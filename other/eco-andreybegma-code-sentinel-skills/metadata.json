@@ -1,0 +1,37 @@
+{
+  "name": "cs-eco",
+  "repo": "AndreyBegma/code-sentinel-skills",
+  "path": "skills/eco/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AndreyBegma/code-sentinel-skills",
+  "dir_name": "eco-andreybegma-code-sentinel-skills",
+  "downloaded_at": "2026-11-01T09:58:06.189359Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreyBegma",
+  "source_url": "https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/eco/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/eco/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Token saver for the current Claude Code session \u2014 filters noisy command output through nautelle-runner (bypassPermissions and auto modes only), soft-guards whole reads of big files, soft-dedups repeated reads, cuts large MCP results to head and tail, injects a concise working register, and points broad searches at the haiku `scout` agent. Per session plus a machine default; reports status and savings"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "igraph-r",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/igraph-r/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "igraph-r",
+  "downloaded_at": "2026-11-01T10:21:09.890886Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, visualization",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/igraph-r/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/igraph-r/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "R network analysis with igraph fronted by tidygraph + ggraph: graph construction from edge-list tibbles (tidyverse round-trip), centrality (degree, betweenness, closeness, eigenvector, PageRank), community detection (Leiden, Louvain, walktrap) with seed discipline, shortest paths, components, bipartite construction + projection, and static grammar-of-graphics figures via ggraph with seeded layouts. Use for relational/graph data. For road-network routing use sf-terra (sfnetworks); for non-graph clustering use tidymodels. Use when execution language is R. Python equivalent: igraph."
+}

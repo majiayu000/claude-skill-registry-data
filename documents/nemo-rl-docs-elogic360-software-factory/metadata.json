@@ -1,0 +1,39 @@
+{
+  "name": "nemo-rl-docs",
+  "repo": "Elogic360/software-factory",
+  "path": "skills/nvidia/nemo-rl-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Elogic360/software-factory",
+  "dir_name": "nemo-rl-docs-elogic360-software-factory",
+  "downloaded_at": "2026-11-01T10:32:42.194054Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Elogic360",
+  "source_url": "https://github.com/Elogic360/software-factory/blob/main/skills/nvidia/nemo-rl-docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Elogic360/software-factory/blob/main/skills/nvidia/nemo-rl-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Documentation conventions for NeMo-RL. Covers docs/index.md updates and docstring format. Do NOT use for: bug fixes, test fixes, dependency bumps, refactoring, CI/CD changes, performance tuning, or any task that does not involve writing or updating documentation."
+}

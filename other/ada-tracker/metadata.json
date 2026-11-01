@@ -1,0 +1,37 @@
+{
+  "name": "ada-tracker",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/ada-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "ada-tracker",
+  "downloaded_at": "2026-11-01T10:23:23.108956Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/ada-tracker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/ada-tracker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds an accessibility compliance checklist for a project in two passes: scoping, meaning how many of each element must be accessible, and technical, meaning what each accessible element must measure. Trigger on \"accessibility checklist\", \"ADA check\", \"accessibility compliance\", \"accessible parking count\", \"accessible toilet count\", \"barrier free check\", \"ada-tracker\", or a pasted program with counts of parking, units, or toilet rooms. Works with any accessibility standard. The user names the standard and supplies both the scoping rule and each technical dimension, by typing them, pasting the clause, or naming a file to read. The skill never supplies an accessibility value from memory or from web search, and every row it could not source is reported as unverified rather than filled in. Writes a CSV checklist and appends to a project index."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ms-ms-spectrum-parsing",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v1/skills/ms-ms-spectrum-parsing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "ms-ms-spectrum-parsing",
+  "downloaded_at": "2026-11-01T10:51:38.272603Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/ms-ms-spectrum-parsing/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/ms-ms-spectrum-parsing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you have raw or preprocessed MS/MS spectra in one of the supported formats (MGF, mzML, mzXML, JSON, MSP, mzXML, pickled matchms objects, or USI) and need to extract peak lists (m/z and intensity pairs) along with metadata (precursor m/z, charge, ionization mode) to feed into MS2Query or."
+}

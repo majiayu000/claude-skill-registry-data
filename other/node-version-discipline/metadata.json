@@ -1,0 +1,37 @@
+{
+  "name": "node-version-discipline",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/node-version-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "node-version-discipline",
+  "downloaded_at": "2026-11-01T10:40:45.978029Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/node-version-discipline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/node-version-discipline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Node version discipline \u2014 before running tsc / eslint / build / test / install in any Node project, align the Node version to the project's declared version (.nvmrc / .node-version / .tool-versions / volta / engines.node) and disclose it in the verification report, preventing false-pass / false-fail when the host default Node mismatches the project-pinned version; when the project declares no Node version at all, ask the user for the version and offer to persist a declaration file so future sessions/CI auto-align. Use this skill whenever the user is about to run a version-sensitive Node command, or mentions Node version mismatch / wrong Node / version conflict. \u4e2d\u6587\u89e6\u53d1\u8bcd\u300cnode \u7248\u672c\u5bf9\u9f50\u300d\u300cnvm \u5bf9\u9f50\u300d\u300c.nvmrc\u300d\u300cNode \u7248\u672c\u7eaa\u5f8b\u300d\u300c\u5bf9\u9f50 Node \u7248\u672c\u300d\u300c\u5207\u6362 node \u7248\u672c\u300d\u300c\u7248\u672c\u4e0d\u5339\u914d\u300d\u300c\u521d\u59cb\u5316 node \u7248\u672c\u7ba1\u7406\u300d\u300c\u4e3a\u5de5\u7a0b\u589e\u52a0 node \u7248\u672c\u58f0\u660e\u300d\u300c\u7ed9\u5de5\u7a0b\u52a0 .nvmrc\u300d\u300c\u65e0 .nvmrc \u65f6\u8865\u4e00\u4e2a\u300d\u300c\u5de5\u7a0b\u6ca1\u6709 node \u7248\u672c\u7ba1\u7406\u300d, English aliases node version discipline, nvm use, align node version, switch node version, add nvmrc, initialize node version."
+}

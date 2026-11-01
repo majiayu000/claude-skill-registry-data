@@ -1,0 +1,37 @@
+{
+  "name": "dispute-advisor",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/dispute-advisor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "dispute-advisor",
+  "downloaded_at": "2026-11-01T10:23:33.240689Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/dispute-advisor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/dispute-advisor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Locates a live construction dispute on the escalation ladder of the contract in force, names the next required step, the notice deadline that governs it, and the point at which counsel should be engaged. Trigger on \"dispute advice\", \"claim escalation\", \"is this a claim\", \"notice of claim\", \"time extension request\", \"mediation or arbitration\", \"termination notice\", or a pasted change order rejection, delay narrative, or RFI thread that has turned contested. Works with any standard form or bespoke contract. The user supplies the contract and its clauses; the skill reads what it is given and never recalls a notice period, a ladder step, or a procedure from memory. Procedural only: it produces an escalation memo and a notice letter draft, and it is not legal advice."
+}

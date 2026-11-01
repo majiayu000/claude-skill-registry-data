@@ -1,0 +1,38 @@
+{
+  "name": "polars",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/polars/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "polars-daaf-contribution-co-daaf",
+  "downloaded_at": "2026-11-01T10:21:08.300501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/polars/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/polars/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "High-performance data manipulation with lazy/eager execution, expressions, I/O (CSV, Parquet, JSON), aggregations, joins, string/datetime ops, and pandas interop. Covers performance optimization patterns and common anti-patterns. DAAF's default DataFrame library \u2014 all pipeline code uses Polars, not pandas. Use for any DataFrame operation, reading/writing Parquet files, or migrating existing pandas code to Polars. R equivalent: tidyverse (use when execution language is R)."
+}

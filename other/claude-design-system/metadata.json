@@ -1,0 +1,38 @@
+{
+  "name": "claude-design-system",
+  "repo": "JimLiu/baoyu-design",
+  "path": "skills/claude-design-system/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JimLiu/baoyu-design",
+  "dir_name": "claude-design-system",
+  "downloaded_at": "2026-11-01T11:03:06.891598Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JimLiu",
+  "source_url": "https://github.com/JimLiu/baoyu-design/blob/main/skills/claude-design-system/SKILL.md",
+  "license": "Mixed. The skill text, references and editors adapted from Anthropic's claude.ai Artifact types stay Anthropic's and are not MIT-licensed; the local tooling is MIT. Complete terms in NOTICE.md: https://github.com/JimLiu/baoyu-design/blob/main/NOTICE.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JimLiu/baoyu-design/blob/main/skills/claude-design-system/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create and revise design systems in the Design System artifact format (project/design-system.json, tokens.json, a README brand book, component previews, fonts and asset groups) as local files, then open them in a local design-system page where the user can browse and edit tokens, type, components and assets. Use when the user asks for a design system or brand kit in this format, built from a code repository, a design tool or scratch, names claude-design-system or the Design System type, or wants to revise a folder that holds project/design-system.json. claude-slides and claude-design install these systems. A free-form HTML style guide, UI kit or token page is baoyu-design's."
+}

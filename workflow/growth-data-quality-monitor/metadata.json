@@ -1,0 +1,38 @@
+{
+  "name": "growth-data-quality-monitor",
+  "repo": "GrowthAfinz/GaaS-Framework-Afinz",
+  "path": ".claude/skills/growth-data-quality-monitor/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/GrowthAfinz/GaaS-Framework-Afinz",
+  "dir_name": "growth-data-quality-monitor",
+  "downloaded_at": "2026-11-01T10:46:51.443348Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GrowthAfinz",
+  "source_url": "https://github.com/GrowthAfinz/GaaS-Framework-Afinz/blob/main/.claude/skills/growth-data-quality-monitor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GrowthAfinz/GaaS-Framework-Afinz/blob/main/.claude/skills/growth-data-quality-monitor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Validar atualiza\u00e7\u00e3o, cobertura, completude, duplicidades e integridade das fontes usadas em relat\u00f3rios de aquisi\u00e7\u00e3o CRM e m\u00eddia paga. Use antes de qualquer an\u00e1lise di\u00e1ria ou semanal de growth, especialmente com Supabase, activities, rentabilizacao_activities, b2c_daily_metrics, paid_media_metrics, metas e logs de coleta."
+}

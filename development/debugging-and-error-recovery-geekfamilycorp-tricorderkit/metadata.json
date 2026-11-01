@@ -1,0 +1,39 @@
+{
+  "name": "debugging-and-error-recovery",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-dev-discipline/skills/debugging-and-error-recovery/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "debugging-and-error-recovery-geekfamilycorp-tricorderkit",
+  "downloaded_at": "2026-11-01T10:43:49.974979Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-dev-discipline/skills/debugging-and-error-recovery/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-dev-discipline/skills/debugging-and-error-recovery/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "D\u00e9bogage disciplin\u00e9 par cause racine pour scripts Python, VPS (systemd/Docker/SFTP), pipelines de veille et automatisations maison. \u00c0 utiliser quand un test \u00e9choue, un build casse, un timer ou une t\u00e2che planifi\u00e9e ne produit rien, un script renvoie un r\u00e9sultat inattendu, ou face \u00e0 toute erreur non comprise. D\u00e9clencheurs : \"d\u00e9bogue\", \"\u00e7a marche pas\", \"pourquoi cette erreur\", \"trouve la cause\", \"root cause\", \"\u00e7a plantait avant\", \"le timer ne tourne plus\", \"sortie vide\". Ne pas activer pour une coquille triviale corrig\u00e9e en un coup d'\u0153il, ni pour corriger/durcir une application web enti\u00e8re \u2192 code-corrector, ni pour ajouter du logging pr\u00e9ventif \u2192 observability- and-instrumentation."
+}

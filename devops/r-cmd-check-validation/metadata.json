@@ -1,0 +1,39 @@
+{
+  "name": "r-cmd-check-validation",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v1/skills/r-cmd-check-validation/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "r-cmd-check-validation",
+  "downloaded_at": "2026-11-01T10:51:38.869842Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd, infra, infrastructure",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/r-cmd-check-validation/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/r-cmd-check-validation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when after installing an R package from a non-CRAN repository (such as r-universe) to confirm the package build is sound, dependencies resolve correctly, and no warnings or errors are introduced. Use it as a gate before relying on the package for downstream analysis or distribution."
+}

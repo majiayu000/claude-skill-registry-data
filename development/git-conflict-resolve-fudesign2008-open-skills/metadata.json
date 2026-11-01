@@ -1,0 +1,37 @@
+{
+  "name": "git-conflict-resolve",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/git-conflict-resolve/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "git-conflict-resolve-fudesign2008-open-skills",
+  "downloaded_at": "2026-11-01T10:40:43.533160Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/git-conflict-resolve/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/git-conflict-resolve/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a Git merge or rebase produces code conflicts, especially when AI-automated conflict resolution is error-prone (picking the wrong side, losing a refactor, reverting to an older version) and semantic analysis plus logic verification is needed. Also applies when a multi-round rebase stops repeatedly and conflict files need to be aggregated across rounds. Triggers \u2014 \u300c\u89e3\u51b2\u7a81\u300d\u300c\u5904\u7406\u51b2\u7a81\u300d\u300cgit-conflict-resolve\u300d\u300c\u89e3\u51b3 merge \u51b2\u7a81\u300d\u300c\u89e3\u51b3 rebase \u51b2\u7a81\u300d\u300c\u51b2\u7a81\u89e3\u51b3\u300d / conflict resolve, resolve merge conflict, resolve rebase conflict."
+}

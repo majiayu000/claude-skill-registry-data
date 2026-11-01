@@ -1,0 +1,37 @@
+{
+  "name": "phasing-study",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/phasing-study/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "phasing-study",
+  "downloaded_at": "2026-11-01T10:23:26.016653Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/phasing-study/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/phasing-study/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Works out the phasing for construction in and around a building that stays occupied: which functions must never close, where each one lives during each phase, the swing space that makes the moves possible, and the sequence that gets everyone home without a circular dependency. Builds the occupancy ledger, the move list, and the per-phase checklist of what must be true before a phase can start. Trigger on \"phasing study\", \"occupied renovation\", \"how do we renovate without closing\", \"swing space\", \"decant plan\", \"phasing-study\", or a renovation scope paired with functions that cannot stop. The sequencing logic is the skill's; every duration, cost, and code determination comes from elsewhere: the contractor owns means, methods, and the schedule, and whether egress and separations hold during each phase is a code and AHJ question this skill raises and never answers. It is the design-side plan that makes those conversations possible, not a construction schedule and not a logistics plan."
+}

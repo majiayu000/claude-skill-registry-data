@@ -1,0 +1,37 @@
+{
+  "name": "r-python-translation",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/r-python-translation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "r-python-translation",
+  "downloaded_at": "2026-11-01T10:21:13.706896Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/r-python-translation/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/r-python-translation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "R-to-Python translation for data analysis. Maps R packages (tidyverse, ggplot2, fixest, survey, sf, plm) to Python equivalents (polars, plotnine, pyfixest, svy, geopandas). Use when user has R background or requests R-equivalent code comments."
+}

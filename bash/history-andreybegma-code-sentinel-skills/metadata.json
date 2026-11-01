@@ -1,0 +1,37 @@
+{
+  "name": "cs-history",
+  "repo": "AndreyBegma/code-sentinel-skills",
+  "path": "skills/history/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/AndreyBegma/code-sentinel-skills",
+  "dir_name": "history-andreybegma-code-sentinel-skills",
+  "downloaded_at": "2026-11-01T09:58:06.760061Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreyBegma",
+  "source_url": "https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/history/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/history/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a comprehensive project history by combining PR/release note data with a product status report. Maps development effort to user role portals (e.g., owner, banker, charter) and produces a narrative of what was worked on, effort distribution per role, and current product state. Use when asked to create release notes, project timeline, effort retrospective, work summary, or development history. Triggers on phrases like \"project history\", \"what did we work on\", \"release notes\", \"effort summary\", \"retrospective\", \"development timeline\". Requires `docs/project-status.md` from the repo-analysis skill (or equivalent status report)."
+}

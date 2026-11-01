@@ -1,0 +1,39 @@
+{
+  "name": "figma-pixel-implement",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/figma-pixel-implement/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "figma-pixel-implement",
+  "downloaded_at": "2026-11-01T10:40:44.477810Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, component, figma",
+    "score": 4,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/figma-pixel-implement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/figma-pixel-implement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implement Figma UI with export-faithful assets, a screen\u00d7state inventory, a control measured in its shipping parent, and a durable living spec in the target repo (state/mode/basis, required Assets subsection). With a component workbench (Storybook or similar), also deliver inventory-covering stories and Spec-locking tests. Use when implementing from Figma URLs/nodes or pixel-level restore / \u6309\u7a3f\u5b9e\u73b0; light/dark is in scope when the file has modes or the project has theme switching. Same run measures laid-out frames via figma-pixel-verify until pass; no person between iterations. Triggers \u2014 \u300c\u50cf\u7d20\u7ea7\u8fd8\u539f\u300d\u300c\u6309\u7a3f\u5b9e\u73b0\u300d\u300cFigma \u5bf9\u9f50\u5b9e\u73b0\u300d\u300c\u8fd8\u539f Figma\u300d\u300cfigma \u4fdd\u771f\u5b9e\u73b0\u300d\u300c\u6697\u9ed1\u6a21\u5f0f\u8fd8\u539f\u300d\u300c\u591a\u4e3b\u9898\u4fdd\u771f\u5b9e\u73b0\u300d / implement from Figma, pixel restore, dark mode implement, multi-theme fidelity. Do NOT use for code\u2192Figma canvas writes, no-design creative UI, or post-impl alignment checking alone (use figma-pixel-verify)."
+}

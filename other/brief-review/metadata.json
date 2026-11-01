@@ -1,0 +1,38 @@
+{
+  "name": "brief-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/brief-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "brief-review",
+  "downloaded_at": "2026-11-01T10:23:24.146975Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/brief-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/brief-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user shares a project brief, RFP, or Owner's Project Requirements (OPR) and wants it interrogated for unstated assumptions, gaps, contradictions, and missing constraints before design work proceeds. Trigger on 'review this brief', 'check the RFP', 'unpack this brief', 'analyze the OPR', 'is this brief complete', or pasted brief text accompanied by a request to evaluate completeness. Generates a structured brief review markdown in `docs/briefs/` and appends to the project brief index."
+}

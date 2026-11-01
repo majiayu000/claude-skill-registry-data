@@ -1,0 +1,38 @@
+{
+  "name": "variant-analysis",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/04-asfaleia/variant-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "variant-analysis-kpistolas-claude-skills",
+  "downloaded_at": "2026-11-01T11:07:31.252269Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, vulnerability, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/04-asfaleia/variant-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/04-asfaleia/variant-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hunts for the other instances of a bug already found \u2014 the variants of one root cause across a codebase. Use immediately after a vulnerability, logic bug, or bad pattern turns up in a specific file and the question becomes where else it occurs, including the bare conversational form (\"are there others like this?\", \"is this the same bug?\"). Also for generalizing one known instance into a CodeQL or Semgrep query for its whole pattern family, and for triaging a set of look-alike candidates against a known root cause. Not for initial discovery with no bug in hand."
+}

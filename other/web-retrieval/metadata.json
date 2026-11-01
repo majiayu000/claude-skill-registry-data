@@ -1,0 +1,38 @@
+{
+  "name": "web-retrieval",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/web-retrieval/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "web-retrieval",
+  "downloaded_at": "2026-11-01T10:21:11.727520Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/web-retrieval/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/web-retrieval/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "DAAF's protocol for retrieving web documents that an agent needs to READ (docs pages, articles, API references, issue threads). Retrieval runs through the framework CLI `bash /daaf/scripts/web_fetch.sh URL DEST_DIR`, which saves the raw response, a deterministic extract, and a provenance manifest to disk \u2014 the built-in WebFetch is blocked because it returns an AI paraphrase, not source text. Covers when to fetch at all (check local skills first), tool syntax and flags, the two-artifact + MANIFEST provenance model, the exit-code failure table, the untrusted-content rule, thin-extract diagnosis, extract size rules, and destination conventions. Use when a permitted context (search-agent, data-ingest, debugger, orchestrator) must pull a specific web page into context to read or quote it. NOT for discovery \u2014 WebSearch stays built-in for finding URLs. NOT for pipeline data acquisition \u2014 Stage 5 / onboarding scripts fetching datasets into parquet are a separate, unchanged activity for any pipeline agent."
+}

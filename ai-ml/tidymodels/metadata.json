@@ -1,0 +1,38 @@
+{
+  "name": "tidymodels",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/tidymodels/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "tidymodels",
+  "downloaded_at": "2026-11-01T10:21:10.739498Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ml, machine-learning, model",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "machine-learning",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/tidymodels/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/tidymodels/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "R machine learning with tidymodels: recipes (preprocessing), parsnip\n(model specs), workflows (fit pipelines), tune (hyperparameters), rsample\n(resampling). Engines: ranger (RF), glmnet (lasso/ridge), xgboost, kknn.\nModel interpretation (permutation importance, PDP/ICE, SHAP via\nDALEX/iml/kernelshap) and fairness assessment (fairmodels). UMAP via uwot.\nUse when execution language is R. Python equivalent: scikit-learn.\nFor econometric regression use fixest or r-stats."
+}

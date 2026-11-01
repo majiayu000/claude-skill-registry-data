@@ -1,0 +1,37 @@
+{
+  "name": "assembly-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/assembly-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "assembly-review",
+  "downloaded_at": "2026-11-01T10:23:31.503986Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/assembly-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/assembly-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Takes any envelope assembly you are handed \u2014 a wall, a roof, a floor, a below-grade construction, from a consultant, a contractor, a manufacturer or an earlier phase of your own project \u2014 and reads it for what it is trying to do and where it does not. Locates the four control layers, checks each is continuous through the stack and has somewhere to go at the edges, names every layer with no job, and reports which direction it can dry. Trigger on \"review this assembly\", \"is this wall build-up any good\", \"they sent us a section\", \"read this stack\", \"assembly-review\", or any layered construction handed over for an opinion. Carries no R-values, permeance figures or code minimums; every value comes with the assembly or is marked missing. The `design-` assembly skills build one from demands; this reads one that already exists. It runs no arithmetic \u2014 `condensation-check` does \u2014 and does not replace the enclosure consultant or the Architect of Record."
+}

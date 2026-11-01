@@ -1,0 +1,38 @@
+{
+  "name": "agent-qa-run-review",
+  "repo": "DevelopersGlobal/ai-agent-skills",
+  "path": "skills/agent-qa-run-review/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/DevelopersGlobal/ai-agent-skills",
+  "dir_name": "agent-qa-run-review",
+  "downloaded_at": "2026-11-01T10:25:33.590979Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevelopersGlobal",
+  "source_url": "https://github.com/DevelopersGlobal/ai-agent-skills/blob/main/skills/agent-qa-run-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevelopersGlobal/ai-agent-skills/blob/main/skills/agent-qa-run-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review recorded agent-qa runs and memidex provenance to explain a QA verdict, identify missing evidence, and propose the smallest next step."
+}

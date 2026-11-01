@@ -1,0 +1,38 @@
+{
+  "name": "code-annotating",
+  "repo": "ElioJay/skills",
+  "path": ".claude/skills/code-annotating/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ElioJay/skills",
+  "dir_name": "code-annotating-eliojay-skills-2",
+  "downloaded_at": "2026-11-01T10:32:15.233429Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ElioJay",
+  "source_url": "https://github.com/ElioJay/skills/blob/main/.claude/skills/code-annotating/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ElioJay/skills/blob/main/.claude/skills/code-annotating/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants comments or documentation added to code \u2014 a specific file, code related to an API or interface entry point, or uncommitted git changes. Trigger on requests like \u52a0\u6ce8\u91ca / \u8865\u6ce8\u91ca / \u5b8c\u5584\u6ce8\u91ca / \u5199\u6ce8\u91ca / add comments / annotate code / write Javadoc or docstrings \u2014 even when the user does not literally say \"comment\" but wants code documented. Confirms scope, detail level, and comment language interactively before any edits. Do NOT use for: reviewing code quality (use code-review-deep-zh), deleting redundant code (use code-slimming), explaining code to the user instead of documenting it in place (use /explain), or writing design documents rather than code comments."
+}

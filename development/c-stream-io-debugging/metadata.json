@@ -1,0 +1,38 @@
+{
+  "name": "c-stream-io-debugging",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/transcriptomics/v1/skills/c-stream-io-debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "c-stream-io-debugging",
+  "downloaded_at": "2026-11-01T10:51:48.994756Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/transcriptomics/v1/skills/c-stream-io-debugging/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/transcriptomics/v1/skills/c-stream-io-debugging/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when when a C++ program writes records to an output stream (e.g., SAM alignment file) and the final output file contains fewer records than expected based on upstream counts (e.g., salmon's NumReads total in quant.sf exceeds SAM record count), indicating buffered data loss at stream closure."
+}

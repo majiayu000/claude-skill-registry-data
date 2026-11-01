@@ -1,0 +1,37 @@
+{
+  "name": "context-compress",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "plugins/token-optimizer/skills/context-compress/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "context-compress",
+  "downloaded_at": "2026-11-01T10:43:46.200929Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/plugins/token-optimizer/skills/context-compress/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/plugins/token-optimizer/skills/context-compress/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compresse le contexte d'une conversation longue en preservant les decisions, fichiers touches, et prochaines etapes. Base sur les techniques du repo Agent-Skills-for-Context-Engineering (muratcankoylan). Mots-cles : \"compresse le contexte\", \"trop long\", \"resume cette conversation pour continuer\", \"fais un handoff\", \"optimise ma memoire\", \"context trop charge\"."
+}

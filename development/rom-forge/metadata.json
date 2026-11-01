@@ -1,0 +1,39 @@
+{
+  "name": "rom-forge",
+  "repo": "ByteTerrace/Puck",
+  "path": ".claude/skills/rom-forge/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ByteTerrace/Puck",
+  "dir_name": "rom-forge",
+  "downloaded_at": "2026-11-01T10:11:57.988937Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "gaming",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ByteTerrace",
+  "source_url": "https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/rom-forge/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/rom-forge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Authors and compiles Puck cartridges (puck.cartridge.v1, *.cgb.puck, *.dmg.puck, *.agb.puck, forge.play, forge.open, puck compile --validate), native compilers, cost. Emulator core is gaming-bricks."
+}

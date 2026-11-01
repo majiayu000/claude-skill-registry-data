@@ -1,0 +1,37 @@
+{
+  "name": "stacking-diagram",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/stacking-diagram/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "stacking-diagram",
+  "downloaded_at": "2026-11-01T10:23:35.740955Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/stacking-diagram/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/stacking-diagram/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Distributes a programme vertically against the constraints that actually decide it: the floor plate you have, the core capacity, the loads and heights each use demands, and the ground-level frontage everything competes for. Places the uses that cannot move first, then works down the list, and reports every floor where the programme assigned exceeds what the plate can hold. Trigger on \"stacking diagram\", \"stack the programme\", \"which floor does this go on\", \"vertical zoning\", \"how many floors do we need\", \"stacking-diagram\", or a programme and a floor plate handed over with a request for how it distributes. Carries no areas, no floor-to-floor dimensions, no lift capacities and no loading figures; every one comes from you or from `space-program`, `design-core` and `test-fit`. It does not size the core, does not lay out a floor and does not replace the Architect of Record."
+}

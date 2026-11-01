@@ -1,0 +1,37 @@
+{
+  "name": "closeout-check",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/closeout-check/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "closeout-check",
+  "downloaded_at": "2026-11-01T10:23:28.893783Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/closeout-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/closeout-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds and tracks the closeout deliverables list in docs/construction/closeout.md: O&M manuals, warranties, test and inspection reports, record documents, spare parts and attic stock, training, each with the spec section that requires it. Trigger on \"closeout\", \"closeout checklist\", \"O&M manuals\", \"warranties\", \"attic stock\", \"record drawings\", \"as-builts\", \"turnover package\", \"handover\", \"closeout-check\", or the end of construction approaching. The list is built by reading the closeout requirements out of your spec book or typed by you; the skill never invents a deliverable a spec did not require. Received items are recorded with dates; the report leads with what is outstanding, by division. Whether the contract's closeout conditions are met is the architect's certification, not this skill's."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "daylight-study",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/daylight-study/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "daylight-study",
+  "downloaded_at": "2026-11-01T10:23:27.961818Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/daylight-study/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/daylight-study/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks each room's depth against how far sidelight can reach it, from the window head heights, room depths, and glazing areas the user supplies: daylit depth by a stated convention, glazing-to-floor arithmetic held against a code minimum the user quotes, and the no-sky line when a facing building is in the way. Trigger on \"daylight study\", \"how deep does daylight reach\", \"is this room too deep for daylight\", \"no-sky line\", \"daylight-study\", or room depths paired with window head heights. The depth convention and the obstruction geometry are the only things this skill supplies itself; every dimension, glazing area, and code minimum comes from the user. It is a plan-stage tool for comparing layouts, not a daylighting simulation: no daylight factor, no illuminance, no glare, no LEED credit documentation, all of which come from a model. Exterior shadows on neighbors belong to shadow-study; energy-code glazing checks belong to test-glazing."
+}

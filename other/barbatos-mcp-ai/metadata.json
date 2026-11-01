@@ -1,0 +1,38 @@
+{
+  "name": "barbatos-mcp-ai",
+  "repo": "Barbatos-Labs/Barbatos.Wpf",
+  "path": ".claude/skills/barbatos-mcp-ai/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Barbatos-Labs/Barbatos.Wpf",
+  "dir_name": "barbatos-mcp-ai",
+  "downloaded_at": "2026-11-01T10:06:32.834171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Barbatos-Labs",
+  "source_url": "https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-mcp-ai/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-mcp-ai/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "MCP servers and bring-your-own-key AI in Barbatos.Wpf.Core (Barbatos.Wpf.Mcp) - ConfigureMcp, IMcpServerRegistry (stdio/HTTP, OAuth), IAiApiKeyProvider, IAiChatClientFactory, IAiChatService, IAiAgentFactory tool approval, IAiSessionStore. Use for an AI chat or assistant panel, end users pasting their own OpenAI/Gemini/Claude API key so the publisher never pays, a provider or model picker, connecting or signing in to an MCP server, confirming before a tool runs, keeping a conversation after restart, sending an image, or when the AI ignores the tools or a server never connects. For SecureStorage outside AI use barbatos-wpf-essentials. Vietnamese prompts too - chat AI, tr\u1ee3 l\u00fd \u1ea3o, t\u1ef1 nh\u1eadp kh\u00f3a API, ch\u1ecdn m\u00f4 h\u00ecnh, k\u1ebft n\u1ed1i MCP server, h\u1ecfi tr\u01b0\u1edbc khi ch\u1ea1y tool, l\u01b0u h\u1ed9i tho\u1ea1i, g\u1eedi \u1ea3nh cho AI."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "hic-map-format-validation",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/epigenomics/v1/skills/hic-map-format-validation/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "hic-map-format-validation",
+  "downloaded_at": "2026-11-01T10:51:47.105177Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/epigenomics/v1/skills/hic-map-format-validation/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/epigenomics/v1/skills/hic-map-format-validation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when after running the ENCODE Hi-C uniform processing pipeline or Juicer on FASTQ input data and generating a .hic output file."
+}

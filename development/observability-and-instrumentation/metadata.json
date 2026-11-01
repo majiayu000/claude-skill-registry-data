@@ -1,0 +1,38 @@
+{
+  "name": "observability-and-instrumentation",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-dev-discipline/skills/observability-and-instrumentation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "observability-and-instrumentation",
+  "downloaded_at": "2026-11-01T10:43:50.191127Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-dev-discipline/skills/observability-and-instrumentation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-dev-discipline/skills/observability-and-instrumentation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rend le comportement des automatisations VISIBLE et diagnosticable \u2014 logs structur\u00e9s JSON, compteurs de fin de run, heartbeats, alertes sur seuil \u2014 pour les timers systemd, t\u00e2ches planifi\u00e9es, pipelines de veille et scripts maison. \u00c0 utiliser quand on ajoute du logging ou de l'alerting, quand on d\u00e9ploie une automatisation et qu'il faut prouver qu'elle tourne, ou quand un incident survient sans trace exploitable. D\u00e9clencheurs : \"ajoute des logs\", \"comment savoir si \u00e7a tourne\", \"instrumente\", \"m\u00e9triques\", \"alerte si\", \"observabilit\u00e9\", \"le cron tourne-t-il\". Fournit un logger JSON stdlib pr\u00eat \u00e0 copier (scripts/structlog_snippet.py). Ne pas activer pour un simple print de debug ponctuel, ni pour trouver la cause d'une panne d\u00e9j\u00e0 visible \u2192 debugging-and-error- recovery."
+}

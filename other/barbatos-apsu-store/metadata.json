@@ -1,0 +1,37 @@
+{
+  "name": "barbatos-apsu-store",
+  "repo": "Barbatos-Labs/Barbatos.Wpf",
+  "path": ".claude/skills/barbatos-apsu-store/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Barbatos-Labs/Barbatos.Wpf",
+  "dir_name": "barbatos-apsu-store",
+  "downloaded_at": "2026-11-01T10:06:33.857017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Barbatos-Labs",
+  "source_url": "https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-apsu-store/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-apsu-store/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Shared state with Barbatos.Wpf.Apsu (in Barbatos.Wpf.Core), Pinia-style stores - StoreBase, StateChanged/Patch/Reset, Getter<T>, [Action] methods wrapped by IStoreActionInterceptor, AddStore, InterceptorHandle.Eject, IStorePlugin, IStoreRegistry. Use when state is shared by several ViewModels or windows, deriving a value from stores, logging, auditing or blocking an action without editing it, persisting a store, or when an [Action] is never intercepted, an action hangs forever, a sealed store throws on resolve, or a getter shows a stale value. For view-local state and Provide/Inject use barbatos-aquarius-view. Vietnamese prompts too - tr\u1ea1ng th\u00e1i d\u00f9ng chung, chia s\u1ebb state gi\u1eefa m\u00e0n h\u00ecnh, store ki\u1ec3u Pinia, gi\u00e1 tr\u1ecb t\u00ednh t\u1eeb store, ghi log h\u00e0nh \u0111\u1ed9ng, h\u00e0nh \u0111\u1ed9ng b\u1ecb treo, l\u01b0u tr\u1ea1ng th\u00e1i store."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "guardrails",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/prompt-engineer/skills/guardrails/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "guardrails",
+  "downloaded_at": "2026-11-01T10:41:25.097305Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/prompt-engineer/skills/guardrails/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/prompt-engineer/skills/guardrails/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when implementing input/output guardrails, writing ethical guardrail templates, or auditing an agent/prompt for missing security controls."
+}

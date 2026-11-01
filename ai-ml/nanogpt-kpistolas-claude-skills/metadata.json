@@ -1,0 +1,40 @@
+{
+  "name": "nanogpt",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/07-ai-ml-ereuna/nanogpt/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "nanogpt-kpistolas-claude-skills",
+  "downloaded_at": "2026-11-01T11:07:24.979297Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model, training",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/nanogpt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/nanogpt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Educational GPT implementation in ~300 lines. Reproduces GPT-2 (124M) on OpenWebText. Clean, hackable code for learning transformers. By Andrej Karpathy. Perfect for understanding GPT architecture from scratch. Train on Shakespeare (CPU) or OpenWebText (multi-GPU)."
+}

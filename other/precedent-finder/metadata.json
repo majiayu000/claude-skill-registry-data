@@ -1,0 +1,37 @@
+{
+  "name": "precedent-finder",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/precedent-finder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "precedent-finder",
+  "downloaded_at": "2026-11-01T10:23:34.672693Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/precedent-finder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/precedent-finder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user describes a project concept, program, atmosphere, or site condition and needs architectural precedents. Trigger on 'find references', 'similar projects', 'precedents for', or natural-language descriptions paired with phrases like 'something with this feeling'. Caches a curated precedent list in `docs/precedents/` (one file per topic) and updates the project precedent index."
+}

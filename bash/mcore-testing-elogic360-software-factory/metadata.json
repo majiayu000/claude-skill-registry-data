@@ -1,0 +1,38 @@
+{
+  "name": "mcore-testing",
+  "repo": "Elogic360/software-factory",
+  "path": "skills/nvidia/mcore-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Elogic360/software-factory",
+  "dir_name": "mcore-testing-elogic360-software-factory",
+  "downloaded_at": "2026-11-01T10:32:43.057643Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Elogic360",
+  "source_url": "https://github.com/Elogic360/software-factory/blob/main/skills/nvidia/mcore-testing/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Elogic360/software-factory/blob/main/skills/nvidia/mcore-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Test system for Megatron-LM. Covers test layout, recipe YAML structure, adding and running unit and functional tests, golden values, marker filters, and CI parity."
+}

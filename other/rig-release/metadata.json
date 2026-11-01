@@ -1,0 +1,37 @@
+{
+  "name": "Rig Release",
+  "repo": "Borda/AI-Rig",
+  "path": "plugins/opencode-rig/src/resources/skills/rig-release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Borda/AI-Rig",
+  "dir_name": "rig-release",
+  "downloaded_at": "2026-11-01T10:10:42.485150Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Borda",
+  "source_url": "https://github.com/Borda/AI-Rig/blob/main/plugins/opencode-rig/src/resources/skills/rig-release/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Borda/AI-Rig/blob/main/plugins/opencode-rig/src/resources/skills/rig-release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assess release readiness with a version baseline from HEAD, full gates, packaged file verification, and read-only release-note, migration, and contributor-reply drafts."
+}

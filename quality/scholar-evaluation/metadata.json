@@ -1,0 +1,38 @@
+{
+  "name": "scholar-evaluation",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/05-ereuna/scholar-evaluation/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "scholar-evaluation",
+  "downloaded_at": "2026-11-01T11:07:31.843329Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/05-ereuna/scholar-evaluation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/05-ereuna/scholar-evaluation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Provides qualitative-first, evidence-traceable developmental review of scholarly works and audit low-stakes research-assessment rubrics with optional local quality controls. Never use for ranking people or consequential decisions."
+}

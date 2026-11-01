@@ -1,0 +1,37 @@
+{
+  "name": "design-stair",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/design-stair/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "design-stair",
+  "downloaded_at": "2026-11-01T10:23:24.350671Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-stair/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-stair/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks one stair flight item by item: width, headroom, riser, tread, uniformity, nosing, landing, vertical rise between landings, handrail height, wall clearance, cross section, extensions, both-sides requirement, and open risers. Trigger on \"check stair\", \"stair compliance\", \"stair dimension check\", \"riser tread check\", \"handrail extension\", \"stair code check\", \"IBC 1011\", \"ADA stair\", \"OBC stair\", \"NBC stair\", or pasted stair geometry. Works in any jurisdiction. The user names the governing code and edition, then supplies each limit by typing it, pasting the clause, or naming a file to read. The skill never supplies a code value from memory or from web search, and any row without a supplied limit is reported as unverified rather than guessed. Does not replace the Architect or Engineer of Record, and does not cover curved, spiral, winder, or alternating tread stairs."
+}

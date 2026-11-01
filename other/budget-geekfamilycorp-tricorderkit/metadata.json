@@ -1,0 +1,37 @@
+{
+  "name": "budget",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-token-economy/skills/budget/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "budget-geekfamilycorp-tricorderkit",
+  "downloaded_at": "2026-11-01T10:43:45.131255Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-token-economy/skills/budget/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-token-economy/skills/budget/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Suit, analyse et optimise la consommation mensuelle de tokens ESTIM\u00c9E par famille de mod\u00e8le (fast / default / deep, voir models.json) \u00e0 partir d'un fichier local. Trois modes : `status` (consommation et seuils 50/80/95 %), `analyze` (tendance, projection fin de mois, gaspillages), `optimize` (drapeaux s\u00fbrs et r\u00e9versibles, jamais appliqu\u00e9s sans GO explicite). \u00c0 utiliser quand l'utilisateur demande \u00ab combien j'ai consomm\u00e9 \u00bb, \u00ab budget tokens \u00bb, \u00ab o\u00f9 partent mes tokens \u00bb, \u00ab projection budget \u00bb, \u00ab optimise mon budget \u00bb, \u00ab logge cette conso \u00bb, ou depuis la t\u00e2che planifi\u00e9e du matin. Ce sont des estimations locales, pas la facturation Anthropic ; en Cowork le hook PostToolUse ne re\u00e7oit pas toujours les tokens, d'o\u00f9 une commande de log manuel de repli. Ne pas utiliser pour choisir le mod\u00e8le d'une t\u00e2che (\u2192 model-router) ni pour compresser une sortie (\u2192 caveman)."
+}

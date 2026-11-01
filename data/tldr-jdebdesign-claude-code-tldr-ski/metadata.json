@@ -1,0 +1,37 @@
+{
+  "name": "tldr",
+  "repo": "JDebDesign/claude-code-tldr-skill",
+  "path": "tldr/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/JDebDesign/claude-code-tldr-skill",
+  "dir_name": "tldr-jdebdesign-claude-code-tldr-ski",
+  "downloaded_at": "2026-11-01T10:56:49.080800Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JDebDesign",
+  "source_url": "https://github.com/JDebDesign/claude-code-tldr-skill/blob/main/tldr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JDebDesign/claude-code-tldr-skill/blob/main/tldr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Boil a Claude Code plan down to a short, beginner-friendly bullet list. Use when the user types /tldr, or asks for a TL;DR, summary, or plain-English version of a plan Claude just made (in plan mode or otherwise). Anything typed after /tldr is treated as a hint for how to write it."
+}

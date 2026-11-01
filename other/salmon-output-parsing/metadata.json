@@ -1,0 +1,36 @@
+{
+  "name": "salmon-output-parsing",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/transcriptomics/v1/skills/salmon-output-parsing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "salmon-output-parsing",
+  "downloaded_at": "2026-11-01T10:51:47.978198Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category analysis scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/transcriptomics/v1/skills/salmon-output-parsing/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/transcriptomics/v1/skills/salmon-output-parsing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when when you have salmon quant.sf.gz output files from pseudoalignment-based transcript quantification and need to convert transcript-level abundance estimates and counts into gene-level matrices for differential expression analysis with edgeR, DESeq2, or limma-voom."
+}

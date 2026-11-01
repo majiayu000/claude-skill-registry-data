@@ -1,0 +1,37 @@
+{
+  "name": "biome",
+  "repo": "Gram-ax/gramax",
+  "path": ".claude/skills/biome/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/Gram-ax/gramax",
+  "dir_name": "biome",
+  "downloaded_at": "2026-11-01T10:46:25.855029Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "cd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Gram-ax",
+  "source_url": "https://github.com/Gram-ax/gramax/blob/master/.claude/skills/biome/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Gram-ax/gramax/blob/master/.claude/skills/biome/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when user asks to lint with Biome, check lint warnings introduced in an MR/branch, run `lint:ref`, or read/triage large Biome diagnostic output in the Gramax project. Triggers on keywords like biome, lint, lint:ref, warnings, lint gate."
+}

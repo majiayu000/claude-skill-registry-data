@@ -1,0 +1,38 @@
+{
+  "name": "commit",
+  "repo": "Chemaclass/bashdep",
+  "path": ".claude/skills/commit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Chemaclass/bashdep",
+  "dir_name": "commit-chemaclass-bashdep",
+  "downloaded_at": "2026-11-01T10:15:06.625233Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Chemaclass",
+  "source_url": "https://github.com/Chemaclass/bashdep/blob/main/.claude/skills/commit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Chemaclass/bashdep/blob/main/.claude/skills/commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stage and commit changes using conventional commits format"
+}

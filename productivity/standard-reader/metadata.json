@@ -1,0 +1,37 @@
+{
+  "name": "standard-reader",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/standard-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "standard-reader",
+  "downloaded_at": "2026-11-01T10:23:32.897997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/standard-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/standard-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads any referenced standard \u2014 a test method, a product standard, a design standard, an industry guideline \u2014 and answers the four questions that decide whether it means anything on this project: what it actually covers, whether it binds here or is only advisory, which edition is the one that binds, and what it deliberately does not address. A standard cited in a specification is often doing none of the work anybody assumes. Trigger on \"what does this standard say\", \"is ASTM E-something relevant here\", \"they referenced a standard\", \"does this standard apply to us\", \"standard-reader\", or a standard cited in a spec, a submittal, or a manufacturer's claim. Carries no standard text: everything comes from the document you supply or the publisher, never from recall, since standards are revised and paraphrase drifts. It does not certify compliance and does not replace the code consultant or the Architect of Record."
+}

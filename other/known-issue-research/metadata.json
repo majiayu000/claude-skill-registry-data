@@ -1,0 +1,38 @@
+{
+  "name": "known-issue-research",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/known-issue-research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "known-issue-research",
+  "downloaded_at": "2026-11-01T10:40:43.186433Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/known-issue-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/known-issue-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "External-research routing for confirmed code problems: triage whether the root cause is internal / external / hybrid, run a known-issue quick search before deep root-causing (platform silent failures, nested host runtimes, no code-level suspects), and evaluate industry-wide hard limits. Delegates all WebSearch discipline to effective-web-research. Referenced by PDCA hosts via frontmatter dependencies; load during the technical-analysis stage. Do NOT use for competitor product-behavior, interaction-boundary, or mechanism observation (competitive-research)."
+}

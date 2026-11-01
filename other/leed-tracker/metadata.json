@@ -1,0 +1,38 @@
+{
+  "name": "leed-tracker",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/leed-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "leed-tracker",
+  "downloaded_at": "2026-11-01T10:23:23.274317Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/leed-tracker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/leed-tracker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user wants to build, update, or score a LEED v4.1 BD+C New Construction scorecard for an architectural project \u2014 by walking the credit list, declaring pursuit status (Yes / Maybe / No / N/A) for each credit, and summing points to predict certification level (Certified / Silver / Gold / Platinum). Trigger on \"LEED scorecard\", \"LEED v4.1 score\", \"score this project for LEED\", \"LEED tracker\", or pasted project program with sustainability goals. Reads bundled credit-by-credit point matrix from USGBC LEED v4.1 BD+C and outputs a CSV scorecard plus a markdown summary in `docs/leed/`. Does NOT make LEED eligibility judgments \u2014 the user declares what they intend to pursue; this skill organizes and scores."
+}

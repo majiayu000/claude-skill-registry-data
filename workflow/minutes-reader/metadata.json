@@ -1,0 +1,37 @@
+{
+  "name": "minutes-reader",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/minutes-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "minutes-reader",
+  "downloaded_at": "2026-11-01T10:23:30.222168Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/minutes-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/minutes-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads minutes written by somebody else \u2014 a contractor, a client, a project manager, a consultant \u2014 for the thing that matters and gets skipped: what they recorded about you. Minutes become the record if nobody objects within the period the contract or the covering note sets, so an action assigned to you that you did not accept, or a decision recorded that was not made, hardens into fact by silence. Trigger on \"read these minutes\", \"the contractor sent minutes\", \"do we need to correct these\", \"did we agree to that\", \"minutes-reader\", or minutes received from anybody else. Carries no contract terms; the objection period comes from the agreement or the minutes themselves. `meeting-notes-cleaner` turns your own raw notes into actions; this reads somebody else's finished document. It does not replace the Architect of Record."
+}

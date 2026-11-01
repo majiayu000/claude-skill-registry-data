@@ -1,0 +1,38 @@
+{
+  "name": "permit-tracker",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/permit-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "permit-tracker",
+  "downloaded_at": "2026-11-01T10:23:28.689299Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, planning, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/permit-tracker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/permit-tracker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keeps one dated log of every approval a project has to obtain, from the agencies you name rather than from an assumed list: what each permit is, which agency issues it, what it depends on, who owns it, what has been submitted and when, every comment received and its response, and every expiry. Reads back what is on the critical path and what is waiting on somebody. Trigger on \"permit tracker\", \"track the approvals\", \"what permits do we need\", \"permit log\", \"who owns this approval\", \"when does the permit expire\", \"permit-tracker\", or a list of agencies named with a request to keep track of them. Carries no agency lists, no review durations, no fee schedules and no permit types; every one comes from the jurisdiction, because they differ between adjacent municipalities and change without notice. It does not file anything, does not predict a duration, and does not replace the expediter, the code consultant, or the Architect of Record."
+}

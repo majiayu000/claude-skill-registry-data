@@ -1,0 +1,37 @@
+{
+  "name": "design-envelope",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/design-envelope/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "design-envelope",
+  "downloaded_at": "2026-11-01T10:23:31.348682Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-envelope/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-envelope/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The door into envelope work, and the step usually skipped: before any assembly is built up, decide how many envelope types the building actually has, which face gets which, where the junctions between them fall, and what each one has to achieve. Produces the schedule of types and junctions that the assembly and junction skills then execute against, and hands each part off by name. Trigger on \"design the envelope\", \"how many wall types do we need\", \"what should this facade be\", \"envelope strategy\", \"where do the assemblies change\", \"design-envelope\", or an envelope scope with no strategy behind it. Carries no R-values, no assemblies and no code minimums; performance requirements come from the code and the brief you quote. It builds nothing itself \u2014 `design-wall-assembly`, `design-roof-assembly` and the junction skills do \u2014 and does not replace the enclosure consultant or the Architect of Record."
+}

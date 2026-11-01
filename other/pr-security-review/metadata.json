@@ -1,0 +1,39 @@
+{
+  "name": "pr-security-review",
+  "repo": "EricTechPro/super-board",
+  "path": "skills/pr-security-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/EricTechPro/super-board",
+  "dir_name": "pr-security-review",
+  "downloaded_at": "2026-11-01T10:34:32.785292Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, security=4",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EricTechPro",
+  "source_url": "https://github.com/EricTechPro/super-board/blob/main/skills/pr-security-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EricTechPro/super-board/blob/main/skills/pr-security-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Security review of one PR's diff against its base branch \u2014 high-confidence, exploitable vulnerabilities only (injection, auth bypass, crypto and secrets, code execution, data exposure), each false-positive-filtered by a parallel sub-task. The super-qa Tester lane runs it on every PR; each finding fails QA and goes back to Build. Use when the user says \"pr security review\", \"/pr-security-review\", or wants a security pass on a branch or PR diff. Not Claude Code's built-in /security-review; for a deep whole-repo audit use security-audit."
+}

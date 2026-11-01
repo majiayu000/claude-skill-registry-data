@@ -1,0 +1,39 @@
+{
+  "name": "harness-writing",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/04-asfaleia/harness-writing/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "harness-writing-kpistolas-claude-skills",
+  "downloaded_at": "2026-11-01T11:07:29.780764Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, fuzzing",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "fuzzing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/04-asfaleia/harness-writing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/04-asfaleia/harness-writing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Designs and improves fuzzing harnesses for C/C++ and Rust. Covers mapping raw bytes onto a target API, generating structured inputs, avoiding non-determinism and false crashes, and deciding what to fuzz together. Use when writing a first LLVMFuzzerTestOneInput or fuzz_target! harness, when a campaign finds nothing or reports crashes that will not reproduce, or when the target API needs structured rather than raw input."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "agenda-builder",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/agenda-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "agenda-builder",
+  "downloaded_at": "2026-11-01T10:23:29.260178Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/agenda-builder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/agenda-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds an agenda for any project meeting from the decisions it has to produce rather than from the topics somebody wants to raise. Establishes who has to be there for each decision and whether they are coming, what has to be sent in advance for a decision to be possible, and what is being discussed with nobody present who can decide it \u2014 which is how a meeting produces a follow-up meeting. Trigger on \"agenda for tomorrow\", \"what should we cover in this meeting\", \"build the agenda\", \"prep for the client meeting\", \"agenda-builder\", or a meeting coming up with nothing prepared. Carries no meeting formats and no standard agendas; the items come from what this project actually needs settled. `meeting-notes-cleaner` handles what comes out of the meeting; this handles what goes in. It does not replace the principal or the Architect of Record."
+}

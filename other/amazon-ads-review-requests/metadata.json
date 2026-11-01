@@ -1,0 +1,36 @@
+{
+  "name": "amazon-ads-review-requests",
+  "repo": "KuudoAI/skills",
+  "path": "skills/amazon-ads-review-requests/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KuudoAI/skills",
+  "dir_name": "amazon-ads-review-requests",
+  "downloaded_at": "2026-11-01T11:12:05.826732Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KuudoAI",
+  "source_url": "https://github.com/KuudoAI/skills/blob/main/skills/amazon-ads-review-requests/SKILL.md",
+  "license": "PolyForm-Shield-1.0.0 (see LICENSE.txt)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KuudoAI/skills/blob/main/skills/amazon-ads-review-requests/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Launch, manage, and review Amazon Ads Review Requests campaigns (US beta): the Sponsored Products ad product that shows verified purchasers a \"How was your item?\" card and charges only when a shopper leaves a rating or review. Creates the ENGAGEMENT-goal campaign, ad group, required THEME target, and one REVIEW_REQUEST ad per ASIN after one approval. Also lists these campaigns, adds or pauses ASINs, changes bids, budgets, and dates, and reports reviews, written reviews, star rating, and cost per review. Use whenever someone wants more ratings or reviews for a product through Amazon Ads, a new launch needs reviews, or they mention Review Requests, review request ads, an ENGAGEMENT campaign, or cost per review, even without naming the ad product. Not for the free per-order \"Request a Review\" button or Solicitations API, Amazon Vine, buyer messages, or regular Sponsored Products campaigns."
+}

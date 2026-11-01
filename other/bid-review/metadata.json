@@ -1,0 +1,37 @@
+{
+  "name": "bid-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/bid-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "bid-review",
+  "downloaded_at": "2026-11-01T10:23:20.092265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/bid-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/bid-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used during the bid phase when the user shares contractor bids, sub-bids, or proposal packages and wants them reviewed for completeness, scope alignment, qualifications, exclusions, alternates, and contract terms before owner award. Trigger on 'review these bids', 'bid review', 'check this proposal', 'compare bids', 'are these bids complete', 'bid leveling', 'bid analysis', 'qualifications and exclusions', or pasted bid content with award-decision intent. Generates a structured bid-review markdown in `docs/bids/` and appends to the project bid index."
+}

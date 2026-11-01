@@ -1,0 +1,36 @@
+{
+  "name": "session-cleanup",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/session-cleanup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "session-cleanup-fudesign2008-open-skills",
+  "downloaded_at": "2026-11-01T10:40:38.567110Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "integration",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/session-cleanup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/session-cleanup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End a finished conversation by inventorying temp files, background services, and browser pages this session opened, keeping unique uncommitted work, stopping those services, closing unused pages, and deleting disposable temps. Use for \u300c\u6e05\u7406\u4e34\u65f6\u6587\u4ef6\u300d\u300c\u5173\u95ed\u540e\u53f0\u670d\u52a1\u300d\u300c\u5173\u95ed\u7f51\u9875\u300d\u300c\u6e05\u7406\u4e0d\u7528\u7684\u7f51\u9875\u300d\u300c\u4f1a\u8bdd\u6536\u5c3e\u300d\u300c\u7ed3\u675f\u524d\u6e05\u7406\u300d\u300c\u4f1a\u8bdd\u6e05\u7406\u300d / session cleanup, clean temp files, stop background services, close unused pages, including when the agent is about to finish and those resources are still around. Do NOT use for merge (merge-discipline), the branch closeout menu or worktree removal (feature-branch-closeout), or a retrospective (learn-and-improve)."
+}

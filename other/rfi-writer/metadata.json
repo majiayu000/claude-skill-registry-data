@@ -1,0 +1,37 @@
+{
+  "name": "rfi-writer",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/rfi-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "rfi-writer",
+  "downloaded_at": "2026-11-01T10:23:20.505506Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/rfi-writer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/rfi-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user provides an informal construction-site question \u2014 drawing/spec discrepancies, dimension conflicts, missing details \u2014 and needs a formal Request for Information (RFI) document filed in the project. Trigger on phrases like \"make an RFI\", \"draft an RFI\", \"send this as an RFI\", or pasted site questions implying transmittal to design consultants. Generates a numbered RFI markdown file in `docs/rfis/` and updates the project's RFI log."
+}

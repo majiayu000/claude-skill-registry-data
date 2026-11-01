@@ -1,0 +1,37 @@
+{
+  "name": "pyfixest",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/pyfixest/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "pyfixest",
+  "downloaded_at": "2026-11-01T10:21:09.663575Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/pyfixest/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/pyfixest/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fast high-dimensional fixed effects: OLS, Poisson, IV with multi-way FE; DiD (TWFE, did2s, Sun-Abraham); clustered SEs; etable/coefplot/iplot. Use for FE regressions or DiD. For panel RE/between use linearmodels; for GLM without FE use statsmodels. R equivalent: fixest (use when execution language is R)."
+}

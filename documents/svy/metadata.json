@@ -1,0 +1,37 @@
+{
+  "name": "svy",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/svy/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "svy",
+  "downloaded_at": "2026-11-01T10:21:06.806063Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, documentation",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/svy/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/svy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Complex survey analysis: strata/PSU/weights, variance estimation (Taylor, BRR, jackknife, bootstrap), survey GLM, domain analysis, calibration, survey data I/O (SAS, SPSS, Stata formats). Polars-native. Use for any complex-sample survey: NHANES, CPS, ACS PUMS, BRFSS, DHS, ECLS-K, MEPS-HC. CRITICAL: statsmodels WLS and pyfixest clustered SEs are NOT substitutes for proper survey-weighted analysis \u2014 they ignore stratification and unequal probability sampling. Non-survey regression: statsmodels/pyfixest. R equivalent: survey-r (use when execution language is R)."
+}

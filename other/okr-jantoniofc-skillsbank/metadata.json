@@ -1,0 +1,36 @@
+{
+  "name": "okr",
+  "repo": "JantonioFC/skillsbank",
+  "path": "skills/okr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JantonioFC/skillsbank",
+  "dir_name": "okr-jantoniofc-skillsbank",
+  "downloaded_at": "2026-11-01T11:00:01.288528Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JantonioFC",
+  "source_url": "https://github.com/JantonioFC/skillsbank/blob/main/skills/okr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JantonioFC/skillsbank/blob/main/skills/okr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate OKR cascades from company strategy to team objectives. Usage: /okr generate <strategy>"
+}

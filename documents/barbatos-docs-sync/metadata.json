@@ -1,0 +1,38 @@
+{
+  "name": "barbatos-docs-sync",
+  "repo": "Barbatos-Labs/Barbatos.Wpf",
+  "path": ".claude/skills/barbatos-docs-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Barbatos-Labs/Barbatos.Wpf",
+  "dir_name": "barbatos-docs-sync",
+  "downloaded_at": "2026-11-01T10:06:33.279988Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Barbatos-Labs",
+  "source_url": "https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-docs-sync/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-docs-sync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keeps Barbatos.Wpf docs in step with the code after a public API change: each package's README.md (concept-first, the nuget.org landing page) versus API-REFERENCE.md (member-by-member, GitHub only), Documentation Menu anchors, the root README.md and API-REFERENCE.md, templates/README.md, [Obsolete] renames, house voice, and the sample. Use after adding, renaming or removing public API, when asked to document a feature, on \"what else before this ships\" or \"did I forget anything\", or when a menu link goes nowhere or a README logo or link is blank on nuget.org. For the code change itself use barbatos-package-authoring. Vietnamese prompts too - c\u1eadp nh\u1eadt t\u00e0i li\u1ec7u, vi\u1ebft docs cho t\u00ednh n\u0103ng m\u1edbi, c\u00f2n thi\u1ebfu g\u00ec tr\u01b0\u1edbc khi ship, m\u1ee5c l\u1ee5c README b\u1ecb l\u1ec7ch, link anchor b\u1ecb h\u1ecfng, qu\u00ean c\u1eadp nh\u1eadt API reference."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "punch-list",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/punch-list/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "punch-list",
+  "downloaded_at": "2026-11-01T10:23:19.603565Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/punch-list/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/punch-list/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maintains a project punch list in docs/construction/punch-list.md. Trigger on \"punch list\", \"punch item\", \"snag list\", \"deficiency list\", \"defect list\", \"punch walk\", \"punch-list\", or a pasted site visit report whose observations should become tracked items. Each item carries a location, a description, the responsible trade, the date raised, its source, and a status that separates completed from verified, because a contractor marking work done is not the same as the architect seeing it done. The skill never invents an item, a responsible party, or a completion; what it was not told stays open. Feeds on create-site-visit-report output. It does not decide substantial completion and does not certify anything; those are contract acts."
+}

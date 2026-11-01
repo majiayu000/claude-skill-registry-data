@@ -1,0 +1,37 @@
+{
+  "name": "fix-pipelines",
+  "repo": "Gram-ax/gramax",
+  "path": ".claude/skills/fix-pipelines/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Gram-ax/gramax",
+  "dir_name": "fix-pipelines",
+  "downloaded_at": "2026-11-01T10:46:26.812240Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Gram-ax",
+  "source_url": "https://github.com/Gram-ax/gramax/blob/master/.claude/skills/fix-pipelines/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Gram-ax/gramax/blob/master/.claude/skills/fix-pipelines/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when CI jobs are red on a Gramax branch and need diagnosing/fixing \u2014 failed pipeline, broken build/tests, flaky jobs, a job that has been red for a while, \"\u043f\u043e\u0447\u0438\u043d\u0438 \u043f\u0430\u0439\u043f\u043b\u0430\u0439\u043d\", \"\u043f\u043e\u0447\u0438\u043d\u0438 \u0432\u0441\u0435 \u043f\u0430\u0439\u043f\u043b\u0430\u0439\u043d\u044b\", \"\u0441\u043b\u043e\u043c\u0430\u043d\u043d\u044b\u0435 \u0434\u0436\u043e\u0431\u044b\", \"failed CI jobs\", \"pipeline red\", \"fix the pipeline\"."
+}

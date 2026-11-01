@@ -1,0 +1,184 @@
+---
+name: laravel-vite
+description: Complete Vite bundling for Laravel - assets, HMR, SSR, frameworks, optimization. Use when configuring frontend build pipeline.
+versions:
+  laravel: "13.0"
+  vite: "8.x"
+  php: "8.3"
+user-invocable: true
+references: references/setup.md, references/entry-points.md, references/preprocessors.md, references/assets.md, references/environment.md, references/dev-server.md, references/build-optimization.md, references/ssr.md, references/inertia.md, references/frameworks.md, references/security.md, references/deployment.md, references/templates/ViteConfig.js.md, references/templates/ViteConfigAdvanced.js.md, references/templates/InertiaSetup.md, references/templates/SSRSetup.md
+related-skills: laravel-blade, laravel-livewire, fusecore
+---
+
+<objective>
+Covers Vite as Laravel's frontend build tool: initial setup and the
+laravel-vite-plugin, multiple entry points, CSS preprocessors
+(Sass/Less/PostCSS), asset handling, VITE_-prefixed environment variables,
+the dev server and HMR (including Docker configuration), build optimization
+(chunking, minification), server-side rendering, Inertia integration, JS
+framework plugins (Vue/React/Svelte), CSP nonce security, and production
+deployment.
+</objective>
+
+# Laravel Vite
+
+## Agent Workflow (MANDATORY)
+
+Before ANY implementation, spawn 3 agents in parallel, one `Agent` call each with a `name`:
+
+1. **fuse-ai-pilot:explore-codebase** - Check existing vite.config.js, package.json
+2. **fuse-ai-pilot:research-expert** - Verify latest Vite docs via Context7
+3. **mcp__context7__query-docs** - Query specific patterns (SSR, Inertia)
+
+After implementation, run **fuse-ai-pilot:sniper** for validation.
+
+---
+
+## Overview
+
+Vite is Laravel's default frontend build tool. It provides fast HMR in development and optimized builds for production.
+
+| Feature | Purpose |
+|---------|---------|
+| **HMR** | Instant updates during development |
+| **Bundling** | Optimized production assets |
+| **SSR** | Server-side rendering support |
+| **Frameworks** | Vue, React, Svelte integration |
+
+---
+
+## Critical Rules
+
+1. **Always use laravel-vite-plugin** - Never raw Vite config
+2. **VITE_ prefix for env vars** - Only exposed to frontend
+3. **Use @vite directive** - Not manual script tags
+4. **Build before deploy** - `npm run build` in CI/CD
+5. **Configure HMR for Docker** - Set `server.host: '0.0.0.0'`
+
+---
+
+## Decision Guide
+
+### Stack Selection
+
+```
+Using Tailwind CSS?
+├── YES → v4? @tailwindcss/vite plugin
+│         v3? PostCSS config
+└── NO → Just laravel-vite-plugin
+
+Using JavaScript framework?
+├── Vue → @vitejs/plugin-vue
+├── React → @vitejs/plugin-react
+├── Svelte → @sveltejs/vite-plugin-svelte
+└── None → Plain JS/CSS only
+```
+
+### SSR Decision
+
+```
+Need SEO/fast first paint?
+├── YES → Using Inertia?
+│   ├── YES → Inertia SSR
+│   └── NO → Consider Inertia or Livewire
+└── NO → Client-side only
+```
+
+---
+
+## Reference Guide
+
+### Concepts (WHY & Architecture)
+
+| Topic | Reference | When to Consult |
+|-------|-----------|-----------------|
+| **Setup** | [setup.md](references/setup.md) | Initial configuration |
+| **Entry Points** | [entry-points.md](references/entry-points.md) | Multiple bundles |
+| **Preprocessors** | [preprocessors.md](references/preprocessors.md) | Sass, Less, PostCSS |
+| **Assets** | [assets.md](references/assets.md) | Images, fonts, static |
+| **Environment** | [environment.md](references/environment.md) | VITE_ variables |
+| **Dev Server** | [dev-server.md](references/dev-server.md) | HMR, Docker, HTTPS |
+| **Build** | [build-optimization.md](references/build-optimization.md) | Chunks, minification |
+| **SSR** | [ssr.md](references/ssr.md) | Server-side rendering |
+| **Inertia** | [inertia.md](references/inertia.md) | SPA without API |
+| **Frameworks** | [frameworks.md](references/frameworks.md) | Vue, React, Svelte |
+| **Security** | [security.md](references/security.md) | CSP nonce |
+| **Deployment** | [deployment.md](references/deployment.md) | Production, CDN |
+
+### Templates (Complete Code)
+
+| Template | When to Use |
+|----------|-------------|
+| [ViteConfig.js.md](references/templates/ViteConfig.js.md) | Standard setup |
+| [ViteConfigAdvanced.js.md](references/templates/ViteConfigAdvanced.js.md) | Full optimization |
+| [InertiaSetup.md](references/templates/InertiaSetup.md) | Inertia + Vue/React |
+| [SSRSetup.md](references/templates/SSRSetup.md) | SSR configuration |
+
+---
+
+## Quick Reference
+
+### Basic Setup
+
+```javascript
+// vite.config.js
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+
+export default defineConfig({
+    plugins: [
+        laravel({
+            input: ['resources/css/app.css', 'resources/js/app.js'],
+            refresh: true,
+        }),
+    ],
+});
+```
+
+### Blade Directive
+
+```blade
+<!DOCTYPE html>
+<head>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+```
+
+### Commands
+
+| Command | Purpose |
+|---------|---------|
+| `npm run dev` | Start dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview build |
+
+---
+
+## Best Practices
+
+### DO
+- Use `refresh: true` for Blade HMR
+- Configure aliases for clean imports
+- Split vendors into separate chunks
+- Use `VITE_` prefix for frontend env vars
+- Test Docker/Sail config locally
+
+### DON'T
+- Expose sensitive data via VITE_ vars
+- Forget to build before deploying
+- Use absolute paths for assets
+- Skip source maps in staging
+- Ignore chunk size warnings
+
+---
+
+## Laravel 13 Notes
+
+The Laravel 13 skeleton ships **`laravel-vite-plugin` ^3.1** (current 3.2, peer `vite` ^8) + **Vite 8** + `@tailwindcss/vite` ^4. Adjustments:
+
+- The `@vite()` Blade helper works unchanged
+- For Inertia 3 + React 19: use `@vitejs/plugin-react` (current 6.x)
+- Self-hosted fonts (13.7+): the plugin's `fonts` option (`import { google, bunny, fontsource, local } from 'laravel-vite-plugin/fonts'`) + the `@fonts` Blade directive
+- `Vite::devServerUrl()` (13.31+) to get the dev server URL
+- HMR over WebSocket: Reverb and Vite can coexist on separate ports in dev
+- `build.target` is a browser (JS) target, independent of the server's PHP version

@@ -1,0 +1,37 @@
+{
+  "name": "runtime-verification-discipline",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/runtime-verification-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "runtime-verification-discipline",
+  "downloaded_at": "2026-11-01T10:40:48.424589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/runtime-verification-discipline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/runtime-verification-discipline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hard discipline for runtime verification in PDCA workflows: the AI executes verification itself in an environment \u2014 real preferred over simulated, subject to determinism + safety \u2014 never defaulting to a human checklist. Attempt-first, resolve a pluggable provider (project script/skill \u2192 shared capability skill), and hand to a human only at a true hard boundary with a stated reason. Use at any workflow verify/check stage (bug fix or feature) to decide WHERE verification runs, WHO runs it, WHETHER it suffices. Referenced by PDCA hosts via frontmatter dependencies. Triggers \u2014 \u300c\u73af\u5883\u9a8c\u8bc1\u300d\u300c\u771f\u5b9e\u73af\u5883\u9a8c\u8bc1\u300d\u300c\u771f\u673a\u9a8c\u8bc1\u300d\u300c\u771f\u673a\u6d4b\u8bd5\u300d\u300c\u6a21\u62df\u73af\u5883\u9a8c\u8bc1\u300d\u300cAI \u9a8c\u8bc1\u300d\u300c\u9a8c\u8bc1\u5206\u5c42\u300d\u300c\u9a8c\u8bc1\u5145\u5206\u6027\u300d / runtime verification, environment verification, real vs simulated. When a check opens a UI, cite a saved non-empty screenshot; non-UI checks do not. Do NOT alias completion-evidence-discipline (evidence freshness) or runtime-evidence-debug (debug instrumentation)."
+}

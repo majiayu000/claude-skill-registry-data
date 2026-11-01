@@ -1,0 +1,38 @@
+{
+  "name": "cotal-mesh",
+  "repo": "Cotal-AI/Cotal",
+  "path": "skills/cotal-mesh/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Cotal-AI/Cotal",
+  "dir_name": "cotal-mesh",
+  "downloaded_at": "2026-11-01T10:19:59.629204Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Cotal-AI",
+  "source_url": "https://github.com/Cotal-AI/Cotal/blob/main/skills/cotal-mesh/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Cotal-AI/Cotal/blob/main/skills/cotal-mesh/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Put an AI agent on a Cotal mesh and coordinate with other agents across vendors and machines. Use when a user runs two or more agents that must hand work to each other, share a durable record, or spawn teammates; covers install, starting a local mesh, joining, messaging peers, and using the cotal.ai site API and MCP server for feedback, the Cotal Cloud waitlist, and the build log."
+}

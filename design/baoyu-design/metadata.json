@@ -1,0 +1,40 @@
+{
+  "name": "baoyu-design",
+  "repo": "JimLiu/baoyu-design",
+  "path": "archive/baoyu-design/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/JimLiu/baoyu-design",
+  "dir_name": "baoyu-design",
+  "downloaded_at": "2026-11-01T11:03:06.577531Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend, component, animation",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "frontend",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JimLiu",
+  "source_url": "https://github.com/JimLiu/baoyu-design/blob/main/archive/baoyu-design/SKILL.md",
+  "license": "Mixed. The Claude Design system prompt, built-in skills and starter components are Anthropic's and not MIT-licensed (frontend-design.md is Apache 2.0, see built-in-skills/LICENSE-frontend-design.txt); the maintainer's tools are MIT. Complete terms in NOTICE.md: https://github.com/JimLiu/baoyu-design/blob/main/NOTICE.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JimLiu/baoyu-design/blob/main/archive/baoyu-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create or edit visual design artifacts as self-contained HTML: UI mockups, interactive prototypes, wireframes, landing pages, dashboards, app screens, slide decks, print documents, r\u00e9sum\u00e9s, animations, 3D objects, diagrams, fliers, HTML email, and visual research reports. Also author reusable design systems, UI kits, brand tokens, and component libraries, or export slide-structured decks made with this skill to PPTX. Use only when the task actually creates or edits a visual deliverable, even if the user does not say \"design\". Architecture or protocol analysis, rendering-engine or Rust/WASM/backend implementation, and technical Markdown do not trigger it by themselves. In a larger task, load it when visual creation or editing begins."
+}

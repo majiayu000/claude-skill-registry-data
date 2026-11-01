@@ -1,0 +1,37 @@
+{
+  "name": "snippe-integration",
+  "repo": "Elogic360/software-factory",
+  "path": "skills/snippe-integration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Elogic360/software-factory",
+  "dir_name": "snippe-integration",
+  "downloaded_at": "2026-11-01T10:32:40.552056Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Elogic360",
+  "source_url": "https://github.com/Elogic360/software-factory/blob/main/skills/snippe-integration/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Elogic360/software-factory/blob/main/skills/snippe-integration/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build integrations with Snippe (api.snippe.sh), a Tanzania payment processing API. Use this skill whenever the user mentions Snippe, is working on payment integrations for Tanzania (mobile money via M-Pesa, Airtel Money, Mixx by Yas, Halotel; credit/debit cards via Visa/Mastercard; dynamic QR codes), needs to accept TZS payments, sends payouts to Tanzanian mobile wallets or banks (CRDB, NMB, NBC, ABSA, Equity, KCB, Stanbic, etc.), verifies Snippe webhooks, or handles Snippe errors and idempotency. Covers the v2026-01-25 API \u2014 authentication, payments, hosted checkout sessions, disbursements, webhooks, and error handling."
+}

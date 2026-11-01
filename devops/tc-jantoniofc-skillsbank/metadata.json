@@ -1,0 +1,38 @@
+{
+  "name": "tc",
+  "repo": "JantonioFC/skillsbank",
+  "path": "skills/tc/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/JantonioFC/skillsbank",
+  "dir_name": "tc-jantoniofc-skillsbank",
+  "downloaded_at": "2026-11-01T11:00:01.062802Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra, infrastructure",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JantonioFC",
+  "source_url": "https://github.com/JantonioFC/skillsbank/blob/main/skills/tc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JantonioFC/skillsbank/blob/main/skills/tc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Track technical changes with structured records, a state machine, and session handoff. Usage: /tc <init|create|update|status|resume|close|export|dashboard> [args]"
+}

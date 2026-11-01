@@ -1,0 +1,38 @@
+{
+  "name": "cs-pr-review",
+  "repo": "AndreyBegma/code-sentinel-skills",
+  "path": "skills/pr-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/AndreyBegma/code-sentinel-skills",
+  "dir_name": "pr-review-andreybegma-code-sentinel-skills",
+  "downloaded_at": "2026-11-01T09:58:08.068414Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, owasp",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreyBegma",
+  "source_url": "https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/pr-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/pr-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a PR (or current branch if no PR number given) and post comments on GitHub"
+}

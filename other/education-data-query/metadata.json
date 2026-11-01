@@ -1,0 +1,37 @@
+{
+  "name": "education-data-query",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/education-data-query/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "education-data-query",
+  "downloaded_at": "2026-11-01T10:21:13.281656Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/education-data-query/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/education-data-query/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Downloads education datasets from configured mirror sources (parquet/CSV) with local Polars filtering, including versioned mirror vintages (revision-pinned for reproducibility). Use when writing fetch scripts, retrieving CCD, IPEDS, CRDC, SAIPE data, or pinning a fetch to a specific mirror vintage. Load after education-data-explorer \u2014 retrieval here, not discovery."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "evm-wallet-docker-e2e",
+  "repo": "Consensys-Incorporated/ocap-kernel",
+  "path": ".claude/skills/evm-wallet-docker-e2e/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/Consensys-Incorporated/ocap-kernel",
+  "dir_name": "evm-wallet-docker-e2e",
+  "downloaded_at": "2026-11-01T10:19:14.872113Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Consensys-Incorporated",
+  "source_url": "https://github.com/Consensys-Incorporated/ocap-kernel/blob/main/.claude/skills/evm-wallet-docker-e2e/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Consensys-Incorporated/ocap-kernel/blob/main/.claude/skills/evm-wallet-docker-e2e/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the evm-wallet Docker e2e tests (build, start stack, wait for healthy, test, diagnose failures)."
+}

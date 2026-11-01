@@ -1,0 +1,37 @@
+{
+  "name": "skill-authoring",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/skill-authoring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "skill-authoring-daaf-contribution-co-daaf",
+  "downloaded_at": "2026-11-01T10:21:12.588316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/skill-authoring/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/skill-authoring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guide for creating and auditing DAAF skills (SKILL.md). Covers frontmatter, metadata vocabulary, progressive disclosure, decision trees, reference files. Use when creating, reviewing, or debugging skill loading. For agent files, use agent-authoring."
+}

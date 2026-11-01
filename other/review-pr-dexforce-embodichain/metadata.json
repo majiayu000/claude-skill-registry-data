@@ -1,0 +1,38 @@
+{
+  "name": "review-pr",
+  "repo": "DexForce/EmbodiChain",
+  "path": ".agents/skills/review-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DexForce/EmbodiChain",
+  "dir_name": "review-pr-dexforce-embodichain",
+  "downloaded_at": "2026-11-01T10:25:44.552629Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DexForce",
+  "source_url": "https://github.com/DexForce/EmbodiChain/blob/main/.agents/skills/review-pr/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DexForce/EmbodiChain/blob/main/.agents/skills/review-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review EmbodiChain pull requests, branches, commits, patches, or working-tree diffs for correctness regressions, architecture-contract violations, compatibility risks, unsafe resource behavior, and test coverage or necessity issues. Use when asked to review, audit, inspect, assess, or approve an EmbodiChain change; coordinate independent expert reviewers when subagents are available, and produce prioritized, evidence-backed findings without modifying the change unless the user explicitly asks for fixes."
+}

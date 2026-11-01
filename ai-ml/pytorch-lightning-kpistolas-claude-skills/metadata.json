@@ -1,0 +1,40 @@
+{
+  "name": "pytorch-lightning",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/07-ai-ml-ereuna/pytorch-lightning/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "pytorch-lightning-kpistolas-claude-skills",
+  "downloaded_at": "2026-11-01T11:07:38.751466Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model, training",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/pytorch-lightning/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/pytorch-lightning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. Use when you want clean training loops with built-in best practices."
+}

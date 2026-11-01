@@ -1,0 +1,37 @@
+{
+  "name": "graphrag-hybrid",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-data-ops/skills/graphrag-hybrid/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "graphrag-hybrid",
+  "downloaded_at": "2026-11-01T10:43:46.956174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-data-ops/skills/graphrag-hybrid/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-data-ops/skills/graphrag-hybrid/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "R\u00e9pond \u00e0 une question par recherche hybride locale : similarit\u00e9 vectorielle dans Qdrant, puis expansion du voisinage dans Neo4j, puis synth\u00e8se par un mod\u00e8le Ollama \u2014 pipeline neo4j-graphrag-python (Apache-2.0), z\u00e9ro API payante. \u00c0 utiliser quand l'utilisateur veut \u00ab chercher dans ma base de connaissances \u00bb, \u00ab des projets/notes qui ressemblent \u00e0 \u2026 \u00bb, \u00ab pourquoi ces deux fiches sont li\u00e9es \u00bb, \u00ab RAG sur mon graphe \u00bb, \u00ab indexer mon vault Markdown \u00e0 frontmatter dans Qdrant et Neo4j \u00bb, \u00ab r\u00e9ponse sourc\u00e9e \u00e0 partir du graphe \u00bb, ou pour comparer retriever vectoriel, Cypher et hybride. Fournit scripts/hybrid_query.py (--dry-run sans services). Ne pas utiliser pour une requ\u00eate Cypher pure ou une \u00e9criture dans le graphe \u2192 neo4j-graph-ops, ni pour une recherche web ou un scraping \u2192 scrape-adaptive."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "compliance-check",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/compliance-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "compliance-check-davidcho1999-archaiflow-skills",
+  "downloaded_at": "2026-11-01T10:23:35.034312Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/compliance-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/compliance-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Takes a drawing and the code text that governs it and works through them together, one requirement at a time: what the text demands, what the drawing shows, and whether the drawing shows enough to tell. The third answer is the common one and it is the useful one, because a drawing that does not say is not a drawing that complies. Trigger on \"does this drawing meet this code\", \"check this against the code text\", \"we pasted the section, now check the plan\", \"compliance-check\", or a drawing and a quoted requirement handed over together. Carries no code text and recalls no limit: everything comes from what you paste. `code-compliance-review` audits a plan across eight fixed axes without being given text; this checks whatever text you bring against whatever drawing you bring. It does not interpret the clause, does not certify anything, and does not replace the code consultant or the Architect of Record."
+}

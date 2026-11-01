@@ -1,0 +1,37 @@
+{
+  "name": "code-reader",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/code-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "code-reader",
+  "downloaded_at": "2026-11-01T10:23:21.992234Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/code-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/code-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Takes a code section, a standard, or an ordinance you paste and pulls it apart into the separate requirements inside it: what each one applies to, what it demands, what triggers it, what exempts it, and which other section it hands off to. A single paragraph routinely contains four requirements and two exceptions, and reading it as one sentence is how half of it gets missed. Trigger on \"read this code section\", \"what does this clause actually require\", \"pull the requirements out of this\", \"code-reader\", or a pasted section that has to be worked through. Carries no code text and recalls no section: everything comes from what you paste or from the jurisdiction's own published source. `explain-code` puts one clause in plain English; this takes the clause apart into a table you can check a design against. It does not check the design \u2014 `compliance-check` does \u2014 and does not replace the code consultant or the Architect of Record."
+}

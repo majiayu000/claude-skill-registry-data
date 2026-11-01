@@ -1,0 +1,37 @@
+{
+  "name": "fee-estimator",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/fee-estimator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "fee-estimator",
+  "downloaded_at": "2026-11-01T10:23:26.408146Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/fee-estimator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/fee-estimator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Estimates a design fee four ways in parallel, as a percentage of construction cost, by area, as hourly against a cap, and as a lump sum, then splits the result by phase and by consultant and adds a reimbursables budget. Trigger on \"fee estimate\", \"what should I charge\", \"design fee\", \"percent of construction cost\", \"lump sum or hourly\", \"consultant fee split\", or a pasted program with a fee question. Works in any market. Every rate, percentage, phase split, consultant share, and any procurement cap comes from the user's own past projects, their contract, or the rule they name; the skill supplies the four methods and the comparison and never a benchmark figure from memory, since the published fee surveys are paywalled and cannot be quoted."
+}

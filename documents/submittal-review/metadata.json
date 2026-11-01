@@ -1,0 +1,38 @@
+{
+  "name": "submittal-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/submittal-review/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "submittal-review",
+  "downloaded_at": "2026-11-01T10:23:35.565869Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/submittal-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/submittal-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used during construction administration when the user shares a contractor submittal \u2014 shop drawings, product data, samples, or mockup documentation \u2014 and wants it reviewed for conformance with the contract documents. Trigger on 'review this submittal', 'shop drawing review', 'check this product data', 'submittal log', 'is this approved', 'spec compliance check', 'AIA G712', or pasted submittal content paired with CA-phase context. Generates a structured submittal-review markdown in `docs/submittals/` and appends to the project submittal log."
+}

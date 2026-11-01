@@ -1,0 +1,37 @@
+{
+  "name": "scrape-adaptive",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-data-ops/skills/scrape-adaptive/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "scrape-adaptive",
+  "downloaded_at": "2026-11-01T10:43:47.152738Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-data-ops/skills/scrape-adaptive/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-data-ops/skills/scrape-adaptive/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Collecte des pages web de fa\u00e7on robuste et respectueuse avec Scrapling (BSD-3 : parseur adaptatif qui retrouve un \u00e9l\u00e9ment apr\u00e8s refonte du site, spiders pause/reprise, robots.txt, serveur MCP natif) et Playwright en repli pour les pages rendues en JavaScript. \u00c0 utiliser quand l'utilisateur veut \u00ab scraper \u00bb, \u00ab r\u00e9cup\u00e9rer les nouveaut\u00e9s d'un site \u00bb, \u00ab extraire une liste de titres/dates/prix \u00bb, \u00ab mon s\u00e9lecteur ne marche plus depuis la refonte \u00bb, \u00ab crawler un catalogue avec reprise \u00bb, \u00ab brancher le MCP Scrapling \u00bb, ou pr\u00e9parer un collecteur pour un site exigeant (encodage, rythme, conditions d'usage). Applique robots.txt lu avec le User-Agent d\u00e9clar\u00e9, throttle, provenance de chaque donn\u00e9e, inventaire des donn\u00e9es locales avant tout nouveau collecteur. Fournit scripts/fetch_adaptive.py (--dry-run). Ne pas utiliser pour surveiller un changement de page dans le temps \u2192 watch-changes, ni pour consommer une API ou un flux RSS d\u00e9j\u00e0 existant (appel direct)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "wind-snow-lookup",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/wind-snow-lookup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "wind-snow-lookup",
+  "downloaded_at": "2026-11-01T10:23:34.509803Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/wind-snow-lookup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/wind-snow-lookup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assembles the site environmental criteria block a project needs before any structural or envelope design starts: wind, snow, seismic, ice, rain, and flood parameters, each recorded with the source it came from. Trigger on \"wind speed for this site\", \"ground snow load\", \"site hazard parameters\", \"design criteria block\", \"seismic parameters\", \"rainfall intensity\", \"wind-snow-lookup\", or a pasted site location with a request for design values. Works in any jurisdiction. The skill knows which parameters a design needs and what each one feeds; the values come from the user's own code maps, official hazard tool, or authority, supplied by typing, pasting, or naming a file. It never supplies a hazard value from memory or from web search, and reports every parameter it could not source as a gap. Returns mapped parameters only, never design pressures or loads."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pr",
+  "repo": "Chemaclass/bashdep",
+  "path": ".claude/skills/pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Chemaclass/bashdep",
+  "dir_name": "pr-chemaclass-bashdep",
+  "downloaded_at": "2026-11-01T10:15:06.451307Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Chemaclass",
+  "source_url": "https://github.com/Chemaclass/bashdep/blob/main/.claude/skills/pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Chemaclass/bashdep/blob/main/.claude/skills/pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Push branch and create a GitHub PR following the bashdep PR template"
+}

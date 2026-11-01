@@ -1,0 +1,40 @@
+{
+  "name": "end-to-end-snowflake-pipeline",
+  "repo": "AltimateAI/data-engineering-skills",
+  "path": "skills/snowflake/end-to-end-snowflake-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AltimateAI/data-engineering-skills",
+  "dir_name": "end-to-end-snowflake-pipeline",
+  "downloaded_at": "2026-11-01T09:56:49.426414Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, refactor",
+    "score": 5,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AltimateAI",
+  "source_url": "https://github.com/AltimateAI/data-engineering-skills/blob/main/skills/snowflake/end-to-end-snowflake-pipeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AltimateAI/data-engineering-skills/blob/main/skills/snowflake/end-to-end-snowflake-pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build an end-to-end Snowflake pipeline \u2014 ticket \u2192 dbt models + orchestration DAG \u2192 PR \u2192 self-review \u2192 ticket comment. Use when:\n(1) User says \"build a pipeline for X **end-to-end**\", \"create an end-to-end flow\", \"set up the <X> pipeline per JIRA-123\"\n(2) Scope spans dbt models AND orchestration AND a PR \u2014 not just one of them\n(3) Target warehouse is Snowflake and the dbt project already exists\n(4) An orchestrator (Airflow / Prefect / Dagster) is already in the repo, OR the user is OK operating without one\n**Prefer `dbt-model-enhancement`** for a scoped change to one existing model (no new DAG, no new source).\n**Prefer `creating-dbt-models`** for a new model with no orchestration/PR expectation.\n**Prefer `snowflake-dbt-model-refactoring`** for restructuring an existing model.\nTarget wall time: \u22647 min."
+}

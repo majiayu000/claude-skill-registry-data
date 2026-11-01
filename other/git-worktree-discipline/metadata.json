@@ -1,0 +1,37 @@
+{
+  "name": "git-worktree-discipline",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/git-worktree-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "git-worktree-discipline",
+  "downloaded_at": "2026-11-01T10:40:45.376504Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/git-worktree-discipline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/git-worktree-discipline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pre-write (docs or code) git/native worktree isolation with worktree-gate (always|never|ask; unset\u2261ask): detect reuse (incl. submodule guard), recommend suitability, create (native then ignored .worktrees/), setup+baseline, or decline/lean with \u7559\u75d5; cleanup via feature-branch-closeout. Triggers \u2014 \u300cgit worktree\u300d\u300c\u5de5\u4f5c\u533a\u9694\u79bb\u300d\u300c\u9694\u79bb\u5de5\u4f5c\u533a\u300d\u300c\u6267\u884c\u524d\u9694\u79bb\u300d\u300cworktree \u95e8\u63a7\u300d / git worktree discipline. Do NOT use as Superpowers using-git-worktrees alias or for closeout destroy."
+}

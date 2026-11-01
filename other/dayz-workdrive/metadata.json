@@ -1,0 +1,36 @@
+{
+  "name": "dayz-workdrive",
+  "repo": "DayZ-n-Chill/Agentic-Z",
+  "path": "skills/dayz-workdrive/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DayZ-n-Chill/Agentic-Z",
+  "dir_name": "dayz-workdrive",
+  "downloaded_at": "2026-11-01T10:23:55.737153Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DayZ-n-Chill",
+  "source_url": "https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-workdrive/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-workdrive/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Mounts or unmounts P:\\ as the DayZ work drive without opening the DayZ Tools GUI. Windows-only and idempotent. Use when P:\\ is not mounted (usually after a reboot) before any other DayZ skill, or when the user asks to mount or unmount the work drive."
+}

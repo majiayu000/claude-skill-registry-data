@@ -1,0 +1,37 @@
+{
+  "name": "review-passes",
+  "repo": "ByteTerrace/Puck",
+  "path": ".claude/skills/review-passes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ByteTerrace/Puck",
+  "dir_name": "review-passes",
+  "downloaded_at": "2026-11-01T10:11:59.648745Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ByteTerrace",
+  "source_url": "https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/review-passes/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/review-passes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs a review-and-fix pass on a Puck lane. Use for review briefs and scope ranges, Codex task flags (--write, --cwd, --help), job status, findings, blockers, second rounds, follow-up fix branches."
+}

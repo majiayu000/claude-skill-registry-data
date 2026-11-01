@@ -1,0 +1,37 @@
+{
+  "name": "file-organizer",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/file-organizer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "file-organizer-davidcho1999-archaiflow-skills",
+  "downloaded_at": "2026-11-01T10:23:29.806684Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: creative=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "story",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/file-organizer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/file-organizer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sorts a disorganized folder into a target tree, by writing a move plan you read and approve before any file is touched. Trigger on \"organize this folder\", \"sort these files\", \"clean up this directory\", \"tidy this handoff folder\", \"file organizer\", or a pasted path plus an organizing verb. Matches on filename, extension, size, and modified date, never on file contents. Finds duplicates by hash and routes them for review rather than deleting anything. Every run writes a plan first, executes only against the approved plan, and appends an audit log that a rollback can read backwards. The taxonomy is yours: the skill will draft one from what it finds, but it does not invent target folders you did not agree to."
+}

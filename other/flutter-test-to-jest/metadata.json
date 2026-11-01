@@ -1,0 +1,37 @@
+{
+  "name": "flutter-test-to-jest",
+  "repo": "Ayush101K/vidaXl-react-native",
+  "path": ".claude/skills/flutter-test-to-jest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Ayush101K/vidaXl-react-native",
+  "dir_name": "flutter-test-to-jest",
+  "downloaded_at": "2026-11-01T10:05:37.352501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: language=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "translation",
+      "i18n"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ayush101K",
+  "source_url": "https://github.com/Ayush101K/vidaXl-react-native/blob/main/.claude/skills/flutter-test-to-jest/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ayush101K/vidaXl-react-native/blob/main/.claude/skills/flutter-test-to-jest/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Port flutter_test files (unit `test()` and widget `testWidgets()`) from the poc_vedaxl test/ folder to Jest + @testing-library/react-native v14 in the workspace that owns the code, with fixtures, fake repositories and fake services. Use it when porting or writing parity tests for a ported Dart file, when asked to \"port the tests for X\", \"convert <name>_test.dart\", or to check test parity; also when a ported RN test needs pumpVida-style setup, 360px/French variants, timers or fake HTTP. Remember RNTL v14 `render` is async."
+}

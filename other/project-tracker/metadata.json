@@ -1,0 +1,37 @@
+{
+  "name": "project-tracker",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/project-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "project-tracker",
+  "downloaded_at": "2026-11-01T10:23:33.081079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/project-tracker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/project-tracker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keeps one dated log of a project's issues, decisions, risks, and action items in docs/project/tracker.md. Trigger on \"project tracker\", \"decision log\", \"issue log\", \"risk register\", \"action items\", \"track this\", \"log this decision\", \"what did we decide\", \"who owns this\", \"project-tracker\", or when meeting notes produce action items worth keeping past the meeting. Every entry carries a date and a person; closed items move to a closed section rather than being deleted, so the log is also the project's history. The skill never invents a status, an owner, or a deadline. What it was not told, it records as unassigned and says so. Feeds on meeting-notes-cleaner output and is what generate-weekly-report reads. Not a construction schedule and not a CA log; RFIs and submittals have their own logs."
+}

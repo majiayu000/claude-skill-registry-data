@@ -1,0 +1,38 @@
+{
+  "name": "solid-ruby",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/solid/skills/solid-ruby/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "solid-ruby",
+  "downloaded_at": "2026-11-01T10:41:11.392693Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/solid/skills/solid-ruby/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/solid/skills/solid-ruby/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing or refactoring Ruby/Rails code, structuring app/modules/[feature]/ layers, or defining contracts/ modules (SOLID, files within FUSE_SOLID_MAX_LINES)."
+}

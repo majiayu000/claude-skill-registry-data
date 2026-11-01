@@ -1,0 +1,37 @@
+{
+  "name": "graphify",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "plugins/graphify/skills/graphify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "graphify-geekfamilycorp-tricorderkit",
+  "downloaded_at": "2026-11-01T10:43:42.643759Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/plugins/graphify/skills/graphify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/plugins/graphify/skills/graphify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Knowledge graph hybride Neo4j + Qdrant. Stocker et retrouver concepts, decisions et entites ; traversee de graphe et recherche semantique ; indexer la sortie de recherche ; seed depuis le vault Obsidian. Declencheurs : stocke dans le graphe, qu'est-ce qui est relie a X, retrouve les concepts lies, graphify_store, graphify_retrieve."
+}

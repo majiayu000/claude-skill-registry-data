@@ -1,0 +1,39 @@
+{
+  "name": "serving-llms-vllm",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/07-ai-ml-ereuna/serving-llms-vllm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "serving-llms-vllm",
+  "downloaded_at": "2026-11-01T11:07:38.430976Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/serving-llms-vllm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/serving-llms-vllm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Serves LLMs with high throughput using vLLM's PagedAttention and continuous batching. Use when deploying production LLM APIs, optimizing inference latency/throughput, or serving models with limited GPU memory. Supports OpenAI-compatible endpoints, quantization (GPTQ/AWQ/FP8), and tensor parallelism."
+}

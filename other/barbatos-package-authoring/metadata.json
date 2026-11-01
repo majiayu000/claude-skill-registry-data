@@ -1,0 +1,37 @@
+{
+  "name": "barbatos-package-authoring",
+  "repo": "Barbatos-Labs/Barbatos.Wpf",
+  "path": ".claude/skills/barbatos-package-authoring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Barbatos-Labs/Barbatos.Wpf",
+  "dir_name": "barbatos-package-authoring",
+  "downloaded_at": "2026-11-01T10:06:34.914822Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Barbatos-Labs",
+  "source_url": "https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-package-authoring/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-package-authoring/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Change the Barbatos.Wpf libraries in src/ and their build - public API design (ConfigureXxx on WpfAppBuilder, AddXxx/UseXxx, TryAdd*, Setup.Resolve, Validate(), [Obsolete] renames), csproj/TFMs, Directory.Packages.props, C# 14 on net8/9/10, XmlnsDefinition, strong naming and the NuGet release workflow. Use when adding or reviewing public API, deprecating a member, adding a dependency to a library or a new package, preparing a release or version bump (every file that pins it), or when restore fails with NU1605/NU1008, nuget.org still shows the old version, or a new aq: control is not found in XAML. For app-side use, load the feature skill. Vietnamese prompts too - th\u00eam API c\u00f4ng khai, s\u1eeda th\u01b0 vi\u1ec7n trong src, \u0111\u00e1nh d\u1ea5u l\u1ed7i th\u1eddi, th\u00eam g\u00f3i NuGet, ph\u00e1t h\u00e0nh phi\u00ean b\u1ea3n m\u1edbi, t\u0103ng version, k\u00fd strong name."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "add-atomic-action",
+  "repo": "DexForce/EmbodiChain",
+  "path": ".agents/skills/add-atomic-action/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DexForce/EmbodiChain",
+  "dir_name": "add-atomic-action",
+  "downloaded_at": "2026-11-01T10:25:47.686122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, compile",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DexForce",
+  "source_url": "https://github.com/DexForce/EmbodiChain/blob/main/.agents/skills/add-atomic-action/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DexForce/EmbodiChain/blob/main/.agents/skills/add-atomic-action/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add a new simulation atomic action or motion primitive to EmbodiChain's typed planning and execution framework. Use when implementing a new skill, goal contract, action planner, symbolic effect, registration entry, documentation, and tests for AtomicActionEngine."
+}

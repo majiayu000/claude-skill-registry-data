@@ -1,0 +1,37 @@
+{
+  "name": "dataviz",
+  "repo": "JimLiu/baoyu-design",
+  "path": "skills/dataviz/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JimLiu/baoyu-design",
+  "dir_name": "dataviz",
+  "downloaded_at": "2026-11-01T11:03:06.083822Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JimLiu",
+  "source_url": "https://github.com/JimLiu/baoyu-design/blob/main/skills/dataviz/SKILL.md",
+  "license": "Anthropic's dataviz skill: not MIT-licensed, rights stay with Anthropic. Complete terms in NOTICE.md: https://github.com/JimLiu/baoyu-design/blob/main/NOTICE.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JimLiu/baoyu-design/blob/main/skills/dataviz/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualization, in ANY output medium (HTML/React artifact, inline SVG, matplotlib/plotly/d3/Recharts, PNG). Read it BEFORE writing the first line of chart code, choosing chart colors, building a stat tile / KPI row, or laying out a dashboard. Teaches a design-system-agnostic method - form heuristic, color formula with a runnable validator, mark specs, interaction rules. Default palette in references/palette.md."
+}

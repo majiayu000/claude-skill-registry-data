@@ -1,0 +1,37 @@
+{
+  "name": "creative-verification",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/creative-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "creative-verification",
+  "downloaded_at": "2026-11-01T10:21:14.088307Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/creative-verification/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/creative-verification/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Researcher-facing analytic triangulation (\"creative verification\") for stress-testing provisional findings and designing pre-specified challenges before an analysis runs. Turns a researcher's concern or focal claim into competing explanations, bounded discriminating tests, audited diagnostic artifacts, and evidence-calibrated interpretations in a hypothesis/evidence ledger \u2014 behavioral, output-level verification replacing line-by-line code review. Covers 12 challenge families organized by Shadish-Cook-Campbell validity type, named sensitivity statistics, pre-committed interpretation rules, anti-fishing guardrails, and interactive diagnostic-artifact QA. Use in Ad Hoc Collaboration to verify, challenge, or stress-test a result, or to design discriminating tests before an analysis runs. Not code-change verification (verify skill / code review) and not final adjudication or re-execution (data-verifier, Reproducibility Verification) \u2014 prospective, hypothesis-driven challenge design of analytic claims."
+}

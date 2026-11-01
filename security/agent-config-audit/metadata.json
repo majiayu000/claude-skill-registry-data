@@ -1,0 +1,39 @@
+{
+  "name": "agent-config-audit",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-agent-security/skills/agent-config-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "agent-config-audit",
+  "downloaded_at": "2026-11-01T10:43:49.418605Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit, owasp",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-agent-security/skills/agent-config-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-agent-security/skills/agent-config-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit de s\u00e9curit\u00e9 en lecture seule de la CONFIGURATION DE L'AGENT lui-m\u00eame (pas de l'application) \u2014 serveurs MCP et leurs port\u00e9es, hooks et commandes, permissions et auto-approbations d'outils, secrets en clair dans les configs/hooks/env, code distant ou non \u00e9pingl\u00e9, exposition r\u00e9seau de la surface agent. \u00c0 utiliser sur \"audit de ma config agent\", \"mes MCP sont-ils s\u00fbrs\", \"audit des hooks/permissions\", \"secrets en clair dans la config\", \"revue de s\u00e9curit\u00e9 du harnais\", ou apr\u00e8s l'installation d'un plugin/MCP inconnu. Produit un tableau de gravit\u00e9 + correctifs PROPOS\u00c9S ; ne modifie jamais lui-m\u00eame permissions, contr\u00f4les d'acc\u00e8s ou secrets. Ne pas utiliser pour auditer le code d'une application web (OWASP) \u2192 code-corrector, ni pour inventorier/comparer des skills \u2192 tk-knowledge:skill-manager."
+}

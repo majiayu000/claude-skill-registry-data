@@ -1,0 +1,38 @@
+{
+  "name": "upstream-dependency-debug",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/upstream-dependency-debug/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "upstream-dependency-debug",
+  "downloaded_at": "2026-11-01T10:40:46.646674Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/upstream-dependency-debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/upstream-dependency-debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When a bug involves a named third-party library/framework, or symptoms correlate strongly with a platform/library-specific behavior, evaluate 'upgrade the dependency' BEFORE piling on local workarounds. Walks through a 4-step decision (is it upstream? \u2192 check Changelog/Release Notes \u2192 upgrade at low semver risk \u2192 only workaround if upgrade is infeasible), the upgrade engineering discipline (package-manager consistency, post-upgrade verification chain, semver risk, dedup check), and a result table. Use this skill whenever a bug smells like an upstream library issue \u2014 symptoms tied to a specific framework version, silent failures where code looks correct, workarounds that keep growing, or platform-specific rendering bugs that CSS cannot fix. Triggers \u2014 \u300c\u5347\u7ea7\u4f9d\u8d56\u300d\u300c\u4f9d\u8d56\u5347\u7ea7\u4fee\u590d\u300d\u300c\u8fd9\u4e2a bug \u5347\u7ea7\u4f9d\u8d56\u80fd\u89e3\u51b3\u5417\u300d\u300c\u67e5 changelog \u4fee\u590d\u300d\u300c\u4f18\u5148\u5347\u7ea7\u4f9d\u8d56\u300d\u300c\u5347\u7ea7\u4f9d\u8d56\u8fd8\u662f\u5806 workaround\u300d / dependency upgrade, upgrade to fix bug, changelog fix, avoid workaround, upgrade library to fix."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "react-19",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/react-expert/skills/react-19/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "react-19",
+  "downloaded_at": "2026-11-01T10:41:14.697981Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component, animation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/react-expert/skills/react-19/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/react-expert/skills/react-19/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when implementing React 19.3 patterns \u2014 use(), useOptimistic, useActionState, useEffectEvent, Activity, ViewTransition, Fragment refs, use(browser()), React Compiler."
+}

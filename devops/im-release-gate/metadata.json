@@ -1,0 +1,37 @@
+{
+  "name": "im-release-gate",
+  "repo": "Elogic360/software-factory",
+  "path": "skills/im-release-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Elogic360/software-factory",
+  "dir_name": "im-release-gate",
+  "downloaded_at": "2026-11-01T10:32:37.011660Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "cd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Elogic360",
+  "source_url": "https://github.com/Elogic360/software-factory/blob/main/skills/im-release-gate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Elogic360/software-factory/blob/main/skills/im-release-gate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Zero-regression testing, CI/CD gates, and staging verification"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ship",
+  "repo": "Erin-1919/claude-skills",
+  "path": "ship/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Erin-1919/claude-skills",
+  "dir_name": "ship-erin-1919-claude-skills",
+  "downloaded_at": "2026-11-01T10:34:45.597927Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Erin-1919",
+  "source_url": "https://github.com/Erin-1919/claude-skills/blob/main/ship/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Erin-1919/claude-skills/blob/main/ship/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks to commit and push changes (e.g. \"commit and push changes in <dir>\", \"commit this and push\", \"ok commit and push\", \"publish to Pages\", \"push to the remote repo\"). Runs the standard commit-and-push ritual, optionally scoped to a directory, with README refresh, org-repo creation, and GitHub Pages build-poll."
+}

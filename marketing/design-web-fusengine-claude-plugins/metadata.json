@@ -1,0 +1,38 @@
+{
+  "name": "design-web",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/design-expert/skills/design-web/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "design-web-fusengine-claude-plugins",
+  "downloaded_at": "2026-11-01T10:41:20.362646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, campaign, brand",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/design-expert/skills/design-web/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/design-expert/skills/design-web/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building or revising a marketing/landing/campaign page, register `brand` locked at Gate 0 \u2014 use design-webapp for app screens instead."
+}

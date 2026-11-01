@@ -1,0 +1,37 @@
+{
+  "name": "claude-slides",
+  "repo": "JimLiu/baoyu-design",
+  "path": "dsh-plugins/dsh-claude-slides/skills/claude-slides/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JimLiu/baoyu-design",
+  "dir_name": "claude-slides-jimliu-baoyu-design",
+  "downloaded_at": "2026-11-01T11:03:07.216786Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JimLiu",
+  "source_url": "https://github.com/JimLiu/baoyu-design/blob/main/dsh-plugins/dsh-claude-slides/skills/claude-slides/SKILL.md",
+  "license": "Mixed. The skill text, references and editors adapted from Anthropic's claude.ai Artifact types stay Anthropic's and are not MIT-licensed; the local tooling is MIT. Complete terms in NOTICE.md: https://github.com/JimLiu/baoyu-design/blob/main/NOTICE.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JimLiu/baoyu-design/blob/main/dsh-plugins/dsh-claude-slides/skills/claude-slides/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make and revise slide decks in the Slides artifact format (project/deck.json plus one HTML file per slide) as local files, then open them in a local slide editor where the user can present, retype, drag, and export PDF, HTML or PowerPoint. Use when the user asks for an editable slide deck or presentation in this format, names claude-slides or the Slides type, or wants to revise a folder that holds project/deck.json. A one-off single-file HTML deck or prototype is baoyu-design's."
+}

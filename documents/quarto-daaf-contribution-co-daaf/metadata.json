@@ -1,0 +1,39 @@
+{
+  "name": "quarto",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/quarto/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "quarto-daaf-contribution-co-daaf",
+  "downloaded_at": "2026-11-01T10:21:07.914352Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, markdown, documentation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "pdf",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/quarto/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/quarto/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Quarto document system for R: .qmd format with knitr engine, YAML frontmatter,\ncode chunks with execution options, rendering to HTML/PDF. DAAF's R notebook\nformat \u2014 Stage 9 literally archives executed R scripts in globally and\nper-chunk non-evaluating chunks paired with real execution logs. Optional\ndisplay-only content may preview existing Parquet data or show already-created\nfigures, but may not analyze data or generate figures. Use when execution\nlanguage is R. Python equivalent: marimo."
+}

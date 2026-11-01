@@ -1,0 +1,223 @@
+---
+name: gtrk-tools
+description: gtrk 单点工具与媒体转换能力的调用向导，覆盖 `gtrk tool` 家族。当用户想“让图动起来 / 抠像去背景 / 图片或视频去黑边 / 图片或视频比例转换 / 视频防抖 / 添加蒸汽波滤镜 / 清理有权处理的图片或视频中的水印、字幕或叠加元素 / 视频超分变清晰 / 视频补帧变流畅 / 分离人声和伴奏 / 提取伴奏 / 按说话人分轨 / 音频变调变速 / 钢琴扒谱转 MIDI 或修复钢琴录音 / 给音频或视频降噪 / 去掉音频静音停顿 / 长图转方图 / 图片变 LivePhoto 微动 / 视频机械分镜或智能分镜切镜头 / 提取运镜高光片段 / 给视频加字幕或翻译字幕或烧录字幕 / 把视频翻译配音成另一种语言或译制 / 一键剪 MAD / 用某个 gtrk 单点工具 / gtrk 工具族里有什么”时使用本 Skill。凡涉及这些能力，优先驱动 CLI，不让用户自己去终端敲，也不手搓 ffmpeg。
+---
+
+# gtrk 工具族（gtrk-tools）
+
+飞书使用教程统一入口：[gtrk CLI 使用教程](https://hocassian.feishu.cn/wiki/HCFpwoF7SivIFbkKosgcFMcEnxk)。
+
+`gtrk tool <name> [输入...]` 是 gtrk 的**单点能力**族：一个工具 = 单发单收（给一份输入、出一份产物；多文件图片工具的「一份输入」是一组图片路径，顺序即拼装顺序），没有成片 SOP 次序；视频去水印必须先完成下文的用户模式选择——与成片管线的车道命令（`oralcut` / `split` / `matrix` / `mg`）是两回事。本 skill 是这个族的**统一调用向导**：认清有哪些工具、按纪律驱动 `gtrk tool` 命令、把产物和计费如实回给用户。
+
+> **本 skill 已含你需要的全部信息**（工具清单、调用纪律、恢复语义、排错话术）。工具清单以 `gtrk tool list --json` 为**唯一真相**——本文件与它漂移时以命令输出为准并回来修本文件。参数细节以 `gtrk tool --help` 为准。
+
+## 工具清单（与 `gtrk tool list` 同源）
+
+| 工具名 | 触发语（用户可能怎么说） | 输入要求 | 产物形态 | 计费 | 可用状态 |
+|---|---|---|---|---|---|
+| `image_move` | 「把这张图做成运镜视频 / 让图动起来 / 图转视频 / 往右推镜 / 拉远」 | 单张图片；可选 `--motion` 指定 26 种运镜之一（见下文枚举表） | 运镜视频 | 运行前实时查询 | 已上线 |
+| `image_matting` | 「给图片抠像 / 抠出主体 / 去背景 / 出透明 png」 | 单张图片（带 EXIF 方向的手机照片自动摆正后上传） | 透明背景 png | 运行前实时查询 | 已上线 |
+| `image_blackborder_remove` | 「图片去黑边 / 裁掉四周黑边 / 保留有效画面」 | 单张本地图片 | 去黑边图片 | 运行前实时查询 | 已上线 |
+| `image_canvas_adapt` | 「图片比例转换 / 调整画布尺寸 / 转成矩形或方形裁剪」 | 单张本地图片；模式只支持 `normal` / `rectangle` / `square` | 比例适配图片 | 运行前实时查询 | 已上线 |
+| `image_purify` | 「清理我有权处理的图片水印 / 去掉 Logo 或叠加元素 / 图片净化 / 按我圈的框去掉台标 / 铺满全图的网格水印」 | 单张本地图片（仅处理你有权处理的素材）；可选按框直接去除；可选 `--redraw` 重绘模式（单独计价） | 净化图片 | 运行前实时查询 | 已上线 |
+| `video_matting` | 「视频抠像 / 视频去背景 / 出透明背景视频」 | 单条视频（≤10 分钟） | 透明背景 webm | 运行前实时查询 | 已上线 |
+| `video_blackborder_remove` | 「视频去黑边 / 裁掉视频四周黑边 / 保留有效画面」 | 单条本地视频 | 去黑边视频 | 运行前实时查询 | 已上线 |
+| `video_canvas_adapt` | 「视频比例转换 / 横竖屏适配 / 截取片段并转换画布」 | 单条本地视频；模式只支持 `normal` / `rectangle` / `square` | 比例适配视频 | 运行前实时查询 | 已上线 |
+| `video_stabilizer` | 「视频防抖 / 稳定手持画面 / 去抖」 | 单条本地视频；方式 `fast` / `exp` / `turbo` | 防抖视频 | 运行前实时查询 | 已上线 |
+| `video_vaporwave` | 「给视频加蒸汽波滤镜 / 复古滤镜 / 使用某个滤镜预设」 | 单条本地视频；滤镜名需精确 | 蒸汽波滤镜视频 | 运行前实时查询 | 已上线 |
+| `video_purify` | 「清理我有权处理的视频水印 / 去字幕 / 只净化指定区域 / 只抹我圈的这块 / 只抹片头几秒的角标」 | 单条本地视频（仅处理你有权处理的素材）；可选范围、方式、归一化 ROI 和带时间段的区域框 | 一条净化视频 | 运行前实时查询 | 已上线 |
+| `video_upscale` | 「视频超分 / 低清视频放大 / 动漫视频变清晰」 | 单条本地视频（≤1 分钟）；倍数 `2` / `3` / `4`，类型 `Reality` / `Anime` | 一条超分视频 | 运行前实时查询 | 已上线 |
+| `video_interpolate` | 「视频补帧 / 提高帧率 / 让画面更流畅」 | 单条本地视频；倍数 `2` / `3` / `4`，不附加 1 分钟限制 | 一条插帧视频 | 运行前实时查询 | 已上线 |
+| `video_highlight` | 泛高光发现（视频高光算法）；明确脚本优先语义检索 | 本地视频，3秒以上、30分钟以内；上传448p/4fps分析代理（缺省附单声道低码率原声，可 `--no-audio`） | 按请求分组的三秒候选，需 Agent 复核 | 未开放外部收费 | 内部验收候选 |
+| `video_segment` | 「机械分镜 / 按画面变动切分镜区间 / 场景切分」 | 单条本地视频；可选 `--detector content\|adaptive`、`--threshold` | 分镜区间结构 `result-output.json`（非下载文件） | 运行前实时查询 | 已上线 |
+| `video_ai_segment` | 「智能分镜 / 语义切镜头 / 按类目景别拆镜头」 | 单条本地视频；可选 `--segment-mode scene\|shot_type\|narrative\|subject` | 语义分镜结构 `result-output.json`（非下载文件） | 运行前实时查询 | 已上线 |
+| `video_motion_cut` | 「运镜高光 / 提取运镜片段 / 找高光镜头」 | 单条本地视频 | 运镜/高光片段结构 `result-output.json`（非下载文件） | 运行前实时查询 | 已上线 |
+| `video_speaker_detect` | 「谁在说话 / 说话人检测 / 检测画面里谁在何时开口」 | 单条本地视频；可选 `--language`、`--max-faces-per-frame`、`--detect-body`、`--track-sample-fps`。**重 GPU、按分钟计费较高，长片先想清楚** | 可见说话人结构 `result-output.json`（时间字段时基以服务端输出为准） | 运行前实时查询 | 已上线 |
+| `video_split_screen` | 「分屏 / reaction 同框 / 对比视频 / 多画面合成」 | **2~16 段视频**（多 positional，顺序有语义）；精确档 `--clips-json`：条目 `{input:0 起序号, begin_time_ms, end_time_ms, crop 归一化}`（**毫秒时基**、`input` 指第几个输入文件、同文件可多窗口）；可选 `--layout-mode/--layout-id/--seed/--output-ratio/--quality/--fit-mode/--audio-mode/--gap-ratio/--background-color`。**成片时长对齐最短段** | 一条分屏成片视频 | 运行前实时查询 | 已上线 |
+| `video_long2short_pro` | 「长视频剪成多条高光短片 / 一键出成片 / 长剪短精剪 / 播客切片直接出片」 | 单条长视频（**整片上传**，云端要渲成片）；**`--language <码>` 必填**；可选 `--output-language`、`--main-topic`、`--output-size`、`--no-jump-cut`、`--duration-pref`、`--max-clip-sec`、`--split-screen`、`--split-orientation`、`--speed-factor`、`--no-camera-move`、`--no-subtitle`、`--subtitle-translate-language`；润色细颗粒走 `--params-json` | 逐条成片 `clip{i}.mp4` + 人读报告 `clips.md`（含**润色降级明细**）+ `result-output.json` | 运行前实时查询（**约为粗剪两倍**） | 已上线 |
+| `video_face_track` | 「人脸追踪 / 人物出场时间段 / 视频里有哪几个人」 | 单条本地视频；可选 `--sample-fps`、`--max-faces`、`--min-face-ratio`、`--enable-body-match`、`--similarity-threshold`；`time_ranges` 经 `--params-json` 传（**单位毫秒**，如 `{"begin_time":0,"end_time":30000}`）。**重 GPU、按分钟计费较高** | 人物 ID/时间段/轨迹结构 `result-output.json`（时基以服务端输出为准） | 运行前实时查询 | 已上线 |
+| `video_character_cut` | 「角色 Cut / 找出某角色全片片段 / 正反打角色检索」 | 本地视频；`--character`、`--seed-range`，多人时 `--seed-bbox x,y,w,h`；全片镜头清单 + ≤720p/12fps 代理；CPU 解码 + 外部多图理解 | `video_character_cut.v2`：cuts、review_candidates、context_review、unknown_ranges；仅返回原片时间轴。partial 不可声称全片已找全；身份歧义换种子/框选 | 运行前实时查询 | v2 重构验证中，未部署 |
+| `video_ai_subtitle` | 「智能字幕 / 给视频加字幕 / 视频翻译字幕 / 烧录字幕 / 去原字幕」 | 单条视频或音频；**`--language <码>` 必填**；可选 `--translate-language`、`--need-render`（烧录）、`--need-pure`（去原字幕）、`--subtitle-type`、`--subtitle-color`。**默认只上传本地抽出的音频、毛片不出本地**（几何随请求回传，字幕按原片画布出） | `.ass` 字幕文件 + 可选烧录/去字幕 `.mp4` + `result-output.json`（LLM 摘要 + 字级时间轴） | 运行前实时查询 | 已上线 |
+
+> **字幕这两条要提前讲给用户**（`video_ai_subtitle` 专属）：
+> - `--need-render`（烧录）**在本地跑 ffmpeg**，成片不从云端下行。字幕模板用 `思源黑体 CN Bold`，**本机没装就直接报错**（不拿替代字体顶——观感会与模板设计不符且用户难以察觉）。装上后重跑即可，字幕文件已落地、无需重新提交任务。4K/长片本地烧录要重编码，耗时可观，先跟用户打招呼。
+> - `--need-pure`（去原字幕）是画面操作，**加了这个 flag 就会整片上传**（CLI 会打一行说明）。只要字幕文件时别加。
+| `audio_separation` | 「分离人声和伴奏 / 提取人声 / 提取伴奏」 | 单条音频 | 人声与伴奏音频（按实际返回可为一项或两项） | 运行前实时查询 | 已上线 |
+| `audio_speaker_split` | 「按说话人分轨 / 把不同人的声音分开 / 谁在什么时候说话」 | 单条音频；可选 `--only-struct` 只出结构 | 各说话人 `.wav` 分轨 + `spoken_list` 时间线（`result-output.json`） | 运行前实时查询 | 已上线 |
+| `audio_stretch` | 「变调 / 变速 / 升降 key / 加快放慢音频」 | 单条音频；可选 `--semitones`、`--speed`（>0） | 变调变速音频 | 运行前实时查询 | 已上线 |
+| `audio_noise_reduce` | 「音频降噪 / 视频声音降噪 / 去底噪」 | 单条音频或视频 | 降噪后的音频 | 运行前实时查询 | 已上线 |
+| `audio_silence_remove` | 「去静音 / 删掉过长停顿 / 压缩音频空白」 | 单条音频 | 去静音音频 | 运行前实时查询 | 已上线 |
+| `piano_audio_to_midi` | 「钢琴扒谱 / 钢琴音频转 MIDI / 提取 MIDI」 | 单条音频 | MIDI 文件 `.mid` | 运行前实时查询 | 已上线 |
+| `piano_audio_enhance` | 「钢琴录音修复 / 增强钢琴音质」 | 单条音频 | 高质量 WAV + 配套 MIDI（双产物） | 运行前实时查询 | 已上线 |
+| `image_to_square` | 「长图转方图 / 把长图变方的」 | 单张图片；可选 `--max-line`（≤20000） | 方形图片 | 运行前实时查询 | 已上线 |
+| `image_to_live` | 「图片变 LivePhoto / 静图微动 / 让照片动起来 / 要能长按播放的动态照片」 | 单张图片；可选 `--output-format`（见下文） | 约 4 秒短视频 `.mp4`（无声）；或安卓动态照片 `.jpg` + 附带同一条 `.mp4` | 运行前实时查询 | 已上线 |
+| `image_classic_template` | 「做封面 / 智能拼图 / 标题配图出封面图」 | **多张图片**（可传多个路径，文件顺序即拼装顺序）；**`--main-title <标题>` 封面模式必填**（`--template-mode image` 只要拼图时可省；标题含 emoji 等封面字体画不出的字符会被服务端建单前拒，错误码 6046、不扣费，去掉再提）；可选 `--sub-title`、`--template-mode`（`full` 封面 / `image` 只要拼图 / `text` 只要标题层）、`--aspect`、`--quality`、`--output-pic-count`（服务端钳制 ≤20）、`--output-text-count`（≤20）、`--title-layout` | 封面/拼图成品（text/pic/render 三组、各组可空可多张） | 运行前实时查询 | 已上线 |
+| `image_vertical_stitch` | 「拼长图 / 多图竖拼 / 截图接成一张长图」 | **多张图片**（可传多个路径，顺序=自上而下拼接顺序） | 一张垂直拼接长图 | 运行前实时查询 | 已上线 |
+| `audio_tts_clone` | 「配音 / 文字转语音 / TTS / 用 xx 音色念这段 / 把这段稿子合成音频」 | **无文件**：`--text <短文本>` 或 `--text-file <txt>` 二选一（≤5000 字，服务端为真相）+ **`--speaker <音色代号>` 必填**（可用音色见官网文档，传错时报错会列出全部可用项）；可选 `--text-lang`/`--output-format wav\|mp3`/`--speed`/`--split-method`/`--batch-size`/`--fragment-interval <秒>`（句间停顿，**仅自训音色**，云引擎音色传了会报错；speed/切分法缺省跟随该音色调好的参数）/`--subtitle-format <fmt>`（**可选出字幕**，如 `srt`；缺省不出字幕、不额外计费，取值以服务端为准，传了不认的格式服务端会拒并列出可用项）。**计量单位与单价以 `gtrk tool list` 实时显示为准 —— MUST NOT 在本文写死**（此处写死过一次「200 字/分钟」，服务端实为 240，且计量口径已改为千字符）** | 配音音频（wav/mp3）；传了 `--subtitle-format` 时另产字幕 `tts-<音色代号>.srt`（服务端字幕降级时只落音频、不留空字幕文件） | 运行前实时查询 | 已上线 |
+| `video_translate_dub` | 「视频翻译配音 / 译制 / 把这条视频换成英文配音 / 用我的声音说英文 / 给视频出个外语配音版」 | 单条视频或音频（**≤120 分钟**，整片上传）；**`--language <源语种>`、`--translate-language <目标语种>`、`--speaker <clone 或音色代号>` 三项必填**（语种传标准地区码如 `zh-CN` / `en-US`；可用语种与音色以服务端为准，传错时报错会列出可用项）；`clone` = 用原片说话人的声音，可加 `--ref <音频或视频>` 指定克隆参考、`--ref-lang` 标参考语种（非 `clone` 时 `--ref` 会被忽略并提示）；可选 `--no-keep-bgm`（不保留原伴奏）、`--fit-policy`（时长拟合策略）、`--speed-band <最小,最大>`（语速倍率区间）、`--subtitle-mode`（字幕形态，音频输入不能烧录）、`--subtitle-type`（烧录样式）、`--project-formats <逗号分隔>`（缺省只出客户端工程 `.gtrk`；要剪映草稿写 `gtrk,jianying`，要 PR / Final Cut 工程写如 `gtrk,xml`）、`--jianying-draft-dir <目录>`（剪映草稿目录，缺省读 `gtrk init` 配置或自动探测）；各参数取值以服务端为准 | 配音成片 `<输入名>-dub.mp4`（音频输入为 `-dub.mp3`）+ 纯配音轨 `dub.wav` + 伴奏轨 `bgm.wav`（有则）+ 延长后的底片 `base.mp4`（有则）+ 字幕 `<输入名>.srt` / `<输入名>_bilingual.srt`（有则）+ 逐句对齐记录 `transcript.json` + 工程文件按格式分目录（如 `gtrk/project.gtrk`、`jianying/`；音频输入没有）+ `result-output.json`（配音对齐报告） | 运行前实时查询 | 已上线 |
+| `mad` | 「一键剪 MAD / 素材文件夹自动出卡点成片 / 自动选技法 / 给这堆素材出个 AE 工程 / 我想要某某效果的卡点片」 | 一个素材文件夹（3~10 条视频）+ 可选 `--bgm 歌.mp3` + 可选 `--technique 技法名`；`--search <词>` 只查技法目录不要输入 | AE 母合成工程 `.jsx`（仅支持 AE） | 仅 `--bgm` 触发实时查价 | 已上线 |
+
+> 清单随 CLI 版本增补。**动手前先跑 `gtrk tool list --json` 拿最新清单**，别凭记忆——新工具、状态变化都在那里。
+
+### video_translate_dub（视频译制配音）要提前讲给用户的
+
+- **克隆声音须本人同意**：`--speaker clone`（或 `--ref` 给的是别人的录音）会克隆说话人的声音。克隆别人的声音 MUST 先取得那个人的同意，发起任务即视为已取得；不确定就先问用户，别替他默认。
+- **只换音轨，画面保持原样**：不做口型同步，镜头也不动。缺省拟合策略下，个别译句过长时画面可能短暂定格来让出时间；用户要成片与原片严格等长，传 `--fit-policy strict`（超出部分截尾）。
+- **时长与耗时**：单条最长 120 分钟，超了 CLI 在上传前直接拒并提示分段；长片耗时十几分钟起，CLI 最多等 4 小时。中途断开别直接重跑（会重新计费），凭产物目录里 `task.json` 的任务号取回。
+- **工程文件怎么打开**：CLI 提交时自动带上原片与产物目录的本机路径，各格式工程里的素材都指向本机的原片与产物目录里的 `dub.wav` / `bgm.wav` / `base.mp4`，打开即用。要剪映草稿加 `--project-formats gtrk,jianying`：草稿自动放进剪映草稿目录，打开剪映就在列表里（同一毛片重跑覆盖上一次的草稿；别的目录下的同名毛片撞上时改落 `…-2` 并提示，原草稿不动）；CLI 提示「没找到剪映草稿目录」或「草稿缺 draft_meta_info.json」时，让用户给出剪映草稿目录再用 `--jianying-draft-dir` 重跑，或先用客户端工程。CapCut 草稿留在产物目录 `capcut/`，需要时手动放进 CapCut 草稿目录。
+- **附带产物偶尔缺项不算失败**：字幕、逐句对齐记录、工程文件某一项没生成时，成片与配音轨照出、`ok=true`，终端打一行「部分附带产物未生成」，原因在 `result-output.json` 的 `errors`。照实告诉用户少了哪样。
+- 常用形态：`gtrk tool video_translate_dub ./talk.mp4 --language zh-CN --translate-language en-US --speaker clone --json`；用自己另录的干净人声做参考加 `--ref ./me.m4a`；要剪映草稿加 `--project-formats gtrk,jianying`，要 PR 工程加 `--project-formats gtrk,xml`。
+  打开 PR 工程时的重链提醒照 `gtrk-oralcut`「回给用户（三端打开方式）」PR/FCP 条，引用不复制。
+
+### mad（一键剪 MAD）的特殊之处
+
+`mad` 是族内首个 **local 型「纯本地工具、可选云端加料」**成员，与 cloud 型工具不同：
+
+- **无 Key 可跑**：不带 `--bgm` 时全程只走免鉴权数据面（技法数据经云端 manifest 下发 + `~/.gitruck/mad-cache` 缓存），**首拉联网一次性下载、缓存命中后离线可跑**；不要求 API Key、不触发计费任务。
+- **`--bgm` 才需 Key 且计费一次**：带 `--bgm` 且已配 Key → BGM 卡点到 downbeat（调一次云端节拍分析计费）；没配 Key → **温和提示 `gtrk init` 可解锁卡点，不阻断**，BGM 仍入轨、按固定节奏出片；坏 BGM/云端失败一律降级不崩。
+- **产物只有 `.jsx`、只支持 AE**：完成后引导「装 AE 2020+ → 文件›脚本›运行脚本文件 选它」。**不承诺 `.amproj`/Alight Motion 等本命令未产出的形态**。
+- **可复现**：`--seed <n>` 固定选窗序列（同素材同种子同数据版本 → 同结果）；`result.json` 记录 seed、数据版本、降级档位、选中技法清单。
+- 常用：`gtrk tool mad ./素材 --bgm 歌.mp3 --duration 20 --json`。
+
+#### 用户描述了想要的效果时：你先查目录、再点名
+
+不带技法参数时，选技法是纯规则抽样（类目轮转 + 频次加权），**用户说的「我要那种切到鼓点屏幕震一下的感觉」不会进到命令里**。想让效果对上用户的描述，走两步：
+
+1. `gtrk tool mad --search <关键词> --json` —— 只查技法目录，不出片、不要素材文件夹、零计费不需 Key。回来的每条带 `name` / `cat` / `pid` / `n_seen`（该技法在图鉴收录工程里出现过多少次）/ `windows`（技法池里有几个可用窗口，**0 = 点了也用不上**）。
+2. `gtrk tool mad ./素材 --technique <技法名[,技法名…]>` —— 只用点名的技法出片。取值接受技法名、别名或 `pid`。
+
+**把用户的话翻译成关键词是你的活**，命令那头只做纯字符串包含匹配（无分词无模型）。「屏幕震一下」→ 搜「震屏」/「抖动」；「一闪一闪的」→ 搜「闪白」/「频闪」；「字一个个蹦出来」→ 搜「打字机」。搜不到就换更短的词，别硬塞整句。
+
+三条要如实转述给用户，别替它圆场：
+- 名字歧义（比如只写「卡点」命中一片）命令会**报错并列候选**，不会自己挑一个——把候选念给用户听，让他选。
+- 点名的技法里有 `windows: 0` 的，命令会跳过它并说明原因，用剩下的继续出片；全是 0 才报错。
+- 白名单里只有一两个技法时，成片会反复用同一个技法的**不同实例**（运动曲线不同），这是设计，不是 bug。
+
+### ⚠️ 长剪短有两条线，别选错（名字很像，产物完全不同）
+
+用户说「把这条长视频剪成短片」时，**开工先问两件事、一张表一次问完**（MUST NOT 碎问、MUST NOT 代猜）：
+
+| # | 问 | 决定什么 |
+|---|---|---|
+| ① | 要**可编辑工程**还是**直接成片**？ | 走粗剪 `gtrk long2short` 还是本 skill 的精剪——选错一次的代价是白花积分重来 |
+| ② | 素材是不是**多人同框**（对谈 / 访谈 / 多人直播）？ | 答「是」⇒ 命令带 `--split-screen`、不再追问；答「否 / 不确定」⇒ 不带。**「不确定」按「否」**：开错是分屏烧进成片不可回退 + 一段检测等待，不开只是少个点缀、看片后补一句重跑即可 |
+
+> 分屏是**点缀不是主体**：只挑多人同框段做，单段最长 8 秒、每条最多 3 处，不会整条变分屏。
+> 单人素材开了也不会出现分屏画面，但仍会多付一段说话人检测的等待——**不是零副作用**，别这么跟用户说。
+> 跑完 `clips.md` 头部会回显「分屏：开/关」（只是请求态，报告不知道实际做了几处）。
+
+| | `gtrk long2short`（粗剪，**独立命令、不在本 skill**） | `gtrk tool video_long2short_pro`（精剪，本 skill） |
+|---|---|---|
+| 产物 | **可编辑工程**：gtrk（客户端）+ 剪映草稿 + PR xml，逐 clip 一套 | **直接出成片 mp4**，一条一个文件 |
+| 上传 | 只传抽出音频 / 720p 代理，**毛片不出本地** | **整片上传**（云端要渲染） |
+| 适合谁 | 要自己再剪、要调时间轴、要换素材 | 要能直接发布的成品，不打算二次编辑 |
+| 计费 | 按分钟 | 按分钟，**约为粗剪两倍** |
+| 驱动 skill | `/gtrk-long2short` | 本 skill |
+
+判断句：**「剪完还要不要再动？」要动 → 粗剪；不动 → 精剪。**
+
+精剪的润色（运镜 / 调速 / 接缝 / 分屏 / 字幕）都是 best-effort——**单项失败会降级，成片照出**。跑完 MUST 看一眼产物根的 `clips.md`，里面有「⚠️ 润色降级」小节点名哪条片的哪些效果没做成；有降级就如实告诉用户，别让他拿着不完整的效果去发布。
+
+## 调用纪律（每次都照做）
+
+> **产物落点纪律（MUST · 全文见随包 `AGENT.md` 同名一节）**：
+> 交付物 MUST NOT 先写 agent 自有目录再拷进工程；中转本身即违规，体积不是豁免理由。
+> 一切产物只落 `outDir`（缺省 = 输入同目录）或**用户显式指定的 `--out`**；
+> **MUST NOT** 把成片、预览或任何大媒体文件复制到 agent 自有工作目录（如用户文档目录下 agent 产品自建的目录、agent 家目录缓存、会话工作区）——需要引用媒体时**用原路径引用**，不做副本；
+> 临时文件一律放系统 temp 且**用完即删**。交付物直接写入工程目录或用户显式指定的路径；引用媒体用原路径。
+
+1. **先看清单、再对号**：用户的意图对到某个工具名（拿不准就 `gtrk tool list --json` 核对触发语与输入要求）。
+2. **执行前转述实时计费提示**：先读本次 `gtrk tool list --json` 的 `billingHint`/`pricing`，再把实时结果如实告诉用户；不得引用本文件或记忆中的旧价格。若显示价格暂不可用，就说明最终以服务端结算为准。
+3. **一律带 `--json`**：`gtrk tool <name> <输入> --json`。stdout 只会有一行结果 JSON（`{ ok, outDir, files, taskId, fileId, … }`），人读日志在 stderr。按 `ok` 判成败、从 `files` 拿产物路径、把 `outDir` 回给用户。
+4. **缺 API Key 先引导配置**：cloud 型工具没配 Key 会报错让先跑 `gtrk init`。遇到就引导用户 `gtrk init`（或设 `GITRUCK_API_KEY`），别反复重试。
+5. **瞬时网络错误退避后只重试 1 次**：若 `gtrk tool list --json` 或工具命令因 `fetch failed`、`ECONNRESET`、`ETIMEDOUT`、`ENOTFOUND`、`socket hang up`、网络不可达或 HTTP `502/503/504` 失败，先等 **2 秒**，再原样执行同一命令 **1 次且仅 1 次**（总尝试次数最多 2 次）。第二次仍失败就停止，如实说明网络波动并给出最后错误，绝不循环重试。参数/文件校验错误、缺 Key、HTTP 4xx、云端业务错误码、明确的任务失败/取消均**不重试**。重试前先检查日志及输出目录：一旦已出现 `taskId` 或 `task.json`，说明任务可能已经提交，禁止重跑整条以免重复计费，转入下一条恢复语义。
+6. **产物落地与恢复**：产物落在 `outDir`（缺省 = 输入同目录下 `<输入名>-<工具名>/`，可 `--out <dir>` 覆盖）。**无输入文件的工具**（`input=none`，如纯文本转语音）缺省落**当前目录**下 `<工具名>-<时间戳>/`。该名撞上已有目录时自动带 `-2`/`-3` 序号后缀；同一目录内产物文件撞名时带 taskId 后 6 位后缀。**一律以回执的 `outDir` / `files` 为准，别按名字硬拼**——猜出来的路径会指向上一次那份产物。提交成功即写 `task.json`（含 `taskId`）、完成即写 `result.json`。**分析型工具**（`video_segment` / `video_ai_segment` / `video_motion_cut`）产的是**结构化数据不是下载文件**：结果落 `result-output.json`（分镜/运镜结构），`result.json` 的 `resultFile` 字段指向它、`files` 为空且 `ok=true` 属正常，别当成「没出产物」。**若 `ok=false`**（任务完成但产物下载失败，如链接过期；或既无文件也无结构）：`result.json` 的 `errors` 有明细、`task.json` 保留——凭其中的 `taskId` 可稍后人工恢复取回，别急着重跑整条（重跑会重新计费）。
+7. **透传高级参数**：命令没为某个云端参数开 flag 时，用 `--param k=v`（可重复）或 `--params-json '<对象>'` 直接透传（如 `image_move` 想指定输出几何 `--param width=1080 --param height=1920`）。
+8. **单发单收、批量靠循环**：一次一份输入；用户要批处理就你逐个循环调。例外是多文件图片工具（`image_classic_template` / `image_vertical_stitch`）——它们的一份输入天然是一组图片（一次任务一次计费），传参顺序即拼装顺序，别把它当批处理。
+
+图片比例转换常用形态：`gtrk tool image_canvas_adapt ./photo.jpg --canvas-width 1080 --canvas-height 1920 --canvas-type rectangle --json`。`--canvas-type` 只接受 `normal`、`rectangle`、`square`；省略画布参数时不替服务端写死默认值。
+
+图转运镜可指定运镜方式：`gtrk tool image_move ./photo.jpg --motion zoom_in_center --json`。`--motion` 未传时云端自动选择（构图 + 主体识别 + 随机，同图重跑结果会变）；显式指定后同图同参重跑结果一致。合法值 26 个、分三组，用户说「往右推 / 拉远 / 从左往右扫」这类自然语言时按语义对号入座，对不上就问清，别瞎猜：
+
+| 组 | 取值 | 语义 |
+|---|---|---|
+| 平移 8（值=运动朝向） | `up_to_down` `down_to_up` `left_to_right` `right_to_left` `left_up_to_right_down` `right_down_to_left_up` `right_up_to_left_down` `left_down_to_right_up` | 画面沿该方向平移扫过 |
+| 放大 9（值=画布锚点方位） | `zoom_in_center` `zoom_in_up` `zoom_in_down` `zoom_in_left` `zoom_in_right` `zoom_in_left_up` `zoom_in_right_up` `zoom_in_left_down` `zoom_in_right_down` | 以中心 / 边中点 / 角为锚点推近 |
+| 缩小 9（锚点同上） | `zoom_out_center` 及 `zoom_out_` 同九方位 | 以对应锚点拉远 |
+
+智能 LivePhoto 可选交付格式：`gtrk tool image_to_live ./photo.jpg --output-format motion_photo --json`。两个取值——
+
+| 取值 | 产物 | 什么时候用 |
+|---|---|---|
+| `mp4`（缺省，不传即此） | 一个约 4 秒的短视频（无声） | 要拿去剪辑、投放、当 B-roll 素材 |
+| `motion_photo` | **一个 `.jpg`**（静图末尾内嵌该视频，相册里长按即播）**外加**同一条 `.mp4` | 用户明说要「像手机拍的那种动态照片」「能长按播放的一张图」「发相册/发朋友的一个文件」 |
+
+两种格式**同价**（交付格式只决定产物怎么封装，不改生成参数、不改计费），所以选哪个纯看用户想要什么形态。`motion_photo` 时那条附带的 `.mp4` 是白给的，不必为了拿视频再跑一次。
+
+⚠️ **兼容边界，用户问起时如实说，别打包票**：支持该标准的安卓相册可识别并长按播放；**iOS 不识别**，在 iPhone 上就是一张普通静态图片（能正常打开、不报错）；少数安卓机型可能只显示静图。用户若明确要 iPhone 上能动的，这个格式满足不了，如实讲。
+
+这七个公共视频工具（去黑边、比例转换、防抖、蒸汽波、净化、超分、插帧）都只接本地文件，允许扩展名为 `.mp4/.avi/.mpg/.mov/.flv/.mxf/.mpeg/.ogg/.3gp/.wmv/.h264/.m4v/.ts`；不要把 `.mkv`、`.webm` 或 URL 交给它们。
+
+- 视频比例转换：`gtrk tool video_canvas_adapt ./clip.mp4 --canvas-width 1080 --canvas-height 1920 --canvas-type rectangle --clip-start 1.5 --clip-end 4 --without-audio --json`。`--clip-start/--clip-end` 传起止时间（秒，可带小数）；省略选项就沿用服务端默认，需要保留音轨时不要传 `--without-audio`。
+- 视频防抖：`gtrk tool video_stabilizer ./clip.mp4 --stabilizer-method turbo --json`。支持 `fast`、`exp`、`turbo`；未传时由服务端使用 `turbo`，`exp` 只按实验方式转述，不承诺观感。
+- 蒸汽波滤镜：`gtrk tool video_vaporwave ./clip.mp4 --vaporwave-filter "灼熱苦夏" --json`。滤镜名原样精确传递，不翻译、不猜别名；未传时 CLI 明确使用 `愈漸升溫`。
+- 视频净化：`gtrk tool video_purify ./clip.mp4 --purify-scope custom --purify-method <用户选定模式> --purify-roi 0,0.78,1,0.2 --json`。ROI 是 `x,y,w,h` 归一化坐标，只能和 `custom` 同用；`raft` 仅支持 20 分钟以内视频，`ffmpeg` 不套用这个上限。只处理用户有权修改的素材，不宣称能还原被遮挡的原始内容。
+- 按框直接去除：`gtrk tool video_purify ./clip.mp4 --purify-scope region --purify-region 0.8,0.02,0.18,0.08,0,5 --json`（图片把工具换成 `image_purify`、框只写 `x,y,w,h`）。`--purify-region` 可重复，图片最多 16 个框、视频按服务资源限制，视频框后可带 `start,end` 秒。`custom` 只去除框内识别到的文字；`region` 不做识别、**框内全部内容都会被处理（包括画面主体）**——用户要去的是图形台标、半透明图案或只在某段时间出现的角标时选 `region`，并提醒框越小越贴边效果越好。
+- 图片重绘模式：`gtrk tool image_purify ./photo.jpg --redraw --json`。整张图交给图片编辑模型重新生成，适合铺满全图的半透明、网格水印和压在主体上的水印（缺省的修复模式只修补识别到的水印区域，这类去不干净）；与 `--purify-scope region` 同用时只替换框内。**单独计价**、不设免费次数，运行前的报价按重绘档；图片会发送给中国大陆以外的第三方模型服务处理，细节可能与原图略有不同——用户没说要重绘就用缺省修复，换重绘前先说清这两点。内容审核拒绝时任务失败（错误码 6054）、积分退回，换图或改回修复，不要反复重试同一张。
+- 视频超分：`gtrk tool video_upscale ./clip.mp4 --upscale-times 3 --upscale-type Anime --json`。输入最多 60 秒，放大后任一边超过 4000 px 会由服务端拒绝；这是实验性增强，不能承诺主观画质一定提升。
+- 视频插帧：`gtrk tool video_interpolate ./clip.mp4 --interpolate-multiplier 3 --json`。支持 `2`、`3`、`4`，不套用旧总览里的 1 分钟限制；原视频任一边超过 4000 px 时由服务端拒绝。
+
+净化、超分、插帧属于长耗时 GPU 任务，CLI 最多持续轮询 4 小时。超时只表示本次等待结束，不等于云端任务已取消；保留输出目录中的 `task.json` / `result.json`，按 `taskId` 查询或恢复，避免直接重跑造成重复计费。
+
+### 某工具显示「未开放」时怎么回应
+
+清单里若某工具状态为**未开放**（带原因），如实告诉用户「这个能力暂时没开放」即可——**不承诺开放时间点、不展开内部原因细节**。当前清单内工具均已上线，此话术是通用兜底。
+
+## 与栏目生产 skill 的边界
+
+本 skill 是**框架向导**、不含任何审美/栏目设定：它只教「怎么调 `gtrk tool`」，不规定运镜风格、不规定抠像用在什么画面上——那些是你自己的创作判断或栏目资产的事。工具族只认「输入 → 产物」的通用契约。
+
+## 毕业条款
+
+某个工具若长出复杂度——需要多模式子命令、需要分步用户确认、需要注入栏目风格——它就该从工具族**毕业**成独立命令 / 独立 skill（照成片车道命令的先例）。毕业后旧的 `gtrk tool <名>` 会报错并指路新命令。你只要跟着 `gtrk tool list` 的当前清单走即可。
+
+## 可审阅的视频净化
+
+### 先选模式，再处理（必须）
+
+Agent 在任何去除处理之前 MUST 主动向用户说明两种模式，并等待明确选择：
+
+- **快速去除（ffmpeg）**：速度快，做基础模糊去除，可能留下模糊块或涂抹痕迹，适合更看重速度、能接受基础效果的场景。
+- **精细修复（raft）**：速度慢，做内容修复，通常更自然，合适素材可接近无痕；不保证无损或还原被遮挡的真实细节。
+
+建议问法：「这次要快速还是精细？快速处理更快，但效果基础、可能留模糊痕迹；精细处理更慢，通常更自然、可接近无痕，但不保证所有画面都能完美修复。你选哪一种？」
+
+**没有回答就不开始去除，不替用户默认 ffmpeg，也不默认 raft。** 用户在本次任务已明确选好模式时无需重复询问；批量素材只有在用户明确说明整批沿用该模式时才能统一使用。“直接处理”“无需复核选区”“按检测结果去除”只授权范围，不代表选择了处理模式。只做 detect/edit 可以继续；空清单直接返回原片，不为不发生的处理追问。
+
+用户选定后才把对应值显式传给命令：顶层 `--purify-func-type ffmpeg|raft`，旧工具入口 `--purify-method ffmpeg|raft`。这些参数没有默认值；下面的 `<用户选定模式>` 必须替换为本次选择，不能照示例猜一个。
+
+不确定误检时：先 `gtrk purify detect <视频> --out <工程目录> --json`，消费摘要与代表时间查看原片，再用 `gtrk purify edit <区域文件> --select-roi x,y,w,h --out <最终文件>` 筛选。edit 还支持重复的 --delete-id / --watermark-region / --protect-region。最后 `gtrk purify apply <最终文件> --purify-func-type <用户选定模式> --json`，最终清单不会被重新检测覆盖。
+
+用户明确清理范围时：`gtrk purify run <视频> --detect-scope subtitle --watermark-region x,y,w,h --purify-func-type <用户选定模式> --json`。不得将全屏文字候选默认当成水印；full_screen 需明确选择。图形台标需 Agent 补框。
+
+只处理明确的角标框时：`gtrk purify <视频> --no-detect --watermark-region x,y,w,h[,start[,end]] --purify-func-type <用户选定模式> --out <工程内产物目录> --json`，跳过文字检测。省略时间表示全片；每条视频分别确认角标位置，不复用上一条视频的框。用户已授权采用检测结果时无需再审选区，但仍须完成模式选择。检测和处理分别计费，纯人工框只创建处理任务。
+
+中断后用 `gtrk purify resume <回执中的运行记录> --json`。新记录沿用用户已选模式；旧记录尚未建处理任务且无法确认选择时，先询问用户，再在 resume 补 `--purify-func-type <用户选定模式>`。已建单只能继续查询下载，不能通过 resume 换模式。
+
+**慢速失败、排队或暂不可用时，必须先告知原因及切换快速去除的效果代价，等用户同意后才能另建快速任务；严禁自行手搓本地 ffmpeg 交差。** 长片超出 raft 限制时先说明限制，讨论分段或改模式，不因时长自动降档。交付时写明实际模式与已知效果问题，不把 ffmpeg 结果描述为无痕修复。
+
+完整万级区域保存在文件，勿逐条读进模型上下文。保护框优先于去除框，新处理请求会先检查服务支持 review_protocol=2，否则在上传计费前停止。
+
+## 视频高光发现
+
+### 高光发现与失败兜底
+
+该工具只由 `gtrk-vlog-docu` 图纸按需调用，或响应用户明确的单点工具调用；其他成片图纸不自动启用。Vlog 在全批概览之后，需要探索动态看点时执行：
+
+```bash
+gtrk tool video_highlight "<本地视频>" --out "<工程目录>/highlight/<素材名>" --json
+```
+
+该入口当前仅供内部验收。只上传本地生成的448p/4fps分析代理，缺省附单声道低码率原声，原片不上传；用户在意对话隐私时加 `--no-audio`，只少一项声音信号，候选照常产出。若报错要求短边224或无音频，说明云端尚未升级到新版代理，如实告知用户，不要重试或自行改参数。结果在 `result-output.json`。`groups` 各自的 `top3` 只代表该请求内的三秒候选；不可跨素材、跨分块混排分数。用 `matrix describe --materials <原片> --source-window <起秒,止秒> --prepare <目录>` 查看候选前后过程，再结合原声判定它能否进入脚本。不要用三秒评分推断整段事件完整性。已有明确脚本时优先语义检索，不自动调用视频高光算法，也不覆盖语义 best 或 VLM highlight。
+
+服务忙、冷却、超时、坏响应、无候选或接口未部署时，记录素材、任务号（若有）、失败原因和后续来源 `agent_semantic_overview`，继续从已观察素材按故事选材。视觉项当前 Agent 确实无法完成才标 `unavailable` 交豆包；两者都不可用则保留缺口，不写成已看过。纯粹请求“高光评分结果”时，原子失败就如实报告未完成。已有任务号优先查询原任务；提交状态未知时用同一素材、模型、输出目录恢复，不换身份盲目建单。

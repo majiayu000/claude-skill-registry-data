@@ -1,0 +1,40 @@
+{
+  "name": "doc-to-skill",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-knowledge/skills/doc-to-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "doc-to-skill",
+  "downloaded_at": "2026-11-01T10:43:46.577713Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, xlsx, docx, documentation",
+    "score": 5,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "pdf",
+      "xlsx",
+      "docx",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-knowledge/skills/doc-to-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-knowledge/skills/doc-to-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Transforme une source documentaire (README, doc, PDF, DOCX, page web, d\u00e9p\u00f4t) en un brouillon de SKILL.md pr\u00eat \u00e0 relire OU en fiche de connaissance, avec checklist de frontmatter et d\u00e9tection de doublon vs les skills existants. \u00c0 utiliser quand l'utilisateur veut \"faire un skill \u00e0 partir de ce doc/PDF/repo\", \"ing\u00e9rer cette documentation\", \"extraire un skill de ce README\", \"convertir cette page en comp\u00e9tence\", \"capitaliser ce contenu\". Pipeline : ingestion (pdf/docx via les skills pdf et docx) \u2192 extraction d'intention \u2192 brouillon \u2192 d\u00e9tection de doublon \u2192 PROPOSITION, jamais d'installation automatique. Ne pas utiliser pour un simple r\u00e9sum\u00e9, ni pour polir/\u00e9valuer un skill d\u00e9j\u00e0 r\u00e9dig\u00e9 \u2192 skill-creator, ni pour chercher un skill existant \u00e0 installer (recherche \u00e0 part, hors de ce skill)."
+}

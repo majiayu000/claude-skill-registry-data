@@ -1,0 +1,38 @@
+{
+  "name": "marimo",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/marimo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "marimo-daaf-contribution-co-daaf",
+  "downloaded_at": "2026-11-01T10:21:08.108823Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/marimo/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/marimo/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reactive Python notebook system with cell reactivity, UI elements, SQL cells, plotting, and app deployment. DAAF's standard notebook format \u2014 stored as Git-friendly .py files, not .ipynb. For DAAF pipelines, Stage 9 literally archives existing executed scripts in bounded comment/pass cells paired with real execution logs; optional display-only cells may preview existing Parquet data or show already-created figures, but may not analyze data or generate figures. Use when assembling Stage 9 research notebooks, building standalone interactive data apps, or converting Jupyter notebooks to marimo format. R equivalent: quarto \u2014 when execution language is R, use quarto instead."
+}

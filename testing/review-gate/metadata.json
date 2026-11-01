@@ -1,0 +1,37 @@
+{
+  "name": "review-gate",
+  "repo": "KerberosClaw/kc_ai_skills",
+  "path": "review-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/KerberosClaw/kc_ai_skills",
+  "dir_name": "review-gate",
+  "downloaded_at": "2026-11-01T11:09:55.221102Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "qa"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KerberosClaw",
+  "source_url": "https://github.com/KerberosClaw/kc_ai_skills/blob/main/review-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KerberosClaw/kc_ai_skills/blob/main/review-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to review a dispatch before handoff, requirements and plans before implementation, or code after implementation. Runs a fresh reviewer, then a separate context-aware adjudicator; returns evidence-backed dispositions to the main agent. Does not replace tests, acceptance checks or UI QA, and does not authorize execution or publication."
+}

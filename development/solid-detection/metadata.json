@@ -1,0 +1,38 @@
+{
+  "name": "solid-detection",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/solid/skills/solid-detection/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "solid-detection",
+  "downloaded_at": "2026-11-01T10:41:14.537369Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, framework, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/solid/skills/solid-detection/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/solid/skills/solid-detection/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when determining which language-specific SOLID skill to load, detecting project type from config files, or resolving interface directory conventions."
+}

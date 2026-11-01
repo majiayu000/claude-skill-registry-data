@@ -1,0 +1,38 @@
+{
+  "name": "doubt-driven-development",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-dev-discipline/skills/doubt-driven-development/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "doubt-driven-development-geekfamilycorp-tricorderkit",
+  "downloaded_at": "2026-11-01T10:43:49.620534Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-dev-discipline/skills/doubt-driven-development/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-dev-discipline/skills/doubt-driven-development/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Soumet une d\u00e9cision non triviale \u00e0 une revue adverse \u00e0 contexte frais AVANT de la valider \u2014 trois modes d'\u00e9chec concrets, recoupement sur la source r\u00e9elle, r\u00e9versibilit\u00e9 v\u00e9rifi\u00e9e, dry-run. \u00c0 utiliser quand la justesse prime sur la vitesse : op\u00e9ration irr\u00e9versible (\u00e9criture en masse, purge, push prod, modification d'un service ou d'un timer), logique sensible, terrain inconnu, ou toute affirmation d'\u00e9tat faite de m\u00e9moire. Usage manuel (d\u00e9clenchement explicite) pour ne pas ralentir les t\u00e2ches simples. D\u00e9clencheurs : \"doute\", \"v\u00e9rifie cette d\u00e9cision\", \"es-tu s\u00fbr\", \"revue adverse\", \"stress-test\", \"avant de pousser/purger/\u00e9crire en masse\". Ne pas utiliser pour cadrer une demande floue AVANT qu'une d\u00e9cision existe \u2192 tk-dev-discipline:interview-me, ni pour d\u00e9rouler tout un d\u00e9veloppement \u2192 dev-protocol (qui appelle ce skill en porte finale)."
+}

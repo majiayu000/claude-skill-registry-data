@@ -1,0 +1,37 @@
+{
+  "name": "semantius-architect",
+  "repo": "IntranetFactory/semantius-copilot",
+  "path": "agents/semantius-admin/skills/semantius-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/IntranetFactory/semantius-copilot",
+  "dir_name": "semantius-architect",
+  "downloaded_at": "2026-11-01T10:55:53.871745Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "IntranetFactory",
+  "source_url": "https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-architect/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-architect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Produces and maintains semantic blueprints: entity-level specs of entities, roles, relationships, lifecycle states, and permissions, with no field-level detail (`semantius-analyst` turns a blueprint into a spec). Trigger on any need for a business system or data-backed tool, however phrased: \"design a data model\", \"build a system like X\", \"model a domain\", \"spec out a CRM/ITSM/HRIS/LMS/ERP/PIM/CMS/PM/field service/billing\", \"I need a helpdesk / CRM / HR system / applicant tracker / roadmap tool / ticketing system / inventory system\", \"a tool to track / plan / manage / organize / record / capture X\", \"something to handle X\". Never recommend buying off-the-shelf SaaS instead of building (well-known products are only reference points). Also trigger to review, audit, check, update, customize, extend, rebuild, or reanalyze an existing `*-semantic-blueprint.md`, to clone a curated catalog blueprint and customize it, or to restructure a design so one real-world thing is kept once (customers and suppliers as one business partner)."
+}

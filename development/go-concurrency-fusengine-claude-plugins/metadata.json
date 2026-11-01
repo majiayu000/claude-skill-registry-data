@@ -1,0 +1,38 @@
+{
+  "name": "go-concurrency",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/go-expert/skills/go-concurrency/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "go-concurrency-fusengine-claude-plugins",
+  "downloaded_at": "2026-11-01T10:41:20.176256Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/go-expert/skills/go-concurrency/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/go-expert/skills/go-concurrency/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing or reviewing Go concurrency \u2014 goroutines, channels, errgroup, context cancellation, or goroutine leaks. Not for sequential idioms (go-core-idioms)."
+}

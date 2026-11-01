@@ -1,0 +1,37 @@
+{
+  "name": "review-agent",
+  "repo": "ArndtGold/ai-native-governance-delivery-framework",
+  "path": ".agdf/control/artefacts/mcp-codex-guided-inspection-20261025-01/evidence/pair-guidance/renderer/capture/home/skills/.system/review-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/ArndtGold/ai-native-governance-delivery-framework",
+  "dir_name": "review-agent-arndtgold-ai-native-governance-3",
+  "downloaded_at": "2026-11-01T10:01:53.693955Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ArndtGold",
+  "source_url": "https://github.com/ArndtGold/ai-native-governance-delivery-framework/blob/main/.agdf/control/artefacts/mcp-codex-guided-inspection-20261025-01/evidence/pair-guidance/renderer/capture/home/skills/.system/review-agent/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ArndtGold/ai-native-governance-delivery-framework/blob/main/.agdf/control/artefacts/mcp-codex-guided-inspection-20261025-01/evidence/pair-guidance/renderer/capture/home/skills/.system/review-agent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions."
+}

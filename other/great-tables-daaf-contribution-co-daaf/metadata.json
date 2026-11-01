@@ -1,0 +1,37 @@
+{
+  "name": "great-tables",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/great-tables/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "great-tables-daaf-contribution-co-daaf",
+  "downloaded_at": "2026-11-01T10:21:11.340651Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/great-tables/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/great-tables/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Python table formatting with great-tables: publication-quality display tables from Polars/pandas DataFrames. GT() grammar-of-tables object, fmt_*() number formatting, tab_*() structure (header, spanners, stub, source notes), tab_style() and data_color() styling, cols_*() column operations, and HTML/LaTeX export via as_raw_html()/write_raw_html()/as_latex(). Use when execution language is Python and the task involves formatted data tables, summary tables, or descriptive-stat tables for reports. R equivalent: gt (use when execution language is R). For regression/model tables in Python, use the estimator's own output (pyfixest etable(), statsmodels summary()) \u2014 great-tables has no modelsummary equivalent. For figures/charts use plotnine or plotly, not this skill."
+}

@@ -1,0 +1,41 @@
+{
+  "name": "markitdown",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/05-ereuna/markitdown/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "markitdown-kpistolas-claude-skills",
+  "downloaded_at": "2026-11-01T11:07:22.706855Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, pptx, xlsx, docx, markdown",
+    "score": 6,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "pdf",
+      "pptx",
+      "xlsx",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/05-ereuna/markitdown/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/05-ereuna/markitdown/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Converts heterogeneous documents and selected URIs to Markdown with Microsoft MarkItDown for text analysis, search, and LLM/RAG ingestion. Covers safe local conversion, streams, Office/PDF/data formats, batch workflows, plugins, vision OCR, Azure extraction, and the official MCP server."
+}

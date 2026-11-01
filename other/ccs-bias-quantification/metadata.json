@@ -1,0 +1,37 @@
+{
+  "name": "ccs-bias-quantification",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v1/skills/ccs-bias-quantification/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "ccs-bias-quantification",
+  "downloaded_at": "2026-11-01T10:51:43.274586Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/ccs-bias-quantification/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/ccs-bias-quantification/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you have IM-MS lipidomics data acquired on samples spiked with fully labeled U13C lipid standards (e.g., U13C yeast extract), and you need to assess whether systematic CCS deviation exists between your instrument's measured values and the DT CCS N2 reference library for U13C labeled lipids."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "schedule-reader",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/schedule-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "schedule-reader",
+  "downloaded_at": "2026-11-01T10:23:32.395658Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/schedule-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/schedule-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads any engineer's or consultant's schedule \u2014 mechanical equipment, plumbing fixtures, electrical panels, lighting, fire protection devices, structural members \u2014 and translates it into the architectural consequences: what has to fit somewhere, what needs a room, what needs access, what needs a route, what lands on a wall or a ceiling, and what weighs something the structure has to carry. Trigger on \"read this equipment schedule\", \"what does this mechanical schedule mean for us\", \"they sent a schedule\", \"schedule-reader\", or any consultant's schedule handed over. Carries no dimensions, capacities or clearances; every figure comes from the schedule or the product data. Not to be confused with `schedule-review`, which reads a contractor's construction programme \u2014 a different document entirely. `explain-panel-schedule` goes deeper on one electrical panel. It does not check the engineering and does not replace the engineers or the Architect of Record."
+}

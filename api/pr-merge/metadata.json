@@ -1,0 +1,38 @@
+{
+  "name": "cs-pr-merge",
+  "repo": "AndreyBegma/code-sentinel-skills",
+  "path": "skills/pr-merge/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/AndreyBegma/code-sentinel-skills",
+  "dir_name": "pr-merge",
+  "downloaded_at": "2026-11-01T09:58:07.744147Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreyBegma",
+  "source_url": "https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/pr-merge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/pr-merge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extract generalizable rules from PR comments and open a PR updating CLAUDE.md instructions"
+}

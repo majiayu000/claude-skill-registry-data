@@ -1,0 +1,38 @@
+{
+  "name": "transcribe",
+  "repo": "DojoCodingLabs/remotion-superpowers",
+  "path": "skills/transcribe/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/DojoCodingLabs/remotion-superpowers",
+  "dir_name": "transcribe-dojocodinglabs-remotion-superpowers",
+  "downloaded_at": "2026-11-01T10:27:41.862413Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DojoCodingLabs",
+  "source_url": "https://github.com/DojoCodingLabs/remotion-superpowers/blob/main/skills/transcribe/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DojoCodingLabs/remotion-superpowers/blob/main/skills/transcribe/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Transcribe audio or video files to text with timestamps. Produces word-level Caption JSON through the official remotion-captions flow (whisper-webgpu, or ElevenLabs Scribe via @remotion/elevenlabs when there's no GPU), plus an SRT export generated from those captions and plain text, for use with Remotion's captions system."
+}

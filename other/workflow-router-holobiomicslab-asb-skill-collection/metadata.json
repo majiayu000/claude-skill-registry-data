@@ -1,0 +1,37 @@
+{
+  "name": "metabolomics-workflow-router",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v2/workflows/_workflow_router/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "workflow-router-holobiomicslab-asb-skill-collection",
+  "downloaded_at": "2026-11-01T10:51:37.363190Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v2/workflows/_workflow_router/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v2/workflows/_workflow_router/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a user has a whole metabolomics analysis GOAL (e.g. \"annotate my untargeted LC-MS/MS data\", \"find biomarkers\", \"where else has this molecule been seen\") rather than a single step \u2014 select the right end-to-end composite workflow super-skill, then run its stages, grounding each against its source papers."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "prisma-7",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/nextjs-expert/skills/prisma-7/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "prisma-7",
+  "downloaded_at": "2026-11-01T10:41:16.264567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/nextjs-expert/skills/prisma-7/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/nextjs-expert/skills/prisma-7/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with database schema, migrations, queries, or relations via Prisma 7 (Rust-free client, TypedSQL, Omit API)."
+}

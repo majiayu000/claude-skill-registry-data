@@ -1,0 +1,37 @@
+{
+  "name": "twim-ms-data-processing",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v1/skills/twim-ms-data-processing/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "twim-ms-data-processing",
+  "downloaded_at": "2026-11-01T10:51:44.176924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/twim-ms-data-processing/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/twim-ms-data-processing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you have TWIM-MS data (arrival time and m/z values) from a multi-omic sample and need to: (1) establish a CCS calibration curve from known standards, (2) assign unidentified features to biomolecular classes (e."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "cli-compress",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-agent-security/skills/cli-compress/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "cli-compress",
+  "downloaded_at": "2026-11-01T10:43:48.469037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-agent-security/skills/cli-compress/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-agent-security/skills/cli-compress/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compresse les sorties de commandes shell verbeuses (git, npm, docker, kubectl, pytest, cargo\u2026) avant qu'elles n'entrent dans le contexte, via le binaire rtk et le hook PreToolUse du plugin. \u00c0 utiliser quand l'utilisateur mentionne \u00ab rtk \u00bb, \u00ab sortie trop longue \u00bb, \u00ab output bash massif \u00bb, \u00ab git log trop long \u00bb, \u00ab pytest verbose \u00bb, ou avant une session riche en commandes shell pour v\u00e9rifier que rtk est install\u00e9. Ne pas utiliser pour compresser de la prose ou un contexte de conversation (\u2192 caveman, context-compress), et ne jamais installer rtk sans GO explicite."
+}

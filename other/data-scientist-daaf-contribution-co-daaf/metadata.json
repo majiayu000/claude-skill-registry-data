@@ -1,0 +1,37 @@
+{
+  "name": "data-scientist",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/data-scientist/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "data-scientist-daaf-contribution-co-daaf",
+  "downloaded_at": "2026-11-01T10:21:11.973520Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/data-scientist/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/data-scientist/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Data science methodology and method-selection routing for quantitative research. Covers EDA, data validation, descriptive analysis, causal inference (IV, DiD, RD, synthetic control), clustering/PCA/UMAP, supervised ML, geospatial analysis, network analysis, and visualization design. Contains the canonical method-to-library routing tree, routed by execution language \u2014 Python: statsmodels (OLS/GLM/time series), pyfixest (FE/DiD), linearmodels (RE/GMM/SUR), svy (complex surveys), scikit-learn (clustering/prediction ML), geopandas (spatial), igraph (network analysis); R: r-stats (OLS/GLM/time series), fixest (FE/DiD), plm (panel/RE/IV), survey-r (complex surveys), tidymodels (ML), sf-terra (spatial), igraph-r (network analysis). Load the routed tool-specific skill before giving tool-specific advice or writing code \u2014 library skills encode environment constraints and curated caveats absent from general knowledge."
+}

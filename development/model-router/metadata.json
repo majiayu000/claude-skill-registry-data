@@ -1,0 +1,38 @@
+{
+  "name": "model-router",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "plugins/token-optimizer/skills/model-router/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "model-router",
+  "downloaded_at": "2026-11-01T10:43:44.346136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/plugins/token-optimizer/skills/model-router/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/plugins/token-optimizer/skills/model-router/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Choisit le modele Claude optimal (Haiku 4.5, Sonnet 4.6 ou Opus 4.6) pour une tache donnee en combinant longueur du prompt, type de tache detecte et budget mensuel restant. Applique automatiquement le mode caveman (compression sortie -75%) sur T1/T2 pour maximiser l'economie de tokens. Se declenche AVANT toute execution significative sur les requetes utilisateur. Mots-cles : \"quel modele\", \"route la tache\", \"choisis le modele\", \"dispatche\", \"optimise mon token\", \"economise des tokens\", \"classifie cette demande\", \"tache simple\", \"tache complexe\", toute nouvelle demande entrante non triviale."
+}

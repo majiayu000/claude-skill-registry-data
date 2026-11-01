@@ -1,0 +1,40 @@
+{
+  "name": "autoresearch",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/07-ai-ml-ereuna/autoresearch/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "autoresearch",
+  "downloaded_at": "2026-11-01T11:07:30.355704Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model, training",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/autoresearch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/autoresearch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orchestrates end-to-end autonomous AI research projects using a two-loop architecture. The inner loop runs rapid experiment iterations with clear optimization targets. The outer loop synthesizes results, identifies patterns, and steers research direction. Routes to domain-specific skills for execution, supports continuous agent operation via Claude Code /loop and OpenClaw heartbeat, and produces research presentations and papers. Use when starting a research project, running autonomous experiments, or managing a multi-hypothesis research effort."
+}

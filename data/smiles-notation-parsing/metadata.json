@@ -1,0 +1,38 @@
+{
+  "name": "smiles-notation-parsing",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v1/skills/smiles-notation-parsing/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "smiles-notation-parsing",
+  "downloaded_at": "2026-11-01T10:51:41.793004Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/smiles-notation-parsing/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/smiles-notation-parsing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when when processing downloaded mass spectral libraries (particularly MoNA EI or MS2 libraries) where SMILES information exists but is embedded in unstructured Comment fields rather than a dedicated SMILES field, or when assigning SMILES from external structure databases (SDF files) to library."
+}

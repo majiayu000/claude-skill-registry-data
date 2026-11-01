@@ -1,0 +1,36 @@
+{
+  "name": "dayz-build-imageset",
+  "repo": "DayZ-n-Chill/Agentic-Z",
+  "path": "skills/dayz-build-imageset/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DayZ-n-Chill/Agentic-Z",
+  "dir_name": "dayz-build-imageset",
+  "downloaded_at": "2026-11-01T10:23:59.544458Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DayZ-n-Chill",
+  "source_url": "https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-build-imageset/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-build-imageset/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Packs PNG sprites from a mod's .gui-sources/<setname>/ folders into a DayZ .imageset definition and .paa atlas under gui/imagesets/. Use when a mod's HUD or menu icons need to become an imageset that .layout files can reference."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "flutter-to-rn-migration",
+  "repo": "Ayush101K/vidaXl-react-native",
+  "path": ".claude/skills/flutter-to-rn-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Ayush101K/vidaXl-react-native",
+  "dir_name": "flutter-to-rn-migration",
+  "downloaded_at": "2026-11-01T10:05:37.190763Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component, animation",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ayush101K",
+  "source_url": "https://github.com/Ayush101K/vidaXl-react-native/blob/main/.claude/skills/flutter-to-rn-migration/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ayush101K/vidaXl-react-native/blob/main/.claude/skills/flutter-to-rn-migration/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "End-to-end procedure for porting any Flutter/Dart file from the poc_vedaxl app into this React Native monorepo (models, repositories, services, state, widgets, screens, navigation, l10n). Use it whenever you start, continue or review the port of a `lib/**/*.dart` file, when you're asked \"port X\", \"convert this Dart file\", \"where does <dart file> go\", or when you need the Flutter\u2192RN concept mapping (widgets, ChangeNotifier, FutureBuilder, Navigator, ThemeData, sheets, animations, CustomPainter, ARB). For a single screen use flutter-screen-to-rn; for models/repositories use dart-model-to-ts; for tests use flutter-test-to-jest."
+}

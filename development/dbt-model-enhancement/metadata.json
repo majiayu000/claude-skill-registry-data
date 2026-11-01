@@ -1,0 +1,39 @@
+{
+  "name": "dbt-model-enhancement",
+  "repo": "AltimateAI/data-engineering-skills",
+  "path": "skills/dbt/dbt-model-enhancement/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AltimateAI/data-engineering-skills",
+  "dir_name": "dbt-model-enhancement",
+  "downloaded_at": "2026-11-01T09:56:46.428201Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AltimateAI",
+  "source_url": "https://github.com/AltimateAI/data-engineering-skills/blob/main/skills/dbt/dbt-model-enhancement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AltimateAI/data-engineering-skills/blob/main/skills/dbt/dbt-model-enhancement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scoped enhancement of ONE existing dbt model from a ticket, with a validated PR as the deliverable. Use when:\n(1) User says \"update <model> per JIRA-123\", \"add column X to this model\", \"enhance <model> based on this ticket\"\n(2) Task is a scoped change to a specific existing model \u2014 one model, one ticket, one PR\n(3) User expects dbt build + self-review + PR open at the end\n(4) The change can be described as \"add/change column, filter, grain, or test\" \u2014 not a cross-model refactor\n**Prefer `creating-dbt-models`** for a NEW model (even if the ticket points at an area). This skill will not create models.\n**Prefer `refactoring-dbt-models`** for cross-model restructuring, CTE extraction, or macro consolidation.\nTarget wall time: \u22646 min."
+}

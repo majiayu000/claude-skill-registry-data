@@ -1,0 +1,37 @@
+{
+  "name": "seo-audit",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/seo/skills/seo-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "seo-audit-fusengine-claude-plugins",
+  "downloaded_at": "2026-11-01T10:41:09.428634Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/seo/skills/seo-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/seo/skills/seo-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when running a full-site SEO audit via /seo audit \u2014 orchestrates all SEO sub-agents in parallel for one unified Health Score."
+}

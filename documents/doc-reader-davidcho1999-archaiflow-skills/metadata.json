@@ -1,0 +1,39 @@
+{
+  "name": "doc-reader",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/doc-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "doc-reader-davidcho1999-archaiflow-skills",
+  "downloaded_at": "2026-11-01T10:23:20.318641Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, markdown",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/doc-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/doc-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads a non-drawing project PDF and answers questions about it: a specification, a code excerpt, a contract, a consultant report, or correspondence from an authority. Summarises, locates a clause, extracts values, or lists comments, and cites section and page for every claim it makes. Trigger on \"read this spec\", \"what does this document say\", \"summarize this report\", \"find clause X\", \"what is the authority asking for\", or a pasted path to a non-drawing project PDF. For drawing sheets use drawing-reader instead. Detects the document type, asks what is wanted before reading at length, and never answers from what a document of that kind usually says. Writes a per-read summary that points back at the source."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "nextjs-16",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/nextjs-expert/skills/nextjs-16/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "nextjs-16-fusengine-claude-plugins",
+  "downloaded_at": "2026-11-01T10:41:18.395962Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, compile",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/nextjs-expert/skills/nextjs-16/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/nextjs-expert/skills/nextjs-16/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building Next.js 16 apps \u2014 Turbopack, App Router, Cache Components, proxy.ts, v15 migration. Not for stack scaffolding (nextjs-stack) or React SPA (react-expert)."
+}

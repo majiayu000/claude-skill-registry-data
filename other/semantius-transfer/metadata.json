@@ -1,0 +1,37 @@
+{
+  "name": "semantius-transfer",
+  "repo": "IntranetFactory/semantius-copilot",
+  "path": "agents/semantius-admin/skills/semantius-transfer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/IntranetFactory/semantius-copilot",
+  "dir_name": "semantius-transfer",
+  "downloaded_at": "2026-11-01T10:55:53.496909Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "xlsx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "IntranetFactory",
+  "source_url": "https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-transfer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-transfer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Moves Semantius modules and tables, with or without their records, between hosts or into a restorable file, through the CLI's `utils` transfer tools (`export_module`, `export_entities`, `import_module`, `import_entities`). Covers copy / clone / move / migrate / promote between hosts (stage to prod, prod to test), backup and snapshot of a module to a JSON file, and restore of such a file. Trigger on \"export module X to a file\", \"back up / snapshot module X\", \"back up all modules\", \"restore this export / backup\", \"copy / clone / move / migrate / promote module X or tables A, B (with their data) to <host>\", \"seed test from prod\", \"import crm.json into the test host\". Do NOT trigger for loading a CSV or xlsx file (semantius-importer), exporting a table to CSV (semantius-importer), producing a markdown spec from a live module (semantius-optimizer), deploying blueprints or specs (semantius-admin / semantius-modeler), or webhook receivers."
+}

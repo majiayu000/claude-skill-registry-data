@@ -1,0 +1,38 @@
+{
+  "name": "android-tv-setup",
+  "repo": "JohnWayneeee/cleantv",
+  "path": "skills/android-tv-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/JohnWayneeee/cleantv",
+  "dir_name": "android-tv-setup",
+  "downloaded_at": "2026-11-01T11:04:25.126422Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, adb, android",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "device",
+      "adb",
+      "android"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JohnWayneeee",
+  "source_url": "https://github.com/JohnWayneeee/cleantv/blob/main/skills/android-tv-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JohnWayneeee/cleantv/blob/main/skills/android-tv-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up an Android TV or Google TV over network ADB - back up, debloat with the owner's choices, switch off screen recognition (ACR) and take the microphone and camera away from vendor apps, tune performance, set picture and sound like a calibrator, replace the home screen with a clean Apple TV style launcher, and set up a YouTube DPI bypass (ByeByeDPI) where the ISP throttles YouTube, verifying every step with screenshots from the TV. Use when the user wants to debloat, clean up, speed up, configure, calibrate or replace the launcher on an Android TV / Google TV set or box (Xiaomi, TCL, Hisense, Sony, Philips, CHiQ/Changhong, Haier, Nvidia Shield and others). Not for Samsung Tizen, LG webOS or Fire TV launchers."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "mssql-to-snowflake-dbt-migration",
+  "repo": "AltimateAI/data-engineering-skills",
+  "path": "skills/dbt/mssql-to-snowflake-dbt-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/AltimateAI/data-engineering-skills",
+  "dir_name": "mssql-to-snowflake-dbt-migration",
+  "downloaded_at": "2026-11-01T09:56:46.618885Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AltimateAI",
+  "source_url": "https://github.com/AltimateAI/data-engineering-skills/blob/main/skills/dbt/mssql-to-snowflake-dbt-migration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AltimateAI/data-engineering-skills/blob/main/skills/dbt/mssql-to-snowflake-dbt-migration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Convert MS SQL Server source code (stored procs, views, T-SQL scripts) into dbt models targeting Snowflake, with build-first-then-parity, isolated-schema deployment, and a migration dashboard. Use when:\n(1) User says \"migrate this T-SQL to dbt on Snowflake\", \"convert these stored procs end-to-end\", \"move <schema> from SQL Server to Snowflake\"\n(2) Source lives in a repo as `.sql` dumps OR behind a reachable MS SQL connection, AND source rows are available in Snowflake for parity (replicated, staged, or landable)\n(3) Target is a dbt project with a Snowflake adapter\n(4) User expects a layered architecture (Medallion or Data Vault 2.0), parity-validated output, and an isolated-schema deploy\n**Prefer `migrating-sql-to-dbt`** for generic SQL-to-dbt conversion with no cross-engine parity, no isolated deploy, and no T-SQL-specific traps.\nTarget wall time: \u22647 min for \u226410 objects; scales roughly linearly."
+}

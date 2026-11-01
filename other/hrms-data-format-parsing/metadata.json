@@ -1,0 +1,37 @@
+{
+  "name": "hrms-data-format-parsing",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v1/skills/hrms-data-format-parsing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "hrms-data-format-parsing",
+  "downloaded_at": "2026-11-01T10:51:46.099310Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/hrms-data-format-parsing/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/hrms-data-format-parsing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you have raw or processed HRMS/MS data from Q-Exactive, Agilent Q-TOF, Bruker Q-TOF, or SCIEX Q-TOF instruments in formats such as mzML, CSV peaklists, or vendor-specific formats, and you need to extract experimental fragment m/z values and their intensities for comparison against."
+}

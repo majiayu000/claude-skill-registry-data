@@ -1,0 +1,37 @@
+{
+  "name": "chemical-class-mapping",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "packs/metabolomics/lc-ms/leaves/chemical-class-mapping/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "chemical-class-mapping",
+  "downloaded_at": "2026-11-01T10:51:37.137944Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/packs/metabolomics/lc-ms/leaves/chemical-class-mapping/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/packs/metabolomics/lc-ms/leaves/chemical-class-mapping/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you have a GNPS molecular network (GML or GraphML format) and wish to annotate network nodes with chemical class labels to support metabolite family interpretation. Use it specifically when you need to overlay chemical classification schemes (e."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "drawing-reader",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/drawing-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "drawing-reader",
+  "downloaded_at": "2026-11-01T10:23:30.587255Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, markdown",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/drawing-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/drawing-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads an architectural drawing PDF and answers questions about it: a single sheet, a full set, a redline, a record drawing, a shop drawing, or a detail. Summarises, finds a sheet, explains a detail, lists disciplines, or pulls a callout. Trigger on \"read this drawing\", \"what is in this set\", \"summarize this drawing\", \"show me sheet X\", \"what is on this sheet\", or a pasted path to a drawing PDF. For specifications, codes, contracts, and reports use doc-reader instead. Detects the drawing type, asks what is wanted before reading at length, and hands off to schedule-extractor, drawing-set-bookmarker, or drawing-checklist when one of those fits better. Never reports a dimension or a note it did not read off the sheet."
+}

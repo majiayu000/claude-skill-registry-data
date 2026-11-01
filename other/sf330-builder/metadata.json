@@ -1,0 +1,37 @@
+{
+  "name": "sf330-builder",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/sf330-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "sf330-builder",
+  "downloaded_at": "2026-11-01T10:23:27.235929Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/sf330-builder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/sf330-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assembles a federal qualifications submission section by section, and does the part that decides the score: selecting the example projects and writing them so that each one demonstrates a specific evaluation criterion rather than being included because it is good work. Builds the team organisation against the projects named, keeps r\u00e9sum\u00e9s consistent with the projects they claim, and checks every section against the solicitation's own instructions before submission. Trigger on \"SF330\", \"federal qualifications package\", \"which projects go in Section F\", \"architect-engineer qualifications\", \"sf330-builder\", or a federal solicitation handed over to answer. Carries no form instructions and no evaluation criteria; both come from the current form and the specific solicitation, which override any general guidance. It does not replace the principal, who signs."
+}

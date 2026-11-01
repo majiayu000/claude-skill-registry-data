@@ -1,0 +1,38 @@
+{
+  "name": "cs-spec",
+  "repo": "AndreyBegma/code-sentinel-skills",
+  "path": "skills/spec/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/AndreyBegma/code-sentinel-skills",
+  "dir_name": "spec-andreybegma-code-sentinel-skills",
+  "downloaded_at": "2026-11-01T09:58:08.955649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, roadmap, feature",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "roadmap",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreyBegma",
+  "source_url": "https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn an intention into a specification the fleet can execute \u2014 or find the work when there is no intention yet. Interviews the person in rounds, checks the result against the project's decisions, splits it into slots parallel agents can work without colliding, and lands it as a GitHub issue (plus an optional spec file) that cs-orchestrator can dispatch"
+}

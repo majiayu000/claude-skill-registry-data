@@ -1,0 +1,37 @@
+{
+  "name": "commit",
+  "repo": "EverMind-AI/EverOS",
+  "path": ".claude/skills/commit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/EverMind-AI/EverOS",
+  "dir_name": "commit-evermind-ai-everos",
+  "downloaded_at": "2026-11-01T10:35:51.216582Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EverMind-AI",
+  "source_url": "https://github.com/EverMind-AI/EverOS/blob/main/.claude/skills/commit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EverMind-AI/EverOS/blob/main/.claude/skills/commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stage and create a Conventional Commits message for the current change"
+}

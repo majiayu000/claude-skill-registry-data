@@ -1,0 +1,37 @@
+{
+  "name": "dayz-lint",
+  "repo": "DayZ-n-Chill/Agentic-Z",
+  "path": "skills/dayz-lint/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DayZ-n-Chill/Agentic-Z",
+  "dir_name": "dayz-lint",
+  "downloaded_at": "2026-11-01T10:23:53.654116Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DayZ-n-Chill",
+  "source_url": "https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-lint/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-lint/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Finds errors that would stop a DayZ mod loading, before it is packed: config.cpp syntax, CfgPatches, requiredAddons, $PBOPREFIX$ and its P: link, script modules, modded classes, missing files and bad suffixes. Prints PASS or FAIL with file:line findings, each with an owner and a fix. Runs first inside /dayz-gate build and /dayz-build-pbo; use it alone to check a mod while you work."
+}

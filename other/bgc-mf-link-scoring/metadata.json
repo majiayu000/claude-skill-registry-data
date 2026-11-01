@@ -1,0 +1,37 @@
+{
+  "name": "bgc-mf-link-scoring",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "packs/metabolomics/lc-ms/leaves/bgc-mf-link-scoring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "bgc-mf-link-scoring",
+  "downloaded_at": "2026-11-01T10:51:36.464533Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/packs/metabolomics/lc-ms/leaves/bgc-mf-link-scoring/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/packs/metabolomics/lc-ms/leaves/bgc-mf-link-scoring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you have preprocessed GCF-MF link pairs from paired genomics\u2013metabolomics datasets (antiSMASH-detected BGCs clustered into GCFs, and GNPS spectra grouped into MFs) and need to rank them by likelihood of representing true natural product\u2013biosynthetic gene associations."
+}

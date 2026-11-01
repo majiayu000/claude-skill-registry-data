@@ -1,0 +1,37 @@
+{
+  "name": "update-api-docs",
+  "repo": "DexForce/EmbodiChain",
+  "path": ".agents/skills/update-api-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DexForce/EmbodiChain",
+  "dir_name": "update-api-docs",
+  "downloaded_at": "2026-11-01T10:25:46.385861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DexForce",
+  "source_url": "https://github.com/DexForce/EmbodiChain/blob/main/.agents/skills/update-api-docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DexForce/EmbodiChain/blob/main/.agents/skills/update-api-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate or update EmbodiChain Sphinx API documentation for public Python exports. Use when the API docs checker or CI reports missing __all__ exports, after adding or changing public APIs, or when asked to fill, generate, or synchronize API-reference pages and their descriptions."
+}

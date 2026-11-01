@@ -1,0 +1,37 @@
+{
+  "name": "daaf-deploy-smoke-testing",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/daaf-deploy-smoke-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "daaf-deploy-smoke-testing",
+  "downloaded_at": "2026-11-01T10:21:15.045961Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/daaf-deploy-smoke-testing/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/daaf-deploy-smoke-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "In-situ smoke testing that verifies a LIVE DAAF deployment functions end-to-end in whatever provider route it is configured for. Auto-detects the active install route (anthropic-subscription, openrouter, chatgpt-subscription shim, openai-api shim) and runs tiered probes: Tier 0 free preflight (route/env coherence, hooks, statuslines, shim health); Tier 1 one live round-trip (~cents); Tier 2 a six-probe functional battery (dispatch, coding, web, skill loading, isolation-strip, nested-dispatch deny); Tier D a zero-cost deterministic battery (bats, Pester, lint, safety-hook tests). Use after install, after a rebuild or update, after any provider/config change (new API key, model remap, shim change), for pre-release validation, or when asked \"is my install working\" or to \"smoke test the deployment/config.\" Requires the DAAF_DEV=1 dev image; a contributor tool, not end-user-facing. NOT DAAFBench (model behavioral-adherence evaluation under benchmarks/) and NOT scripts/smoke_tests/ (R/Python library-package smoke tests)."
+}

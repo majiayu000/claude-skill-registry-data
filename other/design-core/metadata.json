@@ -1,0 +1,37 @@
+{
+  "name": "design-core",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/design-core/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "design-core",
+  "downloaded_at": "2026-11-01T10:23:22.209870Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-core/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-core/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Aggregates the pieces of a building core (elevator shafts, stairs, toilets, mechanical and electrical shafts and rooms) from dimensions the user supplies, applies the user's own wall-and-circulation factor, and reports total core area and core-to-floor-plate ratio against the user's benchmark, showing every step. Trigger on \"core sizing\", \"how big is my core\", \"core-to-floor ratio\", \"core efficiency\", \"design-core\", or a floor plate paired with a list of core components. Every dimension comes from the user: shaft sizes from manufacturer cut sheets, stair footprints from the user's stair layout, room sizes from the user's plans, the grossing factor and the target ratio from the user's own benchmarks. The skill never supplies a typical shaft size, fixture count, or target ratio. It does not decide elevator count (the elevator consultant's traffic analysis does), does not check stair or fixture code compliance, and is not a substitute for the Architect of Record."
+}

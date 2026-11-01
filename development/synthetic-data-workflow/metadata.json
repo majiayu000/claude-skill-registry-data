@@ -1,0 +1,38 @@
+{
+  "name": "synthetic-data-workflow",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/synthetic-data-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "synthetic-data-workflow",
+  "downloaded_at": "2026-11-01T10:21:14.668408Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/synthetic-data-workflow/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/synthetic-data-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Privacy-preserving workflow for building synthetic datasets and data source skills when raw data must never enter the DAAF container. The user profiles their sensitive data locally with a disclosure-controlled script; only a summary profile report crosses the boundary; DAAF builds a synthetic dataset and skill from the report alone. Use whenever data is sensitive, proprietary, PII-bearing, HIPAA/FERPA-governed, held in a secure enclave, or the user says the data cannot leave their environment, they cannot upload it, or asks to profile it locally. Covers a four-tier disclosure ladder (T1 schema, T2 marginals, T3 relationships, T4 local high-fidelity synthesis), profile-only generation with simstudy (R) / NumPy-SciPy copulas (Python), and three-part QA (disclosure-safety, report consistency, synthetic-vs-profile validation). Not for synthetic control, the causal-inference method; for that see data-scientist. Synthetic data here is a code-development scaffold, not an analytic substitute."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "php-standards",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/php-expert/skills/php-standards/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "php-standards-fusengine-claude-plugins",
+  "downloaded_at": "2026-11-01T10:41:18.972936Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/php-expert/skills/php-standards/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/php-expert/skills/php-standards/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when setting up PHP-package autoloading, coding style, or PSR interfaces \u2014 PSR-4, PER Coding Style 3.1, composer.json. Do NOT use for syntax or Laravel."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "spec-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/spec-review/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "spec-review",
+  "downloaded_at": "2026-11-01T10:23:22.514854Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/spec-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/spec-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user shares a project specification \u2014 full spec book, individual CSI MasterFormat sections, or specs paired with drawings \u2014 and wants it audited for division completeness, drawing-spec coordination, prescriptive vs performance balance, basis-of-design products, reference-standard currency, AHJ amendments, section-internal completeness, and OPR alignment. Trigger on 'spec review', 'spec audit', 'CSI review', 'check this spec section', 'are the specs and drawings coordinated', 'reference standards', 'basis of design', 'or equal language', or pasted spec content with completeness intent. Generates a structured review markdown in `docs/spec-reviews/` and appends to the project spec-review index."
+}

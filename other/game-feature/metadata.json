@@ -1,0 +1,37 @@
+{
+  "name": "game-feature",
+  "repo": "Elfspectrals/CampusCove",
+  "path": ".claude/skills/game-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Elfspectrals/CampusCove",
+  "dir_name": "game-feature",
+  "downloaded_at": "2026-11-01T10:32:00.188367Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Elfspectrals",
+  "source_url": "https://github.com/Elfspectrals/CampusCove/blob/main/.claude/skills/game-feature/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Elfspectrals/CampusCove/blob/main/.claude/skills/game-feature/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "End-to-end recipe for adding or changing a CampusCove gameplay feature (housing, doors, keys, tools, work buildings, fishing, open-world phases, interactions, hotbar items). Use at the start of any /game feature that may span Blender assets, the Three.js front, the Colyseus socket and the Laravel API, to decide which layers to touch, in which order, and how to ship it."
+}

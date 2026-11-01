@@ -1,0 +1,38 @@
+{
+  "name": "merge-discipline",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/merge-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "merge-discipline",
+  "downloaded_at": "2026-11-01T10:40:39.389111Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt, prompting",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/merge-discipline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/merge-discipline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hard gate before merging into a protected branch: run Parts A\u2192B\u2192C\u2192R\u2192D (OpenSpec archive association, rebase/conflict pre-check, coverage preference, pr-code-review with content-matched depth via pr-review-gate (unset \u2261 auto), squash decision from commit quality + tip-pin merge). Do NOT merge while an associated OpenSpec change is still active; do NOT skip on a direct \"merge MR\" command; do NOT auto-select squash when two viable strategies exist \u2014 ask with a commit-quality recommendation; a single-commit or single-permitted-strategy MR concludes without prompting; after merging, sync the local workspace onto the resolved target branch. Triggers \u2014 \u300c\u5408\u5e76 tip\u300d\u300cmerge tip\u300d\u300c\u5408\u5e76\u7eaa\u5f8b\u300d\u300cpush \u540e\u5408\u5e76\u300d\u300carchive \u5408\u5165\u300d\u300c\u5408\u5e76\u524d\u95e8\u63a7\u300d\u300crebase \u68c0\u67e5\u300d\u300c\u51b2\u7a81\u9884\u68c0\u300d\u300c\u5408\u5e76\u524d rebase\u300d\u300c\u5148 archive \u518d merge\u300d\u300c\u5408\u5e76\u524d code-review\u300d / merge discipline, archive-before-merge, rebase pre-check, coverage gate, pr code review before merge."
+}

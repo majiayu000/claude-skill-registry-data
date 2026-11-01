@@ -1,0 +1,38 @@
+{
+  "name": "daaf-orchestrator",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/daaf-orchestrator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "daaf-orchestrator",
+  "downloaded_at": "2026-11-01T10:21:12.797517Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, orchestration=3",
+    "score": 3,
+    "runner_up": "orchestration",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/daaf-orchestrator/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/daaf-orchestrator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operational framework for the DAAF orchestrator. Defines engagement modes, confirmation protocol, subagent dispatch, context budget, and reference-loading. Loaded exclusively by the orchestrator \u2014 not for subagents or user questions."
+}

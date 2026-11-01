@@ -1,0 +1,1210 @@
+---
+name: data-scientist
+description: >-
+  Data science methodology and method-selection routing for quantitative research. Covers EDA, data validation, descriptive analysis, causal inference (IV, DiD, RD, synthetic control), clustering/PCA/UMAP, supervised ML, geospatial analysis, network analysis, and visualization design. Contains the canonical method-to-library routing tree, routed by execution language — Python: statsmodels (OLS/GLM/time series), pyfixest (FE/DiD), linearmodels (RE/GMM/SUR), svy (complex surveys), scikit-learn (clustering/prediction ML), geopandas (spatial), igraph (network analysis); R: r-stats (OLS/GLM/time series), fixest (FE/DiD), plm (panel/RE/IV), survey-r (complex surveys), tidymodels (ML), sf-terra (spatial), igraph-r (network analysis). Load the routed tool-specific skill before giving tool-specific advice or writing code — library skills encode environment constraints and curated caveats absent from general knowledge.
+metadata:
+  audience: any-agent
+  domain: research-methodology
+---
+
+# Data Scientist Skill
+
+Rigorous data science methodology and mindset for quantitative research in Python or R. Covers EDA, data validation, transformation verification, documentation standards, visualization design, descriptive analysis, statistical modeling, causal inference method selection (IV, DiD, RD, synthetic control), unsupervised analysis (clustering, PCA, UMAP), supervised ML methodology (prediction vs. inference, cross-validation, model interpretation, fairness), geospatial analysis, and network analysis (centrality, community detection, bipartite graphs). Provides methodology decisions and analytical approach guidance. Load the routed, language-appropriate tool-specific skill (Python: polars, statsmodels, plotnine, pyfixest, scikit-learn, geopandas, igraph; R: tidyverse, r-stats, ggplot2, fixest, tidymodels, sf-terra, igraph-r; etc.) before giving tool-specific advice or writing code — library skills encode environment-specific constraints and curated caveats that general knowledge lacks or gets wrong. Use for any data analysis, exploration, transformation, or modeling task — especially when choosing methods, checking assumptions, or structuring an analysis.
+
+Establishes a rigorous, methodical approach to data science work. This skill is about *how* to think and work, not specific tools. The moment a specific tool enters the conversation — in advice and brainstorming as much as in code — load its specialized skill (Python: polars, plotnine, plotly, marimo; R: tidyverse, ggplot2, plotly-r, quarto; etc.): those skills know this environment's tooling in ways general knowledge does not.
+
+## Core Principles - NON-NEGOTIABLE
+
+These five principles must guide ALL data science work. They are not optional.
+
+### Principle 1: Data Robustness First
+
+**ALWAYS check data before operating on it.**
+
+Before ANY analysis or transformation:
+- Check shape, types, and memory usage
+- Examine value distributions and ranges
+- Identify and characterize missing values (count, percentage, pattern)
+- Understand what uniquely identifies each row (granularity)
+- Look for outliers and anomalies
+
+Be VERBOSE about what you're checking and what you find. Never assume data is clean.
+
+**Python:**
+```python
+# ALWAYS start with this pattern
+print(f"Shape: {df.shape}")
+print(f"Columns: {df.columns.to_list()}")
+print(f"Types:\n{df.dtypes}")
+print(f"Null counts:\n{df.null_count()}")
+print(f"Sample:\n{df.sample(5)}")
+```
+
+**R:**
+```r
+# ALWAYS start with this pattern
+cat("Shape:", nrow(df), "x", ncol(df), "\n")
+cat("Columns:", paste(names(df), collapse = ", "), "\n")
+str(df)
+cat("Null counts:\n")
+print(colSums(is.na(df)))
+cat("Sample:\n")
+print(df[sample(nrow(df), 5), ])
+```
+
+This principle applies only when you are conducting actual data work. Do NOT conduct net new analyses or data inspections when tasked with compiling past work (e.g., analytic notebook creation), or synthesizing prior analyses into a report (e.g., final report writing).
+
+### Principle 2: Documentation First
+
+**ALWAYS understand or create data documentation.**
+
+Before analysis:
+- Seek data dictionaries, schemas, or documentation
+- Understand where data comes from (provenance)
+- Learn collection methods and their implications
+- Identify known quality issues or caveats
+- Clarify what each column means in business context
+
+If documentation doesn't exist, CREATE IT as you learn about the data.
+
+### Principle 3: Verify Every Operation
+
+**NEVER assume a transformation worked correctly.**
+
+For EVERY data operation:
+- Check row counts before and after
+- Examine random samples of affected rows
+- Validate that expected changes occurred
+- Confirm no unintended side effects
+- Document what you checked and what you found
+
+**Python:**
+```python
+# Before transformation
+print(f"Before: {len(df)} rows, columns: {df.columns.to_list()}")
+sample_before = df.filter(pl.col("id").is_in([1, 42, 100]))
+
+# After transformation
+print(f"After: {len(result)} rows, columns: {result.columns.to_list()}")
+sample_after = result.filter(pl.col("id").is_in([1, 42, 100]))
+print(f"Sample comparison:\nBefore:\n{sample_before}\nAfter:\n{sample_after}")
+```
+
+**R:**
+```r
+# Before transformation
+cat("Before:", nrow(df), "rows, columns:", paste(names(df), collapse = ", "), "\n")
+sample_before <- df |> dplyr::filter(id %in% c(1, 42, 100))
+
+# After transformation
+cat("After:", nrow(result), "rows, columns:", paste(names(result), collapse = ", "), "\n")
+sample_after <- result |> dplyr::filter(id %in% c(1, 42, 100))
+cat("Sample comparison:\nBefore:\n")
+print(sample_before)
+cat("After:\n")
+print(sample_after)
+```
+
+### Principle 4: Thorough Code Documentation (ENFORCED)
+
+**Write extensive comments explaining your reasoning. This is MANDATORY, not optional.**
+
+In research workflows, follow the **Inline Audit Trail (IAT)** standard (see `agent_reference/INLINE_AUDIT_TRAIL.md`). The IAT standard is enforced during QA review — scripts with sparse documentation receive WARNING findings.
+
+Every code block should explain:
+- WHAT you're trying to accomplish (the goal) → IAT Type 2: Intent Comment
+- WHY you chose this approach (the reasoning) → IAT Type 3: Reasoning Comment
+- WHAT assumptions you're making (the dependencies) → IAT Type 4: Assumption Comment
+
+For tests and validations, explain:
+- What behavior you're checking
+- What would indicate success vs. failure
+- Why this check matters
+
+### Principle 5: Focus on Research Questions
+
+**Balance rigor with usefulness.**
+
+Always consider:
+- What question are we actually answering?
+- What level of rigor does this decision require?
+- Are there multiple valid approaches with different tradeoffs?
+- Should I check with the user before proceeding?
+
+CHECK IN with users when:
+- Multiple valid methodologies exist
+- Tradeoffs between precision and practicality arise
+- Findings are surprising or counterintuitive
+- Scope might need adjustment
+
+## Language Routing
+
+This skill routes to **language-specific library skills** based on the execution
+language set in CLAUDE.md § User Preferences and propagated in the agent's prompt.
+When no language is specified, default to Python.
+
+| Method | Python Skill | R Skill |
+|--------|-------------|---------|
+| Data manipulation | `polars` | `tidyverse` |
+| Static visualization | `plotnine` | `ggplot2` |
+| Interactive visualization | `plotly` | `plotly-r` |
+| Fixed effects / DiD | `pyfixest` | `fixest` |
+| OLS / GLM / time series | `statsmodels` | `r-stats` |
+| Panel / RE / IV / system | `linearmodels` | `plm` |
+| Complex survey statistics | `svy` | `survey-r` |
+| ML / clustering / PCA | `scikit-learn` | `tidymodels` |
+| Geospatial | `geopandas` | `sf-terra` |
+| Network analysis | `igraph` | `igraph-r` |
+| Table formatting | `great-tables` | `gt` |
+| Notebook | `marimo` | `quarto` |
+
+All decision trees below use Python skill names as the primary label, with the R
+counterpart noted inline as `(Python)`/`(R)` pairs. When the execution language is
+R, substitute the R skill from this table. Time-series estimation routes to
+`statsmodels` in Python and `r-stats` in R (see its `references/time-series.md`).
+
+## Related Skills - When to Load
+
+**Core Workflow Skills (Load Together):**
+- `polars` (R: `tidyverse`) - Required for DataFrame operations; data-scientist provides methodology, polars/tidyverse provides syntax
+- `marimo` (R: `quarto`) - Required for creating validated notebooks; data-scientist defines validation patterns, marimo/quarto provides implementation
+
+**For Data Analysis Workflows:**
+
+In the research pipeline, data-scientist methodology is applied within the **file-first execution pattern**:
+- Write script files FIRST (to `scripts/stage{N}_{type}/`) as `.py` (Python) or `.R` (R)
+- Execute via Bash with automatic output capture wrapper script
+- Validation results get automatically embedded in scripts as comments
+- Marimo (Python) or Quarto (R) notebook assembles validated scripts for interactive review
+
+Closely read `agent_reference/SCRIPT_EXECUTION_REFERENCE.md` for the mandatory file-first execution protocol covering complete code file writing, output capture, and file versioning rules.
+
+**Load for Specific Needs:**
+```
+What task are you performing?
+├─ Data visualization (any kind)
+│   └─ Stage 8.2 — FIRST read visualization reference files below:
+│       ├─ ./references/visualization-design.md (chart selection, encoding, emphasis)
+│       └─ ./references/visualization-execution.md (color, labeling, accessibility, export)
+│       THEN load the tool-specific skill:
+│       ├─ Static plots → Load `plotnine` skill (Python) or `ggplot2` skill (R)
+│       └─ Interactive plots → Load `plotly` skill (Python) or `plotly-r` skill (R)
+├─ Descriptive analysis (subgroups, distributions, decompositions, trends)
+│   └─ Stage 8.1 — FIRST read ./references/descriptive-analysis.md
+│       THEN load the `polars` skill (Python) or `tidyverse` skill (R) (some methods
+│       may also need `statsmodels`/`r-stats` for weighted SEs/formal tests or
+│       `pyfixest`/`fixest` for descriptive FE regressions)
+├─ Statistical modeling (regression, robustness checks)
+│   └─ Stage 8.1 — FIRST read ./references/statistical-modeling.md
+│       THEN load library skill:
+│       ├─ Standard regression (OLS, logistic, GLM) → Load `statsmodels` skill (Python) or `r-stats` skill (R)
+│       │   (Note: for OLS with clustered SEs, prefer `pyfixest`/`fixest` — native cluster support)
+│       ├─ Fixed effects, IV with FE, or DiD → Load `pyfixest` skill (Python) or `fixest` skill (R)
+│       ├─ Random effects, between, first difference, Fama-MacBeth → Load `linearmodels` skill (Python) or `plm` skill (R)
+│       ├─ IV without FE (LIML, GMM) → Load `linearmodels` skill (Python) or `plm` skill (R)
+│       ├─ System estimation (SUR, 3SLS) → Load `linearmodels` skill (Python) or `plm` skill (R)
+│       ├─ Time series modeling (ARIMA/SARIMAX, VAR, forecasting, stationarity
+│       │   tests, exponential smoothing) → Load `statsmodels` skill (Python) or
+│       │   `r-stats` skill (R, see its references/time-series.md)
+│       │   (to *describe* trends or seasonality without formal modeling, read
+│       │   ./references/descriptive-analysis.md "Trend Analysis" section instead)
+│       └─ Spatial regression (spatial lag, spatial error, GWR) → Load `geopandas` skill (Python) or `sf-terra` skill (R)
+│           (Python: PySAL/spreg via geopandas; R: spdep/spatialreg via sf-terra; also read geospatial refs)
+├─ Supervised ML (prediction, classification, risk scoring)
+│   └─ FIRST read ./references/supervised-ml.md (when to use ML, how to validate, interpret, report)
+│       THEN load `scikit-learn` skill (Python) or `tidymodels` skill (R) (algorithms, syntax, evaluation)
+│       ├─ Model interpretation (SHAP, feature importance)
+│       │   → Read supervised-ml.md "Interpreting ML Models" + scikit-learn/tidymodels interpretation refs
+│       └─ Fairness assessment
+│           → Read supervised-ml.md "Fairness" + scikit-learn/tidymodels fairness refs
+├─ Unsupervised analysis (clustering, dimensionality reduction, pattern discovery)
+│   └─ Stage 8.1 — FIRST read ./references/exploratory-unsupervised.md
+│       THEN load `scikit-learn` skill (Python) or `tidymodels` skill (R)
+│       ├─ Clustering → clustering.md, evaluation-unsupervised.md (scikit-learn refs; R: tidymodels unsupervised.md)
+│       ├─ Dimensionality reduction → decomposition.md, manifold.md (scikit-learn refs; R: tidymodels unsupervised.md)
+│       └─ Index construction via PCA → also read ./references/descriptive-analysis.md
+├─ Causal / quasi-experimental analysis
+│   └─ FIRST read ./references/causal-inference.md
+│       THEN load appropriate library skill:
+│       Python: pyfixest for DiD/IV/FE, linearmodels for panel RE/IV-GMM
+│       R: fixest for DiD/IV/FE, plm for panel RE
+│       For RD implementation (rdrobust) → also read ./references/causal-rd.md
+│       For matching/IPW/AIPW implementation → also read ./references/causal-matching.md
+│       For Heckman selection correction → also read ./references/causal-selection.md
+│       For synthetic control implementation → also read ./references/causal-synth.md
+│       For causal ML (DML, CATE, meta-learners, causal forests) → also read ./references/causal-ml.md
+│       For mediation analysis (mechanisms, NDE/NIE) → also read ./references/causal-mediation.md
+│       (reference files show Python implementations; in R, map to fixest/plm/r-stats
+│       per the Language Routing table and the R library skills' own references)
+├─ Complex survey data analysis (NHANES, ACS PUMS, CPS, ECLS-K, MEPS, etc.)
+│   └─ FIRST read ./references/survey-analysis.md (methodology, pitfalls, weight selection)
+│       THEN load `svy` skill (Python) or `survey-r` skill (R)
+│       ├─ Survey-weighted descriptive statistics → svy/survey-r estimation refs
+│       ├─ Survey-weighted regression (OLS, logistic, Poisson) → svy/survey-r regression refs
+│       ├─ Survey design setup / replicate weights → svy/survey-r design-weights refs
+│       └─ Advanced models not in svy (ordinal, survival, IV) → rpy2 + R survey package
+│           (Python: see svy skill "rpy2 Bridge" section; R: use `survey-r` skill directly — rpy2 bridge not needed)
+├─ Creating formatted tables (data summaries, regression output)
+│   └─ Python: Load `great-tables` skill (grammar-of-tables display tables,
+│       HTML/LaTeX export). No modelsummary equivalent — for regression tables
+│       use library-specific output (e.g., pyfixest etable(), statsmodels summary())
+│       R: Load `gt` skill (gt for data tables, modelsummary for regression
+│       tables, kableExtra for simple Quarto tables)
+├─ Communicating to non-technical audiences
+│   └─ Load `science-communication` skill
+├─ Geospatial / spatial analysis (any kind)
+│   └─ FIRST read methodology reference files:
+│       ├─ ./references/geospatial-analysis.md (spatial thinking, methods, interpretation)
+│       └─ ./references/geospatial-operations.md (joins, weights, interpolation, operations)
+│       THEN load `geopandas` skill (Python) or `sf-terra` skill (R)
+├─ Network / graph analysis (relationships, centrality, community detection,
+│   bipartite/two-mode data, paths/components, ego networks, network visualization)
+│   └─ FIRST read ./references/network-analysis.md (when a network frame fits,
+│       node/edge/directedness/weight conceptualization, centrality selection,
+│       community detection + seed discipline, bipartite projection, disconnected-graph
+│       and weights-as-distances guardrails, reproducibility requirements)
+│       THEN load `igraph` skill (Python) or `igraph-r` skill (R)
+│       (ERGM / statistical network models are not currently covered — see the
+│       reference's "Out of Current Scope" note; escalate to orchestrator)
+└─ Not currently covered by DAAF skills:
+    ├─ Bayesian modeling (PyMC, bambi / brms) → escalate to orchestrator
+    ├─ Survival / time-to-event analysis → escalate to orchestrator
+    └─ Deep learning (PyTorch, TensorFlow / torch for R) → escalate to orchestrator
+```
+
+**The THEN-load steps apply to advisory and brainstorming turns as much as implementation.** Recommending a method, reviewing a plan, or talking through an approach that names a tool needs the routed library skill loaded just as much as writing code does. The library skills encode environment-specific constraints (which estimators and export backends are actually installed and working here) and curated caveats that general knowledge lacks or gets wrong — for example, when a familiar tool is statistically inappropriate for the data at hand. Naming a tool in advice without loading its skill risks recommending an approach this environment cannot run, or one the skill's curated caveats explicitly warn against. The norm extends one hop further: once the routed library skill is loaded, its own reference-file routing carries the same advisory-inclusive expectation — answer from its routed reference files, not just its SKILL.md overview.
+
+**Visualization loading order matters:** The reference files provide *design principles* (what chart to use, how to direct attention, how to handle color accessibly). The tool skills provide *syntax* (how to code it). Read the design guidance first so implementation choices are principled, not ad-hoc.
+
+**For Domain-Specific Analysis (e.g., CCD Education Data):**
+- Load relevant `*-data-source-*` skill first to understand domain-specific data caveats
+- Then apply data-scientist methodology with that context
+
+**Prerequisite Knowledge:**
+This skill assumes familiarity with:
+- Python or R programming basics
+- DataFrame concepts (rows, columns, filtering)
+- Basic statistical concepts (mean, distribution, correlation)
+
+**Important:** This skill provides the METHODOLOGY. The specialized skills provide TOOL KNOWLEDGE. Use both together — on advisory and brainstorming turns as much as when writing code. A methodology answer that names a tool without its skill loaded rests on general knowledge, which misses the environment constraints and curated caveats the tool skills encode.
+
+## Reference File Structure
+
+| File | Purpose | When to Read |
+|------|---------|--------------|
+| `eda-checklist.md` | Detailed EDA procedures and validation checks | Starting analysis on new data |
+| `data-documentation.md` | Understanding and creating data documentation | Working with unfamiliar data |
+| `transformation-validation.md` | Validating data operations | Before/after any transformation |
+| `code-documentation.md` | Writing thorough comments and docs | Writing any analysis code |
+| `research-questions.md` | Framing questions, stakeholder communication | Scoping work, presenting findings |
+| `visualization-design.md` | Chart selection, visual encoding, emphasis, integrity | **Before creating any visualization** |
+| `visualization-execution.md` | Color palettes, accessibility, labeling, typography, export | **When producing figures** |
+| `descriptive-analysis.md` | Summary statistics, subgroups, distributions, decompositions, weighting, inequality, correlation, missing data | Stage 8 analysis when the research contribution is descriptive |
+| `statistical-modeling.md` | Model selection, assumption checking, robust inference, coefficient interpretation, robustness checks | Stage 8.1 analysis involving regression, modeling, or hypothesis testing. For formal time-series estimation (ARIMA/SARIMAX, VAR, forecasting), load the `statsmodels` skill directly |
+| `causal-inference.md` | Causal identification, DAGs, RCTs, IV, RD, DiD, synthetic control, matching | Stage 8.1 analysis requiring causal claims |
+| `causal-rd.md` | Regression discontinuity implementation: rdrobust API (sharp, fuzzy, kink), bandwidth selection, manipulation testing, covariate balance, visualization, diagnostics | Stage 8.1 analysis using regression discontinuity designs |
+| `causal-matching.md` | Matching (NN, caliper, Mahalanobis, exact, CEM), IPW, doubly robust/AIPW implementation with sklearn + statsmodels + scipy + polars; balance diagnostics; inference | Stage 8.1 analysis using matching, propensity scores, IPW, or AIPW methods |
+| `causal-synth.md` | Synthetic control implementation: manual scipy, pysyncon, synthdid, scpi-pkg, CausalPy; inference methods; SDID; gotchas | Stage 8.1 analysis using synthetic control or SDID methods |
+| `causal-ml.md` | Causal ML implementation: manual DML (partially linear + interactive/AIPW) with sklearn + statsmodels + pyfixest; S/T-learner (manual); EconML patterns (LinearDML, CausalForestDML, meta-learners, DR-learner); DoubleML patterns (PLR, IRM, sensitivity); causal forests (EconML + R grf); CATE diagnostics (overlap, GATES, BLP); gotchas | Stage 8.1 analysis using DML, CATE estimation, meta-learners, or causal forests |
+| `causal-selection.md` | Heckman selection model implementation: manual two-step (Probit + OLS + IMR), FIML via scipy, bootstrap inference, exclusion restriction diagnostics, IMR collinearity checks; no statsmodels.heckman module exists | Stage 8.1 analysis where the outcome is observed only for a non-random subset (sample selection bias) |
+| `causal-mediation.md` | Causal mediation analysis: statsmodels Mediation (Imai et al. 2010), manual bootstrap, NDE/NIE decomposition, moderated mediation, multiple mediators, sensitivity analysis (E-value), gotchas | Stage 8.1 analysis decomposing causal effects into direct and indirect pathways (mechanisms) |
+| `survey-analysis.md` | Complex survey methodology: design anatomy, weight selection, variance estimation, domain estimation, plausible values, survey-weighted regression, federal survey reference table, pitfalls checklist | **Any task involving data from a complex probability survey** (NHANES, ACS PUMS, CPS, ECLS-K, HSLS, MEPS, NAEP, etc.) |
+| `geospatial-analysis.md` | Spatial thinking, MAUP, CRS, methods decision guide, autocorrelation, regression | **Any task involving geographic/spatial data** |
+| `geospatial-operations.md` | Spatial joins, weights, LISA interpretation, interpolation, zonal statistics, geometry validity | **Planning or executing spatial operations (joins, overlays, weights, interpolation, zonal statistics), or interpreting spatial statistics results (Moran's I, LISA)** |
+| `network-analysis.md` | Network/graph methodology: when a network frame fits, node/edge/directedness/weight conceptualization, centrality selection by research question, community detection + seed discipline, bipartite/two-mode data and projection, disconnected-graph and weights-as-distances guardrails, reproducibility; ERGM out of scope | **Any task involving relational/network data — centrality, community detection, paths/components, bipartite graphs, ego networks, or network visualization** |
+| `exploratory-unsupervised.md` | Cluster analysis, dimension reduction (PCA), Gaussian mixture models, nonlinear embeddings (t-SNE, UMAP), cluster validation, classify-analyze problem | Stage 8 tasks involving unsupervised methods, typology construction, or pattern discovery |
+| `supervised-ml.md` | Supervised ML methodology: prediction vs. inference (Shmueli 2010), bias-variance tradeoff, cross-validation for structured data (grouped, temporal, spatial), model selection, classification and ML regression methodology, ensemble methods, interpretation caveats (feature importance is not causation), algorithmic fairness and equity (impossibility theorems), deep learning orientation, reporting standards | Stage 8 tasks involving classification, prediction, risk scoring, ML-based variable selection, or any task where the goal is predicting outcomes rather than estimating causal parameters |
+
+### Validation Tracking
+
+For multi-step transformations, track validation state with a simple dict (Python) or named list (R):
+
+**Python:**
+```python
+validation_log = {}
+
+# After each transformation step:
+validation_log["Filter to high schools"] = {
+    "pre_rows": pre_rows,
+    "post_rows": result.shape[0],
+    "status": "PASSED" if result.shape[0] > 0 else "FAILED",
+}
+
+# Print summary at end:
+for step, info in validation_log.items():
+    print(f"  [{info['status']}] {step}: {info['pre_rows']:,} → {info['post_rows']:,}")
+```
+
+**R:**
+```r
+validation_log <- list()
+
+# After each transformation step:
+validation_log[["Filter to high schools"]] <- list(
+  pre_rows = pre_rows,
+  post_rows = nrow(result),
+  status = if (nrow(result) > 0) "PASSED" else "FAILED"
+)
+
+# Print summary at end:
+for (step in names(validation_log)) {
+  info <- validation_log[[step]]
+  cat(sprintf("  [%s] %s: %s -> %s\n", info$status, step,
+              format(info$pre_rows, big.mark = ","),
+              format(info$post_rows, big.mark = ",")))
+}
+```
+
+This is inline code, not a separate module. Never create a `validation.py` / `validation.R` or import a validation class.
+
+## Quick Decision Trees
+
+### "I'm starting a new analysis"
+
+```
+Starting new analysis?
+├─ Do I have data documentation?
+│   ├─ Yes → Read it thoroughly first
+│   │         → ./references/data-documentation.md
+│   └─ No → Create it as you explore
+│           → ./references/data-documentation.md
+├─ Have I profiled the data?
+│   └─ No → Run full EDA checklist
+│           → ./references/eda-checklist.md
+├─ Do I understand the research question?
+│   └─ Unclear → Clarify with stakeholder
+│                → ./references/research-questions.md
+└─ Ready to analyze → Document as you go
+                      → ./references/code-documentation.md
+```
+
+### "I have unfamiliar data"
+
+```
+Unfamiliar data?
+├─ Step 1: Basic inspection
+│   └─ Shape, types, head/tail/sample
+│      → ./references/eda-checklist.md
+│      IF data contains geometry column, lat/lon, GEOID, or FIPS codes:
+│      → also read ./references/geospatial-analysis.md
+│      IF data has a temporal index (dates, repeated periods, panel structure):
+│      → also read ./references/descriptive-analysis.md "Trend Analysis" section
+│        (for forecasting or formal time-series modeling, load `statsmodels` skill)
+├─ Step 2: Understand granularity
+│   └─ What does each row represent?
+│   └─ What columns uniquely identify a row?
+├─ Step 3: Check data quality
+│   └─ Missing values, duplicates, outliers
+│      → ./references/eda-checklist.md
+├─ Step 4: Seek documentation
+│   └─ Data dictionary, schema, provenance
+│      → ./references/data-documentation.md
+└─ Step 5: Document findings
+    └─ Create documentation if none exists
+```
+
+### "I need to transform data"
+
+```
+Transforming data?
+├─ Before transformation:
+│   ├─ Document current state (shape, sample)
+│   ├─ Identify what SHOULD change
+│   └─ Identify what should NOT change
+│      → ./references/transformation-validation.md
+├─ After transformation:
+│   ├─ Verify shape changes are expected
+│   ├─ Check random sample of results
+│   ├─ Validate invariants (sums, counts)
+│   └─ Document what you verified
+│      → ./references/transformation-validation.md
+└─ For joins specifically:
+    ├─ Check for unintended row duplication
+    ├─ Check for unintended data loss
+    └─ Validate join keys match expectations
+```
+
+### "I need to communicate findings"
+
+```
+Communicating findings?
+├─ Have I documented limitations?
+│   └─ No → List caveats and assumptions
+│           → ./references/research-questions.md
+├─ Am I making causal claims?
+│   └─ Yes → Ensure justified; prefer correlational language
+│            → ./references/research-questions.md
+├─ Is uncertainty quantified?
+│   └─ No → Add confidence intervals or ranges
+└─ Have I checked in with stakeholder?
+    └─ No → Validate findings align with expectations
+```
+
+### "I need to create a visualization"
+
+```
+What kind of visualization task?
+├─ Choosing what chart to make
+│   └─ → ./references/visualization-design.md
+├─ Directing attention / emphasis strategy
+│   └─ → ./references/visualization-design.md
+├─ Selecting colors or ensuring accessibility
+│   └─ → ./references/visualization-execution.md
+├─ Labeling, titling, or annotating
+│   └─ → ./references/visualization-execution.md
+├─ Making it publication-ready (export, DPI, fonts)
+│   └─ → ./references/visualization-execution.md
+├─ Ensuring project consistency (theme, palette)
+│   └─ → ./references/visualization-execution.md
+├─ Mapping geographic data (choropleth, dot density, proportional symbols)
+│   └─ → ./references/geospatial-analysis.md (map design, classification)
+│       THEN → ./references/visualization-execution.md (color, accessibility)
+│       THEN load `geopandas` skill (Python) or `sf-terra` skill (R)
+└─ Tool-specific syntax (geoms, traces, themes)
+    ├─ Static plots → Load `plotnine` skill (Python) or `ggplot2` skill (R)
+    └─ Interactive plots → Load `plotly` skill (Python) or `plotly-r` skill (R)
+```
+
+### "I need to analyze patterns in this data"
+
+```
+Am I trying to describe or explain?
+├─ Describe (characterize what exists)
+│   └─ → ./references/descriptive-analysis.md
+│       ├─ Subgroup comparisons → Stratification section
+│       ├─ Distribution shape → Distributional analysis section
+│       ├─ Trends over time (characterize, smooth, decompose) → Trend analysis section
+│       ├─ Gaps between groups → Decomposition methods section
+│       ├─ Composite measure → Index construction section
+│       ├─ Inequality → Inequality measurement section
+│       └─ Weighted estimates → Weighted analysis section
+├─ Model (regression, hypothesis testing)
+│   └─ → ./references/statistical-modeling.md
+│       ├─ Choose model by outcome type → Model selection framework
+│       ├─ Check assumptions → Assumption checking protocol
+│       ├─ Choose standard errors → SE type decision table
+│       ├─ Interpret coefficients → Interpretation guide
+│       └─ Forecast or formally model temporal dynamics (ARIMA/SARIMAX, VAR,
+│           stationarity tests) → Load `statsmodels` skill (see its
+│           "I need to analyze time series" decision tree)
+└─ Explain causally
+    └─ → ./references/causal-inference.md
+        └─ Select method per Method Selection Guide
+```
+
+### "I need to establish a causal relationship"
+
+```
+What variation identifies the causal effect?
+├─ Random assignment → RCT analysis
+│   → ./references/causal-inference.md
+├─ I can control for all confounders → Regression / matching
+│   → ./references/causal-inference.md (methodology)
+│   → ./references/causal-matching.md (implementation: PSM, IPW, AIPW, balance)
+├─ There's a valid instrument → IV / 2SLS
+│   → ./references/causal-inference.md
+├─ There's a score cutoff → Regression discontinuity
+│   → ./references/causal-inference.md (methodology)
+│   → ./references/causal-rd.md (implementation: rdrobust, bandwidth, diagnostics)
+├─ Policy changed for some groups → Difference-in-differences
+│   → ./references/causal-inference.md
+├─ Few treated units, long pre-period → Synthetic control
+│   → ./references/causal-inference.md (methodology)
+│   → ./references/causal-synth.md (implementation, packages, inference)
+├─ Outcome only observed for a selected subset → Heckman selection correction
+│   → ./references/causal-selection.md (implementation: manual Probit+OLS, FIML, bootstrap)
+├─ I want to understand the mechanism (T→M→Y) → Mediation analysis
+│   → ./references/causal-mediation.md (implementation: statsmodels Mediation, bootstrap, sensitivity)
+├─ Many confounders / want ML nuisance estimation → DML
+│   → ./references/causal-ml.md (manual DML, EconML, DoubleML)
+├─ Want to explore treatment effect heterogeneity → CATE / causal forests
+│   → ./references/causal-ml.md (meta-learners, causal forests, diagnostics)
+└─ Not sure → Start with a DAG
+    → ./references/causal-inference.md
+```
+
+### "I need to discover structure or groupings in data"
+
+```
+What kind of structure am I looking for?
+├─ Groups of similar observations (typology, classification)
+│   ├─ Know number of groups → K-means or GMM (scikit-learn / tidymodels)
+│   ├─ Don't know number → Try multiple k + validation (scikit-learn / tidymodels)
+│   ├─ Arbitrary shapes / noise → DBSCAN or HDBSCAN (scikit-learn — Python only;
+│   │   the R `dbscan` package is not installed and tidymodels does not cover it)
+│   └─ Uncertain → Read exploratory-unsupervised.md "Algorithm Selection" table
+├─ Reducing a large variable set
+│   ├─ Linear reduction → PCA (scikit-learn / tidymodels)
+│   └─ Visualizing structure → t-SNE or UMAP (scikit-learn / umap-learn; R: uwot)
+│       └─ CAUTION: visualization only — not for analysis
+│           → ./references/exploratory-unsupervised.md
+├─ Using unsupervised results in subsequent regression
+│   └─ Read exploratory-unsupervised.md "The Classify-Analyze Problem"
+└─ Predicting outcomes with ML methods
+    └─ Load `scikit-learn` skill (Python) or `tidymodels` skill (R) → classification/regression refs
+```
+
+### "I'm working with geographic/spatial data"
+
+```
+Geospatial analysis task?
+├─ Understanding spatial concepts, methods, or statistical theory
+│   └─ (MAUP, CRS, autocorrelation, spatial regression)
+│       → ./references/geospatial-analysis.md
+├─ Choosing a spatial analysis method
+│   └─ → ./references/geospatial-analysis.md (decision guide)
+├─ Performing spatial joins, overlays, or weights construction
+│   └─ → ./references/geospatial-operations.md
+│       THEN load `geopandas` skill (Python) or `sf-terra` skill (R)
+├─ Interpreting Moran's I, LISA, or spatial regression results
+│   └─ → ./references/geospatial-operations.md (interpretation sections)
+├─ Interpolation or areal interpolation
+│   └─ → ./references/geospatial-operations.md
+├─ Extracting raster values into polygons (zonal statistics)
+│   └─ → ./references/geospatial-operations.md
+├─ Debugging spatial operation failures or geometry errors
+│   └─ → ./references/geospatial-operations.md (geometry validity)
+├─ Making maps or choosing classification schemes
+│   └─ → ./references/geospatial-analysis.md (map design)
+│       THEN → ./references/visualization-execution.md (color, accessibility)
+└─ Working with or advising on geopandas/PySAL/rasterio or sf/terra/spdep
+    └─ Load `geopandas` skill (Python) or `sf-terra` skill (R)
+```
+
+### "I need to analyze relationships or network structure"
+
+```
+Is a network frame appropriate for this question?
+├─ Question is about attributes of individual units (how much, how many, what predicts Y)
+│   └─ A network frame is NOT needed — use descriptive/regression/ML routing above.
+│       Relational data can often be analyzed as ordinary tabular features.
+├─ Question is about relationships, connectivity, or position within a web of ties
+│   (who is central, who bridges groups, what clusters exist, how far apart are units)
+│   └─ A network frame fits → ./references/network-analysis.md, then load
+│       `igraph` skill (Python) or `igraph-r` skill (R)
+│
+├─ Which centrality answers my research question?
+│   ├─ Activity / volume of direct ties → degree centrality
+│   ├─ Brokerage / bridging between groups → betweenness
+│   │   (NOTE: betweenness is NOT a resilience/robustness metric — do not read it that way)
+│   ├─ Reach / average closeness to all others → closeness
+│   │   (requires a connected component — see disconnected-graph guardrail below)
+│   └─ Influence via being connected to well-connected units → eigenvector / PageRank
+│       → ./references/network-analysis.md "Centrality Selection"
+│
+├─ I want to find groups / communities
+│   └─ Community detection → prefer Leiden over Louvain (Louvain can yield
+│       disconnected communities); ALWAYS set a seed (results are non-deterministic)
+│       and record it; in R, cluster_leiden/cluster_louvain require an UNDIRECTED graph
+│       → ./references/network-analysis.md "Community Detection"
+│
+├─ My data is two-mode / bipartite (e.g., people × events, authors × papers)
+│   └─ Construct a bipartite graph, then project to one mode if needed — but
+│       projection loses information and inflates ties; interpret projected
+│       edges with care → ./references/network-analysis.md "Bipartite / Two-Mode Data"
+│
+├─ Before computing closeness/betweenness or trusting distances
+│   ├─ Check connectivity/components first (these measures are ill-defined across
+│   │   disconnected components) → network-analysis.md "Disconnected-Graph Guardrail"
+│   └─ Confirm whether edge weights mean distance or strength — igraph treats a
+│       `weight` attribute as DISTANCE and uses it automatically; pass weights=NA
+│       to suppress → network-analysis.md "Weights-as-Distances Trap"
+│
+└─ I need statistical inference / generative network models (ERGM, SAOM, TERGM)
+    └─ NOT currently covered by DAAF skills → escalate to orchestrator
+        (noted as a future extension in network-analysis.md)
+```
+
+### "I need to predict an outcome or classify observations"
+
+```
+Am I predicting or explaining?
+├─ Explaining (estimating a causal or associational parameter)
+│   └─ Use pyfixest/statsmodels (Python) or fixest/r-stats (R) — see statistical-modeling.md
+├─ Predicting (minimizing prediction error on new data)
+│   ├─ Read supervised-ml.md for methodology
+│   ├─ Load `scikit-learn` skill (Python) or `tidymodels` skill (R)
+│   ├─ Tabular data → Start with logistic regression baseline,
+│   │   then try HistGradientBoosting/LightGBM (Python) or ranger/xgboost (R)
+│   ├─ Text data → See supervised-ml.md "When Deep Learning Methods Are Appropriate"
+│   ├─ Need to explain predictions → scikit-learn/tidymodels interpretation refs (SHAP)
+│   └─ Need fairness assessment → scikit-learn/tidymodels fairness refs
+└─ Not sure → Read supervised-ml.md "Prediction vs. Inference"
+```
+
+## Essential Workflows
+
+### New Data Workflow
+
+When you receive new data, ALWAYS follow this sequence:
+
+1. **Load and inspect** (do not transform yet)
+
+   **Python:**
+   ```python
+   # Load data
+   df = pl.read_csv("data.csv")  # or scan_csv for lazy
+   
+   # Immediate inspection
+   print(f"Shape: {df.shape}")
+   print(f"Columns: {df.columns}")
+   print(f"Types:\n{df.dtypes}")
+   print(f"First 5 rows:\n{df.head()}")
+   print(f"Last 5 rows:\n{df.tail()}")
+   print(f"Random sample:\n{df.sample(5)}")
+   ```
+
+   **R:**
+   ```r
+   # Load data
+   library(tidyverse)
+   library(arrow)
+   df <- read_csv("data.csv")  # or read_parquet() for parquet
+   
+   # Immediate inspection
+   cat("Shape:", nrow(df), "x", ncol(df), "\n")
+   cat("Columns:", paste(names(df), collapse = ", "), "\n")
+   glimpse(df)
+   cat("First 5 rows:\n")
+   print(head(df, 5))
+   cat("Last 5 rows:\n")
+   print(tail(df, 5))
+   cat("Random sample:\n")
+   print(df[sample(nrow(df), 5), ])
+   ```
+
+2. **Check data quality**
+
+   **Python:**
+   ```python
+   # Missing values
+   print(f"Null counts:\n{df.null_count()}")
+   print(f"Null percentages:\n{df.null_count() / len(df) * 100}")
+   
+   # Duplicates
+   print(f"Duplicate rows: {len(df) - len(df.unique())}")
+   
+   # Unique values per column
+   for col in df.columns:
+       print(f"{col}: {df[col].n_unique()} unique values")
+   ```
+
+   **R:**
+   ```r
+   # Missing values
+   cat("Null counts:\n")
+   print(colSums(is.na(df)))
+   cat("Null percentages:\n")
+   print(round(colSums(is.na(df)) / nrow(df) * 100, 2))
+   
+   # Duplicates
+   cat("Duplicate rows:", nrow(df) - nrow(distinct(df)), "\n")
+   
+   # Unique values per column
+   for (col in names(df)) {
+     cat(col, ":", n_distinct(df[[col]]), "unique values\n")
+   }
+   ```
+
+3. **Understand distributions**
+
+   **Python:**
+   ```python
+   # Numerical columns
+   print(df.describe())
+   
+   # Categorical columns - value counts
+   for col in df.select(pl.col(pl.String)).columns:
+       print(f"\n{col}:\n{df[col].value_counts().head(10)}")
+   ```
+
+   **R:**
+   ```r
+   # Numerical columns
+   summary(df |> select(where(is.numeric)))
+   
+   # Categorical columns - value counts
+   df |>
+     select(where(is.character)) |>
+     names() |>
+     purrr::walk(\(col) {
+       cat("\n", col, ":\n", sep = "")
+       print(head(count(df, .data[[col]], sort = TRUE), 10))
+     })
+   ```
+
+4. **Identify granularity**
+
+   **Python:**
+   ```python
+   # What uniquely identifies a row?
+   # Test candidate keys
+   candidate_keys = ["id", "user_id", ["user_id", "date"]]
+   for key in candidate_keys:
+       cols = [key] if isinstance(key, str) else key
+       unique_count = df.select(cols).n_unique()
+       print(f"{cols}: {unique_count} unique vs {len(df)} rows")
+   ```
+
+   **R:**
+   ```r
+   # What uniquely identifies a row?
+   # Test candidate keys
+   candidate_keys <- list("id", "user_id", c("user_id", "date"))
+   for (key in candidate_keys) {
+     unique_count <- nrow(distinct(df, across(all_of(key))))
+     cat(paste(key, collapse = ", "), ":", unique_count, "unique vs", nrow(df), "rows\n")
+   }
+   ```
+
+5. **Document findings** before proceeding
+
+### Transformation Workflow
+
+For ANY data transformation:
+
+1. **Document pre-state**
+
+   **Python:**
+   ```python
+   # Record state before transformation
+   pre_shape = df.shape
+   pre_columns = df.columns.copy()
+   pre_sample = df.sample(10, seed=42)  # Reproducible sample
+   pre_sum = df.select(pl.col("amount").sum()).item()  # If applicable
+   ```
+
+   **R:**
+   ```r
+   # Record state before transformation
+   pre_shape <- c(nrow(df), ncol(df))
+   pre_columns <- names(df)
+   set.seed(42)
+   pre_sample <- df[sample(nrow(df), 10), ]  # Reproducible sample
+   pre_sum <- sum(df$amount, na.rm = TRUE)  # If applicable
+   ```
+
+2. **Perform transformation with comments**
+
+   **Python:**
+   ```python
+   # GOAL: Filter to active users and calculate total spend
+   # REASONING: We only want users who logged in within 30 days
+   # EXPECTED: Fewer rows, same columns, preserved sum for included rows
+   result = (
+       df
+       .filter(pl.col("last_login") > cutoff_date)  # Remove inactive
+       .group_by("user_id")
+       .agg(pl.col("amount").sum().alias("total_spend"))
+   )
+   ```
+
+   **R:**
+   ```r
+   # GOAL: Filter to active users and calculate total spend
+   # REASONING: We only want users who logged in within 30 days
+   # EXPECTED: Fewer rows, same columns, preserved sum for included rows
+   result <- df |>
+     dplyr::filter(last_login > cutoff_date) |>  # Remove inactive
+     summarise(total_spend = sum(amount, na.rm = TRUE), .by = user_id)
+   ```
+
+3. **Validate post-state**
+
+   **Python:**
+   ```python
+   # Verify transformation results
+   post_shape = result.shape
+   print(f"Shape: {pre_shape} -> {post_shape}")
+   
+   # Check sample of results
+   sample_ids = pre_sample["user_id"].to_list()[:3]
+   print(f"Sample before:\n{pre_sample.filter(pl.col('user_id').is_in(sample_ids))}")
+   print(f"Sample after:\n{result.filter(pl.col('user_id').is_in(sample_ids))}")
+   
+   # Validate invariants where applicable
+   # (e.g., sum should be preserved or explainably different)
+   ```
+
+   **R:**
+   ```r
+   # Verify transformation results
+   post_shape <- c(nrow(result), ncol(result))
+   cat("Shape:", paste(pre_shape, collapse = "x"), "->", paste(post_shape, collapse = "x"), "\n")
+   
+   # Check sample of results
+   sample_ids <- pre_sample$user_id[1:3]
+   cat("Sample before:\n")
+   print(pre_sample |> dplyr::filter(user_id %in% sample_ids))
+   cat("Sample after:\n")
+   print(result |> dplyr::filter(user_id %in% sample_ids))
+   
+   # Validate invariants where applicable
+   # (e.g., sum should be preserved or explainably different)
+   ```
+
+4. **Document what you verified**
+
+### Analysis Workflow
+
+From question to answer:
+
+1. **Clarify the question**
+   - What decision will this inform?
+   - What would a "good" answer look like?
+   - What level of rigor is required?
+
+2. **Assess data fitness**
+   - Does the data contain what we need?
+   - What are the limitations?
+   - Are there gaps or quality issues?
+
+3. **Choose methodology**
+   - What approaches are valid?
+   - What are the tradeoffs?
+   - CHECK WITH USER if multiple valid options
+
+4. **Execute with verification**
+   - Follow transformation workflow
+   - Document each step thoroughly
+
+5. **Validate findings**
+   - Do results make sense?
+   - Cross-check with known facts
+   - Identify limitations and caveats
+
+6. **Communicate with appropriate uncertainty**
+
+## Quick Checklists
+
+### Initial Data Inspection Checklist
+
+- [ ] Loaded data successfully
+- [ ] Checked shape (rows x columns)
+- [ ] Reviewed column names
+- [ ] Checked data types
+- [ ] Examined head, tail, and random sample
+- [ ] Counted missing values per column
+- [ ] Checked for duplicate rows
+- [ ] Identified unique value counts per column
+- [ ] Generated summary statistics
+- [ ] Identified granularity (what uniquely identifies a row)
+- [ ] Documented findings
+
+### Pre-Transformation Checklist
+
+- [ ] Documented current shape and columns
+- [ ] Saved sample of data for comparison
+- [ ] Recorded relevant aggregates (sums, counts)
+- [ ] Stated what SHOULD change
+- [ ] Stated what should NOT change
+- [ ] Explained WHY this transformation is needed
+
+### Post-Transformation Checklist
+
+- [ ] Verified shape change matches expectations
+- [ ] Compared sample before/after
+- [ ] Validated invariants are preserved
+- [ ] Checked for unintended nulls
+- [ ] Checked for unintended duplicates
+- [ ] Documented what was verified and results
+
+### Documentation Checklist
+
+- [ ] Data source documented
+- [ ] Each column defined
+- [ ] Missing value conventions explained
+- [ ] Granularity/unit of observation stated
+- [ ] Known quality issues noted
+- [ ] Transformation history recorded
+
+## Marimo Integration
+
+When working in marimo notebooks:
+
+### Cell Organization Pattern
+
+```python
+# Cell 1: Imports and setup
+import marimo as mo
+import polars as pl
+
+# Cell 2: Data loading (separate cell for reactivity)
+df = pl.read_csv("data.csv")
+
+# Cell 3: Data inspection (markdown + code)
+mo.md("## Data Inspection")
+# ... inspection code ...
+
+# Cell 4: Data quality checks
+mo.md("## Data Quality")
+# ... quality checks ...
+
+# Cell 5+: Analysis cells, each with:
+# - Markdown explaining goal
+# - Code with thorough comments
+# - Validation of results
+```
+
+### Using Reactivity for Validation
+
+```python
+# Create interactive validators
+validation_column = mo.ui.dropdown(
+    options=df.columns,
+    label="Select column to validate"
+)
+
+# Reactive validation display
+mo.md(f"""
+### Validation for `{validation_column.value}`
+- Null count: {df[validation_column.value].null_count()}
+- Unique values: {df[validation_column.value].n_unique()}
+- Sample values: {df[validation_column.value].head(5).to_list()}
+""")
+```
+
+### Documentation Cells
+
+Use markdown cells liberally:
+- Before code: explain what you're about to do and why
+- After code: summarize findings and implications
+- At decision points: document choices made
+
+## Quarto Integration
+
+When working in Quarto notebooks (R pipelines):
+
+### Chunk Organization Pattern
+
+```r
+# Chunk 1: Library loading
+library(tidyverse)
+library(arrow)
+
+# Chunk 2: Data loading (separate chunk)
+df <- read_parquet("data.parquet")
+
+# Chunk 3: Data inspection (with narrative)
+#| echo: true
+# ... inspection code ...
+
+# Chunk 4: Data quality checks
+# ... quality checks ...
+
+# Chunk 5+: Analysis chunks, each with:
+# - Narrative text explaining goal
+# - Code with thorough IAT comments
+# - Validation of results
+```
+
+### Inline Validation
+
+```r
+# Validate inline — no separate validation files
+stopifnot(nrow(df) > 0)
+cat("Shape:", nrow(df), "x", ncol(df), "\n")
+cat("Columns:", paste(names(df), collapse = ", "), "\n")
+```
+
+### Documentation Chunks
+
+Use narrative text chunks liberally:
+- Before code: explain what you are about to do and why
+- After code: summarize findings and implications
+- At decision points: document choices made
+
+## Topic Index
+
+| Topic | Reference File |
+|-------|---------------|
+| Initial data inspection | `./references/eda-checklist.md` |
+| Missing value analysis | `./references/eda-checklist.md` |
+| Distribution analysis | `./references/eda-checklist.md` |
+| Outlier detection | `./references/eda-checklist.md` |
+| Uniqueness and cardinality | `./references/eda-checklist.md` |
+| Correlation analysis | `./references/eda-checklist.md` |
+| Data dictionaries | `./references/data-documentation.md` |
+| Data provenance | `./references/data-documentation.md` |
+| Working with undocumented data | `./references/data-documentation.md` |
+| Questions to ask about data | `./references/data-documentation.md` |
+| Before/after validation | `./references/transformation-validation.md` |
+| Join validation | `./references/transformation-validation.md` |
+| Aggregation validation | `./references/transformation-validation.md` |
+| Schema validation (inline) | `./references/transformation-validation.md` |
+| Common transformation errors | `./references/transformation-validation.md` |
+| Comment philosophy | `./references/code-documentation.md` |
+| Docstring patterns | `./references/code-documentation.md` |
+| Notebook documentation | `./references/code-documentation.md` |
+| Test documentation | `./references/code-documentation.md` |
+| Research question formulation | `./references/research-questions.md` |
+| Rigor vs. practicality | `./references/research-questions.md` |
+| Stakeholder check-ins | `./references/research-questions.md` |
+| Communicating uncertainty | `./references/research-questions.md` |
+| Causal vs. correlational claims | `./references/research-questions.md` |
+| Chart selection by relationship | `./references/visualization-design.md` |
+| Visual encoding hierarchy | `./references/visualization-design.md` |
+| Exploratory vs. explanatory viz | `./references/visualization-design.md` |
+| Small multiples | `./references/visualization-design.md` |
+| Common visualization pitfalls | `./references/visualization-design.md` |
+| Graphical integrity | `./references/visualization-design.md` |
+| Color palette selection | `./references/visualization-execution.md` |
+| Colorblind accessibility | `./references/visualization-execution.md` |
+| Direct labeling vs. legends | `./references/visualization-execution.md` |
+| Chart titles and annotation | `./references/visualization-execution.md` |
+| Typography and layout | `./references/visualization-execution.md` |
+| Export standards (DPI, format) | `./references/visualization-execution.md` |
+| Project visual consistency | `./references/visualization-execution.md` |
+| Figure captions | `./references/visualization-execution.md` |
+| Summary statistics selection | `./references/descriptive-analysis.md` |
+| Subgroup analysis and stratification | `./references/descriptive-analysis.md` |
+| Distributional analysis (KDE, quantiles) | `./references/descriptive-analysis.md` |
+| Cross-tabulations and rates | `./references/descriptive-analysis.md` |
+| Trend analysis and time series description | `./references/descriptive-analysis.md` |
+| Decomposition methods (Oaxaca-Blinder, Kitagawa, Gelbach, shift-share) | `./references/descriptive-analysis.md` |
+| Index construction and composite measures | `./references/descriptive-analysis.md` |
+| Weighted analysis (survey, population, IPW) | `./references/descriptive-analysis.md` |
+| Inequality measurement (Gini, Theil, percentile ratios) | `./references/descriptive-analysis.md` |
+| Correlation and association methodology | `./references/descriptive-analysis.md` |
+| Missing data characterization (MCAR/MAR/MNAR) | `./references/descriptive-analysis.md` |
+| Sample description and representativeness | `./references/descriptive-analysis.md` |
+| Model selection by outcome type | `./references/statistical-modeling.md` |
+| Regression as CEF approximation | `./references/statistical-modeling.md` |
+| OLS assumption checking and diagnostics | `./references/statistical-modeling.md` |
+| Standard error type selection (robust, clustered, HAC) | `./references/statistical-modeling.md` |
+| Coefficient interpretation by model type | `./references/statistical-modeling.md` |
+| Marginal effects (AME vs MEM) | `./references/statistical-modeling.md` |
+| Robustness checks and sensitivity analysis | `./references/statistical-modeling.md` |
+| Causal inference method selection | `./references/causal-inference.md` |
+| DAGs and causal reasoning | `./references/causal-inference.md` |
+| Potential outcomes framework | `./references/causal-inference.md` |
+| Randomized controlled trials (RCTs) | `./references/causal-inference.md` |
+| Instrumental variables (IV / 2SLS) | `./references/causal-inference.md` |
+| Regression discontinuity methodology (RD) | `./references/causal-inference.md` |
+| RD implementation (rdrobust, sharp, fuzzy, kink) | `./references/causal-rd.md` |
+| RD bandwidth selection (MSE-optimal, CER-optimal) | `./references/causal-rd.md` |
+| RD diagnostics (manipulation testing, covariate balance, placebo cutoffs) | `./references/causal-rd.md` |
+| RD visualization (rdplot workaround, manual plotting) | `./references/causal-rd.md` |
+| Difference-in-differences (DiD, modern methods) | `./references/causal-inference.md` |
+| Synthetic control methods (methodology) | `./references/causal-inference.md` |
+| Synthetic control implementation (scipy, pysyncon, scpi-pkg) | `./references/causal-synth.md` |
+| Synthetic difference-in-differences (SDID, synthdid) | `./references/causal-synth.md` |
+| SC inference (placebos, RMSPE ratios, conformal, prediction intervals) | `./references/causal-synth.md` |
+| SC gotchas (overfitting, interpolation bias, donor pool, SUTVA) | `./references/causal-synth.md` |
+| Matching and propensity scores (methodology) | `./references/causal-inference.md` |
+| Matching implementation (NN, caliper, Mahalanobis, exact, CEM) | `./references/causal-matching.md` |
+| Propensity score estimation (sklearn LogisticRegression) | `./references/causal-matching.md` |
+| Inverse probability weighting (IPW, stabilized, overlap weights) | `./references/causal-matching.md` |
+| Doubly robust / AIPW estimation (cross-fitted) | `./references/causal-matching.md` |
+| Balance diagnostics (SMD, variance ratios, Love plots, KS tests) | `./references/causal-matching.md` |
+| Inference after matching (bootstrap validity, Abadie-Imbens SE) | `./references/causal-matching.md` |
+| Sample selection bias (Heckman correction, Heckit) | `./references/causal-selection.md` |
+| Heckman two-step implementation (Probit + OLS + IMR) | `./references/causal-selection.md` |
+| Heckman FIML (joint maximum likelihood, scipy.optimize) | `./references/causal-selection.md` |
+| Inverse Mills ratio (computation, collinearity diagnostics) | `./references/causal-selection.md` |
+| Exclusion restriction (Heckman identification, strength tests) | `./references/causal-selection.md` |
+| Bootstrap inference for two-step estimators | `./references/causal-selection.md` |
+| sm.heckman.Heckman does not exist (statsmodels has no Heckman module) | `./references/causal-selection.md` |
+| Causal mediation analysis (NDE, NIE, ACME, mechanisms) | `./references/causal-mediation.md` |
+| Mediation implementation (statsmodels Mediation, bootstrap) | `./references/causal-mediation.md` |
+| Sequential ignorability assumption | `./references/causal-mediation.md` |
+| Moderated mediation (conditional indirect effects) | `./references/causal-mediation.md` |
+| Multiple mediators (parallel, sequential) | `./references/causal-mediation.md` |
+| Mediation sensitivity analysis (E-value, coefficient stability) | `./references/causal-mediation.md` |
+| Baron-Kenny vs. modern mediation framework | `./references/causal-mediation.md` |
+| Double/debiased machine learning (DML, methodology) | `./references/causal-inference.md` |
+| DML implementation (manual partially linear model, cross-fitting) | `./references/causal-ml.md` |
+| DML interactive model (AIPW-based ATE) | `./references/causal-ml.md` |
+| DML final stage with pyfixest (clustered SEs) | `./references/causal-ml.md` |
+| DML nuisance model sensitivity (robustness check) | `./references/causal-ml.md` |
+| CATE estimation (conditional average treatment effects) | `./references/causal-ml.md` |
+| Meta-learners (S-learner, T-learner, X-learner, DR-learner) | `./references/causal-ml.md` |
+| S-learner and T-learner manual implementation | `./references/causal-ml.md` |
+| EconML (LinearDML, CausalForestDML, meta-learners) | `./references/causal-ml.md` |
+| DoubleML (PLR, IRM, sensitivity analysis) | `./references/causal-ml.md` |
+| Causal forests (EconML CausalForestDML, R grf) | `./references/causal-ml.md` |
+| CATE diagnostics (GATES, BLP test, overlap check) | `./references/causal-ml.md` |
+| Causal ML gotchas (cross-fitting, overlap, identification) | `./references/causal-ml.md` |
+| Complex survey design (strata, PSUs, clustering) | `./references/survey-analysis.md` |
+| Survey weight selection and types | `./references/survey-analysis.md` |
+| Variance estimation (Taylor linearization, BRR, jackknife) | `./references/survey-analysis.md` |
+| Design effects (DEFF) and effective sample size | `./references/survey-analysis.md` |
+| Domain / subpopulation estimation (never subset rule) | `./references/survey-analysis.md` |
+| Plausible values (NAEP, PISA, TIMSS) | `./references/survey-analysis.md` |
+| Survey-weighted regression methodology | `./references/survey-analysis.md` |
+| Replicate weights (BRR, jackknife, bootstrap) | `./references/survey-analysis.md` |
+| Federal survey data sources reference table | `./references/survey-analysis.md` |
+| Survey analysis pitfalls checklist | `./references/survey-analysis.md` |
+| Finite population corrections (FPC) | `./references/survey-analysis.md` |
+| When to weight regressions (Solon-Haider-Wooldridge) | `./references/survey-analysis.md` |
+| Spatial thinking and Tobler's Law | `./references/geospatial-analysis.md` |
+| MAUP (Modifiable Areal Unit Problem) | `./references/geospatial-analysis.md` |
+| Ecological fallacy | `./references/geospatial-analysis.md` |
+| Coordinate reference systems (CRS) | `./references/geospatial-analysis.md` |
+| Projections (choosing, setting, transforming) | `./references/geospatial-analysis.md` |
+| Spatial data types (vector, raster) | `./references/geospatial-analysis.md` |
+| Spatial method selection | `./references/geospatial-analysis.md` |
+| Spatial autocorrelation (Moran's I, Geary's C) | `./references/geospatial-analysis.md` |
+| LISA and local autocorrelation | `./references/geospatial-analysis.md` |
+| Point pattern analysis | `./references/geospatial-analysis.md` |
+| Kernel density estimation (KDE) | `./references/geospatial-analysis.md` |
+| Geometry validity and repair | `./references/geospatial-operations.md` |
+| Spatial regression methods | `./references/geospatial-analysis.md` |
+| Raster operations taxonomy | `./references/geospatial-analysis.md` |
+| Map design and classification schemes | `./references/geospatial-analysis.md` |
+| Spatial joins (strategies, pitfalls) | `./references/geospatial-operations.md` |
+| Overlay operations | `./references/geospatial-operations.md` |
+| Spatial weights construction | `./references/geospatial-operations.md` |
+| Interpreting Moran's I and LISA | `./references/geospatial-operations.md` |
+| Interpolation (IDW, kriging) | `./references/geospatial-operations.md` |
+| Zonal statistics | `./references/geospatial-operations.md` |
+| Areal interpolation (boundary mismatch) | `./references/geospatial-operations.md` |
+| Spatial correlograms (residual diagnostics) | `./references/geospatial-operations.md` |
+| Spatial regression reporting standards | `./references/geospatial-operations.md` |
+| Islands / disconnected observations in weights | `./references/geospatial-operations.md` |
+| Endogeneity in spatial lag models | `./references/geospatial-operations.md` |
+| LM tests (lag vs. error model selection) | `./references/geospatial-analysis.md` |
+| Coordinate precision and significant digits | `./references/geospatial-analysis.md` |
+| Choropleth normalization (rates not counts) | `./references/geospatial-analysis.md` |
+| GWR (Geographically Weighted Regression) | `./references/geospatial-analysis.md` |
+| Cluster analysis (K-means, hierarchical, DBSCAN, GMM) | `./references/exploratory-unsupervised.md` |
+| Dimension reduction (PCA as exploration) | `./references/exploratory-unsupervised.md` |
+| Nonlinear embeddings (t-SNE, UMAP) | `./references/exploratory-unsupervised.md` |
+| Gaussian mixture models | `./references/exploratory-unsupervised.md` |
+| Cluster validation (silhouette, stability, ARI) | `./references/exploratory-unsupervised.md` |
+| Classify-analyze problem | `./references/exploratory-unsupervised.md` |
+| Typology construction | `./references/exploratory-unsupervised.md` |
+| Prediction vs. inference distinction | `./references/supervised-ml.md` |
+| Bias-variance tradeoff | `./references/supervised-ml.md` |
+| Cross-validation for social science data (grouped, temporal, spatial) | `./references/supervised-ml.md` |
+| Model selection (supervised ML) | `./references/supervised-ml.md` |
+| Classification methodology | `./references/supervised-ml.md` |
+| ML regression (prediction-focused) | `./references/supervised-ml.md` |
+| Ensemble methods (random forests, boosting) | `./references/supervised-ml.md` |
+| Feature importance interpretation (SHAP, permutation importance) | `./references/supervised-ml.md` |
+| Algorithmic fairness and bias | `./references/supervised-ml.md` |
+| Deep learning orientation | `./references/supervised-ml.md` |
+| Reporting standards for ML | `./references/supervised-ml.md` |
+| When a network frame is appropriate (relational vs. attribute questions) | `./references/network-analysis.md` |
+| Graph construction from edge lists | `./references/network-analysis.md` |
+| Centrality selection (degree, betweenness, closeness, eigenvector, PageRank) | `./references/network-analysis.md` |
+| Community detection (Leiden, Louvain, walktrap) and seed discipline | `./references/network-analysis.md` |
+| Bipartite / two-mode networks and projection | `./references/network-analysis.md` |
+| Ego networks and neighborhoods | `./references/network-analysis.md` |
+| Shortest paths, components, and connectivity | `./references/network-analysis.md` |
+| Network visualization (seeded layouts, reproducibility) | `./references/network-analysis.md` |
+| Directedness and weighted-edge (weights-as-distances) handling | `./references/network-analysis.md` |
+| ERGM / statistical network models (out of current scope) | `./references/network-analysis.md` |
+
+## Citation Responsibility
+
+When analytical methods from this skill's reference materials are used in DAAF analyses,
+the research-executor includes relevant citations in its structured output. Focus on
+**primary citations** — the papers and tools that directly enable the analytical results,
+not every background reference mentioned in the reference files.
+
+Each citation must include a brief rationale explaining why it is included, so the
+researcher can make informed decisions about what to keep in the final report.
+
+For the master citation index and inclusion thresholds, consult
+`agent_reference/CITATION_REFERENCE.md`.

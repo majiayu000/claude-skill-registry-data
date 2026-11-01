@@ -1,0 +1,39 @@
+{
+  "name": "telegram",
+  "repo": "AmidVoshakul/opencode-secops-blueprint",
+  "path": ".opencode/skills/telegram/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/AmidVoshakul/opencode-secops-blueprint",
+  "dir_name": "telegram-amidvoshakul-opencode-secops-blue",
+  "downloaded_at": "2026-11-01T09:57:21.641964Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "AmidVoshakul",
+  "source_url": "https://github.com/AmidVoshakul/opencode-secops-blueprint/blob/main/.opencode/skills/telegram/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AmidVoshakul/opencode-secops-blueprint/blob/main/.opencode/skills/telegram/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Integracao completa com Telegram Bot API. Setup com BotFather, mensagens, webhooks, inline keyboards, grupos, canais. Boilerplates Node.js e Python."
+}

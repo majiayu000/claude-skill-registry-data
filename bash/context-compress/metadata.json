@@ -1,0 +1,39 @@
+{
+  "name": "context-compress",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-token-economy/skills/context-compress/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "context-compress",
+  "downloaded_at": "2026-11-01T10:43:49.034042Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-token-economy/skills/context-compress/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-token-economy/skills/context-compress/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compresse le contexte d'une conversation longue en un r\u00e9sum\u00e9 structur\u00e9 \u00e0 cinq sections (objectif, d\u00e9cisions, fichiers touch\u00e9s, \u00e9tat courant, prochaines \u00e9tapes) qui pr\u00e9serve chemins, identifiants et contraintes n\u00e9goci\u00e9es, apr\u00e8s archivage dat\u00e9 du contexte complet. \u00c0 utiliser quand l'utilisateur demande \u00ab compresse le contexte \u00bb, \u00ab r\u00e9sume pour continuer \u00bb, \u00ab fais un handoff \u00bb, \u00ab le contexte est trop charg\u00e9 \u00bb, ou avant de passer une longue conversation \u00e0 un sous-agent. Ne pas utiliser pour raccourcir une r\u00e9ponse (\u2192 caveman) ni pour une sortie de commande shell (\u2192 cli-compress)."
+}

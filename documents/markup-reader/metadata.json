@@ -1,0 +1,38 @@
+{
+  "name": "markup-reader",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/markup-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "markup-reader",
+  "downloaded_at": "2026-11-01T10:23:24.853102Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, documentation",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/markup-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/markup-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads a marked-up drawing \u2014 a redline, a scanned sketch over a print, a PDF with comments, a photograph of a drawing somebody wrote on \u2014 and turns it into a numbered list of what each mark asks for, who it is for, and whether it can be acted on as drawn. Separates the marks that instruct from the marks that ask, and flags every mark whose meaning cannot be determined, because a guessed markup is worse than an unread one. Trigger on \"read this redline\", \"they marked up the drawing\", \"what does this markup say\", \"turn these comments into a list\", \"markup-reader\", or a marked drawing handed over. Carries no conventions: what a colour or a symbol means is the office's or the marker's, and it is asked rather than assumed. `drawing-diff` compares two issued revisions; this reads what somebody wrote on one. It does not replace the Architect of Record."
+}

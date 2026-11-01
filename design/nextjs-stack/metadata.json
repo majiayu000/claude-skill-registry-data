@@ -1,0 +1,39 @@
+{
+  "name": "nextjs-stack",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/nextjs-expert/skills/nextjs-stack/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "nextjs-stack",
+  "downloaded_at": "2026-11-01T10:41:23.813239Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, component, tailwind",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "css",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/nextjs-expert/skills/nextjs-stack/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/nextjs-expert/skills/nextjs-stack/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use as the master reference for a full Next.js 16+ stack \u2014 Prisma 7, Better Auth, shadcn/ui, TanStack Form, Zustand. Not for core framework API details (use nextjs-16)."
+}

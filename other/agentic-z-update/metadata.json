@@ -1,0 +1,37 @@
+{
+  "name": "agentic-z-update",
+  "repo": "DayZ-n-Chill/Agentic-Z",
+  "path": ".claude/skills/agentic-z-update/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DayZ-n-Chill/Agentic-Z",
+  "dir_name": "agentic-z-update",
+  "downloaded_at": "2026-11-01T10:24:01.079564Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-llm=2",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DayZ-n-Chill",
+  "source_url": "https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/.claude/skills/agentic-z-update/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/.claude/skills/agentic-z-update/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pulls the latest Agentic-Z template files (agents, skills, docs) from upstream into this clone and commits them, leaving workspace/ mod work untouched. Use when the user asks to update Agentic-Z or pull template improvements, or when the SessionStart nudge says upstream is ahead."
+}

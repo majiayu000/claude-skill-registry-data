@@ -1,0 +1,36 @@
+{
+  "name": "coordination-log",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/coordination-log/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "coordination-log",
+  "downloaded_at": "2026-11-01T10:23:34.345252Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/coordination-log/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/coordination-log/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keeps one dated log of conflicts between disciplines and follows each to the only ending that counts: both sets showing the same thing. Records which two documents disagree, what each says, who resolves it, and then the step everyone skips \u2014 whether the agreed answer reached both drawings and at which revision. Consolidates what the review skills find rather than leaving each discipline's findings in its own report. Trigger on \"coordination log\", \"track the clashes\", \"did that conflict get fixed in both sets\", \"coordination issues\", \"coordination-log\", or the output of a discipline review handed over to keep. Carries no positions of its own; the conflicts come from `mep-review`, `structural-drawing-review`, `civil-drawing-review`, `penetration-review` and `design-ceiling`. It does not resolve anything and does not replace the Architect of Record."
+}

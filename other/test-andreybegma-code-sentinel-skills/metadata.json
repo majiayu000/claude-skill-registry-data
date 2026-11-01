@@ -1,0 +1,39 @@
+{
+  "name": "cs-test",
+  "repo": "AndreyBegma/code-sentinel-skills",
+  "path": "skills/test/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AndreyBegma/code-sentinel-skills",
+  "dir_name": "test-andreybegma-code-sentinel-skills",
+  "downloaded_at": "2026-11-01T09:58:09.386560Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=4, testing=4",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 4,
+    "signals": [
+      "data",
+      "sql",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreyBegma",
+  "source_url": "https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/test/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreyBegma/code-sentinel-skills/blob/main/skills/test/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Retrospective TDD test writer \u2014 analyzes a fix and writes the appropriate test (unit or integration) that would have caught the bug, or explains why testing is not possible"
+}

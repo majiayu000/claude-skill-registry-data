@@ -1,0 +1,39 @@
+{
+  "name": "sql-pro",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/10-vaseis-dedomenon/sql-pro/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "sql-pro-kpistolas-claude-skills",
+  "downloaded_at": "2026-11-01T11:07:29.458182Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database",
+    "score": 4,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/10-vaseis-dedomenon/sql-pro/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/10-vaseis-dedomenon/sql-pro/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Optimizes SQL queries, designs database schemas, and troubleshoots performance issues. Use when a user asks why their query is slow, needs help writing complex joins or aggregations, mentions database performance issues, or wants to design or migrate a schema. Invoke for complex queries, window functions, CTEs, indexing strategies, query plan analysis, covering index creation, recursive queries, EXPLAIN/ANALYZE interpretation, before/after query benchmarking, or migrating queries between database dialects (PostgreSQL, MySQL, SQL Server, Oracle)."
+}

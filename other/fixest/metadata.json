@@ -1,0 +1,37 @@
+{
+  "name": "fixest",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/fixest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "fixest",
+  "downloaded_at": "2026-11-01T10:21:07.248954Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/fixest/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/fixest/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fast high-dimensional fixed effects in R: feols/fepois/feglm/fenegbin with\nmulti-way FE; IV estimation; DiD (TWFE, Sun-Abraham via sunab); clustered/\nheteroskedasticity-robust SEs; etable/coefplot/iplot for reporting. Use when\nexecution language is R. Python equivalent: pyfixest. For panel RE/between\nuse plm; for GLM without FE use r-stats."
+}

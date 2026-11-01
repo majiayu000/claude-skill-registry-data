@@ -1,0 +1,37 @@
+{
+  "name": "facade-module",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/facade-module/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "facade-module",
+  "downloaded_at": "2026-11-01T10:23:27.438959Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/facade-module/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/facade-module/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Divides elevation lengths and heights by a panel module and works the remainder into explicit options: resize every panel equally, absorb the leftover in end or corner panels, or take it in one feature bay, with the arithmetic for each and a check of where mullions land against the structural grid. Trigger on \"panelize\", \"curtain wall module\", \"facade module\", \"mullion spacing\", \"panel layout\", \"facade-module\", or an elevation length paired with a module. Every dimension comes from the user: elevation lengths and floor heights from their drawings, the module and any panel size limits from the manufacturer's literature, the grid from their structural plans. The skill never supplies a manufacturer's maximum panel size or a standard module from memory, does not size mullions or check wind load, does not judge thermal or glare performance, and does not choose between the options it lays out."
+}

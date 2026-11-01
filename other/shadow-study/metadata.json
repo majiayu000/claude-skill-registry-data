@@ -1,0 +1,37 @@
+{
+  "name": "shadow-study",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/shadow-study/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "shadow-study",
+  "downloaded_at": "2026-11-01T10:23:23.802199Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/shadow-study/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/shadow-study/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Computes solar altitude and azimuth from latitude, date, and time, then the shadow a massing casts: length, direction, and, if the user supplies the distance, whether it reaches a neighboring line. Trigger on \"shadow study\", \"how far does the shadow go\", \"solstice shadows\", \"will my building shade the neighbor\", \"shadow-study\", or a massing height paired with a date and a place. The solar geometry is computed from published astronomy formulas, the one thing this skill works out itself; everything else comes from the user: heights, distances, grades, and any shadow criteria the jurisdiction enforces. Flat ground is assumed unless the user supplies grades. It is a design-stage tool for comparing massing options, not a submission-grade shadow study, and it does not know which hours or open spaces any city protects."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "go-no-go-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/go-no-go-review/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "go-no-go-review",
+  "downloaded_at": "2026-11-01T10:23:32.742770Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/go-no-go-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/go-no-go-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scores a pursuit before the proposal is written, against the factors that actually predict whether a project is won and whether it is worth winning: the relationship, the client's decision process and funding, the competition, the fit with what the practice does, the fee and terms, and the capacity to deliver it. Records the decision and the reasoning so it can be read back against the outcome. Trigger on \"go no go\", \"should we chase this\", \"pursuit review\", \"is this RFP worth answering\", \"go-no-go-review\", or an opportunity raised for a decision. Carries no scoring weights and no thresholds; the practice sets what matters to it and what score means yes. It does not write the response \u2014 `rfp-response-builder` does \u2014 and does not decide. It records a decision somebody made, with the reasoning, so the next one is better informed."
+}

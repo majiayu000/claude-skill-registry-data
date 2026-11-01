@@ -1,0 +1,38 @@
+{
+  "name": "astrill-control",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/astrill-control/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "astrill-control",
+  "downloaded_at": "2026-11-01T10:40:39.065785Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/astrill-control/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/astrill-control/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Control Astrill VPN on macOS through its menu-bar GUI: status (app / tunnel / GUI menu / exit IP), connect, disconnect \u2014 all idempotent, verified by dual probes (tunnel process + exit IP) plus GUI menu state. Use whenever the user mentions Astrill, asks to turn the VPN on or off, connect or disconnect the VPN, check VPN status or exit IP, or needs to switch VPN state around network-sensitive steps where one platform requires the proxy and another requires a direct connection. Prerequisite (one-time): the app hosting the agent holds the macOS Accessibility permission. Do NOT use for other VPN clients or general network debugging. Triggers \u2014 \u300cAstrill\u300d\u300c\u6253\u5f00 VPN\u300d\u300c\u8fde\u63a5 VPN\u300d\u300cVPN \u5f00\u300d\u300cVPN on\u300d\u300c\u65ad\u5f00 VPN\u300d\u300c\u5173\u6389 VPN\u300d\u300cVPN \u5173\u300d\u300cVPN off\u300d\u300c\u67e5 VPN \u72b6\u6001\u300d\u300cVPN \u72b6\u6001\u300d\u300c\u5207\u6362 VPN\u300d\u300cVPN \u51fa\u53e3 IP\u300d / Astrill, turn on VPN, connect VPN, disconnect VPN, turn off VPN, check VPN status, toggle VPN, VPN exit IP."
+}

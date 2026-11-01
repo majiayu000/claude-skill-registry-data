@@ -1,0 +1,37 @@
+{
+  "name": "semantius-importer",
+  "repo": "IntranetFactory/semantius-copilot",
+  "path": "agents/semantius-admin/skills/semantius-importer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/IntranetFactory/semantius-copilot",
+  "dir_name": "semantius-importer",
+  "downloaded_at": "2026-11-01T10:55:53.283089Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "IntranetFactory",
+  "source_url": "https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-importer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-importer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Imports a CSV into Semantius: maps its columns to field formats, diffs them against an existing entity, optionally creates the entity (and its module), and bulk-loads the rows with a Bun script. Also schema-only runs (no rows) and compare-only runs (no writes). Trigger on \"import this CSV\", \"load this CSV into semantius\", \"create an entity from this CSV / spreadsheet export\", \"introspect this CSV\", \"bulk load these CSV rows\", \"does this CSV match our table?\", \"export the orders table to CSV\", or asking what entity shape a CSV implies. Do NOT trigger for JSON transfer files (from `export_entities` / `export_module`), moving modules or tables between hosts, backups or restores (semantius-transfer), deploying blueprints or specs (semantius-admin / semantius-modeler), designing a multi-entity system (semantius-architect), or CSV work with no Semantius target. For xlsx, ask for a CSV export first; CSV-only."
+}

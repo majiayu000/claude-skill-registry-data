@@ -1,0 +1,37 @@
+{
+  "name": "content-search",
+  "repo": "ByteTerrace/Puck",
+  "path": ".claude/skills/content-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ByteTerrace/Puck",
+  "dir_name": "content-search",
+  "downloaded_at": "2026-11-01T10:12:00.329943Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ByteTerrace",
+  "source_url": "https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/content-search/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/content-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Searches Puck repo text with puck search, not grep or rg: files or lines mentioning a verb, flag or key, regex, contains-A-not-B, counts, uncapped file lists. C# usages go to symbol-analysis."
+}

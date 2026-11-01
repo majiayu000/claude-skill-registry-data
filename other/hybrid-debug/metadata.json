@@ -1,0 +1,38 @@
+{
+  "name": "hybrid-debug",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/hybrid-debug/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "hybrid-debug",
+  "downloaded_at": "2026-11-01T10:40:37.039010Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "css",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/hybrid-debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/hybrid-debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hybrid app (native shell + WebView/WKWebView/Electron + H5) full-stack debugging methodology \u2014 forces analysis across four layers (web runtime, native-web bridge, native config, platform runtime) instead of stopping at a single layer, preventing whack-a-mole surface fixes. Use when debugging hybrid app UI/theme/behavior issues, especially platform discrepancies (one platform reproduces, the other does not), repeated single-end fix failures, or silent failures involving native-H5 communication, theme switching, or platform runtime behavior. Triggers \u2014 \u300chybrid \u8c03\u8bd5\u300d\u300c\u8de8\u7aef\u8c03\u8bd5\u300d\u300c\u5168\u94fe\u8def\u8c03\u8bd5\u300d\u300c\u5e73\u53f0\u5dee\u5f02\u8c03\u8bd5\u300d\u300cWebView \u95ee\u9898\u300d\u300cWKWebView \u95ee\u9898\u300d\u300cnative \u548c H5 \u4ea4\u4e92\u95ee\u9898\u300d\u300c\u5355\u7aef\u4fee\u590d\u5931\u8d25\u300d\u300c\u8de8\u7aef\u4e3b\u9898\u95ee\u9898\u300d\u300c\u8de8\u7aef\u6837\u5f0f\u4e0d\u4e00\u81f4\u300d / hybrid debug, cross-platform debug, webview issue, native-web bridge, full-stack debugging, RN/Electron debugging."
+}

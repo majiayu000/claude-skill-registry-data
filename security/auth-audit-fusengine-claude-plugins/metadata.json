@@ -1,0 +1,39 @@
+{
+  "name": "auth-audit",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/security-expert/skills/auth-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "auth-audit-fusengine-claude-plugins",
+  "downloaded_at": "2026-11-01T10:41:24.367893Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/security-expert/skills/auth-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/security-expert/skills/auth-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when auditing JWT, session, OAuth2/PKCE, password, or MFA implementations for security vulnerabilities and best-practice deviations."
+}

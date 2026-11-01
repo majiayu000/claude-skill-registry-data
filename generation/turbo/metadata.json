@@ -1,0 +1,38 @@
+{
+  "name": "turbo",
+  "repo": "2389-research/speed-run",
+  "path": "skills/turbo/SKILL.md",
+  "github_branch": "main",
+  "category": "generation",
+  "source": "github.com/2389-research/speed-run",
+  "dir_name": "turbo",
+  "downloaded_at": "2026-11-01T09:44:09.896036Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "generation",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for generation: generation, scaffold, boilerplate",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "generation",
+      "scaffold",
+      "boilerplate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2389-research",
+  "source_url": "https://github.com/2389-research/speed-run/blob/main/skills/turbo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2389-research/speed-run/blob/main/skills/turbo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates code via Cerebras hosted LLM from a structured contract prompt, writes files directly to disk, then applies surgical Claude fixes for test failures (~60% token savings vs Claude direct). Use when you have a single task \u2014 algorithmic code, boilerplate, data transformations, or multi-file scaffolding \u2014 and want fast token-efficient generation."
+}

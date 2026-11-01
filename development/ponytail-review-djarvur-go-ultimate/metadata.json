@@ -1,0 +1,38 @@
+{
+  "name": "ponytail-review",
+  "repo": "Djarvur/go-ultimate",
+  "path": "skills/ponytail-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Djarvur/go-ultimate",
+  "dir_name": "ponytail-review-djarvur-go-ultimate",
+  "downloaded_at": "2026-11-01T10:27:21.594972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, software",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Djarvur",
+  "source_url": "https://github.com/Djarvur/go-ultimate/blob/main/skills/ponytail-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Djarvur/go-ultimate/blob/main/skills/ponytail-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Quality review of a change: is the logic right, is it safe, does it hold under real load, is risky code tested, is it fast enough, and is every line needed. Reads the connected code, not only the diff. Each finding is explained in plain English. Use for \"review this\", \"code review\", \"review the last commit\", \"review my PR\", \"is this over-engineered\", /ponytail-review."
+}

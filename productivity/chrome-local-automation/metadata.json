@@ -1,0 +1,38 @@
+{
+  "name": "chrome-local-automation",
+  "repo": "EagleRanger/chrome-local-automation-skill",
+  "path": "skills/chrome-local-automation/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/EagleRanger/chrome-local-automation-skill",
+  "dir_name": "chrome-local-automation",
+  "downloaded_at": "2026-11-01T10:30:03.961657Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EagleRanger",
+  "source_url": "https://github.com/EagleRanger/chrome-local-automation-skill/blob/main/skills/chrome-local-automation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EagleRanger/chrome-local-automation-skill/blob/main/skills/chrome-local-automation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Connect app-specific browser skills to an already connected Chrome session through managed tabs and DOM automation. Use for reusable tab setup, click/readback helpers, and web workflow control; not for standalone CDP, background HTTP control, account login, or credential storage."
+}

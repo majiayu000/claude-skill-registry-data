@@ -1,0 +1,37 @@
+{
+  "name": "set-reader",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/set-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "set-reader",
+  "downloaded_at": "2026-11-01T10:23:19.384400Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/set-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/set-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads a complete drawing set rather than a drawing: works out what phase it actually is regardless of what the title block claims, what is in it and what is missing for that phase, which disciplines are present and at what revision, how the set is organised, and what somebody receiving it would have to ask about first. Built for the set that arrives from somewhere else \u2014 a previous architect, a client, a design-build partner, a project you are taking over. Trigger on \"read this set\", \"what have we been given\", \"we are taking over this project\", \"is this set complete\", \"set-reader\", or a whole set handed over. Carries no standards and no phase definitions; completeness is judged against what the set itself claims to be. `drawing-reader` reads one sheet, `plan-review` reads a plan, `drawing-standards-audit` sweeps for conventions. It does not replace the Architect of Record."
+}

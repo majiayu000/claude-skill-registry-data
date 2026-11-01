@@ -1,0 +1,39 @@
+{
+  "name": "option-compare",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/option-compare/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "option-compare",
+  "downloaded_at": "2026-11-01T10:23:29.630527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, word",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/option-compare/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/option-compare/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a side-by-side comparison of design options in docs/design/options.md: the criteria you choose, one column per scheme, every cell filled from what you supply, and a tradeoff summary that stops short of picking the winner. Trigger on \"compare options\", \"option A or B\", \"scheme comparison\", \"comparison matrix\", \"which scheme\", \"options for the client\", \"option-compare\", or pasted facts about two or more schemes. Areas can be read from a space-program file where one exists, costs arrive from you or a cited benchmark, and empty cells stay visibly empty rather than estimated. Weighted scoring runs only if you supply the weights, arithmetic shown. The decision is the client's and yours; the skill structures it and does not make it. Renders to Word or PDF through aec-doc-gen when the meeting needs a handout."
+}

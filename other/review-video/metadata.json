@@ -1,0 +1,37 @@
+{
+  "name": "review-video",
+  "repo": "DojoCodingLabs/remotion-superpowers",
+  "path": "skills/review-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DojoCodingLabs/remotion-superpowers",
+  "dir_name": "review-video",
+  "downloaded_at": "2026-11-01T10:27:42.529589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DojoCodingLabs",
+  "source_url": "https://github.com/DojoCodingLabs/remotion-superpowers/blob/main/skills/review-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DojoCodingLabs/remotion-superpowers/blob/main/skills/review-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a Remotion video with AI vision. Starts with a cheap local check of rendered still frames, then has TwelveLabs watch the full render and score it against a JSON rubric (pacing, composition, text legibility, audio sync and more) with timestamped fixes, applies the fixes and re-reviews. The feedback loop that closes the production circle."
+}

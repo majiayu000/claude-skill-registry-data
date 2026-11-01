@@ -1,0 +1,38 @@
+{
+  "name": "dt-setup-genai",
+  "repo": "Dynatrace/dynatrace-for-ai",
+  "path": "skills/dt-setup-genai/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Dynatrace/dynatrace-for-ai",
+  "dir_name": "dt-setup-genai",
+  "downloaded_at": "2026-11-01T10:29:32.152033Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Dynatrace",
+  "source_url": "https://github.com/Dynatrace/dynatrace-for-ai/blob/main/skills/dt-setup-genai/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Dynatrace/dynatrace-for-ai/blob/main/skills/dt-setup-genai/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Framework-independent decision process for instrumenting a GenAI/LLM app (Python or TypeScript, any provider/agent SDK) so it emits OTel GenAI semantic-convention (gen_ai.*) spans queryable in Dynatrace. Four steps: detect, instrument, enrich, validate. Decides which approach a given SDK needs; does not replace the concrete per-framework recipes in dynatrace-oss/dynatrace-ai-agent-instrumentation-examples. Trigger: \"instrument this GenAI app\", \"add tracing to this LLM app\", \"how do I get gen_ai spans into Dynatrace\", \"onboard this agent app to AI Observability\". Do NOT use for analyzing telemetry from an already-instrumented app (use dt-obs-genai) or for languages other than Python/TypeScript."
+}

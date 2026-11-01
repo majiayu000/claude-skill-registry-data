@@ -1,0 +1,37 @@
+{
+  "name": "schedule-builder",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/schedule-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "schedule-builder",
+  "downloaded_at": "2026-11-01T10:23:34.163418Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, documentation",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/schedule-builder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/schedule-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a drawing schedule of any type \u2014 door, window, finish, room, wall type, equipment \u2014 by settling the column set before any row is filled, since the columns are what the schedule is and adding one later means revisiting every row. Takes the items from your drawings or model, fills only what you supply, marks every gap rather than defaulting it, and checks the finished schedule against the plans for items scheduled but not drawn and drawn but not scheduled. Trigger on \"build a door schedule\", \"window schedule\", \"finish schedule\", \"room data sheet\", \"wall type schedule\", \"make a schedule from these drawings\", \"schedule-builder\", or a request to assemble any drawing schedule. Carries no default column sets, no hardware sets, no fire ratings and no product data; the columns come from your office standard and every value comes from you. For extracting a schedule that already exists in a PDF use `schedule-extractor`. It does not replace the Architect of Record."
+}

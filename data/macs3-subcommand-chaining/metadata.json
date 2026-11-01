@@ -1,0 +1,37 @@
+{
+  "name": "macs3-subcommand-chaining",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/epigenomics/v1/skills/macs3-subcommand-chaining/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "macs3-subcommand-chaining",
+  "downloaded_at": "2026-11-01T10:51:50.079421Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/epigenomics/v1/skills/macs3-subcommand-chaining/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/epigenomics/v1/skills/macs3-subcommand-chaining/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when when you have aligned ChIP-Seq reads (BED or BEDPE format) and a corresponding control sample, and you need explicit control over peak-calling parameters\u2014including fragment-length prediction, local bias windows (d, slocal=1kb, llocal=10kb), background scaling, and score-cutoff."
+}

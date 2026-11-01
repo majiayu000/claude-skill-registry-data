@@ -1,0 +1,37 @@
+{
+  "name": "cosine-distance-scoring",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v1/skills/cosine-distance-scoring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "cosine-distance-scoring",
+  "downloaded_at": "2026-11-01T10:51:42.436646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/cosine-distance-scoring/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/cosine-distance-scoring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when when you have preprocessed mass spectra (peak-filtered, metadata-cleaned) in supported formats (mzML, mzXML, msp, MGF, JSON) and need to compare all or many pairs of spectra to identify similar compounds, search spectral libraries, or build a similarity network for spectral clustering or."
+}

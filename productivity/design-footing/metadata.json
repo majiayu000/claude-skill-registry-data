@@ -1,0 +1,37 @@
+{
+  "name": "design-footing",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/design-footing/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "design-footing",
+  "downloaded_at": "2026-11-01T10:23:30.422453Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-footing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-footing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks a single isolated spread footing: bearing pressure under your loads against the allowable bearing value your geotechnical report gives, with every step of the arithmetic shown. Trigger on \"footing size\", \"spread footing\", \"bearing pressure\", \"bearing check\", \"pad footing\", \"footing check\", \"design-footing\", or a pasted column load with a bearing value. Works with any standard. The user supplies the loads, the allowable or factored bearing resistance with its source, the load combinations, and a trial plan size; the skill never supplies a bearing value, a soil property, or a frost depth from memory or from web search. Plan size and bearing only: the footing's thickness, shear, and reinforcement are concrete design and stop the run. Preliminary sizing, never a substitute for the Engineer of Record or the geotechnical engineer."
+}

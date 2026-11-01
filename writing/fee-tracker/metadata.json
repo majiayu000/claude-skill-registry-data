@@ -1,0 +1,37 @@
+{
+  "name": "fee-tracker",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/fee-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "fee-tracker",
+  "downloaded_at": "2026-11-01T10:23:20.677129Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: copy, article",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "copy",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/fee-tracker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/fee-tracker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tracks a project's design fee in docs/practice/fees.md: the contract fee by phase, percent complete as you state it, earned fee computed from the two, invoices as issued and as paid, and the aging of what is outstanding, with the arithmetic shown. Trigger on \"fee tracker\", \"how much have we billed\", \"earned vs billed\", \"unbilled\", \"outstanding invoices\", \"receivables\", \"invoice log\", \"fee-tracker\", or an invoice to record. Percent complete is your judgment and the skill never estimates it; fees, invoice amounts, and dates come from you, in your currency, and nothing is recalled or benchmarked. Estimating a fee before there is a contract is fee-estimator's job; this starts when the contract is signed. It is a project record, not accounting: no tax, no ledger, no payroll costs."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "fix-test",
+  "repo": "Chemaclass/bashdep",
+  "path": ".claude/skills/fix-test/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Chemaclass/bashdep",
+  "dir_name": "fix-test-chemaclass-bashdep",
+  "downloaded_at": "2026-11-01T10:15:07.737909Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Chemaclass",
+  "source_url": "https://github.com/Chemaclass/bashdep/blob/main/.claude/skills/fix-test/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Chemaclass/bashdep/blob/main/.claude/skills/fix-test/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Debug and fix failing bashdep tests systematically"
+}

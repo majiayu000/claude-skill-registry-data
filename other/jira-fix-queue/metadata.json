@@ -1,0 +1,37 @@
+{
+  "name": "jira-fix-queue",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/jira-fix-queue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "jira-fix-queue",
+  "downloaded_at": "2026-11-01T10:40:38.051174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "productivity",
+    "runner_up_score": 1,
+    "signals": [
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/jira-fix-queue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/jira-fix-queue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triggers when the user says\u300c\u6279\u91cf\u4fee\u590d\u300d\u300c\u6279\u91cf jira-fix\u300d\u300cjira-fix-queue\u300d\u300cjira-fix-batch\u300d\u300c\u6279\u91cf\u4fee\u590d\u591a\u4e2a Jira\u300d\u300c\u6279\u91cf\u4fee\u590d\u4ee5\u4e0b bug\u300d/ batch fix, batch jira-fix, jira-fix-queue, jira-fix-batch. Thin trigger shell: parse Jira IDs/URLs and enqueue them into goal-driven-queue with Engine jira-fix-workflow. Does not run fixes or merge. Do NOT use for a single issue (jira-fix-workflow) or a non-Jira queue (goal-driven-queue)."
+}

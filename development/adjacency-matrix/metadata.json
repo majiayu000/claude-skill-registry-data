@@ -1,0 +1,37 @@
+{
+  "name": "adjacency-matrix",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/adjacency-matrix/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "adjacency-matrix",
+  "downloaded_at": "2026-11-01T10:23:35.409587Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/adjacency-matrix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/adjacency-matrix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a programme adjacency matrix from movement and constraint rather than from stated preference: takes the room list, asks for each pair what actually travels between them and how often, separates a required adjacency from a desired one and from a required separation, then reads the finished matrix for the rooms that want to be everywhere at once and the conflicts that no plan can satisfy. Trigger on \"adjacency matrix\", \"bubble diagram\", \"which rooms need to be near each other\", \"programme relationships\", \"adjacency-matrix\", or a room list handed over with a request for how it should be organised. Carries no adjacency conventions for any building type, because who has to be near whom is the client's operation and not a rule. Reads a room list from `space-program` where one exists and does not duplicate its area tracking. It does not lay out a plan and does not replace the Architect of Record."
+}

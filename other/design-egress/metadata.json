@@ -1,0 +1,37 @@
+{
+  "name": "design-egress",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/design-egress/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "design-egress",
+  "downloaded_at": "2026-11-01T10:23:26.223602Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-egress/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-egress/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks a floor or a tenancy against the means-of-egress items every building code regulates: egress capacity per occupant, number of exits required, single-exit allowance, common path of travel, exit separation, travel distance, corridor width, dead-end length, door clear width, and door swing threshold. Trigger on \"check egress\", \"egress review\", \"exit count\", \"travel distance\", \"common path\", \"exit separation\", \"dead end corridor\", \"design-egress\", \"IBC 1006\", \"IBC 1017\", \"OBC 3.4\", or a pasted plan with occupant load and exit positions. Works in any jurisdiction. The user names the governing code and edition and supplies each limit by typing it, pasting the clause, or naming a file to read. The skill never supplies a limit from memory or from web search, and any item without a supplied limit is reported as unverified rather than assumed. Does not compute occupant load, and does not replace the Architect of Record or the AHJ."
+}

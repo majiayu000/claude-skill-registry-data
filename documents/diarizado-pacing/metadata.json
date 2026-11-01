@@ -1,0 +1,38 @@
+{
+  "name": "diarizado-pacing",
+  "repo": "GrowthAfinz/GaaS-Framework-Afinz",
+  "path": ".claude/skills/diarizado-pacing/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/GrowthAfinz/GaaS-Framework-Afinz",
+  "dir_name": "diarizado-pacing",
+  "downloaded_at": "2026-11-01T10:46:47.386932Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, excel, xlsx",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "excel",
+      "xlsx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GrowthAfinz",
+  "source_url": "https://github.com/GrowthAfinz/GaaS-Framework-Afinz/blob/main/.claude/skills/diarizado-pacing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GrowthAfinz/GaaS-Framework-Afinz/blob/main/.claude/skills/diarizado-pacing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Gera planilhas Excel (.xlsx) de Diarizado de Pacing no formato herdado da Jacto \u2014 gr\u00e1ficos de linha no topo (Realizado acumulado vs Meta acumulada), um cockpit de pacing por objetivo (Acumulado/Meta/Gap%/Proje\u00e7\u00e3o) e uma tabela di\u00e1ria com pares di\u00e1rio+acumulado por objetivo. M\u00e9tricas em PT-BR. Use quando o usu\u00e1rio pedir \"diarizado\", \"pacing di\u00e1rio\", \"acompanhamento di\u00e1rio de m\u00eddia paga\", \"planilha estilo Jacto\", ou quiser proje\u00e7\u00e3o de fechamento de m\u00eas por objetivo/frente a partir de dados di\u00e1rios."
+}

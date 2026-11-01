@@ -1,0 +1,39 @@
+{
+  "name": "e2e",
+  "repo": "Gram-ax/gramax",
+  "path": ".claude/skills/e2e/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Gram-ax/gramax",
+  "dir_name": "e2e-gram-ax-gramax",
+  "downloaded_at": "2026-11-01T10:46:25.420019Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, testing=4",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 4,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Gram-ax",
+  "source_url": "https://github.com/Gram-ax/gramax/blob/master/.claude/skills/e2e/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Gram-ax/gramax/blob/master/.claude/skills/e2e/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when user asks to write, create, run, or debug Playwright e2e tests in the Gramax project. Triggers on keywords like e2e, playwright, test, spec, QA."
+}

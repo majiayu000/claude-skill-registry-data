@@ -1,0 +1,38 @@
+{
+  "name": "glycowork",
+  "repo": "BojarLab/glycowork",
+  "path": "skills/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-ml",
+  "source": "github.com/BojarLab/glycowork",
+  "dir_name": "skills-bojarlab-glycowork",
+  "downloaded_at": "2026-11-01T10:09:54.764594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ml, machine-learning, model",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "machine-learning",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BojarLab",
+  "source_url": "https://github.com/BojarLab/glycowork/blob/master/skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BojarLab/glycowork/blob/master/skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Glycan data science with the glycowork Python package. Use for any code that touches glycans, oligosaccharides, polysaccharides or glycoconjugates, including parsing and converting glycan notations (IUPAC-condensed/extended, WURCS, GlycoCT, GlyTouCan IDs, Oxford, LinearCode, GLYCAM, KCF, SMILES), compositions and masses, m/z to composition to structure, motif and epitope search (Lewis, sialyl, core fucose, LacNAc, blood groups), SNFG drawing, differential glycomics, glycoproteomics and lectin-array statistics, glycan databases with species/tissue/disease labels, protein-glycan binding data, biosynthetic networks, and glycan machine learning. Use it instead of writing custom glycan parsers, monosaccharide dictionaries, mass tables or string matching."
+}

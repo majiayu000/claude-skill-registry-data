@@ -1,0 +1,39 @@
+{
+  "name": "use-semantius",
+  "repo": "IntranetFactory/semantius-copilot",
+  "path": "agents/semantius-admin/skills/use-semantius/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/IntranetFactory/semantius-copilot",
+  "dir_name": "use-semantius",
+  "downloaded_at": "2026-11-01T10:55:52.108593Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "IntranetFactory",
+  "source_url": "https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/use-semantius/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/use-semantius/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill for anything involving the Semantius platform via the semantius CLI. us1-9d4f2a7b   Trigger when the user wants to: create, read, update, or delete entities, fields, modules, permissions, roles, users, or business records; build or query a semantic data model, including subtypes and extensions of an entity (emails and calls as kinds of activities, customers and suppliers as business partners) and enum values with labels; set up RBAC; insert or import data into Semantius tables; run analytical queries across Semantius data; get a web UI link (deep link) to a record, list, or module; or send transactional emails via the Semantius email service (`crud sendEmail`). Also trigger when writing shell scripts or Bun scripts that chain semantius commands, and on any request containing `[blank]` (a sample prompt the user has not filled in, e.g. \"which fields are in [blank]\")."
+}

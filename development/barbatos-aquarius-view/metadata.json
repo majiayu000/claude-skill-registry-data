@@ -1,0 +1,38 @@
+{
+  "name": "barbatos-aquarius-view",
+  "repo": "Barbatos-Labs/Barbatos.Wpf",
+  "path": ".claude/skills/barbatos-aquarius-view/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Barbatos-Labs/Barbatos.Wpf",
+  "dir_name": "barbatos-aquarius-view",
+  "downloaded_at": "2026-11-01T10:06:34.290264Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Barbatos-Labs",
+  "source_url": "https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-aquarius-view/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Barbatos-Labs/Barbatos.Wpf/blob/main/.claude/skills/barbatos-aquarius-view/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Views and ViewModels with Barbatos.Wpf.Aquarius (aq: XAML) - Ref/Computed/Watch, aq:Setup ViewModel resolution, aq:Lifecycle hooks (IOnMounted, IOnMountedAsync), Directives.Model/Show/Event, If/Expr, Teleport, Transition, Provide/Inject, Suspense, Slots, Component/KeepAlive. Use when building or debugging a screen with aq:, or when DataContext is null, the ViewModel is never found, OnMounted never fires or fires twice, a value should update by itself, a popup is clipped, state is lost when switching tabs, or content should fade in. For navigation use barbatos-aquarius-router; for validation barbatos-valee-form. Vietnamese prompts too - m\u00e0n h\u00ecnh m\u1edbi, DataContext b\u1ecb null, binding kh\u00f4ng t\u1ef1 c\u1eadp nh\u1eadt, ch\u1ea1y khi m\u00e0n h\u00ecnh hi\u1ec7n ra, hi\u1ec7u \u1ee9ng hi\u1ec7n d\u1ea7n, gi\u1eef tr\u1ea1ng th\u00e1i khi chuy\u1ec3n tab, popup b\u1ecb c\u1eaft."
+}

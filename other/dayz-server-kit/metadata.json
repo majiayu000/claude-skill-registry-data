@@ -1,0 +1,36 @@
+{
+  "name": "dayz-server-kit",
+  "repo": "DayZ-n-Chill/Agentic-Z",
+  "path": "skills/dayz-server-kit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DayZ-n-Chill/Agentic-Z",
+  "dir_name": "dayz-server-kit",
+  "downloaded_at": "2026-11-01T10:23:57.686135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DayZ-n-Chill",
+  "source_url": "https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-server-kit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-server-kit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Zips what a server owner needs to run a DayZ mod: types.xml entries for every spawnable class, the cfgeconomycore.xml lines that load them, the load order and the public .bikey. Never packs a .biprivatekey. Use when a mod is released, alongside /dayz-release-pack."
+}

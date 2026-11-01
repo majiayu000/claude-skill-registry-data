@@ -1,0 +1,38 @@
+{
+  "name": "lc-ms-output-validation",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v1/skills/lc-ms-output-validation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "lc-ms-output-validation",
+  "downloaded_at": "2026-11-01T10:51:40.716975Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/lc-ms-output-validation/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/lc-ms-output-validation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when after executing a Nextflow-based LC-HRMS metabolomics workflow with Docker or Singularity containerization on .mzML LC-MS data, before proceeding to downstream statistical or visualization analyses."
+}

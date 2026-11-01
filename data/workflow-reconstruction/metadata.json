@@ -1,0 +1,39 @@
+{
+  "name": "workflow-reconstruction",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/metabolomics/v1/skills/workflow-reconstruction/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "workflow-reconstruction",
+  "downloaded_at": "2026-11-01T10:51:40.250534Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline, visualization",
+    "score": 4,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/workflow-reconstruction/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/metabolomics/v1/skills/workflow-reconstruction/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when when you have a partially documented or undocumented MS analysis pipeline and need to verify its correctness, trace data provenance through multiple processing stages, integrate tools via unified parameter handling (CTD scheme), or ensure the workflow adheres to community standards for."
+}

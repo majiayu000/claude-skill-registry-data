@@ -1,0 +1,38 @@
+{
+  "name": "gt",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/gt/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "gt-daaf-contribution-co-daaf",
+  "downloaded_at": "2026-11-01T10:21:06.555201Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline, visualization",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/gt/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/gt/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "R table formatting with gt, kableExtra, modelsummary. Publication-quality tables: gt() grammar-of-tables, fmt_*() formatting, tab_*() structure, gtsave() export. Use when execution language is R. Python equivalent: great-tables (use when execution language is Python)."
+}

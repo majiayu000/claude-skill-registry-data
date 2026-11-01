@@ -1,0 +1,38 @@
+{
+  "name": "boof",
+  "repo": "KingKaonix/minis-skills",
+  "path": "skills/boof/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/KingKaonix/minis-skills",
+  "dir_name": "boof",
+  "downloaded_at": "2026-11-01T11:10:54.480736Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, context-window",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KingKaonix",
+  "source_url": "https://github.com/KingKaonix/minis-skills/blob/main/skills/boof/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KingKaonix/minis-skills/blob/main/skills/boof/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Convert PDFs and documents to markdown, index them locally for RAG retrieval, and analyze them token-efficiently. Use when asked to: read/analyze/summarize a PDF, process a document, boof a file, extract information from papers/decks/NOFOs, or when you need to work with large documents without filling the context window. Supports batch processing and cross-document queries."
+}

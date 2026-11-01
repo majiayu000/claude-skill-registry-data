@@ -1,0 +1,41 @@
+{
+  "name": "hsb-app",
+  "repo": "Elogic360/software-factory",
+  "path": "skills/nvidia/hsb-app/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Elogic360/software-factory",
+  "dir_name": "hsb-app-elogic360-software-factory",
+  "downloaded_at": "2026-11-01T10:32:35.842647Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, software, debug",
+    "score": 5,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "Elogic360",
+  "source_url": "https://github.com/Elogic360/software-factory/blob/main/skills/nvidia/hsb-app/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Elogic360/software-factory/blob/main/skills/nvidia/hsb-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Discover and run Holoscan Sensor Bridge example applications on a connected devkit. Filters available apps by the user's platform, HSB software version, board type, and sensors. Supports timed execution, failure analysis, code-edit suggestions, and iterative re-runs."
+}

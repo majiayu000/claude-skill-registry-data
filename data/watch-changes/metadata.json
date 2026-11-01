@@ -1,0 +1,37 @@
+{
+  "name": "watch-changes",
+  "repo": "GeekFamilyCorp/TricorderKit",
+  "path": "cowork-plugins/tk-data-ops/skills/watch-changes/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/GeekFamilyCorp/TricorderKit",
+  "dir_name": "watch-changes",
+  "downloaded_at": "2026-11-01T10:43:46.368536Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeekFamilyCorp",
+  "source_url": "https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-data-ops/skills/watch-changes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeekFamilyCorp/TricorderKit/blob/main/cowork-plugins/tk-data-ops/skills/watch-changes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Met en place et exploite une veille de changements de pages et de flux, en local : changedetection.io (Apache-2.0, s\u00e9lecteurs CSS/XPath/jq, notifications Apprise) pour surveiller des pages, RSSHub (AGPL-3.0) pour transformer des sites sans flux en RSS, puis route chaque changement d\u00e9tect\u00e9 vers un fichier de veille dat\u00e9 ou un message sur le bus des agents. \u00c0 utiliser quand l'utilisateur veut \u00ab \u00eatre pr\u00e9venu quand cette page change \u00bb, \u00ab surveiller les nouveaut\u00e9s d'un site \u00bb, \u00ab g\u00e9n\u00e9rer un flux RSS pour un site qui n'en a pas \u00bb, \u00ab brancher une veille sur le digest \u00bb, \u00ab configurer changedetection \u00bb, \u00ab quelle route RSSHub pour ce site \u00bb, ou quand un changement a \u00e9t\u00e9 d\u00e9tect\u00e9 et qu'il faut le consigner. Ne pas utiliser pour extraire des donn\u00e9es structur\u00e9es d'une page \u2192 scrape-adaptive, ni pour surveiller l'\u00e9tat d'un service ou d'un timer (observabilit\u00e9)."
+}

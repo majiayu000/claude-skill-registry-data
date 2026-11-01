@@ -1,0 +1,37 @@
+{
+  "name": "call-a-person",
+  "repo": "23blocks-OS/ai-maestro-plugins",
+  "path": "plugins/ai-maestro/skills/call-a-person/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/23blocks-OS/ai-maestro-plugins",
+  "dir_name": "call-a-person-23blocks-os-ai-maestro-plugins",
+  "downloaded_at": "2026-11-01T09:44:34.974037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "23blocks-OS",
+  "source_url": "https://github.com/23blocks-OS/ai-maestro-plugins/blob/main/plugins/ai-maestro/skills/call-a-person/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/23blocks-OS/ai-maestro-plugins/blob/main/plugins/ai-maestro/skills/call-a-person/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ring a person's phone (the AI Maestro app) from an agent and see whether they answered. Use when a person must act now and a message would wait: a decision blocks you, something is breaking, or the operator asked to be called. Not for news, progress or anything a message can carry; and there is no audio yet, so a call says who is calling and the person answers or declines."
+}

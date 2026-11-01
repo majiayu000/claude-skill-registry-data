@@ -1,0 +1,37 @@
+{
+  "name": "opsx-jira-fix-workflow",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/opsx-jira-fix-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "opsx-jira-fix-workflow",
+  "downloaded_at": "2026-11-01T10:40:44.828716Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/opsx-jira-fix-workflow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/opsx-jira-fix-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "OpenSpec-flavored end-to-end Jira bug-fix workflow that persists root cause, behavior change, fix plan, verification, and archive into OpenSpec artifacts (openspec/changes/<name>/, archived into openspec/specs/) instead of leaving them only in chat context or Jira comments. Use when a Jira issue needs long-term behavioral-contract traceability, team review, or auditability. Do NOT use for a quick fix needing no traceability \u2014 use jira-fix-workflow instead. Triggers\uff1a\u300copsx-jira-fix\u300d\u300cOpenSpec Jira \u4fee\u590d\u300d\u300c\u89c4\u8303\u5316\u4fee\u590d Jira\u300d\u300copsx\u4fee\u590dJira\u300d\u300cJira OpenSpec \u4fee\u590d\u300d\u300copsx\u81ea\u52a8\u4fee\u590dJira\u300d\u300c\u7528OpenSpec\u4fee\u590dJira\u300d\u300copsx-jira-fix-workflow\u300d\uff1b\u300cai-proxy \u6a21\u5f0f\u300d\u300cAI \u4ee3\u7406\u6a21\u5f0f\u300d\u300c\u5207\u6362 ai-proxy\u300d / opsx jira fix, OpenSpec Jira fix workflow, ai-proxy mode, switch to ai-proxy."
+}

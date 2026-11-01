@@ -1,0 +1,37 @@
+{
+  "name": "meetings",
+  "repo": "Hassaan146/event",
+  "path": ".claude/skills/meetings/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Hassaan146/event",
+  "dir_name": "meetings-hassaan146-event",
+  "downloaded_at": "2026-11-01T10:49:59.793652Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, business=2",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Hassaan146",
+  "source_url": "https://github.com/Hassaan146/event/blob/main/.claude/skills/meetings/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Hassaan146/event/blob/main/.claude/skills/meetings/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when someone wants to decide whether a meeting is worth calling, price a meeting in dollars, build a timeboxed agenda with desired outcomes, or turn messy meeting notes into owned action items \u2014 or says \"should this be a meeting\", \"/cs:meeting-prep\", or \"/cs:meeting-actions\". Runs a cost gate (ASYNC / NOT-READY / MEET), builds a decision-first agenda, and extracts an owner + due-date checklist that flags every orphan."
+}

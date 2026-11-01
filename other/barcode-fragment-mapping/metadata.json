@@ -1,0 +1,37 @@
+{
+  "name": "barcode-fragment-mapping",
+  "repo": "HolobiomicsLab/asb-skill-collections",
+  "path": "collections/epigenomics/v1/skills/barcode-fragment-mapping/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HolobiomicsLab/asb-skill-collections",
+  "dir_name": "barcode-fragment-mapping",
+  "downloaded_at": "2026-11-01T10:51:41.992022Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HolobiomicsLab",
+  "source_url": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/epigenomics/v1/skills/barcode-fragment-mapping/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/collections/epigenomics/v1/skills/barcode-fragment-mapping/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you have a coordinate-sorted BAM file from a single-cell ATAC-seq experiment (especially 10X Genomics platforms) and need to extract per-fragment information including cell barcodes, fragment coordinates, and quality metrics for downstream analysis in SnapATAC2 or compatible tools."
+}

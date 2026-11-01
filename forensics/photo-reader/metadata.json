@@ -1,0 +1,37 @@
+{
+  "name": "photo-reader",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/photo-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "photo-reader",
+  "downloaded_at": "2026-11-01T10:23:23.445520Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: evidence, triage",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/photo-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/photo-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads any photograph an architect ends up with \u2014 a site visit, an existing building, a defect somebody wants explained, a phone picture from a client, a product on a shelf \u2014 and separates what is visible from what is inferred, because a photograph is the most persuasive and least complete document on a project. Establishes when and where it was taken and which way the camera faced before reading anything, since a photograph with no location is evidence of nothing. Trigger on \"read this photo\", \"what am I looking at here\", \"the client sent a picture\", \"is this a problem\", \"photo-reader\", or an image handed over with a question. Carries no dimensions and measures nothing from an image. It diagnoses nothing: a photograph of a stain is not a diagnosis, and `leak-triage` takes it from there. It does not replace the Architect of Record."
+}

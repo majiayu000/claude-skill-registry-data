@@ -1,0 +1,37 @@
+{
+  "name": "education-data-context",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/education-data-context/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "education-data-context",
+  "downloaded_at": "2026-11-01T10:21:14.271999Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/education-data-context/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/education-data-context/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Interpretation guidance for Urban Institute Education Data Portal datasets. The Portal is a curation layer over federal data: lowercase variable names, integer-encoded categoricals, standardized missing codes (-1 missing, -2 not applicable, -3 suppressed). Covers year definitions, grade encoding (grade=-1 is Pre-K, not missing), suppression rates, ODC-By licensing, and cross-source join identifiers. Load before analyzing any Portal data. Routes to source-specific deep-dive skills for individual datasets."
+}

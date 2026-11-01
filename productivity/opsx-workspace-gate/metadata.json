@@ -1,0 +1,37 @@
+{
+  "name": "opsx-workspace-gate",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/opsx-workspace-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "opsx-workspace-gate",
+  "downloaded_at": "2026-11-01T10:40:42.187022Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/opsx-workspace-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/opsx-workspace-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Shared OpenSpec workspace gate for OPSX workflows: locate project root, verify openspec/, and require exact native OPSX skills before delegation. Triggers \u2014 \u300cOpenSpec \u5de5\u7a0b\u95e8\u7981\u300d\u300cOPSX \u5de5\u7a0b\u5b9a\u4f4d\u300d\u300cOpenSpec \u539f\u751f\u6280\u80fd\u68c0\u67e5\u300d / OPSX workspace gate, OpenSpec project root, native skill gate. Do NOT use for Jira, Git, retry binding, or implementation orchestration."
+}

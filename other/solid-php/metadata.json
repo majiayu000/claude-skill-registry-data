@@ -1,0 +1,37 @@
+{
+  "name": "solid-php",
+  "repo": "Fusengine/claude-plugins",
+  "path": "plugins/laravel-expert/skills/solid-php/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Fusengine/claude-plugins",
+  "dir_name": "solid-php",
+  "downloaded_at": "2026-11-01T10:41:20.929805Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fusengine",
+  "source_url": "https://github.com/Fusengine/claude-plugins/blob/main/plugins/laravel-expert/skills/solid-php/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fusengine/claude-plugins/blob/main/plugins/laravel-expert/skills/solid-php/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when applying SOLID principles to Laravel 13 / PHP 8.3+ code \u2014 file size limits, interface placement, or PHPDoc enforcement."
+}

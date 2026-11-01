@@ -1,0 +1,36 @@
+{
+  "name": "dayz-launch-test",
+  "repo": "DayZ-n-Chill/Agentic-Z",
+  "path": "skills/dayz-launch-test/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DayZ-n-Chill/Agentic-Z",
+  "dir_name": "dayz-launch-test",
+  "downloaded_at": "2026-11-01T10:24:01.872860Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DayZ-n-Chill",
+  "source_url": "https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-launch-test/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DayZ-n-Chill/Agentic-Z/blob/main/skills/dayz-launch-test/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Launches a local DayZ Diag server for an instance from /dayz-add-server, then the diag client connected to it with the given built mods loaded. Run-only; does no setup. Use when you want to test built mods in game, or to preview the exact launch commands with a dry run."
+}

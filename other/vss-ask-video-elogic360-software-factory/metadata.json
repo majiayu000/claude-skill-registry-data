@@ -1,0 +1,37 @@
+{
+  "name": "vss-ask-video",
+  "repo": "Elogic360/software-factory",
+  "path": "skills/nvidia/vss-ask-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Elogic360/software-factory",
+  "dir_name": "vss-ask-video-elogic360-software-factory",
+  "downloaded_at": "2026-11-01T10:32:42.495172Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Elogic360",
+  "source_url": "https://github.com/Elogic360/software-factory/blob/main/skills/nvidia/vss-ask-video/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Elogic360/software-factory/blob/main/skills/nvidia/vss-ask-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to ask the VSS agent's video_understanding tool a fresh visual question about a recorded clip. Not for prior tool output, search hits, or metadata-answerable questions."
+}

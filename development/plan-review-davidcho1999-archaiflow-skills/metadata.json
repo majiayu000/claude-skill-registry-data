@@ -1,0 +1,37 @@
+{
+  "name": "plan-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/plan-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "plan-review-davidcho1999-archaiflow-skills",
+  "downloaded_at": "2026-11-01T10:23:20.886005Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/plan-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/plan-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads any floor plan you hand it and reports three things separately: what is drawn, what a plan of this kind should show and does not, and what the plan commits to without saying so. Works whatever the project type, whatever the phase, and whether the plan is yours, a consultant's, a client's previous architect's, or one found in a property listing. Trigger on \"read this plan\", \"what do you make of this floor plan\", \"review this layout\", \"they sent us a plan\", \"plan-review\", or a plan handed over with no particular question attached. Carries no dimensions and no standards; anything measured comes from what is on the drawing. `design-critic` judges a design, `code-compliance-review` audits against eight code axes, and `circulation-study` traces the journeys; this reads the drawing first, which is what the other three assume has happened. It does not replace the Architect of Record."
+}

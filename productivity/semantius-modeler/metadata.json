@@ -1,0 +1,37 @@
+{
+  "name": "semantius-modeler",
+  "repo": "IntranetFactory/semantius-copilot",
+  "path": "agents/semantius-admin/skills/semantius-modeler/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/IntranetFactory/semantius-copilot",
+  "dir_name": "semantius-modeler",
+  "downloaded_at": "2026-11-01T10:55:52.699861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "IntranetFactory",
+  "source_url": "https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-modeler/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-modeler/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploys a `*-semantic-spec.md` (from `semantius-analyst`) to a live Semantius instance via the `semantius` CLI. Every decision is already in the spec: each entity carries its annotation (create-new, reuse-from, rename-incoming-from, promote-to-master, dropped), every cross-model link resolved, every collision decision baked in. A thin executor: parse spec, verify annotations hold against live, render plan, execute writes, verify, optional sample data. It does NOT detect collisions, classify entities, drive merge/rename/promotion widgets, or ask about catalog ambiguity; that is the analyst's job, carried in the spec. If annotations are missing or the catalog drifted since the analyst ran, the modeler refuses and routes the user back to the analyst. Trigger when the user has a spec and wants to deploy / apply / push / implement the spec (\"deploy the spec\", \"apply the schema\", \"push this to Semantius\", \"now make it real\"). If the user references a `*-semantic-blueprint.md`, route through the analyst first."
+}

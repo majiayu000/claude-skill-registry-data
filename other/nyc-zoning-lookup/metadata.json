@@ -1,0 +1,37 @@
+{
+  "name": "nyc-zoning-lookup",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/nyc-zoning-lookup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "nyc-zoning-lookup",
+  "downloaded_at": "2026-11-01T10:23:36.802229Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/nyc-zoning-lookup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/nyc-zoning-lookup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks NYC-specific zoning questions and wants citation-backed answers from the NYC Zoning Resolution. Trigger on NYC zoning terms (FAR, lot coverage, setback, side/rear yard, sky exposure plane, height factor, dwelling unit factor, use group, accessory use), district codes (R1-R10, C1-C8, M1-M3), Special Districts (Special Hudson Yards District, Special West Chelsea District, etc.), or direct \u00a7X-XX citation requests. Downloads the official NYC ZR Complete PDF (~100 MB) on first use, caches a section-to-page outline at ~/.archtmpl/pdfs/nyc-zoning/, and answers each query by reading targeted pages and citing them as `\u00a7X-XX, p.N`. Operates with zero external dependencies \u2014 no Python, no embeddings, no API key beyond Claude Code subscription. Do NOT trigger for non-NYC zoning (use zoning-summary) or NYC Building Code questions (different document)."
+}

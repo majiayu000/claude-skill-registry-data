@@ -1,0 +1,38 @@
+{
+  "name": "browser-debug-toolkit",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/browser-debug-toolkit/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "browser-debug-toolkit",
+  "downloaded_at": "2026-11-01T10:40:44.287863Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, frontend",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/browser-debug-toolkit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/browser-debug-toolkit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Browser runtime debugging toolkit \u2014 prioritize browser DevTools and CDP tools for runtime inspection and control when debugging UI/CSS/DOM layout, frontend interaction, and rendering issues. Default channel: ego-browser (macOS, runtime-checked) \u2014 full interaction, js(), raw cdp(), inherited login state, isolated task space, human-AI handoff. On unavailability or failure degrade along: playwright-mcp \u2192 agent-browser (non-macOS); web-access CDP Proxy (lightweight control + login state, curl-parallel); chrome-devtools-mcp (DevTools panels: computed style, network, perf trace). Triggers: \u300c\u6d4f\u89c8\u5668\u8c03\u8bd5\u300d\u300cUI \u8c03\u8bd5\u300d\u300cDOM \u68c0\u67e5\u300d\u300cCSS \u8c03\u8bd5\u300d\u300c\u9875\u9762\u5e03\u5c40\u95ee\u9898\u300d\u300c\u524d\u7aef\u8fd0\u884c\u65f6\u8c03\u8bd5\u300d\u300cchrome devtools\u300d\u300cCDP \u8c03\u8bd5\u300d\u300c\u767b\u5f55\u6001\u8c03\u8bd5\u300d / browser debug, devtools, dom inspect, css debug, runtime debugging, login-state debug."
+}

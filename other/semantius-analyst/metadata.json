@@ -1,0 +1,37 @@
+{
+  "name": "semantius-analyst",
+  "repo": "IntranetFactory/semantius-copilot",
+  "path": "agents/semantius-admin/skills/semantius-analyst/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/IntranetFactory/semantius-copilot",
+  "dir_name": "semantius-analyst",
+  "downloaded_at": "2026-11-01T10:55:53.021193Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "IntranetFactory",
+  "source_url": "https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-analyst/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/IntranetFactory/semantius-copilot/blob/main/agents/semantius-admin/skills/semantius-analyst/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a `*-semantic-blueprint.md` (from `semantius-architect`) into a deployable `*-semantic-spec.md`: the first half of a deploy, which `semantius-modeler` finishes. **Trigger when the user has a blueprint to turn into or extend into a deployable spec**, or on \"what in the catalog can this blueprint reuse\", \"fold this blueprint into the live catalog\", \"make the blueprint match what we already have\", or any ask comparing a blueprint to live state and filling in field-level detail. Gatekeeper of the unified catalog: the analyst inspects every blueprint entity against built-ins, same-module duplicates, shared masters, cross-module and near-name collisions; drives merge/rename/reuse/promote decisions; confirms which optional blueprint entities to include; then elicits field-level detail (formats, validation rules, computed fields, input-type and select rules) only for entities the spec OWNs. Reused entities are referenced, not respecified. Spec deploys via `semantius-modeler`, no further interactive decisions."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "stakeholder-map",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/stakeholder-map/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "stakeholder-map-davidcho1999-archaiflow-skills",
+  "downloaded_at": "2026-11-01T10:23:32.576509Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/stakeholder-map/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/stakeholder-map/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user wants to map the stakeholders, decision rights, and communication structure of an AEC project. Trigger on 'stakeholder map', 'who decides what', 'project stakeholder analysis', 'RACI matrix for this project', 'map the stakeholders', 'governance plan', or pasted project context where governance, sign-off authority, or communication cadence is the question. Generates a structured stakeholder map markdown in `docs/stakeholders/` and appends to the project stakeholder index."
+}

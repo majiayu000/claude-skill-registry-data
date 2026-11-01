@@ -1,0 +1,38 @@
+{
+  "name": "fuzzing-apis",
+  "repo": "HelixDevelopment/agent",
+  "path": "skills/plugins/testing/api-fuzzer/fuzzing-apis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HelixDevelopment/agent",
+  "dir_name": "fuzzing-apis",
+  "downloaded_at": "2026-11-01T10:50:28.281864Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "analysis",
+      "analyze",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HelixDevelopment",
+  "source_url": "https://github.com/HelixDevelopment/agent/blob/main/skills/plugins/testing/api-fuzzer/fuzzing-apis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HelixDevelopment/agent/blob/main/skills/plugins/testing/api-fuzzer/fuzzing-apis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure perform API fuzzing to discover edge cases, crashes, and security vulnerabilities.\nUse when performing specialized testing.\nTrigger with phrases like \"fuzz the API\", \"run fuzzing tests\", or \"discover edge cases\"."
+}

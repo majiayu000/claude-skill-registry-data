@@ -1,0 +1,36 @@
+{
+  "name": "next-steps-mod",
+  "repo": "HiQS-Labs/XYZ-forge",
+  "path": "skills/2-daily/next-steps-mod/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/HiQS-Labs/XYZ-forge",
+  "dir_name": "next-steps-mod",
+  "downloaded_at": "2026-11-01T10:51:12.576846Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HiQS-Labs",
+  "source_url": "https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/2-daily/next-steps-mod/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/2-daily/next-steps-mod/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load, verify or troubleshoot the Claude Code mod that makes Claude name the next steps at the end of every answer (a Next:/Also: block), draws them as one-press buttons above the prompt, offers the top one as the Tab suggestion, and adds /next-steps. Use when the operator says \"install the next-steps mod\", \"why is there no next step band\", \"turn the next-steps band back on\", or asks for Claude to recommend next steps without being asked. Deployed through Skills Army HQ; the HQ link in ~/.claude/skills auto-loads it. Requires Claude Code 2.1.309 or newer. Never approves, blocks or rewrites a tool call or an operator prompt."
+}

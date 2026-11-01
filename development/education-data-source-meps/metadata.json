@@ -1,0 +1,37 @@
+{
+  "name": "education-data-source-meps",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/education-data-source-meps/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "education-data-source-meps",
+  "downloaded_at": "2026-11-01T10:21:15.784797Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/education-data-source-meps/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/education-data-source-meps/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "MEPS \u2014 Urban Institute modeled school-level poverty (% at 100% FPL) for public schools. MEPS 2.0 (released 2025-12-11) covers school years 2009-10 through 2022-23 and is planned for annual updates; Portal year 2022 returned rows while 2023 was empty on 2026-08-06 (re-probed). Use when FRPL is unreliable due to CEP and for consistent cross-state measurement."
+}

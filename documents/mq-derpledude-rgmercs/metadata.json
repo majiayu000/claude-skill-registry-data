@@ -1,0 +1,37 @@
+{
+  "name": "mq",
+  "repo": "DerpleDude/rgmercs",
+  "path": ".claude/skills/mq/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DerpleDude/rgmercs",
+  "dir_name": "mq-derpledude-rgmercs",
+  "downloaded_at": "2026-11-01T10:25:18.513154Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, documentation",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DerpleDude",
+  "source_url": "https://github.com/DerpleDude/rgmercs/blob/main/.claude/skills/mq/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DerpleDude/rgmercs/blob/main/.claude/skills/mq/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "MacroQuest coordinator from the MQ docs repo - delegates to a documentation researcher or code expert agent. Use when the user asks how an MQ command, TLO, datatype, or plugin works and the rgmercs code doesn't answer it, or invokes /mq. Don't use for routine rgmercs edits that follow existing code patterns."
+}

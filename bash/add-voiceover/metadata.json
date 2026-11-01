@@ -1,0 +1,37 @@
+{
+  "name": "add-voiceover",
+  "repo": "DojoCodingLabs/remotion-superpowers",
+  "path": "skills/add-voiceover/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/DojoCodingLabs/remotion-superpowers",
+  "dir_name": "add-voiceover",
+  "downloaded_at": "2026-11-01T10:27:43.008155Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DojoCodingLabs",
+  "source_url": "https://github.com/DojoCodingLabs/remotion-superpowers/blob/main/skills/add-voiceover/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DojoCodingLabs/remotion-superpowers/blob/main/skills/add-voiceover/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a voiceover narration and add it to your Remotion project. Provide a script or describe what the narration should say, and this will generate per-scene ElevenLabs TTS audio (official ElevenLabs text-to-speech skill) and wire it into your composition."
+}

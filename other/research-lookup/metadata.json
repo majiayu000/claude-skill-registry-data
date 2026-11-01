@@ -1,0 +1,37 @@
+{
+  "name": "research-lookup",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/05-ereuna/research-lookup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "research-lookup",
+  "downloaded_at": "2026-11-01T11:07:26.811753Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/05-ereuna/research-lookup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/05-ereuna/research-lookup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compiles current scholarly evidence for a scientific manuscript or research brief when the user explicitly asks to gather literature, references, background evidence, competing findings, or a manuscript research packet. Uses Parallel Search by default, Parallel Extract for source retrieval, Parallel Research for explicitly deep/exhaustive work, optional explicit Parallel Chat, and optional Perplexity only when requested or allowed as a failure fallback."
+}

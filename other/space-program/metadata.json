@@ -1,0 +1,37 @@
+{
+  "name": "space-program",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/space-program/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "space-program",
+  "downloaded_at": "2026-11-01T10:23:27.080924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "programming",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/space-program/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/space-program/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maintains a space program in docs/program/program.md: every space the project must contain, its required quantity and target area from the brief, the area the current plan gives it, and the delta. Trigger on \"space program\", \"program of requirements\", \"room list\", \"area program\", \"programming\", \"target area\", \"are we over program\", \"space-program\", or a pasted brief with a room schedule to capture. Targets come from the brief or the client, measured areas come from your plan, and the grossing factor comes from you; the skill supplies none of them and computes only the arithmetic between them, shown. Works in the unit system the brief uses. Reports name every space still missing a target or a measured area rather than hiding them in totals. Interrogating the brief itself is brief-review's job."
+}

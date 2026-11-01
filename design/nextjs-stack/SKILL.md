@@ -1,0 +1,84 @@
+---
+name: nextjs-stack
+description: Use as the master reference for a full Next.js 16+ stack — Prisma 7, Better Auth, shadcn/ui, TanStack Form, Zustand. Not for core framework API details (use nextjs-16).
+versions:
+  nextjs: 16
+  react: 19
+  prisma: 7
+  better-auth: 1.7
+  shadcn-ui: 4.21.0
+  tailwindcss: 4
+user-invocable: true
+related-skills: nextjs-16, prisma-7, better-auth, nextjs-shadcn, nextjs-tanstack-form, nextjs-zustand, nextjs-i18n, solid-nextjs
+---
+
+<objective>
+Serves as the master reference tying together the complete recommended Next.js 16+ technology stack: App Router (nextjs-16), Prisma 7 (prisma-7), Better Auth 1.7 (better-auth), shadcn/ui CLI 4.21 (nextjs-shadcn), TanStack Form (nextjs-tanstack-form), Zustand (nextjs-zustand), Tailwind CSS 4, and next-intl 4.14 (nextjs-i18n) — pointing to the right sub-skill for each layer rather than duplicating their content.
+
+Documents forbidden substitutions (NextAuth.js instead of Better Auth, Pages Router instead of App Router, React Hook Form instead of TanStack Form, Client-Components-by-default instead of Server-first) and provides reference material for stack-decision justification, SOLID module structure, cross-part integration points, and project bootstrapping. Does not cover core framework API details like routing internals, caching, or proxy.ts — those live in nextjs-16.
+</objective>
+
+# Next.js Complete Stack
+
+Master skill combining all framework documentation for modern Next.js development.
+
+## Agent Workflow (MANDATORY)
+
+Before ANY implementation, spawn 3 agents in parallel, one `Agent` call each with a `name`:
+
+1. **fuse-ai-pilot:explore-codebase** - Analyze project structure and existing patterns
+2. **fuse-ai-pilot:research-expert** - Verify latest docs for all stack technologies
+3. **mcp__context7__query-docs** - Check integration compatibility
+
+After implementation, run **fuse-ai-pilot:sniper** for validation.
+
+---
+
+## Overview
+
+### When to Use
+
+- Starting a new Next.js 16 project from scratch
+- Need the complete recommended technology stack
+- Building production applications with authentication
+- Implementing forms, state management, and UI components
+- Understanding how all parts fit together
+
+### Technology Stack
+
+| Layer | Technology | Skill Reference |
+|-------|------------|-----------------|
+| Framework | Next.js 16 (App Router, stable 16.3) | `nextjs-16` |
+| Database ORM | Prisma 7 (stable 7.10; 8.0 is RC only) | `prisma-7` |
+| Authentication | Better Auth 1.7 | `better-auth` |
+| UI Components | shadcn/ui CLI 4.21.0 | `nextjs-shadcn` |
+| Forms | TanStack Form | `nextjs-tanstack-form` |
+| State | Zustand | `nextjs-zustand` |
+| Styling | Tailwind CSS 4 | `tailwindcss` |
+| i18n | next-intl 4.14 | `nextjs-i18n` |
+
+---
+
+## Forbidden Patterns
+
+- **NextAuth.js** - Use Better Auth instead
+- **Pages Router** - Use App Router for new projects
+- **React Hook Form** - Use TanStack Form
+- **Client Components by default** - Server Components first
+
+---
+
+## References
+
+Detailed guidance lives in `references/` to keep this file scannable — load only what the task needs:
+
+| File | Load when… |
+|------|------------|
+| [references/stack-decisions.md](references/stack-decisions.md) | Justifying a technology choice (Better Auth vs NextAuth, Prisma vs Drizzle, TanStack Form vs RHF, Zustand vs Redux, shadcn/ui vs MUI) |
+| [references/solid-architecture.md](references/solid-architecture.md) | Setting up or reviewing the project's module/folder structure |
+| [references/integration-points.md](references/integration-points.md) | Wiring two parts of the stack together (auth+DB, forms+UI, state+RSC, i18n+routing) |
+| [references/quick-reference.md](references/quick-reference.md) | Looking up which sub-skill file covers a specific feature (App Router, Prisma schema, Better Auth OAuth, …) |
+| [references/best-practices.md](references/best-practices.md) | Doing a final review pass before shipping |
+| [references/getting-started.md](references/getting-started.md) | Bootstrapping a brand-new project step by step |
+
+For framework-specific detail, go directly to the sub-skill: `nextjs-16`, `prisma-7`, `better-auth`, `nextjs-shadcn`, `nextjs-tanstack-form`, `nextjs-zustand`, `nextjs-i18n`, `solid-nextjs`.

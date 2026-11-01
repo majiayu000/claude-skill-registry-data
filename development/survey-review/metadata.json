@@ -1,0 +1,37 @@
+{
+  "name": "survey-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/survey-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "survey-review",
+  "downloaded_at": "2026-11-01T10:23:25.005134Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/survey-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/survey-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads a land survey the way a design team has to: establishes what kind of survey it is and therefore what it is certified to show, checks it against what the project actually needs, and reports the gaps before a scheme gets built on top of them. Separates what was measured from what was compiled from records, works the boundary, the encumbrances, the topography, the utilities and the datum in that order, and flags every place the drawing shows a line that no instrument supports. Trigger on \"review the survey\", \"is this survey adequate\", \"what's missing from this survey\", \"ALTA survey review\", \"survey-review\", or a survey handed over at the start of a project. Carries no survey standards and no certification requirements; the standard the survey was made to comes from its own certificate. It is not a survey, does not verify a boundary, and does not replace the surveyor or the Architect of Record."
+}

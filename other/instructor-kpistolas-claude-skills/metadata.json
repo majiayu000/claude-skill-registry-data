@@ -1,0 +1,39 @@
+{
+  "name": "instructor",
+  "repo": "KPISTOLAS/claude-skills",
+  "path": "skills/07-ai-ml-ereuna/instructor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KPISTOLAS/claude-skills",
+  "dir_name": "instructor-kpistolas-claude-skills",
+  "downloaded_at": "2026-11-01T11:07:27.380102Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "KPISTOLAS",
+  "source_url": "https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/instructor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KPISTOLAS/claude-skills/blob/main/skills/07-ai-ml-ereuna/instructor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-tested structured output library"
+}

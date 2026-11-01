@@ -1,0 +1,37 @@
+{
+  "name": "design-bathroom",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/design-bathroom/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "design-bathroom",
+  "downloaded_at": "2026-11-01T10:23:31.190836Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-bathroom/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/design-bathroom/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lays out a domestic bathroom or ensuite from the two things that actually constrain it \u2014 where the waste can run and which way the door swings \u2014 rather than from the fixtures. Works ventilation, the wet area and its waterproofing, storage, and the reach and clearance around each fixture, and separates what is fixed by the building from what is a choice. Trigger on \"bathroom layout\", \"ensuite\", \"can we move the toilet\", \"powder room\", \"where does the shower drain go\", \"design-bathroom\", or a bathroom to be laid out or moved. Carries no clearances, no fixture dimensions and no ventilation rates; each comes from the code you quote, the accessibility standard, or the fixture's own data. For an accessible restroom to a standard use `design-accessible-restroom`; for commercial fixture counts use `/count-plumbing-fixtures`. It does not replace the Architect of Record."
+}

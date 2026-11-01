@@ -1,0 +1,37 @@
+{
+  "name": "mep-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/mep-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "mep-review",
+  "downloaded_at": "2026-11-01T10:23:19.924999Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/mep-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/mep-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews a mechanical, electrical, and plumbing drawing set against the architectural and structural drawings across eight coordination axes: shafts and risers, ceiling and plenum depth, equipment rooms, horizontal distribution, intake and exhaust, service entries, maintenance access, and document coordination. Trigger on \"MEP review\", \"MEP coordination\", \"check the MEP set\", \"will the ducts fit\", \"plenum depth\", \"shaft coordination\", \"is there room for the equipment\", or a shared MEP sheet with a fit question. The skill supplies no dimensions of its own: every clearance, depth, and area comes from the drawings or from you. Writes a dated review file and appends to a project index, with every unverified axis counted on the face of the review. Does not size equipment and does not replace the Engineer of Record."
+}

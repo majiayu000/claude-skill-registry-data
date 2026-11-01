@@ -1,0 +1,37 @@
+{
+  "name": "section-review",
+  "repo": "DavidCho1999/archaiflow-skills",
+  "path": "skills/section-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DavidCho1999/archaiflow-skills",
+  "dir_name": "section-review",
+  "downloaded_at": "2026-11-01T10:23:29.056190Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DavidCho1999",
+  "source_url": "https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/section-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DavidCho1999/archaiflow-skills/blob/main/skills/section-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads any section \u2014 a sketch section, a building section, a wall section, a consultant's, an inherited one \u2014 for the thing a section exists to settle: whether the vertical dimensions actually add up, and what has been drawn around rather than resolved. A section is the only drawing where the structure, the services, the ceiling, the floor build-up and the envelope have to agree in the same line, which is why it is the drawing most often cut where the conflicts are not. Trigger on \"read this section\", \"does this section work\", \"they sent a wall section\", \"check this section\", \"section-review\", or any section handed over. Carries no dimensions or depths; anything measured is read off the drawing at its stated scale. `plan-review` reads a plan and `assembly-review` reads a stack; this reads the drawing where the vertical dimensions meet. It does not replace the Architect of Record."
+}

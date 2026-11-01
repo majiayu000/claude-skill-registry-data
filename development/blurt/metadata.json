@@ -1,0 +1,38 @@
+{
+  "name": "blurt",
+  "repo": "AGIHunt/blurt",
+  "path": "skills/blurt/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AGIHunt/blurt",
+  "dir_name": "blurt",
+  "downloaded_at": "2026-11-01T09:47:50.735994Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AGIHunt",
+  "source_url": "https://github.com/AGIHunt/blurt/blob/main/skills/blurt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AGIHunt/blurt/blob/main/skills/blurt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Screen + voice \u2192 structured work. The user records their screen while talking (demoing their product, browsing, exploring an idea); turn the recording into items \u2014 bug/polish issues with repro steps, frames and suspected code, ideas with the inspiration behind them, notes, tasks \u2014 let them review on a local page, then export (Markdown/CSV, a hand-off bundle (.zip), or any tracker or chat through the tools you already have) or start fixing. Use when the user wants to record feedback / QA / ideas by talking while using their screen, hands over such a video, wants to process recordings from the Blurt app, or wants their Blurt items packed up and sent somewhere. Triggers: \"blurt\", \"/blurt\", \"start blurt\", \"\u5f00\u59cb\u53e3\u55b7\", \"\u53e3\u55b7\u9e21\", \"\u5f00\u59cb\u5f55\", \"\u5f55\u5c4f\u63d0 bug\", \"\u5f55\u4e00\u4e0b\u6211\u7684\u60f3\u6cd5\", \"record feedback\", \"turn this recording into issues\", \"\u5904\u7406\u6211\u5f55\u7684\u89c6\u9891\", \"process my recordings\", \"\u628a\u8fd9\u4e9b\u95ee\u9898\u6253\u5305\u53d1\u7ed9\u2026\", \"bundle these items for\u2026\", \"set up Blurt's models\", \"\u5e2e\u6211\u8bbe\u7f6e\u53e3\u55b7\u9e21\u7684\u6a21\u578b\", \"\u914d\u7f6e\u542c\u5199\u6a21\u578b / API Key\"."
+}
