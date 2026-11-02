@@ -1,0 +1,38 @@
+{
+  "name": "clack",
+  "repo": "LeoYeAI/agent-master-skills",
+  "path": "skills/clack/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/LeoYeAI/agent-master-skills",
+  "dir_name": "clack-leoyeai-agent-master-skills",
+  "downloaded_at": "2026-11-02T04:50:58.615991Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeoYeAI",
+  "source_url": "https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/clack/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/clack/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy and manage Clack, a voice relay server for OpenClaw. Bridges voice input (WebSocket) through STT \u2192 OpenClaw agent \u2192 TTS, enabling real-time voice conversations with your agent. Supports ElevenLabs, OpenAI, and Deepgram for STT/TTS. Per-session provider selection \u2014 users can independently choose STT and TTS providers (including on-device) from the app settings. Encrypted connections via Domain (SSL) or Tailscale. Supports local speech mode where STT/TTS run on-device and only LLM calls go through the server. Use when a user wants to set up voice chat, voice relay, voice interface, Clack, or talk to their agent by voice."
+}

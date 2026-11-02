@@ -1,0 +1,38 @@
+{
+  "name": "workers-best-practices",
+  "repo": "SeaXen/agentskills",
+  "path": "skills/workers-best-practices/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/SeaXen/agentskills",
+  "dir_name": "workers-best-practices-seaxen-agentskills",
+  "downloaded_at": "2026-11-02T05:35:59.805528Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "crypto"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SeaXen",
+  "source_url": "https://github.com/SeaXen/agentskills/blob/main/skills/workers-best-practices/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SeaXen/agentskills/blob/main/skills/workers-best-practices/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cloudflare Workers best practices for production applications. Use when writing, reviewing, or configuring Workers."
+}

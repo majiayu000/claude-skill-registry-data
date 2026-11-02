@@ -1,0 +1,37 @@
+{
+  "name": "arc-pdf",
+  "repo": "Remote-Arc/remote-arc",
+  "path": "packages/skills/builtin/arc-pdf/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Remote-Arc/remote-arc",
+  "dir_name": "arc-pdf",
+  "downloaded_at": "2026-11-02T05:29:38.007486Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Remote-Arc",
+  "source_url": "https://github.com/Remote-Arc/remote-arc/blob/master/packages/skills/builtin/arc-pdf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Remote-Arc/remote-arc/blob/master/packages/skills/builtin/arc-pdf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Inspect, extract, merge, split, and rotate PDF files with page-order and content verification, while identifying scans and avoiding false redaction claims."
+}

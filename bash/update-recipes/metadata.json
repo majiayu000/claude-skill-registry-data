@@ -1,0 +1,38 @@
+{
+  "name": "update-recipes",
+  "repo": "SatcherInstitute/health-equity-tracker",
+  "path": ".claude/skills/update-recipes/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/SatcherInstitute/health-equity-tracker",
+  "dir_name": "update-recipes",
+  "downloaded_at": "2026-11-02T05:34:54.667838Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SatcherInstitute",
+  "source_url": "https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/update-recipes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/update-recipes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Refresh the ReadMe contributor recipes (code tabs, line highlights, and prose) after frontend changes land on main. Runs scripts/readme_recipes/sync_recipes.py, then scans recipe prose against the merged diff. Called by /merge after frontend PRs; also usable standalone via /update-recipes [PR number]."
+}

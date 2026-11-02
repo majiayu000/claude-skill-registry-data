@@ -1,0 +1,38 @@
+{
+  "name": "PopNow Video Generation",
+  "repo": "agentskillexchange/skills",
+  "path": "skills/popnow-video/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/agentskillexchange/skills",
+  "dir_name": "popnow-video",
+  "downloaded_at": "2026-11-02T06:22:34.540389Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agentskillexchange",
+  "source_url": "https://github.com/agentskillexchange/skills/blob/main/skills/popnow-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentskillexchange/skills/blob/main/skills/popnow-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the existing MIT-licensed PopNow video skill to quote and create AI videos from text or an image through the commercial PopNow API, confirm the quoted cost before generation, poll asynchronous jobs, and download the result."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "score-ai-slop",
+  "repo": "SalZaki/antislop",
+  "path": "skills/score-ai-slop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SalZaki/antislop",
+  "dir_name": "score-ai-slop",
+  "downloaded_at": "2026-11-02T05:33:44.318470Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SalZaki",
+  "source_url": "https://github.com/SalZaki/antislop/blob/main/skills/score-ai-slop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SalZaki/antislop/blob/main/skills/score-ai-slop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants a slop quality-pass rather than a rewrite or a located list. Triggers include \"score this for slop\", \"how sloppy is this\", \"give me a slop breakdown\", \"rate this writing for AI tells\", \"is this ready to publish\", or \"slop report by category\". Returns a per-category breakdown (deterministic counts plus judged notes) and a publish-readiness read, deliberately without a single 0-10 headline number, because one number invites gaming. For located findings use detect-ai-slop; to rewrite the text use remove-ai-slop."
+}

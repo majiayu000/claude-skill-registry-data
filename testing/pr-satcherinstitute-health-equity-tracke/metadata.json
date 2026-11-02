@@ -1,0 +1,38 @@
+{
+  "name": "pr",
+  "repo": "SatcherInstitute/health-equity-tracker",
+  "path": ".claude/skills/pr/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/SatcherInstitute/health-equity-tracker",
+  "dir_name": "pr-satcherinstitute-health-equity-tracke",
+  "downloaded_at": "2026-11-02T05:34:53.221074Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, playwright",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SatcherInstitute",
+  "source_url": "https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Polish an open PR for review. Classify the diff by bucket (frontend / python / go) and run only the relevant checks \u2014 Biome+tsc+Playwright for frontend, black+pylint+pytest for python, build+test for go. Address open review comments, update CLAUDE.md docs if stale, rewrite the PR title and description, then watch CI until all checks pass (diagnosing and reporting any failures). Use when the user wants to close out a PR, verify it's ready for review, or run /pr."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "fix-bug",
+  "repo": "Marc-Elz/run-tracker",
+  "path": ".claude/skills/fix-bug/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Marc-Elz/run-tracker",
+  "dir_name": "fix-bug-marc-elz-run-tracker",
+  "downloaded_at": "2026-11-02T05:00:12.819071Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Marc-Elz",
+  "source_url": "https://github.com/Marc-Elz/run-tracker/blob/main/.claude/skills/fix-bug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Marc-Elz/run-tracker/blob/main/.claude/skills/fix-bug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fix a bug with a reproduce, root-cause, approve, fix, verify loop and a short write-up. Use when the user says \"fix bug\", \"fix #N\", \"debug this\", \"this is broken\", or picks up an issue labelled bug. Lighter than plan-feature: no interrogation, just a confirmed repro and proof the fix held."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "analyze",
+  "repo": "agisota/old-one",
+  "path": "skills/analyze/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/agisota/old-one",
+  "dir_name": "analyze-agisota-old-one",
+  "downloaded_at": "2026-11-02T06:22:48.611003Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agisota",
+  "source_url": "https://github.com/agisota/old-one/blob/main/skills/analyze/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agisota/old-one/blob/main/skills/analyze/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run read-only deep repository analysis and return a ranked synthesis with explicit confidence, concrete file references, and clear evidence-vs-inference boundaries. Use when a user says 'analyze', 'investigate', 'why does', 'what's causing', or needs grounded cross-file explanation before any changes are proposed."
+}

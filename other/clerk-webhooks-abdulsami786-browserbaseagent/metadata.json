@@ -1,0 +1,37 @@
+{
+  "name": "clerk-webhooks",
+  "repo": "abdulsami786/BrowserBaseAgent",
+  "path": ".claude/skills/clerk-webhooks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/abdulsami786/BrowserBaseAgent",
+  "dir_name": "clerk-webhooks-abdulsami786-browserbaseagent",
+  "downloaded_at": "2026-11-02T06:16:18.644363Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "abdulsami786",
+  "source_url": "https://github.com/abdulsami786/BrowserBaseAgent/blob/main/.claude/skills/clerk-webhooks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/abdulsami786/BrowserBaseAgent/blob/main/.claude/skills/clerk-webhooks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Clerk webhooks for real-time events and data syncing. Verify with verifyWebhook from the framework-specific package. Handle user, session, organization, billing, and payment events. Build event-driven features like database sync, notifications, and integrations."
+}

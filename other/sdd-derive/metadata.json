@@ -1,0 +1,37 @@
+{
+  "name": "sdd-derive",
+  "repo": "ahgraber/skills",
+  "path": "skills/sdd-derive/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "sdd-derive",
+  "downloaded_at": "2026-11-02T06:23:47.592513Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/sdd-derive/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/sdd-derive/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when deriving SDD specs from existing code or retroactively documenting implemented behavior. Triggers: \"derive specs\", \"generate specs from code\", \"document this code in SDD\", \"retrofit specs\", \"spec out what's already built\"."
+}

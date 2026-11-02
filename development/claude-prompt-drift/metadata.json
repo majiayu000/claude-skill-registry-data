@@ -1,0 +1,38 @@
+{
+  "name": "claude-prompt-drift",
+  "repo": "SkillfulAgents/SuperAgent",
+  "path": ".claude/skills/claude-prompt-drift/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/SkillfulAgents/SuperAgent",
+  "dir_name": "claude-prompt-drift",
+  "downloaded_at": "2026-11-02T05:40:08.907913Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillfulAgents",
+  "source_url": "https://github.com/SkillfulAgents/SuperAgent/blob/main/.claude/skills/claude-prompt-drift/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillfulAgents/SuperAgent/blob/main/.claude/skills/claude-prompt-drift/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detect drift in the Claude system prompt that agent-container sends to Anthropic. Captures two axes \u2014 the bare `claude_code` preset (Anthropic baseline) and agent-container's fully custom wire request \u2014 at the SDK version pinned in `agent-container/package-lock.json`, then stores versioned snapshots in `<skill>/snapshots/` (gitignored). Because SuperAgent REPLACES the preset with its own system prompt, preset drift never reaches our sessions automatically \u2014 every pure-claude change must be triaged for porting into system-prompt.md. Use when bumping `@anthropic-ai/claude-agent-sdk`, debugging unexpected model behavior after an SDK upgrade, previewing what a PR changes in the on-wire prompt, or auditing what Anthropic silently changed in the Claude Code preset."
+}

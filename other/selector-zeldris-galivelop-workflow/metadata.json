@@ -1,0 +1,38 @@
+{
+  "name": "selector",
+  "repo": "Zeldris/Galivelop-workflow",
+  "path": ".claude/skills/selector/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Zeldris/Galivelop-workflow",
+  "dir_name": "selector-zeldris-galivelop-workflow",
+  "downloaded_at": "2026-11-02T06:11:24.084043Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Zeldris",
+  "source_url": "https://github.com/Zeldris/Galivelop-workflow/blob/main/.claude/skills/selector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Zeldris/Galivelop-workflow/blob/main/.claude/skills/selector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pick the skill and models for the task that is starting. Use at the start of every task, when a bug or a design request arrives, before reviewing a diff for the protected branch, when a block or phase closes, and whenever the user asks which workflow or model fits."
+}

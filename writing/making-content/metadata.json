@@ -1,0 +1,39 @@
+{
+  "name": "making-content",
+  "repo": "MiniMax-AI/mcode-stack",
+  "path": "stacks/jiachen/skills/making-content/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/MiniMax-AI/mcode-stack",
+  "dir_name": "making-content",
+  "downloaded_at": "2026-11-02T05:05:59.908675Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for writing: writing, copy, blog, article",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "copy",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MiniMax-AI",
+  "source_url": "https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/jiachen/skills/making-content/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/jiachen/skills/making-content/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Content production in three modes: rewrite, Xiaohongshu (\u5c0f\u7ea2\u4e66) image post, short video. Rewrite (default): turns an AI-sounding Chinese or mixed Chinese-English draft (post, newsletter, engineering blog, commentary) into the author's restrained style: few emoji, short paragraphs, hedged claims, neutral wording, English terms split by spaces. Triggers: \u6309\u6211\u7684\u98ce\u683c\u6539, \u53bb AI \u5473, \u6da6\u8272, \u6539\u6539\u8fd9\u7bc7, or a vague \u5e2e\u6211\u6539\u6539 when the context is a structured draft. Also for a Xiaohongshu image post from scratch (title, cover, cards, body, hooks); read references/xhs-post.md first. Also turns a document, research, notes or an article into a 60-180 s vertical video (\u6296\u97f3, \u5c0f\u7ea2\u4e66, \u89c6\u9891\u53f7, B\u7ad9: real sources, voice-over, captions, cover). Triggers: \u505a\u6210\u89c6\u9891, \u505a\u4e2a\u77ed\u89c6\u9891, \u526a\u4e2a 90 \u79d2\u7248\u672c, \u914d\u97f3, \u6362\u6210\u6211\u7684\u58f0\u97f3, or complaints of \u5b57\u592a\u5bc6, AI \u5473\u592a\u91cd, \u5bb9\u6613\u8d70\u795e; read references/video-pipeline.md first."
+}

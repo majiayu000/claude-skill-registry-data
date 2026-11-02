@@ -1,0 +1,38 @@
+{
+  "name": "xero_command_line",
+  "repo": "XeroAPI/xero-command-line",
+  "path": "skills/xero-command-line/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/XeroAPI/xero-command-line",
+  "dir_name": "xero-command-line",
+  "downloaded_at": "2026-11-02T06:06:02.289772Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "XeroAPI",
+  "source_url": "https://github.com/XeroAPI/xero-command-line/blob/main/skills/xero-command-line/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/XeroAPI/xero-command-line/blob/main/skills/xero-command-line/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Interact with the Xero accounting API using the `xero` CLI tool. Manage contacts, invoices, quotes, credit notes, payments, bank transactions, items, manual journals, tracking categories, currencies, tax rates, reports, organisation details, and attachments."
+}

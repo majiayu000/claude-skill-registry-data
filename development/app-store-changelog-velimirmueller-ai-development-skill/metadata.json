@@ -1,0 +1,37 @@
+{
+  "name": "app-store-changelog",
+  "repo": "VelimirMueller/ai-development-skills",
+  "path": "skills/swift/app-store-changelog/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/VelimirMueller/ai-development-skills",
+  "dir_name": "app-store-changelog-velimirmueller-ai-development-skill",
+  "downloaded_at": "2026-11-02T05:57:33.611209Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, refactor",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VelimirMueller",
+  "source_url": "https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/swift/app-store-changelog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/swift/app-store-changelog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked to generate a comprehensive release changelog, App Store \"What's New\" text, or release notes based on git history or tags. Create user-facing App Store release notes by collecting and summarizing all user-impacting changes since the last git tag (or a specified ref)."
+}

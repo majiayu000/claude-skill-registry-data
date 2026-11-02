@@ -1,0 +1,37 @@
+{
+  "name": "teach-me",
+  "repo": "ahgraber/skills",
+  "path": "skills/teach-me/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "teach-me-ahgraber-skills",
+  "downloaded_at": "2026-11-02T06:23:46.414608Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/teach-me/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/teach-me/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to be taught a subject, not just answered \u2014 \"teach me X\", \"help me learn X\", \"help me understand X\", \"help me grok X\", \"explain how X works\", \"quiz me on X\", \"I keep bouncing off X\" \u2014 where X can be anything: a historical period, a statistical method, music theory, a poem, a legal concept, a cooking technique, a library, a codebase, or a code change. Change-focused asks belong here too: \"explain this diff/PR/branch\", \"walk me through this change\", \"onboarding doc for this change\", \"teach me what changed\", \"help me/my team understand this PR\". Spans a quick in-chat lesson up to a saved, dated lesson artifact. Not for: a quick factual answer (just answer), needing only to see a shape or sketch (use show-me), writing a commit message (use commit-message), or reviewing code for defects (use code-review)."
+}

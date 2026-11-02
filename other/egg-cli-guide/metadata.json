@@ -1,0 +1,37 @@
+{
+  "name": "egg-cli-guide",
+  "repo": "Ryu0118/Egg",
+  "path": "skills/egg-cli-guide/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Ryu0118/Egg",
+  "dir_name": "egg-cli-guide",
+  "downloaded_at": "2026-11-02T05:31:49.123731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ryu0118",
+  "source_url": "https://github.com/Ryu0118/Egg/blob/main/skills/egg-cli-guide/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ryu0118/Egg/blob/main/skills/egg-cli-guide/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "CLI usage guide for the egg scaffolding tool. Use when an agent or user wants to hatch a template, needs the preview/apply/rollback/discard/transactions transaction flow, wants to manage templates (create/list/detail/install/validate/duplicate/move/delete/open), or wants to declare/pin/sync template sources reproducibly via an eggs.yml manifest (egg template sync/update)."
+}

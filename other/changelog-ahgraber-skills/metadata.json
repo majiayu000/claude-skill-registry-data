@@ -1,0 +1,37 @@
+{
+  "name": "changelog",
+  "repo": "ahgraber/skills",
+  "path": "skills/changelog/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "changelog-ahgraber-skills",
+  "downloaded_at": "2026-11-02T06:23:46.917537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/changelog/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/changelog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing, updating, or generating a CHANGELOG.md \u2014 for a new release, an unreleased section update, or drafting from git history or diff. Triggers: \"update the changelog\", \"write release notes\", \"what changed since X\", \"generate changelog for v1.2.0\", \"add this to the changelog\", \"draft unreleased section\". Not for commit messages (use commit-message skill) or internal deployment runbooks."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ssrf-boundary-review",
+  "repo": "Lucas-Belucci-Bellini/All-Skills-for-the-claude-code",
+  "path": "plugins/all-skills-collection/skills/ssrf-boundary-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Lucas-Belucci-Bellini/All-Skills-for-the-claude-code",
+  "dir_name": "ssrf-boundary-review",
+  "downloaded_at": "2026-11-02T04:54:52.451559Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: integration=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "webhook"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lucas-Belucci-Bellini",
+  "source_url": "https://github.com/Lucas-Belucci-Bellini/All-Skills-for-the-claude-code/blob/main/plugins/all-skills-collection/skills/ssrf-boundary-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lucas-Belucci-Bellini/All-Skills-for-the-claude-code/blob/main/plugins/all-skills-collection/skills/ssrf-boundary-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review server-side URL fetching and webhook integrations for SSRF boundaries, redirect handling, DNS rebinding, and egress restrictions."
+}

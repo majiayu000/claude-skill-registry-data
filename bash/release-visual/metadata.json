@@ -1,0 +1,38 @@
+{
+  "name": "release-visual",
+  "repo": "ajnart/self-host",
+  "path": ".claude/skills/release-visual/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ajnart/self-host",
+  "dir_name": "release-visual",
+  "downloaded_at": "2026-11-02T06:27:14.975442Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ajnart",
+  "source_url": "https://github.com/ajnart/self-host/blob/main/.claude/skills/release-visual/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ajnart/self-host/blob/main/.claude/skills/release-visual/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate the self-host release announcement visual when preparing a release or announcing newly added Apps. Discover added Apps between refs and render the approved Logo hub with pulses, rather than inventing a new layout."
+}

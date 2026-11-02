@@ -1,0 +1,39 @@
+{
+  "name": "scaffold-go-service",
+  "repo": "VelimirMueller/ai-development-skills",
+  "path": "skills/backend/scaffold-go-service/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/VelimirMueller/ai-development-skills",
+  "dir_name": "scaffold-go-service",
+  "downloaded_at": "2026-11-02T05:57:35.497825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VelimirMueller",
+  "source_url": "https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/backend/scaffold-go-service/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/backend/scaffold-go-service/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when starting a Go HTTP service or adding one to a repo with no Go module yet \u2014 scaffolds stdlib net/http (1.22+ routing), cmd/ and internal/ layers, slog JSON logs, validated env config, problem+json errors, health/readiness, graceful shutdown and a golangci-lint v2 config."
+}

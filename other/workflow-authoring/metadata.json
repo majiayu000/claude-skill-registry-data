@@ -1,0 +1,37 @@
+{
+  "name": "workflow-authoring",
+  "repo": "SkillfulAgents/SuperAgent",
+  "path": "agent-container/plugin/skills/workflow-authoring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SkillfulAgents/SuperAgent",
+  "dir_name": "workflow-authoring",
+  "downloaded_at": "2026-11-02T05:40:10.230636Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillfulAgents",
+  "source_url": "https://github.com/SkillfulAgents/SuperAgent/blob/main/agent-container/plugin/skills/workflow-authoring/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillfulAgents/SuperAgent/blob/main/agent-container/plugin/skills/workflow-authoring/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reference for writing a Workflow tool script (script API and gotchas, resume, quality patterns, worked examples). Load before authoring a script for a workflow the user already opted into; it does not itself authorize running one."
+}

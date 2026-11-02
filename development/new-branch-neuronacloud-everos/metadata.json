@@ -1,0 +1,38 @@
+{
+  "name": "new-branch",
+  "repo": "NeuronaCloud/everOS",
+  "path": ".claude/skills/new-branch/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/NeuronaCloud/everOS",
+  "dir_name": "new-branch-neuronacloud-everos",
+  "downloaded_at": "2026-11-02T05:13:16.259992Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NeuronaCloud",
+  "source_url": "https://github.com/NeuronaCloud/everOS/blob/main/.claude/skills/new-branch/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NeuronaCloud/everOS/blob/main/.claude/skills/new-branch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a GitHub branch from main with the project naming convention"
+}

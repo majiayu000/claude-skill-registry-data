@@ -1,0 +1,38 @@
+{
+  "name": "release-cli",
+  "repo": "VelimirMueller/ai-development-skills",
+  "path": "skills/cli/release-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/VelimirMueller/ai-development-skills",
+  "dir_name": "release-cli",
+  "downloaded_at": "2026-11-02T05:57:25.000925Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VelimirMueller",
+  "source_url": "https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/cli/release-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/cli/release-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when cutting a release of a CLI \u2014 SemVer over the CLI surface, changelog-driven release notes, tag-triggered CI, per-language distribution (npm, GoReleaser, PyPI, cargo-dist), signed or provenance-bearing artifacts, and install plus verify instructions in the README."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "incremental-enhancement-lanes",
+  "repo": "aj604/toolshed",
+  "path": "plugins/workbench/skills/incremental-enhancement-lanes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aj604/toolshed",
+  "dir_name": "incremental-enhancement-lanes",
+  "downloaded_at": "2026-11-02T06:26:53.497977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aj604",
+  "source_url": "https://github.com/aj604/toolshed/blob/main/plugins/workbench/skills/incremental-enhancement-lanes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aj604/toolshed/blob/main/plugins/workbench/skills/incremental-enhancement-lanes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user requests agents to improve several distinct areas in parallel over a fixed number of rounds, with a stack of PRs per lane left open for human review. For an existing issue dependency graph use workbench:orchestrate-issues; for one autonomous improvement use workbench:enhance."
+}

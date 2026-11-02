@@ -1,0 +1,37 @@
+{
+  "name": "gw-doctor",
+  "repo": "Zeldris/Galivelop-workflow",
+  "path": ".claude/skills/gw-doctor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Zeldris/Galivelop-workflow",
+  "dir_name": "gw-doctor-zeldris-galivelop-workflow",
+  "downloaded_at": "2026-11-02T06:11:24.383937Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Zeldris",
+  "source_url": "https://github.com/Zeldris/Galivelop-workflow/blob/main/.claude/skills/gw-doctor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Zeldris/Galivelop-workflow/blob/main/.claude/skills/gw-doctor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check that Galivelop-workflow is set up correctly in the current project and explain every failure with its fix. Use when something in the workflow misbehaves or after applying or updating it (run by hand with /gw-doctor)."
+}

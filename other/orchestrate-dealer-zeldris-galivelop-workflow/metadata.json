@@ -1,0 +1,37 @@
+{
+  "name": "orchestrate-dealer",
+  "repo": "Zeldris/Galivelop-workflow",
+  "path": ".claude/skills/orchestrate-dealer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Zeldris/Galivelop-workflow",
+  "dir_name": "orchestrate-dealer-zeldris-galivelop-workflow",
+  "downloaded_at": "2026-11-02T06:11:26.177377Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Zeldris",
+  "source_url": "https://github.com/Zeldris/Galivelop-workflow/blob/main/.claude/skills/orchestrate-dealer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Zeldris/Galivelop-workflow/blob/main/.claude/skills/orchestrate-dealer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the main session as an orchestrator that deals work out to clean-context subagents, so it can work for hours without /clear. Use for any task of more than one step (a plan task, a batch of fixes, a whole phase), when bringing material from another repo, and when the session context passes ~150k tokens."
+}

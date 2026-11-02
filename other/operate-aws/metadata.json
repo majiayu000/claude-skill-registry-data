@@ -1,0 +1,37 @@
+{
+  "name": "operate-aws",
+  "repo": "VelimirMueller/ai-development-skills",
+  "path": "skills/ops/operate-aws/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/VelimirMueller/ai-development-skills",
+  "dir_name": "operate-aws",
+  "downloaded_at": "2026-11-02T05:57:24.849065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VelimirMueller",
+  "source_url": "https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/ops/operate-aws/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/ops/operate-aws/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when operating AWS by CLI \u2014 SSO profiles, explicit profile and region, caller-identity check first, least privilege without long-lived keys, CloudTrail and cost lookups, Session Manager over SSH, CDK version skew avoided."
+}

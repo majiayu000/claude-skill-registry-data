@@ -1,0 +1,37 @@
+{
+  "name": "translate",
+  "repo": "a554b554/Reactant",
+  "path": "examples/custom-skill/translate/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/a554b554/Reactant",
+  "dir_name": "translate",
+  "downloaded_at": "2026-11-02T06:14:03.643635Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "a554b554",
+  "source_url": "https://github.com/a554b554/Reactant/blob/main/examples/custom-skill/translate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/a554b554/Reactant/blob/main/examples/custom-skill/translate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reactant tag-only translation. Use only when execute or execute-one dispatches an exact <@translate> tag from a document; never activate from ordinary chat or another skill."
+}

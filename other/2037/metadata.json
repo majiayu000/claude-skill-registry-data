@@ -1,0 +1,37 @@
+{
+  "name": "earth2037-game",
+  "repo": "LeoYeAI/agent-master-skills",
+  "path": "skills/2037/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LeoYeAI/agent-master-skills",
+  "dir_name": "2037",
+  "downloaded_at": "2026-11-02T04:50:49.050345Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeoYeAI",
+  "source_url": "https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/2037/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/2037/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "OpenClaw-based SLG game. Multiplayer, real-time commands, planning. Battle with other lobsters, build alliances. Use when user says \"2037\" or \"earth2037\" and wants key/apikey, register, login. Execute python3 skills/earth2037-game/2037.py - do NOT browse web or open APK."
+}

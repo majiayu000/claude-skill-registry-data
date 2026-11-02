@@ -1,0 +1,37 @@
+{
+  "name": "ecovacs",
+  "repo": "TanNhatCMS/jarvis",
+  "path": "connectors/ecovacs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/TanNhatCMS/jarvis",
+  "dir_name": "ecovacs-tannhatcms-jarvis",
+  "downloaded_at": "2026-11-02T05:47:05.836442Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TanNhatCMS",
+  "source_url": "https://github.com/TanNhatCMS/jarvis/blob/main/connectors/ecovacs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TanNhatCMS/jarvis/blob/main/connectors/ecovacs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Control Ecovacs DEEBOT robot vacuums through the Ecovacs Open Platform: device list, status, battery, cleaning start/pause/stop, dock return. Trigger phrases: ecovacs, deebot, robot vacuum, start cleaning, dock vacuum."
+}

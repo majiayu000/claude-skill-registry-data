@@ -1,0 +1,41 @@
+{
+  "name": "deploy-to-ionos",
+  "repo": "VelimirMueller/ai-development-skills",
+  "path": "skills/infra/deploy-to-ionos/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/VelimirMueller/ai-development-skills",
+  "dir_name": "deploy-to-ionos",
+  "downloaded_at": "2026-11-02T05:57:28.833265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, docker, kubernetes, deploy, infra, infrastructure",
+    "score": 6,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "docker",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VelimirMueller",
+  "source_url": "https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/infra/deploy-to-ionos/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/infra/deploy-to-ionos/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when hosting on IONOS Cloud with the ionoscloud OpenTofu provider (datacenter, LAN, server or Managed Kubernetes, DBaaS Postgres, Object Storage), or picking IONOS Deploy Now for a static site."
+}

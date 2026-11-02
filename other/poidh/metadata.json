@@ -1,0 +1,36 @@
+{
+  "name": "poidh-bounty",
+  "repo": "LeoYeAI/agent-master-skills",
+  "path": "skills/poidh/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LeoYeAI/agent-master-skills",
+  "dir_name": "poidh",
+  "downloaded_at": "2026-11-02T04:50:55.144875Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "productivity",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeoYeAI",
+  "source_url": "https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/poidh/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/poidh/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Post bounties and evaluate/accept winning submissions on poidh (pics or it didn't happen) on Arbitrum, Base, or Degen Chain. Use this skill when the user wants to create a bounty on poidh.xyz, post a task with an ETH or DEGEN reward on-chain, evaluate photo submissions using vision, accept a winning claim on a solo bounty, or initiate/resolve voting on an open bounty."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "clerk-cli",
+  "repo": "NeelakshSaxena/Drishti",
+  "path": ".agents/skills/clerk-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NeelakshSaxena/Drishti",
+  "dir_name": "clerk-cli-neelakshsaxena-drishti",
+  "downloaded_at": "2026-11-02T05:11:29.167261Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NeelakshSaxena",
+  "source_url": "https://github.com/NeelakshSaxena/Drishti/blob/main/.agents/skills/clerk-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NeelakshSaxena/Drishti/blob/main/.agents/skills/clerk-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operate the Clerk CLI (`clerk` binary) for authentication, user/org/session management, impersonation, local webhook testing, deploy verification, instance config, env keys, feature toggles, and any Clerk Backend, Platform, or Frontend API call. Use when the user mentions Clerk management tasks, \"list clerk users\", \"impersonate a user\", \"test webhooks locally\", \"enable orgs\", \"enable billing\", \"clerk env pull\", \"clerk doctor\", \"clerk deploy\", \"clerk api\", or any ad-hoc Clerk API request. Prefer the CLI over raw HTTP: it handles auth, key resolution, app/instance targeting, and formatting automatically."
+}

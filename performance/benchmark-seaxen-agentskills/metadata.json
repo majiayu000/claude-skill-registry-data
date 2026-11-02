@@ -1,0 +1,39 @@
+{
+  "name": "benchmark",
+  "repo": "SeaXen/agentskills",
+  "path": "skills/benchmark/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/SeaXen/agentskills",
+  "dir_name": "benchmark-seaxen-agentskills",
+  "downloaded_at": "2026-11-02T05:35:52.183888Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for performance: performance, optimize, latency, benchmark",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "optimize",
+      "latency",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SeaXen",
+  "source_url": "https://github.com/SeaXen/agentskills/blob/main/skills/benchmark/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SeaXen/agentskills/blob/main/skills/benchmark/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Replaces guesswork with empirical hardware telemetry: synthesizes ad-hoc stress-test harnesses on the fly, executes them headlessly, and proves performance gains with hard numbers."
+}

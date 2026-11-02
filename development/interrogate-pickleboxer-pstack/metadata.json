@@ -1,0 +1,38 @@
+{
+  "name": "interrogate",
+  "repo": "PickleBoxer/pstack",
+  "path": "skills/interrogate/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/PickleBoxer/pstack",
+  "dir_name": "interrogate-pickleboxer-pstack",
+  "downloaded_at": "2026-11-02T05:23:26.713879Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PickleBoxer",
+  "source_url": "https://github.com/PickleBoxer/pstack/blob/main/skills/interrogate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PickleBoxer/pstack/blob/main/skills/interrogate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for \"interrogate\", \"adversarial review\", \"multi-model review\", \"challenge this\", \"stress test this code\", \"find blind spots\", or \"tear this apart\". Multiple LLM reviewers challenge changes from independent angles."
+}

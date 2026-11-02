@@ -1,0 +1,38 @@
+{
+  "name": "vibe-goldfish",
+  "repo": "aakashdhar/vibe-skill",
+  "path": "vibe-goldfish/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/aakashdhar/vibe-skill",
+  "dir_name": "vibe-goldfish",
+  "downloaded_at": "2026-11-02T06:14:37.180363Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aakashdhar",
+  "source_url": "https://github.com/aakashdhar/vibe-skill/blob/main/vibe-goldfish/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aakashdhar/vibe-skill/blob/main/vibe-goldfish/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Independent document review for the vibe-* framework, on the elephant-goldfish model. The agent that wrote a document (the elephant) never reviews it. Fresh read-only subagents with no conversation and no CLAUDE.md (the goldfish) read it cold, each with one job: rubric, comprehension, zoom-out, design critique, implementation readiness, codebase fit. The elephant answers every finding as fix, contest (with evidence), escalate (a person decides) or decline (P2 only). Reviews loop until two clean rounds in a row, capped at 5, and stop for a person on churn or escalation. goldfish.py keeps the ledger. Called by vibe-spec-review; also runs on \"goldfish:\" with a preset or a file, \"goldfish review\", \"fresh-eyes review\", \"independent review of this doc\"."
+}

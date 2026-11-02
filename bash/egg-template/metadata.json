@@ -1,0 +1,38 @@
+{
+  "name": "egg-template",
+  "repo": "Ryu0118/Egg",
+  "path": "skills/egg-template/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Ryu0118/Egg",
+  "dir_name": "egg-template",
+  "downloaded_at": "2026-11-02T05:31:49.013092Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ryu0118",
+  "source_url": "https://github.com/Ryu0118/Egg/blob/main/skills/egg-template/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ryu0118/Egg/blob/main/skills/egg-template/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create or update egg templates. Use when user wants to: (1) create a new template from scratch, (2) add/modify/remove macros, (3) update template files or lifecycle hooks, (4) convert files to Stencil format. For fetching/pinning/syncing existing templates from a repo (egg template install, eggs.yml manifests, egg template sync/update), use egg-cli-guide instead."
+}

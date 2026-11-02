@@ -1,0 +1,38 @@
+{
+  "name": "opt-ai",
+  "repo": "Zeldris/Galivelop-workflow",
+  "path": "skills/opt-ai/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Zeldris/Galivelop-workflow",
+  "dir_name": "opt-ai",
+  "downloaded_at": "2026-11-02T06:11:19.409753Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: local-ai-infrastructure=3, performance=3",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "ollama",
+      "llama-cpp",
+      "vllm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Zeldris",
+  "source_url": "https://github.com/Zeldris/Galivelop-workflow/blob/main/skills/opt-ai/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Zeldris/Galivelop-workflow/blob/main/skills/opt-ai/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Optional retrospective for projects with local or self-hosted AI models (Ollama, LM Studio, llama.cpp, vLLM, an embeddings/RAG pipeline). Measures latency, quality (for example RAG recall) and configuration per machine profile from a per-call log, and proposes changes without applying them. Use after each testing round, before switching models or engines, and when latency bothers the user."
+}

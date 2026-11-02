@@ -1,0 +1,37 @@
+{
+  "name": "reversa-clarify",
+  "repo": "Pabloprogramador23/loja",
+  "path": ".agents/skills/reversa-clarify/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Pabloprogramador23/loja",
+  "dir_name": "reversa-clarify-pabloprogramador23-loja-2",
+  "downloaded_at": "2026-11-02T05:21:06.003386Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Pabloprogramador23",
+  "source_url": "https://github.com/Pabloprogramador23/loja/blob/master/.agents/skills/reversa-clarify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Pabloprogramador23/loja/blob/master/.agents/skills/reversa-clarify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Gera at\u00e9 cinco perguntas dirigidas para resolver pontos amb\u00edguos do requirements e integra as respostas no documento. Use quando o usu\u00e1rio digitar \"/reversa-clarify\", \"reversa-clarify\", \"esclarecer d\u00favidas\" ou pedir para tirar pontos abertos do requirements antes de planejar. Etapa opcional do ciclo forward, entre `/reversa-requirements` e `/reversa-plan`."
+}

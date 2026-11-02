@@ -1,0 +1,38 @@
+{
+  "name": "release",
+  "repo": "SatcherInstitute/health-equity-tracker",
+  "path": ".claude/skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/SatcherInstitute/health-equity-tracker",
+  "dir_name": "release-satcherinstitute-health-equity-tracke",
+  "downloaded_at": "2026-11-02T05:34:54.117967Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SatcherInstitute",
+  "source_url": "https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cut a new production release \u2014 pre-flight checks, auto-increment tag, publish GitHub release, monitor prod deploy, verify prod loads, targeted Playwright smoke tests, then trigger nightly E2E. Use when the user wants to ship a release or run /release."
+}

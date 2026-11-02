@@ -1,0 +1,38 @@
+{
+  "name": "add-container",
+  "repo": "ajnart/self-host",
+  "path": ".claude/skills/add-container/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/ajnart/self-host",
+  "dir_name": "add-container",
+  "downloaded_at": "2026-11-02T06:27:14.874833Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ajnart",
+  "source_url": "https://github.com/ajnart/self-host/blob/main/.claude/skills/add-container/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ajnart/self-host/blob/main/.claude/skills/add-container/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "DCM Container work. Use to add or edit a Container in dcm/src/tools/, including an issue labelled `container` and then `accepted`, and the pull request dcm-add-container.yml opens from it. A Container is a compose snippet DCM offers for a product the Catalog does not install. Catalog Apps go to edit-catalog."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "reversa-forward",
+  "repo": "Pabloprogramador23/loja",
+  "path": ".claude/skills/reversa-forward/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Pabloprogramador23/loja",
+  "dir_name": "reversa-forward-pabloprogramador23-loja-2",
+  "downloaded_at": "2026-11-02T05:21:06.520043Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Pabloprogramador23",
+  "source_url": "https://github.com/Pabloprogramador23/loja/blob/master/.claude/skills/reversa-forward/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Pabloprogramador23/loja/blob/master/.claude/skills/reversa-forward/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orquestrador do pipeline de evolu\u00e7\u00e3o do Reversa. Detecta o est\u00e1gio f\u00edsico da feature ativa em `_reversa_forward/` e sugere o pr\u00f3ximo agente do ciclo forward (requirements, clarify, plan, to-do, audit, quality, coding). Use quando o usu\u00e1rio digitar \"/reversa-forward\", \"reversa-forward\", \"iniciar evolu\u00e7\u00e3o\", \"iniciar pipeline forward\" ou pedir para conduzir o ciclo de uma feature do zero ao c\u00f3digo. N\u00e3o escreve artefatos de feature por conta pr\u00f3pria, apenas roteia."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "debugging",
+  "repo": "ahgraber/skills",
+  "path": "skills/debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "debugging-ahgraber-skills",
+  "downloaded_at": "2026-11-02T06:23:47.187103Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/debugging/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/debugging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a bug, test failure, build break, regression, flaky test, or unexpected behavior appears \u2014 before proposing or attempting fixes. Triggers: \"why is this failing\", \"this test broke\", \"something's wrong\", \"help me debug\", \"it works on my machine\", mysterious stack traces, intermittent failures. Not for: writing new features, reviewing working code, or routine refactors."
+}

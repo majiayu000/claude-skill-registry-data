@@ -1,0 +1,38 @@
+{
+  "name": "writing-docstrings",
+  "repo": "ahgraber/skills",
+  "path": "skills/writing-docstrings/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "writing-docstrings",
+  "downloaded_at": "2026-11-02T06:23:49.639318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/writing-docstrings/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/writing-docstrings/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing, rewriting, or auditing Python docstrings that a documentation site is generated from, or when docstrings are long, narrate the code, or leave a reader of the generated reference unable to find their way. Triggers - \"audit the docstrings\", \"docstring slop\", \"docstrings as documentation\", \"the API reference reads badly\", \"rewrite these docstrings\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "refactor",
+  "repo": "ahgraber/skills",
+  "path": "skills/refactor/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "refactor-ahgraber-skills",
+  "downloaded_at": "2026-11-02T06:23:46.554749Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/refactor/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/refactor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when changing the structure of working code without changing its behavior: decomposing an oversized function, extracting or merging a module, collapsing a layer, breaking an import cycle. Applies when the edit is structural enough to need a plan and explicit approval before it lands. Triggers: 'refactor this', 'decompose this function', 'split this module', 'break this dependency cycle', 'extract this into', 'restructure', 'work through the deferred items'. Not for slop cleanup (use simplify), judging a change (use code-review), fixing bugs, or adding behavior."
+}

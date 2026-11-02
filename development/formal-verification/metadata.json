@@ -1,0 +1,37 @@
+{
+  "name": "formal-verification",
+  "repo": "ahgraber/skills",
+  "path": "skills/formal-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "formal-verification",
+  "downloaded_at": "2026-11-02T06:23:49.919990Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, software",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/formal-verification/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/formal-verification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks for formal verification or formal methods: writing or checking a design model (TLA+, Alloy, P, Quint), proving code against contracts (Dafny, Verus, SPARK, Frama-C, Lean, Rocq), model checking, invariants, liveness, vacuous passes, or counterexamples; deciding whether a design or requirement warrants formal verification; or keeping existing formal specs and proofs current. Not for prose requirements or \"spec this out\" (use sdd)."
+}

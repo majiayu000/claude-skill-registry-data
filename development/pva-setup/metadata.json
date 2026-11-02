@@ -1,0 +1,40 @@
+{
+  "name": "pva-setup",
+  "repo": "NVIDIA/skills",
+  "path": "skills/pva-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/NVIDIA/skills",
+  "dir_name": "pva-setup",
+  "downloaded_at": "2026-11-02T05:09:39.437695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, software, compile, debug",
+    "score": 5,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/skills/blob/main/skills/pva-setup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/skills/blob/main/skills/pva-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Install and configure the NVIDIA PVA SDK, NVVPU compiler, and L4T target runtime from the selected installation guide. Use when the user requests PVA environment setup on a development host and board."
+}

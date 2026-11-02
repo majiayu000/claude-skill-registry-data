@@ -1,0 +1,37 @@
+{
+  "name": "doca-dts",
+  "repo": "NVIDIA/skills",
+  "path": "skills/doca-dts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NVIDIA/skills",
+  "dir_name": "doca-dts",
+  "downloaded_at": "2026-11-02T05:09:39.316793Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/skills/blob/main/skills/doca-dts/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/skills/blob/main/skills/doca-dts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy and configure the NVIDIA DOCA Telemetry Service (DTS) as it is actually run: (A) BlueField (built-in static pod), (B) Host (docker) on x86_64 / aarch64, or (C) DPF (DPUService / helm chart) \u2014 plus the shared configuration layer (`dts_config.ini`, providers, exporters, level labels) that all three share. The user's DEPLOYMENT TYPE decides everything; pick it first. Trigger even without \"DTS\" for \"prometheus on the DPU shows nothing on 9100\", \"telemetry container exits right after start\", \"add ethtool counters to the telemetry DPUService\", \"how do I upgrade the built-in telemetry on BlueField\", or \"level labels per rack/pod\". Refuse and route elsewhere for installing DOCA itself, the `doca_telemetry` / `doca_telemetry_exporter` library API, installing the DPF cluster, Grafana / Prometheus server setup or dashboard / PromQL authoring, and BFB / BSP imaging \u2014 those belong to other skills or to external products."
+}

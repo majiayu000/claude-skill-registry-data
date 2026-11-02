@@ -1,0 +1,39 @@
+{
+  "name": "optimize-bevy-game",
+  "repo": "VelimirMueller/ai-development-skills",
+  "path": "skills/game/optimize-bevy-game/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/VelimirMueller/ai-development-skills",
+  "dir_name": "optimize-bevy-game",
+  "downloaded_at": "2026-11-02T05:57:31.766809Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VelimirMueller",
+  "source_url": "https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/game/optimize-bevy-game/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/game/optimize-bevy-game/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a Bevy game stutters, drops frames, loads slowly, or ships a large binary or wasm \u2014 measure with diagnostics and Tracy/Chrome traces first, then fix change detection, system parallelism, batching, per-frame allocations, and release/wasm profiles."
+}

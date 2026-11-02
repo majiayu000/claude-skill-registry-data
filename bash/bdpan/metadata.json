@@ -1,0 +1,39 @@
+{
+  "name": "baidu-drive",
+  "repo": "actionow-ai/vvv",
+  "path": "skills/vvv/vendor/bdpan/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/actionow-ai/vvv",
+  "dir_name": "bdpan",
+  "downloaded_at": "2026-11-02T06:17:30.985021Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "actionow-ai",
+  "source_url": "https://github.com/actionow-ai/vvv/blob/main/skills/vvv/vendor/bdpan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/actionow-ai/vvv/blob/main/skills/vvv/vendor/bdpan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u767e\u5ea6\u7f51\u76d8(Baidu Drive)\u6587\u4ef6\u7ba1\u7406\u4e0e\u6b63\u6587\u80fd\u529b \u2014 \u4e0a\u4f20\u3001\u4e0b\u8f7d\u3001\u8f6c\u5b58\u3001\u5206\u4eab\u3001\u641c\u7d22\u6587\u4ef6\u3001\u641c\u7d22\u6b63\u6587\u7247\u6bb5\u3001\u8bfb\u53d6\u6587\u4ef6\u5168\u6587\u3001\u79fb\u52a8\u3001\u590d\u5236\u3001\u91cd\u547d\u540d\u3001\u521b\u5efa\u6587\u4ef6\u5939\uff1b\u67e5\u8be2\u7f51\u76d8\u5bb9\u91cf\u3001\u5df2\u7528\u548c\u5269\u4f59\u7a7a\u95f4\u3002 \u540c\u65f6\u652f\u6301 Agent \u8bb0\u5fc6\u5907\u4efd/\u6062\u590d\uff08kimiclaw/maxclaw/qclaw/openclaw\uff09\u3002 TRIGGER: \u7528\u6237\u63d0\u53ca\"\u767e\u5ea6\u7f51\u76d8/bdpan/\u7f51\u76d8/\u4e91\u76d8/baidu drive/Baidu Drive\"\u5e76\u6d89\u53ca\u6587\u4ef6\u64cd\u4f5c\u6216\u67e5\u8be2\u7f51\u76d8\u5bb9\u91cf\u3001\u5269\u4f59\u7a7a\u95f4\u3001\u4f7f\u7528\u7387\uff1b\n         \u6216\u7528\u6237\u63d0\u53ca\"\u5907\u4efd\u8bb0\u5fc6\"\u3001\"\u6062\u590d\u8bb0\u5fc6\"\u3001\"\u67e5\u770b\u8bb0\u5fc6\u5907\u4efd\"\u7b49\u8bb0\u5fc6\u76f8\u5173\u64cd\u4f5c\u3002\nDO NOT TRIGGER: \u975e\u6587\u4ef6\u5b58\u50a8\u64cd\u4f5c\uff0c\u6216\u4f7f\u7528\u5176\u4ed6\u4e91\u76d8\u670d\u52a1\u65f6\uff1b\u672c\u5730\u8bb0\u5fc6\u6574\u7406/\u6e05\u7406\u64cd\u4f5c\uff1bPPT \u751f\u6210\u64cd\u4f5c\uff08\u5df2\u72ec\u7acb\u4e3a baidu-wenku-aippt skill\uff09\u3002"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "long-command-check",
+  "repo": "MiniMax-AI/mcode-stack",
+  "path": "stacks/ronny/skills/long-command-check/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MiniMax-AI/mcode-stack",
+  "dir_name": "long-command-check",
+  "downloaded_at": "2026-11-02T05:06:00.790210Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MiniMax-AI",
+  "source_url": "https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/long-command-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/long-command-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit how an agent harness runs long shell commands, covering foreground wait limits, moving to background without re-running, timeouts, completion notification, polling, output size, cleanup and behaviour after compaction. Use when building or reviewing an agent's shell or background-task tool, or when an agent hangs on dev servers, long builds or test runs."
+}

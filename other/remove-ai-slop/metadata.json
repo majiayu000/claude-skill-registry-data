@@ -1,0 +1,37 @@
+{
+  "name": "remove-ai-slop",
+  "repo": "SalZaki/antislop",
+  "path": "skills/remove-ai-slop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SalZaki/antislop",
+  "dir_name": "remove-ai-slop",
+  "downloaded_at": "2026-11-02T05:33:44.463068Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SalZaki",
+  "source_url": "https://github.com/SalZaki/antislop/blob/main/skills/remove-ai-slop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SalZaki/antislop/blob/main/skills/remove-ai-slop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user pastes text and asks to make it \"less AI\", \"less ChatGPT\", \"less slop\", \"more human\", \"humanize\", \"de-slop\", \"de-AI\", \"edit out the AI tells\", \"remove AI giveaways\", \"clean up this generated copy\", or says \"this sounds AI-generated\". Also use when the user asks to check writing before publishing, or when pasted draft copy shows multiple co-occurring AI tells (em-dash overuse, hedging filler, promotional padding, recap intros, copula avoidance, bullet-and-bold soup, assistant scaffolding) even if the user hasn't named the problem."
+}

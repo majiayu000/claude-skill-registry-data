@@ -1,0 +1,37 @@
+{
+  "name": "ocft",
+  "repo": "Trompetilla/Skills",
+  "path": "skills/stormixus/ocft/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Trompetilla/Skills",
+  "dir_name": "ocft",
+  "downloaded_at": "2026-11-02T05:53:25.659922Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Trompetilla",
+  "source_url": "https://github.com/Trompetilla/Skills/blob/main/skills/stormixus/ocft/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Trompetilla/Skills/blob/main/skills/stormixus/ocft/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "P2P file transfer between AI agents via message channels. Supports chunked transfer, IPFS fallback for large files, and trusted peer management."
+}

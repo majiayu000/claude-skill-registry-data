@@ -1,0 +1,37 @@
+{
+  "name": "gw-harvest",
+  "repo": "Zeldris/Galivelop-workflow",
+  "path": "skills/gw-harvest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Zeldris/Galivelop-workflow",
+  "dir_name": "gw-harvest",
+  "downloaded_at": "2026-11-02T06:11:22.784909Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Zeldris",
+  "source_url": "https://github.com/Zeldris/Galivelop-workflow/blob/main/skills/gw-harvest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Zeldris/Galivelop-workflow/blob/main/skills/gw-harvest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Collect, as proposals, what projects using Galivelop-workflow changed or invented (edited workflow skills and scripts, new skills, ideas in their retros) since the last harvest. Use when, from the Galivelop-workflow repo, the user asks to harvest, review or gather improvements from connected projects, and at the start of every new workflow version (AGENTS.md; `version.py --release` checks it)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "context-budget",
+  "repo": "Zauwad/my-agentic-rig",
+  "path": "skills/context-budget/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Zauwad/my-agentic-rig",
+  "dir_name": "context-budget-zauwad-my-agentic-rig",
+  "downloaded_at": "2026-11-02T06:11:07.572364Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Zauwad",
+  "source_url": "https://github.com/Zauwad/my-agentic-rig/blob/main/skills/context-budget/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Zauwad/my-agentic-rig/blob/main/skills/context-budget/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits Claude Code context window consumption across agents, skills, MCP servers, and rules. Identifies bloat, redundant components, and produces prioritized token-savings recommendations."
+}

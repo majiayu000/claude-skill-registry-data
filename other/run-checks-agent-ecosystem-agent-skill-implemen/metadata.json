@@ -1,0 +1,37 @@
+{
+  "name": "run-checks",
+  "repo": "agent-ecosystem/agent-skill-implementation",
+  "path": ".claude/skills/run-checks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/agent-ecosystem/agent-skill-implementation",
+  "dir_name": "run-checks-agent-ecosystem-agent-skill-implemen",
+  "downloaded_at": "2026-11-02T06:20:58.388171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agent-ecosystem",
+  "source_url": "https://github.com/agent-ecosystem/agent-skill-implementation/blob/main/.claude/skills/run-checks/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agent-ecosystem/agent-skill-implementation/blob/main/.claude/skills/run-checks/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Re-run this repository's automated skill-loading checks against the installed harnesses (Antigravity CLI, Claude Code, Codex CLI, Copilot CLI), compare the verdicts with the previous run, and publish the changes. Use when asked to run or re-run the checks, test the harnesses on new releases, see whether skill behavior changed, bump agentsummons/agentminutes/skillxp and re-test, regenerate the platform reports or site, or write a changelog entry for a run."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "speech-recognition",
+  "repo": "SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App",
+  "path": ".claude/skills/speech-recognition/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App",
+  "dir_name": "speech-recognition",
+  "downloaded_at": "2026-11-02T05:35:13.435087Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SattikBhaumik",
+  "source_url": "https://github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App/blob/main/.claude/skills/speech-recognition/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App/blob/main/.claude/skills/speech-recognition/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Transcribe speech to text using the Speech framework. Use when implementing live microphone transcription with AVAudioEngine, recognizing pre-recorded audio files, configuring on-device vs server-based recognition, handling authorization flows, or adopting the new SpeechAnalyzer API (iOS 26+) for modern async/await speech-to-text."
+}

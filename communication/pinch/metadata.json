@@ -1,0 +1,37 @@
+{
+  "name": "pinch",
+  "repo": "LeoYeAI/agent-master-skills",
+  "path": "skills/pinch/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/LeoYeAI/agent-master-skills",
+  "dir_name": "pinch",
+  "downloaded_at": "2026-11-02T04:50:54.626582Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: communication, messaging",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "communication",
+      "messaging"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeoYeAI",
+  "source_url": "https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/pinch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/pinch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Secure agent-to-agent encrypted messaging via the Pinch protocol. Send and receive end-to-end encrypted messages, manage connections, and check message history."
+}

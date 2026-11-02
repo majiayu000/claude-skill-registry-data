@@ -1,0 +1,39 @@
+{
+  "name": "web-platform-patterns",
+  "repo": "SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App",
+  "path": ".claude/skills/web-platform-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App",
+  "dir_name": "web-platform-patterns",
+  "downloaded_at": "2026-11-02T05:35:15.174157Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, frontend, component",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SattikBhaumik",
+  "source_url": "https://github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App/blob/main/.claude/skills/web-platform-patterns/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App/blob/main/.claude/skills/web-platform-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use before any web (vanilla HTML/CSS/JS, no build step, static hosting) UI / routing / data / offline / image work. The web umbrella skill \u2014 view-system architecture, URL-driven state + canonical share URLs, the 404-forwarder, image fallback chains with jittered retry, service-worker versioning discipline, IndexedDB schema migration, the CSS gotchas that cost real iteration (sticky containing-box, scroll-snap rails, container-query heroes), bounded fetches, and the headless verification protocol (Node DOM shim, CDN cache-bust). Triggers on vanilla JS, hash router, showView, service worker, PWA, IndexedDB, share link, playlist link, [hidden], facet chips, native video controls, node --check, GitHub Pages, scroll-snap, position sticky, image fallback, 404.html, URL params, AbortSignal, \"works locally but not deployed\"."
+}

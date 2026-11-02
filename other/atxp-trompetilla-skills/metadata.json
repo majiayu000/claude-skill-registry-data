@@ -1,0 +1,37 @@
+{
+  "name": "atxp",
+  "repo": "Trompetilla/Skills",
+  "path": "skills/emilioacc/atxp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Trompetilla/Skills",
+  "dir_name": "atxp-trompetilla-skills",
+  "downloaded_at": "2026-11-02T05:53:25.548187Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Trompetilla",
+  "source_url": "https://github.com/Trompetilla/Skills/blob/main/skills/emilioacc/atxp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Trompetilla/Skills/blob/main/skills/emilioacc/atxp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Access ATXP paid API tools for web search, AI image generation, music creation, video generation, and X/Twitter search. Use when users need real-time web search, AI-generated media (images, music, video), or X/Twitter search. Requires authentication via `npx atxp login`."
+}

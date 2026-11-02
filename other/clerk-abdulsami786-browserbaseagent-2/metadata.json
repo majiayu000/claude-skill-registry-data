@@ -1,0 +1,38 @@
+{
+  "name": "clerk",
+  "repo": "abdulsami786/BrowserBaseAgent",
+  "path": ".claude/skills/clerk/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/abdulsami786/BrowserBaseAgent",
+  "dir_name": "clerk-abdulsami786-browserbaseagent-2",
+  "downloaded_at": "2026-11-02T06:16:16.664985Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, integration=3",
+    "score": 3,
+    "runner_up": "integration",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "abdulsami786",
+  "source_url": "https://github.com/abdulsami786/BrowserBaseAgent/blob/main/.claude/skills/clerk/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/abdulsami786/BrowserBaseAgent/blob/main/.claude/skills/clerk/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Clerk authentication router. Use when user asks about Clerk CLI operations, adding authentication, setting up Clerk, custom sign-in flows, Swift or native iOS auth, native Android auth, Next.js patterns, React patterns, Vue patterns, Nuxt patterns, Astro patterns, TanStack Start patterns, Expo patterns, React Router patterns, Chrome Extension patterns, organizations, billing, subscriptions, payments, pricing, plans, seat-based pricing, feature entitlements, syncing users, testing, impersonating a user, or testing webhooks locally. Automatically routes to the specific skill based on their task."
+}

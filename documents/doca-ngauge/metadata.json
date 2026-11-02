@@ -1,0 +1,38 @@
+{
+  "name": "doca-ngauge",
+  "repo": "NVIDIA/skills",
+  "path": "skills/doca-ngauge/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/NVIDIA/skills",
+  "dir_name": "doca-ngauge",
+  "downloaded_at": "2026-11-02T05:09:39.903223Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/skills/blob/main/skills/doca-ngauge/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/skills/blob/main/skills/doca-ngauge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the operator is driving the DOCA ngauge tool to analyze, visualize, and debug network performance on a single node by probing NIC hardware counters and storing collected data in HDF5 format. Trigger even when the user does not say \"DOCA ngauge\" \u2014 implicit phrasings include \"probe NIC hardware counters\", \"collect HDF5 performance data\", \"plot ngauge output\", \"sample counters on BlueField/ConnectX\", \"measure network performance on a single node\", \"debug network performance with hardware counters\", \"run ngauge YAML config\", \"parse ngauge HDF5 output\". Refuse and route elsewhere: DOCA install/bring-up to doca-setup, version questions to doca-version, hardware/firmware state changes to doca-hardware-safety, raw packet I/O to doca-eth, and host-DPU messaging to doca-comch."
+}

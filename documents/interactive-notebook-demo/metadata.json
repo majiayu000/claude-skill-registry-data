@@ -1,0 +1,39 @@
+{
+  "name": "interactive-notebook-demo",
+  "repo": "ahgraber/skills",
+  "path": "skills/interactive-notebook-demo/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "interactive-notebook-demo",
+  "downloaded_at": "2026-11-02T06:23:50.313130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown, documentation",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/interactive-notebook-demo/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/interactive-notebook-demo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when authoring or reviewing a hands-on demo, tour, or walkthrough notebook (`#%%` percent-format or Jupyter) that demonstrates a feature, library, or API and doubles as semi-interactive documentation. Triggers: \"write a demo notebook\", \"build a feature demo\", \"demo this library/API\", \"a notebook to walk through X\", \"interactive docs for this feature\". Not for production/analysis notebooks or pure asyncio event-loop mechanics (see python-notebooks-async)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "add-dashboard-polyfill",
+  "repo": "SkillfulAgents/SuperAgent",
+  "path": ".claude/skills/add-dashboard-polyfill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SkillfulAgents/SuperAgent",
+  "dir_name": "add-dashboard-polyfill",
+  "downloaded_at": "2026-11-02T05:40:09.630098Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillfulAgents",
+  "source_url": "https://github.com/SkillfulAgents/SuperAgent/blob/main/.claude/skills/add-dashboard-polyfill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillfulAgents/SuperAgent/blob/main/.claude/skills/add-dashboard-polyfill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add a new browser API polyfill that is auto-injected into dashboard iframes. Covers the polyfill implementation, injection wiring, testing (unit + E2E), and documentation for the dashboard builder agent."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "auto-updater",
+  "repo": "abk234/searxng-skill",
+  "path": "skills/auto-updater/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/abk234/searxng-skill",
+  "dir_name": "auto-updater",
+  "downloaded_at": "2026-11-02T06:16:30.323766Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "abk234",
+  "source_url": "https://github.com/abk234/searxng-skill/blob/main/skills/auto-updater/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/abk234/searxng-skill/blob/main/skills/auto-updater/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Automatically update Clawdbot and all installed skills once daily. Runs via cron, checks for updates, applies them, and messages the user with a summary of what changed."
+}

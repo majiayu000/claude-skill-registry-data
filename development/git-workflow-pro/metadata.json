@@ -1,0 +1,38 @@
+{
+  "name": "git-workflow-pro",
+  "repo": "SeaXen/agentskills",
+  "path": "skills/git-workflow-pro/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/SeaXen/agentskills",
+  "dir_name": "git-workflow-pro",
+  "downloaded_at": "2026-11-02T05:35:56.914548Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, debug, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SeaXen",
+  "source_url": "https://github.com/SeaXen/agentskills/blob/main/skills/git-workflow-pro/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SeaXen/agentskills/blob/main/skills/git-workflow-pro/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Advanced Git operations, conventional commits, interactive rebase, bisect, worktrees, and release branch management. Use when restructuring messy commit history, performing interactive rebases, resolving complex merge conflicts, finding regressions with git bisect, or managing worktrees."
+}

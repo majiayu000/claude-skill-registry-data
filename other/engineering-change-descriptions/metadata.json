@@ -1,0 +1,38 @@
+{
+  "name": "engineering-change-descriptions",
+  "repo": "MiniMax-AI/mcode-stack",
+  "path": "stacks/ronny/skills/engineering-change-descriptions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MiniMax-AI/mcode-stack",
+  "dir_name": "engineering-change-descriptions",
+  "downloaded_at": "2026-11-02T05:06:01.769828Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MiniMax-AI",
+  "source_url": "https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/engineering-change-descriptions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/engineering-change-descriptions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing, rewriting, or reviewing PR/CL descriptions, commit messages, or code-change summaries that explain what changed and why. TRIGGER on \"write PR description\", \"improve this commit message\", \"summarize this diff\", \"CL description\", \"change description\", or \"make this PR/CL description easier to review\". DO NOT TRIGGER for code review, PR splitting, code restructuring, user-facing changelogs, or reviewer replies unless the requested output is a change description."
+}

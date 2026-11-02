@@ -1,0 +1,37 @@
+{
+  "name": "palette",
+  "repo": "Turki-Sh/Foreman",
+  "path": "plugins/foreman/skills/palette/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Turki-Sh/Foreman",
+  "dir_name": "palette",
+  "downloaded_at": "2026-11-02T05:53:44.366007Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Turki-Sh",
+  "source_url": "https://github.com/Turki-Sh/Foreman/blob/main/plugins/foreman/skills/palette/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Turki-Sh/Foreman/blob/main/plugins/foreman/skills/palette/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a website colour palette from a named material instead of the model's defaults. Three variants that differ on ground, accent family and contrast strategy, contrast checked, shown on the owner's real content in a brand.html. Part of Foreman by Turki Alshuaibi. Use when someone asks for colours, a palette or a brand look."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "nature-paper2word",
+  "repo": "Yuan1z0825/nature-skills",
+  "path": "skills/nature-paper2word/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Yuan1z0825/nature-skills",
+  "dir_name": "nature-paper2word",
+  "downloaded_at": "2026-11-02T06:09:31.955515Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, word, docx, markdown, documentation",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "docx",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Yuan1z0825",
+  "source_url": "https://github.com/Yuan1z0825/nature-skills/blob/main/skills/nature-paper2word/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Yuan1z0825/nature-skills/blob/main/skills/nature-paper2word/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compile an academic Markdown manuscript into a journal- or school-compliant Word (.docx): declared typography, native OMML equations, three-line tables, cross-references, per-section page numbers, CSL bibliographies (GB/T 7714, APA, Nature, IEEE), and pre/post-export quality gates. \u628a\u5b66\u672f\u8bba\u6587\u7684 Markdown \u7a3f\u4ef6\u5bfc\u51fa\u4e3a\u7b26\u5408\u671f\u520a\u6216\u5b66\u4f4d\u8bba\u6587\u89c4\u8303\u7684 Word\uff1a\u6458\u8981\u3001\u516c\u5f0f\u7f16\u53f7\u3001\u4e09\u7ebf\u8868\u3001\u9898\u6ce8\u3001\u4ea4\u53c9\u5f15\u7528\u3001\u76ee\u5f55\u57df\u3001\u53c2\u8003\u6587\u732e\u3002Use when the user wants a submission-ready .docx \u2014 \u8bba\u6587\u8f6c Word\u3001\u5b66\u4f4d\u8bba\u6587\u6392\u7248\u3001\u671f\u520a\u6295\u7a3f\u6392\u7248\u3001prepare submission docx \u2014 or a readable copy of a manuscript. Not for PDF, HTML or LaTeX output, and not for slide decks or grant forms."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "operate-azure",
+  "repo": "VelimirMueller/ai-development-skills",
+  "path": "skills/ops/operate-azure/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/VelimirMueller/ai-development-skills",
+  "dir_name": "operate-azure",
+  "downloaded_at": "2026-11-02T05:57:25.356762Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VelimirMueller",
+  "source_url": "https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/ops/operate-azure/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/ops/operate-azure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when operating Azure by CLI \u2014 confirm sign-in, tenant and active subscription first, choose read-only or IaC or a recorded one-off, query with az graph, avoid az rest and RBAC traps, and keep Terraform-managed resources hands-off."
+}

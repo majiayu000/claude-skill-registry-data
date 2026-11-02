@@ -1,0 +1,37 @@
+{
+  "name": "merge",
+  "repo": "SatcherInstitute/health-equity-tracker",
+  "path": ".claude/skills/merge/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/SatcherInstitute/health-equity-tracker",
+  "dir_name": "merge",
+  "downloaded_at": "2026-11-02T05:34:53.565096Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: feature, backlog",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SatcherInstitute",
+  "source_url": "https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/merge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/merge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Force-merge an open PR to main (bypassing review requirements), delete the local branch, pull the updated main, and push it to the personal fork remote. Use when the user wants to close out a PR without waiting for review, or run /merge."
+}

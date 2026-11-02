@@ -1,0 +1,36 @@
+{
+  "name": "guide-deepen-module",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/guides/guide-deepen-module/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "guide-deepen-module",
+  "downloaded_at": "2026-11-02T05:20:10.314573Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category design scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "design"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/guides/guide-deepen-module/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/guides/guide-deepen-module/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when code is written or changed that adds a module or changes a module's public interface, in any tier. Produces an interface shaped before the code behind it, and the bar it must meet at merge. Not for designing the interface with the person (deepen-module) and not for code that leaves every interface as it was."
+}

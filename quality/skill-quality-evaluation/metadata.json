@@ -1,0 +1,37 @@
+{
+  "name": "skill-quality-evaluation",
+  "repo": "Lucas-Belucci-Bellini/All-Skills-for-the-claude-code",
+  "path": "plugins/all-skills-collection/skills/skill-quality-evaluation/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/Lucas-Belucci-Bellini/All-Skills-for-the-claude-code",
+  "dir_name": "skill-quality-evaluation",
+  "downloaded_at": "2026-11-02T04:55:00.674762Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lucas-Belucci-Bellini",
+  "source_url": "https://github.com/Lucas-Belucci-Bellini/All-Skills-for-the-claude-code/blob/main/plugins/all-skills-collection/skills/skill-quality-evaluation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lucas-Belucci-Bellini/All-Skills-for-the-claude-code/blob/main/plugins/all-skills-collection/skills/skill-quality-evaluation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Evaluates skill quality, actionability, and usefulness before adding it to a shared library. Use when accepting new skills or reviewing a skill batch for duplicates and vague guidance."
+}

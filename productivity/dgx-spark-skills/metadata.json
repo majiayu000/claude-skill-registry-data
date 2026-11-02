@@ -1,0 +1,38 @@
+{
+  "name": "dgx-spark-skills",
+  "repo": "NVIDIA/skills",
+  "path": "skills/dgx-spark-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/NVIDIA/skills",
+  "dir_name": "dgx-spark-skills",
+  "downloaded_at": "2026-11-02T05:09:40.313517Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/skills/blob/main/skills/dgx-spark-skills/SKILL.md",
+  "license": "CC-BY-4.0 AND Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/skills/blob/main/skills/dgx-spark-skills/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for NVIDIA DGX Spark and related GB10 system identification, capacity, troubleshooting, known issues, updates, recovery, playbooks, examples, NVIDIA Sync, clustering, Custom Apps, Field Diagnostics, or support evidence. Always route through this skill. Do not use for Apache Spark or unrelated meanings of spark."
+}

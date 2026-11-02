@@ -1,0 +1,39 @@
+{
+  "name": "clean-architecture",
+  "repo": "NahuelMosse/ClubNahuelMosse",
+  "path": ".claude/skills/clean-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/NahuelMosse/ClubNahuelMosse",
+  "dir_name": "clean-architecture-nahuelmosse-clubnahuelmosse",
+  "downloaded_at": "2026-11-02T05:10:31.853058Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, debug, refactor",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NahuelMosse",
+  "source_url": "https://github.com/NahuelMosse/ClubNahuelMosse/blob/main/.claude/skills/clean-architecture/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NahuelMosse/ClubNahuelMosse/blob/main/.claude/skills/clean-architecture/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Clean Architecture practitioner's guide. Trigger when users ask about four-layer architecture, dependency direction & inversion (DIP), an entity directly depending on external SDKs, ORM/data access layer (Repository pattern) design, microservice decomposition, technology selection, over-engineering, or architecture refactoring. Covers business logic organization in Express/Next.js/Go/Spring projects, MongoDB\u2192PostgreSQL migrate, REST\u2192GraphQL migrate, third-party integration (Stripe/PayPal), Redis caching, and Kafka message queue evaluation. Evaluates architecture against Robert C. Martin's Clean Architecture, SOLID principles, and the Dependency Rule; uses Musk's five-step algorithm as an anti-over-engineering gate. Do NOT trigger on: pure code quality, DDD, system design interviews, single-DTO micro-decisions, cache library selection, DI framework debugging, diagram drawing, translation, or formatting requests \u2014 answer directly without invoking this skill."
+}

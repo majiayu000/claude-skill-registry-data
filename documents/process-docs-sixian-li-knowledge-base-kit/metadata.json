@@ -1,0 +1,38 @@
+{
+  "name": "process_docs",
+  "repo": "Sixian-Li/knowledge-base-kit",
+  "path": "skills/process_docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Sixian-Li/knowledge-base-kit",
+  "dir_name": "process-docs-sixian-li-knowledge-base-kit",
+  "downloaded_at": "2026-11-02T05:39:56.290788Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, markdown",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Sixian-Li",
+  "source_url": "https://github.com/Sixian-Li/knowledge-base-kit/blob/main/skills/process_docs/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Sixian-Li/knowledge-base-kit/blob/main/skills/process_docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ingest documents into this local knowledge workspace, preserving source content, drafting full text and summaries, validating, classifying and updating the catalog. Also supports check, batch, group, delete and teach requests."
+}

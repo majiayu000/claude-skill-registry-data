@@ -1,0 +1,37 @@
+{
+  "name": "browser-transcript-mining",
+  "repo": "SkillfulAgents/SuperAgent",
+  "path": ".claude/skills/browser-transcript-mining/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SkillfulAgents/SuperAgent",
+  "dir_name": "browser-transcript-mining",
+  "downloaded_at": "2026-11-02T05:40:09.925159Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillfulAgents",
+  "source_url": "https://github.com/SkillfulAgents/SuperAgent/blob/main/.claude/skills/browser-transcript-mining/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillfulAgents/SuperAgent/blob/main/.claude/skills/browser-transcript-mining/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Mine a dump of production `web-browser` subagent transcripts (jsonl) for browser-harness friction \u2014 soft failures, workarounds, missing tools, misleading output. Deterministic stats + compact traces first, then Lane A (Opus reads whole sessions with screenshots, open rubric, discovery) and Lane B (Sonnet classifies compact traces against a closed taxonomy, prevalence). Use when a new transcript dump arrives, after shipping a harness fix to see if the metric moved, or when someone asks \"where does the browser harness waste the agent's steps\"."
+}

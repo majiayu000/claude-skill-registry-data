@@ -1,0 +1,39 @@
+{
+  "name": "app-production-readiness",
+  "repo": "SeaXen/agentskills",
+  "path": "skills/app-production-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/SeaXen/agentskills",
+  "dir_name": "app-production-readiness",
+  "downloaded_at": "2026-11-02T05:36:01.804991Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review, validate",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "quality",
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SeaXen",
+  "source_url": "https://github.com/SeaXen/agentskills/blob/main/skills/app-production-readiness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SeaXen/agentskills/blob/main/skills/app-production-readiness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build portable apps (any stack - TypeScript, Python, Go, Rust) for localhost, Docker, Vercel, Netlify, Railway, Render, Fly.io, Cloudflare Free plan, then run an adaptive 21-gate production-readiness review - cross-browser visual QA, bundle budgets, performance, a measured design-polish rubric, desktop Lighthouse, security + dependency-CVE scan, WCAG 2.1 AA audit, live SEO/header/health checks, tests, reliability, production-grade README with real screenshots, observability, free-tier cost check, business rules (executable contract + domain sign-off), load/soak, migrations, privacy/GDPR (policy + legal sign-off), i18n/RTL, screen-reader contract, payment/email flows, code quality, and an adversarial re-verification of every claimed PASS. A scoping step decides which gates actually apply to the app in front of you (no migration gate for a static site, no payment gate for an API service). One command runs the whole review - `python scripts/review.py --root <app> --serve` starts the app, measures it, judges every gate adversarially and writes qa/report.md; `--fix` writes the safe mechanical fixes first, and a framework-profile layer knows what Next.js/Remix/Astro/Nuxt/SvelteKit inject by default, so a framework default is never reported as an app defect. Absorbs the frontend-design, mobile-design, i18n-localization, api-patterns, database-design, seo/geo-fundamentals, lint-and-validate, nextjs-react-expert, review-team and security-audit skills so you do not need them separately. Works on any single app or across every app in a workspace. Use when asked to make an app portable, deploy free anywhere, check design match, optimize speed, polish UI, run Lighthouse audit, review for production readiness, write a professional README, capture app screenshots, prep a release, or audit all apps in a repo."
+}

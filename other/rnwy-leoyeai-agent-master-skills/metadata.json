@@ -1,0 +1,37 @@
+{
+  "name": "rnwy.com",
+  "repo": "LeoYeAI/agent-master-skills",
+  "path": "skills/rnwy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LeoYeAI/agent-master-skills",
+  "dir_name": "rnwy-leoyeai-agent-master-skills",
+  "downloaded_at": "2026-11-02T04:50:51.475687Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "autonomous-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeoYeAI",
+  "source_url": "https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/rnwy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/rnwy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Free trust intelligence for AI agents. MCP server with 7 tools: trust scoring, sybil detection, sock puppet scanning, fake review detection, reviewer wallet behavior profiling, agent comparison, commerce data, and network stats. Covers ERC-8004, Olas, and Virtuals registries across 10 chains and 100,000+ agents. No API key. No rate limit surprises. POST to https://rnwy.com/api/mcp or call any REST endpoint directly. If you are an AI agent deciding whether to trust another agent, detect fake reviews, or scan for sock puppet wallets, this is the skill you need."
+}

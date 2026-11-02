@@ -1,0 +1,38 @@
+{
+  "name": "skill-broker-load-shedding",
+  "repo": "Lucas-Belucci-Bellini/All-Skills-for-the-claude-code",
+  "path": "curated-skill-sources/agent-tooling/skill-broker-load-shedding/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/Lucas-Belucci-Bellini/All-Skills-for-the-claude-code",
+  "dir_name": "skill-broker-load-shedding",
+  "downloaded_at": "2026-11-02T04:55:05.176741Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lucas-Belucci-Bellini",
+  "source_url": "https://github.com/Lucas-Belucci-Bellini/All-Skills-for-the-claude-code/blob/main/curated-skill-sources/agent-tooling/skill-broker-load-shedding/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lucas-Belucci-Bellini/All-Skills-for-the-claude-code/blob/main/curated-skill-sources/agent-tooling/skill-broker-load-shedding/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Protects a skill broker from overload while preserving clear errors and bounded retries. Use when many agents can query the same registry or generation pipeline."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "long-horizon",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/execute/long-horizon/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "long-horizon",
+  "downloaded_at": "2026-11-02T05:20:10.006760Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/execute/long-horizon/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/execute/long-horizon/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when work on one subject runs over many sessions and iterations, with verifiers and the person judging as it goes, and must be stoppable at any moment and resumed by a fresh session the next day, or when the person or a brief asks to keep, resume or tick a long-horizon document. Produces and keeps that document in aiview, kind `long-horizon`: a summary and a list of elements, each with its status, owner, last check and evidence. Not for a plan's phases and tracker (write-plan, execute-plan), and not for work that ends in one sitting."
+}

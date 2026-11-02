@@ -1,0 +1,38 @@
+{
+  "name": "smoke-check",
+  "repo": "MarekZurek/Roblox-HatchTheEgg",
+  "path": ".agents/skills/smoke-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MarekZurek/Roblox-HatchTheEgg",
+  "dir_name": "smoke-check-marekzurek-roblox-hatchtheegg-2",
+  "downloaded_at": "2026-11-02T05:00:52.535087Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: gaming=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "game",
+      "unity",
+      "godot"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MarekZurek",
+  "source_url": "https://github.com/MarekZurek/Roblox-HatchTheEgg/blob/main/.agents/skills/smoke-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MarekZurek/Roblox-HatchTheEgg/blob/main/.agents/skills/smoke-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Critical-path smoke gate before QA hand-off \u2014 runs the automated suite. A failed check means the build is not QA-ready."
+}

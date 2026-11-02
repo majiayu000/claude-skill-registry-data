@@ -1,0 +1,38 @@
+{
+  "name": "red-discordbot",
+  "repo": "Septa-Serpenta-Seraph/Vesper",
+  "path": "skills/.archive/red-discordbot/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Septa-Serpenta-Seraph/Vesper",
+  "dir_name": "red-discordbot",
+  "downloaded_at": "2026-11-02T05:37:13.448124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "Septa-Serpenta-Seraph",
+  "source_url": "https://github.com/Septa-Serpenta-Seraph/Vesper/blob/master/skills/.archive/red-discordbot/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Septa-Serpenta-Seraph/Vesper/blob/master/skills/.archive/red-discordbot/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Install, host, manage, and author Red-DiscordBot cogs on your own Hermes VM with your own Discord token. Coexists with the Hermes gateway as a separate bot process. Covers the Python<3.12 requirement, the discord.py 2.7.x shutdown-crash patch, non-interactive instance setup, and safe token/collision handling. Use when standing up a Red instance alongside Hermes for community cogs (music, dice, polls, auto-mod)."
+}

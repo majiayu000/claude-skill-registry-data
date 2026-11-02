@@ -1,0 +1,38 @@
+{
+  "name": "play-cli-submission",
+  "repo": "SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App",
+  "path": ".claude/skills/play-cli-submission/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App",
+  "dir_name": "play-cli-submission",
+  "downloaded_at": "2026-11-02T05:35:13.681665Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SattikBhaumik",
+  "source_url": "https://github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App/blob/main/.claude/skills/play-cli-submission/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App/blob/main/.claude/skills/play-cli-submission/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when shipping an Android build (AAB) to Google Play without the Play Console GUI, from CI (play-release.yml builds to internal; promote the SAME versionCode with play_promote.py) or the CLI (submit-play.sh). Carries the Play Developer API v3 edits transaction, service-account JSON auth, versionCode +1 on every upload, versionName read from AppVersion.xcconfig, the 500-character release-notes cap (check before the bump), applicationId vs namespace, staged rollout, changesNotSentForReview and the refused-to-auto-submit stall, inputs as env in workflows, and the org-policy key block. Triggers on Google Play, Play Console, AAB upload, submit-play, play-release.yml, androidpublisher, service account, versionCode, staged rollout, promote, internal track, org policy key block, refused to auto-submit, changesNotSentForReview, pre-launch report, Test Lab."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Berlin Job Search",
+  "repo": "agentskillexchange/skills",
+  "path": "skills/berlin-job-search/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/agentskillexchange/skills",
+  "dir_name": "berlin-job-search",
+  "downloaded_at": "2026-11-02T06:22:34.666507Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, software",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agentskillexchange",
+  "source_url": "https://github.com/agentskillexchange/skills/blob/main/skills/berlin-job-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentskillexchange/skills/blob/main/skills/berlin-job-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "AI job-search coach for Berlin and the rest of Germany. Searches live postings (Bundesagentur f\u00fcr Arbeit API, Arbeitnow, LinkedIn guest jobs, Daily Berlin Jobs for Berlin tech, public Greenhouse/Lever/Ashby/Personio boards), quotes German-language requirements, checks salaries against 2026 EU Blue Card thresholds, writes a German Lebenslauf/Anschreiben or English CV as PDF, runs mock interviews and tracks applications. Use for any job search in Germany."
+}

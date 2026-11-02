@@ -1,0 +1,37 @@
+{
+  "name": "reversa-paradigm-advisor",
+  "repo": "Pabloprogramador23/loja",
+  "path": ".claude/skills/reversa-paradigm-advisor/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Pabloprogramador23/loja",
+  "dir_name": "reversa-paradigm-advisor-pabloprogramador23-loja-2",
+  "downloaded_at": "2026-11-02T05:21:15.848857Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Pabloprogramador23",
+  "source_url": "https://github.com/Pabloprogramador23/loja/blob/master/.claude/skills/reversa-paradigm-advisor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Pabloprogramador23/loja/blob/master/.claude/skills/reversa-paradigm-advisor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Primeiro agente do Time de Migra\u00e7\u00e3o. Detecta o paradigma do sistema legado a partir das specs, infere o paradigma natural da stack alvo, alerta sobre gaps e for\u00e7a uma decis\u00e3o consciente do usu\u00e1rio. Produz paradigm_decision.md, leitura obrigat\u00f3ria de todos os agentes posteriores. Ativa\u00e7\u00e3o: /reversa-paradigm-advisor (geralmente invocado por /reversa-migrate)."
+}

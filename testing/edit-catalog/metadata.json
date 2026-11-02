@@ -1,0 +1,38 @@
+{
+  "name": "edit-catalog",
+  "repo": "ajnart/self-host",
+  "path": ".claude/skills/edit-catalog/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/ajnart/self-host",
+  "dir_name": "edit-catalog",
+  "downloaded_at": "2026-11-02T06:27:14.758471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration, e2e",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ajnart",
+  "source_url": "https://github.com/ajnart/self-host/blob/main/.claude/skills/edit-catalog/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ajnart/self-host/blob/main/.claude/skills/edit-catalog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Catalog edits in Go. Use for any task that adds an App, changes an App's image, port, Compose, env, notes or StandaloneGuide (even a one-line image bump), changes a Recipe, or hides or unhides an App. Each of these changes generated site and DCM data and hand-kept App counts. DCM-only Containers go to add-container; Homarr wiring goes to docs/agents/homarr-integrations.md."
+}

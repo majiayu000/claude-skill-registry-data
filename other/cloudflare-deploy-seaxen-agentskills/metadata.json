@@ -1,0 +1,40 @@
+{
+  "name": "cloudflare-deploy",
+  "repo": "SeaXen/agentskills",
+  "path": "skills/cloudflare-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SeaXen/agentskills",
+  "dir_name": "cloudflare-deploy-seaxen-agentskills",
+  "downloaded_at": "2026-11-02T05:35:57.594110Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=5, devops=5",
+    "score": 5,
+    "runner_up": "devops",
+    "runner_up_score": 5,
+    "signals": [
+      "data",
+      "sql",
+      "database",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SeaXen",
+  "source_url": "https://github.com/SeaXen/agentskills/blob/main/skills/cloudflare-deploy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SeaXen/agentskills/blob/main/skills/cloudflare-deploy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare."
+}

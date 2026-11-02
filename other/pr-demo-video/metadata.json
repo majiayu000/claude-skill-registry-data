@@ -1,0 +1,38 @@
+{
+  "name": "pr-demo-video",
+  "repo": "SkillfulAgents/SuperAgent",
+  "path": ".claude/skills/pr-demo-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SkillfulAgents/SuperAgent",
+  "dir_name": "pr-demo-video",
+  "downloaded_at": "2026-11-02T05:40:08.197952Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillfulAgents",
+  "source_url": "https://github.com/SkillfulAgents/SuperAgent/blob/main/.claude/skills/pr-demo-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillfulAgents/SuperAgent/blob/main/.claude/skills/pr-demo-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Record a short demo video of a UI change with Playwright and embed it in the PR description or a PR comment with `gh --attach`. Use when a PR changes something a reviewer should see move, or when the user asks for a demo clip."
+}

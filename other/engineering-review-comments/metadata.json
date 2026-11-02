@@ -1,0 +1,37 @@
+{
+  "name": "engineering-review-comments",
+  "repo": "MiniMax-AI/mcode-stack",
+  "path": "stacks/ronny/skills/engineering-review-comments/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MiniMax-AI/mcode-stack",
+  "dir_name": "engineering-review-comments",
+  "downloaded_at": "2026-11-02T05:06:01.527731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MiniMax-AI",
+  "source_url": "https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/engineering-review-comments/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/engineering-review-comments/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when drafting, rewriting, classifying, or improving code review comments as a reviewer. TRIGGER on rough review notes, requests to make comments clearer or kinder, severity labels, \"how should I phrase this review comment?\", \"write review comments\", author pushback, or turning findings into PR comments. If role is unclear, ask reviewer or author. DO NOT TRIGGER for full code review, PR descriptions, or author responses unless wording is requested."
+}

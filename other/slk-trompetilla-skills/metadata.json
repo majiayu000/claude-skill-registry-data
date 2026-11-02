@@ -1,0 +1,37 @@
+{
+  "name": "slack-personal",
+  "repo": "Trompetilla/Skills",
+  "path": "skills/therohitdas/slk/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Trompetilla/Skills",
+  "dir_name": "slk-trompetilla-skills",
+  "downloaded_at": "2026-11-02T05:53:29.335388Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Trompetilla",
+  "source_url": "https://github.com/Trompetilla/Skills/blob/main/skills/therohitdas/slk/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Trompetilla/Skills/blob/main/skills/therohitdas/slk/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read, send, search, and manage Slack messages and DMs via the slk CLI. Use when the user asks to check Slack, read channels or DMs, send Slack messages, search Slack, check unreads, manage drafts, view saved items, or interact with Slack workspace. Also use for heartbeat Slack checks. Triggers on \"check slack\", \"any slack messages\", \"send on slack\", \"slack unreads\", \"search slack\", \"slack threads\", \"draft on slack\", \"read slack dms\", \"message on slack\"."
+}

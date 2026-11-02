@@ -1,0 +1,37 @@
+{
+  "name": "maintain-imgsqueeze-bump-tool",
+  "repo": "MacHu-GWU/imgsqueeze-project",
+  "path": ".claude/skills/maintain-imgsqueeze-bump-tool/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/MacHu-GWU/imgsqueeze-project",
+  "dir_name": "maintain-imgsqueeze-bump-tool",
+  "downloaded_at": "2026-11-02T04:58:59.376631Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "lint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/imgsqueeze-project/blob/main/.claude/skills/maintain-imgsqueeze-bump-tool/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/imgsqueeze-project/blob/main/.claude/skills/maintain-imgsqueeze-bump-tool/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Upgrade the pinned version of pngquant or oxipng in imgsqueeze: check the new version is installable through mise, verify the flags and exit codes imgsqueeze relies on, then update the pin, CI, docs and skills together. Use when the user asks to upgrade, bump, or update pngquant or oxipng, or when a newer release of either is out."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ci-fleet-engineering",
+  "repo": "SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App",
+  "path": ".claude/skills/ci-fleet-engineering/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App",
+  "dir_name": "ci-fleet-engineering",
+  "downloaded_at": "2026-11-02T05:35:14.428753Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SattikBhaumik",
+  "source_url": "https://github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App/blob/main/.claude/skills/ci-fleet-engineering/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SattikBhaumik/Minerva-University-AI-Research-Team-ATLAS-App/blob/main/.claude/skills/ci-fleet-engineering/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when adding, editing, or debugging ANY GitHub Actions workflow that mutates shared data, publishes an artifact, reports, or runs on a cron, and when diagnosing CI failures, cancelled runs, lock contention, lost work, or alert noise. Carries the fleet doctrine: the compute/apply lock split, budgets that publish vs timeouts that kill, restore/publish guards, the never-started/displaced-run sweeper, the health auditor that never fails (findings go to one self-closing issue), the static gate checker (apply gating, GH_TOKEN in scope, reporter-may-fail), a red X reserved for broken, and the shell/scheduler traps (pipefail with tee, the [ -n x ] && ARGS+= trap, inputs as env, late crons, [skip ci] vs workflow_run). Triggers on workflow yml, cron, concurrency group, timeout-minutes, gh release upload, cancelled run, CI alert, lock, publish step skipped, GH_TOKEN, reporter, health issue, skip ci."
+}

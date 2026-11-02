@@ -1,0 +1,37 @@
+{
+  "name": "company-knowledge-qa",
+  "repo": "aidevs-pt/devs-ai-skills",
+  "path": ".agents/skills/company-knowledge-qa/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/aidevs-pt/devs-ai-skills",
+  "dir_name": "company-knowledge-qa",
+  "downloaded_at": "2026-11-02T06:26:09.425196Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aidevs-pt",
+  "source_url": "https://github.com/aidevs-pt/devs-ai-skills/blob/master/.agents/skills/company-knowledge-qa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aidevs-pt/devs-ai-skills/blob/master/.agents/skills/company-knowledge-qa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer company policy and SOP questions from approved documents with citations and version checks. Use for internal document Q&A, conflicting procedures, policy updates, or questions that need a verifiable source. Do not invent missing policy."
+}

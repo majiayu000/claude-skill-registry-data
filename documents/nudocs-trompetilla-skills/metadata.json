@@ -1,0 +1,40 @@
+{
+  "name": "nudocs",
+  "repo": "Trompetilla/Skills",
+  "path": "skills/jdrhyne/nudocs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Trompetilla/Skills",
+  "dir_name": "nudocs-trompetilla-skills",
+  "downloaded_at": "2026-11-02T05:53:24.327147Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, docx, markdown",
+    "score": 5,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Trompetilla",
+  "source_url": "https://github.com/Trompetilla/Skills/blob/main/skills/jdrhyne/nudocs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Trompetilla/Skills/blob/main/skills/jdrhyne/nudocs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Upload, edit, and export documents via Nudocs.ai. Use when creating shareable document links for collaborative editing, uploading markdown/docs to Nudocs for rich editing, or pulling back edited content. Triggers on \"send to nudocs\", \"upload to nudocs\", \"edit in nudocs\", \"pull from nudocs\", \"get the nudocs link\", \"show my nudocs documents\"."
+}

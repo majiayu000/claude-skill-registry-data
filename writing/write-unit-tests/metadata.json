@@ -1,0 +1,38 @@
+{
+  "name": "write-unit-tests",
+  "repo": "Sumonta056/brain-games",
+  "path": ".claude/skills/write-unit-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/Sumonta056/brain-games",
+  "dir_name": "write-unit-tests",
+  "downloaded_at": "2026-11-02T05:43:54.836249Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Sumonta056",
+  "source_url": "https://github.com/Sumonta056/brain-games/blob/main/.claude/skills/write-unit-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Sumonta056/brain-games/blob/main/.claude/skills/write-unit-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How to write Vitest specs for Brain Games. Use when writing or changing any file under test/nuxt/, when a source file under app/ needs its spec, when the Stop hook reports a missing spec, or when the test-writer agent runs. Covers the spec path rule, the patterns for games, composables, components, pages and game JSON, and the mutation check that proves each test can fail."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "trajectory-review",
+  "repo": "MiniMax-AI/mcode-stack",
+  "path": "stacks/ronny/skills/trajectory-review/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/MiniMax-AI/mcode-stack",
+  "dir_name": "trajectory-review",
+  "downloaded_at": "2026-11-02T05:06:00.315606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction, memory",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MiniMax-AI",
+  "source_url": "https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/trajectory-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/trajectory-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review how an agent reached its result, not only whether the result passed, covering tools called, detours, unverified assumptions and wasted round trips, and turn the findings into concrete harness or prompt fixes. Use after an agent task finishes or fails, when an eval task flips, or when asked to look at the process behind a result."
+}

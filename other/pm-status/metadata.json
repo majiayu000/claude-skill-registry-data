@@ -1,0 +1,37 @@
+{
+  "name": "pm-status",
+  "repo": "aj604/toolshed",
+  "path": "plugins/workbench/skills/pm-status/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aj604/toolshed",
+  "dir_name": "pm-status",
+  "downloaded_at": "2026-11-02T06:26:53.824351Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aj604",
+  "source_url": "https://github.com/aj604/toolshed/blob/main/plugins/workbench/skills/pm-status/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aj604/toolshed/blob/main/plugins/workbench/skills/pm-status/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Project-manager status check for the current repo: summarizes what landed since the last check (merged PRs, commits on main, closed issues, what dispatched agent sessions concluded), what's still in flight or stuck (open PRs, failing CI, worktrees with unpushed or un-PR'd work, orphaned branches), and lines up a ranked list of what to do next. Use this whenever the user says /pm-status or /workbench:pm-status, or asks anything like \"where are we\", \"what landed\", \"what happened while I was away\", \"catch me up\", \"what did the agents finish\", \"status check\", \"what's next on this repo\", \"where did that work end up\", or comes back to a repo after dispatching long-running sessions, orchestrate-issues runs, or enhancement lanes and needs to get re-oriented, even if they never say \"status\". Not for a single PR's CI status or for reviewing code quality."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "engineering-review-feedback",
+  "repo": "MiniMax-AI/mcode-stack",
+  "path": "stacks/ronny/skills/engineering-review-feedback/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/MiniMax-AI/mcode-stack",
+  "dir_name": "engineering-review-feedback",
+  "downloaded_at": "2026-11-02T05:06:01.375110Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, markdown, documentation",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MiniMax-AI",
+  "source_url": "https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/engineering-review-feedback/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/engineering-review-feedback/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when handling code review feedback as the change author, addressing reviewer comments, drafting replies, resolving disagreements, or summarizing updates. TRIGGER on \"address review feedback\", \"respond to this review comment\", \"reviewer asked\", \"I disagree with reviewer\", \"what should I reply?\", or \"apply PR comments\". If role is unclear, ask reviewer or author. DO NOT TRIGGER for reviewer comment writing, full code review, or PR descriptions unless author-response behavior is requested."
+}

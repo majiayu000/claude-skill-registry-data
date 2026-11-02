@@ -1,0 +1,37 @@
+{
+  "name": "local-pois",
+  "repo": "Parsa-29/loop-config",
+  "path": "skills/local-pois/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/Parsa-29/loop-config",
+  "dir_name": "local-pois",
+  "downloaded_at": "2026-11-02T05:22:09.682202Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Parsa-29",
+  "source_url": "https://github.com/Parsa-29/loop-config/blob/main/skills/local-pois/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Parsa-29/loop-config/blob/main/skills/local-pois/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "USE FOR getting local business/POI details. Requires POI IDs obtained from web-search (with result_filter=locations). Returns full business information including ratings, hours, contact info. Max 20 IDs."
+}

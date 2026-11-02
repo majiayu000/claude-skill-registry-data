@@ -1,0 +1,37 @@
+{
+  "name": "skillcheck",
+  "repo": "Noem836/skillcheck",
+  "path": "skills/skillcheck/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Noem836/skillcheck",
+  "dir_name": "skillcheck",
+  "downloaded_at": "2026-11-02T05:15:37.787033Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Noem836",
+  "source_url": "https://github.com/Noem836/skillcheck/blob/main/skills/skillcheck/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Noem836/skillcheck/blob/main/skills/skillcheck/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure whether the user's Claude Code or Codex skills actually trigger in their real setup, next to all their other installed skills and plugins. Use when the user says a skill \"doesn't fire\", \"isn't being used\", \"gets ignored\", \"the wrong skill runs\", asks to test, audit or debug skill triggering or descriptions, wants to check a skill before publishing it, or is about to install a new skill and wants to know whether it will break or take over existing ones. Not for writing a new skill from scratch or for general code review."
+}

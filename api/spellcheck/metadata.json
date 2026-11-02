@@ -1,0 +1,37 @@
+{
+  "name": "spellcheck",
+  "repo": "Parsa-29/loop-config",
+  "path": "skills/spellcheck/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/Parsa-29/loop-config",
+  "dir_name": "spellcheck",
+  "downloaded_at": "2026-11-02T05:22:10.111416Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Parsa-29",
+  "source_url": "https://github.com/Parsa-29/loop-config/blob/main/skills/spellcheck/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Parsa-29/loop-config/blob/main/skills/spellcheck/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "USE FOR spell correction. Returns corrected query if misspelled. Most search endpoints have spellcheck built-in; use this only for pre-search query cleanup or \"Did you mean?\" UI."
+}

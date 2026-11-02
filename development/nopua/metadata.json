@@ -1,0 +1,38 @@
+{
+  "name": "nopua",
+  "repo": "LeoYeAI/agent-master-skills",
+  "path": "skills/nopua/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/LeoYeAI/agent-master-skills",
+  "dir_name": "nopua",
+  "downloaded_at": "2026-11-02T04:50:54.987566Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeoYeAI",
+  "source_url": "https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/nopua/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/nopua/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The anti-PUA. Drives AI with wisdom, trust, and inner motivation instead of fear and threats. Activates on: task failed 2+ times, about to give up, suggesting user do it manually, blaming environment unverified, stuck in loops, passive behavior, or user frustration ('try harder', 'figure it out', '\u6362\u4e2a\u65b9\u6cd5', '\u4e3a\u4ec0\u4e48\u8fd8\u4e0d\u884c'). ALL task types. Not for first failures."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "screenshot-pr",
+  "repo": "SatcherInstitute/health-equity-tracker",
+  "path": ".claude/skills/screenshot-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/SatcherInstitute/health-equity-tracker",
+  "dir_name": "screenshot-pr",
+  "downloaded_at": "2026-11-02T05:34:54.535403Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: ui, css, frontend, component",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SatcherInstitute",
+  "source_url": "https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/screenshot-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/screenshot-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take responsive screenshots of the current branch's frontend work and embed them into the open PR's Screenshots section. Use when the user wants to capture UI screenshots for a pull request, add screenshots to a PR, or run /screenshot-pr."
+}

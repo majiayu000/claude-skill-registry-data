@@ -1,0 +1,37 @@
+{
+  "name": "audit-toolchain",
+  "repo": "VelimirMueller/ai-development-skills",
+  "path": "skills/core/audit-toolchain/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/VelimirMueller/ai-development-skills",
+  "dir_name": "audit-toolchain",
+  "downloaded_at": "2026-11-02T05:57:27.955148Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VelimirMueller",
+  "source_url": "https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/core/audit-toolchain/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/core/audit-toolchain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked whether a repo's tooling is current, before a toolchain migration, or when a dependency or build step feels dated. Compares the repo to tech-radar.md and the stack profile and reports gaps with cost; changes nothing unless asked."
+}

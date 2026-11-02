@@ -1,0 +1,39 @@
+{
+  "name": "securing-code",
+  "repo": "ahgraber/skills",
+  "path": "skills/securing-code/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "securing-code",
+  "downloaded_at": "2026-11-02T06:23:48.544771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=4, development=4",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/securing-code/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/securing-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing or reviewing code that handles external input, manages access, touches data or crypto, or changes dependencies. Triggers: endpoints, auth/authz, DB/ORM, file handling, secrets, \"is this secure?\", \"security review\". NOT for formatting, pure UI, or explaining code."
+}

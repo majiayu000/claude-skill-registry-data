@@ -1,0 +1,37 @@
+{
+  "name": "punch-list",
+  "repo": "Turki-Sh/Foreman",
+  "path": "plugins/foreman/skills/punch-list/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Turki-Sh/Foreman",
+  "dir_name": "punch-list",
+  "downloaded_at": "2026-11-02T05:53:44.483977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Turki-Sh",
+  "source_url": "https://github.com/Turki-Sh/Foreman/blob/main/plugins/foreman/skills/punch-list/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Turki-Sh/Foreman/blob/main/plugins/foreman/skills/punch-list/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit any website for what makes it look AI-generated or unfinished, such as dead buttons, missing hover and focus states, a broken mobile layout, contrast failures, missing metadata and share cards, stale numbers and the generated-page tells, ranked with a fix for each. Part of Foreman by Turki Alshuaibi. Use on a URL, a local project or a screenshot, including sites Foreman never built."
+}

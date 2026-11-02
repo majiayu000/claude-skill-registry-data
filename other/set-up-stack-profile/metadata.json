@@ -1,0 +1,37 @@
+{
+  "name": "set-up-stack-profile",
+  "repo": "VelimirMueller/ai-development-skills",
+  "path": "skills/core/set-up-stack-profile/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/VelimirMueller/ai-development-skills",
+  "dir_name": "set-up-stack-profile",
+  "downloaded_at": "2026-11-02T05:57:33.942649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VelimirMueller",
+  "source_url": "https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/core/set-up-stack-profile/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VelimirMueller/ai-development-skills/blob/main/skills/core/set-up-stack-profile/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when starting in a repo with no .claude/stack-profile.md, when the stack changed, or when the user asks which plugins and skills to use. Detects the stack, asks only the gaps, writes the profile, and lists plugins and skill order."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "deep-research",
+  "repo": "ahgraber/skills",
+  "path": "skills/deep-research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "deep-research-ahgraber-skills",
+  "downloaded_at": "2026-11-02T06:23:48.800582Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/deep-research/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/deep-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants a deep, multi-source, fact-checked web research report on a topic too broad for a single search. Triggers: \"deep research on X\", \"research report\", \"investigate thoroughly\", \"comprehensive findings on\", \"what's the current state of X\", \"survey the landscape of\". Not for: single-fact lookups, library/API/version questions (use mcp-research), or open-ended ideation (use brainstorming)."
+}

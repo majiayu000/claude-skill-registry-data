@@ -1,0 +1,37 @@
+{
+  "name": "pr",
+  "repo": "SeaXen/agentskills",
+  "path": "library/lobehub-skills/skills/pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SeaXen/agentskills",
+  "dir_name": "pr-seaxen-agentskills",
+  "downloaded_at": "2026-11-02T05:36:02.628483Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SeaXen",
+  "source_url": "https://github.com/SeaXen/agentskills/blob/main/library/lobehub-skills/skills/pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SeaXen/agentskills/blob/main/library/lobehub-skills/skills/pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a PR for the current branch (targets `canary` by default), including splitting one cross-layer branch into ordered stacked PRs so a lower layer (db / shared package / server TRPC) merges before its callers (desktop / CLI / UI). Use when the user asks to create / submit a PR, or to split a branch because clients call a server contract that isn't on the trunk yet. Triggers on 'pr', 'create pr', 'submit pr', 'open a PR', 'pull request', 'split this PR', 'stacked PR', 'backend should merge first', '\u63d0 PR', '\u63d0\u4e2a PR', '\u65b0\u5efa PR', '\u62c6 PR', '\u540e\u7aef\u5148\u5408', '\u5206\u5c42\u5408\u5e76'."
+}

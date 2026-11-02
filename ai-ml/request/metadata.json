@@ -1,0 +1,37 @@
+{
+  "name": "request",
+  "repo": "SatcherInstitute/health-equity-tracker",
+  "path": ".claude/skills/request/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/SatcherInstitute/health-equity-tracker",
+  "dir_name": "request",
+  "downloaded_at": "2026-11-02T05:34:53.976836Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SatcherInstitute",
+  "source_url": "https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/request/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/request/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Flag the open PR as ready for human review \u2014 request GitHub review from the two teammates who did not open it, then post a \"ready for review\" message to the het-core Slack channel with the PR title and link, tagging @channel. Use when the user wants to hand a finished PR off for review, or runs /request."
+}

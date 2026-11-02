@@ -1,0 +1,38 @@
+{
+  "name": "wrangler",
+  "repo": "Solizardking/skillhub-main",
+  "path": "skills/wrangler/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Solizardking/skillhub-main",
+  "dir_name": "wrangler-solizardking-skillhub-main",
+  "downloaded_at": "2026-11-02T05:41:42.300735Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Solizardking",
+  "source_url": "https://github.com/Solizardking/skillhub-main/blob/main/skills/wrangler/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Solizardking/skillhub-main/blob/main/skills/wrangler/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1, Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store. Load before running wrangler commands to ensure correct syntax and best practices. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "cartesia-api",
+  "repo": "Parsa-29/loop-config",
+  "path": "skills/cartesia-api/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Parsa-29/loop-config",
+  "dir_name": "cartesia-api",
+  "downloaded_at": "2026-11-02T05:22:10.914341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Parsa-29",
+  "source_url": "https://github.com/Parsa-29/loop-config/blob/main/skills/cartesia-api/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Parsa-29/loop-config/blob/main/skills/cartesia-api/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Integrate Cartesia speech APIs (TTS, STT, voices) in application code or coding-agent workflows. Use when the user asks about Cartesia REST/WebSocket APIs, SDKs, API keys, Sonic TTS, Ink STT, voice IDs, access tokens, or embedding voice in an app. For Cartesia Line deployed agents, CLI deploy, and telephony, use the line-voice-agent skill instead."
+}

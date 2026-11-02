@@ -1,0 +1,428 @@
+---
+name: xero_command_line
+description: Interact with the Xero accounting API using the `xero` CLI tool. Manage contacts, invoices, quotes, credit notes, payments, bank transactions, items, manual journals, tracking categories, currencies, tax rates, reports, organisation details, and attachments.
+user-invocable: true
+metadata:
+  openclaw:
+    source: "https://github.com/XeroAPI/xero-command-line"
+    homepage: "https://github.com/XeroAPI/xero-command-line#readme"
+    requires:
+      bins:
+        - xero
+      install: "npm install -g @xeroapi/xero-command-line"
+    keywords:
+      - accounting
+      - xero
+      - invoices
+      - bookkeeping
+      - finance
+---
+
+# xero CLI
+
+You have access to the `xero` CLI — a command-line tool for the Xero accounting API using PKCE OAuth. Use it to read and write accounting data in the user's Xero organisation.
+
+## Authentication & Setup
+
+**Note for Agent:** If the user is not logged in, you must instruct them to run `xero login` in their terminal manually, as it requires a browser-based OAuth flow that you cannot complete. If login fails with `unauthorized_client` or scope-related errors — common for new Xero apps after the March 2026 scope migration, or when the app only grants read scopes — instruct them to re-login with `--scope` listing only the scopes enabled on their app (see [OAuth scopes](#oauth-scopes) below).
+
+```bash
+# Check if logged in / check organization details
+xero org details
+```
+
+### Token storage (Linux / WSL / SSH)
+
+Tokens are encrypted in `~/.config/xero-command-line/tokens.json`. By default the encryption key lives **only** in the OS keychain (on Linux: GNOME Keyring / Secret Service over D-Bus). A file copy is **not** written unless the user opts in.
+
+**If the user is on WSL, SSH, or a headless VM** and sees an encryption-key error after a successful `xero login`:
+
+1. **Prefer fixing the keychain:** `sudo apt install gnome-keyring libsecret-tools dbus-x11`, start `gnome-keyring-daemon`, then `xero login` again.
+2. **Flaky keychain** (login OK, next command fails): `export XERO_KEYRING_FILE_BACKUP=1` before `xero login` — mirrors the key to `~/.config/xero-command-line/.encryption-key` (0600) for later reads. Opt-in; weaker than keychain-only.
+3. **No keychain:** `export XERO_KEY_STORAGE=file` before `xero login`.
+4. **Stronger file-based option:** `export XERO_TOKEN_PASSPHRASE='…'` (same value every session) — scrypt-derived key, not stored in plaintext.
+
+Warn if `XERO_PROFILE`, `XERO_CLIENT_ID`, `XERO_KEY_STORAGE`, `XERO_KEYRING_FILE_BACKUP`, or `XERO_TOKEN_PASSPHRASE` are set — they change profile or how keys are stored. Check with `echo $XERO_PROFILE $XERO_CLIENT_ID $XERO_KEY_STORAGE $XERO_KEYRING_FILE_BACKUP`.
+
+The CLI does **not** wipe `tokens.json` when decryption fails; instruct re-login only after the user confirms.
+
+If a command fails with an error saying the token cache is **corrupted** (`TokenCacheError`), that is not token expiry. Stop and tell the user: a backup exists at `~/.config/xero-command-line/tokens.json.bak` and can be restored over `tokens.json`. Do not run `xero login` or delete files unless the user asks.
+
+## IMPORTANT: Profile and identity verification
+
+Before executing **any** commands (including read-only operations), you **must** verify which Xero organisation is active:
+
+1. **Always run `xero org details` at the start of a session** and display the organisation name to the user before executing any other commands. Do not proceed until the user confirms this is the correct org.
+2. **Use `-p <profile>` explicitly** when the user has specified or confirmed which profile/org to use. Do not silently rely on the default profile or environment variables without confirmation.
+3. **Warn the user if `XERO_PROFILE` or `XERO_CLIENT_ID` environment variables are set**, as these silently override the default profile and may connect to an unintended organisation. Check with `echo $XERO_PROFILE $XERO_CLIENT_ID` if in doubt.
+4. **Never switch profiles or call `xero profile set-default`** without explicit user instruction. Changing the default profile affects all subsequent commands and other tools sharing the same config.
+
+## IMPORTANT: Safety rules for write operations
+
+Any command that **creates, updates, or deletes** data (invoices, contacts, payments, bank transactions, manual journals, credit notes, quotes, items, tracking categories) is a write operation. Before executing a write operation you **must** follow these steps:
+
+1. **Confirm the active profile and organisation.** Run `xero org details` and show the user which organisation will be affected. Never assume the correct org is active.
+2. **Use read-only commands first** to verify IDs and details (e.g. list contacts, invoices, accounts) before referencing them in a write.
+3. **Show the user a summary** of what will be written — include the resource type, key fields, and target organisation — then **wait for explicit user approval** before executing the write command.
+4. **Do not proceed** with the write unless the user confirms. A simple "yes" or "go ahead" is sufficient, but silence or ambiguity is not approval.
+
+These rules apply regardless of whether the write is performed via inline flags or `--file`. They exist to prevent accidental creation or modification of financial records in the wrong organisation.
+
+## Global flags
+
+Every API command supports these flags:
+
+| Flag | Description |
+|---|---|
+| `-p, --profile <name>` | Use a specific named profile (defaults to the default profile) |
+| `--client-id <id>` | Override the profile with an inline OAuth client ID |
+| `--json` | Output raw JSON (useful for piping to `jq` or further processing) |
+| `--csv` | Output as CSV |
+| `--toon` | Output as [TOON](https://github.com/toon-format/toon) (Token Oriented Object Notation) |
+
+Environment variables `XERO_PROFILE`, `XERO_CLIENT_ID`, `XERO_KEY_STORAGE`, `XERO_KEYRING_FILE_BACKUP`, and `XERO_TOKEN_PASSPHRASE` are also recognised. The `xero login` command additionally accepts `XERO_SCOPES`. See [Token storage (Linux / WSL / SSH)](#token-storage-linux--wsl--ssh).
+
+### Output format for agents
+
+When you run **read/list commands** and need to parse the results yourself, prefer **`--toon`** over the default table, `--json`, or `--csv`. TOON (Token Oriented Object Notation) is a compact, LLM-friendly encoding — typically far fewer tokens than JSON — so it uses the context window and processing budget more efficiently.
+
+Use `--json` only when the user explicitly needs JSON (e.g. piping to `jq`) or a tool requires it. Use the default table when presenting human-readable output to the user in chat.
+
+```bash
+xero contacts list --search "Acme" --toon
+xero invoices list --toon
+xero accounts list --toon
+```
+
+## OAuth scopes
+
+By default, `xero login` requests broad read/write scopes. Override with `--scope` (space-separated API scopes) or `XERO_SCOPES` when the user's Xero wants to grant a narrower set — e.g. read-only dashboards. 
+
+API credentials created before Xero's March 2026 scope changes where deprecated broader scopes like `accounting.transactions` and `accounting.reports` are available until September 2027 may request those scopes via the `--scope` override as well. `xero login` will request the granular scopes that replaced these deprecated broader scopes by default.
+
+Required scopes (`openid`, `profile`, `email`, `offline_access`) are prepended automatically. Users only pass Xero API scopes. Re-login is required after changing scopes.
+
+```bash
+# Read-only example (adjust to match scopes enabled on the user's app)
+xero login --scope "accounting.contacts.read accounting.settings.read accounting.invoices.read accounting.payments.read accounting.banktransactions.read accounting.manualjournals.read accounting.reports.balancesheet.read accounting.reports.profitandloss.read accounting.reports.trialbalance.read accounting.reports.aged.read accounting.budgets.read accounting.attachments.read"
+
+# Or via environment variable
+XERO_SCOPES="accounting.invoices.read accounting.contacts.read" xero login
+```
+
+## Auth & profiles
+
+```bash
+# Log in (opens browser for OAuth consent)
+xero login
+xero login -p my-profile
+xero login --scope "accounting.contacts.read accounting.invoices.read"
+
+# Log out
+xero logout
+
+# Manage profiles (each profile maps to a Xero OAuth app / organisation)
+xero profile add <name>                    # prompts for Client ID
+xero profile add <name> --client-id <id>   # inline
+xero profile list
+xero profile set-default <name>
+xero profile remove <name>
+```
+
+## Key workflow: find IDs first
+
+Most create/update commands need Xero GUIDs. Always list first to find IDs:
+
+```bash
+xero contacts list --search "Acme"    # find a contact ID
+xero accounts list                    # find account codes
+xero invoices list                    # find invoice IDs
+xero items list                       # find item codes
+```
+
+## JSON file input
+
+Any create or update command accepts `--file <path.json>` instead of inline flags. Use this for multi-line-item resources. All inputs are validated before being sent to the API.
+
+```bash
+xero invoices create --file invoice.json
+xero contacts update --file contact-update.json
+```
+
+## Commands
+
+### Contacts
+
+```bash
+xero contacts list
+xero contacts list --search "Acme" --page 2
+xero contacts create --name "Acme Corp" --email acme@example.com --phone "+1234567890"
+xero contacts create --file contact.json
+xero contacts update --contact-id <ID> --name "Acme Corporation" --email new@acme.com
+xero contacts update --file contact-update.json
+```
+
+### Contact Groups
+
+```bash
+xero contact-groups list
+xero contact-groups list --group-id <ID>
+```
+
+### Accounts
+
+```bash
+xero accounts list
+xero accounts list --json
+```
+
+### Invoices
+
+```bash
+xero invoices list
+xero invoices list --contact-id <ID>
+xero invoices list --invoice-number INV-0001
+xero invoices list --page 2
+xero invoices pdf --invoice-id <ID> --output invoice.pdf
+xero invoices online-url --invoice-id <ID>
+
+# Single line item inline
+xero invoices create --contact-id <ID> --type ACCREC \
+  --description "Consulting" --quantity 10 --unit-amount 150 \
+  --account-code 200 --tax-type OUTPUT2
+
+# Multiple line items via JSON file
+xero invoices create --file invoice.json
+
+# Update a draft invoice
+xero invoices update --invoice-id <ID> --reference "Updated ref"
+xero invoices update --file invoice-update.json
+```
+
+Invoice types: `ACCREC` (sales/receivable), `ACCPAY` (purchase/payable).
+
+`invoices pdf` downloads the rendered invoice from Xero. It requires an explicit `--output <path>`; use `--output -` only when redirecting or piping binary stdout. `invoices online-url` returns the customer-facing online invoice URL for a non-draft `ACCREC` sales invoice from Xero's dedicated endpoint, not the unrelated source-document `url` field in invoice list results.
+
+Example invoice.json:
+```json
+{
+  "contactId": "<CONTACT_ID>",
+  "type": "ACCREC",
+  "date": "2025-06-15",
+  "reference": "REF-001",
+  "lineItems": [
+    {
+      "description": "Consulting",
+      "quantity": 10,
+      "unitAmount": 150,
+      "accountCode": "200",
+      "taxType": "OUTPUT2"
+    }
+  ]
+}
+```
+
+### Quotes
+
+```bash
+xero quotes list
+xero quotes list --contact-id <ID>
+xero quotes list --quote-number QU-0001
+
+xero quotes create --contact-id <ID> --title "Project Quote" \
+  --date 2025-12-30 --description "Web design" --quantity 1 --unit-amount 5000 \
+  --account-code 200 --tax-type OUTPUT2
+xero quotes create --file quote.json
+
+xero quotes update --file quote-update.json
+```
+
+> **Note:** Xero's API requires `contact` and `date` on quote updates even though the CLI allows them to be omitted. If you get a validation error, ensure your update payload includes both fields.
+
+### Credit Notes
+
+```bash
+xero credit-notes list
+xero credit-notes list --contact-id <ID> --page 2
+
+xero credit-notes create --contact-id <ID> \
+  --description "Refund" --quantity 1 --unit-amount 100 \
+  --account-code 200 --tax-type OUTPUT2
+xero credit-notes create --file credit-note.json
+
+xero credit-notes update --file credit-note-update.json
+```
+
+### Manual Journals
+
+Manual journals require at least two journal lines (debit + credit). Always use `--file`.
+
+```bash
+xero manual-journals list
+xero manual-journals list --manual-journal-id <ID>
+xero manual-journals list --modified-after 2025-01-01
+
+xero manual-journals create --file journal.json
+xero manual-journals update --file journal-update.json
+```
+
+Example journal.json:
+```json
+{
+  "narration": "Reclassify office supplies",
+  "manualJournalLines": [
+    { "accountCode": "200", "lineAmount": 100, "description": "Debit" },
+    { "accountCode": "400", "lineAmount": -100, "description": "Credit" }
+  ]
+}
+```
+
+### Bank Transactions
+
+```bash
+xero bank-transactions list
+xero bank-transactions list --bank-account-id <ID>
+
+xero bank-transactions create --type SPEND --bank-account-id <BANK_ID> \
+  --contact-id <CONTACT_ID> --description "Office supplies" \
+  --quantity 1 --unit-amount 50 --account-code 429 --tax-type INPUT2
+xero bank-transactions create --file bank-transaction.json
+
+xero bank-transactions update --file bank-transaction-update.json
+```
+
+Transaction types: `RECEIVE` (money in), `SPEND` (money out).
+
+### Attachments
+
+Files can be attached to invoices, credit notes, bank transactions, quotes, contacts, accounts, and manual journals. Each supports `upload`, `list`, and `download`. The Xero API does not support deleting attachments.
+
+Supported file types: `.pdf`, `.png`, `.jpg`/`.jpeg`, `.gif`, `.webp`, `.xml`, `.csv`, `.txt`. Maximum 25MB per file, up to 10 attachments per resource.
+
+```bash
+# Upload
+xero invoices attachments upload --invoice-id <ID> --file <path>
+xero invoices attachments upload --invoice-id <ID> --file <path> --include-online
+xero credit-notes attachments upload --credit-note-id <ID> --file <path> --include-online
+xero bank-transactions attachments upload --bank-transaction-id <ID> --file <path>
+xero quotes attachments upload --quote-id <ID> --file <path>
+xero contacts attachments upload --contact-id <ID> --file <path>
+xero accounts attachments upload --account-id <ID> --file <path>
+xero manual-journals attachments upload --manual-journal-id <ID> --file <path>
+
+# List (shows attachmentID, fileName, mimeType, size, URL)
+xero invoices attachments list --invoice-id <ID>
+xero credit-notes attachments list --credit-note-id <ID>
+xero bank-transactions attachments list --bank-transaction-id <ID>
+xero quotes attachments list --quote-id <ID>
+xero contacts attachments list --contact-id <ID>
+xero accounts attachments list --account-id <ID>
+xero manual-journals attachments list --manual-journal-id <ID>
+
+# Download (--output defaults to current directory; accepts a file path or directory)
+xero invoices attachments download --invoice-id <ID> --attachment-id <ID>
+xero invoices attachments download --invoice-id <ID> --attachment-id <ID> --output ./downloads/
+xero credit-notes attachments download --credit-note-id <ID> --attachment-id <ID>
+xero bank-transactions attachments download --bank-transaction-id <ID> --attachment-id <ID>
+xero quotes attachments download --quote-id <ID> --attachment-id <ID>
+xero contacts attachments download --contact-id <ID> --attachment-id <ID>
+xero accounts attachments download --account-id <ID> --attachment-id <ID>
+xero manual-journals attachments download --manual-journal-id <ID> --attachment-id <ID>
+```
+
+`--include-online` (invoices and credit notes only) makes the attachment visible to the end customer in their online invoice/credit note view.
+
+### Payments
+
+```bash
+xero payments list
+xero payments list --invoice-id <ID>
+xero payments list --invoice-number INV-0001
+xero payments list --reference "Payment ref"
+
+xero payments create --invoice-id <ID> --account-id <ACCOUNT_ID> --amount 500
+xero payments create --file payment.json
+```
+
+### Items
+
+```bash
+xero items list
+xero items list --page 2
+
+xero items create --code WIDGET --name "Widget" --sale-price 29.99
+xero items create --file item.json
+
+xero items update --item-id <ID> --code WIDGET --name "Updated Widget"
+xero items update --file item-update.json
+```
+
+### Currencies
+
+```bash
+xero currencies list
+xero currencies list --json
+```
+
+### Tax Rates
+
+```bash
+xero tax-rates list
+xero tax-rates list --json
+```
+
+### Tracking Categories & Options
+
+```bash
+xero tracking categories list
+xero tracking categories list --include-archived
+
+xero tracking categories create --name "Department"
+xero tracking categories update --category-id <ID> --name "Region"
+xero tracking categories update --category-id <ID> --status ARCHIVED
+
+xero tracking options create --category-id <ID> --names "Sales,Marketing,Engineering"
+xero tracking options update --category-id <ID> --file tracking-options.json
+```
+
+### Organisation
+
+```bash
+xero org details
+xero org details --json
+```
+
+### Reports
+
+```bash
+# Trial balance
+xero reports trial-balance
+xero reports trial-balance --date 2025-12-31
+
+# Profit and loss
+xero reports profit-and-loss
+xero reports profit-and-loss --from 2025-01-01 --to 2025-12-31
+xero reports profit-and-loss --timeframe QUARTER --periods 4
+
+# Balance sheet
+xero reports balance-sheet
+xero reports balance-sheet --date 2025-12-31
+xero reports balance-sheet --timeframe MONTH --periods 12
+
+# Aged receivables (requires contact ID)
+xero reports aged-receivables --contact-id <ID>
+xero reports aged-receivables --contact-id <ID> --report-date 2025-12-31
+
+# Aged payables (requires contact ID)
+xero reports aged-payables --contact-id <ID>
+xero reports aged-payables --contact-id <ID> --from-date 2025-01-01 --to-date 2025-12-31
+```
+
+## Tips
+
+- Use `--json` and pipe to `jq` when you need to extract specific fields programmatically.
+- Only draft invoices, quotes, and credit notes can be updated.
+- For multi-line-item creates, always use `--file` with a JSON payload.
+- Tax types vary by region. Run `xero tax-rates list` to see what's available.
+- Account codes are needed for line items. Run `xero accounts list` to find them.
+- To attach a file: `xero <topic> attachments upload --<resource>-id <ID> --file <path>`. Run `list` first to get the resource ID, then `attachments list` to get attachment IDs for download.

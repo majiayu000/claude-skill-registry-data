@@ -1,0 +1,38 @@
+{
+  "name": "infra-test",
+  "repo": "SatcherInstitute/health-equity-tracker",
+  "path": ".claude/skills/infra-test/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/SatcherInstitute/health-equity-tracker",
+  "dir_name": "infra-test",
+  "downloaded_at": "2026-11-02T05:34:54.788558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SatcherInstitute",
+  "source_url": "https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/infra-test/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SatcherInstitute/health-equity-tracker/blob/main/.claude/skills/infra-test/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Force-push the current branch to infra-test to trigger a GCP deploy, wait for it to complete, then run each associated DAG pipeline one at a time and wait for each to finish. On full success, updates the PR description with a checklist confirming real GCP infra-test results. Use when the user wants to verify backend changes on the test environment before merging, or run /infra-test."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "orchestrate-issues",
+  "repo": "aj604/toolshed",
+  "path": "plugins/workbench/skills/orchestrate-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/aj604/toolshed",
+  "dir_name": "orchestrate-issues",
+  "downloaded_at": "2026-11-02T06:26:53.666708Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aj604",
+  "source_url": "https://github.com/aj604/toolshed/blob/main/plugins/workbench/skills/orchestrate-issues/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aj604/toolshed/blob/main/plugins/workbench/skills/orchestrate-issues/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drive a whole graph of GitHub issues to completion using background subagents. Queries the unblocked frontier through native GitHub issue dependencies, dispatches one implementer per ready issue into an isolated worktree, runs a spec-review agent against the result, lands the PR, then re-queries as each merge opens new edges. Use this whenever the user wants a set of linked issues worked through by agents rather than by hand \u2014 \"orchestrate agents to implement these issues\", \"work through the issue chain\", \"dispatch background agents for my backlog\", \"implement this epic/milestone end to end\", \"queue up whatever's unblocked and keep going\" \u2014 and whenever they describe a dependency chain, DAG, blocked-by graph, or parent issue with sub-issues that needs implementing. Applies even when they never say \"orchestrate\": a request to work several dependent issues automatically is this skill. Not for implementing one issue yourself, and not for creating the issues or the dependency edges in the first place."
+}

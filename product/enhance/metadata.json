@@ -1,0 +1,38 @@
+{
+  "name": "enhance",
+  "repo": "aj604/toolshed",
+  "path": "plugins/workbench/skills/enhance/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/aj604/toolshed",
+  "dir_name": "enhance",
+  "downloaded_at": "2026-11-02T06:26:53.366612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: roadmap, feature, backlog",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "roadmap",
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aj604",
+  "source_url": "https://github.com/aj604/toolshed/blob/main/plugins/workbench/skills/enhance/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aj604/toolshed/blob/main/plugins/workbench/skills/enhance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user invokes /workbench:enhance or asks for one autonomous improvement, such as \"improve this repo\", \"find something worth building\", or \"surprise me\". An optional domain narrows the search. For multiple improvement lanes with stacked PRs, use workbench:incremental-enhancement-lanes."
+}

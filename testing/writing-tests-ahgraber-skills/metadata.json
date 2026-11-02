@@ -1,0 +1,39 @@
+{
+  "name": "writing-tests",
+  "repo": "ahgraber/skills",
+  "path": "skills/writing-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/ahgraber/skills",
+  "dir_name": "writing-tests-ahgraber-skills",
+  "downloaded_at": "2026-11-02T06:23:50.459693Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration, e2e",
+    "score": 4,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahgraber",
+  "source_url": "https://github.com/ahgraber/skills/blob/main/skills/writing-tests/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahgraber/skills/blob/main/skills/writing-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing or reviewing tests in any language, or diagnosing a suite that is slow, brittle, or hard to read. Triggers: \"write tests\", \"how should I test this\", \"what kind of test\", \"test is flaky/fragile\", \"should I mock this\", \"test is hard to read\". Python-specific practices (mocking, pytest, async) are included in `references/python-testing.md`."
+}
