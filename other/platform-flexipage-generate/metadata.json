@@ -1,0 +1,37 @@
+{
+  "name": "platform-flexipage-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/platform-flexipage-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "platform-flexipage-generate",
+  "downloaded_at": "2026-11-03T07:14:21.346558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-flexipage-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-flexipage-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when users create, generate, modify, or validate Salesforce Lightning pages (FlexiPages). Trigger on RecordPage, AppPage, HomePage, Lightning pages, adding components to a page, page customization (e.g. 'customize the record page'), or .flexipage-meta.xml files (regions, components, deployment errors). DO NOT TRIGGER for Visualforce pages, page layout assignments in the UI, UI Bundle/Experience Cloud site pages, or Aura/Lightning Web Component development without FlexiPage context."
+}

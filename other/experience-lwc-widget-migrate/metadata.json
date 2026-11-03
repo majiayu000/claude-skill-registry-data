@@ -1,0 +1,37 @@
+{
+  "name": "experience-lwc-widget-migrate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-lwc-widget-migrate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-lwc-widget-migrate",
+  "downloaded_at": "2026-11-03T07:14:27.541994Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-lwc-widget-migrate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-lwc-widget-migrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Convert a specific existing Lightning web component (LWC) into a declarative HXL / Agentforce widget, end to end. Gates on experience-lwc-widget-assess and stops when a widget cannot serve the LWC's purpose; otherwise hands the derived field shape to platform-widget-generate and wires the widget as the Lightning Type renderer. TRIGGER when: the user wants to convert, migrate, port, rebuild, or turn a named LWC into a widget or declarative Agentforce widget, or asks for a widget built from an existing LWC component. DO NOT TRIGGER when: the user only wants to know whether an LWC can become a widget (use experience-lwc-widget-assess), or wants a widget for a data shape, entity, or Lightning Type with no existing LWC (use platform-widget-generate or platform-lightning-type-widget-coordinate)."
+}

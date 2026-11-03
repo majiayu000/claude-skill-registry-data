@@ -1,0 +1,38 @@
+{
+  "name": "pixel-fire",
+  "repo": "arla6ka/design.how",
+  "path": "vault/pixel-fire/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/arla6ka/design.how",
+  "dir_name": "skill-arla6ka-design-how-18",
+  "downloaded_at": "2026-11-03T05:56:07.180273Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component, animation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arla6ka",
+  "source_url": "https://github.com/arla6ka/design.how/blob/main/vault/pixel-fire/skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arla6ka/design.how/blob/main/vault/pixel-fire/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a Canvas 2D pixel-art fire, a 16 by 16 flipbook generated from a tiny heat simulation and drawn as crisp blocks on a stone block, with a live pixel buffer the pointer edits by pushing lit cells up and along its travel and heating them white, and a tap that blows the flame out to regrow. Use when someone asks for a pixel fire, a retro game flame, an interactive pixel-art sprite, a campfire animation, or a flame you can blow out."
+}

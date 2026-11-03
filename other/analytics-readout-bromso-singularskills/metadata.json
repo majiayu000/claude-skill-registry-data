@@ -1,0 +1,37 @@
+{
+  "name": "analytics-readout",
+  "repo": "bromso/singularskills",
+  "path": "skills/analytics-readout/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "analytics-readout-bromso-singularskills",
+  "downloaded_at": "2026-11-03T06:14:55.508994Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/analytics-readout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/analytics-readout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write the decision readout \u2014 the answer to each question in one line, the recommendation, the confidence and why, what would change it, and what to watch \u2014 for the decision-maker named at the start. Use when the analysis is done and someone has to decide. Not for the sprint or project status report; see /project-management-status-report."
+}

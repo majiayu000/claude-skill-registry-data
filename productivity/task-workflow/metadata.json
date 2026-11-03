@@ -1,0 +1,38 @@
+{
+  "name": "task-workflow",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/task-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "task-workflow",
+  "downloaded_at": "2026-11-03T06:49:25.570485Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/task-workflow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/task-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Core loop for executing tasks from the tasks.md board \u2014 claim, plan checkpoint, worktree, implement, quality gates, draft PR, bounded review-and-fix rounds, optional gated merge, human notification. Use whenever asked to work the task board, run the next task, or continue a task in progress."
+}

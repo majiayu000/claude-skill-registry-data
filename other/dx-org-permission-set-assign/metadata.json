@@ -1,0 +1,37 @@
+{
+  "name": "dx-org-permission-set-assign",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/dx-org-permission-set-assign/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "dx-org-permission-set-assign",
+  "downloaded_at": "2026-11-03T07:14:25.077214Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-org-permission-set-assign/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-org-permission-set-assign/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "ALWAYS USE THIS SKILL to assign permission sets to org users. Assign one or more permission sets to org users using the sf org assign permset command. TRIGGER when the user asks to assign, grant, give, add, or apply permission sets to users, admins, specific orgs, or specific users. Supports granting permissions, giving access, and adding permission sets to default admin or specific users via --on-behalf-of. DO NOT TRIGGER for listing permission sets or checking user permissions."
+}

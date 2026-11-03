@@ -1,0 +1,38 @@
+{
+  "name": "omnistudio-omniscript-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/omnistudio-omniscript-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "omnistudio-omniscript-generate",
+  "downloaded_at": "2026-11-03T07:14:29.190042Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze, insights",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/omnistudio-omniscript-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/omnistudio-omniscript-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "OmniStudio OmniScript creation and validation with 120-point scoring. Use when building guided digital experiences, multi-step forms, or interactive processes that orchestrate Integration Procedures and Data Mappers. TRIGGER when: user creates OmniScripts, designs step flows, configures element types, or reviews existing OmniScript configurations. DO NOT TRIGGER when: building FlexCards (use omnistudio-flexcard-generate), creating Integration Procedures directly (use omnistudio-integration-procedure-generate), or analyzing dependencies (use omnistudio-dependencies-analyze)."
+}

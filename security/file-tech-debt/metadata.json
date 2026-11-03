@@ -1,0 +1,39 @@
+{
+  "name": "file-tech-debt",
+  "repo": "gaia-harness/gaia",
+  "path": ".claude/skills/file-tech-debt/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "file-tech-debt",
+  "downloaded_at": "2026-11-03T07:19:08.742781Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/.claude/skills/file-tech-debt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/.claude/skills/file-tech-debt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Files a new tech-debt GitHub issue for an out-of-scope code-review finding. Builds the dedup key, skips an open or declined-closed match, else creates the labeled issue and touches the debt-count sentinel. Trigger on asks like \"file a tech-debt issue\", \"record this as tech-debt\", \"file this finding as debt\". Do NOT trigger on draining, fixing, listing, or prioritizing existing debt (that's `/gaia-debt`), nor on general \"clean up the code\" or \"fix this bug\" asks that aren't about filing a new tracked issue."
+}

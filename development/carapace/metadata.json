@@ -1,0 +1,39 @@
+{
+  "name": "carapace",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/carapace/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "carapace",
+  "downloaded_at": "2026-11-03T06:20:06.193463Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/carapace/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/carapace/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with carapace shell completion \u2014 integrating into CLIs, writing YAML specs, creating custom actions, building completion-aware lexers for DSLs, looking up macros, setting up shell completion, configuring choices/bridges, using the MCP server, or adding man page documentation."
+}

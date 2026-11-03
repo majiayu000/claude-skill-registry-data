@@ -1,0 +1,37 @@
+{
+  "name": "commit",
+  "repo": "elastic/docs-builder",
+  "path": ".claude/skills/commit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/elastic/docs-builder",
+  "dir_name": "commit-elastic-docs-builder",
+  "downloaded_at": "2026-11-03T06:59:56.212548Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elastic",
+  "source_url": "https://github.com/elastic/docs-builder/blob/main/.claude/skills/commit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elastic/docs-builder/blob/main/.claude/skills/commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stage relevant files and create a well-formed git commit for the docs-builder repo. Use this when the user asks to commit changes, save work, or create a commit."
+}

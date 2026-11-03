@@ -1,0 +1,38 @@
+{
+  "name": "crm-analytics-wave-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/crm-analytics-wave-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "crm-analytics-wave-generate",
+  "downloaded_at": "2026-11-03T07:14:22.736773Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/crm-analytics-wave-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/crm-analytics-wave-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to build a Wave Recipe, deploy a CRM Analytics dataset or dashboard, or author the full CRMA asset stack \u2014 apps, Wave Recipes (.wdpr), datasets, and dashboards \u2014 against a connected Salesforce org via REST and Metadata APIs, without CRM Analytics Studio or Dashboard Builder. TRIGGER when: user asks to build or create a Wave Recipe, generate a .wdpr or .wdpr-meta.xml, deploy a .wdash or .wapp, run a recipe or dataflowjob programmatically, upload CSV data via InsightsExternalData, validate a dataset schema with synthetic data, fetch dataset XMD, audit dashboard SAQL re-encoding, or find unused dataset fields. TRIGGER on keywords: Wave Recipe, CRMA, CRM Analytics, wdpr, wdash, wapp, WaveRecipe, Wave dataflow, dataflowjob, InsightsExternalData, SAQL, dataset XMD, Analytics Studio, R3 format, wave/recipes, wave/dashboards, or analytics on Salesforce objects (opportunities, leads, cases, accounts, sales). DO NOT TRIGGER for standard Salesforce reports or LWC components unrelated to CRM Analytics."
+}

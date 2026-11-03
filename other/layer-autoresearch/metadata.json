@@ -1,0 +1,37 @@
+{
+  "name": "layer-autoresearch",
+  "repo": "flisk-sh/flisk",
+  "path": ".claude/skills/layer-autoresearch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "layer-autoresearch",
+  "downloaded_at": "2026-11-03T07:13:00.868932Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/.claude/skills/layer-autoresearch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/.claude/skills/layer-autoresearch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Contributor-only autonomous keep/discard experiment loop (after karpathy/autoresearch) that edits Flisk's L1-L4 Docker layer generators in a flisk checkout and keeps only changes that lower idle memory per service, toward 100 services on a 16 GB machine. Use when asked to run autoresearch on the Docker layers or to optimise the golden/runtime layers experimentally. To only measure a stack, use flisk-benchmark."
+}

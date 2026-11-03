@@ -1,0 +1,36 @@
+{
+  "name": "platform-encryption-configure",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/platform-encryption-configure/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "platform-encryption-configure",
+  "downloaded_at": "2026-11-03T07:14:26.427423Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-encryption-configure/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-encryption-configure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure Salesforce Shield Platform Encryption \u2014 generate deployable encryption settings and encrypted-field metadata, and answer key-model and lifecycle questions. TRIGGER when: user wants to turn on deterministic encryption, encrypt a field, set up Cache-Only Keys, External Key Management, or replay detection, or mentions Shield Platform Encryption, encryption at rest, deterministic vs probabilistic encryption, encryptionScheme, PlatformEncryptionSettings, EncryptionKeySettings, BYOK, BYOKMS, tenant secrets, key rotation, or .settings-meta.xml / .field-meta.xml for encryption \u2014 even when they don't say 'Shield'. SKIP when: user needs a generic custom field with no encryption (use platform-custom-field-generate), needs the raw Metadata API type reference (use platform-metadata-api-context-get), or asks about Classic Encryption (encrypted text fields), which is a different feature. Use this skill for any Platform Encryption configuration, field-encryption, or key-model question."
+}

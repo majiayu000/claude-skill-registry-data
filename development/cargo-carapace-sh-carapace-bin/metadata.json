@@ -1,0 +1,39 @@
+{
+  "name": "cargo",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/cargo/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "cargo-carapace-sh-carapace-bin",
+  "downloaded_at": "2026-11-03T06:20:03.336140Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/cargo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/cargo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with the cargo CLI \u2014 Rust's package manager. Covers the manifest format (Cargo.toml), dependencies, features, workspaces, build profiles, build scripts, configuration (.cargo/config.toml), registries and publishing, environment variables, the lockfile and cache, and the command reference. Triggers on: \"cargo\", \"cargo build\", \"cargo check\", \"cargo test\", \"cargo run\", \"cargo add\", \"cargo update\", \"cargo publish\", \"cargo new\", \"cargo init\", \"cargo install\", \"cargo doc\", \"cargo bench\", \"cargo tree\", \"cargo metadata\", \"Cargo.toml\", \"Cargo.lock\", \"crate\", \"workspace\", \"feature\", \"profile\", \"build script\", \"build.rs\", \"registry\", \"crates.io\", \"CARGO_HOME\", \"rustc\", \"rustdoc\", \"rust-version\", \"edition\"."
+}

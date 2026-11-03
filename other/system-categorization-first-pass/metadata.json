@@ -1,0 +1,38 @@
+{
+  "name": "system-categorization-first-pass",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/system-categorization-first-pass/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "system-categorization-first-pass",
+  "downloaded_at": "2026-11-03T06:08:25.986852Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/system-categorization-first-pass/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/system-categorization-first-pass/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a system enters the Risk Management Framework, or its categorization is\nmissing, inherited from another system or out of date, and someone asks \"categorize the\nsystem\", \"what is our impact level\", \"is this system moderate or high\", \"draft the security\ncategorization\", \"list our information types\", \"define the authorization boundary\" or \"the\ncategorization was never approved\". Drafts the system description and boundary, the information\ntypes with provisional confidentiality, integrity and availability impact levels and the reason\nfor each, the high-water mark, and the decisions the system owner and the authorizing official\nstill have to make, for a named official to approve."
+}

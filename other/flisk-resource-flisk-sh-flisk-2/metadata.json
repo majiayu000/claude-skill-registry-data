@@ -1,0 +1,37 @@
+{
+  "name": "flisk-resource",
+  "repo": "flisk-sh/flisk",
+  "path": "cli/templates/agent-skills/flisk-resource/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "flisk-resource-flisk-sh-flisk-2",
+  "downloaded_at": "2026-11-03T07:13:04.705748Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/cli/templates/agent-skills/flisk-resource/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/cli/templates/agent-skills/flisk-resource/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add one service to an existing Flisk project with `flisk resource <name> --type frontend|backend|worker|agent|mcp --stack <stack>`, or wrap an existing Dockerfile or image with `--type bring-your-own`. Use when the user asks to add a service, website, agent, MCP tools server, worker or backend. For a whole new app from a plain request, use flisk-build; to start it, use flisk-up."
+}

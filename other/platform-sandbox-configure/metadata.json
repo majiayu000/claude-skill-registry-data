@@ -1,0 +1,37 @@
+{
+  "name": "platform-sandbox-configure",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/platform-sandbox-configure/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "platform-sandbox-configure",
+  "downloaded_at": "2026-11-03T07:14:20.669552Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-sandbox-configure/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-sandbox-configure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "MUST USE this skill for ANY sandbox request \u2014 including simply getting a sandbox's details, status, license type, or pending-activation state by name or ID. TRIGGER when the user: types \"sandbox -help\"/\"sandbox help\"; mentions a sandbox ID (07E prefix); asks to list or show sandboxes; asks for the details, status, license type, or config of a sandbox by name or ID; activates or discards a completed refresh; deletes a sandbox; verifies activation or deletion; creates or refreshes a sandbox. DO NOT TRIGGER when: the user wants to clone a sandbox."
+}

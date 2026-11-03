@@ -1,0 +1,38 @@
+{
+  "name": "pandoc",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/pandoc/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "pandoc-carapace-sh-carapace-bin",
+  "downloaded_at": "2026-11-03T06:20:04.941123Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, markdown",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/pandoc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/pandoc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with pandoc \u2014 the universal document converter. Covers CLI options, input/output formats, extensions, defaults files, templates, filters (JSON, Lua, citeproc), citations/CSL, PDF generation, slide shows, EPUBs, chunked HTML, Jupyter notebooks, pandoc Markdown syntax, and the Haskell AST/reader-writer architecture. Triggers on: \"pandoc\", \"pandoc Markdown\", \"pandoc template\", \"pandoc filter\", \"pandoc lua filter\", \"pandoc defaults\", \"pandoc citeproc\", \"pandoc PDF\", \"pandoc epub\", \"pandoc slide\", \"pandoc AST\", \"PandocMonad\", \"pandoc-types\", \"Text.Pandoc\", \"--from\", \"--to\", \"--standalone\", \"--citeproc\", \"--lua-filter\", \"--defaults\", \"--template\", \"--pdf-engine\"."
+}

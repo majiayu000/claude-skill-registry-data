@@ -1,0 +1,38 @@
+{
+  "name": "batch-file-ops",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/utilities/batch-file-ops/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "batch-file-ops",
+  "downloaded_at": "2026-11-03T07:01:12.743697Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/utilities/batch-file-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/utilities/batch-file-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Batch-Dateioperationen (L\u00f6schen, Verschieben, Kopieren, Auflisten) mit Glob-Mustern. CLI-Werkzeug f\u00fcr effiziente Dateisystem-Operationen. Ohne Abh\u00e4ngigkeiten."
+}

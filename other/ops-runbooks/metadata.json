@@ -1,0 +1,37 @@
+{
+  "name": "ops-runbooks",
+  "repo": "bromso/singularskills",
+  "path": "skills/ops-runbooks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ops-runbooks",
+  "downloaded_at": "2026-11-03T06:14:44.096505Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ops-runbooks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ops-runbooks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write runbooks for a service \u2014 one per paging alert plus the common incident types \u2014 each a checklist of is-this-real checks, mitigations as commands with expected output, impact and rollback, and when to escalate, with every step that changes production marked. Use when the people on call need steps they can follow at 3am. Not for a security incident playbook; see /security-incident-response."
+}

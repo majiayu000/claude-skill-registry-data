@@ -1,0 +1,39 @@
+{
+  "name": "tailwind",
+  "repo": "gaia-harness/gaia",
+  "path": "apps/web/.claude/skills/tailwind/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "tailwind-gaia-harness-gaia",
+  "downloaded_at": "2026-11-03T07:19:09.170581Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: ui, css, component, tailwind",
+    "score": 4,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "css",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/tailwind/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/tailwind/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Applies GAIA's patterns and conventions for all Tailwind styling. Use this skill whenever writing Tailwind class names, combining classes with `cn`, writing conditional classes, or building component variants. Also trigger when the user asks about custom values, defining @theme tokens or CSS variables, naming color/spacing tokens, rem vs px, responsive breakpoints, or avoiding template literal class strings."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "workflow-new-repository",
+  "repo": "bitwise-media-group/skills",
+  "path": "plugins/workflow/skills/workflow-new-repository/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/bitwise-media-group/skills",
+  "dir_name": "workflow-new-repository",
+  "downloaded_at": "2026-11-03T06:10:28.708965Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitwise-media-group",
+  "source_url": "https://github.com/bitwise-media-group/skills/blob/main/plugins/workflow/skills/workflow-new-repository/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitwise-media-group/skills/blob/main/plugins/workflow/skills/workflow-new-repository/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bootstrap a new bitwise-media-group repository for a given archetype (go, node, python, swift, terraform, or common-only Markdown/YAML) \u2014 git init on main, baseline files (README, MIT LICENSE, AGENTS.md with a CLAUDE.md symlink, .gitignore, release-please config), the shared mise toolchain submodule, the language scaffold, and the SHA-pinned reusable GitHub workflow callers \u2014 then verify the lint gate and hand off the commit and the GitHub-side setup. Asks for the archetype when the request does not name one. Use when creating, starting, bootstrapping, initialising, or scaffolding a new repository, repo, or project for the org, or setting up a fresh repo with the standard toolchain, CI, release, and merge automation. Not for adding the toolchain or workflows to an existing repo (the workflow-toolchain and actions-reusable-workflows skills), scaffolding a module or package inside an existing repo, or creating the GitHub remote without a local scaffold."
+}

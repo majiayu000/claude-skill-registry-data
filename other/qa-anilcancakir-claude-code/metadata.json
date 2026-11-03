@@ -1,0 +1,37 @@
+{
+  "name": "qa",
+  "repo": "anilcancakir/claude-code",
+  "path": "opencode/ac/skills/qa/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/anilcancakir/claude-code",
+  "dir_name": "qa-anilcancakir-claude-code",
+  "downloaded_at": "2026-11-03T05:50:18.776309Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anilcancakir",
+  "source_url": "https://github.com/anilcancakir/claude-code/blob/main/opencode/ac/skills/qa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anilcancakir/claude-code/blob/main/opencode/ac/skills/qa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Test recent work the way a QA engineer would: derive cases from the requirement and the diff, run them against the live app, fix critical and high findings, retest once. Use when the user asks for QA, a test pass or a browser walk-through, or the execute skill reaches Phase 3e; never start it unasked."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "domain-research-analysis",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-prompts/skills/domain-research-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "domain-research-analysis",
+  "downloaded_at": "2026-11-03T06:53:45.284932Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/domain-research-analysis/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/domain-research-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Specialized research and analysis prompt methodology for Claude. Provides 11 tested approaches (3 identity, 4 reasoning, 4 output) for data analysis, policy research, systematic evidence review, investigative research, and research-specific deliverables. Use when building prompts for quantitative data interpretation, evidence-based policy recommendations, literature reviews, causal analysis, hypothesis-driven investigation, or briefing documents. Trigger on: \"prompt for data analysis,\" \"research prompt,\" \"policy brief prompt,\" \"literature review prompt,\" \"prompt for investigating,\" \"systematic review prompt,\" \"build a prompt for evidence synthesis,\" \"causal analysis prompt,\" \"briefing document prompt.\" Also use when user describes a research or analytical task and needs a structured Claude prompt for it. Do NOT use for evaluating existing prompts (use prompt-validation if available) or auditing Claude Projects (use project-audit if available)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "opendesigner-illustrate",
+  "repo": "ckryptickunal/OpenDesigner",
+  "path": ".agents/skills/opendesigner-illustrate/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/ckryptickunal/OpenDesigner",
+  "dir_name": "opendesigner-illustrate",
+  "downloaded_at": "2026-11-03T06:27:30.695993Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css, component",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ckryptickunal",
+  "source_url": "https://github.com/ckryptickunal/OpenDesigner/blob/main/.agents/skills/opendesigner-illustrate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ckryptickunal/OpenDesigner/blob/main/.agents/skills/opendesigner-illustrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds open-licence SVG illustrations for empty states, onboarding, errors or heroes, ranks them for fit, recolors them to the design tokens with light, dark and themed variants, and wires them in."
+}

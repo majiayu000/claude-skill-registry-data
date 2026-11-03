@@ -1,0 +1,37 @@
+{
+  "name": "product-srs",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/cto/.claude/skills/product-srs/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "product-srs",
+  "downloaded_at": "2026-11-03T07:06:54.744830Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "prd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/cto/.claude/skills/product-srs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/cto/.claude/skills/product-srs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "CTO-posture skill that authors a project's SRS \u2014 the technical source of truth, written off the settled PRD alongside the CDO's UXD. Requires CTO posture (halts if invoked outside a cto session or the cto subagent). Non-interactive by design \u2014 it derives the whole SRS best-effort from the CPO's PRD, and instead of interviewing live it surfaces everything it can't settle into a companion open-issues file (open issues, choices to confirm) for the owner to answer async. On re-run it consumes both files, retires the owner's answered companion whole to a permanent trail, folds their answers into the SRS, and when nothing is left unresolved it clears the companion \u2014 its absence means the SRS is done. The skill resolves where the files land from the project's Product path. Use when authoring, continuing, or revising a product's SRS. Do not use for per-change specs (development-specs), the PRD (product-prd), the project's Agari (project-agari), or downstream documents (SDD / Delivery Plan / FDR / ADR / NFDR)."
+}

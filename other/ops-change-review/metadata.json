@@ -1,0 +1,37 @@
+{
+  "name": "ops-change-review",
+  "repo": "bromso/singularskills",
+  "path": "skills/ops-change-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ops-change-review",
+  "downloaded_at": "2026-11-03T06:14:57.461524Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ops-change-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ops-change-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assess the deploy risk of one production change \u2014 what it touches and its blast radius, the error budget status of the affected SLOs, the rollback and how long it takes, whether a flag or staged rollout is possible, and what to watch, ending in go, go with conditions or wait. Use when a team is about to ship a risky change to production. Not for reviewing the code itself; see /development-review."
+}

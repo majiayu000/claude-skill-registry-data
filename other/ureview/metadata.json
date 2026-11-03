@@ -1,0 +1,37 @@
+{
+  "name": "ureview",
+  "repo": "btseytlin/ultrapack",
+  "path": "skills/ureview/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/btseytlin/ultrapack",
+  "dir_name": "ureview",
+  "downloaded_at": "2026-11-03T06:16:38.372005Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "btseytlin",
+  "source_url": "https://github.com/btseytlin/ultrapack/blob/main/skills/ureview/SKILL.md",
+  "license": "WTFPL",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/btseytlin/ultrapack/blob/main/skills/ureview/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use after verify passes for the future maintainer's audit \u2014 sit in the chair of the person who'll touch this code in 3-6 months and ask \"what will bite us later?\" at the decision level. Surfaces wrong abstractions, load-bearing-but-unobvious shapes, next-change traps, drift from surrounding code. Raises a Scope flag if the whole change looks like the wrong call. Delegates an independent, critical review and fills the task file's `## Conclusion`."
+}

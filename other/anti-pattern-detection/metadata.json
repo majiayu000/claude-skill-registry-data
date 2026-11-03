@@ -1,0 +1,37 @@
+{
+  "name": "anti-pattern-detection",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-projects/skills/anti-pattern-detection/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "anti-pattern-detection",
+  "downloaded_at": "2026-11-03T06:53:45.095669Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-projects/skills/anti-pattern-detection/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-projects/skills/anti-pattern-detection/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects seven structural anti-patterns in Claude Projects that cause unpredictable output, ignored instructions, and degraded quality. Diagnoses Monolith, Orphan File, Echo Chamber, Phantom Conversation, Kitchen Sink, Misaligned Hierarchy, and Blurred Layers. Use when user says \"what's wrong with my project,\" \"Claude ignores my instructions,\" \"diagnose my project,\" \"why is output inconsistent,\" \"review my project setup.\" Also trigger on symptom-phrased: \"Claude doesn't follow my rules,\" \"my instructions keep getting overridden,\" \"my Project isn't behaving as designed.\" Use alongside project-audit if available for deeper structural analysis. Activate whenever the user describes symptoms of unreliable, inconsistent, or degraded Claude Project output, even if they do not name a specific pattern. Do NOT use when the user's primary request is Memory-layer rebalancing (use memory-optimization if available) or scoring a single prompt (use prompt-validation if available)."
+}

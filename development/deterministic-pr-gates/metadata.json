@@ -1,0 +1,38 @@
+{
+  "name": "deterministic-pr-gates",
+  "repo": "akshaypimprikar/pragma",
+  "path": ".claude/skills/deterministic-pr-gates/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/akshaypimprikar/pragma",
+  "dir_name": "deterministic-pr-gates",
+  "downloaded_at": "2026-11-03T05:40:09.426740Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akshaypimprikar",
+  "source_url": "https://github.com/akshaypimprikar/pragma/blob/main/.claude/skills/deterministic-pr-gates/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akshaypimprikar/pragma/blob/main/.claude/skills/deterministic-pr-gates/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run deterministic, scriptable pre-PR verification gates (build, full test suite, coverage threshold, branch naming, changelog presence, force-unwrap/duplication heuristics, and project-specific architecture/layer rules via grep) before a PR is opened or before a human reviewer looks at the diff. Use when a user asks whether a branch is ready for PR, wants a pre-PR checklist automated, wants CI-equivalent checks run locally and fast, or wants pre-merge verification that doesn't depend on an LLM's subjective judgment of code quality. Works standalone in any project \u2014 no other skill or pipeline required."
+}

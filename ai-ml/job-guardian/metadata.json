@@ -1,0 +1,37 @@
+{
+  "name": "job-guardian",
+  "repo": "btseytlin/ultrapack",
+  "path": "skills/job-guardian/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/btseytlin/ultrapack",
+  "dir_name": "job-guardian",
+  "downloaded_at": "2026-11-03T06:16:40.249170Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ml, training",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "ml",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "btseytlin",
+  "source_url": "https://github.com/btseytlin/ultrapack/blob/main/skills/job-guardian/SKILL.md",
+  "license": "WTFPL",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/btseytlin/ultrapack/blob/main/skills/job-guardian/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user explicitly asks to launch and supervise a job. Require an authorized launch, monitoring, recovery, and teardown contract. Detect failures without inventing permission to restart or spend money."
+}

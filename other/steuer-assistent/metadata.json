@@ -1,0 +1,38 @@
+{
+  "name": "steuer-assistent",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/utilities/steuer-assistent/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "steuer-assistent",
+  "downloaded_at": "2026-11-03T07:01:17.213148Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/utilities/steuer-assistent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/utilities/steuer-assistent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Points to the standalone module steuer-assistent: a local, offline-first receipt worksheet for German employee income-related expenses (Werbungskosten) -- record, sum to the cent, private ZIP export. Use this skill when Werbungskosten receipts should be prepared in a structured way -- with a clear boundary: not tax advice, no deductibility check, no creation or submission of a tax return (that happens via ELSTER or approved software)."
+}

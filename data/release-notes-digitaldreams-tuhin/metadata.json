@@ -1,0 +1,37 @@
+{
+  "name": "release-notes",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/release-notes/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "release-notes-digitaldreams-tuhin",
+  "downloaded_at": "2026-11-03T06:49:25.759842Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/release-notes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/release-notes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or update developer-facing release notes for the current application. Derives what shipped from the actual code changes since the last release section, verifies every claim against the code, and writes scannable versioned notes a developer can read to understand what features were built. Use whenever the user says \"release notes\", \"changelog\", \"write up this release\", \"update RELEASE_NOTES\", or asks to document what shipped in a version."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "sec-supplychain",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/dev/sec-supplychain/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "sec-supplychain",
+  "downloaded_at": "2026-11-03T07:01:07.495289Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-supplychain/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-supplychain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pr\u00fcft fremde Skills, Plugins, MCP-Server und Hooks VOR der Installation nach dem Muster Staging-then-promote: in einen Staging-Ordner holen, dort vollst\u00e4ndig lesen und mit einem Musterscanner vorsortieren, erst nach eigenem Urteil und ausdr\u00fccklicher Nutzerfreigabe installieren - ein Agent installiert nie selbst. Ausl\u00f6ser: 'Skill/Plugin/MCP von GitHub installieren', 'ist dieses Plugin sicher', 'fremden Hook pr\u00fcfen', 'npm-Paket f\u00fcr den Agenten'. Nicht f\u00fcr eigene Repos (sec-scan) und nicht f\u00fcr Abh\u00e4ngigkeiten/CVEs des eigenen Stacks (security-tech-stack-check)."
+}

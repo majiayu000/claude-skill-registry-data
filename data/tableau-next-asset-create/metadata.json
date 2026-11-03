@@ -1,0 +1,40 @@
+{
+  "name": "tableau-next-asset-create",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/tableau-next-asset-create/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "tableau-next-asset-create",
+  "downloaded_at": "2026-11-03T07:14:18.527719Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database, visualization",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/tableau-next-asset-create/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/tableau-next-asset-create/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build and edit Tableau Next semantic models (SDMs), vizzes, and dashboards via MCP. TRIGGER when: building a semantic model or dashboard from CSV/Excel files; ingesting a flat file/database into DLO/DMO; profiling a dataset (grain, measures, dimensions; large/wide files via `infer_object_schema`); adding a dimension, measure, AI-ready metric, join, or logical view; running a semantic query, interpreting a breakdown, analyzing account/customer engagement, or pulling counts/totals from existing Tableau Next data (even unnamed/read-only); creating/editing a viz (filter, forecast, sort, shelf, mark encoding, reference line), widget, or dashboard layout. Also: Data Cloud SQL transforms; show a dashboard; share/revoke access; reuse prod or promote Personal Org assets; provision users/licenses; data alerts ('alert me when'); list/classify verified questions or score agent SQL. DO NOT TRIGGER for: rewriting prose descriptions, layout-only dashboard review, debugging MCP, or writing app code."
+}

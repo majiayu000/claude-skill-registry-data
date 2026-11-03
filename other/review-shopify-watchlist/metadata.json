@@ -1,0 +1,36 @@
+{
+  "name": "review-shopify-watchlist",
+  "repo": "applora/agent-skills",
+  "path": "skills/review-shopify-watchlist/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/applora/agent-skills",
+  "dir_name": "review-shopify-watchlist",
+  "downloaded_at": "2026-11-03T05:54:39.602627Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "applora",
+  "source_url": "https://github.com/applora/agent-skills/blob/main/skills/review-shopify-watchlist/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/applora/agent-skills/blob/main/skills/review-shopify-watchlist/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review the authenticated user\u2019s saved Shopify apps, markets, keywords or developers and compare selected earlier findings with fresh evidence. Use for portfolio check-ins, competitor follow-ups and watchlist summaries; does not schedule automatic monitoring."
+}

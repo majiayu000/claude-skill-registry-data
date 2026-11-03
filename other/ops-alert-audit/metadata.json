@@ -1,0 +1,37 @@
+{
+  "name": "ops-alert-audit",
+  "repo": "bromso/singularskills",
+  "path": "skills/ops-alert-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ops-alert-audit",
+  "downloaded_at": "2026-11-03T06:14:48.515423Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ops-alert-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ops-alert-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit a service's alerts from an export \u2014 firings and actionable ratio per alert over the period, computed \u2014 and decide for each whether to keep, tune, demote to a ticket or delete, flagging pages with no runbook and pages per shift over the target. Use when on-call is noisy and the team wants fewer, better alerts. Not for designing alerting from scratch; see /ops-alerting."
+}

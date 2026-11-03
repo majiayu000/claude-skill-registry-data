@@ -1,0 +1,39 @@
+{
+  "name": "mcp-search",
+  "repo": "elastic/docs-builder",
+  "path": ".claude/skills/mcp-search/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/elastic/docs-builder",
+  "dir_name": "mcp-search",
+  "downloaded_at": "2026-11-03T06:59:56.405667Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elastic",
+  "source_url": "https://github.com/elastic/docs-builder/blob/main/.claude/skills/mcp-search/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elastic/docs-builder/blob/main/.claude/skills/mcp-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search, analyze, and author Elastic documentation using the remote MCP server. Use this when the user asks about Elastic product documentation, features, or APIs; wants to find, read, or verify existing docs pages; is writing or editing documentation; mentions cross-links between repos; asks about documentation structure, coherence, or consistency; wants to generate templates following Elastic content type guidelines; or references elastic.co/docs URLs or Elastic product names."
+}

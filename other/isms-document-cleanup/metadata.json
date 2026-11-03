@@ -1,0 +1,38 @@
+{
+  "name": "isms-document-cleanup",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/isms-document-cleanup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "isms-document-cleanup",
+  "downloaded_at": "2026-11-03T06:08:25.562164Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/isms-document-cleanup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/isms-document-cleanup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when an ISMS document (policy, procedure, statement of applicability or register)\nreads badly and someone asks \"clean up this policy\", \"make this readable for the auditor\",\n\"this reads like AI wrote it\", \"deslop this document\", \"too much technical detail in the policy\",\n\"the revision history is a mess\" or \"tidy our ISMS documents before the audit\". Rewrites the\ndocument so it reads like a competent person wrote it for an auditor, keeps every fact and\nobligation, proposes where lower-level detail should live, and lists every change for approval."
+}

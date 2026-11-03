@@ -1,0 +1,37 @@
+{
+  "name": "local-place-search",
+  "repo": "brave/brave-search-skills",
+  "path": "skills/local-place-search/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/brave/brave-search-skills",
+  "dir_name": "local-place-search",
+  "downloaded_at": "2026-11-03T06:14:06.594136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brave",
+  "source_url": "https://github.com/brave/brave-search-skills/blob/main/skills/local-place-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brave/brave-search-skills/blob/main/skills/local-place-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "USE FOR finding places in the physical world - businesses, POIs, street addresses, cities and streets. Results carry address, coordinates, rating, opening hours and phone, so basic details need no follow-up call. Standalone - no POI IDs or prior web search required; the IDs it returns work with local-pois and local-descriptions. Locate by coordinates or a location string, or omit both to search globally. Omit the query to browse an area. Max 100 results."
+}

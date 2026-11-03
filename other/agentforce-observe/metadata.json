@@ -1,0 +1,37 @@
+{
+  "name": "agentforce-observe",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/agentforce-observe/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "agentforce-observe",
+  "downloaded_at": "2026-11-03T07:14:11.982801Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-observe/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-observe/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze production Agentforce agent behavior using session traces and Data Cloud, and manage Agent Health Monitoring (AHM) alerts. TRIGGER when: user queries STDM session data or Data Cloud trace records; investigates production agent failures, regressions, or performance issues; asks about session traces, conversation logs, or agent metrics; wants to reproduce a reported production issue in preview; runs findSessions or trace analysis queries; creates, lists, updates, or deletes an AHM data alert on an agent metric (escalation rate, deflection, etc.); asks why an alert is not firing or wants to check whether alerts have fired (notification counts, or the per-alert Incidents view). DO NOT TRIGGER when: user creates, modifies, or debugs .agent files during development (use agentforce-generate); writes or runs test specs (use agentforce-test); uses sf agent preview for local development iteration; deploys or publishes agents."
+}

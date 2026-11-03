@@ -1,0 +1,39 @@
+{
+  "name": "cobra",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/cobra/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "cobra",
+  "downloaded_at": "2026-11-03T06:20:03.968774Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/cobra/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/cobra/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building CLI applications with spf13/cobra \u2014 creating commands, defining flags, argument validation, lifecycle hooks, help/usage customization, shell completions, or Viper integration. Triggers on: \"cobra\", \"cobra command\", \"cobra flag\", \"cobra subcommand\", \"cobra completion\", \"cobra help\", \"cobra usage\", \"cobra hook\", \"cobra viper\", \"AddCommand\", \"PersistentFlags\", \"LocalFlags\", \"MarkFlagRequired\", \"RunE\", \"PreRun\", \"PostRun\", \"PersistentPreRun\", \"ValidArgs\", \"ValidArgsFunction\", \"RegisterFlagCompletionFunc\", \"ShellCompDirective\", \"ExactArgs\", \"NoArgs\", \"MinimumNArgs\", \"MatchAll\", \"MarkFlagsRequiredTogether\", \"MarkFlagsMutuallyExclusive\", \"cobra-cli\", \"cobra completion\", \"cobra active help\", \"cobra plugin\"."
+}

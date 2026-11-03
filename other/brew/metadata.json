@@ -1,0 +1,37 @@
+{
+  "name": "brew",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/brew/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "brew",
+  "downloaded_at": "2026-11-03T06:20:01.434819Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/brew/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/brew/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with Homebrew (`brew`) \u2014 the package manager for macOS and Linux. Covers the command structure, formula and cask DSLs, taps, bottles, the Cellar, services, bundle/Brewfile, environment variables, installation internals, and developer commands. Triggers on: \"brew\", \"homebrew\", \"brew install\", \"brew uninstall\", \"brew update\", \"brew upgrade\", \"brew search\", \"brew tap\", \"brew cask\", \"brew bottle\", \"brew services\", \"brew bundle\", \"brew cleanup\", \"brew doctor\", \"brew audit\", \"brew livecheck\", \"brew test-bot\", \"brew bump-formula-pr\", \"Brewfile\", \"HOMEBREW_PREFIX\", \"HOMEBREW_CELLAR\", \"HOMEBREW_NO_INSTALL_FROM_API\", \"HOMEBREW_CASK_OPTS\", \"HOMEBREW_BOTTLE_DOMAIN\", \"Formula\", \"Cask\", \"Cellar\", \"Caskroom\", \"keg\", \"rack\", \"tap\", \"bottle\", \"superenv\", \"Formulary\", \"FormulaInstaller\", \"shellenv\", \"restart_service\", \"keg-only\", \"brew deps\", \"brew uses\", \"brew leaves\", \"brew outdated\", \"brew pin\", \"brew fetch\", \"brew create\", \"brew edit\", \"livecheck\", \"auto_updates\", \"depends_on\"."
+}

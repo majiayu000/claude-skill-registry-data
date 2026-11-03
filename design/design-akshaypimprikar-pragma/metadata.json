@@ -1,0 +1,38 @@
+{
+  "name": "design",
+  "repo": "akshaypimprikar/pragma",
+  "path": ".claude/skills/design/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/akshaypimprikar/pragma",
+  "dir_name": "design-akshaypimprikar-pragma",
+  "downloaded_at": "2026-11-03T05:40:08.233748Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akshaypimprikar",
+  "source_url": "https://github.com/akshaypimprikar/pragma/blob/main/.claude/skills/design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akshaypimprikar/pragma/blob/main/.claude/skills/design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Establish and maintain the visual design language as enforceable Swift tokens. Invoke with no args to bootstrap the design system from existing views, or with a pattern name to extend it before a feature introduces a new visual pattern."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "style-review",
+  "repo": "elastic/docs-builder",
+  "path": ".claude/skills/style-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/elastic/docs-builder",
+  "dir_name": "style-review-elastic-docs-builder",
+  "downloaded_at": "2026-11-03T06:59:56.966369Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elastic",
+  "source_url": "https://github.com/elastic/docs-builder/blob/main/.claude/skills/style-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elastic/docs-builder/blob/main/.claude/skills/style-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review changed or staged C# code against the docs-builder coding standards and flag violations. Use when the user asks to review code style, check for standards violations, or audit a diff before committing."
+}

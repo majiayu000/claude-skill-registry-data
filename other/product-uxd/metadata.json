@@ -1,0 +1,37 @@
+{
+  "name": "product-uxd",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/cdo/.claude/skills/product-uxd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "product-uxd",
+  "downloaded_at": "2026-11-03T07:06:55.002400Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/cdo/.claude/skills/product-uxd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/cdo/.claude/skills/product-uxd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "CDO-posture skill that authors a project's UXD \u2014 the experience source of truth, written off the settled PRD alongside the CTO's SRS and read by the SDD. Requires CDO posture (halts if invoked outside a cdo session or the cdo subagent). Non-interactive by design \u2014 it derives the whole UXD best-effort from the CPO's PRD, and instead of interviewing live it surfaces everything it can't settle into a companion open-issues file (open issues, choices to confirm) for the owner to answer async. On re-run it consumes both files, retires the owner's answered companion whole to a permanent trail, folds their answers into the UXD, and when nothing is left unresolved it clears the companion \u2014 its absence means the UXD is done. The skill resolves where the files land from the project's Product path. Use when authoring, continuing, or revising a product's UXD. Do not use for per-change specs (development-specs), the PRD (product-prd), the SRS (product-srs), the design language (product-design), the project's Agari (project-agari), or downstream documents (SDD / Delivery Plan / FDR / ADR / NFDR)."
+}

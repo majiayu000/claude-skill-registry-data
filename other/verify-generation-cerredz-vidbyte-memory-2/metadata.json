@@ -1,0 +1,37 @@
+{
+  "name": "verify-generation",
+  "repo": "cerredz/vidbyte-memory",
+  "path": "skills/verify-generation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cerredz/vidbyte-memory",
+  "dir_name": "verify-generation-cerredz-vidbyte-memory-2",
+  "downloaded_at": "2026-11-03T06:22:03.712418Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cerredz",
+  "source_url": "https://github.com/cerredz/vidbyte-memory/blob/main/skills/verify-generation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cerredz/vidbyte-memory/blob/main/skills/verify-generation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use on every generative step. Runs 3 to 5 verification rounds with the full suite (tests plus the matching verifier agents), fixes every finding between rounds, records the rounds in progress, stops on a passing round, and refuses to call a step done while findings remain."
+}

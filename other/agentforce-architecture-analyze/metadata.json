@@ -1,0 +1,37 @@
+{
+  "name": "agentforce-architecture-analyze",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/agentforce-architecture-analyze/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "agentforce-architecture-analyze",
+  "downloaded_at": "2026-11-03T07:14:29.717825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-architecture-analyze/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-architecture-analyze/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Declared architecture snapshot for one Agentforce agent: planner, topics, actions, flows, Apex, prompt templates, and NGA plugins. Renders a human-readable architecture document and Mermaid invocation graph from design-time metadata (not runtime audit rows). TRIGGER when user asks to describe, diagram, inventory, audit, document, or diff (e.g. v3 vs v5) the architecture / action tree / topic structure / tool inventory of a specific agent by agent API name in a specific org. DO NOT TRIGGER for runtime session traces, conversation transcripts, generation timings, or gateway audit chains \u2014 this skill reads design-time metadata only (use agentforce-d360-analyze for session traces)."
+}

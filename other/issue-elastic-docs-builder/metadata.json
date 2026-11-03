@@ -1,0 +1,36 @@
+{
+  "name": "issue",
+  "repo": "elastic/docs-builder",
+  "path": ".claude/skills/issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/elastic/docs-builder",
+  "dir_name": "issue-elastic-docs-builder",
+  "downloaded_at": "2026-11-03T06:59:56.006268Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elastic",
+  "source_url": "https://github.com/elastic/docs-builder/blob/main/.claude/skills/issue/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elastic/docs-builder/blob/main/.claude/skills/issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "File a well-formed bug report or feature request. Use when the user asks to open an issue, report a bug, or request a feature in the docs-builder repo."
+}

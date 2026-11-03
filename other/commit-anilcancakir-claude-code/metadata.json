@@ -1,0 +1,38 @@
+{
+  "name": "commit",
+  "repo": "anilcancakir/claude-code",
+  "path": "plugins/ac/skills/commit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/anilcancakir/claude-code",
+  "dir_name": "commit-anilcancakir-claude-code",
+  "downloaded_at": "2026-11-03T05:50:19.818968Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anilcancakir",
+  "source_url": "https://github.com/anilcancakir/claude-code/blob/main/plugins/ac/skills/commit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anilcancakir/claude-code/blob/main/plugins/ac/skills/commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Split the changes into atomic commits, preflight and push them; also rebase, squash and trace history. Pass --no-push when the user only asked to commit."
+}

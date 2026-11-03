@@ -1,0 +1,37 @@
+{
+  "name": "teaser-video",
+  "repo": "every-app/video-skills",
+  "path": "skills/teaser-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/every-app/video-skills",
+  "dir_name": "teaser-video",
+  "downloaded_at": "2026-11-03T07:05:44.661598Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "every-app",
+  "source_url": "https://github.com/every-app/video-skills/blob/main/skills/teaser-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/every-app/video-skills/blob/main/skills/teaser-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a short product teaser with no narration (a feature announcement, a social clip, a hype video, about 10-30 s) from real screenshots of the product, as a HyperFrames composition (HTML and GSAP, rendered with npx). One slow camera move per scene, rows cut from the captures that land in place, a page tipped back in 3D, two- or three-word captions, a brand end card, and cuts on the hits of a music track. Use when someone wants a teaser, motion graphic, or launch clip without a voiceover; for a narrated demo use narrated-video instead."
+}

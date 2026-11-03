@@ -1,0 +1,37 @@
+{
+  "name": "flisk-recipe-blog",
+  "repo": "flisk-sh/flisk",
+  "path": "cli/templates/agent-skills/flisk-recipe-blog/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "flisk-recipe-blog-flisk-sh-flisk-2",
+  "downloaded_at": "2026-11-03T07:13:05.790481Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/cli/templates/agent-skills/flisk-recipe-blog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/cli/templates/agent-skills/flisk-recipe-blog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recipe for \"build me a blog with an admin API\" with Flisk - a public blog site and a posts API with a database and token-protected admin routes, in one stack started with `flisk up`. Use with the flisk-build skill when the user asks for a blog, a CMS, a news site or any site with an editor."
+}

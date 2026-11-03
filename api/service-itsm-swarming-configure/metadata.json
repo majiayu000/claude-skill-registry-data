@@ -1,0 +1,37 @@
+{
+  "name": "service-itsm-swarming-configure",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/service-itsm-swarming-configure/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "service-itsm-swarming-configure",
+  "downloaded_at": "2026-11-03T07:14:29.384742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/service-itsm-swarming-configure/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/service-itsm-swarming-configure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Enable Swarming for Employee Service (ITSM) in Salesforce \u2014 the Salesforce Go feature service-cloud-swarming that lets IT Desk agents pull in subject-matter experts to collaboratively resolve incidents in real time. Use this for: 'turn on swarming', 'enable service-cloud-swarming', 'set up swarming for IT Desk', 'set Teams as collaboration tool for swarming', 'enable collaborative incident resolution', or any request to enable/verify this Salesforce Go feature. DO NOT TRIGGER for the base Microsoft Teams ITSM integration toggle (service-itsm-teams-configure) or for configuring notification-channel preferences."
+}

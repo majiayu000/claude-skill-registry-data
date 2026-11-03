@@ -1,0 +1,38 @@
+{
+  "name": "tdd",
+  "repo": "gaia-harness/gaia",
+  "path": ".claude/skills/tdd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "tdd-gaia-harness-gaia",
+  "downloaded_at": "2026-11-03T07:19:07.606786Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/.claude/skills/tdd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/.claude/skills/tdd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs test-driven development with a red-green-refactor loop. Use when the user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development."
+}

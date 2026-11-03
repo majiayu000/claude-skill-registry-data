@@ -1,0 +1,37 @@
+{
+  "name": "ai-monitor",
+  "repo": "bromso/singularskills",
+  "path": "skills/ai-monitor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ai-monitor",
+  "downloaded_at": "2026-11-03T06:14:42.583487Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ai-monitor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ai-monitor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Monitor a live AI feature \u2014 what to log, the signals that call for a look, a monthly error analysis, a re-evaluation on every prompt or model change, and cost and latency against budget. Use when the feature is launched and the team must know when it gets worse. Not for the first evaluation before launch; see /ai-evaluate."
+}

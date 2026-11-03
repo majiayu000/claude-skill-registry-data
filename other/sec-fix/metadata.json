@@ -1,0 +1,38 @@
+{
+  "name": "sec-fix",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/dev/sec-fix/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "sec-fix",
+  "downloaded_at": "2026-11-03T07:01:03.533260Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-fix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-fix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Erzeugt NUR auf ausdr\u00fccklichen Wunsch einen minimalen Sicherheitspatch f\u00fcr einen best\u00e4tigten Fund (Status validated oder triaged) - in einer Scratch-Kopie oder einem Worktree, nie im Original, als patches/<id>.diff ohne Anwenden, Commit oder Push. Ausl\u00f6ser: 'fix diesen Fund', 'Patch f\u00fcr SEC-...', 'Sicherheitsl\u00fccke schlie\u00dfen'. Nicht f\u00fcr gew\u00f6hnliche Fehlerbehebung (daf\u00fcr bugfix-protocol), nicht zum Pr\u00fcfen eines Patches (sec-verify-fix), nicht zum Auffinden (sec-scan)."
+}

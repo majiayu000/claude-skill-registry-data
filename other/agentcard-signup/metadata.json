@@ -1,0 +1,36 @@
+{
+  "name": "agentcard-signup",
+  "repo": "devclone20/icloneos",
+  "path": "iclone/skills/agentcard-signup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/devclone20/icloneos",
+  "dir_name": "agentcard-signup",
+  "downloaded_at": "2026-11-03T06:47:09.165656Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devclone20",
+  "source_url": "https://github.com/devclone20/icloneos/blob/main/iclone/skills/agentcard-signup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devclone20/icloneos/blob/main/iclone/skills/agentcard-signup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when signing up or resuming an AgentCard account. The acp card setup order (whoami, signup, signup-poll, profile, payment method, limit), the poll schedule, the magic link from the agent inbox and the one-signup-per-state rule."
+}

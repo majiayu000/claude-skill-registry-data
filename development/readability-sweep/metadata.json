@@ -1,0 +1,38 @@
+{
+  "name": "readability-sweep",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/readability-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "readability-sweep",
+  "downloaded_at": "2026-11-03T06:49:27.472544Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/readability-sweep/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/readability-sweep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Three-pass readability cleanup of application source: remove inline comments, extract cohesive blocks into intent-named private methods, and challenge every class and method name. Use whenever the user says \"readability sweep\", \"no inline comments\", \"remove comments\", \"check naming\", \"make the code readable\", \"extract private methods\", or asks to scan the project for readability violations. Edits allowed. Scope is application source only (not tests/config) unless told otherwise. Runs lint and the full test suite after changes."
+}

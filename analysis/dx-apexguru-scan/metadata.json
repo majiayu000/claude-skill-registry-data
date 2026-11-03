@@ -1,0 +1,38 @@
+{
+  "name": "dx-apexguru-scan",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/dx-apexguru-scan/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "dx-apexguru-scan",
+  "downloaded_at": "2026-11-03T07:14:11.277022Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze, insights",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-apexguru-scan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-apexguru-scan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run an ApexGuru performance scan on a Salesforce Apex project via the ApexGuru SFAP Scan API. Zips the project's Apex (any layout), submits it, polls to completion, decodes the base64 report, and presents performance antipattern violations (SOQL in loop, DML in loop, Schema.getGlobalDescribe(), SOQL without WHERE/LIMIT, unused SOQL fields) grouped by rule with severity, file:line, and suggested fixes \u2014 clearly attributed as 'Static only' or 'Production insights'. TRIGGER when the user says 'run ApexGuru', 'ApexGuru scan', 'check Apex performance', 'find governor-limit / performance antipatterns', 'SOQL in loop', 'scan my Apex for performance', or 'ApexGuru performance insights'. DO NOT TRIGGER for general static analysis or security scans (use dx-code-analyzer-run), for fixing code without scanning, or for onboarding an org to ApexGuru."
+}

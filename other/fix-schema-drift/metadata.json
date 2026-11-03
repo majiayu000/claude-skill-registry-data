@@ -1,0 +1,37 @@
+{
+  "name": "fix-schema-drift",
+  "repo": "ayunis-core/ayunis-core",
+  "path": ".claude/skills/fix-schema-drift/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ayunis-core/ayunis-core",
+  "dir_name": "fix-schema-drift",
+  "downloaded_at": "2026-11-03T06:02:56.142075Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ayunis-core",
+  "source_url": "https://github.com/ayunis-core/ayunis-core/blob/main/.claude/skills/fix-schema-drift/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ayunis-core/ayunis-core/blob/main/.claude/skills/fix-schema-drift/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fix OpenAPI schema drift between backend and frontend. Use when CI fails with \"API Schema Drift\" or \"API client is out of date\", or after adding/changing backend controllers or DTOs."
+}

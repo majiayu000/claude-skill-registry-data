@@ -1,0 +1,37 @@
+{
+  "name": "handsoff",
+  "repo": "btseytlin/ultrapack",
+  "path": "skills/handsoff/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/btseytlin/ultrapack",
+  "dir_name": "handsoff",
+  "downloaded_at": "2026-11-03T06:16:39.429018Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "btseytlin",
+  "source_url": "https://github.com/btseytlin/ultrapack/blob/main/skills/handsoff/SKILL.md",
+  "license": "WTFPL",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/btseytlin/ultrapack/blob/main/skills/handsoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Contract for hands-off mode \u2014 the ultrapack workflow variant that minimizes user prompts after Design, takes the safest reversible path, and logs every auto-choice for one end-of-task review. Referenced by the workflow entry point and child skills (udesign, uplan, uexecute, uverify, ureview). Read when the task file's **Mode:** header is `hands-off`."
+}

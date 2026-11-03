@@ -1,0 +1,38 @@
+{
+  "name": "rails",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/rails/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "rails-carapace-sh-carapace-bin",
+  "downloaded_at": "2026-11-03T06:20:03.045543Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/rails/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/rails/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with the Rails CLI \u2014 commands, generators, database tasks, test subcommands, rake tasks, flags, and argument completion. Triggers on: \"rails\", \"Ruby on Rails\", \"bin/rails\", \"rails new\", \"rails generate\", \"rails server\", \"rails console\", \"rails dbconsole\", \"rails runner\", \"rails test\", \"rails routes\", \"rails destroy\", \"rails db\", \"rails credentials\", \"rails middleware\", \"rails notes\", \"rails dev:cache\", \"rails restart\", \"rails secret\", \"rails stats\", \"rails about\", \"rails boot\", \"rails initializers\", \"rails plugin\", \"rails tmp\", \"rails version\", \"rails devcontainer\", \"rails encrypted\", \"rails zeitwerk\", \"rails yarn\", \"rails scaffold\", \"rails model\", \"rails migration\", \"rails controller\", \"rails resource\", \"rails job\", \"rails mailer\", \"rails channel\", \"railsrc\", \".railsrc\", \"config/database.yml\"."
+}

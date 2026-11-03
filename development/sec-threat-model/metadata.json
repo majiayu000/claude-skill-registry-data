@@ -1,0 +1,40 @@
+{
+  "name": "sec-threat-model",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/dev/sec-threat-model/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "sec-threat-model",
+  "downloaded_at": "2026-11-03T07:01:07.849222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-threat-model/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-threat-model/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Erstellt oder aktualisiert das Bedrohungsmodell eines eigenen Repos (Assets, Vertrauensgrenzen, Einstiegspunkte, Datenfl\u00fcsse, Angreiferziele, priorisierte Untersuchungsfragen) als threatmodel.md aus dem echten Quelltext. Nutzen bei 'Bedrohungsmodell', 'Threat Model', 'was muss ich in diesem Repo zuerst pr\u00fcfen', 'Angriffsfl\u00e4che', vor einem Security-Scan oder wenn sich die Architektur ge\u00e4ndert hat. L\u00e4uft allein oder als Phase 1 von sec-scan; findet selbst keine Schwachstellen (daf\u00fcr sec-scan / sec-diff-scan) und pr\u00fcft keine Abh\u00e4ngigkeits-Advisories (daf\u00fcr security-tech-stack-check)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "condition",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/infrastructure/condition/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "condition",
+  "downloaded_at": "2026-11-03T07:01:13.036266Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/infrastructure/condition/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/infrastructure/condition/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Flexible Bedingungssprache f\u00fcr Ziele, Prompts und Auftr\u00e4ge. \u00dcbersetzt Bedingungen, Zeitpunkte und Reihenfolge-Abh\u00e4ngigkeiten in pr\u00fcfbare Gates, damit ein Teilschritt erst nach belegter Freigabe ausgef\u00fchrt wird. Immer verwenden bei /condition, /if, /if-only, /when, /after, /and oder /or sowie bei Formulierungen wie \"erst wenn\", \"sobald\", \"nur falls\", \"nachdem\", \"warte bis\", \"danach\" oder \"vorher nicht\". Auch verwenden, wenn mehrere Teilziele voneinander abh\u00e4ngen oder ein Goal eine sp\u00e4tere Freigabe enth\u00e4lt."
+}

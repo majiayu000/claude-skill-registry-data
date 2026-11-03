@@ -1,0 +1,37 @@
+{
+  "name": "platform-trial-org-create",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/platform-trial-org-create/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "platform-trial-org-create",
+  "downloaded_at": "2026-11-03T07:14:18.115063Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-trial-org-create/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-trial-org-create/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to create a Salesforce trial, developer, or Trialforce org against an already-authenticated host org, the same way a developer/Trialforce web signup form provisions one. INVOKE when the user asks to: create a trial org, sign up a new trial or developer org, provision a Trialforce org from a template, or check the status of a trial-org signup they started. Trigger phrases: 'create a trial org', 'sign up a trial org', 'spin up a dev org', 'Trialforce signup', 'provision trial from template', 'check my trial org signup status'. Do NOT use for scratch orgs (use dx-org-manage) or for checking trial expiration dates of existing orgs (use dx-org-trial-expiration-check)."
+}

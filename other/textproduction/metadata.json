@@ -1,0 +1,38 @@
+{
+  "name": "textproduction",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/production/textproduction/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "textproduction",
+  "downloaded_at": "2026-11-03T07:01:14.520416Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/production/textproduction/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/production/textproduction/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "KI-gestuetzte Textproduktion in drei Teilskills: Allgemeine Texte (Blogpost, Social, Newsletter, Copy, E-Mail, Bericht), narrative Storys (Skript, Kurzgeschichte, RPG, Weltenbau) und PR-Kommunikation (Pressemitteilung, Positionspapier) mit lokalem LaTeX-PDF-Compiler. Kein externer Dienst zwingend erforderlich."
+}

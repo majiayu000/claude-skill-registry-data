@@ -1,0 +1,38 @@
+{
+  "name": "answers",
+  "repo": "brave/brave-search-skills",
+  "path": "skills/answers/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/brave/brave-search-skills",
+  "dir_name": "answers-brave-brave-search-skills",
+  "downloaded_at": "2026-11-03T06:14:04.484446Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brave",
+  "source_url": "https://github.com/brave/brave-search-skills/blob/main/skills/answers/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brave/brave-search-skills/blob/main/skills/answers/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "USE FOR AI-grounded answers via OpenAI-compatible /chat/completions. Two modes: single-search (fast) or deep research (enable_research=true, thorough multi-search). Streaming/blocking. Citations."
+}

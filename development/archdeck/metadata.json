@@ -1,0 +1,38 @@
+{
+  "name": "archdeck",
+  "repo": "duthaho/skillhub",
+  "path": ".claude/skills/archdeck/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/duthaho/skillhub",
+  "dir_name": "archdeck",
+  "downloaded_at": "2026-11-03T06:56:07.295885Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, programming, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "duthaho",
+  "source_url": "https://github.com/duthaho/skillhub/blob/main/.claude/skills/archdeck/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/duthaho/skillhub/blob/main/.claude/skills/archdeck/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Animated explainer slides for programming videos \u2014 turns one technical problem (backend, database, system design, frontend, infra) into a deck of 1920\u00d71080 HTML scenes that teach the mechanism: requests travel, scans crawl, races interleave, the bottleneck lights up. Picks a story arc, drafts a storyboard with one shared fact sheet (same data, consistent numbers on every slide) for your approval, then renders standalone per-slide HTML plus one single-file deck with step-by-step reveals, speaker notes, and a clean recording mode, to out/archdeck/<slug>/. No codebase needed. Use for \"make slides explaining X for my video\", \"animated architecture slides for a tutorial\", \"turn this system design problem into a presentation\" \u2014 e.g. \"/archdeck keyset vs offset pagination\". For docs and mermaid diagrams of a real codebase use blueprint; to be taught a topic interactively use learn."
+}

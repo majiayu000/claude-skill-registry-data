@@ -1,0 +1,78 @@
+---
+name: afk-to-tickets
+description: Slice a merged spec into tracer-bullet GitHub tickets with blocking edges, unattended, each carrying the Agent Brief that makes it ready once its blockers close. Use when a spec under .ai/specs/ has merged without tickets, or when asked to break a spec or plan into issues.
+---
+
+# AFK to tickets
+
+**These instructions are already in your system prompt.** Never call the `Skill` tool for an `afk-*` skill - a repo-local skill is not in the agent's registry, so the call fails with `Unknown skill`.
+
+Adapted from mattpocock/skills `to-tickets` for unattended runs. The spec file stays the source of truth: tickets link to it and never copy it.
+
+No label marks a ticket ready (ADR 0029). Each ticket's body is its Agent Brief, and `.ai/scripts/backlog-status.mjs` treats it as ready once every issue under its `### Blocked by` is closed; the scheduled implement-ticket run takes it from there, in priority order.
+
+**Caps:** at most one spec and eight tickets per run. Never close, retitle or re-scope an existing issue.
+
+## 0. Setup
+
+Load `.ai/agentic.config.json` and `.ai/trackers/github.md`, and use their operations and label guards. Read `CONTEXT.md` and the ADRs for the area. For vocabulary, read `.ai/skills/afk-domain-modeling/SKILL.md` and `.ai/skills/afk-codebase-design/SKILL.md`.
+
+## 1. Pick the spec
+
+- When the task names a spec path or an issue, use that.
+- Otherwise, take the oldest spec directly in `.ai/specs/` (not `implemented/` or `archived/`) whose `Status` is `ready` and that has no parent issue: no issue, open or closed, whose body starts with `Spec: <spec path>` (**search-issues** with `--state all`). The Reconciler picks by exactly this rule (`node .ai/scripts/backlog-status.mjs --plan`, the `slice` action), so there is no age window: a spec that merged last month is as sliceable as one that merged today.
+- Skip a spec whose status is `draft` or `in-progress`, or that is in `implemented/` or `archived/`.
+- A spec with a `Plan` row was written from a plan stage (`afk-plan-to-spec`) and has no `Issue` yet: the parent you file here is its first. Say the stage in the parent's checklist.
+- Stop with `NO_ACTION_NEEDED` when a run, or an open PR, is already slicing it.
+- No candidate: finish with `NO_ACTION_NEEDED`.
+
+## 2. Draft the slices
+
+Read the whole spec and explore the code it touches. Then draft **tracer-bullet** tickets:
+- Each ticket is a narrow but **complete** vertical path through every layer it needs (contract, server, cockpit, tests). A ticket that touches only one layer is not a slice; merge it into the one it serves.
+- Each ticket, once done, can be demonstrated or verified on its own. That is the SLC test from `SDLC.md`: simple, and complete within its scope.
+- Each ticket fits one fresh agent context window.
+- Prefactoring ("make the change easy") comes first, as its own ticket.
+- **Wide refactors** (one mechanical change fanning out across the codebase) use expand-contract instead: an expand ticket, one migrate ticket per package blocked by the expand, and a contract ticket blocked by every migrate ticket.
+
+Give every ticket its **blocking edges**: only the tickets that genuinely gate it.
+
+**Self-check before publishing** (this replaces asking the user):
+- Could any two tickets merge without exceeding one context window?
+- Does any ticket depend on another only by habit?
+- Does every acceptance criterion trace back to the spec?
+
+Fix what fails. Settle every judgement call through `.ai/skills/afk-decide/SKILL.md`, and record each verdict as a row in a Resolved assumptions table. Never write "a human's call" into a ticket: a ticket that carries an open question cannot be groomed ready.
+
+## 3. Publish
+
+1. **create-issue** for the parent, titled `<spec title>`. Body: `Spec: <spec path>` on the first line, then a checklist of the tickets, then the Resolved assumptions table.
+2. Create the tickets in dependency order, blockers first, so every edge names a real issue number. Body:
+
+```md
+## Agent Brief
+
+**Category:** <category> · **Priority:** <label> · **Risk:** <label>
+**Parent:** #<parent>
+
+### What to build
+<the end-to-end behaviour, from the user's perspective, in CONTEXT.md terms>
+
+### Test seam
+<where the acceptance test belongs, in afk-codebase-design terms>
+
+### Acceptance criteria
+- [ ] <criterion>
+
+### Blocked by
+- #<n>   (or: None - can start immediately)
+```
+
+   No file paths or code snippets. Labels: the category, plus priority and risk inherited from the spec. A `risk-high` or `security` ticket needs no verdict here: implement-ticket gets the security and tenancy specialist's verdict before it claims one.
+3. Link each ticket as a sub-issue: `gh api repos/{owner}/{repo}/issues/<parent>/sub_issues -F sub_issue_id=<ticket node id>`. If that call fails, the checklist in the parent is enough; carry on.
+
+Every comment and issue body starts with `> *This was generated by AI from <spec path>.*`.
+
+## Done when
+
+The spec has one parent and at most eight tickets, each with an Agent Brief and explicit blocking edges. Or the run ended with `NO_ACTION_NEEDED`. Finish with `Parent: #<n>` and the list of tickets.

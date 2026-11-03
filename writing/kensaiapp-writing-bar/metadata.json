@@ -1,0 +1,37 @@
+{
+  "name": "kensaiapp-writing-bar",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/content-manager/.claude/skills/kensaiapp-writing-bar/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "kensaiapp-writing-bar",
+  "downloaded_at": "2026-11-03T07:07:08.079420Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/content-manager/.claude/skills/kensaiapp-writing-bar/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/content-manager/.claude/skills/kensaiapp-writing-bar/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Content-Manager-posture skill that authors an instance's writing bar \u2014 the bar every document kensaiapp authors in that instance is held to \u2014 and writes it to `system/doctrine/writing_bar.md`. Producing that document is the run's output; core states no bar to fall back on, so every instance holds its own. Instance-level, never per-product, and never about a product's words. Requires Content Manager posture (halts if invoked outside a `content-manager:` session or the `content-manager` subagent). Non-interactive by design \u2014 it states the bar best-effort from the instance's identity, Michi and domain doctrine and the writing craft this seat holds, and instead of interviewing live it puts whatever it could not settle, and the calls it made on its own authority, into a companion open-issues file the owner answers on their own time; a re-run folds the answer in, retires the answered companion whole to a permanent trail, and deletes the companion when nothing is left unresolved. Step 3 of instance setup, mandatory, after identity and Michi and before the experience pair; it halts where either is still a placeholder. Use when authoring or revising an instance's writing bar, at instance setup or any time after, and whenever someone asks what bar this instance's own documents are written to. Do not use for the instance's identity or Michi (`kensaiapp-michi`), the experience layer (`experience-visual`, `experience-voice`), one product's words (`product-content`), or any product document."
+}

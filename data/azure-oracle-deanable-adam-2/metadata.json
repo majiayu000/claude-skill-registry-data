@@ -1,0 +1,40 @@
+{
+  "name": "azure-oracle",
+  "repo": "deanable/adam",
+  "path": ".claude/skills/azure-oracle/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/deanable/adam",
+  "dir_name": "azure-oracle-deanable-adam-2",
+  "downloaded_at": "2026-11-03T06:44:28.899052Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database, pipeline",
+    "score": 5,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "deanable",
+  "source_url": "https://github.com/deanable/adam/blob/main/.claude/skills/azure-oracle/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/deanable/adam/blob/main/.claude/skills/azure-oracle/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Expert knowledge for Azure Oracle development including troubleshooting, security, configuration, and integrations & coding patterns. Use when configuring Oracle Database@Azure connectivity, TDE with Key Vault, VNet topology, or Exadata logs to Sentinel, and other Azure Oracle related development tasks. Not for Azure SQL Database (use azure-sql-database), Azure SQL Managed Instance (use azure-sql-managed-instance), SQL Server on Azure Virtual Machines (use azure-sql-virtual-machines), SAP HANA on Azure Large Instances (use azure-sap)."
+}

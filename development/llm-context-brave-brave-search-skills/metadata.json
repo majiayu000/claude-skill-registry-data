@@ -1,0 +1,38 @@
+{
+  "name": "llm-context",
+  "repo": "brave/brave-search-skills",
+  "path": "skills/llm-context/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/brave/brave-search-skills",
+  "dir_name": "llm-context-brave-brave-search-skills",
+  "downloaded_at": "2026-11-03T06:14:05.679014Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, programming, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brave",
+  "source_url": "https://github.com/brave/brave-search-skills/blob/main/skills/llm-context/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brave/brave-search-skills/blob/main/skills/llm-context/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "USE FOR RAG/LLM grounding. Returns pre-extracted web content (text, tables, code) optimized for LLMs. GET + POST. Adjust max_tokens/count based on complexity. Supports Goggles, local/POI. For AI answers use answers. Recommended for anyone building AI/agentic applications."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "experience-ui-bundle-localize",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-ui-bundle-localize/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-ui-bundle-localize",
+  "downloaded_at": "2026-11-03T07:14:27.716830Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-ui-bundle-localize/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-ui-bundle-localize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "MUST activate to localize / internationalize a uiBundles/*/src/ project (React or Angular): extract hardcoded user-facing strings into Custom Labels, wire a runtime i18n library over the Platform SDK backend, add labels for another language, or troubleshoot label rendering across locales. Triggers: user-facing string literals in component files, a CustomLabels.labels-meta.xml, a src/i18n/ directory or label-manifest.ts, translation call sites, or requests to 'translate / localize / internationalize / support another language.' Scope: authenticated B2E UI Bundles and B2C site bundles. Use experience-ui-bundle-site-generate instead for site language configuration or sfdc_cms__languageSettings. DO NOT TRIGGER for B2B site bundles, building app shell/UI or styling, reading/writing/refreshing records (use experience-ui-bundle-salesforce-data-access), generating a new bundle (use experience-ui-bundle-frontend-generate), deploying (use experience-ui-bundle-deploy), or authoring translations in Translation Workbench."
+}

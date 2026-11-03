@@ -1,0 +1,40 @@
+{
+  "name": "a11y-fixes",
+  "repo": "gaia-harness/gaia",
+  "path": "apps/web/.claude/skills/a11y-fixes/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "a11y-fixes-gaia-harness-gaia",
+  "downloaded_at": "2026-11-03T07:19:09.993237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, frontend, tailwind",
+    "score": 5,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "frontend",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/a11y-fixes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/a11y-fixes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resolves axe-core accessibility violations reported by a story under Vitest (addon-a11y), Playwright (.playwright/a11y.ts), or the code-audit-frontend agent's a11y bucket, with fix patterns for the common violations and a fix-then-verify loop for the rest. Trigger on any axe rule id appearing in test output."
+}

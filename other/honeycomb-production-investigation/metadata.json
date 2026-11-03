@@ -1,0 +1,37 @@
+{
+  "name": "honeycomb-production-investigation",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/honeycomb-production-investigation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "honeycomb-production-investigation",
+  "downloaded_at": "2026-11-03T06:01:57.698850Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/honeycomb-production-investigation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/honeycomb-production-investigation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load when an investigation needs Honeycomb telemetry to find a root cause: a latency spike, an error surge, a deployment regression, a failing dependency or an SLO burning budget. Gives the order of Honeycomb MCP tool calls (orient, broad query, BubbleUp, trace drill-down, verification) and how to carry each result into the next step."
+}

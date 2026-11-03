@@ -1,0 +1,37 @@
+{
+  "name": "flow",
+  "repo": "anilcancakir/claude-code",
+  "path": "opencode/ac/skills/flow/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/anilcancakir/claude-code",
+  "dir_name": "flow",
+  "downloaded_at": "2026-11-03T05:50:19.649941Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anilcancakir",
+  "source_url": "https://github.com/anilcancakir/claude-code/blob/main/opencode/ac/skills/flow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anilcancakir/claude-code/blob/main/opencode/ac/skills/flow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a medium or large request on the main thread: parallel research, interview, build in slices, oracle review. Use before building anything that touches several files, an unfamiliar area or an open behaviour choice; not for a one-file change or an explicit /ac/plan."
+}

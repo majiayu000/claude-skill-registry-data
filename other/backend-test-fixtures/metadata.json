@@ -1,0 +1,37 @@
+{
+  "name": "backend-test-fixtures",
+  "repo": "ayunis-core/ayunis-core",
+  "path": ".claude/skills/backend-test-fixtures/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ayunis-core/ayunis-core",
+  "dir_name": "backend-test-fixtures",
+  "downloaded_at": "2026-11-03T06:02:58.960264Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ayunis-core",
+  "source_url": "https://github.com/ayunis-core/ayunis-core/blob/main/.claude/skills/backend-test-fixtures/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ayunis-core/ayunis-core/blob/main/.claude/skills/backend-test-fixtures/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Shared test fixtures for backend specs \u2014 port mock factories, domain builders, and shared IDs in a per-module testing/ folder. Use when a module's *.use-case.spec.ts files repeat the same mock-repository literal, inline entity construction, or hardcoded UUIDs across files."
+}

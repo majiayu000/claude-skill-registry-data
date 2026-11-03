@@ -1,0 +1,37 @@
+{
+  "name": "afk-unblock",
+  "repo": "design4pro/money-tracker.online",
+  "path": ".ai/skills/afk-unblock/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/design4pro/money-tracker.online",
+  "dir_name": "afk-unblock",
+  "downloaded_at": "2026-11-03T06:46:32.604918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-llm=2",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "design4pro",
+  "source_url": "https://github.com/design4pro/money-tracker.online/blob/main/.ai/skills/afk-unblock/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/design4pro/money-tracker.online/blob/main/.ai/skills/afk-unblock/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Lift, unattended and on a specialist's verdict, a `blocked` hold or an unanswered not-ready or `STOP:` comment that an agent left on an issue, or hand it back to a person with a `HUMAN-ONLY:` comment naming the one thing only they can do. Use when the Reconciler names an `unblock` action, or when asked to resolve the hold on an issue by number."
+}

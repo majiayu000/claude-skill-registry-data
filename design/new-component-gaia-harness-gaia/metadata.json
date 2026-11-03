@@ -1,0 +1,38 @@
+{
+  "name": "new-component",
+  "repo": "gaia-harness/gaia",
+  "path": "apps/web/.claude/skills/new-component/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "new-component-gaia-harness-gaia",
+  "downloaded_at": "2026-11-03T07:19:11.005078Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component, tailwind",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/new-component/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/new-component/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scaffolds a new React component with its Storybook story, which is the component's test. Use this skill whenever the user asks to \"create a component\", \"make a button\", \"scaffold a card\", \"add a new component\", or asks for a new file under `app/components/` following the project's component pattern (kebab-case folder, index.tsx, tests/), or asks for a component a shadcn registry item already provides (dialog, tabs, popover, and so on)."
+}

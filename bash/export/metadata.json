@@ -1,0 +1,37 @@
+{
+  "name": "export",
+  "repo": "elivatemarketingbryan-beep/Edits",
+  "path": ".claude/skills/export/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/elivatemarketingbryan-beep/Edits",
+  "dir_name": "export",
+  "downloaded_at": "2026-11-03T07:00:30.324616Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elivatemarketingbryan-beep",
+  "source_url": "https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/export/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/export/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Step 7, the last step of the content pipeline. Promotes the newest render to outputs/<job>.final.mp4, copies it to ~/Downloads, then reclaims regenerable build cache. Use when a job's render (rough cut, graphics, captions, or music mix \u2014 whichever is furthest along) is approved and ready to ship."
+}

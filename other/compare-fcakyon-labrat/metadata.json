@@ -1,0 +1,37 @@
+{
+  "name": "compare",
+  "repo": "fcakyon/labrat",
+  "path": "plugin/skills/compare/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fcakyon/labrat",
+  "dir_name": "compare-fcakyon-labrat",
+  "downloaded_at": "2026-11-03T07:09:07.035923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fcakyon",
+  "source_url": "https://github.com/fcakyon/labrat/blob/main/plugin/skills/compare/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fcakyon/labrat/blob/main/plugin/skills/compare/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Same-epoch comparison and analysis of training runs across wandb, neptune, tensorboard, mlflow, or local result files. Aligns runs at the student's current step (never current-vs-final-of-baseline) and separates proxy metrics from downstream targets. Also writes run summaries and experiment reports, analyzes ablations, and monitors training. Use when the user asks to compare runs, check if a run is improving, track lag against a baseline, rank experiments, evaluate run-vs-run performance, analyze results, write a training report or experiment summary, summarize training results, monitor training, or asks which run is best."
+}

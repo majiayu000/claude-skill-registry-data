@@ -1,0 +1,37 @@
+{
+  "name": "dependency-updater",
+  "repo": "daikonic-org/rune-langium",
+  "path": ".agents/skills/dependency-updater/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/daikonic-org/rune-langium",
+  "dir_name": "dependency-updater-daikonic-org-rune-langium",
+  "downloaded_at": "2026-11-03T06:39:16.733392Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "daikonic-org",
+  "source_url": "https://github.com/daikonic-org/rune-langium/blob/master/.agents/skills/dependency-updater/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/daikonic-org/rune-langium/blob/master/.agents/skills/dependency-updater/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Smart dependency management for any language. Auto-detects project type, applies safe updates automatically, prompts for major versions, diagnoses and fixes dependency issues."
+}

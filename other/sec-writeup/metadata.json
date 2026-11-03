@@ -1,0 +1,38 @@
+{
+  "name": "sec-writeup",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/dev/sec-writeup/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "sec-writeup",
+  "downloaded_at": "2026-11-03T07:01:05.539968Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-writeup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-writeup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Erstellt aus Notizen, PoC und Funden einen eigenst\u00e4ndigen, skeptisch gepr\u00fcften Schwachstellenbericht f\u00fcr die koordinierte Offenlegung: betroffene Versionen, Reproduktionsschritte, Auswirkung, Fix, Zeitleiste. PoC minimal (kein einsatzf\u00e4higer Exploit), Secrets geschw\u00e4rzt, jede Behauptung durch Evidenz belegt oder als ungepr\u00fcft markiert. Ausl\u00f6ser: 'Disclosure schreiben', 'Schwachstellenbericht', 'Advisory-Text', 'Meldung an den Maintainer'. Nicht f\u00fcr den internen Scanbericht (sec-report) und nicht f\u00fcrs Ticket (sec-track)."
+}

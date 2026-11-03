@@ -1,0 +1,38 @@
+{
+  "name": "httpie",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/httpie/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "httpie",
+  "downloaded_at": "2026-11-03T06:20:04.297751Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/httpie/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/httpie/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with HTTPie (http/https CLI) \u2014 the command-line HTTP client for the API era. Covers request items syntax (headers, params, data fields, file uploads), authentication (basic, digest, bearer, plugins), session management, output formatting and printing, SSL/TLS configuration, download mode, configuration files, environment variables, plugin system, exit codes, scripting, and URL syntax. Triggers on: \"httpie\", \"http command\", \"https command\", \"http --json\", \"http --form\", \"http --download\", \"http --session\", \"http --auth\", \"http --auth-type\", \"http --print\", \"http --verbose\", \"http --follow\", \"http --offline\", \"http --check-status\", \"http --proxy\", \"http --ssl\", \"http --cert\", \"http --verify\", \"http --format-options\", \"http --pretty\", \"http --style\", \"http --stream\", \"http --boundary\", \"http --multipart\", \"http --raw\", \"httpie config\", \"HTTPIE_CONFIG_DIR\", \"httpie cli plugins\", \"request items\", \"data fields\", \"URL parameters\", \"HTTP headers\", \"raw JSON fields\", \"file upload fields\", \"named session\", \"anonymous session\", \"read-only session\", \"Content-Disposition\", \"httpie-unixsocket\", \"httpie plugins\", \"AuthPlugin\", \"TransportPlugin\", \"ConverterPlugin\", \"FormatterPlugin\"."
+}

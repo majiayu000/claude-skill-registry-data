@@ -1,0 +1,38 @@
+{
+  "name": "spip-squelettes",
+  "repo": "epilibre-design/spip-skills",
+  "path": "skills/spip-squelettes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/epilibre-design/spip-skills",
+  "dir_name": "spip-squelettes",
+  "downloaded_at": "2026-11-03T07:02:26.789796Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "epilibre-design",
+  "source_url": "https://github.com/epilibre-design/spip-skills/blob/main/skills/spip-squelettes/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/epilibre-design/spip-skills/blob/main/skills/spip-squelettes/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for any SPIP template question \u2014 BOUCLE loops, balises, crit\u00e8res, filtres, INCLURE, pagination, image filters, recursive trees, AJAX reloads. Covers public squelettes and plugin squelettes (espace priv\u00e9, mod\u00e8les). Trigger even when the user doesn't say \"squelette\". Not for PHP hooks/pipelines \u2192 use spip-plugins. Written for SPIP 4.x; on a SPIP 5.0 project some syntaxes are removed (see the SPIP 5.0 section)."
+}

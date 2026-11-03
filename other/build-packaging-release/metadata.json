@@ -1,0 +1,38 @@
+{
+  "name": "build-packaging-release",
+  "repo": "devopsnextgenx/open-bc",
+  "path": ".agent/skills/build-packaging-release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/devopsnextgenx/open-bc",
+  "dir_name": "build-packaging-release",
+  "downloaded_at": "2026-11-03T06:47:45.555984Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devopsnextgenx",
+  "source_url": "https://github.com/devopsnextgenx/open-bc/blob/main/.agent/skills/build-packaging-release/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devopsnextgenx/open-bc/blob/main/.agent/skills/build-packaging-release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Modify build scripts, packaging configuration, or CI/CD release workflows for open-bc with full support for Windows (MSI via WiX), Linux .deb (Ubuntu/Debian), Linux Flatpak, and Linux .rpm (Fedora/RHEL). Use this skill whenever a user asks to change the build pipeline, add a package format, update package metadata, version-bump a release, or add platform-specific CI steps."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "notebook",
+  "repo": "damus-io/notedeck",
+  "path": ".claude/skills/notebook/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/damus-io/notedeck",
+  "dir_name": "notebook",
+  "downloaded_at": "2026-11-03T06:39:47.968028Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "damus-io",
+  "source_url": "https://github.com/damus-io/notedeck/blob/master/.claude/skills/notebook/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/damus-io/notedeck/blob/master/.claude/skills/notebook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read and edit a notebook canvas from the command line via the `notebook` CLI (crates/notebook_cli). Use when the user wants to view the canvas, add/move/edit/recolor/delete nodes, connect or disconnect edges, restack, seed, or rename the canvas \u2014 e.g. \"show the notebook\", \"add a node\", \"move that node\", \"connect these two nodes\"."
+}

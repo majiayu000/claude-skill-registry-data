@@ -1,0 +1,40 @@
+{
+  "name": "experience-lwc-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-lwc-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-lwc-generate",
+  "downloaded_at": "2026-11-03T07:14:15.174500Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, frontend, component",
+    "score": 5,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-lwc-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-lwc-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lightning Web Components with PICKLES methodology and 165-point scoring. Use this skill when the user creates or edits LWC components, builds wire service patterns, or writes Jest tests for LWC. TRIGGER when: user creates/edits LWC components, touches lwc/**/*.js, .html, .css, .js-meta.xml files, or asks about wire service, SLDS, or Jest LWC tests. DO NOT TRIGGER when: Apex classes (use platform-apex-generate), Aura components, or Visualforce."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "red-first",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/red-first/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "red-first",
+  "downloaded_at": "2026-11-03T06:49:23.639111Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/red-first/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/red-first/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Regression-test-first bug fixing: reproduce, write a failing test that proves the bug, show it red, then fix to green with the minimal pattern-consistent change. Use whenever the user reports a bug, pastes failing behavior or a stack trace, or says \"fix this bug\", \"found a bug\", \"write the failing regression test\", \"prove the bug first\". A bug is not fixed until a test proves it was real. When a log file is the evidence, delegate diagnosis to the log-analyzer skill, then return here for the test-first fix."
+}

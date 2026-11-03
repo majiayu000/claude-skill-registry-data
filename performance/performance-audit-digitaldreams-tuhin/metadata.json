@@ -1,0 +1,38 @@
+{
+  "name": "performance-audit",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/performance-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "performance-audit-digitaldreams-tuhin",
+  "downloaded_at": "2026-11-03T06:49:27.814911Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, optimize, latency",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "optimize",
+      "latency"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/performance-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/performance-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Laravel performance sweep of the current codebase, writing ranked findings to tasks/performance_audit.md. Hunts N+1 queries, missing indexes, cache opportunities, sync work that belongs on queues, and oversized payloads. Use whenever the user says \"performance audit\", \"why is it slow\", \"find N+1\", \"optimize queries\", or before a release. Standalone \u2014 no pipeline docs needed."
+}

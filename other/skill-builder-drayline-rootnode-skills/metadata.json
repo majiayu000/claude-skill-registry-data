@@ -1,0 +1,38 @@
+{
+  "name": "skill-builder",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-skill-builder/skills/skill-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "skill-builder-drayline-rootnode-skills",
+  "downloaded_at": "2026-11-03T06:53:44.286658Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-skill-builder/skills/skill-builder/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-skill-builder/skills/skill-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds, validates, packages, tests, and optimizes deployment-ready Skill files (SKILL.md + references/ + scripts/ + agents/) from design specifications. Three pre-build gates + 9-dimension quality gate (with D9a/b/c empirical evidence tiers) + behavioral iteration loop + automated description optimizer + blind version comparator. Use for building, reviewing, revising, testing, or optimizing Skills. Trigger on: \"build this Skill,\" \"review this Skill,\" \"test my Skill,\" \"optimize the description,\" \"compare these Skill versions,\" \"should this be a hook instead,\" \"build a template first.\" Also: \"my Skill doesn't activate,\" \"my description truncates,\" \"my SKILL.md is too long,\" \"my Skill is overtriggering.\" Do NOT use when designing Skill methodology \u2014 that's design work, not packaging. Do NOT use for prompt compilation, project auditing, or prompt scoring (use prompt-compilation, project-audit, or prompt-validation if available)."
+}

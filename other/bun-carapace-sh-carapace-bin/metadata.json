@@ -1,0 +1,38 @@
+{
+  "name": "bun",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/bun/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "bun-carapace-sh-carapace-bin",
+  "downloaded_at": "2026-11-03T06:20:00.446423Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/bun/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/bun/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with the bun CLI \u2014 Bun's all-in-one JavaScript runtime and toolkit. Covers the CLI command reference (install, add, remove, run, build, test, x, create, init, pm, upgrade, link, unlink), bunfig.toml configuration, environment variables, the package manager and lockfile, the test runner, the bundler, the Bun runtime API (Bun.serve, Bun.file, Bun.spawn, Bun.write, hashing, transpiler), the Bun shell ($ template literal), module resolution and loaders, and globals. Triggers on: \"bun\", \"bunx\", \"bun install\", \"bun add\", \"bun remove\", \"bun run\", \"bun build\", \"bun test\", \"bun x\", \"bun create\", \"bun init\", \"bun pm\", \"bun upgrade\", \"bun link\", \"bun unlink\", \"bunfig.toml\", \"bun.lock\", \"Bun.serve\", \"Bun.file\", \"Bun.write\", \"Bun.spawn\", \"Bun.hash\", \"Bun.password\", \"bun:test\", \"Bun.build\", \"Bun.Transpiler\", \"bun shell\", \"$ template\", \"import.meta\", \"JavaScriptCore\", \"Bun.serve\", \"HTMLRewriter\", \"Bun.SQL\", \"Bun.RedisClient\", \"Bun.Glob\", \"Bun.plugin\", \"bun:ffi\"."
+}

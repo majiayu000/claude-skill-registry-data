@@ -1,0 +1,37 @@
+{
+  "name": "development-content",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/content-editor/.claude/skills/development-content/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "development-content",
+  "downloaded_at": "2026-11-03T07:07:06.644329Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/content-editor/.claude/skills/development-content/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/content-editor/.claude/skills/development-content/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Content-editor-posture skill for ongoing work. Takes change_spec.md and change_design.md as primary inputs, with the product's CONTENT.md, the instance's writing bar and the product's existing strings as the standard, and writes change_text.md, the exact words this one change puts in front of a person, one string per state, each verbatim and checked against the product's banned words, so the Developer places them without choosing a word. Runs only when the design's Publishes text line reads yes. Never decides that verdict, never edits a standing rule, never names an identifier or file layout. Run when a change_design.md and tl_instruction.md are on the branch and the design says yes."
+}

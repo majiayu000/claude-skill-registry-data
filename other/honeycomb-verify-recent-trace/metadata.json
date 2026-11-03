@@ -1,0 +1,37 @@
+{
+  "name": "honeycomb-verify-recent-trace",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/honeycomb-verify-recent-trace/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "honeycomb-verify-recent-trace",
+  "downloaded_at": "2026-11-03T06:01:57.513796Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/honeycomb-verify-recent-trace/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/honeycomb-verify-recent-trace/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load when the operator asks to verify a recent test or deployment in Honeycomb, find the most recent trace, or show the trace a test produced. Finds the traces created since the test started and summarizes the most recent one."
+}

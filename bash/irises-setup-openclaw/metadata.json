@@ -1,0 +1,39 @@
+{
+  "name": "irises-setup-openclaw",
+  "repo": "criblaurens/Irises",
+  "path": "skills/irises-setup-openclaw/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/criblaurens/Irises",
+  "dir_name": "irises-setup-openclaw",
+  "downloaded_at": "2026-11-03T06:34:57.262357Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "criblaurens",
+  "source_url": "https://github.com/criblaurens/Irises/blob/main/skills/irises-setup-openclaw/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/criblaurens/Irises/blob/main/skills/irises-setup-openclaw/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide a person through installing Irises \u2014 a user-facing front-end (web chat / CLI, plus the engine bridge) that uses this OpenClaw as its deep-work engine. Explains it, checks prerequisites, hands over the exact terminal commands, and verifies afterwards. It does not install anything itself."
+}

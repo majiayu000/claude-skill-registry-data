@@ -1,0 +1,37 @@
+{
+  "name": "flisk-bug-hunter",
+  "repo": "flisk-sh/flisk",
+  "path": ".claude/skills/flisk-bug-hunter/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "flisk-bug-hunter",
+  "downloaded_at": "2026-11-03T07:12:59.192229Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/.claude/skills/flisk-bug-hunter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/.claude/skills/flisk-bug-hunter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds bugs in the flisk CLI, its generated files and its MCP server by chaos testing - picking the right tier (graph, gates, Docker, CLI fuzz, state, MCP), writing an oracle that does not cry wolf, running thousands of cases, bucketing the findings, proving each one by hand, fixing it with a test and a deliberate-break check. Use when asked to find bugs, harden a command, hunt regressions after a change to service.json handling, `flisk up`, `flisk config` or the MCP tools, or when users report that an edit \"did not take effect\"."
+}

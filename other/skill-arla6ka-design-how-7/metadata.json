@@ -1,0 +1,37 @@
+{
+  "name": "pixel-cycle",
+  "repo": "arla6ka/design.how",
+  "path": "vault/pixel-cycle/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arla6ka/design.how",
+  "dir_name": "skill-arla6ka-design-how-7",
+  "downloaded_at": "2026-11-03T05:56:11.150607Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arla6ka",
+  "source_url": "https://github.com/arla6ka/design.how/blob/main/vault/pixel-cycle/skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arla6ka/design.how/blob/main/vault/pixel-cycle/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a Canvas 2D pixelate transition that cycles through a set of images, each one resolving from big square blocks to sharp along an eased ramp of block sizes, held, dissolved back to blocks, then shrunk away leaning while the next grows in and resolves, with hover particles that lift blocks off the image. Use when someone asks for a pixelate or mosaic transition, an image that resolves from pixels, a character select screen, a pixelated slideshow, or a retro image reveal."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "create-test",
+  "repo": "cerredz/vidbyte-memory",
+  "path": ".agents/skills/create-test/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cerredz/vidbyte-memory",
+  "dir_name": "create-test",
+  "downloaded_at": "2026-11-03T06:22:00.326278Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cerredz",
+  "source_url": "https://github.com/cerredz/vidbyte-memory/blob/main/.agents/skills/create-test/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cerredz/vidbyte-memory/blob/main/.agents/skills/create-test/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when turning human feedback into a deterministic test in tests/. Lists the ways a rule can be checked by code, the constraints a test must meet, and how to register it on the entry it enforces."
+}

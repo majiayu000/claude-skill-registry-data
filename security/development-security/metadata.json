@@ -1,0 +1,39 @@
+{
+  "name": "development-security",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/senior-engineer/.claude/skills/development-security/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "development-security",
+  "downloaded_at": "2026-11-03T07:07:07.366858Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, audit, owasp",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/senior-engineer/.claude/skills/development-security/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/senior-engineer/.claude/skills/development-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Security review of a change's branch, after code integrity. It runs the NFDR's dependency audit and answers every advisory, even in dependencies the change never touched. It takes an allowed fix (a bump to the fixed release, a renamed identifier, a major bump only with the suite green), and for an advisory the product does not reach it writes an exception in the product's exception record, creating the first one when there is none and using a stated default window when the NFDR names none, with a row in the instance upkeep register. It reads the change's code with a lens adapted from Anthropic's security review and the OWASP lists, fixes a hole when no record is edited, the suite stays green and nothing is redesigned, and reports the rest for the PM to decide on. Forbidden moves on what the product reaches are gathered and asked once, at the end. It always writes a committed security report whose first line says clean, fixed, reported or stopped. Halts outside a senior-engineer session or the senior-engineer subagent."
+}

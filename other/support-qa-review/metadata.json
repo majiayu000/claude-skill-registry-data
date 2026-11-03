@@ -1,0 +1,37 @@
+{
+  "name": "support-qa-review",
+  "repo": "bromso/singularskills",
+  "path": "skills/support-qa-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "support-qa-review",
+  "downloaded_at": "2026-11-03T06:14:57.117390Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/support-qa-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/support-qa-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Score one support conversation against a QA rubric \u2014 accuracy, resolution, tone, customer effort, policy and, for failures, the three kinds of fairness in service recovery \u2014 with quoted evidence and the two changes that would most improve it. Use when the user wants feedback on how a support conversation was handled. Not for drafting the reply itself; see /support-reply."
+}

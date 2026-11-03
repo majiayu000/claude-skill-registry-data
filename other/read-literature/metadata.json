@@ -1,0 +1,37 @@
+{
+  "name": "read-literature",
+  "repo": "firecrawl/firecrawl-claude-plugin",
+  "path": "skills/read-literature/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/firecrawl/firecrawl-claude-plugin",
+  "dir_name": "read-literature",
+  "downloaded_at": "2026-11-03T07:11:43.358813Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "firecrawl",
+  "source_url": "https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/read-literature/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/read-literature/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find and read published research papers instead of relying on memory, which may be outdated. Use for what studies, trials or meta-analyses show, evidence for or against a claim, recent findings, related work, citing or cited papers, or questions about a named paper, including biomedical and clinical studies and arXiv preprints in computer science, physics and math, even without an explicit request to search papers. Excludes general explanations, news and questions fully answered by supplied papers."
+}

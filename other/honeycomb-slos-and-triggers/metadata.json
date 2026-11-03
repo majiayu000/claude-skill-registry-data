@@ -1,0 +1,37 @@
+{
+  "name": "honeycomb-slos-and-triggers",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/honeycomb-slos-and-triggers/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "honeycomb-slos-and-triggers",
+  "downloaded_at": "2026-11-03T06:01:57.326034Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/honeycomb-slos-and-triggers/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/honeycomb-slos-and-triggers/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load before calling Honeycomb get_slos or get_triggers, or when an investigation must judge SLO compliance, error budget burn or trigger status. Explains what the numbers mean, how to spot a misconfigured SLI, when a burn rate justifies paging or freezing deploys, and how to design burn alert thresholds."
+}

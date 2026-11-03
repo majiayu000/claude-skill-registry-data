@@ -1,0 +1,38 @@
+{
+  "name": "exasol-pyexasol",
+  "repo": "exasol-labs/exasol-agent-skills",
+  "path": "plugins/exasol/skills/exasol-pyexasol/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/exasol-labs/exasol-agent-skills",
+  "dir_name": "exasol-pyexasol",
+  "downloaded_at": "2026-11-03T07:06:42.035742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "exasol-labs",
+  "source_url": "https://github.com/exasol-labs/exasol-agent-skills/blob/main/plugins/exasol/skills/exasol-pyexasol/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/exasol-labs/exasol-agent-skills/blob/main/plugins/exasol/skills/exasol-pyexasol/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the official PyExasol Python driver for direct Exasol connections, queries, bulk I/O, metadata, UDF logs, and multiprocessing. Covers pyexasol.connect, connect_local_config, ExaConnection, ExaStatement, fetch_mapper, convert_websocket_to_python, execute_sql_script, create_prepared_statement, import_from_*, export_to_*, insert_multi, .meta, sql_columns, explain_last, execute_udf_output, http_transport, exa_address, export_parallel, import_parallel, exasol.driver.websocket.dbapi2, and EXASOL_TELEMETRY_DISABLE."
+}

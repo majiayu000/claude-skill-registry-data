@@ -1,0 +1,37 @@
+{
+  "name": "experience-search-coordinate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-search-coordinate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-search-coordinate",
+  "downloaded_at": "2026-11-03T07:14:24.853228Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-search-coordinate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-search-coordinate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Searches for and retrieves existing content and media (articles, blogs, news, FAQs, events, products, images, logos, icons, photos, graphics, banners, hero images, audio clips, videos, documents) from Salesforce CMS or other connected sources. Use this skill ANY TIME a user says \"find\", \"search\", \"get\", \"fetch\", \"retrieve\", \"look up\", \"locate\", \"show me\", \"list\", or \"I need\" followed by content or media words like \"blog\", \"article\", \"news\", \"FAQ\", \"event\", \"product page\", \"image\", \"logo\", \"icon\", \"photo\", \"banner\", \"audio\", \"video\", \"document\". Also use for requests that mix both, like \"reuse existing assets\" for a page. Routes each intent to the correct sub-workflow \u2014 structured content search or media search \u2014 and can run both in the same request. Does not apply when the request is to generate NEW content or images from scratch, define content type schemas, or apply brand guidelines."
+}

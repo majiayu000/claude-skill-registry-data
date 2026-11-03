@@ -1,0 +1,37 @@
+{
+  "name": "platform-policy-rule-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/platform-policy-rule-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "platform-policy-rule-generate",
+  "downloaded_at": "2026-11-03T07:14:26.257069Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-policy-rule-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-policy-rule-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "THE skill for creating a Data Cloud / Data Governance access policy \u2014 authors and deploys a PolicyRuleDefinitionSet + PolicyRuleDefinition pair (CRUD) covering OLS, FLS, RLS, masking/transform, and tag/classification-based access for the DATACLOUD or ALL consumer. TRIGGER when the user wants to create/write/author a Data Cloud or Data Governance policy, access policy, or policy rule, or to grant access to a Data Cloud object THROUGH A POLICY \u2014 a Data Cloud policy-create request routes here, not to the tag/classification surface. Resolves every reference via Data 360 MCP. SCOPE: Data Cloud policies only (not Security Center, DSAR, or User Access Policies). DO NOT TRIGGER to create tags/classifications, or to grant object/dataspace access via a PERMISSION SET / RBAC grant (use platform-dataspace-access-configure). For a vague object-access ask, surface both skills and ASK the permission-set way vs the policy way; if unsure the object is Data Cloud, ask which first."
+}

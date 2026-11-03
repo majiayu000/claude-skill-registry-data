@@ -1,0 +1,37 @@
+{
+  "name": "openkb-html-critic",
+  "repo": "concept-git/cloud-concept-skills",
+  "path": "development/kcs-foundry/vendor/openkb/skills/openkb-html-critic/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/concept-git/cloud-concept-skills",
+  "dir_name": "openkb-html-critic-concept-git-cloud-concept-skills",
+  "downloaded_at": "2026-11-03T06:32:40.931035Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "concept-git",
+  "source_url": "https://github.com/concept-git/cloud-concept-skills/blob/main/development/kcs-foundry/vendor/openkb/skills/openkb-html-critic/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/concept-git/cloud-concept-skills/blob/main/development/kcs-foundry/vendor/openkb/skills/openkb-html-critic/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to review a generated HTML deck or single-page artifact for visual\nquality and structural correctness. Especially good at catching CSS\nspecificity bugs where slide-modifier classes (.divider, .center, .q,\n.flow etc.) accidentally override the base .slide{display:none} and\ncause one slide to stack on top of every other. Also catches missing\nkeyboard navigation, bullet-dump / wall-of-text failure modes, broken\nself-containment (external link/script/img). Patches the file in\nplace; never changes the original content (slide text, numbers, named\nentities are the author's work, not yours)."
+}

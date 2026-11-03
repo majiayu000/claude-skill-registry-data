@@ -1,0 +1,37 @@
+{
+  "name": "ig-feed-research",
+  "repo": "elivatemarketingbryan-beep/Edits",
+  "path": ".claude/skills/ig-feed-research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/elivatemarketingbryan-beep/Edits",
+  "dir_name": "ig-feed-research",
+  "downloaded_at": "2026-11-03T07:00:40.217271Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elivatemarketingbryan-beep",
+  "source_url": "https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/ig-feed-research/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/ig-feed-research/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scans the logged-in Instagram HOME feed (instagram.com \u2014 reels, carousels, and image posts together) in the real Chrome profile (Claude-in-Chrome MCP) for on-niche content ideas AND tailors the algorithm while doing it: every scanned post gets classified, and anything off-niche or not replicable for the brand gets the three-dots \u2192 'Not interested' treatment (plus account-level 'Don't suggest posts from X' for categorically wrong accounts). Harvest and tailoring are ONE loop on ONE surface. Outputs a visual HTML report to research/. Use this for algorithm-driven discovery \u2014 what Instagram itself is pushing right now \u2014 vs tracked handles (ig-competitor-research). Triggers: ig feed research, instagram feed research, scan my instagram feed, tailor my instagram, clean up my instagram feed, what's my ig pushing, instagram feed ideas, ig feed."
+}

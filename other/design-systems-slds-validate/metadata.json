@@ -1,0 +1,39 @@
+{
+  "name": "design-systems-slds-validate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/design-systems-slds-validate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "design-systems-slds-validate",
+  "downloaded_at": "2026-11-03T07:14:25.432740Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=4, quality=4",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 4,
+    "signals": [
+      "design",
+      "ux",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/design-systems-slds-validate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/design-systems-slds-validate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit Lightning Web Components for SLDS design-system compliance and produce a scored quality report. Runs the SLDS linter and analyzes CSS for theming hook usage and pairing, scoring SLDS findings across categories into an overall grade. Use when asked to \"score my component's SLDS\", \"SLDS scorecard\", \"SLDS quality report\", \"audit SLDS compliance\", \"how good is my SLDS\", \"check SLDS quality\", \"rate my SLDS styling\", \"evaluate my component's SLDS\", \"is this component's SLDS ready to ship?\", \"look at my LWC for SLDS issues\", \"audit SLDS before I submit\", \"review my component's SLDS before code review\", or any time a user wants an SLDS quality assessment or SLDS production-readiness check on an LWC. Not for fixing violations (use design-systems-slds2-migrate), building new components (use design-systems-slds-apply), or accessibility/WCAG/ARIA audits (use experience-accessibility-validate)."
+}

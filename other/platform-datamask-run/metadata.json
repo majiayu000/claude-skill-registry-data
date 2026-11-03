@@ -1,0 +1,37 @@
+{
+  "name": "platform-datamask-run",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/platform-datamask-run/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "platform-datamask-run",
+  "downloaded_at": "2026-11-03T07:14:13.676057Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-datamask-run/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-datamask-run/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Data Mask end-to-end operation on a sandbox: configure a masking policy over PII, run the masking job, poll it to completion, report masked-record results, and abort an in-progress run. Use when the user needs to run, monitor, or cancel a Salesforce Data Mask job, mask PII/sandbox data, or work with DataMaskPolicy / DataMaskPolicyJobRun. TRIGGER when: user runs a data mask job, masks sandbox PII, polls masking status, reports masked records, or aborts a running mask. DO NOT TRIGGER when: writing anonymization Apex by hand (use platform-apex-generate), generating test data (use platform-data-manage), or deploying unrelated metadata (use platform-metadata-deploy)."
+}

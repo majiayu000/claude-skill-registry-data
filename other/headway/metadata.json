@@ -1,0 +1,37 @@
+{
+  "name": "headway",
+  "repo": "damus-io/notedeck",
+  "path": ".claude/skills/headway/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/damus-io/notedeck",
+  "dir_name": "headway",
+  "downloaded_at": "2026-11-03T06:39:47.258934Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "damus-io",
+  "source_url": "https://github.com/damus-io/notedeck/blob/master/.claude/skills/headway/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/damus-io/notedeck/blob/master/.claude/skills/headway/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read and edit a Headway kanban board from the command line via the `headway` CLI (crates/headway_cli). Use when the user wants to view the board, add/move/edit/archive cards, or shuffle work between columns like Backlog, Todo, In Progress, In Review, and Done \u2014 e.g. \"move X to done\", \"show the board\", \"add a card to todo\"."
+}

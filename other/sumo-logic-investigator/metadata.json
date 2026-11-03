@@ -1,0 +1,37 @@
+{
+  "name": "sumo-logic-investigator",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/sumo-logic-investigator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "sumo-logic-investigator",
+  "downloaded_at": "2026-11-03T06:01:56.299846Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/sumo-logic-investigator/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/sumo-logic-investigator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Investigate incidents and answer operational questions using Sumo Logic logs, alerts, dashboards and SIEM insights. Use during incident triage and root cause analysis when the customer's telemetry is in Sumo Logic, or when the user asks to search Sumo Logic, check monitors/alerts, review insights, or inspect dashboards."
+}

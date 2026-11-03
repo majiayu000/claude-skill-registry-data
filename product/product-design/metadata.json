@@ -1,0 +1,37 @@
+{
+  "name": "product-design",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/cdo/.claude/skills/product-design/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "product-design",
+  "downloaded_at": "2026-11-03T07:06:57.405100Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "prd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/cdo/.claude/skills/product-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/cdo/.claude/skills/product-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "CDO-posture skill that authors a project's design language \u2014 the visual source of truth in Google's DESIGN.md format, written off the settled UXD's design-system direction and read cold by implementing agents to style the product. Requires CDO posture (halts if invoked outside a cdo session or the cdo subagent). Non-interactive by design \u2014 it grounds every value in the evidence where evidence exists (the product's own source, its brand assets, the UXD's constraints) and designs the rest itself, and instead of interviewing live it surfaces its load-bearing calls into a companion open-issues file for the owner to sign off async. It runs the format's own linter before committing and never reports a design language finished on a file that has not met the prompt's bar. On re-run it consumes both files, retires the owner's answered companion whole to a permanent trail, folds their answers into the design language, and when nothing is left unresolved it clears the companion \u2014 its absence means the design language is done. The skill resolves where the files land from the project's Product path. Use when authoring, continuing, or revising a product's design language. Do not use for the experience definition (product-uxd), per-change specs (development-specs), the PRD (product-prd), the SRS (product-srs), the project's Agari (project-agari), or downstream documents (SDD / Delivery Plan / FDR / ADR / NFDR)."
+}

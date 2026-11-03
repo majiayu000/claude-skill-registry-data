@@ -1,0 +1,37 @@
+{
+  "name": "new-emacs-package",
+  "repo": "benthamite/dotfiles",
+  "path": "codex/skills/new-emacs-package/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/benthamite/dotfiles",
+  "dir_name": "new-emacs-package",
+  "downloaded_at": "2026-11-03T06:07:37.084533Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "benthamite",
+  "source_url": "https://github.com/benthamite/dotfiles/blob/master/codex/skills/new-emacs-package/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/benthamite/dotfiles/blob/master/codex/skills/new-emacs-package/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create a new standalone Emacs package of Pablo's from scratch, or turn existing code into one, through to a public, documented and registered package. Use for \"create a new package\", \"make this a proper package\", \"turn this into a public package\" or a new benthamite/<name> Emacs repository. Not for dotfiles extras (emacs/extras), renames (rename-package), releases of an existing package (release-package) or documentation alone (document-elisp-package)."
+}

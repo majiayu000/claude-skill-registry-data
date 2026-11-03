@@ -1,0 +1,38 @@
+{
+  "name": "session-handoff",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-governance/skills/session-handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "session-handoff-drayline-rootnode-skills",
+  "downloaded_at": "2026-11-03T06:53:43.727835Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-governance/skills/session-handoff/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-governance/skills/session-handoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Produces structured markdown session continuation documents for multi-session workflows. Captures active work streams, decisions with rationale, knowledge-file deltas learned during the session, the exact files to load next conversation, ingested content, artifacts, and open items into an ingestion-optimized handoff. Carries pending KF updates and unresolved items forward across handoff chains so context never drops. Generates a closeout checklist and echoes the starter prompt to chat. Use when approaching context limits, wrapping up a session, or managing work across conversations. Trigger on: \"create a handoff,\" \"session closeout,\" \"wrap up this session,\" \"build session handoff,\" \"BSH,\" \"continue next session,\" \"we're running out of context,\" \"context is getting long.\" Do NOT use for Memory optimization, context budget analysis, project audits, deciding whether work is ready for autonomous/Claude Code execution (use handoff-trigger-check), or summaries with no continuation intent."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "sync-core-lib",
+  "repo": "foundryvtt-dcc/dcc",
+  "path": ".claude/skills/sync-core-lib/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/foundryvtt-dcc/dcc",
+  "dir_name": "sync-core-lib",
+  "downloaded_at": "2026-11-03T07:15:11.314680Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "foundryvtt-dcc",
+  "source_url": "https://github.com/foundryvtt-dcc/dcc/blob/main/.claude/skills/sync-core-lib/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/foundryvtt-dcc/dcc/blob/main/.claude/skills/sync-core-lib/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sync the vendored dcc-core-lib copy after a lib fix merges upstream, then clean up temporary adapter workarounds. Use after a moonloch/dcc-core-lib PR lands, or when asked to update module/vendor/dcc-core-lib."
+}

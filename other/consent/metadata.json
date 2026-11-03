@@ -1,0 +1,37 @@
+{
+  "name": "consent",
+  "repo": "devclone20/icloneos",
+  "path": "iclone/skills/consent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/devclone20/icloneos",
+  "dir_name": "consent",
+  "downloaded_at": "2026-11-03T06:46:56.015362Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devclone20",
+  "source_url": "https://github.com/devclone20/icloneos/blob/main/iclone/skills/consent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devclone20/icloneos/blob/main/iclone/skills/consent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a step needs a permission the user may have off. Use BEFORE a step that needs a permission the user may have left off \u2014 running terminal commands, writing files, browsing or calling online tools, controlling other apps, screenshots, the clipboard, installing packages, creating scheduled tasks, sending email or messages, or spending/trading. Check ICLONE_CONSENT_<KEY>; when it is 0 or ask, ask the user through the app with `acp consent request <key> --reason \"\u2026\"` instead of failing or working around it."
+}

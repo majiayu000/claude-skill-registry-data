@@ -1,0 +1,38 @@
+{
+  "name": "ai-define",
+  "repo": "bromso/singularskills",
+  "path": "skills/ai-define/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ai-define",
+  "downloaded_at": "2026-11-03T06:14:42.398081Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ai-define/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ai-define/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Define an AI feature \u2014 the job it does, for whom and when, whether AI is the right tool at all, success criteria a check could test, the failure modes that matter, and latency and cost budgets. Use when a product team wants to add an AI feature and has not yet pinned down what good looks like. Not for assessing AI regulation; see /compliance-eu-ai-act."
+}

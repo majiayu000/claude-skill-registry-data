@@ -1,0 +1,39 @@
+{
+  "name": "slide-stack",
+  "repo": "arla6ka/design.how",
+  "path": "vault/slide-stack/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/arla6ka/design.how",
+  "dir_name": "skill-arla6ka-design-how-32",
+  "downloaded_at": "2026-11-03T05:56:09.776079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, css, component, animation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arla6ka",
+  "source_url": "https://github.com/arla6ka/design.how/blob/main/vault/slide-stack/skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arla6ka/design.how/blob/main/vault/slide-stack/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a Canvas 2D stack of five identical dark blocks sliding between a left and a right stop, each row a twelfth of a cycle ahead of the one below so the motion runs through the stack as a wave, with an orange accent that is the convex hull of the blocks rather than a shape of its own, plus motion blur, direction labels and a pointer magnet. Use when someone asks for a staggered slide animation, a cascading or wave stack, sliding bars, a rhythmic block loop, or an accent shape derived from moving objects."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "llm-eval",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/llm-eval/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "llm-eval",
+  "downloaded_at": "2026-11-03T06:49:23.277522Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug, refactor",
+    "score": 5,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/llm-eval/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/llm-eval/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure an LLM feature instead of vibe-checking it. Five modes. ANALYZE: read 20\u201330 real outputs, write one line each, group and count the failures before choosing any metric. BUILD: turn the top failure into an eval \u2014 planted-defect cases, a code grader first, an app:eval command, a baseline. COMPARE: change one lever (prompt, input, model, code), re-run, decide by a sign test. REDTEAM: prompt-injection cases for any step that reads text it didn't write; the attack success rate must be 0 against a control run. AUDIT: read-only review of an existing eval suite against the EV rules. Use whenever the user says \"eval\", \"is my AI/agent/prompt any good\", \"measure the LLM feature\", \"recall/precision/pass rate\", \"LLM judge\", \"calibrate the judge\", \"red team the prompt\", \"prompt injection\", \"which model is good enough\", or \"audit my evals\" \u2014 and when a prompt or model change needs proof before it ships. The runner reference targets Symfony AI (symfony/ai-*); the rules apply to any stack."
+}

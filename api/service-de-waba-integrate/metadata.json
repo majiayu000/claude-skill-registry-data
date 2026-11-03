@@ -1,0 +1,37 @@
+{
+  "name": "service-de-waba-integrate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/service-de-waba-integrate/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "service-de-waba-integrate",
+  "downloaded_at": "2026-11-03T07:14:18.718775Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/service-de-waba-integrate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/service-de-waba-integrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Confirm the customer's WhatsApp Business Account is shared with Salesforce on Meta's side. TRIGGER when the user asks to link, share, or confirm sharing of a WhatsApp Business Account with Salesforce, or to verify Salesforce appears in the WABA's Partners list. Pure instruction + one user-confirmation prompt \u2014 no API calls, no token handling. Sharing happens in Meta Business Suite (UI-only; Meta has no Graph endpoint for this). Renders step-by-step instructions with Salesforce's Business Manager ID substituted in, then asks the user to confirm whether \"Salesforce\" appears in the WABA's Partners list. DO NOT TRIGGER when the user needs full end-to-end WhatsApp setup (use `service-de-headless-channel-configure`) or to insert the channel record itself (use `service-de-channel-create`)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "experience-lwr-site-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-lwr-site-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-lwr-site-generate",
+  "downloaded_at": "2026-11-03T07:14:24.665530Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-lwr-site-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-lwr-site-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates, modifies, or manages Salesforce Experience Cloud LWR sites via DigitalExperience metadata. Always trigger when the tasks involve LWR sites configurations, e.g. creating/modifying pages/routes/views/theme layouts/branding sets, previewing sites, or creating/modifying guest sharing rule (metadata type sharingGuestRules)/guest user access/sharing records to guest users, or when user provides a guest user ID (15 or 18 characters starting with 005). NEVER trigger for React or any other ui bundle framework. LWR sites ONLY."
+}

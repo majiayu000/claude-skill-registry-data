@@ -1,0 +1,37 @@
+{
+  "name": "companion-answer",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/interactive/.claude/skills/companion-answer/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "companion-answer",
+  "downloaded_at": "2026-11-03T07:07:03.489339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive/.claude/skills/companion-answer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive/.claude/skills/companion-answer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Walk an open-issues companion with the owner, one item at a time, in plain language, and write their\nanswers into it. A document authored non-interactively parks whatever its run could not settle in a\n`*_open_issues.md` companion beside it. This skill finds that file, learns from its own header which\ndocument it belongs to and which skill re-runs it, puts each unanswered item as a question a person can\nanswer \u2014 offering an opinion and the grounds for it where it has one \u2014 writes the answer into that\nitem's slot, commits it, and names the launchers to re-run. An item belonging to another document\nopens that document's companion. Then it stops.\nUse when the owner wants to go through an open-issues file, answer a companion's questions, settle what\na run could not, or be walked through a document's open items \u2014 including when they merely report the\nstate and expect the walk to follow, or name the document rather than the file.\nTrigger phrases: \"we have a new companion\", \"there are open questions for X\", \"X has open issues\", \"the\nrun left some questions\", \"a companion landed for X\", \"walk the companion\", \"go over the open issues\",\n\"answer the open-issues file\", \"one by one, plainly\", \"what's still open on X\", \"let's close the open\nitems on X\", \"companion-answer\".\nDo not use for: writing or revising the document itself, deleting a companion or creating the one it\nwalks, running the producing skill (this names its launcher and stops), or a\nNemawashi seed / Shukuba station (the journey skills)."
+}

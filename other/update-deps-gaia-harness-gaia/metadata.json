@@ -1,0 +1,37 @@
+{
+  "name": "update-deps",
+  "repo": "gaia-harness/gaia",
+  "path": ".claude/skills/update-deps/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "update-deps-gaia-harness-gaia",
+  "downloaded_at": "2026-11-03T07:19:07.975615Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/.claude/skills/update-deps/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/.claude/skills/update-deps/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remediates dependencies in place of Dependabot version and security updates. Discovers outdated packages and open security advisories, resolves advisories (in-range refresh, chain-head bump, security-floor override, or alert dismissal), audits overrides, applies migrations for major bumps, and runs the quality gate. Trigger when the user clicks the statusline `\ud83d\udce6 /update-deps` indicator or asks \"update dependencies\", \"bump deps\", \"run dependabot\", \"fix Dependabot alerts\", \"fix security advisories\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "sales-call-scoring-configure",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/sales-call-scoring-configure/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "sales-call-scoring-configure",
+  "downloaded_at": "2026-11-03T07:14:24.462665Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/sales-call-scoring-configure/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/sales-call-scoring-configure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure, set up, or repair AI Call Scoring (a.k.a. Call Coaching / Coaching Competencies) on an ECI-enabled Salesforce org. Flips ECICallScoringEnabled via SOAP Metadata API, enables Einstein Generative AI Platform if off, and manages Coaching Competency records (EnablementCompetencyDef Tooling API): install the 6 OOTB set, the 7 Momentum best-practice prompts, or conversationally author/edit/activate/deactivate custom competencies (8-active + 16000/255-char caps). TRIGGER when: user wants to turn on AI Call Scoring or Call Coaching, install OOTB or best-practice competencies, create/edit custom competencies, re-enable after sandbox refresh, or verify/repair partial Call Coaching setup on a 68+ ECI org. DO NOT TRIGGER when: no ECI license (direct to Agentforce for Sales), user wants to enable ECI/Momentum themselves (out of scope \u2014 Setup), Pipeline Management (use sales-agentforce-pipeline-management-configure), or custom agent (use agentforce-generate)."
+}

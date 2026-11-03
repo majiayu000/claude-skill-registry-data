@@ -1,0 +1,38 @@
+{
+  "name": "flisk-build",
+  "repo": "flisk-sh/flisk",
+  "path": "cli/templates/agent-skills/flisk-build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "flisk-build-flisk-sh-flisk-2",
+  "downloaded_at": "2026-11-03T07:13:02.875818Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/cli/templates/agent-skills/flisk-build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/cli/templates/agent-skills/flisk-build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a plain request such as \"build me a small online shop\", \"a SaaS with login and billing\", \"an AI agent with MCP tools and a database\" or \"a blog with an admin API\" into Flisk steps (`flisk project`, `flisk resource ... --type ... --stack ...`, `flisk up`), check that every URL is healthy, and tell the user where the app is. Use when the user asks you to build, scaffold or run a new app on their laptop with Flisk."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "test-driven-development",
+  "repo": "btseytlin/ultrapack",
+  "path": "skills/test-driven-development/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/btseytlin/ultrapack",
+  "dir_name": "test-driven-development-btseytlin-ultrapack",
+  "downloaded_at": "2026-11-03T06:16:40.559083Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "btseytlin",
+  "source_url": "https://github.com/btseytlin/ultrapack/blob/main/skills/test-driven-development/SKILL.md",
+  "license": "WTFPL",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/btseytlin/ultrapack/blob/main/skills/test-driven-development/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when implementing deterministic, reusable code where regressions would warrant a CI red light. Enforces RED-GREEN-REFACTOR. Applicability rule and skip conditions inside."
+}

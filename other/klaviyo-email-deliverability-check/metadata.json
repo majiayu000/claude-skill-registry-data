@@ -1,0 +1,37 @@
+{
+  "name": "klaviyo-email-deliverability-check",
+  "repo": "coupler-io/skills",
+  "path": "ecommerce/klaviyo/klaviyo-email-deliverability-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coupler-io/skills",
+  "dir_name": "klaviyo-email-deliverability-check",
+  "downloaded_at": "2026-11-03T06:33:42.649303Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coupler-io",
+  "source_url": "https://github.com/coupler-io/skills/blob/main/ecommerce/klaviyo/klaviyo-email-deliverability-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coupler-io/skills/blob/main/ecommerce/klaviyo/klaviyo-email-deliverability-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for \"is our Klaviyo sending healthy\", \"are our emails going to spam\", \"why is our Klaviyo bounce rate up\", \"which campaign got spam complaints\", \"are we at risk with Gmail\", \"too many unsubscribes from Klaviyo\", \"should we sunset unengaged subscribers\", or \"check our email list health\" \u2014 even when the user never says \"deliverability\". Use when the decision is whether sending is safe and which campaigns, flows or segments to stop or narrow. Klaviyo email only."
+}

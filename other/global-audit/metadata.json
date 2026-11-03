@@ -1,0 +1,37 @@
+{
+  "name": "global-audit",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-projects/skills/global-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "global-audit",
+  "downloaded_at": "2026-11-03T06:53:40.884726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-projects/skills/global-audit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-projects/skills/global-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits and optimizes the five global Claude layers (User Preferences, Styles, Global Memory, Skills, MCP Connectors) using the Global Layer Scorecard (six dimensions, anchored 1-5 rubrics). Detects eight cross-layer failure modes and produces evolutionary recommendations (Promotion, Demotion, Codification, Skill Extraction). Use when user says \"audit my global setup,\" \"optimize my preferences,\" \"review my Claude configuration,\" \"check my cross-project setup,\" \"are my preferences working,\" \"clean up my global memory,\" or \"what should be in my preferences vs my project.\" Also use when a user has 3+ Projects and wants to improve their shared foundation. Do NOT use for single-Project audits, Project Memory optimization, or full-stack audits (use project-audit, memory-optimization, or full-stack-audit respectively, if available). Run on Opus 5.5 (`medium`+) or Sonnet 5.5 (`high`); depth reduces on legacy models."
+}

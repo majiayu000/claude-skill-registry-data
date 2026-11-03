@@ -1,0 +1,38 @@
+{
+  "name": "typer",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/typer/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "typer",
+  "downloaded_at": "2026-11-03T06:20:03.675461Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/typer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/typer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building CLI applications with fastapi/typer \u2014 creating commands, defining CLI arguments and options, type-hint-driven parameter parsing, callbacks, context, help customization, shell completion, testing, packaging, or Typer internals. Triggers on: \"typer\", \"typer.run\", \"typer.Typer\", \"typer app\", \"typer command\", \"typer argument\", \"typer option\", \"typer callback\", \"typer context\", \"Annotated\", \"typer.Argument\", \"typer.Option\", \"typer.Context\", \"CliRunner\", \"add_typer\", \"rich_markup_mode\", \"typer completion\", \"typer autocompletion\", \"typer echo\", \"typer test\", \"typer package\", \"typer click\", \"get_command\"."
+}

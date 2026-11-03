@@ -1,0 +1,39 @@
+{
+  "name": "sdkm",
+  "repo": "borenchan/sdkmate",
+  "path": "skills/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/borenchan/sdkmate",
+  "dir_name": "skills-borenchan-sdkmate",
+  "downloaded_at": "2026-11-03T06:12:50.664437Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "borenchan",
+  "source_url": "https://github.com/borenchan/sdkmate/blob/master/skills/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/borenchan/sdkmate/blob/master/skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u5b89\u88c5\u5e76\u4f7f\u7528 sdkm\uff08\u8de8\u5e73\u53f0 SDK \u7248\u672c\u7ba1\u7406\u5668 CLI\uff0c\u5355\u4e8c\u8fdb\u5236\u3001\u7eaf\u7eff\u8272\uff09\u5728\u7528\u6237\u673a\u5668\u4e0a\u7ba1\u7406 Java/Node.js/Python/Maven/Go \u7b49\u5f00\u53d1\u73af\u5883\u7248\u672c\uff0c\u4ee5\u53ca\u914d\u7f6e sdkm \u81ea\u8eab\uff08\u4ee3\u7406\u3001\u7f13\u5b58\u3001\u8d85\u65f6\u3001GitHub token\u3001\u7b26\u53f7\u94fe\u63a5\u76ee\u5f55\u7b49 config.toml \u9879\uff09\u3002\u5f53\u7528\u6237\u673a\u5668\u4e0a\u8fd8\u6ca1\u6709 sdkm \u65f6\uff0c\u6309\u672c skill \u7684\u5b89\u88c5\u7ae0\u8282\u4ece GitHub Release \u4e0b\u8f7d\u6700\u65b0\u7248\u5e76\u521d\u59cb\u5316\uff08\u542b\u914d\u5957\u5b89\u88c5\u811a\u672c scripts/install.sh / scripts/install.ps1\uff0c\u53ef\u76f4\u63a5\u8c03\u7528\uff09\u3002\u5f53 agent \u9700\u8981\u4e3a\u7528\u6237\u5b89\u88c5\u6216\u5207\u6362/\u5378\u8f7d SDK \u7248\u672c\u3001\u9047\u5230 sdkm \u547d\u4ee4\uff08sdkm init/install/uninstall/switch/use/list/current/config/self \u53ca\u522b\u540d i/rm/s/ls/c/u\uff09\u3001\u9700\u8981\u914d\u7f6e Java/Node/Python/Maven/Go \u7248\u672c\u3001\u914d\u7f6e sdkm \u5de5\u5177\u81ea\u8eab\u3001\u6216\u8981\u6ce8\u518c\u81ea\u5b9a\u4e49 SDK \u65f6\uff0c\u52a1\u5fc5\u5148\u8bfb\u672c skill\u3002\u6db5\u76d6\u591a\u4f5c\u7528\u57df\u7248\u672c\u5207\u6362\uff08\u5168\u5c40/\u9879\u76ee/\u4e34\u65f6\uff09\u3001\u6a21\u7cca\u7248\u672c\u5339\u914d\u3001config.toml \u914d\u7f6e\u3001TUI \u9009\u62e9\u5668\u6309\u952e\u3001\u81ea\u5b9a\u4e49 SDK \u6ce8\u518c\u4e0e\u5df2\u77e5\u9650\u5236\u3002\u5373\u4f7f\u7528\u6237\u6ca1\u660e\u8bf4\"\u7528 sdkm\"\uff0c\u53ea\u8981\u610f\u56fe\u662f\u5728\u7528\u6237\u673a\u5668\u4e0a\u5b89\u88c5/\u7ba1\u7406\u672c\u5730 SDK \u7248\u672c\uff08\u88c5/\u5207/\u5378/\u67e5 Java/Node/Python/Maven/Go\uff09\u6216\u8c03\u6574 sdkm \u7684\u4ee3\u7406/\u7f13\u5b58/token \u7b49\u8bbe\u7f6e\u5c31\u5e94\u89e6\u53d1\u3002"
+}

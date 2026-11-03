@@ -1,0 +1,37 @@
+{
+  "name": "product-prd",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/cpo/.claude/skills/product-prd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "product-prd",
+  "downloaded_at": "2026-11-03T07:06:55.449397Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/cpo/.claude/skills/product-prd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/cpo/.claude/skills/product-prd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "CPO-posture skill that authors a project's PRD \u2014 the product source of truth and the head of the definition sequence. Requires CPO posture (halts if invoked outside a cpo session or the cpo agent). Non-interactive by design \u2014 it drafts the whole PRD best-effort from the project's inputs and a product diagnostic, and instead of interviewing live it surfaces everything it can't settle into a companion open-issues file (open issues, choices to confirm, directives) for the owner to answer async. On re-run it consumes both files, retires the owner's answered file whole to a permanent trail, folds their answers into the PRD, and when nothing is left unresolved it clears the companion \u2014 its absence means the PRD is done. The skill resolves where the files land from the project's Product path. Use when authoring, continuing, or revising a product's PRD. Do not use for per-change specs (development-specs), the project's Agari (project-agari), or downstream documents (SRS / SDD / Delivery Plan / FDR / ADR / NFDR)."
+}

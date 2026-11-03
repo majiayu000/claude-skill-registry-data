@@ -1,0 +1,40 @@
+{
+  "name": "domain-content-communications",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-prompts/skills/domain-content-communications/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "domain-content-communications",
+  "downloaded_at": "2026-11-03T06:53:46.249902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy, blog, article",
+    "score": 5,
+    "runner_up": "communication",
+    "runner_up_score": 3,
+    "signals": [
+      "writing",
+      "writer",
+      "copy",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/domain-content-communications/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/domain-content-communications/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Specialized prompt-building methodology for content and communications tasks. Provides 11 tested approaches (3 identity, 4 reasoning, 4 output) for writing, editing, content strategy, copywriting, audience analysis, editorial evaluation, cross-channel adaptation, and persuasion design. Use when building a Claude prompt or system prompt for content creation, editorial workflows, or communications tasks. Trigger on: \"build a prompt for writing,\" \"prompt for content strategy,\" \"prompt for copywriting,\" \"prompt for blog posts,\" \"prompt for email sequences,\" \"system prompt for editorial,\" \"prompt for messaging framework,\" \"content brief prompt,\" \"prompt for audience analysis,\" \"prompt that produces better content.\" Do NOT use for writing content directly \u2014 this Skill builds prompts that produce better content. Do NOT use for evaluating or scoring existing prompts \u2014 use prompt-validation if available. Do NOT use for general prompt compilation \u2014 use prompt-compilation if available."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dx-devops-conflict-resolve",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/dx-devops-conflict-resolve/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "dx-devops-conflict-resolve",
+  "downloaded_at": "2026-11-03T07:14:20.470042Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-devops-conflict-resolve/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-devops-conflict-resolve/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to diagnose and resolve what blocks a DevOps Center promotion of a work item's feature branch: Git merge conflicts and deployment failures. DevOps Center is Git-backed, so overlapping metadata changes surface as merge conflicts against the target stage branch, resolved with git (detect, resolve markers, commit, push). Deploy failures often cite a missing dependency a full promotion can fix when the component already exists on the branch. TRIGGER when the user wants to check a work item for conflicts before promoting, resolve merge conflicts or leftover conflict markers in metadata files (.xml, .object-meta.xml, .cls), reconcile a feature branch with its target stage branch, or diagnose why a DevOps Center promotion or deployment failed and whether a full promotion or a missing-dependency fix will resolve it. DO NOT TRIGGER for running the promotion itself (use dx-devops-promote), creating or updating work items (use dx-devops-work-item-manage), or deploying metadata directly to an org."
+}

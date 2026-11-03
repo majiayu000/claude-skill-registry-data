@@ -1,0 +1,37 @@
+{
+  "name": "life-sciences-kam-coordinate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/life-sciences-kam-coordinate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "life-sciences-kam-coordinate",
+  "downloaded_at": "2026-11-03T07:14:24.071528Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: orchestration=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "orchestration",
+      "orchestrator"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/life-sciences-kam-coordinate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/life-sciences-kam-coordinate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to run the full end-to-end Life Sciences Cloud setup workflow for a key account management (KAM) user in sequence. Trigger when the user says 'set up Life Sciences Cloud end to end for kam user', 'run the full LSC setup for kam user', 'orchestrate Life Sciences Cloud configuration for kam user', 'complete LSC setup for kam user', or 'Life Sciences Cloud full install for kam user'. Executes six stages in order: prerequisites validation, starter config deployment, territory configuration, participant role and sprint creation, KAM data and plan-template (goals, tasks, measures) creation, and KAM user provisioning \u2014 gating each stage on the success of the previous one. DO NOT TRIGGER when: the user wants to run only one specific stage individually, or when the request targets a field sales rep rather than a KAM user (use life-sciences-fieldsalesrep-coordinate for that persona)."
+}

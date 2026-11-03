@@ -1,0 +1,37 @@
+{
+  "name": "support-taxonomy",
+  "repo": "bromso/singularskills",
+  "path": "skills/support-taxonomy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "support-taxonomy",
+  "downloaded_at": "2026-11-03T06:14:52.040903Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/support-taxonomy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/support-taxonomy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design the ticket taxonomy \u2014 a two-level category tree, tags, and P1 to P4 priority definitions an agent can apply \u2014 and test it against real tickets. Use when the user needs to decide how support tickets are categorised, tagged and prioritised before building help content or reports. Not for mapping where customers contact support; see /support-journey-map."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "eas-app-stores",
+  "repo": "daniel-dihardja/menuyukti",
+  "path": ".agents/skills/eas-app-stores/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/daniel-dihardja/menuyukti",
+  "dir_name": "eas-app-stores-daniel-dihardja-menuyukti",
+  "downloaded_at": "2026-11-03T06:40:02.090010Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "daniel-dihardja",
+  "source_url": "https://github.com/daniel-dihardja/menuyukti/blob/master/.agents/skills/eas-app-stores/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/daniel-dihardja/menuyukti/blob/master/.agents/skills/eas-app-stores/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "EAS service (paid). Deploy Expo apps to the app stores with EAS - build and submit to the iOS App Store, Google Play Store, and TestFlight, configure eas.json build and submit profiles, manage app versions and build numbers, and publish App Store metadata and ASO. Use whenever the user wants to deploy, release, or ship an app to production or the app stores, is preparing a production build, running eas build or eas submit, shipping to TestFlight, bumping version or build numbers, or setting up store listing metadata. For deploying an Expo website or API routes, use the eas-hosting skill."
+}

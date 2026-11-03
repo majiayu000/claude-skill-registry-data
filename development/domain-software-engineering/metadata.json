@@ -1,0 +1,40 @@
+{
+  "name": "domain-software-engineering",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-prompts/skills/domain-software-engineering/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "domain-software-engineering",
+  "downloaded_at": "2026-11-03T06:53:46.017991Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, software, compile, debug",
+    "score": 5,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/domain-software-engineering/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/domain-software-engineering/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Specialized software engineering prompt methodology for Claude. Use when building prompts for system design, code review, incident response, security analysis, API design, architecture decisions, RFCs, ADRs, runbooks, or technical leadership. Trigger on: \"build a prompt for code review,\" \"system design prompt,\" \"SRE prompt,\" \"security review prompt,\" \"incident response prompt,\" \"API design prompt,\" \"architecture decision prompt,\" \"RFC prompt,\" \"runbook prompt.\" Provides 11 tested approaches across identity, reasoning, and output for engineering analysis. Do NOT use for general coding help, writing code, or debugging \u2014 this builds prompts that shape engineering analysis, not code itself. Do NOT use for evaluating existing prompts (use prompt-validation if available)."
+}

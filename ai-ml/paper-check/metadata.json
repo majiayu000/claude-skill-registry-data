@@ -1,0 +1,37 @@
+{
+  "name": "paper-check",
+  "repo": "fcakyon/labrat",
+  "path": "plugin/skills/paper-check/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/fcakyon/labrat",
+  "dir_name": "paper-check",
+  "downloaded_at": "2026-11-03T07:09:07.662168Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: model, training",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fcakyon",
+  "source_url": "https://github.com/fcakyon/labrat/blob/main/plugin/skills/paper-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fcakyon/labrat/blob/main/plugin/skills/paper-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check a paper against its code, results and citations before submission (numbers, terms, code vs paper, formulas vs code, BibTeX and cited claims via DBLP and Crossref, eval integrity), and prepare its code for open-source release. Use when the user says \"verify claims\" / \"verify paper against code\", \"check numbers\" / \"do the numbers match\" / \"are my numbers right\", \"formula vs code\", \"audit my paper\", \"cross-check claims or results\", \"paper consistency check\", \"check citations\", \"verify BibTeX\", \"publish code\" / \"open source release\" / \"code release\", \"structure a research repository for publication\", \"create reproducible research artifacts\", \"reproducibility checklist for a code release\", or \"prepare for publication\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "refactor-for-clarity",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/developer/.claude/skills/refactor-for-clarity/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "refactor-for-clarity-eyalgo-kensaiapp",
+  "downloaded_at": "2026-11-03T07:07:04.242825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/developer/.claude/skills/refactor-for-clarity/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/developer/.claude/skills/refactor-for-clarity/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Refactor code for clarity without changing behavior. Use when the implementation works but is harder to read, follow, or extend than it needs to be \u2014 deep nesting, unclear names, long functions, dense logic. Pairs with refactor-for-reuse (redundancy focus)."
+}

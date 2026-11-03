@@ -1,0 +1,37 @@
+{
+  "name": "kensaiapp-michi",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/interactive-product/.claude/skills/kensaiapp-michi/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "kensaiapp-michi",
+  "downloaded_at": "2026-11-03T07:07:07.197993Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive-product/.claude/skills/kensaiapp-michi/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive-product/.claude/skills/kensaiapp-michi/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Posture-neutral skill (CTO / principal-PM level, no role prefix) that settles a kensaiapp instance's identity and declares its Michi (\u9053 \u2014 the endless Way it steers by), in that order. Works WITH the user \u2014 drafts first, interviews only the genuine gaps leading with a recommendation, lets the user make the calls, and commits each artifact once confirmed. Fills the `kensaiapp.md` \u00a7 \"What this is about\" and `system/michi.md` placeholders that setup-kensaiapp stamps, then reconciles the README to match. Use when declaring or revising what a kensaiapp instance is and the Way(s) it commits to \u2014 at instance setup, or later to revise identity / add a Way; also when handed a filled-in identity brief for an instance."
+}

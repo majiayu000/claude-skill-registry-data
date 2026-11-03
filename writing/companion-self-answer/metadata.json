@@ -1,0 +1,37 @@
+{
+  "name": "companion-self-answer",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/companion/.claude/skills/companion-self-answer/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "companion-self-answer",
+  "downloaded_at": "2026-11-03T07:07:04.985053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/companion/.claude/skills/companion-self-answer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/companion/.claude/skills/companion-self-answer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer an open-issues companion when nobody is in the room \u2014 the run decides, and writes its own\ndecisions into the file. A document authored non-interactively parks what it could not settle in a\n`*_open_issues.md` companion beside it, which the owner ordinarily answers item by item. This skill\ntakes that seat. **It is given the companion to answer \u2014 a path, required \u2014 and halts without one.**\nIt proves the file is live, reads from the header which document it belongs to and which skill\nre-runs it, decides every open item it is given \u2014 all of them, or only the items its invocation\nlists \u2014 by the judgment in `prompts/rich.md`, and writes each answer\ninto its slot. It also raises a\nchange on that companion where the document is owed one no item asked for, opens or updates another\ndocument's companion where a change belongs there, and leaves a committed report of every verdict \u2014\ncarrying, for an item only the owner may settle, the answer it would have given. Then it commits,\nnames the launchers owed a run, and stops.\nUse when a companion must be answered with no owner present \u2014 an unattended or launcher-driven run,\na chain that would stall waiting on an answer, or an ask for the run to decide for itself.\nTrigger phrases \u2014 \"answer the companion yourself\", \"decide the open issues\", \"self-answer the open\nissues\", \"answer it without me\", \"companion-self-answer\".\nDo not use for walking a companion with the owner present (that is `companion-answer`), writing the\ndocument itself, running the producing skill, or a Nemawashi seed / Shukuba station."
+}

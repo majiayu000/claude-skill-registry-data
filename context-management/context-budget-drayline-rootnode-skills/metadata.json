@@ -1,0 +1,38 @@
+{
+  "name": "context-budget",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-projects/skills/context-budget/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "context-budget-drayline-rootnode-skills",
+  "downloaded_at": "2026-11-03T06:53:42.209849Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, memory",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-projects/skills/context-budget/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-projects/skills/context-budget/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyzes Claude Project context budget under the automatic-RAG-by-window model: knowledge files vs. threshold-exempt overhead (Skills, MCPs, CI, Memory). Two modes: Quick Diagnostic and Full Budget Audit. Use when user says \"check my context budget,\" \"how much context am I using,\" \"is my project too big,\" \"optimize my token usage,\" \"tier my files,\" \"optimize for RAG,\" \"improve retrieval quality,\" \"should I keep compressing,\" \"am I over-compressing,\" \"should I accept RAG mode.\" Also trigger on context pressure symptoms: \"Claude forgets my instructions,\" \"responses getting generic,\" \"content not found in my knowledge files.\" Also use when a project audit scores Knowledge Architecture \u2264 3. Do NOT use for content placement decisions (use memory-optimization if available), full project audits (use project-audit if available), or behavioral tuning (use behavioral-tuning if available). Run on Opus 5.5 (`medium`+) or Sonnet 5.5 (`high`); depth reduces on legacy models."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "seeds-from-product-docs",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/principal-pm/.claude/skills/seeds-from-product-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "seeds-from-product-docs",
+  "downloaded_at": "2026-11-03T07:07:07.562504Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/principal-pm/.claude/skills/seeds-from-product-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/principal-pm/.claude/skills/seeds-from-product-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Principal PM-posture skill that cuts a product's settled documents \u2014 its SDD, FDR, ADR records and NFDR \u2014 into \u6839\u56de\u3057 Nemawashi seeds, each walkable on its own, each with its own station checklist, written into the owning project's candidate pool. The second of that seat's two cutters, beside seeds-from-idea; this one starts from a document set already designed, ordered and locked, and draws out the work nobody has drawn yet. Four kinds come out \u2014 work on the product, a document the product's own records name and nobody wrote, a change asked of a definition-tier document through its open-issues companion, and a project that has to exist first. Requires Principal PM posture and halts outside a principal-pm session or the principal-pm subagent. It opens no worktree and no branch \u2014 it writes and commits in the instance it was started in, so the seeds are in the pool the moment the run ends. The cut never interviews \u2014 meeting something the repository cannot settle, it commits what it has, names the case and halts."
+}

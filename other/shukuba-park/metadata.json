@@ -1,0 +1,36 @@
+{
+  "name": "shukuba-park",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/pm/.claude/skills/shukuba-park/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "shukuba-park",
+  "downloaded_at": "2026-11-03T07:06:55.892363Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category documents scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "",
+    "runner_up_score": 0,
+    "signals": [
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/pm/.claude/skills/shukuba-park/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/pm/.claude/skills/shukuba-park/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Park an unreached \u5bbf\u5834 Shukuba station and free the slot. Moves the station file into the sibling\n`shukuba/parked/`, where it waits until someone opens it again, and leaves the \u6839\u56de\u3057 Nemawashi seed's\nchecklist item **unticked**. The **PM**'s \u2014 it halts outside a pm session or the pm subagent. Asks\nnothing \u2014 the freed slot is shukuba-open's and the idea's un-pick is nemawashi-unpick's \u2014 so it runs\nunattended.\nPark-don't-strike: the station is relocated, never struck through, never marked done-in-place.\nProject-level only. The instance's `system/shukuba/` is a router station with one destination,\n`trail/`, and no `parked/` at all.\nUse when: a station is being set down before its reached-when is met \u2014 the work is paused, deprioritised,\nblocked, or superseded, or the slot is wanted for different work \u2014 and it should stay available to take\nup again.\nDo not use for: a station whose reached-when **is** met (use shukuba-retire \u2014 that closes it to `trail/`\nand ticks the seed), the idea behind it (use nemawashi-unpick \u2014 that moves the seed itself to\n`unpicked/` and leaves the root empty), an unsealed \u98db\u3073\u77f3 Tobiishi being set down (use tobiishi-drop \u2014 that moves it to\n`tobiishi/drop/`), a finished one (use tobiishi-seal), or an instance-level item\nunder `system/` (the instance router has no `parked/` to move a station into).\nTrigger phrases: \"park the station\", \"park this shukuba\", \"set this station down\", \"shelve the station\",\n\"the station isn't reached but I need the slot\", \"shukuba-park\"."
+}

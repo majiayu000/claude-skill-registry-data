@@ -1,0 +1,37 @@
+{
+  "name": "organizations",
+  "repo": "auth0/nextjs-auth0",
+  "path": "skills/organizations/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/auth0/nextjs-auth0",
+  "dir_name": "organizations",
+  "downloaded_at": "2026-11-03T06:00:09.287817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "auth0",
+  "source_url": "https://github.com/auth0/nextjs-auth0/blob/main/skills/organizations/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/auth0/nextjs-auth0/blob/main/skills/organizations/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Auth0 Organizations (multi-tenant B2B) with @auth0/nextjs-auth0 v4: pass organization at login via authorizationParameters / the /auth/login query param / startInteractiveLogin, read org_id back from the session, validate it on the backend, accept invitations, and configure orgs/connections via the Auth0 CLI or Terraform."
+}

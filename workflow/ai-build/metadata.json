@@ -1,0 +1,38 @@
+{
+  "name": "ai-build",
+  "repo": "bromso/singularskills",
+  "path": "skills/ai-build/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ai-build",
+  "downloaded_at": "2026-11-03T06:14:41.795883Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ai-build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ai-build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write the build spec for an AI feature \u2014 components, prompt files, retrieval pipeline or tool definitions, configuration, logging, and an initial test set from the failure modes \u2014 ready for the development workflow to implement. Use when the prompt and experience are designed and the feature needs building. Not for writing the code itself; see /development-plan."
+}

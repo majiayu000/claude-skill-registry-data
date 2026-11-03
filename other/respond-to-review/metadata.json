@@ -1,0 +1,37 @@
+{
+  "name": "respond-to-review",
+  "repo": "chrislacey89/skills",
+  "path": "respond-to-review/SKILL.md",
+  "github_branch": "prod",
+  "category": "other",
+  "source": "github.com/chrislacey89/skills",
+  "dir_name": "respond-to-review",
+  "downloaded_at": "2026-11-03T06:25:33.376913Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chrislacey89",
+  "source_url": "https://github.com/chrislacey89/skills/blob/prod/respond-to-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chrislacey89/skills/blob/prod/respond-to-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Side-route for when a teammate's review lands on your open PR and you want to decide what to fix, what to push back on, and what to defer. Each thread's claim is checked against the code by a fresh sub-agent before you decide, threads you mark fix go to /fix-findings, pushback gets a reply draft you post yourself, and a record stays in the project's sidecar so you can come back to it. Not for reviewing someone else's PR (that's /pre-merge --pr), not for the pack's own review findings (that's /fix-findings from the /pre-merge menu), and never on an AFK run."
+}

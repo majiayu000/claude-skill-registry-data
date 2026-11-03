@@ -1,0 +1,38 @@
+{
+  "name": "Document Audit (Sovereign Intelligence)",
+  "repo": "andrejrunb/-quila-pro-v-1.0.0",
+  "path": ".agent/skills/document_audit/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/andrejrunb/-quila-pro-v-1.0.0",
+  "dir_name": "document-audit",
+  "downloaded_at": "2026-11-03T05:49:22.098295Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, excel, docx",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "excel",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "andrejrunb",
+  "source_url": "https://github.com/andrejrunb/-quila-pro-v-1.0.0/blob/main/.agent/skills/document_audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/andrejrunb/-quila-pro-v-1.0.0/blob/main/.agent/skills/document_audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Habilidade avan\u00e7ada para leitura, extra\u00e7\u00e3o de dados e auditoria de documentos Docx, PDF e Planilhas no \u00c1quila Pro."
+}

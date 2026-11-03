@@ -1,0 +1,37 @@
+{
+  "name": "finance-scenario",
+  "repo": "bromso/singularskills",
+  "path": "skills/finance-scenario/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "finance-scenario",
+  "downloaded_at": "2026-11-03T06:14:53.998780Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/finance-scenario/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/finance-scenario/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Model best, base and worst-case financial scenarios for one decision, with the variables that differ, projections for each, decision triggers and contingency plans. Use when the user faces a decision under uncertainty and wants to see the range of outcomes before choosing. Not for a full multi-year model with valuation; see /finance-model."
+}

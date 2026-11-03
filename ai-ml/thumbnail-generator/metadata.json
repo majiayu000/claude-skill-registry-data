@@ -1,0 +1,38 @@
+{
+  "name": "thumbnail-generator",
+  "repo": "elivatemarketingbryan-beep/Edits",
+  "path": ".claude/skills/thumbnail-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/elivatemarketingbryan-beep/Edits",
+  "dir_name": "thumbnail-generator",
+  "downloaded_at": "2026-11-03T07:00:44.491502Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elivatemarketingbryan-beep",
+  "source_url": "https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/thumbnail-generator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/thumbnail-generator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "YouTube thumbnail generator via Higgsfield Nano Banana Pro. Claude reads the video's hook/title (Notion page or raw string), proposes thumbnail concepts with cinematic prompts anchored to your face-ref photo library, you approve the manifest, then submits in parallel and downloads 16:9 PNGs. Optional per-concept extra_refs bake in logos/products/scene refs. A second script burns tilted yellow/white title blocks on top with PIL \u2014 no Canva/Photoshop needed. Style-match mode (face_refs: false) lets you mimic an existing thumbnail's no-humans aesthetic. Triggers: make a thumbnail, yt thumbnail, generate thumbnail, youtube thumbnail, design a thumbnail, style-match this thumbnail, add title to thumbnail."
+}

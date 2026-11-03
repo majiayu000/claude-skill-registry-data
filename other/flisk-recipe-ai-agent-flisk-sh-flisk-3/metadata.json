@@ -1,0 +1,37 @@
+{
+  "name": "flisk-recipe-ai-agent",
+  "repo": "flisk-sh/flisk",
+  "path": "plugins/flisk-claude/skills/flisk-recipe-ai-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "flisk-recipe-ai-agent-flisk-sh-flisk-3",
+  "downloaded_at": "2026-11-03T07:13:07.676366Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/plugins/flisk-claude/skills/flisk-recipe-ai-agent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/plugins/flisk-claude/skills/flisk-recipe-ai-agent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recipe for \"build me an AI agent with MCP tools and a database\" with Flisk - an agent service with sessions, an MCP tools server and a backend with a database in one stack, started with `flisk up`. Use with the flisk-build skill when the user asks for an AI agent, chatbot, assistant, MCP server or tools for an agent."
+}

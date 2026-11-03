@@ -1,0 +1,37 @@
+{
+  "name": "service-itsm-teams-debug",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/service-itsm-teams-debug/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "service-itsm-teams-debug",
+  "downloaded_at": "2026-11-03T07:14:16.053218Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, debug",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/service-itsm-teams-debug/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/service-itsm-teams-debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Debug and diagnose Microsoft Teams for Employee Service (ITSM) configuration failures \u2014 run a pass/fail validation checklist against the org and report exact remediation. Use this for: 'IT Desk login not working in Teams', 'UEL/CCP user can't log in to IT Service', 'Teams feature not showing / not enabled', 'CI Hub / Service Catalog / My Assets tab not loading', 'Teams Agentforce agent not responding', 'Teams swarming not working', 'Teams SSO failing', or any request to troubleshoot a Teams ITSM setup. Routes the problem to the right checklist (login, feature enablement, tab loading, Agentforce, swarming, SSO) and checks the exact CORS, External Client App, feature toggle, PSL, profile, auth-provider, named-credential, and messaging-channel settings each requires. DO NOT TRIGGER for first-time enablement (service-itsm-teams-configure / -itservice-configure / -itdesk-configure) or building the embedded agent from scratch (service-itsm-teams-employee-agent-configure)."
+}

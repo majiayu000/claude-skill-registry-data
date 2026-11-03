@@ -1,0 +1,37 @@
+{
+  "name": "ad-hoc-plan",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/tech-lead/.claude/skills/ad-hoc-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "ad-hoc-plan",
+  "downloaded_at": "2026-11-03T07:06:58.206862Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/tech-lead/.claude/skills/ad-hoc-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/tech-lead/.claude/skills/ad-hoc-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tech Lead-posture skill that plans a hand-opened \u98db\u3073\u77f3 Tobiishi end to end, so the chain can carry it from the content step, or from implementation when the change publishes no text, onward. Takes a quote-checked brief beside the change's change_request.md \u2014 confirmed by the owner in a session, or the Request itself when unattended \u2014 grounds every claim against the repository, opens the change's worktree, and writes a stub change_spec.md, a stub change_design.md, and a full tl_instruction.md in development-plan's shape, with a report beside the brief. Requires Tech Lead posture and halts outside a tech-lead session or the tech-lead subagent. The run itself never interviews \u2014 when the repository cannot settle something it stops and says what would settle it. Use when a change has been opened by hand and should be planned in one pass rather than walked through development-specs, development-design and development-plan."
+}

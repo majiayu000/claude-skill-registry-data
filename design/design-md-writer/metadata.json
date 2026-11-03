@@ -1,0 +1,41 @@
+{
+  "name": "design-md-writer",
+  "repo": "anilcancakir/claude-code",
+  "path": "plugins/ac/skills/design-md-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/anilcancakir/claude-code",
+  "dir_name": "design-md-writer",
+  "downloaded_at": "2026-11-03T05:50:22.401017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, frontend, component, tailwind",
+    "score": 6,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "frontend",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anilcancakir",
+  "source_url": "https://github.com/anilcancakir/claude-code/blob/main/plugins/ac/skills/design-md-writer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anilcancakir/claude-code/blob/main/plugins/ac/skills/design-md-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or audit a visual-identity DESIGN.md: design tokens plus rationale in the Google Labs format, for UI agents."
+}

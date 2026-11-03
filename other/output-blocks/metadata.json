@@ -1,0 +1,37 @@
+{
+  "name": "output-blocks",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-prompts/skills/output-blocks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "output-blocks",
+  "downloaded_at": "2026-11-03T06:53:40.677294Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/output-blocks/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/output-blocks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tested output format specifications for Claude prompts. Use when the user wants a specific deliverable structure \u2014 retrieving, reviewing, customizing, or building output formatting. Trigger on: \"give me the Executive Brief format,\" \"show me the output template for,\" \"I need the Decision Matrix structure,\" \"show me available output formats,\" \"build a custom output format for.\" Provides 10 ready-to-use structures (executive briefs, technical designs, research summaries, implementation plans, decision matrices, competitive analyses, post-mortems, stakeholder updates, strategic memos, process documentation) plus a custom template, with per-section length guidance and format constraints tested against Claude formatting defaults. If unsure which format fits, use block-selection first if available. Do NOT use for evaluating existing prompts (use prompt-validation if available) or choosing reasoning/identity approaches (use block-selection if available)."
+}

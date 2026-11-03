@@ -1,0 +1,39 @@
+{
+  "name": "react-code",
+  "repo": "gaia-harness/gaia",
+  "path": "apps/web/.claude/skills/react-code/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "react-code-gaia-harness-gaia",
+  "downloaded_at": "2026-11-03T07:19:10.392009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, frontend, component",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/react-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/react-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Applies GAIA's patterns and conventions for writing and editing React components and hooks. Use this skill whenever writing or reviewing React components, hooks, or event handlers, or deciding on component extraction. Also trigger when deciding whether a manual memo or \"use no memo\" is justified under React Compiler, debugging stale closures or infinite re-renders, weighing a new dependency against a web-platform API or a hand-rolled primitive, choosing a React 19 idiom, or reaching for React's form Actions instead of React Router's form handling."
+}

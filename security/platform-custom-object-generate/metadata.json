@@ -1,0 +1,37 @@
+{
+  "name": "platform-custom-object-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/platform-custom-object-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "platform-custom-object-generate",
+  "downloaded_at": "2026-11-03T07:14:30.514236Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-custom-object-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-custom-object-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when users create, generate, or validate Salesforce Custom Object metadata. Trigger on custom objects, .object files, sharing models, name fields, or validation rules \u2014 e.g. \"create a custom object\" \u2014 and deployment errors around sharing models and Master-Detail relationships. Also keep the object's <description> current when its fields or validation rules change. Do NOT use for non-Custom-Object metadata (Apex, Flows, LWC, Permission Sets, Custom Metadata Types) or standard objects."
+}

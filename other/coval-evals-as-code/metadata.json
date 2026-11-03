@@ -1,0 +1,37 @@
+{
+  "name": "coval-evals-as-code",
+  "repo": "coval-ai/coval-external-skills",
+  "path": "skills/evaluation/coval-evals-as-code/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coval-ai/coval-external-skills",
+  "dir_name": "coval-evals-as-code",
+  "downloaded_at": "2026-11-03T06:34:21.989715Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coval-ai",
+  "source_url": "https://github.com/coval-ai/coval-external-skills/blob/main/skills/evaluation/coval-evals-as-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coval-ai/coval-external-skills/blob/main/skills/evaluation/coval-evals-as-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maintain Coval evaluation configuration in a repository using Terraform. Use to adopt existing agents, suites, cases and metrics, add regression cases, review drift, or prepare isolated CI evaluations while preserving resource identity and run evidence."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "project-agari",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/cpo/.claude/skills/project-agari/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "project-agari",
+  "downloaded_at": "2026-11-03T07:06:56.948580Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "prd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/cpo/.claude/skills/project-agari/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/cpo/.claude/skills/project-agari/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "CPO-posture skill that declares a project's Agari (\u4e0a\u304c\u308a) \u2014 the terminus that says when the product is complete or shipped. Requires CPO posture and halts if invoked outside a cpo session or the cpo subagent. Non-interactive by design \u2014 it drafts the terminus best-effort from the settled PRD and the project card, and instead of interviewing live it parks what it cannot settle in a companion open-issues file (open issues, choices to confirm) for the owner to answer async. On re-run it retires the owner's answered file whole to a permanent trail, folds their answers in, and when nothing is left unresolved it deletes the companion \u2014 its absence means the Agari is declared. Declared off the back of the settled PRD and before the SRS, as station 2 of a project's setup seed. Fills the project's agari.md in the instance repo. Use when declaring or revising what done means for a managed project. Do not use for the instance's identity or Michi (kensaiapp-michi), the PRD (product-prd), or a single change's done (the change pipeline)."
+}

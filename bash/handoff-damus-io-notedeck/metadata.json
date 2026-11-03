@@ -1,0 +1,38 @@
+{
+  "name": "handoff",
+  "repo": "damus-io/notedeck",
+  "path": ".claude/skills/handoff/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/damus-io/notedeck",
+  "dir_name": "handoff-damus-io-notedeck",
+  "downloaded_at": "2026-11-03T06:39:46.887330Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "damus-io",
+  "source_url": "https://github.com/damus-io/notedeck/blob/master/.claude/skills/handoff/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/damus-io/notedeck/blob/master/.claude/skills/handoff/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hand off to a fresh Dave session \u2014 ask the user what to work on next, spawn a new session in the current worktree, and send it the task as its first message. Use when the user wants to delegate the next unit of work to a brand-new agentic session rather than continue in this one \u2014 e.g. \"/handoff\", \"hand this off\", \"spawn a session to do X next\", \"start a fresh session on the next task\". `/handoff autowork <task>` also branches the new session off the `autowork` branch and has it land its commit there."
+}

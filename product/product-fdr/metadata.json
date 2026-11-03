@@ -1,0 +1,37 @@
+{
+  "name": "product-fdr",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/principal-pm/.claude/skills/product-fdr/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "product-fdr",
+  "downloaded_at": "2026-11-03T07:06:58.621944Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "prd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/principal-pm/.claude/skills/product-fdr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/principal-pm/.claude/skills/product-fdr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Principal PM-posture skill that authors a product's FDR \u2014 the behavioural contract, written off the settled PRD, SRS and SDD as the foundation step. Requires Principal PM posture (halts if invoked outside a principal-pm session or the principal-pm subagent). Non-interactive by design \u2014 it derives the whole FDR best-effort from the three upstream documents, and instead of interviewing live it surfaces everything it can't settle into a companion open-issues file (open issues, choices to confirm) for the owner to answer async. On re-run it consumes both files, retires the owner's answered companion whole to a permanent trail, folds their answers into the FDR, and when nothing is left unresolved it clears the companion \u2014 its absence means the FDR is done. The skill resolves where the files land from the project's Product path. Use when authoring, continuing, or revising a product's FDR. Do not use for per-change specs (development-specs), the PRD (product-prd), the SRS (product-srs), the SDD (product-sdd), the project's Agari (project-agari), or the ADR and NFDR (product-architecture)."
+}

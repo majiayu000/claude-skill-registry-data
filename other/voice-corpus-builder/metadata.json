@@ -1,0 +1,37 @@
+{
+  "name": "voice-corpus-builder",
+  "repo": "elivatemarketingbryan-beep/Edits",
+  "path": ".claude/skills/voice-corpus-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/elivatemarketingbryan-beep/Edits",
+  "dir_name": "voice-corpus-builder",
+  "downloaded_at": "2026-11-03T07:00:45.676773Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elivatemarketingbryan-beep",
+  "source_url": "https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/voice-corpus-builder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/voice-corpus-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds (or refreshes) voice-corpus/ from the creator's OWN top-performing videos so scriptwriter can write by imitation instead of description. Ranks the creator's YouTube uploads by views (yt-dlp) and Instagram reels by plays/likes (Apify MCP, same actor as ig-competitor-research), transcribes each winner (YouTube captions or local faster-whisper), writes one tagged markdown entry per video, rebuilds voice-corpus/index.md, then drafts voice-dna.md (the explicit voice rulebook) from the corpus. Triggers: build my voice corpus, voice corpus, refresh the corpus, rebuild voice-dna, update my voice, add my videos to the corpus, voice-corpus-builder, my top videos as examples."
+}

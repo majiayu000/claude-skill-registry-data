@@ -1,0 +1,38 @@
+{
+  "name": "kb",
+  "repo": "astashov/liftosaur",
+  "path": ".claude/skills/kb/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/astashov/liftosaur",
+  "dir_name": "kb-astashov-liftosaur",
+  "downloaded_at": "2026-11-03T05:58:43.508498Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "astashov",
+  "source_url": "https://github.com/astashov/liftosaur/blob/master/.claude/skills/kb/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/astashov/liftosaur/blob/master/.claude/skills/kb/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Capture important architectural decisions, bug patterns, feature designs, or other critical findings into the project knowledge base. Use proactively when significant technical decisions are made, non-obvious bugs are resolved, new subsystems are designed, or important product features are discussed."
+}

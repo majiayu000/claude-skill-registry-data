@@ -1,0 +1,37 @@
+{
+  "name": "ruby",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/ruby/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "ruby-carapace-sh-carapace-bin",
+  "downloaded_at": "2026-11-03T06:20:02.160797Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "programming",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/ruby/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/ruby/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with Ruby \u2014 the dynamic, object-oriented language and its runtime (MRI/CRuby). Covers the object model, metaprogramming, core types, blocks/procs/lambdas, control flow and exceptions, I/O and encoding, the concurrency model (Threads, Fibers, Ractors, GVL), garbage collection and ObjectSpace, the RubyGems/Bundler package system, the interpreter CLI and tooling (irb, erb, rake, rdoc/ri), environment variables, and the standard library. Triggers on: \"ruby\", \"Ruby\", \"MRI\", \"CRuby\", \"YARV\", \"Ripper\", \"object model\", \"method lookup\", \"eigenclass\", \"singleton class\", \"metaprogramming\", \"define_method\", \"method_missing\", \"class_eval\", \"instance_eval\", \"Refinements\", \"Binding\", \"Proc\", \"lambda\", \"block\", \"yield\", \"rescue\", \"ensure\", \"raise\", \"begin\", \"end\", \"Encoding\", \"String#encode\", \"Thread\", \"Fiber\", \"Ractor\", \"GVL\", \"GIL\", \"Mutex\", \"ObjectSpace\", \"GC\", \"WeakRef\", \"gem\", \"Gemfile\", \"Bundler\", \"gemspec\", \"bundle exec\", \"irb\", \"erb\", \"rake\", \"Rakefile\", \"rdoc\", \"ri\", \"RUBYOPT\", \"RUBYLIB\", \"GEM_HOME\", \"GEM_PATH\", \"BUNDLE_GEMFILE\", \"frozen string literal\", \"RUBY_VERSION\", \"RUBY_ENGINE\"."
+}

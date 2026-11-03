@@ -1,0 +1,37 @@
+{
+  "name": "sandbox",
+  "repo": "arla6ka/design.how",
+  "path": "vault/sandbox/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arla6ka/design.how",
+  "dir_name": "skill-arla6ka-design-how",
+  "downloaded_at": "2026-11-03T05:56:03.990630Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arla6ka",
+  "source_url": "https://github.com/arla6ka/design.how/blob/main/vault/sandbox/skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arla6ka/design.how/blob/main/vault/sandbox/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a three.js halftone shader in which an image or a playing video is cut into a grid of cells, each cell's brightness is bucketed into four bands, and every band stamps its own small symbol tinted with its own colour, so the picture is rebuilt out of marks, with preset looks, a palette and glyph crossfade, PNG export and WebM recording. Use when someone asks for a halftone or symbol mosaic, a glyph or emoji dither, an ASCII-like video filter, a pattern stamp effect on video, or a live image-to-symbols shader."
+}

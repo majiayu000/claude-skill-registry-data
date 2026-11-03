@@ -1,0 +1,38 @@
+{
+  "name": "shukuba-open",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/pm/.claude/skills/shukuba-open/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "shukuba-open",
+  "downloaded_at": "2026-11-03T07:06:55.220124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/pm/.claude/skills/shukuba-open/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/pm/.claude/skills/shukuba-open/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "PM-posture skill that opens the next \u5bbf\u5834 Shukuba station for a project \u2014 the model writes the station for the next unticked item on the active seed's route, in the shukuba template's shape, and a script decides whether that station may be opened before it lands at the shukuba root in one commit. A station of that seed parked for that item is taken up again instead, its reached-when unchanged. Halts outside a pm session or the pm subagent. Use when a project has an active seed and no open station \u2014 \"open the next station\", \"open the shukuba\", \"start the next leg\", \"shukuba-open\". Do not use for picking or un-picking a seed (nemawashi-pick, nemawashi-unpick), cutting or re-cutting the route (stations-from-seed, shukuba-refine), opening a change unit (tobiishi-open), closing or parking a station (shukuba-retire, shukuba-park), or the instance router under system/shukuba/."
+}

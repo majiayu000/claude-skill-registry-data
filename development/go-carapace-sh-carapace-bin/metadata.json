@@ -1,0 +1,39 @@
+{
+  "name": "go",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/go/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "go-carapace-sh-carapace-bin",
+  "downloaded_at": "2026-11-03T06:19:59.826494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/go/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/go/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with the Go CLI (go command) \u2014 building, testing, modules, workspaces, environment, toolchain, generate, vet, coverage, profiling, fuzzing, cross-compilation, and internal tool commands. Triggers on: \"go\", \"go build\", \"go test\", \"go mod\", \"go work\", \"go generate\", \"go vet\", \"go tool\", \"go get\", \"go install\", \"go run\", \"go clean\", \"go list\", \"go env\", \"go doc\", \"go fmt\", \"go fix\", \"go version\", \"go telemetry\", \"GOMODCACHE\", \"GOPROXY\", \"GOSUMDB\", \"GOPRIVATE\", \"GOTOOLCHAIN\", \"GOOS\", \"GOARCH\", \"CGO_ENABLED\", \"build constraint\", \"build tag\", \"go.mod\", \"go.sum\", \"go.work\", \"vendor\", \"pprof\", \"cover\", \"test2json\", \"buildjson\", \"GODEBUG\", \"GOEXPERIMENT\", \"minimal version selection\", \"MVS\", \"module proxy\", \"toolchain\", \"fuzzing\", \"race detector\"."
+}

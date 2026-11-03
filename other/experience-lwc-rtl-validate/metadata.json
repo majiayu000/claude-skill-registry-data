@@ -1,0 +1,38 @@
+{
+  "name": "experience-lwc-rtl-validate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-lwc-rtl-validate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-lwc-rtl-validate",
+  "downloaded_at": "2026-11-03T07:14:22.165357Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-lwc-rtl-validate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-lwc-rtl-validate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to review a Lightning Web Component (.html, .js, .css files) for right-to-left (RTL) internationalization correctness, producing a finding list with code-level fixes covering CSS logical properties, bidirectional text handling, keyboard semantics, and RTL-aware SLDS class usage. TRIGGER when the user says \"review this LWC for RTL\", \"audit i18n compliance\", \"fix bidirectional text rendering\", \"replace left/right CSS with logical properties\", \"check RTL layout issues\", \"verify SLDS RTL classes\", \"review my component for Arabic/Hebrew layout\", \"ensure this LWC works in RTL locales\", or \"check bidi text handling\". DO NOT TRIGGER when the user is building a new LWC (use experience-lwc-generate), refactoring SLDS classes themselves (use design-systems-slds-apply or design-systems-slds2-migrate), or performing accessibility/security review."
+}

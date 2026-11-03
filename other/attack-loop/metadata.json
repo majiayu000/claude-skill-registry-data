@@ -1,0 +1,37 @@
+{
+  "name": "attack-loop",
+  "repo": "btseytlin/ultrapack",
+  "path": "skills/attack-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/btseytlin/ultrapack",
+  "dir_name": "attack-loop",
+  "downloaded_at": "2026-11-03T06:16:40.072727Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "btseytlin",
+  "source_url": "https://github.com/btseytlin/ultrapack/blob/main/skills/attack-loop/SKILL.md",
+  "license": "WTFPL",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/btseytlin/ultrapack/blob/main/skills/attack-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a bounded implement-attack-repair loop for a user-specified task. Use when work needs repeated independent criticism: perform the task, dispatch a fresh attacker, verify significant findings, repair them, and stop on a clean attack or the user's round limit."
+}

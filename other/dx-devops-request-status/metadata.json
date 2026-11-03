@@ -1,0 +1,38 @@
+{
+  "name": "dx-devops-request-status",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/dx-devops-request-status/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "dx-devops-request-status",
+  "downloaded_at": "2026-11-03T07:14:15.550270Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-devops-request-status/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-devops-request-status/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to poll the status of an asynchronous DevOps Center request \u2014 a promotion or deploy operation. Provide the request token returned by dx-devops-promote (the promote response) to check completion, monitor progress, or verify success or failure via sf devops request status. TRIGGER when the user wants to check whether a promotion or deploy finished, monitor an in-flight async request, poll until a request completes, or confirm a request succeeded before finalizing. DO NOT TRIGGER for initiating a promotion or deploy (use dx-devops-promote), for work item creation or status transitions (use dx-devops-work-item-manage), or for conflict detection. Read-only status check \u2014 never mutates pipeline state."
+}

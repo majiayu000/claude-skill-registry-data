@@ -1,0 +1,37 @@
+{
+  "name": "agentforce-bot-upgrade",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/agentforce-bot-upgrade/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "agentforce-bot-upgrade",
+  "downloaded_at": "2026-11-03T07:14:13.851430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-bot-upgrade/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-bot-upgrade/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to Upgrade Einstein Bots into Agentforce agents end-to-end in a single pass, orchestrating per-bot Agent Spec generation, planner reconciliation across bots, agentforce-generate authoring, and post-conversion .agent enhancements. TRIGGER when: user asks to migrate, upgrade, or convert one or more Einstein Bots (BotDefinition/BotVersion chatbots) to Agentforce agents; runs a multi-bot bot-to-agent upgrade; needs Einstein Bot metadata turned into Agent Spec handoffs and generated .agent agents; convert bots to agents; upgrade my service bots; move bots to Agentforce. DO NOT TRIGGER when: user already has an approved Agent Spec and only wants direct .agent authoring, deploy, test, or observe flows; user wants to migrate or upgrade an EXISTING Agentforce agent from a legacy GenAiPlannerBundle to an NGA aiAuthoringBundle (that is agentforce-generate's 'Migrate a Legacy Agent to Agent Script' flow, not an Einstein Bot upgrade); the request is unrelated to Einstein Bot migration."
+}

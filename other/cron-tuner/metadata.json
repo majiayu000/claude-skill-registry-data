@@ -1,0 +1,38 @@
+{
+  "name": "cron-tuner",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/infrastructure/cron-tuner/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "cron-tuner",
+  "downloaded_at": "2026-11-03T07:01:13.935353Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/infrastructure/cron-tuner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/infrastructure/cron-tuner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Selbstjustierende Takt-Regelschleife f\u00fcr wiederkehrende Agenten-Scans. Nutzen, wenn ein geplanter Scan sein Intervall bei Aktivit\u00e4t sch\u00e4rfen und bei Stille abk\u00fchlen soll, ohne Operator-Eingriff."
+}

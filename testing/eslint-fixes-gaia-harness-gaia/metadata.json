@@ -1,0 +1,37 @@
+{
+  "name": "eslint-fixes",
+  "repo": "gaia-harness/gaia",
+  "path": "apps/web/.claude/skills/eslint-fixes/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "eslint-fixes-gaia-harness-gaia",
+  "downloaded_at": "2026-11-03T07:19:10.813254Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "jest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/eslint-fixes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/eslint-fixes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resolves the ESLint errors and warnings this project's lint config reports, including autofix conflicts. Use when fixing lint failures, ESLint-reported issues, or an autofix that fights another rule."
+}

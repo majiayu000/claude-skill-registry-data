@@ -1,0 +1,37 @@
+{
+  "name": "kubectl",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/kubectl/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "kubectl-carapace-sh-carapace-bin",
+  "downloaded_at": "2026-11-03T06:20:05.509460Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/kubectl/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/kubectl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with the kubectl CLI \u2014 Kubernetes command-line tool for managing cluster resources. Covers the command structure, resource types and API groups, kubeconfig and contexts, declarative apply, workload management (deployments, rollout, scale, autoscale, expose), debugging (logs, exec, port-forward, debug, top), cluster management (cordon, drain, taint), output formats (jsonpath, go-template, custom-columns), patches, labels, annotations, kustomize, and the plugin system. Triggers on: \"kubectl\", \"kubectl get\", \"kubectl apply\", \"kubectl create\", \"kubectl delete\", \"kubectl describe\", \"kubectl logs\", \"kubectl exec\", \"kubectl config\", \"kubectl rollout\", \"kubectl scale\", \"kubectl expose\", \"kubectl port-forward\", \"kubectl top\", \"kubectl drain\", \"kubectl cordon\", \"kubectl taint\", \"kubectl patch\", \"kubectl label\", \"kubectl annotate\", \"kubectl kustomize\", \"kubectl wait\", \"kubectl debug\", \"kubectl explain\", \"kubeconfig\", \"kubectl context\", \"kubectl plugin\"."
+}

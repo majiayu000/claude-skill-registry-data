@@ -1,0 +1,39 @@
+{
+  "name": "sec-validate",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/dev/sec-validate/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "sec-validate",
+  "downloaded_at": "2026-11-03T07:01:05.863800Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-validate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-validate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Versucht jeden Kandidaten aus findings.json zu WIDERLEGEN: Source-to-Sink-Pfad nachzeichnen, Erreichbarkeit und Gegenma\u00dfnahmen pr\u00fcfen, Schweregrad kalibrieren, wo gefahrlos m\u00f6glich lokal nachstellen. Setzt validatedBy (confirmed/refuted/uncertain) und Status validated bzw. rejected mit Grund. Nutzen bei 'Funde pr\u00fcfen', 'False Positives aussortieren', 'ist das wirklich ausnutzbar', 'unabh\u00e4ngige Zweitpr\u00fcfung des Scans'. Der Pr\u00fcfer soll ein anderer Anbieter als der Finder sein. Neue Funde suchen: sec-scan. Fremde Berichte einordnen: sec-triage. Bericht: sec-report."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "winget",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/winget/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "winget",
+  "downloaded_at": "2026-11-03T06:20:05.225853Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/winget/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/winget/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with the Windows Package Manager CLI (`winget`) \u2014 package installation, search, upgrade, uninstall, repair, sources, package manifests (YAML schema), WinGet Configuration / DSC v3, settings.json, pins, export/import, download, hash, validate, experimental features, and the dscv3 resource commands. Triggers on: \"winget\", \"winget install\", \"winget search\", \"winget upgrade\", \"winget uninstall\", \"winget list\", \"winget source\", \"winget configure\", \"winget settings\", \"winget pin\", \"winget export\", \"winget import\", \"winget download\", \"winget hash\", \"winget validate\", \"winget features\", \"winget dscv3\", \"winget repair\", \"winget mcp\", \"PackageIdentifier\", \"winget-pkgs\", \"manifest\", \"PreIndexed\", \"Microsoft.Rest\", \"msstore\", \"settings.json\", \"configuration.winget\", \"DSC v3\", \"WinGet Configuration\", \"portable package\", \"MSIX\", \"ARP\"."
+}

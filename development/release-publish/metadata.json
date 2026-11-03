@@ -1,0 +1,38 @@
+{
+  "name": "release-publish",
+  "repo": "devclone20/icloneos",
+  "path": "iclone/skills/release-publish/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/devclone20/icloneos",
+  "dir_name": "release-publish",
+  "downloaded_at": "2026-11-03T06:47:06.983958Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devclone20",
+  "source_url": "https://github.com/devclone20/icloneos/blob/main/iclone/skills/release-publish/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devclone20/icloneos/blob/main/iclone/skills/release-publish/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when tagging versions or publishing a GitHub release. Version in every manifest, build, gates, a pathspec commit, push of main or one tag (never --tags, never --force), a draft release with checksums, promotion and a stranger's download check."
+}

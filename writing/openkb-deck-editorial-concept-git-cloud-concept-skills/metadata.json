@@ -1,0 +1,38 @@
+{
+  "name": "openkb-deck-editorial",
+  "repo": "concept-git/cloud-concept-skills",
+  "path": "development/kcs-foundry/vendor/openkb/skills/openkb-deck-editorial/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/concept-git/cloud-concept-skills",
+  "dir_name": "openkb-deck-editorial-concept-git-cloud-concept-skills",
+  "downloaded_at": "2026-11-03T06:32:40.527892Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy, article",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "copy",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "concept-git",
+  "source_url": "https://github.com/concept-git/cloud-concept-skills/blob/main/development/kcs-foundry/vendor/openkb/skills/openkb-deck-editorial/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/concept-git/cloud-concept-skills/blob/main/development/kcs-foundry/vendor/openkb/skills/openkb-deck-editorial/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks the openkb chat to make a deck / slide presentation /\nPPT / slides / \u6f14\u793a\u7a3f / \u5e7b\u706f\u7247 from their compiled KB content. Generates a\npolished single-file HTML deck in the Editorial Monocle visual direction\n(warm cream background, serif type, brick-red accent) \u2014 designed to be\nopened in a browser, full-screened, and shared. Does NOT apply to\ngenerating skills (that's `openkb skill new`), long-form research reports,\nor interactive prototypes."
+}

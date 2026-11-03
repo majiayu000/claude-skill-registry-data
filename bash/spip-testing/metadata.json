@@ -1,0 +1,38 @@
+{
+  "name": "spip-testing",
+  "repo": "epilibre-design/spip-skills",
+  "path": "skills/spip-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/epilibre-design/spip-skills",
+  "dir_name": "spip-testing",
+  "downloaded_at": "2026-11-03T07:02:25.835043Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "epilibre-design",
+  "source_url": "https://github.com/epilibre-design/spip-skills/blob/main/skills/spip-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/epilibre-design/spip-skills/blob/main/skills/spip-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guides automated testing of SPIP plugins and squelettes using PHPUnit \u2014 the standard test tool for SPIP. Covers the full self-contained setup (composer, spip-cli), unit tests with lightweight mocks, and integration tests against a real SPIP instance. Written for SPIP 4.x; on a SPIP 5.0 project the integration bootstrap and test install change (see the SPIP 5.0 section). Use whenever the user wants to test, verify, or validate a SPIP plugin or squelette \u2014 even if they don't mention PHPUnit \u2014 including questions like \"how do I test my plugin\", \"I want to make sure my filtre works\", or \"how do I write tests for my autorisation / CVT form /"
+}

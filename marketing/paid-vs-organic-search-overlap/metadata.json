@@ -1,0 +1,37 @@
+{
+  "name": "paid-vs-organic-search-overlap",
+  "repo": "coupler-io/skills",
+  "path": "seo-and-geo/paid-vs-organic-search-overlap/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/coupler-io/skills",
+  "dir_name": "paid-vs-organic-search-overlap",
+  "downloaded_at": "2026-11-03T06:33:41.354182Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: seo, brand",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "seo",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coupler-io",
+  "source_url": "https://github.com/coupler-io/skills/blob/main/seo-and-geo/paid-vs-organic-search-overlap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coupler-io/skills/blob/main/seo-and-geo/paid-vs-organic-search-overlap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lines up Google Ads search terms against your Google Search Console queries, from live data in your Coupler.io workspace, to show where you pay for clicks on searches you already rank well for, where paid covers searches you don't rank for, and which brand terms carry most of the overlap \u2014 with the spend on each and a holdout test plan instead of a guess. Use for \"are we paying for clicks we'd get for free\", \"should we stop bidding on our brand\", \"paid and organic overlap\", \"do our ads cannibalise SEO\", \"which keywords can we cut because we rank\", \"where does SEO need paid support\" \u2014 even when the user never says \"overlap\". This is the paid-meets-organic decision: where search spend duplicates rankings. For wasted spend inside Google Ads alone use google-ads-wasted-spend-and-scaling; for brand vs non-brand organic only use branded-vs-non-branded-search-traffic. Needs Google Ads and Google Search Console."
+}

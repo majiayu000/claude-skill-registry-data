@@ -1,0 +1,37 @@
+{
+  "name": "local-pois",
+  "repo": "brave/brave-search-skills",
+  "path": "skills/local-pois/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/brave/brave-search-skills",
+  "dir_name": "local-pois-brave-brave-search-skills",
+  "downloaded_at": "2026-11-03T06:14:04.869228Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brave",
+  "source_url": "https://github.com/brave/brave-search-skills/blob/main/skills/local-pois/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brave/brave-search-skills/blob/main/skills/local-pois/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "USE FOR getting local business/POI details. Requires POI IDs from local-place-search, or from web-search with result_filter=locations. Returns full business information including ratings, hours, contact info. Max 20 IDs."
+}

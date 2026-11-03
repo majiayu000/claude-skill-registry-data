@@ -1,0 +1,37 @@
+{
+  "name": "oma-video",
+  "repo": "first-fluke/oh-my-agent",
+  "path": ".claude-plugin/directory/skills/oma-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/first-fluke/oh-my-agent",
+  "dir_name": "oma-video",
+  "downloaded_at": "2026-11-03T07:11:56.611828Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "first-fluke",
+  "source_url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/directory/skills/oma-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/directory/skills/oma-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create videos through the OMA video CLI, or analyze and edit existing clips with media tools. Use for frame extraction, visual analysis, silence cuts, dubbing assembly, sound effects, scripts, and composition; audio-only work uses oma-voice."
+}

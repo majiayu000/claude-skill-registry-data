@@ -1,0 +1,36 @@
+{
+  "name": "nemawashi-unpick",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/pm/.claude/skills/nemawashi-unpick/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "nemawashi-unpick",
+  "downloaded_at": "2026-11-03T07:06:57.640817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category context-management scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "context"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/pm/.claude/skills/nemawashi-unpick/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/pm/.claude/skills/nemawashi-unpick/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Un-pick the active \u6839\u56de\u3057 Nemawashi idea, leaving the project with no idea active. The **PM**'s \u2014 it\nhalts outside a pm session or the pm subagent. Un-picking moves the\nseed itself \u2014 root \u2192 `unpicked/`, rejoining the candidate pool \u2014 and leaves the root **empty**. No other\ncandidate moves; the pool's shape is otherwise unaffected. The checklist is left exactly as it is, ticks\nand all, so the route survives intact for a re-pick. The seed's line leaves the Principal PM's\n`## Picked seeds` in the same commit. It un-picks one; it picks none. Project-level\nonly \u2014 this skill serves project journeys; the instance seedbed's pick is made and undone by hand.\nUse when: the active idea is being paused, deprioritised, blocked, or superseded for now \u2014 including to clear the\nslot for different work \u2014 and it should stay in the candidate pool.\nDo not use for: an idea that ripened into work \u2014 its checklist fully walked, or cut into the seeds\nthat will walk it (use nemawashi-retire \u2014 that files it in `trail/` and restores nothing), an idea being **killed** \u2014 ruled out, superseded for good, or not going to be\ndone (use nemawashi-drop \u2014 that files it in `drop/`, because the candidate pool is for ideas that may\nstill be picked), a \u5bbf\u5834 Shukuba station (use shukuba-park \u2014 a station really does move, to\nits own `parked/`), a \u98db\u3073\u77f3 Tobiishi (use tobiishi-seal), or picking the next idea (nemawashi-pick).\nTrigger phrases: \"unpick this idea\", \"un-pick the active seed\", \"set this nemawashi down\", \"no idea\nshould be active\", \"this idea isn't finished but I need the slot\", \"nemawashi-unpick\"."
+}

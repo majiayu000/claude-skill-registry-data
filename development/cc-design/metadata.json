@@ -1,0 +1,39 @@
+{
+  "name": "cc-design",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-code/skills/cc-design/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "cc-design",
+  "downloaded_at": "2026-11-03T06:53:40.196177Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-code/skills/cc-design/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-code/skills/cc-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs Claude Code prompts and CC environments. Produces CLAUDE.md drafts, agent topologies, scope-authorization frameworks, halt triggers, Skills/hooks/MCP plans, chat-to-CC handoff specs, EXECUTION_PLAN.md remediation plans, and session-report standards. Five modes: DESIGN (new CC deployments), EVOLVE (updates from friction), RESEARCH (evaluate a CC tool/pattern), TEMPLATE (reusable artifacts), REMEDIATE (consume hygiene findings \u2192 produce + execute plan). Do NOT use REMEDIATE for direct cleanup (Cat 1\u201310 \u2014 use repo-hygiene Phase 2). Do NOT use for hygiene scanning (repo-hygiene), chat prompts (prompt-validation), or chat Projects (project-audit)."
+}

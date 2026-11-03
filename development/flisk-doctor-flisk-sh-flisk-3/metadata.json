@@ -1,0 +1,38 @@
+{
+  "name": "flisk-doctor",
+  "repo": "flisk-sh/flisk",
+  "path": "plugins/flisk-claude/skills/flisk-doctor/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "flisk-doctor-flisk-sh-flisk-3",
+  "downloaded_at": "2026-11-03T07:13:03.984456Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/plugins/flisk-claude/skills/flisk-doctor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/plugins/flisk-claude/skills/flisk-doctor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check or repair the local Flisk development environment and project configuration using `flisk doctor` (including `--all`, `--json` and `--fix`). Use when setting up a Flisk project, before running `flisk up`, or when Docker, Tilt, Bun, ports, Docker networks, generated files or service manifests may be misconfigured. For a stack that started and then failed, use flisk-troubleshoot instead."
+}

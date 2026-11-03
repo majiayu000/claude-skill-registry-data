@@ -1,0 +1,37 @@
+{
+  "name": "readme-status",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/content-editor/.claude/skills/readme-status/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "readme-status",
+  "downloaded_at": "2026-11-03T07:07:00.594356Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/content-editor/.claude/skills/readme-status/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/content-editor/.claude/skills/readme-status/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Content-editor-posture skill that brings a product README's Status section up to what is built. One run reduces the product's what-left file against the tip of main, removing only the entries whose whole want has merged, then rewrites the Status section from the reduced file, every built sentence citing the commit that brought it in, and makes one commit in the product's repository. Writes no other file and never adds an entry. Halts outside Content Editor posture. Run when a product has merged work and its README Status section may be out of date."
+}

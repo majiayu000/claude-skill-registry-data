@@ -1,0 +1,37 @@
+{
+  "name": "rustup",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/rustup/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "rustup",
+  "downloaded_at": "2026-11-03T06:20:04.629060Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/rustup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/rustup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with the rustup CLI \u2014 the Rust toolchain multiplexer. Covers installing/updating/uninstalling toolchains, channel syntax (stable/beta/nightly, dated, versioned), cross-compilation targets, components and profiles, directory and file overrides (rust-toolchain.toml), the proxy/shim dispatch system (cargo/rustc/rustdoc/rustfmt/rust-analyzer), `rustup run`, `+toolchain` shorthand, self-management, shell completions, and environment variables. Triggers on: \"rustup\", \"rustup install\", \"rustup update\", \"rustup toolchain\", \"rustup target\", \"rustup component\", \"rustup override\", \"rustup run\", \"rustup which\", \"rustup doc\", \"rustup man\", \"rustup self\", \"rustup show\", \"rustup set\", \"rustup home\", \"rustup completions\", \"rustup check\", \"rustup default\", \"+toolchain\", \"rust-toolchain.toml\", \"RUSTUP_HOME\", \"RUSTUP_TOOLCHAIN\", \"RUSTUP_AUTO_INSTALL\", \"rustup profile\", \"rustup proxy\", \"rust-analyzer proxy\", \"cargo-miri\"."
+}

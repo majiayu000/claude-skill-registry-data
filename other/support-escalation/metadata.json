@@ -1,0 +1,37 @@
+{
+  "name": "support-escalation",
+  "repo": "bromso/singularskills",
+  "path": "skills/support-escalation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "support-escalation",
+  "downloaded_at": "2026-11-03T06:14:58.305728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/support-escalation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/support-escalation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Define support escalation \u2014 tiers, the triggers that move a ticket up by priority and category, handoffs to engineering, billing, account management and security, and how the customer is kept informed meanwhile. Use when the user needs to decide who takes a ticket the first agent cannot solve. Not for responding to a security incident itself; see /security-incident-response."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dx-scratch-def-configure",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/dx-scratch-def-configure/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "dx-scratch-def-configure",
+  "downloaded_at": "2026-11-03T07:14:16.861981Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-scratch-def-configure/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-scratch-def-configure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drafts a schema-valid Salesforce DX scratch-def from natural language. Preview first (confirmation card, do not write). A later edit \u2014 including a write that also changes the draft \u2014 is another preview. Write only on consent that this draft is unchanged: invoke this skill and apply via its helper \u2014 never hand-write JSON with Write. Writes config/<purpose>-scratch-def.json (default purpose project) under an existing SF DX project that already has config/ (never creates config/). Grounds features on the PUBLIC config-values catalog: put product names (like Revenue Cloud) in features as-is. Use to author/validate a scratch-def or layer features onto a shape or snapshot. Also use for trial, shape-only, snapshot-only, underspecified, missing config/ (ask for the SF DX project path), or batch multi-def asks: invoke this skill, STOP, write report.md on disk (chat is not a substitute; do not skip the skill). Does not create orgs or enable Dev Hub. Not for dx-org-manage, dx-org-devhub-configure, or SKU work."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "support-reply",
+  "repo": "bromso/singularskills",
+  "path": "skills/support-reply/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "support-reply",
+  "downloaded_at": "2026-11-03T06:14:45.364241Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/support-reply/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/support-reply/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft a reply to one support ticket or conversation \u2014 classified, checked against the support policy and escalation rules, in the brand's voice \u2014 ready for an agent to send. Use when the user pastes or names a customer message and wants an answer they can send. Not for building saved replies for every contact reason; see /support-macros."
+}

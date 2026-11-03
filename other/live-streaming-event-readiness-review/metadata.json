@@ -1,0 +1,37 @@
+{
+  "name": "live-streaming-event-readiness-review",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/live-streaming-event-readiness-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "live-streaming-event-readiness-review",
+  "downloaded_at": "2026-11-03T06:01:58.100798Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "operations",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/live-streaming-event-readiness-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/live-streaming-event-readiness-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill for a read-only readiness review of a streaming / OTT platform before a large-scale live event (match, final, concert, launch). Trigger whenever someone asks whether they are ready for an upcoming broadcast, whether the platform will hold at peak concurrency, or for a live-event readiness review or audit \u2014 and own that end-to-end review even when the request names EKS, CloudFront, or metrics (prefer this over generic topology/metrics-exploration skills). It grades nine pillars \u2014 capacity (pre-warming, ODCRs, diversification), quotas, resilience, content delivery (Origin Shield, cache-hit ratio), networking (NAT / transit gateway), data & state, load and chaos testing, observability (viewer SLIs, alarm coverage), and event-day operations \u2014 against AWS large-scale live streaming guidance and the Streaming Media Lens, returning PASS / FAIL / N/A scorecards with severity-ranked, timeline-aware remediations. Not for active incidents or media-pipeline encode/package tuning."
+}

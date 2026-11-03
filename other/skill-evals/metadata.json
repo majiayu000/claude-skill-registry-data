@@ -1,0 +1,37 @@
+{
+  "name": "skill-evals",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/experimental/.claude/skills/skill-evals/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "skill-evals",
+  "downloaded_at": "2026-11-03T07:06:58.833081Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: performance=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/experimental/.claude/skills/skill-evals/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/experimental/.claude/skills/skill-evals/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run benchmark evaluations for any skill. Reads evals/evals.json from the target skill, spawns parallel with-skill and without-skill agent runs, grades outputs against assertions, aggregates benchmark statistics, and launches the eval viewer. Use when you want to measure or compare skill performance without entering the full skill-creator create/improve flow. Trigger on phrases like \"run evals\", \"run the evals\", \"benchmark this skill\", \"run the eval loop\", \"test this skill against baseline\", or when a skill has an evals.json and the user wants to see how it performs."
+}

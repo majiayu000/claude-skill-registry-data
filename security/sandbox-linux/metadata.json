@@ -1,0 +1,37 @@
+{
+  "name": "sandbox-linux",
+  "repo": "devclone20/icloneos",
+  "path": "iclone/skills/sandbox-linux/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/devclone20/icloneos",
+  "dir_name": "sandbox-linux",
+  "downloaded_at": "2026-11-03T06:47:03.334840Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devclone20",
+  "source_url": "https://github.com/devclone20/icloneos/blob/main/iclone/skills/sandbox-linux/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devclone20/icloneos/blob/main/iclone/skills/sandbox-linux/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked about agent confinement on Linux. In icloneOS v0.0.3 it is not available: the same five activity classes are planned on bubblewrap and Landlock, so on Linux commands run as the user with the permission mode as the only gate, and this skill says what to tell the owner."
+}

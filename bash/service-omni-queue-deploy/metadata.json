@@ -1,0 +1,38 @@
+{
+  "name": "service-omni-queue-deploy",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/service-omni-queue-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "service-omni-queue-deploy",
+  "downloaded_at": "2026-11-03T07:14:18.324944Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/service-omni-queue-deploy/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/service-omni-queue-deploy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to verify or create a Queue on a Salesforce org for a routable sObject (Case | Incident | MessagingSession | VoiceCall), discovered via its QueueSobject binding rather than by hardcoded name. Reuses whatever queue already routes the target sObject; with --create-if-missing it creates a Queue via the Metadata API (Group + QueueSobject) when none is bound and aligns its QueueRoutingConfigId to a caller-specified QRC. Returns created, reused, updated, or blocked. Triggers: verify or create a queue for Case/Incident/Messaging/Voice routing, align queue routing config, set up an Omni voice queue. Do not use to add users to the queue (service-omni-queue-members-assign) or for sObjects outside Case/Incident/MessagingSession/VoiceCall."
+}

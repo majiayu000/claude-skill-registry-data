@@ -1,0 +1,37 @@
+{
+  "name": "product-sdd",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/cto/.claude/skills/product-sdd/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "product-sdd",
+  "downloaded_at": "2026-11-03T07:06:55.676772Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "prd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/cto/.claude/skills/product-sdd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/cto/.claude/skills/product-sdd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "CTO-posture skill that authors a project's SDD \u2014 the architecture-and-cut document, written off the settled SRS and UXD. Requires CTO posture (writes nothing and stops, saying \"product-sdd requires CTO posture\", if invoked outside a cto session or the cto subagent). Non-interactive by design \u2014 every run drafts the whole SDD best-effort, including the parts the CPO or the CDO decides, and writes whatever it cannot settle into a companion open-issues file whose items carry the answering seat's Seat field. On the next round it folds the owner's answered companion into the SDD, retires the answered file whole to a permanent trail, re-raises what stays unsettled, and removes the companion when nothing is left \u2014 its absence means the SDD is done. The skill resolves where the files land from the project's Product path. Use when authoring, continuing or revising a product's SDD \u2014 write the SDD, cut the architecture into slices, station 5 of the definition sequence. Do not use for upstream documents (product-prd / product-srs / product-uxd / product-design / product-content), the Agari (project-agari), per-change specs (development-specs), or anything downstream (Delivery Plan / FDR / ADR / NFDR)."
+}

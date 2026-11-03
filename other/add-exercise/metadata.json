@@ -1,0 +1,36 @@
+{
+  "name": "add-exercise",
+  "repo": "astashov/liftosaur",
+  "path": ".claude/skills/add-exercise/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/astashov/liftosaur",
+  "dir_name": "add-exercise",
+  "downloaded_at": "2026-11-03T05:58:46.524413Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "astashov",
+  "source_url": "https://github.com/astashov/liftosaur/blob/master/.claude/skills/add-exercise/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/astashov/liftosaur/blob/master/.claude/skills/add-exercise/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add a new built-in exercise to Liftosaur end-to-end \u2014 image (gymvisual.com \u2192 S3), catalog registration, description page, and the LLM/MCP exercise list. Use when adding one or more built-in exercises to the app catalog."
+}

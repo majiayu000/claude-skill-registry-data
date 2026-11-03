@@ -1,0 +1,38 @@
+{
+  "name": "system-one",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/system-one/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "system-one",
+  "downloaded_at": "2026-11-03T06:49:23.965222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/system-one/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/system-one/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reference for System One decision models \u2014 Ollama's local POST /v1/systemone endpoint (nimble, clef, clef-flash) and TypeSafe's hosted Jev API (jev-latest / jev-1.13.0), plus the typesafe-sdk Python and @typesafe-ai/sdk JS clients. Covers the three question types (choice, score, noul), state shaping, structured instructions/criteria, confidence math, request limits and errors, the Ollama-vs-TypeSafe differences, Jev's known failure modes, and worked patterns from the official cookbooks (fan-out, confidence gating, composite scoring, intent routing, guardrails, RAG gating, extraction, re-ranking, hierarchical beam search). Use whenever the work mentions System One, systemone, Ollama decision models, nimble, clef, TypeSafe, Jev, noul, or classifying/scoring/yes-no judgments that code consumes instead of generated text."
+}

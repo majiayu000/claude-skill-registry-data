@@ -1,0 +1,38 @@
+{
+  "name": "datamodel-code-generator",
+  "repo": "datamodel-code-generator/datamodel-code-generator",
+  "path": "skills/datamodel-code-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "generation",
+  "source": "github.com/datamodel-code-generator/datamodel-code-generator",
+  "dir_name": "datamodel-code-generator",
+  "downloaded_at": "2026-11-03T06:42:12.409076Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "generation",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for generation: generation, generator, codegen",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "generation",
+      "generator",
+      "codegen"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "datamodel-code-generator",
+  "source_url": "https://github.com/datamodel-code-generator/datamodel-code-generator/blob/main/skills/datamodel-code-generator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/datamodel-code-generator/datamodel-code-generator/blob/main/skills/datamodel-code-generator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the user wants Python data models, Pydantic models, dataclasses, TypedDicts, msgspec structs, or type-safe Python classes generated from OpenAPI, AsyncAPI, JSON Schema, GraphQL, JSON/YAML/CSV sample data, MCP tool schemas, Protocol Buffers, XML Schema, Apache Avro, or existing Python model objects. Use it for requests such as \"Pydantic models from this schema\", \"types for this API\", \"parse this JSON into classes\", or \"convert this spec into Python models\". Prefer the datamodel-codegen CLI over hand-written model code whenever an input schema, API spec, sample data file, or Python model object exists."
+}

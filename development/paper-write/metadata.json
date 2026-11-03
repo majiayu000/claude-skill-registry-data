@@ -1,0 +1,39 @@
+{
+  "name": "paper-write",
+  "repo": "fcakyon/labrat",
+  "path": "plugin/skills/paper-write/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fcakyon/labrat",
+  "dir_name": "paper-write",
+  "downloaded_at": "2026-11-03T07:09:07.510145Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fcakyon",
+  "source_url": "https://github.com/fcakyon/labrat/blob/main/plugin/skills/paper-write/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fcakyon/labrat/blob/main/plugin/skills/paper-write/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write, structure, or revise academic paper sections, keep notation consistent, refine figures and tables, and set up or fix the LaTeX build (TeX distribution, biber vs bibtex, venue templates, compilation). Use when the user says \"write the abstract\", \"structure the methods\", \"improve this section\", \"notation consistency\", \"figure refinement\", \"paper structure\", \"setup latex\", \"biber vs bibtex\", \"latex compilation error\", \"install latex packages\", \"venue template\", or \"texlive setup\"."
+}

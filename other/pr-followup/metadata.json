@@ -1,0 +1,37 @@
+{
+  "name": "pr-followup",
+  "repo": "akshaypimprikar/pragma",
+  "path": ".claude/skills/pr-followup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/akshaypimprikar/pragma",
+  "dir_name": "pr-followup",
+  "downloaded_at": "2026-11-03T05:40:17.635293Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akshaypimprikar",
+  "source_url": "https://github.com/akshaypimprikar/pragma/blob/main/.claude/skills/pr-followup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akshaypimprikar/pragma/blob/main/.claude/skills/pr-followup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Auto-chain code-review and review immediately after a PR is opened, with no human trigger needed for either. Invoke right after a PR is created, or manually against an existing PR."
+}

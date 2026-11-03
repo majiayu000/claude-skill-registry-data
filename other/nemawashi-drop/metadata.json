@@ -1,0 +1,36 @@
+{
+  "name": "nemawashi-drop",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/principal-pm/.claude/skills/nemawashi-drop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "nemawashi-drop",
+  "downloaded_at": "2026-11-03T07:06:59.970344Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category documents scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "",
+    "runner_up_score": 0,
+    "signals": [
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/principal-pm/.claude/skills/nemawashi-drop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/principal-pm/.claude/skills/nemawashi-drop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drop a killed \u6839\u56de\u3057 Nemawashi idea and leave the seedbed as it is behind it. The **Principal PM**'s \u2014\nit halts outside that seat, because killing an idea is a route decision. Moves the seed \u2014 a\nfile, or a folder holding `seed.md` \u2014 whole into the sibling `nemawashi/drop/`, restoring nothing.\nTakes a **candidate from `unpicked/`**\nruled out before it was ever picked \u2014 the one origin no other journey skill accepts \u2014 and also the\nactive idea from the seedbed root, whose line it also removes from the Principal PM's\n`## Picked seeds`. It moves the seed; it does not pick one, and it works identically at both levels.\nPark-don't-strike: the seed is relocated, never struck through, never marked dead in place. The why\ngoes in the commit body, never into the file.\nUse when: an idea is being killed for good \u2014 ruled out, superseded, answered by another route, or\nabandoned before it was ever picked \u2014 and you want it moved to `drop/`.\nDo not use for: an idea that **ripened into work** \u2014 a project seed walked to the end (use\nnemawashi-retire), or an instance idea-seed cut into project seeds (moved to `trail/` by hand) \u2014\n`trail/` is the record of ideas that ripened; an idea being set down to be **picked up again** (use\nnemawashi-unpick \u2014 that returns the seed to `unpicked/`), a \u5bbf\u5834 Shukuba station (use shukuba-park or\nshukuba-retire), a \u98db\u3073\u77f3 Tobiishi (use tobiishi-seal), or picking the next idea (the PM's own call).\nTrigger phrases: \"drop this seed\", \"this idea is dead\", \"kill this candidate\", \"we are not doing\nthis\", \"rule this one out\", \"this seed is superseded for good\", \"nemawashi-drop\"."
+}

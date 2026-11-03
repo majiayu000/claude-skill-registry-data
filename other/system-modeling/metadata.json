@@ -1,0 +1,37 @@
+{
+  "name": "system-modeling",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/system-modeling/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "system-modeling",
+  "downloaded_at": "2026-11-03T06:49:26.990358Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/system-modeling/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/system-modeling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Renders the frozen system design as UML diagrams: sequence diagrams from key flows, state diagrams for stateful entities, ERD from the entity list, class diagram for the domain model. Reads tasks/system_design.md, writes tasks/system_model.md. Use whenever the user says \"system modeling\", \"UML diagrams\", \"sequence diagram\", \"state diagram\", \"ERD\", or \"model the system\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "pr",
+  "repo": "foundryvtt-dcc/dcc",
+  "path": ".claude/skills/pr/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/foundryvtt-dcc/dcc",
+  "dir_name": "pr-foundryvtt-dcc-dcc",
+  "downloaded_at": "2026-11-03T07:15:10.723884Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "foundryvtt-dcc",
+  "source_url": "https://github.com/foundryvtt-dcc/dcc/blob/main/.claude/skills/pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/foundryvtt-dcc/dcc/blob/main/.claude/skills/pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a pull request for the DCC system. Handles branch verify, i18n translation, checks, E2E gate, simplify, commit, push, create/update PR, review, auto-fix. No version bump \u2014 that happens on main at release time."
+}

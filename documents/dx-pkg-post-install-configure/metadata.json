@@ -1,0 +1,39 @@
+{
+  "name": "dx-pkg-post-install-configure",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/dx-pkg-post-install-configure/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "dx-pkg-post-install-configure",
+  "downloaded_at": "2026-11-03T07:14:26.805383Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, markdown, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "pdf",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-pkg-post-install-configure/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-pkg-post-install-configure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to automate managed package post-install configuration. Package-agnostic \u2014 works with any managed package (LMA, FMA, work.com, Certinia, etc.). TRIGGER when: user installs a managed package and needs post-install configuration, mentions LMA/FMA/work.com post-install setup, asks to configure permission sets/FLS/page layouts for an installed package, says 'post-install', 'package setup', 'configure LMA', 'set up FMA', 'post-install steps'. DO NOT TRIGGER for: standalone permission set assignment (use dx-org-permission-set-assign), generating permission set metadata XML (use platform-permission-set-generate), package installation, or org switching."
+}

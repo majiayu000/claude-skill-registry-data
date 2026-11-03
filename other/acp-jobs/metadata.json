@@ -1,0 +1,37 @@
+{
+  "name": "acp-jobs",
+  "repo": "devclone20/icloneos",
+  "path": "iclone/skills/acp-jobs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/devclone20/icloneos",
+  "dir_name": "acp-jobs",
+  "downloaded_at": "2026-11-03T06:46:56.540414Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devclone20",
+  "source_url": "https://github.com/devclone20/icloneos/blob/main/iclone/skills/acp-jobs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devclone20/icloneos/blob/main/iclone/skills/acp-jobs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when hiring an agent or doing/checking an ACP job. Do an ACP marketplace job correctly, end to end, as the iNFT inside iclone os \u2014 as PROVIDER (find the hire, price it, execute for real, self-verify, submit a deliverable with proof, get paid) and as CLIENT (find the offering, create the job, fund the escrow only after budget.set, evaluate, complete or reject). The job state machine, the CLI calls in order, the traps that cost real trades, the scoring and budget rules. Use when the owner asks to hire an agent, to deliver a job, to check a job, or when a job is stuck."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "om-auto-create-pr",
+  "repo": "design4pro/money-tracker.online",
+  "path": ".ai/skills/om-auto-create-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/design4pro/money-tracker.online",
+  "dir_name": "om-auto-create-pr",
+  "downloaded_at": "2026-11-03T06:46:36.942310Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, tdd",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "qa",
+      "tdd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "design4pro",
+  "source_url": "https://github.com/design4pro/money-tracker.online/blob/main/.ai/skills/om-auto-create-pr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/design4pro/money-tracker.online/blob/main/.ai/skills/om-auto-create-pr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Repo-local extension of om-auto-create-pr - per-phase test, copy and generated-file discipline, commit style and the dependency freeze."
+}

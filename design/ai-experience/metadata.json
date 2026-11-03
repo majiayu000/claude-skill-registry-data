@@ -1,0 +1,38 @@
+{
+  "name": "ai-experience",
+  "repo": "bromso/singularskills",
+  "path": "skills/ai-experience/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ai-experience",
+  "downloaded_at": "2026-11-03T06:14:44.295811Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ai-experience/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ai-experience/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design how an AI feature behaves for its users \u2014 saying it is AI, showing sources and uncertainty, letting users correct or undo it, falling back to a person or a non-AI path, collecting feedback, and handling slow or failed responses. Use when the team must decide what users see when the AI is right, unsure or wrong. Not for designing a UI component; see /design-define-component."
+}

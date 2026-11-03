@@ -1,0 +1,37 @@
+{
+  "name": "symfony-ai-chat",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/symfony-ai-chat/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "symfony-ai-chat",
+  "downloaded_at": "2026-11-03T06:49:26.818710Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/symfony-ai-chat/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/symfony-ai-chat/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reference for the Symfony AI Chat component (symfony/ai-chat) \u2014 Chat over an Agent with persisted conversation history, MessageStoreInterface and ManagedStoreInterface, the bundled stores (session, cache, Doctrine DBAL, Redis, MongoDB, Meilisearch, SurrealDB, Cloudflare KV, Pogocache, InMemory), writing a custom store, streaming persistence, the ai:message-store console commands, and the 0.12 vs 0.13 stream() change. Use whenever the work involves Symfony\\AI\\Chat classes, persisting an LLM conversation, or building a chat history store in a Symfony app."
+}

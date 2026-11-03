@@ -1,0 +1,37 @@
+{
+  "name": "narrated-video",
+  "repo": "every-app/video-skills",
+  "path": "skills/narrated-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/every-app/video-skills",
+  "dir_name": "narrated-video-every-app-video-skills",
+  "downloaded_at": "2026-11-03T07:05:44.851985Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "every-app",
+  "source_url": "https://github.com/every-app/video-skills/blob/main/skills/narrated-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/every-app/video-skills/blob/main/skills/narrated-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a narrated product video (a launch video, product demo, or tutorial) from real screenshots of the product and the person's own webcam narration. Captures the product, builds a storyboard to record against, edits the recorded take (restarts, dead air, optionally fillers), times every scene, click, and keystroke to the spoken words, then renders and verifies a 1080p mp4 with a round webcam bubble. Use when someone wants a demo, walkthrough, tutorial, or launch video they will narrate themselves, or has recorded a new take to cut."
+}

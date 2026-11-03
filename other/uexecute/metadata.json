@@ -1,0 +1,37 @@
+{
+  "name": "uexecute",
+  "repo": "btseytlin/ultrapack",
+  "path": "skills/uexecute/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/btseytlin/ultrapack",
+  "dir_name": "uexecute",
+  "downloaded_at": "2026-11-03T06:16:39.248542Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "btseytlin",
+  "source_url": "https://github.com/btseytlin/ultrapack/blob/main/skills/uexecute/SKILL.md",
+  "license": "WTFPL",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/btseytlin/ultrapack/blob/main/skills/uexecute/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to implement an approved plan. When the plan declares `### Interface graph`, derives waves by topo-sort over `[blocks]` IF edges only \u2014 non-blocking IF edges (the default) put producer and consumer in the same wave, since the IF declaration is sufficient context. Edits inline when only one implementer would fire (single phase or serial fallback). Runs plan-diff check and consistency sweep after each commit. Forbids silent fallbacks and mutation of external spec/design docs. Dispatches the planner skill when deviations invalidate the plan."
+}

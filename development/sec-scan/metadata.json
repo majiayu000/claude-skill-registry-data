@@ -1,0 +1,39 @@
+{
+  "name": "sec-scan",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/dev/sec-scan/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "sec-scan",
+  "downloaded_at": "2026-11-03T07:01:03.880117Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-scan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-scan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Anbieterneutraler Security-Scan eines eigenen Repos: Bedrohungsmodell, Aufteilung nach Vertrauensgrenzen, gezielte Pr\u00fcfung je Paket (Injection, Authn/Authz, Secrets, Krypto, Deserialisierung, Pfade, SSRF, Konfiguration, verwundbare Abh\u00e4ngigkeiten), Kandidaten mit Evidenz in findings.json und ehrliche coverage.json. Modi standard und deep. Nutzen bei 'Security-Scan', 'Repo auf Schwachstellen pr\u00fcfen', 'Sicherheitsreview', 'Vollscan', 'Scanner-Ergebnis in das ellmos-Format \u00fcbernehmen'. Enth\u00e4lt den Adapter f\u00fcr /claude-security und codex-security. Nur \u00c4nderungen/PRs: sec-diff-scan. Kandidaten widerlegen: sec-validate. Fremde Berichte importieren: sec-triage. Bericht: sec-report."
+}

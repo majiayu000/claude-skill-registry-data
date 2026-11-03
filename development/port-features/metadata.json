@@ -1,0 +1,37 @@
+{
+  "name": "port-features",
+  "repo": "dzhng/skills",
+  "path": "skills/engineering/port-features/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dzhng/skills",
+  "dir_name": "port-features",
+  "downloaded_at": "2026-11-03T06:56:56.439938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dzhng",
+  "source_url": "https://github.com/dzhng/skills/blob/main/skills/engineering/port-features/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dzhng/skills/blob/main/skills/engineering/port-features/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Port a feature from an existing repository by copying its actual code and editing the copy, so its bug fixes and behavioral nuances survive. Use when asked to copy or port an existing feature (especially an exact copy), when moving one into a different framework or host, or when a previous reimplementation missed upstream behavior."
+}

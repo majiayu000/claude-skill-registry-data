@@ -1,0 +1,38 @@
+{
+  "name": "task-breakdown",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/task-breakdown/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "task-breakdown-digitaldreams-tuhin",
+  "downloaded_at": "2026-11-03T06:49:26.493582Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/task-breakdown/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/task-breakdown/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Breaks analyzed requirements down into Epics and vertically-sliced actionable tasks, writing the tasks/epics.md planning document from requirements, architecture, system design, IA, and journeys. Use whenever the user says \"break down the requirements\", \"epics and tasks\", or \"create the development task breakdown\". Never writes tasks/tasks.md \u2014 that board belongs to the task-manager agent, which converts epics into board tasks."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "improve-architecture",
+  "repo": "daveebbelaar/bama",
+  "path": "skills/code/improve-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/daveebbelaar/bama",
+  "dir_name": "improve-architecture-daveebbelaar-bama",
+  "downloaded_at": "2026-11-03T06:43:15.819674Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "daveebbelaar",
+  "source_url": "https://github.com/daveebbelaar/bama/blob/main/skills/code/improve-architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/daveebbelaar/bama/blob/main/skills/code/improve-architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Architecture check-in for a growing macOS Swift codebase. Finds hot spots, proposes deeper modules, and refactors one step per commit with behavior proven unchanged. Use at the end of a milestone, before a big feature, when a file passes 600 lines, when one feature touches many files, when bugs repeat in one area, or when the user asks to refactor or clean up the code."
+}

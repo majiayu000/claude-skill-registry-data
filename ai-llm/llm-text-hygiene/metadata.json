@@ -1,0 +1,39 @@
+{
+  "name": "llm-text-hygiene",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/utilities/llm-text-hygiene/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-llm",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "llm-text-hygiene",
+  "downloaded_at": "2026-11-03T07:01:16.325561Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/utilities/llm-text-hygiene/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/utilities/llm-text-hygiene/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Entfernt KI-Spuren, Chat-Reste, Platzhalter und LLM-Stilmuster aus fertigen Texten und pr\u00fcft die AI-Disclosure auf Vollst\u00e4ndigkeit und korrekten Sitz."
+}

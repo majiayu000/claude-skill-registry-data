@@ -1,0 +1,37 @@
+{
+  "name": "decision-shot",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/utilities/decision-shot/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "decision-shot",
+  "downloaded_at": "2026-11-03T07:01:11.839510Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/utilities/decision-shot/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/utilities/decision-shot/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extrem kurzes, substantielles Ausgabe-FORMAT fuer EINE Entscheidung oder Entscheidungsgruppe, wenn die dahinterstehende Analyse bereits existiert (im Chat entstanden, aus `decide`, aus `decision-briefing`, aus einem Ticket oder Dokument): Kontext in 2-3 Zeilen, Pro/Contra je Option als Stichpunkte im paveman/caveman-reduzierten Stil, Talking Points, eine begruendete Empfehlung, und ein Pfad/Link zur Vollanalyse zum Komplett-Nachlesen. Nutze diesen Skill bei \"gib mir das kurz mit Pro Contra und Empfehlung\", \"executive summary zur Entscheidung\", \"kurzkontext zu <Thema>\", \"fass die Entscheidung X in einer Kurzform zusammen\", /decision-shot, oder wenn ein Ergebnis an jemanden weitergereicht werden soll, der nur die Essenz braucht, nicht die volle Herleitung. NICHT nutzen, um viele offene Entscheidungen zu SAMMELN und per Buchstabe abzufragen -- das macht decision-briefing; NICHT nutzen, um eine Entscheidung erst zu ANALYSIEREN -- das macht decide. decision-shot setzt eine fertige Analyse voraus und komprimiert nur deren Praesentation."
+}

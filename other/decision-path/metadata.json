@@ -1,0 +1,37 @@
+{
+  "name": "decision-path",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/utilities/decision-path/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "decision-path",
+  "downloaded_at": "2026-11-03T07:01:10.510828Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category development scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "security",
+    "runner_up_score": 1,
+    "signals": [
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/utilities/decision-path/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/utilities/decision-path/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Erzeugt aus einem Bestand offener und gefallener Entscheidungen einen strukturierten ASCII-Abh\u00e4ngigkeitsgraphen (maximal 100 Spalten) f\u00fcr das Terminal. Bewertet Knoten nach f\u00fcnf festen Kriterien: sinnvoll, empfohlen, usertypisch (Richtung und decision-avatar-Konfidenz getrennt), zusammenpassend und widersprechend; Kanten tragen Beziehungstyp und Belegstatus. Deckt Blocker, Freischaltungen, Reihenfolgen und widerspr\u00fcchliche Empfehlungen gnadenlos auf. Nutze diesen Skill bei \"welche Entscheidungen h\u00e4ngen voneinander ab\", \"Abh\u00e4ngigkeitsgraph der Entscheidungen\", \"Entscheidungspfad visualisieren\", \"Widerspr\u00fcche zwischen Entscheidungen pr\u00fcfen\", \"Reihenfolge der Beschl\u00fcsse\", /decision-path. NICHT nutzen, um Entscheidungen erst zu inventarisieren -- das macht decision-briefing; NICHT nutzen, um das empfohlene Gesamtkonzept zur Abnahme zu b\u00fcndeln -- das macht decision-draw; NICHT f\u00fcr kompakte F\u00fcnfteiler- Einzelbl\u00f6cke mit Optionen und Pro/Contra -- das macht decision-shot; NICHT f\u00fcr die Einzelfall-Erw\u00e4gung mit Frameworks -- das macht decide."
+}

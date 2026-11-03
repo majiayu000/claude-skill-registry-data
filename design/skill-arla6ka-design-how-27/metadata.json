@@ -1,0 +1,38 @@
+{
+  "name": "voice-wave",
+  "repo": "arla6ka/design.how",
+  "path": "vault/voice-wave/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/arla6ka/design.how",
+  "dir_name": "skill-arla6ka-design-how-27",
+  "downloaded_at": "2026-11-03T05:56:09.011045Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component, animation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arla6ka",
+  "source_url": "https://github.com/arla6ka/design.how/blob/main/vault/voice-wave/skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arla6ka/design.how/blob/main/vault/voice-wave/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a WebGL2 voice-visualiser effect in which one glowing ribbon is drawn four times in four colours, slightly out of phase, so it reads neutral where it is flat and fans into violet, magenta and coral where it bends, driven by a simulated voice or, after an explicit click, by the microphone through a WebAudio analyser. Use when someone asks for a voice or speech waveform, an assistant listening animation, an audio-reactive ribbon, a microphone visualiser, a glowing sine wave, or dispersion and chromatic splitting in WebGL."
+}

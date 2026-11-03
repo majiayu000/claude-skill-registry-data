@@ -1,0 +1,38 @@
+{
+  "name": "backlog",
+  "repo": "design4pro/money-tracker.online",
+  "path": ".claude/skills/backlog/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/design4pro/money-tracker.online",
+  "dir_name": "backlog",
+  "downloaded_at": "2026-11-03T06:46:32.809727Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, automation, pipeline",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "design4pro",
+  "source_url": "https://github.com/design4pro/money-tracker.online/blob/main/.claude/skills/backlog/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/design4pro/money-tracker.online/blob/main/.claude/skills/backlog/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Report the backlog - where every open issue sits in the SDLC.md pipeline and the one next step that moves each. Read-only - it runs .ai/scripts/backlog-status.mjs and reads the result, and never applies a label. Use when asked what is ready to start, what the queue is holding, or where one issue stands."
+}

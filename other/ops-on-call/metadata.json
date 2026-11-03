@@ -1,0 +1,37 @@
+{
+  "name": "ops-on-call",
+  "repo": "bromso/singularskills",
+  "path": "skills/ops-on-call/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ops-on-call",
+  "downloaded_at": "2026-11-03T06:14:42.969017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ops-on-call/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ops-on-call/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up on-call for a service \u2014 the rotation, primary and secondary, the handoff checklist, severity levels, incident roles, the escalation path, and load limits on pages per shift with recovery after a heavy one. Use when a team is starting on-call or its current rotation is burning people out. Not for a security incident response plan; see /security-incident-response."
+}

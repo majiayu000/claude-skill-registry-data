@@ -1,0 +1,38 @@
+{
+  "name": "capcut",
+  "repo": "elivatemarketingbryan-beep/Edits",
+  "path": ".claude/skills/capcut/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/elivatemarketingbryan-beep/Edits",
+  "dir_name": "capcut",
+  "downloaded_at": "2026-11-03T07:00:29.966769Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, automation, pipeline",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elivatemarketingbryan-beep",
+  "source_url": "https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/capcut/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/capcut/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Finish a job inside CapCut \u2014 the CapCut-user counterpart to premiere-pro (editing apps are the primary path; Premiere is your default, CapCut is for CapCut-user clients). Builds a real CapCut draft from the EDL (one trimmable clip per cut), then drives the running app live to place graphics, edit, and export \u2014 CapCut has no API, so this is the only way to script it. Triggers: send to capcut, open in capcut, finish in capcut, hand off to capcut, edit this in capcut, build a capcut draft, export from capcut, take it into capcut."
+}

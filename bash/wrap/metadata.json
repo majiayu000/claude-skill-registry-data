@@ -1,0 +1,38 @@
+{
+  "name": "wrap",
+  "repo": "egregore-labs/egregore",
+  "path": ".codex/skills/wrap/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/egregore-labs/egregore",
+  "dir_name": "wrap",
+  "downloaded_at": "2026-11-03T06:59:14.397680Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "egregore-labs",
+  "source_url": "https://github.com/egregore-labs/egregore/blob/main/.codex/skills/wrap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/egregore-labs/egregore/blob/main/.codex/skills/wrap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Close the current Egregore session with a personal, canonical summary. Use for /wrap or when the user says they are done, wrapping up, or at a stopping point. Route work assigned to another person to /handoff and save-without-closing to /save."
+}

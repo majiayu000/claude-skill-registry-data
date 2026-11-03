@@ -1,0 +1,37 @@
+{
+  "name": "Performance Audit Expert",
+  "repo": "andrejrunb/-quila-pro-v-1.0.0",
+  "path": ".agent/skills/performance_audit/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/andrejrunb/-quila-pro-v-1.0.0",
+  "dir_name": "performance-audit-andrejrunb-quila-pro-v-1-0-0",
+  "downloaded_at": "2026-11-03T05:49:22.974094Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, latency",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "performance",
+      "latency"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "andrejrunb",
+  "source_url": "https://github.com/andrejrunb/-quila-pro-v-1.0.0/blob/main/.agent/skills/performance_audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/andrejrunb/-quila-pro-v-1.0.0/blob/main/.agent/skills/performance_audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Skill especializada em auditoria profunda de performance, memory leaks e concorr\u00eancia no Electron e SQLite."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "experience-portal-create",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-portal-create/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-portal-create",
+  "downloaded_at": "2026-11-03T07:14:17.229568Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-portal-create/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-portal-create/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create / provision / set up a NEW Digital Experience (Communities) / Experience Cloud site \u2014 employee service, IT support, help desk, HR, customer, and partner portals \u2014 via the headless-360 MCP site-creation APIs. Use whenever a user asks to create/provision/set up a portal, site, or community, e.g.: 'create an employee service portal', 'create an IT Support Portal', 'create an Agentforce Employee Center', including wiring MIAW (Messaging for In-App/Web) at create. This is the site-CREATION skill and OWNS provisioning a new Aura OR LWR Experience Builder site from scratch \u2014 trigger it even when the user says 'Experience Builder site' or 'LWR site', as long as a NEW site is wanted. It always writes a portal-creation report as its final step (never ad hoc via CLI) and never makes a legacy Tabs+Visualforce site. DO NOT TRIGGER only for modifying an EXISTING site's pages/routes/theme/branding/guest-access metadata (experience-lwr-site-generate), existing-site customization (experience-ui-bundle), CMS, Commerce."
+}

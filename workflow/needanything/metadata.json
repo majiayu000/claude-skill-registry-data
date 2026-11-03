@@ -1,0 +1,38 @@
+{
+  "name": "needanything",
+  "repo": "foundryvtt-dcc/dcc",
+  "path": ".claude/skills/needanything/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/foundryvtt-dcc/dcc",
+  "dir_name": "needanything",
+  "downloaded_at": "2026-11-03T07:15:11.131405Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, automation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "automation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "foundryvtt-dcc",
+  "source_url": "https://github.com/foundryvtt-dcc/dcc/blob/main/.claude/skills/needanything/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/foundryvtt-dcc/dcc/blob/main/.claude/skills/needanything/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only sweep of everything that may be waiting on a human \u2014 open PRs (contributor PRs to review, Dependabot and Audit Fix bot PRs that didn't land, red CI, conflicts, the E2E gate waiting on an `e2e-approved` label, stacked drafts whose base merged, green-but-unmerged), issues awaiting a reply, the release state (a draft waiting to be published, unreleased commits on main, a dead release workflow), red scheduled jobs on main, the dcc-core-lib sync state, the sibling modules, and this checkout's leftover branches and worktrees. Use when Tim asks \"need anything?\", \"anything waiting on me?\", \"what needs attention\", \"check open PRs and issues\", or at the start of a session before picking work."
+}

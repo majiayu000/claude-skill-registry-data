@@ -1,0 +1,37 @@
+{
+  "name": "platform-trust-archive-manage",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/platform-trust-archive-manage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "platform-trust-archive-manage",
+  "downloaded_at": "2026-11-03T07:14:25.624981Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-trust-archive-manage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/platform-trust-archive-manage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "ALWAYS USE THIS SKILL for anything involving Salesforce Archive (also called Trusted Services Archive) \u2014 search, view, unarchive, analyze, mask, and erase (RTBF) archived records via the Archive Connect API, and reading archive job status from the ArchiveActivity object. TRIGGER when: user mentions Salesforce Archive, Trusted Services Archive, archive/unarchive records, ArchiveActivity, archive jobs, archive policy, archive analyzer, archived record search, archive storage, archive failure logs, right to be forgotten / RTBF on archived data, or masking archived PII \u2014 including phrasings like 'find records that were archived', 'restore archived data', 'why did the archive job fail', 'download the archive failure log', or 'monitor my archive jobs', AND even when they ask you to explain, give guidance, or write a runbook/doc about these topics rather than run code. SKIP when: the user wants generic data-export/backup unrelated to the Archive add-on, or wants to build the archive policy UI metadata."
+}

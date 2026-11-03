@@ -1,0 +1,37 @@
+{
+  "name": "pr",
+  "repo": "axlaser/pitwall",
+  "path": ".claude/skills/pr/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/axlaser/pitwall",
+  "dir_name": "pr-axlaser-pitwall",
+  "downloaded_at": "2026-11-03T06:02:10.705945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "axlaser",
+  "source_url": "https://github.com/axlaser/pitwall/blob/master/.claude/skills/pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/axlaser/pitwall/blob/master/.claude/skills/pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a pull request from the current branch for pitwall, into the right base for this repo's two-tier flow \u2014 feature branches (`dev-<feature>`) target `dev`, and `dev` itself targets `master` as a release PR. Analyzes the new commits, drafts a PR title and a Summary/Test-plan body matching this repo's existing PR style, previews it for approval, then creates it via the `gh` CLI. A release PR into `master` additionally settles the version and writes the release notes file before the tag exists. Use whenever the user says \"pr\", \"pull request\", \"open a pr\", \"create pr\", \"ship it\", \"merge into dev\", \"merge into master\", \"cut a release\", \"raise a pr\", or anything about getting the current branch merged \u2014 even if they don't say the word \"skill\"."
+}

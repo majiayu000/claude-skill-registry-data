@@ -1,0 +1,38 @@
+{
+  "name": "understand",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/understand/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "understand-digitaldreams-tuhin",
+  "downloaded_at": "2026-11-03T06:49:23.804748Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/understand/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/understand/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a complete mental model of a codebase, module, or feature before any change is discussed. Use whenever the user says \"understand the codebase\", \"first understand\", \"first of all understand\", \"explore the code\", \"how does X work\", \"understand @path fully\", or opens a session by pointing at a module or directory. Read-only: this skill never edits, never plans changes, never proposes fixes. It produces a compact mental model \u2014 purpose, file map, state machine, event flow, schedule hooks \u2014 and ends ready for change requests. Always run this before planning any modification."
+}

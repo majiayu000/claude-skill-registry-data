@@ -1,0 +1,39 @@
+{
+  "name": "experience-design-validate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-design-validate/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-design-validate",
+  "downloaded_at": "2026-11-03T07:14:20.051713Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, css, figma",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-design-validate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-design-validate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to run a visual-craft audit of a rendered UI and produce an evidence-grounded Craft Report across Useful, Usable, Reliable, Coherent, and Well-Crafted. Invoke it for craft audits, visual critiques, design comparisons, felt-quality reviews, or visual-craft readiness checks on screenshots (.png, .jpg, .jpeg, .webp, .gif), Figma frames, rendered prototypes, and live URLs. Do not use it for source-code review, SLDS compliance (use design-systems-slds-validate), or accessibility compliance (use experience-accessibility-validate)."
+}

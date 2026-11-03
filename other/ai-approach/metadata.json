@@ -1,0 +1,37 @@
+{
+  "name": "ai-approach",
+  "repo": "bromso/singularskills",
+  "path": "skills/ai-approach/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ai-approach",
+  "downloaded_at": "2026-11-03T06:14:43.520832Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ai-approach/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ai-approach/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assess the approaches for an AI feature \u2014 prompt only, retrieval over the team's content, tool use or a multi-step agent \u2014 and pick the simplest that meets its criteria, with the data and tools it needs and how to choose the model. Use when an AI feature is defined and the team must decide how to build it. Not for comparing models on test results; see /ai-model-compare."
+}

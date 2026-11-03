@@ -1,0 +1,37 @@
+{
+  "name": "copilot-plugin-builder",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/copilot-plugin-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "copilot-plugin-builder",
+  "downloaded_at": "2026-11-03T05:55:40.760952Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/copilot-plugin-builder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/copilot-plugin-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Author, scaffold, test, and distribute GitHub Copilot plugins \u2014 portable Agent Plugins 1.0 packages (skills + MCP servers) plus Copilot-specific components (agents, commands, rules, hooks) that run across Copilot CLI, VS Code/Agents Window, the GitHub Copilot desktop app, and the Copilot SDK. Use when the user wants to: (1) create or scaffold a new Copilot plugin, (2) add skills, agents, hooks, commands, or MCP servers to a plugin, (3) write or validate a plugin.json manifest, (4) distribute or install a plugin via a marketplace or Git repository, (5) test a local plugin in any Copilot runtime, (6) migrate a legacy Copilot-format plugin to Agent Plugins 1.0, (7) bump or sync plugin versions, or (8) build programmable plugins with @github/copilot-sdk. Covers the Agent Plugins 1.0 format (agent-plugins.org) and the legacy Copilot format. Do NOT use for Copilot CLI extensions (tools/commands/canvas via @github/copilot-sdk/extension) \u2014 use copilot-extension-builder instead."
+}

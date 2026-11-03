@@ -1,0 +1,37 @@
+{
+  "name": "release",
+  "repo": "akshaypimprikar/pragma",
+  "path": ".claude/skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/akshaypimprikar/pragma",
+  "dir_name": "release-akshaypimprikar-pragma",
+  "downloaded_at": "2026-11-03T05:40:17.820461Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akshaypimprikar",
+  "source_url": "https://github.com/akshaypimprikar/pragma/blob/main/.claude/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akshaypimprikar/pragma/blob/main/.claude/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare and tag a release \u2014 pre-flight checks, version bump, CHANGELOG, and tag. Invoke with a version number."
+}

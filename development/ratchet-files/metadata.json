@@ -1,0 +1,37 @@
+{
+  "name": "ratchet-files",
+  "repo": "dzhng/skills",
+  "path": "skills/engineering/ratchet-files/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dzhng/skills",
+  "dir_name": "ratchet-files",
+  "downloaded_at": "2026-11-03T06:56:56.262005Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, refactor",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dzhng",
+  "source_url": "https://github.com/dzhng/skills/blob/main/skills/engineering/ratchet-files/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dzhng/skills/blob/main/skills/engineering/ratchet-files/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ratchet source file size so every file stays small enough for an agent to read whole: find every file over a token budget, split oversized files by concept, and set up the pre-commit ratchet that stops them from growing. Use when a commit is blocked because a file is over the size budget, when asked to find or split oversized/long/god files, when a file you need to change is too large to read in one pass, or when asked to add a file-size limit or hook to a repository or repair commit-hook coverage across worktrees."
+}

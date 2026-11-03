@@ -1,0 +1,37 @@
+{
+  "name": "development-implementation",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/developer/.claude/skills/development-implementation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "development-implementation",
+  "downloaded_at": "2026-11-03T07:07:07.737165Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/developer/.claude/skills/development-implementation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/developer/.claude/skills/development-implementation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Developer-posture skill for ongoing work. Executes a development-plan `tl_instruction.md` in a fresh execution session \u2014 per-task TDD (red/green/refactor), developer standards, verification gates, and a self-owned closing commit, made again over an earlier one when a relaunched run re-closes the change \u2014 or, when the chain's context cap is passed, a pause commit after the task in progress so a fresh run continues at the next task. Repairs incomplete implementation and tests against the resolved contract, including inherited work, until verification passes. Writes new logic in the part that owns it in the product's parts table (docs/SDD.md \u00a7 3). External impediments are handled by the deferral contract; the run halts in three cases only. Reads execution type + test command from project.md. Does not advance pipeline inboxes \u2014 that baton-pass is handled separately."
+}

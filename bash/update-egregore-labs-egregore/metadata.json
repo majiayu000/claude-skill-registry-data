@@ -1,0 +1,38 @@
+{
+  "name": "update",
+  "repo": "egregore-labs/egregore",
+  "path": ".codex/skills/update/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/egregore-labs/egregore",
+  "dir_name": "update-egregore-labs-egregore",
+  "downloaded_at": "2026-11-03T06:59:16.338287Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "egregore-labs",
+  "source_url": "https://github.com/egregore-labs/egregore/blob/main/.codex/skills/update/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/egregore-labs/egregore/blob/main/.codex/skills/update/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Update local Egregore environment \u2014 sync the framework from upstream, run post-update migrations, and pull repos. Use for /update or when framework behavior seems broken or missing."
+}

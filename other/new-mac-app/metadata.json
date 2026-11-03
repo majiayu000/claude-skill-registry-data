@@ -1,0 +1,37 @@
+{
+  "name": "new-mac-app",
+  "repo": "daveebbelaar/bama",
+  "path": "skills/start/new-mac-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/daveebbelaar/bama",
+  "dir_name": "new-mac-app",
+  "downloaded_at": "2026-11-03T06:43:13.879310Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "daveebbelaar",
+  "source_url": "https://github.com/daveebbelaar/bama/blob/main/skills/start/new-mac-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/daveebbelaar/bama/blob/main/skills/start/new-mac-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a native macOS SwiftUI app from a working template (Swift package, SwiftData, build script, icon script, snapshot mode, git), with no Xcode GUI. Use when the user wants to start a new Mac app or scaffold a macOS project."
+}

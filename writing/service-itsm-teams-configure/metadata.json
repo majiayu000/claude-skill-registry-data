@@ -1,0 +1,37 @@
+{
+  "name": "service-itsm-teams-configure",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/service-itsm-teams-configure/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "service-itsm-teams-configure",
+  "downloaded_at": "2026-11-03T07:14:23.673743Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/service-itsm-teams-configure/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/service-itsm-teams-configure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Enable Microsoft Teams for Employee Service (ITSM) in Salesforce \u2014 the Salesforce Go feature service-cloud-itsm-teams-integration gating Teams-based IT Desk and IT Service collaboration. Use this for: 'enable Teams for employee service', 'turn on ITSM Teams integration', 'enable Microsoft Teams for IT Service', 'set up Salesforce IT Desk Teams app', 'enable ITSMTeamsEnabled', 'why can't I enable the Teams org preference', or any request to enable/verify this Salesforce Go feature. DO NOT TRIGGER for configuring the TeamsNotifications notification-channel preference or for enabling the Swarming feature itself (service-itsm-swarming-configure)."
+}

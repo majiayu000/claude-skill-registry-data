@@ -1,0 +1,38 @@
+{
+  "name": "flisk-agent-ops",
+  "repo": "flisk-sh/flisk",
+  "path": ".claude/skills/flisk-agent-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "flisk-agent-ops",
+  "downloaded_at": "2026-11-03T07:12:58.996252Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/.claude/skills/flisk-agent-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/.claude/skills/flisk-agent-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ground rules and the CLI-to-MCP command map for a coding agent (Claude Code, Cursor, Codex) working in a Flisk project - create services with `flisk resource` instead of hand-writing Dockerfiles, Compose files or manifests, keep the agent resource contract, and drive the stack with `--json` commands or the `flisk mcp` tools (`doctor`, `up`, `status`, `logs`, `resource_restart`, `agent_list`, `agent_sessions`, `down`). Use when about to write container config by hand or when you need the MCP tool for a CLI command. For building a whole app from a request, use flisk-build."
+}

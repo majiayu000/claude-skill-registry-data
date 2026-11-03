@@ -1,0 +1,39 @@
+{
+  "name": "analytics-query",
+  "repo": "bromso/singularskills",
+  "path": "skills/analytics-query/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "analytics-query",
+  "downloaded_at": "2026-11-03T06:14:50.895960Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/analytics-query/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/analytics-query/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or explain a SQL query against a schema the user gives, in their dialect, using the project's metric definitions when they exist, and name the traps \u2014 fan-out joins, time zones, nulls in filters. Use when the user needs a query to compute a metric or wants to understand one they have. Not for checking a reported number against data; see /analytics-number-check."
+}

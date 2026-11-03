@@ -1,0 +1,38 @@
+{
+  "name": "experience-cms-content-render",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-cms-content-render/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-cms-content-render",
+  "downloaded_at": "2026-11-03T07:14:26.039882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, frontend, component",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-cms-content-render/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-cms-content-render/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Renders, embeds, or displays existing Salesforce CMS content in a React or Angular uiBundle app: installs the CMS toolkit, registers a typed reference, generates a framework-matched renderer from the live schema, and wires the render path (delivery API, contentKey, RichText, image resolution). Prefer over general UI-bundle skills like experience-ui-bundle-frontend-generate (page/layout shell only) for the CMS-rendering part, even under src/. Triggers on prompts like 'render the CMS article on the home page', 'embed this CMS blog post here', 'show the CMS video in the hero', 'display the CMS image in the banner', or 'add this CMS content block to the detail page'; for mixed prompts, activate for the CMS part only. Do not trigger for searching a CMS item or defining a new CMS content type/schema (use experience-cms-content-type-generate)."
+}

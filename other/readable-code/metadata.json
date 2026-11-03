@@ -1,0 +1,37 @@
+{
+  "name": "readable-code",
+  "repo": "denysdovhan/agents",
+  "path": "skills/readable-code/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/denysdovhan/agents",
+  "dir_name": "readable-code",
+  "downloaded_at": "2026-11-03T06:46:21.452902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "denysdovhan",
+  "source_url": "https://github.com/denysdovhan/agents/blob/main/skills/readable-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/denysdovhan/agents/blob/main/skills/readable-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Readable code rules inspired by The Art of Readable Code, for any language with TypeScript/JavaScript as the primary focus. Use when writing, reviewing, or refactoring code in TS, JS, React/JSX, Node, Python, or any other language, including when the user asks to clean up, simplify, untangle, or make code easier to follow. Enforces short functions, flat control flow, clear naming, readable structure, and language idioms."
+}

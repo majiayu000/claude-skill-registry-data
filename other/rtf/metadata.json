@@ -1,0 +1,36 @@
+{
+  "name": "rtf",
+  "repo": "elivatemarketingbryan-beep/Edits",
+  "path": ".claude/skills/rtf/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/elivatemarketingbryan-beep/Edits",
+  "dir_name": "rtf",
+  "downloaded_at": "2026-11-03T07:00:28.705117Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elivatemarketingbryan-beep",
+  "source_url": "https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/rtf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/rtf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Give it a YouTube URL and it returns a word level timestamped transcript (an RTF) plus the moments in the video where a graphic would actually earn its place \u2014 each with in and out timecodes, the words underneath, why it was picked, and what to put there. Also reads the picture to say where the speaker sits and which part of the frame stays free. Trigger on \"/rtf\", \"RTF this video\", \"transcript with timestamps\", \"word level transcript\", \"where should I add graphics\", \"find the moments in this video\", \"timestamp this video\", or any YouTube URL handed over with a request for a transcript or for insert points."
+}

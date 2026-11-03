@@ -1,0 +1,37 @@
+{
+  "name": "product-content",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/content-manager/.claude/skills/product-content/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "product-content",
+  "downloaded_at": "2026-11-03T07:07:05.230741Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, language=2",
+    "score": 2,
+    "runner_up": "language",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/content-manager/.claude/skills/product-content/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/content-manager/.claude/skills/product-content/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Content-Manager-posture skill that authors a project's verbal language (CONTENT.md) \u2014 the standing source of truth for everything a product says to a person, covering voice and tone, grammar and mechanics, terminology, the message patterns for error/empty/loading/partial/recovered states, the accessibility bar for text, and localization rules. The peer of the CDO's DESIGN.md \u2014 how something looks belongs there, what it says belongs here. Requires Content Manager posture (halts outside a content-manager session or subagent). Non-interactive by design \u2014 it derives the whole verbal language best-effort off the settled UXD and the product's existing strings, and surfaces its load-bearing calls into a companion open-issues file for the owner to sign off async. On re-run it folds their answers in and clears the companion when nothing is left unresolved \u2014 its absence means the verbal language is done. Use when authoring, continuing, or revising a product's verbal language, content standard, voice and tone guide, terminology governance, or UX-writing rules \u2014 including when the request never says \"CONTENT.md\", such as \"define how this product talks\", \"we need a voice and tone standard\", or \"our error messages are inconsistent\". Do not use for per-change copy or interface strings, the design language (product-design), the experience definition (product-uxd), the PRD (product-prd), the SRS (product-srs), the project's Agari (project-agari), or downstream documents (SDD / Delivery Plan / FDR / ADR / NFDR)."
+}

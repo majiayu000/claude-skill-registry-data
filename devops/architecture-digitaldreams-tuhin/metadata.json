@@ -1,0 +1,40 @@
+{
+  "name": "architecture",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "architecture-digitaldreams-tuhin",
+  "downloaded_at": "2026-11-03T06:49:24.674933Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates a practical web architecture design from analyzed requirements, with interactive decision checkpoints \u2014 the user picks ecosystem, pattern, and repo strategy from recommended options. Reads tasks/requirements.md and writes tasks/architecture.md. Use whenever the user says \"design the architecture\", \"architecture doc\", \"create architecture.md\", or as the SDLC pipeline step after requirement analysis."
+}

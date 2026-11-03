@@ -1,0 +1,36 @@
+{
+  "name": "agent-invoke",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/interactive/.claude/skills/agent-invoke/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "agent-invoke",
+  "downloaded_at": "2026-11-03T07:06:59.025642Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive/.claude/skills/agent-invoke/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive/.claude/skills/agent-invoke/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run an owner's ad-hoc request for delegated work as a properly configured background subagent \u2014 picks the model from doctrine by where the judgment lives, writes a brief that makes the agent commit its own output, holds the Mac awake for the run, reads the run's own report in full and verifies what came back against the repo rather than relaying it, and leaves the completion message to the SubagentStop hook that fires whether or not anyone remembers. Use this whenever the owner asks for work to be handed to an agent or done in the background, including phrasings that never say \"agent\" \u2014 \"invoke an agent to\u2026\", \"I want to research\u2026\", \"look into X and report back\", \"have something draft a plan\", \"go do X while I'm away\", \"spin something up for this\". Prefer it even for a single one-off delegation, since the model choice and the commit requirement are exactly what a hand-assembled launch forgets."
+}

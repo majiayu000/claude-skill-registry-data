@@ -1,0 +1,38 @@
+{
+  "name": "taste",
+  "repo": "aktonay/skillz",
+  "path": "skills/design/taste-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/aktonay/skillz",
+  "dir_name": "taste-skill",
+  "downloaded_at": "2026-11-03T05:40:30.027917Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aktonay",
+  "source_url": "https://github.com/aktonay/skillz/blob/main/skills/design/taste-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aktonay/skillz/blob/main/skills/design/taste-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reverse-engineer the design taste of any website. Given a URL, captures DOM data and a screenshot via real browser, then runs a 4-step analysis to produce {domain}.md + {domain}.json with practical design tokens (colors, typography, spacing, radii, shadows, grid) AND taste DNA (Trigger \u2192 Decision \u2192 Reason \u2192 Evidence trade-offs explaining WHY the design works). Use whenever the user wants to extract a site's design system, study a competitor's visual language, port an aesthetic to a new project, or generate design guidance for an AI coding agent. Triggers on '/taste <url>', 'analyze the design of X', 'what makes X's site good', 'extract design tokens from X', 'give me X's design DNA', 'build something in the style of X', 'I want my app to feel like X'. Output rejects AI slop ('clean', 'modern', 'user-friendly') in favor of concrete px/hex values and restraint trade-offs. Do NOT use for scraping data, summarizing page content, or tasks unrelated to visual design."
+}

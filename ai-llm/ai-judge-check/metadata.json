@@ -1,0 +1,38 @@
+{
+  "name": "ai-judge-check",
+  "repo": "bromso/singularskills",
+  "path": "skills/ai-judge-check/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ai-judge-check",
+  "downloaded_at": "2026-11-03T06:14:46.098170Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ai-judge-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ai-judge-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check an AI judge against human labels \u2014 agreement, true-positive rate and true-negative rate from the four cells of the agreement table, the disagreements listed \u2014 and say whether the judge can be trusted for its check, and how to fix its prompt if not. Use when a team wants to rely on an LLM judge instead of reviewing outputs by hand. Not for evaluating the feature itself; see /ai-evaluate."
+}

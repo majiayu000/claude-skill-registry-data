@@ -1,0 +1,37 @@
+{
+  "name": "implement",
+  "repo": "ascribed-dev/ascribe",
+  "path": ".claude/skills/implement/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ascribed-dev/ascribe",
+  "dir_name": "implement-ascribed-dev-ascribe",
+  "downloaded_at": "2026-11-03T05:57:48.509337Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ascribed-dev",
+  "source_url": "https://github.com/ascribed-dev/ascribe/blob/main/.claude/skills/implement/SKILL.md",
+  "license": "MPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ascribed-dev/ascribe/blob/main/.claude/skills/implement/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement an issue from Ascribe's project board: build the change, open the pull request, move the card to In review, and answer the review. Use when a thread is started to implement a card that is In progress, or asked to pick up an issue from the board."
+}

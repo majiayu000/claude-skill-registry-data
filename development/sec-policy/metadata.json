@@ -1,0 +1,39 @@
+{
+  "name": "sec-policy",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/dev/sec-policy/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "sec-policy",
+  "downloaded_at": "2026-11-03T07:01:04.569445Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-policy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-policy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Definiert, pr\u00fcft oder aktualisiert die SECURITY.md eines Repos (Geltungsbereich, ausgeschlossene Bereiche, verlangte Sicherheitseigenschaften, Meldeweg, Reaktionszeiten, unterst\u00fctzte Versionen) und gleicht ihre Aussagen gegen den tats\u00e4chlichen Code ab. Die Richtlinie ist die Grundlage f\u00fcr sec-triage. Ausl\u00f6ser: 'SECURITY.md erstellen/pr\u00fcfen', 'Sicherheitsrichtlinie', 'was gilt hier als Schwachstelle', 'Meldeweg festlegen'. Nicht f\u00fcr Funde (sec-scan), nicht f\u00fcr Offenlegungsberichte (sec-writeup)."
+}

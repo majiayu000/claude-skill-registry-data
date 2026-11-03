@@ -1,0 +1,39 @@
+{
+  "name": "ellmos-security",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/dev/ellmos-security/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "ellmos-security",
+  "downloaded_at": "2026-11-03T07:01:07.170325Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/dev/ellmos-security/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/dev/ellmos-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Einstieg und Router der anbieterneutralen ellmos-Security-Familie (sec-*): ordnet Phasen von Bedrohungsmodell \u00fcber Scan, Validierung, Triage, Fix, Verifikation und Tracking bis zum Bericht ein und verweist auf den passenden Skill. Ausl\u00f6ser: 'Sicherheitspr\u00fcfung', 'Repo auf Schwachstellen pr\u00fcfen', 'welcher Security-Skill', 'PR sicherheitspr\u00fcfen', 'Fremdplugin pr\u00fcfen', 'SECURITY.md', 'Disclosure'. F\u00fchrt selbst keine Pr\u00fcfung aus; die Arbeit machen die sec-*-Skills und die Nachbar-Skills, die hier nur verlinkt sind."
+}

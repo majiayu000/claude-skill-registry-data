@@ -1,0 +1,37 @@
+{
+  "name": "kaizen-audit",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/experimental/.claude/skills/kaizen-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "kaizen-audit",
+  "downloaded_at": "2026-11-03T07:06:59.407723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/experimental/.claude/skills/kaizen-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/experimental/.claude/skills/kaizen-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits a kensaiapp pipeline skill through an artifact it produced. Spawns the blind auditor fan-out (one kensaiapp-auditor per lens, none of them given the skill) over the artifact and its inputs, then the non-blind synthesis passes (version comparison, surfaced-set comparison) over both versions of the outputs, and gathers every finding into an audit.md beside the artifact. The caller supplies the evidence, the surfacing fact, and any prior round; this skill runs the auditors and collects what they find. Use to run the audit over a settled, snapshotted artifact \u2014 \"audit this evidence\", \"fan out the auditors\", \"audit the <skill> output\". Emits findings only. It does not produce the evidence it reads and does not act on the findings it emits."
+}

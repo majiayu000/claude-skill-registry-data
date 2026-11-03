@@ -1,0 +1,37 @@
+{
+  "name": "development-design",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/architect/.claude/skills/development-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "development-design",
+  "downloaded_at": "2026-11-03T07:07:00.778488Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/architect/.claude/skills/development-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/architect/.claude/skills/development-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Architect-posture skill for ongoing work on an existing project. Takes change_spec.md (output of development-specs) as primary input, with docs/adr/, docs/fdr.md, docs/nfdr.md and the parts table of docs/SDD.md \u00a7 3 as architectural references. Names the part that owns each new piece of logic, determines blast radius, decomposes into isolated sub-jobs when multiple modules are affected, and produces change_design.md \u2014 a targeted change blueprint with sub-job boundaries, interface contracts, build sequence, and code strategy, whose header carries a Publishes text line (yes with the places, or no) that the chain reads to decide whether the content-editor step runs. No interview. The records are optional context \u2014 used when present, never required. Run when a change_spec.md is ready."
+}

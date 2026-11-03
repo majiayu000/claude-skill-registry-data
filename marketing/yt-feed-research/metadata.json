@@ -1,0 +1,37 @@
+{
+  "name": "yt-feed-research",
+  "repo": "elivatemarketingbryan-beep/Edits",
+  "path": ".claude/skills/yt-feed-research/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/elivatemarketingbryan-beep/Edits",
+  "dir_name": "yt-feed-research",
+  "downloaded_at": "2026-11-03T07:00:41.096036Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, brand",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elivatemarketingbryan-beep",
+  "source_url": "https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/yt-feed-research/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elivatemarketingbryan-beep/Edits/blob/main/.claude/skills/yt-feed-research/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scans the logged-in YouTube home feed in the real Chrome profile (Claude-in-Chrome MCP) for on-niche outlier video ideas AND tailors the feed while doing it \u2014 every off-niche tile gets 'Not interested' (one-off misses) or 'Don't recommend channel' (categorically wrong channels), then the feed is refreshed and re-scanned until the idea target is hit (default 20). Reads VidIQ badges (VPH + outlier multiplier + subs) straight off the tiles for free outlier scoring. Outputs a visual HTML report to research/. Use this for algorithm-driven discovery \u2014 what YouTube itself is pushing in the niche right now \u2014 vs tracked channels (yt-competitor-research). Triggers: feed research, scan my home feed, youtube feed research, tailor my feed, home feed ideas, what's my feed showing, feed outliers, clean up my youtube feed, yt feed."
+}

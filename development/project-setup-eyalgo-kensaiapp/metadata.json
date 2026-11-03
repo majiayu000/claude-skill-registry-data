@@ -1,0 +1,38 @@
+{
+  "name": "project-setup",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/interactive-product/.claude/skills/project-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "project-setup-eyalgo-kensaiapp",
+  "downloaded_at": "2026-11-03T07:07:06.472901Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive-product/.claude/skills/project-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive-product/.claude/skills/project-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The front door for a project in a kensaiapp \u2014 one plain-language conversation that turns \"I have an idea for a product\" into a project whose definition is already running. It interviews the owner without kensaiapp's vocabulary (no PRD, no Agari, no companion), one question at a time, offering a suggested answer wherever the idea or the material already holds one, stamps the project through project-stamp, writes the owner's answers as the PRD's and the Agari's first round, commits them, and starts the chain that writes the PRD and then the Agari. Interactive, with the owner in the room; works the same in a host or a satellite. Use whenever someone wants to start, create, set up, add or kick off a new project or product in this instance, says they have a product idea and want kensaiapp to take it from here, or is new to kensaiapp and asks how to begin \u2014 even if they never say \"project\". Do not use for scaffolding only the management folder with no interview (project-stamp), writing a PRD or an Agari for a project that already exists (product-prd, project-agari), declaring the instance's own identity (kensaiapp-michi), or filling the card after the foundation step (product-card)."
+}

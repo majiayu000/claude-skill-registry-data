@@ -1,0 +1,38 @@
+{
+  "name": "log-analyzer",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/log-analyzer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "log-analyzer-digitaldreams-tuhin",
+  "downloaded_at": "2026-11-03T06:49:25.227904Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug, refactor",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/log-analyzer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/log-analyzer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Laravel log file analyzer for expert-level bug diagnosis. Use this skill whenever the user mentions 'laravel.log', 'check the log', 'analyze logs', 'log file', 'there's an error in the log', or asks to diagnose, investigate, or fix a bug from a Laravel log file. Triggers on any mention of Laravel errors, exceptions, undefined variable errors, or stack traces from a Laravel application. This skill reads the log file, isolates actionable errors (ignoring INFO/DEBUG/routine logs), identifies the root cause by tracing into App-namespaced source files, inspects database table structure when model-related, and recommends a minimal, pattern-consistent fix. Always use this skill before attempting to diagnose any Laravel bug from a log."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "development-code-integrity",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/senior-engineer/.claude/skills/development-code-integrity/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "development-code-integrity",
+  "downloaded_at": "2026-11-03T07:07:09.204607Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/senior-engineer/.claude/skills/development-code-integrity/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/senior-engineer/.claude/skills/development-code-integrity/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Integrity check on freshly-written code \u2014 proves the code does what its intent says by making the tests match that intent. It adds the tests that are missing and fixes any test that is wrong (always derived from the spec or the owner's expectations, never read off the implementation), runs them, and \u2014 when a test goes red \u2014 fixes the code (or the test, where a recorded call finds the test wrong) and makes it green. Before any of that, it moves new logic the change wrote outside the part that owns it in the product's parts table (docs/SDD.md \u00a7 3), in a commit of its own. It always writes a committed `code-integrity-report`, so even a clean pass leaves proof a review happened \u2014 for a product in its own repo the code commits land in the product's repo and the report in the change's own. Runs two ways with the same behaviour: as a step in the change pipeline on the code just implemented, and interactively when you point it at a file or a folder. Where the intent leaves a call open, the reviewer makes it \u2014 the reading most faithful to the intent \u2014 and records it in the report for its owner to confirm; it STOPs only when it cannot go on (no intent to read, interactively no way to tell how to run the tests, a fix or a placement move that would redesign the change, or a `Deferred:` line on the closing marker that is not real), and it never invents scope. In the pipeline it also accepts the developer's declared deferrals \u2014 one `Deferred:` line per blocked task \u2014 after checking each is real (not right), leaves everything inside a deferred task alone, and reports each line with its four check results.\nUse when: verifying that just-implemented code is correct against its intent, checking a file or a folder for integrity, \"does this code actually do what it's meant to\", or running the code-integrity step of the change pipeline.\nDo not use for: product-correctness sign-off (that is acceptance / QA), redesigning code, or authoring a change spec."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "agentforce-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/agentforce-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "agentforce-generate",
+  "downloaded_at": "2026-11-03T07:14:12.544454Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build, modify, audit, repair, optimize, debug, and deploy agents with Agentforce Agent Script. TRIGGER when: user creates, reviews, or changes .agent files or aiAuthoringBundle metadata; asks to fix AgentScript, audit an existing agent, run an AgentScript health check, common-pitfall review, or baseline-versus-candidate repair loop; changes a response, action, subagent, route, state flow, or Agent Spec; migrates or upgrades a legacy GenAiPlannerBundle Agentforce agent (NOT an Einstein Bot) to an aiAuthoringBundle (Agent Script) agent; previews, debugs, deploys, publishes, or tests agents; uses sf agent generate/preview/publish/test; or manages Agentforce MCP servers, tools, assets, or authentication. DO NOT TRIGGER when: Apex, Flow, Prompt Template, Experience Cloud, or general Salesforce CLI work is unrelated to Agent Script; the source is an Einstein Bot (BotDefinition/BotVersion) \u2014 use agentforce-bot-upgrade; or the primary input is a production session or trace ID rather than an agent artifact."
+}

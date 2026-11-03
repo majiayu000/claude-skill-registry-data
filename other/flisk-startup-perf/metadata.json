@@ -1,0 +1,38 @@
+{
+  "name": "flisk-startup-perf",
+  "repo": "flisk-sh/flisk",
+  "path": ".claude/skills/flisk-startup-perf/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "flisk-startup-perf",
+  "downloaded_at": "2026-11-03T07:13:00.352036Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, performance=3",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/.claude/skills/flisk-startup-perf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/.claude/skills/flisk-startup-perf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds out where a Flisk start (flisk up or the one-command flisk demo) spends its time, tells a slow start from a stuck one, and guides a fix with before and after numbers. Use when a user says the demo or flisk up is slow, hangs on \"Starting services\", or asks to speed up startup, image builds or the first run."
+}

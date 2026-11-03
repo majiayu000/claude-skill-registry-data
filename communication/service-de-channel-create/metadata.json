@@ -1,0 +1,37 @@
+{
+  "name": "service-de-channel-create",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/service-de-channel-create/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "service-de-channel-create",
+  "downloaded_at": "2026-11-03T07:14:18.912502Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: messaging, chat",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "messaging",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/service-de-channel-create/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/service-de-channel-create/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "**INTERNAL USE ONLY \u2014 invoked by `service-de-headless-channel-configure`.** Insert an Enhanced messaging `MessagingChannel` (plus child `MessagingChannelUsage` as a free side-effect) of any type \u2014 WhatsApp, LINE, Apple Business Chat, Facebook, or SMS. Given a `{MESSAGE_TYPE}` and its inputs, runs the shared preflight \u2192 Connect-insert \u2192 verify flow, branching only where a type differs. Uses `POST /services/data/v{V}/connect/livemessage/channels` \u2014 no Aura session, no shell-stored token. **Invoke `service-de-headless-channel-configure` instead** \u2014 it handles insert \u2192 route \u2192 activate in one flow; replaces the four former per-type creation skills."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "dx-lifecycle-center",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/dx-lifecycle-center/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "dx-lifecycle-center",
+  "downloaded_at": "2026-11-03T07:14:12.747329Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, cd, deploy",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "cd",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-lifecycle-center/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-lifecycle-center/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lifecycle Center for DX Inspector and Builder Central. Use this skill first for four jobs: (A) list the orgs connected to DX Inspector; (B) connect a new org (sandbox or scratch, production, OrgFarm) as a deploy target; (C) connect or check the Lifecycle Center org, also written LifecycleCenter org, lifecycle-center, ALMDevOpsCenterHub, DevOps Center hub, or Hub org; (D) deploy, validate, or quick-deploy components that already exist in the user's org to a connected org, and poll a simple-deploy requestId. TRIGGER on: show, list, or pick connected orgs or environments; connect, add, log in to, or repair an org; connect the Lifecycle Center org; deploy, validate, or push components to another org, URL, org id, alias, or environment name. Short asks like \"connect a new org\", \"which orgs can I deploy to\", or \"deploy to my sandbox\" match. These deploys move components from the connected source org to another org, not local project files."
+}

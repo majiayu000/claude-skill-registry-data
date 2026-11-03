@@ -1,0 +1,38 @@
+{
+  "name": "honeycomb-create-board",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/honeycomb-create-board/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "honeycomb-create-board",
+  "downloaded_at": "2026-11-03T06:01:56.100164Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, infra, infrastructure",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/honeycomb-create-board/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/honeycomb-create-board/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load when the operator asks for a Honeycomb board or dashboard: a board for a service, a feature, or an incident, a golden signals dashboard, or a board to visualize service health. Designs the board from SLOs and queries, shows the full plan to the operator, and calls create_board only after the operator approves it."
+}

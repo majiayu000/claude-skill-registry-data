@@ -1,0 +1,39 @@
+{
+  "name": "verifying-changes",
+  "repo": "design4pro/money-tracker.online",
+  "path": ".claude/skills/verifying-changes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/design4pro/money-tracker.online",
+  "dir_name": "verifying-changes",
+  "downloaded_at": "2026-11-03T06:46:41.820733Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, testing=4",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "design4pro",
+  "source_url": "https://github.com/design4pro/money-tracker.online/blob/main/.claude/skills/verifying-changes/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/design4pro/money-tracker.online/blob/main/.claude/skills/verifying-changes/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The canonical verification ladder for this repo and how to read its feedback loops (vitest, the Playwright suite, the blind A/B pair, dev-server pitfalls). Use before claiming any change works, and when a test failure looks confusing."
+}

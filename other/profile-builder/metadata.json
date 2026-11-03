@@ -1,0 +1,37 @@
+{
+  "name": "profile-builder",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-governance/skills/profile-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "profile-builder",
+  "downloaded_at": "2026-11-03T06:53:43.532144Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-governance/skills/profile-builder/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-governance/skills/profile-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Conversational profile builder. Produces validated JSON config files for any rootnode Skill that consumes profile-shaped configuration (handoff trigger check, mode router, critic gate, future Skills). Reads a target JSON Schema (draft-07), conducts a progressive-depth interview using plain-language questions, validates answers, and writes the resulting JSON to a destination path. Schema-agnostic \u2014 works with any profile schema conforming to draft-07. Use when a user needs to create, clone, or revise a profile and you do not want them hand-editing JSON. Trigger on: \"build me a profile,\" \"create a profile,\" \"I need a profile for X,\" \"set up my profile,\" \"edit my profile,\" \"clone the X profile,\" \"walk me through making a profile.\" Do NOT use when the user already has a working profile and only wants to invoke the consuming Skill, when the schema cannot be located, or for non-profile JSON config work. Always validate before writing."
+}

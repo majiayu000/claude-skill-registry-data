@@ -1,0 +1,38 @@
+{
+  "name": "ddd-symfony",
+  "repo": "digitaldreams/tuhin",
+  "path": "skills/ddd-symfony/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/digitaldreams/tuhin",
+  "dir_name": "ddd-symfony",
+  "downloaded_at": "2026-11-03T06:49:24.366784Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitaldreams",
+  "source_url": "https://github.com/digitaldreams/tuhin/blob/main/skills/ddd-symfony/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitaldreams/tuhin/blob/main/skills/ddd-symfony/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Domain Driven Design in Symfony, three modes. PLACE: decide which building block (entity, value object, aggregate, domain service, event, repository, command, application service), layer and folder a piece of logic belongs in. BUILD: implement a use case or aggregate through the layers in order (Domain \u2192 tests \u2192 Application \u2192 Infrastructure). AUDIT: scan a Symfony codebase for DDD violations (framework leaks in the Domain, anemic models, business rules in services, wrong repositories, events dispatched before commit) and prescribe fixes by rule id. Use whenever the user mentions DDD, aggregate, value object, bounded context, domain event, domain service, or asks \"where does this go\" / \"DDD audit\" in a Symfony project."
+}

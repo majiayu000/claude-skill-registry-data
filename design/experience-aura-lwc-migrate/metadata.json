@@ -1,0 +1,39 @@
+{
+  "name": "experience-aura-lwc-migrate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-aura-lwc-migrate/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-aura-lwc-migrate",
+  "downloaded_at": "2026-11-03T07:14:22.376227Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css, component, figma",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-aura-lwc-migrate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-aura-lwc-migrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill to analyze a Salesforce Aura component bundle (.cmp, .app, .evt, .intf, Controller.js, Helper.js, Renderer.js) and produce a framework-agnostic migration blueprint (PRD.yaml / PRD.md / PRD.json) capturing public API, data requirements, slots, events, states, accessibility, styling, localization, and security posture. This is Phase 1 (analysis + PRD) only \u2014 it does NOT author or edit component code, wire adapters, or Jest tests, and does not write .html/.js/.css/.js-meta.xml. TRIGGER when the user says \"analyze this Aura component\", \"migrate Aura\", \"convert .cmp\", \"produce a migration blueprint\", \"generate a PRD for this Aura component\", or mentions aura:attribute, aura:handler, force:recordData, $Label, $Resource, component.get, cmp.find, or an input directory containing .cmp files. DO NOT TRIGGER when there is no Aura source (delegate downstream LWC authoring to experience-lwc-generate), for post-migration scoring, or for refactoring an existing modern component."
+}

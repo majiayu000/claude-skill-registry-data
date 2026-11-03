@@ -1,0 +1,37 @@
+{
+  "name": "development-audit",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/kensaiapp-auditor/.claude/skills/development-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "development-audit",
+  "downloaded_at": "2026-11-03T07:07:06.829284Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/kensaiapp-auditor/.claude/skills/development-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/kensaiapp-auditor/.claude/skills/development-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Independent fresh-eyes audit of a development-* step's output for FLOW-quality issues \u2014 coverage gaps, altitude leaks, unrecorded divergences, classification-propagation slips, contracts realized by coincidence, new logic outside the part that owns it. One skill for every audited step (the step is a parameter). Produces flow_findings/<step>.md, one file per audited step; audits only, never fixes.\nUse when: a development-* step (development-specs / development-design / development-plan / development-content / development-implementation) has just produced its artifact and you want to audit that output for issues about the flow before the next step runs.\nDo not use for: product-correctness review (that is acceptance / QA), redesigning the artifact, or fixing anything.\nTrigger phrases: \"run development-audit\", \"audit the flow output\", \"audit the change_spec / change_design / tl_instruction\", \"development-auditing\", \"check this step's output for flow issues\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dnf5",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/dnf5/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "dnf5",
+  "downloaded_at": "2026-11-03T06:20:01.847366Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/dnf5/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/dnf5/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with dnf5 \u2014 the next-generation RPM package manager for Fedora/RHEL. Covers CLI commands and options, configuration, plugin system (dnf5 active plugins and libdnf5 passive plugins), dnf5daemon D-Bus API, execution workflow, package specs (NEVRA), modularity, caching, migration from DNF4, libdnf5 library architecture, build system, and command-line aliases. Triggers on: \"dnf5\", \"dnf\", \"libdnf5\", \"libdnf\", \"dnf5daemon\", \"dnf5-plugins\", \"libdnf5-plugins\", \"dnf5.conf\", \"repoquery\", \"versionlock\", \"distro-sync\", \"offline upgrade\", \"system-upgrade\", \"advisory\", \"comps\", \"modulemd\", \"NEVRA\", \"installroot\", \"forcearch\", \"repo variables\", \"metadata_expire\", \"setopt\", \"setvar\", \"config-manager\", \"repofrompath\", \"releasever\", \"basearch\", \"pluginpath\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "update-gaia",
+  "repo": "gaia-harness/gaia",
+  "path": ".claude/skills/update-gaia/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "update-gaia",
+  "downloaded_at": "2026-11-03T07:19:08.219695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/.claude/skills/update-gaia/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/.claude/skills/update-gaia/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pulls the latest GAIA release into this project without clobbering customizations, with a three-way merge per file using .gaia/manifest.json classes. Trigger when the user clicks the statusline `\ud83d\ude80 /update-gaia` indicator or asks \"update GAIA\", \"pull the latest GAIA\", \"apply the new GAIA release\"."
+}

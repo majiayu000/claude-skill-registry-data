@@ -1,0 +1,38 @@
+{
+  "name": "ascribe",
+  "repo": "ascribed-dev/ascribe",
+  "path": ".claude/skills/ascribe/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ascribed-dev/ascribe",
+  "dir_name": "ascribe",
+  "downloaded_at": "2026-11-03T05:57:48.134867Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ascribed-dev",
+  "source_url": "https://github.com/ascribed-dev/ascribe/blob/main/.claude/skills/ascribe/SKILL.md",
+  "license": "MPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ascribed-dev/ascribe/blob/main/.claude/skills/ascribe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write and fix Markdown docs in an Ascribe project: pages with YAML frontmatter, `@` directives, and `{phrase}` keys, checked against the content model in `ascribe.toml`. Use when adding or editing pages in a folder with an `ascribe.toml`, fixing what `cargo run -q -p ascribe-cli -- check` reports, or finding which frontmatter, directives, and phrases the project allows."
+}

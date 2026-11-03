@@ -1,0 +1,37 @@
+{
+  "name": "project-stamp",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/interactive-product/.claude/skills/project-stamp/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "project-stamp",
+  "downloaded_at": "2026-11-03T07:07:06.292475Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "prd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive-product/.claude/skills/project-stamp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/interactive-product/.claude/skills/project-stamp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scaffold a new managed project inside a kensaiapp instance \u2014 create the per-project folder tree system/projects/<name>/ (project.md with the Product path binding, agari.md, doctrine/, contexts/CONTEXT_PM.md, and the journey/ folders nemawashi/ (README + the recommended define-the-product seed + unpicked/ + trail/ + drop/), shukuba/ (README + parked/ + trail/), tobiishi/trail/) stamped from the core templates, per kensaiapp_structure.md \u00a72. Use this whenever the user wants to start, register, scaffold, or set up a new project / product engagement in this instance \u2014 even if they just say \"add a project\" or \"onboard <product>\". It is the step that comes BEFORE the CPO session (which authors the PRD and declares the product's \"done\"); this creates the management folder that points at the product. Does NOT create the product's docs or code. Do not use for: declaring the product's Agari (project-agari), running a change through the pipeline (the chain), or first-time instance setup (setup-kensaiapp)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ai-prompt-design",
+  "repo": "bromso/singularskills",
+  "path": "skills/ai-prompt-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ai-prompt-design",
+  "downloaded_at": "2026-11-03T06:14:53.327341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ai-prompt-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ai-prompt-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design the prompt and context for an AI feature \u2014 system prompt, how context is assembled per request, examples, output format, refusal and uncertainty behaviour, and defences against prompt injection \u2014 versioned like code. Use when the approach is chosen and the team needs the instructions the model will run on. Not for reviewing an existing prompt; see /ai-prompt-review."
+}

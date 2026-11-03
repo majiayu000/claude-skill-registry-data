@@ -1,0 +1,37 @@
+{
+  "name": "domain-business-strategy",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-prompts/skills/domain-business-strategy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "domain-business-strategy",
+  "downloaded_at": "2026-11-03T06:53:45.841051Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/domain-business-strategy/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/domain-business-strategy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Specialized business strategy prompt methodology for Claude. Provides 11 tested approaches (3 identity, 4 reasoning, 4 output formats) for consulting, M&A, corporate strategy, and strategic planning tasks. Use when building prompts for deal evaluation, due diligence, portfolio strategy, business model analysis, board narratives, investment cases, market entry plans, or strategic options assessments. Trigger on: \"build a prompt for M&A analysis,\" \"due diligence prompt,\" \"board narrative,\" \"investment case,\" \"market entry strategy,\" \"strategic options,\" \"portfolio strategy prompt,\" \"business model analysis prompt,\" \"consulting-style analysis.\" Do NOT use for evaluating or scoring existing prompts (use prompt-validation if available) or for auditing Claude Projects (use project-audit if available)."
+}

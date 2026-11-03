@@ -1,0 +1,38 @@
+{
+  "name": "mfa",
+  "repo": "auth0/nextjs-auth0",
+  "path": "skills/mfa/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/auth0/nextjs-auth0",
+  "dir_name": "mfa",
+  "downloaded_at": "2026-11-03T06:00:08.887323Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ux, frontend, component",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "ux",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "auth0",
+  "source_url": "https://github.com/auth0/nextjs-auth0/blob/main/skills/mfa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/auth0/nextjs-auth0/blob/main/skills/mfa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Multi-factor authentication with @auth0/nextjs-auth0 v4: redirect step-up via Universal Login (amr gating), server-side step-up on mfa_required, the MFA management API (getAuthenticators, enroll, challenge, verify), and reactive step-up via mfa.challengeWithPopup(). Covers the beforeSessionSaved amr hook, the secure mfa_token handoff, and MFA error classes."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ai-prompt-review",
+  "repo": "bromso/singularskills",
+  "path": "skills/ai-prompt-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/singularskills",
+  "dir_name": "ai-prompt-review",
+  "downloaded_at": "2026-11-03T06:14:53.848113Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/singularskills/blob/main/skills/ai-prompt-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/singularskills/blob/main/skills/ai-prompt-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review one prompt for an AI feature \u2014 unclear or conflicting instructions, missing context, gaps in the output format, missing refusal rules, and places where user input could override instructions \u2014 and return a rewritten version with the changes listed. Use when a team has a prompt and wants it checked before it ships. Not for designing a prompt from scratch; see /ai-prompt-design."
+}

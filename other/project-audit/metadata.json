@@ -1,0 +1,37 @@
+{
+  "name": "project-audit",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-projects/skills/project-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "project-audit",
+  "downloaded_at": "2026-11-03T06:53:41.350581Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-projects/skills/project-audit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-projects/skills/project-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits and scores Claude Projects using a six-dimension Scorecard with anchored 1-5 rubrics and detects seven structural anti-patterns. When global layer info is provided, adds cross-layer alignment findings. Use when user says \"audit my project,\" \"review my custom instructions,\" \"score my project,\" \"evaluate my Claude project,\" \"improve my system prompt,\" \"what's wrong with my project,\" \"why is my project underperforming.\" Also trigger on symptom-phrased: \"my project doesn't work right,\" \"Claude is inconsistent in my project,\" \"my Project used to work and now doesn't.\" Also use when the user pastes Custom Instructions asking why output is poor or generic. Do NOT use when the user's primary request is a global-layer audit (use global-audit if available), single-prompt evaluation (use prompt-validation if available), or Memory-only optimization (use memory-optimization if available). Run on Opus 5.5 (`medium`+) or Sonnet 5.5 (`high`); depth reduces on legacy models."
+}

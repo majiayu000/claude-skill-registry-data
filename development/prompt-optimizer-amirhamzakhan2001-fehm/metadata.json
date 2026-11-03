@@ -1,0 +1,38 @@
+{
+  "name": "prompt-optimizer",
+  "repo": "amirhamzakhan2001/fehm",
+  "path": "skills/ai/prompt-optimizer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/amirhamzakhan2001/fehm",
+  "dir_name": "prompt-optimizer-amirhamzakhan2001-fehm",
+  "downloaded_at": "2026-11-03T05:48:26.104340Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "amirhamzakhan2001",
+  "source_url": "https://github.com/amirhamzakhan2001/fehm/blob/main/skills/ai/prompt-optimizer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/amirhamzakhan2001/fehm/blob/main/skills/ai/prompt-optimizer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze raw prompts, identify intent and gaps, match ECC components (skills/commands/agents/hooks), and output a ready-to-paste optimized prompt. Advisory role only \u2014 never executes the task itself. TRIGGER when: user says \"optimize prompt\", \"improve my prompt\", \"how to write a prompt for\", \"help me prompt\", \"rewrite this prompt\", or explicitly asks to enhance prompt quality. Also triggers on Chinese equivalents: \"\u4f18\u5316prompt\", \"\u6539\u8fdbprompt\", \"\u600e\u4e48\u5199prompt\", \"\u5e2e\u6211\u4f18\u5316\u8fd9\u4e2a\u6307\u4ee4\". DO NOT TRIGGER when: user wants the task executed directly, or says \"just do it\" / \"\u76f4\u63a5\u505a\". DO NOT TRIGGER when user says \"\u4f18\u5316\u4ee3\u7801\", \"\u4f18\u5316\u6027\u80fd\", \"optimize performance\", \"optimize this code\" \u2014 those are refactoring/performance tasks, not prompt optimization."
+}

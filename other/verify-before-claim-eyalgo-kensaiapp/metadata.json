@@ -1,0 +1,37 @@
+{
+  "name": "verify-before-claim",
+  "repo": "eyalgo/kensaiapp",
+  "path": "skills/developer/.claude/skills/verify-before-claim/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eyalgo/kensaiapp",
+  "dir_name": "verify-before-claim-eyalgo-kensaiapp",
+  "downloaded_at": "2026-11-03T07:07:03.680500Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eyalgo",
+  "source_url": "https://github.com/eyalgo/kensaiapp/blob/main/skills/developer/.claude/skills/verify-before-claim/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eyalgo/kensaiapp/blob/main/skills/developer/.claude/skills/verify-before-claim/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pre-commit verification floor for two specific claim shapes that recur at decision points \u2014 vendor-specific quantitative claims (price, rate limit, free-tier coverage, supported tickers/exchanges) and codebase-state claims (\"we already inject X\", \"the system already validates Y\"). When typing either shape, stop and verify against the canonical source \u2014 the vendor's own URL for vendor claims, the file itself this session for codebase-state claims. Use this whenever drafting an ADR, doctrine entry, handoff, sparring reply, or review verdict that hangs on a quantitative vendor fact or a \"the existing code does X\" claim. The behavioral why and source cases live in `feedback_decision_claims_need_source_and_confidence.md`; this skill is the procedural floor that fires at the moment of typing."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "shell",
+  "repo": "aktonay/skillz",
+  "path": "skills/cursor-tools/shell/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aktonay/skillz",
+  "dir_name": "shell-aktonay-skillz",
+  "downloaded_at": "2026-11-03T05:40:30.656391Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aktonay",
+  "source_url": "https://github.com/aktonay/skillz/blob/main/skills/cursor-tools/shell/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aktonay/skillz/blob/main/skills/cursor-tools/shell/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs the rest of a /shell request as a literal shell command. Use only when the user explicitly invokes /shell and wants the following text executed directly in the terminal."
+}

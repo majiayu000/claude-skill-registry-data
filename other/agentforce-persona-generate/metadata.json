@@ -1,0 +1,37 @@
+{
+  "name": "agentforce-persona-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/agentforce-persona-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "agentforce-persona-generate",
+  "downloaded_at": "2026-11-03T07:14:22.930265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-persona-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/agentforce-persona-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to design an AI agent persona \u2014 identity, voice, tone, behavioral style, guardrails \u2014 and encode it into Agent Script (.agent files) or Agentforce Builder field values. Runs four sequenced phases (DRAFT, REFINE, SCORE, ENCODE) plus five spokes (NAME, FILL OUT, ADJUST, CHECKLIST, WORKSHOP). Supports greenfield (brand input to a starter .agent file) and brownfield (audit an existing .agent file and re-encode persona fields only), with a 100-point evaluation rubric. Trigger when a user designs a new agent persona, retrofits persona consistency, translates brand guidelines into agent voice, defines tone/register/formality/warmth/humor/personification, encodes a persona for Agent Script or Agentforce Builder, or scores or audits an existing .agent file for persona quality. Do not trigger for building Agentforce actions/metadata, authoring Agent Script flow control without persona work, or testing agent conversations."
+}

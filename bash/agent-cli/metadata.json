@@ -1,0 +1,39 @@
+{
+  "name": "agent-cli",
+  "repo": "daveebbelaar/bama",
+  "path": "skills/code/agent-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/daveebbelaar/bama",
+  "dir_name": "agent-cli",
+  "downloaded_at": "2026-11-03T06:43:12.963872Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "daveebbelaar",
+  "source_url": "https://github.com/daveebbelaar/bama/blob/main/skills/code/agent-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/daveebbelaar/bama/blob/main/skills/code/agent-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Optional command line and MCP server for a macOS app, so Claude Code, Codex, and scripts can drive it (list, add, change, search, act) through the running app. Use when the user wants agents to work with their app or its data, asks for a CLI, an MCP server, or automation for the app, or says \"Claude should be able to use my app\"."
+}

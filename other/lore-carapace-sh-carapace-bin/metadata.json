@@ -1,0 +1,37 @@
+{
+  "name": "lore",
+  "repo": "carapace-sh/carapace-bin",
+  "path": "skills/lore/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/carapace-sh/carapace-bin",
+  "dir_name": "lore-carapace-sh-carapace-bin",
+  "downloaded_at": "2026-11-03T06:20:02.461015Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "carapace-sh",
+  "source_url": "https://github.com/carapace-sh/carapace-bin/blob/master/skills/lore/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/carapace-sh/carapace-bin/blob/master/skills/lore/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with the Epic Games Lore version control system \u2014 a centralized VCS designed for game development with binary-first content-addressed storage. Covers architecture, core concepts, server deployment, CLI and server configuration, workflows, and the full command reference. Triggers on: \"lore\", \"Lore\", \"Epic Games Lore\", \"loreserver\", \"version control system\", \"VCS\", \"content-addressed\", \"immutable store\", \"mutable store\", \"BLAKE3\", \"Merkle tree\", \"FastCDC\", \"fragment\", \"partition\", \"content-defined chunking\", \"split-write\", \"shared store\", \"revision\", \"branch\", \"merge\", \"cherry-pick\", \"revert\", \"bisect\", \"layer\", \"link\", \"lock\", \"staging\", \"dirty\", \"obliterate\", \"packfile\", \"LoreError\", \"config.toml\", \"cli.toml\", \"lore://\", \"Lore server\", \"Lore CLI\", \"Lore configuration\", \"Lore FAQ\", \"Lore roadmap\", \"Lore system design\"."
+}

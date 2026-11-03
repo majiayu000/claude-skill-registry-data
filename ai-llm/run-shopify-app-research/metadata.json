@@ -1,0 +1,37 @@
+{
+  "name": "run-shopify-app-research",
+  "repo": "applora/agent-skills",
+  "path": "skills/run-shopify-app-research/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/applora/agent-skills",
+  "dir_name": "run-shopify-app-research",
+  "downloaded_at": "2026-11-03T05:54:39.791398Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "applora",
+  "source_url": "https://github.com/applora/agent-skills/blob/main/skills/run-shopify-app-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/applora/agent-skills/blob/main/skills/run-shopify-app-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run an Applora research workflow from a prepared brief or a direct Shopify App Store question. Use for selected templates, business context, output language, prior reports, saving findings or continuing research; specialized skills handle deeper domain analysis."
+}

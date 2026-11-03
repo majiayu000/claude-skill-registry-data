@@ -1,0 +1,38 @@
+{
+  "name": "sec-diff-scan",
+  "repo": "ellmos-ai/skills",
+  "path": "skills/dev/sec-diff-scan/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ellmos-ai/skills",
+  "dir_name": "sec-diff-scan",
+  "downloaded_at": "2026-11-03T07:01:06.553796Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ellmos-ai",
+  "source_url": "https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-diff-scan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ellmos-ai/skills/blob/master/skills/dev/sec-diff-scan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Security-Scan einer \u00c4nderung statt des ganzen Repos: PR, Commit, Branch-Diff oder Working-Tree-Patch. Pr\u00fcft ge\u00e4nderte Zeilen samt Aufrufern und Aufgerufenen, sucht Regressionen bekannter Muster und schreibt Kandidaten in findings.json plus coverage.json mit Diff- und Kontextdateien. Nutzen bei 'Security-Review dieses PR', 'Diff auf Schwachstellen pr\u00fcfen', 'vor dem Merge sicherheitlich ansehen', 'hat diese \u00c4nderung etwas aufgerissen'. Voll-Repo-Scan: sec-scan. Kandidaten widerlegen: sec-validate. Bericht: sec-report."
+}

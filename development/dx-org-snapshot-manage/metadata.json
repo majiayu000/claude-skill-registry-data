@@ -1,0 +1,37 @@
+{
+  "name": "dx-org-snapshot-manage",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/dx-org-snapshot-manage/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "dx-org-snapshot-manage",
+  "downloaded_at": "2026-11-03T07:14:14.205013Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-org-snapshot-manage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/dx-org-snapshot-manage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "ALWAYS USE THIS SKILL to create, check the status of, list, or delete scratch org snapshots. A snapshot is a point-in-time copy of a scratch org's metadata AND data, referenced by name in the `snapshot` field of a scratch org definition file. Use when the user asks to create/take a snapshot, check a snapshot's status or creation progress, list/show/view existing snapshots (including filtering for snapshots expiring soon), or delete/remove a snapshot. Requires a Dev Hub with Scratch Org Snapshots enabled. DO NOT TRIGGER for creating org shapes (use dx-org-shape-manage) or for creating scratch orgs, including from an existing snapshot via `--snapshot` (use dx-org-manage)."
+}

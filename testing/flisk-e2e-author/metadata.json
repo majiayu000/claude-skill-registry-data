@@ -1,0 +1,38 @@
+{
+  "name": "flisk-e2e-author",
+  "repo": "flisk-sh/flisk",
+  "path": ".claude/skills/flisk-e2e-author/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/flisk-sh/flisk",
+  "dir_name": "flisk-e2e-author",
+  "downloaded_at": "2026-11-03T07:12:59.385105Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration, e2e",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flisk-sh",
+  "source_url": "https://github.com/flisk-sh/flisk/blob/main/.claude/skills/flisk-e2e-author/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flisk-sh/flisk/blob/main/.claude/skills/flisk-e2e-author/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides an AI assistant through adding or changing an end-to-end test in flisk - deciding whether one is required, choosing the group, scaffolding a suite under tests/e2e from the agent reference suite, using the shared helpers, running cases on a real stack, and capturing passing and deliberate-break evidence. Use when adding a resource type, a command or MCP tool that talks to a running stack, a provider (language or framework), or a change to flisk up, Traefik routing or the engine."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "new-service",
+  "repo": "gaia-harness/gaia",
+  "path": "apps/web/.claude/skills/new-service/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/gaia-harness/gaia",
+  "dir_name": "new-service-gaia-harness-gaia",
+  "downloaded_at": "2026-11-03T07:19:10.617665Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-harness",
+  "source_url": "https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/new-service/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-harness/gaia/blob/main/apps/web/.claude/skills/new-service/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scaffolds a new API service with request functions, Zod schemas, URL constants, optional TanStack Query options, and optional MSW mock handlers. Use this skill whenever the user asks to \"add a service\", \"create the projects API\", \"wire up CRUD for users\", or anything implying a new service folder under `app/services/` (`app/services/gaia/{name}/` until the `gaia/` folder is renamed) with parsers/types/requests + matching `test/mocks/{name}/` collections."
+}

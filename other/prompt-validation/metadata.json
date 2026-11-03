@@ -1,0 +1,37 @@
+{
+  "name": "prompt-validation",
+  "repo": "drayline/rootnode-skills",
+  "path": "plugins/rootnode-prompts/skills/prompt-validation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/drayline/rootnode-skills",
+  "dir_name": "prompt-validation",
+  "downloaded_at": "2026-11-03T06:53:43.121451Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "drayline",
+  "source_url": "https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/prompt-validation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/drayline/rootnode-skills/blob/main/plugins/rootnode-prompts/skills/prompt-validation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Evaluates and scores Claude prompts and system prompts using a six-dimension Scorecard with anchored 1-5 rubrics. Trigger on: \"review my prompt,\" \"score this prompt,\" \"rate my prompt,\" \"evaluate this prompt,\" \"improve my prompt,\" \"what's wrong with my prompt.\" Also trigger on: \"why isn't my prompt working,\" \"my prompt produces bad output,\" \"help me fix this prompt,\" \"is this prompt any good.\" Scorecard covers Objective Clarity, Context Specificity, Reasoning Fit, Output Precision, Behavioral Calibration, and Architectural Efficiency, plus a five-question Output Evaluation Rubric for assessing actual output. Also use when the user pastes a system prompt and asks for feedback. Activate whenever structured quality assessment of a single prompt is the primary need. Do NOT use for project-level audits involving Custom Instructions architecture, knowledge file organization, or multi-file Project structure (use project-audit if available)."
+}

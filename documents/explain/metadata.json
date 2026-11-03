@@ -1,0 +1,37 @@
+{
+  "name": "explain",
+  "repo": "anujgupta19/RunningWrapped",
+  "path": ".claude/skills/explain/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/anujgupta19/RunningWrapped",
+  "dir_name": "explain",
+  "downloaded_at": "2026-11-03T05:51:55.212060Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anujgupta19",
+  "source_url": "https://github.com/anujgupta19/RunningWrapped/blob/main/.claude/skills/explain/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anujgupta19/RunningWrapped/blob/main/.claude/skills/explain/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Explain a Java, Spring Boot, JPA, or React Native concept to an experienced Go/TypeScript developer, grounded in this repo's code. Use when the user asks \"why\", \"what does X do\", \"how does @Annotation work\", or wants a concept unpacked."
+}
