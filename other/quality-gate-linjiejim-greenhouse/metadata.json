@@ -1,0 +1,38 @@
+{
+  "name": "quality-gate",
+  "repo": "linjiejim/greenhouse",
+  "path": ".claude/skills/quality-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/linjiejim/greenhouse",
+  "dir_name": "quality-gate-linjiejim-greenhouse",
+  "downloaded_at": "2026-11-04T06:25:49.546521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "linjiejim",
+  "source_url": "https://github.com/linjiejim/greenhouse/blob/main/.claude/skills/quality-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/linjiejim/greenhouse/blob/main/.claude/skills/quality-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the Greenhouse quality gate before handing off or committing: typecheck, lint (with the plugin boundary check) and the full test suite, then the extra gates the change surface needs (HTTP security e2e, plugin assembly and core-only run, universal client checks and browser suite, desktop), a compliance scan of the changed files, a docs-sync check and a status table. Use for: run the gate / check code quality / pre-commit self check / quality gate, \u8dd1\u4e00\u4e0b\u95e8\u7981, \u68c0\u67e5\u4ee3\u7801\u8d28\u91cf, \u63d0\u4ea4\u524d\u81ea\u68c0, \u8d28\u91cf\u68c0\u67e5. Red lines: never trim the default suite, report red as red."
+}

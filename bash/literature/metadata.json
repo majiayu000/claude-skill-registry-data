@@ -1,0 +1,39 @@
+{
+  "name": "literature",
+  "repo": "lilinji/GeneTind-Life-Skills",
+  "path": "skills/literature/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/lilinji/GeneTind-Life-Skills",
+  "dir_name": "literature",
+  "downloaded_at": "2026-11-04T06:24:47.336247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "lilinji",
+  "source_url": "https://github.com/lilinji/GeneTind-Life-Skills/blob/main/skills/literature/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lilinji/GeneTind-Life-Skills/blob/main/skills/literature/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load when extracting GEO accessions, dataset metadata, and downloadable references from a scientific paper (PDF / URL / DOI / PubMed ID / raw text) for downstream omics analysis. Skip when the dataset is already in hand; only routing a query (use orchestrator)."
+}

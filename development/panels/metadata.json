@@ -1,0 +1,38 @@
+{
+  "name": "panels",
+  "repo": "intentic/intentic",
+  "path": "_sandbox/sandbox/seed-skills/panels/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/intentic/intentic",
+  "dir_name": "panels",
+  "downloaded_at": "2026-11-04T05:42:10.967708Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intentic",
+  "source_url": "https://github.com/intentic/intentic/blob/main/_sandbox/sandbox/seed-skills/panels/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intentic/intentic/blob/main/_sandbox/sandbox/seed-skills/panels/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a repository runnable in the sandbox and on the owner's computers (targets in its `.intentic/run.json`, or a Procfile, a dev or start script, a Cargo binary that Start finds) and give it an operator panel, a small web UI the user opens from the sidebar to run and preview that repo, by adding an `operator/` directory that is a runnable web app. Use whenever you scaffold or work in a repo the user should be able to start, open, preview, or operate from the sidebar."
+}

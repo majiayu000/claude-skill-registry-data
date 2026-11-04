@@ -1,0 +1,38 @@
+{
+  "name": "release-changelog",
+  "repo": "isathish/localpilot",
+  "path": ".claude/skills/release-changelog/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/isathish/localpilot",
+  "dir_name": "release-changelog-isathish-localpilot",
+  "downloaded_at": "2026-11-04T05:43:19.811721Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, compile, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "isathish",
+  "source_url": "https://github.com/isathish/localpilot/blob/main/.claude/skills/release-changelog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/isathish/localpilot/blob/main/.claude/skills/release-changelog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write LocalPilot changelog entries and prepare a release (version bump, CHANGELOG promotion, VSIX check). USE WHEN a user-visible change is finished and needs a CHANGELOG.md entry, or when asked to release, bump the version, or package the extension."
+}

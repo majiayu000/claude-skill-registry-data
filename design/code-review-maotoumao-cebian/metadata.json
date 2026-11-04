@@ -1,0 +1,38 @@
+{
+  "name": "code-review",
+  "repo": "maotoumao/Cebian",
+  "path": ".agents/skills/code-review/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/maotoumao/Cebian",
+  "dir_name": "code-review-maotoumao-cebian",
+  "downloaded_at": "2026-11-04T06:40:27.661441Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maotoumao",
+  "source_url": "https://github.com/maotoumao/Cebian/blob/master/.agents/skills/code-review/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maotoumao/Cebian/blob/master/.agents/skills/code-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when completing a coding task to perform senior-level code review. Triggers on: code review, post-task review, review changes, check code quality, review my code."
+}

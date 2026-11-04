@@ -1,0 +1,38 @@
+{
+  "name": "frame-security-scan",
+  "repo": "lambdasec/skills",
+  "path": "skills/frame-security-scan/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/lambdasec/skills",
+  "dir_name": "frame-security-scan",
+  "downloaded_at": "2026-11-04T06:18:11.278173Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lambdasec",
+  "source_url": "https://github.com/lambdasec/skills/blob/main/skills/frame-security-scan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lambdasec/skills/blob/main/skills/frame-security-scan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scan code (Python, JavaScript/TypeScript, Java, C#, C/C++) for security vulnerabilities with the open-source Frame CLI or its MCP server, triage the findings, generate and verify fixes, and re-scan. Use when the user asks to security-scan a repo or file, review taint or injection findings, or fix scan results."
+}

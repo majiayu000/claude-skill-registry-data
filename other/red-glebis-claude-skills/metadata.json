@@ -1,0 +1,37 @@
+{
+  "name": "red",
+  "repo": "glebis/claude-skills",
+  "path": "confide/skills/red/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "red-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:16.951301Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/confide/skills/red/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/confide/skills/red/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Residual re-identification RISK CHECK on text you have ALREADY redacted (defensive, dual-use). Use when the user asks to \"check residual re-id risk\", \"red-team my redaction\", \"what can an attacker still infer\", \"is this safe to share\", or assess \"re-identification risk\" after anonymizing. Re-runs the CONFIDE detectors on the redacted output to surface surviving identifiers (singling-out), checks multiple files for linkability, and optionally probes a local model for still-inferable attribute CATEGORIES (inference) \u2014 mapped to GDPR Art-29. Reports risk categories/counts only, never a re-identification recipe. Pairs with confide:anon (run AFTER redacting)."
+}

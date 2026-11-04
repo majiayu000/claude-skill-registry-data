@@ -1,0 +1,38 @@
+{
+  "name": "tech-stack-setup",
+  "repo": "luis-mc/dev-standards",
+  "path": "claude/plugins/project-setup/skills/tech-stack-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/luis-mc/dev-standards",
+  "dir_name": "tech-stack-setup",
+  "downloaded_at": "2026-11-04T06:34:24.404656Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "luis-mc",
+  "source_url": "https://github.com/luis-mc/dev-standards/blob/main/claude/plugins/project-setup/skills/tech-stack-setup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/luis-mc/dev-standards/blob/main/claude/plugins/project-setup/skills/tech-stack-setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guide a user to a coherent technology stack \u2014 language, frameworks, database, host, and providers that work well together \u2014 then generate a repository conforming to STACKSPEC, the organization's technology-neutral invariants specification. Also audits an existing repo against those invariants and reports drift by section. Use when the user wants to start a new product, asks \"help me pick a stack\", \"scaffold a conforming repo\", \"bootstrap a new product\", \"set up the tech stack\", \"does this repo conform\", \"check conformance\", or invokes /luismc-project-setup:tech-stack-setup. This skill does NOT build authentication \u2014 that is the auth-setup skill, and it only runs if the user asks for it at the end."
+}

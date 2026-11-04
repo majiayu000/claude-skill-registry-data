@@ -1,0 +1,38 @@
+{
+  "name": "humanizer",
+  "repo": "harperreed/dotfiles",
+  "path": ".claude/skills/humanizer/SKILL.md",
+  "github_branch": "master",
+  "category": "writing",
+  "source": "github.com/harperreed/dotfiles",
+  "dir_name": "humanizer-harperreed-dotfiles",
+  "downloaded_at": "2026-11-04T05:24:46.495528Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, blog, article",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harperreed",
+  "source_url": "https://github.com/harperreed/dotfiles/blob/master/.claude/skills/humanizer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harperreed/dotfiles/blob/master/.claude/skills/humanizer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing\ntext to make it sound more natural and human-written. Based on Wikipedia's\ncomprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including:\ninflated symbolism, promotional language, superficial -ing analyses, vague\nattributions, em dash overuse, rule of three, AI vocabulary words, passive\nvoice, negative parallelisms, and filler phrases."
+}

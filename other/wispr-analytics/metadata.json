@@ -1,0 +1,38 @@
+{
+  "name": "wispr-analytics",
+  "repo": "glebis/claude-skills",
+  "path": "wispr-analytics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "wispr-analytics",
+  "downloaded_at": "2026-11-04T05:15:12.556158Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "analysis",
+      "analyze",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/wispr-analytics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/wispr-analytics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when analyzing Wispr Flow voice dictation history for self-reflection, work patterns, mental health insights, or productivity analytics AND when managing the Wispr Flow dictionary (adding terms, fixing mishears, exporting/importing, suggesting improvements). Triggered by requests like \"/wispr-analytics\", \"analyze my dictations\", \"what did I dictate today\", \"wispr reflection\", \"add to wispr dictionary\", \"improve dictation\", \"wispr suggest\", \"export wispr dictionary\", or any request to review voice dictation patterns or manage dictation quality. Also use for live Wispr Flow meeting transcription or completed-dictation capture into separate Obsidian talk folders, with a default 30-second capture target."
+}

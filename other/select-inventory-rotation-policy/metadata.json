@@ -1,0 +1,37 @@
+{
+  "name": "select-inventory-rotation-policy",
+  "repo": "jeremylongworth-source/AgentLogistics",
+  "path": "skills/inventory-control/select-inventory-rotation-policy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jeremylongworth-source/AgentLogistics",
+  "dir_name": "select-inventory-rotation-policy",
+  "downloaded_at": "2026-11-04T05:51:17.284690Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jeremylongworth-source",
+  "source_url": "https://github.com/jeremylongworth-source/AgentLogistics/blob/main/skills/inventory-control/select-inventory-rotation-policy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jeremylongworth-source/AgentLogistics/blob/main/skills/inventory-control/select-inventory-rotation-policy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Select inventory rotation policy from SKU attributes, age, expiration, lot control, demand, and operational constraints."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "mogu-visual",
+  "repo": "kohoj/skills",
+  "path": "mogu-visual/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kohoj/skills",
+  "dir_name": "mogu-visual",
+  "downloaded_at": "2026-11-04T06:12:08.601924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, writing=3",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kohoj",
+  "source_url": "https://github.com/kohoj/skills/blob/main/mogu-visual/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kohoj/skills/blob/main/mogu-visual/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Transform technical descriptions into interactive animated HTML visualizations\nstarring Mogu \u2014 a mushroom character whose cap adapts to each concept.\nGenerates self-contained HTML files with Canvas 2D animations, interactive\nparameter controls, and a consistent character brand.\nUse when: \"explain how X works\", \"visualize this concept\", \"make an interactive\ndemo of\", \"show me how Y works visually\", \"mogu\", \"technical animation\",\n\"interactive diagram\", \"concept visualization\", or any request to turn a\ntechnical mechanism into an interactive, visual, character-driven explanation.\nAlso use when the user describes a system they want to understand better and\nwould benefit from seeing it animated, even if they don't say \"visualize\" \u2014\ne.g., \"I don't get how Kafka partitions work\", \"can you show me load balancing\",\n\"explain consensus algorithms\"."
+}

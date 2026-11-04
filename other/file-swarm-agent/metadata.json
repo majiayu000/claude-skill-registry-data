@@ -1,0 +1,38 @@
+{
+  "name": "file-swarm-agent",
+  "repo": "maoyaoweii/file-swarm",
+  "path": ".claude/skills/file-swarm-agent/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maoyaoweii/file-swarm",
+  "dir_name": "file-swarm-agent",
+  "downloaded_at": "2026-11-04T06:40:38.078576Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maoyaoweii",
+  "source_url": "https://github.com/maoyaoweii/file-swarm/blob/master/.claude/skills/file-swarm-agent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maoyaoweii/file-swarm/blob/master/.claude/skills/file-swarm-agent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the enhanced file-swarm agent subsystem for non-patch structured action tasks, including shell, browser, mouse, keyboard, screenshot, wait, and MCP-style tool actions. Trigger when the user asks file-swarm to execute agent tasks, benchmark models for action quality, route non-coding tasks to an agent worker, use NVIDIA rate limiting, or inspect cross-model agent benchmark results."
+}

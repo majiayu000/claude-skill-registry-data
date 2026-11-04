@@ -1,0 +1,38 @@
+{
+  "name": "sam3-segmentation",
+  "repo": "lillyguisnet/sam3-segmentation",
+  "path": "skills/sam3-segmentation/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/lillyguisnet/sam3-segmentation",
+  "dir_name": "sam3-segmentation",
+  "downloaded_at": "2026-11-04T06:24:50.625395Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lillyguisnet",
+  "source_url": "https://github.com/lillyguisnet/sam3-segmentation/blob/main/skills/sam3-segmentation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lillyguisnet/sam3-segmentation/blob/main/skills/sam3-segmentation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Outline, mask, cut out or count objects in images with Meta's SAM 3 (Segment Anything Model 3), run locally on an NVIDIA GPU. Use when the user wants pixel masks or outlines of things in a photo, even without saying \"segmentation\" or \"SAM\": every instance of a phrase (\"all the dogs\"), one object from a click or box, automatic \"segment everything\", or careful, auditable annotation of many small objects or parts, such as corn kernels, seeds, cells, insects or leaves, with COCO RLE / PNG masks, review and a zoomable viewer. Prefer it to judging outlines, counts or object positions by eye. Includes first-time setup and a demo that needs no GPU. Outputs are model proposals, not verified ground truth. Not for classifying, captioning or editing images, video, medical scans, or customer and network segmentation."
+}

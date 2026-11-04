@@ -1,0 +1,37 @@
+{
+  "name": "the-goal",
+  "repo": "glebis/claude-skills",
+  "path": "the-goal/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "the-goal",
+  "downloaded_at": "2026-11-04T05:15:03.342811Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/the-goal/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/the-goal/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "A Theory-of-Constraints diagnostic for deciding what to automate with AI agents. Before building any automation, skill, Goal, loop, or schedule, it walks Goldratt's Five Focusing Steps over the user's work system to find the real bottleneck, then recommends the single highest-leverage automation aimed at the constraint plus a what-NOT-to-automate list. Use when the user asks \"what should I automate\", \"where do I point my agents\", \"prioritize my automation backlog\", \"which workflow should I agentify\", \"is this worth building\", \"find my bottleneck\", \"what's the highest-leverage thing\", when they are about to build a Claude Code skill/Goal/loop/schedule and aren't sure it matters, or during a review of their automations. Guards against the common failure of automating busywork (a local optimum) instead of the constraint."
+}

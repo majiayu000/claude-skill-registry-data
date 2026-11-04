@@ -1,0 +1,37 @@
+{
+  "name": "1password",
+  "repo": "kirksw/nix-config",
+  "path": "agents/defs/skills/1password/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/kirksw/nix-config",
+  "dir_name": "1password-kirksw-nix-config",
+  "downloaded_at": "2026-11-04T06:11:05.333084Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirksw",
+  "source_url": "https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/1password/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/1password/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use 1Password MCPorter CLI for authenticated environment, variable, and local env-file operations when the user explicitly requests 1Password access."
+}

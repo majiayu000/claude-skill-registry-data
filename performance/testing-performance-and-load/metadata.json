@@ -1,0 +1,38 @@
+{
+  "name": "testing-performance-and-load",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "skills/testing-performance-and-load/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "testing-performance-and-load",
+  "downloaded_at": "2026-11-04T05:46:54.852738Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, latency, speed",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "latency",
+      "speed"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/testing-performance-and-load/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/testing-performance-and-load/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs and runs performance and load tests: workload modelling from real traffic, thresholds tied to SLOs, warmup and ramp shapes, percentile-based analysis, and lightweight CI perf checks with k6 or Artillery. Use when a feature has latency or throughput requirements, when \"it feels slow\" needs to become a number, when a launch needs a capacity check, or when a performance result needs interpreting rather than just collecting."
+}

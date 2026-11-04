@@ -1,0 +1,38 @@
+{
+  "name": "precommit",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/precommit/skills/precommit/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "precommit-mattermost-mattermost-ai-market",
+  "downloaded_at": "2026-11-04T06:44:51.578997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, validate",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/precommit/skills/precommit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/precommit/skills/precommit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Discover and run all pre-commit code quality checks (linters, type checks, i18n extraction) in a monorepo, auto-fix failures, and report results. Use when the user asks to run pre-commit checks, validate code before committing, or ensure CI checks pass locally."
+}

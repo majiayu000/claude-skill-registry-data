@@ -1,0 +1,39 @@
+{
+  "name": "scaffold-app",
+  "repo": "mdopieralski/mobywatel",
+  "path": ".claude/skills/scaffold-app/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/mdopieralski/mobywatel",
+  "dir_name": "scaffold-app",
+  "downloaded_at": "2026-11-04T06:47:39.798062Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, e2e, playwright",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "jest",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mdopieralski",
+  "source_url": "https://github.com/mdopieralski/mobywatel/blob/main/.claude/skills/scaffold-app/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mdopieralski/mobywatel/blob/main/.claude/skills/scaffold-app/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create the PWA and shared packages from scratch: apps/pwa with Vite + React + TS, vite-plugin-pwa, router, Vitest, Playwright + axe, and packages core/content/brand/ui wired into pnpm + Turborepo. Use for \"scaffold the app\", \"set up the project\", \"create a package\", or when apps/pwa is missing."
+}

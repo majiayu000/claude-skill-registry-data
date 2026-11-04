@@ -1,0 +1,38 @@
+{
+  "name": "japa-bugs-hunters",
+  "repo": "jedafe/japa",
+  "path": ".claude/skills/japa-bugs-hunters/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jedafe/japa",
+  "dir_name": "japa-bugs-hunters",
+  "downloaded_at": "2026-11-04T05:50:39.744946Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, planning=3",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jedafe",
+  "source_url": "https://github.com/jedafe/japa/blob/main/.claude/skills/japa-bugs-hunters/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jedafe/japa/blob/main/.claude/skills/japa-bugs-hunters/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "JapaConnect comprehensive bug hunter. On load it presents a menu \u2014 (1) a frontend URL or page name of any of the 6 SvelteKit apps (+ Flutter mobile), (2) a backend API route, (3-9) a whole surface (backend / main / control / admin / docs / learn / tools), (10) a feature name from ./internal (e.g. forum, like, bookmark, ai, affiliate, persona, rag, remittance, studio, story_wall, wiki, scam_alert, planning_group, mentorship) for a full cross-stack audit against JEOS Specs with findings saved to ./.jeos/audit, or (11) apply fixes to a feature's audit findings in ./.jeos/audit/<feature_name>-audit.md. It hunts bugs from the JapaConnect Bug Hunter's Guide (.jeos/.ai/skills/japa-bugs-hunters.md) against the page/route/surface/feature, fixes frontend issues, and \u2014 when a bug needs backend work (missing route, unwired handler, incomplete CRUD, migration, RBAC, Valkey, Asynq, GDPR) \u2014 fixes the backend too until the target is 100% working. Covers v1 (sections 01\u201359) and v2 (sections 60\u2013102, ADRs 061\u2013110) features including AI personas, RAG, content studio, participation orchestration, remittance, identity tools, the multi-surface tools/mobile architecture, 11 V2 community features (\u00a7\u00a779\u201389, \u00a798 \u2014 story wall, destination wiki, scam alert, planning groups, visa timeline, digest widget, mutual aid, community calendar, japa stage, ask-an-expat AMA, achievement feed, service directory), 12 V2 functional tools (\u00a7\u00a790\u201397, \u00a7\u00a799\u2013101 \u2014 visa route comparison, embassy alerter, arrival checklist, processing time tracker, credential checker, CV formatter, housing guide, attestation guide, language test hub, tax calculator, community locator), mentorship matching (\u00a7102), and the geo-aware tool pattern (ADR-088 universal AI content generation). Use when the user says \"hunt bugs\", \"bug hunt\", \"audit and fix\", \"fix bugs on <page/route>\", \"audit feature <name>\", \"audit [feature_name]\", \"fix [feature_name]\", \"audit /api/v1/<route>\", \"fix /api/v1/<route>\", \"audit <url-or-path>\", \"fix <url-or-path>\", \"audit <surface>\", \"fix <surface>\" (surface = backend/main/control/admin/docs/academy/tools), or triggers /japa-bugs-hunters."
+}

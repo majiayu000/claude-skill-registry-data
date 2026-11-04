@@ -1,0 +1,37 @@
+{
+  "name": "add-agent-tool",
+  "repo": "linjiejim/greenhouse",
+  "path": ".claude/skills/add-agent-tool/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/linjiejim/greenhouse",
+  "dir_name": "add-agent-tool-linjiejim-greenhouse",
+  "downloaded_at": "2026-11-04T06:25:50.121639Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "linjiejim",
+  "source_url": "https://github.com/linjiejim/greenhouse/blob/main/.claude/skills/add-agent-tool/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/linjiejim/greenhouse/blob/main/.claude/skills/add-agent-tool/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add an Agent-callable tool to Greenhouse: defineTool with meta and implementation in one file, registered in CORE_TOOL_MODULES (core, apps/api/src/tools) or a plugin's defineExtension tools (plugins/<id>/api), surface deciding proxy/MCP exposure, a grant path (global, Advanced tools bucket or a plugin feature point), description rules and guard tests. Use for: add a tool / agent tool / function calling / let the model call X, \u52a0\u4e2a\u5de5\u5177, \u65b0\u589e agent tool, \u8ba9\u6a21\u578b\u80fd\u8c03\u7528 xx. Red lines: no tools/index.ts, meta lives with the implementation, writes declare proxy 'write', every non-global tool has exactly one grant path."
+}

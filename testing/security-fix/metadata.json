@@ -1,0 +1,38 @@
+{
+  "name": "security-fix",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/security-fix/skills/security-fix/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "security-fix",
+  "downloaded_at": "2026-11-04T06:44:52.780690Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, integration",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "tdd",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/security-fix/skills/security-fix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/security-fix/skills/security-fix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orchestrates test-driven fixes for Mattermost security tickets (Jira/Atlassian) with a Staff Security Engineer mindset: failing secure-behavior tests first, then implementation, then security review and edge-case loops, then opening a non-draft PR that follows `.github/PULL_REQUEST_TEMPLATE.md` when present, with a vague public description (no exploit detail). Use when the user invokes /security-fix:security-fix with a mattermost.atlassian.net browse URL, MM-* security work, backend permission or authorization bugs, or asks for this security TDD workflow."
+}

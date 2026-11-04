@@ -1,0 +1,38 @@
+{
+  "name": "negative-keyword-sweep",
+  "repo": "markifact/markifact-mcp",
+  "path": "plugins/antigravity/markifact/skills/negative-keyword-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/markifact/markifact-mcp",
+  "dir_name": "negative-keyword-sweep-markifact-markifact-mcp",
+  "downloaded_at": "2026-11-04T06:41:55.098471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, excel",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "excel"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "markifact",
+  "source_url": "https://github.com/markifact/markifact-mcp/blob/main/plugins/antigravity/markifact/skills/negative-keyword-sweep/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/markifact/markifact-mcp/blob/main/plugins/antigravity/markifact/skills/negative-keyword-sweep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find wasted spend in Google Ads search terms and add negatives at the right scope (account list, campaign, or ad group). Use when the user says \"find junk keywords\", \"stop wasting on bad searches\", or wants a search-terms cleanup."
+}

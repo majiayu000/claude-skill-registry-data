@@ -1,0 +1,37 @@
+{
+  "name": "instagram-reels",
+  "repo": "kortix-ai/suna",
+  "path": "packages/starter/templates/marketplace/skills/instagram-reels/SKILL.md",
+  "github_branch": "dev",
+  "category": "other",
+  "source": "github.com/kortix-ai/suna",
+  "dir_name": "instagram-reels-kortix-ai-suna",
+  "downloaded_at": "2026-11-04T06:13:31.090469Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/suna/blob/dev/packages/starter/templates/marketplace/skills/instagram-reels/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/suna/blob/dev/packages/starter/templates/marketplace/skills/instagram-reels/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build and run an automated Instagram Reels pipeline on Kortix: topic and fact check, hook-first script, text-to-speech narration with word timestamps (ElevenLabs, or Sarvam Bulbul for Indian languages), AI images, a 1080x1920 render with animated captions inside Instagram's safe zones, machine QA plus frame review, and publishing through the Instagram connector (container -> poll -> publish) with duplicate protection. Use when a user wants to make Reels, post short vertical videos to Instagram on a schedule, or turn content into Reels for a business or creator account."
+}

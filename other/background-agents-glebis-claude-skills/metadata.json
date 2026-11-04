@@ -1,0 +1,37 @@
+{
+  "name": "background-agents",
+  "repo": "glebis/claude-skills",
+  "path": "background-agents/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "background-agents-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:15.055861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/background-agents/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/background-agents/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure and run background agents with reusable profiles for agent engines, model providers and execution backends. Use when delegating background work, reusing agents across sessions, or adding an engine or backend. Trigger.dev and Cloudflare Workflows are available backends; the approach is extensible. Includes optional source-backed evidence review."
+}

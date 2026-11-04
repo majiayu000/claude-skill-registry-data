@@ -1,0 +1,38 @@
+{
+  "name": "claude-md-improver",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/claude-md-improver/skills/claude-md-improver/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "claude-md-improver-mattermost-mattermost-ai-market",
+  "downloaded_at": "2026-11-04T06:45:01.404735Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/claude-md-improver/skills/claude-md-improver/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/claude-md-improver/skills/claude-md-improver/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions \"CLAUDE.md maintenance\" or \"project memory optimization\"."
+}

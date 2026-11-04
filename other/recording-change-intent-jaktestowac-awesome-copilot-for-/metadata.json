@@ -1,0 +1,37 @@
+{
+  "name": "recording-change-intent",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "plugins/recording-change-intent/skills/recording-change-intent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "recording-change-intent-jaktestowac-awesome-copilot-for-",
+  "downloaded_at": "2026-11-04T05:47:00.220551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/recording-change-intent/skills/recording-change-intent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/recording-change-intent/skills/recording-change-intent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Requires an externalised rationale for high-risk changes - new public exports, new endpoints, auth edits, migrations, removed guards - recorded as an Intent commit trailer, an ADR reference, or a module intent register, and reports high-risk changes that carry none. Use when agent-generated or AI-assisted changes ship without a recorded why, when reviewers cannot tell what a diff was for, when a codebase is losing its decision history, or when setting up an intent gate alongside test and coverage gates."
+}

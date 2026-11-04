@@ -1,0 +1,37 @@
+{
+  "name": "agent-cli",
+  "repo": "glebis/claude-skills",
+  "path": "agent-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "agent-cli",
+  "downloaded_at": "2026-11-04T05:15:04.557402Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/agent-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/agent-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add agent-friendly --json NDJSON output to Python CLI scripts, or scaffold a complete cli_utils package for a project. Use this skill when the user wants to make scripts machine-readable for AI agents, add --json flags, convert print statements to structured JSON, build a CLI helper library, create an open-source CLI-for-agents package, add structured logging, or make CLI output machine-readable. Also use when the user mentions NDJSON, structured CLI output, agent-friendly CLI, non-interactive scripts, or JSON I/O for automation."
+}

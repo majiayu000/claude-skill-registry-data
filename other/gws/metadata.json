@@ -1,0 +1,37 @@
+{
+  "name": "gws",
+  "repo": "glebis/claude-skills",
+  "path": "gws/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "gws",
+  "downloaded_at": "2026-11-04T05:14:57.558477Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/gws/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/gws/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when interacting with Google Workspace services via the gws CLI \u2014 Gmail (search, triage, send, labels, filters, drafts), Calendar (agenda, events, Meet conferencing), Drive (upload, list, share, download), Sheets (read, append), Docs, Tasks, Chat (send), People/Contacts, and cross-service workflows (standup, meeting prep, weekly digest, email-to-task). Triggers on queries like \"check my email\", \"search Gmail\", \"send email\", \"calendar agenda\", \"create calendar event\", \"upload to Drive\", \"read spreadsheet\", \"create a task\", \"triage inbox\", \"find contact\", \"post to Chat\"."
+}

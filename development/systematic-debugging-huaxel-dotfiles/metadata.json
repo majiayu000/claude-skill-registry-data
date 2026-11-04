@@ -1,0 +1,38 @@
+{
+  "name": "systematic-debugging",
+  "repo": "huaxel/dotfiles",
+  "path": "skills/systematic-debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/huaxel/dotfiles",
+  "dir_name": "systematic-debugging-huaxel-dotfiles",
+  "downloaded_at": "2026-11-04T05:33:27.128278Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huaxel",
+  "source_url": "https://github.com/huaxel/dotfiles/blob/main/skills/systematic-debugging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huaxel/dotfiles/blob/main/skills/systematic-debugging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose bugs, failing tests, flaky behavior, build failures, and unexplained performance regressions through reproduction, evidence, and hypothesis testing. Use when the cause is uncertain or attempted fixes keep failing. Not for routine feature development or a request limited to explaining code."
+}

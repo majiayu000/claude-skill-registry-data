@@ -1,0 +1,37 @@
+{
+  "name": "anon",
+  "repo": "glebis/claude-skills",
+  "path": "confide/skills/anon/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "anon-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:17.497068Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/confide/skills/anon/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/confide/skills/anon/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "De-identify a session transcript (file or folder) by redacting PII LOCALLY before any sharing or cloud use. Produces a redacted GREEN copy with unique reserved-sentinel placeholders ([CONFIDE_PERSON_0001], [CONFIDE_EMAIL_0001], [CONFIDE_DATE_0002]...) plus a counts-only stats summary, and a local secret <name>.map.json (0600, gitignored) that enables confide:rehydrate to restore real values after a cloud analysis. Use when the user says \"anonymize this transcript\", \"redact PII\", \"de-identify session\", \"make safe to share\", \"strip personal data\", \"anonymize notes before sending to an LLM\", or points at a transcript/folder that should be scrubbed. Local-only by default \u2014 raw text never leaves the machine; the map is the only artifact with originals and stays local; nothing printed is PII; human review is still required before sharing."
+}

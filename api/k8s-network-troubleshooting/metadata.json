@@ -1,0 +1,37 @@
+{
+  "name": "k8s-network-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-network-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-network-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:39.054195Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-network-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-network-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when traffic does not reach a workload in Kubernetes although its pods are running: a Service with no endpoints, a wrong selector or targetPort, connection refused or time-outs between pods, DNS names that do not resolve (NXDOMAIN, \"server can't find\"), a NetworkPolicy blocking traffic, or an Ingress or Gateway API route that does not route. Investigates with kubectl get and describe, asks before checks inside a container, and proposes fixes. Reads first and asks before changing anything."
+}

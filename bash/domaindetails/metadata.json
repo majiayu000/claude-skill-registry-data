@@ -1,0 +1,37 @@
+{
+  "name": "domaindetails",
+  "repo": "mahsumaktas/agent-evolution-kit",
+  "path": "skills/domaindetails/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/mahsumaktas/agent-evolution-kit",
+  "dir_name": "domaindetails",
+  "downloaded_at": "2026-11-04T06:37:45.071847Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mahsumaktas",
+  "source_url": "https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/domaindetails/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/domaindetails/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Look up domain WHOIS/RDAP info and check marketplace listings. Free API, no auth required."
+}

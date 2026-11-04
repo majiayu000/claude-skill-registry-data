@@ -1,0 +1,37 @@
+{
+  "name": "social-fetch",
+  "repo": "imMamdouhaboammar/marketing-skills",
+  "path": "skills/social-fetch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/imMamdouhaboammar/marketing-skills",
+  "dir_name": "social-fetch-immamdouhaboammar-marketing-skills",
+  "downloaded_at": "2026-11-04T05:39:09.256509Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "imMamdouhaboammar",
+  "source_url": "https://github.com/imMamdouhaboammar/marketing-skills/blob/main/skills/social-fetch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/imMamdouhaboammar/marketing-skills/blob/main/skills/social-fetch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When you or another skill needs to fetch the content of a social media post by URL \u2014 tweet, X thread, LinkedIn post, Instagram post, TikTok video, Bluesky post, Reddit thread, Mastodon status, Threads post, Hacker News thread. Returns normalized structured data (author, posted_at, text, engagement counts, media URLs, replies if requested) regardless of platform. Tries strategies in order: direct API (Bluesky, Mastodon, HN, Reddit), agent-browser with modal dismissal (LinkedIn, X preview), Wayback Machine (older posts), paid APIs (ScrapeCreators / Apify \u2014 only if env keys present). Triggers on \"/social-fetch <url>,\" \"fetch this tweet,\" \"fetch this post,\" \"what does this LinkedIn say,\" \"read this thread,\" \"pull this post.\" Used by deep-research (citing specific posts), jab-hook (inspiration account analysis), business-brainstorm (competitor / operator commentary)."
+}

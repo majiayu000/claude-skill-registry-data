@@ -1,0 +1,37 @@
+{
+  "name": "urdf",
+  "repo": "makemoney2023/renewimplants",
+  "path": "skills/community/text-to-cad/urdf/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/makemoney2023/renewimplants",
+  "dir_name": "urdf-makemoney2023-renewimplants",
+  "downloaded_at": "2026-11-04T06:38:51.267438Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, generation=2",
+    "score": 2,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "makemoney2023",
+  "source_url": "https://github.com/makemoney2023/renewimplants/blob/main/skills/community/text-to-cad/urdf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/makemoney2023/renewimplants/blob/main/skills/community/text-to-cad/urdf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "URDF robot description generation and default generation-time validation. Use when creating, editing, regenerating, inspecting, or debugging `.urdf` files, Python `gen_urdf()` sources, robot links, joints, limits, inertials, visual/collision geometry, mesh references, frame conventions, or generated robot-description artifacts. Use the SRDF skill for MoveIt2 semantic groups and IK/path-planning semantics; use the cad-viewer skill for local MoveIt2 server controls; use the CAD skill for STEP/STL/3MF/DXF/GLB outputs."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "faa-system-safety",
+  "repo": "jgsystemsconsulting/jgs-se-knowledge-packs",
+  "path": "packs/faa-system-safety/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
+  "dir_name": "faa-system-safety",
+  "downloaded_at": "2026-11-04T05:52:37.363538Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgsystemsconsulting",
+  "source_url": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-system-safety/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-system-safety/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Knowledge base from the FAA System Safety Handbook (Dec 30, 2000). Use for system safety as a specialty within systems engineering: the five-step safety risk management process (mandated by FAA Order 8040.4 and the AMS), the severity-by-likelihood risk matrix and acceptance bands, the Safety Order of Precedence, system-description models (5M, SHEL(L)), the hazard-analysis activities (PHL/PHA/RHA/SSHA/SHA/O&SHA/HHA), integrated system hazard analysis, the analysis techniques (FTA, FMEA/FMECA, Fault Hazard, Common Cause, Sneak Circuit, Energy Trace), closed-loop hazard tracking (Safety Action Record), and the specialty domains the handbook covers \u2014 acquisition-lifecycle safety and contracting (OSA/CSA/SSPP/ISSPP), software safety (control-capability ranking, SHCM, DO-178B), test & evaluation safety, facilities safety, commercial launch safety (AST licensing, expected casualty, MPL/DAMP), system safety training, and Operational Risk Management (ORM) with human/organizational factors. Scope limits: this is a year-2000 FAA how-to; it predates the modern FAA/ICAO Safety Management System (SMS) and Just Culture regulatory frameworks, and many cited orders, advisory circulars, and launch-licensing rules have since been restructured. It is FAA/NAS-centric, leans on MIL-STD-882C, and does not define the SE life-cycle processes themselves (use nasa-npr-7123 / dau-se-guidebook) or reproduce third-party standard text (MIL-STD-882, DO-178B, ISO/IEC/IEEE)."
+}

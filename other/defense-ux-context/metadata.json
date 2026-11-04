@@ -1,0 +1,39 @@
+{
+  "name": "defense-ux-context",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/ux-spec-process/skills/defense-ux-context/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "defense-ux-context",
+  "downloaded_at": "2026-11-04T06:44:57.614250Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/defense-ux-context/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/defense-ux-context/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Shared operating context for the 8-phase UX spec pipeline \u2014 the defense-UX persona, compliance scope, complexity tiers, interaction modes, gate enforcement, output rules, and prompt-injection policy. The orchestrator and every phase agent read this FIRST and treat it as TRUSTED. Replaces what used to live in a project CLAUDE.md."
+}

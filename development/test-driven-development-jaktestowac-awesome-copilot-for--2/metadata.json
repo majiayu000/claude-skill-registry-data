@@ -1,0 +1,39 @@
+{
+  "name": "test-driven-development",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "plugins/test-driven-development/skills/test-driven-development/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "test-driven-development-jaktestowac-awesome-copilot-for--2",
+  "downloaded_at": "2026-11-04T05:47:07.431160Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, refactor",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/test-driven-development/skills/test-driven-development/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/test-driven-development/skills/test-driven-development/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drives implementation test-first through red-green-refactor cycles: one failing test, the minimal code to pass it, then cleanup under green. Use before writing production code for a new behavior, and whenever the request mentions TDD, test-driven, test-first, red-green-refactor, \"write the test first\", \"start with a failing test\", or reproducing a bug with a test before fixing it. Also use when implementation keeps landing before anyone knows how it will be verified."
+}

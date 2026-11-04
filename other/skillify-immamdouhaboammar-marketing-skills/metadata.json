@@ -1,0 +1,37 @@
+{
+  "name": "skillify",
+  "repo": "imMamdouhaboammar/marketing-skills",
+  "path": "skills/skillify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/imMamdouhaboammar/marketing-skills",
+  "dir_name": "skillify-immamdouhaboammar-marketing-skills",
+  "downloaded_at": "2026-11-04T05:39:05.834910Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "imMamdouhaboammar",
+  "source_url": "https://github.com/imMamdouhaboammar/marketing-skills/blob/main/skills/skillify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/imMamdouhaboammar/marketing-skills/blob/main/skills/skillify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When you want to create, adapt, or update a Claude Code skill in one of your sibling repos (list your own repos in ~/.config/makerskills/skillify/repos.yaml; defaults to makerskills). Routes to the right mode automatically. Modes \u2014 CREATE (from-chat / from-video / from-dump / from-scratch) turns a workflow, brief, recording, or fresh idea into a new skill. ADAPT ports an external skill (GitHub URL, agentskills.io, local disk) into your namespace with three-bucket classification (keep/adapt/add) + license check + attribution. UPDATE improves existing skills from learnings with cross-skill propagation, memory-vs-skill triage, and semver discipline. Defers to Anthropic's guidance (compound-engineering:create-agent-skill, compound-engineering:skill-creator, compound-engineering:heal-skill) for schema and best-practice depth. Triggers on \"/skillify,\" \"create a skill,\" \"make this a skill,\" \"skill from this chat,\" \"extract a skill from what we've been doing,\" \"adapt this skill,\" \"port this skill,\" \"fork this skill,\" \"borrow this skill,\" \"update X skill,\" \"apply this to the relevant skills,\" \"propagate this learning,\" \"improve [skill],\" \"fix [skill],\" \"iterate on [skill].\" Part of the -ify trifecta (skillify / toolify / loopify) for extending Claude Code."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "add-db-table",
+  "repo": "linjiejim/greenhouse",
+  "path": ".claude/skills/add-db-table/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/linjiejim/greenhouse",
+  "dir_name": "add-db-table",
+  "downloaded_at": "2026-11-04T06:25:49.748346Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "linjiejim",
+  "source_url": "https://github.com/linjiejim/greenhouse/blob/main/.claude/skills/add-db-table/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/linjiejim/greenhouse/blob/main/.claude/skills/add-db-table/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add or change a Greenhouse database table end to end: core tables in packages/db (schema with _columns helpers + ids prefix, domain service, provider registration, drizzle-kit generate into packages/db/migrations, pnpm db:migrate, db-schema.md, *.db.test.ts) or plugin tables in plugins/<id> (own schema, service bag, NNNN_name.sql lane file). Use for: add a table / column / migration / service, \u65b0\u589e\u8868, \u52a0\u4e2a\u8868, \u5efa\u5f20\u8868, \u52a0\u5b57\u6bb5\u8981\u8fc1\u79fb, \u5199\u4e2a service. Red lines: migrate never push, never edit an applied migration, no repository classes or interface mirrors, types are inferred, core never gets plugin tables or plugin FKs."
+}

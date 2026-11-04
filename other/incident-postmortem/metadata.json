@@ -1,0 +1,37 @@
+{
+  "name": "incident-postmortem",
+  "repo": "logly/mureo",
+  "path": "skills/incident-postmortem/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/logly/mureo",
+  "dir_name": "incident-postmortem",
+  "downloaded_at": "2026-11-04T06:29:54.483796Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "logly",
+  "source_url": "https://github.com/logly/mureo/blob/main/skills/incident-postmortem/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/logly/mureo/blob/main/skills/incident-postmortem/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Close the learning loop after a rescue or incident \u2014 reconstruct the timeline from action_log, run root-cause analysis (platform / site / measurement / external), produce a structured postmortem document, distill reusable insights via /learn, and propose preventive guardrails. Use after a /rescue, a CPA spike, a conversion drop, or a runaway-spend event has been handled, or when the user asks for a postmortem, retrospective, root-cause writeup, or requests \u30a4\u30f3\u30b7\u30c7\u30f3\u30c8\u632f\u308a\u8fd4\u308a / \u30dd\u30b9\u30c8\u30e2\u30fc\u30c6\u30e0 / \u4e8b\u5f8c\u5206\u6790 / \u306a\u305c\u8d77\u304d\u305f\u306e\u304b / \u518d\u767a\u9632\u6b62\u7b56. Read-and-document only \u2014 makes no ad-platform writes."
+}

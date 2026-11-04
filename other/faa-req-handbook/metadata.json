@@ -1,0 +1,37 @@
+{
+  "name": "faa-req-handbook",
+  "repo": "jgsystemsconsulting/jgs-se-knowledge-packs",
+  "path": "packs/faa-req-handbook/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
+  "dir_name": "faa-req-handbook",
+  "downloaded_at": "2026-11-04T05:52:35.173819Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgsystemsconsulting",
+  "source_url": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-req-handbook/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-req-handbook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Knowledge base from the FAA Requirements Engineering Management Handbook (DOT/FAA/AR-08/32). Use for writing requirements for real-time, embedded control systems \u2014 the avionics/medical slant \u2014 via the Handbook's eleven recommended practices: system overview and boundary (monitored/controlled variables), operational concepts (use cases), environmental assumptions, change-tolerant functional architecture (dependency diagrams), safety-driven architecture revision (FHA/PSSA/fault tree), system modes, detailed behavior and performance requirements (ideal value + tolerance + latency), the four-variable model bridge to software requirements (MON/CON/NAT/REQ, IN'/REQ'/OUT', DO-178B mapping), subsystem allocation, and rationale. Carries the Isolette Thermostat and Flight Control System worked examples. Slanted toward control systems with sensors and actuators; thin on information-system / enterprise / agile requirements, on requirements-management tooling, and on the formal-methods internals of SCR/RSML/SpecTRM (it names them, does not re-teach them). Does not reproduce the IEEE/DO-178B/ARP standards it cites."
+}

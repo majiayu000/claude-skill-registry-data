@@ -1,0 +1,37 @@
+{
+  "name": "listen",
+  "repo": "lovrozagar/grunt",
+  "path": ".claude/skills/listen/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/lovrozagar/grunt",
+  "dir_name": "listen-lovrozagar-grunt",
+  "downloaded_at": "2026-11-04T06:31:28.519888Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lovrozagar",
+  "source_url": "https://github.com/lovrozagar/grunt/blob/main/.claude/skills/listen/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lovrozagar/grunt/blob/main/.claude/skills/listen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Speech-to-text via node .rulesync/scripts/listen.mjs (ffmpeg mic + local whisper.cpp, OpenAI fallback). Input only."
+}

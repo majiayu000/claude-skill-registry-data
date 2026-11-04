@@ -1,0 +1,37 @@
+{
+  "name": "explain",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/explain/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "explain-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:42.331692Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/explain/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/explain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explain code with educational depth. Generates Mermaid diagrams for architecture and data flow, traces data through the codebase, explains design decisions with rationale, identifies patterns, and suggests improvements. Use when user says \"explain\", \"explain this code\", \"how does this work\", \"walk me through\", \"what does this do\", \"trace the data flow\", or wants to understand a file, directory, or system with educational depth. For code review, use /review; for debugging, use /investigate; for architecture assessment, use /assessment."
+}

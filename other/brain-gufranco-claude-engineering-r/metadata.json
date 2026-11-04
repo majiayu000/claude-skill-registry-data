@@ -1,0 +1,37 @@
+{
+  "name": "brain",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/brain/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "brain-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:40.856186Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/brain/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/brain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read from and write to the second brain vault. Subcommands - capture (default), ingest, ask, link, health, refresh, falsify, wrong, compile, eval. Files durable knowledge as specced notes, answers questions from what is already stored, keeps the graph honest as facts age, hunts facts that are wrong rather than merely old, and compiles the session memory directory from the vault. Use when user says \"capture this\", \"remember this\", \"file this\", \"what do we know about X\", \"ask the vault\", \"vault health\", \"check the vault\", \"refresh stale facts\", \"the vault was wrong\", \"that is not true anymore\", \"falsify\", \"compile memory\", \"second brain\", or names a note, entity, meeting, or decision to store. For external research, use /research; for codebase questions, use /onboard or /explain; for session retrospectives, use /retro."
+}

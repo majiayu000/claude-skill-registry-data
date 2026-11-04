@@ -1,0 +1,37 @@
+{
+  "name": "exa-search",
+  "repo": "lilinji/GeneTind-Life-Skills",
+  "path": "skills/exa-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lilinji/GeneTind-Life-Skills",
+  "dir_name": "exa-search-lilinji-genetind-life-skills",
+  "downloaded_at": "2026-11-04T06:24:46.782674Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lilinji",
+  "source_url": "https://github.com/lilinji/GeneTind-Life-Skills/blob/main/skills/exa-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lilinji/GeneTind-Life-Skills/blob/main/skills/exa-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Web toolkit powered by Exa, tuned for scientific and technical content. Use this skill when the user needs to search the web or fetch/extract URL content. Covers: web search (semantic lookups, research, current info \u2014 with optional research-paper category and academic domain filtering) and URL extraction (fetching pages, articles, academic PDFs in batch). Use this skill for web-related tasks when the user wants high-quality search or scholarly filtering via category=research paper. Triggers on requests to search, look up, fetch a page, or extract an article."
+}

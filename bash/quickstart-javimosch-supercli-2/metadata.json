@@ -1,0 +1,37 @@
+{
+  "name": "jc",
+  "repo": "javimosch/supercli",
+  "path": "plugins/jc/skills/quickstart/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/javimosch/supercli",
+  "dir_name": "quickstart-javimosch-supercli-2",
+  "downloaded_at": "2026-11-04T05:49:25.505951Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "javimosch",
+  "source_url": "https://github.com/javimosch/supercli/blob/master/plugins/jc/skills/quickstart/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/javimosch/supercli/blob/master/plugins/jc/skills/quickstart/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "jc \u2014 convert command output to JSON. Pipe any CLI output through jc for structured data. Supports 100+ parsers. Essential for agents."
+}

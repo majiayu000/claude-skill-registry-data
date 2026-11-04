@@ -1,0 +1,37 @@
+{
+  "name": "writing-plans",
+  "repo": "mblink/scala-ts",
+  "path": ".claude/skills/writing-plans/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/mblink/scala-ts",
+  "dir_name": "writing-plans-mblink-scala-ts",
+  "downloaded_at": "2026-11-04T06:46:44.610880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblink",
+  "source_url": "https://github.com/mblink/scala-ts/blob/master/.claude/skills/writing-plans/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblink/scala-ts/blob/master/.claude/skills/writing-plans/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Feature planning methodology using Compiler Driven Development for scala-ts. Use when designing new features or multi-step changes. Plans break work into type-first tasks with exact file paths and expected TypeScript output."
+}

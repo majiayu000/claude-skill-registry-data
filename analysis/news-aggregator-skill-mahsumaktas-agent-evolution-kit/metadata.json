@@ -1,0 +1,38 @@
+{
+  "name": "news-aggregator-skill",
+  "repo": "mahsumaktas/agent-evolution-kit",
+  "path": "skills/news-aggregator-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/mahsumaktas/agent-evolution-kit",
+  "dir_name": "news-aggregator-skill-mahsumaktas-agent-evolution-kit",
+  "downloaded_at": "2026-11-04T06:37:47.478032Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze, insights",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mahsumaktas",
+  "source_url": "https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/news-aggregator-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/news-aggregator-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Comprehensive news aggregator that fetches, filters, and deeply analyzes real-time content from 8 major sources: Hacker News, GitHub Trending, Product Hunt, 36Kr, Tencent News, WallStreetCN, V2EX, and Weibo. Best for 'daily scans', 'tech news briefings', 'finance updates', and 'deep interpretations' of hot topics."
+}

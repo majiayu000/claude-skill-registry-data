@@ -1,0 +1,37 @@
+{
+  "name": "i18n-naming",
+  "repo": "maotoumao/Cebian",
+  "path": ".claude/skills/i18n-naming/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maotoumao/Cebian",
+  "dir_name": "i18n-naming",
+  "downloaded_at": "2026-11-04T06:40:27.992510Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, language=2",
+    "score": 2,
+    "runner_up": "language",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maotoumao",
+  "source_url": "https://github.com/maotoumao/Cebian/blob/master/.claude/skills/i18n-naming/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maotoumao/Cebian/blob/master/.claude/skills/i18n-naming/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cebian project i18n key naming, placeholder, pluralization, file layout, and glossary conventions. MUST be used whenever adding, editing, refactoring, or reviewing any translation key in `locales/*.yml`, any `t(...)` call in source code, or any `__MSG_*__` placeholder in manifest. Also triggers when reviewing diffs that touch i18n files, when proposing new user-facing strings, or when validating translation completeness/consistency between `en.yml`, `zh_CN.yml`, and `zh_TW.yml`."
+}

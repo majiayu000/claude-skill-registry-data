@@ -1,0 +1,37 @@
+{
+  "name": "learning-vault",
+  "repo": "glebis/claude-skills",
+  "path": "learning-vault/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "learning-vault",
+  "downloaded_at": "2026-11-04T05:15:12.201519Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "programming",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/learning-vault/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/learning-vault/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create or maintain a portable learning vault for any certification, course, or study goal. Creates or updates domains, concepts, lessons, scenarios, maps, review tasks, and optional Dataview views using an Open Knowledge Format profile. Inspired by the genome vault pattern. Use when the user wants to create a study vault, learning vault, certification prep vault, or structured knowledge base for a learning goal."
+}

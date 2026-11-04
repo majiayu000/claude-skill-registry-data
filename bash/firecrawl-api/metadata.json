@@ -1,0 +1,38 @@
+{
+  "name": "firecrawl-api",
+  "repo": "glebis/claude-skills",
+  "path": "firecrawl-api/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "firecrawl-api",
+  "downloaded_at": "2026-11-04T05:15:09.281279Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/firecrawl-api/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/firecrawl-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used for scripted Firecrawl API access from a dependency-light Python script (search, scrape, extract, map) and for Firecrawl Alexandria structured-data tools (discover, inspect contract, run with a spend ceiling), including a local catalog of all Alexandria providers and tools. Use it when the official `firecrawl` CLI skill is unavailable or broken, when a pipeline needs a plain Python client, or when browsing the Alexandria catalog offline. The API key is read from SOPS with env fallback. For ordinary interactive web work prefer the official `firecrawl` CLI skill. Never use beautifulsoup."
+}

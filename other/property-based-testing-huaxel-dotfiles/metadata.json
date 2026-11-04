@@ -1,0 +1,37 @@
+{
+  "name": "property-based-testing",
+  "repo": "huaxel/dotfiles",
+  "path": "skills/property-based-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/huaxel/dotfiles",
+  "dir_name": "property-based-testing-huaxel-dotfiles",
+  "downloaded_at": "2026-11-04T05:33:27.284082Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huaxel",
+  "source_url": "https://github.com/huaxel/dotfiles/blob/main/skills/property-based-testing/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huaxel/dotfiles/blob/main/skills/property-based-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write, review, or debug generated tests for invariants across an input domain. Use for serializers, parsers, normalizers, validators, numeric calculations, data structures, state transitions, or existing Hypothesis/fast-check/proptest failures. Choose this when examples miss meaningful combinations or boundaries\u2014not for every test, UI verification, benchmarks, or mutation campaigns."
+}

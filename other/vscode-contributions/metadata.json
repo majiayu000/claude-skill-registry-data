@@ -1,0 +1,38 @@
+{
+  "name": "vscode-contributions",
+  "repo": "isathish/localpilot",
+  "path": ".claude/skills/vscode-contributions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/isathish/localpilot",
+  "dir_name": "vscode-contributions",
+  "downloaded_at": "2026-11-04T05:43:20.211686Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "isathish",
+  "source_url": "https://github.com/isathish/localpilot/blob/main/.claude/skills/vscode-contributions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/isathish/localpilot/blob/main/.claude/skills/vscode-contributions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add or change a LocalPilot setting, command, menu entry, keybinding or view, and keep package.json, src/config.ts, src/extension.ts, the docs and the tests in sync. USE WHEN adding a `localpilot.*` setting or command, wiring a button into the Agents view or chat title bar, changing a default, or exposing a new feature to users."
+}

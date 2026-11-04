@@ -1,0 +1,37 @@
+{
+  "name": "plano-cli-operations",
+  "repo": "katanemo/plano",
+  "path": "skills/plano-cli-operations/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/katanemo/plano",
+  "dir_name": "plano-cli-operations",
+  "downloaded_at": "2026-11-04T06:05:59.781795Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "katanemo",
+  "source_url": "https://github.com/katanemo/plano/blob/main/skills/plano-cli-operations/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/katanemo/plano/blob/main/skills/plano-cli-operations/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply Plano CLI best practices. Use for startup troubleshooting, cli_agent workflows, and template-based project bootstrapping."
+}

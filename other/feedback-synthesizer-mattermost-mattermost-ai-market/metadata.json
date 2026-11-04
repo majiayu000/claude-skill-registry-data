@@ -1,0 +1,40 @@
+{
+  "name": "Feedback Synthesizer",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/ux-spec-process/skills/feedback-synthesizer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "feedback-synthesizer-mattermost-mattermost-ai-market",
+  "downloaded_at": "2026-11-04T06:44:58.768632Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=4, security=4",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "product",
+      "prd",
+      "feature",
+      "user-research"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/feedback-synthesizer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/feedback-synthesizer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Categorizes raw stakeholder feedback into actionable priority tiers with suggested fixes for gate decisions"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "prisma-migrate",
+  "repo": "howard36/probase",
+  "path": ".claude/skills/prisma-migrate/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/howard36/probase",
+  "dir_name": "prisma-migrate-howard36-probase",
+  "downloaded_at": "2026-11-04T05:31:44.358873Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howard36",
+  "source_url": "https://github.com/howard36/probase/blob/main/.claude/skills/prisma-migrate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howard36/probase/blob/main/.claude/skills/prisma-migrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a Prisma migration for a schema change against the local database. Use after editing prisma/schema.prisma."
+}

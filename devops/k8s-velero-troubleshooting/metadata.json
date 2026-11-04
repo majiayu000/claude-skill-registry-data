@@ -1,0 +1,37 @@
+{
+  "name": "k8s-velero-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-velero-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-velero-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:38.015149Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-velero-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-velero-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when Velero backups or restores in Kubernetes fail or do not happen: a BackupStorageLocation that is Unavailable (\"is unavailable\", NoSuchBucket, AccessDenied, a wrong endpoint or region), a Backup in FailedValidation, Failed or PartiallyFailed, or stuck in New, Queued or InProgress, a Schedule in FailedValidation (\"invalid schedule\") or that makes no backups, a Restore that is Completed with warnings but did not bring objects back (\"already exists\", \"the in-cluster version is different than the backed-up version\"), a PartiallyFailed restore, volume data from File System Backup (PodVolumeBackup, node-agent) or the CSI data mover (DataUpload) that fails, and backups missing from a cluster. Investigates with kubectl get, describe and the Velero server logs, never reading Secrets or backup contents, and proposes fixes. Reads first and asks before changing anything."
+}

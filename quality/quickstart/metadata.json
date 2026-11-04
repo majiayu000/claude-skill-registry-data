@@ -1,0 +1,38 @@
+{
+  "name": "hk",
+  "repo": "javimosch/supercli",
+  "path": "plugins/hk/skills/quickstart/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/javimosch/supercli",
+  "dir_name": "quickstart",
+  "downloaded_at": "2026-11-04T05:49:29.990081Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, validate",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "javimosch",
+  "source_url": "https://github.com/javimosch/supercli/blob/master/plugins/hk/skills/quickstart/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/javimosch/supercli/blob/master/plugins/hk/skills/quickstart/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the user wants to run linters, set up git hooks, or orchestrate code quality checks with hk."
+}

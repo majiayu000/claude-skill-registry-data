@@ -1,0 +1,37 @@
+{
+  "name": "podcast-to-md",
+  "repo": "kohoj/skills",
+  "path": "podcast-to-md/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kohoj/skills",
+  "dir_name": "podcast-to-md",
+  "downloaded_at": "2026-11-04T06:12:09.006894Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kohoj",
+  "source_url": "https://github.com/kohoj/skills/blob/main/podcast-to-md/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kohoj/skills/blob/main/podcast-to-md/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Podcast to Markdown \u2014 Turn any Apple Podcast into structured Markdown files with full metadata and transcripts. Use when the user wants to transcribe, archive, or extract content from podcast episodes. Supports search by name or Apple Podcasts URL, date filtering, automatic transcript detection (RSS/Podcasting 2.0), and local Whisper transcription as fallback."
+}

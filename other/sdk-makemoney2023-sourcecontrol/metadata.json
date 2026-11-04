@@ -1,0 +1,37 @@
+{
+  "name": "sdk",
+  "repo": "makemoney2023/SourceControl",
+  "path": "skills/cursor-managed/sdk/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/makemoney2023/SourceControl",
+  "dir_name": "sdk-makemoney2023-sourcecontrol",
+  "downloaded_at": "2026-11-04T06:38:16.677678Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "makemoney2023",
+  "source_url": "https://github.com/makemoney2023/SourceControl/blob/main/skills/cursor-managed/sdk/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/makemoney2023/SourceControl/blob/main/skills/cursor-managed/sdk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guide users building apps, scripts, CI pipelines, or automations on top of the Cursor SDK - TypeScript (`@cursor/sdk`) or Python (`cursor-sdk` / `cursor_sdk`). Use when the user mentions integrating, installing, or writing code against the Cursor SDK; says `Agent.create`, `Agent.prompt`, `Agent.resume`, `agent.send`, `run.stream`, `run.messages`, `CursorAgentError`, `customTools`, `custom_tools`, `auto-smart`, `optimize_for`, `sandboxOptions`, `autoReview`, `@cursor/sdk`, `cursor-sdk`, or `cursor_sdk`; asks to run Cursor agents programmatically from a script, CI/CD pipeline, GitHub Action, backend service, or other code outside the Cursor IDE; wants local vs cloud runtime, MCP, custom tools, Router, sandbox / auto-review, streaming, cancellation, or errors; or is wiring Cursor into a bot or REST `/v1/agents` migration. Do not use for the Cursor Automations product editor (use the `automate` skill). Use eagerly rather than answering from memory; the SDK surface evolves and this skill is the source of truth for the external packages."
+}

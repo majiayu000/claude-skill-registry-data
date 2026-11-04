@@ -1,0 +1,37 @@
+{
+  "name": "k8s-cilium-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-cilium-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-cilium-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:37.821712Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-cilium-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-cilium-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when networking fails on a Kubernetes cluster that runs Cilium as its CNI: traffic between pods dropped or timing out after a CiliumNetworkPolicy or CiliumClusterwideNetworkPolicy, \"Policy denied\" drops in Hubble, DNS that stops resolving after an egress policy, HTTP 403 \"Access denied\" from an L7 rule, toFQDNs rules that do not match, pods stuck ContainerCreating with \"unable to connect to Cilium agent\", Cilium agent or operator pods not ready, CiliumEndpoints not ready, or IPAM exhaustion. Investigates with kubectl get, describe, events and logs, asks before running cilium-dbg or hubble inside the agent, and proposes fixes. Reads first and asks before changing anything."
+}

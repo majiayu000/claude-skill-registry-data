@@ -1,0 +1,37 @@
+{
+  "name": "pixijs-scene-gif",
+  "repo": "ltruchot/seed-pixi-typescript",
+  "path": ".claude/skills/pixijs-scene-gif/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/ltruchot/seed-pixi-typescript",
+  "dir_name": "pixijs-scene-gif",
+  "downloaded_at": "2026-11-04T06:33:21.999079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, speed",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "performance",
+      "speed"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ltruchot",
+  "source_url": "https://github.com/ltruchot/seed-pixi-typescript/blob/main/.claude/skills/pixijs-scene-gif/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ltruchot/seed-pixi-typescript/blob/main/.claude/skills/pixijs-scene-gif/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when displaying animated GIFs in PixiJS v8. Covers the pixi.js/gif side-effect import, Assets.load returning a GifSource, GifSprite playback (play/stop/currentFrame/animationSpeed), autoPlay/loop options, onComplete/onLoop/onFrameChange callbacks, GifSource sharing, clone, destroy. Triggers on: GifSprite, GifSource, pixi.js/gif, animationSpeed, currentFrame, autoPlay, onComplete, onFrameChange, constructor options, GifSpriteOptions."
+}

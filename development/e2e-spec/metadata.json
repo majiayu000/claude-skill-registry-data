@@ -1,0 +1,39 @@
+{
+  "name": "e2e-spec",
+  "repo": "ivanerricis/easytask-tauri",
+  "path": ".claude/skills/e2e-spec/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/ivanerricis/easytask-tauri",
+  "dir_name": "e2e-spec",
+  "downloaded_at": "2026-11-04T05:45:27.067446Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ivanerricis",
+  "source_url": "https://github.com/ivanerricis/easytask-tauri/blob/master/.claude/skills/e2e-spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ivanerricis/easytask-tauri/blob/master/.claude/skills/e2e-spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write, run and debug the WebdriverIO + tauri-driver end-to-end specs of EasyTask (e2e/), and measure UI lag in the real app. Use when a user flow is added or changed, when an e2e test fails, or to measure UI lag in the real app"
+}

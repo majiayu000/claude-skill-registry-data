@@ -1,0 +1,37 @@
+{
+  "name": "maplibre-fonts-glyphs",
+  "repo": "maplibre/maplibre-agent-skills",
+  "path": "skills/maplibre-fonts-glyphs/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/maplibre/maplibre-agent-skills",
+  "dir_name": "maplibre-fonts-glyphs",
+  "downloaded_at": "2026-11-04T06:40:43.334562Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: android, ios",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maplibre",
+  "source_url": "https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-fonts-glyphs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-fonts-glyphs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configuring fonts and glyphs for MapLibre GL JS and MapLibre Native \u2014 the style's `glyphs` URL, self-hosting or generating font PBFs, the GL JS local-font fallback (omitted `glyphs` or a failed glyph fetch), the `font-faces` property both SDKs read, and CJK, right-to-left and Devanagari script handling. Use when text labels aren't rendering in the intended font, setting up a glyphs server, choosing between self-hosting and generating font PBFs, or handling non-Latin scripts."
+}

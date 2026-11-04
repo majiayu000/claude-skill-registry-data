@@ -1,0 +1,38 @@
+{
+  "name": "Playground Bootstrap",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/prfaq-prototype/skills/playground-bootstrap/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "playground-bootstrap",
+  "downloaded_at": "2026-11-04T06:44:58.583742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/playground-bootstrap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/playground-bootstrap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pre-flight for /prfaq-prototype. Makes sure the active target playground exists inside the workspace. If it's missing and the target profile names a repo, prompts the user to clone a fresh copy (plus any companion repos it needs) and install dependencies; if it exists, verifies it's the expected repo. A production repo is used only when the profile names it explicitly and the user says yes on that run. Never clones, installs, pulls, or resets without the user's yes."
+}

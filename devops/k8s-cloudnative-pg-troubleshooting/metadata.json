@@ -1,0 +1,37 @@
+{
+  "name": "k8s-cloudnative-pg-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-cloudnative-pg-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-cloudnative-pg-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:41.077389Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-cloudnative-pg-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-cloudnative-pg-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a CloudNativePG (CNPG) PostgreSQL Cluster in Kubernetes is not healthy: a Cluster stuck in \"Setting up primary\", \"Creating a new replica\" or \"Waiting for the instances to become active\", fewer ready instances than requested, an initdb or join pod that is Pending or in CreateContainerConfigError, PVCs that stay Pending, a bootstrap Secret that is missing, a replica that cannot be scheduled (pod anti-affinity, nodeSelector, taints), \"Not enough disk space\", failing WAL archiving or backups (ContinuousArchiving, LastBackupSucceeded False), a failover or switchover that does not finish, \"Invalid cluster definition\" or \"Cluster is unrecoverable\", and operator errors. Investigates with kubectl get, describe, events and logs, never reading Secrets, and proposes fixes. Reads first and asks before changing anything."
+}

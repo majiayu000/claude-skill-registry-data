@@ -1,0 +1,38 @@
+{
+  "name": "site-diagnosis",
+  "repo": "glebis/claude-skills",
+  "path": "site-diagnosis/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "site-diagnosis",
+  "downloaded_at": "2026-11-04T05:15:11.849472Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/site-diagnosis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/site-diagnosis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pre-consultation diagnostic questionnaire for clients building websites with AI tools (Claude, Codex, Cursor, Bolt, v0, etc.) who have concerns about quality, design, or maintainability. Collects structured answers about their project, tools, pain points, and goals, then generates a consultation brief. Use when preparing for a website review consultation, when a client asks for a site audit, or when someone says their AI-built site has problems. Supports Russian and English \u2014 asks the client to choose language first."
+}

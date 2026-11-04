@@ -1,0 +1,37 @@
+{
+  "name": "k8s-loki-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-loki-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-loki-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:36.384351Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-loki-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-loki-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when Grafana Loki on Kubernetes rejects, drops or cannot query logs: clients getting 400, 401 or 429 from /loki/api/v1/push, \"write operation failed\", \"has timestamp too old\", \"entry too far behind\", \"Per stream rate limit exceeded\", \"ingestion rate limit exceeded\", \"maximum active stream limit exceeded\", \"no org id\" (missing X-Scope-OrgID tenant), Loki crashing at start with \"validating config\" or \"invalid schema config\", \"failed to flush chunks\", ring or memberlist errors (\"empty ring\", \"too many unhealthy instances in the ring\"), or queries failing with \"the query time range exceeds the limit\" or timing out. Investigates with kubectl get, logs and read-only Loki endpoints, and proposes fixes. Reads first and asks before changing anything."
+}

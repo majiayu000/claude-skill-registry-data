@@ -1,0 +1,36 @@
+{
+  "name": "maplibre-source-wiring",
+  "repo": "maplibre/maplibre-agent-skills",
+  "path": "skills/maplibre-source-wiring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/maplibre/maplibre-agent-skills",
+  "dir_name": "maplibre-source-wiring",
+  "downloaded_at": "2026-11-04T06:40:43.899767Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maplibre",
+  "source_url": "https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-source-wiring/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-source-wiring/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Getting a MapLibre GL JS source to actually render \u2014 TileJSON `url` versus hand-wired `tiles` templates, matching `source-layer` names to the tile schema, layer order and inserting below labels, `promoteId` and the feature ids that feature state needs, and the CORS and glyph failures behind a blank map. Use when a source is configured but nothing is drawing, or when setFeatureState does nothing."
+}

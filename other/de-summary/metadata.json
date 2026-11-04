@@ -1,0 +1,37 @@
+{
+  "name": "de-summary",
+  "repo": "lilinji/GeneTind-Life-Skills",
+  "path": "skills/de-summary/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lilinji/GeneTind-Life-Skills",
+  "dir_name": "de-summary",
+  "downloaded_at": "2026-11-04T06:24:47.805329Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lilinji",
+  "source_url": "https://github.com/lilinji/GeneTind-Life-Skills/blob/main/skills/de-summary/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lilinji/GeneTind-Life-Skills/blob/main/skills/de-summary/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Summarise pre-computed differential expression results with ranked gene lists, biological themes, and publication-ready interpretation."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "toolify",
+  "repo": "imMamdouhaboammar/marketing-skills",
+  "path": "skills/toolify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/imMamdouhaboammar/marketing-skills",
+  "dir_name": "toolify-immamdouhaboammar-marketing-skills",
+  "downloaded_at": "2026-11-04T05:39:05.300658Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: integration=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "integration",
+      "webhook",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "imMamdouhaboammar",
+  "source_url": "https://github.com/imMamdouhaboammar/marketing-skills/blob/main/skills/toolify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/imMamdouhaboammar/marketing-skills/blob/main/skills/toolify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When you want to integrate an external tool, API, MCP server, or service into a project \u2014 the wizard walks you through auth, config, env vars, client wrapper code, example usage, and (optionally) a smoke-test. Scoped to Next.js and Rails projects (the two primary stacks). Interactive Q&A pattern \u2014 starts with the tool name, asks structured questions until the integration is fully specified, then scaffolds files. Examples of tools to toolify \u2014 Stripe, Kit, Sanity, Notion, Neon, Supabase, Fathom, Rewardful, SavvyCal, Riverside, ScrapeCreators, Anthropic, OpenAI, Gemini, Twilio, Resend, Postmark, Vercel Blob, custom internal APIs. For MCP servers specifically, also handles the .mcp.json wiring. Triggers on \"/toolify,\" \"integrate X,\" \"add X to this project,\" \"wire up X,\" \"set up the X integration,\" \"hook up X,\" \"connect X,\" \"add MCP for X.\" Part of the -ify trifecta (skillify / toolify / loopify) for extending Claude Code. NOT for adding new SKILL.md files \u2014 that's skillify. NOT for cron/agent loops \u2014 that's loopify."
+}

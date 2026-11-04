@@ -1,0 +1,38 @@
+{
+  "name": "verification-before-completion",
+  "repo": "mblink/scala-ts",
+  "path": ".claude/skills/verification-before-completion/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/mblink/scala-ts",
+  "dir_name": "verification-before-completion-mblink-scala-ts",
+  "downloaded_at": "2026-11-04T06:46:46.657895Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblink",
+  "source_url": "https://github.com/mblink/scala-ts/blob/master/.claude/skills/verification-before-completion/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblink/scala-ts/blob/master/.claude/skills/verification-before-completion/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before declaring any task complete, claiming code works, or asserting changes are correct in scala-ts. Requires fresh command execution evidence before any completion claim."
+}

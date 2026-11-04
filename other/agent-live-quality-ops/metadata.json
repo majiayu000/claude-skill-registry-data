@@ -1,0 +1,37 @@
+{
+  "name": "agent-system-live-quality-ops",
+  "repo": "mahsumaktas/agent-evolution-kit",
+  "path": "skills/agent-live-quality-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mahsumaktas/agent-evolution-kit",
+  "dir_name": "agent-live-quality-ops",
+  "downloaded_at": "2026-11-04T06:37:47.638123Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mahsumaktas",
+  "source_url": "https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/agent-live-quality-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/agent-live-quality-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operate and validate AgentSystem live quality alarm (systemd timer + alert state) to keep memory/proactivity/consistency regressions visible in real time."
+}

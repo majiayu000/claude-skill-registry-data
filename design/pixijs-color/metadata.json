@@ -1,0 +1,37 @@
+{
+  "name": "pixijs-color",
+  "repo": "ltruchot/seed-pixi-typescript",
+  "path": ".claude/skills/pixijs-color/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/ltruchot/seed-pixi-typescript",
+  "dir_name": "pixijs-color",
+  "downloaded_at": "2026-11-04T06:33:20.904418Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: css, component",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ltruchot",
+  "source_url": "https://github.com/ltruchot/seed-pixi-typescript/blob/main/.claude/skills/pixijs-color/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ltruchot/seed-pixi-typescript/blob/main/.claude/skills/pixijs-color/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when creating, converting, or manipulating colors in PixiJS v8. Covers Color class input formats (hex, CSS names, RGB/HSL objects, arrays, Uint8Array), conversion methods (toHex, toNumber, toArray, toRgba), component access, setAlpha/multiply/premultiply, Color.shared singleton. Triggers on: Color, ColorSource, hex, rgb, hsl, tint, premultiply, Color.shared, color conversion."
+}

@@ -1,0 +1,87 @@
+---
+name: lead-form-create
+description: "Create a Meta Instant Form (Lead Ad form) through a one-question-at-a-time interview. Use when the user asks to create a lead form, Instant Form, CV form, or similar. The agent collects required parameters via a guided dialogue, confirms, then calls meta_ads_lead_forms_create. Also use when the user asks in Japanese (リードフォームを作成 / インスタントフォームを作って / CVフォーム作成)."
+metadata:
+  version: 0.39.0
+---
+
+# Lead Form Create
+
+> PREREQUISITE: Read `../_mureo-shared/SKILL.md` for auth, security rules, output format, and **Tool Selection**.
+
+> Tool names below refer to the built-in platforms; a namespaced variant (see `_mureo-shared` → Namespaced built-in variants) is used with its prefix substituted.
+
+Drive an interactive interview that produces a Meta Instant Form (Lead Ad form) on the user's Facebook Page. The skill is for the first-time creation flow — lifecycle operations (update / archive / duplicate) live in their own paths.
+
+## Prerequisites
+- STRATEGY.md and STATE.json must exist (run the `onboard` skill first)
+- Meta Ads platform must be configured in STATE.json `platforms`
+- The user can supply a Facebook Page ID (mureo does not currently ship a Page-listing helper)
+
+## Steps
+
+**Before you start**: Run the **Diagnostic preamble** from ../_mureo-shared/SKILL.md — load learning insights (mureo_learning_insights_get) and consult advisors (mureo_consult_advisor) before drawing conclusions.
+
+
+### How to drive the interview
+
+This skill is a **dialogue**, not a form-fill. Ask the user **one question at a time** and wait for an answer before moving on. Do **not** dump every parameter at once. The user-facing experience the operator asked for is "answer a few questions and the form appears" — pacing matters.
+
+For every step below:
+
+1. State what you're about to ask in one sentence.
+2. Offer a sensible default (drawn from STRATEGY.md / Persona / Brand Voice / prior `meta_ads_lead_forms_list` results) so the user can answer with "use the default" instead of typing.
+3. After they answer, repeat their answer back in one sentence and move on.
+
+Skip a step only when the answer is unambiguous from STATE.json / STRATEGY.md (e.g. only one Facebook Page on the account → still confirm in one line, do not silently assume).
+
+1. **Identify the Facebook Page**: Ask the user for the Page ID that will own the form (e.g. "Which Facebook Page should host this form? Paste the Page ID."). mureo does not currently ship a Page-listing helper, so do not pretend to enumerate Pages — if the user does not know their Page ID, point them at **Meta Business Suite → Page Settings → Page Info**, or `https://www.facebook.com/<page-name>/about`. Capture the supplied `page_id` for the create call.
+
+2. **Form name**: Ask for the form name shown in Ads Manager + Page Lead Center. Default suggestion uses the current campaign / Persona context — e.g. "2026 Q2 — `<Persona>` lead form". Confirm the picked name with the user before moving on.
+
+3. **Lead questions to collect**: Ask "What information do you need from each lead?" with a one-sentence default (e.g. "Most B2B advertisers ask for name + email + phone — use that default?"). Build the `questions` list:
+   - Standard types: `FULL_NAME`, `EMAIL`, `PHONE_NUMBER`, `COMPANY_NAME`, `JOB_TITLE`, `CITY`, `STATE`, `ZIP_CODE`, `COUNTRY`, `DATE_OF_BIRTH`.
+   - Custom questions (advertiser-defined) — only when the user asks for one. Each custom question needs `type: CUSTOM`, a stable `key` (used as the CRM field name; suggest a snake_case key based on the label), a `label`, and `options` if it is a dropdown. Walk the user through each custom question one at a time.
+
+   Adding more than ~3 standard questions noticeably reduces submission rate — warn the user when the list grows beyond that.
+
+4. **Privacy policy URL**: Ask the user for the advertiser's privacy policy URL. Meta requires `https://` and will reject the form otherwise — validate the prefix and re-prompt if the input does not start with `https://`. Suggest pulling the URL from STRATEGY.md when possible.
+
+5. **Intro card (`context_card`)?**: Ask "Do you want an intro / welcome screen before the form questions? It typically lifts CVR." If yes, collect — one question per step:
+   - **title** — short headline.
+   - **content** — body text. Default style is `PARAGRAPH_STYLE`; offer `LIST_STYLE` if the body is naturally bulletable.
+   - **cover image** — explicitly ask "Do you want a cover image on the intro screen?" The operator's feedback flagged this as the kind of question users want surfaced.
+     - **IMPORTANT — `cover_photo_id` needs a PAGE photo id, not an ad-account `image_hash`.** Do **not** use `meta_ads_images_upload_file` / `meta_ads_creatives_upload_image` here — those upload to the ad account and return an `image_hash`, which Meta rejects for a form cover photo (this previously failed silently).
+     - If the user wants a cover image, offer these three paths **in order** and stop at the first one they accept:
+       1. **Pick an existing Page photo** — call **`meta_ads_pages_photos_list`** with the form's `page_id`, show the returned photos (`id`, `name`, `created_time`, preview `url` and its `width`/`height`) and let the user choose one. Pass the chosen **`id`** as `context_card.cover_photo_id`. mureo cannot upload a new photo for the user, so a picture that is not on the Page yet has to be posted to the Page first (Meta Business Suite → Page → Photos) or handled by path 3.
+       2. **Skip the cover** — `cover_photo_id` is optional. Omit it entirely and the intro screen still renders with title + content.
+       3. **Set it by hand** — the user adds the cover in **Ads Manager → form builder → intro screen** after the form is created.
+     - **Reusing an existing Page photo as a cover is undocumented behaviour.** Meta does not document `cover_photo_id` accepting an arbitrary pre-existing Page photo, so treat path 1 as best-effort. If `meta_ads_lead_forms_create` rejects the id (e.g. an invalid-parameter error naming `cover_photo_id`), **do not retry** — say so plainly and fall back to path 2 or 3.
+     - `cover_photo_id` is write-only: Meta reads the id back as `context_card.cover_photo.id`. Verify there (`meta_ads_lead_forms_get`) — requesting `context_card{cover_photo_id}` returns a 400.
+     - If the user does not want a cover image, omit `cover_photo_id` entirely.
+
+6. **Post-submission behaviour**: `follow_up_action_url` is **always required** by Meta (omitting it fails with `error_subcode 1892085` / "Missing field(s): FollowUpActionURL"), so always ask for the completion-screen URL — "Where should the form send people after they submit?" Default it from STRATEGY.md or the site's thank-you page so the user can accept in one word, and never invent one silently. Then ask whether they also want a full custom completion screen with title / body / CTA button (`thank_you_page`). That is an optional add-on *on top of* `follow_up_action_url`, not a replacement — if yes, collect one question per step: `title`, `body`, `button_type` (`VIEW_WEBSITE` / `CALL_BUSINESS` / `MESSAGE_BUSINESS` / `DOWNLOAD` / `DOWNLOAD_APP`), `website_url`, `button_text`.
+
+7. **Higher-intent (3-step) mode?**: Explain the trade-off in one sentence: "Higher-intent mode adds a review step before submit. It improves lead quality and trims junk submissions, but it costs total volume." Then ask yes/no. Default is `false` (single-step) unless the operator's STRATEGY.md flags quality over volume.
+
+8. **Locale**: Ask whether to use the Page's primary locale or override (e.g. `ja_JP` for a Japanese form on a multilingual Page). Default = Page primary locale.
+
+### Confirm before mutating
+
+Once every answer is collected, summarise the full payload in a short bulleted list (form name, questions, privacy URL, follow-up action URL, intro card on/off, thank-you on/off, higher-intent on/off, locale) and **ask the user to confirm** before calling the tool. Do not call `meta_ads_lead_forms_create` until the user gives an explicit go-ahead.
+
+### Create the form
+
+Call `meta_ads_lead_forms_create` with the collected parameters. On success, report the new `form_id` back to the user. On failure, surface the platform error verbatim and offer to retry with adjusted parameters (do not silently retry with different values).
+
+### Suggest the natural next step
+
+After the form is created, suggest using it in a Lead Ad creative: "To wire this form into an ad, run `meta_ads_creatives_create_lead` with `form_id=<new_id>`, `page_id=<page_id>`, and either an `image_hash` or a `video_id`." Stop there — building the creative belongs to a separate flow; this skill's job is the form.
+
+### Edge cases
+
+- **No Meta Ads access**: If the Meta Ads provider is not configured (or `MUREO_DISABLE_META_ADS=1` is set), explain to the user that mureo's Meta Ads tools are unavailable and point them at `mureo setup claude-code` / `mureo providers add meta-ads-official`. Do not attempt the create call.
+- **Privacy URL is `http://`**: Re-prompt; do not pass a non-HTTPS URL into `meta_ads_lead_forms_create`.
+- **User wants to revisit an earlier answer**: Honour it. Edit the in-progress payload and re-summarise before the confirm step.
+- **The form should reuse an existing form's structure**: Suggest `meta_ads_lead_forms_duplicate` instead of this skill — that is a different starting point and outside this skill's scope.
+- **The user asks for branching logic (`conditional_questions_choices`)**: The tool supports it (e.g. "if industry = retail, ask about store count next") but this skill does not interview for it in v1 — the interview would balloon into a question-graph editor. Explain the trade-off and offer to call `meta_ads_lead_forms_create` directly with a hand-written `conditional_questions_choices` payload if the user supplies one, or suggest creating the form linearly first via this skill and following up with `meta_ads_lead_forms_update`.

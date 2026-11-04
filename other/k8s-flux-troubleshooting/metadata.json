@@ -1,0 +1,37 @@
+{
+  "name": "k8s-flux-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-flux-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-flux-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:37.227723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-flux-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-flux-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when Flux does not deploy or update something in Kubernetes: a GitRepository, OCIRepository or HelmRepository that is not Ready (\"couldn't find remote ref\", \"authentication required\"), a Kustomization that is not Ready (\"kustomization path not found\", \"kustomize build failed\", \"dependency ... is not ready\", health check timeouts), a HelmRelease that is not Ready (HelmChart \"invalid chart reference\", InstallFailed, UpgradeFailed, RetriesExceeded), changes in Git that never reach the cluster, or suspended Flux objects. Investigates with kubectl get, describe, events and logs, and proposes fixes. Reads first and asks before changing anything."
+}

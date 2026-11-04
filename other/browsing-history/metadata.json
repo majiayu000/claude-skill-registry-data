@@ -1,0 +1,37 @@
+{
+  "name": "browsing-history",
+  "repo": "glebis/claude-skills",
+  "path": "browsing-history/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "browsing-history",
+  "downloaded_at": "2026-11-04T05:15:13.444587Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/browsing-history/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/browsing-history/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Query browsing history from all synced devices (iPhone, Mac, iPad, desktop). Supports natural language queries for filtering by date, device, domain, and keywords. Uses LLM classification for content categories. Can output to stdout or save as markdown/JSON to Obsidian vault."
+}

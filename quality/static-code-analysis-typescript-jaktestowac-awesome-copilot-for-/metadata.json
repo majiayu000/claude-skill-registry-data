@@ -1,0 +1,39 @@
+{
+  "name": "static-code-analysis-typescript",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "plugins/static-code-analysis-typescript/skills/static-code-analysis-typescript/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "static-code-analysis-typescript-jaktestowac-awesome-copilot-for-",
+  "downloaded_at": "2026-11-04T05:47:03.594465Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review, validate",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/static-code-analysis-typescript/skills/static-code-analysis-typescript/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/static-code-analysis-typescript/skills/static-code-analysis-typescript/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates, reviews, and modernizes static code analysis setups for Node.js and TypeScript repositories, covering ESLint flat config, typescript-eslint, tsconfig, Prettier, import sorting, Husky, lint-staged, package.json quality scripts, and CI quality gates. Use when setting up or auditing linting, formatting, type-checking, commit hooks, or GitHub Actions quality checks in a TypeScript project."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "self-improvement",
+  "repo": "mahsumaktas/agent-evolution-kit",
+  "path": "skills/self-improving-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/mahsumaktas/agent-evolution-kit",
+  "dir_name": "self-improving-agent-mahsumaktas-agent-evolution-kit",
+  "downloaded_at": "2026-11-04T06:37:47.109132Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mahsumaktas",
+  "source_url": "https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/self-improving-agent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/self-improving-agent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks."
+}

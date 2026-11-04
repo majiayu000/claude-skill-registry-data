@@ -1,0 +1,37 @@
+{
+  "name": "orchestrator-loop",
+  "repo": "mahsumaktas/agent-evolution-kit",
+  "path": "skills/orchestrator-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mahsumaktas/agent-evolution-kit",
+  "dir_name": "orchestrator-loop",
+  "downloaded_at": "2026-11-04T06:37:46.269572Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: orchestration=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "orchestration",
+      "orchestrator"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mahsumaktas",
+  "source_url": "https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/orchestrator-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/orchestrator-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orchestration pipeline for development tasks. The orchestrator delegates everything and never writes code directly."
+}

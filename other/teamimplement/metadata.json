@@ -1,0 +1,38 @@
+{
+  "name": "teamimplement",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/teamimplement/skills/teamimplement/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "teamimplement",
+  "downloaded_at": "2026-11-04T06:44:52.999486Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/teamimplement/skills/teamimplement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/teamimplement/skills/teamimplement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orchestrate phased software implementation using a team of engineers. Delegates research, planning, implementation, code review, and QA validation to separate engineers following a pipeline defined in .planning/PLAN.md. Use when the user asks to execute a multi-phase implementation plan, run a team-based development workflow, or implement features using planning/implementation/review stages."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "verify-outbound-shipment",
+  "repo": "jeremylongworth-source/AgentLogistics",
+  "path": "skills/packing-shipping/verify-outbound-shipment/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jeremylongworth-source/AgentLogistics",
+  "dir_name": "verify-outbound-shipment",
+  "downloaded_at": "2026-11-04T05:51:24.396127Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category forensics scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "marketing",
+    "runner_up_score": 1,
+    "signals": [
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jeremylongworth-source",
+  "source_url": "https://github.com/jeremylongworth-source/AgentLogistics/blob/main/skills/packing-shipping/verify-outbound-shipment/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jeremylongworth-source/AgentLogistics/blob/main/skills/packing-shipping/verify-outbound-shipment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify outbound shipments against order, pick, pack, label, document, carrier, staging, and handoff evidence."
+}

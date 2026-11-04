@@ -1,0 +1,37 @@
+{
+  "name": "onboard",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/onboard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "onboard-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:44.893663Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/onboard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/onboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Onboard to a new codebase with structured exploration. Scans the project, generates an architecture map with Mermaid diagrams, identifies entry points, explains the tech stack, lists key patterns and conventions, and produces a \"start here\" guide. Use when user says \"onboard\", \"new project\", \"understand this codebase\", \"what does this project do\", \"walk me through the project\", \"project overview\", or joins a new team or repository. For explaining a single file, use /explain; for code review, use /review; for assessment, use /assessment."
+}

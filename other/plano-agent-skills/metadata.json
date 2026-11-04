@@ -1,0 +1,37 @@
+{
+  "name": "plano-agent-skills",
+  "repo": "katanemo/plano",
+  "path": "skills/plano-agent-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/katanemo/plano",
+  "dir_name": "plano-agent-skills",
+  "downloaded_at": "2026-11-04T06:05:59.373233Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "katanemo",
+  "source_url": "https://github.com/katanemo/plano/blob/main/skills/plano-agent-skills/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/katanemo/plano/blob/main/skills/plano-agent-skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Best practices for building agents and agentic applications with Plano, including configuration, routing, orchestration, guardrails, observability, and deployment."
+}

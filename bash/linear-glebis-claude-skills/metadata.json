@@ -1,0 +1,38 @@
+{
+  "name": "linear",
+  "repo": "glebis/claude-skills",
+  "path": "linear/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "linear-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:01.506365Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/linear/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/linear/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Manage Linear issues, projects, and workflows via CLI. This skill should be used when the user wants to create, list, update, or search Linear issues, manage projects or milestones, or interact with their Linear workspace. Triggers on \"create a task\", \"add a Linear issue\", \"list my issues\", \"update GLE-123\", \"what's in my backlog\", or any Linear-related request."
+}

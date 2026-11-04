@@ -1,0 +1,37 @@
+{
+  "name": "state-machine-audit",
+  "repo": "huaxel/dotfiles",
+  "path": "skills/state-machine-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/huaxel/dotfiles",
+  "dir_name": "state-machine-audit",
+  "downloaded_at": "2026-11-04T05:33:26.964892Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huaxel",
+  "source_url": "https://github.com/huaxel/dotfiles/blob/main/skills/state-machine-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huaxel/dotfiles/blob/main/skills/state-machine-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find and explain implicit state machines in an app or system. Use for \u201cfind all the implicit state machines,\u201d lifecycle/state audits, interacting status flags, invalid state combinations, and hidden ordering or recovery rules. Not for automatically introducing a state-machine framework or merely drawing a known workflow."
+}

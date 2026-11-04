@@ -1,0 +1,37 @@
+{
+  "name": "test-python",
+  "repo": "katanemo/plano",
+  "path": ".claude/skills/test-python/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/katanemo/plano",
+  "dir_name": "test-python",
+  "downloaded_at": "2026-11-04T06:06:01.769689Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "katanemo",
+  "source_url": "https://github.com/katanemo/plano/blob/main/.claude/skills/test-python/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/katanemo/plano/blob/main/.claude/skills/test-python/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run Python CLI tests. Use after making changes to cli/ code."
+}

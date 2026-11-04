@@ -1,0 +1,38 @@
+{
+  "name": "telegram-telethon",
+  "repo": "glebis/claude-skills",
+  "path": "telegram-telethon/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "telegram-telethon",
+  "downloaded_at": "2026-11-04T05:15:15.224272Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/telegram-telethon/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/telegram-telethon/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used for comprehensive Telegram automation via Telethon API. Use for sending/receiving messages, monitoring chats, running a background daemon that triggers Codex sessions, managing channels/groups, and downloading media. Triggers on \"telegram daemon\", \"monitor telegram\", \"telegram bot\", \"spawn Codex from telegram\", or any Telethon-related request. IMPORTANT - use the draft command for \"\u0434\u0440\u0430\u0444\u0442/draft\", use send for \"\u043e\u0442\u043f\u0440\u0430\u0432\u044c/send\"; if ambiguous, ASK before sending."
+}

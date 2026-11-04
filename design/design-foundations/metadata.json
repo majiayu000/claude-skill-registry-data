@@ -1,0 +1,38 @@
+{
+  "name": "design-foundations",
+  "repo": "kortix-ai/suna",
+  "path": "packages/starter/templates/general-knowledge-worker/skills/design-foundations/SKILL.md",
+  "github_branch": "dev",
+  "category": "design",
+  "source": "github.com/kortix-ai/suna",
+  "dir_name": "design-foundations",
+  "downloaded_at": "2026-11-04T06:13:26.748997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css, animation",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/suna/blob/dev/packages/starter/templates/general-knowledge-worker/skills/design-foundations/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/suna/blob/dev/packages/starter/templates/general-knowledge-worker/skills/design-foundations/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Artifact-agnostic design guidance \u2014 works for CSS, PowerPoint, matplotlib, PDF, or any visual output. Also includes a curated catalog of named font/color themes for slides, docs, and reports (non-web assets). Not for a chart, table or cards inside a chat reply: those are kortix-genui blocks."
+}

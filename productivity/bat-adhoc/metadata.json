@@ -1,0 +1,38 @@
+{
+  "name": "bat-adhoc",
+  "repo": "homeassistant-ai/ha-mcp",
+  "path": ".claude/skills/bat-adhoc/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/homeassistant-ai/ha-mcp",
+  "dir_name": "bat-adhoc",
+  "downloaded_at": "2026-11-04T05:31:04.067562Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "homeassistant-ai",
+  "source_url": "https://github.com/homeassistant-ai/ha-mcp/blob/master/.claude/skills/bat-adhoc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/homeassistant-ai/ha-mcp/blob/master/.claude/skills/bat-adhoc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run bot acceptance tests to validate MCP tools work correctly from a real AI agent's perspective. Use when testing PRs, detecting regressions, or verifying tool changes end-to-end with Claude/Gemini CLIs."
+}

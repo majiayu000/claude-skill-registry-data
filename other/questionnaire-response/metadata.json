@@ -1,0 +1,37 @@
+{
+  "name": "questionnaire-response",
+  "repo": "kortix-ai/suna",
+  "path": "packages/starter/templates/marketplace/runtime/skills/questionnaire-response/SKILL.md",
+  "github_branch": "dev",
+  "category": "other",
+  "source": "github.com/kortix-ai/suna",
+  "dir_name": "questionnaire-response",
+  "downloaded_at": "2026-11-04T06:13:30.436595Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/suna/blob/dev/packages/starter/templates/marketplace/runtime/skills/questionnaire-response/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/suna/blob/dev/packages/starter/templates/marketplace/runtime/skills/questionnaire-response/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fresh-session security questionnaire response for {{projectName}}. Parses a new inbound questionnaire from {{questionnaire_label}} in Gmail, matches each question to our vetted knowledge base of approved answers and policies, drafts responses in the vendor's own format (SIG, CAIQ, or a custom spreadsheet), flags anything it can't answer confidently, and posts the completed draft to {{security_channel}} \u2014 holding it for security to review before it goes back to the prospect."
+}

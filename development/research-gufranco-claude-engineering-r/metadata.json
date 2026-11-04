@@ -1,0 +1,39 @@
+{
+  "name": "research",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/research/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "research-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:46.050012Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Multi-source external research with entity resolution, query planning, parallel fan-out, cross-source clustering, and grounded synthesis. Use when user says \"research X\", \"what does the community say about X\", \"compare X vs Y\", \"find prior art for X\", \"market scan for X\", \"what are people using for X\", or asks for a survey of an external domain. For internal codebase questions, use /onboard; for debugging, use /investigate; for code review, use /review."
+}

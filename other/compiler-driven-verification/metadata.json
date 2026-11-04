@@ -1,0 +1,37 @@
+{
+  "name": "compiler-driven-verification",
+  "repo": "mblink/scala-ts",
+  "path": ".claude/skills/compiler-driven-verification/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/mblink/scala-ts",
+  "dir_name": "compiler-driven-verification",
+  "downloaded_at": "2026-11-04T06:46:46.343640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblink",
+  "source_url": "https://github.com/mblink/scala-ts/blob/master/.claude/skills/compiler-driven-verification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblink/scala-ts/blob/master/.claude/skills/compiler-driven-verification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Step-by-step CDD implementation workflow for scala-ts \u2014 change the type first, follow compiler errors, pin generated output, verify. The equivalent of TDD here. Use when implementing features or making code changes."
+}

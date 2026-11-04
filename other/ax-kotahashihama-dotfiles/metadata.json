@@ -1,0 +1,37 @@
+{
+  "name": "ax",
+  "repo": "kotahashihama/dotfiles",
+  "path": "home/.claude/skills/ax/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kotahashihama/dotfiles",
+  "dir_name": "ax-kotahashihama-dotfiles",
+  "downloaded_at": "2026-11-04T06:13:56.082984Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kotahashihama",
+  "source_url": "https://github.com/kotahashihama/dotfiles/blob/main/home/.claude/skills/ax/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kotahashihama/dotfiles/blob/main/home/.claude/skills/ax/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the ax CLI instead of curl + throwaway parsing scripts whenever you fetch a URL, explore an unknown web page, or extract structured data from HTML. Trigger whenever you are about to write an inline script (python3 heredoc, node -e, regex over HTML) or a bare curl for one-off web fetching, scraping, or page exploration."
+}

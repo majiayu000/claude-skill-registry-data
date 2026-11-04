@@ -1,0 +1,39 @@
+{
+  "name": "migrate",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/migrate/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "migrate-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:44.293335Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, refactor",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/migrate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/migrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Migrate a framework or library, or upgrade a major version, along the official migration path with one tested commit per step."
+}

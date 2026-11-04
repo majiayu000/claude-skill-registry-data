@@ -1,0 +1,37 @@
+{
+  "name": "audit-freight-charge",
+  "repo": "jeremylongworth-source/AgentLogistics",
+  "path": "skills/transportation-freight/audit-freight-charge/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/jeremylongworth-source/AgentLogistics",
+  "dir_name": "audit-freight-charge",
+  "downloaded_at": "2026-11-04T05:51:36.962002Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jeremylongworth-source",
+  "source_url": "https://github.com/jeremylongworth-source/AgentLogistics/blob/main/skills/transportation-freight/audit-freight-charge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jeremylongworth-source/AgentLogistics/blob/main/skills/transportation-freight/audit-freight-charge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit freight charges from invoice, rate agreement, quote, BOL, shipment facts, accessorials, and billing evidence."
+}

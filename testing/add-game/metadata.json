@@ -1,0 +1,38 @@
+{
+  "name": "add-game",
+  "repo": "ltruchot/seed-pixi-typescript",
+  "path": ".claude/skills/add-game/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/ltruchot/seed-pixi-typescript",
+  "dir_name": "add-game",
+  "downloaded_at": "2026-11-04T06:33:20.562471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ltruchot",
+  "source_url": "https://github.com/ltruchot/seed-pixi-typescript/blob/main/.claude/skills/add-game/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ltruchot/seed-pixi-typescript/blob/main/.claude/skills/add-game/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add a second game to the monorepo (apps/<game>) from the seed game, wired to the gate. Load when asked to create a new game / app / prototype in this repo."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "herdr-orchestrator",
+  "repo": "glebis/claude-skills",
+  "path": "herdr-orchestrator/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "herdr-orchestrator",
+  "downloaded_at": "2026-11-04T05:15:15.571226Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/herdr-orchestrator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/herdr-orchestrator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Coordinate multiple CLI agents in herdr with scoped briefs, verified startup, permission handling, independent review, and monitored handoffs. Use for parallel agent work or observer/evaluator supervision in herdr."
+}

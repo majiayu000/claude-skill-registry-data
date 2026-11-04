@@ -1,0 +1,38 @@
+{
+  "name": "wow-digest",
+  "repo": "glebis/claude-skills",
+  "path": "wow-digest/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "wow-digest",
+  "downloaded_at": "2026-11-04T05:15:05.480723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/wow-digest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/wow-digest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Daily digest of 3-7 genuinely surprising items from newsletters and Telegram channels. Scores content for epistemic friction, not just relevance. Appends to daily note. Use when the user says \"/wow-digest\", \"run the wow digest\", \"what's surprising today\", \"morning reading\", or \"digest my newsletters\"."
+}

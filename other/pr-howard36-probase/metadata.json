@@ -1,0 +1,37 @@
+{
+  "name": "pr",
+  "repo": "howard36/probase",
+  "path": ".claude/skills/pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/howard36/probase",
+  "dir_name": "pr-howard36-probase",
+  "downloaded_at": "2026-11-04T05:31:44.000880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howard36",
+  "source_url": "https://github.com/howard36/probase/blob/main/.claude/skills/pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howard36/probase/blob/main/.claude/skills/pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Commit the current changes on a new branch, push, and open a GitHub PR following this repo's conventions."
+}

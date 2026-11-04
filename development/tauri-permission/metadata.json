@@ -1,0 +1,38 @@
+{
+  "name": "tauri-permission",
+  "repo": "ivanerricis/easytask-tauri",
+  "path": ".claude/skills/tauri-permission/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/ivanerricis/easytask-tauri",
+  "dir_name": "tauri-permission",
+  "downloaded_at": "2026-11-04T05:45:29.759217Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ivanerricis",
+  "source_url": "https://github.com/ivanerricis/easytask-tauri/blob/master/.claude/skills/tauri-permission/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ivanerricis/easytask-tauri/blob/master/.claude/skills/tauri-permission/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checklist when the frontend of EasyTask starts using a new Tauri plugin command, window API, shell/opener URL or fs path - the permission in src-tauri/capabilities must be granted or the call fails only in the real app. Use when adding or changing a call to @tauri-apps/plugin-* or @tauri-apps/api, or when something works in vitest but not in `npm run tauri dev`."
+}

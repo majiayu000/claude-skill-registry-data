@@ -1,0 +1,38 @@
+{
+  "name": "documenting-test-suites",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "plugins/documenting-test-suites/skills/documenting-test-suites/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "documenting-test-suites-jaktestowac-awesome-copilot-for-",
+  "downloaded_at": "2026-11-04T05:47:07.241254Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/documenting-test-suites/skills/documenting-test-suites/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/documenting-test-suites/skills/documenting-test-suites/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes the documentation a test suite needs to be usable by someone who did not build it: run instructions, environment setup, tag glossary, ownership, fixture and data notes, and architecture decision records. Use when onboarding someone into a suite, when \"how do I run these\" keeps being asked, when a test architecture decision needs recording, or when a suite is inherited with no documentation."
+}

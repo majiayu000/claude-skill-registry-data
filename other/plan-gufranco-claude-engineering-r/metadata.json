@@ -1,0 +1,38 @@
+{
+  "name": "plan",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "plan-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:45.075793Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: generation=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "generation",
+      "scaffold",
+      "boilerplate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan implementations, record architecture decisions, and scaffold boilerplate, with subcommands plan (default), adr, and scaffold. Creates spec folders, manages ADRs, and generates files from existing project patterns. Use when user says \"plan this\", \"how should I implement\", \"design this feature\", \"create an ADR\", \"scaffold a service\", \"architecture decision\", or needs to think through an approach before coding. For code review, use /review; for shipping, use /ship; for running tests, use /test."
+}

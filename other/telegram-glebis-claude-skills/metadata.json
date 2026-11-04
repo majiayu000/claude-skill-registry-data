@@ -1,0 +1,37 @@
+{
+  "name": "telegram",
+  "repo": "glebis/claude-skills",
+  "path": "telegram/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "telegram-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:02.308737Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/telegram/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/telegram/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when fetching, searching, downloading, sending, editing, or publishing messages on Telegram. Use for queries like \"show my Telegram messages\", \"search Telegram for...\", \"get unread messages\", \"send a message to...\", \"edit that message\", \"publish this draft to klodkot\", or \"add Telegram messages to my notes\"."
+}

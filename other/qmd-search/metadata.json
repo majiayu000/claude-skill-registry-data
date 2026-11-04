@@ -1,0 +1,37 @@
+{
+  "name": "qmd-search",
+  "repo": "glebis/claude-skills",
+  "path": "qmd-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "qmd-search",
+  "downloaded_at": "2026-11-04T05:15:05.265867Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/qmd-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/qmd-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used to search the local Obsidian vault / markdown knowledge base by meaning, not just keywords, using the on-device qmd engine (BM25 + vector + LLM rerank). Trigger when the user asks to \"search my vault/notes\", \"find notes about X\", \"what do my notes say about Y\", \"do I have anything on Z\", \"semantic search my knowledge base\", or wants concept/cross-lingual retrieval over markdown. Fully local \u2014 nothing leaves the machine."
+}

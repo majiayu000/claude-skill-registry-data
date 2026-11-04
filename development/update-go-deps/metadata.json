@@ -1,0 +1,37 @@
+{
+  "name": "update-go-deps",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/dev-workflows/skills/update-go-deps/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "update-go-deps",
+  "downloaded_at": "2026-11-04T06:44:54.035196Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/dev-workflows/skills/update-go-deps/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/dev-workflows/skills/update-go-deps/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Update all direct Go module dependencies to their latest versions, tidy the module graph, verify tests pass, and commit the result. Use when you want to bump deps, address CVEs, or do routine dependency maintenance."
+}

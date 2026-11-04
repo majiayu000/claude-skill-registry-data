@@ -1,0 +1,41 @@
+{
+  "name": "Threat Modeler",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/ux-spec-process/skills/threat-modeler/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "threat-modeler-mattermost-mattermost-ai-market",
+  "downloaded_at": "2026-11-04T06:44:55.192876Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, vulnerability, audit",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/threat-modeler/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/threat-modeler/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews specifications for UI-layer security risks including data spillage paths, implicit trust, and misconfiguration vulnerabilities."
+}

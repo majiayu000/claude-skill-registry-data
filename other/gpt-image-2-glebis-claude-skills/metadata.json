@@ -1,0 +1,37 @@
+{
+  "name": "gpt-image-2",
+  "repo": "glebis/claude-skills",
+  "path": "gpt-image-2/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "gpt-image-2-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:06.407345Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/gpt-image-2/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/gpt-image-2/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate and edit images using OpenAI's GPT Image 2 API. Interactive skill that guides users through image creation with style presets, cost-aware draft/final workflow, thinking mode, carousels, and photo editing. This skill should be used when the user requests image generation via OpenAI/GPT Image 2, wants to create social media carousels, edit photos into artistic styles, or needs images with readable text (infographics, diagrams, posters)."
+}

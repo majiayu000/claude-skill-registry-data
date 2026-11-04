@@ -1,0 +1,37 @@
+{
+  "name": "grafana",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/grafana/skills/grafana/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "grafana",
+  "downloaded_at": "2026-11-04T06:44:51.208894Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, metrics",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/grafana/skills/grafana/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/grafana/skills/grafana/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Investigate production issues, query logs and metrics, and explore dashboards on the Mattermost Grafana instance at grafana.internal.mattermost.com."
+}

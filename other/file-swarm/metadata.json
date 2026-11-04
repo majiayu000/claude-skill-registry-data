@@ -1,0 +1,37 @@
+{
+  "name": "file-swarm",
+  "repo": "maoyaoweii/file-swarm",
+  "path": ".claude/skills/file-swarm/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maoyaoweii/file-swarm",
+  "dir_name": "file-swarm",
+  "downloaded_at": "2026-11-04T06:40:37.807022Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maoyaoweii",
+  "source_url": "https://github.com/maoyaoweii/file-swarm/blob/master/.claude/skills/file-swarm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maoyaoweii/file-swarm/blob/master/.claude/skills/file-swarm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use file-swarm to run Codex-controlled, OpenAI-compatible, file-level coding swarms. Trigger when a coding task should be split into guarded patch workers, when the user asks for multi-model or multi-slot cooperation, when Codex should generate hard_constraints.yaml/interface_contract.yaml, run file-swarm auto/preflight/smoke-test/summary/apply/repair, or inspect which model handled which task."
+}

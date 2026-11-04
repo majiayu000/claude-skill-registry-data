@@ -1,0 +1,37 @@
+{
+  "name": "hermes-agent-dissect",
+  "repo": "kohoj/skills",
+  "path": "hermes-agent-dissect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kohoj/skills",
+  "dir_name": "hermes-agent-dissect",
+  "downloaded_at": "2026-11-04T06:12:10.088836Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kohoj",
+  "source_url": "https://github.com/kohoj/skills/blob/main/hermes-agent-dissect/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kohoj/skills/blob/main/hermes-agent-dissect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Navigate and extract reusable design patterns from the Hermes Agent source code for application in our project.\nIt covers ten subsystems: bootstrap/CLI, conversation engine, prompt/context, tool system,\ngateway/messaging, skills, terminal backends, memory/persistence, RL training, and integrations (ACP/MCP/plugins).\n\nUse this skill whenever a user wants to study, reference, or adapt architectural patterns from\nHermes Agent. Also use it when the user asks questions such as \"how does Hermes do this?\",\n\"learn from Hermes Agent\", \"dissect Hermes\", \"reference Hermes source\", or requests\nimplementation details for any Hermes Agent feature.\n\nThis skill is the primary entry point: it routes to the appropriate reference file by topic,\nthen reads the source code and returns extractable patterns. Even when the question appears simple\n(for example, \"how does Hermes implement X?\"), use this skill because the reference files provide\nprecise file paths, reading order, and architectural context that substantially improve answer quality."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "cherry-pick-create-pr",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/cursor-automations/skills/cherry-pick-create-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "cherry-pick-create-pr",
+  "downloaded_at": "2026-11-04T06:45:02.543707Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/cursor-automations/skills/cherry-pick-create-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/cursor-automations/skills/cherry-pick-create-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cherry-pick a single merged commit onto one release-X.Y branch, correctly resolving conflicts, running lint in a separate commit, pushing, and opening a cherry-pick PR via the create_pr_tool MCP following the PR template. Self-contained (carries its own conflict-resolution logic). Use inside a per-branch subagent when backporting a merged PR to a release branch. Has side effects (push + open PR)."
+}

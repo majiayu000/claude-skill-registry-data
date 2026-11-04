@@ -1,0 +1,38 @@
+{
+  "name": "maplibre-v6-migration",
+  "repo": "maplibre/maplibre-agent-skills",
+  "path": "skills/maplibre-v6-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/maplibre/maplibre-agent-skills",
+  "dir_name": "maplibre-v6-migration",
+  "downloaded_at": "2026-11-04T06:40:43.523560Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maplibre",
+  "source_url": "https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-v6-migration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-v6-migration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Upgrading a MapLibre GL JS app from v5 to v6 \u2014 the ESM-only build, the removed default export, CommonJS require() breakage, the styleimagemissing/setMissingStyleImageResolver change, the removal of the internal map.transform, the MapDataEvent \u2192 MapSourceDataEvent/MapStyleDataEvent split, and the bundler-only setWorkerUrl() requirement. Use when a v5 app breaks after upgrading to v6, or before pinning a v6 install."
+}

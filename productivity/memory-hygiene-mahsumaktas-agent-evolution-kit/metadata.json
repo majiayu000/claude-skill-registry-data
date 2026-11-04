@@ -1,0 +1,38 @@
+{
+  "name": "memory-hygiene",
+  "repo": "mahsumaktas/agent-evolution-kit",
+  "path": "skills/memory-hygiene/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/mahsumaktas/agent-evolution-kit",
+  "dir_name": "memory-hygiene-mahsumaktas-agent-evolution-kit",
+  "downloaded_at": "2026-11-04T06:37:45.773446Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, memory",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mahsumaktas",
+  "source_url": "https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/memory-hygiene/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/memory-hygiene/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit, clean, and optimize Clawdbot's vector memory (LanceDB). Use when memory is bloated with junk, token usage is high from irrelevant auto-recalls, or setting up memory maintenance automation."
+}

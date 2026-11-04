@@ -1,0 +1,38 @@
+{
+  "name": "verify",
+  "repo": "howard36/probase",
+  "path": ".claude/skills/verify/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/howard36/probase",
+  "dir_name": "verify-howard36-probase",
+  "downloaded_at": "2026-11-04T05:31:44.184016Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howard36",
+  "source_url": "https://github.com/howard36/probase/blob/main/.claude/skills/verify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howard36/probase/blob/main/.claude/skills/verify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify a change is done by running lint, the Prettier check, the test suites, and a production build. Use after finishing any code change and before opening a PR."
+}

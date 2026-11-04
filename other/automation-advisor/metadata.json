@@ -1,0 +1,37 @@
+{
+  "name": "automation-advisor",
+  "repo": "glebis/claude-skills",
+  "path": "automation-advisor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "automation-advisor",
+  "downloaded_at": "2026-11-04T05:15:16.597487Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/automation-advisor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/automation-advisor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Interactive automation decision advisor using the Automation Decision Matrix framework. Use when the user asks \"should I automate this?\", wants to evaluate an automation opportunity, calculate automation ROI or break-even, or requests an automation decision analysis. Guides a structured questionnaire, scores four dimensions, applies override checks, and generates an Obsidian-formatted report with a visual decision diagram."
+}

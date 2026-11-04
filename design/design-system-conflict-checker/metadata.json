@@ -1,0 +1,40 @@
+{
+  "name": "Design System Conflict Checker",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/ux-spec-process/skills/design-system-conflict-checker/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "design-system-conflict-checker",
+  "downloaded_at": "2026-11-04T06:45:03.631808Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/design-system-conflict-checker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/design-system-conflict-checker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verifies proposed UI elements (icons, components, color tokens, badge types, modal patterns) against existing system usage. Outputs a conflict table flagging proposed elements that overlap with existing semantic uses. Use before recommending any new UI element to prevent ambiguity in the shipped product."
+}

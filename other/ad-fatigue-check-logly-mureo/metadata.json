@@ -1,0 +1,37 @@
+{
+  "name": "ad-fatigue-check",
+  "repo": "logly/mureo",
+  "path": "mureo/_data/skills/ad-fatigue-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/logly/mureo",
+  "dir_name": "ad-fatigue-check-logly-mureo",
+  "downloaded_at": "2026-11-04T06:29:58.908723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "logly",
+  "source_url": "https://github.com/logly/mureo/blob/main/mureo/_data/skills/ad-fatigue-check/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/logly/mureo/blob/main/mureo/_data/skills/ad-fatigue-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detect creative fatigue across active ads \u2014 rising frequency, declining CTR week-over-week, and CPM drift \u2014 score each ad FATIGUED / WATCH / FRESH, and hand the evidence to a creative refresh. Use when the user asks whether creatives are worn out, why CTR is falling, if frequency is too high, when to rotate or refresh ads, or requests \u30af\u30ea\u30a8\u30a4\u30c6\u30a3\u30d6\u75b2\u5f0a\u30c1\u30a7\u30c3\u30af / \u5e83\u544a\u306e\u75b2\u5f0a\u3092\u78ba\u8a8d / \u30d5\u30ea\u30fc\u30af\u30a8\u30f3\u30b7\u30fc\u304c\u9ad8\u3044 / CTR\u304c\u843d\u3061\u3066\u304d\u305f / \u305d\u308d\u305d\u308d\u5dee\u3057\u66ff\u3048\u6642\u304b. Reads active ads per platform, applies documented fatigue thresholds with noise guards, and routes fatigued ads to /creative-generate or /creative-refresh."
+}

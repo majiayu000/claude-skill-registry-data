@@ -1,0 +1,38 @@
+{
+  "name": "Artifact Frontmatter",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/prfaq-prototype/skills/artifact-frontmatter/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "artifact-frontmatter",
+  "downloaded_at": "2026-11-04T06:45:00.666940Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: prd, feature",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/artifact-frontmatter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/artifact-frontmatter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Emits the skimmable two-layer skim block at the TOP of every phase artifact \u2014 TL;DR, phase + complexity tier, what-changed-since-last-version, decisions locked (and which flipped from a Recommended default), open [VERIFY WITH PM] items, and a one-line reading guide. Goal \u2014 a reader answers what / phase / what-changed / what's-open in under 60 seconds without reading the body. Composable; phase agents invoke it as their first output step."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "review",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/review/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "review-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:46.876099Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ux, css, frontend, component",
+    "score": 5,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ux",
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review code, run QA analysis, or audit visual design, with subcommands code (default), qa, and design. Three-pass code review with 71-category checklist, 30-rule QA analysis with PICT and coverage delta, and frontend design/accessibility/performance/SEO audit. Use when user says \"review this PR\", \"review my code\", \"check this diff\", \"QA analysis\", \"test coverage gaps\", \"design audit\", \"check accessibility\", \"check performance\", \"check SEO\", or wants feedback on a specific change. For full architecture assessment, use /assessment; for security scanning, use /audit; for shipping code, use /ship."
+}

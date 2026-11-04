@@ -1,0 +1,38 @@
+{
+  "name": "tracking-health",
+  "repo": "logly/mureo",
+  "path": "mureo/_data/skills/tracking-health/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/logly/mureo",
+  "dir_name": "tracking-health-logly-mureo",
+  "downloaded_at": "2026-11-04T06:29:58.089388Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "logly",
+  "source_url": "https://github.com/logly/mureo/blob/main/mureo/_data/skills/tracking-health/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/logly/mureo/blob/main/mureo/_data/skills/tracking-health/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Preventive audit of conversion tracking across all configured ad platforms \u2014 Meta pixels + CAPI, Google Ads conversion actions, and final-URL tracking-parameter consistency on every platform \u2014 with a GA4 cross-check. Use when the user asks to check tracking, audit conversion measurement, verify pixels / tags, check that ads carry the right utm / tracking parameters for the campaign they are in, diagnose why conversions stopped or look wrong, sanity-check CV counting, or requests a \u8a08\u6e2c\u30d8\u30eb\u30b9\u30c1\u30a7\u30c3\u30af / \u30bf\u30b0\u30fb\u8a08\u6e2c\u76e3\u67fb / \u30d1\u30e9\u30e1\u30fc\u30bf\u6574\u5408\u6027\u30c1\u30a7\u30c3\u30af / \u8a08\u6e2c\u304c\u58ca\u308c\u3066\u3044\u306a\u3044\u304b\u78ba\u8a8d. Reads STRATEGY.md and STATE.json, produces a per-platform tracking scorecard (OK / Watch / Broken per check) and a fix list ranked by revenue risk."
+}

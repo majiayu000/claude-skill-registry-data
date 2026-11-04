@@ -1,0 +1,37 @@
+{
+  "name": "faa-rma",
+  "repo": "jgsystemsconsulting/jgs-se-knowledge-packs",
+  "path": "packs/faa-rma/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
+  "dir_name": "faa-rma",
+  "downloaded_at": "2026-11-04T05:52:22.777751Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, software",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "framework",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgsystemsconsulting",
+  "source_url": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-rma/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-rma/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Knowledge base from FAA-HDBK-006D (2020), the FAA's System Reliability, Maintainability, and Availability (RMA) Handbook for National Airspace System (NAS) hardware and software. Use for RMA figures of merit (MTBF, MTBO, MTTR, the availability variants), the bathtub curve and probability distributions, the four-stage RMA lifecycle mapped to the FAA Acquisition Management System (AMS), the six-task RMA technical-management/acquisition process, service-thread criticality and the NAS-RD severity-to-target table, the RMA analysis toolbox (RBD, FMEA/FMECA, FTA, Ishikawa, Monte Carlo, Bayesian, FRACAS, ALT, reliability-growth/recovery tests), software reliability (early prediction + reliability growth), and tailorable example RMA requirements for a Program Requirements Document. Scope limits: it is FAA/NAS-specific guidance (not a requirement, by its own statement), centred on hardware-plus-software availability \u2014 it brackets out human/service/facility/communications availability, names but does not reproduce the math derivations or external standards (MIL-STDs, IEEE 1633, RTCA DO-178C/DO-278A, SAE JA1011), is thin on detailed worked numerical examples and on safety-case method, and predates any current revision beyond 006D."
+}

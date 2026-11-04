@@ -1,0 +1,37 @@
+{
+  "name": "underhood",
+  "repo": "harsh-aghara/underhood",
+  "path": "skills/underhood/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/harsh-aghara/underhood",
+  "dir_name": "underhood-harsh-aghara-underhood",
+  "downloaded_at": "2026-11-04T05:25:07.588528Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harsh-aghara",
+  "source_url": "https://github.com/harsh-aghara/underhood/blob/main/skills/underhood/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harsh-aghara/underhood/blob/main/skills/underhood/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explains how code really works, with file:line evidence: architecture, the end-to-end execution path, where state lives, how it fails, and what a PR changes. Use when the user asks how a repo, module, or function works, wants a request or operation traced through code, is onboarding onto unfamiliar code, asks what a PR or diff really does, wants to understand concurrency or failure behavior, or types /underhood, even if they never say \"architecture\". Not for writing or fixing code, and not for style or lint feedback."
+}

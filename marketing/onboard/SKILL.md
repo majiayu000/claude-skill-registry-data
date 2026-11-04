@@ -1,0 +1,129 @@
+---
+name: onboard
+description: "Initial account setup — create STRATEGY.md and STATE.json from scratch, import platform data, and establish baseline metrics. Use when the user is starting fresh with mureo, has no STRATEGY.md yet, or asks to set up a new account. Also use when the user asks in Japanese (初期セットアップ / STRATEGY.mdを作成して / mureoを使い始めたい / アカウントの立ち上げ)."
+metadata:
+  version: 0.39.0
+---
+
+# Onboard
+
+> PREREQUISITE: Read `../_mureo-shared/SKILL.md` for auth, security rules, output format, and **Tool Selection** (Read/Write on Code, `mureo_strategy_*` / `mureo_state_*` MCP on Desktop / Cowork).
+
+> Tool names below refer to the built-in platforms; a namespaced variant (see `_mureo-shared` → Namespaced built-in variants) is used with its prefix substituted.
+
+Guide me through setting up mureo for a new marketing account.
+
+## Steps
+
+1. **Check installation**: Verify mureo is installed by running `mureo --help`. If not found, guide the user to run `pip install mureo`.
+
+2. **Check data mode (BYOD first, then auth)**:
+
+   **Always run `mureo byod status` first.** If any platform shows
+   `BYOD (N rows, ...)`, that platform is in **BYOD mode** — do NOT prompt
+   the user to run `mureo auth setup` for it, do NOT call `mureo auth
+   status` to "verify" it (that command reads `credentials.json` directly
+   and ignores BYOD), and do NOT report it as "未認証" ("not authenticated"). <!-- ja-literal -->
+   For BYOD platforms, announce: "Using BYOD CSV data (N rows, <date range>)."
+
+   For the **remaining** platforms (those showing `not configured` or `real
+   API`), then run `mureo auth status` to see which have OAuth credentials.
+   If a platform is `not configured` for BYOD AND has no credentials, offer
+   `mureo auth setup` (interactive — user runs it themselves) **or** offer
+   the BYOD path: "Export a CSV from <platform> and run `mureo byod import
+   <file>` instead."
+
+   Never claim a platform is unauthenticated when `mureo byod status` shows
+   it in BYOD mode. BYOD takes priority over OAuth and is sufficient on its
+   own for analysis.
+
+   Note: When calling MCP tools, you do NOT need to specify customer_id or
+   account_id — they are automatically loaded from credentials.json (real
+   API mode) or routed to the BYOD client (BYOD mode). Just omit them.
+
+3. **Create STRATEGY.md**: Ask me about my business to fill in each section:
+   - **Persona**: Who is the target customer? (role, age, goals, pain points)
+   - **USP**: What makes the product/service unique? (3-5 bullet points)
+   - **Target Audience**: Demographics, geography, budget range
+   - **Brand Voice**: Tone and style guidelines for ad copy
+   - **Market Context**: Competitors, market trends, competitive advantages
+   - **Operation Mode**: Choose from the imported campaigns' **actual
+     maturity**, NOT from the fact that mureo was just set up:
+     - Use `ONBOARDING_LEARNING` only for genuinely **new** campaigns still
+       in their learning period — little/no accumulated conversions and
+       started recently (roughly the last 2-4 weeks).
+     - For campaigns that have already been running for a while with
+       accumulated conversion history, pick a steady-state mode — default to
+       `EFFICIENCY_STABILIZE` (mature campaigns optimizing for efficiency),
+       or another mode the imported data clearly warrants (e.g.
+       `SCALE_EXPANSION`, `TURNAROUND_RESCUE`).
+     - Base this on real delivery data, not setup recency: use the recent
+       conversion volume from `google_ads_performance_report` (LAST_30_DAYS)
+       and the learning status from `google_ads_campaigns_diagnose` — i.e.
+       the data fetched in step 7 below. If you reach this step before that
+       data is available, fetch it now (or finalize the mode right after the
+       step-7 diagnosis). STATE.json's campaign snapshots do not carry age /
+       conversion counts, so do not rely on them for this. If still unsure,
+       ask me. Picking `ONBOARDING_LEARNING` for a long-running campaign
+       makes the first daily-check wrongly tell me to "prioritize data
+       accumulation" when the data is already there.
+
+   If I don't know the answers to any of the above sections (Persona, USP,
+   Target Audience, Brand Voice, Market Context — Operation Mode is chosen
+   from campaign maturity per the rule above, not from the URL), offer an
+   alternative: ask me for the
+   **product / landing-page URL** (or corporate site / competitor URLs).
+   Then fetch the URL with WebFetch, read the page content, and draft a
+   first-pass for **every** unknown section — Persona, USP, Target Audience,
+   Brand Voice, and Market Context — from what's on the site. Show me the
+   draft for each section and ask me to confirm or correct it before writing
+   STRATEGY.md. If multiple URLs are relevant (LP + corporate + competitor),
+   fetch each and consolidate; competitor URLs are especially useful for
+   Market Context. If the site is behind login or returns no useful content,
+   fall back to interactive Q&A. Apply this URL-fallback per-section: the
+   user may know some sections (e.g., Brand Voice) but need help drafting
+   others (e.g., Persona, USP) — only fetch and draft the ones I'm unsure
+   about.
+
+   Write the completed STRATEGY.md to the current directory.
+
+4. **Discover platforms and data sources**:
+   - For each advertising platform with configured credentials, discover accessible accounts and list campaigns
+   - **Hosted-connector platforms**: if a hosted official-MCP connector is present in the session (e.g. TikTok's `tt-ads-*` tools — `mureo providers add tiktok-ads-official` registers it as a Claude.ai connector), treat it as a discoverable platform under the key `tiktok_ads` and list its campaigns via the connector's own tools. See `../_mureo-shared/SKILL.md` → *Hosted-connector platforms*.
+   - **Amazon Ads (official-MCP bridge)**: if Amazon's bridged tools are present in the session (Amazon's own names, e.g. `campaign_management-*` / `account_management-*`), treat it as a discoverable platform under the key `plugin:mureo-amazon-ads-bridge:amazon_ads` and list its campaigns best-effort via those tools. If they are absent and the user wants Amazon, point them at the setup: enter the Login with Amazon client id/secret in the **Amazon Ads** tab of the **Connection credentials** section of `mureo configure` (or the `AMAZON_ADS_*` environment variables), then run the tab's **Authorize with Amazon** flow — Amazon's consent has no loopback callback, so it is a guided paste-code flow: mureo opens the consent page and the user pastes the redirected address back. It stores both tokens and refreshes the tool list; restart the MCP server afterwards. See `../_mureo-shared/SKILL.md` → *Plugin platforms* and `docs/amazon-ads.md`.
+   - Check if Search Console credentials are available — if so, run site discovery and list verified sites
+   - Check if GA4 MCP is available by probing for analytics tools
+   - Record all available platforms and data sources in STRATEGY.md under a `## Data Sources` section
+
+5. **Initialize STATE.json**: For each discovered platform, snapshot campaigns into STATE.json under the corresponding `platforms` key (e.g. `google_ads`, `meta_ads`, `tiktok_ads` for the TikTok hosted connector, `plugin:mureo-amazon-ads-bridge:amazon_ads` for Amazon Ads and `plugin:<dist>:<provider>` for any other plugin platform).
+
+6. **Set up Goals**: Ask about quantitative marketing goals:
+   - "What are your key marketing goals? (e.g., CPA target, lead volume, ROAS target, organic traffic growth)"
+   - For each goal, ask for: target value, deadline, and which platforms/data sources it applies to
+   - For goals involving website conversions or user behavior, note that GA4 data will be used for tracking
+   - For goals involving organic search, note Search Console as the data source
+   - Create `## Goal: <title>` sections in STRATEGY.md with Target, Deadline, Current (TBD), Platform, and Priority fields
+
+7. **Offer budget guardrails** (optional but recommended): mureo can enforce **hard** budget limits deterministically on its native platforms — the built-in `StrategyPolicyGate` refuses any native `google_ads_*` / `meta_ads_*` budget mutation that violates a `## Guardrails` section in STRATEGY.md, *before* dispatch, regardless of what the AI decides. The gate also reaches plugin / bridged platforms such as Amazon Ads: the money-carrying tools mureo declares paths for are enforced exactly there too, and anything else on those platforms gets a weaker, best-effort check — see the honest-scope note below before promising a cap there. Without the section the gate is fail-open (no enforcement), so most operators never get guardrails unless they know to ask — offer them here.
+   - Explain in one line: "limits mureo checks before any budget change, regardless of the AI — hard-enforced on Google / Meta and on the Amazon money tools mureo declares, best-effort on the rest of a plugin platform."
+   - Offer to set the machine-readable keys, seeding defaults from what you already discovered (the Target Audience **Budget Range**, and the current per-campaign budgets from step 5) — but **let me confirm every number**, never auto-decide:
+     - `currency` — write it **first** in the section, as the account's ISO 4217 code. It enforces nothing on its own: it tells the gate that Meta's `daily_budget` / `lifetime_budget` / `bid_amount` are **minor units** of that currency, so the caps below can be written in plain currency units. Without it a EUR/USD cap of `250` refuses anything above €2.50, so never skip it on a non-JPY account. Take the code from the platform discovery in step 4 wherever the platform reported it (the Meta ad-account picker in `mureo configure` / `mureo auth setup` shows each account's currency); mureo's own MCP tools do not return it, so if it is not already known, **ask me** rather than inferring it from the numbers (on a single-workspace install it can also be set later from the **Advanced** section of `mureo configure`, Guardrails card). If the connected accounts use **different** currencies, ask me which account the caps are meant for, write that code, and say plainly that the Meta conversion follows it.
+     - `max_daily_budget_per_campaign` — suggest from the current max campaign daily budget (e.g. current max × 1.5) or the Budget Range. In the account's currency units.
+     - `max_daily_budget_increase_pct` — suggest a conservative default (e.g. 20).
+     - `max_total_daily_budget` — suggest from the Budget Range upper bound.
+     - `blocked_operations` — offer opt-in for distinct destructive tools that actually exist (e.g. `google_ads_keywords_remove`, `meta_ads_audiences_delete`); each name must exactly match the dispatched MCP tool name or the block never fires. Note the gate matches whole tool names, not arguments: there is no standalone campaign-delete tool (Google Ads removes a campaign via `google_ads_campaigns_update_status` with `status=REMOVED`, the same tool that pauses/enables; Meta has none), so "block campaign deletion only" is not possible. See `../_mureo-strategy/SKILL.md` → *Guardrails (machine-enforced hard rules)* for the full constraint.
+   - On confirmation, write the `## Guardrails` section to STRATEGY.md (`Write` on Code / `mureo_strategy_set` on Desktop / Cowork) using the exact format in `../_mureo-strategy/SKILL.md` → *Guardrails (machine-enforced hard rules)*.
+   - **Skippable**: if I say "no guardrails for now", leave the section absent (fail-open, unchanged behaviour) and note I can add them later just by asking.
+   - **Honest scope**: the gate reaches every call mureo dispatches, but the **strength of the check differs by platform** — exact argument keys on native `google_ads` / `meta_ads` (**hard enforcement**), declaration-first on plugin / bridged platforms (exact where mureo or the plugin declares the money, otherwise best-effort pattern-matched keys — **strong but not guaranteed**), and hosted connectors bypass mureo entirely (**no gate at all**). Concretely: for native `google_ads` / `meta_ads` the gate matches the **exact argument keys** it knows, so coverage is deterministic. For mureo-dispatched **plugin / bridged** platforms (including Amazon Ads, `plugin:mureo-amazon-ads-bridge:amazon_ads`) a tool that declares its budget / bid keys or nested argument paths in its MCP metadata is matched exactly and that declaration wins, and the **13 money-carrying Amazon tools mureo declares paths for are matched exactly too** — with the best-effort scan still applied underneath them as a floor, so a drifted or newly-added money field falls back to that best-effort cover (found when its name still looks like money) rather than to nothing; everything else there is matched **best-effort** by pattern alone, so coverage depends on how the tool names its arguments — tell the operator those undeclared caps are **strong but not guaranteed**, and to verify the values after the first mutations on such a platform. Hosted / official MCPs registered with the host (TikTok `tt-ads-*`, `google-ads-official`, `meta-ads-official`) go client→platform and never reach the gate, so for those guardrails stay best-effort until the MCP gateway (#359) lands — say so.
+
+8. **Initial diagnosis**: Run health checks on each configured ad platform:
+   - **Google Ads**: prefer mureo native — `google_ads_performance_report` (LAST_30_DAYS), `google_ads_campaigns_list`, `google_ads_health_check_all`. Iterate the campaigns and call `google_ads_monitoring_zero_conversions` per campaign_id for any with conv = 0. If mureo's Google Ads tools are unavailable (e.g. `MUREO_DISABLE_GOOGLE_ADS=1` after `mureo providers add google-ads-official`), fall back to the official `google-ads-official` MCP's equivalent campaign-list and performance-report tools, then **skip the mureo-only anomaly-detection tools** (`google_ads_health_check_all`, `google_ads_monitoring_zero_conversions`) and identify zero-conversion campaigns manually from the raw conv numbers; note: "anomaly detection requires mureo's native MCP — install or re-enable via `mureo setup claude-code` for full onboarding coverage."
+   - **Meta Ads**: prefer mureo native — `meta_ads_insights_report` (LAST_30_DAYS) — surface `result_indicator` per campaign so the operator sees up front whether any campaigns are optimizing for `link_click` instead of true leads. If mureo's Meta Ads tools are unavailable, fall back to the official `meta-ads-official` hosted MCP for raw insights; note that the `result_indicator` field is mureo-specific — inspect each campaign's optimization goal / actions list yourself and warn the operator about any `link_click`-optimized campaigns where the user expects real leads.
+   - **TikTok Ads (hosted connector, `tiktok_ads`)**: call the connector's own reporting tools (e.g. `tt-ads-*`) for LAST_30_DAYS and record baseline per-campaign spend/conversions. mureo-only anomaly detection / RSA audit do not apply — report `analytics_not_available_for_tiktok_ads` and keep the diagnosis to the raw numbers. See `../_mureo-shared/SKILL.md` → *Hosted-connector platforms*.
+   - **Amazon Ads (official-MCP bridge, `plugin:mureo-amazon-ads-bridge:amazon_ads`)**: drive it best-effort with Amazon's own bridged tools for a comparable 30-day window and record baseline per-campaign spend/conversions. mureo-only anomaly detection / RSA audit do not apply — report `analytics_not_available_for_plugin:mureo-amazon-ads-bridge:amazon_ads` and keep the diagnosis to the raw numbers (the generic `analysis_anomalies_check` still works once history exists). See `../_mureo-shared/SKILL.md` → *Plugin platforms*.
+   - mureo BYOD data is centralized in the workspace `byod/` directory (or `~/.mureo/byod/` for legacy CLI users) and is only accessible through mureo MCP tools — do **not** look for raw CSVs in the project directory.
+   - If Search Console is available, run a top-queries check to establish an organic baseline. If GA4 is available, check overall site conversion metrics.
+
+9. **Summary**: Show what was set up — platforms discovered, data sources available, goals defined, guardrails offered — and recommend next steps.
+
+IMPORTANT: Ask me questions interactively — don't assume answers. Each STRATEGY.md section should reflect MY actual business, not generic examples.

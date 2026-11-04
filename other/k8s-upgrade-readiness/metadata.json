@@ -1,0 +1,37 @@
+{
+  "name": "k8s-upgrade-readiness",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-upgrade-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-upgrade-readiness",
+  "downloaded_at": "2026-11-04T06:02:35.789878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-upgrade-readiness/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-upgrade-readiness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a Kubernetes cluster is about to be upgraded to its next minor version, or someone asks \"is the cluster ready to upgrade?\", \"what will break when we upgrade?\" or why a node drain hangs during an upgrade: PodDisruptionBudgets with ALLOWED DISRUPTIONS 0, pods with no controller (\"cannot delete Pods that declare no controller\"), admission webhooks with failurePolicy Fail and no endpoints, deprecated or removed APIs still in use (apiserver_requested_deprecated_apis, CRD versions marked deprecated), kubelet and control plane version skew, nodes on cgroup v1 or containerd 1.x, and add-ons that do not support the target version. Reports what to fix first. Read-only: never upgrades, drains or changes anything itself."
+}

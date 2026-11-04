@@ -1,0 +1,37 @@
+{
+  "name": "maplibre-running-evals",
+  "repo": "maplibre/maplibre-agent-skills",
+  "path": "skills/maplibre-running-evals/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/maplibre/maplibre-agent-skills",
+  "dir_name": "maplibre-running-evals",
+  "downloaded_at": "2026-11-04T06:40:44.153652Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, api=2",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maplibre",
+  "source_url": "https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-running-evals/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-running-evals/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The step-by-step procedure for running this repo's Promptfoo evals with a generator and a judge over provider APIs. Use when starting a new skill and needing a baseline before writing content, when a run stalls or returns no data, when a provider rate-limits, or when deciding whether an edit needs a retest."
+}

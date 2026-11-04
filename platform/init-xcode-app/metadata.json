@@ -1,0 +1,38 @@
+{
+  "name": "init-xcode-app",
+  "repo": "glebis/claude-skills",
+  "path": "init-xcode-app/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "init-xcode-app",
+  "downloaded_at": "2026-11-04T05:15:10.960895Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, ios",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/init-xcode-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/init-xcode-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scaffold a standalone SwiftUI app via XcodeGen \u2014 pick macOS, iOS, or iOS+watchOS; ships house conventions, a Swift Testing target, swiftformat/swiftlint, optional CloudKit/CI/Release/Push modules, and optional JTBD product context. Use to \"init an xcode project\", \"scaffold a swiftui app\", \"new mac/ios app\"."
+}

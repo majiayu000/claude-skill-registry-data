@@ -1,0 +1,39 @@
+{
+  "name": "faa-8110-49",
+  "repo": "jgsystemsconsulting/jgs-se-knowledge-packs",
+  "path": "packs/faa-8110-49/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
+  "dir_name": "faa-8110-49",
+  "downloaded_at": "2026-11-04T05:52:29.089163Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, software",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgsystemsconsulting",
+  "source_url": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-8110-49/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-8110-49/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reconstructed reference notes on US FAA approval guidance for airborne software and airborne electronic hardware, built from four public-domain sources (FAA Order 8110.49A, AC 20-115D, AC 20-152A, AC 00-69; documents dated 2017-07-21 to 2022-10-07, pinned 2026-10-12). Use for how FAA certification staff plan and conduct software reviews (certification liaison, desk versus on-site review, review planning agreements), how the level of FAA involvement (LOI) is picked and scored with the Appendix A worksheets, how software conformity inspection works (software part and installation conformity, ASE and ASI tasks, Form 8120-10), what AC 20-115D recognizes and how DO-178B processes and tool qualification transition to DO-178C/DO-330 (supplements, FLS, UMS, legacy software changes), and what AC 20-152A adds for airborne electronic hardware (simple versus complex custom devices, robustness and HDL code coverage, tool assessment, previously developed hardware, COTS IP, COTS devices, circuit board assemblies), and what AC 00-69 adds as best practices for change impact analysis, data and control coupling, and design-level error handling (best practices, not guidance and not a means of compliance). SCOPE LIMITS: FAA guidance only, and guidance is not regulation (ACs are acceptable means, not the only means); no RTCA DO-178C or DO-254, EUROCAE ED-12C or ED-80, supplement, or SAE ARP text, which are copyrighted and named only (see the avionics-signpost pack); no AC 00-72 (named, not packed); no DO-178C software-level objective tables; no EASA AMC 20-115D or AMC 20-152A content (use easa-rules); reflects the pinned source dates, not later FAA actions; synthesized reference notes, not legal advice and not a substitute for the source documents. LICENCE: Public Domain (US Government work, 17 U.S.C. 105)."
+}

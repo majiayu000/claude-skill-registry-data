@@ -1,0 +1,38 @@
+{
+  "name": "agent-chrome",
+  "repo": "hanzhangzzz/agent-skills-zh",
+  "path": "agent-chrome/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/hanzhangzzz/agent-skills-zh",
+  "dir_name": "agent-chrome",
+  "downloaded_at": "2026-11-04T05:23:21.501000Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hanzhangzzz",
+  "source_url": "https://github.com/hanzhangzzz/agent-skills-zh/blob/main/agent-chrome/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hanzhangzzz/agent-skills-zh/blob/main/agent-chrome/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u672c\u673a AI \u6d4f\u89c8\u5668\u81ea\u52a8\u5316\u7684\u7edf\u4e00 Chrome \u542f\u52a8\u5668\u4e0e\u7ea6\u5b9a\uff1a\u6bcf\u4e2a\u767b\u5f55\u6001\u4e00\u4e2a profile\uff08~/.chrome-profiles/<\u7ad9\u70b9>-<\u522b\u540d>\uff09\uff0c\u7528\u6b63\u5f0f\u7248 Google Chrome \u5728\u56fa\u5b9a CDP \u7aef\u53e3\u4e0a up/down\uff0cagent-browser\u3001Playwright\u3001python CDP \u90fd\u53ea\u8fde\u7aef\u53e3\u3001\u4e0d\u81ea\u5df1\u8d77\u6d4f\u89c8\u5668\u3002Use when \u9700\u8981\u6d4f\u89c8\u5668\u81ea\u52a8\u5316\u3001\u9700\u8981\u67d0\u7f51\u7ad9\u7684\u767b\u5f55\u6001\u3001\u8981\u8d77 Chrome / \u5f00 profile / \u62ff CDP \u7aef\u53e3\u3001\u63a5 agent-browser --cdp\u3001Playwright connectOverCDP\u3001\u767b\u5f55\u8fc7\u671f\u8981\u91cd\u65b0\u767b\u5f55\u6216\u4ece\u4e3b Chrome \u5f15\u5bfc cookie\u3001\u65b0\u589e\u4e00\u4e2a\u7f51\u7ad9\u8d26\u53f7\u3002"
+}

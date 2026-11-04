@@ -1,0 +1,38 @@
+{
+  "name": "settings-row",
+  "repo": "ivanerricis/easytask-tauri",
+  "path": ".claude/skills/settings-row/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/ivanerricis/easytask-tauri",
+  "dir_name": "settings-row",
+  "downloaded_at": "2026-11-04T05:45:29.336589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component, animation",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ivanerricis",
+  "source_url": "https://github.com/ivanerricis/easytask-tauri/blob/master/.claude/skills/settings-row/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ivanerricis/easytask-tauri/blob/master/.claude/skills/settings-row/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end recipe to add a new setting (user preference) to the EasyTask Settings dialog - stored pref with default and validation, context exposure, row in the right panel, it+en translations, reset behaviour, tests. Use when the user wants a new option/preference/setting, or to change the Settings dialog."
+}

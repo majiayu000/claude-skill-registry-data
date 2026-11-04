@@ -1,0 +1,37 @@
+{
+  "name": "implement-plan",
+  "repo": "lovrozagar/oat",
+  "path": ".agents/skills/implement-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lovrozagar/oat",
+  "dir_name": "implement-plan-lovrozagar-oat-2",
+  "downloaded_at": "2026-11-04T06:32:19.815782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lovrozagar",
+  "source_url": "https://github.com/lovrozagar/oat/blob/main/.agents/skills/implement-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lovrozagar/oat/blob/main/.agents/skills/implement-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Execute remaining leaves in a .tmp/grunt/plans checklist. Skip [x]."
+}

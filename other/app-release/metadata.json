@@ -1,0 +1,38 @@
+{
+  "name": "app-release",
+  "repo": "glebis/claude-skills",
+  "path": "app-release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "app-release",
+  "downloaded_at": "2026-11-04T05:15:06.052969Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/app-release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/app-release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end pipeline for releasing an iOS / watchOS app to TestFlight and the App Store. Use when the user wants to publish, ship, or release an iOS/watchOS app, get a build onto TestFlight, archive and upload via xcodebuild, deploy a CloudKit schema to Production, set App Privacy or export compliance, mint a Distribution certificate, or work through App Store Connect / Apple Developer portal steps. Triggers on 'continue publishing', 'ship the app to TestFlight', 'release the iOS app', 'upload a build', 'deploy CloudKit to production', 'App Privacy labels', 'distribution signing', or any cryptic Apple upload error (cloud signing, 90057 missing CFBundleShortVersionString, 90474 orientation). macOS and Xcode only."
+}

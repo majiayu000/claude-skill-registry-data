@@ -1,0 +1,37 @@
+{
+  "name": "hubble-mcp",
+  "repo": "kirksw/nix-config",
+  "path": "agents/defs/skills/hubble-mcp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kirksw/nix-config",
+  "dir_name": "hubble-mcp",
+  "downloaded_at": "2026-11-04T06:11:05.517062Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirksw",
+  "source_url": "https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/hubble-mcp/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/hubble-mcp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use Hubble MCPorter CLI to investigate Airflow DAGs and SYNQ entities, lineage, freshness, quality, executions, and incidents."
+}

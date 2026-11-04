@@ -1,0 +1,38 @@
+{
+  "name": "add-client-screen",
+  "repo": "linjiejim/greenhouse",
+  "path": ".claude/skills/add-client-screen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/linjiejim/greenhouse",
+  "dir_name": "add-client-screen",
+  "downloaded_at": "2026-11-04T06:25:50.482837Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "linjiejim",
+  "source_url": "https://github.com/linjiejim/greenhouse/blob/main/.claude/skills/add-client-screen/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/linjiejim/greenhouse/blob/main/.claude/skills/add-client-screen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add or change a screen in the Greenhouse universal client (apps/client: Expo web, iOS, Android, macOS shell): choose place vs sheet/inspector vs centered dialog (DIALOG_SIZES), build it from the DESIGN.md kit, wire routes under apps/client/app with .web/.ios/.android siblings, call the API through ApiResult helpers with identity-bound writes, add en+zh copy, cover it with React-free unit tests and tests/client-e2e, run the client checks. Covers core screens, Admin sections and official plugin glue. Use for: add a page / screen / dialog / Admin section / plugin native page, \u52a0\u4e2a\u9875\u9762, \u65b0\u589e\u754c\u9762, \u505a\u4e2a\u5f39\u7a97, \u52a0\u4e2a\u7ba1\u7406\u9875, \u52a0\u4e2a\u540e\u53f0\u9875\u9762, \u5ba2\u6237\u7aef\u9875\u9762, \u79fb\u52a8\u7aef\u9875\u9762. Red lines: never import @greenhouse/*, no raw hex or font sizes, objects open only through openObject."
+}

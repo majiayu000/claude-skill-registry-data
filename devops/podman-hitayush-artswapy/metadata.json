@@ -1,0 +1,39 @@
+{
+  "name": "podman",
+  "repo": "hitayush/artswapy",
+  "path": ".claude/skills/podman/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/hitayush/artswapy",
+  "dir_name": "podman-hitayush-artswapy",
+  "downloaded_at": "2026-11-04T05:30:25.094243Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, docker, kubernetes",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "ci",
+      "docker",
+      "kubernetes"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hitayush",
+  "source_url": "https://github.com/hitayush/artswapy/blob/main/.claude/skills/podman/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hitayush/artswapy/blob/main/.claude/skills/podman/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Manage containers using Podman, the daemonless container engine."
+}

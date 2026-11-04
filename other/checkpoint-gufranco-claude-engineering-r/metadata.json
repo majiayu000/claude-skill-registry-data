@@ -1,0 +1,37 @@
+{
+  "name": "checkpoint",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/checkpoint/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "checkpoint-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:41.058876Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/checkpoint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/checkpoint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Save and resume working state across sessions, with subcommands save, resume, and list. Captures git state, decisions made, remaining work, and modified files so a new session can pick up where the last one left off. Use when user says \"checkpoint\", \"save progress\", \"save state\", \"resume\", \"pick up where I left off\", or wants to preserve session context. For git commits, use /ship commit; for retrospectives, use /retro; for planning, use /plan."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "tufte-report",
+  "repo": "glebis/claude-skills",
+  "path": "tufte-report/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "tufte-report",
+  "downloaded_at": "2026-11-04T05:15:07.469209Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css, component, animation",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/tufte-report/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/tufte-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create Tufte-inspired data reports and infographic dashboards as standalone HTML files. Uses EB Garamond for text, Monaspace Argon for numbers, Chart.js for interactive charts, and inline SVG sparklines. Produces publication-quality reports with 2-column narrative+data layouts, status dashboards, scroll animations, and responsive mobile support. Use this skill whenever the user wants to create a data report, activity dashboard, infographic, personal analytics page, health tracker visualization, or any document that combines narrative text with interactive charts and tables. Also triggers for \"make a report like Tufte\", \"create an infographic\", \"build a dashboard\", \"visualize my data\", or requests for beautiful data-driven documents."
+}

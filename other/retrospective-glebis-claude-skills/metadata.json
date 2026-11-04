@@ -1,0 +1,38 @@
+{
+  "name": "retrospective",
+  "repo": "glebis/claude-skills",
+  "path": "retrospective/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "retrospective-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:09.611037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/retrospective/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/retrospective/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Interactive post-session retrospective that captures learnings, updates skills, and saves memories. Use when the user says \"/retrospective\", \"let's do a retro\", \"what did we learn\", \"session review\", \"retro\", or \"wrap up\". Also use at the end of long productive sessions when significant patterns or corrections emerged. Supports multi-session mode \u2014 by default processes all of today's sessions across projects."
+}

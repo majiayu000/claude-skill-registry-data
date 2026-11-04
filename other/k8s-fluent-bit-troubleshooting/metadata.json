@@ -1,0 +1,37 @@
+{
+  "name": "k8s-fluent-bit-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-fluent-bit-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-fluent-bit-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:39.827929Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-fluent-bit-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-fluent-bit-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when Fluent Bit on Kubernetes does not deliver logs: the DaemonSet crashes on a config error (\"tried to instance a plugin name that doesn't exist\", \"unknown configuration property\", \"configuration file contains errors\"), an output fails (\"failed to flush chunk\", \"cannot be retried\", \"no upstream connections available\", \"getaddrinfo\", \"Connection refused\"), records arrive without Kubernetes metadata (\"could not get meta for POD\"), lines arrive unparsed or not at all (tail path, parser, CRI versus Docker format), or inputs pause (\"paused (mem buf overlimit\"). Covers the Helm chart and the Fluent Operator. Investigates with kubectl get, logs and Fluent Bit's read-only HTTP endpoints, and proposes fixes. Reads first and asks before changing anything."
+}

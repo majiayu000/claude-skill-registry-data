@@ -1,0 +1,37 @@
+{
+  "name": "k8s-triage",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-triage",
+  "downloaded_at": "2026-11-04T06:02:35.560278Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-triage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when something is wrong in a cluster and it is not yet clear where: \"the cluster is broken\", \"a lot of pods are failing\", \"users say the app is down\", \"something is off after the upgrade\", or any problem report that names no workload. Sweeps nodes, pods in every namespace, recent Warning events and CPU and memory use, ranks what it finds by severity, proposes a first fix for each issue and names the skill that goes deeper. Reads first and asks before changing anything."
+}

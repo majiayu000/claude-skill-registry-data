@@ -1,0 +1,37 @@
+{
+  "name": "contrib-pr-review",
+  "repo": "homeassistant-ai/ha-mcp",
+  "path": ".claude/skills/contrib-pr-review/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/homeassistant-ai/ha-mcp",
+  "dir_name": "contrib-pr-review",
+  "downloaded_at": "2026-11-04T05:31:05.413907Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "homeassistant-ai",
+  "source_url": "https://github.com/homeassistant-ai/ha-mcp/blob/master/.claude/skills/contrib-pr-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/homeassistant-ai/ha-mcp/blob/master/.claude/skills/contrib-pr-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a contribution PR for safety, quality, and readiness. Checks for security concerns, test coverage, size appropriateness, and intent alignment. Use when reviewing external contributions."
+}

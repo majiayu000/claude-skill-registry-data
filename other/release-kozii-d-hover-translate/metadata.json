@@ -1,0 +1,37 @@
+{
+  "name": "release",
+  "repo": "kozii-d/hover-translate",
+  "path": ".claude/skills/release/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/kozii-d/hover-translate",
+  "dir_name": "release-kozii-d-hover-translate",
+  "downloaded_at": "2026-11-04T06:14:18.047701Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kozii-d",
+  "source_url": "https://github.com/kozii-d/hover-translate/blob/master/.claude/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kozii-d/hover-translate/blob/master/.claude/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare a release of HoverTranslate \u2014 version, changelog, checks, live YouTube markup, store archives, and what the user uploads where. Uploads nothing itself."
+}

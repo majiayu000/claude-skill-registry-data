@@ -1,0 +1,37 @@
+{
+  "name": "obsidian-secrets",
+  "repo": "makemoney2023/SourceControl",
+  "path": "skills/integrations/obsidian-secrets/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/makemoney2023/SourceControl",
+  "dir_name": "obsidian-secrets",
+  "downloaded_at": "2026-11-04T06:38:33.793066Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "makemoney2023",
+  "source_url": "https://github.com/makemoney2023/SourceControl/blob/main/skills/integrations/obsidian-secrets/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/makemoney2023/SourceControl/blob/main/skills/integrations/obsidian-secrets/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when resolving API keys or credentials from Obsidian vault notes before calling external APIs, or when .env.local values are empty."
+}

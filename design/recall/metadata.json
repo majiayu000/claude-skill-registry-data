@@ -1,0 +1,38 @@
+{
+  "name": "recall",
+  "repo": "imat-cordoba/imat-agentic",
+  "path": "skills/recall/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/imat-cordoba/imat-agentic",
+  "dir_name": "recall",
+  "downloaded_at": "2026-11-04T05:39:19.254542Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component, tailwind",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "imat-cordoba",
+  "source_url": "https://github.com/imat-cordoba/imat-agentic/blob/master/skills/recall/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/imat-cordoba/imat-agentic/blob/master/skills/recall/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "This skill should be used when the user asks to \"recall related knowledge\", \"search previous solutions\", \"check what we learned before\", \"look up past decisions\", or when starting a new task and wanting to surface prior context. Searches .claude/knowledge/ for solutions, patterns, and ADRs related to the current task before spending tokens on fresh exploration."
+}

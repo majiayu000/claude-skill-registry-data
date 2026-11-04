@@ -1,0 +1,39 @@
+{
+  "name": "qa-analysis",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/qa-analysis/skills/qa-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "qa-analysis",
+  "downloaded_at": "2026-11-04T06:44:52.585845Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=4, devops=4",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 4,
+    "signals": [
+      "data",
+      "sql",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/qa-analysis/skills/qa-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/qa-analysis/skills/qa-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze a GitHub pull request for risk level and generate concrete QA recommendations. Accepts a PR URL or \"owner/repo#number\" reference. Uses `gh` CLI to fetch the diff and metadata, computes blast radius, scores six risk dimensions, and returns a structured JSON risk assessment. Use when the user invokes /qa-analysis:qa-analysis with a GitHub PR URL or reference, or asks for a PR risk assessment, QA recommendations, or \"what should I test?\" for a given pull request."
+}

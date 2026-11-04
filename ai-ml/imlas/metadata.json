@@ -1,0 +1,39 @@
+{
+  "name": "imlas",
+  "repo": "marek-burza/workstation",
+  "path": ".claude/skills/imlas/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/marek-burza/workstation",
+  "dir_name": "imlas",
+  "downloaded_at": "2026-11-04T06:41:22.147593Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model, training",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marek-burza",
+  "source_url": "https://github.com/marek-burza/workstation/blob/main/.claude/skills/imlas/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marek-burza/workstation/blob/main/.claude/skills/imlas/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Short prose brief for a mock ML/AI system architecture interview at Google (staff level, 50 minutes), from the live transcript and screenshot on the connected cloud drive. Use when the user sends \"imlas\"."
+}

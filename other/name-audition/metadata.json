@@ -1,0 +1,38 @@
+{
+  "name": "name-audition",
+  "repo": "glebis/claude-skills",
+  "path": "name-audition/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "name-audition",
+  "downloaded_at": "2026-11-04T05:15:09.137811Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/name-audition/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/name-audition/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run candidate product, brand, company, or benchmark names through an audition \u2014 authoritative domain-availability checks, collision research across SaaS/GitHub/packages/the target adjacent domain, a light trademark and ownability read, a ranked callback list, and an interactive casting report of finalists with optional draft branding. Use when the user is naming a product, app, company, feature, or benchmark; asks \"is this name taken\", \"check these domains\", \"help me pick a name\", \"is X available\", \"name my product\", \"brand name research\", \"audition names\"; or wants to compare and pressure-test a shortlist of candidate names before committing."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "watch-video",
+  "repo": "imMamdouhaboammar/marketing-skills",
+  "path": "skills/watch-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/imMamdouhaboammar/marketing-skills",
+  "dir_name": "watch-video-immamdouhaboammar-marketing-skills",
+  "downloaded_at": "2026-11-04T05:39:09.072817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "imMamdouhaboammar",
+  "source_url": "https://github.com/imMamdouhaboammar/marketing-skills/blob/main/skills/watch-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/imMamdouhaboammar/marketing-skills/blob/main/skills/watch-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When you want to extract content from a video \u2014 YouTube, Loom, Vimeo, Riverside, Zoom recording, local MP4, X/IG video, anything yt-dlp supports. Three depth modes user picks per invocation \u2014 transcript (just words, fast/free), visual (transcript + ffmpeg frame extraction + Claude vision pass on key moments), multimodal (Gemini native video ingestion if $GEMINI_API_KEY set, else dense Claude vision). Uses MLX-Whisper local on Mac for transcription, falls back to platform-provided transcripts when available (Loom, Riverside, YouTube auto-subs). Saves to ~/Documents/videos/<source>-<slug>-<date>/ and optionally captures summary to second-brain raw/ as call-/meeting-/note-. Triggers on \"/watch-video <url>,\" \"watch this video,\" \"transcribe this loom,\" \"analyze this video,\" \"summarize this recording,\" \"key moments from this,\" \"what happened in this video.\" This skill replaces and broadens the prior youtube-transcript skill."
+}

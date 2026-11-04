@@ -1,0 +1,39 @@
+{
+  "name": "fable-super-audit",
+  "repo": "madisonrickert/claude-skills",
+  "path": "fable-super-audit/skills/fable-super-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/madisonrickert/claude-skills",
+  "dir_name": "fable-super-audit",
+  "downloaded_at": "2026-11-04T06:37:10.924949Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software, compile",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "madisonrickert",
+  "source_url": "https://github.com/madisonrickert/claude-skills/blob/main/fable-super-audit/skills/fable-super-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/madisonrickert/claude-skills/blob/main/fable-super-audit/skills/fable-super-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Comprehensive, rubric-driven, whole-repository code audit that ends in a prioritized improvement plan with an executive health grade. Built to run in a premium, time-limited model session (Fable): it dispatches cheaper Opus/Sonnet subagents to explore the codebase and pre-build a project-tailored audit checklist, then spends the premium model's budget only on the deep audit reasoning, strategy, and task plan. Strictly analysis-only, it never modifies code. Ships two collated rubrics: a general language-agnostic audit (architecture, security, async/state, logic, quality, testing, performance, dependencies, docs) and an AI-generated-code anti-patterns lens (orphan state, swallowed async errors, phantom guards, feedback-loop security regression, context-decay duplication, dependency hallucination). Use whenever the user wants to audit, review, or assess a whole project/repo/codebase, asks \"what's wrong with this project\", wants a technical-debt or code-health assessment, an improvement roadmap, a \"what should I fix first\" plan, an architecture review, or an honest second opinion on a codebase they inherited or vibe-coded. Especially apt for AI-built projects. Trigger even when phrased casually (\"go through this repo and tell me what to fix\", \"is this codebase any good\", \"grade this project\", \"audit my vibe-coded app\"). This is a repo-wide strategic audit, not a diff or PR review. For reviewing a specific set of changes, use /code-review instead."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Sandbox Scaffolder",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/prfaq-prototype/skills/sandbox-scaffolder/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "sandbox-scaffolder",
+  "downloaded_at": "2026-11-04T06:44:57.833518Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ux, component",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/sandbox-scaffolder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/sandbox-scaffolder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Target-profile-driven scaffolding for a multi-scene, multi-option prototype into the active playground defined in ${CLAUDE_PLUGIN_ROOT}/config/prototype-targets.json. Reads the target's real conventions at runtime (folder layout, manifest shape, scene API), checks for collisions/reuse, and creates the orchestrator + scene files + manifest entry. Swappable \u2014 point at a newer playground by changing the target profile, not this skill."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "vision-bench",
+  "repo": "glebis/claude-skills",
+  "path": "vision-bench/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "vision-bench",
+  "downloaded_at": "2026-11-04T05:15:08.030584Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/vision-bench/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/vision-bench/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Score and compare images using vision LLMs as judges. YAML-defined criteria presets for 11 use cases (text-to-image, photorealism, document OCR, charts, UI, portrait, product, scientific, invoice, alt-text, artistic style). Supports OpenAI, Anthropic, Gemini, Mistral, and OpenRouter as judge providers. Keys auto-decrypted via SOPS + age."
+}

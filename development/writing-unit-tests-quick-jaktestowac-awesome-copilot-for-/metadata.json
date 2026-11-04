@@ -1,0 +1,38 @@
+{
+  "name": "writing-unit-tests-quick",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "plugins/writing-unit-tests/skills/writing-unit-tests-quick/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "writing-unit-tests-quick-jaktestowac-awesome-copilot-for-",
+  "downloaded_at": "2026-11-04T05:47:07.063434Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, refactor",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/writing-unit-tests/skills/writing-unit-tests-quick/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/writing-unit-tests/skills/writing-unit-tests-quick/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes a few solid unit tests, using a compact set of rules for structure, assertions, determinism, and edge cases. Use for routine everyday testing of a single function, class, or small module, or for a quick sanity check on tests someone just wrote. For legacy backfills, flaky-suite investigations, deep test-double design, or a full suite review, use the writing-unit-tests skill instead."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "benchmark-checklist",
+  "repo": "huaxel/dotfiles",
+  "path": "skills/benchmark-checklist/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/huaxel/dotfiles",
+  "dir_name": "benchmark-checklist-huaxel-dotfiles",
+  "downloaded_at": "2026-11-04T05:33:26.611989Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for performance: performance, latency, speed, benchmark",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "latency",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huaxel",
+  "source_url": "https://github.com/huaxel/dotfiles/blob/main/skills/benchmark-checklist/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huaxel/dotfiles/blob/main/skills/benchmark-checklist/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Vet a performance measurement or design a fair comparison before using a speedup, regression, throughput, or latency number to make a decision. Use explicitly for benchmark review or measurement validation, not ordinary correctness checks or every incidental timing observation."
+}

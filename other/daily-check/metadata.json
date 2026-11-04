@@ -1,0 +1,37 @@
+{
+  "name": "daily-check",
+  "repo": "logly/mureo",
+  "path": "skills/daily-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/logly/mureo",
+  "dir_name": "daily-check",
+  "downloaded_at": "2026-11-04T06:29:49.698526Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "logly",
+  "source_url": "https://github.com/logly/mureo/blob/main/skills/daily-check/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/logly/mureo/blob/main/skills/daily-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a daily health check on all configured ad accounts (Google Ads, Meta Ads, Amazon Ads, TikTok Ads, Search Console, GA4, and any configured plugin platform). Use when the user asks for a daily review, health check, status update, anomaly detection, or 'how are my campaigns doing today'. Reads STRATEGY.md and STATE.json, runs platform-specific health diagnostics, checks goal progress, evaluates pending action_log observations, and reports findings as Healthy / Watch / Action-needed. Also use when the user asks in Japanese (\u30c7\u30a4\u30ea\u30fc\u30c1\u30a7\u30c3\u30af / \u4eca\u65e5\u306e\u30a2\u30ab\u30a6\u30f3\u30c8\u72b6\u6cc1\u306f / \u7570\u5e38\u304c\u306a\u3044\u304b\u78ba\u8a8d\u3057\u3066 / \u65e5\u6b21\u30d8\u30eb\u30b9\u30c1\u30a7\u30c3\u30af)."
+}

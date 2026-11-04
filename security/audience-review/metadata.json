@@ -1,0 +1,38 @@
+{
+  "name": "audience-review",
+  "repo": "logly/mureo",
+  "path": "skills/audience-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/logly/mureo",
+  "dir_name": "audience-review",
+  "downloaded_at": "2026-11-04T06:29:51.153924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "logly",
+  "source_url": "https://github.com/logly/mureo/blob/main/skills/audience-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/logly/mureo/blob/main/skills/audience-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit who your ads actually target and where they run, compare it against the STRATEGY.md Persona, and surface exclusions, bid adjustments, lookalikes, and placement pruning tied to that Persona. Use when the user asks to review targeting, audiences, demographics, placements, or device performance, to check whether spend matches the Persona, to find wasted placements (e.g. Audience Network with no conversions), or requests \u30aa\u30fc\u30c7\u30a3\u30a8\u30f3\u30b9\u30ec\u30d3\u30e5\u30fc / \u914d\u7f6e\u30ec\u30d3\u30e5\u30fc / \u30bf\u30fc\u30b2\u30c6\u30a3\u30f3\u30b0\u898b\u76f4\u3057 / \u30da\u30eb\u30bd\u30ca\u3068\u914d\u4fe1\u306e\u30ba\u30ec\u3092\u78ba\u8a8d / \u9664\u5916\u8a2d\u5b9a\u3092\u63d0\u6848\u3057\u3066. Reads Persona + Target Audience from STRATEGY.md and drives the read-only targeting tools."
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Walkthrough Builder",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/prfaq-prototype/skills/walkthrough-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "walkthrough-builder",
+  "downloaded_at": "2026-11-04T06:44:58.163683Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component, figma",
+    "score": 5,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/walkthrough-builder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/walkthrough-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a stakeholder guided-tour over live sandbox prototypes \u2014 rail, plain-language copy, and per-step iframe deep-links. Use after a prototype exists when the user asks for a walkthrough, guided tour, click-through, or stakeholder explanation of a feature."
+}

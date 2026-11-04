@@ -1,0 +1,38 @@
+{
+  "name": "codex-collab",
+  "repo": "kohoj/skills",
+  "path": "codex-collab/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/kohoj/skills",
+  "dir_name": "codex-collab",
+  "downloaded_at": "2026-11-04T06:12:08.809551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kohoj",
+  "source_url": "https://github.com/kohoj/skills/blob/main/codex-collab/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kohoj/skills/blob/main/codex-collab/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Background dual-agent collaboration with Codex CLI. Sends tasks to Codex\nvia `codex exec` in the background, captures JSONL output, and integrates\nresults without blocking Claude Code. No tmux, no Terminal windows.\nUse when asked to \"codex collab\", \"dual agent\", \"pair with codex\", \"codex tmux\",\n\"collaborate with codex\", \"let codex help\", or \"spiral coding\"."
+}

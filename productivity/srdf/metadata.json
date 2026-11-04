@@ -1,0 +1,38 @@
+{
+  "name": "srdf",
+  "repo": "makemoney2023/SourceControl",
+  "path": "skills/community/text-to-cad/srdf/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/makemoney2023/SourceControl",
+  "dir_name": "srdf",
+  "downloaded_at": "2026-11-04T06:38:27.403828Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "makemoney2023",
+  "source_url": "https://github.com/makemoney2023/SourceControl/blob/main/skills/community/text-to-cad/srdf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/makemoney2023/SourceControl/blob/main/skills/community/text-to-cad/srdf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "MoveIt2 SRDF generation, validation, and planning-semantics workflow. Use when creating, editing, regenerating, inspecting, or validating `.srdf` files, `gen_srdf()` sources, MoveIt planning groups, virtual joints, passive joints, end effectors, group states, disabled collisions, URDF-linked planning semantics, or SRDF handoff for live review. Use the URDF skill for robot structure, the SDF skill for simulator descriptions, and the cad-viewer skill for rendering, live review links, and optional MoveIt2 controls."
+}

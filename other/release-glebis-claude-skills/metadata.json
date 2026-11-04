@@ -1,0 +1,37 @@
+{
+  "name": "release",
+  "repo": "glebis/claude-skills",
+  "path": "skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "release-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:11.343298Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cut a software release and maintain a tiered compatibility policy. Use when the user wants to release, ship a version, bump the version, tag a release, write a changelog, or update COMPATIBILITY. Config-driven via release.config.json; bumps version files, runs a readiness gate, updates COMPATIBILITY.md tiers and deprecations, tags (\u2192 release workflow), and reports closed issues. Teaches the underlying standards as it runs."
+}

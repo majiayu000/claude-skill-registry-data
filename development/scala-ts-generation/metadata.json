@@ -1,0 +1,38 @@
+{
+  "name": "scala-ts-generation",
+  "repo": "mblink/scala-ts",
+  "path": ".claude/skills/scala-ts-generation/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/mblink/scala-ts",
+  "dir_name": "scala-ts-generation",
+  "downloaded_at": "2026-11-04T06:46:45.631304Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblink",
+  "source_url": "https://github.com/mblink/scala-ts/blob/master/.claude/skills/scala-ts-generation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblink/scala-ts/blob/master/.claude/skills/scala-ts-generation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How scala-ts maps Scala types to TypeScript types and io-ts codecs \u2014 the parse/render pipeline, the full mapping table, naming, imports, and the footguns consumers hit. Use when changing generated output, adding support for a Scala type, or debugging why a consumer's generated file looks wrong."
+}

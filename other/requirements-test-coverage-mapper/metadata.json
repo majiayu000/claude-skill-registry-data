@@ -1,0 +1,38 @@
+{
+  "name": "requirements-test-coverage-mapper",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "skills/requirements-test-coverage-mapper/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "requirements-test-coverage-mapper",
+  "downloaded_at": "2026-11-04T05:47:06.326669Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/requirements-test-coverage-mapper/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/requirements-test-coverage-mapper/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maps requirements (PRD, user stories, acceptance criteria) to planned test coverage via a Requirements Traceability Matrix, exposing coverage gaps, risks, test levels, prioritization, and automation candidates. Use when designing coverage from a specification, checking coverage completeness for a PRD or user story, finding missing acceptance criteria, or building a risk-based regression strategy. When the tests already exist and the matrix has to be extracted from them, verified, and kept accurate, use the tracing-requirements-to-code skill instead."
+}

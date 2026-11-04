@@ -1,0 +1,38 @@
+{
+  "name": "keap",
+  "repo": "kbarbel640-del/skills",
+  "path": "skills/byungkyu/keap/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kbarbel640-del/skills",
+  "dir_name": "keap-kbarbel640-del-skills",
+  "downloaded_at": "2026-11-04T06:06:40.885397Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "marketing",
+      "content",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kbarbel640-del",
+  "source_url": "https://github.com/kbarbel640-del/skills/blob/main/skills/byungkyu/keap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kbarbel640-del/skills/blob/main/skills/byungkyu/keap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keap API integration with managed OAuth. Manage contacts, companies, tags, tasks, orders, opportunities, and campaigns for CRM and marketing automation.\nUse this skill when users want to create and manage contacts, apply tags, track opportunities, or automate marketing workflows in Keap.\nFor other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway).\nRequires network access and valid Maton API key."
+}

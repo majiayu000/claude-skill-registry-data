@@ -1,0 +1,40 @@
+{
+  "name": "mocking-network-and-time",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "plugins/mocking-network-and-time/skills/mocking-network-and-time/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "mocking-network-and-time-jaktestowac-awesome-copilot-for-",
+  "downloaded_at": "2026-11-04T05:47:00.438842Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, jest, integration, e2e, playwright",
+    "score": 5,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "integration",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/mocking-network-and-time/skills/mocking-network-and-time/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/mocking-network-and-time/skills/mocking-network-and-time/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Decides what to fake and stubs it correctly: network interception with Playwright route or HAR replay, MSW handlers, fake clocks, and fixed timezones. Use when a test depends on a third party, when a date-sensitive test breaks overnight, when a suite is slow because it calls real services, or when a mocked test stays green while production is broken."
+}

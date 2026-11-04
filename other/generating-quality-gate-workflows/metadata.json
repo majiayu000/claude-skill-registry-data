@@ -1,0 +1,38 @@
+{
+  "name": "generating-quality-gate-workflows",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "skills/generating-quality-gate-workflows/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "generating-quality-gate-workflows",
+  "downloaded_at": "2026-11-04T05:46:57.014925Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/generating-quality-gate-workflows/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/generating-quality-gate-workflows/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates the CI workflow that enforces a quality contract: layered jobs from fast local hooks to release gates, per-practice steps for JS/TS toolchains, diff-scoped checks, sticky PR reporting, required-check wiring, and a severity policy deciding what fails the build. Use when quality practices are agreed but not enforced, when CI runs everything on every commit, when a gate reports green while the check it runs cannot fail, or when a per-change gate needs to post findings on the pull request."
+}

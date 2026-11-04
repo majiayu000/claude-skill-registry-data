@@ -1,0 +1,38 @@
+{
+  "name": "model-prompt-audit",
+  "repo": "hanzhangzzz/agent-skills-zh",
+  "path": "model-prompt-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/hanzhangzzz/agent-skills-zh",
+  "dir_name": "model-prompt-audit",
+  "downloaded_at": "2026-11-04T05:23:21.870626Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hanzhangzzz",
+  "source_url": "https://github.com/hanzhangzzz/agent-skills-zh/blob/main/model-prompt-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hanzhangzzz/agent-skills-zh/blob/main/model-prompt-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit the global agent configuration (CLAUDE.md / AGENTS.md, rules, settings, behavioral plugins) against the current official prompting guide of the Claude model in use. Fetches the guides live at run time instead of relying on memory, derives how prompting paradigms shifted across model generations, flags anti-patterns, duplicates, stale rules and unused patterns, proposes changes, and applies them only after approval. Use when the user says /model-prompt-audit, \u63d0\u793a\u8bcd\u8303\u5f0f\u5ba1\u8ba1, \u6211\u7684 CLAUDE.md \u8fc7\u65f6\u4e86\u5417, \u65b0\u6a21\u578b\u8be5\u600e\u4e48\u6539 prompt, \u5ba1\u8ba1\u5168\u5c40\u914d\u7f6e, audit my prompts for the new model, prompt drift."
+}

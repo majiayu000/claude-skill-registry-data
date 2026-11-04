@@ -1,0 +1,40 @@
+{
+  "name": "ai-loop",
+  "repo": "hitayush/artswapy",
+  "path": ".claude/skills/ai-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/hitayush/artswapy",
+  "dir_name": "ai-loop-hitayush-artswapy",
+  "downloaded_at": "2026-11-04T05:30:30.751665Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, programming, build, refactor",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "hitayush",
+  "source_url": "https://github.com/hitayush/artswapy/blob/main/.claude/skills/ai-loop/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hitayush/artswapy/blob/main/.claude/skills/ai-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs a bounded spec-build-review development loop with explicit scope, stop conditions, and human approval gates for risky or ambiguous work."
+}

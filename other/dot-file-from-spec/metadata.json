@@ -1,0 +1,38 @@
+{
+  "name": "dotfile-from-spec",
+  "repo": "harperreed/dotfiles",
+  "path": ".claude/skills-archive/dot-file-from-spec/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/harperreed/dotfiles",
+  "dir_name": "dot-file-from-spec",
+  "downloaded_at": "2026-11-04T05:24:53.921658Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harperreed",
+  "source_url": "https://github.com/harperreed/dotfiles/blob/master/.claude/skills-archive/dot-file-from-spec/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harperreed/dotfiles/blob/master/.claude/skills-archive/dot-file-from-spec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you have a spec, design doc, structured plan, or prompt_plan and need to generate a pipeline Graphviz DOT file for headless autonomous building. The agent reads the spec, extracts build pipeline phases, determines tech stack, asks about human gates and model preferences, generates a validated DOT digraph with rich self-contained prompts, and saves it to the project root. Handles any language or framework."
+}

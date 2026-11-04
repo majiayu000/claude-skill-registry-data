@@ -1,0 +1,37 @@
+{
+  "name": "weekly-digest",
+  "repo": "glebis/claude-skills",
+  "path": "weekly-digest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "weekly-digest-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:08.946124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/weekly-digest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/weekly-digest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Research, score, and publish a weekly industry digest on any topic. Casts a wide net via web search (20+ candidates), verifies sources for AI-generated slop, scores each item on five parameters (Novelty, Relevance, Slopiness, Technical depth, Feasibility), selects the top items, and generates both markdown files and a Tufte-style HTML report. Use this skill whenever the user says \"/weekly-digest\", \"run the weekly digest\", \"industry digest\", \"what's new in [topic]\", \"weekly roundup\", \"news digest on [topic]\", \"research what happened this week in [topic]\", or any request to create a curated, scored summary of recent developments in a field. Also use when the user wants to monitor a topic area with quality filtering \u2014 the slopiness scoring is the key differentiator from a simple news search."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "instagram-content-studio",
+  "repo": "kortix-ai/suna",
+  "path": "packages/starter/templates/marketplace/skills/instagram-content-studio/SKILL.md",
+  "github_branch": "dev",
+  "category": "other",
+  "source": "github.com/kortix-ai/suna",
+  "dir_name": "instagram-content-studio",
+  "downloaded_at": "2026-11-04T06:13:30.871589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/suna/blob/dev/packages/starter/templates/marketplace/skills/instagram-content-studio/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/suna/blob/dev/packages/starter/templates/marketplace/skills/instagram-content-studio/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a whole Instagram account on Kortix: Reels (voiced vertical video), Stories (9:16 image or video) and feed posts (4:5 single image or carousel), made with an image model (gpt-image-2 / Nano Banana) and a text-to-speech voice (ElevenLabs, or Sarvam Bulbul for Indian languages), checked by a QA gate, and published through the Instagram connector on a schedule, with duplicate protection and a content calendar. Use when a user wants an AI content studio for Instagram, daily stories and posts, a mix of Reels and image posts, or to automate a brand or creator account end to end."
+}

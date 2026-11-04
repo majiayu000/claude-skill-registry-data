@@ -1,0 +1,38 @@
+{
+  "name": "governing-quality-waivers",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "skills/governing-quality-waivers/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "governing-quality-waivers",
+  "downloaded_at": "2026-11-04T05:46:53.672672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/governing-quality-waivers/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/governing-quality-waivers/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns \"we will skip this check for now\" into a dated, attributed, expiring waiver with a stated reason and owner, inventories the silent skips already hiding in a repo - skipped tests, disabled lint rules, ts-expect-error, continue-on-error, lowered thresholds, coverage ignores - and reports expired waivers as findings. Use when a team wants to bypass a quality gate, when skip lists and quarantined tests accumulate without owners, when an audit asks why a check is off, or when a repo needs to know what it has quietly stopped enforcing."
+}

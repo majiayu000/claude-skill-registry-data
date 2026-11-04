@@ -1,0 +1,37 @@
+{
+  "name": "session-anonymizer",
+  "repo": "glebis/claude-skills",
+  "path": "session-anonymizer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "session-anonymizer",
+  "downloaded_at": "2026-11-04T05:15:16.786277Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/session-anonymizer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/session-anonymizer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Three-layer PII anonymization for session transcripts (therapy, coaching, consulting, mentoring). Runs Natasha (Russian NER), OpenAI Privacy Filter, and local LLM (Ollama) in sequence for maximum coverage. Fully local by default. This skill should be used when anonymizing session transcripts, notes, or any text containing client PII before AI analysis. Triggers on \"anonymize\", \"redact PII\", \"anonymize session\", \"protect client data\", \"strip personal data\", \"anonymize transcript\"."
+}

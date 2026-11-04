@@ -1,0 +1,37 @@
+{
+  "name": "ponder",
+  "repo": "github/awesome-copilot",
+  "path": "skills/ponder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/github/awesome-copilot",
+  "dir_name": "ponder",
+  "downloaded_at": "2026-11-04T05:13:58.735709Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "github",
+  "source_url": "https://github.com/github/awesome-copilot/blob/main/skills/ponder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/github/awesome-copilot/blob/main/skills/ponder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Convergent deliberation loop - repeated grading passes over one subject until the answer stops changing, with coverage enforced so no unit is silently skipped. Use when the user says \"ponder <anything>\" (\"ponder the UI\", \"ponder our error handling\"), \"think this over properly\", \"keep thinking until it converges\", \"keep looping until it converges\", \"loop on this until it stops changing\", \"go through all the screens and grade them\", \"audit/rate/grade every X\", or asks for any broad sweep-and-grade across many units where a single pass would miss things. Also use to resume or recover a ponder already in flight - \"where were we\", \"carry on pondering\", a lost thread mid-loop, or a .ponder/ directory in the project - where the move is to run ponder status rather than start over."
+}

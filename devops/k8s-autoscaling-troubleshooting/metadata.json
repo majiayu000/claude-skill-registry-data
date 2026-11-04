@@ -1,0 +1,37 @@
+{
+  "name": "k8s-autoscaling-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-autoscaling-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-autoscaling-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:40.471236Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-autoscaling-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-autoscaling-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when Kubernetes autoscaling does not scale as expected: a HorizontalPodAutoscaler whose TARGETS show \"<unknown>\", \"missing request for cpu\", \"unable to get metrics for resource cpu\" or \"FailedGetResourceMetric\", an HPA stuck at maxReplicas (\"TooManyReplicas\") or not scaling down, \"Metrics API not available\" from kubectl top, metrics-server not Ready, a KEDA ScaledObject that is not Ready (\"ScaledObjectCheckFailed\") or creates no HPA, KEDA scalers failing, two autoscalers on one workload, or a VerticalPodAutoscaler without recommendations. Investigates with kubectl get, describe, events, logs and top, and proposes fixes. Reads first and asks before changing anything."
+}

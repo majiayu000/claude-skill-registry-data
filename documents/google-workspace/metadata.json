@@ -1,0 +1,40 @@
+{
+  "name": "google-workspace",
+  "repo": "huaxel/dotfiles",
+  "path": "skills/synced/c52af476-7246-4b53-919e-ec158c2e1ad9_737f3636-ca9d-402c-b405-9a1c3436b285/google-workspace/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/huaxel/dotfiles",
+  "dir_name": "google-workspace",
+  "downloaded_at": "2026-11-04T05:33:30.419521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, word, excel",
+    "score": 5,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "word",
+      "excel"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huaxel",
+  "source_url": "https://github.com/huaxel/dotfiles/blob/main/skills/synced/c52af476-7246-4b53-919e-ec158c2e1ad9_737f3636-ca9d-402c-b405-9a1c3436b285/google-workspace/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huaxel/dotfiles/blob/main/skills/synced/c52af476-7246-4b53-919e-ec158c2e1ad9_737f3636-ca9d-402c-b405-9a1c3436b285/google-workspace/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read this before the first Google Drive, Docs, Sheets or Slides connector call whenever the task creates or changes a Google file. Use this skill whenever the user wants to create or change a Google Doc, Sheet or Slides file in their Google Drive. Triggers include: a request that names Google Docs, Sheets, Slides or Drive and asks to make, edit, format, copy or rename a file; a docs.google.com link with a request to change that file, even a one-line fix or suggested edits; and any follow-up change to a Google file from earlier in the chat, even \"change it\" or \"add a tab\". Includes helper scripts for document positions, cell ranges and slide layout. However, if the user asks for a doc, deck or spreadsheet without naming Google, or gives a Google file only as source material for something new, use Claude's own output type instead. Do NOT use for read-only questions about a Google file, or for Word, Excel, PowerPoint or PDF files."
+}

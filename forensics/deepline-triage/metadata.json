@@ -1,0 +1,38 @@
+{
+  "name": "deepline-triage",
+  "repo": "getaero-io/gtm-eng-skills",
+  "path": "skills/deepline-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/getaero-io/gtm-eng-skills",
+  "dir_name": "deepline-triage",
+  "downloaded_at": "2026-11-04T05:12:56.816655Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getaero-io",
+  "source_url": "https://github.com/getaero-io/gtm-eng-skills/blob/main/skills/deepline-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getaero-io/gtm-eng-skills/blob/main/skills/deepline-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose failing, stuck, partial, or incorrect Deepline Plays, including when no Play is named. Use deepline-gtm for the primitives, reproduce safely, propose an evidence-backed fix, and apply it after approval. For customer troubleshooting; skip platform incident response."
+}

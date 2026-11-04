@@ -1,0 +1,38 @@
+{
+  "name": "tracing-requirements-to-code",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "plugins/tracing-requirements-to-code/skills/tracing-requirements-to-code/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "tracing-requirements-to-code-jaktestowac-awesome-copilot-for-",
+  "downloaded_at": "2026-11-04T05:47:02.073396Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/tracing-requirements-to-code/skills/tracing-requirements-to-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/plugins/tracing-requirements-to-code/skills/tracing-requirements-to-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds and maintains bidirectional traceability between requirements and the tests that verify them: extracts a matrix from an existing codebase, annotates tests with requirement IDs, finds orphan tests and uncovered requirements, verifies that each link is real, and enforces linkage in CI. Use when a suite exists but nobody can say what it proves, when an auditor or stakeholder asks which tests cover a requirement, when a traceability matrix has gone stale, or when a requirement changes and its blast radius must be found."
+}

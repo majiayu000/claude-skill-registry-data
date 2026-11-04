@@ -1,0 +1,37 @@
+{
+  "name": "repo-publish",
+  "repo": "glebis/claude-skills",
+  "path": "repo-publish/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "repo-publish-glebis-claude-skills",
+  "downloaded_at": "2026-11-04T05:15:07.285851Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/repo-publish/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/repo-publish/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Publish a local repository to a remote with quality gates, version tagging, and rollout steps. Use this skill when the user asks to publish, release, or push a project end-to-end. Triggers on \"publish repo\", \"release project\", \"ship it\", \"push to remote\"."
+}

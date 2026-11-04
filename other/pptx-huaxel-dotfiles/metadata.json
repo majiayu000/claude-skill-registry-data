@@ -1,0 +1,38 @@
+{
+  "name": "pptx",
+  "repo": "huaxel/dotfiles",
+  "path": "skills/synced/c52af476-7246-4b53-919e-ec158c2e1ad9_737f3636-ca9d-402c-b405-9a1c3436b285/pptx/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/huaxel/dotfiles",
+  "dir_name": "pptx-huaxel-dotfiles",
+  "downloaded_at": "2026-11-04T05:33:28.327246Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huaxel",
+  "source_url": "https://github.com/huaxel/dotfiles/blob/main/skills/synced/c52af476-7246-4b53-919e-ec158c2e1ad9_737f3636-ca9d-402c-b405-9a1c3436b285/pptx/SKILL.md",
+  "license": "Proprietary. LICENSE.txt has complete terms",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huaxel/dotfiles/blob/main/skills/synced/c52af476-7246-4b53-919e-ec158c2e1ad9_737f3636-ca9d-402c-b405-9a1c3436b285/pptx/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill any time a .pptx or .potx file is involved in any way \u2014 as input, output, or both. This includes: creating slide decks, pitch decks, or presentations as PowerPoint (.pptx) files; reading, parsing, or extracting text from any .pptx or .potx file (even if the extracted content will be used elsewhere, like in an email, summary, or creating a different type of slide deck); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates (.potx), layouts, speaker notes, or comments. Trigger whenever the user asks for a PowerPoint or .pptx file, or references a .pptx or .potx filename, regardless of what they plan to do with the content afterward. However, when the user asks for a deck, slides, a slide deck, or a presentation without naming a file format, default to using a dedicated slide-deck artifact type or a separate slides skill if this session offers one; otherwise, use this skill."
+}

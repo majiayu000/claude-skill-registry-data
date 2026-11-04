@@ -1,0 +1,37 @@
+{
+  "name": "mattermost-test-data",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/mattermost-test-data/skills/mattermost-test-data/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "mattermost-test-data",
+  "downloaded_at": "2026-11-04T06:45:04.579924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: communication, email",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "communication",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/mattermost-test-data/skills/mattermost-test-data/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/mattermost-test-data/skills/mattermost-test-data/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Backfill realistic test data into a Mattermost server using the Mattermost MCP tools. Creates users, teams, channels, and natural conversations. Use when the user asks to populate a Mattermost instance, create test data, set up a demo environment, seed conversations, or backfill a Mattermost server. Also provides guidance on reading, searching, and interacting with Mattermost via MCP tools."
+}

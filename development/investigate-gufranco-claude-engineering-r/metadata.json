@@ -1,0 +1,39 @@
+{
+  "name": "investigate",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/investigate/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "investigate-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:44.114266Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/investigate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/investigate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Systematic debugging with hypothesis testing, bounded retries, and optional edit freeze. Use when user says \"debug this\", \"investigate\", \"why is this failing\", \"find the bug\", \"trace this error\", \"root cause\", or needs structured debugging beyond reading an error message. For incident postmortems, use /incident; for code review, use /review; for running tests, use /test."
+}

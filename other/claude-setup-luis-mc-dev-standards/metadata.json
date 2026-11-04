@@ -1,0 +1,37 @@
+{
+  "name": "claude-setup",
+  "repo": "luis-mc/dev-standards",
+  "path": "claude/plugins/project-setup/skills/claude-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/luis-mc/dev-standards",
+  "dir_name": "claude-setup-luis-mc-dev-standards",
+  "downloaded_at": "2026-11-04T06:34:23.992324Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "luis-mc",
+  "source_url": "https://github.com/luis-mc/dev-standards/blob/main/claude/plugins/project-setup/skills/claude-setup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/luis-mc/dev-standards/blob/main/claude/plugins/project-setup/skills/claude-setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Apply Claude Code configuration \u2014 statusline, settings.json (auto-compact window, output style, Opus-plans/Sonnet-codes model split with a medium-or-high effort level per model), output styles, rules, and CLAUDE.md \u2014 to this project and/or the user-level ~/.claude/, turns on and configures all 8 plugins of the luismc marketplace in the project settings (installing missing ones after the owner confirms), turns on luismc-transcript-folds in the project like the other seven and binds its two chords in ~/.claude/keybindings.json, defaults every config file to the project's .claude/, then offers to start enforcing the docs, design system, delivery, project record, CI checks and other dev-standards setups (`claude-setup status` only reports). Use when the user asks to set up Claude, configure the statusline, fix their Claude settings, add a CLAUDE.md, or apply their Claude config to a repo or a new machine, or invokes /luismc-project-setup:claude-setup. Not for repo or product tooling (hooks, gitleaks, CI, playwright) \u2014 that is /luismc-project-setup:tech-stack-setup."
+}

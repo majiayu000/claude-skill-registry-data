@@ -1,0 +1,37 @@
+{
+  "name": "i18n-keys",
+  "repo": "ivanerricis/easytask-tauri",
+  "path": ".claude/skills/i18n-keys/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ivanerricis/easytask-tauri",
+  "dir_name": "i18n-keys",
+  "downloaded_at": "2026-11-04T05:45:27.740576Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: language=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "translation",
+      "i18n"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ivanerricis",
+  "source_url": "https://github.com/ivanerricis/easytask-tauri/blob/master/.claude/skills/i18n-keys/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ivanerricis/easytask-tauri/blob/master/.claude/skills/i18n-keys/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add, rename, merge or remove translation keys in EasyTask (src/i18n/locales en + it) without breaking the e2e specs, the docs screenshots or the unused-keys test. Use when touching any file in src/i18n/locales, when a UI text changes, or when a spec fails with an element that \"wasn't found\" by its text."
+}

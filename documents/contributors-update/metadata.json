@@ -1,0 +1,38 @@
+{
+  "name": "contributors-update",
+  "repo": "homeassistant-ai/ha-mcp",
+  "path": ".claude/skills/contributors-update/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/homeassistant-ai/ha-mcp",
+  "dir_name": "contributors-update",
+  "downloaded_at": "2026-11-04T05:31:05.741949Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "homeassistant-ai",
+  "source_url": "https://github.com/homeassistant-ai/ha-mcp/blob/master/.claude/skills/contributors-update/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/homeassistant-ai/ha-mcp/blob/master/.claude/skills/contributors-update/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find merged PR authors missing from README and update the contributors list after approval"
+}

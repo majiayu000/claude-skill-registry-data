@@ -1,0 +1,38 @@
+{
+  "name": "testing-llm-features",
+  "repo": "jaktestowac/awesome-copilot-for-testers",
+  "path": "skills/testing-llm-features/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/jaktestowac/awesome-copilot-for-testers",
+  "dir_name": "testing-llm-features",
+  "downloaded_at": "2026-11-04T05:46:51.816625Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaktestowac",
+  "source_url": "https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/testing-llm-features/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaktestowac/awesome-copilot-for-testers/blob/main/skills/testing-llm-features/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds an offline eval suite for LLM-powered features: golden reference cases per prompt template, deterministic scoring where possible, a regression gate on prompt, model and retrieval changes, and CI wiring with promptfoo, Vitest or deepeval. Use when a product ships prompts, agents or RAG, when a model or prompt upgrade needs a regression check, when LLM output is currently verified by someone eyeballing it, or when asked how to test a feature whose output is non-deterministic."
+}

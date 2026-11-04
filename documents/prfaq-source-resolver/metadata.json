@@ -1,0 +1,41 @@
+{
+  "name": "PRFAQ Source Resolver",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/prfaq-prototype/skills/prfaq-source-resolver/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "prfaq-source-resolver",
+  "downloaded_at": "2026-11-04T06:45:00.891062Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, docx, markdown",
+    "score": 5,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/prfaq-source-resolver/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/prfaq-source-resolver/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Step 0 of /prfaq-prototype. Turns whatever the user shared \u2014 a local file, a GitHub link, a Google Doc, a Confluence page, a Mattermost thread, or any other doc link \u2014 into a local markdown source under PRFAQs/ that the prfaq-parser can read. Routes each link to a matching connected tool, prompts the user to connect one when none is available, records provenance, and reuses a previously pulled copy instead of re-fetching. Read-only against every source system."
+}

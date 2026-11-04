@@ -1,0 +1,37 @@
+{
+  "name": "twitter-scraper",
+  "repo": "kohoj/skills",
+  "path": "twitter-scraper/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kohoj/skills",
+  "dir_name": "twitter-scraper",
+  "downloaded_at": "2026-11-04T06:12:09.442659Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kohoj",
+  "source_url": "https://github.com/kohoj/skills/blob/main/twitter-scraper/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kohoj/skills/blob/main/twitter-scraper/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "X/Twitter CDP Tweet Scraper \u2014 Scrapes a user's complete tweet history via browser CDP protocol. Use when the user needs to fully and accurately collect all tweets from a specific Twitter/X user. Applicable scenarios: collecting all tweets from a user for a given year, exporting a Twitter timeline, bulk-fetching tweet data for analysis. Preferred over x-tweet-fetcher (Nitter-based) when full long-form tweets, precise timestamps, or higher completeness is required. Supports Arc, Chrome, Edge, Brave, and all Chromium-based browsers. Requires the user to be logged into Twitter in the browser."
+}

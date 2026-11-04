@@ -1,0 +1,37 @@
+{
+  "name": "auto-updater",
+  "repo": "mahsumaktas/agent-evolution-kit",
+  "path": "skills/auto-updater/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/mahsumaktas/agent-evolution-kit",
+  "dir_name": "auto-updater-mahsumaktas-agent-evolution-kit",
+  "downloaded_at": "2026-11-04T06:37:44.700262Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mahsumaktas",
+  "source_url": "https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/auto-updater/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mahsumaktas/agent-evolution-kit/blob/main/skills/auto-updater/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Automatically update Clawdbot and all installed skills once daily. Runs via cron, checks for updates, applies them, and messages the user with a summary of what changed."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "whitepaper-audit",
+  "repo": "glebis/claude-skills",
+  "path": "whitepaper-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "whitepaper-audit",
+  "downloaded_at": "2026-11-04T05:15:13.086161Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, tdd, pytest",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "tdd",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/whitepaper-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/whitepaper-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit a white paper or long-form technical document against a research-grounded best-practices checklist. Two lanes \u2014 deterministic script checks (readability, undefined acronyms, structure blocks, broken links) plus an LLM-judge review (overclaims, inconsistent numbers, buried lede, limitations honesty, audience fit). Produces a prioritized P0\u2013P2 findings report by default; applies fixes on explicit request (TDD for any code changes). Use when the user says \"audit this white paper\", \"review my paper against best practices\", \"check this doc for overclaims\", \"whitepaper QA\", \"is this paper ready to publish\", or wants prioritized recommendations on a technical document."
+}

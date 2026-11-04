@@ -1,0 +1,37 @@
+{
+  "name": "finalize-prs",
+  "repo": "kotahashihama/dotfiles",
+  "path": "home/.claude/skills/finalize-prs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kotahashihama/dotfiles",
+  "dir_name": "finalize-prs",
+  "downloaded_at": "2026-11-04T06:14:00.110926Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kotahashihama",
+  "source_url": "https://github.com/kotahashihama/dotfiles/blob/main/home/.claude/skills/finalize-prs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kotahashihama/dotfiles/blob/main/home/.claude/skills/finalize-prs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u81ea\u5206\u306e PR \u3092\u4ed5\u4e0a\u3052\u308b\u3002PR \u30921\u3064\u6307\u5b9a\u3059\u308c\u3070\u305d\u306e1\u672c\u3092\u3001\u6307\u5b9a\u3057\u306a\u3051\u308c\u3070\u62c5\u5f53\u3057\u3066\u3044\u308b open \u306a PR \u3092\u6a2a\u65ad\u3067\u8d70\u67fb\u3057\u3001\u4ed5\u4e0a\u304c\u3063\u3066\u3044\u306a\u3044\u3082\u306e\u30921\u672c\u305a\u3064\u4ed5\u4e0a\u3052\u308b\u30021\u672c\u306e\u4ed5\u4e0a\u3052\u3067\u306f\u3001\u30d9\u30fc\u30b9\u3068\u306e\u7d71\u5408\u3092\u78ba\u304b\u3081\u3001\u70b9\u691c (/triage-why-comments + /review-tests\u3001\u30ea\u30dd\u30b8\u30c8\u30ea\u306b\u3042\u308c\u3070 /review-conventions) \u3092\u8d70\u3089\u305b\u3001\u5fc5\u8981\u306a\u3089\u4fee\u6b63\u3057\u3066 /commit-push \u3057\u3001\u5fc5\u8981\u306a\u3089 /update-pr-description \u307e\u3067\u4e00\u62ec\u3067\u884c\u3046\u3002\u30e6\u30fc\u30b6\u30fc\u304c\u300cPR \u3092\u4ed5\u4e0a\u3052\u3066\u300d\u300cPR \u51fa\u3059\u76f4\u524d\u306e\u70b9\u691c\u3092\u300d\u300c\u5168\u90e8\u306e PR \u3092\u4ed5\u4e0a\u3052\u3066\u300d\u300c\u62c5\u5f53 PR \u3092\u4e00\u901a\u308a\u70b9\u691c\u3057\u3066\u300d\u300c/finalize-prs\u300d\u7b49\u3092\u6307\u793a\u3057\u305f\u3068\u304d\u3001\u307e\u305f\u306f\u307b\u304b\u306e\u30b9\u30ad\u30eb\u304c PR \u3092\u6307\u5b9a\u3057\u3066\u547c\u3076\u3068\u304d\u306b\u4f7f\u3046\u3002"
+}

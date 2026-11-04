@@ -1,0 +1,39 @@
+{
+  "name": "Clarification Protocol",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/ux-spec-process/skills/clarification-protocol/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "clarification-protocol",
+  "downloaded_at": "2026-11-04T06:45:01.989514Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/clarification-protocol/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/ux-spec-process/skills/clarification-protocol/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reusable contract for surfacing multiple-choice clarifying questions (with a recommended option) at phase intake and whenever in-phase ambiguity exceeds threshold. Defines question shape, threshold scoring, capture format, and bypass. Phase-specific question banks live in the calling agent. Surface-and-pause is mandatory; the agent never self-resolves Recommended options."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "travel-search-bladebro",
+  "repo": "kirksw/nix-config",
+  "path": "agents/defs/skills/travel-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kirksw/nix-config",
+  "dir_name": "travel-search",
+  "downloaded_at": "2026-11-04T06:11:06.735589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirksw",
+  "source_url": "https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/travel-search/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/travel-search/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find practical ways and travel times between locations using Google Maps, Google Flights and transport-operator websites through Bladebro. Use for how to get from A to B, journey duration, train/bus/transit/driving/walking options, airport transfers, or comparing transport modes."
+}

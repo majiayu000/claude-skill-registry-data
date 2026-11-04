@@ -1,0 +1,39 @@
+{
+  "name": "microvm-agent",
+  "repo": "kirksw/nix-config",
+  "path": "agents/defs/skills/microvm-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/kirksw/nix-config",
+  "dir_name": "microvm-agent",
+  "downloaded_at": "2026-11-04T06:11:06.384599Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning, memory",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirksw",
+  "source_url": "https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/microvm-agent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/microvm-agent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Manage agent microvms on a NixOS hypervisor host. Use when creating, listing, starting, stopping, or removing microvms that run isolated agent environments, or when planning resource allocation for agent workloads."
+}

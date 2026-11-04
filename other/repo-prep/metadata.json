@@ -1,0 +1,37 @@
+{
+  "name": "repo-prep",
+  "repo": "glebis/claude-skills",
+  "path": "repo-prep/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "repo-prep",
+  "downloaded_at": "2026-11-04T05:15:03.712229Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/repo-prep/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/repo-prep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Interactively prepare a code repository for publication \u2014 LICENSE, NOTICE, AUTHORSHIP, README sections, package metadata, .gitignore, community docs (CONTRIBUTING/CODE_OF_CONDUCT/SECURITY/CHANGELOG), .github templates (issues/PR/CI/dependabot), a promo \"more from the author\" block, and conditional EU/Germany legal compliance (CRA, AI Act, GDPR, Impressum, product liability). Includes a dedicated authorship wizard that documents human decisions, judgment, direction, and art direction with jurisdiction-aware legal framing. Use when setting up a new repo for release, adding missing legal/meta/community files, writing an AUTHORSHIP record for AI-assisted work, or asking \"prepare this repo for GitHub / open-sourcing\"."
+}

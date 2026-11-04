@@ -1,0 +1,37 @@
+{
+  "name": "faa-hf-std",
+  "repo": "jgsystemsconsulting/jgs-se-knowledge-packs",
+  "path": "packs/faa-hf-std/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jgsystemsconsulting/jgs-se-knowledge-packs",
+  "dir_name": "faa-hf-std",
+  "downloaded_at": "2026-11-04T05:52:26.615309Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgsystemsconsulting",
+  "source_url": "https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-hf-std/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs/blob/main/packs/faa-hf-std/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Knowledge base from the FAA Human Factors Design Standard (HF-STD-001B, 2016) \u2014 the FAA's consolidated human-factors / human-systems-integration design criteria for systems it manages, operates, or maintains. Use for requirement-level design rules on: general human-factors design principles; automation and function allocation; designing equipment for maintenance; displays, controls, and visual indicators; alarms, audio, and voice communications; the computer-human interface (information presentation, coding, interaction styles, windows, dialogue); keyboards, input devices, and workstation/workplace ergonomics; system security, personnel safety, environment, anthropometry, and user documentation; plus intended-use and tailoring guidance. It is a quantified, source-attributed synthesis (heavily citing MIL-STD-1472G, MIL-HDBK-759C, DOD-HFDG-ATCCS, NUREG-0700, NASA-STD-3000, ANSI, OSHA, ISO 9241). Complements nasa-hsi as a parallel HSI tradition from the civil-aviation domain. Scope limits: it is design criteria, NOT an HSI lifecycle/process model (use nasa-hsi, nasa-npr-7123, or dau-se-guidebook for process); it does NOT reproduce the third-party standards it cites; it is FAA-acquisition-oriented (ATC, towers, TRACONs, airway facilities), not a general consumer-UX guide; and it is thin on modern touchscreen/mobile, web, and AI-driven interface patterns and on quantitative human-reliability analysis."
+}

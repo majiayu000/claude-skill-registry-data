@@ -1,0 +1,37 @@
+{
+  "name": "zoom-out",
+  "repo": "gufranco/claude-engineering-rules",
+  "path": "skills/zoom-out/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gufranco/claude-engineering-rules",
+  "dir_name": "zoom-out-gufranco-claude-engineering-r",
+  "downloaded_at": "2026-11-04T05:19:48.365602Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gufranco",
+  "source_url": "https://github.com/gufranco/claude-engineering-rules/blob/main/skills/zoom-out/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gufranco/claude-engineering-rules/blob/main/skills/zoom-out/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Step back from a narrow code section and place it in its system context. Reads the file, traces callers and callees, identifies the module boundary, names the architectural role, and surfaces hidden coupling. Use when user says \"zoom out\", \"what is this\", \"where does this fit\", \"give me context on this code\", \"what calls this\", or feels lost in unfamiliar code. For line-by-line code review, use /review; for debugging, use /investigate; for onboarding to a whole repo, use /onboard."
+}

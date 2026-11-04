@@ -1,0 +1,40 @@
+{
+  "name": "wgm",
+  "repo": "hitayush/artswapy",
+  "path": ".claude/skills/wgm/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/hitayush/artswapy",
+  "dir_name": "wgm-hitayush-artswapy",
+  "downloaded_at": "2026-11-04T05:30:11.003556Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, software, debug",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "hitayush",
+  "source_url": "https://github.com/hitayush/artswapy/blob/main/.claude/skills/wgm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hitayush/artswapy/blob/main/.claude/skills/wgm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a rough request into working software via a governed build loop: align first, plan, then iterate one task at a time with deterministic backpressure and holdout-scenario judging."
+}

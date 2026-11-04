@@ -1,0 +1,38 @@
+{
+  "name": "agent-roundtable",
+  "repo": "glebis/claude-skills",
+  "path": "agent-roundtable/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "agent-roundtable",
+  "downloaded_at": "2026-11-04T05:15:13.255603Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/agent-roundtable/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/agent-roundtable/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a multi-agent audit of a feature, PR/diff, or task spec in which Codex, Command Code (cmd), Gemini, OpenCode and Claude debate over ACP for a configurable number of rounds and converge on a final spec, a prioritized task list and improvements. Claude moderates and synthesizes; every other agent gets a final veto. Use when the user says \"roundtable\", \"agent roundtable\", \"audit this with codex\", \"have the agents discuss/debate this\", \"get a second (third) opinion from other agents\", \"multi-agent review\", \"council\", or wants several coding agents to agree on a spec."
+}

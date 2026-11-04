@@ -1,0 +1,37 @@
+{
+  "name": "lanekeeper",
+  "repo": "hsetially/lanekeeper",
+  "path": "skills/lanekeeper/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/hsetially/lanekeeper",
+  "dir_name": "lanekeeper",
+  "downloaded_at": "2026-11-04T05:32:13.123070Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hsetially",
+  "source_url": "https://github.com/hsetially/lanekeeper/blob/main/skills/lanekeeper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hsetially/lanekeeper/blob/main/skills/lanekeeper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Answer questions about, and safely change, the microservice config files behind every swimlane (sit, sitb, presita\u2026) through the Lanekeeper MCP tools. Covers which swimlane has which value, what a service actually receives from the config-server, drift between Git and NFS, inconsistencies, feature flags, what the config docs say, and edits, PRs, notifying and restarting services, all with human confirmation. Use this skill whenever the user mentions a swimlane, a tenant (sit1\u2026sitN), a config file such as tx-infinity-core.yml, a setting key, NFS, drift, the config-server, feature flags or the configuration docs, even if they don't say \"Lanekeeper\". Never answer these questions from memory or by reading local files."
+}

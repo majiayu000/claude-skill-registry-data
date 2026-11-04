@@ -1,0 +1,41 @@
+{
+  "name": "stop-slop-ko",
+  "repo": "leeandev/stop-slop-ko",
+  "path": "plugins/stop-slop-ko/skills/stop-slop-ko/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/leeandev/stop-slop-ko",
+  "dir_name": "stop-slop-ko",
+  "downloaded_at": "2026-11-04T06:21:42.162972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, excel, pptx, xlsx, docx",
+    "score": 6,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "excel",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leeandev",
+  "source_url": "https://github.com/leeandev/stop-slop-ko/blob/main/plugins/stop-slop-ko/skills/stop-slop-ko/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leeandev/stop-slop-ko/blob/main/plugins/stop-slop-ko/skills/stop-slop-ko/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing, generating, or editing Korean documents meant for people (\ud68c\uc758\ub85d, \ubcf4\uace0\uc11c, \uc81c\uc548\uc11c, \uc124\uacc4\uc11c, \uba54\uc77c, \uc548\ub0b4\ubb38, pptx/xlsx/docx \uc0b0\ucd9c\ubb3c) or Korean prose (\ub9ac\ud3ec\ud2b8, \ub808\ud3ec\ud2b8, \uacfc\uc81c, \uc5d0\uc138\uc774, \uce7c\ub7fc, \uae30\uace0\ubb38, \ube14\ub85c\uadf8 \uae00, \uc790\uc18c\uc11c \ub2e4\ub4ec\uae30) together with the docx/pptx/xlsx skills (for documents aimed at a named audience, stakeholder-brief leads and this skill runs last as the tone pass), when asked to remove \"AI \ud2f0\"/\uae30\uacc4 \ubc88\uc5ed\ud22c from Korean docs, or to match an existing document/author's tone (\ubb38\uccb4 \ud1b5\uc77c, \ud1a4 \ub9de\ucdb0\uc918). Triggers include /stop-slop-ko, \"\ud68c\uc758\ub85d \ub9cc\ub4e4\uc5b4\uc918\", \"\ubcf4\uace0\uc11c pptx\ub85c\", \"AI \ud2f0 \ube7c\uc918\", \"\uc774 \ud1a4\uc5d0 \ub9de\ucdb0\uc918\", \"\ub9ac\ud3ec\ud2b8 \uc368\uc918\", \"\ube14\ub85c\uadf8 \uae00 \ub2e4\ub4ec\uc5b4\uc918\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "present",
+  "repo": "glebis/claude-skills",
+  "path": "present/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "present",
+  "downloaded_at": "2026-11-04T05:15:01.908035Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/present/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/present/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate interactive HTML presentations with professional ElevenLabs voiceover narration synced to slides. Supports dual article/slides mode, scroll-reveal animations, GPT Image 2 illustrations, and configurable detail levels. Use this skill when the user wants to create a presentation, slide deck, narrated briefing, research report with voiceover, or any content that should be presentable as both a readable article and a navigable slide deck. Also triggers on \"make a presentation\", \"create slides\", \"present this\", \"narrated deck\", \"voiceover slides\", \"briefing with audio\", or requests to turn research/notes into a shareable presentation. Works with any content \u2014 research findings, meeting summaries, proposals, educational material."
+}

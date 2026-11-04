@@ -1,0 +1,39 @@
+{
+  "name": "PRFAQ Parser",
+  "repo": "mattermost/mattermost-ai-marketplace",
+  "path": "plugins/prfaq-prototype/skills/prfaq-parser/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/mattermost/mattermost-ai-marketplace",
+  "dir_name": "prfaq-parser",
+  "downloaded_at": "2026-11-04T06:44:53.645460Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "mattermost",
+  "source_url": "https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/prfaq-parser/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattermost/mattermost-ai-marketplace/blob/main/plugins/prfaq-prototype/skills/prfaq-parser/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Normalizes an arbitrary Mattermost PRFAQ markdown file (T3-aware) into a structured, format-independent PRFAQ extract \u2014 feature intent, tier, actors, named surfaces, capabilities/actions, behavioral rules, verbatim UI copy, scope, open design questions, dependencies \u2014 reconciling in-document contradictions and scrubbing customer names. Feeds scene-mapper and the prfaq-analyst agent."
+}

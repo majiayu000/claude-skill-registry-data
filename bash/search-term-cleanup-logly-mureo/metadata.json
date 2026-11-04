@@ -1,0 +1,39 @@
+{
+  "name": "search-term-cleanup",
+  "repo": "logly/mureo",
+  "path": "mureo/_data/skills/search-term-cleanup/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/logly/mureo",
+  "dir_name": "search-term-cleanup-logly-mureo",
+  "downloaded_at": "2026-11-04T06:30:00.963677Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "logly",
+  "source_url": "https://github.com/logly/mureo/blob/main/mureo/_data/skills/search-term-cleanup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/logly/mureo/blob/main/mureo/_data/skills/search-term-cleanup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit and clean up search terms (negative keywords, intent classification, query hygiene). Use when the user asks to clean up search queries, add negative keywords, review search term reports, or improve match quality. Cross-references Search Console, GA4, and ad platform data. Also use when the user asks in Japanese (\u691c\u7d22\u8a9e\u53e5\u306e\u30af\u30ea\u30fc\u30f3\u30a2\u30c3\u30d7 / \u9664\u5916\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u8ffd\u52a0\u3057\u3066 / \u7121\u99c4\u306a\u691c\u7d22\u30af\u30a8\u30ea\u3092\u6b62\u3081\u305f\u3044)."
+}

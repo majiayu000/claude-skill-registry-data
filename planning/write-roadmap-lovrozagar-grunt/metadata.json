@@ -1,0 +1,37 @@
+{
+  "name": "write-roadmap",
+  "repo": "lovrozagar/grunt",
+  "path": ".grok/skills/write-roadmap/SKILL.md",
+  "github_branch": "main",
+  "category": "planning",
+  "source": "github.com/lovrozagar/grunt",
+  "dir_name": "write-roadmap-lovrozagar-grunt",
+  "downloaded_at": "2026-11-04T06:31:34.582080Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "planning",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for planning: plan, roadmap",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lovrozagar",
+  "source_url": "https://github.com/lovrozagar/grunt/blob/main/.grok/skills/write-roadmap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lovrozagar/grunt/blob/main/.grok/skills/write-roadmap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write an ordered program of plans under .tmp/grunt/roadmaps/. Use for /write-roadmap. Stops for y, which locks and runs it."
+}

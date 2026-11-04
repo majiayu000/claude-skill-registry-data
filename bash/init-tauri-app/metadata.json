@@ -1,0 +1,38 @@
+{
+  "name": "init-tauri-app",
+  "repo": "glebis/claude-skills",
+  "path": "init-tauri-app/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "init-tauri-app",
+  "downloaded_at": "2026-11-04T05:15:11.513652Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/init-tauri-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/init-tauri-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scaffold a new Tauri v2 project with the cenno/cull house conventions \u2014 delegates boilerplate to `npm create tauri-app`, then layers an opinionated core plus opt-in modules (CLI+MCP, SQLite, tray/updater, release/preflight, Swift sidecar). Use when the user wants to start a new Tauri desktop app, \"init a tauri project\", or \"scaffold a tauri app\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "xiaohongshu-to-markdown",
+  "repo": "kohoj/skills",
+  "path": "xiaohongshu-to-markdown/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kohoj/skills",
+  "dir_name": "xiaohongshu-to-markdown",
+  "downloaded_at": "2026-11-04T06:12:10.338743Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kohoj",
+  "source_url": "https://github.com/kohoj/skills/blob/main/xiaohongshu-to-markdown/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kohoj/skills/blob/main/xiaohongshu-to-markdown/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Xiaohongshu Article to Markdown \u2014 Extracts text from Xiaohongshu image-based posts via OCR. Use when the user needs to convert a Xiaohongshu/Little Red Book post into readable Markdown text. The tool downloads all carousel images from a post and uses macOS Vision OCR to extract the text content. Requires a Chromium browser logged into xiaohongshu.com with CDP enabled. macOS only (uses Vision Framework for OCR)."
+}

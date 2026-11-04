@@ -1,0 +1,37 @@
+{
+  "name": "k8s-gatekeeper-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-gatekeeper-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-gatekeeper-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:40.067430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-gatekeeper-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-gatekeeper-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when OPA Gatekeeper blocks, warns about or fails to police resources in Kubernetes: \"admission webhook \\\"validation.gatekeeper.sh\\\" denied the request: [constraint] message\", warnings from constraints in warn mode, a constraint that should block but only shows violations in audit (dryrun), a ConstraintTemplate that does not compile (ingest_error, rego_parse_error), \"no matches for kind\" when applying a constraint, referential policies that never fire (sync), mutations that do not apply, or Gatekeeper that stopped enforcing because its webhook is down. Investigates with kubectl get, describe and logs, and proposes fixes. Reads first and asks before changing anything."
+}

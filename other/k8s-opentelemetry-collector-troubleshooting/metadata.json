@@ -1,0 +1,37 @@
+{
+  "name": "k8s-opentelemetry-collector-troubleshooting",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-opentelemetry-collector-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-opentelemetry-collector-troubleshooting",
+  "downloaded_at": "2026-11-04T06:02:41.538634Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-opentelemetry-collector-troubleshooting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-opentelemetry-collector-troubleshooting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when telemetry (traces, metrics, logs) does not get through the OpenTelemetry Collector on Kubernetes: the collector crashes at start (\"invalid configuration\", \"references receiver ... which is not configured\", \"unknown type\"), applications get \"connection refused\" on 4317 or 4318 (a receiver listening on localhost, or not in a pipeline), exporters fail (\"Exporting failed. Will retry the request after interval\", \"Exporting failed. Dropping data.\", \"sending queue is full\", \"no children to pick from\"), the memory_limiter refuses data, k8s_attributes lacks RBAC, or the OpenTelemetry Operator does not create a collector or inject auto-instrumentation. Investigates with kubectl get, logs and the collector's own metrics, and proposes fixes. Reads first and asks before changing anything."
+}

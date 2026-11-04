@@ -1,0 +1,37 @@
+{
+  "name": "ecosystem",
+  "repo": "glebis/claude-skills",
+  "path": "ecosystem/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "ecosystem",
+  "downloaded_at": "2026-11-04T05:15:04.368758Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/ecosystem/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/ecosystem/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit the Claude Code ecosystem \u2014 skill health and staleness, project activity pulse, CLAUDE.md instruction drift, Mac Mini service status. Use this skill whenever the user asks about ecosystem health, stale skills, abandoned projects, system status, infrastructure check, \"what's broken\", \"what's stale\", \"how's my setup\", or any request to review the state of their Claude Code environment. Also triggers on \"/ecosystem\", \"audit my ecosystem\", \"ecosystem health\", \"ecosystem audit\"."
+}

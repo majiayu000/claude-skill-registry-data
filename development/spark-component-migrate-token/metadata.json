@@ -1,0 +1,37 @@
+{
+  "name": "spark-component-migrate-token",
+  "repo": "leboncoin/spark-ios",
+  "path": ".claude/skills/spark-component-migrate-token/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/leboncoin/spark-ios",
+  "dir_name": "spark-component-migrate-token",
+  "downloaded_at": "2026-11-04T06:21:23.354505Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leboncoin",
+  "source_url": "https://github.com/leboncoin/spark-ios/blob/main/.claude/skills/spark-component-migrate-token/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leboncoin/spark-ios/blob/main/.claude/skills/spark-component-migrate-token/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Migrate a spark-ios-component-XXX from use cases / models / view models to component tokens (XXXToken exposed through theme.component.xxx) consumed by the SwiftUI views through private view modifiers. Keeps the ViewModel and use cases still used by the UIKit component."
+}
