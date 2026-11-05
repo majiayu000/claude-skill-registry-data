@@ -1,0 +1,37 @@
+{
+  "name": "plan",
+  "repo": "sneha-asi/convopilot-bolna",
+  "path": ".claude/skills/plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sneha-asi/convopilot-bolna",
+  "dir_name": "plan-sneha-asi-convopilot-bolna",
+  "downloaded_at": "2026-11-05T06:57:09.921856Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sneha-asi",
+  "source_url": "https://github.com/sneha-asi/convopilot-bolna/blob/main/.claude/skills/plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sneha-asi/convopilot-bolna/blob/main/.claude/skills/plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Master build roadmap for ConvoPilot. Claude should load this when user asks what to build next, starts a coding session, or needs to know the build order."
+}

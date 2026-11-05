@@ -1,0 +1,37 @@
+{
+  "name": "bioproject-search",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/bioproject-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "bioproject-search",
+  "downloaded_at": "2026-11-05T07:02:20.337024Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/bioproject-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/bioproject-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Retrieves NCBI BioProject metadata \u2014 title, description, organism, submitter and release dates \u2014 for a batch of BioProject accessions, using the official NCBI E-utilities API rather than scraping the BioProject web pages. Supports keyword filtering over titles and descriptions, CSV/JSON export, and requires a contact email as the NCBI usage policy mandates. This skill should be used when looking up what a BioProject or PRJNA/PRD accession contains, retrieving sequencing project descriptions, or collecting BioProject metadata in bulk is requested."
+}

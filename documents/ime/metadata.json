@@ -1,0 +1,37 @@
+{
+  "name": "ime",
+  "repo": "sepehr071/iran-mcp",
+  "path": "plugins/ime/skills/ime/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/sepehr071/iran-mcp",
+  "dir_name": "ime",
+  "downloaded_at": "2026-11-05T06:44:21.994470Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, pdf",
+    "score": 2,
+    "runner_up": "",
+    "runner_up_score": 0,
+    "signals": [
+      "docs",
+      "pdf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sepehr071",
+  "source_url": "https://github.com/sepehr071/iran-mcp/blob/main/plugins/ime/skills/ime/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sepehr071/iran-mcp/blob/main/plugins/ime/skills/ime/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only Iran Mercantile Exchange (ime.co.ir): physical trades, supply, prices, market totals. Use when the user asks about Iran Mercantile Exchange (ime.co.ir) or wants stock exchange quotes, company filings, funds, bonds or commodity exchange trades in Iran."
+}

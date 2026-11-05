@@ -1,0 +1,37 @@
+{
+  "name": "greploop-apps",
+  "repo": "michaelshimeles/rstack",
+  "path": "greploop-apps/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/michaelshimeles/rstack",
+  "dir_name": "greploop-apps",
+  "downloaded_at": "2026-11-05T05:33:16.618067Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "michaelshimeles",
+  "source_url": "https://github.com/michaelshimeles/rstack/blob/main/greploop-apps/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/michaelshimeles/rstack/blob/main/greploop-apps/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the greploop workflow with the @greptile-apps trigger when the normal trigger refuses a large PR. Requires the greploop skill installed alongside this entrypoint."
+}

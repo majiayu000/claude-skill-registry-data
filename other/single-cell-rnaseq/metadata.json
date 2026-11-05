@@ -1,0 +1,37 @@
+{
+  "name": "single-cell-rnaseq",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/single-cell-rnaseq/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "single-cell-rnaseq",
+  "downloaded_at": "2026-11-05T07:02:22.842752Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/single-cell-rnaseq/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/single-cell-rnaseq/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when running single-cell RNA-seq analysis: reading 10x/AnnData matrices, QC filtering, normalization, HVG selection, PCA, clustering, UMAP/t-SNE and cell type annotation. \u7528\u4e8e\u5355\u7ec6\u80de\u8f6c\u5f55\u7ec4\uff08scRNA-seq\uff09\u8d28\u63a7\u3001\u964d\u7ef4\u3001\u805a\u7c7b\u4e0e\u7ec6\u80de\u6ce8\u91ca\u5168\u6d41\u7a0b\u3002"
+}

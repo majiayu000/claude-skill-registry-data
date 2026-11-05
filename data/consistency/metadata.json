@@ -1,0 +1,38 @@
+{
+  "name": "consistency",
+  "repo": "sneha-asi/convopilot-bolna",
+  "path": ".claude/skills/consistency/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/sneha-asi/convopilot-bolna",
+  "dir_name": "consistency",
+  "downloaded_at": "2026-11-05T06:57:11.043612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sneha-asi",
+  "source_url": "https://github.com/sneha-asi/convopilot-bolna/blob/main/.claude/skills/consistency/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sneha-asi/convopilot-bolna/blob/main/.claude/skills/consistency/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits codebase for consistency after building features or pulling from reference repos. Claude MUST run this automatically after /verify passes. Do not wait for user to ask."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "skills:write",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/skills:write/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "skills-write",
+  "downloaded_at": "2026-11-05T06:35:52.633866Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/skills:write/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/skills:write/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create or edit skills with proper structure, task tracking, and naming conventions"
+}

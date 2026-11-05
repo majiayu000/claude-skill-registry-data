@@ -1,0 +1,37 @@
+{
+  "name": "greploop",
+  "repo": "michaelshimeles/rstack",
+  "path": "greploop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/michaelshimeles/rstack",
+  "dir_name": "greploop-michaelshimeles-rstack",
+  "downloaded_at": "2026-11-05T05:33:16.256151Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "michaelshimeles",
+  "source_url": "https://github.com/michaelshimeles/rstack/blob/main/greploop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/michaelshimeles/rstack/blob/main/greploop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Address Greptile feedback on a PR, MR, or shelved changelist through bounded review and fix cycles. Use when the task includes a Greptile review loop. Supports the alternate @greptile-apps trigger for large PRs."
+}

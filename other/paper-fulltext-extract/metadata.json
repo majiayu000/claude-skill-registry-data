@@ -1,0 +1,37 @@
+{
+  "name": "paper-fulltext-extract",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/paper-fulltext-extract/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "paper-fulltext-extract",
+  "downloaded_at": "2026-11-05T07:02:21.457450Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/paper-fulltext-extract/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/paper-fulltext-extract/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when extracting structured full text from scientific PDF papers \u2014 converting PDFs to TEI XML via a local GROBID service, parsing titles, authors, abstracts, keywords, section trees, figures and references into JSON, Markdown or HTML, building a searchable corpus index across many papers, and pulling the first sentences of each Introduction paragraph for rapid paper triage. \u7528\u4e8e\u79d1\u7814 PDF \u5168\u6587\u7ed3\u6784\u5316\u62bd\u53d6\u3001TEI \u89e3\u6790\u3001\u6587\u732e\u8bed\u6599\u5168\u6587\u68c0\u7d22\u4e0e\u5f15\u8a00\u7cbe\u8bfb\u7684\u573a\u666f\u3002"
+}

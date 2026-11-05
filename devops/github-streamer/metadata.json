@@ -1,0 +1,40 @@
+{
+  "name": "github:streamer",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/github:streamer/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "github-streamer",
+  "downloaded_at": "2026-11-05T06:35:54.790214Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/github:streamer/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/github:streamer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Split large feature branches into chains of smaller, independently mergeable PRs \u2014 supports cross-repo work with progress tracking"
+}

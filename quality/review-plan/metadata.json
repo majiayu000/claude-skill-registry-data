@@ -1,0 +1,38 @@
+{
+  "name": "review-plan",
+  "repo": "microsoft/vscode-team-kit",
+  "path": "review-plan/skills/review-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/microsoft/vscode-team-kit",
+  "dir_name": "review-plan",
+  "downloaded_at": "2026-11-05T05:33:55.647270Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/vscode-team-kit/blob/main/review-plan/skills/review-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/vscode-team-kit/blob/main/review-plan/skills/review-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review an implementation plan produced by the Plan agent. It is CRITICAL to review plans before handing off to implementation \u2014 plans often have gaps, incorrect assumptions, or suboptimal sequencing that are cheaper to catch now than after coding. Use when the user asks to 'review the plan', 'check my plan', 'is this plan ready', or after the Plan agent produces a plan.md."
+}

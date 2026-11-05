@@ -1,0 +1,38 @@
+{
+  "name": "solublempnn",
+  "repo": "r2ascension/skill_repo",
+  "path": "skills/solublempnn/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/r2ascension/skill_repo",
+  "dir_name": "solublempnn-r2ascension-skill-repo",
+  "downloaded_at": "2026-11-05T06:23:24.930923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "r2ascension",
+  "source_url": "https://github.com/r2ascension/skill_repo/blob/main/skills/solublempnn/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/r2ascension/skill_repo/blob/main/skills/solublempnn/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Solubility-optimized protein sequence design using SolubleMPNN. Use this skill when: (1) Designing for E. coli expression, (2) Optimizing solubility of designed proteins, (3) Reducing aggregation propensity, (4) Need high-yield expression, (5) Avoiding inclusion body formation.\nFor standard design, use proteinmpnn. For ligand-aware design, use ligandmpnn."
+}

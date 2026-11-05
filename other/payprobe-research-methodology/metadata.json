@@ -1,0 +1,37 @@
+{
+  "name": "payprobe-research-methodology",
+  "repo": "pay-probe/payprobe",
+  "path": ".claude/skills/payprobe-research-methodology/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pay-probe/payprobe",
+  "dir_name": "payprobe-research-methodology",
+  "downloaded_at": "2026-11-05T06:09:10.701579Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pay-probe",
+  "source_url": "https://github.com/pay-probe/payprobe/blob/main/.claude/skills/payprobe-research-methodology/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pay-probe/payprobe/blob/main/.claude/skills/payprobe-research-methodology/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "WHEN a claim counts as proven in PayProbe \u2014 the evidence bar and idea lifecycle that turn a hunch into an accepted result. Load this when you are about to claim a root cause, propose a fix or new mechanism, design an experiment, decide whether a hypothesis is proven, plan a migration/feature rollout, or decide whether to promote or retire an idea. Triggers: \"I think the cause is\u2026\", \"root cause\", \"hypothesis\", \"let's verify\", \"is this proven?\", \"should we flip the flag?\", \"should we remove this?\", \"the fix worked\" (did it?), designing a benchmark or comparison, writing up an investigation, or reviewing someone else's claimed result. Encodes: the evidence bar (one mechanism explains ALL observations + survives assigned adversarial refutation), hypothesis-predicts-numbers-first, the idea lifecycle (hunch \u2192 spec \u2192 flag-gated build \u2192 verify \u2192 flip ON or documented retirement), where good ideas historically came from, and observed anti-patterns."
+}

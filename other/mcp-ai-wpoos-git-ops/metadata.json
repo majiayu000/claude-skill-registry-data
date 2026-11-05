@@ -1,0 +1,37 @@
+{
+  "name": "mcp-ai-wpoos-git-ops",
+  "repo": "nvdigitalsolutions/mcp-ai-wpoos",
+  "path": ".agents/skills/mcp-ai-wpoos-git-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nvdigitalsolutions/mcp-ai-wpoos",
+  "dir_name": "mcp-ai-wpoos-git-ops",
+  "downloaded_at": "2026-11-05T05:56:35.234494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvdigitalsolutions",
+  "source_url": "https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/mcp-ai-wpoos-git-ops/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/mcp-ai-wpoos-git-ops/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Git/GitHub workflow discipline for the mcp-ai-wpoos repo \u2014 PRs against `alpha-working` with owner-merge, commit style, staged commits (no `git add -A`), the stacked-PR rebase recipe for when a parent PR gets squash-merged, shared-worktree discipline for the multi-agent repo (check the branch before committing, never `reset --hard` over other agents' unstaged edits, `--autostash` rebases), conflict verification via `git merge-tree`, and gh CLI gotchas (`gh workflow run` 404 on non-default branches, long PHP lint checks). Use when creating/rebasing/fixing PRs, resolving PR conflicts, or dispatching workflows."
+}

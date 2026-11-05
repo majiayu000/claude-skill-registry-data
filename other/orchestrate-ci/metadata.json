@@ -1,0 +1,37 @@
+{
+  "name": "orchestrate:ci",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/orchestrate:ci/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "orchestrate-ci",
+  "downloaded_at": "2026-11-05T06:35:53.906857Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/orchestrate:ci/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/orchestrate:ci/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add comprehensive CI workflows to a target repo - lint, test, build, security scanning, dependabot, scorecard, action pinning"
+}

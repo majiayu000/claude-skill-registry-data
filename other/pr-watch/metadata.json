@@ -1,0 +1,37 @@
+{
+  "name": "pr-watch",
+  "repo": "robinalexandre/claude-code-kit",
+  "path": "skills/pr-watch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/robinalexandre/claude-code-kit",
+  "dir_name": "pr-watch",
+  "downloaded_at": "2026-11-05T06:32:50.614875Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "robinalexandre",
+  "source_url": "https://github.com/robinalexandre/claude-code-kit/blob/main/skills/pr-watch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/robinalexandre/claude-code-kit/blob/main/skills/pr-watch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tracks the pull requests the user and Claude worked on together until they are merged, and reports new comments, votes, CI results (green, failed) and status changes (merged, abandoned); also follows the GitHub issues the user is subscribed to. Works with Azure DevOps and GitHub; the list follows the user on every computer through the config sync, never in the project repos. Use when the user says \"watch this PR\", \"track the PR\", \"tell me when it's merged\", \"check the PRs\", \"any new comments on my PRs?\", \"what's new on my issues?\", \"stop watching\", or right after you open or push a PR with the user."
+}

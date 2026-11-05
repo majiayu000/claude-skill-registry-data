@@ -1,0 +1,39 @@
+{
+  "name": "build-health",
+  "repo": "microsoft/vscode-team-kit",
+  "path": "build-health/skills/build-health/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/microsoft/vscode-team-kit",
+  "dir_name": "build-health",
+  "downloaded_at": "2026-11-05T05:33:56.784931Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/vscode-team-kit/blob/main/build-health/skills/build-health/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/vscode-team-kit/blob/main/build-health/skills/build-health/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze VS Code rolling build health on Azure DevOps. Use when: the rolling build is red right now, you need a report for the last 100 builds, you need to identify the commit range that broke the build, you are on build champ duty, or you need a build health report."
+}

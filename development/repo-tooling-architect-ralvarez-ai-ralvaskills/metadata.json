@@ -1,0 +1,39 @@
+{
+  "name": "repo-tooling-architect",
+  "repo": "ralvarez-ai/ralvaskills",
+  "path": "skills/tooling/repo-tooling-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ralvarez-ai/ralvaskills",
+  "dir_name": "repo-tooling-architect-ralvarez-ai-ralvaskills",
+  "downloaded_at": "2026-11-05T06:24:35.888580Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ralvarez-ai",
+  "source_url": "https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/tooling/repo-tooling-architect/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/tooling/repo-tooling-architect/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Repo-root developer tooling \u2014 .editorconfig, .gitignore, version pinning (mise default, proto alt), task runner (Task default, just alt), CI (GitHub Actions default, act for local/free runs), minimal pre-commit, env vars via dotenv + external secret manager, Renovate, AGENTS.md / CLAUDE.md agent-instruction files. Use when scaffolding or auditing a repo's tooling layer, or naming/renaming Taskfile tasks."
+}

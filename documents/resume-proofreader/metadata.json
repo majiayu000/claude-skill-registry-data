@@ -1,0 +1,38 @@
+{
+  "name": "resume-proofreader",
+  "repo": "reactive-resume/reactive-resume",
+  "path": "plugins/reactive-resume/skills/resume-proofreader/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/reactive-resume/reactive-resume",
+  "dir_name": "resume-proofreader",
+  "downloaded_at": "2026-11-05T06:26:51.603004Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, docx",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "reactive-resume",
+  "source_url": "https://github.com/reactive-resume/reactive-resume/blob/main/plugins/reactive-resume/skills/resume-proofreader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/reactive-resume/reactive-resume/blob/main/plugins/reactive-resume/skills/resume-proofreader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Proofreads resume, CV and cover-letter drafts for grammar, clarity, consistency and unsupported wording while preserving facts and voice. Use for a final editorial pass or a bounded wording fix; use resume-content-guide for section selection and resume-tailor for job matching."
+}

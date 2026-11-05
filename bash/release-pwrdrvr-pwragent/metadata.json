@@ -1,0 +1,38 @@
+{
+  "name": "release",
+  "repo": "pwrdrvr/PwrAgent",
+  "path": ".agents/skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/pwrdrvr/PwrAgent",
+  "dir_name": "release-pwrdrvr-pwragent",
+  "downloaded_at": "2026-11-05T06:20:12.291144Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pwrdrvr",
+  "source_url": "https://github.com/pwrdrvr/PwrAgent/blob/main/.agents/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pwrdrvr/PwrAgent/blob/main/.agents/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare, validate, tag, publish, and monitor guarded PwrAgent desktop releases, including Winget and Homebrew distribution. Use when the user asks to release PwrAgent, prepare a vX.Y.Z or vX.Y.Z-prerelease tag, update release notes or CHANGELOG.md for a desktop release, verify package.json/tag/changelog alignment, trigger the signed release workflow, or inspect release/distribution status."
+}

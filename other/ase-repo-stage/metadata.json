@@ -1,0 +1,36 @@
+{
+  "name": "ase-repo-stage",
+  "repo": "rse/ase",
+  "path": "plugin/skills/ase-repo-stage/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/rse/ase",
+  "dir_name": "ase-repo-stage",
+  "downloaded_at": "2026-11-05T06:36:12.720387Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rse",
+  "source_url": "https://github.com/rse/ase/blob/master/plugin/skills/ase-repo-stage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rse/ase/blob/master/plugin/skills/ase-repo-stage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stage only the part of the current Git working copy changes which belongs to a topic, to the last `CHANGELOG.md` entry, to the last turn, or to the entire session, by picking and, if necessary, splitting hunks, check that the staged state builds on its own, and optionally chain into ChangeLog updating and commit message crafting. Use when the user calls to \"stage\" only a part of the changes, like \"the hunks related to\" a topic or \"the last turn\"."
+}

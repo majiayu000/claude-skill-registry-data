@@ -1,0 +1,494 @@
+---
+name: release
+description: Prepare, validate, tag, publish, and monitor guarded PwrAgent desktop releases, including Winget and Homebrew distribution. Use when the user asks to release PwrAgent, prepare a vX.Y.Z or vX.Y.Z-prerelease tag, update release notes or CHANGELOG.md for a desktop release, verify package.json/tag/changelog alignment, trigger the signed release workflow, or inspect release/distribution status.
+---
+
+# Release
+
+Use this skill for paired PwrAgent desktop and Outpost npm releases published by the
+`.github/workflows/release.yml` macOS, Windows and Linux workflow.
+
+## Read First
+
+Read these files before changing release metadata:
+
+1. [../../../docs/desktop-release-runbook.md](../../../docs/desktop-release-runbook.md)
+2. [../../../docs/desktop-distribution-phase-2-runbook.md](../../../docs/desktop-distribution-phase-2-runbook.md) when the release affects update feeds or distribution repos
+3. [../../../.github/workflows/release.yml](../../../.github/workflows/release.yml)
+4. [../../../scripts/check-desktop-release-metadata.mjs](../../../scripts/check-desktop-release-metadata.mjs)
+5. [../../../docs/package-manager-distribution.md](../../../docs/package-manager-distribution.md) for every release, including prereleases
+6. [../../../.github/workflows/package-manager-distribution.yml](../../../.github/workflows/package-manager-distribution.yml)
+7. [../../../docs/headless-npm-release.md](../../../docs/headless-npm-release.md), including its operator migration checklist and partial-failure recovery
+
+## Guardrails
+
+- `main` remains the active `N.N` release train through its alpha and beta
+  candidates, first stable release, and follow-up `N.N.P` releases. Cut a
+  long-lived maintenance branch named `releases/<major>.<minor>` only after the
+  product owner explicitly decides to begin the next major/minor train on
+  `main`. Do not include the patch component in maintenance branch names: use
+  `releases/1.0`, not `releases/1.0.x` or `releases/1.0.1`.
+- Start from a clean working tree. If tracked files are dirty, stop and ask
+  before changing release metadata.
+- Fetch tags before planning:
+
+  ```bash
+  git fetch origin --tags
+  ```
+
+- Treat `apps/desktop/package.json` as the shared release version source.
+  The root `package.json` version is not the desktop app release version.
+- Outpost's public npm `pwragent` package must have the exact desktop version,
+  including suffix. Use `pnpm release:prepare <version>` to update both package
+  manifests and Outpost's npm channel. Never create a `pwragent-v*` tag or dispatch
+  a separate CLI publisher. Shared/private packages keep independent versions.
+- Before tagging, have the operator verify the npm migration checklist:
+  `npm-pwragent` required review/admin-bypass protection, exactly one `v*` tag
+  deployment rule, protected desktop tags, npm trust for
+  `pwrdrvr/PwrAgent` / `release.yml` / `npm-pwragent` with direct publish allowed,
+  and repository variable `OUTPOST_NPM_RELEASE_READY=release.yml/npm-pwragent`.
+  Do not change protections, trust, owners or credentials without explicit
+  authorization. Missing setup blocks desktop packaging; public registry reads
+  cannot prove the private npm trust settings are correct.
+- Always use a leading-`v` tag such as `v1.0.0-alpha.5`.
+- The tag version, `apps/desktop/package.json` version, and
+  `packages/pwragent/package.json` version and `CHANGELOG.md` release heading
+  must match.
+- Desktop Settings expose two axes: **channel** (Stable or Beta) and
+  **track** (Latest or Prerelease). Encode those slots in the tag suffix
+  so GitHub `/releases/latest` stays on the Stable Latest train:
+  - Stable Latest: `v1.0.5` (no suffix; GitHub Latest after promotion)
+  - Stable Prerelease: `v1.0.6-prerelease.1` (GitHub Pre-release)
+  - Beta Latest: `v1.1.0-beta.3` (GitHub Pre-release; smoke-checked `main`)
+  - Beta Prerelease: `v1.1.0-alpha.7` (GitHub Pre-release; may not install)
+- Keep `-prerelease.N` for Stable RCs. Do not reuse `-beta` for 1.0 RCs;
+  `-beta` is the Beta Latest identifier.
+- CI publishes every release as a GitHub `Pre-release`, whatever the tag
+  suffix. A suffix-free tag left at `prerelease: true` lands in Stable
+  Prerelease, so Stable Latest keeps serving the previous stable release until
+  an operator promotes the new one. Promotion is the documented final step of
+  a release; see "Promote To Latest" below.
+- `main` tags with a prerelease suffix must stay GitHub Pre-release so they
+  never steal `/releases/latest` from the Stable train. Never promote a
+  suffixed tag.
+- To promote a smoked alpha to beta, run `pnpm release:prepare <beta-version>` and
+  add a CHANGELOG heading from `X.Y.Z-alpha.N` to `X.Y.Z-beta.M`, commit,
+  and tag that commit. The tree can otherwise match the alpha. Do not add
+  a second tag to the alpha SHA: the metadata gate and the baked app
+  version both come from `package.json`.
+- Never create a maintenance branch merely to promote an accepted beta to its
+  suffix-free stable release. When the owner directs the next-train transition,
+  cut the maintenance branch from the then-current `main` commit; that commit
+  may intentionally include post-release fixes or enhancements beyond the first
+  stable tag. Then bump `main` to the next alpha train.
+- After that cut, release maintenance candidates and patches for the prior train
+  from its `releases/<major>.<minor>` branch.
+- Before pushing a release tag, verify the `apple-signing` GitHub Environment
+  exists, requires reviewer approval, is scoped to release tags, and has the
+  Apple signing/notarization secrets required by the workflow.
+- Do not create or push the tag until the version and changelog are committed
+  and present on the intended release branch.
+- Do not create the GitHub Release by hand before the build succeeds. Let
+  electron-builder create or update the release from the signed/notarized CI
+  build; the workflow publishes the matching changelog entry to the GitHub
+  Release body after release assets are uploaded.
+- Do not use GitHub generated release notes as the final notes.
+- A release is not complete when the workflow reaches the `apple-signing`
+  approval gate. After approval, continue monitoring through the release-notes
+  publishing job, and verify the release body is non-empty.
+- Do not force-push the default branch or rewrite an existing release tag
+  without explicit user approval.
+- Keep MIT licensing intact: do not change first-party license metadata or
+  remove license disclosures without an explicit policy change.
+
+## Release Branch Preflight
+
+For every release, identify `RELEASE_BRANCH` before editing files:
+
+- Active-train alpha, beta, first stable, or follow-up patch release: `main`.
+- Maintenance candidates and patches after a train has been cut:
+  `releases/<major>.<minor>`.
+
+If the product owner explicitly decides to start a new major/minor train on
+`main`, compare the current desktop version's major/minor with the requested
+version's major/minor. The decision authorizes cutting the current train's
+maintenance branch; do not infer it from a beta promotion or stable release.
+Check whether the branch already exists:
+
+```bash
+git ls-remote --heads origin releases/<current-major>.<current-minor>
+```
+
+If it is missing, cut it from the current `main` commit after syncing `main`.
+That branch point may contain post-release fixes or enhancements, and must not
+be replaced with the first stable tag just because it exists. Then switch back
+to `main` and commit the next alpha-version metadata:
+
+```bash
+git switch main
+git fetch origin main --tags
+git pull --ff-only
+git switch -c releases/<old-train>
+git push origin releases/<old-train>
+git switch main
+```
+
+For example, keep `1.0.0-alpha.N`, `1.0.0-beta.N`, `1.0.0`, and any `1.0.P`
+releases on `main`. Only after the owner directs the `1.1` transition do you cut
+`releases/1.0` from the current `main`, then bump `main` to `1.1.0-alpha.1`.
+
+## Prepare Release Metadata
+
+Before changing metadata, run `pnpm release:channels --audit`. Compare GitHub
+Latest with the authoritative `pwrdrvr/homebrew-tap` cask and
+`microsoft/winget-pkgs` manifest versions. Record identifiers, check time,
+source URLs, open submissions and exact blockers in the release handoff.
+Investigate ahead/stale channels and reuse pending PRs; do not create duplicate
+registrations. An API failure or incomplete search is not an absent package.
+Public source audits/searches and verified manifest generation use the
+organization-provided public-read-only `DISTRIBUTION_READ_TOKEN`, falling back
+to `github.token` for fork checks. Keep unrelated operations on the default token
+and submission writes on the separate `DISTRIBUTION_TOKEN`. Confirm selected
+repository access through secret metadata only, check expiration with the
+organization owner, and arrange rotation before expiry without copying the value
+or broadening permissions. Require a successful authenticated audit after rotation.
+Retain bounded rate-limit retries; a PAT can still receive HTTP 429 or incomplete
+code-search results. Report these as blockers and retry later or narrow the query.
+Check automation credential readiness. Prereleases still require this comparison
+but do not update either stable package channel.
+
+1. Determine the next version from the previous tag and user intent:
+
+   ```bash
+   git tag --sort=-version:refname | head -n 10
+   gh release list --limit 10
+   ```
+
+2. Prepare both package versions without creating a tag yet:
+
+   ```bash
+   pnpm release:prepare <version>
+   ```
+
+   This synchronizes `packages/pwragent/package.json` and its `next`/`latest`
+   channel with the desktop authority. Commit both manifests. If editing by
+   hand, preserve formatting and update both; `release:check` rejects drift.
+
+3. Add a top `CHANGELOG.md` entry:
+
+   ```md
+   ## v1.0.0-alpha.5 - YYYY-MM-DD
+   ```
+
+   Write user-facing bullets from merged PRs and direct commits since the last
+   release. Preserve the same substance in GitHub release notes.
+
+   Release notes must give context first, not just describe the code delta.
+   Start each bullet with the user-visible area or feature, then state whether
+   it was added, improved, or fixed. Keep bullets punchy and readable by
+   operators:
+
+   ```md
+   - Composer - Improved complex Markdown pastes with lists, inline code, and nested code blocks.
+   - Thread Search - Escape now dismisses search, pairing with Cmd/Ctrl+Shift+F to open it.
+   - Thread List Pull Request Info - Merged PR commits no longer show as unpushed work.
+   - Minor - Dependency updates and small UI polish.
+   ```
+
+   Avoid release-note bullets that only say "Improved handling", "Added
+   plumbing", "Updated dependencies", or "Fixed packaging" without naming the
+   feature surface and why users should care. Roll maintenance-only changes
+   into a short `Minor - ...` bullet unless they materially affect installs,
+   updates, or data safety.
+
+4. Run the metadata gate locally before committing:
+
+   ```bash
+   RELEASE_TAG=v<version> pnpm release:check
+   ```
+
+5. Run normal repo gates unless the user explicitly narrows verification:
+
+   ```bash
+   pnpm typecheck
+   pnpm test
+   ```
+
+## Commit, Land, And Tag
+
+Commit the version and changelog together. Use a signed commit; this repo's git
+config should already sign commits with SSH.
+
+```bash
+git add apps/desktop/package.json packages/pwragent/package.json CHANGELOG.md
+git commit -m "chore(release): prepare v<version>"
+```
+
+Preferred fast path: if maintainer direct-push bypass is enabled for
+`RELEASE_BRANCH`, push the signed release metadata commit directly. This avoids
+running PR CI and then running the same gates again from the release tag.
+
+```bash
+git push origin HEAD:<RELEASE_BRANCH>
+git fetch origin <RELEASE_BRANCH> --tags
+git pull --ff-only
+```
+
+Fallback path: if direct push to `RELEASE_BRANCH` is rejected, push the release
+metadata commit to a short-lived release branch, open a PR, wait for required
+checks, then **squash merge** the PR. Do not use rebase merge for release
+metadata PRs: GitHub may rewrite the commit SHA, which makes it too easy to tag
+the pre-merge commit instead of the actual release-branch commit.
+
+Remember that a GitHub squash merge creates a GitHub-authored commit on
+`RELEASE_BRANCH`, not the original locally signed commit. If the user requires
+the release metadata commit on the release branch itself to be locally signed,
+use the direct-push path or ask before using the PR fallback.
+
+```bash
+git switch -c release/v<version>
+git push -u origin release/v<version>
+gh pr create --base <RELEASE_BRANCH> --head release/v<version> \
+  --title "chore(release): prepare v<version>" \
+  --body-file .local/PR-v<version>.md
+gh pr checks <pr-number> --watch --interval 10
+gh pr merge <pr-number> --squash --delete-branch
+git fetch origin <RELEASE_BRANCH> --tags
+git switch <RELEASE_BRANCH>
+git pull --ff-only
+```
+
+After the direct push or squash merge, rerun the metadata gate on
+`RELEASE_BRANCH`, then create exactly one tag on the actual release-branch
+commit.
+
+```bash
+RELEASE_TAG=v<version> pnpm release:check
+```
+
+If signing tags is configured and works locally, prefer a signed annotated tag:
+
+```bash
+git tag -s v<version> -m "v<version>"
+```
+
+If signed tags are not available and the user approves an unsigned release tag,
+create a lightweight tag instead:
+
+```bash
+git tag v<version>
+```
+
+Do not silently fall back from a failed signed tag to an unsigned tag. Ask the
+user which tag form to use. Before pushing, verify the tag points at
+`origin/<RELEASE_BRANCH>` or the intended release-branch commit:
+
+```bash
+git tag -v v<version>
+git merge-base --is-ancestor v<version> origin/<RELEASE_BRANCH>
+```
+
+## Publish
+
+Push the tag after the release metadata is already on `RELEASE_BRANCH`:
+
+```bash
+git push origin v<version>
+```
+
+The tag push triggers `Release Desktop (macOS universal + arm64 + Windows + Linux DEB)`. The workflow must
+pass `Check release metadata` in the no-secret `Test and prepare signing input`
+job before the environment-gated `Sign, notarize, publish` job can request
+approval and access Apple signing secrets.
+
+For a manual dispatch, verify the tag already exists on GitHub:
+
+```bash
+git ls-remote --tags origin v<version>
+gh workflow run release.yml --ref v<version> -f tag=v<version>
+```
+
+The workflow ref must be that same protected desktop tag. Branch dispatches
+are rejected so event SHA, desktop source, tested npm bytes and provenance all
+identify one commit. An advancing release branch does not invalidate a retry.
+
+## Monitor And Verify
+
+Find the run for the release tag and watch it. If it takes a while to appear,
+sleep for 5-10 minutes before deciding it failed to start.
+
+```bash
+gh run list --workflow release.yml --limit 10
+gh run watch <run-id>
+```
+
+The `Sign, notarize, publish` job pauses for `apple-signing` Environment
+approval. Treat that pause as expected. Before approving, verify the workflow
+run is for the intended tag, the tag points at the intended default-branch
+commit, and the version/changelog metadata match the tag.
+
+The npm job later pauses for `npm-pwragent` review after desktop assets/notes
+are visible. Before approval, verify the tag/SHA, Node 22/24 validation and
+retained `headless-npm-package` artifact/integrity. There is no independent CLI
+release request. Do not report success until `Verify desktop and Outpost release
+completion` succeeds and `outpost-release-receipt` matches public npm version,
+`pwragentRelease` tag/commit, integrity and provenance metadata.
+
+An npm failure leaves a partial release, not a successful desktop-only train.
+Inspect the registry, then prefer rerunning failed jobs of the original run to
+reuse tested bytes. Identical occupied versions are verified without mutation;
+different bytes/source, missing provenance, stale channels or expired artifacts
+fail closed. Do not overwrite/unpublish, move tags, change trust or use a token
+fallback as recovery. Follow the runbook for operator action or a new paired
+version. GitHub and npm have no cross-service atomic transaction.
+
+If monitoring is delegated and the monitor stops at the approval gate, resume
+monitoring after approval. Do not end the release turn as "done" at the
+approval gate; the workflow still has to publish and verify release notes after
+assets are uploaded.
+
+On failure, inspect logs yourself:
+
+```bash
+gh run view <run-id> --log-failed
+```
+
+After success, verify the release and generated assets:
+
+```bash
+gh release view v<version>
+gh release download v<version> --dir .local/release/v<version>
+ls .local/release/v<version>
+```
+
+Expect signed/notarized Universal macOS assets:
+
+- A versioned Universal DMG, such as `PwrAgent-<version>-universal.dmg`.
+- A stable `PwrAgent.dmg` alias uploaded by the workflow for
+  `https://github.com/pwrdrvr/PwrAgent/releases/latest/download/PwrAgent.dmg`.
+- Universal and arm64 updater ZIPs, each with its own `.blockmap`.
+- An Apple Silicon DMG and stable `PwrAgent-arm64.dmg` alias.
+- `PwrAgent-macos-SHA256SUMS` covering both targets and aliases.
+- One merged `latest-mac.yml`, universal legacy path/hash and both ZIP entries.
+
+The stable `PwrAgent.dmg` alias is intentionally unversioned so the website can
+link to the latest release without knowing the current version. Do not remove
+or replace it with an arch-suffixed DMG.
+
+The workflow replaces electron-builder's empty/default release notes after
+release assets are published. Every release is born as a GitHub `Pre-release`,
+including a suffix-free stable tag such as `v1.0.0`; the publish step passes
+`--prerelease` unconditionally and fails the job if GitHub did not honor it.
+GitHub excludes pre-release entries from `/releases/latest`, which also excludes
+them from
+`https://github.com/pwrdrvr/PwrAgent/releases/latest/download/PwrAgent.dmg`
+and the default Electron updater feed. Promotion to Latest is a separate
+operator action, not part of the workflow.
+
+The npm `latest` channel advances for suffix-free versions in the shared
+workflow, before desktop promotion. Alpha/beta/prerelease/rc versions use `next`;
+older maintenance trains use guarded per-train channels where needed. Use a
+`-prerelease.N` version if npm stable consumers must not advance yet. Verify
+shared-release completion before promoting the desktop release.
+
+This release-note publication is required, not cosmetic. Electron-builder may
+leave the body empty or duplicate the tag name. If the workflow release-notes
+job fails or GitHub temporarily rejects the edit, run the manual fallback after
+confirming the extracted notes match the approved changelog entry:
+
+```bash
+node scripts/extract-release-notes.mjs \
+  --tag v<version> \
+  --out .local/release/v<version>/RELEASE_NOTES.md
+gh release edit v<version> \
+  --repo pwrdrvr/PwrAgent \
+  --notes-file .local/release/v<version>/RELEASE_NOTES.md
+```
+
+Verify the final release body before calling the publish step complete:
+
+```bash
+gh release view v<version> --json name,body,isPrerelease \
+  --jq '{name, isPrerelease, bodyLength: (.body | length)}'
+```
+
+The `bodyLength` must be greater than zero and the title/body must match the
+approved changelog entry. `isPrerelease` must be `true` at this point — that is
+the expected published state for every tag, not a failure signal. If it reads
+`false`, the publish step's own assertion should already have failed the job;
+investigate before going further.
+
+## Promote To Latest
+
+Promotion is the final step of a stable release and is always an explicit
+operator action. Do not promote without the user asking for it.
+
+Promote only a suffix-free tag, and only once all of these hold:
+
+- Every platform asset the tag should carry is attached to the release.
+- The updater metadata (`latest-mac.yml`, `latest.yml`, `latest-linux*.yml`)
+  is attached and names the published version.
+- The release body carries the matching `CHANGELOG.md` entry.
+- The build has been smoke-checked on at least one machine.
+
+```bash
+gh release edit v<version> --repo pwrdrvr/PwrAgent --latest --prerelease=false
+```
+
+No retag is needed. Clearing the flag moves a suffix-free tag from Stable
+Prerelease into Stable Latest.
+
+After promotion, follow the package-manager distribution runbook through
+platform validation, Homebrew/Winget submissions, review/merge and refreshed
+client publication checks. If the promotion did not trigger the workflow,
+dispatch `package-manager-distribution.yml` with `submit=true`. Validate
+architecture-specific released artifacts and actual downloaded checksums,
+signature/notarization, fresh install and previous-version upgrade. Never
+substitute an alias URL, an unsigned build or a guessed hash.
+
+The release handoff must report both channel versions and outcomes. Link each
+pending PR or failed run, name any credential/CLA/review/index/cache blocker,
+and give its next action and last check time. Do not call setup live or channel
+updates complete until authoritative remote files and refreshed clients both
+resolve the new version. Carry delayed channels forward explicitly; opening a
+PR or observing a successful product build does not prove distribution.
+
+Never run this on a suffixed tag such as `v1.1.0-beta.3`. `--latest` repoints
+`/releases/latest/download/`, so it would hand the website a beta build while
+leaving the app's Stable Latest slot on the previous stable — the updater
+requires a candidate to be both suffix-free and non-prerelease.
+
+To undo a premature promotion, restore the flag:
+
+```bash
+gh release edit v<version> --repo pwrdrvr/PwrAgent --prerelease
+```
+
+## Local Fallback
+
+Use the local path only when CI is unavailable or the user explicitly asks for
+local signing/notarization. Follow
+[../../../docs/desktop-release-runbook.md](../../../docs/desktop-release-runbook.md)
+for required Apple and GitHub secrets.
+
+Local desktop packaging does not satisfy the shared release contract or publish
+Outpost. Finish the normal protected-tag workflow and verify its npm receipt;
+do not manually publish a separately built npm tarball as a local fallback.
+
+```bash
+pnpm --filter @pwragent/desktop package:dryrun
+pnpm --filter @pwragent/desktop package
+pnpm --filter @pwragent/desktop release
+```
+
+## Homebrew automation contract
+
+Routine stable Homebrew updates are published automatically by the vendor tap,
+after artifact-backed native validation; do not open or merge per-release bump
+PRs. Follow the current package-manager runbook's automatic-publication section.
+CI must use the original successful release-build Actions artifacts and verify
+published SHA-256/size. No published release-installer download fallback is
+allowed. Missing/expired artifacts are named blockers, not permission to fetch
+from release URLs or rebuild published bytes. Signed artifact retention is 90
+days. Immediate dispatch is optional; the tap's 15-minute schedule remains the
+fallback. Verify tap main and a refreshed client before declaring publication.

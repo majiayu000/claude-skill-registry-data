@@ -1,0 +1,39 @@
+{
+  "name": "pinax-api",
+  "repo": "pinax-network/pinax-api",
+  "path": "skills/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/pinax-network/pinax-api",
+  "dir_name": "skills-pinax-network-pinax-api",
+  "downloaded_at": "2026-11-05T06:12:45.027500Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "pinax-network",
+  "source_url": "https://github.com/pinax-network/pinax-api/blob/main/skills/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pinax-network/pinax-api/blob/main/skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Query Pinax API datasets, including Token API for EVM/SVM token data, prediction markets, and perp exchange data. Use when: integrating with Pinax API, choosing endpoints, building API requests, handling pagination, or discovering supported networks."
+}

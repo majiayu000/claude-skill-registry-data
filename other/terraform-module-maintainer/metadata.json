@@ -1,0 +1,38 @@
+{
+  "name": "terraform-module-maintainer",
+  "repo": "modulestf/modulestf",
+  "path": ".agents/skills/terraform-module-maintainer/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/modulestf/modulestf",
+  "dir_name": "terraform-module-maintainer",
+  "downloaded_at": "2026-11-05T05:38:53.150616Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "modulestf",
+  "source_url": "https://github.com/modulestf/modulestf/blob/master/.agents/skills/terraform-module-maintainer/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/modulestf/modulestf/blob/master/.agents/skills/terraform-module-maintainer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, restructure, change, fix, and upgrade reusable Terraform modules for any provider, following a module profile (default terraform-aws-modules). Use for new modules, feature changes, fixing review findings, resolving review feedback with draft replies, and provider major upgrades. Not for general Terraform questions (use terraform-skill)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "test-native",
+  "repo": "patrickjaja/claude-desktop-extra",
+  "path": ".claude/skills/test-native/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/patrickjaja/claude-desktop-extra",
+  "dir_name": "test-native",
+  "downloaded_at": "2026-11-05T06:08:22.139265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patrickjaja",
+  "source_url": "https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/test-native/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/test-native/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reproduce and measure Claude Desktop behavior in a Linux session that is not the host's - a nested sway/wlroots compositor (native Wayland, XWayland, hidden workspaces, another XDG_CURRENT_DESKTOP) driven by scripted input and screenshots, plus run-time probes injected into the Electron client when the needed data is not in any log. Use when a report comes from Wayland/sway/Hyprland/GNOME/KDE and the host runs something else, when X11 vs Wayland must be compared, when a window must be hidden/occluded/on another workspace, or when a renderer or main-process value must be measured in the running app."
+}

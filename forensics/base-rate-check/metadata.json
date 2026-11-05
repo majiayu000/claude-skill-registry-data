@@ -1,0 +1,37 @@
+{
+  "name": "base-rate-check",
+  "repo": "nourdean22/MAINnicks-tire-autoNEW",
+  "path": ".claude/skills/base-rate-check/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/nourdean22/MAINnicks-tire-autoNEW",
+  "dir_name": "base-rate-check",
+  "downloaded_at": "2026-11-05T05:54:58.027464Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nourdean22",
+  "source_url": "https://github.com/nourdean22/MAINnicks-tire-autoNEW/blob/main/.claude/skills/base-rate-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nourdean22/MAINnicks-tire-autoNEW/blob/main/.claude/skills/base-rate-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use before reporting ANY ratio, percentage or count computed inside a filtered population - failures, aborts, rejects, churned users, declined estimates. Compute the same ratio over the unfiltered population and report both, or report neither."
+}

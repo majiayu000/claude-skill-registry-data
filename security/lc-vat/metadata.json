@@ -1,0 +1,38 @@
+{
+  "name": "lc-vat",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/lc-vat/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "lc-vat",
+  "downloaded_at": "2026-11-05T06:02:44.206882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/lc-vat/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/lc-vat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Saint Lucia VAT registration, standard-rate calculation and return reference checked for 2026. Covers the statutory EC$400,000 registration threshold, forward-looking and three-month tests, standard VAT arithmetic, tourism-rate distinctions and nil-return filing. Use for Saint Lucia VAT, registration deadlines, taxable turnover, standard-rate invoices or tourism accommodation VAT. It uses the Attorney General Chambers revised legislation rather than old government pages retaining the original EC$180,000 threshold. Input recovery, exemptions, levy interaction and current amendments require further checking. This Guide does not claim complete VAT compliance or accountant review."
+}

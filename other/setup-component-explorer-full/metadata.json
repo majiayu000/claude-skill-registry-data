@@ -1,0 +1,38 @@
+{
+  "name": "setup-component-explorer-full",
+  "repo": "microsoft/vscode-team-kit",
+  "path": "component-explorer/skills/setup-component-explorer-full/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/microsoft/vscode-team-kit",
+  "dir_name": "setup-component-explorer-full",
+  "downloaded_at": "2026-11-05T05:33:59.724162Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/vscode-team-kit/blob/main/component-explorer/skills/setup-component-explorer-full/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/vscode-team-kit/blob/main/component-explorer/skills/setup-component-explorer-full/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Full setup of the Component Explorer including CLI, MCP server, VS Code tasks and launch config. USE FOR: \"complete component explorer setup with the CLI\", \"configure the component explorer MCP server\", \"add VS Code tasks for the component explorer\", \"add a launch config for the component explorer\". DO NOT USE FOR: \"minimal or plugin only component explorer setup\", \"write a fixture for a component\"."
+}

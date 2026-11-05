@@ -1,0 +1,37 @@
+{
+  "name": "istio:mesh-selfheal",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/istio:mesh-selfheal/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "istio-mesh-selfheal",
+  "downloaded_at": "2026-11-05T06:35:59.435453Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/istio:mesh-selfheal/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/istio:mesh-selfheal/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detect and recover from Istio Ambient mesh outages where ztunnel/waypoint proxies serve expired mTLS certs and every gateway route returns HTTP 503 (long-running or suspended dev/Kind clusters)"
+}

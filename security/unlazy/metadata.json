@@ -1,0 +1,38 @@
+{
+  "name": "unlazy",
+  "repo": "mhyahya854/AI-Second-Brain_Universal-Rules",
+  "path": "skills/_intake/github/Leonxlnx/unlazy/unlazy/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mhyahya854/AI-Second-Brain_Universal-Rules",
+  "dir_name": "unlazy",
+  "downloaded_at": "2026-11-05T05:32:50.896017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mhyahya854",
+  "source_url": "https://github.com/mhyahya854/AI-Second-Brain_Universal-Rules/blob/main/skills/_intake/github/Leonxlnx/unlazy/unlazy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mhyahya854/AI-Second-Brain_Universal-Rules/blob/main/skills/_intake/github/Leonxlnx/unlazy/unlazy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Enforces completion discipline for substantial autonomous work by writing acceptance gates before execution, decomposing work with the Depth Tree, running approved checks, and re-verifying evidence before reporting. Use when an agent faces a long or multi-part task, work that has returned half-done, an exhaustive audit or build, parallel leaves or pipelines, or explicit triggers such as /unlazy, $unlazy, \"tree N\", \"gates\", and \"do not stop until it is done\"."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "issue-creator",
+  "repo": "rsicarelli/fakt",
+  "path": ".claude/skills/issue-creator/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rsicarelli/fakt",
+  "dir_name": "issue-creator",
+  "downloaded_at": "2026-11-05T06:36:23.422669Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, refactor",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rsicarelli",
+  "source_url": "https://github.com/rsicarelli/fakt/blob/main/.claude/skills/issue-creator/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rsicarelli/fakt/blob/main/.claude/skills/issue-creator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates well-structured GitHub issues using gh CLI with auto-detected project context (version, platform, module). Supports bug reports, feature requests, and internal tasks following repo templates. Use when creating a GitHub issue, reporting a bug, requesting a feature, logging a task, documenting a TODO as an issue, or recording a bug found during development. Make sure to use this skill whenever an issue needs to be created \u2014 it auto-detects project context and applies the correct template."
+}

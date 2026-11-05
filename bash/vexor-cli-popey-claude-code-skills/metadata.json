@@ -1,0 +1,38 @@
+{
+  "name": "vexor-cli",
+  "repo": "popey/claude-code-skills",
+  "path": "skills/vexor-cli/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/popey/claude-code-skills",
+  "dir_name": "vexor-cli-popey-claude-code-skills",
+  "downloaded_at": "2026-11-05T06:15:45.559284Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "popey",
+  "source_url": "https://github.com/popey/claude-code-skills/blob/master/skills/vexor-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/popey/claude-code-skills/blob/master/skills/vexor-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Semantic file discovery via `vexor`. Use whenever locating where something is implemented/loaded/defined in a medium or large repo, or when the file location is unclear. Prefer this over manual browsing."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "add-agent-playbooks",
+  "repo": "redis/agent-skills",
+  "path": "plugins/redis-development/skills/add-agent-playbooks/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/redis/agent-skills",
+  "dir_name": "add-agent-playbooks-redis-agent-skills",
+  "downloaded_at": "2026-11-05T06:27:45.597783Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "redis",
+  "source_url": "https://github.com/redis/agent-skills/blob/main/plugins/redis-development/skills/add-agent-playbooks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/redis/agent-skills/blob/main/plugins/redis-development/skills/add-agent-playbooks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add Redis Iris Agent Playbooks to an existing agent. Use when approved answers or repeatable procedures live in prompts, document retrieval, or a semantic response cache. Connect or provision a Playbook, publish FAQs and Skills, and verify the first application turn with optional review proposals."
+}

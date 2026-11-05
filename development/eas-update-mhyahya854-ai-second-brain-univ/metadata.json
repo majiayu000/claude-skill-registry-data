@@ -1,0 +1,39 @@
+{
+  "name": "eas-update",
+  "repo": "mhyahya854/AI-Second-Brain_Universal-Rules",
+  "path": "skills/_intake/github/expo/skills/eas-update/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mhyahya854/AI-Second-Brain_Universal-Rules",
+  "dir_name": "eas-update-mhyahya854-ai-second-brain-univ",
+  "downloaded_at": "2026-11-05T05:32:48.131655Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mhyahya854",
+  "source_url": "https://github.com/mhyahya854/AI-Second-Brain_Universal-Rules/blob/main/skills/_intake/github/expo/skills/eas-update/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mhyahya854/AI-Second-Brain_Universal-Rules/blob/main/skills/_intake/github/expo/skills/eas-update/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure and use EAS Update for over-the-air JavaScript and asset updates with expo-updates and EAS CLI. Use when setting up OTA updates, running eas update:configure or eas update, publishing to preview/staging/production channels, explaining branches/channels/runtime versions, testing updates, or debugging why an installed build still shows old code. Load for TestFlight, preview, or production updates that do not appear, including questions about cold launches or reopening the app. Not for update health metrics; use eas-update-insights for adoption, crashes, and rollout monitoring."
+}

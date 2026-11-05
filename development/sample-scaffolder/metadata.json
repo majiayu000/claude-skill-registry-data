@@ -1,0 +1,38 @@
+{
+  "name": "sample-scaffolder",
+  "repo": "rsicarelli/fakt",
+  "path": ".claude/skills/sample-scaffolder/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rsicarelli/fakt",
+  "dir_name": "sample-scaffolder",
+  "downloaded_at": "2026-11-05T06:36:23.753596Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, compile, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rsicarelli",
+  "source_url": "https://github.com/rsicarelli/fakt/blob/main/.claude/skills/sample-scaffolder/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rsicarelli/fakt/blob/main/.claude/skills/sample-scaffolder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scaffolds new Fakt sample projects with correct structure, build scripts, and CI integration. Supports JVM, KMP, Android, multi-module, test-fixtures, and fake-publishing types. Use when creating a new sample project, adding a demo for a new feature, setting up a new test project, or scaffolding a demonstration project. Make sure to use this skill whenever a new sample directory needs to be created \u2014 it handles build scripts, CI integration, and settings.gradle.kts registration that are easy to miss manually."
+}

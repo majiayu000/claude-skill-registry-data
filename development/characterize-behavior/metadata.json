@@ -1,0 +1,39 @@
+{
+  "name": "characterize-behavior",
+  "repo": "moessimple/dotfiles",
+  "path": "home/.claude/skills/characterize-behavior/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/moessimple/dotfiles",
+  "dir_name": "characterize-behavior",
+  "downloaded_at": "2026-11-05T05:39:04.984065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moessimple",
+  "source_url": "https://github.com/moessimple/dotfiles/blob/main/home/.claude/skills/characterize-behavior/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moessimple/dotfiles/blob/main/home/.claude/skills/characterize-behavior/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pins the current behaviour of an existing Laravel application or package (Laravel 11 or newer) with Pest characterization tests and a golden master, without changing a single line of application code. Sets up Pest with an isolated, deterministic test environment on the production database engine where one runs locally, pins every capability at its entry point, highest risk first, until coverage reaches 100 % and every mutation is caught or recorded as equivalent, marks behaviour that looks unintended in the tests themselves, runs the golden master in CI, and stops on blockers such as migrations that cannot build a fresh database. Derives what to pin from the code, asks at two optional checkpoints, and does not commit."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "payprobe-build-and-env",
+  "repo": "pay-probe/payprobe",
+  "path": ".claude/skills/payprobe-build-and-env/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/pay-probe/payprobe",
+  "dir_name": "payprobe-build-and-env",
+  "downloaded_at": "2026-11-05T06:09:08.351440Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, pytest, e2e, playwright",
+    "score": 5,
+    "runner_up": "devops",
+    "runner_up_score": 4,
+    "signals": [
+      "test",
+      "qa",
+      "pytest",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pay-probe",
+  "source_url": "https://github.com/pay-probe/payprobe/blob/main/.claude/skills/payprobe-build-and-env/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pay-probe/payprobe/blob/main/.claude/skills/payprobe-build-and-env/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Recreate the PayProbe development environment from scratch and recognize the known environment traps. Load this skill when: setting up a fresh clone or fresh machine/VM/sandbox; pip install or editable-install errors (payprobe-worker / payprobe-common \"No matching distribution found\"); ModuleNotFoundError or ImportError during pytest \u2014 i.e. INSTALLING or fixing a missing dependency (\"tests fail locally but pass in CI\" with crypto/EMV/pycryptodome/aiohttp symptoms; for triaging an UNKNOWN failure use payprobe-debugging-playbook instead); pytest collects zero tests or the wrong tests; npm ci / ng build / Prettier / Playwright problems in the Angular portal; corrupt node_modules; bringing the stack up with docker compose for the first time. Keywords: setup, install, venv, editable install, pip, pytest.ini, make install, make test, npm ci, e2e:install, docker compose, mock mode, Python 3.11, Node 20, pycryptodome, aiohttp."
+}

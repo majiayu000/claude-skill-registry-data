@@ -1,0 +1,38 @@
+{
+  "name": "tk-merge",
+  "repo": "solatis/trapperkeeper",
+  "path": ".claude/skills/tk-merge/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/solatis/trapperkeeper",
+  "dir_name": "tk-merge",
+  "downloaded_at": "2026-11-05T06:59:07.445950Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "solatis",
+  "source_url": "https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-merge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-merge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Open the merge stage -- per PR in dependency order, fast-forward master onto the reviewed green head, push it, retarget stacked children, delete the branch, close the issue and delete its plan. Invoked by the owner after reviewing the diffs; the invocation is the owner's yes on the code."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "resume-writer",
+  "repo": "reactive-resume/reactive-resume",
+  "path": "plugins/reactive-resume/skills/resume-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/reactive-resume/reactive-resume",
+  "dir_name": "resume-writer",
+  "downloaded_at": "2026-11-05T06:26:50.012099Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writer, copy",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "reactive-resume",
+  "source_url": "https://github.com/reactive-resume/reactive-resume/blob/main/plugins/reactive-resume/skills/resume-writer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/reactive-resume/reactive-resume/blob/main/plugins/reactive-resume/skills/resume-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes or rewrites a complete resume as copy-ready text from work history, notes or an existing draft. Also writes standalone headlines and summaries. Use for a general resume draft without a specific job posting; use resume-builder for Reactive Resume JSON and resume-tailor for one posting."
+}

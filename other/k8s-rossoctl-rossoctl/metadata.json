@@ -1,0 +1,37 @@
+{
+  "name": "k8s",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/k8s/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "k8s-rossoctl-rossoctl",
+  "downloaded_at": "2026-11-05T06:35:44.657185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/k8s/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/k8s/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Kubernetes debugging and troubleshooting skills. Debug pods, check logs, verify platform health."
+}

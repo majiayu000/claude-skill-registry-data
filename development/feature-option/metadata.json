@@ -1,0 +1,38 @@
+{
+  "name": "feature-option",
+  "repo": "rsicarelli/fakt",
+  "path": ".claude/skills/feature-option/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rsicarelli/fakt",
+  "dir_name": "feature-option",
+  "downloaded_at": "2026-11-05T06:36:23.588836Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rsicarelli",
+  "source_url": "https://github.com/rsicarelli/fakt/blob/main/.claude/skills/feature-option/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rsicarelli/fakt/blob/main/.claude/skills/feature-option/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides step-by-step through all 11 touchpoints for adding a new @Fake annotation option (like mutability or callHistory). Covers annotation enum, CLI processor, Gradle plugin, FIR metadata, FIR translator, the shared FakeDeclaration model, and code generators. Use when adding a new option to @Fake, adding a new enum to the annotation, making something configurable per-interface, implementing a new compiler plugin feature flag, adding a new Gradle extension property, or extending the three-tier resolution (annotation \u2192 plugin \u2192 default). Make sure to use this skill whenever a change touches more than one layer of the option pipeline, even for small additions like a new enum value."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "payprobe-proof-and-analysis-toolkit",
+  "repo": "pay-probe/payprobe",
+  "path": ".claude/skills/payprobe-proof-and-analysis-toolkit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pay-probe/payprobe",
+  "dir_name": "payprobe-proof-and-analysis-toolkit",
+  "downloaded_at": "2026-11-05T06:09:11.312150Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pay-probe",
+  "source_url": "https://github.com/pay-probe/payprobe/blob/main/.claude/skills/payprobe-proof-and-analysis-toolkit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pay-probe/payprobe/blob/main/.claude/skills/payprobe-proof-and-analysis-toolkit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "HOW to measure and prove things in PayProbe \u2014 analysis recipes with commands (prove it, don't just install it). Load when you need to establish a fact rather than fix a known symptom \u2014 reproducing and categorizing a failing suite before touching code, verifying crypto (DUKPT/ARQC/PVV/CVV) against known vectors instead of trusting it by inspection, proving what bytes actually crossed a TCP wire (ISO 8583 analyze/diff, raw_log, length-prefix framing), measuring load performance without fooling yourself (tps_series, error_categories, /load-runs/{id}/compare, the in-process TPS cap), designing chaos fault-injection experiments where a gate decides pass/fail (resilience scoring), and reasoning about crash-safety and delivery semantics (reconcile_orphans, Redis Streams last_event_id resume). Keywords: worked example, test vector, measured not assumed, root cause, wire trace, hex dump, regression detection, chaos storm, resilience certificate, crash recovery, stuck run, exactly-once, at-least-once."
+}

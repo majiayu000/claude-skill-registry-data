@@ -1,0 +1,37 @@
+{
+  "name": "kb",
+  "repo": "robinalexandre/claude-code-kit",
+  "path": "skills/kb/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/robinalexandre/claude-code-kit",
+  "dir_name": "kb-robinalexandre-claude-code-kit",
+  "downloaded_at": "2026-11-05T06:32:50.235237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "robinalexandre",
+  "source_url": "https://github.com/robinalexandre/claude-code-kit/blob/main/skills/kb/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/robinalexandre/claude-code-kit/blob/main/skills/kb/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The user's personal knowledge base, shared by every computer (and their other agents) through the config sync. Markdown notes with links in ~/.claude-sync/knowledge, indexed by the `kb` command for text, semantic and graph search. Use when the user asks \"what do you know about\u2026\", \"qu'est-ce que tu sais sur\u2026\", \"have we already\u2026\", \"on avait d\u00e9cid\u00e9 quoi pour\u2026\", \"mind map\", \"carte mentale\", \"note this for good\", \"retiens \u00e7a pour toujours\", \"where did we leave\u2026\", or when a SessionStart or prompt message lists knowledge base notes."
+}

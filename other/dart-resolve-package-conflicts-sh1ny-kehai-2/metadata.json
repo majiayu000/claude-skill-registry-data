@@ -1,0 +1,37 @@
+{
+  "name": "dart-resolve-package-conflicts",
+  "repo": "sh1ny/kehai",
+  "path": ".agents/skills/dart-resolve-package-conflicts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sh1ny/kehai",
+  "dir_name": "dart-resolve-package-conflicts-sh1ny-kehai-2",
+  "downloaded_at": "2026-11-05T06:46:49.351269Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sh1ny",
+  "source_url": "https://github.com/sh1ny/kehai/blob/main/.agents/skills/dart-resolve-package-conflicts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sh1ny/kehai/blob/main/.agents/skills/dart-resolve-package-conflicts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Workflow for fixing package version conflicts. Use this when `pub get` fails due to incompatible package versions."
+}

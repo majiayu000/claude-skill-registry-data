@@ -1,0 +1,38 @@
+{
+  "name": "tdd:kind",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/tdd:kind/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "tdd-kind",
+  "downloaded_at": "2026-11-05T06:35:48.641921Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/tdd:kind/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/tdd:kind/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "TDD workflow with Kind cluster - fast local iteration for Rossoctl development"
+}

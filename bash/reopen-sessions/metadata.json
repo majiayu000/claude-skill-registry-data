@@ -1,0 +1,38 @@
+{
+  "name": "reopen-sessions",
+  "repo": "robinalexandre/claude-code-kit",
+  "path": "skills/reopen-sessions/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/robinalexandre/claude-code-kit",
+  "dir_name": "reopen-sessions",
+  "downloaded_at": "2026-11-05T06:32:52.047580Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "robinalexandre",
+  "source_url": "https://github.com/robinalexandre/claude-code-kit/blob/main/skills/reopen-sessions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/robinalexandre/claude-code-kit/blob/main/skills/reopen-sessions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reopens, one terminal tab each, the Claude Code sessions that were running before the terminal, the IDE or the computer crashed or closed, or the ones about a topic the user names, in whatever terminal or app the user runs them in (Ghostty, iTerm, Terminal.app, WezTerm, kitty, Windows Terminal, GNOME Terminal; JustSessions, an IDE or any other app gets the steps or commands instead). Use when the user says \"reopen my sessions\", \"my terminal crashed\", \"WebStorm crashed, bring my sessions back\", \"resume all the sessions I had open\", \"reopen the session about\u2026\", \"rouvre mes sessions\", or after moving to another terminal app."
+}

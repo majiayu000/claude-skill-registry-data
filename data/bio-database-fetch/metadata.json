@@ -1,0 +1,38 @@
+{
+  "name": "bio-database-fetch",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/bio-database-fetch/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "bio-database-fetch",
+  "downloaded_at": "2026-11-05T07:02:20.157493Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/bio-database-fetch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/bio-database-fetch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fetches compound properties and species taxonomy from the official PubChem PUG-REST and NCBI Taxonomy APIs. Retrieves molecular formula, weight, SMILES, InChI, InChIKey, IUPAC name, XLogP, TPSA and CAS numbers for a batch of PubChem CIDs, and full lineage classification (domain through species) for a batch of NCBI Taxonomy IDs. Supports batched queries (100 IDs per request), CSV/JSON export, and requires a contact email as the NCBI usage policy mandates. This skill should be used when looking up properties of known compounds by CID, retrieving CAS registry numbers, resolving taxonomy IDs to species names, or collecting chemical and taxonomic reference data in bulk is requested."
+}

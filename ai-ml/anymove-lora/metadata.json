@@ -1,0 +1,38 @@
+{
+  "name": "anymove-lora",
+  "repo": "patch-gg/anymove",
+  "path": "skills/anymove-lora/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/patch-gg/anymove",
+  "dir_name": "anymove-lora",
+  "downloaded_at": "2026-11-05T06:07:33.657547Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patch-gg",
+  "source_url": "https://github.com/patch-gg/anymove/blob/main/skills/anymove-lora/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patch-gg/anymove/blob/main/skills/anymove-lora/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Train and use a MiniMax H3 image-to-video LoRA on fal that keeps anymove's two-camera layout - split screen held, limb colours kept, both views in step. Builds the dataset by re-rendering clean captured motions (and their mirrors) from both cameras, packs it, runs a cheap debug pass, trains, and A/B tests against plain H3 with the same seeds. Use when plain video models keep swapping limb colours or breaking the split screen for a creature, or when someone asks about @Graalitoo's LoRA step, its cost or its training data."
+}

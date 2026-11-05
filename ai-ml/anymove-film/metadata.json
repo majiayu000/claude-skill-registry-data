@@ -1,0 +1,38 @@
+{
+  "name": "anymove-film",
+  "repo": "patch-gg/anymove",
+  "path": "skills/anymove-film/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/patch-gg/anymove",
+  "dir_name": "anymove-film",
+  "downloaded_at": "2026-11-05T06:07:33.292998Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patch-gg",
+  "source_url": "https://github.com/patch-gg/anymove/blob/main/skills/anymove-film/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patch-gg/anymove/blob/main/skills/anymove-film/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make the two-camera AI clip for an anymove creature - write the move's prompt from creature.json, send the reference frame to MiniMax H3 Max (or H3, Seedance, FLUX 3 Max) on fal, and check the clip kept the split screen, the limb colours and both views in step before capture. Use when someone wants a new move for a rigged anymove creature, when clips come back with swapped colours, a moving camera or a broken split screen, or when choosing a video model for two-camera clips."
+}

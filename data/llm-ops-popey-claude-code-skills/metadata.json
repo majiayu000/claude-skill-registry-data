@@ -1,0 +1,39 @@
+{
+  "name": "llm-ops",
+  "repo": "popey/claude-code-skills",
+  "path": "skills/llm-ops/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/popey/claude-code-skills",
+  "dir_name": "llm-ops-popey-claude-code-skills",
+  "downloaded_at": "2026-11-05T06:15:34.472209Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "popey",
+  "source_url": "https://github.com/popey/claude-code-skills/blob/master/skills/llm-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/popey/claude-code-skills/blob/master/skills/llm-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "LLM Operations -- RAG, embeddings, vector databases, fine-tuning, prompt engineering avancado, custos de LLM, evals de qualidade e arquiteturas de IA para producao."
+}

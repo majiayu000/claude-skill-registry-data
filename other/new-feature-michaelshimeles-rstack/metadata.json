@@ -1,0 +1,37 @@
+{
+  "name": "new-feature",
+  "repo": "michaelshimeles/rstack",
+  "path": "new-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/michaelshimeles/rstack",
+  "dir_name": "new-feature-michaelshimeles-rstack",
+  "downloaded_at": "2026-11-05T05:33:16.434328Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "michaelshimeles",
+  "source_url": "https://github.com/michaelshimeles/rstack/blob/main/new-feature/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/michaelshimeles/rstack/blob/main/new-feature/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Isolate repository edits in a Git worktree before starting a feature, fix, or documentation change. Preserve a worktree already assigned to the same task. Read-only reviews and investigations do not need a new worktree."
+}

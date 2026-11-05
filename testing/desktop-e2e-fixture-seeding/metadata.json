@@ -1,0 +1,38 @@
+{
+  "name": "desktop-e2e-fixture-seeding",
+  "repo": "pwrdrvr/PwrAgent",
+  "path": ".agents/skills/desktop-e2e-fixture-seeding/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/pwrdrvr/PwrAgent",
+  "dir_name": "desktop-e2e-fixture-seeding",
+  "downloaded_at": "2026-11-05T06:20:13.910992Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pwrdrvr",
+  "source_url": "https://github.com/pwrdrvr/PwrAgent/blob/main/.agents/skills/desktop-e2e-fixture-seeding/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pwrdrvr/PwrAgent/blob/main/.agents/skills/desktop-e2e-fixture-seeding/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Record, export, derive, and refresh desktop replay-backed E2E fixtures for PwrAgent. Use when Codex needs to seed or update `apps/desktop/e2e/fixtures/*` from a live desktop session with Computer Use, add a new capture recipe, promote `raw.capture.jsonl` into `replay.fixture.json`, or wire a replay-backed Electron spec around a captured scenario."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "image-scoring-mcp",
+  "repo": "synthet/image-scoring-gallery",
+  "path": ".agent/skills/image-scoring-mcp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/synthet/image-scoring-gallery",
+  "dir_name": "image-scoring-mcp",
+  "downloaded_at": "2026-11-05T07:08:07.290543Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "synthet",
+  "source_url": "https://github.com/synthet/image-scoring-gallery/blob/main/.agent/skills/image-scoring-mcp/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/synthet/image-scoring-gallery/blob/main/.agent/skills/image-scoring-mcp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Driftara Gallery MCP \u2014 one driftara server (search \u2192 resolve \u2192 execute over local, ipc, cdp, api and system actions); backend work goes to the sibling vexlum (is-be-mcp)."
+}

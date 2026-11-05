@@ -1,0 +1,38 @@
+{
+  "name": "scoring-pipeline",
+  "repo": "synthet/image-scoring-gallery",
+  "path": ".agents/skills/scoring-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/synthet/image-scoring-gallery",
+  "dir_name": "scoring-pipeline-synthet-image-scoring-galler-2",
+  "downloaded_at": "2026-11-05T07:08:07.126579Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "synthet",
+  "source_url": "https://github.com/synthet/image-scoring-gallery/blob/main/.agents/skills/scoring-pipeline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/synthet/image-scoring-gallery/blob/main/.agents/skills/scoring-pipeline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Python scoring pipeline architecture \u2014 models, workers, engine, and how to extend the system."
+}

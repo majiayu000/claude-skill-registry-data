@@ -1,0 +1,38 @@
+{
+  "name": "hook-stocktake",
+  "repo": "shimo4228/akc-cycle",
+  "path": "skills/hook-stocktake/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/shimo4228/akc-cycle",
+  "dir_name": "hook-stocktake",
+  "downloaded_at": "2026-11-05T06:49:50.257270Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shimo4228",
+  "source_url": "https://github.com/shimo4228/akc-cycle/blob/main/skills/hook-stocktake/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shimo4228/akc-cycle/blob/main/skills/hook-stocktake/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit the harness hooks (hooks/*.sh, scripts/hooks/*) and their settings.json wiring, and give each a verdict (hook \u306e\u68da\u5378\u3057)."
+}

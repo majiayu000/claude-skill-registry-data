@@ -1,0 +1,38 @@
+{
+  "name": "hypershift:preflight",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/hypershift:preflight/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "hypershift-preflight",
+  "downloaded_at": "2026-11-05T06:35:59.971465Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/hypershift:preflight/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/hypershift:preflight/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run pre-flight checks for HyperShift CI. Verifies tools, AWS auth, OpenShift permissions, and configuration."
+}

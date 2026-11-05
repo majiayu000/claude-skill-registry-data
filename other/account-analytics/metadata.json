@@ -1,0 +1,37 @@
+{
+  "name": "monte-carlo-account-analytics",
+  "repo": "monte-carlo-data/mc-agent-toolkit",
+  "path": "skills/account-analytics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/monte-carlo-data/mc-agent-toolkit",
+  "dir_name": "account-analytics",
+  "downloaded_at": "2026-11-05T05:40:21.091079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "monte-carlo-data",
+  "source_url": "https://github.com/monte-carlo-data/mc-agent-toolkit/blob/main/skills/account-analytics/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/monte-carlo-data/mc-agent-toolkit/blob/main/skills/account-analytics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answers questions about your Monte Carlo account (alerts, data quality, coverage, monitors, credits, monitor runs) from the Analytics API, helps sharpen vague questions, and builds dashboards on request."
+}

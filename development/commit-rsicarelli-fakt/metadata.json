@@ -1,0 +1,39 @@
+{
+  "name": "commit",
+  "repo": "rsicarelli/fakt",
+  "path": ".claude/skills/commit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rsicarelli/fakt",
+  "dir_name": "commit-rsicarelli-fakt",
+  "downloaded_at": "2026-11-05T06:36:22.781258Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile, refactor",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rsicarelli",
+  "source_url": "https://github.com/rsicarelli/fakt/blob/main/.claude/skills/commit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rsicarelli/fakt/blob/main/.claude/skills/commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates project commits \u2014 Conventional Commits format, message quality (72 char subject, 80 char body), staged-change checks, and the AI co-author trailer. Use when committing changes, running /commit, creating commit messages, or reviewing commit message quality. Make sure to use this skill whenever a git commit is being created \u2014 it is the project's commit workflow and replaces the default one."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "typescript",
+  "repo": "shift-editor/shift",
+  "path": ".claude/skills/typescript/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/shift-editor/shift",
+  "dir_name": "typescript-shift-editor-shift",
+  "downloaded_at": "2026-11-05T06:49:32.232124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shift-editor",
+  "source_url": "https://github.com/shift-editor/shift/blob/main/.claude/skills/typescript/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shift-editor/shift/blob/main/.claude/skills/typescript/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Canonical rules for writing and reviewing TypeScript in Shift's packages and desktop app. Use whenever you add or change `.ts`/`.tsx` code that defines a domain type, a lookup by id, a collection field, a scene node kind, a cross-object `?.` chain, a `filter`/`map`/`find` chain, a spread, a cast, or data arriving over IPC, MCP or JSON. Load `signals` as well for reactive code and `jsdoc` for documentation comments."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "peptide-design",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/peptide-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "peptide-design",
+  "downloaded_at": "2026-11-05T07:02:21.627503Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/peptide-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/peptide-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when analyzing or designing antimicrobial peptides \u2014 computing physicochemical properties such as molecular weight, isoelectric point, Kyte-Doolittle hydrophobicity and instability index, classifying peptides as antimicrobial or non-antimicrobial from GO terms and sequence features, deduplicating peptide libraries by clustering, and exporting FASTA or CSV. \u7528\u4e8e\u591a\u80bd\u7406\u5316\u6027\u8d28\u8ba1\u7b97\u3001\u6297\u83cc\u80bd\u5224\u522b\u3001\u5e8f\u5217\u805a\u7c7b\u53bb\u5197\u4f59\u4e0e\u5bfc\u51fa\u7684\u573a\u666f\u3002"
+}

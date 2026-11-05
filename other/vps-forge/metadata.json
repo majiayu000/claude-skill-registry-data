@@ -1,0 +1,38 @@
+{
+  "name": "vps-forge",
+  "repo": "mountain-beaver/vps-forge",
+  "path": "skills/vps-forge/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mountain-beaver/vps-forge",
+  "dir_name": "vps-forge",
+  "downloaded_at": "2026-11-05T05:41:54.378734Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "docker",
+      "kubernetes"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mountain-beaver",
+  "source_url": "https://github.com/mountain-beaver/vps-forge/blob/main/skills/vps-forge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mountain-beaver/vps-forge/blob/main/skills/vps-forge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up, harden, audit and polish a Linux VPS (Debian/Ubuntu) to production grade without ever losing access \u2014 SSH keys and crypto, firewall, fail2ban/CrowdSec, automatic security updates, kernel hardening, Docker, Caddy/nginx with TLS, WireGuard/Tailscale, restic backups, phone alerts, monitoring and a final verified score. Use this skill whenever the user mentions a VPS, VDS, cloud server, droplet, Hetzner/DigitalOcean/Vultr/Linode/OVH/Oracle Cloud/AWS EC2 or Lightsail box (x86 or ARM), a \"fresh server\", \"secure/harden/lock down my server\", SSH hardening, ufw, fail2ban, \"set up Docker/Caddy/nginx on my server\", preparing a server for Coolify, Dokploy, CapRover or Kamal, server backups or monitoring, or asks to audit or check an existing server \u2014 even if they don't say \"harden\". Not for RHEL/Fedora-family servers, Kubernetes nodes (k3s, kubeadm), Proxmox or other hypervisor hosts, managed or shared hosting without root, or the user's own desktop."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "video-montage",
+  "repo": "robinalexandre/claude-code-kit",
+  "path": "skills/video-montage/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/robinalexandre/claude-code-kit",
+  "dir_name": "video-montage",
+  "downloaded_at": "2026-11-05T06:32:51.876125Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "robinalexandre",
+  "source_url": "https://github.com/robinalexandre/claude-code-kit/blob/main/skills/video-montage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/robinalexandre/claude-code-kit/blob/main/skills/video-montage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Edit a short video montage from a folder of phone videos with ffmpeg, proposed by default as a vertical Instagram Reel (1080x1920, 30 fps, H.264). Claude reviews every clip visually, proposes numbered candidate clips for the user to pick, then assembles the montage once, verifies it frame by frame and delivers. Use when the user asks for a Reel, a short vertical edit, a highlight video, or a montage from several clips."
+}

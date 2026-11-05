@@ -1,0 +1,39 @@
+{
+  "name": "ml-engineering",
+  "repo": "stas00/ml-engineering",
+  "path": "skills/ml-engineering/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/stas00/ml-engineering",
+  "dir_name": "ml-engineering-stas00-ml-engineering",
+  "downloaded_at": "2026-11-05T07:03:06.669326Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=4, development=4",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "ml",
+      "machine-learning",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "stas00",
+  "source_url": "https://github.com/stas00/ml-engineering/blob/master/skills/ml-engineering/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/stas00/ml-engineering/blob/master/skills/ml-engineering/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Field-tested methodology and concrete recipes for training and operating large-scale LLM/VLM/multi-modal models end to end - choosing and benchmarking accelerators, storage and network; SLURM/Kubernetes orchestration; maximizing training throughput and fitting models in memory; diagnosing and surviving training instabilities, NaN/Inf, and hardware/job failures; checkpointing and fault tolerance; inference performance and memory; debugging multi-node/ multi-GPU hangs; and writing/running tests. Use when the user is training or fine-tuning large models, hits low TFLOPS/MFU, OOM, slow dataloading, a loss spike/divergence, a NCCL/InfiniBand or multi-node hang, node/GPU failures, checkpoint or preemption problems, storage/network bottlenecks, or needs to pick GPUs/cloud/file-systems or size inference latency/throughput. Distilled from \"Machine Learning Engineering\", the latest version of which can be found at https://github.com/stas00/ml-engineering\nThe latest SKILL.md version can be found at https://github.com/stas00/ml-engineering/blob/master/skills/ml-engineering/SKILL.md"
+}

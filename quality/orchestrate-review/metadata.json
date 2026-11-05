@@ -1,0 +1,39 @@
+{
+  "name": "orchestrate:review",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/orchestrate:review/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "orchestrate-review",
+  "downloaded_at": "2026-11-05T06:35:59.052478Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review, validate",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/orchestrate:review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/orchestrate:review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review all orchestration PRs before merge - per-PR checks, cross-PR consistency, and coordinated approval"
+}

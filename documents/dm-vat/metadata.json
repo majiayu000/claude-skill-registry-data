@@ -1,0 +1,37 @@
+{
+  "name": "dm-vat",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/dm-vat/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "dm-vat",
+  "downloaded_at": "2026-11-05T06:02:44.413300Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/dm-vat/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/dm-vat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Dominica VAT registration, rates and return preparation reference checked for 2026. Covers the standard and accommodation or diving rates, the annual registration threshold, the three-month forward-looking registration test, monthly filing and payment, and illustrative output-tax arithmetic. Use for Dominica VAT, EC$250,000 registration, tax-inclusive pricing or nil returns. It flags inconsistent official wording at the exact annual threshold and cites the 2016 regulation changing threshold amounts. This draft does not determine every exemption, input deduction, special-sector registration rule, import liability or place-of-supply question, and does not assert comprehensive VAT coverage."
+}

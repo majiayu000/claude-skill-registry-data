@@ -1,0 +1,39 @@
+{
+  "name": "rossoctl:weather-demo",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/rossoctl:weather-demo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "rossoctl-weather-demo",
+  "downloaded_at": "2026-11-05T06:36:01.139022Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=4, devops=4",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 4,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/rossoctl:weather-demo/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/rossoctl:weather-demo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy the weather agent and MCP tool demo via CLI (no UI required). Uses pre-built ghcr.io images, deploys to team1. Optimized for speed (~15s)."
+}

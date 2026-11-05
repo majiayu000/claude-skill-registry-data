@@ -1,0 +1,38 @@
+{
+  "name": "playwright-research",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/playwright-research/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "playwright-research-rossoctl-rossoctl",
+  "downloaded_at": "2026-11-05T06:35:59.235806Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/playwright-research/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/playwright-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze UI code changes to plan, create, and maintain Playwright demo videos - change detection, test writing, video recording lifecycle"
+}

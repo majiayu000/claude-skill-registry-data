@@ -1,0 +1,37 @@
+{
+  "name": "change-scope",
+  "repo": "modulestf/modulestf",
+  "path": ".agents/skills/change-scope/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/modulestf/modulestf",
+  "dir_name": "change-scope",
+  "downloaded_at": "2026-11-05T05:38:52.085699Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "modulestf",
+  "source_url": "https://github.com/modulestf/modulestf/blob/master/.agents/skills/change-scope/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/modulestf/modulestf/blob/master/.agents/skills/change-scope/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Decide whether an addition belongs in the thing being changed at all, for any language, project or task. Use before adding, changing, reviewing or fixing anything - creating a feature or a new unit, changing an existing one, reviewing a change, or fixing code after a review. Domain skills supply the concrete boundary rules; this skill supplies the concept, the outcomes and how each activity applies them."
+}

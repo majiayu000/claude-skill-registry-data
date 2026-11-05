@@ -1,0 +1,38 @@
+{
+  "name": "debug",
+  "repo": "patrickjaja/claude-desktop-extra",
+  "path": ".claude/skills/debug/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/patrickjaja/claude-desktop-extra",
+  "dir_name": "debug",
+  "downloaded_at": "2026-11-05T06:08:19.195234Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patrickjaja",
+  "source_url": "https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Debug a problem in claude-desktop-extra by pulling the right local evidence - the most recent local-agent-mode session transcript (your last prompt + the model's tool calls/errors) and the Claude Desktop logs - and asking you for anything else worth collecting for the specific issue. Invoke as \"/debug <short description of what's broken>\"."
+}

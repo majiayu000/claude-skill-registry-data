@@ -1,0 +1,39 @@
+{
+  "name": "dart-write-documentation",
+  "repo": "sh1ny/kehai",
+  "path": ".agents/skills/dart-write-documentation/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/sh1ny/kehai",
+  "dir_name": "dart-write-documentation-sh1ny-kehai-2",
+  "downloaded_at": "2026-11-05T06:46:47.723893Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, word, markdown, documentation",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sh1ny",
+  "source_url": "https://github.com/sh1ny/kehai/blob/main/.agents/skills/dart-write-documentation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sh1ny/kehai/blob/main/.agents/skills/dart-write-documentation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rules and formatting guidelines for writing Dart /// API documentation and doc comments. Use when documenting Dart code, writing doc comments for any Dart declaration (libraries, classes, methods, variables, etc.), or when instructed to follow the Effective Dart documentation guidelines."
+}

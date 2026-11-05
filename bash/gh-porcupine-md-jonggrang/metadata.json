@@ -1,0 +1,38 @@
+{
+  "name": "gh",
+  "repo": "porcupine-md/jonggrang",
+  "path": "skills/library/vcs/gh/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/porcupine-md/jonggrang",
+  "dir_name": "gh-porcupine-md-jonggrang",
+  "downloaded_at": "2026-11-05T06:15:56.925231Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "porcupine-md",
+  "source_url": "https://github.com/porcupine-md/jonggrang/blob/main/skills/library/vcs/gh/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/porcupine-md/jonggrang/blob/main/skills/library/vcs/gh/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "GitHub workflow automation with the gh CLI \u2014 pull requests, issues, releases, the REST/GraphQL API, and safe message escaping. Auth via GH_TOKEN (set in global settings, attached to the sandbox env)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "generate-test-video",
+  "repo": "microsoft/vscode-team-kit",
+  "path": "test-videos/skills/generate-test-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/microsoft/vscode-team-kit",
+  "dir_name": "generate-test-video",
+  "downloaded_at": "2026-11-05T05:34:00.093395Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/vscode-team-kit/blob/main/test-videos/skills/generate-test-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/vscode-team-kit/blob/main/test-videos/skills/generate-test-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a short narrated \"how to test\" or \"how to verify\" video for a VS Code test plan item (TPI), a fixed bug, or a few fixed bugs of one area: recorded in real VS Code Insiders in a throwaway profile, every step checked in the app, with captions, a zoom, flags that pause where something is wrong, a verdict slide and a recap. macOS. USE FOR: \"make a how-to-test video for TPI 342400\", \"a video to verify issue 341013\", \"how-to-verify video for bugs 339711 339712 339714\". DO NOT USE FOR: explaining a PR to someone who won't test it (use pr-studio:generate-video), plain screen recordings, editing an existing video."
+}

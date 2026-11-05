@@ -1,0 +1,38 @@
+{
+  "name": "implementing-shell",
+  "repo": "qte77/claude-code-plugins",
+  "path": "plugins/sh-dev/skills/implementing-shell/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/qte77/claude-code-plugins",
+  "dir_name": "implementing-shell",
+  "downloaded_at": "2026-11-05T06:22:35.872503Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qte77",
+  "source_url": "https://github.com/qte77/claude-code-plugins/blob/main/plugins/sh-dev/skills/implementing-shell/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qte77/claude-code-plugins/blob/main/plugins/sh-dev/skills/implementing-shell/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write and review Bash scripts \u2014 strict mode, argument parsing, usage messages, exit codes, DRY_RUN, dependency checks, ShellCheck clean. Use for hooks, CI helpers and setup scripts."
+}

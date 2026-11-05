@@ -1,0 +1,38 @@
+{
+  "name": "rfdiffusion",
+  "repo": "r2ascension/skill_repo",
+  "path": "skills/rfdiffusion/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/r2ascension/skill_repo",
+  "dir_name": "rfdiffusion-r2ascension-skill-repo",
+  "downloaded_at": "2026-11-05T06:23:25.098498Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, generation=2",
+    "score": 2,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "r2ascension",
+  "source_url": "https://github.com/r2ascension/skill_repo/blob/main/skills/rfdiffusion/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/r2ascension/skill_repo/blob/main/skills/rfdiffusion/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate protein backbones using RFdiffusion, a diffusion-based generative model for de novo protein structure generation. Use this skill when: (1) Designing binder scaffolds for a target protein, (2) Generating novel protein backbones from scratch, (3) Scaffolding functional motifs into new proteins, (4) Specifying hotspot residues for interface design, (5) Creating symmetric oligomers.\nFor sequence design after backbone generation, use proteinmpnn. For structure validation, use alphafold or chai. For QC thresholds, use protein-qc."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "generate-video",
+  "repo": "microsoft/vscode-team-kit",
+  "path": "pr-studio/skills/generate-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/microsoft/vscode-team-kit",
+  "dir_name": "generate-video-microsoft-vscode-team-kit",
+  "downloaded_at": "2026-11-05T05:33:56.310351Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/vscode-team-kit/blob/main/pr-studio/skills/generate-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/vscode-team-kit/blob/main/pr-studio/skills/generate-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make the shortest narrated video that fully explains a GitHub pull request (at most 90 seconds, captions, diagrams chosen for the PR, and real footage of the app, before and after side by side, when the change is visible) in one white Microsoft look. USE FOR: \"/generate-video 12345\", \"make a video of this PR\", \"explain PR <url> in a video\", \"a video for my manager about this PR\". DO NOT USE FOR: a screen recording on its own (no PR to explain), editing existing videos, slide decks (use generate-presentation)."
+}

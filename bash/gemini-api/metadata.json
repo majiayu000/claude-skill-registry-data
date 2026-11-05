@@ -1,0 +1,38 @@
+{
+  "name": "gemini-api",
+  "repo": "sanjay3290/ai-skills",
+  "path": "skills/gemini-api/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sanjay3290/ai-skills",
+  "dir_name": "gemini-api",
+  "downloaded_at": "2026-11-05T06:40:00.760119Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sanjay3290",
+  "source_url": "https://github.com/sanjay3290/ai-skills/blob/main/skills/gemini-api/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sanjay3290/ai-skills/blob/main/skills/gemini-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Call the Gemini API from the shell with Google's `gemini-api` CLI, when that binary is installed \u2014 text and reasoning, image generation and editing, text-to-speech, music, video, document/audio/video/YouTube analysis, transcription and captions, file uploads, and managed agents (Deep Research) run in the background. Use when the task needs a Gemini model or a second opinion from one, a generated image/voiceover/soundtrack/clip, an answer out of a PDF or recording, an SRT caption file, or a long-running research agent. Triggers: 'use gemini', 'ask gemini', 'gemini-api', 'generate an image', 'make a voiceover', 'transcribe this', 'analyze this PDF', 'deep research'. Not for writing application code against the Gemini SDK or Vertex AI."
+}

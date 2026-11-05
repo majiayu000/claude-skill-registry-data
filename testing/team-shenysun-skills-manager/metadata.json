@@ -1,0 +1,38 @@
+{
+  "name": "team",
+  "repo": "shenysun/skills-manager",
+  "path": ".claude/skills/team/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/shenysun/skills-manager",
+  "dir_name": "team-shenysun-skills-manager",
+  "downloaded_at": "2026-11-05T06:49:03.998829Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, tdd",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "tdd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shenysun",
+  "source_url": "https://github.com/shenysun/skills-manager/blob/main/.claude/skills/team/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shenysun/skills-manager/blob/main/.claude/skills/team/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the four-role Herdr team (pm, po, dev, qa panes) that ships one feature of this repo. In the main session the user runs /team as the orchestrator (up, status, go, down); in a role pane the orchestrator prompts /team role: pm|po|dev|qa. Requires HERDR_ENV=1."
+}

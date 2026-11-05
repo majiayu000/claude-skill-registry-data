@@ -1,0 +1,38 @@
+{
+  "name": "codegen",
+  "repo": "rsicarelli/fakt",
+  "path": ".claude/skills/codegen/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rsicarelli/fakt",
+  "dir_name": "codegen",
+  "downloaded_at": "2026-11-05T06:36:22.932096Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rsicarelli",
+  "source_url": "https://github.com/rsicarelli/fakt/blob/main/.claude/skills/codegen/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rsicarelli/fakt/blob/main/.claude/skills/codegen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Documents the Fakt code generation pipeline \u2014 immutable AST model, builder DSL, renderer, default value strategies, and extension functions. Use when modifying code generation, changing generated output, adding new generated patterns, understanding builders or renderers, adding a new default value strategy, or debugging generated output. Make sure to use this skill whenever generated Kotlin code needs to change \u2014 the pipeline has strict conventions (immutable AST, builder DSL, renderer separation) that must be followed even for small changes."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "generate-presentation",
+  "repo": "microsoft/vscode-team-kit",
+  "path": "pr-studio/skills/generate-presentation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/microsoft/vscode-team-kit",
+  "dir_name": "generate-presentation",
+  "downloaded_at": "2026-11-05T05:33:57.691927Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/vscode-team-kit/blob/main/pr-studio/skills/generate-presentation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/vscode-team-kit/blob/main/pr-studio/skills/generate-presentation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make the shortest slide deck (a 16:9 PDF with speaker notes, at most 12 slides) that fully explains a GitHub pull request, in one white Microsoft look: one idea per slide, drawn as diagrams, with screenshots of the real app when the change is visible, every fact from the PR. USE FOR: \"/generate-presentation 12345\", \"make slides about this PR\", \"a deck for my manager on PR <url>\", \"present this pull request\". DO NOT USE FOR: editing PowerPoint files, videos (use generate-video), decks with no pull request behind them."
+}

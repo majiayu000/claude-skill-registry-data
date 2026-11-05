@@ -1,0 +1,38 @@
+{
+  "name": "anymove-rig",
+  "repo": "patch-gg/anymove",
+  "path": "skills/anymove-rig/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/patch-gg/anymove",
+  "dir_name": "anymove-rig",
+  "downloaded_at": "2026-11-05T06:07:33.109500Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patch-gg",
+  "source_url": "https://github.com/patch-gg/anymove/blob/main/skills/anymove-rig/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patch-gg/anymove/blob/main/skills/anymove-rig/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up a new creature for anymove - get a textured mesh, scale and face it, place its skeleton in rig.json with grid views, build and skin the rig in Blender, paint each limb its own colour, choose the two-camera framing, and render the reference frame the video model starts from. Use when adding a creature to anymove, when a rig tears or deforms badly, when the creature is cut off or tiny in the two-camera frame, or when someone asks how to rig a non-humanoid for anymove."
+}

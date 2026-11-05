@@ -1,0 +1,38 @@
+{
+  "name": "specwright-roadmap",
+  "repo": "sh1ny/kehai",
+  "path": ".claude/skills/specwright-roadmap/SKILL.md",
+  "github_branch": "main",
+  "category": "planning",
+  "source": "github.com/sh1ny/kehai",
+  "dir_name": "specwright-roadmap-sh1ny-kehai",
+  "downloaded_at": "2026-11-05T06:46:43.452407Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "planning",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for planning: planning, plan, roadmap",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sh1ny",
+  "source_url": "https://github.com/sh1ny/kehai/blob/main/.claude/skills/specwright-roadmap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sh1ny/kehai/blob/main/.claude/skills/specwright-roadmap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Project-level planning above OpenSpec changes: strategy, architecture baseline (foundational ADRs) and a milestone roadmap. Modes: init (turn a big project idea or brief into strategy, architecture and roadmap), next (start the next change of the current milestone, or offer close at its end), close (verify a milestone's exit criteria and plan the next one), status. Triggers: a project idea too big for one change, 'plan this project', 'create a roadmap', 'what's next on the roadmap', 'next change/milestone', 'close the milestone', 'roadmap status', or specwright-finish offering next/close."
+}

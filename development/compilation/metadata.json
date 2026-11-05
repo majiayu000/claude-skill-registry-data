@@ -1,0 +1,39 @@
+{
+  "name": "compilation",
+  "repo": "rsicarelli/fakt",
+  "path": ".claude/skills/compilation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rsicarelli/fakt",
+  "dir_name": "compilation",
+  "downloaded_at": "2026-11-05T06:36:23.098486Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rsicarelli",
+  "source_url": "https://github.com/rsicarelli/fakt/blob/main/.claude/skills/compilation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rsicarelli/fakt/blob/main/.claude/skills/compilation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Validates compilation of generated Fakt fakes and diagnoses build failures \u2014 where fakes are generated, which path produced them, error classification, and root cause analysis. Use when compilation fails, generated code has errors, no fakes were generated, validating changes compile before committing, or checking if generated code is valid. Make sure to use this skill whenever a build error mentions generated fakes or the Fakt plugin \u2014 even if the root cause might be elsewhere, this skill's error classification pinpoints the actual source."
+}

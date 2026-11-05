@@ -1,0 +1,37 @@
+{
+  "name": "bounded-delegation",
+  "repo": "n-n-code/n-n-code-skills",
+  "path": ".agents/skills/bounded-delegation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/n-n-code/n-n-code-skills",
+  "dir_name": "bounded-delegation",
+  "downloaded_at": "2026-11-05T05:44:33.468550Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: generation=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "generation",
+      "generator"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n-n-code",
+  "source_url": "https://github.com/n-n-code/n-n-code-skills/blob/main/.agents/skills/bounded-delegation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n-n-code/n-n-code-skills/blob/main/.agents/skills/bounded-delegation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate bounded factual file analysis or reference-based code and test generation through available workers, with explicit ownership, limits, and acceptance checks. Use when a narrow read or predictable generation task benefits from offloading. Not a default for every coding task, open-ended diagnosis, general context management, or installing a routing service."
+}

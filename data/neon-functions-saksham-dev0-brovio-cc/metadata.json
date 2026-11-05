@@ -1,0 +1,38 @@
+{
+  "name": "neon-functions",
+  "repo": "saksham-dev0/Brovio.cc",
+  "path": ".agents/skills/neon-functions/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/saksham-dev0/Brovio.cc",
+  "dir_name": "neon-functions-saksham-dev0-brovio-cc",
+  "downloaded_at": "2026-11-05T06:38:22.104888Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, database",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saksham-dev0",
+  "source_url": "https://github.com/saksham-dev0/Brovio.cc/blob/main/.agents/skills/neon-functions/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saksham-dev0/Brovio.cc/blob/main/.agents/skills/neon-functions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Long-running, serverless Node.js HTTP functions deployed onto your Neon branch, with DATABASE_URL injected automatically and compute that runs next to your data. Use when a user wants to host an API, an AI agent with long streaming responses, a WebSocket or server-sent-events (SSE) server, a webhook handler, a Discord bot, an MCP server, or any request/response workload that risks timing out on short, lambda-style serverless functions \u2014 and wants it to branch with their database. Triggers include \"serverless function\", \"deploy an API\", \"long-running function\", \"streaming agent\", \"SSE server\", \"WebSocket server\", \"webhook handler\", \"MCP server\", \"run code next to my database\", \"function that won't time out\", \"function logs\", \"Neon Functions\", and \"Neon Compute\"."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "architecture",
+  "repo": "patrickjaja/claude-desktop-extra",
+  "path": ".claude/skills/architecture/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/patrickjaja/claude-desktop-extra",
+  "dir_name": "architecture-patrickjaja-claude-desktop-extra",
+  "downloaded_at": "2026-11-05T06:08:21.579761Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patrickjaja",
+  "source_url": "https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explains the purpose, features, and architecture of claude-desktop-extra - which repackages Anthropic's official Claude Desktop Linux .deb for Arch/Fedora/RHEL/Nix/AppImage and layers Linux-only extras (Computer Use, themes, multi-profile, Quick Entry) on top via surgical JS patches. Use when onboarding, writing docs/READMEs, explaining what the project does, or reasoning about how the official build and our patches fit together."
+}

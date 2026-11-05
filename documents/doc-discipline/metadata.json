@@ -1,0 +1,39 @@
+{
+  "name": "doc-discipline",
+  "repo": "solatis/trapperkeeper",
+  "path": ".claude/skills/doc-discipline/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/solatis/trapperkeeper",
+  "dir_name": "doc-discipline",
+  "downloaded_at": "2026-11-05T06:59:09.061119Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "solatis",
+  "source_url": "https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/doc-discipline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/doc-discipline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Enforce this project's documentation discipline. Moves knowledge out of the documentation folder and AGENTS.md files into comments next to the code it describes while keeping it discoverable, and gives functions short contract doc comments, one-line reasons at the lines that need them, and an overview only where the order of steps is not obvious. Rewrites comments that read as patches on an earlier version, or that record plans and conversations, from the current code. Use when asked to apply or check documentation discipline, tidy docs, fix comment quality, or after a change that added non-trivial logic. Accepts a mode (all, placement, narrative, read), an optional \"check\" flag for report-only, optional paths, and optionally a plan document whose promised comments the code is reconciled against. Run \"read\" before writing code or a plan in this shape."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "fix",
+  "repo": "sneha-asi/convopilot-bolna",
+  "path": ".claude/skills/fix/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/sneha-asi/convopilot-bolna",
+  "dir_name": "fix-sneha-asi-convopilot-bolna",
+  "downloaded_at": "2026-11-05T06:57:09.545710Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sneha-asi",
+  "source_url": "https://github.com/sneha-asi/convopilot-bolna/blob/main/.claude/skills/fix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sneha-asi/convopilot-bolna/blob/main/.claude/skills/fix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose and fix a build error, test failure, or deploy problem \u2014 explains first, acts only when told"
+}

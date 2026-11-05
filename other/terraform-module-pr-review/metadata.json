@@ -1,0 +1,37 @@
+{
+  "name": "terraform-module-pr-review",
+  "repo": "modulestf/modulestf",
+  "path": ".agents/skills/terraform-module-pr-review/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/modulestf/modulestf",
+  "dir_name": "terraform-module-pr-review",
+  "downloaded_at": "2026-11-05T05:38:52.788004Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "modulestf",
+  "source_url": "https://github.com/modulestf/modulestf/blob/master/.agents/skills/terraform-module-pr-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/modulestf/modulestf/blob/master/.agents/skills/terraform-module-pr-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews a GitHub pull request, or a single commit, against a Terraform module repository. Use when the request carries a pull request URL like github.com/owner/repo/pull/123, a short reference like owner/repo#123, or a commit URL like github.com/owner/repo/commit/<sha>, and asks for a review, a verdict, a comment to post, \"what should I reply on this pull request\", or \"is this ready to merge\". Not for a local diff or a set of changed files with no pull request (use terraform-module-reviewer), and not for making the change (use terraform-module-maintainer)."
+}

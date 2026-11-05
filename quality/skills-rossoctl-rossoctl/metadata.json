@@ -1,0 +1,38 @@
+{
+  "name": "skills",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/skills/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "skills-rossoctl-rossoctl",
+  "downloaded_at": "2026-11-05T06:35:47.178303Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/skills/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Skill management - create, validate, and improve Claude Code skills"
+}

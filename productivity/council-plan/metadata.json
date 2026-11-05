@@ -1,0 +1,38 @@
+{
+  "name": "council-plan",
+  "repo": "microsoft/vscode-team-kit",
+  "path": "model-council/skills/council-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/microsoft/vscode-team-kit",
+  "dir_name": "council-plan",
+  "downloaded_at": "2026-11-05T05:33:57.153277Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/vscode-team-kit/blob/main/model-council/skills/council-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/vscode-team-kit/blob/main/model-council/skills/council-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Multi-model council planning for implementation and architecture decisions. USE FOR: \"plan with council\", \"multi-model plan\", \"different perspectives on an approach\", \"multiple models propose plans independently\", \"debate approaches or compare strategies\", \"cross-plan a synthesis\". DO NOT USE FOR: \"review a diff or pull request\", \"answer a quick factual question\"."
+}

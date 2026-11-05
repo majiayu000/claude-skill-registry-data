@@ -1,0 +1,37 @@
+{
+  "name": "reminders",
+  "repo": "robinalexandre/claude-code-kit",
+  "path": "skills/reminders/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/robinalexandre/claude-code-kit",
+  "dir_name": "reminders",
+  "downloaded_at": "2026-11-05T06:32:50.829567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "robinalexandre",
+  "source_url": "https://github.com/robinalexandre/claude-code-kit/blob/main/skills/reminders/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/robinalexandre/claude-code-kit/blob/main/skills/reminders/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Leaves a reminder for the user, shown in a later Claude Code session on this computer or another one, and notifies them on the desktop and on the phone (Claude mobile app through a scheduled task, or ntfy) every morning and at the first session of the day. Use when the user says \"remind me\", \"rappelle-moi\", \"tomorrow when I open a session, tell me\u2026\", \"don't let me forget\", \"list my reminders\", \"that reminder is done\", or when a SessionStart message lists reminders."
+}

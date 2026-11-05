@@ -1,0 +1,37 @@
+{
+  "name": "pr-writer",
+  "repo": "rubenautodetail/autodetailapp",
+  "path": ".claude/skills/pr-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rubenautodetail/autodetailapp",
+  "dir_name": "pr-writer-rubenautodetail-autodetailapp",
+  "downloaded_at": "2026-11-05T06:36:41.726354Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rubenautodetail",
+  "source_url": "https://github.com/rubenautodetail/autodetailapp/blob/main/.claude/skills/pr-writer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rubenautodetail/autodetailapp/blob/main/.claude/skills/pr-writer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "ALWAYS use this skill when creating or updating pull requests \u2014 never create or edit a PR directly without it. Follows Sentry conventions for PR titles, descriptions, and issue references. Trigger on any create PR, open PR, submit PR, make PR,..."
+}

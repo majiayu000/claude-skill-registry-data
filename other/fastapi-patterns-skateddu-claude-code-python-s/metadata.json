@@ -1,0 +1,38 @@
+{
+  "name": "fastapi-patterns",
+  "repo": "skateddu/claude-code-python-setup",
+  "path": ".claude/skills/fastapi-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/skateddu/claude-code-python-setup",
+  "dir_name": "fastapi-patterns-skateddu-claude-code-python-s",
+  "downloaded_at": "2026-11-05T06:53:49.405754Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skateddu",
+  "source_url": "https://github.com/skateddu/claude-code-python-setup/blob/main/.claude/skills/fastapi-patterns/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skateddu/claude-code-python-setup/blob/main/.claude/skills/fastapi-patterns/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "FastAPI patterns for this template's stack \u2014 src layout with routes, services and repositories, pydantic-settings injected rather than imported, Pydantic v2 schemas, async SQLAlchemy 2.0, domain exceptions mapped to HTTP in one place, OAuth2 with PyJWT and pwdlib, and httpx + pytest-asyncio tests. Use when building or reviewing a FastAPI app \u2014 endpoints, schemas, dependencies, auth, error handling or API tests."
+}

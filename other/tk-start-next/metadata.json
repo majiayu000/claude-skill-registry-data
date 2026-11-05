@@ -1,0 +1,37 @@
+{
+  "name": "tk-start-next",
+  "repo": "solatis/trapperkeeper",
+  "path": ".claude/skills/tk-start-next/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/solatis/trapperkeeper",
+  "dir_name": "tk-start-next",
+  "downloaded_at": "2026-11-05T06:59:08.730817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "solatis",
+  "source_url": "https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-start-next/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-start-next/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Seed a session with the next unit of work -- read the active milestone's goals against the tree and the open issues, cut what is still missing into right-sized issues, ask the owner which to tackle together, then load their context and put their design choices to the owner without starting them"
+}

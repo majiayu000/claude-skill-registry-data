@@ -1,0 +1,37 @@
+{
+  "name": "nostr-vpn",
+  "repo": "mmalmi/nostr-vpn",
+  "path": "plugins/nostr-vpn/skills/nostr-vpn/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/mmalmi/nostr-vpn",
+  "dir_name": "nostr-vpn",
+  "downloaded_at": "2026-11-05T05:38:05.146340Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mmalmi",
+  "source_url": "https://github.com/mmalmi/nostr-vpn/blob/master/plugins/nostr-vpn/skills/nostr-vpn/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mmalmi/nostr-vpn/blob/master/plugins/nostr-vpn/skills/nostr-vpn/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Connect an authorized machine to a Nostr VPN private mesh, review device join requests, and verify access with the nvpn CLI. Use for account-free private networking between agent hosts, people, and servers."
+}

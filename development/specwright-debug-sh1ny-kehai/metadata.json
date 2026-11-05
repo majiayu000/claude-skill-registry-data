@@ -1,0 +1,38 @@
+{
+  "name": "specwright-debug",
+  "repo": "sh1ny/kehai",
+  "path": ".agents/skills/specwright-debug/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sh1ny/kehai",
+  "dir_name": "specwright-debug-sh1ny-kehai",
+  "downloaded_at": "2026-11-05T06:46:40.101714Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sh1ny",
+  "source_url": "https://github.com/sh1ny/kehai/blob/main/.agents/skills/specwright-debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sh1ny/kehai/blob/main/.agents/skills/specwright-debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Root-cause debugging discipline: reproduce, trace, test hypotheses, fix test-first. Use for unexplained failures, not for the deliberate red step of test-first work. Triggers: a bug report, an issue link, an unexpected test or CI failure, an error or crash, 'debug this', 'why does X happen', 'fix this bug', or specwright-pr watch handing off a CI failure."
+}

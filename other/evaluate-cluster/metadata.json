@@ -1,0 +1,37 @@
+{
+  "name": "evaluate-cluster",
+  "repo": "stas00/ml-engineering",
+  "path": "skills/evaluate-cluster/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/stas00/ml-engineering",
+  "dir_name": "evaluate-cluster",
+  "downloaded_at": "2026-11-05T07:03:06.992677Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "stas00",
+  "source_url": "https://github.com/stas00/ml-engineering/blob/master/skills/evaluate-cluster/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/stas00/ml-engineering/blob/master/skills/evaluate-cluster/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Evaluates an ML GPU cluster for a cloud trial or acceptance test: environment dump, isolated newest PyTorch, matmul FLOPS (MAMF/MSMF) on every GPU while the others compute, intra-node all-reduce bandwidth and per-call latency of every collective, the same inter-node on every node you were given (omit those sections if there is only one node), fio on local disk and shared FS, dated markdown report. Use when the user asks to evaluate a cluster, kick the tires on trial nodes, run cluster acceptance, or measure GPU/network/storage.\nCanonical copy: https://github.com/stas00/ml-engineering/blob/master/skills/evaluate-cluster/SKILL.md"
+}

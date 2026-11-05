@@ -1,0 +1,37 @@
+{
+  "name": "digcrawl",
+  "repo": "originaleric/digcrawl",
+  "path": ".agents/skills/digcrawl/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/originaleric/digcrawl",
+  "dir_name": "digcrawl",
+  "downloaded_at": "2026-11-05T06:04:08.658757Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "originaleric",
+  "source_url": "https://github.com/originaleric/digcrawl/blob/main/.agents/skills/digcrawl/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/originaleric/digcrawl/blob/main/.agents/skills/digcrawl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read web and supported social-platform links through a locally installed DigCrawl MCP server, or analyze an explicitly requested local video path or direct-media URL through its CLI. Use when a user asks to read, analyze, quote, compare, OCR, transcribe, or summarize a provided URL; or explicitly opts a supported platform into local image or video saving. Especially supports WeChat articles, Xiaohongshu notes, Douyin or Toutiao videos, X posts, Reddit, RSS/Atom feeds, and supported Chinese social platforms. Use the host Agent to read returned image attachments and to summarize retrieved content; use local ASR only for an explicit video-transcription request. Preserve structured errors for unavailable, login-gated, captcha-gated, or rate-limited content."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "comment",
+  "repo": "patrickjaja/claude-desktop-extra",
+  "path": ".claude/skills/comment/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/patrickjaja/claude-desktop-extra",
+  "dir_name": "comment-patrickjaja-claude-desktop-extra",
+  "downloaded_at": "2026-11-05T06:08:20.703281Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patrickjaja",
+  "source_url": "https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/comment/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/comment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft (and after approval, post) a reply on a claude-desktop-extra GitHub issue in this project's house voice - short, factual, friendly, no self-blame and no speculation - ending in one copy-pasteable command block that asks the reporter for the evidence we still need. Invoke as \"/comment <issue number>\"."
+}

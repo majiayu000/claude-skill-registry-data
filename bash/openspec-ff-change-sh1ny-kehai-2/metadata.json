@@ -1,0 +1,37 @@
+{
+  "name": "openspec-ff-change",
+  "repo": "sh1ny/kehai",
+  "path": ".claude/skills/openspec-ff-change/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sh1ny/kehai",
+  "dir_name": "openspec-ff-change-sh1ny-kehai-2",
+  "downloaded_at": "2026-11-05T06:46:42.370483Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sh1ny",
+  "source_url": "https://github.com/sh1ny/kehai/blob/main/.claude/skills/openspec-ff-change/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sh1ny/kehai/blob/main/.claude/skills/openspec-ff-change/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fast-forward through OpenSpec artifact creation. Use when the user wants to quickly create all artifacts needed for implementation without stepping through each one individually. Also use when the user says \"openspec ff\" or \"opsx ff\"."
+}

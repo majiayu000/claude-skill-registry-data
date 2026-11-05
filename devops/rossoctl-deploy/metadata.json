@@ -1,0 +1,39 @@
+{
+  "name": "rossoctl:deploy",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/rossoctl:deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "rossoctl-deploy",
+  "downloaded_at": "2026-11-05T06:35:55.793386Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: cd, docker, kubernetes, deploy",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "cd",
+      "docker",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/rossoctl:deploy/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/rossoctl:deploy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy or redeploy the Rossoctl Kind cluster using the Python installer - quick redeploy, manual steps, and troubleshooting"
+}

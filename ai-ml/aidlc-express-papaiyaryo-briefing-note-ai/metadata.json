@@ -1,0 +1,37 @@
+{
+  "name": "aidlc-express",
+  "repo": "papaiyaryo/briefing-note-ai",
+  "path": ".claude/skills/aidlc-express/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/papaiyaryo/briefing-note-ai",
+  "dir_name": "aidlc-express-papaiyaryo-briefing-note-ai",
+  "downloaded_at": "2026-11-05T06:06:45.298150Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "papaiyaryo",
+  "source_url": "https://github.com/papaiyaryo/briefing-note-ai/blob/main/.claude/skills/aidlc-express/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/papaiyaryo/briefing-note-ai/blob/main/.claude/skills/aidlc-express/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the AI-DLC workflow with the express scope baked in \u2014 no scope detection. Lightest run: requirements to deploy, no design pass, no reviewers. Packaging over `/aidlc --scope express`, which works without this skill."
+}

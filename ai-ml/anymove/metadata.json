@@ -1,0 +1,38 @@
+{
+  "name": "anymove",
+  "repo": "patch-gg/anymove",
+  "path": "skills/anymove/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/patch-gg/anymove",
+  "dir_name": "anymove",
+  "downloaded_at": "2026-11-05T06:07:32.928753Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patch-gg",
+  "source_url": "https://github.com/patch-gg/anymove/blob/main/skills/anymove/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patch-gg/anymove/blob/main/skills/anymove/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Motion capture for any creature from one AI video, with the anymove repo. A video model films a rigged 3D creature from two cameras in one frame, a DINOv2 joint reader trained on that creature finds every joint in both views, and the rig is fitted to them and exported as a GLB. Use when someone wants to animate a non-human creature (dragon, spider, wolf, monster) from a text prompt or an AI video, asks how anymove works, or needs to know which step comes next; it routes to anymove-rig, anymove-film, anymove-reader, anymove-capture, anymove-pack and anymove-lora."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "memoryze",
+  "repo": "mhyahya854/AI-Second-Brain_Universal-Rules",
+  "path": "skills/_intake/github/AEndrix03/Graft/memoryze/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mhyahya854/AI-Second-Brain_Universal-Rules",
+  "dir_name": "memoryze",
+  "downloaded_at": "2026-11-05T05:32:57.257834Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mhyahya854",
+  "source_url": "https://github.com/mhyahya854/AI-Second-Brain_Universal-Rules/blob/main/skills/_intake/github/AEndrix03/Graft/memoryze/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mhyahya854/AI-Second-Brain_Universal-Rules/blob/main/skills/_intake/github/AEndrix03/Graft/memoryze/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Distill the current conversation (or a specified excerpt) into N high-quality graft nodes and save them. Triggered by `/memoryze`, \"save this to memory\", \"ricorda questo\", \"memorize this\", or whenever the user explicitly wants the agent to commit knowledge to the persistent graph. The user can hint at granularity (\"split into 3 atomic nodes\", \"one comprehensive node\"), focus (\"save the WHY, not the diff\"), and target profile. Auto-classifies keywords. Prefer this over a raw `graft insert` whenever you're saving more than a one-liner."
+}

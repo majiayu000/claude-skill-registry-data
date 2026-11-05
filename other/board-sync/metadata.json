@@ -1,0 +1,37 @@
+{
+  "name": "board-sync",
+  "repo": "sirioberati/YouTube-AI-Motion-Graphics",
+  "path": "skills/board-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sirioberati/YouTube-AI-Motion-Graphics",
+  "dir_name": "board-sync",
+  "downloaded_at": "2026-11-05T06:53:05.886305Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sirioberati",
+  "source_url": "https://github.com/sirioberati/YouTube-AI-Motion-Graphics/blob/main/skills/board-sync/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sirioberati/YouTube-AI-Motion-Graphics/blob/main/skills/board-sync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Animate explainer boards to the presenter's voice. Takes the board HTMLs from Claude Design (04-boards), the final-cut WAV and its words.tsv, the marked script and the board brief; makes every element land on its spoken word; renders one clip per board and a full-length board-track.mp4; checks itself (qa-report.md with contact sheets); and writes the editor timeline for DaVinci Resolve (FCPXML) and Premiere (FCP7 XML) with the camera in the bottom-right zone. Step 5 of the explainer pipeline. Use when the editor says \"animate the boards\", \"sync the boards to his voice\", \"board video\", \"render the boards\", \"build the editor timeline\", re-runs one board after a fix, or asks why a board lands early, sits static or covers the camera zone. Runs end to end on Windows and Mac with one setup command (Python via uv, ffmpeg, the installed Edge or Chrome)."
+}

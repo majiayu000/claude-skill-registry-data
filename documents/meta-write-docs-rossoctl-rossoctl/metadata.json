@@ -1,0 +1,40 @@
+{
+  "name": "meta:write-docs",
+  "repo": "rossoctl/rossoctl",
+  "path": ".claude/skills/meta:write-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/rossoctl/rossoctl",
+  "dir_name": "meta-write-docs-rossoctl-rossoctl",
+  "downloaded_at": "2026-11-05T06:35:54.971847Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, markdown, documentation",
+    "score": 5,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rossoctl",
+  "source_url": "https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/meta:write-docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rossoctl/rossoctl/blob/main/.claude/skills/meta:write-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or change Rossoctl documentation \u2014 where a page belongs, the STE100 writing rules, page templates, and the checks that Docs CI runs"
+}

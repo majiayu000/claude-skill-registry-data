@@ -1,0 +1,37 @@
+{
+  "name": "tk-seed",
+  "repo": "solatis/trapperkeeper",
+  "path": ".claude/skills/tk-seed/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/solatis/trapperkeeper",
+  "dir_name": "tk-seed",
+  "downloaded_at": "2026-11-05T06:59:06.785998Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "solatis",
+  "source_url": "https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-seed/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-seed/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Seed a session for one unit of trapperkeeper work -- classify the sources by provenance, load the unit's context, shape each of its issues, put their design choices to the owner, and write the seed report. Loaded by tk-start and tk-start-next after they have fixed the unit; never invoked by the owner."
+}

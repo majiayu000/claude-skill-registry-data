@@ -1,0 +1,37 @@
+{
+  "name": "ci-review",
+  "repo": "robinalexandre/claude-code-kit",
+  "path": "skills/ci-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/robinalexandre/claude-code-kit",
+  "dir_name": "ci-review-robinalexandre-claude-code-kit",
+  "downloaded_at": "2026-11-05T06:32:51.005788Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "robinalexandre",
+  "source_url": "https://github.com/robinalexandre/claude-code-kit/blob/main/skills/ci-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/robinalexandre/claude-code-kit/blob/main/skills/ci-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Proposes and sets up an AI review step on a repo's CI that reviews every PR/MR and checks, from the proof the PR/MR carries (screenshots, videos, network captures, test report), that what was delivered and tested really works, so the team stops reviewing by hand. Use when the user says \"AI review on CI\", \"agent review in the pipeline\", \"review every PR automatically\", \"claude -p in CI\", \"set up claude-code-action\", or when working in a repo whose CI has no such step and no answer is recorded for it."
+}

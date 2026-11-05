@@ -1,0 +1,37 @@
+{
+  "name": "github",
+  "repo": "popey/claude-code-skills",
+  "path": "skills/github/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/popey/claude-code-skills",
+  "dir_name": "github-popey-claude-code-skills",
+  "downloaded_at": "2026-11-05T06:15:22.059326Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "popey",
+  "source_url": "https://github.com/popey/claude-code-skills/blob/master/skills/github/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/popey/claude-code-skills/blob/master/skills/github/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the `gh` CLI for issues, pull requests, Actions runs, and GitHub API queries."
+}

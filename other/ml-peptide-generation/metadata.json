@@ -1,0 +1,37 @@
+{
+  "name": "ml-peptide-generation",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/ml-peptide-generation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "ml-peptide-generation",
+  "downloaded_at": "2026-11-05T07:02:21.085109Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, analysis=2",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/ml-peptide-generation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/ml-peptide-generation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates candidate binder peptides for a target protein using the PepMLM-650M masked language model \u2014 appends <mask> tokens to the target sequence and samples amino acids at each position, with illegal residues (X, B, Z) excluded from the sampling candidates. Reports pseudo-perplexity for each candidate, supports reproducible generation via an explicit random seed, and provides offline filtering and parameter-sweep analysis that needs no GPU. This skill should be used when designing peptides or protein fragments that should bind a target, generating a ranked candidate pool for a target sequence, or comparing how peptide length and top-k sampling settings affect candidate quality."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "bulk-rnaseq",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/bulk-rnaseq/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "bulk-rnaseq",
+  "downloaded_at": "2026-11-05T07:02:20.507880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/bulk-rnaseq/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/bulk-rnaseq/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when running bulk RNA-seq differential expression analysis: FastQC/trimming, Salmon quantification, counts matrix construction, DESeq2 statistics, GO/KEGG enrichment and publication figures. \u7528\u4e8e bulk \u8f6c\u5f55\u7ec4\uff08RNA-seq\uff09\u5dee\u5f02\u8868\u8fbe\u5206\u6790\u5168\u6d41\u7a0b\u3002"
+}

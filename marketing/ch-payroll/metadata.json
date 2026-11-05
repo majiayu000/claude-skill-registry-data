@@ -1,0 +1,37 @@
+{
+  "name": "ch-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/ch-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "ch-payroll",
+  "downloaded_at": "2026-11-05T06:02:45.734128Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, social",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ch-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ch-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Swiss payroll for tax year 2026: what an employer deducts from wages and pays on top. Covers AHV/IV/EO (10.6%, split 5.3% each), unemployment insurance ALV (2.2%, split 1.1% each, on pay up to CHF 148,200; nothing above since 2023), accident insurance UVG (employer pays occupational, employee pays non-occupational, rates set by the insurer), occupational pension BVG (entry threshold CHF 22,680, coordination deduction CHF 26,460, coordinated pay CHF 3,780 to CHF 64,260, savings credits 7/10/15/18%), cantonal family allowance funds, the salary certificate (Lohnausweis), the annual AHV wage declaration due 30 January, and tax at source (Quellensteuer) for foreign employees without a C permit: tariff codes, the employer's commission and remittance. Trigger on: Swiss payroll, Lohnabrechnung, AHV Arbeitgeber, ALV Beitrag, BVG Koordinationsabzug, Quellensteuer Arbeitgeber, Lohnausweis, employer cost Switzerland. Out of scope: ch-ahv-iv (self-employed), ch-cross-border (residence, NOV, frontie"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "entry-naming",
+  "repo": "monarch-initiative/dismech",
+  "path": ".claude/skills/entry-naming/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/monarch-initiative/dismech",
+  "dir_name": "entry-naming",
+  "downloaded_at": "2026-11-05T05:40:15.741313Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "monarch-initiative",
+  "source_url": "https://github.com/monarch-initiative/dismech/blob/main/.claude/skills/entry-naming/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/monarch-initiative/dismech/blob/main/.claude/skills/entry-naming/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Choose, review, or change the `name` of a dismech Disease entry. Use when creating an entry (including from a stub, whose `label` is the MONDO label), renaming one, or reviewing a PR that adds or renames one. Covers the scope rule (the name must not be broader than the entry), when a single-gene entry takes a gene-related (dyadic) name, where an established name can be found, umbrella names that must not be used for a single entry, casing, and when to report a MONDO label upstream. Not for choosing the `disease_term` binding itself; see dismech-terms and mapping-analysis."
+}

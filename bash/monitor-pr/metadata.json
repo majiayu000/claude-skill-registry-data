@@ -1,0 +1,37 @@
+{
+  "name": "monitor-pr",
+  "repo": "microsoft/vscode-team-kit",
+  "path": "monitor-pr/skills/monitor-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/microsoft/vscode-team-kit",
+  "dir_name": "monitor-pr",
+  "downloaded_at": "2026-11-05T05:33:55.250916Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/vscode-team-kit/blob/main/monitor-pr/skills/monitor-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/vscode-team-kit/blob/main/monitor-pr/skills/monitor-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Monitor a pull request until CI status or Copilot review is available. Use when: monitor PR, watch PR, land PR, wait for CI, wait for checks, wait for review, check PR status. Starts two async terminal tasks (CI + Copilot review) and reacts when either completes."
+}

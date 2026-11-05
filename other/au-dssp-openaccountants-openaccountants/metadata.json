@@ -1,0 +1,36 @@
+{
+  "name": "au-dssp",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/au-dssp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "au-dssp-openaccountants-openaccountants",
+  "downloaded_at": "2026-11-05T06:02:45.039338Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-dssp/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-dssp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill to classify Australian Dividend Substitution Share Plan transactions and maintain share parcel tax records for the 2026-27 income year. Covers Australian resident individuals, companies, trusts and complying superannuation funds holding shares on capital account, subject to the applicable scheme ruling. Trigger phrases include DSSP, dividend substitution share plan, bonus share plan, AFIC bonus shares, Argo DSSP, dividend reinvestment versus DSSP, inherited acquisition date and bonus share cost base. Produces a documented income classification and parcel reconciliation for professional review; excludes investment recommendations and complete income tax or capital gains tax calculations."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "document-product",
+  "repo": "moessimple/dotfiles",
+  "path": "home/.claude/skills/document-product/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moessimple/dotfiles",
+  "dir_name": "document-product",
+  "downloaded_at": "2026-11-05T05:39:03.908674Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moessimple",
+  "source_url": "https://github.com/moessimple/dotfiles/blob/main/home/.claude/skills/document-product/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moessimple/dotfiles/blob/main/home/.claude/skills/document-product/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Derives the complete product behaviour of an unfamiliar application or package from its code, its documentation, and any reachable knowledge sources, and writes it into the repository as PRODUCT.md (what must stay true, purpose, positioning, principles, vocabulary) and KNOWLEDGE_BASE.md (one self-contained, user-facing entry per feature), in plain prose that people and retrieval both use, with the questions for its review in PRODUCT_REVIEW.md. Runs without questions, does not commit, and leaves review and correction to people. For technical onboarding (stack, structure, commands, CLAUDE.md), use codebase-onboarding instead."
+}

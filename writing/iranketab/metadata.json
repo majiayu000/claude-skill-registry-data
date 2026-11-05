@@ -1,0 +1,37 @@
+{
+  "name": "iranketab",
+  "repo": "sepehr071/iran-mcp",
+  "path": "plugins/iranketab/skills/iranketab/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/sepehr071/iran-mcp",
+  "dir_name": "iranketab",
+  "downloaded_at": "2026-11-05T06:44:26.298174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: blog, article",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sepehr071",
+  "source_url": "https://github.com/sepehr071/iran-mcp/blob/main/plugins/iranketab/skills/iranketab/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sepehr071/iran-mcp/blob/main/plugins/iranketab/skills/iranketab/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only Iranketab (iranketab.ir) books: search, translations compared, ratings, reviews, prices. Use when the user asks about Iranketab Books (iranketab.ir) or wants ebooks, audiobooks or printed books in Iran."
+}

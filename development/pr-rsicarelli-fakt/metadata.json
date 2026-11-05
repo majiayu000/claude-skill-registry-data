@@ -1,0 +1,40 @@
+{
+  "name": "pr",
+  "repo": "rsicarelli/fakt",
+  "path": ".claude/skills/pr/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rsicarelli/fakt",
+  "dir_name": "pr-rsicarelli-fakt",
+  "downloaded_at": "2026-11-05T06:36:22.625945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile, refactor",
+    "score": 5,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rsicarelli",
+  "source_url": "https://github.com/rsicarelli/fakt/blob/main/.claude/skills/pr/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rsicarelli/fakt/blob/main/.claude/skills/pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates draft pull requests from the project PR template with Conventional Commits titles and an AI attribution footer. Use when creating or opening pull requests, running /pr, pushing a branch for review, or preparing changes for merge. Make sure to use this skill whenever a pull request needs to be created \u2014 it is the project's PR workflow and replaces the default one."
+}

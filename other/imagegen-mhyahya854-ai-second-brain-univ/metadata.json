@@ -1,0 +1,38 @@
+{
+  "name": "imagegen",
+  "repo": "mhyahya854/AI-Second-Brain_Universal-Rules",
+  "path": "skills/_intake/github/openai/skills/imagegen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mhyahya854/AI-Second-Brain_Universal-Rules",
+  "dir_name": "imagegen-mhyahya854-ai-second-brain-univ",
+  "downloaded_at": "2026-11-05T05:32:51.807118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mhyahya854",
+  "source_url": "https://github.com/mhyahya854/AI-Second-Brain_Universal-Rules/blob/main/skills/_intake/github/openai/skills/imagegen/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mhyahya854/AI-Second-Brain_Universal-Rules/blob/main/skills/_intake/github/openai/skills/imagegen/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+}

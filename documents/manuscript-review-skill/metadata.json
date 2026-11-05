@@ -1,0 +1,38 @@
+{
+  "name": "manuscript-review",
+  "repo": "shaowen-ye/manuscript-review-skill",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/shaowen-ye/manuscript-review-skill",
+  "dir_name": "manuscript-review-skill",
+  "downloaded_at": "2026-11-05T06:48:19.658542Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, docx",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shaowen-ye",
+  "source_url": "https://github.com/shaowen-ye/manuscript-review-skill/blob/main/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shaowen-ye/manuscript-review-skill/blob/main/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Multi-agent academic manuscript review that generates bilingual annotated docx. Use when the user wants to review a manuscript, create a multi-agent review document, generate bilingual annotated review, or improve a paper before journal submission. Also trigger on: '\u5ba1\u7a3f', '\u591aAgent\u5ba1\u7a3f', '\u6587\u7a3f\u5ba1\u9605', '\u5b66\u672f\u6587\u7a3f\u8bc4\u5ba1', 'agent team review', 'manuscript critique', 'paper review panel', '\u6295\u7a3f\u524d\u5ba1\u9605', '\u9010\u6bb5\u5ba1\u7a3f'."
+}

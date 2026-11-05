@@ -1,0 +1,36 @@
+{
+  "name": "claim-before-act",
+  "repo": "nourdean22/MAINnicks-tire-autoNEW",
+  "path": ".claude/skills/claim-before-act/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nourdean22/MAINnicks-tire-autoNEW",
+  "dir_name": "claim-before-act",
+  "downloaded_at": "2026-11-05T05:54:59.611391Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nourdean22",
+  "source_url": "https://github.com/nourdean22/MAINnicks-tire-autoNEW/blob/main/.claude/skills/claim-before-act/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nourdean22/MAINnicks-tire-autoNEW/blob/main/.claude/skills/claim-before-act/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use whenever a read-then-write decides WHICH CALLER ACTS \u2014 an idempotency claim, a lease, a dedupe marker, a reclaim of an expired or failed row, an approval slot. The write must be a compare-and-swap on the exact row you read (or a serializable transaction); an unconditional update by id lets two racers both win. Triggers on lib/ai/tools/tool-idempotency.ts, lib/services/action-attempts.ts, and any create -> P2002 -> update sequence."
+}

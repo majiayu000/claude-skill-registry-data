@@ -1,0 +1,40 @@
+{
+  "name": "audit",
+  "repo": "patrickjaja/claude-desktop-extra",
+  "path": ".claude/skills/audit/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/patrickjaja/claude-desktop-extra",
+  "dir_name": "audit-patrickjaja-claude-desktop-extra",
+  "downloaded_at": "2026-11-05T06:08:19.824394Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug, refactor",
+    "score": 5,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patrickjaja",
+  "source_url": "https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Full review of the claude-desktop-extra project - patches vs the official Linux .deb (still needed? new ones needed? did the surrounding code change?), docs accuracy, Linux compatibility across the distro/session matrix, and runtime logs. Orchestrates a team of sub-agents and produces a consolidated report with solution approaches."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "anymove-reader",
+  "repo": "patch-gg/anymove",
+  "path": "skills/anymove-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/patch-gg/anymove",
+  "dir_name": "anymove-reader",
+  "downloaded_at": "2026-11-05T06:07:33.824520Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patch-gg",
+  "source_url": "https://github.com/patch-gg/anymove/blob/main/skills/anymove-reader/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patch-gg/anymove/blob/main/skills/anymove-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Train the joint reader for one anymove creature - render about 2,200 random poses from both layout cameras with every joint's true position, fine-tune DINOv2 (ViT-B/14 with registers) plus a heatmap head on them, check the held-out error, and optionally run the exam (a made-up motion with known joints, read back and scored in centimetres). Use after anymove-rig and before anymove-capture, when a reader misses or swaps joints on real clips, or when planning GPU time for dataset rendering and training."
+}

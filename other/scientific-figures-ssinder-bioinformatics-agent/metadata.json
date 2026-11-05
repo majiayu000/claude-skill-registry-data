@@ -1,0 +1,37 @@
+{
+  "name": "scientific-figures",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/scientific-figures/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "scientific-figures-ssinder-bioinformatics-agent",
+  "downloaded_at": "2026-11-05T07:02:22.697272Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/scientific-figures/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/scientific-figures/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when generating publication-ready scientific figures \u2014 ROC curves, confusion matrix heatmaps, docking binding-energy heatmaps, pLDDT confidence histograms, SHAP summary beeswarms, class distribution charts and other chart types with a unified journal-grade visual style. \u7528\u4e8e\u751f\u6210\u9876\u520a\u7ea7\u51fa\u7248\u56fe\u8868\uff08ROC \u66f2\u7ebf\u3001\u6df7\u6dc6\u77e9\u9635\u3001\u70ed\u56fe\u3001pLDDT \u5206\u5e03\u3001SHAP \u6458\u8981\u7b49\uff09\u7684\u573a\u666f\u3002"
+}

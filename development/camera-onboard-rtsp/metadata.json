@@ -1,0 +1,38 @@
+{
+  "name": "camera-onboard-rtsp",
+  "repo": "nourdean22/MAINnicks-tire-autoNEW",
+  "path": ".claude/skills/camera-onboard-rtsp/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nourdean22/MAINnicks-tire-autoNEW",
+  "dir_name": "camera-onboard-rtsp",
+  "downloaded_at": "2026-11-05T05:55:02.510425Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nourdean22",
+  "source_url": "https://github.com/nourdean22/MAINnicks-tire-autoNEW/blob/main/.claude/skills/camera-onboard-rtsp/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nourdean22/MAINnicks-tire-autoNEW/blob/main/.claude/skills/camera-onboard-rtsp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a standard IP camera (RTSP and ONVIF) is being added to the shop camera bridge or swapped in for an old one, when someone asks how to find a camera's stream address or ONVIF profiles, or when a camera that only works through its own phone app is supposed to feed the car counter, in which case this skill says stop and swap the camera. Read-only probes, a copy of the config and a registry entry only. Not for a counter or sign camera that died or shows zero (production-health-report, systematic-debugging, empty-vs-error), reel content (nickstire-reel-operator), or installing or running Frigate, MediaMTX, detectors, plate readers or the vision edge."
+}

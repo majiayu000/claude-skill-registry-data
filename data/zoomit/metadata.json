@@ -1,0 +1,37 @@
+{
+  "name": "zoomit",
+  "repo": "sepehr071/iran-mcp",
+  "path": "plugins/zoomit/skills/zoomit/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/sepehr071/iran-mcp",
+  "dir_name": "zoomit",
+  "downloaded_at": "2026-11-05T06:44:23.604631Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sepehr071",
+  "source_url": "https://github.com/sepehr071/iran-mcp/blob/main/plugins/zoomit/skills/zoomit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sepehr071/iran-mcp/blob/main/plugins/zoomit/skills/zoomit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only Zoomit (zoobin) product database: specs, shop prices in Toman, price history, comparisons. Use when the user asks about Zoomit Products (zoomit.ir) or wants electronics, appliances or other goods in Iran."
+}

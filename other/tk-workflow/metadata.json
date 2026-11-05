@@ -1,0 +1,37 @@
+{
+  "name": "tk-workflow",
+  "repo": "solatis/trapperkeeper",
+  "path": ".claude/skills/tk-workflow/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/solatis/trapperkeeper",
+  "dir_name": "tk-workflow",
+  "downloaded_at": "2026-11-05T06:59:08.401792Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "solatis",
+  "source_url": "https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-workflow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The trapperkeeper workflow -- names, branches, commits, issues, plans, the GitHub tools and the four stages a unit of work moves through with the owner's invocation as the gate between them. Loaded by the seed skills and at the top of every stage skill; never invoked by the owner."
+}

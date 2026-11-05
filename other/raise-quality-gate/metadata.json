@@ -1,0 +1,37 @@
+{
+  "name": "raise-quality-gate",
+  "repo": "moessimple/dotfiles",
+  "path": "home/.claude/skills/raise-quality-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moessimple/dotfiles",
+  "dir_name": "raise-quality-gate",
+  "downloaded_at": "2026-11-05T05:39:04.445817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moessimple",
+  "source_url": "https://github.com/moessimple/dotfiles/blob/main/home/.claude/skills/raise-quality-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moessimple/dotfiles/blob/main/home/.claude/skills/raise-quality-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Raises an existing Laravel application or package (Laravel 11 or newer) to a fixed quality gate (PHPStan at max with Larastan, 100 % type coverage, Rector's Laravel and prepared sets, Pint) without changing its behaviour, in stages that each become one pull request a team can review and merge while work goes on. Each run does one stage on its own branch from the default branch, commits every step after the full test suite passes, writes the pull request description, never pushes, and stops where people have to decide. Requires a test suite with 100 % coverage and a golden master; characterize-behavior provides both."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "anymove-capture",
+  "repo": "patch-gg/anymove",
+  "path": "skills/anymove-capture/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/patch-gg/anymove",
+  "dir_name": "anymove-capture",
+  "downloaded_at": "2026-11-05T06:07:33.993122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patch-gg",
+  "source_url": "https://github.com/patch-gg/anymove/blob/main/skills/anymove-capture/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patch-gg/anymove/blob/main/skills/anymove-capture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a two-camera AI clip into a game-ready animation with anymove - read every joint with the creature's trained reader, check that the two views agree, fit the rig in both views at once, and export a GLB with renders and a side-by-side comparison. Covers the quality gates (paw agreement, reprojection error), what to do when a fit fails, and three-quarter showcase renders. Use when someone has an anymove clip to capture, asks whether a capture is good, wants the GLB or renders of a move, or a fit looks wrong."
+}

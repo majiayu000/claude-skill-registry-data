@@ -1,0 +1,105 @@
+---
+name: linux
+description: Linux compatibility reference for the claude-desktop-extra project (repackaging Anthropic's official Claude Desktop Linux .deb and patching its app.asar for the distros Anthropic does not ship). Use when working on Linux support, session managers, distros, Computer Use input/screenshot backends, glibc floors, Wayland/X11, multi-profile, or any patch in patches/*/*.nim. Loads the distro/session matrix, the input + screenshot cascades, native-binary glibc floors, and known Linux gotchas.
+when_to_use: When the user mentions Linux compatibility, X11, Wayland, wlroots, GNOME, KDE, XWayland, a distro (Arch/Ubuntu/Debian/Fedora/RHEL/NixOS/Jetson), xdotool/ydotool/grim/spectacle, glibc, kwin-portal-bridge, app_id/WM_CLASS, profiles, or edits files under patches/ or scripts/.
+paths: patches/**, scripts/**, js/**, baseline/PLATFORM_GATE_BASELINE.md
+---
+
+# Linux compatibility - claude-desktop-extra
+
+Repackages Anthropic's **official Claude Desktop Linux `.deb`** (bundles Electron 44.4.3 as of v2.7032.0 - read the deb tree's `usr/lib/claude-desktop/version` for the current one - plus a native Cowork VM backend) for the distros Anthropic does not ship, patching its `app.asar` to add Linux value-adds (Computer Use, themes, multi-profile, Quick Entry) and Linux fixes. **Linux only** - never add macOS/Windows code. Minified JS identifiers change every upstream release, so patterns must use `[\w$]+` wildcards anchored on stable strings (feature names, log messages, `process.platform==="darwin"`). For a clean unpatched bundle to test patterns against, see `/fresh-upstream`.
+
+## Support matrix (must validate every change against ALL rows)
+
+| Session | Compositors/DEs | Input backend | Screenshot |
+|---|---|---|---|
+| X11 | any (GNOME, KDE, i3, …) | `x11-bridge` (bundled, static) | `x11-bridge` (bundled, static) |
+| Wayland wlroots | Sway, Hyprland, Niri | `wlroots-bridge` (bundled, static) | `wlroots-bridge` (bundled, static) |
+| Wayland GNOME | GNOME Shell | `gnome-portal-bridge` (bundled; portal consent, persisted GNOME 46+) | `gnome-portal-bridge` (bundled) |
+| Wayland KDE 6.6+ | KDE Plasma | `kwin-portal-bridge` (bundled) | `kwin-portal-bridge` (bundled) |
+| Wayland KDE <6.6 | KDE Plasma | `ydotool`, else x11-bridge/XWayland | `spectacle`+`convert` |
+| XWayland | any Wayland | `x11-bridge` (bundled) | `x11-bridge` (bundled) |
+| Wayland exotic | COSMIC, Enlightenment, … | `ydotool` (+`ydotoold`), else x11-bridge/XWayland | `desktopCapturer` / `COWORK_SCREENSHOT_CMD` |
+
+| Distro | Pkg | Min glibc | Arch |
+|---|---|---|---|
+| Arch | own pacman repo | 2.41 | x86_64, aarch64 |
+| Ubuntu 22.04+ | deb | 2.35 | amd64, arm64 |
+| Debian 12+ | deb | 2.36 | amd64, arm64 |
+| Fedora 40+ | rpm | 2.39 | x86_64, aarch64 |
+| RHEL 9+ | rpm | 2.34 | x86_64, aarch64 |
+| NixOS | flake | 2.40 | x86_64 (the Nix package is x86_64-only) |
+| Jetson (JetPack 6) | deb | 2.35 | aarch64 |
+| Fedora Atomic (Bazzite, Kinoite, Silverblue) | AppImage (immutable `/usr`; the rpm would need `rpm-ostree` layering, untested) | 2.39+ | x86_64, aarch64 |
+| Any (glibc) | AppImage | varies | x86_64, aarch64 |
+
+**Immutable distros** (Bazzite, Kinoite, Silverblue): everything the launcher writes is under `$HOME` or `$XDG_RUNTIME_DIR` (desktop entry + `claude://` handler, Quick Entry socket, systemd scope, userData, KDE shortcut), and the host tools it reads (`/usr/bin/busctl`, `kwin_wayland`, `systemd-run`, FUSE 2) ship in the image; verified on the Bazzite 44 live ISO (Plasma 6.7.5) 2026-10-17 (#281).
+
+**glibc floor is 2.34** (RHEL 9 / Ubuntu 22.04). Debian 11 (bullseye, glibc 2.31) is **no longer supported** - the official Linux `.deb` we repackage targets newer glibc.
+
+## Session detection (`scripts/claude-desktop-launcher.sh`)
+- Wayland iff `$WAYLAND_DISPLAY` set; else X11. When `WAYLAND_DISPLAY` is set but `XDG_SESSION_TYPE` is empty or `tty` (compositor started from a TTY), the launcher exports `XDG_SESSION_TYPE=wayland` so the app and the CU executors take the Wayland path; an explicit `x11` is left alone.
+- `platform_mode ∈ {x11, wayland, xwayland}` drives Electron flags. `CLAUDE_USE_XWAYLAND=1` forces xwayland only when `$DISPLAY` is set (an X server exists; niri + xwayland-satellite qualifies); without `DISPLAY` it stays wayland and logs why.
+- Electron <40 on Wayland warns loudly: broken GlobalShortcutsPortal (electron/electron#49806) → global hotkeys only work when focused. Fix: update Electron, or `CLAUDE_USE_XWAYLAND=1`.
+- `claude-desktop --diagnose` dumps raw vs effective `XDG_SESSION_TYPE`, `WAYLAND_DISPLAY`, `platform_mode`, electron major, the GlobalShortcuts portal probed exactly as the app does it (busctl, same args/timeout, gdbus cross-check), a Host capabilities section (each host tool the app execs -> upstream path / PATH only / MISSING -> consequence), a run check of all four CU bridges, tray host, keep-awake backend, bluetoothd, and a closing Problems found list. `--diagnose` and `--help` have no side effects (no profile refresh, no AppImage integration).
+
+## Input + screenshot executors - single source of truth
+The dispatch logic lives in checked-in JS under `js/`, embedded into `patches/linux/fix_computer_use_linux.nim` via `staticRead` (35 sub-patches, still `std/nre` for backreferences - the one patch that keeps it; new patches use the `regex` package). **Edit the `.js`, not the patch.**
+- `js/cu_linux_executor.js` - inline executor: session detection, per-session bridge dispatch, residual fallbacks, `[claude-cu] diagnostics:` lines.
+- `js/executor_linux.js` - KWin/KDE hybrid executor (kwin mode).
+- `js/cu_handler_injection.js`, `js/cu_mode_preamble.js` - handler wiring + mode/bridge-binary resolution: env var override (`X11_BRIDGE_BIN`, `WLROOTS_BRIDGE_BIN`, `GNOME_PORTAL_BRIDGE_BIN`, `KWIN_PORTAL_BRIDGE_BIN`) → bundled `process.resourcesPath/<bridge>`. There is NO `$PATH` lookup. A resolved bridge must then pass a runnable check (`<bridge> --version`, async, 3 s, cached per path) before it is selected; a failure is logged with its real cause (PipeWire/glibc floor, foreign ELF loader on NixOS, wrong arch, noexec) and the next tier is used (KDE: spectacle). `CLAUDE_CU_MODE=kwin-wayland|regular` overrides the auto mode.
+
+**Upstream's own Linux CU (since v2.19675.1):** the official build ships a native executor in `claude-native-binding.node` (XTest on X11, RemoteDesktop + ScreenCast portal over PipeWire on Wayland), gated by GrowthBook `3676943315` plus a Wayland portal probe (RemoteDesktop >= 2 and Clipboard; no wlroots). Our patch makes `hasComputerUseExecutor` true on Linux and puts the `__linuxExecutor` branch in front of upstream's linux arm, so the bridges below always win; upstream's executor is unreachable while the patch is applied.
+
+**Dispatch (bridge-only on covered sessions):** wlroots session → `wlroots-bridge`; GNOME Wayland → `gnome-portal-bridge` (portal session daemon scoped to the CU lock via `__setLockHeld`); X11/XWayland → `x11-bridge`; KDE 6.6+ → kwin mode. All bridges share the x11-bridge CLI/JSON contract (subcommand + `--kebab` flags, one JSON value on stdout, exit 1 + stderr on error). On covered sessions there is NO third-party fallback - a missing bridge is a hard, diagnosable error. `COWORK_SCREENSHOT_CMD` overrides screenshots everywhere; Electron `desktopCapturer` is the last-resort screenshot tier. Clipboard + cursor-position are Electron-native in the regular executor. `_checkYdotool()` (ydotool + running ydotoold) gates only the exotic-Wayland residual path.
+
+**Executor methods run OUTSIDE the CU lock - treat them as ambient API (issue #184).** Upstream builds the CU tool schemas at Code/Cowork session open and calls `executor.listInstalledApps()`/`listRunningApps()` there (raced against a 1s timeout that CANNOT preempt a synchronous block - `execFileSync` freezes the whole main process, timer never fires). Therefore: enumeration subcommands (`windows`, `frontmost-app`, `app-under-point`, `screens`) must NEVER open a portal session, pop a consent dialog, or wait on user interaction; portal sessions belong to the lock lifecycle (`__setLockHeld`, async `execFile`) plus the per-portal-command sync backstop. In `cu_linux_executor.js` this is enforced by the `_gnomePortalCmds` allowlist - only input/capture subcommands (pointer-*, key-sequence, type, hold-key, zoom, screenshot, left-mouse-*) may ensure the portal session. Any new executor method or bridge subcommand must declare which side it is on. All four bridges audited 2026-07-08: kwin already enforces this structurally (enumeration = portal-free KWin scripting; portal only via explicit `session-start`, fail-closed otherwise; JS fully async); wlroots/x11 have zero portal/consent surface (`session-start` is a no-op there) and bounded enumeration - GNOME was the only offender.
+
+**`[claude-cu] diagnostics:`** lines (input-backend, per-bridge `present (path)|absent`, `screenshot-cascade=[...]`, VM/Wayland detection) are written via `globalThis.__cdbDiag` to `~/.config/Claude/logs/claude-patches.log` + raw fd 2. **Debugging locally: read that file yourself** (`grep -a 'claude-cu' ~/.config/Claude/logs/claude-patches.log`); ask remote issue reporters to attach it. The official `.deb` build DISCARDS main-process `console.log`/`process.stdout` (fds healthy - proven via /proc fd probe); never add plain `console.log` diagnostics to main-process patch code - use `__cdbDiag` (or the `(globalThis.__cdbDiag||console.log)` fallback outside the CU patch).
+
+## Native binaries & glibc floors (CI enforces via `objdump -T | grep GLIBC_`)
+| Binary | Floor | Why | CI base |
+|---|---|---|---|
+| x11-bridge | none (static musl) | pure Rust, runs everywhere incl. NixOS | `ubuntu:noble` (rustup musl) |
+| wlroots-bridge | none (static musl) | pure Rust, runs everywhere incl. NixOS | `ubuntu:noble` (rustup musl) |
+| gnome-portal-bridge | 2.39 (Ubuntu Noble) | lamco-pipewire needs PipeWire >= 1.0.5 runtime (Noble/Fedora 40+/Debian 13+); Jammy (0.3.48) and Bookworm (0.3.65) cannot even load the binary | `ubuntu:noble` + native cross |
+| kwin-portal-bridge | 2.39 (Ubuntu Noble) | KWin 6.6+ only on Noble+/Fedora 40+ | `ubuntu:noble` + native cross |
+
+- **node-pty is no longer rebuilt by us.** The official Linux `.deb` ships a pre-built `pty.node` + `spawn-helper` for x86_64 and arm64 inside `app.asar.unpacked`; our repackage preserves them (`asar pack` keeps the unpacked dir). There is no `rebuild-pty-for-arch.sh` and no Electron pin (`.electron-version`/`.electron-shasums` are gone) - Electron (44.4.3 as of v2.7032.0) is bundled in the official `.deb`.
+- **Three CU bridges are ours** (patrickjaja/x11-bridge, patrickjaja/wlroots-bridge, patrickjaja/gnome-bridge); **kwin-portal-bridge is mosi0815's** project - patrickjaja/kwin-portal-bridge is a fork, fixes go through a PR to mosi0815/kwin-portal-bridge. Built for x86_64 + arm64 by CI, cached by upstream HEAD SHA. Static bridges assert `statically linked|static-pie`; dynamic bridges assert the glibc floor.
+- On NixOS the static bridges run as bundled; the dynamic two do not (foreign glibc loader) - the runnable check rejects them, so KDE falls back to spectacle and GNOME needs `.override { gnome-portal-bridge = …; }`.
+- New native binary → pick floor = its minimum viable distro; CI verifies it via `objdump -T | grep GLIBC_`.
+- **RPM caveat:** per-binary floors above the distro floor only work because `packaging/rpm/claude-desktop-extra.spec` excludes the bundled tree from rpm's automatic ELF dependency generator (`__requires_exclude_from`); without it the gnome/kwin bridges' glibc-2.39 symbols become package requirements and the rpm cannot install on RHEL 9 (glibc 2.34). CI's rockylinux:9 install test guards this.
+
+## Multi-profile / window identity (`scripts/claude-desktop-launcher.sh`)
+- Per-profile Electron binary at `~/.local/lib/claude-desktop/<APP_ID>-<name>` via **hardlink → reflink → copy** (never symlink - Electron derives identity from `realpath(/proc/self/exe)`, kernel resolves symlinks first), refreshed from `CLAUDE_ELECTRON` when set (Nix). Gives per-profile process/exe identity, NOT a per-profile window app_id. `--create-profile` is refused on the AppImage (its tree moves every run; use `--profile=NAME`). On wrapped installs (Nix) the profile shortcut is a two-line exec script and autostart/profile entries run `CLAUDE_LAUNCHER` (the wrapper), so they keep the wrapper env and survive GC.
+- WM_CLASS = Wayland app_id = `com.anthropic.Claude` - Chromium derives it from the bundle's `desktopName` (upstream's own reverse-DNS identity; the old `claude-desktop` pin was removed 2026-07-15). Shared across ALL profiles; distinct per-profile app_id needs a per-profile `desktopName` override (unsolved follow-up). systemd scope `app-com.anthropic.Claude(-<name>)-$$.scope`; installed `.desktop` = `com.anthropic.Claude.desktop` (`StartupWMClass=com.anthropic.Claude`); Quick Entry keeps its own `claude-quick-entry` id. XDG autostart entries derive from the BINARY basename instead: `~/.config/autostart/claude(-<name>).desktop`.
+- Per-profile isolation: `--user-data-dir` (Electron userData), `CLAUDE_CONFIG_DIR` (Claude Code CLI), `CLAUDE_PROFILE` env (sockets/markers). See AGENTS.md "Profile System" table.
+- **Portal identity**: xdg-desktop-portal resolves unsandboxed Electron via systemd scope → `.desktop` id; a reverse-DNS id is required for activation routing and KDE persistent grants. Shipped since 2026-07-15: `desktopName` / `.desktop` / `StartupWMClass` / scope all agree on `com.anthropic.Claude`. A build tripwire in `build-patched-tarball.sh` fails loud if upstream renames `desktopName` again.
+
+## Known Linux gotchas (one line each → which patch)
+- Opening a Code session enumerates apps via the executor (no CU lock); a portal-session ensure on that path popped GNOME's consent dialog + froze the main process (#184) → `js/cu_linux_executor.js` `_gnomePortalCmds` allowlist + async `__setLockHeld` lifecycle.
+- A gnome-portal-bridge that never answers froze the whole app: every bridge call on the capture/input paths was a blocking `execFileSync`, and a failed `session-start` left no memo, so each action re-paid `screens` + `session-start` + the command itself (#232) → screenshot path is async end to end (`_wlBridgeCallAsync`, `_x11BridgeAsync`), a failed portal session latches for 60 s (`_gnomePortalDown`, cleared by a fresh CU lock), the sync backstop is capped at 8 s (consent belongs to the async lock path, which keeps 30 s), and the x11-bridge screenshot tier is gated on `!_wlb` - a rootless XWayland root answers `BadMatch`, so a covered session goes straight to `desktopCapturer`. Pinned by `scripts/tests/linux/test-cu-nonblocking.mjs`; `--diagnose` self-tests `gnome-portal-bridge screens` on GNOME Wayland.
+- Upstream execs host tools by absolute FHS path (`/usr/bin/busctl` for the GlobalShortcuts portal probe - a failure there disables every Wayland shortcut incl. Quick Entry; `/usr/bin/secret-tool` / `kwallet-query` for Chrome cookie import; `/usr/bin/sqlite3` for detected projects) → `fix_host_tool_paths_linux.nim` / `fix_detected_projects_linux.nim` keep the literal when the file exists, else the bare name via PATH (NixOS, non-FHS). The `index.pre.js` KWallet pre-flight `busctl` is left alone (the launcher probes kwallet itself: busctl → dbus-send → gdbus).
+- Sandbox credential-path blocklist (.ssh/.gnupg/.aws/keyrings/.pki/autostart) → `fix_sensitive_dirs_linux.nim`.
+- Tray icon theme → `fix_tray_icon_theme.nim` (tray update-in-place is upstream-native; `fix_tray_dbus` was retired). Wayland with no `org.kde.StatusNotifierWatcher` on the bus (GNOME without AppIndicator, sway/niri without a tray bar): close quits natively (upstream's own `IsStatusNotifierHostRegistered` check), but an autostart (`--startup`) launch would stay invisible → `fix_tray_less_desktops.nim` (hidden launch shows the window; probed once at startup; X11 unchanged because XEmbed trays are invisible to the bus).
+- "Keep computer awake" relies on `powerSaveBlocker`, which is a no-op without `org.gnome.SessionManager` / `org.freedesktop.PowerManagement` (Sway, Hyprland, niri, i3) → `fix_keep_awake_linux.nim` holds a logind idle inhibitor (`systemd-inhibit --what=idle`); logind IdleAction and hypridle honor it, plain swayidle timeouts do not.
+- GNOME Mutter focus-stealing: Quick Entry opens then self-dismisses → `fix_quick_entry_wayland_blur_guard.nim` (ignore blur with no preceding focus). KDE/Hyprland transfer focus so click-outside works; GNOME users close with Esc.
+- Native titlebar overlay was win32-only → `fix_native_frame.nim` (switches persisted by `add_feature_window_controls.nim`); three runtime modes: default integrated, `CLAUDE_NATIVE_TITLEBAR=1` (system frame, wins), `CLAUDE_NO_WINDOW_CONTROLS=1` (frameless, no overlay, `hasShadow:false`). The last one is the only in-app way to drop the 4 px border Chromium paints inside frameless windows on xfwm4 and on WMs that do not advertise `_GTK_FRAME_EXTENTS` (i3, Awesome): its gate is `wants_frame_ = !IsTranslucent() && (HasShadow() || IsWindowControlsOverlayEnabled())`, so BOTH disjuncts must be false - dropping `hasShadow:false` silently restores the border.
+- Resource paths are upstream-native: every package ships the official install tree verbatim (exe-adjacent `resources/app.asar`, autoloaded via the OnlyLoadAppFromAsar fuse; launcher passes NO asar argv). `process.resourcesPath` / `app.isPackaged` behave exactly as on the stock .deb; bridges + `ion-dist.asar` (the 3P-config SPA; the build repacks it in place after patching) + virtiofsd live directly in `resources/`. The former repackaging patches (`fix_locale_paths`, `fix_0_node_host`, `fix_asar_folder_drop`, `fix_asar_workspace_cwd`) were removed 2026-07-13.
+- RHEL 9 ships QEMU only as `/usr/libexec/qemu-kvm`, while upstream's Cowork probe walks PATH for `qemu-system-<arch>` → the `.rpm` installs `/usr/lib/claude-desktop/qemu-shim/qemu-system-<arch>` -> `/usr/libexec/qemu-kvm`, and the launcher appends that dir to PATH only when no `qemu-system-<arch>` is on PATH and `/usr/libexec/qemu-kvm` exists (VM boot verified on RHEL 9 x86_64; aarch64 untested). Debian 12 has no Rust virtiofsd (its C one rejects `--shared-dir`), so Cowork is unavailable there.
+- `process.argv` undefined in renderer broke Claude Code web bundle → `fix_process_argv_renderer.nim`.
+- `app.dock.bounce` (macOS) → `fix_dock_bounce.nim` (stub).
+
+## Wayland hotkey notes
+- GNOME hotkey: GlobalShortcuts portal exists only on GNOME 48+ and its approval is easy to miss (Electron returns true even if it failed). `claude-desktop --install-gnome-hotkey` writes a gsettings custom keybinding (bypasses portal), toggling via Unix socket in `$XDG_RUNTIME_DIR`.
+- xdg-desktop-portal-wlr has no GlobalShortcuts (Sway, river, niri): users bind `claude-desktop --toggle` in the compositor. Hyprland's portal has it but only fires through a `global` bind. The app's portal probe runs once per process (`busctl --timeout=2` under a 3 s exec timeout), so a portal that is slow at login leaves hotkeys off until restart. Per-compositor snippets: `docs/quick-entry.md`.
+- KDE stale kglobalaccel entries after crash block re-registration → `gdbus` unregister before re-register.
+- KDE Plasma 6.7.4+ (xdg-desktop-portal-kde) no longer arms a stored portal shortcut at CreateSession, and Chromium 152 (Electron 44) skips BindShortcuts when its id is already listed → hotkey dead after the first restart (#281) → `fix_quick_entry_kde_portal_rebind.nim` / `js/kde_global_shortcuts_rebind.js`: a second portal session from the main process (pure-JS D-Bus client, same app id) re-binds the stored ids on every launch, silently. Gated to KDE Wayland, KWin >= 6.4, not XWayland, Chromium < 159 (fixed upstream on main 2026-10-15). Needs the app id to resolve: systemd scope AND an installed `com.anthropic.Claude.desktop` (xdp 1.22 answers "An app id is required" otherwise - no dialog, no hotkey, on any Plasma).
+
+## Rules
+1. Every change must work across all session types and all distro/arch rows - think through each, especially Wayland fragmentation (GNOME ≠ KDE ≠ wlroots ≠ exotic).
+2. New input/screenshot work → change the BRIDGE for that session type (x11-bridge / wlroots-bridge / gnome-portal-bridge / kwin-portal-bridge), or the dispatch in `js/cu_linux_executor.js` (+ `executor_linux.js` for KDE); keep diagnostics lines and the shared CLI/JSON contract (x11-bridge DESIGN.md is authoritative).
+3. Fixed user-level paths → prefer `app.getPath("userData")` (auto-isolates per profile) over `~/.config/Claude`.
+4. New native binary we ship → builds for x86_64 AND aarch64, pick a glibc floor (or static musl), CI verifies. (We do NOT rebuild node-pty - it comes pre-built in the official `.deb`.)
+5. Verify JS syntax after any patch: `node --check ./tmp/app.asar.contents/.vite/build/index.js`.

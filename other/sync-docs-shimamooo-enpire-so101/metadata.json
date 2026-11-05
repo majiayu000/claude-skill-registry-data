@@ -1,0 +1,38 @@
+{
+  "name": "sync-docs",
+  "repo": "shimamooo/ENPIRE-so101",
+  "path": ".claude/skills/sync-docs/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/shimamooo/ENPIRE-so101",
+  "dir_name": "sync-docs-shimamooo-enpire-so101",
+  "downloaded_at": "2026-11-05T06:49:40.642968Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shimamooo",
+  "source_url": "https://github.com/shimamooo/ENPIRE-so101/blob/master/.claude/skills/sync-docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shimamooo/ENPIRE-so101/blob/master/.claude/skills/sync-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Synchronize docs/ with codebase: update stale docs, discover undocumented features, rebuild CLAUDE.md index. Use after implementation work or periodically."
+}

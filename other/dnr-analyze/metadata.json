@@ -1,0 +1,37 @@
+{
+  "name": "dnr-analyze",
+  "repo": "solanabr/auditor-skill",
+  "path": "skills/dnr-analyze/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/solanabr/auditor-skill",
+  "dir_name": "dnr-analyze",
+  "downloaded_at": "2026-11-05T06:58:56.705024Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "solanabr",
+  "source_url": "https://github.com/solanabr/auditor-skill/blob/main/skills/dnr-analyze/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/solanabr/auditor-skill/blob/main/skills/dnr-analyze/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "One analysis phase of /auditor:hunt or /auditor:respond, run in the auditor:incident-responder agent over incident_<n>/ only: profiles and queries the incident corpus with the bundled offline tools, keeps LEDGER.md, and writes the incident files there. Invoke it only where those commands say to, with the phase brief they describe as its arguments."
+}

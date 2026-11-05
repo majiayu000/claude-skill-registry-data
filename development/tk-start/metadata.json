@@ -1,0 +1,38 @@
+{
+  "name": "tk-start",
+  "repo": "solatis/trapperkeeper",
+  "path": ".claude/skills/tk-start/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/solatis/trapperkeeper",
+  "dir_name": "tk-start",
+  "downloaded_at": "2026-11-05T06:59:07.749308Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "solatis",
+  "source_url": "https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-start/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/solatis/trapperkeeper/blob/master/.claude/skills/tk-start/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Seed a session -- acknowledge the trapperkeeper workflow, load context for a task the owner describes or for issues the owner names, and put its design choices to the owner without starting it; for an issue already in flight, report its stage instead"
+}

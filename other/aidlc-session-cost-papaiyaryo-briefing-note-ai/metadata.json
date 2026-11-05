@@ -1,0 +1,37 @@
+{
+  "name": "aidlc-session-cost",
+  "repo": "papaiyaryo/briefing-note-ai",
+  "path": ".agents/skills/aidlc-session-cost/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/papaiyaryo/briefing-note-ai",
+  "dir_name": "aidlc-session-cost-papaiyaryo-briefing-note-ai",
+  "downloaded_at": "2026-11-05T06:06:47.015331Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "papaiyaryo",
+  "source_url": "https://github.com/papaiyaryo/briefing-note-ai/blob/main/.agents/skills/aidlc-session-cost/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/papaiyaryo/briefing-note-ai/blob/main/.agents/skills/aidlc-session-cost/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only session cost view. Prints deterministic aggregates for the current workflow \u2014 duration, stage outcomes, memory entries, sensor firings, learnings captured \u2014 sourced entirely from `aidlc engine runtime summary`. Never mutates workflow state, never emits audit events, never writes files."
+}

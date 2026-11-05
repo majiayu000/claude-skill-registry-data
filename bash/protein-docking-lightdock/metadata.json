@@ -1,0 +1,37 @@
+{
+  "name": "protein-docking-lightdock",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/protein-docking-lightdock/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "protein-docking-lightdock",
+  "downloaded_at": "2026-11-05T07:02:21.988531Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/protein-docking-lightdock/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/protein-docking-lightdock/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs LightDock protein-protein docking locally by driving the lightdock3_setup.py and lightdock3.py executables, then extracts the best docked complex. Parses the GSO swarm output files with the correct field semantics (glowworm id is the line number, not the LigID column), selects the latest gso_<step>.out by numeric step rather than dictionary order, and generates conformations from the origin-shifted structures that the setup stage produced so the receptor and ligand stay in a consistent coordinate frame. Supports batch receptor-ligand grids, resumable execution, incremental score logging, and DFIRE-based ranking. This skill should be used when protein-protein docking must be performed on the local machine, when a swarm-level score ranking is needed, or when the best docked complex model must be generated as a PDB file."
+}

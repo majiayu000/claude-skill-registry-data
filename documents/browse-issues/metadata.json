@@ -1,0 +1,37 @@
+{
+  "name": "browse-issues",
+  "repo": "monarch-initiative/dismech",
+  "path": ".claude/skills/browse-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/monarch-initiative/dismech",
+  "dir_name": "browse-issues",
+  "downloaded_at": "2026-11-05T05:40:15.944328Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "monarch-initiative",
+  "source_url": "https://github.com/monarch-initiative/dismech/blob/main/.claude/skills/browse-issues/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/monarch-initiative/dismech/blob/main/.claude/skills/browse-issues/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to browse the open dismech issues that already exist, of any kind (claims, lit/kgap/preprint scans, genetics passes, evidence reviews, curation follow-ups, schema, tooling, bugs, docs, unlabelled), and choose for themselves what to work on - filtering, searching or shortlisting them by author, assignee, lane, effort, PR state, or text in the title, body or comments, finding issues ready for cleanup, and then opening one issue they name as its own interactive Claude Code session in a tmux window. The listing is deterministic, from one snapshot with fixed rules and a reason code for every exclusion; the user does the choosing."
+}

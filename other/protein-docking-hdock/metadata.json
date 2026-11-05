@@ -1,0 +1,37 @@
+{
+  "name": "protein-docking-hdock",
+  "repo": "ssinder/bioinformatics-agent-skills",
+  "path": "skills/protein-docking-hdock/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ssinder/bioinformatics-agent-skills",
+  "dir_name": "protein-docking-hdock",
+  "downloaded_at": "2026-11-05T07:02:21.800540Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssinder",
+  "source_url": "https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/protein-docking-hdock/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssinder/bioinformatics-agent-skills/blob/main/skills/protein-docking-hdock/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Submits protein-protein docking jobs to the HDOCK server and retrieves the resulting Docking Score, Confidence Score, ligand RMSD and ranked complex models. Uses plain HTTP form submission against the HDOCK server rather than browser automation, supports PDB files, PDB ID:ChainID references and FASTA sequences for both receptor and ligand, records submitted jobs to a CSV so results can be collected later, and can poll for completion. This skill should be used when running protein-protein complex structure prediction on the HDOCK server, checking the docking score of a submitted complex, or downloading top-ranked docked models is requested."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "fresh-upstream",
+  "repo": "patrickjaja/claude-desktop-extra",
+  "path": ".claude/skills/fresh-upstream/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/patrickjaja/claude-desktop-extra",
+  "dir_name": "fresh-upstream",
+  "downloaded_at": "2026-11-05T06:08:21.860359Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patrickjaja",
+  "source_url": "https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/fresh-upstream/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/fresh-upstream/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "For claude-desktop-extra - wipe any existing extracted Claude Desktop bundles and extract a fresh, CLEAN, UNPATCHED copy of the latest official Claude Desktop Linux .deb into ./tmp/ for patch analysis. Fetches + GPG/SHA256-verifies the latest .deb if missing or stale, then extracts app.asar via asar (NOT the build script, which applies patches)."
+}

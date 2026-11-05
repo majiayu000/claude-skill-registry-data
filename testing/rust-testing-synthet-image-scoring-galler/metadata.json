@@ -1,0 +1,37 @@
+{
+  "name": "rust-testing",
+  "repo": "synthet/image-scoring-gallery",
+  "path": ".cursor/skills/rust-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/synthet/image-scoring-gallery",
+  "dir_name": "rust-testing-synthet-image-scoring-galler",
+  "downloaded_at": "2026-11-05T07:07:58.113026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "synthet",
+  "source_url": "https://github.com/synthet/image-scoring-gallery/blob/main/.cursor/skills/rust-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/synthet/image-scoring-gallery/blob/main/.cursor/skills/rust-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when writing or running Rust unit tests with cargo or nextest. Apply for crate-level tests that live beside modules, smoke tests for new crates, or when choosing cargo test vs cargo nextest. Do not use for GUI/TUI product-specific test frameworks."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "bdd-test-runner",
+  "repo": "rsicarelli/fakt",
+  "path": ".claude/skills/bdd-test-runner/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rsicarelli/fakt",
+  "dir_name": "bdd-test-runner",
+  "downloaded_at": "2026-11-05T06:36:24.075464Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rsicarelli",
+  "source_url": "https://github.com/rsicarelli/fakt/blob/main/.claude/skills/bdd-test-runner/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rsicarelli/fakt/blob/main/.claude/skills/bdd-test-runner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs BDD-compliant GIVEN-WHEN-THEN tests, validates naming compliance, and analyzes coverage. Use when running tests, checking BDD compliance, validating test patterns, or verifying that test names follow GIVEN-WHEN-THEN conventions. Make sure to use this skill whenever tests need to be executed \u2014 it validates naming compliance and catches convention violations that plain test runners miss."
+}

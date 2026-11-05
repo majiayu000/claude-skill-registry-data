@@ -1,0 +1,39 @@
+{
+  "name": "check-issue",
+  "repo": "patrickjaja/claude-desktop-extra",
+  "path": ".claude/skills/check-issue/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/patrickjaja/claude-desktop-extra",
+  "dir_name": "check-issue",
+  "downloaded_at": "2026-11-05T06:08:21.275938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "patrickjaja",
+  "source_url": "https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/check-issue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/patrickjaja/claude-desktop-extra/blob/master/.claude/skills/check-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take one or more claude-desktop-extra GitHub bug reports from triage to a shipped fix - read, classify ours vs upstream, reproduce without touching the user's running app, spec with the maintainer, implement and review in parallel, verify live, commit, release, and close the loop with the reporter. Self-improving - every run ends by folding what it learned back into this file. Invoke as \"/check-issue <issue numbers or URLs>\"."
+}

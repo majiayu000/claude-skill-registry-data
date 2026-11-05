@@ -1,0 +1,38 @@
+{
+  "name": "aidlc-knowledge",
+  "repo": "papaiyaryo/briefing-note-ai",
+  "path": ".claude/skills/aidlc-knowledge/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/papaiyaryo/briefing-note-ai",
+  "dir_name": "aidlc-knowledge-papaiyaryo-briefing-note-ai-2",
+  "downloaded_at": "2026-11-05T06:06:45.834510Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, markdown",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "papaiyaryo",
+  "source_url": "https://github.com/papaiyaryo/briefing-note-ai/blob/main/.claude/skills/aidlc-knowledge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/papaiyaryo/briefing-note-ai/blob/main/.claude/skills/aidlc-knowledge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Index the team's own documents \u2014 PDFs, Word files, Markdown, plain text \u2014 into a per-space catalog the AI-DLC agents can cite. Wraps `aidlc-knowledge.ts`: onboard, sync, list, show, associate, dissociate, rebind, summarize. Every catalog row is written by the tool under a workspace lock; this skill never edits the catalog by hand and never advances workflow state."
+}
