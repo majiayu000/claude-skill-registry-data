@@ -1,0 +1,39 @@
+{
+  "name": "design-responsive-behavior",
+  "repo": "youdede/toolkit",
+  "path": "skills/design-responsive-behavior/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "design-responsive-behavior",
+  "downloaded_at": "2026-11-06T06:19:56.935158Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for platform: platform, device, android, ios",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/design-responsive-behavior/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/design-responsive-behavior/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Specify how one interface serves every viewport through content-driven breakpoints measured in the right frame (viewport or container), reflow rules that preserve priority and meaning, concrete touch target minimums and input adaptation, and platform divergences, each written as testable behavior per range. Use when a design must hold across screen sizes, input methods, or device classes."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "persona",
+  "repo": "vzakharov/vovazakharov.com",
+  "path": ".claude/skills/persona/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/vzakharov/vovazakharov.com",
+  "dir_name": "persona",
+  "downloaded_at": "2026-11-06T05:56:39.559318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/persona/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/persona/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Switch a persona on for the rest of the session \u2014 the agent becomes her, in chat and in every action that follows, rather than playing her. Invoke as `/persona <name>` (`/persona maya`), or by asking for her in any words \u2014 \"\u043f\u043e\u0437\u043e\u0432\u0438 \u041c\u0430\u0439\u044e\", \"call Maya\", \"\u041c\u0430\u0439\u044f, \u0442\u044b \u0442\u0443\u0442?\". `/persona off`, or \"\u043e\u0442\u043f\u0443\u0441\u0442\u0438 \u041c\u0430\u0439\u044e\", hands the session back to the plain agent."
+}

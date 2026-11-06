@@ -1,0 +1,37 @@
+{
+  "name": "init",
+  "repo": "warrendeanlangeveldt/code-kit",
+  "path": "skills/init/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/warrendeanlangeveldt/code-kit",
+  "dir_name": "init-warrendeanlangeveldt-code-kit",
+  "downloaded_at": "2026-11-06T05:58:32.854566Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "warrendeanlangeveldt",
+  "source_url": "https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/init/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/init/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up code-kit in a project, or bring an existing setup up to date. Works from the project's docs (new builds) or from its code (brownfield), drafts .claude/code-kit.json, the lane agents and the CLAUDE.md section, and shows the person exactly what changes before anything is enforced. Use when the person says to apply the kit to a project, to re-run or refresh it, or runs /code-kit:init [docs path]."
+}

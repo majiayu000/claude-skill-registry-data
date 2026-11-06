@@ -1,0 +1,37 @@
+{
+  "name": "gpt-image-sprite-sheet",
+  "repo": "vargHQ/skills",
+  "path": "gpt-image-sprite-sheet/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "gpt-image-sprite-sheet",
+  "downloaded_at": "2026-11-06T05:50:48.835987Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/gpt-image-sprite-sheet/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/gpt-image-sprite-sheet/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make 2D game sprite sheets with GPT Image 2.6 on varg and turn them into game-ready files: a strict 4\u00d74 sheet spec (16 frames, equal cells, fixed scale and ground line; credited to @SSSS_CRYPTOMAN, translated from Japanese), then scripts/slice.sh cuts the sheet into frames, keys out the background, puts every frame on one ground line, and writes a looping GIF, a clean atlas PNG and a JSON atlas (TexturePacker JSON Hash) for Phaser, with the Godot steps. Also covers the native GIF route and turning its frames into an atlas. Use when someone asks for a sprite sheet, a run, walk, idle or attack cycle, game character animation frames, a texture atlas, or Phaser or Godot sprites from an AI image. Not for chat stickers (gpt-image-sticker-pack), a single looping GIF for the web (gpt-image-gif) or pixel-art sprites (the model fails at pixel art)."
+}

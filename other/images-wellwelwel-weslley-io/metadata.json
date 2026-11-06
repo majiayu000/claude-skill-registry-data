@@ -1,0 +1,37 @@
+{
+  "name": "images",
+  "repo": "wellwelwel/weslley.io",
+  "path": ".claude/skills/images/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wellwelwel/weslley.io",
+  "dir_name": "images-wellwelwel-weslley-io",
+  "downloaded_at": "2026-11-06T06:00:58.495796Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/weslley.io/blob/main/.claude/skills/images/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/weslley.io/blob/main/.claude/skills/images/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Responsive image generation and audit through a deterministic hook. It encodes every declared master into AVIF and WebP at the widths devices actually render, detects drift between masters and their generated variants, and pairs with the Picture component so pages serve the smallest fitting source. Use when adding, changing, or auditing raster images."
+}

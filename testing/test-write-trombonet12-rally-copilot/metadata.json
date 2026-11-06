@@ -1,0 +1,38 @@
+{
+  "name": "test-write",
+  "repo": "trombonet12/Rally-Copilot",
+  "path": ".claude/skills/test-write/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/trombonet12/Rally-Copilot",
+  "dir_name": "test-write-trombonet12-rally-copilot",
+  "downloaded_at": "2026-11-06T05:44:58.737886Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, tdd",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "tdd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trombonet12",
+  "source_url": "https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/test-write/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/test-write/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Escribir tests por tipo (motor, unit, db, android-ui) con TDD en l\u00f3gica cr\u00edtica (notas, cronometraje, tramos, deltas, parsing); no ejecuta QA (qa) ni escenarios en dispositivo (qa-scenario)."
+}

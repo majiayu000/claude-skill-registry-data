@@ -1,0 +1,38 @@
+{
+  "name": "test-gap",
+  "repo": "yuchdev/AegisSwr",
+  "path": ".junie/skills/test-gap/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/yuchdev/AegisSwr",
+  "dir_name": "test-gap",
+  "downloaded_at": "2026-11-06T06:20:56.739910Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, pytest",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuchdev",
+  "source_url": "https://github.com/yuchdev/AegisSwr/blob/master/.junie/skills/test-gap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuchdev/AegisSwr/blob/master/.junie/skills/test-gap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "User-invoked as /test-gap [path]. Spawns the qa agent to analyse test coverage and returns a prioritised list of missing tests, risk-ranked (consensus/payload-parsing logic first). Use to decide what to test next."
+}

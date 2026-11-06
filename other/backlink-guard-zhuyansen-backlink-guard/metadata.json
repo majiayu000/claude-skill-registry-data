@@ -1,0 +1,36 @@
+{
+  "name": "backlink-guard",
+  "repo": "zhuyansen/backlink-guard",
+  "path": "skills/backlink-guard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zhuyansen/backlink-guard",
+  "dir_name": "backlink-guard-zhuyansen-backlink-guard",
+  "downloaded_at": "2026-11-06T06:28:01.091051Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zhuyansen",
+  "source_url": "https://github.com/zhuyansen/backlink-guard/blob/main/skills/backlink-guard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zhuyansen/backlink-guard/blob/main/skills/backlink-guard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check a link source before submitting a site to it, verify a listing after it goes live, and audit a site's own backlink profile for patterns that read as link spam. Use when the user wants to submit a site, tool or repository to directories, awesome lists or guest-post sites, asks whether a directory or link source is safe or worth it, wants to check whether a backlink is followed, asks for a backlink audit or spam check after a Google spam update, asks which sites link to their competitors and not to them, which sites Google's AI Overviews cite for their keywords, or what ChatGPT, Perplexity, Claude and Gemini answer, search for and cite when asked for what they make. Runs the backlink-guard command line; a GOANYAPI_API_KEY and a GLASSER_API_KEY (or an AISA_API_KEY) add the paid signals."
+}

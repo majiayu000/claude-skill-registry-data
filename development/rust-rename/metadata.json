@@ -1,0 +1,39 @@
+{
+  "name": "rust-rename",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/rust-rename/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "rust-rename",
+  "downloaded_at": "2026-11-06T05:57:02.240497Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/rust-rename/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/rust-rename/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rename a Rust symbol across the workspace (an item, a method, a field, a module, a local variable) with `wado-dev-tools rust-rename`, which edits where rust-analyzer resolves the name rather than where the text matches. Read before any Rust rename."
+}

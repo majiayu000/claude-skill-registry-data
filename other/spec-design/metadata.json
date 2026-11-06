@@ -1,0 +1,37 @@
+{
+  "name": "spec-design",
+  "repo": "warrendeanlangeveldt/code-kit",
+  "path": "skills/spec-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/warrendeanlangeveldt/code-kit",
+  "dir_name": "spec-design",
+  "downloaded_at": "2026-11-06T05:58:34.331069Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "warrendeanlangeveldt",
+  "source_url": "https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/spec-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/spec-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn an idea into a buildable specification by working it through with the person. Frames the problem, explores options, asks the questions that decide scope and behaviour, and writes the brief, specs, architecture, standards, principles and plan that code-kit init and spec-check work from. Use when someone starts a new product or feature with an idea rather than a spec, wants to ideate or shape requirements, or runs /code-kit:spec-design [idea or docs path]. Also use to resume or extend specs it wrote earlier."
+}

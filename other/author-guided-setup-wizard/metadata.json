@@ -1,0 +1,38 @@
+{
+  "name": "author-guided-setup-wizard",
+  "repo": "youdede/toolkit",
+  "path": "skills/author-guided-setup-wizard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "author-guided-setup-wizard",
+  "downloaded_at": "2026-11-06T06:19:57.402138Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/author-guided-setup-wizard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/author-guided-setup-wizard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Author a bounded shell wizard for manual setup steps that require human interaction, credentials, dashboards, or irreversible confirmation. Use when automation cannot complete the procedure but a repeatable guided path is valuable."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "neru-file-issue",
+  "repo": "y3owk1n/neru",
+  "path": ".agents/skills/neru-file-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/y3owk1n/neru",
+  "dir_name": "neru-file-issue",
+  "downloaded_at": "2026-11-06T06:15:10.302427Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "y3owk1n",
+  "source_url": "https://github.com/y3owk1n/neru/blob/main/.agents/skills/neru-file-issue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/y3owk1n/neru/blob/main/.agents/skills/neru-file-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "File a Neru bug report or feature request that matches the repo's issue forms: duplicate check first, every required field filled with real diagnostics, correct labels. Use when asked to open, file, or draft a GitHub issue for Neru. Not for pull requests."
+}

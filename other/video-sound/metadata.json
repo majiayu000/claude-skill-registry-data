@@ -1,0 +1,38 @@
+{
+  "name": "video-sound",
+  "repo": "vargHQ/skills",
+  "path": "video-sound/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "video-sound",
+  "downloaded_at": "2026-11-06T05:50:40.939749Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, bash=3",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/video-sound/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/video-sound/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make the sound of any video so it feels real: AI voices that don't sound fake (cast from candidates a person picks, directed with each model's documented tags), dialogue and narration written for the ear with pauses, breaths and small actions, sound effects on the right frame, music planned bar by bar with a quiet part, and a measured mix. Built from 480 sourced findings (Walter Murch, Randy Thom, Ben Burtt, trailer editors, NPR, voice directors, model docs, HyperFrames, earshot) plus paid tests. An agent can't hear, so every step writes numbers: a cue sheet, scripts that build and grade the mix (LUFS, true peak, voice over music, effects within a frame, cuts on the beat, dead air), a voice audition page and an audio LLM judge that shortlists takes. Use for \"add sound\", \"voiceover\", \"sound design\", \"music for my video\", \"make the AI voice sound real\", \"pick the best take\", \"SFX\", \"mix\", \"launch video audio\", \"trailer sound\", in HyperFrames, Remotion or AI films. Not for making a song as the product."
+}

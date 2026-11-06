@@ -1,0 +1,39 @@
+{
+  "name": "aginxbrowser",
+  "repo": "yinnho/aginxbrowser",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/yinnho/aginxbrowser",
+  "dir_name": "aginxbrowser",
+  "downloaded_at": "2026-11-06T06:18:58.738181Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, word, markdown",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yinnho",
+  "source_url": "https://github.com/yinnho/aginxbrowser/blob/main/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yinnho/aginxbrowser/blob/main/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Browser engine for AI agents: fetch JS-rendered and Cloudflare-protected pages as clean markdown, run 5-engine aggregated web search (Baidu, Bing, Sogou, WeChat, Google), take screenshots as visual input, extract structured data from SPAs, and drive multi-step interactions (click, type, fill forms, login, paginate) through indexed sessions. One HTTP API from a single Rust binary \u2014 no Chromium. Use when the agent needs to read a web page, scrape or extract content from a URL, search the web, screenshot a page, log in or fill a form, or click through interactive content. Triggers include user requests to \"read this page\", \"open this link\", \"what does this site say\", \"search the web\", \"take a screenshot\", \"scrape this page\", \"download this file / this zip / this pdf\", \"log in and do X\", \"fill out this form\", \"click through this\", \"bypass Cloudflare\", and Chinese equivalents (\u6253\u5f00\u8fd9\u4e2a\u7f51\u9875/\u770b\u770b\u8fd9\u4e2a\u7f51\u7ad9/\u641c\u4e00\u4e0b/ \u622a\u56fe/\u767b\u5f55/\u586b\u8868/\u7ffb\u9875). Trigger words: scrape, fetch, read this page, open this link, web search, look up, screenshot, headless browser, browser automation, Cloudflare bypass, CAPTCHA, login, fill form, paginate, \u6293\u53d6/\u8bfb\u53d6/\u641c\u7d22/\u622a\u56fe/\u767b\u5f55/\u586b\u8868/\u7ffb\u9875/\u4e0b\u8f7d."
+}

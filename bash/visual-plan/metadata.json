@@ -1,0 +1,38 @@
+{
+  "name": "visual-plan",
+  "repo": "yandy-r/ystack",
+  "path": ".agents-plugin/skills/visual-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/yandy-r/ystack",
+  "dir_name": "visual-plan",
+  "downloaded_at": "2026-11-06T06:15:39.332365Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yandy-r",
+  "source_url": "https://github.com/yandy-r/ystack/blob/main/.agents-plugin/skills/visual-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yandy-r/ystack/blob/main/.agents-plugin/skills/visual-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Renders existing plans as interactive visual documents. Use when visualizing a text plan, creating a plan wireframe, or reviewing planned architecture visually."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "agent-desktop",
+  "repo": "travisjneuman/.claude",
+  "path": "skills/agent-desktop/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/travisjneuman/.claude",
+  "dir_name": "agent-desktop",
+  "downloaded_at": "2026-11-06T05:44:29.804090Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "travisjneuman",
+  "source_url": "https://github.com/travisjneuman/.claude/blob/master/skills/agent-desktop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/travisjneuman/.claude/blob/master/skills/agent-desktop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Control native desktop apps with agent-desktop accessibility snapshots and actions on macOS, Windows, or Linux. Use for desktop UI tasks, never browser automation or web research."
+}

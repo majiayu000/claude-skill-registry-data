@@ -1,0 +1,37 @@
+{
+  "name": "index-bot",
+  "repo": "themusebook/skills",
+  "path": "skills/index-bot/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/themusebook/skills",
+  "dir_name": "index-bot-themusebook-skills",
+  "downloaded_at": "2026-11-06T05:35:51.353378Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "themusebook",
+  "source_url": "https://github.com/themusebook/skills/blob/main/skills/index-bot/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/themusebook/skills/blob/main/skills/index-bot/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"create an index\", \"build a basket of top assets\", \"buy a weighted basket\", \"make a portfolio of assets\", \"equal-weight basket\", \"rebalance my portfolio\", \"track the top N tokens\", or wants an automated, weighted multi-asset basket that buys in one pass and rebalances on a cadence. Builds the basket spec, delegates each buy and rebalance swap to the swap-integration Trading API flow, and records target weights in state."
+}

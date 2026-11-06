@@ -1,0 +1,39 @@
+{
+  "name": "find-references",
+  "repo": "vargHQ/skills",
+  "path": "find-references/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "find-references",
+  "downloaded_at": "2026-11-06T05:50:42.977871Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=4, bash=4",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 4,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/find-references/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/find-references/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find real, human-made references before anything is made, for AI image, video and music and for video made with code. Turns a request into one query pack per job (light first, then framing, people, location, texture, type, motion, palette, music and a \"never\" board), searches each source in its own words, opens everything it keeps, proves who made it, measures what code can measure, checks light with an LLM judge, and hands a person three candidates per job. Use when someone says \"find references\", \"reference board\", \"what should this look like\", \"lighting reference\", \"framing reference\", \"texture reference\", \"font reference\", \"motion reference\", \"casting reference\", \"music reference\", \"moodboard references\", \"make it not look like AI\", \"avoid slop\", \"rank these references\", or starts a video with no look yet. Not for writing the look from chosen references (video-moodboard, varg-video-prompting), building the cast (character-passport) or downloading one known link (media-download)."
+}

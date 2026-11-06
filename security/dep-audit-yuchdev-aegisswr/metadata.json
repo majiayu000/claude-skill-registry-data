@@ -1,0 +1,38 @@
+{
+  "name": "dep-audit",
+  "repo": "yuchdev/AegisSwr",
+  "path": ".junie/skills/dep-audit/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/yuchdev/AegisSwr",
+  "dir_name": "dep-audit-yuchdev-aegisswr",
+  "downloaded_at": "2026-11-06T06:20:53.149707Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuchdev",
+  "source_url": "https://github.com/yuchdev/AegisSwr/blob/master/.junie/skills/dep-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuchdev/AegisSwr/blob/master/.junie/skills/dep-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Dependency audit for Aegis SWR. Invoke on changes to pyproject.toml / uv.lock / requirements*.txt, or on a weekly cadence, or manually as /dep-audit. Runs a CVE scan and a licence-compatibility check and delegates the deep write-up to the background-reviewer agent."
+}

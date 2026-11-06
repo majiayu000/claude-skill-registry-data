@@ -1,0 +1,40 @@
+{
+  "name": "rust",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/rust/skills/rust/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "rust-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:41.895395Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug, refactor",
+    "score": 5,
+    "runner_up": "documents",
+    "runner_up_score": 4,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/rust/skills/rust/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/rust/skills/rust/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rust language conventions, idioms, error handling, concurrency (CPU-bound parallelism with threads/rayon and I/O-bound async with Tokio), the cargo/clippy/rustfmt toolchain, and rustdoc. Invoke whenever task involves any interaction with Rust code \u2014 writing, reviewing, refactoring, debugging, or understanding .rs files and Cargo projects."
+}

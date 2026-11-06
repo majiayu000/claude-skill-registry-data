@@ -1,0 +1,40 @@
+{
+  "name": "containers",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/infrastructure/skills/containers/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "containers-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:51.828976Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, docker, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "docker",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/infrastructure/skills/containers/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/infrastructure/skills/containers/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Docker and Podman container management: Dockerfile optimization, multi-stage builds, Compose v2 orchestration, networking, volumes, security hardening, supply chain integrity, health checks, resource limits, Quadlet systemd integration, and debugging. Invoke whenever task involves any interaction with containers \u2014 writing Dockerfiles, configuring Compose, managing Podman Quadlets, reviewing container security, debugging container issues, or setting up image signing and scanning."
+}

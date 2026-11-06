@@ -1,0 +1,39 @@
+{
+  "name": "networking",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/infrastructure/skills/networking/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "networking-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:52.382878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, docker, infra, infrastructure",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "devops",
+      "docker",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/infrastructure/skills/networking/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/infrastructure/skills/networking/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write and review network configuration for self-hosted Linux infrastructure: what an nftables ruleset, a resolver zone, a reverse-proxy site, a forward-auth chain, a WireGuard or Tailscale tunnel, or an IDS rule does once loaded, where that differs from what the file reads. Not how a change is applied or verified."
+}

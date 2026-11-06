@@ -1,0 +1,38 @@
+{
+  "name": "herdr-faq",
+  "repo": "tenequm/skills",
+  "path": "archive/herdr-faq/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/tenequm/skills",
+  "dir_name": "herdr-faq-tenequm-skills",
+  "downloaded_at": "2026-11-06T05:32:52.028567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tenequm",
+  "source_url": "https://github.com/tenequm/skills/blob/main/archive/herdr-faq/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tenequm/skills/blob/main/archive/herdr-faq/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Launch and drive coding agents (codex, claude, agy) through the Herdr CLI; requires a herdr pane (HERDR_ENV=1). Use before starting or prompting a herdr subagent, and when a herdr command fails or an agent seems stuck or silently lost a prompt."
+}

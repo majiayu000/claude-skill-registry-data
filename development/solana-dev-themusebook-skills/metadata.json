@@ -1,0 +1,39 @@
+{
+  "name": "solana-dev",
+  "repo": "themusebook/skills",
+  "path": "skills/solana-dev/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/themusebook/skills",
+  "dir_name": "solana-dev-themusebook-skills",
+  "downloaded_at": "2026-11-06T05:35:52.227249Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "themusebook",
+  "source_url": "https://github.com/themusebook/skills/blob/main/skills/solana-dev/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/themusebook/skills/blob/main/skills/solana-dev/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when user asks to \"build a Solana dapp\", \"write an Anchor program\", \"create a token\", \"debug Solana errors\", \"set up wallet connection\", \"test my Solana program\", \"fuzz my Solana program\", \"deploy to devnet\", \"send a v1 transaction\", \"support larger transactions\", \"fix maxSupportedTransactionVersion\", or \"explain Solana concepts\" (rent, accounts, PDAs, CPIs). Also for program architecture (state layout, compute units, throughput, naming), quick on-chain lookups via public RPC + curl, gasless or sponsored-fee transactions (Kora), server-side signing with KMS/Turnkey/Privy/Fireblocks (Solana Keychain), and issuing stablecoins or allowlisted tokens (Mosaic). Covers wallets, Anchor/Pinocchio, Codama clients, Surfpool/LiteSVM/Mollusk testing, security review, and v1 transactions (SIMD-0385). Prefers @solana/kit 8 plugin clients building transaction v1 by default, @solana/kit-plugin-wallet + @solana/react for wallets, web3.js v3 as the legacy migration target, and Surfpool for local networks."
+}

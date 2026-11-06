@@ -1,0 +1,37 @@
+{
+  "name": "watch-ci",
+  "repo": "vzakharov/vovazakharov.com",
+  "path": ".claude/skills/watch-ci/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vzakharov/vovazakharov.com",
+  "dir_name": "watch-ci",
+  "downloaded_at": "2026-11-06T05:56:40.302221Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/watch-ci/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/watch-ci/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Watch an in-flight GitHub Actions run for the current ref incrementally \u2014 a push-triggered run, an on-demand test dispatch, or a deploy lane \u2014 surfacing failures as they happen so the agent can push fixes mid-run with the commit skip marker. Use when the user says \"watch ci\", \"wait for ci\", or equivalents. A run has to be dispatched or pushed for there to be anything to watch."
+}

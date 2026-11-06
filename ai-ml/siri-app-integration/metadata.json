@@ -1,0 +1,38 @@
+{
+  "name": "siri-app-integration",
+  "repo": "tartinerlabs/skills",
+  "path": "xcode-skills/siri-app-integration/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/tartinerlabs/skills",
+  "dir_name": "siri-app-integration",
+  "downloaded_at": "2026-11-06T05:31:15.253766Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tartinerlabs",
+  "source_url": "https://github.com/tartinerlabs/skills/blob/main/xcode-skills/siri-app-integration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tartinerlabs/skills/blob/main/xcode-skills/siri-app-integration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make an app work with Siri's model in iOS 27.3 / macOS 27.3 / visionOS 27.3, including an app with no App Intents yet. Use for: exposing intents to Siri as tools with @AppIntent(.tool) / ToolIntent, including @AppIntent(.tool, schema:); letting the model write parameter values with @AppEntity(.generable) / GenerableEntity; describing entity properties for Siri with @Property description: and hiding them with visibility: .internal; adding a Skills.skillsbundle with SKILL.md files that give Siri context for the app's tasks; running sirimetadataanalyzer (the Siri Metadata Analyzer) and fixing its findings; build errors from these macros; and titles and descriptions Siri's model reads. Also for 'make my app work with Siri', 'Siri AI', and 'Apple Intelligence'. For testing how Siri uses the app, use siri-evaluations. For general App Intents practice, use app-intents-specialist. For other iOS 26 / 27 App Intents APIs, use app-intents-whats-new-27."
+}

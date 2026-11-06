@@ -1,0 +1,38 @@
+{
+  "name": "provisioning",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/grafana/skills/provisioning/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "provisioning",
+  "downloaded_at": "2026-11-06T06:12:48.466937Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/grafana/skills/provisioning/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/grafana/skills/provisioning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Grafana provisioning across all delivery methods: file provisioning YAML (datasources, dashboards, alerting), Kubernetes-style HTTP API, gcx CLI (replacing grafanactl), Terraform provider, Foundation SDK, Git Sync. Invoke whenever task involves any interaction with Grafana provisioning or observability-as-code \u2014 configuring datasources, managing dashboards or alerting resources as code, automating Grafana setup, choosing between IaC tools, migrating between approaches, or using the Grafana HTTP API."
+}

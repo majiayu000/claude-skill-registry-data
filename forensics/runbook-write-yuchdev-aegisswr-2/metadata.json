@@ -1,0 +1,39 @@
+{
+  "name": "runbook-write",
+  "repo": "yuchdev/AegisSwr",
+  "path": ".github/copilot/skills/runbook-write/SKILL.md",
+  "github_branch": "master",
+  "category": "forensics",
+  "source": "github.com/yuchdev/AegisSwr",
+  "dir_name": "runbook-write-yuchdev-aegisswr-2",
+  "downloaded_at": "2026-11-06T06:20:58.532237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident, triage",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuchdev",
+  "source_url": "https://github.com/yuchdev/AegisSwr/blob/master/.github/copilot/skills/runbook-write/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuchdev/AegisSwr/blob/master/.github/copilot/skills/runbook-write/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "User-invoked as /runbook-write <incident-type>. Drafts a new operational runbook in docs/runbooks/ using the Aegis runbook template. Use to document how on-call responds to a given incident/fault class."
+}

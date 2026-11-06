@@ -1,0 +1,38 @@
+{
+  "name": "plan-infrastructure-change",
+  "repo": "youdede/toolkit",
+  "path": "skills/plan-infrastructure-change/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "plan-infrastructure-change",
+  "downloaded_at": "2026-11-06T06:19:56.800335Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, infra, infrastructure",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "kubernetes",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/plan-infrastructure-change/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/plan-infrastructure-change/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan or review a Terraform, OpenTofu, Kubernetes, cloud, network, or platform change using current state, dependency and blast-radius evidence, staged transitions, policy checks, and recovery proof. Use before applying infrastructure-as-code or changing shared infrastructure."
+}

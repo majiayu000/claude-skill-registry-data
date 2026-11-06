@@ -1,0 +1,39 @@
+{
+  "name": "glossary",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/the-blueprint/skills/glossary/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "glossary-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:50.138255Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown, documentation",
+    "score": 4,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/the-blueprint/skills/glossary/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/the-blueprint/skills/glossary/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Project glossary for consistent domain terminology. Invoke whenever task involves creating, updating, or referencing a glossary, defining domain terms, establishing ubiquitous language, or when inconsistent naming causes confusion in code or planning artifacts."
+}

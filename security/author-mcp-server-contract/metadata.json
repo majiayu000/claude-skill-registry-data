@@ -1,0 +1,37 @@
+{
+  "name": "author-mcp-server-contract",
+  "repo": "youdede/toolkit",
+  "path": "skills/author-mcp-server-contract/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "author-mcp-server-contract",
+  "downloaded_at": "2026-11-06T06:19:57.937612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/author-mcp-server-contract/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/author-mcp-server-contract/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design or review an MCP server\u2019s resources, prompts, tools, schemas, transport, authentication, pagination, errors, and authority boundaries before implementation. Use when exposing a real system to coding agents through the Model Context Protocol."
+}

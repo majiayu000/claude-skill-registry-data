@@ -1,0 +1,37 @@
+{
+  "name": "next",
+  "repo": "warrendeanlangeveldt/code-kit",
+  "path": "skills/next/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/warrendeanlangeveldt/code-kit",
+  "dir_name": "next-warrendeanlangeveldt-code-kit",
+  "downloaded_at": "2026-11-06T05:58:33.038259Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "warrendeanlangeveldt",
+  "source_url": "https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/next/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/next/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The one command for code-kit. Reads where the project stands (a blank folder, a spec being shaped, a ready spec, existing code, a draft config, stories ready, finished or being built) and runs the right skill in the right order, carrying on until something needs the person. Use when the person runs /code-kit:next, asks \"what now?\" or \"what's next?\", wants to start a project with code-kit without knowing which skill to use, or comes back to a project mid-build."
+}

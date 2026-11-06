@@ -1,0 +1,36 @@
+{
+  "name": "from-branch",
+  "repo": "vzakharov/vovazakharov.com",
+  "path": ".claude/skills/from-branch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vzakharov/vovazakharov.com",
+  "dir_name": "from-branch",
+  "downloaded_at": "2026-11-06T05:56:40.923042Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/from-branch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/from-branch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Attach the current session to an existing branch or PR and continue work from there, abandoning the auto-created session branch. Invoke as `/from-branch <branch-name|#PR|PR-url> [<follow-up instruction or skill ...>]`, a skill in the follow-up named bare (`/from-branch"
+}

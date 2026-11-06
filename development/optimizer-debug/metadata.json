@@ -1,0 +1,39 @@
+{
+  "name": "optimizer-debug",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/optimizer-debug/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "optimizer-debug",
+  "downloaded_at": "2026-11-06T05:57:02.594559Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/optimizer-debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/optimizer-debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Debug the Wado optimizer with the WADO_TRACE, WADO_DUMP_PASS_BEFORE/AFTER, WADO_LIST_PASSES, and WADO_SKIP_PASS env vars. Use whenever a NIR/WIR pass is in question \u2014 wrong code, a WIR pipeline ICE, or just to see what a pass did to the IR. For guest-side slowness see wado-performance."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "php",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/php/skills/php/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "php-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:41.005075Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, compile, debug, refactor",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/php/skills/php/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/php/skills/php/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "PHP language conventions, modern idioms, and type system. Invoke whenever task involves any interaction with PHP code \u2014 writing, reviewing, refactoring, debugging, or understanding PHP projects."
+}

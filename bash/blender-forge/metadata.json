@@ -1,0 +1,37 @@
+{
+  "name": "blender-forge",
+  "repo": "tdimino/claude-code-minoan",
+  "path": "skills/design-media/blender-forge/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/tdimino/claude-code-minoan",
+  "dir_name": "blender-forge",
+  "downloaded_at": "2026-11-06T05:31:41.810695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tdimino",
+  "source_url": "https://github.com/tdimino/claude-code-minoan/blob/main/skills/design-media/blender-forge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tdimino/claude-code-minoan/blob/main/skills/design-media/blender-forge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates and manipulates 3D objects by driving Blender headless (blender -b --python) with versioned bpy scripts: turned vessels and clay tablets with Linear A signs and numerals cut in (sign registry \u2192 Noto Sans Linear A \u2192 Boolean), scan and mesh cleanup (weld, fragments, holes, decimation), transparent turntable renders of any GLB/OBJ/PLY/STL (including site bakes with object-space normal + AO and groove-glow maps), 4-view contact sheets and mesh health reports for visual self-checking, and VP9-alpha / ProRes 4444 encoding with an overlay onto a recorded take. This skill should be used when making or editing a 3D object, carving or inscribing signs on a mesh, cleaning or decimating a scan, rendering a turntable or product shot, putting a turning 3D object into a video, checking a mesh (holes, loose parts, size), or choosing between Blender MCP servers. Triggers on Blender, bpy, 3D model, GLB, glTF, turntable, lathe, vessel, tablet, inscribe, carve signs, clean scan, decimate, 3D object beside my face, Blender MCP."
+}

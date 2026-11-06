@@ -1,0 +1,38 @@
+{
+  "name": "speckit-tasks",
+  "repo": "yhyu13/DOOM3_AINative",
+  "path": ".claude/skills/speckit-tasks/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/yhyu13/DOOM3_AINative",
+  "dir_name": "speckit-tasks-yhyu13-doom3-ainative",
+  "downloaded_at": "2026-11-06T06:17:58.666838Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yhyu13",
+  "source_url": "https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/speckit-tasks/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/speckit-tasks/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate an actionable, dependency-ordered tasks.md for the feature based on available design artifacts."
+}

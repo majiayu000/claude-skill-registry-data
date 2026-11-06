@@ -1,0 +1,37 @@
+{
+  "name": "audit-ai-search-visibility",
+  "repo": "youdede/toolkit",
+  "path": "skills/audit-ai-search-visibility/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "audit-ai-search-visibility",
+  "downloaded_at": "2026-11-06T06:19:57.501135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/audit-ai-search-visibility/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/audit-ai-search-visibility/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit a public site for AI-answer discoverability using crawl access, entity clarity, source quality, extractable answers, citation evidence, and measurement limits. Use when a brand wants to understand or improve visibility in AI-generated search without relying on speculative ranking tricks."
+}

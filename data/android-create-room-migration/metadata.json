@@ -1,0 +1,38 @@
+{
+  "name": "android-create-room-migration",
+  "repo": "trombonet12/Rally-Copilot",
+  "path": ".claude/skills/android-create-room-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/trombonet12/Rally-Copilot",
+  "dir_name": "android-create-room-migration",
+  "downloaded_at": "2026-11-06T05:44:58.566166Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trombonet12",
+  "source_url": "https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/android-create-room-migration/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/android-create-room-migration/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Crear una migraci\u00f3n Room manual (versi\u00f3n N a N+1) en data/db/Migrations.kt con schema JSON versionado y test Robolectric JVM; no para entidades nuevas completas (android-create-data-layer)."
+}

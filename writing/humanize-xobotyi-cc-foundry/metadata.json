@@ -1,0 +1,39 @@
+{
+  "name": "humanize",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/the-writer/skills/humanize/SKILL.md",
+  "github_branch": "master",
+  "category": "writing",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "humanize-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:47.554436Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, blog, article",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "writing",
+      "writer",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/the-writer/skills/humanize/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/the-writer/skills/humanize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remove AI-writing tells from reader-facing prose and prevent them while drafting: the mechanisms that produce the tells, the thresholds that mark a passage, and the edit that fixes the text without flattening its author."
+}

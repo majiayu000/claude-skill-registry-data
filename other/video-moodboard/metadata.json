@@ -1,0 +1,38 @@
+{
+  "name": "video-moodboard",
+  "repo": "vargHQ/skills",
+  "path": "video-moodboard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "video-moodboard",
+  "downloaded_at": "2026-11-06T05:50:43.228547Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, bash=3",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/video-moodboard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/video-moodboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a moodboard that AI image and video models actually follow, in the order that matters most, and prove it on stills before any video is paid for. Ranked from a 48-still test, 6,086 X posts and 14 official prompt guides: references, light, subject lock, framing, palette, motion, texture, type, sound. Every line is a number or a named thing (hex, Kelvin, lens mm, % of frame, film stock, font, seconds), never \"cinematic\". Writes moodboard.md and a visual board.html, checks test stills line by line (palette by \u0394E), and links 450+ sources: reference libraries, palette, light, type and motion tools, vendor guides, benchmarks, creators' posts. Use for \"make a moodboard\", \"mood board for my video\", \"style bible\", \"look and feel\", \"art direction\", \"visual brief\", \"make it not look like AI\", or before prompting Seedance, Kling, Veo, Nano Banana or Midjourney. Not for finding references from scratch (find-references) or per-shot prompts after the board is approved (varg-video-prompting)."
+}

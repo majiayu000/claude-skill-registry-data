@@ -1,0 +1,37 @@
+{
+  "name": "adr-write",
+  "repo": "yuchdev/AegisSwr",
+  "path": ".claude/skills/adr-write/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/yuchdev/AegisSwr",
+  "dir_name": "adr-write-yuchdev-aegisswr",
+  "downloaded_at": "2026-11-06T06:20:53.350681Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuchdev",
+  "source_url": "https://github.com/yuchdev/AegisSwr/blob/master/.claude/skills/adr-write/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuchdev/AegisSwr/blob/master/.claude/skills/adr-write/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "User-invoked as /adr-write <title>. Scaffolds a new Architecture Decision Record in docs/adr/ using the MADR template, pre-filling context from recent git log and open GitHub issues. Use when a design decision needs to be recorded before implementation."
+}

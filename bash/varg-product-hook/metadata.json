@@ -1,0 +1,37 @@
+{
+  "name": "varg-product-hook",
+  "repo": "vargHQ/skills",
+  "path": "varg-product-hook/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "varg-product-hook",
+  "downloaded_at": "2026-11-06T05:50:44.586403Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/varg-product-hook/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/varg-product-hook/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes the first 5-15 seconds of a product video, the part that stops the scroll: either finds a hook that already went viral for this kind of product (TikTok Creative Center, ad spy tools, Reels search) and remakes the idea, or generates a realistic UGC-style clip of the product in use with Seedance 2.5 on varg from the product's own photos (a backyard-camera fail, a torture test, problem then solution, a satisfying close-up, a gift reaction), or the whole \"The problem \u2192 Vs \u2192 The solution\" music ad. Use when someone selling a product (dropshipping, Shopify, TikTok Shop, Amazon) asks for a viral hook, a scroll-stopper, a \"TikTok made me buy it\" clip, product b-roll that looks like real footage, or \"a video of my product in use\" made from product photos. Not for the full guide reel with the laptop and pen (use varg-dropship-reel, which calls this skill for its hook), talking-head UGC ads with an actor reading a script (find one with video-skills), or studio packshot spins (use varg-ai)."
+}

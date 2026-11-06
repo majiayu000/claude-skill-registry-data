@@ -1,0 +1,38 @@
+{
+  "name": "prompt-terser",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/ai-helpers/skills/prompt-terser/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "prompt-terser",
+  "downloaded_at": "2026-11-06T06:12:51.625728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/ai-helpers/skills/prompt-terser/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/ai-helpers/skills/prompt-terser/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a phased terseness pass over an existing prompt or skill and return a diff-proposal: mechanical wording and format cuts listed as applied, structural cuts gated behind a falsification check."
+}

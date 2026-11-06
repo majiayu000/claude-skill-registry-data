@@ -1,0 +1,37 @@
+{
+  "name": "transition-craft",
+  "repo": "vargHQ/skills",
+  "path": "transition-craft/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "transition-craft",
+  "downloaded_at": "2026-11-06T05:50:43.834940Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/transition-craft/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/transition-craft/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Six transitions with exact presets and the editing rules behind them: photo collage burst, Droste recursive zoom into a screen, impact tile-flip mosaic, bokeh light-spot transition, 3D photo cloud gallery and a camera-shake distort cut. Presets give the core length in frames, where the peak lands on the beat, log-space zooms, shake amplitude, frequency and decay, motion-blur shutter angle, bokeh sizes, tile counts and stagger, from Walter Murch, Dan Ebberts' decaying-sine expression, Boris FX, Maxon and Unreal camera-shake defaults, measured transition durations and editors on X. Use when a video needs a transition on the beat, an infinite zoom, a shake cut, a bokeh or photo-collage transition. NOT for plain crossfades and xfade wipes (varg-video-edit-library lists every ffmpeg xfade)."
+}

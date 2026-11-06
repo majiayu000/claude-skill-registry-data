@@ -1,0 +1,38 @@
+{
+  "name": "accessibility",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/frontend/skills/accessibility/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "accessibility-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:50.318233Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: css, frontend, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/frontend/skills/accessibility/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/frontend/skills/accessibility/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Web accessibility discipline: semantic HTML first, ARIA only when needed, keyboard access always. Invoke whenever task involves any interaction with accessible web content -- writing, reviewing, refactoring, or debugging HTML/CSS/JS for WCAG compliance, ARIA usage, keyboard navigation, focus management, screen reader support, or accessible component patterns."
+}

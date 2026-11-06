@@ -1,0 +1,37 @@
+{
+  "name": "ecommerce-video-edit",
+  "repo": "vargHQ/skills",
+  "path": "ecommerce-video-edit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "ecommerce-video-edit",
+  "downloaded_at": "2026-11-06T05:50:46.765058Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/ecommerce-video-edit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/ecommerce-video-edit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn raw product footage into a TikTok ad with FFmpeg. Recuts creator, UGC or product footage into a 9:16 ecommerce ad for TikTok, TikTok Shop, Reels and Meta: the best moment moved to second 0, a text hook inside the safe zone, dead air cut, captions, a CTA end card, loudness at -14 LUFS, and one MP4 per hook for testing (plus a 4:5 feed cut and a cover frame). Every command was run on test media. Free and local; on the varg ffmpeg tool (credits) when the agent has no shell. Use when someone has footage of a product (a creator video, an unboxing, a demo, a winning ad) and wants it edited into an ad, wants new hooks on an existing ad, or wants it TikTok-ready. NOT for generating new footage (use product-photo-to-video or ai-ugc-ad-video), animated word-by-word captions (use a Remotion or HyperFrames caption skill), or generic crops and subtitles (use short-form-ffmpeg-cookbook)."
+}

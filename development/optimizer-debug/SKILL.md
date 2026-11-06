@@ -1,0 +1,232 @@
+---
+name: optimizer-debug
+description: "Debug the Wado optimizer with the WADO_TRACE, WADO_DUMP_PASS_BEFORE/AFTER, WADO_LIST_PASSES, and WADO_SKIP_PASS env vars. Use whenever a NIR/WIR pass is in question — wrong code, a WIR pipeline ICE, or just to see what a pass did to the IR. For guest-side slowness see wado-performance."
+---
+
+# Optimizer pass debugging
+
+The `optimize.rs` and `wir_optimize.rs` pipelines are big — many passes,
+each rewriting the IR in place. When a pass is wrong, the symptom usually
+shows up two passes later as "the WIR validates but produces the wrong
+behaviour" or as "the codegen finds an invalid Wasm module" deep in the
+final emitter. The debug hooks below let you diff the IR around any
+single pass without sprinkling `eprintln!` through pass internals.
+
+All three are env-var-driven so they work uniformly across `wado compile`,
+`wado test`, `wado run`, and Kiln invocations from `package-gale`.
+
+## Quick recipes
+
+### Which pass changed the IR?
+
+```sh
+WADO_LIST_PASSES=1 cargo run --bin wado --quiet -- compile -O1 file.wado -o scratchpad/out.wasm 2>&1 | grep '\[pass\]'
+```
+
+Prints every pass name in execution order. Lets you correlate the order
+in source (`optimize.rs` and `wir_optimize.rs`) with what actually fires
+under your `-Ox` choice.
+
+### What does pass X produce?
+
+```sh
+WADO_DUMP_PASS_AFTER=wir/sroa_multi_value_returns \
+  cargo run --bin wado --quiet -- compile -O1 file.wado -o scratchpad/out.wasm 2>scratchpad/after.log
+```
+
+`scratchpad/after.log` holds the full WIR (or NIR, depending on the pass) right
+after the named pass, framed by `=== WIR after <name> ===` /
+`=== end WIR after <name> ===` (NIR passes use `=== NIR after <name> ===`).
+
+### What does pass X consume?
+
+```sh
+WADO_DUMP_PASS_BEFORE=wir/sroa_multi_value_returns \
+  cargo run --bin wado --quiet -- compile -O1 file.wado -o scratchpad/out.wasm 2>scratchpad/before.log
+```
+
+Same framing, before the pass runs. `diff` the two logs to see exactly
+what the pass rewrote.
+
+### Multiple passes at once
+
+The variables accept a comma-separated list:
+
+```sh
+WADO_DUMP_PASS_AFTER=nir/inline,wir/sroa_multi_value_returns \
+  cargo run --bin wado --quiet -- compile -O1 file.wado -o scratchpad/out.wasm 2>scratchpad/dump.log
+```
+
+### Bisect by skipping a pass
+
+```sh
+WADO_SKIP_PASS=nir/cse cargo run --bin wado --quiet -- compile -O3 file.wado -o scratchpad/out.wasm
+```
+
+Same comma-separated list as `WADO_DUMP_PASS_*`, with one extra
+convenience: a `@N` suffix targets the Nth invocation of a pass within
+the fixed-point loop (1-based). `WADO_SKIP_PASS=nir/cse@2` skips `cse`
+only on the second iteration — invaluable for iteration-dependent bugs
+whose failing test passes on the first iteration and only diverges once
+the inliner expands an additional function on a later one.
+
+Passes and the optimization decisions made outside them are skippable;
+confirm a name with `WADO_LIST_PASSES=1` first. A rule of the peephole
+session is `nir/peephole/<rule>` (`nir/peephole/ref_elim`); `nir/peephole`
+skips the whole session. Lowering's value-copy elisions are
+`lower/value_copy/{move,owned,share,confined,pass_through}`, and
+`-f no-cold-paths` dropping the markers is `lower/drop_cold_markers`. The
+value pool folding a constant operation as it interns it, in lowering and in
+every NIR pass, is `nir/value_pool/fold_const`. The WIR builder's are
+`wir_build/exhaustive_last_arm` (the exhaustive match's unchecked last arm),
+`wir_build/branch_hints` (hints from cold paths) and
+`wir_build/elide_terminator_unreachable` (no `unreachable` after a
+terminator). A CM binding lifting a `list` of numbers by one copy out of
+linear memory is `synthesis/cm_lift_bulk`. A decision is listed once per
+compile and takes no `@N`: the optimizer's threads ask it in no fixed order.
+
+When a pass is the only one whose skipping makes the bug go away that
+just narrows the _participants_ in the buggy interaction — it does not
+prove the pass is itself buggy. Pair the skip-bisection result with
+`WADO_DUMP_PASS_AFTER` on the same pass to compare its output across
+the working vs. broken configuration before concluding.
+
+### Trace pass-internal decisions
+
+For developer-only messages from inside a pass. The crate denies `eprintln!`,
+so use `compiler_trace!`, which writes to the sink the host installed:
+
+```sh
+WADO_TRACE=sroa_return cargo run --bin wado --quiet -- compile -O1 file.wado -o scratchpad/out.wasm 2>&1 | grep '\[sroa_return\]'
+```
+
+Output is framed `[target] message`. Targets are passed verbatim to
+`compiler_trace!(target, ...)` calls inside the compiler. Use
+`WADO_TRACE='*'` to enable every target at once.
+
+To add a new tracing call inside a pass:
+
+```rust
+use crate::compiler_trace;
+// ...
+compiler_trace!("sroa_return", "candidates = {}", candidates.len());
+compiler_trace!("sroa_return", "rewriting return at {span:?}");
+```
+
+The cost when the target is disabled is one `OnceLock` get + a linear
+scan of the configured target list — fine for any rate that makes
+sense in a compiler pass.
+
+## Workflow for a fixed-point loop that never converges
+
+`--log-level debug` ends the NIR loop with either "converged after N
+iteration(s)" or "hit the N-iteration cap without converging", the latter
+naming the passes still reporting changes. From there:
+
+1. `WADO_TRACE=opt_loop` lists, per iteration, every pass that reported a
+   change. The tail of that list is the culprit set.
+2. `WADO_TRACE=const_fold` names each function `const_fold` changed, so a
+   pass that keeps reporting a change points at the body it keeps rewriting.
+   `wado dump --inline-decisions ''` names, per round, the callees spliced
+   into each caller: a late round splicing small helpers is a callee that only
+   shrank under the threshold once its own callees were spliced.
+3. `WADO_DUMP_PASS_BEFORE`/`_AFTER=<pass>` around a late round, diffed, says
+   which of three it is: nothing rewritten at all (the pass reports a change it
+   did not make), a rewrite a later pass deletes (two passes fighting), or real
+   work that tapers (the pass takes one step per round where its own fixed
+   point is one sweep away).
+
+## Workflow for output that is far larger than the level below it
+
+`-O3` emitting several times `-O2`'s wasm is the inliner, not the loop —
+check the iteration count first (`WADO_TRACE=opt_loop`) and stop suspecting
+convergence once it is small.
+
+1. Sweep `--optimize-inline-threshold`. A cliff rather than a curve means one
+   callee crossed the budget and is now copied at every call site.
+2. `wado dump --inline-decisions ''` reports, per round, the unit size and each
+   callee's verdict: its hot price, its size, its call sites, which of them it
+   reaches and why. A callee whose hot price sits under the threshold and its
+   size far over it is one the cold discount admitted, and it grows the unit
+   by its size times its sites less one. A handful of such callees accounting
+   for most of a round's growth is that pattern.
+3. `WADO_TRACE=cold_outline` says why such a callee was not split: control
+   leaving the region, or a local the call cannot hand over.
+4. `--optimize-inline-growth <pct>` caps unit growth, and `--log-level debug`
+   then names what the cap turned down, with both of the callee's prices.
+
+## Workflow for an optimization that stopped firing
+
+A `wir_expect` that disappears when an unrelated knob moves is a precision hole
+somewhere else: one pass reshaped the IR into a form the second pass does not
+recognise, and the second pass is the one to fix.
+
+1. Bisect on the knob, not the source — `--optimize-inline-threshold` one step
+   at a time until the expectation flips. One step is one callee, so the
+   before/after `dump --nir` diff is small enough to read.
+2. `WADO_TRACE=<pass>` for the pass that stopped firing. `const_object_globalization`
+   names each function it walks and, per `let`, either the hoist or the check
+   that declined it.
+3. Read the declined shape in the NIR. A shape that is accepted in one syntactic
+   position and rejected in another — `&x` as a call argument versus `&x` bound
+   by a `let` — is the hole; the inliner just moved it from the first to the
+   second.
+
+## Workflow for a "WIR pipeline generated invalid core Wasm module" ICE
+
+The codegen-time validator catches type mismatches the optimizer
+introduced. The error always points at codegen, but the bug is upstream.
+Walk the pass pipeline like this:
+
+1. Get the failing fixture compiling at `-O0` first to confirm it is an
+   optimization-introduced bug (not a lower/codegen bug).
+2. List the passes that run at the failing `-Ox` level:
+
+   ```sh
+   WADO_LIST_PASSES=1 cargo run --bin wado --quiet -- compile -O1 fixture.wado -o scratchpad/out.wasm 2>&1 | grep '\[pass\]'
+   ```
+3. Bisect: pick a pass roughly mid-pipeline, dump after it, and check
+   whether the IR is already broken. If it is, the bug is at or before
+   that pass; otherwise it is later.
+4. Once you have the suspect pass, dump before AND after it and read
+   the diff. The mismatch will be visible — usually a function whose
+   signature was rewritten but whose return sites weren't (the canonical
+   shape of the SROA / signature-rewrite class of bugs), or a struct
+   layout that changed in one place but not at consumers.
+5. Add `compiler_trace!("<pass_name>", ...)` calls at the suspect rewrite
+   site to confirm which subtrees the pass visits. The `*_mut` walkers
+   in `wir_visitor.rs` and `WirInstr::for_each_boxed_child_mut` cover
+   most rewrite needs.
+
+## Pass-name conventions
+
+| Prefix       | Phase                              |
+| ------------ | ---------------------------------- |
+| `nir/<name>` | NIR-level pass (`optimize.rs`)     |
+| `wir/<name>` | WIR-level pass (`wir_optimize.rs`) |
+
+A `#![wasm_module]` core module (the allocator, `mem`) runs the WIR list as a
+package of its own, under `wir/<module>:<name>` — so `wir/run_peephole` stays
+the main module's and `wir/mem:run_peephole` targets the allocator.
+
+`WADO_LIST_PASSES=1` is the source of truth — names there match exactly
+the strings the env vars want.
+
+## When to NOT reach for these
+
+- For runtime bugs (program compiles cleanly but produces wrong output),
+  use the `debugger` skill (`rust-gdb`) or read the WIR/Wasm directly.
+- For LSP / annotate-time issues, these hooks fire only during the
+  optimization phase. Add `tracing` calls in `annotate.rs` directly.
+- For monomorphization or lowering issues, dump the pre-optimize IR with
+  `wado dump --tir-resolved` / `--tir-monomorphized` (TIR, before lowering)
+  or `--nir-lowered` (NIR, right after lowering) instead; those are exposed
+  as proper CLI flags.
+
+## See also
+
+- `wado-compiler/src/trace.rs` — `compiler_trace!` macro and filter
+  parsing (with unit tests).
+- `wado-compiler/src/optimize.rs` — `run_pass` for NIR passes; defines
+  the env-var hook implementation in `mod pass_dump`.
+- `wado-compiler/src/wir_optimize.rs` — `wir_pass` for WIR passes.

@@ -1,0 +1,38 @@
+{
+  "name": "registrar-decision",
+  "repo": "trombonet12/Rally-Copilot",
+  "path": ".claude/skills/registrar-decision/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/trombonet12/Rally-Copilot",
+  "dir_name": "registrar-decision",
+  "downloaded_at": "2026-11-06T05:44:57.424670Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, roadmap, feature",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "roadmap",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trombonet12",
+  "source_url": "https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/registrar-decision/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/registrar-decision/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Registrar una decisi\u00f3n t\u00e9cnica en docs/DECISIONES.md (y si es grande, investigaci\u00f3n en docs/investigacion/); las de producto van a QUESTIONS.md. No para dise\u00f1ar features (design-feature)."
+}

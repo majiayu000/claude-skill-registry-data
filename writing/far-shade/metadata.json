@@ -1,0 +1,37 @@
+{
+  "name": "far-shade",
+  "repo": "wolffe/three.js-skills",
+  "path": "skills/outdoor/far-shade/SKILL.md",
+  "github_branch": "master",
+  "category": "writing",
+  "source": "github.com/wolffe/three.js-skills",
+  "dir_name": "far-shade",
+  "downloaded_at": "2026-11-06T06:06:07.743728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writer, copy",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wolffe",
+  "source_url": "https://github.com/wolffe/three.js-skills/blob/master/skills/outdoor/far-shade/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wolffe/three.js-skills/blob/master/skills/outdoor/far-shade/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a large streamed terrain needs hill, ridge and tree shade past the reach of the real shadow map, or a cheap fake ambient occlusion everywhere, without paying for a far shadow cascade. A toroidal RGBA8 world atlas (height + canopy + written flag) written per terrain tile, an 8-tap vertex-stage march toward the sun, canopy blobs displaced down-sun, multiplied into albedo; no shadow pass. Ships `far-shade.tsl.js`."
+}

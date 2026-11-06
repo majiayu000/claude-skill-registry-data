@@ -1,0 +1,40 @@
+{
+  "name": "software-dev-loop",
+  "repo": "yhyu13/DOOM3_AINative",
+  "path": ".claude/skills/software-dev-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yhyu13/DOOM3_AINative",
+  "dir_name": "software-dev-loop",
+  "downloaded_at": "2026-11-06T06:17:59.780707Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, software, debug",
+    "score": 5,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yhyu13",
+  "source_url": "https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/software-dev-loop/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/software-dev-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "General software development only (no game engine, no game design). The complete software-development loop \u2014 persist the goal \u2192 write a plan doc and harden it with the source-anchored-design critic loop \u2192 implement and critic-harden \u2192 red-green test + benchmark \u2192 dump JOURNEY in between \u2192 write durable long-term memory. Use when starting or running a real software build, when a task needs goal, docs, testing, and memory chained in order, or when the user asks for the \"holy grail\" dev workflow. Not for games - use game-dev-loop."
+}

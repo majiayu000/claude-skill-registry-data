@@ -1,0 +1,37 @@
+{
+  "name": "write-project-agent-guidance",
+  "repo": "youdede/toolkit",
+  "path": "skills/write-project-agent-guidance/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "write-project-agent-guidance",
+  "downloaded_at": "2026-11-06T06:19:59.243980Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/write-project-agent-guidance/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/write-project-agent-guidance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create or repair root-level AGENTS.md, CLAUDE.md, or equivalent project guidance from verified repository evidence and current runtime precedence. Use when onboarding an agent runtime or replacing generic generated instructions with durable project-specific rules."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dispatch",
+  "repo": "warrendeanlangeveldt/code-kit",
+  "path": "skills/dispatch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/warrendeanlangeveldt/code-kit",
+  "dir_name": "dispatch-warrendeanlangeveldt-code-kit",
+  "downloaded_at": "2026-11-06T05:58:33.913754Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "warrendeanlangeveldt",
+  "source_url": "https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/dispatch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/dispatch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hand stories from the plan to their lane agents, one per lane, every free lane at once. Picks the ready stories, checks each is buildable, briefs each lane agent with its story, requirements and acceptance criteria, and starts it on its own branch and worktree. Use when the lead is ready to start building, asks what to work on next, or runs /code-kit:dispatch [story IDs, a milestone, or \"next\"]."
+}

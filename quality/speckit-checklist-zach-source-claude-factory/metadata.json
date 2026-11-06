@@ -1,0 +1,38 @@
+{
+  "name": "speckit-checklist",
+  "repo": "zach-source/claude-factory",
+  "path": ".claude/skills/speckit-checklist/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/zach-source/claude-factory",
+  "dir_name": "speckit-checklist-zach-source-claude-factory",
+  "downloaded_at": "2026-11-06T06:23:21.251660Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zach-source",
+  "source_url": "https://github.com/zach-source/claude-factory/blob/main/.claude/skills/speckit-checklist/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zach-source/claude-factory/blob/main/.claude/skills/speckit-checklist/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a custom checklist for the current feature based on user requirements."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "media-download",
+  "repo": "vargHQ/skills",
+  "path": "media-download/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "media-download",
+  "downloaded_at": "2026-11-06T05:50:42.854586Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/media-download/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/media-download/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Download videos, audio and images to local files from a link. Video and audio come from X/Twitter, YouTube, Instagram, Facebook, TikTok, Threads, Reddit, Vimeo, LinkedIn, Twitch, VK, Rutube, Bilibili, Dailymotion and the 1800+ other sites yt-dlp supports. Pinterest images come from a pin, board, profile or a plain search query, which is useful for moodboards and visual references. Use when the user pastes a link and wants to download, save or grab it, wants its audio, metadata or a whole playlist, or wants Pinterest pictures or references for a style. Runs locally; no account or API key. Triggers: \"\u0441\u043a\u0430\u0447\u0430\u0439 \u0432\u0438\u0434\u0435\u043e\", \"\u0441\u043a\u0430\u0447\u0430\u0442\u044c \u043f\u043e \u0441\u0441\u044b\u043b\u043a\u0435\", \"\u0441\u043a\u0430\u0447\u0430\u0439 \u0441 \u043f\u0438\u043d\u0442\u0435\u0440\u0435\u0441\u0442\u0430\", \"\u0441\u043e\u0431\u0435\u0440\u0438 \u0440\u0435\u0444\u0435\u0440\u0435\u043d\u0441\u044b\", \"download this video\", \"save this reel/tweet/short\", \"rip the audio\", \"pinterest moodboard\"."
+}

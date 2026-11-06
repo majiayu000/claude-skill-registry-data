@@ -1,0 +1,39 @@
+{
+  "name": "document-tests",
+  "repo": "yuchdev/AegisSwr",
+  "path": ".github/copilot/skills/document-tests/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/yuchdev/AegisSwr",
+  "dir_name": "document-tests-yuchdev-aegisswr",
+  "downloaded_at": "2026-11-06T06:20:59.422853Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration, e2e",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuchdev",
+  "source_url": "https://github.com/yuchdev/AegisSwr/blob/master/.github/copilot/skills/document-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuchdev/AegisSwr/blob/master/.github/copilot/skills/document-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "User-invoked as /document-tests [path]. Documents every automated test under path (default tests/) - classifies each as Unit, Mock, Integration, or E2E and inserts a standardized Scenario/Boundaries/On-failure docstring via the document_tests.py codemod, then delegates flagged/ambiguous cases to the test-documenter agent. Use to bring an undocumented or partially-documented test suite up to a consistent standard."
+}

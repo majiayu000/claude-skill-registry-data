@@ -1,0 +1,40 @@
+{
+  "name": "cross-platform-guide",
+  "repo": "yhyu13/DOOM3_AINative",
+  "path": ".claude/skills/cross-platform-guide/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yhyu13/DOOM3_AINative",
+  "dir_name": "cross-platform-guide",
+  "downloaded_at": "2026-11-06T06:18:00.375747Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, software, compile",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "software",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yhyu13",
+  "source_url": "https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/cross-platform-guide/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/cross-platform-guide/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when making native C/C++ software portable across operating systems and targets: isolating all OS/windowing/input/audio calls behind one platform-abstraction interface, ordering a port to a new OS, building to the web via Emscripten/WebAssembly (cooperative main loop, async file/network, GL ES/WebGPU mapping, 32-bit pointers, memory growth), and reading input devices like gamepads. Triggers on scattered platform #ifdefs, function-pointer OS interfaces, porting to Linux/web, emscripten_set_main_loop, ALLOW_MEMORY_GROWTH, WebGL from a Vulkan engine, /dev/input, evdev, gamepad hotplug, even when the user doesn't say 'portable'."
+}

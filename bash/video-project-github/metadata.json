@@ -1,0 +1,39 @@
+{
+  "name": "video-project-github",
+  "repo": "vargHQ/skills",
+  "path": "video-project-github/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "video-project-github",
+  "downloaded_at": "2026-11-06T05:50:46.362697Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/video-project-github/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/video-project-github/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep an AI video project, or any agent-built project, in a private GitHub repo, even when the person has never used git. The agent does everything: creates the private repo, keeps keys out, saves a version after every approved step, stores big video and audio outside git so GitHub's 100 MB limit never hits, and restores the whole project byte for byte on a new laptop. Sets up the folder layout for mood boards, script, sound, characters, blockout, shots and the edit as text (HyperFrames, Remotion, ffmpeg), records the prompt, model, seed and cost of every take, and gives an undo for anything. Use for \"put this on GitHub\", \"back up my video project\", \"don't lose my work\", \"undo\", \"go back to the old version\", \"move to a new computer\", \"organize my project folder\", \"file structure for an AI video\", \"edit video in the terminal\", \"git for video\". Not for one-off clips with no later edits, or for teams already happy with their own git setup."
+}

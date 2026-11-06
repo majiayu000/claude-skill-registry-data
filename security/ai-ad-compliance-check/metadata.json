@@ -1,0 +1,38 @@
+{
+  "name": "ai-ad-compliance-check",
+  "repo": "vargHQ/skills",
+  "path": "ai-ad-compliance-check/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "ai-ad-compliance-check",
+  "downloaded_at": "2026-11-06T05:50:48.633688Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/ai-ad-compliance-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/ai-ad-compliance-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns an AI video ad into a compliance report for TikTok Shop, TikTok ads, Meta, YouTube, the FTC, New York's synthetic-performer law and the EU AI Act before it runs: varg video_analyze pulls every shot, spoken and on-screen claim and person, each claim is matched to the seller's evidence, the visuals are checked against TikTok Shop's AI product rules (no fake effects, before/after, changed quantity or size), people and voices against the FTC fake-testimonial rule, and the result is a pass / fix / block list with the rule, source and date, a rewrite for each fix, and the AI labels to set on each platform. Use when someone asks \"is this ad allowed\", \"will TikTok Shop reject this\", \"check my AI ad for compliance\", \"do I need an AI label\", \"can an AI avatar say it used the product\", or before publishing AI product ads, UGC or testimonials. Not legal advice, and not for writing the ad (use ecommerce-video-ads or tiktok-shop-video)."
+}

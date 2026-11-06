@@ -1,0 +1,37 @@
+{
+  "name": "video-skills",
+  "repo": "vargHQ/skills",
+  "path": "video-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "video-skills",
+  "downloaded_at": "2026-11-06T05:50:41.382972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, creative=2",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/video-skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/video-skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds the right agent skill for an AI video, image, voice or music job on varg how to (varg.ai/how-to, 2,000+ checked skills and tutorials: UGC ads, product videos, music videos, captions, talking avatars, podcasts, faceless channels, explainers, launch videos, chat-story ads, dubbing, shorts from long videos) and shows the visual options before anything is generated. Use when someone asks to make, edit, caption, voice, dub or animate a video, asks \"which skill should I use\", \"find a skill for\", \"how do I make a ... video\", or wants images, voiceover or music for a video, and no installed skill already covers that format; use it before writing a pipeline from scratch or searching registries. Not for running a generation itself (use varg-ai), not for formats with their own varg skill (varg-music-video, varg-character-keynote, varg-consistent-characters, varg-character-design, varg-podcast-video, varg-product-hook, varg-dropship-reel, varg-previz), and not for non-media coding tasks."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "design",
+  "repo": "warrendeanlangeveldt/code-kit",
+  "path": "skills/design/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/warrendeanlangeveldt/code-kit",
+  "dir_name": "design-warrendeanlangeveldt-code-kit",
+  "downloaded_at": "2026-11-06T05:58:33.490364Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css, figma",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "warrendeanlangeveldt",
+  "source_url": "https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design a design story's screens with the person before any of them is built, and record each approved design so its screen can be coded. Reads the screens the specs list, designs them in the project's design tool (Paper, Figma, Pencil) or as design files under design/, shows them, iterates on the person's feedback, exports each approved screen's states into design/ as files a lane can read, and adds them to the design register the design gate reads. --hand-over exports designs approved before that are still only in the tool. Use when code-kit next or the loop gives the design step, when a lane was refused for a screen whose design isn't approved, or runs /code-kit:design [story IDs]."
+}

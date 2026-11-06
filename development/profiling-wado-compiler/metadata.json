@@ -1,0 +1,40 @@
+{
+  "name": "profiling-wado-compiler",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/profiling-wado-compiler/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "profiling-wado-compiler",
+  "downloaded_at": "2026-11-06T05:57:03.315760Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile, debug",
+    "score": 5,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/profiling-wado-compiler/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/profiling-wado-compiler/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Profile the native Rust `wado` binary (compile/serve/run) for host-side bottlenecks \u2014 wall time per phase with the span trace, CPU with a sampling profiler (samply, or perf where samply cannot run), memory with the span trace's RSS and valgrind DHAT. Use for native CPU or memory profiling, not guest wasm (see wado-performance for that)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "docs-check",
+  "repo": "trombonet12/Rally-Copilot",
+  "path": ".claude/skills/docs-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/trombonet12/Rally-Copilot",
+  "dir_name": "docs-check",
+  "downloaded_at": "2026-11-06T05:44:55.650173Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trombonet12",
+  "source_url": "https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/docs-check/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/docs-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Revisar docs/** y los .md de la ra\u00edz (links = enlaces/anclas rotos | consistency = datos vs DECISIONES.md, VERIFICAR); solo informa, no edita (docs-update)."
+}

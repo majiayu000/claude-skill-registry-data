@@ -1,0 +1,37 @@
+{
+  "name": "decide",
+  "repo": "warrendeanlangeveldt/code-kit",
+  "path": "skills/decide/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/warrendeanlangeveldt/code-kit",
+  "dir_name": "decide-warrendeanlangeveldt-code-kit",
+  "downloaded_at": "2026-11-06T05:58:33.340993Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "warrendeanlangeveldt",
+  "source_url": "https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/decide/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/decide/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The lead decides what a lane asked for and couldn't do itself (a new package, a migration, a protected file, a UX question) against the story's requirements, the spec, the principles and the architecture. Approves it, answers the lane with something that fits better, or takes it to the person only when it crosses a guardrail. Use when code-kit's loop or `code-kit next` says a lane waits on your decision, when a lane hands back a change request, or when the person runs /code-kit:decide [request numbers]."
+}

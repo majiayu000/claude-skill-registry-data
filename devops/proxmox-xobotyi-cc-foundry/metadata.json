@@ -1,0 +1,42 @@
+{
+  "name": "proxmox",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/infrastructure/skills/proxmox/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "proxmox-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:49.786258Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, kubernetes, deploy, infra, infrastructure",
+    "score": 7,
+    "runner_up": "productivity",
+    "runner_up_score": 5,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/infrastructure/skills/proxmox/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/infrastructure/skills/proxmox/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Proxmox VE administration: VM/LXC/OCI container provisioning, storage backends, networking/SDN, clustering, high availability, API automation, cloud-init templates, backups/PBS, PCIe passthrough, and vGPU. Invoke whenever task involves any interaction with Proxmox VE \u2014 configuring hosts, managing guests, designing storage or networking, writing automation scripts, planning clusters, troubleshooting, or reviewing PVE configurations."
+}

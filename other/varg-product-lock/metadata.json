@@ -1,0 +1,37 @@
+{
+  "name": "varg-product-lock",
+  "repo": "vargHQ/skills",
+  "path": "varg-product-lock/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "varg-product-lock",
+  "downloaded_at": "2026-11-06T05:50:44.719061Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/varg-product-lock/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/varg-product-lock/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns product photos into AI video shots that keep the product identical: a lock sheet (fixed geometry, fixed surface, allowed motion), a reference pack of 2-4 angles passed as @image roles to Seedance 2.5 or Kling 4, a camera-risk ladder (locked frame \u2192 push-in \u2192 slide \u2192 small orbit), banned motion words, one action per 4-6 s shot, a drift check with varg video_analyze, and the real packshot composited back where text must be exact. Fixes the #1 \"looks fake\" tell in AI product ads: warped logos, melted labels, products that change shape or size between shots. Use when a product drifts, morphs, changes color or loses its label in AI video, when someone asks for \"consistent product\", \"keep my logo\", \"product looks different in every shot\", or before a batch of product videos for TikTok Shop, Meta or Amazon. Not for people and characters staying the same (use varg-consistent-characters or varg-character-design)."
+}

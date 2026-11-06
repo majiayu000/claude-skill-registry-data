@@ -1,0 +1,37 @@
+{
+  "name": "speech-summarization",
+  "repo": "zoom/skills",
+  "path": "skills/speech-summarization/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zoom/skills",
+  "dir_name": "speech-summarization",
+  "downloaded_at": "2026-11-06T06:30:14.899199Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zoom",
+  "source_url": "https://github.com/zoom/skills/blob/main/skills/speech-summarization/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zoom/skills/blob/main/skills/speech-summarization/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Zoom AI Services Speech Summarization for one-shot audio or video uploads that return a transcript plus streamed summary over SSE. Use for media-to-summary in one request; not for transcript-only Scribe, transcript-text Summarizer, live meeting media, or interactive Voice Agent."
+}

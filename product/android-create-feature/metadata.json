@@ -1,0 +1,38 @@
+{
+  "name": "android-create-feature",
+  "repo": "trombonet12/Rally-Copilot",
+  "path": ".claude/skills/android-create-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/trombonet12/Rally-Copilot",
+  "dir_name": "android-create-feature",
+  "downloaded_at": "2026-11-06T05:44:57.913079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, roadmap, feature",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "roadmap",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trombonet12",
+  "source_url": "https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/android-create-feature/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/android-create-feature/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Crear una feature Android de UI en Rally Copilot (screen Compose, ViewModel con UiState/StateFlow, ruta type-safe en AppNavHost, tests JVM); no capa de datos (android-create-data-layer) ni sistema."
+}

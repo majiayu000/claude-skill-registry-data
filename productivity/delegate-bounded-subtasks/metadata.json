@@ -1,0 +1,37 @@
+{
+  "name": "delegate-bounded-subtasks",
+  "repo": "youdede/toolkit",
+  "path": "skills/delegate-bounded-subtasks/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "delegate-bounded-subtasks",
+  "downloaded_at": "2026-11-06T06:19:55.348488Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/delegate-bounded-subtasks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/delegate-bounded-subtasks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate bounded independent subtasks to available subagents while preventing file overlap, missing context, and unverified integration. Use when parallelism materially reduces latency and each task has a clear output."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "write-incident-runbook",
+  "repo": "youdede/toolkit",
+  "path": "skills/write-incident-runbook/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "write-incident-runbook",
+  "downloaded_at": "2026-11-06T06:19:52.443472Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/write-incident-runbook/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/write-incident-runbook/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or review an incident runbook for a specific service or failure mode using real signals, safe diagnostic commands, authority boundaries, containment, recovery, communication, and verification. Use before an incident or after a response exposes missing guidance."
+}

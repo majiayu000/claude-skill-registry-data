@@ -1,0 +1,37 @@
+{
+  "name": "recordar",
+  "repo": "trombonet12/Rally-Copilot",
+  "path": ".claude/skills/recordar/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/trombonet12/Rally-Copilot",
+  "dir_name": "recordar",
+  "downloaded_at": "2026-11-06T05:44:55.217754Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, roadmap",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trombonet12",
+  "source_url": "https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/recordar/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/recordar/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guardar en docs/MEMORIA.md lo que el usuario pide que se recuerde entre sesiones (\u00aba partir de ahora\u00bb, \u00absiempre\u00bb, \u00abnunca\u00bb, correcciones generales); no para decisiones t\u00e9cnicas (registrar-decision)."
+}

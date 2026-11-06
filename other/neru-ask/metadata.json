@@ -1,0 +1,38 @@
+{
+  "name": "neru-ask",
+  "repo": "y3owk1n/neru",
+  "path": ".agents/skills/neru-ask/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/y3owk1n/neru",
+  "dir_name": "neru-ask",
+  "downloaded_at": "2026-11-06T06:15:10.023593Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "y3owk1n",
+  "source_url": "https://github.com/y3owk1n/neru/blob/main/.agents/skills/neru-ask/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/y3owk1n/neru/blob/main/.agents/skills/neru-ask/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer a Neru user's question about what Neru does, which command, flag, or config key does a thing, why something does not work, or what to try next, from the help, man pages, and docs of their installed version rather than from memory. Routes config work to neru-setup-config. Use when a Neru user asks what Neru can do, how to do something with it, which command to run, why hints or a hotkey do nothing, or which skill to use."
+}

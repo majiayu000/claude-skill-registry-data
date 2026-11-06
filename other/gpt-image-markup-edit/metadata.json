@@ -1,0 +1,37 @@
+{
+  "name": "gpt-image-markup-edit",
+  "repo": "vargHQ/skills",
+  "path": "gpt-image-markup-edit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "gpt-image-markup-edit",
+  "downloaded_at": "2026-11-06T05:50:47.242586Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/gpt-image-markup-edit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/gpt-image-markup-edit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Markup-guided image edits with GPT Image 2.6 on varg: draw circles, boxes, arrows and short notes on a transparent PNG the same size as the source (scripts/markup.py turns a JSON list of shapes into that PNG, a preview and the prompt lines), upload it, then edit with provider_options.fal.markup_image_url and a prompt written per colour (\"Red circle: \u2026 Blue circle: \u2026 Change nothing outside the marks.\"). Includes the measured example (two changes, the rest of the frame kept), how to check what changed, and when to use a black-and-white mask_url instead. Use when someone wants to change one or several specific spots in an image, says \"circle it\", \"only change this part\", \"fix this word\", \"add a hat here\", or an edit keeps changing things it should not. Not for whole-image restyles (gpt-image-2-6 recipes), animation (gpt-image-gif) or video edits (varg-ai)."
+}

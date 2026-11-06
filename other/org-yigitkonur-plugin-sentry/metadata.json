@@ -1,0 +1,36 @@
+{
+  "name": "org",
+  "repo": "yigitkonur/plugin-sentry",
+  "path": "skills/org/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yigitkonur/plugin-sentry",
+  "dir_name": "org-yigitkonur-plugin-sentry",
+  "downloaded_at": "2026-11-06T06:18:31.759118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yigitkonur",
+  "source_url": "https://github.com/yigitkonur/plugin-sentry/blob/main/skills/org/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yigitkonur/plugin-sentry/blob/main/skills/org/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit the Sentry organization behind this repo (projects, keys, filters, scrubbing, spike protection, alerts, monitors, releases, source maps, ownership, usage, Seer settings) with read-only probes, then apply only the org changes you approve."
+}

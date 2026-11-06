@@ -1,0 +1,39 @@
+{
+  "name": "win64-port-playbook",
+  "repo": "yhyu13/DOOM3_AINative",
+  "path": ".claude/skills/win64-port-playbook/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yhyu13/DOOM3_AINative",
+  "dir_name": "win64-port-playbook",
+  "downloaded_at": "2026-11-06T06:18:00.148688Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yhyu13",
+  "source_url": "https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/win64-port-playbook/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/win64-port-playbook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when porting or debugging a 32-bit-era C/C++ game engine (DOOM 3 / idTech 4 here) on Windows x64 with a modern MSVC and no original SDKs - build-system bring-up, 64-bit pointer truncation hunts, runtime crashes that only appear with real game data, and proving a port works with scripted screenshot, log and audio evidence. Triggers on x64 port, LLP64, inline __asm, CMake from vcxproj, 0xC0000005 after the engine \"links fine\", silent audio, black or blank frames, \"works with no data but crashes with data\"."
+}

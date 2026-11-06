@@ -1,0 +1,39 @@
+{
+  "name": "distill",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/distill/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "distill-wado-lang-wado",
+  "downloaded_at": "2026-11-06T05:57:01.404059Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, markdown",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/distill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/distill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cut the branch down to what the code cannot say: reuse what exists, remove duplication, dead code, and wasted work, turn invariants into asserts, and delete the comments the code already speaks. Run it after answering review feedback too \u2014 a fix written to satisfy a reviewer is the least distilled code on the branch."
+}

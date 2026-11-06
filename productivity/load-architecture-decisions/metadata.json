@@ -1,0 +1,37 @@
+{
+  "name": "load-architecture-decisions",
+  "repo": "youdede/toolkit",
+  "path": "skills/load-architecture-decisions/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "load-architecture-decisions",
+  "downloaded_at": "2026-11-06T06:19:59.040976Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/load-architecture-decisions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/load-architecture-decisions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Discover and read all architecture decision records applicable to the current scope, following repository guidance and nested locations. Use before architecture changes or when the user explicitly requests complete ADR context."
+}

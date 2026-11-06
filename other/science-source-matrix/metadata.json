@@ -1,0 +1,36 @@
+{
+  "name": "science-source-matrix",
+  "repo": "yzlin286-wq/Deepscient",
+  "path": "dsh-science/skills/science/science-source-matrix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yzlin286-wq/Deepscient",
+  "dir_name": "science-source-matrix",
+  "downloaded_at": "2026-11-06T06:23:07.177825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category context-management scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "retrieval"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yzlin286-wq",
+  "source_url": "https://github.com/yzlin286-wq/Deepscient/blob/main/dsh-science/skills/science/science-source-matrix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yzlin286-wq/Deepscient/blob/main/dsh-science/skills/science/science-source-matrix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when choosing which retrieval source to query, when a search returns suspiciously few results, when OpenAlex budget runs low, or when a source is rate-limited or blocked; covers per-source capability, quotas, fallback order, and how to tell \"source broke\" from \"query too narrow\"."
+}

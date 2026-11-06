@@ -1,0 +1,37 @@
+{
+  "name": "varg-occasion-video",
+  "repo": "vargHQ/skills",
+  "path": "varg-occasion-video/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "varg-occasion-video",
+  "downloaded_at": "2026-11-06T05:50:46.251193Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/varg-occasion-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/varg-occasion-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a few photos and the details of an occasion into an AI video on varg: a wedding or birthday invitation and save-the-date that unfolds (the names and date printed right), a Christmas, New Year, Diwali, Eid or Lunar New Year greeting, old family photos brought to life, a love story across the eras for an anniversary, and a calm memorial or tribute film. Asks what the occasion needs, makes the stills first (GPT Image 2.5 prints names and dates), animates them (Seedance 2.5, Kling 4, Wan 3), adds music and exports for WhatsApp, a party screen or a service. Use when someone asks for a video invitation, an e-invite, a save-the-date, a wedding invitation video for WhatsApp, a holiday or festival greeting video, an animated e-card or Christmas card, \"bring old photos to life\", an anniversary or love-story video, or a memorial, celebration-of-life, retirement or farewell tribute. Not for birthdays (use varg-birthday-video) or editing real wedding footage (varg-video-editing)."
+}

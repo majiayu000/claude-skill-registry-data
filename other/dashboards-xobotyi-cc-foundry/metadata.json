@@ -1,0 +1,37 @@
+{
+  "name": "dashboards",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/grafana/skills/dashboards/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "dashboards-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:47.008718Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/grafana/skills/dashboards/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/grafana/skills/dashboards/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Grafana dashboard authoring: JSON model (Classic and V2), panel types and selection, standard options, thresholds, value mappings, field overrides, transformations, variables (query/custom/interval/filter), repeating panels and rows, annotations, dashboard/panel/data links, and library panels. Invoke whenever task involves any interaction with Grafana dashboards \u2014 creating, editing, reviewing, debugging, or understanding dashboard configuration."
+}

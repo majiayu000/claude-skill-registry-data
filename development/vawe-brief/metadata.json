@@ -1,0 +1,38 @@
+{
+  "name": "vawe-brief",
+  "repo": "vawe-hq/vawe",
+  "path": "skills/vawe-brief/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/vawe-hq/vawe",
+  "dir_name": "vawe-brief",
+  "downloaded_at": "2026-11-06T05:51:16.321783Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vawe-hq",
+  "source_url": "https://github.com/vawe-hq/vawe/blob/main/skills/vawe-brief/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vawe-hq/vawe/blob/main/skills/vawe-brief/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan an HTML to video film (motion graphics as code). Turn a film request into films/<name>/brief.md: ask the person for the details that make a good film (subject, message, what to show, look), then write the brief in the measured anatomy and name the first draft command. Load when a person asks for a film and no brief.md exists yet."
+}

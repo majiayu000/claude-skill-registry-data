@@ -1,0 +1,39 @@
+{
+  "name": "guardian-cli",
+  "repo": "zakirkun/guardian-cli",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/zakirkun/guardian-cli",
+  "dir_name": "guardian-cli",
+  "downloaded_at": "2026-11-06T06:24:03.149290Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, pentest",
+    "score": 4,
+    "runner_up": "orchestration",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zakirkun",
+  "source_url": "https://github.com/zakirkun/guardian-cli/blob/main/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zakirkun/guardian-cli/blob/main/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "An enterprise-grade, AI-powered penetration testing automation CLI tool. Orchestrates multiple specialized AI agents (Planner, ToolAgent, Analyst, Reporter) backed by 4 AI providers (OpenAI, Claude, Gemini, OpenRouter) and 19 integrated security tools through YAML-defined workflows. Produces professional Markdown, HTML, or JSON security reports with full evidence capture and traceability."
+}

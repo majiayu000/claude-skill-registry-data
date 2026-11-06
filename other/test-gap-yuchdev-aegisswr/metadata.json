@@ -1,0 +1,37 @@
+{
+  "name": "test-gap",
+  "repo": "yuchdev/AegisSwr",
+  "path": ".github/copilot/skills/test-gap/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/yuchdev/AegisSwr",
+  "dir_name": "test-gap-yuchdev-aegisswr",
+  "downloaded_at": "2026-11-06T06:20:59.283182Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuchdev",
+  "source_url": "https://github.com/yuchdev/AegisSwr/blob/master/.github/copilot/skills/test-gap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuchdev/AegisSwr/blob/master/.github/copilot/skills/test-gap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "User-invoked as /test-gap [path]. Spawns the testing-expert agent to analyse test coverage and returns a prioritised list of missing tests, risk-ranked (consensus/payload-parsing logic first). Use to decide what to test next."
+}

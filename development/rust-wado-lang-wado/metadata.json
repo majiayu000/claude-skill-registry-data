@@ -1,0 +1,37 @@
+{
+  "name": "rust",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/rust/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "rust-wado-lang-wado",
+  "downloaded_at": "2026-11-06T05:57:01.283214Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/rust/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/rust/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Workspace-specific Rust rules that override common habits: panic instead of dummy or no-op fallbacks, never catch a panic outside tests, enums over unclear bool parameters, no wildcard match arms, dependencies managed in the workspace Cargo.toml, 2024 edition, zero warnings and clippy lints. Read before writing or editing Rust (.rs) code."
+}

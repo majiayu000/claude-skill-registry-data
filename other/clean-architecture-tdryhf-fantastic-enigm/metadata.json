@@ -1,0 +1,38 @@
+{
+  "name": "clean-architecture",
+  "repo": "tdryhf/fantastic-enigm",
+  "path": "skills/wondelai_skills/clean-architecture/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/tdryhf/fantastic-enigm",
+  "dir_name": "clean-architecture-tdryhf-fantastic-enigm",
+  "downloaded_at": "2026-11-06T05:31:58.211428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tdryhf",
+  "source_url": "https://github.com/tdryhf/fantastic-enigm/blob/master/skills/wondelai_skills/clean-architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tdryhf/fantastic-enigm/blob/master/skills/wondelai_skills/clean-architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Structure software around the Dependency Rule: source code dependencies point inward from frameworks to use cases to entities. Use when the user mentions \"architecture layers\", \"dependency rule\", \"ports and adapters (hexagonal)\", \"onion architecture\", \"screaming architecture\", \"where should business logic go\", \"decouple from the database\", \"swap the framework without a rewrite\", or \"keep business rules independent\". Also trigger when deciding which layer code belongs in, isolating core logic from infrastructure, defining module boundaries, or debating whether the framework should call your code or the reverse. Covers component principles, boundaries, and SOLID. For code-level quality, see clean-code. For domain modeling, see domain-driven-design."
+}

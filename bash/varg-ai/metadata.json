@@ -1,0 +1,38 @@
+{
+  "name": "varg-ai",
+  "repo": "vargHQ/skills",
+  "path": "varg-ai/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "varg-ai",
+  "downloaded_at": "2026-11-06T05:50:40.806787Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/varg-ai/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/varg-ai/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate AI videos, images, voiceovers and music with one varg API key. Text- and image-to-video on Seedance 2.5, Kling 4, Veo 3.1 and Wan 3; images and edits on Nano Banana 2.1, GPT Image 2.6 and Flux 3; lip sync and talking avatars; ElevenLabs v4 voices; Lyria and Mureka music; captions and multi-scene renders to MP4. Use when someone asks to make or render a video, animate a photo, generate an image, create a UGC ad, product video, slideshow or talking head, add voiceover (text to speech), music, lip sync or captions, or mentions varg. Cloud mode needs only curl; local mode runs on bun + ffmpeg."
+}

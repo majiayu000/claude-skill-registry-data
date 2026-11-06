@@ -1,0 +1,39 @@
+{
+  "name": "design-data-pipeline-change",
+  "repo": "youdede/toolkit",
+  "path": "skills/design-data-pipeline-change/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "design-data-pipeline-change",
+  "downloaded_at": "2026-11-06T06:19:58.454842Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, sql, etl, pipeline",
+    "score": 4,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/design-data-pipeline-change/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/design-data-pipeline-change/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design or review a batch, streaming, ETL, ELT, or dbt pipeline change across producer and consumer contracts, idempotency, backfills, dual running, reconciliation, cutover, and recovery. Use before changing a governed data flow or replaying historical data."
+}

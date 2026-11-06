@@ -1,0 +1,74 @@
+---
+name: vendor-submodules
+description: Locate and sync the reference specs and runtimes vendored under vendor/ — the Wasm, WASI P3, and Component Model specs, and the wasm-tools and wasmtime sources. Use whenever an answer should come from one of those sources rather than memory, and whenever vendor/ is missing or stale.
+---
+
+## What is under `vendor/`
+
+- `vendor/wasm/` - WebAssembly/spec
+- `vendor/wasi/` - WebAssembly/WASI
+- `vendor/component-model/` - WebAssembly/component-model (CM spec)
+  - Canonical built-ins: `vendor/component-model/design/mvp/CanonicalABI.md`
+  - Concurrency (async, streams, futures): `vendor/component-model/design/mvp/Concurrency.md`
+  - Explainer: `vendor/component-model/design/mvp/Explainer.md`
+- `vendor/wasmtime/` - a Wasm runtime with WASI P3 support
+- `vendor/wasm-tools/` - the Wasm toolchain the Wado compiler builds on
+- `vendor/antlr4/` - ANTLR4, the grammar dialect Gale targets. Read
+  `package-gale/AGENTS.md` first: most of this tree must not be read
+- `vendor/wasi-webgpu/` - the `wasi:webgpu` proposal
+- `vendor/protobuf-spec/` - protobuf.dev's source, which is the protobuf spec
+  - Wire format: `vendor/protobuf-spec/content/programming-guides/encoding.md`
+  - The `.proto` grammar, one file per syntax and edition:
+    `vendor/protobuf-spec/content/reference/protobuf/{proto2,proto3,edition-2023,edition-2024}-spec.md`
+  - Edition features: `vendor/protobuf-spec/content/editions/features.md`
+- `vendor/protobuf/` - protocolbuffers/protobuf, for the `.proto` files the spec
+  does not carry: `src/google/protobuf/descriptor.proto`, the well-known types,
+  and the `unittest*.proto` / `test_messages_*.proto` Grog parses as a corpus
+- `vendor/ecma262/` - tc39/ecma262, the ECMAScript specification, which Re's
+  pattern syntax follows
+  - Patterns: `vendor/ecma262/spec.html`, chapter `RegExp (Regular Expression) Objects`
+  - The properties `\p{…}` takes: `vendor/ecma262/table-*-unicode-properties*.html`
+- `vendor/test262/` - tc39/test262, ECMAScript's conformance tests. Re's corpus
+  is `test/built-ins/RegExp/` and `test/language/literals/regexp/`
+
+`git submodule update --init --recommend-shallow` fetches them.
+
+## Syncing
+
+```sh
+mise run sync-vendor
+```
+
+`vendor/wasmtime` goes to the exact version in `Cargo.lock`, which WASI P3
+compatibility requires. The other submodules go to their remote HEAD.
+
+## Building against a patched wasmtime
+
+To test a change to wasmtime itself, edit `vendor/wasmtime` in place and add to
+the workspace `Cargo.toml`:
+
+```toml
+[patch.crates-io]
+wasmtime = { path = "vendor/wasmtime/crates/wasmtime" }
+wasmtime-wasi = { path = "vendor/wasmtime/crates/wasi" }
+wasmtime-wasi-http = { path = "vendor/wasmtime/crates/wasi-http" }
+wasmtime-wasi-tls = { path = "vendor/wasmtime/crates/wasi-tls" }
+```
+
+Those four names redirect 31 crates. The `cranelift-*`, `pulley-*`,
+`wasmtime-internal-*` and `wiggle*` crates follow through the dependency graph.
+`sync-vendor` already holds the submodule at the `Cargo.lock` version, so the
+sources match what the workspace expects and nothing needs porting.
+
+Keep the stanza on a throwaway branch. CI checks out without submodules
+(`submodules: false`, also `actions/checkout`'s default), so on `main` every job
+dies while parsing the manifest. Landing it means turning submodule checkout on
+across every workflow.
+
+`reference/` holds patches written this way, each with its measurement:
+
+- `current_thread_split.patch` — splits the cold deferred-frame replay out of
+  `StoreOpaque::current_thread` so the fast path inlines. Removes ~1 point of
+  CPU; throughput flat.
+- `trace_fiber_roots.patch` — tracks fiber-owning reps instead of scanning the
+  whole component `ResourceTable` per GC. Not measurable.

@@ -1,0 +1,38 @@
+{
+  "name": "gps-replay",
+  "repo": "trombonet12/Rally-Copilot",
+  "path": ".claude/skills/gps-replay/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/trombonet12/Rally-Copilot",
+  "dir_name": "gps-replay",
+  "downloaded_at": "2026-11-06T05:44:55.445825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trombonet12",
+  "source_url": "https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/gps-replay/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/gps-replay/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reproducir una ruta GPX/KML real de Mallorca en el emulador (adb emu geo fix) con su cadencia o a velocidad fija, para probar navegaci\u00f3n y notas; no instala la app (android-install-and-logcat)."
+}

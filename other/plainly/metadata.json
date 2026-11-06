@@ -1,0 +1,36 @@
+{
+  "name": "plainly",
+  "repo": "vzakharov/vovazakharov.com",
+  "path": ".claude/skills/plainly/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vzakharov/vovazakharov.com",
+  "dir_name": "plainly",
+  "downloaded_at": "2026-11-06T05:56:39.941900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/plainly/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/plainly/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Explain something to a person in plain language, cause first. Invoked bare at an answer that did not land \u2014 a re-asked question, a \"just tell me\", punctuation doing the complaining \u2014 it re-explains that answer as a causal chain; invoked with a question, it answers that question under the house rule, investigation included; either way it shows the smallest concrete example of what the answer says. Names six defects \u2014 symptom-as-finding, buried lede, untranslated nouns, broken chain, fog, receipt \u2014 so one word calls out a bad report."
+}

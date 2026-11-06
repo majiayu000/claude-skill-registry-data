@@ -1,0 +1,38 @@
+{
+  "name": "on-task-done",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/on-task-done/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "on-task-done",
+  "downloaded_at": "2026-11-06T05:57:02.349643Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/on-task-done/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/on-task-done/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Task-completion flow: `/cr` (a `/code-review` answered with `/code-review-response`, which ends with `/distill`), update docs (spec/cheatsheet/compiler/optimizer), then run `mise run on-task-done` (build, clippy-fix, golden + format fixtures, doc-stdlib, format, tests; the longest task there is) and commit its generated changes. Invoke ONLY when the user asks for it by name or explicitly asks to run the completion flow \u2014 never on your own initiative, and not because a task looks finished."
+}

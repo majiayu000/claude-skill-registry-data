@@ -1,0 +1,37 @@
+{
+  "name": "xhs-research",
+  "repo": "xinyaoliao93/xiaohongshu-research-agent",
+  "path": "skills/xhs-research/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/xinyaoliao93/xiaohongshu-research-agent",
+  "dir_name": "xhs-research",
+  "downloaded_at": "2026-11-06T06:11:42.975902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, pipeline",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xinyaoliao93",
+  "source_url": "https://github.com/xinyaoliao93/xiaohongshu-research-agent/blob/main/skills/xhs-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xinyaoliao93/xiaohongshu-research-agent/blob/main/skills/xhs-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for read-only Xiaohongshu topic research, including keyword search, bounded post/detail collection, best-effort comments, time filtering, relevance screening, opinion synthesis, and evidence-backed reports."
+}

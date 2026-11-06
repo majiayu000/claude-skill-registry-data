@@ -1,0 +1,39 @@
+{
+  "name": "link-check",
+  "repo": "yuchdev/AegisSwr",
+  "path": ".github/copilot/skills/link-check/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/yuchdev/AegisSwr",
+  "dir_name": "link-check-yuchdev-aegisswr-2",
+  "downloaded_at": "2026-11-06T06:20:57.926035Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuchdev",
+  "source_url": "https://github.com/yuchdev/AegisSwr/blob/master/.github/copilot/skills/link-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuchdev/AegisSwr/blob/master/.github/copilot/skills/link-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "User-invoked as /link-check [path ...]. Validates that documentation relative links and heading anchors resolve across docs/ (plus repo-root Markdown files and .github/copilot/), using scripts/check_doc_links.py. Use after editing, splitting, merging, or renaming docs to catch dangling references."
+}

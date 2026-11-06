@@ -1,0 +1,37 @@
+{
+  "name": "ground-rules",
+  "repo": "yigitkonur/plugin-sentry",
+  "path": "skills/ground-rules/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yigitkonur/plugin-sentry",
+  "dir_name": "ground-rules",
+  "downloaded_at": "2026-11-06T06:18:32.789111Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yigitkonur",
+  "source_url": "https://github.com/yigitkonur/plugin-sentry/blob/main/skills/ground-rules/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yigitkonur/plugin-sentry/blob/main/skills/ground-rules/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before writing or reviewing Sentry configuration or SDK setup: sentry.init, Sentry.init, sentry_sdk.init, sentry.client/server/edge config, instrumentation.ts, .sentryclirc, sentry.properties, SENTRY_DSN or SENTRY_AUTH_TOKEN, sentry or sentry-cli CI steps. How to work with Sentry here: look options up instead of recalling them, keep tokens out of files, claim only what was verified, confirm before org changes. For production incidents use triage."
+}

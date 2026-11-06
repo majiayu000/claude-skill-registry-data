@@ -1,0 +1,37 @@
+{
+  "name": "caption-styles",
+  "repo": "vargHQ/skills",
+  "path": "caption-styles/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "caption-styles",
+  "downloaded_at": "2026-11-06T05:50:42.726777Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/caption-styles/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/caption-styles/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Seventeen animated caption looks for talking heads, podcasts, ads, lyric and short-form videos (karaoke fill, active-word pop and colour, sliding pill, word tiles, frosted glass, neon, serif italic, white card, bounce and tilted word cards and more), each with presets in exact numbers: font (OFL), size per format, words per screen, active-word timing 1-2 frames before the voice, 9:16 safe box, contrast, padding and easing. The rules come from the Netflix and BBC subtitle guides, the DCMP Captioning Key, ITU sync tolerances, eye-tracking research and short-form editors. Use when someone asks for TikTok, Reels or Shorts captions, word-by-word or highlighted subtitles, karaoke captions, or 'captions like Hormozi / MrBeast / podcasts'. NOT for transcription itself (use WhisperX or ElevenLabs speech-to-text first), translation, or plain SRT delivery without styling."
+}

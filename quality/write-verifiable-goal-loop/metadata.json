@@ -1,0 +1,38 @@
+{
+  "name": "write-verifiable-goal-loop",
+  "repo": "youdede/toolkit",
+  "path": "skills/write-verifiable-goal-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "write-verifiable-goal-loop",
+  "downloaded_at": "2026-11-06T06:19:57.626767Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/write-verifiable-goal-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/write-verifiable-goal-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write a goal-driven agent loop with explicit constraints, validation, checkpoints, progress measures, and termination conditions. Use for long-running autonomous work where a simple step list is insufficient."
+}

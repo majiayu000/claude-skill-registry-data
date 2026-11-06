@@ -1,0 +1,151 @@
+---
+name: release
+description: >-
+  GitHub release creation for cc-foundry plugins: per-plugin tags, release notes as the changelog, post-merge
+  publishing, and moving the released plugins' XERJ Corpus Hub pins. Invoke whenever task involves merging a pull
+  request into master, releasing or publishing a plugin version, bumping plugin versions, writing release notes, or
+  refreshing the Corpus Hub pins.
+---
+
+# Plugin Releases
+
+Every plugin version bump that lands on master ships with a GitHub release. The release notes are the plugin's changelog
+— there are no CHANGELOG.md files (see [ADR 1.5](/design-docs/adr/1.5-plugin-changelog.md)). A merged version bump
+without a release is an incomplete ship.
+
+## Before the Push
+
+Run `vp run cli check --pre-push` and push only when it reports no error. It fails on a plugin whose shipped files
+changed since `origin/master` while its version did not — a change that never reaches an install, because Claude Code
+keys its plugin cache on the version.
+
+## When to Release
+
+- After every merge into master, check the merged range for plugin version bumps; create one release per plugin whose
+  version changed.
+- The user's authorization to merge covers release creation — do not ask a second time.
+- Repo-level changes that bump no plugin version (ADRs, root docs, the dev CLI in `src/`, CI, this skill) get no
+  release.
+- Several plugins bumped in one merge → one release each.
+
+## Identify What to Release
+
+1. Find bumped plugins in the merged range: `git diff <old-origin-head>..origin/master -- '*/plugin.json'`. When the old
+   head is unknown, compare each plugin's `plugin.json` version against its latest `<plugin>-v*` tag from
+   `gh release list`.
+2. For each bumped plugin, resolve:
+   - the commit on master that changed its `plugin.json` version — the release target
+   - the previous release tag `<plugin>-v*`, if any — the notes range and compare-link anchor
+3. Collect source material: `git log <prev-tag>..<target> -- plugins/<name>/` plus the diff of that range. For a first
+   release, use the commits of the bump itself.
+
+## Tag and Title Scheme
+
+- **Tag** — `<plugin>-v<X.Y.Z>`, e.g. `the-coder-v1.5.0`
+- **Title** — `<plugin> v<X.Y.Z>`, e.g. `the-coder v1.5.0`
+- **Target** — the commit on master that landed the version bump, as its **full 40-character SHA**. GitHub rejects an
+  abbreviated SHA with `HTTP 422 Validation Failed` and the misleading trio `tag_name is not a valid tag`,
+  `Release.target_commitish is invalid`, `Published releases must have a valid tag`. A rebase-merged pull request gives
+  every commit a new SHA, so take the target from `origin/master` after the merge, never from the branch. Resolve it
+  with `git rev-parse <short-sha>`; a branch name also works.
+- Never run `git tag` — `gh release create` creates the tag on the remote at publish time.
+
+## Release Notes
+
+Written for people who install the plugin, not for repo contributors.
+
+<prerequisite>
+Invoke `the-writer:humanize` before drafting. All release prose — the lead sentence and every bullet — is written in
+its writing mode and passes its self-audit before `gh release create`. If the skill is unavailable, ask the user to
+install the `the-writer` plugin before proceeding.
+</prerequisite>
+
+- Lead with one sentence stating what the release is about.
+- Segment by changed component, one `###` section per component: ``### `<name>` skill``, ``### `<name>` output style`` —
+  same pattern for hooks, commands, and agents. A plugin bumps its version even when a single component moved; the
+  segments tell the installer exactly which parts did.
+- Plugin-wide changes that belong to no component (README, packaging, licensing) go under a final `### Plugin` section.
+- Within a segment, prefix each bullet with its change type in bold — `**Added:**`, `**Changed:**`, `**Fixed:**`,
+  `**Removed:**` — ordered Added → Changed → Fixed → Removed.
+- Each bullet states the change and, where not obvious, why it matters to a plugin user.
+- Distill from commit messages and the diff. Never paste a commit list, shortlog, or auto-generated notes.
+- No session artifacts (test counts, CI status) and no repo-internal jargon that means nothing to an installer.
+- End with a compare link when a previous tag exists:
+  `**Full diff:** https://github.com/xobotyi/cc-foundry/compare/<prev-tag>...<new-tag>`
+- First release of a plugin: no compare link; notes cover this version's changes only, not the plugin's history.
+
+### Example
+
+```markdown
+Sharpens commit-message validation and adds trailer support.
+
+### `commit-message` skill
+
+- **Added:** `Task:` and `Refs:` trailer validation — malformed trailers now fail validation instead of landing
+  silently.
+- **Changed:** subject-length limit aligned with git conventions: 50 soft / 72 hard (was a flat 72).
+
+### `commit` skill
+
+- **Fixed:** validator crashed on commit messages containing unescaped backticks.
+
+**Full diff:** https://github.com/xobotyi/cc-foundry/compare/git-commit-v1.1.3...git-commit-v1.1.4
+```
+
+## Create the Release
+
+Write the notes to a scratchpad file first — `--notes-file` avoids shell-quoting damage:
+
+```bash
+gh release create <plugin>-v<X.Y.Z> \
+  --target <bump-commit-sha> \
+  --title "<plugin> v<X.Y.Z>" \
+  --notes-file <path-to-notes.md>
+```
+
+- To stage a release for user review, add `--draft` (visible to collaborators only; the tag is created at publish, not
+  at draft creation). Publish with `gh release edit <tag> --draft=false` — re-set `--target` to the bump commit first if
+  the draft was created before the merge.
+
+## Verify
+
+- `gh release view <tag>` — confirm title, target, and notes.
+- Cross-check: every plugin bumped in the merged range has a release; `plugin.json` version equals the latest tag.
+
+## Move the XERJ Corpus Hub Pins
+
+The XERJ Corpus Hub pins every cc-foundry corpus to a commit, so a release reaches hub users only once the corpora
+inside that plugin move to its release target. Do this after the releases of a merge are published. The user's
+authorization to merge covers this pull request as well. Work in this order:
+
+1. Find an open refresh pull request: `gh pr list --repo xerj-org/xerj --author xobotyi --base corpus-hub --state open`.
+   When one exists, add to its branch instead of opening a second one.
+2. Clone the fork into a new temporary directory, partial and sparse:
+   ```bash
+   git clone --filter=blob:none --sparse git@github.com:xobotyi/xerj.git <tmp>
+   git -C <tmp> sparse-checkout set tools/xerj-code/hub tools/packs
+   git -C <tmp> remote add upstream https://github.com/xerj-org/xerj.git
+   git -C <tmp> fetch upstream corpus-hub
+   ```
+   Switch to the open pull request's branch from step 1, or create `cc-foundry-pins-<YYYY-MM-DD>` from
+   `upstream/corpus-hub` when there is none.
+3. From the cc-foundry root, after `git fetch origin`, run the refresh once per release target, naming the plugins
+   released at that target:
+   ```bash
+   vp run cli xerj-hub-refresh --hub <tmp> --sha <release-target-sha> <plugin>...
+   ```
+   A plugin with no corpus moves nothing; when no manifest changed, delete the clone and stop. When the command reports
+   that the LICENSE changed, stop and ask the user to review the licence, because the hub accepts a changed licence only
+   with a human review.
+4. Run the hub's CI check in the clone: `python3 -I tools/xerj-code/hub/validate_hub.py`.
+5. Commit in the clone with the subject `hub: move cc-foundry pins to <plugin> v<X.Y.Z>`, naming every release the
+   commit covers, and never add a `Co-Authored-By` trailer, which xerj's `.github/AI_CONTRIBUTIONS.md` forbids. The
+   commit author is `xobotyi`, the account that signed xerj's CLA.
+6. Push the branch to the fork and open the pull request against `corpus-hub`. The body opens with xerj's provenance
+   line, naming the real tool and model:
+   ```
+   Written by an AI coding agent (Claude Code, <model>), run by @xobotyi, who approved this release.
+   ```
+   Then link each release, and list each moved corpus with its old and new pin as the command printed them.
+7. Confirm that `gh pr checks <number> --repo xerj-org/xerj` reports `validate` and `verification/cla-signed` as
+   passing, then delete the clone.

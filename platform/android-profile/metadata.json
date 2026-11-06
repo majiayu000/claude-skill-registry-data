@@ -1,0 +1,38 @@
+{
+  "name": "android-profile",
+  "repo": "trombonet12/Rally-Copilot",
+  "path": ".claude/skills/android-profile/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/trombonet12/Rally-Copilot",
+  "dir_name": "android-profile",
+  "downloaded_at": "2026-11-06T05:44:57.136647Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, adb, android",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "device",
+      "adb",
+      "android"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "trombonet12",
+  "source_url": "https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/android-profile/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/trombonet12/Rally-Copilot/blob/main/.claude/skills/android-profile/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Medir CPU, memoria o bater\u00eda (p. ej. navegaci\u00f3n con pantalla apagada, render del mapa, c\u00e1lculo de notas) antes de optimizar y registrar m\u00e9tricas antes/despu\u00e9s; no optimiza ni revisa c\u00f3digo."
+}

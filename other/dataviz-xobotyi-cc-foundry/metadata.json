@@ -1,0 +1,37 @@
+{
+  "name": "dataviz",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/grafana/skills/dataviz/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "dataviz-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:44.829926Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/grafana/skills/dataviz/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/grafana/skills/dataviz/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Data visualization discipline for monitoring and observability dashboards: chart-type selection by data shape, encoding accuracy hierarchy (position > length > angle > area > color), pre-attentive attributes, Tufte data-ink, color theory (semantic conventions, Viridis, colorblind safety), dashboard layout and information hierarchy (F/Z-pattern, tiering), time-series conventions (baseline, interpolation, dual axes, stacking), observability frameworks (RED, USE, Four Golden Signals, SLO/SLI). Invoke whenever task involves any interaction with dashboard design quality \u2014 making a good dashboard, reviewing a visualization, picking a chart type, dashboard layout, color choices, panel arrangement, or critiquing existing observability dashboards."
+}

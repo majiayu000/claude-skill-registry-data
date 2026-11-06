@@ -1,0 +1,38 @@
+{
+  "name": "agents-sdk",
+  "repo": "themusebook/skills",
+  "path": "skills/agents-sdk/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/themusebook/skills",
+  "dir_name": "agents-sdk-themusebook-skills",
+  "downloaded_at": "2026-11-06T05:35:52.587915Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "themusebook",
+  "source_url": "https://github.com/themusebook/skills/blob/main/skills/agents-sdk/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/themusebook/skills/blob/main/skills/agents-sdk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, chat applications, voice agents, or browser automation. Covers Agent class, state management, callable RPC, Workflows, durable execution, queues, retries, observability, and React hooks. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ci-publish",
+  "repo": "theophile-wallez/LichessNeo",
+  "path": ".claude/skills/ci-publish/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/theophile-wallez/LichessNeo",
+  "dir_name": "ci-publish",
+  "downloaded_at": "2026-11-06T05:36:26.969298Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "theophile-wallez",
+  "source_url": "https://github.com/theophile-wallez/LichessNeo/blob/main/.claude/skills/ci-publish/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/theophile-wallez/LichessNeo/blob/main/.claude/skills/ci-publish/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Send main to the Chrome Web Store and Firefox Add-ons, by tagging it `store-<version>`."
+}

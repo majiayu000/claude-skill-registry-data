@@ -1,0 +1,37 @@
+{
+  "name": "threejs-animatic",
+  "repo": "vargHQ/skills",
+  "path": "threejs-animatic/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "threejs-animatic",
+  "downloaded_at": "2026-11-06T05:50:43.952389Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/threejs-animatic/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/threejs-animatic/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a three.js animatic (\"animatronic\", 3D previz, blockout) of a multi-shot video: every storyboard shot becomes a schematic 3D scene drawn in code, with jointed mannequins and poses, master sets in real metres and props, a real camera per shot (START/END keys, lens in mm, move and ease), timed to the music or voiceover, reviewed in the browser with a top-down set map of every camera frustum, approved, exported as a camera plan, rendered to MP4 frame by frame (headless Chrome or HyperFrames), then used as the @video1 reference for Seedance 2.5 video-to-video on varg so the generated shots keep the approved camera and blocking. Use when someone asks for a three.js animatic or animatronic, a 3D previz or blockout, camera blocking, a camera plan, shot sizes and lenses, a grey-box of a storyboard, previz to Seedance, a reference video for video-to-video, or a look blockout (reference pictures as textures on the blockout, stills for look approval). Includes a working starter project (no npm)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "prometheus",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/backend/skills/prometheus/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "prometheus-xobotyi-cc-foundry",
+  "downloaded_at": "2026-11-06T06:12:47.169771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/backend/skills/prometheus/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/backend/skills/prometheus/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prometheus instrumentation discipline: right metric type, right name, right labels. Invoke whenever task involves any interaction with Prometheus metrics \u2014 instrumenting application code, writing PromQL queries, defining alerting or recording rules, choosing metric types, managing label cardinality, building exporters, or reviewing monitoring configuration."
+}

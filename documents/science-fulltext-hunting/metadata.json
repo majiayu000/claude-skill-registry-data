@@ -1,0 +1,37 @@
+{
+  "name": "science-fulltext-hunting",
+  "repo": "yzlin286-wq/Deepscient",
+  "path": "dsh-science/skills/science/science-fulltext-hunting/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/yzlin286-wq/Deepscient",
+  "dir_name": "science-fulltext-hunting",
+  "downloaded_at": "2026-11-06T06:23:06.049479Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, pdf",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "pdf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yzlin286-wq",
+  "source_url": "https://github.com/yzlin286-wq/Deepscient/blob/main/dsh-science/skills/science/science-fulltext-hunting/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yzlin286-wq/Deepscient/blob/main/dsh-science/skills/science/science-fulltext-hunting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you have a DOI/PMID/arXiv id and need the actual PDF or JATS full text, when a download returns HTML instead of a PDF, or when building the methods section and you need page-level quotes; covers the nine-stage fallback chain, how to verify a real PDF, and what provenance to record."
+}

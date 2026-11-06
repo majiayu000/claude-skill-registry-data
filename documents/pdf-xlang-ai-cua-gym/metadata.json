@@ -1,0 +1,37 @@
+{
+  "name": "pdf",
+  "repo": "xlang-ai/CUA-Gym",
+  "path": ".claude/skills/pdf/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/xlang-ai/CUA-Gym",
+  "dir_name": "pdf-xlang-ai-cua-gym",
+  "downloaded_at": "2026-11-06T06:12:26.196850Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, pdf",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "pdf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xlang-ai",
+  "source_url": "https://github.com/xlang-ai/CUA-Gym/blob/main/.claude/skills/pdf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xlang-ai/CUA-Gym/blob/main/.claude/skills/pdf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "How to programmatically create, modify, and verify PDF files using Python PyMuPDF (fitz), pikepdf, and reportlab. For setup-gen and reward-gen agents."
+}

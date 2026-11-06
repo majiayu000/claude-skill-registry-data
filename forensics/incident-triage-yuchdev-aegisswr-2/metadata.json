@@ -1,0 +1,38 @@
+{
+  "name": "incident-triage",
+  "repo": "yuchdev/AegisSwr",
+  "path": ".claude/skills/incident-triage/SKILL.md",
+  "github_branch": "master",
+  "category": "forensics",
+  "source": "github.com/yuchdev/AegisSwr",
+  "dir_name": "incident-triage-yuchdev-aegisswr-2",
+  "downloaded_at": "2026-11-06T06:20:56.195220Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuchdev",
+  "source_url": "https://github.com/yuchdev/AegisSwr/blob/master/.claude/skills/incident-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuchdev/AegisSwr/blob/master/.claude/skills/incident-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when touching incident-lifecycle / investigation-flow code in Aegis SWR (orchestrator.py, events.py, consensus.py, incident_similarity.py, schemas for Hypothesis/SkepticVerdict/RCAReport/HITLRequest, or any api route that drives an investigation). Checks state-machine completeness, escalation paths, and timeout handling before the change is considered done."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "status",
+  "repo": "warrendeanlangeveldt/code-kit",
+  "path": "skills/status/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/warrendeanlangeveldt/code-kit",
+  "dir_name": "status-warrendeanlangeveldt-code-kit",
+  "downloaded_at": "2026-11-06T05:58:33.755656Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "warrendeanlangeveldt",
+  "source_url": "https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/status/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/status/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Where the build stands against the spec. Traces every requirement to its story, branch and tests, shows what's done, in review, ready or blocked, lists gaps between the specs, the plan and the tests, and brings the plan's status fields up to date. Use when the person asks how the build is going, what's left, what's untested or what to do next, or runs /code-kit:status."
+}

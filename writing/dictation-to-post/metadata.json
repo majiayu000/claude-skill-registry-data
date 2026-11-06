@@ -1,0 +1,37 @@
+{
+  "name": "dictation-to-post",
+  "repo": "vzakharov/vovazakharov.com",
+  "path": ".claude/skills/dictation-to-post/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/vzakharov/vovazakharov.com",
+  "dir_name": "dictation-to-post",
+  "downloaded_at": "2026-11-06T05:56:42.144237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/dictation-to-post/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/dictation-to-post/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn an agreed dictation into a post \u2014 the same argument as written text, following the recording but free to supply a link the speaker left unsaid. Writes writing/<project>/drafts/<slug>.md with the copy-exact text and a table of every place the draft departs from the recording. Invoke as `/dictation-to-post <dictation file>`. Use when the operator says \"\u0441\u0434\u0435\u043b\u0430\u0439 \u0438\u0437 \u044d\u0442\u043e\u0433\u043e \u043f\u043e\u0441\u0442\", \"\u043d\u0430\u043f\u0438\u0448\u0438 \u0442\u0435\u043a\u0441\u0442 \u043f\u043e \u0434\u0438\u043a\u0442\u043e\u0432\u043a\u0435\", or asks for the written version of something already transcribed."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "full-output-enforcement",
+  "repo": "tdryhf/fantastic-enigm",
+  "path": "skills/leonxlnx_taste-skill/skills/output-skill/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/tdryhf/fantastic-enigm",
+  "dir_name": "output-skill-tdryhf-fantastic-enigm",
+  "downloaded_at": "2026-11-06T05:32:04.923576Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tdryhf",
+  "source_url": "https://github.com/tdryhf/fantastic-enigm/blob/master/skills/leonxlnx_taste-skill/skills/output-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tdryhf/fantastic-enigm/blob/master/skills/leonxlnx_taste-skill/skills/output-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output."
+}

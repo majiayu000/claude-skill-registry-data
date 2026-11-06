@@ -1,0 +1,39 @@
+{
+  "name": "code-to-video-previz",
+  "repo": "vargHQ/skills",
+  "path": "code-to-video-previz/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "code-to-video-previz",
+  "downloaded_at": "2026-11-06T05:50:46.994796Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt, prompting",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/code-to-video-previz/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/code-to-video-previz/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prototype a video in code with an agent. Decides if a shot needs a 3D prototype at all and which tool fits (Three.js, Blender, a phone act-out, storyboards, Remotion, Cinema 4D, Unreal), stages geometry, people, camera and light in real metres, copies a reference video shot by shot with a solved 3D camera, stages a shot from a painting or still, invents one when there is no reference, checks everything with numbers and frames, and writes the handoff to Seedance or other video models. Same scene file renders in Three.js and headless Blender. Use for \"previz\", \"blockout\", \"3D animatic\", \"three.js or blender\", \"prototype this video\", \"copy this shot\", \"recreate this video in 3D\", \"stage this painting\", \"camera blocking with Claude or Codex\", \"code to video\", \"rank takes\", \"LLM judge\", or when generated shots keep drifting. Not for a full multi-shot three.js film with a review UI (threejs-animatic, varg-previz), prompting a shot with no prototype (varg-video-prompting) or the full animation pass (video-animate)."
+}

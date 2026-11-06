@@ -1,0 +1,37 @@
+{
+  "name": "document-brand-voice",
+  "repo": "youdede/toolkit",
+  "path": "skills/document-brand-voice/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "document-brand-voice",
+  "downloaded_at": "2026-11-06T06:19:50.759605Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, brand",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/document-brand-voice/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/document-brand-voice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create or update a reusable brand-voice guide from approved examples, audience evidence, strategic context, linguistic patterns, and explicit boundaries. Use when multiple writers or agents need consistent choices without flattening all content into one generic tone."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "neru-create-pr",
+  "repo": "y3owk1n/neru",
+  "path": ".agents/skills/neru-create-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/y3owk1n/neru",
+  "dir_name": "neru-create-pr",
+  "downloaded_at": "2026-11-06T06:15:10.181234Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "y3owk1n",
+  "source_url": "https://github.com/y3owk1n/neru/blob/main/.agents/skills/neru-create-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/y3owk1n/neru/blob/main/.agents/skills/neru-create-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Commit working changes and open a Neru pull request the maintainer's way: conventional commit subjects, a PR title written for the changelog, the just ci gate, and the repo PR template filled honestly. Use when asked to commit, create a PR, open a pull request, or ship finished work in this repo."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "game-dev-loop",
+  "repo": "yhyu13/DOOM3_AINative",
+  "path": ".claude/skills/game-dev-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yhyu13/DOOM3_AINative",
+  "dir_name": "game-dev-loop",
+  "downloaded_at": "2026-11-06T06:17:58.553105Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, software, debug",
+    "score": 5,
+    "runner_up": "testing",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yhyu13",
+  "source_url": "https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/game-dev-loop/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/game-dev-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Game development only (game design, engine, playtest). The complete game-development loop \u2014 persist the goal \u2192 classify the game idea \u2192 write GDD + TDD \u2192 pick an engine and scaffold \u2192 implement \u2192 test and debug \u2192 render-quality + playthrough guide \u2192 polish \u2192 write durable memory. Use when starting or running a real game build, when a task needs design, docs, code, testing, and polish chained in order, or when the user asks for a game \"from idea to playable\". Not for general software work - use software-dev-loop."
+}

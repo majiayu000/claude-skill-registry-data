@@ -1,0 +1,37 @@
+{
+  "name": "prompt-pro",
+  "repo": "yhyu13/DOOM3_AINative",
+  "path": ".claude/skills/prompt-pro/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yhyu13/DOOM3_AINative",
+  "dir_name": "prompt-pro",
+  "downloaded_at": "2026-11-06T06:17:58.195988Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, refactor",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yhyu13",
+  "source_url": "https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/prompt-pro/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/prompt-pro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rewrite the user's rough task request into an executable brief, then execute the brief\ninstead of the raw request. Load this skill at the START of any non-trivial task request \u2014\nbuilding, fixing, auditing, writing, deploying, refactoring, investigating \u2014 because a vague\nrequest and a specific one produce different results, and the cost of rewriting is far lower\nthan the cost of guessing wrong. Also trigger on explicit asks like \"\u4f18\u5316 prompt\" /\n\"prompt Pro\" / \"\u628a\u8fd9\u4e2a\u9700\u6c42\u6539\u5199\u5f97\u66f4\u597d\".\nDo NOT use it for: pure Q&A with no state change, single trivial actions (\"\u6253\u5f00\u8fd9\u4e2a\u6587\u4ef6\",\n\"\u8dd1\u4e00\u4e0b\u8fd9\u6761\u547d\u4ee4\"), or when the user already supplied a precise spec with checkable\nacceptance criteria \u2014 rewriting those wastes tokens and can drop detail they cared about."
+}

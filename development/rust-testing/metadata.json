@@ -1,0 +1,41 @@
+{
+  "name": "rust-testing",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/rust/skills/rust-testing/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "rust-testing",
+  "downloaded_at": "2026-11-06T06:12:46.413101Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, compile, debug",
+    "score": 6,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/rust/skills/rust-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/rust/skills/rust-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rust testing conventions and frameworks: built-in #[test], integration, and doctest layout plus the cargo-nextest runner and the proptest, insta, criterion, mockall, and rstest ecosystem. Invoke whenever task involves any interaction with Rust tests \u2014 writing, running, configuring, or debugging tests in .rs files and Cargo projects."
+}

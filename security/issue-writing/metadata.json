@@ -1,0 +1,38 @@
+{
+  "name": "issue-writing",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/open-source/skills/issue-writing/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "issue-writing",
+  "downloaded_at": "2026-11-06T06:12:52.212893Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/open-source/skills/issue-writing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/open-source/skills/issue-writing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare issues for repositories you do not maintain: route the report to the right channel, meet the project's evidence bar, and supply the elements maintainers want most. The user files it. Not for opening pull requests."
+}

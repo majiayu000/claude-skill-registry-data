@@ -1,0 +1,38 @@
+{
+  "name": "copy-trade",
+  "repo": "themusebook/skills",
+  "path": "skills/copy-trade/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/themusebook/skills",
+  "dir_name": "copy-trade-themusebook-skills",
+  "downloaded_at": "2026-11-06T05:35:52.111720Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra, infrastructure",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "themusebook",
+  "source_url": "https://github.com/themusebook/skills/blob/main/skills/copy-trade/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/themusebook/skills/blob/main/skills/copy-trade/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"copy trades from\" a wallet, \"mirror a wallet\", \"follow this address\", set up \"copy trading\", \"track and replicate a trader\", or mirror another account's swaps bounded by guardrails. Watches a target wallet and mirrors its trades, filtered by chain, asset match, position size, and the follower's own portfolio state."
+}

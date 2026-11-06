@@ -1,0 +1,38 @@
+{
+  "name": "plan-dependency-upgrade",
+  "repo": "youdede/toolkit",
+  "path": "skills/plan-dependency-upgrade/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "plan-dependency-upgrade",
+  "downloaded_at": "2026-11-06T06:19:53.939301Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/plan-dependency-upgrade/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/plan-dependency-upgrade/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan, apply, or review an application dependency upgrade using installed versions, release and migration documentation, affected usage, transitive changes, compatibility tests, rollout, and rollback. Use when an upgrade is material, breaking, security-driven, or framework-wide."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "figma",
+  "repo": "tanjcf/NewBrian",
+  "path": "shared/apps/desktop/build/plugins/figma/skills/figma/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/tanjcf/NewBrian",
+  "dir_name": "figma-tanjcf-newbrian",
+  "downloaded_at": "2026-11-06T05:30:47.570289Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component, figma",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tanjcf",
+  "source_url": "https://github.com/tanjcf/NewBrian/blob/main/shared/apps/desktop/build/plugins/figma/skills/figma/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tanjcf/NewBrian/blob/main/shared/apps/desktop/build/plugins/figma/skills/figma/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user wants Figma/FigJam work in NewBrain \u2014 generate UI designs, flowcharts, architecture diagrams, design-to-code, or design-system updates that should appear in a Figma file. Also use when a Figma URL is pasted. Without Figma auth, guide the user to connect MCP/token or fall back to Mermaid/Visualize for local diagrams."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "task",
+  "repo": "vzakharov/vovazakharov.com",
+  "path": ".claude/skills/task/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vzakharov/vovazakharov.com",
+  "dir_name": "task-vzakharov-vovazakharov-com",
+  "downloaded_at": "2026-11-06T05:56:38.797660Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/task/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/task/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Take a task and decide for yourself whether it needs a plan, write the plan when it does, and then decide whether the operator has to look \u2014 plan and hand off, plan and then implement, or implement with no plan at all. Invoke as `/task <what to do>`. The prompt is a conditional go-ahead scoped to that one task."
+}

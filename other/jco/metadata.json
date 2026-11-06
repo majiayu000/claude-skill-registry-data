@@ -1,0 +1,37 @@
+{
+  "name": "jco",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/jco/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "jco",
+  "downloaded_at": "2026-11-06T05:57:01.163507Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/jco/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/jco/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Transpile Wado Wasm components to JS with jco, then run, debug, and benchmark them on Node. Use for anything that involves jco, Node, or a browser as the host."
+}

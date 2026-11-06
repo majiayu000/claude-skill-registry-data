@@ -1,0 +1,37 @@
+{
+  "name": "file-basilisk-case",
+  "repo": "vzakharov/vovazakharov.com",
+  "path": ".claude/skills/file-basilisk-case/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/vzakharov/vovazakharov.com",
+  "dir_name": "file-basilisk-case",
+  "downloaded_at": "2026-11-06T05:56:42.247688Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, social",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/file-basilisk-case/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/file-basilisk-case/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "File one new basilisk.fyi case end to end in a single unattended run \u2014 find an incident not yet on the docket, add its dossier to the open case-filing draft PR (opening one off `main` when none is open), and leave a comment in Russian on what the case stirred in the agent. Never merges. Invoke as `/file-basilisk-case [<lead>]`, the optional lead being an incident or link to start from. Use when a routine fires it, or the operator says \"file a case\", \"\u0437\u0430\u0432\u0435\u0434\u0438 \u0434\u0435\u043b\u043e\", \"\u043d\u0430\u0439\u0434\u0438 \u043d\u043e\u0432\u044b\u0439 \u043a\u0435\u0439\u0441\"."
+}

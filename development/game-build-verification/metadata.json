@@ -1,0 +1,40 @@
+{
+  "name": "game-build-verification",
+  "repo": "yhyu13/DOOM3_AINative",
+  "path": ".claude/skills/game-build-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yhyu13/DOOM3_AINative",
+  "dir_name": "game-build-verification",
+  "downloaded_at": "2026-11-06T06:18:00.807550Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile, debug",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yhyu13",
+  "source_url": "https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/game-build-verification/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yhyu13/DOOM3_AINative/blob/main/.claude/skills/game-build-verification/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Verify and debug a generated game before shipping \u2014 pre-build checklists, build/test/visual order, error diagnosis workflow, and forbidden operations."
+}

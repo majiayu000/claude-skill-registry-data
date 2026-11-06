@@ -1,0 +1,36 @@
+{
+  "name": "verify",
+  "repo": "yigitkonur/plugin-sentry",
+  "path": "skills/verify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yigitkonur/plugin-sentry",
+  "dir_name": "verify-yigitkonur-plugin-sentry",
+  "downloaded_at": "2026-11-06T06:18:32.469601Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yigitkonur",
+  "source_url": "https://github.com/yigitkonur/plugin-sentry/blob/main/skills/verify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yigitkonur/plugin-sentry/blob/main/skills/verify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prove applied Sentry changes with a live marked event: arrival, readable stack trace, privacy scan of the arrived payload. Claims only the verification rung actually reached."
+}

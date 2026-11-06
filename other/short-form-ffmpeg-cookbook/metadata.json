@@ -1,0 +1,37 @@
+{
+  "name": "short-form-ffmpeg-cookbook",
+  "repo": "vargHQ/skills",
+  "path": "short-form-ffmpeg-cookbook/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "short-form-ffmpeg-cookbook",
+  "downloaded_at": "2026-11-06T05:50:49.401128Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/short-form-ffmpeg-cookbook/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/short-form-ffmpeg-cookbook/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Short-form FFmpeg cookbook: copyable commands for Reels. Turns raw footage into a 1080\u00d71920 9:16 MP4 for Reels, TikTok and Shorts with burned-in captions (SRT or ASS), trims and joins clips, and lays music under the voice with ducking. Every command was run on test media. Free and local; works in Claude Code, Codex and Grok, or on the varg ffmpeg tool (credits) when the agent has no shell. Use when the user wants to crop to vertical, burn subtitles, cut or join clips, or add background music with FFmpeg. NOT for animated word-by-word captions (use Remotion or HyperFrames caption skills) or for choosing an editing service (use varg-video-editing)."
+}

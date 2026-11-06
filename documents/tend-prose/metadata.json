@@ -1,0 +1,38 @@
+{
+  "name": "tend-prose",
+  "repo": "vzakharov/vovazakharov.com",
+  "path": ".claude/skills/tend-prose/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/vzakharov/vovazakharov.com",
+  "dir_name": "tend-prose",
+  "downloaded_at": "2026-11-06T05:56:40.776880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/tend-prose/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/tend-prose/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review the prose you added in recent work \u2014 code comments, docstrings, and Markdown \u2014 against four equal defects: **existence** (it should not have been written at all), **durability** / **narration** (it narrates the change instead of the code's lasting contract), **tightness** / **bloat** (it spends more words than it informs), and **negation** / **polar bear** (it denies a thing the change removed, so the mention survives as its own denial). Rewrites, moves and cuts in place. Invoke as: /tend-prose [lens] [optional focus guidance] \u2014 naming one of the four, by either of its names, runs only that lens."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "alignment",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/the-blueprint/skills/alignment/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "alignment",
+  "downloaded_at": "2026-11-06T06:12:51.074765Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, pipeline",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/the-blueprint/skills/alignment/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/the-blueprint/skills/alignment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Solution direction synthesis \u2014 design opinions from research findings, presented for human correction, with each settled decision handed to the adr skill. Invoke whenever task involves the A stage of the DRAFT pipeline or aligning on approach before implementation."
+}

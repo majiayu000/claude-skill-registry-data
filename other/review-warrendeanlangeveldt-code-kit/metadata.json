@@ -1,0 +1,37 @@
+{
+  "name": "review",
+  "repo": "warrendeanlangeveldt/code-kit",
+  "path": "skills/review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/warrendeanlangeveldt/code-kit",
+  "dir_name": "review-warrendeanlangeveldt-code-kit",
+  "downloaded_at": "2026-11-06T05:58:33.638642Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "warrendeanlangeveldt",
+  "source_url": "https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The lead's review of a lane's finished branch before it merges. Runs code-kit verify on the branch, checks the work against its story's requirements and acceptance criteria, the spec-check report, the approval log and the tests, runs the security reviewer on sensitive changes, and ends with merge or send back. Use when a lane agent or person finishes a story, when the person asks to review a branch or pull request, or runs /code-kit:review [branch, story ID or PR number]."
+}

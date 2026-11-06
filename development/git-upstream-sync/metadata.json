@@ -1,0 +1,37 @@
+{
+  "name": "git-upstream-sync",
+  "repo": "wado-lang/wado",
+  "path": ".claude/skills/git-upstream-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wado-lang/wado",
+  "dir_name": "git-upstream-sync",
+  "downloaded_at": "2026-11-06T05:57:02.852212Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wado-lang",
+  "source_url": "https://github.com/wado-lang/wado/blob/main/.claude/skills/git-upstream-sync/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wado-lang/wado/blob/main/.claude/skills/git-upstream-sync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The only way to merge origin/main into a branch, conflicts or not. Use it every time main comes in \u2014 a PR reported conflicting or DIRTY, a branch behind origin/main, a CI failure to reproduce on the merged tree. Never run `git merge origin/main` or `git pull origin main` by hand."
+}

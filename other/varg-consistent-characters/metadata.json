@@ -1,0 +1,37 @@
+{
+  "name": "varg-consistent-characters",
+  "repo": "vargHQ/skills",
+  "path": "varg-consistent-characters/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "varg-consistent-characters",
+  "downloaded_at": "2026-11-06T05:50:49.276627Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/varg-consistent-characters/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/varg-consistent-characters/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes multi-scene ad videos on varg in which the same people, outfits and location stay consistent in every shot, built from real actor photos or generated characters: one profile card per actor, an empty location card, scene composites approved as stills first, then image-to-video with native dialogue audio, trimmed and captioned in one cloud render. Also covers frame and audio QA of the output and turning a reference video into a scene script. Use when a script names actors (A1, A2), a location (L1) and numbered scenes, when someone sends actor or model photos, or asks for a consistent character, the same person in every scene, a recurring mascot or brand character, a UGC or skit ad with two actors, or to remake a reference ad with new people. Not for one speaker on a stage (use varg-character-keynote), seated two-person podcast dialogue (use varg-podcast-video), music videos (use varg-music-video), or one-off images and clips (use varg-ai)."
+}

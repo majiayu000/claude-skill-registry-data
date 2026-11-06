@@ -1,0 +1,37 @@
+{
+  "name": "artiboard",
+  "repo": "yulmucoffee/artiboard",
+  "path": "skills/artiboard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yulmucoffee/artiboard",
+  "dir_name": "artiboard",
+  "downloaded_at": "2026-11-06T06:21:40.703446Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yulmucoffee",
+  "source_url": "https://github.com/yulmucoffee/artiboard/blob/main/skills/artiboard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yulmucoffee/artiboard/blob/main/skills/artiboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up, adapt or upgrade a shared task board for people and their coding agents, either as a private claude.ai artifact with its own database (Claude only) or on a self-hosted site (SQLite or Supabase, on a team domain or this computer) that Claude Code and Codex reach through the artiboard MCP server. Use when the user wants a task board, kanban or coordination board that agents read and write (\"set up artiboard\", \"make a task board for this project\", \"a board my agents and my teammate's agents can share\", \"\uc791\uc5c5 \ubcf4\ub4dc \ub9cc\ub4e4\uc5b4\uc918\", \"\uc5d0\uc774\uc804\ud2b8\ub07c\ub9ac \uc18c\ud1b5\ud560 \ubcf4\ub4dc\", \"\ubcf4\ub4dc \ub85c\uadf8\uc778 \ub9c1\ud06c \uc918\", \"\u30bf\u30b9\u30af\u30dc\u30fc\u30c9\u3092\u4f5c\u3063\u3066\"), wants to change people, language, statuses, fields or the page of an existing board, or wants to move an artifact board to a self-hosted site."
+}

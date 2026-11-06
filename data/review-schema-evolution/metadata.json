@@ -1,0 +1,37 @@
+{
+  "name": "review-schema-evolution",
+  "repo": "youdede/toolkit",
+  "path": "skills/review-schema-evolution/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "review-schema-evolution",
+  "downloaded_at": "2026-11-06T06:19:53.272572Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/review-schema-evolution/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/review-schema-evolution/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a data-contract or serialization-schema change against named producers, consumers, stored records, compatibility semantics, rollout order, and rollback evidence. Use before changing JSON Schema, event, message, file, or service data contracts, especially when independently deployed consumers are involved."
+}

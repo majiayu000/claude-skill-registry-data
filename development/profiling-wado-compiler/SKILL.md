@@ -1,0 +1,278 @@
+---
+name: profiling-wado-compiler
+description: Profile the native Rust `wado` binary (compile/serve/run) for host-side bottlenecks — wall time per phase with the span trace, CPU with a sampling profiler (samply, or perf where samply cannot run), memory with the span trace's RSS and valgrind DHAT. Use for native CPU or memory profiling, not guest wasm (see wado-performance for that).
+---
+
+# Profiling the native `wado` binary
+
+Host-side Rust profiling (the compiler, `wado serve`, `wado run`, …
+including wasmtime/cranelift). For the **guest** wasm program, use
+`wado-performance` instead.
+
+## Pick a build profile
+
+Choose based on **what you're optimising for**:
+
+| Profile     | Cargo flag                                   | Use when                                                                                                                                                                                                                                                               | Trade-off                                                                                                          |
+| ----------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `profiling` | `cargo build --profile profiling --bin wado` | Improving **benchmark scores** — release-equivalent codegen with debug info kept. Inherits `release` (thin LTO, `codegen-units=1`) and adds `debug = 2`, `strip = false`.                                                                                              | Slow build (LTO), but the CPU profile reflects what users actually run.                                            |
+| `dev`       | `cargo build --bin wado`                     | Improving **developer-iteration time** — making `cargo run -- compile/test/...` faster for compiler-hackers. Uses the in-workspace `[profile.dev.package.wado-compiler] opt-level = 1`, so the compiler itself isn't molasses while everything else stays unoptimised. | Fast build, but the absolute numbers are larger than a release run; ratios between hot paths are still actionable. |
+
+If unsure: pick `profiling` for "users complain it's slow", pick `dev`
+for "rebuild → run → tweak feels slow during development." The
+analyzer script and recording flow below are identical for both.
+
+## Wall time per phase: the span trace
+
+Start here: the trace says which phase owns the wall time, and only the profile
+below says why. `--log-level debug` prints every compiler span, and
+`analyze_spans.ts` sums them into a tree.
+
+```sh
+wado compile --log-level debug app.wado -o scratchpad/app.wasm > scratchpad/span.log 2>&1
+node .claude/skills/profiling-wado-compiler/scripts/analyze_spans.ts scratchpad/span.log
+```
+
+A row sums every span of one name under its parent. A name is grouped by its
+first word, so `nir/iteration 3` counts toward `nir/iteration`. `--min SECONDS`
+hides the small rows (default 0.1). `--each RE` also lists each matching span
+with its start and duration, so `--each '^nir/iteration'` shows how the NIR
+fixed point converges round by round.
+
+The trace is wall time. A phase that runs on the `wado-opt-*` workers spends
+more CPU than its row shows; a serial phase spends the same.
+
+## CPU: the sampling profile
+
+```sh
+# 1. Build with the chosen profile (see table above)
+cargo build --profile profiling --bin wado    # benchmark-oriented
+# or
+cargo build --bin wado                        # dev-iteration-oriented
+
+# 2. Record under load with samply (cargo install samply)
+samply record --save-only --rate 1000 -o scratchpad/prof.json -- \
+  target/profiling/wado serve --addr 127.0.0.1:8080 app.wado &
+SAMPLY_PID=$!
+# ... drive load (e.g. oha against benchmark/http_routing) ...
+
+# 3. Stop: SIGTERM the CHILD, not samply. samply finalizes on child exit;
+#    signalling samply leaves the child running and the recording hangs.
+kill -TERM "$(pgrep -P "$SAMPLY_PID" | head -1)"; wait "$SAMPLY_PID"
+
+# 4. Analyze
+node .claude/skills/profiling-wado-compiler/scripts/analyze_native_profile.ts scratchpad/prof.json
+```
+
+Symbols resolve against the path the profile recorded, not the binary that
+produced it. Rebuilding over `target/profiling/wado` makes every earlier profile
+symbolicate against the new build, and its output still looks normal. When you
+A/B, give each arm its own path: copy the first build aside and profile it
+there.
+
+For one-shot commands (`wado compile foo.wado`, `wado test foo.wado`)
+there is nothing to drive — samply records until the child exits, so
+just invoke it directly:
+
+```sh
+samply record --save-only --rate 1000 -o scratchpad/prof.json -- \
+  target/debug/wado test package-gale/tests/driver_rust_test.wado
+```
+
+Interactive call tree (and correct kernel symbols):
+`samply load scratchpad/prof.json` opens a browser-based call-tree UI. The
+CLI analyzer below is for grep-able, transcript-friendly summaries.
+
+The analyzer is a TypeScript script run directly by Node.js (>= 23.6,
+which strips types with no flags). No build step or dependencies are
+needed; `node analyze_native_profile.ts ...` just works.
+
+## Linux setup
+
+```sh
+# samply reads perf_event_paranoid itself and refuses above 1, even as root
+# with CAP_PERFMON. The setting is host-wide: put it back after profiling.
+old=$(cat /proc/sys/kernel/perf_event_paranoid)
+echo '1' | sudo tee /proc/sys/kernel/perf_event_paranoid
+# ... profile ...
+echo "$old" | sudo tee /proc/sys/kernel/perf_event_paranoid
+
+# `addr2line` is part of binutils — usually already installed
+addr2line --version >/dev/null || sudo apt-get install -y binutils
+```
+
+### When `perf_event_paranoid` stays at 2
+
+A sandbox (Claude Code on the web among them) may refuse to lower it. Level 2
+still lets a process profile its own children in user space. `record_perf.sh`
+records with `perf` in user space and converts the result with
+`samply import`, for the same analyzer:
+
+```sh
+sudo apt-get install -y linux-tools-generic   # perf, once
+.claude/skills/profiling-wado-compiler/scripts/record_perf.sh scratchpad/prof.json -- \
+  scratchpad/wado-base compile app.wado -o scratchpad/app.wasm
+node .claude/skills/profiling-wado-compiler/scripts/analyze_native_profile.ts \
+  scratchpad/prof.json --binary wado-base
+```
+
+The kernel half of a syscall is missing from such a profile. A sample whose
+stack outgrew the DWARF copy ends in an unknown frame and loses its callers, so
+inclusive figures for deep recursion read low.
+
+Analyze through `samply import`, not `perf report`. `perf report` names a
+sample by the symbol its address falls in, so a function inlined into a large
+caller is credited to the caller: it showed `Engine::new` where the code that
+ran was the inlined `Engine::build_indices`. `analyze_native_profile.ts`
+resolves each address through the line table with `addr2line` instead.
+`perf report --children` is also slow enough on a DWARF profile to look hung.
+
+## How `analyze_native_profile.ts` works
+
+samply's `--save-only` profile is **unsymbolicated**: `funcTable.name`
+holds the hex relative-virtual-address (RVA), keyed by `(lib_index, rva)` so the same hex address in two different libs is never merged.
+The script:
+
+1. **Auto-detects the symbolicator** (`--symbolicator auto`):
+   - macOS → `atos -o <path> -arch <arch> -l <base> <addrs>`; the main
+     executable's `__TEXT` base is `0x100000000`, shared dylibs use base 0.
+   - Linux → `addr2line -fC -e <path>`; PIE binaries store RVAs directly
+     in the profile (no base offset to add). The script reshapes the
+     output to `<func> (in <lib>) (<file:line>)` so the
+     `(in <binary>)` filter works on both platforms.
+2. **Weights samples by `threadCPUDelta`** (real CPU), not wall-clock
+   `weight` — otherwise parked tokio/rayon worker threads bury everything.
+3. **Reports** five views:
+   - **CPU by library (self)** — where the leaf frames land. A high
+     `libc.so.6 / libsystem_*` ratio means your hot path is in
+     syscalls/`memcpy`, not Rust code.
+   - **Top SELF — all** — flat hot list with foreign code mixed in.
+     Useful to spot allocator / hashing / `memcpy` pressure.
+   - **Top SELF / INCLUSIVE — `wado` only** — the Rust-only view.
+     INCLUSIVE is deduped per sample so recursive frames don't push
+     percentages above 100%.
+   - **Syscall/alloc CPU attributed to nearest Rust caller** — walks up
+     each non-`wado` leaf stack until it finds a `wado` frame and
+     credits the cost there. This is how you find which Rust function
+     is responsible for the `__memcpy` / `mmap` / mimalloc hot spots.
+   - **Allocation cost by requesting caller** — every sample crossing an
+     allocator entry, credited above the outermost one, skipping the
+     `Vec`/`HashMap` growth plumbing. The header is allocation's share of
+     total CPU, so "is this allocation-bound at all" is a number, not a
+     guess.
+
+Common invocations:
+
+```sh
+# Default: top 30, auto-symbolicator
+node .claude/skills/profiling-wado-compiler/scripts/analyze_native_profile.ts scratchpad/prof.json
+
+# Wider view; force Linux symbolicator even on macOS
+node .claude/skills/profiling-wado-compiler/scripts/analyze_native_profile.ts \
+  scratchpad/prof.json --top 60 --symbolicator addr2line
+
+# Profile a different binary, or a copy of `wado` aside for an A/B arm:
+# `--binary` names the file the Rust-only views keep
+node .claude/skills/profiling-wado-compiler/scripts/analyze_native_profile.ts \
+  scratchpad/prof.json --binary wado-lsp
+
+# Split one function's inclusive cost by the frames it calls
+node .claude/skills/profiling-wado-compiler/scripts/analyze_native_profile.ts \
+  scratchpad/prof.json --under 'container_sroa::movers_of'
+
+# Split a shared helper's cost by the three frames calling it: which pass
+# spends it
+node .claude/skills/profiling-wado-compiler/scripts/analyze_native_profile.ts \
+  scratchpad/prof.json --callers 'dce::reachable_function_positions'
+
+# Keep one thread: `main` drives the compile, and what it runs outside the
+# `wado-opt-*` sweeps is the serial part of the wall time
+node .claude/skills/profiling-wado-compiler/scripts/analyze_native_profile.ts \
+  scratchpad/prof.json --thread '^main$'
+```
+
+## Memory
+
+Measure peak RSS first, per phase second, per allocation site last.
+
+### Per phase: the span trace
+
+The span trace that times the phases also samples the process's resident set
+(Linux only). `analyze_spans.ts` shows the peak a row's spans raised the
+process to, and `-` for one that stayed under an earlier peak. An end line adds
+the net change in current RSS since the span began:
+
+```sh
+wado compile --log-level debug hello.wado 2>&1 | grep '<< '
+# [00:00:02.1547] << stdlib_snapshot · rss 343/343 MiB (+225)
+```
+
+The pair is current/peak MiB. A span that allocates and frees again nets out
+near `+0`, so read a jump in the peak as well as the change. RSS is
+process-wide, so under `wado test` with more than one worker the changes mix
+every worker's compile. Use `-p 1` there.
+
+### Per allocation site: DHAT
+
+A heap profiler sees only the system allocator. `wado-cli`'s default
+`mimalloc` feature replaces it, so build without it, and copy the binary aside
+so the next build does not replace it:
+
+```sh
+cargo build -p wado-cli --bin wado --no-default-features
+cp target/debug/wado scratchpad/wado-sysalloc
+valgrind --tool=dhat --num-callers=40 --dhat-out-file=scratchpad/dhat.json \
+  scratchpad/wado-sysalloc compile -O2 hello.wado -o scratchpad/out.wasm
+node .claude/skills/profiling-wado-compiler/scripts/analyze_dhat.ts scratchpad/dhat.json
+```
+
+DHAT runs about 10× slower than native. Its default of 12 frames cuts off the
+recursive phases, which is why `--num-callers=40` is there.
+
+The analyzer reports what was live at the heap's peak (t-gmax), since that
+sets peak memory, by allocation site and by `wado` function inclusive.
+`--where RE` and `--not RE` keep or drop stacks, so
+`--where get_or_init_snapshot` splits the per-thread stdlib snapshot from the
+compile itself. `--stacks N` prints the largest stacks whole.
+
+## Non-obvious points
+
+- **Read CPU, not wall-clock.** The script weights by `threadCPUDelta`;
+  otherwise parked tokio/rayon worker threads bury everything.
+- **Kernel syscall names from `atos` are wrong** (shared-cache base
+  offset). Read syscall cost via the script's "nearest Rust caller"
+  attribution, not the syscall name.
+- **A generic hot spot may be dozens of call sites wearing one name.**
+  Identical monomorphizations are folded to a single address, and the
+  symbolicator reports whichever name sorts first. One pass then appears
+  to own cost that belongs to the whole compiler. A dev build folds 125
+  `Body::for_each_child::<closure>` instantiations onto one address, and
+  it reads as `optimize::drve` at ~10 % self CPU while the `nir/drve`
+  span measures 0.8 %. A span that contradicts the profile is the tell.
+  Before crediting a pass, run `nm target/debug/wado | grep <symbol>`
+  and count how many names share the address.
+- **`addr2line` outermost-frame only.** `-i` (inlined frames) is
+  intentionally omitted because addr2line does not emit a per-input
+  separator with `-i`, so the output cannot be reliably split back to
+  addresses. The outermost frame matches the self-CPU bucket — which
+  is what you want. If you need inlined frames, use `samply load`.
+- **Symbolication needs the matching binary.** A saved profile holds only
+  addresses; the script resolves them against the binary at the recorded
+  path, so rebuilding `target/profiling/wado` (or `target/debug/wado`)
+  makes earlier profiles re-symbolicate to garbage. Analyze before
+  rebuilding, or keep the matching binary.
+- **Validate with the profile, not req/s or wall time.** The CPU
+  breakdown is reproducible run to run; throughput on a busy dev
+  machine swings by tens of percent. Use the profile to confirm a
+  change landed (e.g. a hot function shrank); measure absolute
+  throughput on a quiet/target host.
+- **Choose a target from a fresh profile**, never from a WEP's percentages,
+  which predate what has landed since, and profile again after fixing the top
+  item. Estimate a change from where the time goes, not from what it removes:
+  `-O3` time is the inliner and the NIR fixed point, so cutting the number of
+  lowered functions buys much less than the count suggests.
+- **Linux profile includes the ld-linux frames.** Unwinder occasionally
+  attributes a frame to `ld-linux-x86-64.so.2` when the RVA happens to
+  collide between the main binary and the dynamic linker mapping. The
+  library breakdown's self-CPU view (which uses the leaf frame's lib)
+  is the trustworthy ratio — incl-by-lib can over-count those frames.

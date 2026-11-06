@@ -1,0 +1,37 @@
+{
+  "name": "take-issue",
+  "repo": "vzakharov/vovazakharov.com",
+  "path": ".claude/skills/take-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vzakharov/vovazakharov.com",
+  "dir_name": "take-issue",
+  "downloaded_at": "2026-11-06T05:56:40.654305Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/take-issue/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/vovazakharov.com/blob/main/.claude/skills/take-issue/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Take a GitHub issue onto the branch \u2014 export the thread and its attachments, commit them, and hand the number back to whoever called. Invoke as `/take-issue <number|url>`; its callers are `/task`, `/plan` and `/go`, each running it first when the prompt carries a `#<N>`."
+}

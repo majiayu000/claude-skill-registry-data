@@ -1,0 +1,37 @@
+{
+  "name": "varg-music-video",
+  "repo": "vargHQ/skills",
+  "path": "varg-music-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vargHQ/skills",
+  "dir_name": "varg-music-video",
+  "downloaded_at": "2026-11-06T05:50:43.704771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargHQ",
+  "source_url": "https://github.com/vargHQ/skills/blob/main/varg-music-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargHQ/skills/blob/main/varg-music-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Directs an AI music video or a song-driven promo end to end on varg, the way the most-watched AI music videos are made: measure the song (beat grid, word timings), pitch the concept, cast and lock character references, storyboard every cut on a downbeat, approve stills before paying for video, generate Seedance 2.5 shots, run a mandatory lip-sync pass, draw lyrics and graphics in code, run review rounds and master for each platform. Use when someone asks for a music video, a clip for my song, a video for a track, a lyric video with AI footage, a singing character, an AI artist or band video, slopcore, or a launch video cut to a song. Not for a one-off generated song or single clip (use varg-ai), shot planning and 3D camera blocking only (use varg-previz), a talking character without music (use varg-character-keynote or varg-podcast-video), or a typography-only lyric video with no generated footage (use a HyperFrames music-to-video skill)."
+}
