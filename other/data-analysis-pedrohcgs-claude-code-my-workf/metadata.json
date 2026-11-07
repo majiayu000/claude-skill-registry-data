@@ -1,0 +1,37 @@
+{
+  "name": "data-analysis",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/data-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "data-analysis-pedrohcgs-claude-code-my-workf",
+  "downloaded_at": "2026-11-07T05:23:16.803372Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/data-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/data-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end R data analysis pipeline \u2014 exploration \u2192 cleaning \u2192 regression \u2192 publication-ready tables and figures. Use when user says \"analyze this dataset\", \"run a regression on X\", \"explore this CSV\", \"full analysis workflow\", \"get me summary stats and a regression\", or points at a `.csv`/`.rds`/`.dta` and asks for empirical results. Produces numbered R scripts in `scripts/R/` and outputs to `output/`."
+}

@@ -1,0 +1,52 @@
+{
+  "name": "auditor-de-tarifas",
+  "description": "Requires Python 3.12+ locally (standard library only); no account, API key or fee. Sums the bank fees in OFX or CSV statements from Brazilian banks by bank, month and type, shows IOF tax separately and flags unrecognized fee entries. The script makes no network calls; cloud sessions upload the statement to Anthropic. Content is in Brazilian Portuguese.",
+  "repo": "financeailab/skills-financas-br",
+  "path": "plugins/auditor-de-tarifas/skills/auditor-de-tarifas/SKILL.md",
+  "github_branch": "main",
+  "github_commit_sha": "62c6f18cd67e96a80985583ecb42324c2f74c355",
+  "assets_verified_at": "2026-11-07T05:31:26.704677Z",
+  "category": "data",
+  "tags": [
+    "finance",
+    "brazil",
+    "bank-statement",
+    "ofx",
+    "csv",
+    "bank-fees",
+    "iof",
+    "python",
+    "portuguese"
+  ],
+  "stars": 0,
+  "source": "Community Skills",
+  "dir_name": "auditor-de-tarifas",
+  "archive_mode": "directory",
+  "bundled_files": [
+    "scripts/__init__.py",
+    "scripts/auditar_tarifas.py",
+    "scripts/engine/__init__.py",
+    "scripts/engine/agregador.py",
+    "scripts/engine/dicionario.py",
+    "scripts/engine/ingest.py",
+    "scripts/engine/matcher.py",
+    "scripts/engine/normalize.py"
+  ],
+  "bundled_file_blobs": {
+    "scripts/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "scripts/auditar_tarifas.py": "00dd1f47b06649742eab6e6b8231ad79f874b407",
+    "scripts/engine/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "scripts/engine/agregador.py": "34e8961858e42b9e467b2a38ca6868c6a2ba2816",
+    "scripts/engine/dicionario.py": "c8b613ce2ccabf9241c5edf766b6cf290766a9c7",
+    "scripts/engine/ingest.py": "ceb7ceecc4e5151d1087a5e4731be6c3db18ae60",
+    "scripts/engine/matcher.py": "c31336d4633d9f40760fdf8738159fc1ef404c1d",
+    "scripts/engine/normalize.py": "7ecf64e141f3851adf785c170342e9827c2dfccc"
+  },
+  "author": "Douglas Ferreira",
+  "source_url": "https://github.com/financeailab/skills-financas-br/blob/62c6f18cd67e96a80985583ecb42324c2f74c355/plugins/auditor-de-tarifas/skills/auditor-de-tarifas/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright 2026 Douglas Ferreira",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "extract-tikz",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/extract-tikz/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "extract-tikz",
+  "downloaded_at": "2026-11-07T05:23:15.818480Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/extract-tikz/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/extract-tikz/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extract TikZ diagrams from Beamer `.tex` source, compile each to a standalone PDF, and convert to SVG with 0-based indexing. Use when user says \"extract the tikz\", \"regenerate the diagrams\", \"rebuild the SVGs\", \"sync tikz to quarto\", or after editing TikZ blocks in a Beamer deck that also has a Quarto mirror."
+}

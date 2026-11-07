@@ -1,0 +1,38 @@
+{
+  "name": "tickets-batch",
+  "repo": "me2resh/apexyard",
+  "path": ".claude/skills/tickets-batch/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/me2resh/apexyard",
+  "dir_name": "tickets-batch",
+  "downloaded_at": "2026-11-07T05:20:15.137192Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: roadmap, feature, backlog",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "roadmap",
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "me2resh",
+  "source_url": "https://github.com/me2resh/apexyard/blob/main/.claude/skills/tickets-batch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/me2resh/apexyard/blob/main/.claude/skills/tickets-batch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "File 5\u201320 structured tickets in one flow \u2014 shared-context Qs once, 3-Q micro-interview per ticket, then per-ticket `tracker_create` (gh/glab/custom)."
+}

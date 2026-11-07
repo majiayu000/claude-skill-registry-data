@@ -1,0 +1,37 @@
+{
+  "name": "compliance-check",
+  "repo": "me2resh/apexyard",
+  "path": ".claude/skills/compliance-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/me2resh/apexyard",
+  "dir_name": "compliance-check-me2resh-apexyard",
+  "downloaded_at": "2026-11-07T05:20:17.386468Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "me2resh",
+  "source_url": "https://github.com/me2resh/apexyard/blob/main/.claude/skills/compliance-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/me2resh/apexyard/blob/main/.claude/skills/compliance-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "GDPR + ePrivacy audit \u2014 consent, privacy policy, data handling, right-to-deletion, DPAs. Deep-dive for /launch-check compliance."
+}

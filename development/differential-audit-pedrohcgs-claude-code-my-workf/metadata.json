@@ -1,0 +1,37 @@
+{
+  "name": "differential-audit",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/differential-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "differential-audit-pedrohcgs-claude-code-my-workf",
+  "downloaded_at": "2026-11-07T05:23:20.117128Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/differential-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/differential-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compare two implementations of the same thing \u2014 a port (R\u2194Python\u2194Stata), a reimplementation, a replication package, a refactor, or a new version against the old \u2014 so that agreement means something. Freeze inputs first, inventory every expected output, test the comparator itself, compare every channel (not just the headline number), and give each divergence a stable ID and a smallest witness. Use for cross-language parity, replication, upgrade/regression gates, or whenever \"the numbers match\" is about to license a claim."
+}

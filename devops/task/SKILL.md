@@ -1,0 +1,253 @@
+---
+name: task
+description: Create a structured technical task ticket (driver, scope, ACs) for tech debt, infra, refactoring, or non-user-facing changes.
+argument-hint: "<short title of the task>"
+allowed-tools: Bash, Read, Write
+---
+
+# /task — Create a Technical Task Ticket
+
+Writing: read docs/skills/shared/writing-rule.md before you write a durable artifact.
+
+Creates a structured GitHub Issue for a technical task with driver (why), scope (what), acceptance criteria, and risks. Used for tech debt, infrastructure, refactoring, dependency updates, or any non-user-facing work that doesn't fit /feature or /bug.
+
+## Path resolution
+
+Read the registry path via `portfolio_registry`, the per-project docs dir via `portfolio_projects_dir`, and the ideas backlog via `portfolio_ideas_backlog` — all from `.claude/hooks/_lib-portfolio-paths.sh`. Source the helper at the top of any bash block that touches those paths:
+
+```bash
+source "$(git rev-parse --show-toplevel)/.claude/hooks/_lib-read-config.sh"
+source "$(git rev-parse --show-toplevel)/.claude/hooks/_lib-portfolio-paths.sh"
+registry=$(portfolio_registry)
+```
+
+Defaults match today's single-fork layout (`./apexyard.projects.yaml`, `./projects`, `./projects/ideas-backlog.md`). Adopters in split-portfolio mode override the `portfolio.{registry, projects_dir, ideas_backlog}` keys in `.claude/project-config.json`. Don't hardcode literal `apexyard.projects.yaml` or `projects/` paths in bash blocks — the helper resolves whichever mode the adopter is in. See `docs/multi-project.md`.
+
+## Usage
+
+```
+/task Set up PR-triggered CI pipeline
+/task Extract shared LikeCount component
+/task Migrate from DiceBear to local avatars
+```
+
+## Process
+
+### 0. Write the active-issue-skill marker (REQUIRED — me2resh/apexyard#268)
+
+Before any `gh issue create` (or other tracker CLI), write this skill's name to the active-issue-skill marker so `require-skill-for-issue-create.sh` lets the command through. At skill entry:
+
+```bash
+# Ops root through the session pin (docs/skills/shared/ops-root.md).
+ops_root=$(p="${APEXYARD_OPS_PIN_DIR:-$HOME/.claude/apexyard}/ops-root-${CLAUDE_CODE_SESSION_ID:-}"; r=""; [ -z "${APEXYARD_OPS_DISABLE_PIN:-}" ] && [ -f "$p" ] && IFS= read -r r < "$p"; [ -f "$r/.claude/hooks/_lib-ops-root.sh" ] || { r="$PWD"; while [ -n "$r" ] && [ ! -f "$r/.claude/hooks/_lib-ops-root.sh" ]; do r=${r%/*}; done; }; [ -f "$r/.claude/hooks/_lib-ops-root.sh" ] && . "$r/.claude/hooks/_lib-ops-root.sh" && resolve_ops_root) && [ -n "$ops_root" ] || { echo "No ops root. See docs/skills/shared/ops-root.md." >&2; exit 1; }
+mkdir -p "$ops_root/.claude/session"
+marker_home="$ops_root"
+. "$marker_home/.claude/hooks/_lib-session-markers.sh"
+skill_marker=$(active_issue_skill_marker_path "$marker_home") || { echo "A session id is required. Restart through the harness adapter." >&2; exit 2; }
+echo "task" > "$skill_marker"
+```
+
+Remove the marker on **every** exit path (success, early-exit, user cancel, error):
+
+```bash
+marker_home="$ops_root"
+. "$marker_home/.claude/hooks/_lib-session-markers.sh"
+skill_marker=$(active_issue_skill_marker_path "$marker_home") || { echo "A session id is required. Restart through the harness adapter." >&2; exit 2; }
+rm -f "$skill_marker"
+```
+
+The `clear-issue-skill-marker.sh` SessionStart hook clears only the current session's marker, but a clean exit should never leave one behind. See AgDR-0030.
+
+### 1. Resolve the target repo
+
+Read the active-ticket marker of the working tree you are in to determine which repo we're working in. The marker is the `apexyard-ticket` file in the git dir of that tree. See `/start-ticket` "Read the active ticket". If no active ticket, check `apexyard.projects.yaml` for managed projects. If only one project, use it. If multiple, ask:
+
+```
+Which project is this task for?
+```
+
+If no projects are registered, ask for the repo in `owner/repo` format.
+
+### 2. Parse or ask for the title
+
+Take the title from `$ARGUMENTS`. If empty, ask:
+
+```
+What's the task? Give me a short title.
+```
+
+### 3. Gather details (one question at a time)
+
+Ask conversationally — do NOT batch all questions. Wait for each answer before asking the next.
+
+**a) Driver**
+
+```
+Why is this work needed? (upstream ticket, tech debt rationale, Rex recommendation, dependency requirement, etc.)
+```
+
+**b) Scope**
+
+```
+What specifically needs to change? Be concrete — which files, services, or systems are affected.
+```
+
+**c) Acceptance Criteria**
+
+```
+What are the acceptance criteria? What must be true when this is done?
+```
+
+**d) Priority**
+
+```
+Priority?
+1. P0 — blocks other work
+2. P1 — important, schedule soon
+3. P2 — nice to have, do when convenient
+```
+
+**e) Risks / Dependencies (optional)**
+
+```
+Any risks or dependencies? (what could block this, what depends on it, or Enter to skip)
+```
+
+### 4. Resolve the task body template
+
+Resolve the task body template via the portfolio helper so adopter overrides win when present:
+
+```bash
+source "$(git rev-parse --show-toplevel)/.claude/hooks/_lib-read-config.sh"
+source "$(git rev-parse --show-toplevel)/.claude/hooks/_lib-portfolio-paths.sh"
+template=$(portfolio_resolve_template tickets/task.md)   # → custom-templates/tickets/task.md if present, else templates/tickets/task.md
+```
+
+Single-fork adopters (no `portfolio` block) and adopters with no override fall straight through to `templates/tickets/task.md`. Adopters who want a customised task-body shape drop their version at `<private_repo>/custom-templates/tickets/task.md`. See `templates/README.md` for the path-mirroring convention.
+
+**Backward-compat fallback**: if `portfolio_resolve_template` returns empty (template file missing — partial adopter setup), fall back to the inline heredoc body below and print a one-line WARN on stderr (`WARN: tickets/task.md template missing — using inline fallback`).
+
+Read `.claude/rules/writing-standard.md` before drafting. Treat the resolved template as the source of truth. Keep required sections, remove empty conditional sections, replace unknown required values with `TBD`, and delete the guidance comment before filing.
+
+### 5. Show the formatted ticket for confirmation
+
+Substitute the gathered inputs into the resolved template (or the inline heredoc fallback), then display the full ticket using the resolved shape (the default `templates/tickets/task.md` shape is reproduced below):
+
+```
+Here's the ticket I'll create:
+
+---
+**[{Chore|Refactor|Testing|CI}] {title}**
+
+## Driver
+{why this work is needed}
+
+## Scope
+{what specifically needs to change}
+
+## Acceptance Criteria
+- [ ] {criterion 1}
+- [ ] {criterion 2}
+- [ ] ...
+
+## Risks / Dependencies
+{include only when provided}
+
+## Glossary
+| Term | Definition |
+|------|------------|
+| {term} | {definition} |
+---
+
+Labels: {type}, {P0|P1|P2}
+Repo: {owner/repo}
+
+Create this ticket? (yes / edit / cancel)
+```
+
+The title prefix is derived from the content, and must come from the project's configured prefix whitelist (`.claude/project-config.*.json` → `.ticket.prefix_whitelist`, default list at `.claude/project-config.defaults.json`). Shipped defaults map as follows:
+
+- Testing work → `[Testing]`
+- CI/CD work → `[CI]`
+- Refactoring → `[Refactor]`
+- Documentation-only change → `[Docs]`
+- Everything else → `[Chore]`
+
+A fork that extends the whitelist (e.g. adds `[Security]`, `[Perf]`, `[Scaffold]`) automatically gains the option here — the skill reads the live config, it does not hardcode the list. See apexyard#109 for the schema and how to extend.
+
+### 6. Handle response
+
+- **yes** / **looks good** / **go** → create the issue
+- **edit** / **change X** → ask what to change, update, re-show
+- **cancel** / **no** → abort
+
+### 7. Create the issue (via the tracker abstraction)
+
+Dispatch creation through `tracker_create` (#670 / AgDR-0072) so the issue lands
+in **this project's** tracker — GitHub, GitLab, or a `custom` CLI — per its
+`tracker:` block in `apexyard.projects.yaml`. For a GitHub adopter this runs
+`gh issue create` exactly as before; no behaviour change.
+
+```bash
+# Resolve the tracker lib (it lives in the ops fork's hooks dir) by walking up
+# from the cwd; source it.
+tracker_lib="$(r="$PWD"; while [ -n "$r" ] && [ "$r" != / ]; do \
+  [ -f "$r/.claude/hooks/_lib-tracker.sh" ] && { echo "$r/.claude/hooks/_lib-tracker.sh"; break; }; \
+  r="${r%/*}"; done)"
+# shellcheck source=/dev/null
+. "$tracker_lib"
+
+# Pass the body via a file (arbitrary markdown — never inline-interpolated).
+body_file="$(mktemp)"
+cat > "$body_file" <<'BODY'
+{formatted body}
+BODY
+
+# When ORBIT default planning is on, finish this Bash call here and print
+# the absolute body_file path. In the next Bash call, use that LITERAL path
+# in tracker_create and rm below. The PreToolUse gate must read the file
+# before the create call runs; it cannot resolve a shell variable at that time.
+
+# tracker_create <owner/repo> <title> <body_file> [<labels_csv>] → {"ref","url"}.
+# It is gated by require-skill-for-issue-create.sh; the active-issue-skill
+# marker written in step 0 keeps this call allowed.
+result="$(tracker_create "{owner/repo}" "[{type}] {title}" "$body_file" "{priority}")"
+rc=$?
+rm -f "$body_file"
+if [ "$rc" -eq 3 ]; then
+  # tracker.kind=none (shape-only): no tracker to create in. tracker_create
+  # printed the rendered ticket body to stdout — surface it for manual /
+  # external filing instead of a non-existent CLI/auth failure.
+  echo "Tracker is 'none' (shape-only) — nothing was created in a tracker." >&2
+  echo "File this in your external system (e.g. Jira/Linear via MCP):" >&2
+  printf '%s\n' "$result"
+  exit 0
+elif [ "$rc" -ne 0 ] || [ -z "$result" ]; then
+  echo "Ticket creation failed — check the tracker CLI / auth. Nothing was created." >&2
+  exit 1
+fi
+```
+
+### 8. Return the result
+
+Parse the normalised `{ref, url}` from `tracker_create`:
+
+```bash
+ref="$(printf '%s' "$result" | jq -r '.ref')"
+url="$(printf '%s' "$result" | jq -r '.url')"
+echo "Created: {owner/repo}#${ref} — {title}"
+echo "${url}"
+```
+
+## Rules
+
+1. **One question at a time.** Never batch questions. Wait for each answer.
+2. **Always confirm before creating.** Show the full ticket and get explicit "yes".
+3. **Driver is required.** Every technical task needs a "why".
+4. **At least one acceptance criterion.** Don't create tasks with empty ACs.
+5. **Labels auto-applied.** Priority label always applied.
+6. **Title prefix.** Derived from the nature of the work: Testing, CI, Refactor, or Chore.
+
+---
+
+*Part of [ApexYard](https://github.com/me2resh/apexyard) — multi-project SDLC framework for Claude Code · MIT.*

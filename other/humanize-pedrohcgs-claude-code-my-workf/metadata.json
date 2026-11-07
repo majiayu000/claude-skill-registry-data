@@ -1,0 +1,37 @@
+{
+  "name": "humanize",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/humanize/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "humanize-pedrohcgs-claude-code-my-workf",
+  "downloaded_at": "2026-11-07T05:23:14.895958Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/humanize/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/humanize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only audit of `.tex`, `.qmd`, or `.md` text for AI-voice tells \u2014 boilerplate transitions (\"Moreover\", \"Furthermore\", \"It is important to note that\"), AI-clich\u00e9 lexicon (\"delve\", \"navigate the complexities\", \"tapestry\", \"robust framework\"), em-dash overuse, symmetric paragraph shapes, tricolon abuse, hedging stacking, \"not only X but also Y\" frames, and formulaic openers. Produces a report; does NOT rewrite. Use when user says \"humanize\", \"does this sound like AI?\", \"check for AI tells\", \"de-AI this draft\", \"remove AI voice\", \"audit my prose for sycophancy\", or before journal submission / posting a working paper."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "mcode-delegate",
+  "repo": "amElnagdy/delegate-skills",
+  "path": "skills/mcode-delegate/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/amElnagdy/delegate-skills",
+  "dir_name": "mcode-delegate",
+  "downloaded_at": "2026-11-07T05:09:30.735634Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "amElnagdy",
+  "source_url": "https://github.com/amElnagdy/delegate-skills/blob/master/skills/mcode-delegate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/amElnagdy/delegate-skills/blob/master/skills/mcode-delegate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate a coding task to the MiniMax Code CLI (`mcode`) as a background implementer, then review its diff and land it yourself. Use this whenever the user wants to hand implementation work to MiniMax Code or a MiniMax model \u2014 phrasings like \"have MiniMax do X\", \"delegate this to mcode\", \"run it through MiniMax Code\", or \"use MiniMax to implement/fix/refactor\" \u2014 or to run a queue of coding tasks through MiniMax Code while staying the reviewer. DO NOT USE for tasks small enough to do inline, or when the user wants the code written directly without delegating."
+}

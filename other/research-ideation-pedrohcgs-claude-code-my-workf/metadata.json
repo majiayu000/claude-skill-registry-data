@@ -1,0 +1,36 @@
+{
+  "name": "research-ideation",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/research-ideation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "research-ideation-pedrohcgs-claude-code-my-workf",
+  "downloaded_at": "2026-11-07T05:23:19.549638Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/research-ideation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/research-ideation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate structured research questions, testable hypotheses, and candidate empirical strategies from a topic, phenomenon, or dataset description. Use when user says \"give me research ideas on X\", \"brainstorm questions about Y\", \"what could I study with this data?\", \"I'm looking for a paper idea on...\", \"generate hypotheses for...\". One-shot generation, not multi-turn. For idea-refinement use `/interview-me`."
+}

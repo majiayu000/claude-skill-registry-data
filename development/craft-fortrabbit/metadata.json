@@ -1,0 +1,39 @@
+{
+  "name": "craft-fortrabbit",
+  "repo": "michtio/craftcms-claude-skills",
+  "path": "skills/craft-fortrabbit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/michtio/craftcms-claude-skills",
+  "dir_name": "craft-fortrabbit",
+  "downloaded_at": "2026-11-07T05:20:28.197911Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, software",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "michtio",
+  "source_url": "https://github.com/michtio/craftcms-claude-skills/blob/main/skills/craft-fortrabbit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/michtio/craftcms-claude-skills/blob/main/skills/craft-fortrabbit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "fortrabbit (fortrabbit.com) \u2014 managed PHP hosting with a Craft CMS software template. Covers git push-to-deploy through the fortrabbit GitHub App, the build and post-deploy commands of the Craft template (migrate/all, project-config/apply, clear-caches/all), the merge deployment strategy with the /config/project replace pattern, the deploy file (.fortrabbit/deploy.yml) and its replace-by-default trap, the CRAFT_* ENV vars mapped from FORTRABBIT_DB_* platform variables, production settings (dev mode, admin changes, updates off), the persistent storage for asset volumes and rsync sync, MySQL over SSH and an SSH tunnel, the Craft queue and image transforms in a worker job, crons, platform limits (no root, no sendmail, heavy binaries in jobs only), and DDEV local development."
+}

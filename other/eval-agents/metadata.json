@@ -1,0 +1,37 @@
+{
+  "name": "eval-agents",
+  "repo": "me2resh/apexyard",
+  "path": ".claude/skills/eval-agents/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/me2resh/apexyard",
+  "dir_name": "eval-agents",
+  "downloaded_at": "2026-11-07T05:20:13.120584Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "me2resh",
+  "source_url": "https://github.com/me2resh/apexyard/blob/main/.claude/skills/eval-agents/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/me2resh/apexyard/blob/main/.claude/skills/eval-agents/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Score a review agent (Rex/Hakim/Tariq) against a labeled PR corpus \u2014 ground-truth defect-set overlap, never a prose rubric. Headline metric is approve-precision."
+}

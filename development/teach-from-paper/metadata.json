@@ -1,0 +1,37 @@
+{
+  "name": "teach-from-paper",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/teach-from-paper/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "teach-from-paper",
+  "downloaded_at": "2026-11-07T05:23:19.065925Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/teach-from-paper/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/teach-from-paper/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a research paper into teaching materials \u2014 a lecture outline, the 3-5 results worth presenting (with intuition), a slide skeleton ready for `/create-lecture`, discussion questions, and a problem-set brief. Reads the paper end-to-end and pitches to a stated audience level. Use when user says \"turn this paper into a lecture\", \"teach from this paper\", \"build slides from this PDF\", \"make teaching materials from X\", \"I'm presenting this paper to my class\"."
+}

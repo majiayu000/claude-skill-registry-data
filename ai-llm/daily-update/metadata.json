@@ -1,0 +1,37 @@
+{
+  "name": "daily-update",
+  "repo": "Ar9av/obsidian-wiki",
+  "path": "skills/daily-update/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/Ar9av/obsidian-wiki",
+  "dir_name": "daily-update",
+  "downloaded_at": "2026-11-07T05:00:07.300405Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: llm, prompt",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ar9av",
+  "source_url": "https://github.com/Ar9av/obsidian-wiki/blob/main/skills/daily-update/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ar9av/obsidian-wiki/blob/main/skills/daily-update/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run or configure the daily wiki maintenance cycle: check source freshness, refresh the index and hot.md, and manage its scheduled 9 AM launchd/systemd/cron reminder. Use for daily or morning wiki refresh or scheduler setup and verification."
+}

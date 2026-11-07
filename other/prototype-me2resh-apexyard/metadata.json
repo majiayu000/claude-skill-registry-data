@@ -1,0 +1,37 @@
+{
+  "name": "prototype",
+  "repo": "me2resh/apexyard",
+  "path": ".claude/skills/prototype/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/me2resh/apexyard",
+  "dir_name": "prototype-me2resh-apexyard",
+  "downloaded_at": "2026-11-07T05:20:11.743728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "me2resh",
+  "source_url": "https://github.com/me2resh/apexyard/blob/main/.claude/skills/prototype/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/me2resh/apexyard/blob/main/.claude/skills/prototype/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a throwaway UX/demo prototype ticket (mockup / demo flow) \u2014 answers \"what should it look and feel like?\". DISCARD-by-default; same AgDR + coverage exemptions as /spike."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pr-review",
+  "repo": "DataWithBaraa/claude-code-data-engineering-skills",
+  "path": "skills/pr-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/DataWithBaraa/claude-code-data-engineering-skills",
+  "dir_name": "pr-review-datawithbaraa-claude-code-data-eng",
+  "downloaded_at": "2026-11-07T05:00:28.061494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DataWithBaraa",
+  "source_url": "https://github.com/DataWithBaraa/claude-code-data-engineering-skills/blob/main/skills/pr-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DataWithBaraa/claude-code-data-engineering-skills/blob/main/skills/pr-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before a pull request or another change goes in, on a file, the current diff or a branch, to review it pass by pass against the project's own standards, with pushback."
+}

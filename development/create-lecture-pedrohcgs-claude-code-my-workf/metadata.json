@@ -1,0 +1,38 @@
+{
+  "name": "create-lecture",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/create-lecture/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "create-lecture-pedrohcgs-claude-code-my-workf",
+  "downloaded_at": "2026-11-07T05:23:17.270371Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/create-lecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/create-lecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a new Beamer lecture `.tex` from source papers and materials, with notation consistency checks and the project's preamble wired in. Use when user says \"create a lecture on X\", \"new lecture from these papers\", \"start a deck on topic Y\", \"scaffold a new Beamer file\", \"build me a lecture from these PDFs\". Scaffolds the full deck \u2014 NOT for compiling existing `.tex` (use `/compile-latex`)."
+}

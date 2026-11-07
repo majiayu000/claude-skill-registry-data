@@ -1,0 +1,39 @@
+{
+  "name": "release",
+  "repo": "me2resh/apexyard",
+  "path": ".claude/skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/me2resh/apexyard",
+  "dir_name": "release-me2resh-apexyard",
+  "downloaded_at": "2026-11-07T05:20:10.123561Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, framework, build, refactor",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "framework",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "me2resh",
+  "source_url": "https://github.com/me2resh/apexyard/blob/main/.claude/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/me2resh/apexyard/blob/main/.claude/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cut an apexyard release \u2014 diff dev\u2194main, pick semver bump, generate CHANGELOG, open release PR, auto-tag on merge."
+}

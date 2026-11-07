@@ -1,0 +1,37 @@
+{
+  "name": "syllabus",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/syllabus/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "syllabus-pedrohcgs-claude-code-my-workf",
+  "downloaded_at": "2026-11-07T05:23:14.727695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/syllabus/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/syllabus/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build or restructure a course syllabus from a topic list or reading list \u2014 course description + prerequisites, week-by-week schedule (topic \u2192 readings \u2192 deliverables), measurable learning objectives, an assessment scheme + rubric, standard policies (late work, AI use, academic integrity, accessibility), and a per-week work-list to hand to `/create-lecture`. Use when user says \"build a syllabus\", \"structure my course\", \"turn this reading list into a schedule\", \"draft a course outline\", \"make a syllabus for Econ 7xx\", or \"map weeks to lectures\". Economics-aware (PhD metrics/micro/macro sequences, undergrad); generic enough for any field."
+}

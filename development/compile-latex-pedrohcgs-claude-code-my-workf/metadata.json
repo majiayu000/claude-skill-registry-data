@@ -1,0 +1,38 @@
+{
+  "name": "compile-latex",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/compile-latex/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "compile-latex-pedrohcgs-claude-code-my-workf",
+  "downloaded_at": "2026-11-07T05:23:16.959171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/compile-latex/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/compile-latex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compile a Beamer LaTeX slide deck with XeLaTeX (3 passes + bibtex). Use when user says \"compile\", \"build the slides\", \"rebuild the PDF\", \"run latex\", \"render the tex\", or asks why a `.tex` file isn't producing a PDF. Operates on `Slides/*.tex`."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "build-speed",
+  "repo": "avelikiy/great_cto",
+  "path": "skills/build-speed/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/avelikiy/great_cto",
+  "dir_name": "build-speed",
+  "downloaded_at": "2026-11-07T05:09:43.534172Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "avelikiy",
+  "source_url": "https://github.com/avelikiy/great_cto/blob/main/skills/build-speed/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/avelikiy/great_cto/blob/main/skills/build-speed/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a slow CI pipeline or build faster by measuring it first \u2014 per-step durations, the slowest step, a target \u2014 then one change at a time, re-measured the same way. Speed never comes from removing, skipping or weakening a check. Use when a build or CI is slow (\"CI \u0434\u043e\u043b\u0433\u043e\", \"\u0443\u0441\u043a\u043e\u0440\u044c \u0441\u0431\u043e\u0440\u043a\u0443\", \"\u0433\u0435\u0439\u0442 \u0438\u0434\u0451\u0442 40 \u043c\u0438\u043d\u0443\u0442\", \"build takes forever\"). Loaded by devops, ci-resolver."
+}

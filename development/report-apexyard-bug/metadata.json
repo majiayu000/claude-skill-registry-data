@@ -1,0 +1,38 @@
+{
+  "name": "report-apexyard-bug",
+  "repo": "me2resh/apexyard",
+  "path": ".claude/skills/report-apexyard-bug/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/me2resh/apexyard",
+  "dir_name": "report-apexyard-bug",
+  "downloaded_at": "2026-11-07T05:20:18.577487Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "me2resh",
+  "source_url": "https://github.com/me2resh/apexyard/blob/main/.claude/skills/report-apexyard-bug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/me2resh/apexyard/blob/main/.claude/skills/report-apexyard-bug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Report a bug in the apexyard FRAMEWORK itself (hook misfire, skill gap, rule bug) \u2014 files a structured issue upstream to me2resh/apexyard. Distinct from /bug, which files into your own project."
+}

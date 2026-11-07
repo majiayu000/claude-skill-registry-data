@@ -1,0 +1,37 @@
+{
+  "name": "issues",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/issues/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "issues-pedrohcgs-claude-code-my-workf",
+  "downloaded_at": "2026-11-07T05:23:13.814592Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/issues/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/issues/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keeps a project's to-do list and memory in GitHub issues \u2014 files each finding (from a review, an audit, or the user) as its own issue without duplicates, lists the open issues that bear on the current work, and closes an issue with a comment recording what was wrong, what was tried, what worked, and how it was fixed. Use when review findings or a list of problems should become tracked work (a paper's misleading claims, a codebase's bugs, improvements for later), when starting or resuming work and deciding what to do next, or when a fix has landed and its issue should be closed with a record. Needs the GitHub CLI; warns before posting to a public repository."
+}

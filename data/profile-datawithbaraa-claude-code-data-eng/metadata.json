@@ -1,0 +1,37 @@
+{
+  "name": "profile",
+  "repo": "DataWithBaraa/claude-code-data-engineering-skills",
+  "path": "skills/profile/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/DataWithBaraa/claude-code-data-engineering-skills",
+  "dir_name": "profile-datawithbaraa-claude-code-data-eng",
+  "downloaded_at": "2026-11-07T05:00:27.164765Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DataWithBaraa",
+  "source_url": "https://github.com/DataWithBaraa/claude-code-data-engineering-skills/blob/main/skills/profile/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DataWithBaraa/claude-code-data-engineering-skills/blob/main/skills/profile/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a new source or new files arrive, to profile them before any data contract or pipeline code is written, the file formats, the schema, the data quality, the bad records, the relationships, the gaps and the personal data."
+}

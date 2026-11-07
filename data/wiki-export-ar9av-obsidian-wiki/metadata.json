@@ -1,0 +1,38 @@
+{
+  "name": "wiki-export",
+  "repo": "Ar9av/obsidian-wiki",
+  "path": "skills/wiki-export/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Ar9av/obsidian-wiki",
+  "dir_name": "wiki-export-ar9av-obsidian-wiki",
+  "downloaded_at": "2026-11-07T05:00:04.073084Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, visualization",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ar9av",
+  "source_url": "https://github.com/Ar9av/obsidian-wiki/blob/main/skills/wiki-export/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ar9av/obsidian-wiki/blob/main/skills/wiki-export/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Export the Obsidian wiki graph to JSON, GraphML, Neo4j Cypher, Postgres/SQL, HTML, or OKF bundles. Use when transferring or visualizing wiki data in external tools; wiki-import handles the reverse direction."
+}

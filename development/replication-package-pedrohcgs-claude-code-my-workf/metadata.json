@@ -1,0 +1,37 @@
+{
+  "name": "replication-package",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/replication-package/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "replication-package-pedrohcgs-claude-code-my-workf",
+  "downloaded_at": "2026-11-07T05:23:20.418918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/replication-package/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/replication-package/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assemble a submission-ready replication package to the AEA Data and Code Availability Standard (DCAS) / openICPSR / Social Science Reproduction Platform expectations \u2014 standard replication README, dataset manifest, computational-requirements capture, a Table/Figure \u2192 script:line map, and a confidential-data deposit plan. Use when user says \"build the replication package\", \"prepare the openICPSR deposit\", \"make the AEA data and code package\", \"DCAS compliance\", \"assemble the deposit for the journal\", or after a paper is accepted and the journal's data editor needs the package. NOT a numeric verifier \u2014 it calls /audit-reproducibility to confirm claims reproduce before packaging."
+}

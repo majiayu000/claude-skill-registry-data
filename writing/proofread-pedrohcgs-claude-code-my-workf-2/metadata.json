@@ -1,0 +1,37 @@
+{
+  "name": "proofread",
+  "repo": "pedrohcgs/claude-code-my-workflow",
+  "path": ".agents/skills/proofread/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/pedrohcgs/claude-code-my-workflow",
+  "dir_name": "proofread-pedrohcgs-claude-code-my-workf-2",
+  "downloaded_at": "2026-11-07T05:23:15.050201Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pedrohcgs",
+  "source_url": "https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/proofread/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pedrohcgs/claude-code-my-workflow/blob/main/.agents/skills/proofread/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only proofreading pass over lecture `.tex` or `.qmd` files. Checks grammar, typos, overflow, terminology consistency, and academic writing quality; produces a report without editing. Use when user says \"proofread\", \"check for typos\", \"look for grammar issues\", \"copy-edit this\", \"any writing errors?\", or before a lecture release."
+}
