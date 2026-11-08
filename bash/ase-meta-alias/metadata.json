@@ -1,0 +1,37 @@
+{
+  "name": "ase-meta-alias",
+  "repo": "rse/ase",
+  "path": "plugin/skills/ase-meta-alias/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/rse/ase",
+  "dir_name": "ase-meta-alias",
+  "downloaded_at": "2026-11-08T05:16:36.759195Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rse",
+  "source_url": "https://github.com/rse/ase/blob/master/plugin/skills/ase-meta-alias/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rse/ase/blob/master/plugin/skills/ase-meta-alias/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "List, set, delete, or expand the skill command aliases of ASE: full aliases like `/foo-bar` for an arbitrary ASE skill command line, option aliases like `--custom` for a sequence of options of a skill, and the option defaults of a skill. Use when the user wants to \"alias\" a skill command, define an \"option alias\" or \"default options\" of a skill, or inspect or test the configured aliases."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "kit-recon",
+  "repo": "tonone-ai/tonone",
+  "path": "skills/kit-recon/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tonone-ai/tonone",
+  "dir_name": "kit-recon",
+  "downloaded_at": "2026-11-08T05:18:47.876009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "tonone-ai",
+  "source_url": "https://github.com/tonone-ai/tonone/blob/main/skills/kit-recon/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tonone-ai/tonone/blob/main/skills/kit-recon/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only audit of corporate IT \u2014 SSO coverage, device posture, SaaS inventory, joiner/leaver hygiene, helpdesk load. Use when asked to \"audit our IT setup\", \"what SaaS apps do we have\", \"check our onboarding and offboarding\"."
+}

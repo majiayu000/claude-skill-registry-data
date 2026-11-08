@@ -1,0 +1,38 @@
+{
+  "name": "ats-detector",
+  "repo": "mohitagw15856/pm-claude-skills",
+  "path": "skills/ats-detector/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/mohitagw15856/pm-claude-skills",
+  "dir_name": "ats-detector",
+  "downloaded_at": "2026-11-08T05:13:29.616222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, docx",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mohitagw15856",
+  "source_url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/ats-detector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/ats-detector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Work out which applicant tracking system a job uses from its application link, and give the formatting rules that system parses safely. Use when asked which ATS does this company use, will my CV get through the ATS, is my CV ATS friendly, or how should I format for Workday, Greenhouse, Lever or Taleo. Produces the detected system with the evidence, a parsing-safe formatting checklist, the file type to upload, and a check of a supplied CV against the rules."
+}

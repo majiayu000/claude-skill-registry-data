@@ -1,0 +1,38 @@
+{
+  "name": "demo-poc",
+  "repo": "tonone-ai/tonone",
+  "path": "skills/demo-poc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tonone-ai/tonone",
+  "dir_name": "demo-poc",
+  "downloaded_at": "2026-11-08T05:18:47.147567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "tonone-ai",
+  "source_url": "https://github.com/tonone-ai/tonone/blob/main/skills/demo-poc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tonone-ai/tonone/blob/main/skills/demo-poc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a POC or pilot \u2014 success criteria, timebox, plan, exit decision. Use when asked to \"scope a POC\", \"plan a pilot\", or \"set POC success criteria\"."
+}

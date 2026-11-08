@@ -1,0 +1,37 @@
+{
+  "name": "community-sweep",
+  "repo": "thedotmack/claude-mem",
+  "path": ".claude/skills/community-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/thedotmack/claude-mem",
+  "dir_name": "community-sweep",
+  "downloaded_at": "2026-11-08T05:18:41.930262Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thedotmack",
+  "source_url": "https://github.com/thedotmack/claude-mem/blob/main/.claude/skills/community-sweep/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thedotmack/claude-mem/blob/main/.claude/skills/community-sweep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Land community pull requests as the contributor and answer community issues on thedotmack/claude-mem. Takes stock of every open PR (the owner's own included, except the ones the owner marked experimental) and community issue, triages each against the owner's merge philosophy and the cmem.ai hosted-service boundary, finishes somewhat-aligned PRs on the contributor's own branch, squash-merges so the contributor stays the commit author on main, thanks them by name, closes fixed issues with credit to reporter and fixer, keeps the private ledger and contributor roster current, and reports what it decided. Use when asked to \"go through the PRs\", \"merge contributor PRs\", \"help contributors with their PRs\", \"land the new community PRs\", \"triage new issues and PRs\", \"run the community sweep\", \"keep the momentum\", or \"grow the community\"."
+}
