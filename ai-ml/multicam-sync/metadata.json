@@ -1,0 +1,37 @@
+{
+  "name": "multicam-sync",
+  "repo": "ChatCut-Inc/agent-plugin",
+  "path": "kimi/skills/multicam-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/ChatCut-Inc/agent-plugin",
+  "dir_name": "multicam-sync",
+  "downloaded_at": "2026-11-08T10:02:43.727203Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChatCut-Inc",
+  "source_url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/kimi/skills/multicam-sync/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChatCut-Inc/agent-plugin/blob/main/kimi/skills/multicam-sync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Synchronize footage from a multi-camera / multi-recorder shoot \u2014 several cameras plus separate audio recorders covering one session, imported as loose clips \u2014 and make a speaker-follow draft by default unless the user explicitly asks for sync only. Use when a user drops in multiple clips from the same recording and wants them aligned, asks for multicam / \u591a\u673a\u4f4d / multi-angle sync, wants a \"cut to whoever is talking\" edit, or refers to camera A/B, angles, or separate lav or field recordings that need to line up with picture."
+}

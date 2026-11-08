@@ -1,0 +1,39 @@
+{
+  "name": "gum-codegen",
+  "repo": "Hexancer/FlatRedBall-Linux",
+  "path": ".claude/skills/gum-codegen/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Hexancer/FlatRedBall-Linux",
+  "dir_name": "gum-codegen",
+  "downloaded_at": "2026-11-08T10:37:23.828837Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "generation",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Hexancer",
+  "source_url": "https://github.com/Hexancer/FlatRedBall-Linux/blob/main/.claude/skills/gum-codegen/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Hexancer/FlatRedBall-Linux/blob/main/.claude/skills/gum-codegen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working on Glue's Gum code generation \u2014 adding/removing/version-gating generated properties on Gum standard runtime types (NineSlice, Text, Container, Sprite, etc.), or debugging \"why is/isn't this Gum variable being generated.\""
+}

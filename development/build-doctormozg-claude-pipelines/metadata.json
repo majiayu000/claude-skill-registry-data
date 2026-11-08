@@ -1,0 +1,40 @@
+{
+  "name": "build",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-dev-pipe/skills/build/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "build-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:09.104446Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug, refactor",
+    "score": 5,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-dev-pipe/skills/build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-dev-pipe/skills/build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a new feature, module or component test-first, with code review. Use when the user wants something new built or implemented (\"build X\", \"implement Y\", \"add feature\"). Not for bug fixes (use debug) or bringing code up to criteria (use polish)."
+}

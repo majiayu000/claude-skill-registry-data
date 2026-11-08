@@ -1,0 +1,40 @@
+{
+  "name": "tdd-workflow",
+  "repo": "Badhon-00/MDCP",
+  "path": "skills/tdd-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/Badhon-00/MDCP",
+  "dir_name": "tdd-workflow-badhon-00-mdcp",
+  "downloaded_at": "2026-11-08T09:53:43.532139Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, integration, e2e, playwright",
+    "score": 5,
+    "runner_up": "productivity",
+    "runner_up_score": 4,
+    "signals": [
+      "test",
+      "tdd",
+      "integration",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Badhon-00",
+  "source_url": "https://github.com/Badhon-00/MDCP/blob/main/skills/tdd-workflow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Badhon-00/MDCP/blob/main/skills/tdd-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Test-driven development workflow: write a failing test first, watch it fail, implement the smallest change to green, then refactor with 80%+ coverage across unit, integration, and E2E tests. Use when writing a new feature, fixing a bug, refactoring, or when told to write failing tests first."
+}

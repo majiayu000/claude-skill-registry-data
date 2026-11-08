@@ -1,0 +1,38 @@
+{
+  "name": "obsidian-init",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-knowledge/skills/obsidian-init/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-llm",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "obsidian-init",
+  "downloaded_at": "2026-11-08T10:15:18.704247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/obsidian-init/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/obsidian-init/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bootstraps an Obsidian vault with CLAUDE.md, folders and schema. Use when the user wants a vault set up (\"init vault\", \"bootstrap obsidian\", \"setup knowledge base\", \"create vault structure\"). Not for a code repo's coding rules (use init-rules)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "job-recruiter-info",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-job-outreach/skills/job-recruiter-info/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "job-recruiter-info",
+  "downloaded_at": "2026-11-08T10:15:23.117894Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-job-outreach/skills/job-recruiter-info/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-job-outreach/skills/job-recruiter-info/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds recruiter, hiring-manager and careers contacts for one job or company. Use when the user wants to know who to apply to (\"find a recruiter\", \"who recruits for X\", \"careers email for X\"). Not for B2B contacts (use outreach-enrich-company)."
+}

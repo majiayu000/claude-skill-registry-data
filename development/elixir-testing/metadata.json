@@ -1,0 +1,37 @@
+{
+  "name": "elixir-testing",
+  "repo": "AndrewDryga/emisar",
+  "path": ".claude/skills/elixir-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AndrewDryga/emisar",
+  "dir_name": "elixir-testing",
+  "downloaded_at": "2026-11-08T09:45:33.198155Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndrewDryga",
+  "source_url": "https://github.com/AndrewDryga/emisar/blob/main/.claude/skills/elixir-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndrewDryga/emisar/blob/main/.claude/skills/elixir-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write or improve ExUnit tests for portal/ the emisar way \u2014 DataCase/ConnCase, the real fixtures in test/support, and the mandatory happy / denial / cross-account paths (\u00a77). Use when adding tests for a context/job/LiveView, or when a change is missing its denial + cross-account coverage."
+}

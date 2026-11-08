@@ -1,0 +1,38 @@
+{
+  "name": "lib-layers",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/lib-layers/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "lib-layers",
+  "downloaded_at": "2026-11-08T10:23:39.092352Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/lib-layers/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/lib-layers/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rule under the lib-imports law. Load when editing project manifests, build paths, linter boundaries, any barrel and the layout checks, and when deciding where a shared symbol lives. Patterns lib-layers-new, lib-layers-move."
+}

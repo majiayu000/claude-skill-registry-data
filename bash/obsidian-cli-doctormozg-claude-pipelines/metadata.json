@@ -1,0 +1,39 @@
+{
+  "name": "obsidian-cli",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-knowledge/skills/obsidian-cli/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "obsidian-cli-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:16.973132Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/obsidian-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/obsidian-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs the obsidian CLI to read, create, search and edit vault notes. Use when the user wants vault work done from a shell (\"obsidian CLI\", \"vault command line\", \"obsidian read/create/search from shell\"). Not for OFM syntax (use obsidian-markdown)."
+}

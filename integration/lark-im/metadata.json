@@ -1,0 +1,37 @@
+{
+  "name": "lark-im",
+  "repo": "AgentBull/ankole",
+  "path": "app/library/agent-plugins/lark/skills/lark-im/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/AgentBull/ankole",
+  "dir_name": "lark-im",
+  "downloaded_at": "2026-11-08T09:40:42.125127Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: connector, oauth",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "connector",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AgentBull",
+  "source_url": "https://github.com/AgentBull/ankole/blob/main/app/library/agent-plugins/lark/skills/lark-im/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentBull/ankole/blob/main/app/library/agent-plugins/lark/skills/lark-im/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Send, read, update, and withdraw Feishu or Lark messages and cards; manage reactions, chats, and attachments."
+}

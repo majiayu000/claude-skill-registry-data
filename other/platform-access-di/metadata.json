@@ -1,0 +1,37 @@
+{
+  "name": "platform-access-di",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/platform-access-di/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "platform-access-di",
+  "downloaded_at": "2026-11-08T10:23:51.051399Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/platform-access-di/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/platform-access-di/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule platform-access. Load when the window, the document or an environment check enters the code \u2014 ready-made token injects, casting to Window & typeof globalThis, the window as a parameter of a pure function, DOM initialisation after the first render. Not under libs/api and apps/api."
+}

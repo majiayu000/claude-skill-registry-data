@@ -1,0 +1,37 @@
+{
+  "name": "vault-answer",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-knowledge/skills/vault-answer/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "vault-answer",
+  "downloaded_at": "2026-11-08T10:15:17.250189Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-answer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-answer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answers a question from vault notes with inline wikilink citations and an Unknowns list. Use when the user wants a note-grounded answer (\"what does my vault say about X\", \"search my vault for Y\"). Not for codebase or web questions (use ask)."
+}

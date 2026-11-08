@@ -1,0 +1,37 @@
+{
+  "name": "mcp-integration",
+  "repo": "Badhon-00/MDCP",
+  "path": "skills/mcp-integration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Badhon-00/MDCP",
+  "dir_name": "mcp-integration-badhon-00-mdcp",
+  "downloaded_at": "2026-11-08T09:53:37.807913Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Badhon-00",
+  "source_url": "https://github.com/Badhon-00/MDCP/blob/main/skills/mcp-integration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Badhon-00/MDCP/blob/main/skills/mcp-integration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration."
+}

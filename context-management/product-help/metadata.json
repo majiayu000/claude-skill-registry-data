@@ -1,0 +1,38 @@
+{
+  "name": "product-help",
+  "repo": "ChatCut-Inc/agent-plugin",
+  "path": "kimi/skills/product-help/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/ChatCut-Inc/agent-plugin",
+  "dir_name": "product-help",
+  "downloaded_at": "2026-11-08T10:02:41.186099Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, memory",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChatCut-Inc",
+  "source_url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/kimi/skills/product-help/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChatCut-Inc/agent-plugin/blob/main/kimi/skills/product-help/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer current ChatCut product questions using the latest official Docs, Releases, and Changelog. Use for how ChatCut works; UI layout, buttons, and feature instructions; troubleshooting; feature or fix availability on Web, Desktop, or Agent Plugin and minimum version requirements; credits including costs, balance, usage history, validity, or recent charges; plans, subscriptions, renewals, ChatCut Pro, pricing, card or Alipay (\u652f\u4ed8\u5b9d) payments, and billing; Desktop downloads; Agent Plugin installation or updates, including Kimi Work; and manual GUI guidance when an action cannot be completed directly. NOT for live project, asset, timeline, or item state; use the matching read tool instead."
+}

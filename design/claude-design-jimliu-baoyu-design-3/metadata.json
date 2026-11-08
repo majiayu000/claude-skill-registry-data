@@ -1,0 +1,38 @@
+{
+  "name": "claude-design",
+  "repo": "JimLiu/baoyu-design",
+  "path": "chatgpt-plugins/baoyu-canvas/skills/claude-design/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/JimLiu/baoyu-design",
+  "dir_name": "claude-design-jimliu-baoyu-design-3",
+  "downloaded_at": "2026-11-08T10:50:01.532120Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css, component",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JimLiu",
+  "source_url": "https://github.com/JimLiu/baoyu-design/blob/main/chatgpt-plugins/baoyu-canvas/skills/claude-design/SKILL.md",
+  "license": "Mixed. The skill text, references and editors adapted from Anthropic's claude.ai Artifact types stay Anthropic's and are not MIT-licensed; the local tooling is MIT. Complete terms in NOTICE.md: https://github.com/JimLiu/baoyu-design/blob/main/NOTICE.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JimLiu/baoyu-design/blob/main/chatgpt-plugins/baoyu-canvas/skills/claude-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make and revise designs in the Design (canvas) artifact format (project/canvas.json plus one .dc.html Design Component file per artboard) as local files, then open them in a local canvas editor where the user can view the artboards side by side, retype copy and adjust tweaks. Use when the user asks for an editable canvas of artboards in this format, names claude-design or the Design (canvas) type, or wants to revise a folder that holds project/canvas.json. Not for a one-off HTML prototype or a design exploration outside this format."
+}

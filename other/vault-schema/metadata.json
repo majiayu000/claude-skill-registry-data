@@ -1,0 +1,37 @@
+{
+  "name": "vault-schema",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-knowledge/skills/vault-schema/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "vault-schema",
+  "downloaded_at": "2026-11-08T10:15:16.056084Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-schema/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-schema/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Validates vault frontmatter against a note-type schema and migrates notes to match. Use when the user wants frontmatter checked (\"vault schema\", \"frontmatter validation\", \"schema migration\"). Not for links, orphans, stubs or tags (use vault-health)."
+}

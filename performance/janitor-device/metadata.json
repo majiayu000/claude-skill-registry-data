@@ -1,0 +1,38 @@
+{
+  "name": "janitor-device",
+  "repo": "ArshiaEcho/janitor",
+  "path": "plugins/janitor/skills/janitor-device/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/ArshiaEcho/janitor",
+  "dir_name": "janitor-device",
+  "downloaded_at": "2026-11-08T09:48:51.667743Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, optimize, speed",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "optimize",
+      "speed"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ArshiaEcho",
+  "source_url": "https://github.com/ArshiaEcho/janitor/blob/main/plugins/janitor/skills/janitor-device/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ArshiaEcho/janitor/blob/main/plugins/janitor/skills/janitor-device/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose and fix slow Mac, Windows or Linux performance, and reclaim disk from developer caches. Use this skill whenever the user says their computer, laptop, Mac, MacBook, PC, Windows machine, Linux box, Ubuntu or Fedora install is slow, sluggish, laggy, freezing, stuttering, overheating, beachballing, hanging, or whenever the fans are spinning loudly. Also trigger when the user asks to \"clean up\", \"speed up\", \"tune up\", \"optimize\", \"fix\", \"declutter\", or \"make faster\" their computer or laptop. Trigger even for vague complaints like \"why is my pc so slow\", \"why is my mac so slow\", \"my laptop is dying\", \"what's wrong with this thing\", \"my fans won't stop\", \"my battery drains in two hours\", \"my computer feels old\", \"my disk is full\", \"where did all my storage go\", \"Xcode is eating my disk\". Handles macOS, Windows and Linux automatically by detecting the OS first. Every action is reversible, permission-gated, and never leaves the local machine. No telemetry."
+}

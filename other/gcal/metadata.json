@@ -1,0 +1,37 @@
+{
+  "name": "gcal",
+  "repo": "2016judea/agensi-skills",
+  "path": "skills/gcal/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/2016judea/agensi-skills",
+  "dir_name": "gcal",
+  "downloaded_at": "2026-11-08T09:30:09.719331Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/agensi-skills/blob/main/skills/gcal/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/agensi-skills/blob/main/skills/gcal/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read or write your Google Calendar over the REST API (or the google-calendar MCP), and prove it by reading it back. Use when you say \"put this on my calendar\", \"add it to my calendar\", \"schedule this\", \"what's on my calendar\", \"add a reminder\", \"block time for X\", \"checkpoint\", or ask to turn a plan into dated commitments. Covers the one-time OAuth setup, the traps (API keys can't write, Testing-mode tokens die weekly, Tasks are invisible in the month view), and the rules for events that actually get seen."
+}

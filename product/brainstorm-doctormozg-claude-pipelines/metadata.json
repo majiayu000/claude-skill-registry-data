@@ -1,0 +1,40 @@
+{
+  "name": "brainstorm",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-creative/skills/brainstorm/SKILL.md",
+  "github_branch": "master",
+  "category": "product",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "brainstorm-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:13.358613Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, roadmap, backlog, user-research, metrics",
+    "score": 5,
+    "runner_up": "marketing",
+    "runner_up_score": 4,
+    "signals": [
+      "product",
+      "roadmap",
+      "backlog",
+      "user-research",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-creative/skills/brainstorm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-creative/skills/brainstorm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates ideas for an open problem from a panel of differing viewpoints. Use when the user says \"brainstorm\", \"creative ideas for\" or \"think about this from different angles\", or wants options. Not for critiquing a proposal (use expert)."
+}

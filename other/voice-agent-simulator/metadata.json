@@ -1,0 +1,36 @@
+{
+  "name": "voice-agent-simulator",
+  "repo": "CloudTalk-io/marketplace",
+  "path": "plugins/cloudtalk/claude-skills/voice-agent-simulator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CloudTalk-io/marketplace",
+  "dir_name": "voice-agent-simulator",
+  "downloaded_at": "2026-11-08T10:04:45.210575Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CloudTalk-io",
+  "source_url": "https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/claude-skills/voice-agent-simulator/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/claude-skills/voice-agent-simulator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Test a CloudTalk AI Voice Agent v2 config by simulating a phone conversation against it: a subagent plays the agent strictly per the config against a caller persona, then a blind judge scores the transcript and returns gaps, awkward moments, and concrete config-level fixes. Use whenever the user wants to test or preview an AI Voice Agent config (\"test my agent\", \"simulate a call\", \"how would my agent handle an angry caller\", \"find gaps in this config\", \"run a simulated conversation\"), and as a quality pass right after generating a config. Works on a conversation draft or pasted JSON; with the CloudTalk MCP connected it can also fetch a saved config and, on explicit user opt-in, place a real test call and judge that transcript."
+}

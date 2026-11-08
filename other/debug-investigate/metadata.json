@@ -1,0 +1,37 @@
+{
+  "name": "debug-investigate",
+  "repo": "AndrewDryga/emisar",
+  "path": ".claude/skills/debug-investigate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AndrewDryga/emisar",
+  "dir_name": "debug-investigate",
+  "downloaded_at": "2026-11-08T09:45:34.216627Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndrewDryga",
+  "source_url": "https://github.com/AndrewDryga/emisar/blob/main/.claude/skills/debug-investigate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndrewDryga/emisar/blob/main/.claude/skills/debug-investigate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Root-cause a crash, exception, stacktrace, failing test, or wrong behavior in portal/ \u2014 reproduce, read the real error, trace to the actual cause, propose the minimal fix. Use when something raises/fails/misbehaves and you need the cause, not a guess (Ecto changeset/constraint errors, recurrent job failures, LiveView/MCP errors, runner-socket issues, flaky tests)."
+}

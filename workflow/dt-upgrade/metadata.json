@@ -1,0 +1,38 @@
+{
+  "name": "dt-upgrade",
+  "repo": "Dynatrace/dynatrace-for-ai",
+  "path": "skills/dt-upgrade/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/Dynatrace/dynatrace-for-ai",
+  "dir_name": "dt-upgrade",
+  "downloaded_at": "2026-11-08T10:17:13.900453Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Dynatrace",
+  "source_url": "https://github.com/Dynatrace/dynatrace-for-ai/blob/main/skills/dt-upgrade/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Dynatrace/dynatrace-for-ai/blob/main/skills/dt-upgrade/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide users through Dynatrace upgrade from classic/2nd-gen to 3rd-gen. Assess tenant readiness, run tracking queries, identify migration actions for dashboards, entity queries, IAM, management zones, OpenPipeline, service detection, logs, K8s, RUM, synthetic, alerting. Includes cloud integration migration (AWS, Azure, GCP) from classic to new (Smartscape on Grail): connection discovery, metric mapping, and cutover. Keywords: upgrade, migrate, classic, gen3, phase2, phase3, readiness, cloud integration, AWS, Azure, GCP, classic connection, new connection, Smartscape on Grail, fleet management, Site Reliability Guardian (SRG), classic pipeline, log processing pipeline, bizevents pipeline, pipeline upgrade, classic processing rules, ActiveGate, authToken, auth token, DynaKube, dynatrace-operator, classicFullStack, Platform token, enable RUM on Grail, RUM migration, mobile RUM, web RUM, Experience Vitals."
+}

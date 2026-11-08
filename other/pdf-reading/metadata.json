@@ -1,0 +1,37 @@
+{
+  "name": "pdf-reading",
+  "repo": "DAAF-Contribution-Community/daaf",
+  "path": ".claude/skills/pdf-reading/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DAAF-Contribution-Community/daaf",
+  "dir_name": "pdf-reading",
+  "downloaded_at": "2026-11-08T10:08:57.991022Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DAAF-Contribution-Community",
+  "source_url": "https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/pdf-reading/SKILL.md",
+  "license": "LGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DAAF-Contribution-Community/daaf/blob/main/.claude/skills/pdf-reading/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reads research PDFs with page-anchored provenance. Covers DAAF's deterministic pdf_ingest CLI (unaltered poppler text as the quote anchor, a second extractor, page flags, OCR on scanned pages, 2000 px renders), the lit_verify card gate that checks each verbatim quote and number on its cited page, the vision cross-check policy and its dated vision-validated model list, two-column, table and scan handling, and the arXiv HTML lane (section-cited cards). Use whenever an agent must read, quote, or extract numbers, tables or figures from a PDF already on disk: OA papers saved by web_fetch.sh (exit 8), user-supplied papers, codebooks, methodology reports. For research reading it overrides the synced anthropic-skills:pdf, whose pypdf and pip-install recipes DAAF blocks. NOT for finding or downloading papers (scholarly-search, web-retrieval), or creating, merging or filling PDFs."
+}

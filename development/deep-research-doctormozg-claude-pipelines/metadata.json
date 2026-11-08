@@ -1,0 +1,39 @@
+{
+  "name": "deep-research",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-research-pipe/skills/deep-research/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "deep-research-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:21.645821Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, compile",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-research-pipe/skills/deep-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-research-pipe/skills/deep-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Researches a topic across many web sources and writes a sourced report. Use when the user says \"research X\", \"deep dive into\" or \"what is the state of\", or needs a thorough briefing. Not for consolidating work already on disk (use combine)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "voice-agent-checkup",
+  "repo": "CloudTalk-io/marketplace",
+  "path": "plugins/cloudtalk/skills/voice-agent-checkup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CloudTalk-io/marketplace",
+  "dir_name": "voice-agent-checkup",
+  "downloaded_at": "2026-11-08T10:04:44.324365Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CloudTalk-io",
+  "source_url": "https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/voice-agent-checkup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/voice-agent-checkup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check whether a CloudTalk AI Voice Agent is ready to go live, and what to fix first. Reads the agent's setup, its knowledge bases, custom tools and phone numbers, then checks the greeting, the instructions, handoffs to people, knowledge, numbers, languages, how calls end, the call length cap and what the platform itself flags. Returns a verdict (Ready, Needs work or Don't go live), each finding with one concrete fix, the tests to run and a go-live checklist. Use when the user asks \"is my AI agent ready\", \"can we go live\", \"check, review or audit my voice agent\", \"pre-launch check\", \"what's wrong with my agent's setup\", or right after building or changing an agent. Changes nothing (a test call goes only to your own phone, when you ask): fixes go to the voice-agent-builder skill. Needs AI Voice Agents on the plan and a CloudTalk Admin sign-in."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "missed-call-follow-up",
+  "repo": "CloudTalk-io/marketplace",
+  "path": "plugins/cloudtalk/skills/missed-call-follow-up/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CloudTalk-io/marketplace",
+  "dir_name": "missed-call-follow-up",
+  "downloaded_at": "2026-11-08T10:04:44.555094Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CloudTalk-io",
+  "source_url": "https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/missed-call-follow-up/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/missed-call-follow-up/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make sure no missed caller or unanswered text waits. Finds today's missed CloudTalk calls (or those since the last run) and inbound texts nobody answered, drops anyone the team has reached since, and puts first callers an AI Voice Agent left waiting for a person and anyone past the user's response time. Names an owner for each and drafts a short text back from their history. Sends only what the user approves, rings the user's phone to call back now, or hands routine callbacks to an AI Voice Agent. Can run on a schedule, keeping the list in the app; for delivery to Slack or email, use missed-call-digest where it is available. Use when the user asks who called and didn't get through, who is waiting for a call back or a reply, to text back missed calls, or for a daily missed-call or inbound-lead digest kept in the app. For everything still owed after answered calls, use conversation-insights. Sending needs a number with SMS enabled; callbacks need AI Voice Agents; summaries need Conversation Intelligence."
+}

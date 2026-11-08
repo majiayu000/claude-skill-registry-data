@@ -1,0 +1,37 @@
+{
+  "name": "missed-call-digest",
+  "repo": "CloudTalk-io/marketplace",
+  "path": "plugins/cloudtalk/grok-skills/missed-call-digest/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/CloudTalk-io/marketplace",
+  "dir_name": "missed-call-digest",
+  "downloaded_at": "2026-11-08T10:04:45.019955Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CloudTalk-io",
+  "source_url": "https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/grok-skills/missed-call-digest/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/grok-skills/missed-call-digest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deliver CloudTalk's missed-call follow-up list on a schedule to the user's Slack DM or email, and let them pick texts and calls by replying in the Slack thread; each send still needs approval. Each run finds missed callers and unanswered texts nobody has reached yet, with an owner, response time and a drafted reply for each, using the missed-call-follow-up skill. Use when the user wants a daily or scheduled missed-call or inbound-lead digest in Slack or email, wants to set one up or change it, or replies in the thread of a list a scheduled run delivered (\"send 2\", \"call 1\"). A scheduled run never texts or calls on its own. Needs the app's Slack or email connector for delivery; sending needs a number with SMS enabled."
+}

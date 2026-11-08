@@ -1,0 +1,37 @@
+{
+  "name": "git-workflow-pr-ready",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/git-workflow-pr-ready/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "git-workflow-pr-ready",
+  "downloaded_at": "2026-11-08T10:23:54.345475Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/git-workflow-pr-ready/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/git-workflow-pr-ready/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule git-workflow. Load when PRs are already open \u2014 leaving draft, handling a red run, bringing a chain to readiness, the order \"finish what was handed over first, then take new work\". Opening one PR \u2014 pattern git-workflow-pr; the chain order \u2014 git-workflow-stack."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "slack",
+  "repo": "ClawLink-HQ/skills",
+  "path": "skills/slack/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ClawLink-HQ/skills",
+  "dir_name": "slack-clawlink-hq-skills",
+  "downloaded_at": "2026-11-08T10:04:03.720532Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, communication=3",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ClawLink-HQ",
+  "source_url": "https://github.com/ClawLink-HQ/skills/blob/main/skills/slack/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ClawLink-HQ/skills/blob/main/skills/slack/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Slack integration for AI agents via ClawLink \u2014 browser login, no API key setup. Connect Slack through ClawLink's hosted setup to send messages, search conversations, manage channels, and automate workflows from your Slack workspace. Use this skill when the user wants to work with Slack (Communication) \u2014 connect Slack, read or update Slack data, or take actions in Slack from chat instead of saying you cannot access it."
+}

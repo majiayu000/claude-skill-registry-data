@@ -1,0 +1,38 @@
+{
+  "name": "css-development:validate",
+  "repo": "2389-research/css-development",
+  "path": "skills/validate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/2389-research/css-development",
+  "dir_name": "validate-2389-research-css-development",
+  "downloaded_at": "2026-11-08T09:31:48.403716Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "css",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2389-research",
+  "source_url": "https://github.com/2389-research/css-development/blob/main/skills/validate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2389-research/css-development/blob/main/skills/validate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits existing CSS for semantic naming, @apply composition, dark-mode coverage, and test gaps, then reports actionable findings. Use when reviewing CSS before merging, before a refactor, or when spot-checking pattern compliance."
+}

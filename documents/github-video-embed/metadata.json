@@ -1,0 +1,38 @@
+{
+  "name": "github-video-embed",
+  "repo": "GeiserX/sstack",
+  "path": "codex/skills/github-video-embed/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/GeiserX/sstack",
+  "dir_name": "github-video-embed",
+  "downloaded_at": "2026-11-08T10:30:53.026643Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeiserX",
+  "source_url": "https://github.com/GeiserX/sstack/blob/main/codex/skills/github-video-embed/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeiserX/sstack/blob/main/codex/skills/github-video-embed/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make a video, screen recording or demo clip play inline inside a GitHub Markdown file, pull request or release. Use when a video must play in the README or a PR, when asked to embed a video or add an inline player, or when a committed video renders blank."
+}

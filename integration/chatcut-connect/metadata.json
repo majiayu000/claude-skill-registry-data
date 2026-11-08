@@ -1,0 +1,37 @@
+{
+  "name": "chatcut-connect",
+  "repo": "ChatCut-Inc/agent-plugin",
+  "path": "kimi/skills/chatcut-connect/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/ChatCut-Inc/agent-plugin",
+  "dir_name": "chatcut-connect",
+  "downloaded_at": "2026-11-08T10:02:48.471338Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: connector, oauth",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "connector",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChatCut-Inc",
+  "source_url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/kimi/skills/chatcut-connect/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChatCut-Inc/agent-plugin/blob/main/kimi/skills/chatcut-connect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Connect to ChatCut via MCP, ensure authentication, list projects, and report them with clean editor links. Use when the user asks to connect ChatCut, list ChatCut projects, authenticate ChatCut MCP, or any combination like \"\u8fde\u63a5 ChatCut \u5e76\u5217\u51fa\u6211\u7684\u9879\u76ee\". Delegates editor opening to the chatcut-editor-handoff skill."
+}

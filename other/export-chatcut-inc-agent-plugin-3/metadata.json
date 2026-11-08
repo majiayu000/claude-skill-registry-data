@@ -1,0 +1,36 @@
+{
+  "name": "export",
+  "repo": "ChatCut-Inc/agent-plugin",
+  "path": "codex/skills/export/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ChatCut-Inc/agent-plugin",
+  "dir_name": "export-chatcut-inc-agent-plugin-3",
+  "downloaded_at": "2026-11-08T10:02:36.399681Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category communication scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChatCut-Inc",
+  "source_url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/codex/skills/export/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChatCut-Inc/agent-plugin/blob/main/codex/skills/export/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hosted ChatCut plugin sessions only (the `chatcut` MCP server). If the conversation is driving ChatCut Desktop (a `chatcut_desktop*` MCP server), load this skill only when the user explicitly chooses the plugin/web surface \u2014 desktop sessions otherwise ship their own instructions and tools. Export or deliver a ChatCut project through the hosted connector, including video, audio, subtitles, XML, and render-status checks."
+}

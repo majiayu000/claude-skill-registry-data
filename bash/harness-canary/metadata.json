@@ -1,0 +1,37 @@
+{
+  "name": "alterlab-harness-canary",
+  "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+  "path": "benchmarks/harness-canary/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/AlterLab-IEU/AlterLab-Academic-Skills",
+  "dir_name": "harness-canary",
+  "downloaded_at": "2026-11-08T09:43:47.033069Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlterLab-IEU",
+  "source_url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/benchmarks/harness-canary/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/benchmarks/harness-canary/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "TEST-ONLY canary for the behavioral eval harness (scripts/run_evals.py --behavioral --skill-dir benchmarks/harness-canary). Not a user-facing skill and not part of the catalog. Part of the AlterLab Academic Skills suite."
+}

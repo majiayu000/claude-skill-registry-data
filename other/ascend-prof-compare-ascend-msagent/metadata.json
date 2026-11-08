@@ -1,0 +1,37 @@
+{
+  "name": "ascend-prof-compare",
+  "repo": "Ascend/msagent",
+  "path": "skills/profiler/ascend-prof-compare/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Ascend/msagent",
+  "dir_name": "ascend-prof-compare-ascend-msagent",
+  "downloaded_at": "2026-11-08T09:49:09.337363Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ascend",
+  "source_url": "https://github.com/Ascend/msagent/blob/master/skills/profiler/ascend-prof-compare/SKILL.md",
+  "license": "MulanPSL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ascend/msagent/blob/master/skills/profiler/ascend-prof-compare/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Compares two Prof datasets (GPU vs NPU / NPU vs NPU) by auto-installing and calling msprof-analyze compare, then parses the result xlsx into HTML report and Chinese xlsx. Invoke when user provides two prof dirs to compare, or has a compare result xlsx to analyze/translate."
+}

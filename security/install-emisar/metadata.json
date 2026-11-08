@@ -1,0 +1,38 @@
+{
+  "name": "install-emisar",
+  "repo": "AndrewDryga/emisar",
+  "path": "skills/install-emisar/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/AndrewDryga/emisar",
+  "dir_name": "install-emisar",
+  "downloaded_at": "2026-11-08T09:45:30.045946Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndrewDryga",
+  "source_url": "https://github.com/AndrewDryga/emisar/blob/main/skills/install-emisar/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndrewDryga/emisar/blob/main/skills/install-emisar/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Install, configure, repair, and certify the Emisar runner on a host end to end for customer onboarding. Use for first-run setup, runner installation, guided pack discovery and selection, host capability coverage, custom-pack recommendations, pack credentials, upgrades, supervised-service migration, authenticated MCP dispatch, or any request to diagnose and report runner health across the host, control plane, registry, action execution, and audit trail. After runner setup, reuse the current authenticated Emisar MCP connection or offer to connect the operator's agent through connect-llm; when a required host job has no suitable pack, offer the public author-pack workflow."
+}

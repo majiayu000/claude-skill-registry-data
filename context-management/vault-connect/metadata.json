@@ -1,0 +1,38 @@
+{
+  "name": "vault-connect",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-knowledge/skills/vault-connect/SKILL.md",
+  "github_branch": "master",
+  "category": "context-management",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "vault-connect",
+  "downloaded_at": "2026-11-08T10:15:18.990633Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, memory",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-connect/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-connect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Proposes typed wikilinks between a note and related vault notes. Use when the user wants a note connected to the vault (\"link notes\", \"suggest wikilinks\", \"improve link density\"). Not for splitting a capture into new notes (use process-notes)."
+}

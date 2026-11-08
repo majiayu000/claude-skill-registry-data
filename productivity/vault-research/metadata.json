@@ -1,0 +1,37 @@
+{
+  "name": "vault-research",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-knowledge/skills/vault-research/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "vault-research",
+  "downloaded_at": "2026-11-08T10:15:19.821422Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Atomizes a research or brainstorm report from .mz/ into permanent vault notes. Use when the user wants a report imported (\"ingest research\", \"import report\", \"atomize report\", \"research to notes\"). Not for the user's own captures (use process-notes)."
+}

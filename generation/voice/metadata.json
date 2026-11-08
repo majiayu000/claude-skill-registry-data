@@ -1,0 +1,37 @@
+{
+  "name": "voice",
+  "repo": "ChatCut-Inc/agent-plugin",
+  "path": "grok/skills/voice/SKILL.md",
+  "github_branch": "main",
+  "category": "generation",
+  "source": "github.com/ChatCut-Inc/agent-plugin",
+  "dir_name": "voice",
+  "downloaded_at": "2026-11-08T10:02:34.457095Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "generation",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for generation: generation, generator",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "generation",
+      "generator"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChatCut-Inc",
+  "source_url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/grok/skills/voice/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChatCut-Inc/agent-plugin/blob/main/grok/skills/voice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Text-to-Speech (TTS), voice cloning, voiceover, narration placement/sync, and custom sound effects (SFX) generator. Use when the user wants generated speech from text, wants to clone a consented voice from uploaded reference audio, wants to correct a misspoken word or short phrase in recorded speech, wants to add/replace/align narration or voiceover for an existing video/timeline, wants to keep existing voiceover synced after visual retiming edits, needs voice audition/selection, or explicitly wants a newly generated/custom sound effect that is not available in the Sound Effects library."
+}

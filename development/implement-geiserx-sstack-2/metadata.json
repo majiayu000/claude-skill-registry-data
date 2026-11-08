@@ -1,0 +1,38 @@
+{
+  "name": "implement",
+  "repo": "GeiserX/sstack",
+  "path": "skills/implement/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/GeiserX/sstack",
+  "dir_name": "implement-geiserx-sstack-2",
+  "downloaded_at": "2026-11-08T10:30:57.089924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeiserX",
+  "source_url": "https://github.com/GeiserX/sstack/blob/main/skills/implement/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeiserX/sstack/blob/main/skills/implement/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implements a requested change with the smallest complete diff, splitting genuinely independent work across parallel agents with non-overlapping file ownership, then integrates and verifies it. Use when invoked explicitly to build a feature or change."
+}

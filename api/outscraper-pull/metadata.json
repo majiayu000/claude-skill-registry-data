@@ -1,0 +1,38 @@
+{
+  "name": "outscraper-pull",
+  "repo": "2016judea/agensi-skills",
+  "path": "skills/outscraper-pull/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/2016judea/agensi-skills",
+  "dir_name": "outscraper-pull",
+  "downloaded_at": "2026-11-08T09:30:32.877424Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/agensi-skills/blob/main/skills/outscraper-pull/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/agensi-skills/blob/main/skills/outscraper-pull/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Buy or scrape Google data through Outscraper \u2014 Maps listings, reviews, popular times, busy hours, SERPs, page-one rank \u2014 without overpaying or buying the wrong product. Use when a task needs to pull, scrape, price, probe or cost ANY Outscraper load (\"how much would it cost to pull X\", \"can we buy popular times / busy hours\", \"scrape google maps for X\", \"enumerate every business in the metro\", \"pull reviews for these places\", \"check page one for this trade\", \"what did that pull cost\", \"run the dry-run\"), or when a paid pull needs re-running, resuming or debugging (\"why is this field empty\", \"the response came back with nothing\", \"did that job actually bill us\"). Covers which product carries which field, billing units, the free-first checks, the fields that echo your own query back, and the republishing rights question."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "document",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-creative/skills/document/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "document-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:12.168851Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, writing=3",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-creative/skills/document/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-creative/skills/document/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes or polishes technical docs: READMEs, API references, tutorials and how-tos. Use when the user says \"write docs for\", \"document this\" or \"polish the README\", or wants a guide new users can follow. Not for marketing copy (use copywrite)."
+}

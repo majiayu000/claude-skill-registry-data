@@ -1,0 +1,37 @@
+{
+  "name": "known-errors",
+  "repo": "ChatCut-Inc/agent-plugin",
+  "path": "workbuddy/skills/known-errors/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ChatCut-Inc/agent-plugin",
+  "dir_name": "known-errors-chatcut-inc-agent-plugin-5",
+  "downloaded_at": "2026-11-08T10:02:51.053428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChatCut-Inc",
+  "source_url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/workbuddy/skills/known-errors/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChatCut-Inc/agent-plugin/blob/main/workbuddy/skills/known-errors/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a ChatCut plugin tool call fails or returns an unexpected shape."
+}

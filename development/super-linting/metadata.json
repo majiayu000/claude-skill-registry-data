@@ -1,0 +1,38 @@
+{
+  "name": "super-linting",
+  "repo": "BretFisher/skills",
+  "path": "plugins/devops/skills/super-linting/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/BretFisher/skills",
+  "dir_name": "super-linting",
+  "downloaded_at": "2026-11-08T09:58:16.474790Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BretFisher",
+  "source_url": "https://github.com/BretFisher/skills/blob/main/plugins/devops/skills/super-linting/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BretFisher/skills/blob/main/plugins/devops/skills/super-linting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up local development linting by picking the right linters for each file type a project uses, then recording them as required pre-commit checks in AGENTS.md / CLAUDE.md and a `make lint` target. Uses the super-linter project as the live source of truth for which linters are current and popular per language. Use this skill whenever the user wants to add, choose, configure, or standardize linters for local development; asks \"what linter should I use for X\"; wants the agent to lint files before committing; sets up AGENTS.md/CLAUDE.md linting rules; or mentions super-linter, linting setup, pre-commit linting, or keeping linters up to date. This is for LOCAL developer/agent linting, not for authoring CI workflows."
+}

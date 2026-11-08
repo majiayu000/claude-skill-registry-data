@@ -1,0 +1,37 @@
+{
+  "name": "gov-review",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-gov/skills/gov-review/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "gov-review",
+  "downloaded_at": "2026-11-08T10:15:10.041155Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-gov/skills/gov-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-gov/skills/gov-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits ADRs, RFDs and design docs into a read-only findings report. Use when the user wants existing decision records checked (\"review our ADRs\", \"audit decision records\", \"check governance docs\"). Not for reviewing code changes (use review-branch)."
+}

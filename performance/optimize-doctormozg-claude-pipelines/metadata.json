@@ -1,0 +1,40 @@
+{
+  "name": "optimize",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-dev-pipe/skills/optimize/SKILL.md",
+  "github_branch": "master",
+  "category": "performance",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "optimize-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:11.847635Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, optimize, latency, speed, benchmark",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "performance",
+      "optimize",
+      "latency",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-dev-pipe/skills/optimize/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-dev-pipe/skills/optimize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes code, containers, builds or LLM hyperparameters faster, smaller or cheaper, keeping only changes a benchmark proves. Use when the user says \"optimize\", \"make it faster\" or \"speed up the build\". Not for tidying code (use polish)."
+}

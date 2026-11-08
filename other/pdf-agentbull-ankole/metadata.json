@@ -1,0 +1,38 @@
+{
+  "name": "pdf",
+  "repo": "AgentBull/ankole",
+  "path": "app/library/skills/pdf/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AgentBull/ankole",
+  "dir_name": "pdf-agentbull-ankole",
+  "downloaded_at": "2026-11-08T09:40:35.270560Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "AgentBull",
+  "source_url": "https://github.com/AgentBull/ankole/blob/main/app/library/skills/pdf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentBull/ankole/blob/main/app/library/skills/pdf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, check, edit, and read PDF files. Use when a deliverable must ship as a PDF, or when an inbound PDF needs its text extracted or its scanned pages triaged for OCR."
+}

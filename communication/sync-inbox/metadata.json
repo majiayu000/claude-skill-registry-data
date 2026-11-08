@@ -1,0 +1,37 @@
+{
+  "name": "sync-inbox",
+  "repo": "ClarvAI/job-search-hq",
+  "path": ".agents/skills/sync-inbox/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/ClarvAI/job-search-hq",
+  "dir_name": "sync-inbox",
+  "downloaded_at": "2026-11-08T10:03:48.080830Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ClarvAI",
+  "source_url": "https://github.com/ClarvAI/job-search-hq/blob/main/.agents/skills/sync-inbox/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ClarvAI/job-search-hq/blob/main/.agents/skills/sync-inbox/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read the user's job-search email (read-only; Gmail, a Microsoft 365 work or school mailbox, or emails they paste or save) for job-search replies (recruiter emails, interview invites, rejections, application confirmations) and update the tracker, contacts, and calendar suggestions. Use when the user asks to check their email for job stuff or update the tracker from their inbox."
+}

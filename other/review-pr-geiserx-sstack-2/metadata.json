@@ -1,0 +1,37 @@
+{
+  "name": "review-pr",
+  "repo": "GeiserX/sstack",
+  "path": "skills/review-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GeiserX/sstack",
+  "dir_name": "review-pr-geiserx-sstack-2",
+  "downloaded_at": "2026-11-08T10:30:58.497679Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeiserX",
+  "source_url": "https://github.com/GeiserX/sstack/blob/main/skills/review-pr/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeiserX/sstack/blob/main/skills/review-pr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review one or more pull requests as a single Workflow run (three lenses, one fixer, one adversarial verifier), comment the plan on each PR, push the fixes, then merge or close. Use when asked to review, fix up or merge a PR, or on \"review-pr\"."
+}

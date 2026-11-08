@@ -1,0 +1,42 @@
+{
+  "name": "design-system",
+  "repo": "Gustavosilveira23/claude-design-skills",
+  "path": "skills/design-system/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/Gustavosilveira23/claude-design-skills",
+  "dir_name": "design-system-gustavosilveira23-claude-design-skills",
+  "downloaded_at": "2026-11-08T10:33:23.586839Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, css, component, tailwind, figma",
+    "score": 7,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "css",
+      "component",
+      "tailwind",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Gustavosilveira23",
+  "source_url": "https://github.com/Gustavosilveira23/claude-design-skills/blob/master/skills/design-system/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Gustavosilveira23/claude-design-skills/blob/master/skills/design-system/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design system infrastructure: create, maintain, audit, and document design systems with shadcn/ui + Tailwind CSS 4 + Next.js. Activates when creating design systems, adding components to a design system, auditing token consistency, documenting components, syncing with Figma, building pages from a design system, or generating a system context briefing for AI. Triggers on: 'design system', 'design tokens', 'styleguide', 'token drift', 'sync figma', 'showcase', 'audit DS', 'add component', 'context doc', 'design system briefing'. Also activates on: 'shadcn setup', 'globals.css tokens', 'CSS variables', 'create styleguide', 'check consistency', 'AI-ready design system'. Handles the infrastructure layer -- tokens, components, consistency, documentation. Hands off to ui-designer for visual craft and polish. Hands off to ux-designer for experience strategy and psychology. Do NOT activate for purely visual styling decisions, user research, backend logic, or DevOps."
+}

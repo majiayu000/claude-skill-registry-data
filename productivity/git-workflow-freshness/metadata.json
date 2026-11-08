@@ -1,0 +1,38 @@
+{
+  "name": "git-workflow-freshness",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/git-workflow-freshness/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "git-workflow-freshness",
+  "downloaded_at": "2026-11-08T10:23:55.053238Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/git-workflow-freshness/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/git-workflow-freshness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule git-workflow. Load before a push, when taking a task and after every known merge \u2014 reading all your open PRs at once, telling lag apart from a conflict in files, checking the local head against the hosting."
+}

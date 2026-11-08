@@ -1,0 +1,38 @@
+{
+  "name": "do-roast",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-funny/skills/do-roast/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "do-roast",
+  "downloaded_at": "2026-11-08T10:15:09.745727Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-funny/skills/do-roast/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-funny/skills/do-roast/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Roasts code in a character voice, each joke tied to a real finding. Use when the user wants a funny review of code (\"roast this code\", \"do-roast\", \"make fun of\", \"character roast of\"). Not for a serious code review (use review-branch)."
+}

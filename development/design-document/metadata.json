@@ -1,0 +1,39 @@
+{
+  "name": "design-document",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-design/skills/design-document/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "design-document",
+  "downloaded_at": "2026-11-08T10:15:14.879546Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, software",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-design/skills/design-document/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-design/skills/design-document/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes a UI/UX design document with wireframes and a WCAG contrast report. Use when the user wants an interface designed as a spec (\"design a UI for X\", \"create a design document\", \"design spec\", \"UX spec\"). Not for building it in code (use build)."
+}

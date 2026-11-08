@@ -1,0 +1,38 @@
+{
+  "name": "skill-sample",
+  "repo": "CherryHQ/cherry-studio",
+  "path": "tests/e2e/regression/fixtures/skill-sample/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/CherryHQ/cherry-studio",
+  "dir_name": "skill-sample",
+  "downloaded_at": "2026-11-08T10:03:08.517407Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e",
+    "score": 3,
+    "runner_up": "",
+    "runner_up_score": 0,
+    "signals": [
+      "test",
+      "qa",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CherryHQ",
+  "source_url": "https://github.com/CherryHQ/cherry-studio/blob/main/tests/e2e/regression/fixtures/skill-sample/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CherryHQ/cherry-studio/blob/main/tests/e2e/regression/fixtures/skill-sample/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "A QA sample skill. Use when the user asks to use skill-sample."
+}

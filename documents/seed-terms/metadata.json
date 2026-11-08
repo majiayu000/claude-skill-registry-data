@@ -1,0 +1,37 @@
+{
+  "name": "seed-terms",
+  "repo": "Jakeschincariol/seed-skill",
+  "path": "seed-terms/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Jakeschincariol/seed-skill",
+  "dir_name": "seed-terms",
+  "downloaded_at": "2026-11-08T10:45:40.687364Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/seed-skill/blob/main/seed-terms/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/seed-skill/blob/main/seed-terms/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Term Sheet Reader. Reads a SAFE or a term sheet in plain English, does the dilution math and flags the clauses to ask a lawyer about. Works out what a post-money SAFE owns at its cap and what it converts into at a priced round (cap price vs discount price, whichever is lower), builds a priced round's cap table with the option-pool shuffle (price per share, new shares, the pool top-up, the effective pre-money, everyone's dilution), and scans a pasted term sheet for the traps: liquidation preference over 1x, participating preferred, full ratchet, redemption, cumulative dividends, board control, operating vetoes, pay-to-play, drag-along, long no-shops, exploding deadlines, founder vesting resets, super pro rata and MFN, each with a severity and a question for the lawyer. Not legal advice. Writes seed/terms/ with --write. Use when the user says \"read this term sheet\", \"is this a good deal\", \"what does this SAFE mean\", \"how much do I own after\", \"how much dilution\", \"what's the option pool shuffle\", \"what is a post-money cap\", \"any red flags in this\", or when an investor sends terms after a /seed-closer call."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "git-workflow-secrets",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/git-workflow-secrets/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "git-workflow-secrets",
+  "downloaded_at": "2026-11-08T10:23:53.830474Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/git-workflow-secrets/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/git-workflow-secrets/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule deploy-flow. Load when working with keys of external services \u2014 where they live, how the owner's key differs from the environment key, what each state of an integration row means and why a green probe does not promise a working feature."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "verification-loop",
+  "repo": "Badhon-00/MDCP",
+  "path": "skills/verification-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Badhon-00/MDCP",
+  "dir_name": "verification-loop-badhon-00-mdcp",
+  "downloaded_at": "2026-11-08T09:53:47.112811Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Badhon-00",
+  "source_url": "https://github.com/Badhon-00/MDCP/blob/main/skills/verification-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Badhon-00/MDCP/blob/main/skills/verification-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a six-phase verification of a Claude Code session's work \u2014 build, type check, lint, tests with coverage, security grep, and diff review \u2014 then produce a PASS/FAIL verification report. Use when verifying work after completing a feature or refactor, before creating a PR, or when quality gates must pass."
+}

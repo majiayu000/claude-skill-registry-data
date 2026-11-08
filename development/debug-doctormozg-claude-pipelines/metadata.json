@@ -1,0 +1,40 @@
+{
+  "name": "debug",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-dev-pipe/skills/debug/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "debug-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:08.717196Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug, refactor",
+    "score": 5,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-dev-pipe/skills/debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-dev-pipe/skills/debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fixes a bug test-first, or tests a hypothesis without fixing. Use when the user reports a bug, error, failing test or stack trace, or says \"debug X\" or \"is X actually doing Y\". Not for new features (use build) or getting a suite green (use polish)."
+}

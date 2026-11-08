@@ -1,0 +1,37 @@
+{
+  "name": "seed-deck",
+  "repo": "Jakeschincariol/seed-skill",
+  "path": "seed-deck/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/seed-skill",
+  "dir_name": "seed-deck",
+  "downloaded_at": "2026-11-08T10:45:40.288351Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/seed-skill/blob/main/seed-deck/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/seed-skill/blob/main/seed-deck/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pitch Deck Designer. Turns the business plan into a 10-slide pitch deck in the order investors expect: title, problem, solution, market, competition, business model, go-to-market, team, financials, the ask. Writes ONE self-contained 16:9 HTML file (inline CSS, no fonts or scripts from the web, arrow-key navigation, a print stylesheet that saves to PDF one slide a page) in your brand colours, with real charts drawn from your numbers. Lints it: 35 words or fewer a slide, one idea a slide, a use of funds that adds up to the raise, and every number on a slide traced to your plan, model, market or competitor files. Reads seed/plan.json, writes seed/deck.html. Use when the user says \"make my pitch deck\", \"turn the plan into a deck\", \"build the slides\", \"check my deck\", \"how many words a slide\", or after /seed-plan."
+}

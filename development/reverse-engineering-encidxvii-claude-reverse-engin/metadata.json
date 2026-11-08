@@ -1,0 +1,41 @@
+{
+  "name": "reverse-engineering",
+  "repo": "EncidXVII/claude-reverse-engineering-skill",
+  "path": "skills/reverse-engineering/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/EncidXVII/claude-reverse-engineering-skill",
+  "dir_name": "reverse-engineering-encidxvii-claude-reverse-engin",
+  "downloaded_at": "2026-11-08T10:20:30.545792Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, software, compile, debug",
+    "score": 6,
+    "runner_up": "bash",
+    "runner_up_score": 4,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "software",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EncidXVII",
+  "source_url": "https://github.com/EncidXVII/claude-reverse-engineering-skill/blob/main/skills/reverse-engineering/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EncidXVII/claude-reverse-engineering-skill/blob/main/skills/reverse-engineering/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reverse engineer compiled software and app internals for authorized security research, CTFs, malware analysis, interoperability, and debugging. Use whenever the user wants to understand, decompile, disassemble, unpack, or trace an artifact they own or may study: native binaries (ELF/PE/Mach-O, .so/.dll/.dylib), Android APK/AAB/DEX, iOS/macOS apps, .NET or Java bytecode, JavaScript/Electron/ WASM bundles, Python/Go/Rust/Flutter/React Native/Unity builds, installers, firmware images, or an app's network API or file format. Trigger on phrases like \"what does this binary do\", \"decompile this APK\", \"crackme\", \"CTF reversing\", \"analyze this sample\", \"extract this firmware\", \"recover the file format\", \"what API does this app call\", or \"how does this app work\", even when reverse engineering is not named. Ships triage, tool-detection, headless decompiler export, and endpoint-extraction scripts plus per-platform playbooks."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "principle-make-operations-idempotent",
+  "repo": "GeiserX/sstack",
+  "path": "vendor/pstack/skills/principle-make-operations-idempotent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GeiserX/sstack",
+  "dir_name": "principle-make-operations-idempotent-geiserx-sstack",
+  "downloaded_at": "2026-11-08T10:31:03.964637Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category business scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "operations"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeiserX",
+  "source_url": "https://github.com/GeiserX/sstack/blob/main/vendor/pstack/skills/principle-make-operations-idempotent/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeiserX/sstack/blob/main/vendor/pstack/skills/principle-make-operations-idempotent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Apply when designing commands, lifecycle steps, or processing loops that run amid crashes, restarts, and retries. Converge to the same end state regardless of partial prior runs."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "docker-pro",
+  "repo": "BretFisher/skills",
+  "path": "plugins/devops/skills/docker-pro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/BretFisher/skills",
+  "dir_name": "docker-pro",
+  "downloaded_at": "2026-11-08T09:58:16.040383Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BretFisher",
+  "source_url": "https://github.com/BretFisher/skills/blob/main/plugins/devops/skills/docker-pro/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BretFisher/skills/blob/main/plugins/devops/skills/docker-pro/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, edit, and modernize Dockerfiles, .dockerignore, Docker Bake files, and Compose files using Bret Fisher's strongly opinionated modern Docker + BuildKit rules. Use this skill whenever the user asks about a Dockerfile, containerizing or \"dockerizing\" an app, base image choice, digest/SHA pinning of image tags, multi-stage builds, BuildKit, build caching or secrets, .dockerignore, docker-bake.hcl / `docker buildx bake`, hardened or distroless images (Chainguard, Docker Hardened Images / DHI), a compose.yaml / docker-compose file, or local dev environments with Compose \u2014 even for a small change to any of these files."
+}

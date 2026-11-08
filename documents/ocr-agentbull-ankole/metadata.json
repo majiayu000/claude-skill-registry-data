@@ -1,0 +1,40 @@
+{
+  "name": "ocr",
+  "repo": "AgentBull/ankole",
+  "path": "app/library/skills/ocr/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/AgentBull/ankole",
+  "dir_name": "ocr-agentbull-ankole",
+  "downloaded_at": "2026-11-08T09:40:35.469619Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, pptx, xlsx, docx",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "pdf",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "AgentBull",
+  "source_url": "https://github.com/AgentBull/ankole/blob/main/app/library/skills/ocr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentBull/ankole/blob/main/app/library/skills/ocr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recognize text in images: screenshots, scanned copy, receipts, etc. Use when text must be read out of pixels. For any PDF, start with the pdf Skill."
+}

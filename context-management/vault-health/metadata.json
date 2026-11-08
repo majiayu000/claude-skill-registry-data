@@ -1,0 +1,38 @@
+{
+  "name": "vault-health",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-knowledge/skills/vault-health/SKILL.md",
+  "github_branch": "master",
+  "category": "context-management",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "vault-health",
+  "downloaded_at": "2026-11-08T10:15:15.187830Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-health/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-knowledge/skills/vault-health/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits a whole Obsidian vault for orphan notes, broken wikilinks, stubs, stale notes and tag inconsistencies. Use when the user wants a vault audit (\"vault health check\", \"find orphan notes\"). Not for frontmatter schema rules (use vault-schema)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "digital-human",
+  "repo": "ChatCut-Inc/agent-plugin",
+  "path": "grok/skills/digital-human/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/ChatCut-Inc/agent-plugin",
+  "dir_name": "digital-human",
+  "downloaded_at": "2026-11-08T10:02:44.268720Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChatCut-Inc",
+  "source_url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/grok/skills/digital-human/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChatCut-Inc/agent-plugin/blob/main/grok/skills/digital-human/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create script- or audio-driven talking-head videos with a user's saved character,\nportrait, or a representative still from video. Use for \u6570\u5b57\u4eba\u3001\u89d2\u8272\u53e3\u64ad\u3001\u6570\u5b57\u5206\u8eab\u3001\n\u7167\u7247\u5f00\u53e3\u8bf4\u8bdd\u3001\u4eba\u50cf\u53e3\u64ad, AI avatar, talking photo, AI presenter, or digital twin.\nChoose between direct-to-camera speech and short character performances by the\nrequested shot. Do not use for static avatars, game or 3D characters, video\ntranslation, existing talking-head editing, lip-sync dubbing alone, or TTS alone."
+}

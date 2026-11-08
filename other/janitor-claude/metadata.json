@@ -1,0 +1,37 @@
+{
+  "name": "janitor-claude",
+  "repo": "ArshiaEcho/janitor",
+  "path": "plugins/janitor/skills/janitor-claude/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ArshiaEcho/janitor",
+  "dir_name": "janitor-claude",
+  "downloaded_at": "2026-11-08T09:48:51.417463Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ArshiaEcho",
+  "source_url": "https://github.com/ArshiaEcho/janitor/blob/main/plugins/janitor/skills/janitor-claude/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ArshiaEcho/janitor/blob/main/plugins/janitor/skills/janitor-claude/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit and clean up a Claude Code working directory or Obsidian vault. Use this skill when the user asks to \"clean up my session\", \"clean this directory\", \"tidy this up\", \"audit my CLAUDE.md\", \"is my CLAUDE.md stale\", \"scaffold a CLAUDE.md\", \"find broken wiki-links\", \"find dead files\", \"find orphaned notes\", \"what's wasting tokens in this repo\", \"what's slowing Claude down in here\", \"clean up this vault\", \"find cruft\", \"find .DS_Store files\", \"find stale branches\", \"clean up my .claude folder\", \"audit my settings.json\", \"why is this hook not running\", \"check my MCP servers\", \"are my skills broken\", \"clean up old worktrees\", \"how much space is ~/.claude using\", or \"/janitor-claude\". Also trigger for vague complaints like \"this directory is a mess\", \"my vault is full of broken links\", \"Claude keeps re-reading the same files\", \"my CLAUDE.md is out of date\". Every mutation requires explicit user confirmation. Read-only diagnostics by default. Never rewrites files, never runs destructive git, never touches .git/ internals, never reads session transcripts. No telemetry, no network calls."
+}

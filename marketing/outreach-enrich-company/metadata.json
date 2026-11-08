@@ -1,0 +1,38 @@
+{
+  "name": "outreach-enrich-company",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-biz-outreach/skills/outreach-enrich-company/SKILL.md",
+  "github_branch": "master",
+  "category": "marketing",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "outreach-enrich-company",
+  "downloaded_at": "2026-11-08T10:15:23.680336Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, social",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-biz-outreach/skills/outreach-enrich-company/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-biz-outreach/skills/outreach-enrich-company/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Adds fresh detail to a thin saved company profile and drafts messages to its people. Use when the user wants it filled out or messages written (\"enrich a card\", \"draft messages from a card\"). Not for companies with no card (use outreach-research)."
+}

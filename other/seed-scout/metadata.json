@@ -1,0 +1,36 @@
+{
+  "name": "seed-scout",
+  "repo": "Jakeschincariol/seed-skill",
+  "path": "seed-scout/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/seed-skill",
+  "dir_name": "seed-scout",
+  "downloaded_at": "2026-11-08T10:45:40.489739Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/seed-skill/blob/main/seed-scout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/seed-skill/blob/main/seed-scout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Competitor Scout. Finds the weak points of your competitors in their own App Store reviews: searches the App Store for the apps people already use for your idea, reads up to the 500 most recent reviews of each, sorts the one- and two-star ones into themes (fees and pricing, cancellations and no-shows, support, bugs, trust and safety, payments and refunds, availability), and names each rival's weak point with the evidence (\"106 of 341 recent 1-2 star reviews mention fees\"). Writes seed/reviews/ and seed/competitors.json for the plan, the deck and the pitch coach. Use when the user says \"who are my competitors\", \"find my competitors' weak points\", \"what do people hate about Rover\", \"read their reviews\", \"scout the competition\", \"competitor research\", \"why do customers leave X\", or at the start of a raise, before /seed-market."
+}

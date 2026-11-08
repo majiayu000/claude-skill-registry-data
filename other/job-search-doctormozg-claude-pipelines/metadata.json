@@ -1,0 +1,37 @@
+{
+  "name": "job-search",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-job-outreach/skills/job-search/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "job-search-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:17.525974Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-job-outreach/skills/job-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-job-outreach/skills/job-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds job vacancies, scores them against a CV and ranks a shortlist with cover letters. Use when the user wants a job hunt (\"find me a job\", \"search jobs\", \"match vacancies to my CV\", \"find openings\"). Not for freelance gigs (use freelance-search)."
+}

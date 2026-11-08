@@ -1,0 +1,38 @@
+{
+  "name": "blurt-dictation-review",
+  "repo": "AGIHunt/blurt",
+  "path": ".claude/skills/blurt-dictation-review/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/AGIHunt/blurt",
+  "dir_name": "blurt-dictation-review",
+  "downloaded_at": "2026-11-08T09:36:07.654926Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AGIHunt",
+  "source_url": "https://github.com/AGIHunt/blurt/blob/main/.claude/skills/blurt-dictation-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AGIHunt/blurt/blob/main/.claude/skills/blurt-dictation-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review the user's own recent Blurt dictations (kept audio + what was typed) to find recognition, polish, punctuation and formatting errors, judge each one, save the real ones as Dictation Lab cases, and turn them into fixes measured on the growing case set. Use when the user says \"\u770b\u4e00\u4e0b\u4eca\u5929\u7684\u542c\u5199\", \"review my dictations\", \"\u590d\u67e5\u4e00\u4e0b\u8bc6\u522b\u95ee\u9898\", or reports a misrecognition they just had."
+}

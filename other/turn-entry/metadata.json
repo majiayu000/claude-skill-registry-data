@@ -1,0 +1,37 @@
+{
+  "name": "turn-entry",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/turn-entry/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "turn-entry",
+  "downloaded_at": "2026-11-08T10:23:38.887036Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/turn-entry/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/turn-entry/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rule under the work-conduct law. Load when editing the session entry hook, the turn map and the check over it, and when deciding what a session gets into its context before the first reply. The course of work itself \u2014 rule task-flow."
+}

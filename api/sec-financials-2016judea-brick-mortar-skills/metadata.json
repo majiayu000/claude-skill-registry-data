@@ -1,0 +1,37 @@
+{
+  "name": "sec-financials",
+  "repo": "2016judea/brick-mortar-skills",
+  "path": "skills/sec-financials/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/2016judea/brick-mortar-skills",
+  "dir_name": "sec-financials-2016judea-brick-mortar-skills",
+  "downloaded_at": "2026-11-08T09:30:55.259204Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/brick-mortar-skills/blob/main/skills/sec-financials/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/brick-mortar-skills/blob/main/skills/sec-financials/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pull a US-listed company's real as-reported financials \u2014 revenue, earnings, cash flow, capex, debt, share count \u2014 straight from the SEC's free XBRL API. Use when a valuation, screen or thesis would otherwise quote figures from memory or a summary site, or for \"what did they actually report\", \"get the 10-K numbers\", \"pull their cash flow\". Owns the four ways this endpoint returns a plausible wrong number."
+}

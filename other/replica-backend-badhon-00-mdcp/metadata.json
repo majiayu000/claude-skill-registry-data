@@ -1,0 +1,38 @@
+{
+  "name": "replica-backend",
+  "repo": "Badhon-00/MDCP",
+  "path": "skills/replica-backend/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Badhon-00/MDCP",
+  "dir_name": "replica-backend-badhon-00-mdcp",
+  "downloaded_at": "2026-11-08T09:53:40.569503Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, integration=3",
+    "score": 3,
+    "runner_up": "integration",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Badhon-00",
+  "source_url": "https://github.com/Badhon-00/MDCP/blob/main/skills/replica-backend/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Badhon-00/MDCP/blob/main/skills/replica-backend/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds the backend of an app clone: auth, database migrations and access rules, payments with Stripe, email, background jobs and third-party integrations through official APIs only, plus a security checklist. Use when the user says \"add login\", \"set up auth\", \"wire up the database\", \"add payments\", \"connect Stripe\", \"add Google Calendar\", \"send emails\", \"backend for my clone\", or when /replica-build is running on fake data."
+}

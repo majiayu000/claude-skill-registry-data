@@ -1,0 +1,38 @@
+{
+  "name": "browser-verification-stand",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/browser-verification-stand/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "browser-verification-stand",
+  "downloaded_at": "2026-11-08T10:23:56.631631Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/browser-verification-stand/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/browser-verification-stand/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule browser-verification. Load when an honest stand is needed \u2014 the production build of the site, the admin stand, a stand behind real nginx, signing in to the admin, finding out what sits on a port. Not for layout measurements \u2014 that is pattern browser-verification-measure."
+}

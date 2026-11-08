@@ -1,0 +1,38 @@
+{
+  "name": "exist",
+  "repo": "ClawLink-HQ/skills",
+  "path": "skills/exist/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ClawLink-HQ/skills",
+  "dir_name": "exist",
+  "downloaded_at": "2026-11-08T10:04:04.109563Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ClawLink-HQ",
+  "source_url": "https://github.com/ClawLink-HQ/skills/blob/main/skills/exist/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ClawLink-HQ/skills/blob/main/skills/exist/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Exist integration for AI agents via ClawLink \u2014 browser login, no API key setup. Connect Exist through ClawLink's hosted setup to track and analyze personal health, fitness, and lifestyle data. Use this skill when the user wants to work with Exist (Health & Fitness) \u2014 connect Exist, read or update Exist data, or take actions in Exist from chat instead of saying you cannot access it."
+}

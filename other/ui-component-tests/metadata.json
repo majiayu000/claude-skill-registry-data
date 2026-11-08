@@ -1,0 +1,37 @@
+{
+  "name": "ui-component-tests",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/ui-component-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "ui-component-tests",
+  "downloaded_at": "2026-11-08T10:23:57.522083Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/ui-component-tests/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/ui-component-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ready-made code and the order of checking a kit component and an application screen. Take it on a *.spec.ts next to a component, a frame in the end-to-end suite, a failed showcase snapshot and when deciding what confirms a layout edit. The \"why\" \u2014 testing and browser-verification."
+}

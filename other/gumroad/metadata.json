@@ -1,0 +1,38 @@
+{
+  "name": "gumroad",
+  "repo": "ClawLink-HQ/skills",
+  "path": "skills/gumroad/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ClawLink-HQ/skills",
+  "dir_name": "gumroad",
+  "downloaded_at": "2026-11-08T10:04:15.071254Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, integration=3",
+    "score": 3,
+    "runner_up": "integration",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ClawLink-HQ",
+  "source_url": "https://github.com/ClawLink-HQ/skills/blob/main/skills/gumroad/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ClawLink-HQ/skills/blob/main/skills/gumroad/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Gumroad integration for AI agents via ClawLink \u2014 browser login, no API key setup. Connect Gumroad through ClawLink's hosted setup to manage products, sales, subscribers, licenses, and webhooks. Use this skill when the user wants to work with Gumroad (E-commerce) \u2014 connect Gumroad, read or update Gumroad data, or take actions in Gumroad from chat instead of saying you cannot access it."
+}

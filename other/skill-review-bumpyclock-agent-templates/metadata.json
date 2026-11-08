@@ -1,0 +1,37 @@
+{
+  "name": "skill-review",
+  "repo": "BumpyClock/agent-templates",
+  "path": "skills_archive/skill-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/BumpyClock/agent-templates",
+  "dir_name": "skill-review-bumpyclock-agent-templates",
+  "downloaded_at": "2026-11-08T09:59:33.570628Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BumpyClock",
+  "source_url": "https://github.com/BumpyClock/agent-templates/blob/main/skills_archive/skill-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BumpyClock/agent-templates/blob/main/skills_archive/skill-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Adversarial review and evidence-based overhaul of an agent skill (SKILL.md + references). Fans out reviewers with distinct attack lenses, audits every reference against frontier-model defaults and current web guidance, then rewrites around hard gates + high-freedom principles. Use when asked to review, audit, simplify, or harden a skill or instruction file."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "business-inbox",
+  "repo": "2016judea/agensi-skills",
+  "path": "skills/business-inbox/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/2016judea/agensi-skills",
+  "dir_name": "business-inbox",
+  "downloaded_at": "2026-11-08T09:30:28.022122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/agensi-skills/blob/main/skills/business-inbox/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/agensi-skills/blob/main/skills/business-inbox/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Take a business inbox (Zoho Mail via its MCP; the pattern fits any mailbox) to zero the right way \u2014 read every message, work out what each one changes, write that into the repo or ledger that owns the thread, queue the next chase, then file the message. Use when you say \"go through my business emails\", \"check the business inbox\", \"any replies\", \"did the county answer\", \"clear the inbox\", or when a campaign needs to know whether anyone wrote back. Includes how to get attachment bytes the Zoho MCP can't download (Mail.app's local IMAP cache)."
+}

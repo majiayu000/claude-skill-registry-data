@@ -1,0 +1,79 @@
+---
+name: k8s-catch-up
+description: Kubernetes features that reached beta or GA in v1.35 to v1.37 (Dec 2025 to Aug 2026), newer than most models' training data. Use it whenever the user writes Kubernetes manifests or Helm templates, runs kubectl, configures the kubelet, scheduler, or API server, works with DRA, autoscaling, storage, or admission, or asks what a recent Kubernetes version can do, even without naming a version. Also use it to update or extend this skill.
+license: MIT
+---
+
+# Kubernetes catch-up
+
+**Updated:** 2026-09-30. **Covers:** v1.35 (2025-12-17), v1.36 (2026-04-22), v1.37 (2026-08-26).
+
+Your training data ends before some or all of these releases, so the YAML you write from memory can
+use an alpha field shape, an old API version, or a workaround for a problem Kubernetes now solves.
+This skill holds one short file per user-facing feature that reached beta or GA in the covered
+releases, grouped in directories by task under `references/`, plus the removals and deprecations an
+agent must stop emitting.
+
+## Working style
+
+1. Before you write a manifest, command, or config, scan the feature links below for the area you
+   are in and open every file that matches the task. Each file is one feature: Status, the exact
+   field or flag, an example, and the docs link, about 300 tokens.
+2. Say the stage when you use a beta feature ("beta since v1.36, gate `X` on by default"). A gate that
+   is off by default needs the cluster to enable it, so tell the user before you rely on it.
+3. Check the user's cluster version against the feature's version. A field from v1.37 fails on a
+   v1.35 API server, so name the older way as well when the version is unknown.
+4. Before you hand back a manifest, command, or component config, match it against the **Removals
+   and deprecations** table at the end of the index, and open the file of each row that matches for the
+   version and the fix: a removed volume type or a deprecated proxy mode does more damage than a
+   missed new field. A row that does not match needs no file.
+5. Alpha features are not in these files on purpose; an alpha API can change or vanish. If the user
+   asks for one, say it is alpha and that this skill does not track it.
+
+## Categories
+
+Each line links every feature file in that category; a file is about 300 tokens. Open the ones
+that match the task.
+
+**Pods and containers** (Pod spec fields for lifecycle, resources, volumes, and security): [Arbitrary FQDN as Pod hostname](references/pods/arbitrary-fqdn-as-pod-hostname.md); [PodReadyToStartContainers condition](references/pods/podreadytostartcontainers-condition.md); [Image volumes](references/pods/image-volumes.md); [Unmasked /proc for nested containers](references/pods/unmasked-proc-for-nested-containers.md); [User namespaces](references/pods/user-namespaces.md); [In-place container resize](references/pods/in-place-container-resize.md); [Pod generation tracking](references/pods/pod-generation-tracking.md); [Supplemental groups policy](references/pods/supplemental-groups-policy.md); [In-place pod-level resize](references/pods/in-place-pod-level-resize.md); [Restart all containers on a container exit](references/pods/restart-all-containers-on-a-container-exit.md); [Container restart rules](references/pods/container-restart-rules.md); [Environment variables from a file](references/pods/environment-variables-from-a-file.md); [Node topology labels on Pods](references/pods/node-topology-labels-on-pods.md).
+
+**Workload controllers and autoscaling** (Deployment, StatefulSet, Job, and HPA fields): [Per-HPA tolerance](references/workloads-autoscaling/per-hpa-tolerance.md); [Job managedBy: delegate a Job to an external controller](references/workloads-autoscaling/job-managedby-delegate-a-job-to-an-external-controller.md); [HPA scale to and from zero](references/workloads-autoscaling/hpa-scale-to-and-from-zero.md); [Mutable Pod resources for suspended Jobs](references/workloads-autoscaling/mutable-pod-resources-for-suspended-jobs.md); [Terminating replicas in Deployment and ReplicaSet status](references/workloads-autoscaling/terminating-replicas-in-deployment-and-replicaset-status.md); [maxUnavailable for StatefulSet rolling updates](references/workloads-autoscaling/maxunavailable-for-statefulset-rolling-updates.md).
+
+**Scheduling** (kube-scheduler behavior and the workload-level APIs): [Node declared features](references/scheduling/node-declared-features.md); [Gang scheduling](references/scheduling/gang-scheduling.md); [Standalone PodGroup API](references/scheduling/standalone-podgroup-api.md); [Workload-aware preemption](references/scheduling/workload-aware-preemption.md); [Opportunistic batching](references/scheduling/opportunistic-batching.md); [nominatedNodeName for expected placement](references/scheduling/nominatednodename-for-expected-placement.md); [matchLabelKeys in topology spread constraints](references/scheduling/matchlabelkeys-in-topology-spread-constraints.md).
+
+**Dynamic Resource Allocation** (ResourceClaim, DeviceClass, and ResourceSlice fields; use `resource.k8s.io/v1`): [Device binding conditions](references/dra/device-binding-conditions.md); [Device health in Pod status](references/dra/device-health-in-pod-status.md); [Device taints and tolerations](references/dra/device-taints-and-tolerations.md); [Extended resource requests served by DRA](references/dra/extended-resource-requests-served-by-dra.md); [ResourceClaim device status](references/dra/resourceclaim-device-status.md); [Standard `numaNode` device attribute](references/dra/standard-numanode-device-attribute.md); [Admin access to in-use devices](references/dra/admin-access-to-in-use-devices.md); [DRA devices in the kubelet PodResources API](references/dra/dra-devices-in-the-kubelet-podresources-api.md); [Prioritized list of device requests](references/dra/prioritized-list-of-device-requests.md); [Device metadata files in containers](references/dra/device-metadata-files-in-containers.md); [ResourceClaims for PodGroups (workloads)](references/dra/resourceclaims-for-podgroups.md); [Consumable capacity (shared devices)](references/dra/consumable-capacity.md); [Partitionable devices](references/dra/partitionable-devices.md).
+
+**Storage** (Volumes, CSI, snapshots, and PVC behavior): [CSI service account tokens in the secrets field](references/storage/csi-service-account-tokens-in-the-secrets-field.md); [Mutable CSINode volume attach limits](references/storage/mutable-csinode-volume-attach-limits.md); [Portworx in-tree to CSI migration](references/storage/portworx-in-tree-to-csi-migration.md); [SELinux volume labeling by mount option](references/storage/selinux-volume-labeling-by-mount-option.md); [Volume group snapshots](references/storage/volume-group-snapshots.md); [CSI attach limits and Cluster Autoscaler](references/storage/csi-attach-limits-and-cluster-autoscaler.md); [PVC `Unused` condition](references/storage/pvc-unused-condition.md); [Storage capacity scoring for dynamic provisioning](references/storage/storage-capacity-scoring-for-dynamic-provisioning.md).
+
+**Networking** (Service fields and validation changes): [Service names may start with a digit](references/networking/service-names-may-start-with-a-digit.md); [PreferSameZone and PreferSameNode traffic distribution](references/networking/prefersamezone-and-prefersamenode-traffic-distribution.md); [Strict IP and CIDR validation](references/networking/strict-ip-and-cidr-validation.md).
+
+**Authentication, authorization, and security** (Identity for Pods and nodes, impersonation, kubelet authorization): [Cluster trust bundles](references/auth-security/cluster-trust-bundles.md); [Pod certificates](references/auth-security/pod-certificates.md); [External ServiceAccount token signing](references/auth-security/external-serviceaccount-token-signing.md); [Fine-grained kubelet API authorization](references/auth-security/fine-grained-kubelet-api-authorization.md); [Force deletion of undecryptable resources](references/auth-security/force-deletion-of-undecryptable-resources.md); [Constrained impersonation](references/auth-security/constrained-impersonation.md); [Credential verification for cached images](references/auth-security/credential-verification-for-cached-images.md); [ServiceAccount tokens for kubelet image credential providers](references/auth-security/serviceaccount-tokens-for-kubelet-image-credential-providers.md).
+
+**API server, admission, and API machinery** (In-process admission, storage migration, encodings, control-plane upgrades): [Storage version migration](references/api-admission/storage-version-migration.md); [Declarative validation of built-in types](references/api-admission/declarative-validation-of-built-in-types.md); [Mutating admission policies](references/api-admission/mutating-admission-policies.md); [Comparable resource versions](references/api-admission/comparable-resource-versions.md); [WebSockets for kubectl exec, attach, cp, and port-forward](references/api-admission/websockets-for-kubectl-exec-attach-cp-and-port-forward.md); [Resilient watch cache initialization](references/api-admission/resilient-watch-cache-initialization.md); [Admission webhooks skip virtual auth resources](references/api-admission/admission-webhooks-skip-virtual-auth-resources.md); [Manifest-based admission control](references/api-admission/manifest-based-admission-control.md); [Mixed version proxy](references/api-admission/mixed-version-proxy.md).
+
+**kubectl and the CLI** (Output formats and the kuberc preferences file): [KYAML output format (`-o kyaml`)](references/kubectl-cli/kyaml-output-format.md); [kubectl command metadata in HTTP request headers](references/kubectl-cli/kubectl-command-metadata-in-http-request-headers.md); [kuberc preferences: aliases, defaults, and credential plugin policy](references/kubectl-cli/kuberc-credential-plugin-policy.md).
+
+**Metrics, logs, and component status** (What the kubelet and control plane expose over HTTP): [The metrics.k8s.io API is stable](references/observability/the-metrics-k8s-io-api-is-stable.md); [Node log query through the kubelet](references/observability/node-log-query-through-the-kubelet.md); [Pressure Stall Information (PSI) metrics from the kubelet](references/observability/pressure-stall-information-metrics-from-the-kubelet.md); [Native histograms in component metrics](references/observability/native-histograms-in-component-metrics.md); [Pod and container stats from the CRI, not cAdvisor](references/observability/pod-and-container-stats-from-the-cri-not-cadvisor.md); [Component `/flagz` endpoint](references/observability/component-flagz-endpoint.md); [Component `/statusz` endpoint](references/observability/component-statusz-endpoint.md).
+
+**Node and kubelet operations** (KubeletConfiguration fields, CPU and memory managers, cgroups): [CPU alignment by uncore (L3) cache](references/node-kubelet/cpu-alignment-by-uncore-cache.md); [Image GC by maximum unused age](references/node-kubelet/image-gc-by-maximum-unused-age.md); [Kubelet drop-in configuration directory](references/node-kubelet/kubelet-drop-in-configuration-directory.md); [Limit on parallel image pulls](references/node-kubelet/limit-on-parallel-image-pulls.md); [Strict reservation of system CPUs](references/node-kubelet/strict-reservation-of-system-cpus.md); [Topology manager NUMA node limit above 8](references/node-kubelet/topology-manager-numa-node-limit-above-8.md); [Kubelet Pods gRPC API](references/node-kubelet/kubelet-pods-grpc-api.md); [Kubelet in a user namespace (rootless)](references/node-kubelet/kubelet-in-a-user-namespace.md); [Memory QoS with cgroup v2](references/node-kubelet/memory-qos-with-cgroup-v2.md); [Pod-level resource managers](references/node-kubelet/pod-level-resource-managers.md); [Watch-based route controller reconciliation](references/node-kubelet/watch-based-route-controller-reconciliation.md); [Configurable CrashLoopBackOff maximum](references/node-kubelet/configurable-crashloopbackoff-maximum.md).
+
+**Removals and deprecations** (Things to stop emitting). Match what you wrote against the first column; open the file of each matching row for the version and the details.
+
+| If the output has                                                                                                  | Use instead                                                                                       | File                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `KubeletConfiguration.failCgroupV1`                                                                                | nodes on cgroup v2; `failCgroupV1: false` only as a temporary override                            | [cgroup v1 removal: kubelet refuses cgroup v1 nodes](references/removals/cgroup-v1-removal-kubelet-refuses-cgroup-v1-nodes.md)  |
+| `kube-dns` as the cluster DNS add-on (its Deployment, image, or ConfigMap)                                         | CoreDNS                                                                                           | [Deprecation: `kube-dns`](references/removals/kube-dns.md)                                                                      |
+| `service.spec.externalIPs`                                                                                         | `type: LoadBalancer`, `type: NodePort`, or Gateway API                                            | [Deprecation: `service.spec.externalIPs`](references/removals/service-spec-externalips.md)                                      |
+| `KubeProxyConfiguration.mode: ipvs`, `kube-proxy --proxy-mode=ipvs`                                                | `mode: nftables` (or `iptables`)                                                                  | [Deprecation: kube-proxy `ipvs` mode](references/removals/kube-proxy-ipvs-mode.md)                                              |
+| a static Pod manifest (under the kubelet's `staticPodPath`) that references a ConfigMap, Secret, or ServiceAccount | files on the node (`hostPath` volumes, literal `env` values), or a DaemonSet                      | [Static Pods cannot reference Secrets or ConfigMaps](references/removals/static-pods-cannot-reference-secrets-or-configmaps.md) |
+| `pod.spec.volumes[].gitRepo`                                                                                       | an init container that clones into an `emptyDir` volume, or a `git-sync` sidecar                  | [`gitRepo` volume driver removed](references/removals/gitrepo-volume-driver-removed.md)                                         |
+| `kubectl run ... -f <file>` / `--filename`                                                                         | `kubectl apply -f` or `kubectl create -f`; `kubectl run <name> --image=<image>` for an ad hoc Pod | [`kubectl run --filename/-f` deprecated](references/removals/kubectl-run-filename-f-deprecated.md)                              |
+
+## Updating this skill
+
+The feature files are written from the KEP metadata, the feature-gate docs, and the release
+announcements, which `scripts/k8s-features.py` joins for the maintainer; the index above is generated
+from the files. When asked to update, refresh, or extend the skill, or to cover an older model's gap,
+read [how-to-update.md](references/how-to-update.md) and follow it: it picks the release window from
+the user's models' knowledge cutoffs, builds the feature table, and defines the file format and the
+checks.

@@ -1,0 +1,37 @@
+{
+  "name": "seed-investors",
+  "repo": "Jakeschincariol/seed-skill",
+  "path": "seed-investors/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Jakeschincariol/seed-skill",
+  "dir_name": "seed-investors",
+  "downloaded_at": "2026-11-08T10:45:42.076490Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/seed-skill/blob/main/seed-investors/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/seed-skill/blob/main/seed-investors/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Investor Finder. Researches the best investors for your idea from public sources only (the firm's own site, public profiles found through web search, SEC EDGAR Form D filings, the press) and ranks them by fit, 0 to 100, with the reasons and a source link on every row: stage, sectors, check size against your ask, geography, how recent their last relevant deal is, and a warm intro. Reads SEC Form D filings to see who in your space raised, how much and when. Writes seed/investors.json for the Closer and the Pitch Coach. Use when the user says \"find investors\", \"who should I pitch\", \"which VCs invest in pet tech\", \"build my investor list\", \"rank these investors\", \"who funded companies like mine\", \"Form D\", or after /seed-plan, before /seed-closer."
+}

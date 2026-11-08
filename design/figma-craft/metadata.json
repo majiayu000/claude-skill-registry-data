@@ -1,0 +1,38 @@
+{
+  "name": "figma-craft",
+  "repo": "Gustavosilveira23/claude-design-skills",
+  "path": "skills/figma-craft/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/Gustavosilveira23/claude-design-skills",
+  "dir_name": "figma-craft",
+  "downloaded_at": "2026-11-08T10:33:22.414618Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component, figma",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Gustavosilveira23",
+  "source_url": "https://github.com/Gustavosilveira23/claude-design-skills/blob/master/skills/figma-craft/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Gustavosilveira23/claude-design-skills/blob/master/skills/figma-craft/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Craft de layout ao DESENHAR no Figma via MCP (code-to-design). Ativa sempre que a tarefa for criar, montar, editar, corrigir ou reorganizar qualquer coisa dentro de um arquivo Figma -- tela, frame, card, componente, variante, topbar, sidebar, tabela, FigJam. Triggers: 'criar no Figma', 'montar a tela no Figma', 'desenhar no Figma', 'atualizar o Figma', 'arrumar o auto layout', 'o layout quebrou', 'ficou desalinhado', 'consertar spacing no Figma', 'construir componente no Figma', 'use_figma', 'Plugin API', 'push pro Figma'. Cobre a camada que as skills oficiais do Figma NAO cobrem: decidir a arvore de frames antes de criar, escolher HUG/FILL/FIXED por papel do elemento, validar por propriedades em vez de screenshot, e os erros que ja custaram retrabalho em projeto real. NAO ativa para design-to-code (ler Figma e implementar em React) -- ali vale a skill oficial figma-design-to-code."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "using-mozg-pipelines",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-base/skills/using-mozg-pipelines/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "using-mozg-pipelines",
+  "downloaded_at": "2026-11-08T10:15:20.417934Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug, refactor",
+    "score": 5,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-base/skills/using-mozg-pipelines/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-base/skills/using-mozg-pipelines/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Separates look-alike mozg skills and chains several per task. Use when the user is unsure which of their tools fits or what they have (\"which pipeline fits\", \"what plugins do I have\", \"route this\"). Not when the user named a skill (invoke it)."
+}

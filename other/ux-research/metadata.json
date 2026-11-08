@@ -1,0 +1,38 @@
+{
+  "name": "ux-research",
+  "repo": "Gustavosilveira23/claude-design-skills",
+  "path": "skills/ux-research/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Gustavosilveira23/claude-design-skills",
+  "dir_name": "ux-research",
+  "downloaded_at": "2026-11-08T10:33:22.057027Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "analysis",
+      "analyze",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Gustavosilveira23",
+  "source_url": "https://github.com/Gustavosilveira23/claude-design-skills/blob/master/skills/ux-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Gustavosilveira23/claude-design-skills/blob/master/skills/ux-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "UX Research strategist for evidence-based product decisions. Activates when planning research, preparing user interviews, synthesizing findings, or generating design specs from insights. Triggers on: 'research', 'discovery', 'user interview', 'validate assumption', 'what should we build', 'do users need this', 'test this assumption', 'opportunity', 'synthesize findings', 'interview script', 'research plan', 'analyze data'. Also activates on: 'what method', 'sample size', 'interview guide', 'survey', 'usability test', 'atomic research', 'insight', 'ready to dev'. Hands off to ux-designer when design specs are ready. Do NOT activate for: visual styling, component design, design tokens, backend logic, DevOps, casual mention of 'research' in non-UX contexts (e.g., 'research this library' is not UX research, 'investigate this bug' is not discovery), tasks where the actual problem is technical investigation, market analysis, or competitive benchmarking without user evidence. Require explicit user-centered evidence intent -- do not activate by reflex on the word 'research' alone."
+}

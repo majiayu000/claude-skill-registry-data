@@ -1,0 +1,39 @@
+{
+  "name": "audit",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-dev-pipe/skills/audit/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "audit-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:09.416700Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-dev-pipe/skills/audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-dev-pipe/skills/audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits code for bugs, security and quality issues, writing a report-only findings file. Use when the user wants code checked for problems and reported without changes (\"audit\", \"find bugs\", \"security review\"). Not for one known bug (use debug)."
+}

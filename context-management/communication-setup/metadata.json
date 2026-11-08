@@ -1,0 +1,37 @@
+{
+  "name": "communication-setup",
+  "repo": "Flagrare/agent-skills",
+  "path": "plugins/flagrare/skills/communication-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/Flagrare/agent-skills",
+  "dir_name": "communication-setup",
+  "downloaded_at": "2026-11-08T10:25:00.596127Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: compaction, memory",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Flagrare",
+  "source_url": "https://github.com/Flagrare/agent-skills/blob/main/plugins/flagrare/skills/communication-setup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Flagrare/agent-skills/blob/main/plugins/flagrare/skills/communication-setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set up, change or remove how Claude talks to you: a custom output style with your reply rules, a reminder of those rules on every message, and a Stop hook that quietly nudges Claude when a reply runs a little long and blocks one that runs far past your limit. Use when the user says Claude's replies are too long, exhausting, hard to skim, full of process narration or caveats, 'you make me work for the information', 'talk to me shorter', 'communication setup', 'set up how you talk to me'; when the length check or reply-length hook blocked a reply it shouldn't have, or the user wants a different limit or style; or asks to remove or undo it ('remove communication setup', 'go back to normal replies')."
+}

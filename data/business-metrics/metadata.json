@@ -1,0 +1,39 @@
+{
+  "name": "business-metrics",
+  "repo": "AgentBull/ankole",
+  "path": "app/library/skills/business-metrics/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/AgentBull/ankole",
+  "dir_name": "business-metrics",
+  "downloaded_at": "2026-11-08T09:40:39.895695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "AgentBull",
+  "source_url": "https://github.com/AgentBull/ankole/blob/main/app/library/skills/business-metrics/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentBull/ankole/blob/main/app/library/skills/business-metrics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer quantitative business questions from Pod Bases and connected databases with approved Brain metric definitions, exact server-side numbers, and cited evidence. Use for counts, sums, rates, rankings, trends, comparisons, and metric definitions."
+}

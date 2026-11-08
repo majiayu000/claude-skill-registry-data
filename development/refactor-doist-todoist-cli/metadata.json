@@ -1,0 +1,37 @@
+{
+  "name": "refactor",
+  "repo": "Doist/todoist-cli",
+  "path": ".agents/skills/refactor/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Doist/todoist-cli",
+  "dir_name": "refactor-doist-todoist-cli",
+  "downloaded_at": "2026-11-08T10:15:31.815678Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Doist",
+  "source_url": "https://github.com/Doist/todoist-cli/blob/main/.agents/skills/refactor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Doist/todoist-cli/blob/main/.agents/skills/refactor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Changes the structure of code without changing its behaviour, with the current behaviour pinned by tests first. Use when asked to \"refactor\", \"clean up\", \"simplify\", \"extract\", \"rename\", \"move\" or \"deduplicate\" code, or when another task needs restructuring first."
+}

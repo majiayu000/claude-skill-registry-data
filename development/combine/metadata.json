@@ -1,0 +1,39 @@
+{
+  "name": "combine",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-research-pipe/skills/combine/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "combine",
+  "downloaded_at": "2026-11-08T10:15:14.578556Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, debug, refactor",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-research-pipe/skills/combine/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-research-pipe/skills/combine/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Consolidates existing local research, task artifacts and prior reports into one unified report. Use when the user says \"combine our findings\" or \"pull together everything we found so far\". Not for new research from scratch (use deep-research)."
+}

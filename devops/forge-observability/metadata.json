@@ -1,0 +1,39 @@
+{
+  "name": "forge-observability",
+  "repo": "ForgeyClap/Forge-Core",
+  "path": ".claude/skills/forge-observability/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/ForgeyClap/Forge-Core",
+  "dir_name": "forge-observability",
+  "downloaded_at": "2026-11-08T10:26:02.192944Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, cd, deploy",
+    "score": 4,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "ci",
+      "cd",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ForgeyClap",
+  "source_url": "https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/forge-observability/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/forge-observability/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for traces, metrics, logs, Sentry or incidents (monitoring, storing)."
+}

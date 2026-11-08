@@ -1,0 +1,37 @@
+{
+  "name": "voice-agent-replay",
+  "repo": "CloudTalk-io/marketplace",
+  "path": "plugins/cloudtalk/skills/voice-agent-replay/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/CloudTalk-io/marketplace",
+  "dir_name": "voice-agent-replay",
+  "downloaded_at": "2026-11-08T10:04:43.875244Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "qa"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CloudTalk-io",
+  "source_url": "https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/voice-agent-replay/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/voice-agent-replay/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Improve a live CloudTalk AI Voice Agent from its real calls. Reads the agent's setup and a sample of its recent calls, flags where it failed (gave out or asked for what it shouldn't, left the caller unresolved, repeated itself, made something up, missed a handoff to a person, frustrated the caller, lost the caller early), groups the failures by cause with two quoted calls as proof, and points each cause at the setup change that fixes it, with a practice caller to try the fix. Saves changes only when the user asks, with their approval, and offers to undo them. Use when the user asks how their AI Voice Agent is doing, why it fails, loops or loses callers, to review, replay or QA its calls, or to improve it after go-live. Needs AI Voice Agents, Conversation Intelligence for transcripts and insights, and a CloudTalk Admin sign-in to read and save the setup."
+}

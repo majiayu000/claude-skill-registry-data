@@ -1,0 +1,37 @@
+{
+  "name": "outreach-research",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-biz-outreach/skills/outreach-research/SKILL.md",
+  "github_branch": "master",
+  "category": "business",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "outreach-research",
+  "downloaded_at": "2026-11-08T10:15:22.831290Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "business",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for business: business, strategy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-biz-outreach/skills/outreach-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-biz-outreach/skills/outreach-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ranks target companies for what the user sells, as a lead list. Use when the user wants to know who to target (\"find companies\", \"find potential clients\", \"lead generation\"). Not for deepening a card or writing letters (use outreach-enrich-company)."
+}

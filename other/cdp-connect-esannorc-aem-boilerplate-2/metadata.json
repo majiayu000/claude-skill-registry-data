@@ -1,0 +1,37 @@
+{
+  "name": "cdp-connect",
+  "repo": "ESANNORC/aem-boilerplate",
+  "path": ".claude/skills/cdp-connect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ESANNORC/aem-boilerplate",
+  "dir_name": "cdp-connect-esannorc-aem-boilerplate-2",
+  "downloaded_at": "2026-11-08T10:17:46.125695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ESANNORC",
+  "source_url": "https://github.com/ESANNORC/aem-boilerplate/blob/main/.claude/skills/cdp-connect/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ESANNORC/aem-boilerplate/blob/main/.claude/skills/cdp-connect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Superseded by the web CLI: attach to an already-running Chrome with `web browser attach <cdp-url>`, then drive it with `web browser eval|run|cdp|screenshot`. Use when the user asks to attach to, connect to, or control an existing Chrome running with --remote-debugging-port."
+}

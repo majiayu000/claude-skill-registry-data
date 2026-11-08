@@ -1,0 +1,36 @@
+{
+  "name": "resume-review",
+  "repo": "ClarvAI/job-search-hq",
+  "path": ".claude/skills/resume-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ClarvAI/job-search-hq",
+  "dir_name": "resume-review",
+  "downloaded_at": "2026-11-08T10:03:51.102393Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ClarvAI",
+  "source_url": "https://github.com/ClarvAI/job-search-hq/blob/main/.claude/skills/resume-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ClarvAI/job-search-hq/blob/main/.claude/skills/resume-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Tough, specific review of the user's master resume or a tailored resume, then fixes with their OK. Use when the user asks for resume feedback, wants their resume improved, wants their GitHub, portfolio or publications reflected in it, or before a big application push."
+}

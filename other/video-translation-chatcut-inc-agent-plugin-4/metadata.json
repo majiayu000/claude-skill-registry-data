@@ -1,0 +1,37 @@
+{
+  "name": "video-translation",
+  "repo": "ChatCut-Inc/agent-plugin",
+  "path": "claude/skills/video-translation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ChatCut-Inc/agent-plugin",
+  "dir_name": "video-translation-chatcut-inc-agent-plugin-4",
+  "downloaded_at": "2026-11-08T10:02:52.125399Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: language=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "translation",
+      "localization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChatCut-Inc",
+  "source_url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/claude/skills/video-translation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChatCut-Inc/agent-plugin/blob/main/claude/skills/video-translation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Translate, dub, and localize speech in an existing video while optionally preserving speaker voices, generating translated captions, or synchronizing the speaker's lip movements. Use when the user asks for \u89c6\u9891\u8bd1\u5236\u3001\u591a\u8bed\u8a00\u914d\u97f3\u3001 \u628a\u89c6\u9891\u91cc\u7684\u4e2d\u6587\u53d8\u6210\u82f1\u6587\u3001\u8ba9\u89c6\u9891\u91cc\u7684\u4eba\u8bf4\u53e6\u4e00\u79cd\u8bed\u8a00\u3001\u4fdd\u7559\u539f\u97f3\u8272\u3001\u7ffb\u8bd1\u58f0\u97f3\u3001 \u53e3\u578b\u540c\u6b65\u3001translated video, video dubbing, voice translation, or lip-synced localization, as well as traducci\u00f3n de video, doblaje de video, traducir un video, or sincronizaci\u00f3n labial. This Skill MUST be loaded before composing treatment choices for an ambiguous video-translation request in any language, including a turn that only asks the user to choose a treatment. Do not use when the user only wants subtitles translated, wants an SRT/VTT file, wants text or a script translated before generating a new avatar video, or wants ordinary TTS with a newly selected voice."
+}

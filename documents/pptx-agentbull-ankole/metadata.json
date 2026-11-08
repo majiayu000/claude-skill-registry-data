@@ -1,0 +1,39 @@
+{
+  "name": "pptx",
+  "repo": "AgentBull/ankole",
+  "path": "app/library/agent-plugins/office/skills/pptx/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/AgentBull/ankole",
+  "dir_name": "pptx-agentbull-ankole",
+  "downloaded_at": "2026-11-08T09:40:41.686052Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, pptx, markdown",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "pptx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "AgentBull",
+  "source_url": "https://github.com/AgentBull/ankole/blob/main/app/library/agent-plugins/office/skills/pptx/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentBull/ankole/blob/main/app/library/agent-plugins/office/skills/pptx/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, read, edit, replicate, combine, or split PowerPoint (.pptx) decks. Use whenever .pptx is input or output, or supplied Markdown, documents, outlines, PDFs, or reference images must become an editable slide presentation."
+}

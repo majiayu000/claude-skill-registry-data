@@ -1,0 +1,37 @@
+{
+  "name": "dependencies-upgrade",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/dependencies-upgrade/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "dependencies-upgrade",
+  "downloaded_at": "2026-11-08T10:23:52.894393Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/dependencies-upgrade/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/dependencies-upgrade/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule dependencies. Load when raising package versions \u2014 choosing the upper bound by peer ranges, the order of checks, the reformatting boundary after a formatter upgrade, handling new linter rules. Not for the branch and commit \u2014 pattern git-workflow-commit; for the PR \u2014 git-workflow-pr."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "postgresql",
+  "repo": "AgentBull/ankole",
+  "path": "app/library/agent-plugins/postgresql/skills/postgresql/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/AgentBull/ankole",
+  "dir_name": "postgresql-agentbull-ankole",
+  "downloaded_at": "2026-11-08T09:40:45.598954Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AgentBull",
+  "source_url": "https://github.com/AgentBull/ankole/blob/main/app/library/agent-plugins/postgresql/skills/postgresql/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentBull/ankole/blob/main/app/library/agent-plugins/postgresql/skills/postgresql/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer questions from a tenant PostgreSQL database with catalog search, value probes, plans, read-only queries, and published metrics."
+}

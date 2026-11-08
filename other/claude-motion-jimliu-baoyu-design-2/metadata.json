@@ -1,0 +1,37 @@
+{
+  "name": "claude-motion",
+  "repo": "JimLiu/baoyu-design",
+  "path": "dsh-plugins/dsh-claude-motion/skills/claude-motion/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JimLiu/baoyu-design",
+  "dir_name": "claude-motion-jimliu-baoyu-design-2",
+  "downloaded_at": "2026-11-08T10:50:02.056970Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JimLiu",
+  "source_url": "https://github.com/JimLiu/baoyu-design/blob/main/dsh-plugins/dsh-claude-motion/skills/claude-motion/SKILL.md",
+  "license": "Mixed. The skill text, references and editors adapted from Anthropic's claude.ai Artifact types stay Anthropic's and are not MIT-licensed; the local tooling is MIT. Complete terms in NOTICE.md: https://github.com/JimLiu/baoyu-design/blob/main/NOTICE.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JimLiu/baoyu-design/blob/main/dsh-plugins/dsh-claude-motion/skills/claude-motion/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this for a local Motion film: a short animated video (10\u201330 s unless asked for more, 900 s at most), such as an explainer, product walkthrough or UI demo, launch teaser, logo sting, social clip, animated chart or title sequence, that plays in the bundled Motion player and exports from there to MP4 or GIF. A narrated one carries a voice track: a take a scene, made here with a speech provider of the user's or recorded by them, spoken and captioned by the player, the motion timed to its words. Everything on screen is code, a pure function of time, written scene by scene into the film's own store with this skill's script while the user watches it fill in. Read it when creating, continuing, finalizing or revising one. Not for editing real footage, subtitles or audio (that is a video editor), a still picture, a slide deck or a static HTML page."
+}

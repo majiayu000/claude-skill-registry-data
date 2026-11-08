@@ -1,0 +1,38 @@
+{
+  "name": "lib-layers-move",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/lib-layers-move/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "lib-layers-move",
+  "downloaded_at": "2026-11-08T10:23:45.028493Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, frontend, component",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/lib-layers-move/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/lib-layers-move/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule lib-layers. Load when moving code or a symbol between libs \u2014 where to start, in which order to move domains, what to do with boundaries, imports and the README of both libs, and what to check with. Creating and removing a lib itself \u2014 pattern lib-layers-new."
+}

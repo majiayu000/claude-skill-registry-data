@@ -1,0 +1,37 @@
+{
+  "name": "call-coach",
+  "repo": "CloudTalk-io/marketplace",
+  "path": "plugins/cloudtalk/skills/call-coach/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CloudTalk-io/marketplace",
+  "dir_name": "call-coach",
+  "downloaded_at": "2026-11-08T10:04:43.372395Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CloudTalk-io",
+  "source_url": "https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/call-coach/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/call-coach/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Coach your team from real CloudTalk calls, and check your AI Voice Agents alongside them. For each person, one thing to keep doing and one thing to change, each proven by a short quote from a named call, plus a better line to try on the next call. For each AI Voice Agent, what callers ran into and the one setup change that fixes it. Use for call coaching, QA or call reviews, 1:1 prep, support or sales call quality, \"how is my team handling calls\", \"what should Ada work on\", \"coach me\", \"review Ada's calls\", \"review my calls\" or \"coach my team and our AI agents\". For a deep review of one AI Voice Agent, use voice-agent-replay. Needs Conversation Intelligence for transcripts; AI Voice Agent calls of 30 seconds or more are transcribed like any call. It never scores or ranks people, and changes nothing unless you ask."
+}

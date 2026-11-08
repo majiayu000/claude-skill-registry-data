@@ -1,0 +1,38 @@
+{
+  "name": "open-code-review-delegate",
+  "repo": "BuhDuy256/deck-agent",
+  "path": ".claude/skills/open-code-review-delegate/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/BuhDuy256/deck-agent",
+  "dir_name": "open-code-review-delegate-buhduy256-deck-agent",
+  "downloaded_at": "2026-11-08T09:59:16.893366Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BuhDuy256",
+  "source_url": "https://github.com/BuhDuy256/deck-agent/blob/main/.claude/skills/open-code-review-delegate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BuhDuy256/deck-agent/blob/main/.claude/skills/open-code-review-delegate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review workspace changes, commits, or branch ranges using OpenCodeReview for deterministic file selection and rule resolution while the current agent performs the review. Use when the user asks for a code review or requests review findings before fixes."
+}

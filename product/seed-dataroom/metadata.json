@@ -1,0 +1,38 @@
+{
+  "name": "seed-dataroom",
+  "repo": "Jakeschincariol/seed-skill",
+  "path": "seed-dataroom/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/Jakeschincariol/seed-skill",
+  "dir_name": "seed-dataroom",
+  "downloaded_at": "2026-11-08T10:45:41.883664Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, roadmap, metrics",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "roadmap",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/seed-skill/blob/main/seed-dataroom/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/seed-skill/blob/main/seed-dataroom/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Data Room Builder. Assembles the data room investors ask for and tells you what is missing. Lays out the nine standard folders (01 Company, 02 Pitch deck, 03 Financials, 04 Market, 05 Product, 06 Team, 07 Legal, 08 Cap table, 09 Customers), checks the files against a 25-item checklist (present, missing, or stale by the date in the file name or its last change), writes seed/dataroom/INDEX.md describing every file, and lists what to share before a term sheet and what only after one. Flags what must never be in a data room: passwords, keys, ID documents, raw customer lists. It never uploads or shares anything. Use when the user says \"build my data room\", \"what goes in a data room\", \"what am I missing for diligence\", \"the investor asked for the data room\", \"what can I share now\", \"make an index of my documents\", or after a /seed-closer call goes well or /seed-terms reads a term sheet."
+}

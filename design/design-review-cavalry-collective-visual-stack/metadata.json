@@ -1,0 +1,40 @@
+{
+  "name": "design-review",
+  "repo": "Cavalry-Collective/visual-stack",
+  "path": "plugins/vstack/skills/design-review/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Cavalry-Collective/visual-stack",
+  "dir_name": "design-review-cavalry-collective-visual-stack",
+  "downloaded_at": "2026-11-08T10:01:24.717238Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, frontend, animation",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "frontend",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Cavalry-Collective",
+  "source_url": "https://github.com/Cavalry-Collective/visual-stack/blob/main/plugins/vstack/skills/design-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Cavalry-Collective/visual-stack/blob/main/plugins/vstack/skills/design-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit the UI and UX of what we are working on at a chosen level of polish, open the proposed changes in vstack:review for comments, then build what the owner approves. Product code stays untouched until approval. New UI copy goes to ChatGPT through vstack:proofread where the host supports it. Use when the user invokes /vstack:design-review or $vstack:design-review, asks for a design review, design audit, UI or UX review, or another review round, or wants a screen or app to look more polished, premium or consistent, even if they do not say \"review\". To comment on a wireframe, page or running app with no audit, use vstack:review."
+}

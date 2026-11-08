@@ -1,0 +1,38 @@
+{
+  "name": "docs-loop",
+  "repo": "GeiserX/sstack",
+  "path": "codex/skills/docs-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/GeiserX/sstack",
+  "dir_name": "docs-loop-geiserx-sstack",
+  "downloaded_at": "2026-11-08T10:30:52.257134Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeiserX",
+  "source_url": "https://github.com/GeiserX/sstack/blob/main/codex/skills/docs-loop/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeiserX/sstack/blob/main/codex/skills/docs-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks to audit docs, check documentation for stale claims, or verify docs against the code."
+}

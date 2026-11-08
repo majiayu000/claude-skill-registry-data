@@ -1,0 +1,37 @@
+{
+  "name": "principle-boundary-discipline",
+  "repo": "GeiserX/sstack",
+  "path": "vendor/pstack/skills/principle-boundary-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GeiserX/sstack",
+  "dir_name": "principle-boundary-discipline-geiserx-sstack",
+  "downloaded_at": "2026-11-08T10:31:02.607345Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeiserX",
+  "source_url": "https://github.com/GeiserX/sstack/blob/main/vendor/pstack/skills/principle-boundary-discipline/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeiserX/sstack/blob/main/vendor/pstack/skills/principle-boundary-discipline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Apply when wiring validation, error handling, or framework adapters. Concentrate guards at system boundaries (CLI, config, network, external APIs); trust internal types and keep business logic in pure functions."
+}

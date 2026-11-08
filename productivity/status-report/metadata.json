@@ -1,0 +1,37 @@
+{
+  "name": "status-report",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/status-report/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "status-report",
+  "downloaded_at": "2026-11-08T10:23:43.113255Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, memory",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/status-report/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/status-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rule under the work-conduct law. Load when the owner asked where the work stands \u2014 \"what is the status\", \"which epic\", \"what are you doing now\". Names the shape of the reply \u2014 a paragraph about the epic and a table of its tasks \u2014 and what backs a cell about the tree. Pattern status-report-table."
+}

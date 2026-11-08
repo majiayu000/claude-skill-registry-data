@@ -1,0 +1,36 @@
+{
+  "name": "follow-up",
+  "repo": "Jakeschincariol/closer-skill",
+  "path": "follow-up/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/closer-skill",
+  "dir_name": "follow-up-jakeschincariol-closer-skill",
+  "downloaded_at": "2026-11-08T10:45:02.171558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/closer-skill/blob/main/follow-up/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/closer-skill/blob/main/follow-up/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Follow-Up. Keeps following up until a call is booked, then stops. Every morning it reads closer/pipeline.json and says who is due a follow-up today, who replied and is waiting on you, who booked, and who is stopped and why. Drafts each follow-up (a bump, then something useful, then a polite last note), waits for your yes, logs it, and stops at the first \"no\", the moment a call is booked, after 3 follow-ups or 30 days. Use when the user says \"follow up\", \"who do I need to follow up with\", \"they haven't replied\", \"chase\", \"nudge\", \"bump this\", \"they replied\", or every morning."
+}

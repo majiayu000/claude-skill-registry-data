@@ -1,0 +1,38 @@
+{
+  "name": "verification-before-completion",
+  "repo": "Badhon-00/MDCP",
+  "path": "skills/verification-before-completion/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Badhon-00/MDCP",
+  "dir_name": "verification-before-completion-badhon-00-mdcp",
+  "downloaded_at": "2026-11-08T09:53:46.960664Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Badhon-00",
+  "source_url": "https://github.com/Badhon-00/MDCP/blob/main/skills/verification-before-completion/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Badhon-00/MDCP/blob/main/skills/verification-before-completion/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always"
+}

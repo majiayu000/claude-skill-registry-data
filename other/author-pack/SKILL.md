@@ -1,0 +1,415 @@
+---
+name: author-pack
+description: Author, validate, test, distribute, and certify a custom Emisar action pack for a customer fleet. Use when wrapping internal CLIs or services as declared actions, writing or reviewing pack/action YAML, testing a pack locally, rolling a pack out to runners, hosting a private pack registry with packctl, publishing a new pack version, retiring an unsafe version, or diagnosing pack trust and hash-mismatch issues.
+---
+
+# Author and ship a custom Emisar pack
+
+Author and test in the customer's environment using the installed CLIs and
+public documentation. A pack is a directory of YAML the customer owns; keep it
+in their repo and certify it through the signed-in Emisar portal. Only the
+optional private-registry publisher in step 5 needs a signed Emisar source
+checkout and Go toolchain; no internal contributor instructions are needed.
+
+A pack is the contract between the operator and the LLM: it declares exactly
+what may run on hosts, with what arguments, at what risk. Treat every action
+you author as attack surface. Author restrictively, prove each claim, and
+return one evidence-backed report.
+
+## Use current public interfaces
+
+Default to the hosted control plane at `https://emisar.dev`. Use a different
+`EMISAR_URL` only when the operator identifies and trusts that deployment.
+
+Verify commands and schemas before using them:
+
+- Use `emisar pack --help`, `emisar action --help`, and `packctl catalog
+  --help` as the installed-version contracts.
+- `emisar pack validate` is the schema authority: it runs the exact loader
+  and hash path the runner enforces. When validation disagrees with any
+  document, including this one, the validator wins.
+- Use the public guides at `https://emisar.dev/docs/publishing-packs`
+  (authoring), `https://emisar.dev/docs/action-packs` (full YAML reference),
+  `https://emisar.dev/docs/pack-registry` (self-hosted registries), and
+  `https://emisar.dev/docs/mcp-reference` (MCP catalog contract).
+- Use the signed-in portal's **Packs** page for trust decisions and each
+  runner's **Actions** section for what the fleet actually serves.
+- Study installed packs as worked examples: `emisar pack install <name> --dest
+  ./examples --no-verify` copies a public pack into `./examples/<name>` without
+  running any of its actions. Pick one whose shape matches the job (exec reads,
+  script actions, credentialed services).
+
+Never reconstruct a YAML field, flag, or config shape from memory when the
+validator, installed help, or a public reference can confirm it.
+
+## Safety rules
+
+- **The pack is a security boundary, not a convenience.** Every action you add
+  is something an LLM may execute on hosts. When in doubt, narrow the action,
+  raise its risk tier, or leave it out. Never loosen validation, lower a risk
+  label, or widen `execution.inherit_env` to make a check pass.
+- **Trust authority is a human decision, never yours.** Present the content
+  hash, the diff, and your risk assessment; on hosted Emisar an account admin
+  reviews the pending pack and clicks Trust in the portal. Do not press for
+  approval, never click Trust, and never change which catalog the portal reads
+  (step 6). Never call a pack trusted or certified until you have verified
+  that exact hash is trusted for the account.
+- **`emisar action run` executes locally and bypasses cloud policy and
+  approvals.** Use it only for `risk: low` read actions, only on a
+  development or staging runner, never on a production host. Prove mutating
+  actions through the cloud path, where policy and approvals apply.
+- Treat pack credentials, API tokens, and signing material as secrets. Secrets
+  ride `execution.env` from the runner's protected environment file. Never
+  place them in argv, YAML literals, stdout, or shell history. Mark secret
+  args `sensitive: true`.
+- Pack bytes are public to the fleet: hashed, advertised, and shown in the
+  console. Do not put anything secret in a pack directory.
+- If an action needs protected local files, sockets, groups, service control,
+  or root, map it in `setup.host_access`. Name the exact actions, provide a
+  persistent operator-run grant plus a verification command, and state the
+  authority granted to the runner identity. Emisar displays these commands;
+  it never runs them. Do not suggest action-time `sudo`: action children run
+  with `no_new_privs` and cannot elevate that way.
+- Keep publisher credentials off fleet hosts. `packctl` runs on a workstation
+  or CI job; runners only ever fetch and verify.
+- Pin installs with `--hash` everywhere past the first authoring host. Never
+  install a pack whose content you have not validated or reviewed.
+
+## 1. Scope the pack
+
+Settle what the pack is for before writing YAML:
+
+- The job: which service, CLI, or procedure the operator wants the LLM to
+  handle, and the smallest action set that covers it. Prefer a few precise
+  actions over a wrapper for every subcommand.
+- The fleet: which runners get it, and how many hosts. A handful of hosts
+  installs directly from a directory; a large fleet or CI-driven rollout
+  wants a private registry (step 5).
+- The authoring host: a development or staging runner where local proof is
+  safe. Record `emisar --version` and `emisar pack list` there.
+- The pack id: pick one that is not taken by the public catalog
+  (`curl -fsS https://emisar.dev/packs.json` lists public ids) so an install by name from a registry
+  is never ambiguous. Keep the directory in the customer's
+  own git repo.
+
+Collect required credentials for the wrapped service as named variables in the
+runner's protected environment file, the same way the runner's other packs do,
+without echoing values.
+
+## 2. Design each action before YAML
+
+Decide these per action and write them down, since they become the YAML:
+
+- **Give each action one job and a searchable description.** The MCP catalog
+  is what an LLM keyword-matches; open read descriptions with the verb of the
+  job (List, Show, Get, Tail, Check). Write `description` as the action's
+  contract: what it does and returns, when to use it and when not to, and its
+  limits and caveats. Give every arg a `description` of what its value means.
+  Emisar tells agents to treat pack text as untrusted data, so state facts
+  about the action, not instructions to the agent. List every file, network,
+  and process side effect under `side_effects`.
+- **Risk is honest.** `low` covers structured status, metadata, and cheap
+  bounded probes. Raw log or application output, bounded recoverable changes,
+  opening a listener, and link-saturating probes are at least `medium`.
+  Destructive operations and secret-bearing configuration dumps are `high`;
+  unrestricted escapes are `critical`. Policy decides the outcome: the shipped
+  default allows low and medium, requires approval for high, and denies critical.
+- **The LLM never controls the command.** `execution.command.binary` plus an
+  `argv` list is the shape; `{{ args.x }}` substitutes into fixed slots. The
+  binary is a bare PATH-resolved name (`systemctl`, `psql`). When an action
+  genuinely needs a pipeline, `/bin/sh` with a fixed `-c '<script>'` you
+  author is acceptable. Pass open-ended strings, paths, and arrays through
+  `execution.env` or as whole positional elements after the program
+  (`["-c", "grep -- \"$1\" file", "emisar", "{{ args.pattern }}"]`).
+  Only finite `enum`/`allowed` choices and numbers with both `min` and `max`
+  may render into program text. An anchored regex constrains value shape; it
+  is not a shell-isolation boundary.
+- **Bound every argument.** Strings get `max_length` and an anchored
+  `pattern` or an `enum`; numbers get `min`/`max`. An unbounded string is a
+  DoS hole. **An anchored pattern is not path containment**: `.` and `/` are
+  ordinary characters, so `^/var/log/myapp/.*` still matches
+  `/var/log/myapp/../../etc/shadow`. A path the command reads or writes must
+  declare a nonempty `allowed_prefixes` or `allowed_paths`; those are the
+  only fields that confine it to a location. `denied_prefixes`/`denied_paths`
+  are optional extra exclusions, not containment. Any of the four turns on the
+  runner's symlink-resolving canonical pass, but a deny-only rule refuses the
+  paths it names and accepts every other absolute path.
+- **A private pack may hardcode the fleet.** Unlike generic public packs,
+  yours can enum the exact unit names, databases, and hosts it operates. Use
+  enums for them, since an enum is tighter than any pattern.
+- **Design actions not to emit secrets.** Do not write actions that dump
+  environments, emit credential-bearing connection strings, or read config
+  unfiltered. `output.redact` rules scrub known shapes as a fail-closed last
+  line, but a secret no rule matches leaks, so don't print secrets in the first
+  place.
+
+## 3. Author the pack
+
+The layout, from the authoring guide:
+
+```text
+my-pack/
+  pack.yaml          # manifest: metadata + which action files to load
+  actions/*.yaml     # one action per file
+  scripts/*.sh       # only for kind: script actions
+```
+
+`pack.yaml` declares the pack; new packs start at `version: 0.1.0`:
+
+```yaml
+schema_version: 1
+id: my-pack
+name: My ops pack
+version: 0.1.0
+description: Short one-line summary shown on the runner and console.
+vendor: acme
+requires:
+  os: [linux]
+  binaries: [journalctl]
+setup:
+  host_access:
+    - actions: [my-pack.journal_tail]
+      requirement: Read the system journal.
+      recipes:
+        - name: systemd Linux — default emisar service user
+          commands:
+            - sudo usermod -aG systemd-journal emisar
+            - sudo systemctl restart emisar
+          verify:
+            - sudo -u emisar journalctl -n 1 --no-pager
+          impact: The emisar service identity can read the complete system journal.
+actions:
+  - actions/journal_tail.yaml
+```
+
+Each action file is the full contract. This example shows the main fields;
+the complete schema is in the YAML reference and the validator:
+
+```yaml
+schema_version: 1
+id: my-pack.journal_tail
+title: Read recent system journal entries
+kind: exec
+risk: medium
+description: >
+  Show the most recent system journal entries. Raw application messages can
+  contain personal or sensitive data that pattern redaction cannot fully detect.
+side_effects:
+  - Reads the system journal.
+  - Touches nothing.
+args:
+  - name: lines
+    type: integer
+    default: 100
+    description: Number of most recent entries to return.
+    validation: { min: 1, max: 1000 }
+execution:
+  command:
+    binary: journalctl
+    argv: ["--no-pager", "-n", "{{ args.lines }}"]
+  timeout: 10s
+output:
+  parser: text
+  max_stdout_bytes: 65536
+  max_stderr_bytes: 8192
+examples:
+  - title: Read the last 100 entries
+    args: { lines: 100 }
+```
+
+Write every action this deliberately: designed bounds from step 2, honest
+risk, honest side effects, an example an operator would recognize.
+
+## 4. Validate, then prove it locally
+
+On the authoring runner:
+
+1. Run `emisar pack validate ./my-pack`, which applies the same checks the
+   runner runs at load. Fix until it reports `pack <id> OK` and record the
+   printed `sha256:` content hash; that exact tuple is what the portal catalog
+   matches or an account admin reviews.
+2. Run `sudo emisar pack install ./my-pack`. It copies the pack into the
+   runner's packs dir and reloads the running daemon itself, without a restart
+   or dropped runs.
+3. Run `emisar action list` and `emisar action describe <id>` to confirm
+   every action loaded with the intended risk, args, and bounds.
+4. If the pack includes a `risk: low` read, prove it locally:
+   `emisar action run <id> --arg k=v
+   --reason "pack authoring check"`. Local runs bypass the cloud, so this is
+   strictly a development-runner debugging step. Use the governed cloud path
+   in step 6 for every other action, including the medium-risk journal example.
+5. Through the same permitted path, prove the bounds hold with an
+   out-of-range value (a path outside `allowed_prefixes`, an oversized string,
+   a number past `max`), and require a validation rejection, not an
+   execution. An action whose denial you have not seen is unproven.
+6. Run `emisar doctor` to confirm the runner still reports healthy and every
+   action's executable resolves on `PATH`. `emisar pack info <id>` checks the
+   pack's required binaries and flags required variables missing from
+   `execution.inherit_env`.
+
+## 5. Distribute it
+
+**A few hosts: install the directory, pinned.** On each runner, install the
+exact bytes you validated and reviewed; the install reloads the runner for you:
+
+```sh
+sudo emisar pack install ./my-pack --hash sha256:<validated hash>
+```
+
+Config management (Ansible, a base image) can drop the directory instead and
+reload the runner. Either way every host runs identical, reviewed bytes.
+
+**A fleet: host a private registry.** A registry is a static file tree over
+HTTPS; anything that serves files can be one. It moves bytes only; the portal
+still decides trust per account (step 6).
+
+1. Get `packctl` on the publishing workstation or CI job (never fleet hosts).
+   Build it from the same signed release tag your runners were installed from,
+   so the tool that hashes a pack is the one whose loader will enforce that
+   hash. Do not use `go install …@latest`: it does not pin a version and
+   builds whatever the default branch points at that minute.
+
+   ```sh
+   git clone --depth 1 --branch runner-v<version> \
+     https://github.com/andrewdryga/emisar.git emisar-src
+   go -C emisar-src/runner build -o ~/.local/bin/packctl ./cmd/packctl
+   ```
+
+   Release tags are signed annotated tags, so `git -C emisar-src verify-tag runner-v<version>`
+   confirms the checkout before you build if you have the maintainer's public signing key. Requires
+   a Go toolchain; check `packctl --version`.
+2. From your pack repository, build the tree. `--packs` names the directory
+   containing your pack directories; `--base-url` is wherever you will host it;
+   `--repo-url` is the repository holding the pack source, which each pack links
+   to as `<repo-url>/tree/main/packs/<id>`. Every `pack.yaml` must set `vendor`,
+   or the build fails naming the pack:
+
+   ```sh
+   packctl catalog build --packs ./packs --out ./dist \
+     --base-url https://packs.acme.internal \
+     --repo-url https://github.com/acme/ops-packs
+   ```
+
+3. Host it. GCS is native. Immutable objects are precondition-protected and
+   the pointers are written last:
+
+   ```sh
+   GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token) \
+     packctl catalog publish --dir ./dist --bucket acme-pack-registry
+   ```
+
+   S3, MinIO, or nginx: sync the files yourself, immutable objects first,
+   then the four mutable indexes (`v1/suggest.json`, `packs/suggest.json`,
+   `packs.json`, and finally `v1/catalog.json`) so an index never references
+   missing bytes. The final catalog marks publication complete.
+4. Install fleet-wide using the immutable `tarball_url` and `content_hash` from
+   the catalog entry:
+
+   ```sh
+   sudo emisar pack install <tarball_url> --hash <content_hash>
+   ```
+
+   `emisar pack suggest --catalog https://packs.acme.internal/v1/catalog.json`
+   also prints pinned install commands for matching hosts. Once installed,
+   review and apply the registry's current version with:
+
+   ```sh
+   emisar pack diff my-pack --registry https://packs.acme.internal
+   sudo emisar pack update my-pack --registry https://packs.acme.internal
+   ```
+
+   Both commands verify the catalog's content hash and use its immutable download
+   URL. Static storage does not provide the Portal's name/version download
+   routes: first installs by plain name, `my-pack=0.2.0`, and `pack diff --to`
+   need those routes. Use an immutable URL and hash to install a specific version.
+
+**Every rebuild after the first publish carries history forward.** Fetch the
+currently published catalog and pass it as `--previous`. That makes a byte
+change to an already-published `id@version` fail the build (bump the version
+instead) and keeps each pack's version history and retirement floor intact. A
+rebuild without `--previous` silently starts history from empty:
+
+```sh
+curl -fsS https://packs.acme.internal/v1/catalog.json -o current.json
+packctl catalog build --packs ./packs --out ./dist \
+  --base-url https://packs.acme.internal \
+  --repo-url https://github.com/acme/ops-packs --previous current.json
+```
+
+## 6. Trust it, then certify end to end
+
+Trust is per account, and one deployment setting decides where it comes from. The portal trusts an exact `pack@version/hash` on sight when that tuple appears
+in the catalog it is configured to read (`EMISAR_PACK_CATALOG_URL`), and holds
+every other hash pending with dispatch held. On hosted Emisar that catalog is
+Emisar's published one, which does not include your custom pack, so the pack
+lands on the **Packs** page as pending. An account admin opens it, compares the
+content hash against the `pack validate` output you recorded, reviews the
+actions, and clicks Trust. From then on that exact byte-for-byte version is the
+only one authorized. Publishing to a registry does not confer trust by itself.
+On a self-hosted deployment whose owner separately configured the portal to
+read that catalog, the exact tuple may be trusted after the portal observes it.
+The deployment owner chooses that catalog. Never reconfigure it to skip a
+review, and verify the resulting trust state through `list_packs`.
+
+So verify which state your pack is actually in before certifying anything, then
+prove the whole chain through the customer's real MCP client:
+
+1. Call `list_packs` with `include: "all"` and confirm the pack's exact
+   version and hash appear as executable, with no descriptor or deployment
+   issues. That is your trust verification: MCP does not expose pending,
+   rejected, revoked, or retirement-blocked refs, so an absent ref sends you
+   back to the portal's **Packs** page to see which one it is.
+2. Call `find_actions` for the pack's job words and confirm the descriptions
+   are discoverable the way an operator would ask.
+3. Call `get_action` for one action and confirm the returned schema matches
+   the authored bounds and the intended runner is listed as compatible.
+4. Call `run_action` with those exact refs, schema-valid args, and a clear
+   reason, for a `risk: low` read; follow `wait_for_run` to terminal success.
+   For a mutating action, dispatch through the same path and let policy and
+   approval apply. An approval prompt reaching the operator is the system
+   working; never work around it.
+5. Call `recent_runs` and confirm the run is attributed to this client,
+   action, and runner, and appears in the account audit log.
+
+**Lifecycle.** Any pack change bumps `version`, re-validates, re-deploys, and
+earns trust again. The hash changes, so the new tuple is pending until an
+admin reviews it, or trusted after the portal's configured catalog carries and
+the portal observes that exact tuple. That is the drift guard working, not a
+fault. On a security or critical fix (an under-bounded arg, a secret-emitting
+read, a path escape, or a mislabeled risk), a version bump alone leaves
+vulnerable copies runnable. For a custom pack absent from the Portal's configured
+catalog, have an account admin revoke trust in the old hashes and approve the
+reviewed replacements. A `retired_below` field in that private manifest alone
+does not block old versions. If the Portal reads your catalog, publish
+`retired_below: <fixed version>` there; `--previous` preserves its floor across
+rebuilds. Verify the old tuple is blocked before calling the rollout complete.
+Routine changes do not need retirement or trust revocation.
+
+## Report
+
+Use only these states: `PASS`, `DEGRADED`, `FAIL`, `SKIPPED` (name the
+missing prerequisite and owner), `UNSUPPORTED`.
+
+```text
+Pack report - <pack id>@<version> - <UTC timestamp>
+Overall: PASS | DEGRADED | FAIL | NOT CERTIFIED
+
+Check                State       Evidence
+design review        PASS        actions, risk tiers, bounds decided and recorded
+validate             PASS        pack <id> OK, sha256:<hash>
+local proof          PASS        <action id> ran + out-of-bounds arg rejected
+distribution         PASS        <hosts or registry URL, hash-pinned>
+trust                PASS        <hash> trusted for the account (admin review | exact configured-catalog tuple)
+MCP functional       PASS        <action, runner_ref, run_id, terminal status>
+audit                PASS        run attributed in recent_runs
+lifecycle            PASS        version/retirement plan recorded
+
+Shipped: <pack id>@<version>, sha256:<hash>, <n> actions, risk ceiling <tier>
+Open items: <owner + exact next action, or none>
+```
+
+Overall is `PASS` only when every applicable check passes, including verified
+trust. An untrusted pack is authored, not shipped. A required `FAIL` makes it
+`FAIL`; a required `SKIPPED` makes it `NOT CERTIFIED`. Include exact ids,
+versions, hashes, refs, run IDs, and sanitized errors; never credential
+values or unredacted output.

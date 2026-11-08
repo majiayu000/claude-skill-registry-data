@@ -1,0 +1,38 @@
+{
+  "name": "ralph-tui-prd",
+  "repo": "BumpyClock/agent-templates",
+  "path": "skills_archive/ralph-tui-prd/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/BumpyClock/agent-templates",
+  "dir_name": "ralph-tui-prd-bumpyclock-agent-templates",
+  "downloaded_at": "2026-11-08T09:59:35.528602Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BumpyClock",
+  "source_url": "https://github.com/BumpyClock/agent-templates/blob/main/skills_archive/ralph-tui-prd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BumpyClock/agent-templates/blob/main/skills_archive/ralph-tui-prd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a Product Requirements Document (PRD) for ralph-tui task orchestration. Creates PRDs with user stories that can be converted to beads issues or prd.json for automated execution. Triggers on: create a prd, write prd for, plan this feature, requirements for, spec out."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pipeline",
+  "repo": "Jakeschincariol/closer-skill",
+  "path": "pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/Jakeschincariol/closer-skill",
+  "dir_name": "pipeline",
+  "downloaded_at": "2026-11-08T10:45:01.549105Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "writer"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/closer-skill/blob/main/pipeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/closer-skill/blob/main/pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pipeline Manager. Keeps every deal moving on one board, the CRM the other ten Closer skills share: contacts, deals, stages (lead, contacted, replied, call-booked, proposal, contract-sent, won, lost), every email and call, next steps and a do-not-contact list, all in one plain closer/pipeline.json in your project. Shows the board, one deal's history, moves deals between stages, and validates the file after every change. Use when the user says \"pipeline\", \"board\", \"my deals\", \"CRM\", \"where are we with X\", \"move X to proposal\", \"we won X\", \"we lost X\", \"set up the closer skill\", or wants to replace Salesforce or HubSpot."
+}

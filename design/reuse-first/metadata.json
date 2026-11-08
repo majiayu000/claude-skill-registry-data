@@ -1,0 +1,38 @@
+{
+  "name": "reuse-first",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/reuse-first/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "reuse-first",
+  "downloaded_at": "2026-11-08T10:23:39.357512Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/reuse-first/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/reuse-first/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rule under the reuse-first law. Load before creating any new screen, component, field, store, service, mapper or procedure \u2014 what to build on, and by which signs it is visible that something ready-made was bypassed. Pattern reuse-first-extend."
+}

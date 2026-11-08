@@ -1,0 +1,39 @@
+{
+  "name": "ghost-cms-skill",
+  "repo": "Backgetters/nexus-core",
+  "path": "skills/ghost-cms/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Backgetters/nexus-core",
+  "dir_name": "ghost-cms",
+  "downloaded_at": "2026-11-08T09:52:54.207135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Backgetters",
+  "source_url": "https://github.com/Backgetters/nexus-core/blob/main/skills/ghost-cms/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Backgetters/nexus-core/blob/main/skills/ghost-cms/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Comprehensive Ghost CMS integration for creating, publishing, scheduling, and managing blog content, newsletters, members, and analytics. Use when working with Ghost blogs for content creation (drafts, publishing, scheduling), member/subscriber management (tiers, newsletters), comment moderation, or analytics (popular posts, subscriber growth). Supports all Ghost Admin API operations."
+}

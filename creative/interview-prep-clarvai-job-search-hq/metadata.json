@@ -1,0 +1,37 @@
+{
+  "name": "interview-prep",
+  "repo": "ClarvAI/job-search-hq",
+  "path": ".claude/skills/interview-prep/SKILL.md",
+  "github_branch": "main",
+  "category": "creative",
+  "source": "github.com/ClarvAI/job-search-hq",
+  "dir_name": "interview-prep-clarvai-job-search-hq",
+  "downloaded_at": "2026-11-08T10:03:52.141742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "creative",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for creative: story, writing",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "story",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ClarvAI",
+  "source_url": "https://github.com/ClarvAI/job-search-hq/blob/main/.claude/skills/interview-prep/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ClarvAI/job-search-hq/blob/main/.claude/skills/interview-prep/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user has an interview coming up, gets a take-home assignment or skills exercise, wants to ask for an interview accommodation, or asks how to prepare. Builds an interview prep brief for a specific job (company research, the interviewers, likely behavioral and technical questions mapped to the user's stories, questions to ask, logistics) and handles take-home assignments and accommodation requests."
+}

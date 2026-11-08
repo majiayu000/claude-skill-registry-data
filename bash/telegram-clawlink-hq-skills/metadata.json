@@ -1,0 +1,38 @@
+{
+  "name": "telegram",
+  "repo": "ClawLink-HQ/skills",
+  "path": "skills/telegram/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ClawLink-HQ/skills",
+  "dir_name": "telegram-clawlink-hq-skills",
+  "downloaded_at": "2026-11-08T10:04:19.405882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ClawLink-HQ",
+  "source_url": "https://github.com/ClawLink-HQ/skills/blob/main/skills/telegram/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ClawLink-HQ/skills/blob/main/skills/telegram/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Telegram Bot integration for AI agents via ClawLink \u2014 browser login, no API key setup. Connect telegram through ClawLink's hosted setup. Use this skill when the user wants to work with Telegram Bot (Communication) \u2014 connect Telegram Bot, read or update Telegram Bot data, or take actions in Telegram Bot from chat instead of saying you cannot access it."
+}

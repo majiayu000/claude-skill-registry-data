@@ -1,0 +1,38 @@
+{
+  "name": "forge-autoresearch",
+  "repo": "ForgeyClap/Forge-Core",
+  "path": ".claude/skills/forge-autoresearch/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ForgeyClap/Forge-Core",
+  "dir_name": "forge-autoresearch",
+  "downloaded_at": "2026-11-08T10:25:58.686659Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ForgeyClap",
+  "source_url": "https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/forge-autoresearch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/forge-autoresearch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "User-invoked only: /forge-autoresearch. Bounded keep-or-revert experiment loop on one measured metric (speed, size, score): frozen harness, one change per round, decision log."
+}

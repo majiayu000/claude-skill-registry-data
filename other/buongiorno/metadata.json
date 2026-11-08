@@ -1,0 +1,36 @@
+{
+  "name": "buongiorno",
+  "repo": "AngeloDotNet/claude-config",
+  "path": "plugins/kit/skills/buongiorno/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AngeloDotNet/claude-config",
+  "dir_name": "buongiorno",
+  "downloaded_at": "2026-11-08T09:46:02.857776Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "devops",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AngeloDotNet",
+  "source_url": "https://github.com/AngeloDotNet/claude-config/blob/main/plugins/kit/skills/buongiorno/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AngeloDotNet/claude-config/blob/main/plugins/kit/skills/buongiorno/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Riprende il lavoro del giorno precedente. Rilegge PIANO.md e CHECKLIST.md, riassume dove si \u00e8 arrivati, cosa fare e le priorit\u00e0, e propone il primo passo da cui ripartire. Si lancia solo su richiesta, all'inizio della giornata di lavoro."
+}

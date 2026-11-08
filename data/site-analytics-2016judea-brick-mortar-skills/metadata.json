@@ -1,0 +1,37 @@
+{
+  "name": "site-analytics",
+  "repo": "2016judea/brick-mortar-skills",
+  "path": "skills/site-analytics/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/2016judea/brick-mortar-skills",
+  "dir_name": "site-analytics-2016judea-brick-mortar-skills",
+  "downloaded_at": "2026-11-08T09:30:55.084502Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/brick-mortar-skills/blob/main/skills/site-analytics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/brick-mortar-skills/blob/main/skills/site-analytics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read real traffic for your websites \u2014 who actually came, who came back, which pages, from where \u2014 using PostHog as the primary source and Vercel Web Analytics as the fallback, with your own visits and mail-scanner bots filtered out. Use when you ask \"how's <site> doing\", \"check the traffic/visits/analytics for <site>\", \"did anyone use the page I emailed\", \"any signups yet\", or when wiring the same PostHog snippet onto many small sites. Includes an injectable PostHog block with a ?me=1 self opt-out."
+}

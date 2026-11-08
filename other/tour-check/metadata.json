@@ -1,0 +1,38 @@
+{
+  "name": "tour-check",
+  "repo": "Komediruzecki/token-circles",
+  "path": ".claude/skills/tour-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Komediruzecki/token-circles",
+  "dir_name": "tour-check",
+  "downloaded_at": "2026-11-08T10:58:33.179481Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Komediruzecki",
+  "source_url": "https://github.com/Komediruzecki/token-circles/blob/main/.claude/skills/tour-check/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Komediruzecki/token-circles/blob/main/.claude/skills/tour-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Verify the guided spotlight tours end-to-end by walking every tour step in a real browser (frontend/scripts/walk-tours.mjs) against a seeded demo account, and assert each step spotlights a visible element. Use after ANY change to tour steps or the UI they target \u2014 SPOTLIGHT_TOURS in src/core/spotlightStore.ts, Spotlight.tsx, data-tour anchors, the sidebar, or a page's layout \u2014 and before releases (e.g. \"/tour-check\", \"verify the tours\", \"are the tours still working?\"). Also use when a tour walk reports failures that smell like the API died under it."
+}

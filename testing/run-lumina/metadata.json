@@ -1,0 +1,38 @@
+{
+  "name": "run-lumina",
+  "repo": "Bino5150/lumina",
+  "path": ".agents/skills/run-lumina/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/Bino5150/lumina",
+  "dir_name": "run-lumina",
+  "downloaded_at": "2026-11-08T09:56:38.893671Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, playwright",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Bino5150",
+  "source_url": "https://github.com/Bino5150/lumina/blob/main/.agents/skills/run-lumina/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Bino5150/lumina/blob/main/.agents/skills/run-lumina/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build, run, and screenshot Lumina (PySide6 desktop AI agent app). Use when asked to start Lumina, launch main.py, run its tests, or take a screenshot of its Settings/chat UI to confirm a UI change works."
+}

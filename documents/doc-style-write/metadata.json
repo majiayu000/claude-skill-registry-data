@@ -1,0 +1,39 @@
+{
+  "name": "doc-style-write",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/doc-style-write/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "doc-style-write",
+  "downloaded_at": "2026-11-08T10:23:45.392577Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/doc-style-write/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/doc-style-write/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule doc-style. Load when writing any project prose \u2014 rules, specs, README, code comments, commit bodies, PR descriptions. Samples of \"so\" and \"not so\" for each wording convention. Not for the structure of a spec \u2014 that is rule spec-driven."
+}

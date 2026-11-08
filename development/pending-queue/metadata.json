@@ -1,0 +1,37 @@
+{
+  "name": "pending-queue",
+  "repo": "2016judea/agensi-skills",
+  "path": "skills/pending-queue/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/2016judea/agensi-skills",
+  "dir_name": "pending-queue",
+  "downloaded_at": "2026-11-08T09:30:25.157437Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/agensi-skills/blob/main/skills/pending-queue/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/agensi-skills/blob/main/skills/pending-queue/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "A Claude Code SessionStart hook that keeps an agent's follow-ups (chase a reply, re-run a script, check a deploy) in ~/.claude/pending.json and injects anything overdue or due within 3 days into every new session \u2014 so work items never go on your personal calendar and never get forgotten. Use when you say \"remind me next session\", \"bring this up when we're working\", \"track this follow-up\", \"don't put that on my calendar\", or want a lightweight in-session to-do queue for agents."
+}

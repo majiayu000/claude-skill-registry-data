@@ -1,0 +1,36 @@
+{
+  "name": "seed-coach",
+  "repo": "Jakeschincariol/seed-skill",
+  "path": "seed-coach/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/seed-skill",
+  "dir_name": "seed-coach",
+  "downloaded_at": "2026-11-08T10:45:41.095101Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/seed-skill/blob/main/seed-coach/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/seed-skill/blob/main/seed-coach/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pitch Coach. Rehearses the investor call with you: drills the hard questions investors ask (market, competition, traction, unit economics, team, why now, risks, the ask), tailored to your own numbers from the competitor scout, the financial model, the market size and the investor you are meeting (\"Rover has 515,771 ratings. Why will owners switch?\"), grades your written answers (a number, specifics, no hedging, under a minute spoken, answer first) and writes a 20-minute plan for a booked first call. Reads seed/competitors.json, model.json, market.json, investors.json, pipeline.json and calls/. Use when the user says \"prep me for the call\", \"practice my pitch\", \"what will investors ask\", \"drill me\", \"grade my answer\", \"mock investor\", \"call agenda\", or after /seed-closer books a call."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ekos-leads",
+  "repo": "Ekos-Labs/skills",
+  "path": "skills/ekos-leads/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/Ekos-Labs/skills",
+  "dir_name": "ekos-leads",
+  "downloaded_at": "2026-11-08T10:19:26.953737Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ekos-Labs",
+  "source_url": "https://github.com/Ekos-Labs/skills/blob/main/skills/ekos-leads/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ekos-Labs/skills/blob/main/skills/ekos-leads/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find B2B buyers who are showing a real buying signal right now, and run LinkedIn outreach to them from the user's own account, from inside Claude Code, Claude Desktop, Codex or Cursor through the Ekos MCP connection. Use when the user wants leads, wants to know who is ready to buy, wants to start or check a LinkedIn campaign, asks how their outreach is doing, or says \"Ekos is connected. Check my setup and show me the status of my first five leads.\""
+}

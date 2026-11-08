@@ -1,0 +1,38 @@
+{
+  "name": "voice-agent-builder",
+  "repo": "CloudTalk-io/marketplace",
+  "path": "plugins/cloudtalk/skills/voice-agent-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/CloudTalk-io/marketplace",
+  "dir_name": "voice-agent-builder",
+  "downloaded_at": "2026-11-08T10:04:44.113420Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CloudTalk-io",
+  "source_url": "https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/voice-agent-builder/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/voice-agent-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build, fix, or check a CloudTalk AI Voice Agent: its v2 \"Expert Mode\" configuration. Connected to CloudTalk, it creates, reads and saves the agent directly against your real account (numbers, knowledge bases, tools, transfer targets; every save needs your approval, and a change to an existing agent can be undone); offline, it returns the JSON you paste into the dashboard's Advanced/code tab. Use whenever the user wants to create or edit ANY inbound or outbound AI voice/phone agent for CloudTalk, for any use case or industry (reception, qualification, support, booking, surveys, reminders, notifications, lead capture and more; these are just examples, not the limit), or asks for an AI Voice Agent config, a goalPrompt/greeting/scenarios/skills, or pastes an existing config to review, edit, or reuse. Produces a behaviorally-sound, save-ready config that reuses the agent's existing setup, and runs a structural + behavioral validator first."
+}

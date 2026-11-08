@@ -1,0 +1,37 @@
+{
+  "name": "init-rules",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-rules/skills/init-rules/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "init-rules",
+  "downloaded_at": "2026-11-08T10:15:11.560005Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-rules/skills/init-rules/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-rules/skills/init-rules/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Installs coding rules per project or globally, fitted to the stack it reads itself. Use when the user wants the same habits in a project or every session (\"init rules\", \"install rules\", \"onboard project\"). Not for Obsidian vaults (use obsidian-init)."
+}

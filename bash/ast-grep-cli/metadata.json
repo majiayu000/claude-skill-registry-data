@@ -1,0 +1,38 @@
+{
+  "name": "ast-grep-cli",
+  "repo": "BumpyClock/agent-templates",
+  "path": "skills/ast-grep-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/BumpyClock/agent-templates",
+  "dir_name": "ast-grep-cli",
+  "downloaded_at": "2026-11-08T09:59:24.315701Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BumpyClock",
+  "source_url": "https://github.com/BumpyClock/agent-templates/blob/main/skills/ast-grep-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BumpyClock/agent-templates/blob/main/skills/ast-grep-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find code by AST shape or relationships with ast-grep. Use for structural searches that text matching cannot express."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "kit-approval",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/kit-approval/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "kit-approval",
+  "downloaded_at": "2026-11-08T10:23:41.385859Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component, figma",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/kit-approval/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/kit-approval/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This tree's rule for a visible kit edit. A Figma mockup and the owner's approval come first, then the code and every state in the showcase. The showcase matches the mockup at 100% and is approved too. Only then a push, a PR and a release."
+}

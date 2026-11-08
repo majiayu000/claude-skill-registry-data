@@ -1,0 +1,37 @@
+{
+  "name": "seed-closer",
+  "repo": "Jakeschincariol/seed-skill",
+  "path": "seed-closer/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/Jakeschincariol/seed-skill",
+  "dir_name": "seed-closer",
+  "downloaded_at": "2026-11-08T10:45:41.289190Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/seed-skill/blob/main/seed-closer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/seed-skill/blob/main/seed-closer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The Closer. Sends personalised outreach emails to investors, manages the conversations and keeps following up until an investor call is booked, and nothing leaves the user's inbox without their yes. Drafts one RFC 5322 .eml per investor from seed/investors.json and a template (a real personal line, the sender's real name and an opt-out line, generic lines refused), shows the batch, records the user's yes word for word, enforces a daily cap of 20, then Claude sends through the user's own Gmail connector where the Allow once card is a second check. Schedules follow-ups on +3 and +7 business days (3 touches at most, never after a reply), sorts replies into interested / question / not now / no / out of office, stops a thread for good on a no, an opt-out or a bounce, writes a valid .ics invite and shows the funnel. Reads seed/config.json and seed/investors.json, writes seed/pipeline.json, seed/outreach/ and seed/calls/. Use when the user says \"email the investors\", \"send the outreach\", \"follow up with everyone who hasn't replied\", \"who do I follow up with today\", \"sort my replies\", \"book the call\", \"send her an invite\", \"how is the raise going\", or after /seed-investors ranks the list."
+}

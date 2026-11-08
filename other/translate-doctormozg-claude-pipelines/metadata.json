@@ -1,0 +1,38 @@
+{
+  "name": "translate",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-research-pipe/skills/translate/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "translate-doctormozg-claude-pipelines",
+  "downloaded_at": "2026-11-08T10:15:18.134789Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, language=3",
+    "score": 3,
+    "runner_up": "language",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "pdf",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-research-pipe/skills/translate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-research-pipe/skills/translate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Translates docs and i18n resources into another language. Use when the user says \"translate X to Y\" or \"localize\", or wants files or docs in another language. Not for one phrase or sentence (answer inline) or same-language rewording (use naturalize)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "substack-export",
+  "repo": "2016judea/agensi-skills",
+  "path": "skills/substack-export/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/2016judea/agensi-skills",
+  "dir_name": "substack-export",
+  "downloaded_at": "2026-11-08T09:30:31.360431Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/agensi-skills/blob/main/skills/substack-export/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/agensi-skills/blob/main/skills/substack-export/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Export every public post (titles, dates, word counts, full body text) from any Substack publication via its public archive API \u2014 no login. Use to pull or back up a newsletter, build an archive page, or feed a writing corpus to an agent (\"export my substack\", \"pull all posts from <sub>.substack.com\")."
+}

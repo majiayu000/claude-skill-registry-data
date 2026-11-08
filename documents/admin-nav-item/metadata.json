@@ -1,0 +1,37 @@
+{
+  "name": "admin-nav-item",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/admin-nav-item/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "admin-nav-item",
+  "downloaded_at": "2026-11-08T10:23:44.089321Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/admin-nav-item/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/admin-nav-item/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule navigation. Load when creating an admin menu item, a section with a panel or a new section address \u2014 one declaration per item and route, the flag of a section without a screen, address nesting, a hint on an unavailable item. Not for the record edit panel \u2014 pattern entity-aside."
+}

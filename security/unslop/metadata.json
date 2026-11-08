@@ -1,0 +1,37 @@
+{
+  "name": "unslop",
+  "repo": "Badhon-00/MDCP",
+  "path": ".agents/skills/unslop/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Badhon-00/MDCP",
+  "dir_name": "unslop",
+  "downloaded_at": "2026-11-08T09:53:30.071706Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Badhon-00",
+  "source_url": "https://github.com/Badhon-00/MDCP/blob/main/.agents/skills/unslop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Badhon-00/MDCP/blob/main/.agents/skills/unslop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit or improve formulaic AI-sounding prose while preserving facts, meaning, and the author's voice. See skills/unslop/SKILL.md for the complete MDCP playbook."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "gemini-web-search",
+  "repo": "2016judea/agensi-skills",
+  "path": "skills/gemini-web-search/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/2016judea/agensi-skills",
+  "dir_name": "gemini-web-search",
+  "downloaded_at": "2026-11-08T09:30:36.481266Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/agensi-skills/blob/main/skills/gemini-web-search/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/agensi-skills/blob/main/skills/gemini-web-search/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Search the live web through Gemini's Google Search grounding and get an answer with its cited sources \u2014 better than a generic web-search tool for local, fresh-market and trade-press questions (who operates what in a city, current prices, recent news). Use when you need to \"Google something\", look up businesses, competitors, buyers, prices or news, or verify a fact against live sources before it goes into a report. Needs a GEMINI_API_KEY."
+}

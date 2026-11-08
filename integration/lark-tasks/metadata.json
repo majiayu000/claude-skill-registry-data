@@ -1,0 +1,37 @@
+{
+  "name": "lark-tasks",
+  "repo": "AgentBull/ankole",
+  "path": "app/library/agent-plugins/lark/skills/lark-tasks/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/AgentBull/ankole",
+  "dir_name": "lark-tasks",
+  "downloaded_at": "2026-11-08T09:40:43.607310Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: connector, oauth",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "connector",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AgentBull",
+  "source_url": "https://github.com/AgentBull/ankole/blob/main/app/library/agent-plugins/lark/skills/lark-tasks/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentBull/ankole/blob/main/app/library/agent-plugins/lark/skills/lark-tasks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Manage Feishu or Lark personal and team tasks, tasklists, sections, subtasks, reminders, and comments."
+}

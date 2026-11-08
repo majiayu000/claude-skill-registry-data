@@ -1,0 +1,38 @@
+{
+  "name": "construct-skill",
+  "repo": "DoctorMozg/claude-pipelines",
+  "path": "plugins/mz-base/skills/construct-skill/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/DoctorMozg/claude-pipelines",
+  "dir_name": "construct-skill",
+  "downloaded_at": "2026-11-08T10:15:13.658134Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DoctorMozg",
+  "source_url": "https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-base/skills/construct-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DoctorMozg/claude-pipelines/blob/master/plugins/mz-base/skills/construct-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drafts a new skill for a plugin in a marketplace repo, to its guidelines. Use when the user wants a skill written or a workflow made into one (\"write a skill\", \"create a SKILL.md\", \"add a skill to the plugin\"). Not for .claude/skills project skills."
+}

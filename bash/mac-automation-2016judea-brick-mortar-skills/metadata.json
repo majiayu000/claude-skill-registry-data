@@ -1,0 +1,39 @@
+{
+  "name": "mac-automation",
+  "repo": "2016judea/brick-mortar-skills",
+  "path": "skills/mac-automation/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/2016judea/brick-mortar-skills",
+  "dir_name": "mac-automation-2016judea-brick-mortar-skills",
+  "downloaded_at": "2026-11-08T09:30:55.808756Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/brick-mortar-skills/blob/main/skills/mac-automation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/brick-mortar-skills/blob/main/skills/mac-automation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive Mac apps and the desktop from the shell \u2014 AppleScript and JavaScript (JXA) via osascript, UI scripting through System Events, notifications, dialogs, the clipboard, `open` tricks and the Shortcuts CLI. Use when you say \"automate this app\", \"click that button for me\", \"send me a notification when it's done\", \"copy this to my clipboard\", \"run my shortcut\", \"open this file in X\", \"what's the frontmost app\", \"get the bundle id\". Covers the exact one-liners, how to discover a UI element's name, how not to hang on a consent prompt, and how not to clobber the user's clipboard."
+}

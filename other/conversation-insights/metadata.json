@@ -1,0 +1,36 @@
+{
+  "name": "conversation-insights",
+  "repo": "CloudTalk-io/marketplace",
+  "path": "plugins/cloudtalk/skills/conversation-insights/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CloudTalk-io/marketplace",
+  "dir_name": "conversation-insights",
+  "downloaded_at": "2026-11-08T10:04:44.802448Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CloudTalk-io",
+  "source_url": "https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/conversation-insights/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CloudTalk-io/marketplace/blob/main/plugins/cloudtalk/skills/conversation-insights/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn recent CloudTalk conversations into insights you can act on. It finds the open loops, meaning questions not answered, promises not kept, callers not called back and risks not handled, and says who should close each one, a person or an AI Voice Agent. Use when the user asks what needs attention, what's still open, what the team owes customers, who to follow up with, or for a daily or weekly call digest. It reads first and changes nothing until the user picks a loop to close, and it is not a call-volume report. Summaries need Conversation Intelligence; texts need a number with SMS enabled; callbacks need AI Voice Agents."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "browser-as-you",
+  "repo": "2016judea/brick-mortar-skills",
+  "path": "skills/browser-as-you/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/2016judea/brick-mortar-skills",
+  "dir_name": "browser-as-you-2016judea-brick-mortar-skills",
+  "downloaded_at": "2026-11-08T09:30:55.434692Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2016judea",
+  "source_url": "https://github.com/2016judea/brick-mortar-skills/blob/main/skills/browser-as-you/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2016judea/brick-mortar-skills/blob/main/skills/browser-as-you/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Complete a sign-up, listing, claim or console task on a third-party site AS you, by driving Chrome on a copy of your own logged-in session \u2014 \"create the account\", \"submit us to X\", \"claim that listing\", \"file the application\", \"take over a browser\", \"I don't have an account, can you do it\". Use when a task is blocked on a web UI that has no API and no credential on disk. Covers the launch recipe that works (macOS, Chrome, puppeteer-core), the gates that stop it, reading a verification code out of your mail or Messages, and the failure where a green exit code hides a no-op."
+}

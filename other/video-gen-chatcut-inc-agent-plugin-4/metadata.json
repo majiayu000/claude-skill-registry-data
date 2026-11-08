@@ -1,0 +1,37 @@
+{
+  "name": "video-gen",
+  "repo": "ChatCut-Inc/agent-plugin",
+  "path": "claude/skills/video-gen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ChatCut-Inc/agent-plugin",
+  "dir_name": "video-gen-chatcut-inc-agent-plugin-4",
+  "downloaded_at": "2026-11-08T10:02:39.273736Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChatCut-Inc",
+  "source_url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/claude/skills/video-gen/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChatCut-Inc/agent-plugin/blob/main/claude/skills/video-gen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "AI video generation via Seedance, Kling, Gemini Omni, MiniMax H3, and MiniMax H3 Max. Use when the user wants to generate a video clip \u2014 text-to-video, image-to-video, first/last-frame transitions, reference-guided generation \u2014 or wants to modify / edit / extend an existing generated clip."
+}

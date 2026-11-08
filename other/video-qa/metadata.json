@@ -1,0 +1,36 @@
+{
+  "name": "video-qa",
+  "repo": "Itsmahnor/digikon-ai-video-director",
+  "path": "skills/video-qa/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Itsmahnor/digikon-ai-video-director",
+  "dir_name": "video-qa",
+  "downloaded_at": "2026-11-08T10:42:56.861205Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category forensics scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "marketing",
+    "runner_up_score": 1,
+    "signals": [
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Itsmahnor",
+  "source_url": "https://github.com/Itsmahnor/digikon-ai-video-director/blob/master/skills/video-qa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Itsmahnor/digikon-ai-video-director/blob/master/skills/video-qa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Inspects a rendered video and reports problems with evidence, severity and a fix owner. Use after every render and after every revision."
+}

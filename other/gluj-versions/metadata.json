@@ -1,0 +1,37 @@
+{
+  "name": "gluj-versions",
+  "repo": "Hexancer/FlatRedBall-Linux",
+  "path": ".claude/skills/gluj-versions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Hexancer/FlatRedBall-Linux",
+  "dir_name": "gluj-versions",
+  "downloaded_at": "2026-11-08T10:37:24.193313Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Hexancer",
+  "source_url": "https://github.com/Hexancer/FlatRedBall-Linux/blob/main/.claude/skills/gluj-versions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Hexancer/FlatRedBall-Linux/blob/main/.claude/skills/gluj-versions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when adding, modifying, or reasoning about Gluj/Glux file format versions, the GluxVersions enum, FileVersion checks, or anything that gates behavior on the version of a loaded Glue project."
+}

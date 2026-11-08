@@ -1,0 +1,39 @@
+{
+  "name": "prod-update",
+  "repo": "Komediruzecki/token-circles",
+  "path": ".claude/skills/prod-update/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Komediruzecki/token-circles",
+  "dir_name": "prod-update",
+  "downloaded_at": "2026-11-08T10:58:33.582813Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database, pipeline",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Komediruzecki",
+  "source_url": "https://github.com/Komediruzecki/token-circles/blob/main/.claude/skills/prod-update/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Komediruzecki/token-circles/blob/main/.claude/skills/prod-update/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cut a production release of Token Circles \u2014 pre-flight checks (tests, guided-tour walk, migration dress rehearsal), then tag vX.Y.Z and push, then monitor the two prod deploys and verify the result live. Use whenever the user wants to release, ship, tag a version, or push to prod (e.g. \"/prod-update\", \"release 5.9.1\", \"tag and deploy\", \"ship it\")."
+}

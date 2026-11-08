@@ -1,0 +1,38 @@
+{
+  "name": "task-flow-start",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/task-flow-start/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "task-flow-start",
+  "downloaded_at": "2026-11-08T10:23:45.960034Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/task-flow-start/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/task-flow-start/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule task-flow. Load at the start of work from the owner \u2014 exploration before the first question, the six mandatory questions, the product agreement, creating the task, the branch and the folder. Returning to work \u2014 pattern task-flow-resume."
+}

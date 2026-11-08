@@ -1,0 +1,38 @@
+{
+  "name": "anatomy",
+  "repo": "BumpyClock/agent-templates",
+  "path": "skills/anatomy/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/BumpyClock/agent-templates",
+  "dir_name": "anatomy",
+  "downloaded_at": "2026-11-08T09:59:22.157130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BumpyClock",
+  "source_url": "https://github.com/BumpyClock/agent-templates/blob/main/skills/anatomy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BumpyClock/agent-templates/blob/main/skills/anatomy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build crafted, highly detailed, interactive isometric SVG figures that explain a technical idea as a real physical object (a test rig, a dial gauge, a cabinet of drawers, a plotter, a lock), with many small precise solid parts, four-tone shading, correct painter's order, a framed card with title, hint and live readout, and calm eased motion. Use this whenever someone wants an isometric illustration, an explanatory diagram or figure for docs, a blog post, a landing page or an article, a \"Linear-style\" or \"premium\" technical drawing, an interactive explainer, or an SVG that shows how a system, algorithm or component works, even if they never say \"isometric\". Works framework-free (TypeScript/JS that writes SVG and HTML) and in React/Next.js, and can add realistic WebGL shaders (fire, exhaust, water, caustics, lamp light) that live inside the drawing in the same isometric perspective. Also publishes a finished figure to the Anatomy community gallery when asked."
+}

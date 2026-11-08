@@ -1,0 +1,36 @@
+{
+  "name": "record-keeper",
+  "repo": "Jakeschincariol/closer-skill",
+  "path": "record-keeper/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/closer-skill",
+  "dir_name": "record-keeper",
+  "downloaded_at": "2026-11-08T10:45:03.582865Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/closer-skill/blob/main/record-keeper/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/closer-skill/blob/main/record-keeper/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Record Keeper. Logs every email and call for you, so you never update a CRM by hand again. Reads your inbox through the Gmail connector, matches every message to a contact on the board, and logs it (opening, follow-up or reply) into closer/pipeline.json; logs calls with their notes saved to closer/calls/; shows the full timeline with anyone; and lists new addresses writing in that are not contacts yet. Use when the user says \"log this\", \"log my emails\", \"sync my inbox\", \"update the CRM\", \"what's my history with X\", \"save the call notes\", or at the end of every call and every morning."
+}

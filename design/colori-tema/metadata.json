@@ -1,0 +1,38 @@
+{
+  "name": "colori-tema",
+  "repo": "AngeloDotNet/claude-config",
+  "path": "plugins/kit/skills/colori-tema/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/AngeloDotNet/claude-config",
+  "dir_name": "colori-tema",
+  "downloaded_at": "2026-11-08T09:46:03.043537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: css, frontend, component",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AngeloDotNet",
+  "source_url": "https://github.com/AngeloDotNet/claude-config/blob/main/plugins/kit/skills/colori-tema/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AngeloDotNet/claude-config/blob/main/plugins/kit/skills/colori-tema/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Costruisce o verifica la palette di un progetto con token semantici per i temi chiaro e scuro, e controlla il contrasto sui valori resi. Non modifica file. Si lancia solo su richiesta."
+}

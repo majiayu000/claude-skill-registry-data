@@ -1,0 +1,38 @@
+{
+  "name": "connect-llm",
+  "repo": "AndrewDryga/emisar",
+  "path": "skills/connect-llm/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AndrewDryga/emisar",
+  "dir_name": "connect-llm",
+  "downloaded_at": "2026-11-08T09:45:29.497299Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndrewDryga",
+  "source_url": "https://github.com/AndrewDryga/emisar/blob/main/skills/connect-llm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndrewDryga/emisar/blob/main/skills/connect-llm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Connect an LLM or MCP client to Emisar and certify the connection end to end. Use for installing the emisar-mcp stdio bridge, registering a local client (Claude Code, Cursor, Zed, Copilot CLI, and other stdio clients), wiring a cloud connector (Claude.ai, ChatGPT), repairing a broken client registration, or proving that discovery, action execution, and audit work through the configured client. For installing the on-host runner itself, use the install-emisar skill."
+}

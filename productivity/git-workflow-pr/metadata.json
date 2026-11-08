@@ -1,0 +1,38 @@
+{
+  "name": "git-workflow-pr",
+  "repo": "Eyhenij/rt-tools",
+  "path": ".claude/skills/git-workflow-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Eyhenij/rt-tools",
+  "dir_name": "git-workflow-pr",
+  "downloaded_at": "2026-11-08T10:23:46.613788Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Eyhenij",
+  "source_url": "https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/git-workflow-pr/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Eyhenij/rt-tools/blob/main/.claude/skills/git-workflow-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern of rule git-workflow. Load for opening a PR and everything around it \u2014 title format, draft and leaving it, reading the PR state, the checklist. The link to the task, reviewer, labels and the body sample \u2014 pattern git-workflow-pr-body; creating the task and committing \u2014 git-workflow-commit."
+}

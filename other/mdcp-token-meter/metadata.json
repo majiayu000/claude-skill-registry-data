@@ -1,0 +1,37 @@
+{
+  "name": "mdcp-token-meter",
+  "repo": "Badhon-00/MDCP",
+  "path": "skills/mdcp-token-meter/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Badhon-00/MDCP",
+  "dir_name": "mdcp-token-meter",
+  "downloaded_at": "2026-11-08T09:53:38.135566Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Badhon-00",
+  "source_url": "https://github.com/Badhon-00/MDCP/blob/main/skills/mdcp-token-meter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Badhon-00/MDCP/blob/main/skills/mdcp-token-meter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Show how much of the session's context and tokens have been used. Use when the user asks \"token meter\", \"how much session is used\", \"context usage\", \"how many tokens\", or wants a usage readout in the status line (Claude Code)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "seed-model",
+  "repo": "Jakeschincariol/seed-skill",
+  "path": "seed-model/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Jakeschincariol/seed-skill",
+  "dir_name": "seed-model",
+  "downloaded_at": "2026-11-08T10:45:40.883906Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, software",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/seed-skill/blob/main/seed-model/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/seed-skill/blob/main/seed-model/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Financial Modeler. Builds the 36-month financial model behind your raise: customers, orders, GMV, revenue (GMV x your take rate), contribution, payroll, marketing (new customers x CAC), opex, net and cash, month by month, then the numbers investors ask for: runway, the breakeven month, peak burn, revenue for years 1 to 3, and the unit economics (contribution per order, CAC payback, LTV:CAC). Checks that the use of funds adds up to the raise and exports a CSV. Reads seed/assumptions.json, writes seed/model.json for the business plan, the deck and the pitch coach. Use when the user says \"build my financial model\", \"how long will the money last\", \"what's my runway\", \"when do we break even\", \"3-year projections\", \"use of funds\", \"how much should I raise\", \"unit economics\", \"burn rate\", or before /seed-plan and /seed-deck."
+}
