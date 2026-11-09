@@ -1,0 +1,36 @@
+{
+  "name": "comentar-tarea",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".claude/skills/comentar-tarea/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "comentar-tarea-martincolavita-template-estructura-",
+  "downloaded_at": "2026-11-09T05:10:57.665640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category devops scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "devops"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/comentar-tarea/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/comentar-tarea/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Agregar un comentario a un work item de Azure DevOps (queda en el Historial / Discusi\u00f3n de la tarjeta) y, si hace falta, leer los comentarios existentes. Usar cuando se pida \"coment\u00e1 en la #NNNN\", \"dej\u00e1 una nota en la tarjeta\", \"respond\u00e9 el comentario de X\", \"/comentar-tarea\", al TERMINAR UN DESARROLLO (el comentario de cierre: rama, Merge Request, resumen t\u00e9cnico y pendientes a confirmar), para dejar un hueco o un gris como pendiente, y ANTES DE CERRAR una Tarea (revisar en sus comentarios los pendientes sin resolver). Es la \u00fanica escritura que entra en una tarjeta congelada (en un sprint y ya tomada). Leer comentarios no requiere permiso; escribir el comentario se hace con confirmaci\u00f3n. Espa\u00f1ol (Argentina), sin PHI."
+}

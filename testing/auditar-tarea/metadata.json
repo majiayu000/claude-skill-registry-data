@@ -1,0 +1,37 @@
+{
+  "name": "auditar-tarea",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".claude/skills/auditar-tarea/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "auditar-tarea",
+  "downloaded_at": "2026-11-09T05:10:56.562391Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "tdd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/auditar-tarea/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/auditar-tarea/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "(Solo lectura, adversarial) Auditar UNA Tarea t\u00e9cnica ya escrita \u2014el segundo chequeo, hecho por un agente DISTINTO del que la redact\u00f3\u2014 con foco en la lista \"Tests a escribir PRIMERO\": que no falte ning\u00fan caso (cada validaci\u00f3n, cada Caso de error, cada c\u00f3digo del contrato OpenAPI, cada [RN-\u2026] y cada Escenario del padre tienen su test), que ning\u00fan test sobre, que cada test sea VERIFICABLE (input concreto \u2192 resultado concreto), que PUEDA FALLAR (salvo guardarra\u00edl declarado) y que cada \u00edtem tenga UNA sola condici\u00f3n. Usar cuando se pida \"audit\u00e1 la tarea\", \"revis\u00e1 los tests de la #NNNNN\", \"doble chequeo de la tarjeta\", \"\u00bfesta Tarea est\u00e1 lista para desarrollar?\", \"/auditar-tarea\". OPCIONAL: corre s\u00f3lo a pedido y NO es requisito para arrancar el desarrollo (lo que encuentre queda como pendiente en la tarjeta). NO redacta, NO corrige, NO escribe en el board: devuelve hallazgos y preguntas. Espa\u00f1ol (Argentina)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "review-capacity-check",
+  "repo": "MiniMax-AI/mcode-stack",
+  "path": "stacks/ronny/skills/review-capacity-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MiniMax-AI/mcode-stack",
+  "dir_name": "review-capacity-check",
+  "downloaded_at": "2026-11-09T05:16:11.716449Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MiniMax-AI",
+  "source_url": "https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/review-capacity-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/review-capacity-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check whether finished agent work is piling up faster than we can stand behind it, and fix that by tightening automatic checks or running fewer parallel sessions instead of starting another one. Also checks that multi-agent chains read original sources, and which skills we are letting go. Use before launching another parallel session or subagent batch, at the end of a day with many agent PRs, or in a weekly review."
+}

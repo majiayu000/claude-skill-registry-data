@@ -1,0 +1,39 @@
+{
+  "name": "agent-playbook",
+  "repo": "Remote-Arc/remote-arc",
+  "path": "skills/agent-playbook/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/Remote-Arc/remote-arc",
+  "dir_name": "agent-playbook",
+  "downloaded_at": "2026-11-09T05:38:54.161509Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Remote-Arc",
+  "source_url": "https://github.com/Remote-Arc/remote-arc/blob/master/skills/agent-playbook/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Remote-Arc/remote-arc/blob/master/skills/agent-playbook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Engineering practice for any coding task through Remote Arc, in any language or stack, such as a feature, bug fix, refactor, test, review, migration or pull request. Covers module boundaries, file and folder size, one source of truth for permissions, config, errors and text, safe data changes, real tests and verified reports."
+}

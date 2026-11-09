@@ -1,0 +1,37 @@
+{
+  "name": "ds-context-reset",
+  "repo": "aicodeking/deepseek-stack",
+  "path": "skills/ds-context-reset/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/aicodeking/deepseek-stack",
+  "dir_name": "ds-context-reset",
+  "downloaded_at": "2026-11-09T06:35:31.544903Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, context-window",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aicodeking",
+  "source_url": "https://github.com/aicodeking/deepseek-stack/blob/main/skills/ds-context-reset/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aicodeking/deepseek-stack/blob/main/skills/ds-context-reset/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep a PROGRESS.md for long tasks and move to a fresh session or subagent that reads only that file when the context gets long or stale. Use when a task spans many steps or sessions, when the model starts repeating itself, forgets earlier facts, or re-tries old fixes, or when the context window is past about half full. Invoke as /ds-context-reset."
+}

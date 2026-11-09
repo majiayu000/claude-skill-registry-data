@@ -1,0 +1,37 @@
+{
+  "name": "context-engine",
+  "repo": "Md-Bari/Hospital-Management-system",
+  "path": "agent/skills/context-engine/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/Md-Bari/Hospital-Management-system",
+  "dir_name": "context-engine-md-bari-hospital-management-",
+  "downloaded_at": "2026-11-09T05:13:16.512370Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Md-Bari",
+  "source_url": "https://github.com/Md-Bari/Hospital-Management-system/blob/main/agent/skills/context-engine/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Md-Bari/Hospital-Management-system/blob/main/agent/skills/context-engine/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Loads and manages company context for all C-suite advisor skills. Reads ~/.claude/company-context.md, detects stale context (>90 days), enriches context during conversations"
+}

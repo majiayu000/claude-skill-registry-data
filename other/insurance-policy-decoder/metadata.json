@@ -1,0 +1,36 @@
+{
+  "name": "insurance-policy-decoder",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/insurance-policy-decoder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "insurance-policy-decoder",
+  "downloaded_at": "2026-11-09T05:51:30.358169Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/insurance-policy-decoder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/insurance-policy-decoder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Decode a home, renters, or auto insurance policy into what's actually covered, what's excluded, and what the payout math really looks like before you need it. Use when someone asks 'what does my insurance actually cover', 'decode my policy', 'is this deductible normal', or 'actual cash value vs replacement cost'."
+}

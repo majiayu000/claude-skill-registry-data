@@ -1,0 +1,40 @@
+{
+  "name": "php",
+  "repo": "YemenJPT/YemenJPT-AI-Skills",
+  "path": "skills/media-literacy/php/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/YemenJPT/YemenJPT-AI-Skills",
+  "dir_name": "php-yemenjpt-yemenjpt-ai-skills",
+  "downloaded_at": "2026-11-09T06:18:52.509671Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, debug, refactor",
+    "score": 5,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "YemenJPT",
+  "source_url": "https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/media-literacy/php/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/media-literacy/php/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Modern PHP development skill covering PHP 8.x features (readonly, enums, match, attributes, named arguments), Composer (autoload, packages, scripts), PSR standards (PSR-4 autoloading, PSR-12 style), OOP (interfaces, traits, dependency injection), error handling and exceptions, PHPUnit testing, security (XSS, SQLi, CSRF, password_hash), performance (OPcache), PHP-FPM + nginx, and modern tooling (Pint, Rector). Use when writing, refactoring, or debugging modern PHP applications."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "agent-spec",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/agent-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "agent-spec-slipcast-dev-codex-user-skills",
+  "downloaded_at": "2026-11-09T05:50:04.589437Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/agent-spec/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/agent-spec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Specify an autonomous or tool-using AI agent before building it. Use when asked to design an AI agent, define an agent's tools and guardrails, scope what an agent is allowed to do, or write an agent spec/PRD."
+}

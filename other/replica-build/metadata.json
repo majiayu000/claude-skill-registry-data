@@ -1,0 +1,37 @@
+{
+  "name": "replica-build",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/replica-build/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "replica-build",
+  "downloaded_at": "2026-11-09T05:52:16.894240Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/replica-build/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/replica-build/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rebuilds an app screen by screen from the recon map: app shell first, then the core flow as a vertical slice, then every screen with all its states, ticking off the feature matrix as it goes. Writes every line fresh, never the original's code, assets or copy. Use when the user says \"build the clone\", \"build screen S07\", \"start building\", \"rebuild this screen\", \"implement the booking page\", or after /replica-design."
+}

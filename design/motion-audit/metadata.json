@@ -1,0 +1,38 @@
+{
+  "name": "motion-audit",
+  "repo": "NahuelMosse/ClubNahuelMosse",
+  "path": ".claude/skills/motion-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/NahuelMosse/ClubNahuelMosse",
+  "dir_name": "motion-audit",
+  "downloaded_at": "2026-11-09T05:20:52.294806Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, animation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NahuelMosse",
+  "source_url": "https://github.com/NahuelMosse/ClubNahuelMosse/blob/main/.claude/skills/motion-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NahuelMosse/ClubNahuelMosse/blob/main/.claude/skills/motion-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks to audit, test or QA the motion, animations or microinteractions of a running page or app, says it feels janky, dead, stutters or jumps, or asks whether reduced motion works. Measures in a real browser what is wrong - no hover, press or focus feedback, snapping or janky transitions, long frames, animations that jump or restart, broken prefers-reduced-motion."
+}

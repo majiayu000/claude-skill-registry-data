@@ -1,0 +1,37 @@
+{
+  "name": "stage-launch",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/stage-launch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "stage-launch",
+  "downloaded_at": "2026-11-09T05:52:38.456915Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/stage-launch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/stage-launch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Phase 2 of building a Claude Managed Agent \u2014 turn a validated build sheet into exact API payloads and a resumable BYOK curl launch script, then launch (environment \u2192 agent \u2192 session \u2192 kickoff) using the founder's OWN Anthropic key. Use when the user says \"launch it\", \"deploy the agent\", \"create the agent now\", or when the orchestrator routes phase=stage-launch. payload_generator.py emits the four ordered payloads; launch_script_writer.py writes launch.sh that reads $ANTHROPIC_API_KEY at runtime and never embeds it; payload_validator.py runs a pre-launch check including an API-key-leak scan. No tool in this skill makes network calls \u2014 the user runs launch.sh themselves. Distinct from interview (planning) and grade-iterate (the outcome loop)."
+}

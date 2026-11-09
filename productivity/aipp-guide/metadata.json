@@ -1,0 +1,39 @@
+{
+  "name": "aipp-guide",
+  "repo": "Ronnasayd/aipp",
+  "path": "skills/aipp-guide/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/Ronnasayd/aipp",
+  "dir_name": "aipp-guide",
+  "downloaded_at": "2026-11-09T05:40:32.756398Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning, memory",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ronnasayd",
+  "source_url": "https://github.com/Ronnasayd/aipp/blob/master/skills/aipp-guide/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ronnasayd/aipp/blob/master/skills/aipp-guide/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Explain how to use the AIPP toolkit (this repo, also called aipp): installing it, linking it into a project, enabling skills and agents, choosing a workflow, understanding why a hook blocked something, and adding new skills, agents or hooks. Use when user says 'how do I use aipp', 'how does this toolkit work', 'how do I install aipp', 'enable a skill in this project', 'which workflow should I use', 'why did this hook block me', 'how do I add a skill to aipp', 'como usar o aipp', or 'como funciona este toolkit'. Do NOT use to pick the best skill for a specific task (use skill-advisor), to run a workflow itself, or for ai-memory, rag-rat, caveman or ponytail usage, which have their own skills."
+}

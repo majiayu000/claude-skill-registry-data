@@ -1,0 +1,37 @@
+{
+  "name": "setup-map",
+  "repo": "ZazaGdev/AI-fun",
+  "path": "setup-map/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ZazaGdev/AI-fun",
+  "dir_name": "skill-zazagdev-ai-fun",
+  "downloaded_at": "2026-11-09T06:21:38.898039Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZazaGdev",
+  "source_url": "https://github.com/ZazaGdev/AI-fun/blob/main/setup-map/skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZazaGdev/AI-fun/blob/main/setup-map/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to see their Claude Code setup as a picture, asks for a setup map, a map or overview of their skills, plugins, agents, MCP servers, hooks, commands, rules and memory, wants to see which projects they work in or which have their own setup, or types /setup-map. Builds one local 3D HTML page from ~/.claude and every project Claude Code has worked in."
+}

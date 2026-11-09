@@ -1,0 +1,38 @@
+{
+  "name": "user-feedback-aggregation",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/user-feedback-aggregation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "user-feedback-aggregation",
+  "downloaded_at": "2026-11-09T05:52:53.560507Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "planning",
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/user-feedback-aggregation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/user-feedback-aggregation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Collecting and synthesizing user feedback across channels (support tickets, NPS, in-app feedback, sales calls, social mentions, customer councils) into a continuous signal that informs product decisions. The triage discipline that distinguishes loudest-voice (whoever complains most wins) from averaged-noise (every signal weighted equally) from triaged-synthesis (signal weighted by source quality, frequency, and decision relevance). Triggers on user feedback, customer feedback aggregation, NPS, support ticket analysis, customer councils, feedback synthesis, voice of customer, feedback triage, in-app feedback. Also triggers when feedback channels overflow with volume that does not produce decisions, when the loudest-voice problem is steering roadmap, or when continuous feedback streams need synthesis discipline."
+}

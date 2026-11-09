@@ -1,0 +1,37 @@
+{
+  "name": "crypto-prices",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/crypto-prices/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "crypto-prices",
+  "downloaded_at": "2026-11-09T05:50:46.785377Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/crypto-prices/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/crypto-prices/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fetch live cryptocurrency prices with zero API keys \u2014 CoinGecko's public endpoints primary, Coinbase spot fallback, via plain curl. Use when asked what's bitcoin at, ETH price in euros, how's the crypto market today, or price of some altcoin."
+}

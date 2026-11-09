@@ -1,0 +1,38 @@
+{
+  "name": "run-app",
+  "repo": "Mark-Hine/ai-toolkit",
+  "path": "claude/plugins/web-kit/skills/run-app/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Mark-Hine/ai-toolkit",
+  "dir_name": "run-app-mark-hine-ai-toolkit",
+  "downloaded_at": "2026-11-09T05:10:18.468793Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Mark-Hine",
+  "source_url": "https://github.com/Mark-Hine/ai-toolkit/blob/main/claude/plugins/web-kit/skills/run-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Mark-Hine/ai-toolkit/blob/main/claude/plugins/web-kit/skills/run-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Start a web app's dev server, wait for it to answer, screenshot routes with Playwright at phone and desktop widths, and run a journey when one is named."
+}

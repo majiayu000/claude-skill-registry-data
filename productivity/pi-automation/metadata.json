@@ -1,0 +1,38 @@
+{
+  "name": "pi-automation",
+  "repo": "ahsanghalib/ai-workflow",
+  "path": "pi/agent/skills/pi-automation/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ahsanghalib/ai-workflow",
+  "dir_name": "pi-automation",
+  "downloaded_at": "2026-11-09T06:34:34.410520Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahsanghalib",
+  "source_url": "https://github.com/ahsanghalib/ai-workflow/blob/main/pi/agent/skills/pi-automation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahsanghalib/ai-workflow/blob/main/pi/agent/skills/pi-automation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design safe, observable scheduled and event-triggered Pi automation workflows. Use when the task concerns pi automation."
+}

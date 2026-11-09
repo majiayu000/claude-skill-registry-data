@@ -1,0 +1,39 @@
+{
+  "name": "arrancar-proyecto",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".agents/skills/arrancar-proyecto/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "arrancar-proyecto-martincolavita-template-estructura-",
+  "downloaded_at": "2026-11-09T05:11:00.520172Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, e2e, playwright",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "tdd",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/.agents/skills/arrancar-proyecto/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/.agents/skills/arrancar-proyecto/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Arrancar un proyecto con este template conversando: preguntar en UN solo mensaje lo b\u00e1sico que hace falta (nuevo o existente, nombres, m\u00f3dulo, solo o equipo, tablero, qui\u00e9n sos, d\u00f3nde est\u00e1 el c\u00f3digo), mostrar el plan con los comandos exactos, y con el \"s\u00ed\" correr todo por script (bin/arrancar-proyecto.py: instanciar, git init, instalar, enchufar el proyecto existente, informe). Usar cuando se pida \"arranc\u00e1 un proyecto\", \"instanci\u00e1 el template\", \"agarr\u00e1 el proyecto X\", \"sumale el template a mi carpeta\", \"quiero empezar con esto\", \"/arrancar-proyecto\". Se usa parado en una copia del template (o en un n\u00facleo ya instanciado, para enchufar otro proyecto). No inventa ning\u00fan dato: lo que no se contesta, se pregunta de nuevo o queda pendiente. Espa\u00f1ol (Argentina)."
+}

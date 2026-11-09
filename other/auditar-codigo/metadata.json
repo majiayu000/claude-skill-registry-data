@@ -1,0 +1,37 @@
+{
+  "name": "auditar-codigo",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": "back/.claude/skills/auditar-codigo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "auditar-codigo",
+  "downloaded_at": "2026-11-09T05:11:03.451007Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/back/.claude/skills/auditar-codigo/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/back/.claude/skills/auditar-codigo/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "(Repos de codigo \u00b7 desarrollo) Correr los CHEQUEOS DE ENTREGA sobre un cambio antes del Merge Request: lo que es propio de este pipeline y ningun revisor generico puede saber \u2014 que el cambio respete el contrato de la Tarea, que no cruce los limites del modulo, que la lista \"Tests a escribir PRIMERO\" este cubierta, que el fragmento OpenAPI este consolidado y que NO haya PHI ni secretos en el diff. NO es un revisor de codigo generico: la calidad del codigo es del control 5-bis (code-review.md; /code-review en Claude Code). Usar cuando se pida \"revis\u00e1 el MR\", \"chequeos de entrega\", \"revis\u00e1 el diff antes de subirlo\", \"/auditar-codigo\". NO audita la evidencia del ciclo TDD (eso es verificar-tdd) ni la salud del repo en reposo (eso es diagnosticar-repo). NO escribe codigo de produccion. Espanol (Argentina)."
+}

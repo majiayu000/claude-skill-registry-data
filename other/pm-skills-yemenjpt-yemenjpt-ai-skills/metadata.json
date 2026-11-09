@@ -1,0 +1,38 @@
+{
+  "name": "pm-skills",
+  "repo": "YemenJPT/YemenJPT-AI-Skills",
+  "path": "skills/fact-checking/pm-skills/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/YemenJPT/YemenJPT-AI-Skills",
+  "dir_name": "pm-skills-yemenjpt-yemenjpt-ai-skills",
+  "downloaded_at": "2026-11-09T06:19:06.233368Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "YemenJPT",
+  "source_url": "https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/fact-checking/pm-skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/fact-checking/pm-skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when coordinating project-delivery work across the 8 project-management sub-skills \u2014 sprint/velocity analytics, portfolio health, Jira/JQL, Confluence, Atlassian admin, templates, meeting analysis, team comms. Triggers on 'our sprints feel off', 'project health report', 'audit our Jira permissions', 'when will it be done', 'run the delivery loop'. Forks context to route to one sub-skill via a deterministic signal router and returns a digest; can also drive a full goal\u2192plan\u2192execute\u2192verify\u2192close delivery loop through the repo-wide agent-harness with Jira MCP data bridged into the domain's analytics tools. Distinct from product-team (what to build vs how to deliver it), business-operations (internal ops), and engineering/agent-harness (the generic loop engine this orchestrator plugs into)."
+}

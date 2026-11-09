@@ -1,0 +1,37 @@
+{
+  "name": "pricing-sensitivity-model",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/pricing-sensitivity-model/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "pricing-sensitivity-model",
+  "downloaded_at": "2026-11-09T05:52:04.104939Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/pricing-sensitivity-model/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/pricing-sensitivity-model/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Van Westendorp price sensitivity, computed from real survey answers \u2014 crossings found by interpolation, not read off a chart by eye. Use when someone has (or plans) the four-question pricing survey (too cheap / cheap / expensive / too expensive) and needs the optimal price point, the acceptable range, and a defensible readout."
+}

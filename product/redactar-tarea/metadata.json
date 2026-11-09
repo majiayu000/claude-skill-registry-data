@@ -1,0 +1,37 @@
+{
+  "name": "redactar-tarea",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".agents/skills/redactar-tarea/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "redactar-tarea",
+  "downloaded_at": "2026-11-09T05:10:57.531125Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, backlog",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/.agents/skills/redactar-tarea/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/.agents/skills/redactar-tarea/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Convertir un ticket POBRE (texto suelto, \"ver adjunto\", un link, o el ID de una tarjeta de Azure DevOps) en un work item PROFESIONAL, detallado y listo para pegar o crear en el board. Usar cuando se pida \"redact\u00e1/mejor\u00e1 esta historia\", \"escrib\u00ed el ticket\", \"hac\u00e9 los criterios de aceptaci\u00f3n\", \"pas\u00e1 esto a Gherkin\", \"convert\u00ed este bug en un ticket\", \"est\u00e1 lista para el sprint / cumple el DoR\", \"/redactar-tarea\". Decide primero el TIPO (Historia / Tarea / Bug / Habilitador t\u00e9cnico / Spike). TODO en espa\u00f1ol (Argentina), Gherkin incluido (Dado/Cuando/Entonces). PHI PROHIBIDO (marcadores). NO inventa: lo faltante se marca \"pendiente\" y se pregunta, esperando confirmaci\u00f3n humana. SOLO redacta: no escribe en Azure (para eso est\u00e1 la skill cargar-a-azure)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "git-worktree-workflow",
+  "repo": "ahsanghalib/ai-workflow",
+  "path": "skills/git-worktree-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ahsanghalib/ai-workflow",
+  "dir_name": "git-worktree-workflow",
+  "downloaded_at": "2026-11-09T06:34:34.302837Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahsanghalib",
+  "source_url": "https://github.com/ahsanghalib/ai-workflow/blob/main/skills/git-worktree-workflow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahsanghalib/ai-workflow/blob/main/skills/git-worktree-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when deciding whether to isolate substantial implementation work in a Git worktree, creating one with worktree-new, or safely closing one with worktree-close. Do not use for read-only research, planning, review, documentation-only changes, trivial edits, or arbitrary branch cleanup."
+}

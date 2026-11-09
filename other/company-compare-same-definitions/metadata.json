@@ -1,0 +1,36 @@
+{
+  "name": "company-compare-same-definitions",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/company-compare-same-definitions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "company-compare-same-definitions",
+  "downloaded_at": "2026-11-09T05:50:38.213353Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/company-compare-same-definitions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/company-compare-same-definitions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted numbers mean the same thing. Takes two uploaded annual reports from one sector and compares them on five ratios computed with identical definitions from audited figures, flagging every place the companies define a metric differently. Educational, not financial advice."
+}

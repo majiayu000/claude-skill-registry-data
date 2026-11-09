@@ -1,0 +1,37 @@
+{
+  "name": "auditar-historia",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": "cerebro-digital/configuracion-ia/skills/auditar-historia/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "auditar-historia-martincolavita-template-estructura--2",
+  "downloaded_at": "2026-11-09T05:11:08.678631Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, backlog",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/cerebro-digital/configuracion-ia/skills/auditar-historia/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/cerebro-digital/configuracion-ia/skills/auditar-historia/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "(Solo lectura, adversarial) Auditar UNA Historia de usuario ya escrita \u2014el segundo chequeo, hecho por un agente DISTINTO del que la redact\u00f3\u2014 antes de derivar Tareas de ella: que el Gherkin de los Criterios de aceptaci\u00f3n sea VERIFICABLE (un Entonces observable y un comportamiento por Escenario, actor expl\u00edcito, sin \"correctamente\"), que los Casos de uso y los Datos y estados queden cubiertos, que las reglas citadas existan y digan lo que se les atribuye, que ning\u00fan Entonces afirme sobre un punto que el Cerebro tiene abierto, y que el bloque \"## Derivaci\u00f3n a backlog\" de la ficha fuente est\u00e9 COMPLETO en los dos sentidos. Si el Documento fuente es un mockup no bloquea: deja escrito qu\u00e9 queda sin auditar. Usar cuando se pida \"audit\u00e1 la historia\", \"revis\u00e1 los criterios de la #NNNNN\", \"\u00bfesta Historia est\u00e1 lista para derivar Tareas?\", \"/auditar-historia\". OPCIONAL: corre s\u00f3lo a pedido y NO frena la derivaci\u00f3n. NO redacta, NO corrige, NO escribe en el board: devuelve hallazgos y preguntas. Espa\u00f1ol (Argentina)."
+}

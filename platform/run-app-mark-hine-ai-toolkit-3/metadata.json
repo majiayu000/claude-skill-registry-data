@@ -1,0 +1,39 @@
+{
+  "name": "run-app",
+  "repo": "Mark-Hine/ai-toolkit",
+  "path": "claude/plugins/android-kit/skills/run-app/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/Mark-Hine/ai-toolkit",
+  "dir_name": "run-app-mark-hine-ai-toolkit-3",
+  "downloaded_at": "2026-11-09T05:10:19.829645Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, adb, android",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "adb",
+      "android"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Mark-Hine",
+  "source_url": "https://github.com/Mark-Hine/ai-toolkit/blob/main/claude/plugins/android-kit/skills/run-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Mark-Hine/ai-toolkit/blob/main/claude/plugins/android-kit/skills/run-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build, install, launch and screenshot a house Android debug variant on an emulator via the Android CLI, and run a journey on it when one is named."
+}

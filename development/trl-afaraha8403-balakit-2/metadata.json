@@ -1,0 +1,39 @@
+{
+  "name": "trl",
+  "repo": "afaraha8403/balakit",
+  "path": ".claude/skills/trl/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/afaraha8403/balakit",
+  "dir_name": "trl-afaraha8403-balakit-2",
+  "downloaded_at": "2026-11-09T06:30:19.472160Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "afaraha8403",
+  "source_url": "https://github.com/afaraha8403/balakit/blob/master/.claude/skills/trl/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/afaraha8403/balakit/blob/master/.claude/skills/trl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Raises and scores a software Technology Readiness Level (TRL 1\u20139) in a loop. Each cycle collects facts-only evidence, has three low-context assessor agents score every in-scope area (core logic, data, interfaces, UI/UX, accessibility, performance, security, infra, observability, reliability, docs) without seeing the target or earlier verdicts, then writes the next level's exit criteria as failing evidence checks and builds until they pass. Works on a whole app, one feature, or a narrow improvement. Levels 7\u20139 are reachable before launch with production-equivalent evidence, labeled by provenance. Optional --target N (default 8), --cycles N (default 5), --assess-only, --circuit. Apply when the user invokes trl or /trl, asks for a readiness level, or wants something made ready for real users. Use opinion for open-ended takes. Use generating-app-verify to map app flows. Use proving-change-safety for one diff."
+}

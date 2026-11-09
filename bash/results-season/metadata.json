@@ -1,0 +1,37 @@
+{
+  "name": "results-season",
+  "repo": "Shubhamkumartrichy/claude-trading-skills-india",
+  "path": "skills/results-season/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Shubhamkumartrichy/claude-trading-skills-india",
+  "dir_name": "results-season",
+  "downloaded_at": "2026-11-09T05:48:35.291205Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Shubhamkumartrichy",
+  "source_url": "https://github.com/Shubhamkumartrichy/claude-trading-skills-india/blob/main/skills/results-season/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Shubhamkumartrichy/claude-trading-skills-india/blob/main/skills/results-season/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads the price reaction to quarterly results on NSE/BSE stocks. Picks the right reaction session\nfrom the announcement time (same day for pre-market/market-hours, next NSE session for after-hours,\nweekend or holiday releases), measures gap, close, close location, volume vs 50-day, ATR-normalised\nmove, 1-20 session follow-through and gap fill, grades it 0-100 (A-D) with visible weights, watches\nweekly bars for a post-results drift entry or a failed reaction, ranks many events, and lists\npositions whose results fall inside a holding window. results.py works offline from CSVs.\n\nUse when the user asks: \"how did X react to results\", \"was that a good results reaction\", \"should\nI buy after the results gap\", \"post-earnings drift setup in X\", \"rank this quarter's results\nreactions\", \"did the gap fill\", \"which of my holdings report before I exit\", \"results calendar\ncheck\", or plans a swing trade during results season."
+}

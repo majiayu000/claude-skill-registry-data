@@ -1,0 +1,37 @@
+{
+  "name": "compare-prices",
+  "repo": "Vladimir-Human/ru-marketplace-mcp",
+  "path": "dsh/skills/compare-prices/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Vladimir-Human/ru-marketplace-mcp",
+  "dir_name": "compare-prices-vladimir-human-ru-marketplace-mcp",
+  "downloaded_at": "2026-11-09T06:12:05.805147Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vladimir-Human",
+  "source_url": "https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/dsh/skills/compare-prices/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/dsh/skills/compare-prices/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the operator asks where something is cheapest across marketplaces. Fans out to ten searchable sources \u2014 Wildberries, Ozon, Yandex Market, Avito, Taobao, Megamarket, Lamoda, DNS, Citilink and AliExpress (Detsky Mir is excluded \u2014 no text search; Taobao prices are reported in yuan, not ranked). Trigger on \"\u0433\u0434\u0435 \u0434\u0435\u0448\u0435\u0432\u043b\u0435\", \"\u0441\u0440\u0430\u0432\u043d\u0438 \u0446\u0435\u043d\u044b\", \"\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0442\u043e\u0438\u0442 X \u043d\u0430 \u043c\u0430\u0440\u043a\u0435\u0442\u043f\u043b\u0435\u0439\u0441\u0430\u0445\", \"\u043d\u0430\u0439\u0434\u0438 \u0441\u0430\u043c\u0443\u044e \u043d\u0438\u0437\u043a\u0443\u044e \u0446\u0435\u043d\u0443\", or English equivalents. Skip single-marketplace questions \u2014 use the per-marketplace skills."
+}

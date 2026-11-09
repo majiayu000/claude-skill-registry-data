@@ -1,0 +1,38 @@
+{
+  "name": "Call or Text Your Phone from an Agent with /call-me",
+  "repo": "agentskillexchange/skills",
+  "path": "skills/call-me/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/agentskillexchange/skills",
+  "dir_name": "call-me",
+  "downloaded_at": "2026-11-09T06:32:22.617378Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, connector, oauth",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "connector",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agentskillexchange",
+  "source_url": "https://github.com/agentskillexchange/skills/blob/main/skills/call-me/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentskillexchange/skills/blob/main/skills/call-me/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lets an agent call or text the user's own phone (iPhone or Android) through the /call-me remote MCP server, Claude Code plugin or REST API. The phone rings with a native call screen, the agent's text is read aloud, and the user's spoken answer comes back as a transcript. Use it when an unattended run reaches a decision it cannot make alone, when the user asks to be called or texted, or when a spoken status update or summary is wanted."
+}

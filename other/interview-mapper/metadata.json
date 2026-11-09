@@ -1,0 +1,37 @@
+{
+  "name": "interview-mapper",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/interview-mapper/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "interview-mapper",
+  "downloaded_at": "2026-11-09T05:51:31.130641Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/interview-mapper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/interview-mapper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Maps a single interview transcript into a verbatim-grounded, lens-coded structure and checks whether analytic conclusions hold across independent re-runs. Use when the user wants to code, map, interpret, or make sense of an interview transcript, depth interview, custdev/JTBD/expert/usability/exit/win-loss/focus-group session, or wants cross-interview synthesis (insight cards, patterns) built up from coded transcripts \u2014 even if they don't name a method. Every conclusion must carry a verbatim quote verified against the source text; unstable conclusions are flagged for a human, never resolved by a single silent pass. Not for generating new interviews, not for plain audio transcription, and not for research-method or sample-size planning above the transcript (see product-research)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "alpha-cutout",
+  "repo": "Moh4696/open-3d-skills",
+  "path": "skills/alpha-cutout/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Moh4696/open-3d-skills",
+  "dir_name": "alpha-cutout",
+  "downloaded_at": "2026-11-09T05:16:47.395329Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Moh4696",
+  "source_url": "https://github.com/Moh4696/open-3d-skills/blob/main/skills/alpha-cutout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Moh4696/open-3d-skills/blob/main/skills/alpha-cutout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns an AI-generated (or filmed) clip of a character or product into a transparent, web-ready animation by shooting it on a flat chroma plate and keying it with per-frame plate measurement and edge unmixing. Delivers stacked-alpha MP4 that plays with transparency in every browser including Safari, VP9 alpha WebM, or keyed WebP frame sequences for scroll scrubbing. Use when an animated subject has to sit over page content, between layers of type, or over a 3D scene, when someone asks for \"transparent video\", \"video with alpha\", \"remove the background from this clip\", or when a generated video has a background that should not be there."
+}

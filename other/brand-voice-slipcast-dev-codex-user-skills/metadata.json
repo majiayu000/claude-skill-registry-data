@@ -1,0 +1,38 @@
+{
+  "name": "brand-voice",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/brand-voice/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "brand-voice-slipcast-dev-codex-user-skills",
+  "downloaded_at": "2026-11-09T05:50:18.804546Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=3, writing=3",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 3,
+    "signals": [
+      "marketing",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/brand-voice/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/brand-voice/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Develop or document a complete brand voice and tone system covering voice attributes, tone shifts by context, vocabulary preferences, grammar rules, and copy examples. Use this skill whenever the user wants to define how a brand sounds, write a voice and tone document, audit existing copy for voice consistency, train a team or AI assistant on brand voice, or refine the personality of brand writing. Triggers on brand voice, voice and tone, tone of voice, writing voice, brand personality, copy voice, voice document, voice guidelines, how should we write, voice training, voice audit. Also triggers when the user has copy that 'feels off' and the underlying issue is voice, even if not stated explicitly. On a voice consistency check, this skill owns defining and documenting the voice system; use `editorial-qa` when a specific draft needs checking against an existing system before it publishes."
+}

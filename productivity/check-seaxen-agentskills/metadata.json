@@ -1,0 +1,38 @@
+{
+  "name": "check",
+  "repo": "SeaXen/agentskills",
+  "path": "library/tw93-waza/skills/check/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/SeaXen/agentskills",
+  "dir_name": "check-seaxen-agentskills",
+  "downloaded_at": "2026-11-09T05:44:59.768431Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SeaXen",
+  "source_url": "https://github.com/SeaXen/agentskills/blob/main/library/tw93-waza/skills/check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SeaXen/agentskills/blob/main/library/tw93-waza/skills/check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews diffs, PRs, release readiness, and publishing follow-through. Use when asked to review, triage issues or PRs, or ship. Not for debugging root causes or prose."
+}

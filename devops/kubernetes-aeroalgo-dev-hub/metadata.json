@@ -1,0 +1,37 @@
+{
+  "name": "kubernetes",
+  "repo": "aeroalgo/dev-hub",
+  "path": "harness/skills/kubernetes/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/aeroalgo/dev-hub",
+  "dir_name": "kubernetes-aeroalgo-dev-hub",
+  "downloaded_at": "2026-11-09T06:30:04.715895Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aeroalgo",
+  "source_url": "https://github.com/aeroalgo/dev-hub/blob/master/harness/skills/kubernetes/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aeroalgo/dev-hub/blob/master/harness/skills/kubernetes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Provides comprehensive guidance for Kubernetes including pods, services, deployments, ingress, and cluster management. Use when the user asks about Kubernetes, needs to deploy applications to Kubernetes, configure Kubernetes resources, or manage Kubernetes clusters."
+}

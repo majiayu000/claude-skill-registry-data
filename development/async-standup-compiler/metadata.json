@@ -1,0 +1,37 @@
+{
+  "name": "async-standup-compiler",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/async-standup-compiler/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "async-standup-compiler",
+  "downloaded_at": "2026-11-09T05:50:12.275788Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/async-standup-compiler/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/async-standup-compiler/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compile the team's REAL updates into one async standup \u2014 pull what people posted in Slack (and moved in Notion/Linear), not a template for running standups. Use when asked to compile today's standup, pull the team's updates into one post, what did the team ship, or run async standup in Cowork. Reads a Slack channel and (optionally) the tracker via connectors, groups updates by person into shipped / in-progress / blocked, surfaces the blockers needing attention, and produces a standup-digest artifact ready to post back."
+}

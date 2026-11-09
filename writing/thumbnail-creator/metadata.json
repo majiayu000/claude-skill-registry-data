@@ -1,0 +1,37 @@
+{
+  "name": "thumbnail-creator",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/thumbnail-creator/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "thumbnail-creator",
+  "downloaded_at": "2026-11-09T05:52:50.467201Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: copy, article",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "copy",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/thumbnail-creator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/thumbnail-creator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. Claude reads article copy, proposes composition concepts, writes image generation prompts incorporating brand specs, calls Gemini to generate the images, evaluates the results via computer vision, and returns ranked candidates with rationale. Use when asked to create thumbnails, generate cover images, or produce visual candidates for an article or newsletter."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "linkedin-analytics",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/linkedin-analytics/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "linkedin-analytics",
+  "downloaded_at": "2026-11-09T05:51:39.987109Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/linkedin-analytics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/linkedin-analytics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when someone wants to understand their own LinkedIn numbers \u2014 which posts worked, why reach dropped, whether a pattern is real, or how to test a hypothesis. Triggers on \"why did my reach drop\", \"what's working on my LinkedIn\", \"analyze my posts\", \"do carousels do better for me\", \"should I test this\", \"LinkedIn analytics\". Reads your own exported post data, reports medians and outlier bands, tests candidate patterns against a permutation null, and sizes a real experiment \u2014 refusing to conclude anything below 10 posts."
+}

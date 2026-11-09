@@ -1,0 +1,38 @@
+{
+  "name": "backup-and-disaster-recovery",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/backup-and-disaster-recovery/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "backup-and-disaster-recovery",
+  "downloaded_at": "2026-11-09T05:50:13.896265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/backup-and-disaster-recovery/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/backup-and-disaster-recovery/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plan and run backups, set recovery objectives, and run disaster recovery drills. Use this skill when defining RPO/RTO targets, designing backup architecture, deciding what to back up and how often, planning for full-region or platform outages, or running a restoration drill. Triggers on backup, restore, RPO, RTO, disaster recovery, DR, business continuity, what if the database is gone, what if our hosting goes down, recovery drill, ransomware planning. Also triggers when an incident reveals a gap in restoration capability."
+}

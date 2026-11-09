@@ -1,0 +1,37 @@
+{
+  "name": "signature-pipeline-watch",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/signature-pipeline-watch/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "signature-pipeline-watch",
+  "downloaded_at": "2026-11-09T05:52:32.319224Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, pipeline",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/signature-pipeline-watch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/signature-pipeline-watch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Have a proactive agent watch documents waiting for signature in DocuSign, Adobe Sign or PandaDoc: which are stuck, for how long, with whom, which have expiry dates coming, and which signed ones still need countersigning or filing, reported in the brief with drafted reminders a human sends. Use when asked to track contracts waiting for signature, chase unsigned DocuSign envelopes, have Duet watch my e-signatures, what contracts are stuck, or remind me about documents nobody has signed."
+}

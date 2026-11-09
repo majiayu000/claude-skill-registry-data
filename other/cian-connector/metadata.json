@@ -1,0 +1,37 @@
+{
+  "name": "cian-connector",
+  "repo": "Vladimir-Human/ru-marketplace-mcp",
+  "path": "skills/cian-connector/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Vladimir-Human/ru-marketplace-mcp",
+  "dir_name": "cian-connector",
+  "downloaded_at": "2026-11-09T06:12:04.070991Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vladimir-Human",
+  "source_url": "https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/skills/cian-connector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/skills/cian-connector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the operator needs Russian real-estate data from Cian (cian.ru) \u2014 flats, rooms, houses or commercial property for sale, long-term rent or daily rent, or one offer's card with price history and publisher. Trigger on Russian queries like \"\u043d\u0430\u0439\u0434\u0438 \u043d\u0430 \u0446\u0438\u0430\u043d\u0435\", \"\u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 \u043d\u0430 \u0446\u0438\u0430\u043d\", \"\u0441\u043d\u044f\u0442\u044c \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0443\", \"\u0441\u043d\u044f\u0442\u044c \u043f\u043e\u0441\u0443\u0442\u043e\u0447\u043d\u043e\", \"\u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 \u043d\u0430 \u0441\u0443\u0442\u043a\u0438\", \"\u043a\u0443\u043f\u0438\u0442\u044c \u043e\u0434\u043d\u0443\u0448\u043a\u0443 \u0432 \u041c\u043e\u0441\u043a\u0432\u0435\", \"\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0442\u043e\u0438\u0442 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 \u043d\u0430\", \"\u043e\u0431\u044a\u044f\u0432\u043b\u0435\u043d\u0438\u0435 \u0446\u0438\u0430\u043d\", or English mentions of Cian. Needs the operator's Chrome over CDP (Cian's WAF blocks plain HTTP by IP). Skip for goods, marketplaces, and non-Cian real estate."
+}

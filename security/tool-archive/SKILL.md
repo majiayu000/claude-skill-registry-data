@@ -1,0 +1,126 @@
+---
+name: tool-archive
+description: Use when a script worked and should outlive the session that wrote it.
+version: 1.2.0
+author: TimeLine
+license: MIT
+platforms: [macos]
+metadata:
+    hermes:
+        tags: [tooling, archive, scripts, references, provenance]
+---
+
+# Tool Archive
+
+A script written during a session lives in a scratch directory that is pruned, so the next session
+pays to write it again. The archive is the way out: every reusable script belongs to the skill that
+documents it, under `Documentation/Skill/<Skill>/Reference/`, and `archive_tool.py` is the only
+thing that puts one there.
+
+The rule is one sentence: a script that ran belongs to a skill, and a script that belongs to no
+skill is not finished.
+
+## Why a directory and not a gist
+
+A reference file sits next to the prose that explains it, so the skill and its tool are read
+together. That keeps the two honest - a skill that documents a command nobody has is a lie, and a
+script with no skill is a file the next agent never finds.
+
+The tree mirrors the shape an agent profile uses for its own skills: one directory per skill, one
+`Reference/` per directory, so a reader who knows one layout knows the other. What differs is the
+audience - a repository skill travels with the code and is reviewed with it, while a profile skill
+belongs to one machine.
+
+## The command
+
+```sh
+python3 Documentation/Skill/Tool-Archive/Reference/archive_tool.py \
+    --skill Figma-MCP \
+    --file ./cdp-page.js \
+    --as cdp-page.js \
+    --summary "Open a URL in a background CDP tab and dump its anchors and visible text."
+```
+
+It writes `Documentation/Skill/Figma-MCP/Reference/cdp-page.js`, stamps the file with a header
+comment in that file's own syntax, marks a `.py` or `.sh` executable, and appends a row to the
+skill's `Reference/Index.md`.
+
+| Flag        | Effect                                                                     |
+| ----------- | -------------------------------------------------------------------------- |
+| `--skill`   | The skill directory that owns the tool. It must already exist.             |
+| `--file`    | The script to archive. An empty or unreadable file is refused.             |
+| `--as`      | The name it takes in `Reference/`; defaults to the source name.            |
+| `--summary` | One sentence. It becomes the header line and the index row.                |
+| `--force`   | Replace an existing reference file. Without it a collision stops.          |
+| `--dry-run` | Report what would be written, write nothing.                               |
+| `--list`    | Every archived tool, per skill, with sizes.                                |
+| `--show`    | Print one archived tool: `--skill <Skill> --show <file>`.                  |
+| `--audit`   | Fail on any skill file - a reference or a `SKILL.md` - naming a home path. |
+
+## The rules the tool enforces
+
+**The destination is fixed.** `<root>/Documentation/Skill/<Skill>/Reference/` and nothing else. A
+tool that could write anywhere would need a path policy of its own, and the archive is the only
+place these files belong.
+
+**An existing file is never replaced without `--force`.** A reference file is cited by the skill
+that documents it, so a silent replacement changes what the documentation claims while the prose
+still reads as true.
+
+**A home directory is scrubbed on the way in.** This repository is public and account-agnostic, so a
+reference file must be readable by whoever clones the tree. Three passes run over every archived
+file - the source's own absolute path, then the home directory, then any remaining absolute home
+path
+
+- and a file that still matches after the scrub is refused rather than written. A leak that survives
+  the scrub is a bug in the tool, and failing loudly is the only way it gets fixed.
+
+**A script reads its configuration from the environment.** An archived tool that hardcodes a token
+path or an endpoint is not portable; it names one machine's layout and breaks in every other clone.
+`--audit` is the check: it walks every reference file and every `SKILL.md`, and fails on a line that
+names a home directory. The prose is audited beside the tools because the body is what a reader
+trusts - a home path in a paragraph leaks the same machine a script would, and no archiver stamped
+it there.
+
+**The header is written in the file's own comment syntax** - `#` for Python, `//` for JavaScript,
+`/* */` for a stylesheet - because a reference file is run, and a `//` line in a Python file is a
+syntax error the moment it is. A shebang stays first; the header is spliced after it.
+
+## What belongs in the archive
+
+| Belongs                                          | Does not                                   |
+| ------------------------------------------------ | ------------------------------------------ |
+| A probe that answered a question about a service | A one-line command already in a skill      |
+| A driver with flags, retries or exit codes       | A file generated by a build                |
+| A conversion or audit script the skill describes | A copy of a dependency, or a vendored tool |
+| A script whose failure modes the skill explains  | A scratch experiment nobody will run again |
+
+The test is reuse: if the next session would write it again, archive it. If it would not, delete it.
+
+## When the tool itself changes
+
+`archive_tool.py` is a reference file, so it is edited in place rather than archived through
+itself - a tool that archived itself would need to read its own file while writing it. Run `--list`
+afterwards; the listing is the proof that the tree still parses.
+
+## The index
+
+`Reference/Index.md` is created on first use with a three-column table: the file, what it does, and
+a pointer to its header for the rest. The header is where the detail lives, because a table that
+tried to hold a script's flags would go stale the first time the script changed.
+
+## Claim → test
+
+| Claim                                              | Test                                                                                                                                                                                |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The destination is the owning skill's `Reference/` | `python3 .../archive_tool.py --skill <Skill> --file <script> --summary "<sentence>" --dry-run` prints `[dry] would record <name> in Documentation/Skill/<Skill>/Reference/Index.md` |
+| An existing file is never replaced silently        | the same call without `--force` exits non-zero and prints `<path> exists; pass --force to replace it`                                                                               |
+| The index gains the row it archived                | `grep -c '<as>' Documentation/Skill/<Skill>/Reference/Index.md` returns one more than before the call                                                                               |
+| A home path is scrubbed on the way in              | `python3 .../archive_tool.py --audit` prints `clean: no home paths` and exits 0                                                                                                     |
+| The tree still parses after an edit to the tool    | `python3 .../archive_tool.py --list` exits 0 and prints every skill directory with its files and sizes                                                                              |
+
+## References
+
+| File              | Covers                                             |
+| ----------------- | -------------------------------------------------- |
+| `archive_tool.py` | The archiver: flags, header stamping, scrub, audit |

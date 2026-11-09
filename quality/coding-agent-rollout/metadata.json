@@ -1,0 +1,37 @@
+{
+  "name": "coding-agent-rollout",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/coding-agent-rollout/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "coding-agent-rollout",
+  "downloaded_at": "2026-11-09T05:50:36.499575Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/coding-agent-rollout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/coding-agent-rollout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when rolling Claude Code out to a team or organization, or auditing a rollout already under way \u2014 writing or reviewing shared and managed settings.json permissions, deciding which MCP servers, plugins and marketplaces to approve, cleaning up layered AGENTS.md files, or measuring whether the team actually uses it. Lints settings across scopes, inventories every MCP server and plugin against an approved list, resolves AGENTS.md layers and imports, and turns local session data into privacy-safe adoption counts."
+}

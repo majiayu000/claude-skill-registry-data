@@ -1,0 +1,37 @@
+{
+  "name": "domain-model",
+  "repo": "Mnigos/soonlane",
+  "path": ".agents/skills/domain-model/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Mnigos/soonlane",
+  "dir_name": "domain-model-mnigos-soonlane",
+  "downloaded_at": "2026-11-09T05:16:42.299590Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Mnigos",
+  "source_url": "https://github.com/Mnigos/soonlane/blob/main/.agents/skills/domain-model/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Mnigos/soonlane/blob/main/.agents/skills/domain-model/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stress-tests plans and architecture against the Soonlane modules and packages, Effect ports and layers, ADRs, product docs and code reality, and maintains the UBIQUITOUS_LANGUAGE.md glossary. Use when adding a module or package, moving logic between domain/application/infrastructure/presentation, introducing a port, service or layer, naming or renaming domain concepts, resolving term conflicts, or checking a plan against the domain model."
+}

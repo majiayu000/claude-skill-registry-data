@@ -1,0 +1,37 @@
+{
+  "name": "risk-reward-ratio",
+  "repo": "Shubhamkumartrichy/claude-trading-skills-india",
+  "path": "skills/risk-reward-ratio/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Shubhamkumartrichy/claude-trading-skills-india",
+  "dir_name": "risk-reward-ratio",
+  "downloaded_at": "2026-11-09T05:48:36.084491Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Shubhamkumartrichy",
+  "source_url": "https://github.com/Shubhamkumartrichy/claude-trading-skills-india/blob/main/skills/risk-reward-ratio/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Shubhamkumartrichy/claude-trading-skills-india/blob/main/skills/risk-reward-ratio/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Risk-reward evaluation for Indian trades after real costs: R multiples per target, weighted R for\nscale-outs, breakeven win rate, expectancy, trade-filter thresholds, and option-specific R:R\n(theta, IV, premium). risk.py rr computes everything including Indian round-trip charges.\n\nUse when the user asks: \"is this trade worth it\", \"risk reward for entry X stop Y target Z\", \"R:R\",\n\"expected value\", \"what win rate do I need\", \"should I take this setup\", or compares multiple\ntrade ideas."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "deep-learning-book",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/deep-learning-book/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "deep-learning-book",
+  "downloaded_at": "2026-11-09T05:50:53.008708Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, planning, memory",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/deep-learning-book/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/deep-learning-book/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Study companion and working knowledge base for the Deep Learning textbook by Goodfellow, Bengio & Courville (MIT Press, 2016), read free at deeplearningbook.org. Indexes all 20 chapters, carries a 2016-to-2026 delta layer naming what the book got right, what was superseded (transformers, AdamW, diffusion, double descent) and what still holds, and ships four deterministic tools: a prerequisite-aware reading-path planner, a training-failure diagnostic, a capacity-and-regularization planner, and a parameter/FLOP/activation-memory calculator. Use when studying or teaching this book, planning a route through it, deciding whether a chapter's advice is still current, or translating its math into a training decision. It points at the official chapters \u2014 it never reproduces them."
+}

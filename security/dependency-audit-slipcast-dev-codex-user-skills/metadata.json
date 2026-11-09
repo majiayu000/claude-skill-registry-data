@@ -1,0 +1,38 @@
+{
+  "name": "dependency-audit",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/dependency-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "dependency-audit-slipcast-dev-codex-user-skills",
+  "downloaded_at": "2026-11-09T05:50:55.381972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, vulnerability, audit",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/dependency-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/dependency-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits project dependencies for security vulnerabilities, license compliance issues, outdated packages, and transitive dependency risk. Use when asked to audit dependencies, review package security, check license compliance, assess dependency health, or produce a vulnerability report."
+}

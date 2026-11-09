@@ -1,0 +1,37 @@
+{
+  "name": "seo-keyword-gap-audit",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/seo-keyword-gap-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "seo-keyword-gap-audit",
+  "downloaded_at": "2026-11-09T05:52:29.704879Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/seo-keyword-gap-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/seo-keyword-gap-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find keywords competitors rank for that the target property does not, and prioritize them by opportunity. Uses Ahrefs MCP for keyword and competitor data. Use this skill when planning content investment, identifying quick wins, building a content calendar against a competitor set, or scoping a market entry. Triggers on keyword gap, content gap, competitor keywords, opportunity keywords, what should we target, where are competitors winning, keyword opportunity. Also triggers when planning content for a new market or after losing organic share to a specific competitor."
+}

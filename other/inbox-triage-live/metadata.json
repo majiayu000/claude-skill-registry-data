@@ -1,0 +1,37 @@
+{
+  "name": "inbox-triage-live",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/inbox-triage-live/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "inbox-triage-live",
+  "downloaded_at": "2026-11-09T05:51:28.123285Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/inbox-triage-live/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/inbox-triage-live/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Triage the user's REAL inbox through the Gmail connector \u2014 not a framework they run by hand. Use when asked to clear my inbox, get me to inbox zero on the actual account, triage my unread, or process my email backlog in Cowork. Reads unread via the Gmail connector, sorts every message into archive / reply-now / task / park, applies labels and archives in place, drafts the reply-now messages as real Gmail drafts."
+}

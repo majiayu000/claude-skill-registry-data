@@ -1,0 +1,37 @@
+{
+  "name": "caracterizar-comportamiento",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".agents/skills/caracterizar-comportamiento/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "caracterizar-comportamiento-martincolavita-template-estructura-",
+  "downloaded_at": "2026-11-09T05:11:07.203573Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/.agents/skills/caracterizar-comportamiento/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/.agents/skills/caracterizar-comportamiento/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ponerle una RED a una aplicaci\u00f3n existente antes de tocarla: armar el corpus de casos de un slice desde la radiograf\u00eda (bin/armar-corpus.py), completarlo con una persona con datos de prueba y marcadores, grabarlo contra la aplicaci\u00f3n vieja con bin/paridad.py (el golden, firmado por el script) y, si es refactor, dejar tambi\u00e9n los tests de caracterizaci\u00f3n en el repositorio con el commit test(caracterizacion). Es la fase \u00abprimero la red\u00bb que refactor-y-migracion.md exige, y la que despu\u00e9s usa modernizar-slice para probar paridad. Usar cuando se pida \"ponele una red a este m\u00f3dulo\", \"grab\u00e1 c\u00f3mo responde hoy\", \"arm\u00e1 el corpus de paridad\", \"test de caracterizaci\u00f3n\", \"/caracterizar-comportamiento\". No cambia comportamiento ni toca la app vieja; nunca graba datos de personas. Espa\u00f1ol (Argentina)."
+}

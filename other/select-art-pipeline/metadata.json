@@ -1,0 +1,37 @@
+{
+  "name": "select-art-pipeline",
+  "repo": "TimothyMeadows/Hephaera",
+  "path": "skills/select-art-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/TimothyMeadows/Hephaera",
+  "dir_name": "select-art-pipeline",
+  "downloaded_at": "2026-11-09T06:03:19.625437Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, generation=2",
+    "score": 2,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TimothyMeadows",
+  "source_url": "https://github.com/TimothyMeadows/Hephaera/blob/main/skills/select-art-pipeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TimothyMeadows/Hephaera/blob/main/skills/select-art-pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resolve a registered visual pipeline from a task-local prompt override or STYLE.md, recording selection evidence without changing the default. Use for proof-to-model assets, generated imagery, authored Three.js or Blender models, dimensioned buildings and mechanical schematics. CSS/SVG interface work follows style independently."
+}

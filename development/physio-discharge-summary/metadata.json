@@ -1,0 +1,37 @@
+{
+  "name": "physio-discharge-summary",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/physio-discharge-summary/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "physio-discharge-summary",
+  "downloaded_at": "2026-11-09T05:51:59.708262Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/physio-discharge-summary/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/physio-discharge-summary/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write a physiotherapy discharge summary that closes the episode properly \u2014 outcomes against the goals that were set, what the patient is leaving with, what would bring them back, and what the referrer actually needs to know. Use when asked to write a discharge summary, close an episode of care, write to a referrer at discharge, or discharge a patient who has not fully recovered. A documentation framework for a licensed clinician."
+}

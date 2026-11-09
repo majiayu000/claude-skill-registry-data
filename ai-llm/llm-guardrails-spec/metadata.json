@@ -1,0 +1,38 @@
+{
+  "name": "llm-guardrails-spec",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/llm-guardrails-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "llm-guardrails-spec",
+  "downloaded_at": "2026-11-09T05:51:41.160505Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/llm-guardrails-spec/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/llm-guardrails-spec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Specify the safety and reliability guardrails for an LLM feature before it ships. Use when asked to define LLM guardrails, add safety controls to an AI feature, prevent prompt injection or jailbreaks, or harden a chatbot/agent against misuse."
+}

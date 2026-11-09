@@ -1,0 +1,36 @@
+{
+  "name": "ds-pr",
+  "repo": "aicodeking/deepseek-stack",
+  "path": "skills/ds-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aicodeking/deepseek-stack",
+  "dir_name": "ds-pr",
+  "downloaded_at": "2026-11-09T06:35:28.494758Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aicodeking",
+  "source_url": "https://github.com/aicodeking/deepseek-stack/blob/main/skills/ds-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aicodeking/deepseek-stack/blob/main/skills/ds-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Files a short, clear pull request for the current branch. Use when the user asks to open, file or create a PR, or says /ds-pr."
+}

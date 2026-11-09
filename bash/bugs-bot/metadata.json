@@ -1,0 +1,37 @@
+{
+  "name": "bugs-bot",
+  "repo": "LounisBou/claude-plugins",
+  "path": "plugins/bugs-bot/skills/bugs-bot/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/LounisBou/claude-plugins",
+  "dir_name": "bugs-bot",
+  "downloaded_at": "2026-11-09T05:04:08.521675Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LounisBou",
+  "source_url": "https://github.com/LounisBou/claude-plugins/blob/main/plugins/bugs-bot/skills/bugs-bot/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LounisBou/claude-plugins/blob/main/plugins/bugs-bot/skills/bugs-bot/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a project's bug reports must be read \u2014 text and screenshots posted in the project's group (Telegram or Slack) \u2014 to collect them, see the screenshots, reply in the group, or mark a report handled; and on `/bugs-bot:start`, to launch the project's agent session that relays new reports to you and answers the group's questions."
+}

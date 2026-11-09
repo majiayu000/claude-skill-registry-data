@@ -1,0 +1,37 @@
+{
+  "name": "unikit-bridge-route",
+  "repo": "NintendaDev/unikit-ai",
+  "path": "skills/unikit-bridge-route/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/NintendaDev/unikit-ai",
+  "dir_name": "unikit-bridge-route",
+  "downloaded_at": "2026-11-09T05:24:51.893683Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NintendaDev",
+  "source_url": "https://github.com/NintendaDev/unikit-ai/blob/main/skills/unikit-bridge-route/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NintendaDev/unikit-ai/blob/main/skills/unikit-bridge-route/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write the routing rules of the engine bridges into .unikit/bridge-routing.md: which bridge a kind of work goes through, which bridges it must never touch, which one is tried first. Use when the user wants one case sent through one bridge, for example \"run the tests only through the CLI bridge\", \"never use that bridge for UI work\", \"try this bridge first for scenes\", \"show my bridge routes\", \"remove the route for tests\", \"put that bridge first\". A rule is one row of a table: area, when, rule (only, first or never), bridges, why. Asks in the user's own words, shows the table before writing, and checks only that the bridge ids are installed. On request it also moves a bridge in the order list of .unikit/bridges.yaml. Makes zero bridge calls, runs no command, needs no editor."
+}

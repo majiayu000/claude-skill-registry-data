@@ -1,0 +1,37 @@
+{
+  "name": "execute-work",
+  "repo": "act101-ai/act-lite",
+  "path": "plugin/skills/execute-work/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/act101-ai/act-lite",
+  "dir_name": "execute-work",
+  "downloaded_at": "2026-11-09T06:27:19.743902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "act101-ai",
+  "source_url": "https://github.com/act101-ai/act-lite/blob/main/plugin/skills/execute-work/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/act101-ai/act-lite/blob/main/plugin/skills/execute-work/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs a work graph to completion, schedules the ready nodes in parallel, plans and implements each node test-first in its own checkout through its fixed acceptance check and a verification stage, keeps or discards, archives, and hands the finished branch to delivery. Use when the operator asks to run, resume, continue or execute a plan, work loop, work graph or tracker (\"run the graph\", \"resume the work loop\", \"continue the remediation loop\", \"execute the plan\", \"resume the work in docs/work/<program>/graph.md\"))."
+}

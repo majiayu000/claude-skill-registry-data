@@ -1,0 +1,37 @@
+{
+  "name": "api-bill",
+  "repo": "ZazaGdev/AI-fun",
+  "path": "api-bill/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/ZazaGdev/AI-fun",
+  "dir_name": "skill",
+  "downloaded_at": "2026-11-09T06:21:38.787063Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZazaGdev",
+  "source_url": "https://github.com/ZazaGdev/AI-fun/blob/main/api-bill/skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZazaGdev/AI-fun/blob/main/api-bill/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the owner asks what their Claude Code use would cost on the API, wants an API shadow bill or cost card for a time frame, or types /api-bill (with a time frame such as 24h, 7d, 30d, 6m or all). Prices every reply in this PC's session logs at Anthropic's live per-model list prices and shows the result as a card on a private claude.ai link."
+}

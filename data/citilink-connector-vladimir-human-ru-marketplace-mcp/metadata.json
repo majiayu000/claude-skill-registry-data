@@ -1,0 +1,37 @@
+{
+  "name": "citilink-connector",
+  "repo": "Vladimir-Human/ru-marketplace-mcp",
+  "path": "dsh/skills/citilink-connector/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Vladimir-Human/ru-marketplace-mcp",
+  "dir_name": "citilink-connector-vladimir-human-ru-marketplace-mcp",
+  "downloaded_at": "2026-11-09T06:12:06.896273Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vladimir-Human",
+  "source_url": "https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/dsh/skills/citilink-connector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/dsh/skills/citilink-connector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the operator needs Citilink electronics data \u2014 search or a product card. Trigger on \"\u0441\u0438\u0442\u0438\u043b\u0438\u043d\u043a\", \"citilink\", \"\u0441\u0438\u0442\u0438\u043b\u0438\u043d\u043a \u0446\u0435\u043d\u0430\". Always needs the operator's Chrome over CDP (Qrator rate block + gRPC-web). Skip for non-Citilink tasks."
+}

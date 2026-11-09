@@ -1,0 +1,39 @@
+{
+  "name": "oma-docs",
+  "repo": "YemenJPT/YemenJPT-AI-Skills",
+  "path": "skills/fact-checking/oma-docs/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/YemenJPT/YemenJPT-AI-Skills",
+  "dir_name": "oma-docs-yemenjpt-yemenjpt-ai-skills",
+  "downloaded_at": "2026-11-09T06:19:02.181327Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "YemenJPT",
+  "source_url": "https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/fact-checking/oma-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/fact-checking/oma-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify documentation references against the current codebase and propose updates for diff-affected docs. Use to check if docs still match reality (broken file paths, CLI commands, config keys, env vars, scripts) and to surface docs that may need updating after code changes."
+}

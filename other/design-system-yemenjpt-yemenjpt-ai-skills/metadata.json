@@ -1,0 +1,37 @@
+{
+  "name": "design-system",
+  "repo": "YemenJPT/YemenJPT-AI-Skills",
+  "path": "skills/editorial/design-system/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/YemenJPT/YemenJPT-AI-Skills",
+  "dir_name": "design-system-yemenjpt-yemenjpt-ai-skills",
+  "downloaded_at": "2026-11-09T06:19:06.491594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "YemenJPT",
+  "source_url": "https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/editorial/design-system/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/editorial/design-system/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Captures the user's brand identity once via a 10-question onboarding wizard (primary/accent HEX + heading + body Google Fonts + design style editorial/technical/minimal/playful + default output directory + syntax theme + TOC behavior + optional logo/company), validates body-text and link contrast against WCAG 2.2 AA, derives 12 CSS custom properties in HSL space, and stores the result for every markdown-html converter to consume. Use before any markdown-html conversion. Triggers on first-run onboarding ('set up the brand', 'configure markdown-html', 'run onboarding'), on explicit reset ('reset the design system', 're-onboard'), and is checked by every converter via config_loader.py before rendering. Refuses to save if body-text contrast fails AA 4.5:1 or the output dir isn't writable. Precedence is project (./.markdown-html/) > global (~/.config/markdown-html/) > built-in defaults; MARKDOWN_HTML_NO_CONFIG=1 bypasses."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "saas-metrics",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/saas-metrics/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "saas-metrics",
+  "downloaded_at": "2026-11-09T05:52:23.127147Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/saas-metrics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/saas-metrics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compute the core SaaS metrics \u2014 MRR/ARR, growth, NRR/GRR, churn, quick ratio, magic number \u2014 from your numbers. Use when asked to calculate SaaS metrics, MRR/ARR, net revenue retention, the quick ratio, or to build a SaaS metrics snapshot for a board/investor update."
+}

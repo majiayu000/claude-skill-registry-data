@@ -1,0 +1,37 @@
+{
+  "name": "spreadsheet-audit",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/spreadsheet-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "spreadsheet-audit",
+  "downloaded_at": "2026-11-09T05:52:37.597509Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/spreadsheet-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/spreadsheet-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit a spreadsheet before trusting it \u2014 the error hunt (hardcoded overrides, broken ranges, silent unit mixes), the fragility map (what breaks when rows are added), and the load-bearing-formula review that catches the mistake before the meeting does. Use when asked check this spreadsheet before we present it, why don't these numbers add up, audit this model someone left behind, or is this sheet safe to build on."
+}

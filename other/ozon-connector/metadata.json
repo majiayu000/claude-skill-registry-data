@@ -1,0 +1,37 @@
+{
+  "name": "ozon-connector",
+  "repo": "Vladimir-Human/ru-marketplace-mcp",
+  "path": "skills/ozon-connector/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Vladimir-Human/ru-marketplace-mcp",
+  "dir_name": "ozon-connector",
+  "downloaded_at": "2026-11-09T06:12:04.190577Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vladimir-Human",
+  "source_url": "https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/skills/ozon-connector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/skills/ozon-connector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the operator needs Ozon marketplace data \u2014 product details, search, prices, ratings, or reviews. Trigger on Russian queries like \"\u043d\u0430\u0439\u0434\u0438 \u043d\u0430 \u043e\u0437\u043e\u043d\u0435\", \"\u0446\u0435\u043d\u0430 ozon\", \"\u043e\u0442\u0437\u044b\u0432\u044b \u043d\u0430 \u043e\u0437\u043e\u043d\u0435\", or English mentions of Ozon. Tier 1 (TLS impersonation) handles most queries with no browser; Chrome CDP is only the tier-2 fallback when Cloudflare challenges. Skip for non-Ozon tasks."
+}

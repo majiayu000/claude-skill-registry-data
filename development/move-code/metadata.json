@@ -1,0 +1,38 @@
+{
+  "name": "move-code",
+  "repo": "a-pavithraa/springboot-skills-marketplace",
+  "path": "plugins/springboot-architecture/skills/spring-boot-team-harness/assets/project-skills/move-code/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/a-pavithraa/springboot-skills-marketplace",
+  "dir_name": "move-code",
+  "downloaded_at": "2026-11-09T06:23:53.076478Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "a-pavithraa",
+  "source_url": "https://github.com/a-pavithraa/springboot-skills-marketplace/blob/main/plugins/springboot-architecture/skills/spring-boot-team-harness/assets/project-skills/move-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/a-pavithraa/springboot-skills-marketplace/blob/main/plugins/springboot-architecture/skills/spring-boot-team-harness/assets/project-skills/move-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Moves a Java class or package to another package in this project with OpenRewrite, so every import, fully qualified reference, Javadoc link, properties value and META-INF/services entry follows, the same way each time. Use when the user asks to move, relocate or repackage a class or package, or to rename a package, to restructure code into modules, or when a fix would mean moving a type across modules."
+}

@@ -1,0 +1,42 @@
+{
+  "name": "sca-trivy",
+  "repo": "aeroalgo/dev-hub",
+  "path": "harness/skills/sca-trivy/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/aeroalgo/dev-hub",
+  "dir_name": "sca-trivy",
+  "downloaded_at": "2026-11-09T06:30:03.137723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, kubernetes, infra, infrastructure",
+    "score": 6,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "kubernetes",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "aeroalgo",
+  "source_url": "https://github.com/aeroalgo/dev-hub/blob/master/harness/skills/sca-trivy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aeroalgo/dev-hub/blob/master/harness/skills/sca-trivy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Software Composition Analysis (SCA) and container vulnerability scanning using Aqua Trivy for identifying CVE vulnerabilities in dependencies, container images, IaC misconfigurations, and license compliance risks. Use when: (1) Scanning container images and filesystems for vulnerabilities and misconfigurations, (2) Analyzing dependencies for known CVEs across multiple languages (Go, Python, Node.js, Java, etc.), (3) Detecting IaC security issues in Terraform, Kubernetes, Dockerfile, (4) Integrating vulnerability scanning into CI/CD pipelines with SARIF output, (5) Generating Software Bill of Materials (SBOM) in CycloneDX or SPDX format, (6) Prioritizing remediation by CVSS score and exploitability."
+}

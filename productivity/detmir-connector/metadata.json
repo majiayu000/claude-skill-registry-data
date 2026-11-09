@@ -1,0 +1,37 @@
+{
+  "name": "detmir-connector",
+  "repo": "Vladimir-Human/ru-marketplace-mcp",
+  "path": "skills/detmir-connector/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Vladimir-Human/ru-marketplace-mcp",
+  "dir_name": "detmir-connector",
+  "downloaded_at": "2026-11-09T06:12:04.906403Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vladimir-Human",
+  "source_url": "https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/skills/detmir-connector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/skills/detmir-connector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the operator needs Detsky Mir data \u2014 prices and availability for kids' and baby goods, toys, strollers, nappies, kids' clothing. Trigger on Russian queries like \"\u0446\u0435\u043d\u0430 \u0432 \u0434\u0435\u0442\u0441\u043a\u043e\u043c \u043c\u0438\u0440\u0435\", \"\u0434\u0435\u0442\u0441\u043a\u0438\u0439 \u043c\u0438\u0440 \u043d\u0430\u043b\u0438\u0447\u0438\u0435\", \"\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0442\u043e\u0438\u0442 \u043a\u043e\u043b\u044f\u0441\u043a\u0430\", or English equivalents. Skip for general marketplace tasks; note that Detsky Mir has NO text search, so discovery goes through categories."
+}

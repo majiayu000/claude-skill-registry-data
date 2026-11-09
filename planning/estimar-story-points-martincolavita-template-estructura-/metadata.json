@@ -1,0 +1,37 @@
+{
+  "name": "estimar-story-points",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".agents/skills/estimar-story-points/SKILL.md",
+  "github_branch": "main",
+  "category": "planning",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "estimar-story-points-martincolavita-template-estructura-",
+  "downloaded_at": "2026-11-09T05:11:04.511242Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "planning",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for planning: planning, plan",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/.agents/skills/estimar-story-points/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/.agents/skills/estimar-story-points/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Calcular los Puntos de historia (Story Points) de una historia / tarea / habilitador cuando el desarrollo lo hace la IA: el puntaje sale de la COMPLEJIDAD a nivel sistema + el CONSUMO DE TOKENS para resolver el desarrollo y para investigar historias/fichas relacionadas. NO usa Planning Poker ni estimaci\u00f3n por consenso humano (desarrolla la IA). Usar cuando se pida \"estim\u00e1 esto\", \"cu\u00e1ntos puntos\", \"puntu\u00e1 / asign\u00e1 story points a esta historia\", \"/estimar-story-points\". Salida en escala Fibonacci (1,2,3,5,8,13,20) por compatibilidad con el campo de Azure; 13+ => partir. La IA propone el n\u00famero y el humano puede ajustarlo. NO inventa: lo que falta va (pendiente) y se pregunta. Espa\u00f1ol (Argentina). NO escribe en el board."
+}

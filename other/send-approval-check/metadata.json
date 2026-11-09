@@ -1,0 +1,36 @@
+{
+  "name": "send-approval-check",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/send-approval-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "send-approval-check",
+  "downloaded_at": "2026-11-09T05:52:27.160740Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/send-approval-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/send-approval-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The gate before an agent sends anything on your behalf: one card showing recipient, sending account, subject, attachments, and the single sentence that commits you to something, so approving the wording is never mistaken for approving the send. Use when asked to check before sending, show me exactly what is about to go out, set up a send approval gate, or review this outgoing email or message an agent drafted."
+}

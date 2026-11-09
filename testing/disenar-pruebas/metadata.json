@@ -1,0 +1,38 @@
+{
+  "name": "disenar-pruebas",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".claude/skills/disenar-pruebas/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "disenar-pruebas",
+  "downloaded_at": "2026-11-09T05:10:58.250955Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "qa",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/disenar-pruebas/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/disenar-pruebas/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "El rol de tester: a partir de una Historia con su Gherkin, armar el plan de pruebas de aceptaci\u00f3n: qu\u00e9 Escenarios se automatizan de punta a punta y cu\u00e1les quedan exploratorios, los bordes y los datos de prueba (sin datos de personas), el ambiente y el estado inicial, y una lista para recorrer a mano lo que no conviene automatizar. No depende de la herramienta ni del tipo de aplicaci\u00f3n (web, escritorio, m\u00f3vil, l\u00ednea de comandos, API): eso lo fija DEC-003 y lo ejecuta automatizar-e2e. Usar cuando se pida \"dise\u00f1\u00e1 las pruebas de la Historia X\", \"qu\u00e9 probamos de punta a punta\", \"arm\u00e1 el plan de pruebas\", \"/disenar-pruebas\". No inventa pasos: lo que el Gherkin no dice vuelve como pregunta a la Historia. Espa\u00f1ol (Argentina)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "agent-feature-builder",
+  "repo": "Opsfleet/genai-launchpad",
+  "path": ".claude/skills/agent-feature-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Opsfleet/genai-launchpad",
+  "dir_name": "agent-feature-builder",
+  "downloaded_at": "2026-11-09T05:28:03.637883Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Opsfleet",
+  "source_url": "https://github.com/Opsfleet/genai-launchpad/blob/main/.claude/skills/agent-feature-builder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Opsfleet/genai-launchpad/blob/main/.claude/skills/agent-feature-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Helps a DataStream Corp bootcamp participant extend the Phase 2 AgentCore agent in `phase2/app/agent/agent.py` safely \u2014 add a Strands `@tool`, add a specialist sub-agent (agents-as-tools), tweak the orchestrator or specialist system prompts, use AgentCore Memory with actor/session ids, switch to another gateway model (`llm models`), turn on the optional Code Interpreter / Browser tools, keep the read-only SQL guard, then try it with `invoke --local` (no deploy) and ship with `deploy` + `test --only 4` + `invoke`. Triggers on \"add a tool to my agent\", \"add a specialist\", \"new sub-agent\", \"add an hr_agent\", \"change the system prompt\", \"make the agent remember\", \"memory per user\", \"actor id\", \"session id\", \"switch model\", \"use sonnet\", \"use a cheaper model\", \"code interpreter\", \"run python in a sandbox\", \"browser tool\", \"browse a web page\", \"ENABLE_CODE_INTERPRETER\", \"ENABLE_BROWSER\", \"ENABLE_GUARDRAILS\", \"guardrail\", \"prompt injection\", \"prompt variant\", \"A/B test my prompt\", \"stream the answer\", \"my new tool isn't called\", \"extend the executive assistant\", \"build a feature on the bootcamp agent\". Do NOT use for adding tools to the MCP server / database layer (use mcp-tool-author), for failing tests or errors (use bootcamp-debugger), or for LLM calls outside the agent (use litellm-usage)."
+}

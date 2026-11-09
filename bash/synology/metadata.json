@@ -1,0 +1,38 @@
+{
+  "name": "synology",
+  "repo": "Servosity/msp-skills",
+  "path": "skills/synology/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Servosity/msp-skills",
+  "dir_name": "synology",
+  "downloaded_at": "2026-11-09T05:46:49.980072Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Servosity",
+  "source_url": "https://github.com/Servosity/msp-skills/blob/main/skills/synology/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Servosity/msp-skills/blob/main/skills/synology/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks whether client Synology NAS backups succeeded, which machines have not backed up, or how client NAS storage is doing: mirrors Synology Active Backup for Business jobs and storage health from every registered client NAS (one DSM login each, two-factor supported) into one local database, then answers failed and missed runs, stale devices, which task protects a machine, why a task failed, success-rate trends, machines that dropped out of protection, unusual backup sizes, and degraded pools, bad disks or volumes about to fill across all of them. Also reads Hyper Backup, storage, system health, logs, users and groups per NAS. Trigger phrases: `did last night's synology backups succeed`, `active backup for business failures`, `which machines have not backed up`, `which client nas is running out of space`, `check synology nas disk health`, `why did the synology backup fail`, `use synology`, `run synology-cli`."
+}

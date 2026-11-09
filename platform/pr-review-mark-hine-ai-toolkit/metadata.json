@@ -1,0 +1,38 @@
+{
+  "name": "pr-review",
+  "repo": "Mark-Hine/ai-toolkit",
+  "path": "claude/plugins/pr-review/skills/pr-review/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/Mark-Hine/ai-toolkit",
+  "dir_name": "pr-review-mark-hine-ai-toolkit",
+  "downloaded_at": "2026-11-09T05:10:19.360743Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, android, ios",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Mark-Hine",
+  "source_url": "https://github.com/Mark-Hine/ai-toolkit/blob/main/claude/plugins/pr-review/skills/pr-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Mark-Hine/ai-toolkit/blob/main/claude/plugins/pr-review/skills/pr-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes the formal PR-review deliverable: a standards-cited findings register (Blocker/Question/Major/Nit) with PR comments for senior developers, a scoped approval, and promotion-manifest checks for environment-branch promotions. Grades Android, iOS, Spring Boot, React/Next.js and generic repos. Use when asked to \"review this PR\", \"review the promotion\", \"formal PR review\", \"write up a review we can post\" or \"re-review the PR\", even without naming this skill. Not the built-in /code-review, which gives quick inline findings on a working tree."
+}

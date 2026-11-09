@@ -1,0 +1,37 @@
+{
+  "name": "review",
+  "repo": "MatheusCastro99/ProdHarnessConfig",
+  "path": "harness/.claude/skills/review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/MatheusCastro99/ProdHarnessConfig",
+  "dir_name": "review-matheuscastro99-prodharnessconfig",
+  "downloaded_at": "2026-11-09T05:11:38.035891Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MatheusCastro99",
+  "source_url": "https://github.com/MatheusCastro99/ProdHarnessConfig/blob/main/harness/.claude/skills/review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MatheusCastro99/ProdHarnessConfig/blob/main/harness/.claude/skills/review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Block C of the harness workflow. Reviews a finished change at its handed-off commit with the red-team, triages findings and comments, and brings one report to the owner (gate G2). Invoke as /review <issue> in a fresh Opus session; on the Small tier the main session runs it when the forked build returns."
+}

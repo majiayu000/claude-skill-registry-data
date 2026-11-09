@@ -1,0 +1,36 @@
+{
+  "name": "adr-authoring",
+  "repo": "Mnigos/soonlane",
+  "path": ".agents/skills/adr-authoring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Mnigos/soonlane",
+  "dir_name": "adr-authoring-mnigos-soonlane",
+  "downloaded_at": "2026-11-09T05:16:42.415663Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Mnigos",
+  "source_url": "https://github.com/Mnigos/soonlane/blob/main/.agents/skills/adr-authoring/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Mnigos/soonlane/blob/main/.agents/skills/adr-authoring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Creates or updates Soonlane architecture decision records under docs/decisions. Use when the user asks for an ADR, decision record, architecture decision, accepted/proposed decision, or when domain-model work produces a hard-to-reverse architectural trade-off."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "video-router",
+  "repo": "Wanfeng1028/muse",
+  "path": "source/skill/video-router/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Wanfeng1028/muse",
+  "dir_name": "video-router",
+  "downloaded_at": "2026-11-09T06:13:45.895851Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Wanfeng1028",
+  "source_url": "https://github.com/Wanfeng1028/muse/blob/main/source/skill/video-router/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Wanfeng1028/muse/blob/main/source/skill/video-router/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find a model-specific video or motion skill and produce a decision workflow. Use for Claude Code, Opus 5.5, GPT-6 Astra, Remotion, Hyperframes, LTX, MiniMax H3/H3 Max, Seedance 2.5, Wan, FLUX.3, Gemini Omni, HappyHorse or Kling. Separates code motion from generated footage, checks capabilities and prefers recent verified releases."
+}

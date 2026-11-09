@@ -1,0 +1,37 @@
+{
+  "name": "brand-impersonation-response",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/brand-impersonation-response/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "brand-impersonation-response",
+  "downloaded_at": "2026-11-09T05:50:18.549906Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, brand",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/brand-impersonation-response/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/brand-impersonation-response/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Respond to a brand or executive impersonation incident \u2014 deepfaked executives, cloned support lines, fake apps, spoofed domains, or AI-generated scam content wearing your name. Use when a deepfake of a leader is circulating, customers report a fake version of your product or support channel, or to prepare the impersonation playbook before it happens. For general crisis comms use press-release/pm-crisis skills; for security incidents inside your systems use security-incident-response."
+}

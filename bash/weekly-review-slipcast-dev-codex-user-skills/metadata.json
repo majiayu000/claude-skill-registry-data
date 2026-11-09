@@ -1,0 +1,37 @@
+{
+  "name": "weekly-review",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/weekly-review/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "weekly-review-slipcast-dev-codex-user-skills",
+  "downloaded_at": "2026-11-09T05:52:57.862411Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/weekly-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/weekly-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when someone wants to run a weekly review, close open loops, audit stalled projects and commitments, get their system back to trusted, restart a lapsed review habit, or says \"/cs-weekly-review\". Walks David Allen's three-phase loop \u2014 GET CLEAR, GET CURRENT, GET CREATIVE \u2014 with deterministic scripts that inventory open loops, gate the checklist with named gaps, and score commitment health 0-100."
+}

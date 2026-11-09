@@ -1,0 +1,38 @@
+{
+  "name": "plan-work",
+  "repo": "act101-ai/act-lite",
+  "path": "plugin/skills/plan-work/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/act101-ai/act-lite",
+  "dir_name": "plan-work",
+  "downloaded_at": "2026-11-09T06:27:19.232717Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "act101-ai",
+  "source_url": "https://github.com/act101-ai/act-lite/blob/main/plugin/skills/plan-work/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/act101-ai/act-lite/blob/main/plugin/skills/plan-work/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plans work as a resumable work graph of nodes with contracts, dependencies and fixed acceptance checks, cut from an approved design, reviewed, validated and committed for execution. Use when the operator asks to write a plan, plan a change, break work down or turn a spec into tasks before writing code (\"write a plan\", \"plan this\", \"implementation plan\", \"break this down\"), or to create or set up a work loop, work graph or tracker (\"create a work loop for this spec\", \"set up a tracker\", \"make this resumable\")."
+}

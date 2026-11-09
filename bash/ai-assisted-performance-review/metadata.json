@@ -1,0 +1,37 @@
+{
+  "name": "ai-assisted-performance-review",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/ai-assisted-performance-review/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "ai-assisted-performance-review",
+  "downloaded_at": "2026-11-09T05:50:05.745680Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/ai-assisted-performance-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/ai-assisted-performance-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Evaluate performance fairly when output is AI-assisted \u2014 what still measures the human, what now measures the tooling, and how to run the review conversation. Use when reviewing someone whose work is heavily AI-assisted, when output volume stopped meaning anything, when calibrating a team with uneven AI adoption, or when writing review criteria for the AI era. For the general review document use performance-review; for redesigning the role itself use role-redesign-for-ai."
+}

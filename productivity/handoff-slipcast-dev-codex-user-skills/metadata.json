@@ -1,0 +1,37 @@
+{
+  "name": "handoff",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "handoff-slipcast-dev-codex-user-skills",
+  "downloaded_at": "2026-11-09T05:51:22.669059Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/handoff/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/handoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compact the current conversation into a handoff document for another agent to pick up, referencing existing artifacts (PRDs, plans, ADRs, issues, commits, diffs) by path or URL instead of duplicating them. Use whenever the user wants to hand off to a fresh agent, is ending a session mid-task, asks for a handoff doc or a summary of state, decisions and next steps for the next session, or starts a new session that picks up prior work."
+}

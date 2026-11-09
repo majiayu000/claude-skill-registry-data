@@ -1,0 +1,37 @@
+{
+  "name": "linkedin-skills",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/linkedin-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "linkedin-skills",
+  "downloaded_at": "2026-11-09T05:51:40.368441Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/linkedin-skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/linkedin-skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when someone wants to grow an organic LinkedIn presence \u2014 a content strategy for a career change or consulting or thought leadership, a rewritten profile or headline, post drafts and hooks, a posting cadence or newsletter plan, connection notes and outreach, a commenting strategy, repurposing an article or talk into posts, or a read on why their reach dropped. Triggers on \"grow my LinkedIn\", \"fix my headline\", \"write a LinkedIn post\", \"what should I post about\", \"LinkedIn strategy\", \"connection request\", \"my reach dropped\". Forks context to route to one of five sub-skills, and refuses automation, scraping, pods, and bulk DMs before any drafting starts."
+}

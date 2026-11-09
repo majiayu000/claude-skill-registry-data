@@ -1,0 +1,37 @@
+{
+  "name": "research-ops-skills",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/research-ops-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "research-ops-skills",
+  "downloaded_at": "2026-11-09T05:52:18.357761Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/research-ops-skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/research-ops-skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when planning, funding, scoping, or synthesizing enterprise research across workstreams \u2014 clinical study design, R&D program finance, market sizing/surveys, or product/user research. Triggers on \"design this clinical study\", \"what sample size\", \"R&D budget\", \"burn rate\", \"capitalize or expense\", \"TAM SAM SOM\", \"market sizing\", \"survey design\", \"segment the market\", \"plan user interviews\", \"usability test\", \"synthesize research insights\". Forks context to route to one of four Research-Operations sub-skills (clinical-research, research-finance, market-research, product-research) and returns a digest. Distinct from ra-qm-team (regulatory submission), finance (corporate close/valuation), research/grants (funding discovery), product-team (persona/journey/live experiments), and marketing-skill (campaign analytics)."
+}

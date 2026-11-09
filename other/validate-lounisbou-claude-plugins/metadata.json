@@ -1,0 +1,36 @@
+{
+  "name": "validate",
+  "repo": "LounisBou/claude-plugins",
+  "path": "plugins/norms/skills/validate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LounisBou/claude-plugins",
+  "dir_name": "validate-lounisbou-claude-plugins",
+  "downloaded_at": "2026-11-09T05:04:07.876105Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LounisBou",
+  "source_url": "https://github.com/LounisBou/claude-plugins/blob/main/plugins/norms/skills/validate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LounisBou/claude-plugins/blob/main/plugins/norms/skills/validate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use before running norms:check to validate CONTRIBUTING.md structure. Detects contradictory rules,\nempty entries, vague non-enforceable statements, and missing scope definitions that would cause\nagents to produce unreliable findings."
+}

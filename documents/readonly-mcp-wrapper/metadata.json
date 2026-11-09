@@ -1,0 +1,38 @@
+{
+  "name": "readonly-mcp-wrapper",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/readonly-mcp-wrapper/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "readonly-mcp-wrapper",
+  "downloaded_at": "2026-11-09T05:52:12.388669Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/readonly-mcp-wrapper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/readonly-mcp-wrapper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when asked to expose a folder of notes or docs to Claude or another AI client, build an MCP server over Markdown or JSON files, let an agent read my knowledge base safely, or wrap documentation as MCP tools. To design an MCP server for a whole product, use mcp-server-spec."
+}

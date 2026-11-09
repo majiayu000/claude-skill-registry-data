@@ -1,0 +1,39 @@
+{
+  "name": "android-bugfix",
+  "repo": "Mark-Hine/ai-toolkit",
+  "path": "antigravity/plugins/android-kit/skills/android-bugfix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Mark-Hine/ai-toolkit",
+  "dir_name": "android-bugfix-mark-hine-ai-toolkit",
+  "downloaded_at": "2026-11-09T05:10:21.856902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, platform=4",
+    "score": 4,
+    "runner_up": "platform",
+    "runner_up_score": 4,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Mark-Hine",
+  "source_url": "https://github.com/Mark-Hine/ai-toolkit/blob/main/antigravity/plugins/android-kit/skills/android-bugfix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Mark-Hine/ai-toolkit/blob/main/antigravity/plugins/android-kit/skills/android-bugfix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bug-fix playbook for Android apps: reproduce (test or emulator), root cause, minimal fix, regression test, review, commit."
+}

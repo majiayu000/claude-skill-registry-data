@@ -1,0 +1,39 @@
+{
+  "name": "pw",
+  "repo": "LeoYeAI/agent-master-skills",
+  "path": "skills/pw/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/LeoYeAI/agent-master-skills",
+  "dir_name": "pw-leoyeai-agent-master-skills",
+  "downloaded_at": "2026-11-09T05:00:45.383092Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration, playwright, cypress",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "integration",
+      "playwright",
+      "cypress"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeoYeAI",
+  "source_url": "https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/pw/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeoYeAI/agent-master-skills/blob/main/skills/pw/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for any Playwright or end-to-end browser testing work: writing tests, fixing flaky ones, migrating from Cypress or Selenium, CI setup, TestRail or BrowserStack. Routes to the matching /pw sub-skill and its 55 templates."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "mpstats-connector",
+  "repo": "Vladimir-Human/ru-marketplace-mcp",
+  "path": "skills/mpstats-connector/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Vladimir-Human/ru-marketplace-mcp",
+  "dir_name": "mpstats-connector",
+  "downloaded_at": "2026-11-09T06:12:05.201944Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vladimir-Human",
+  "source_url": "https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/skills/mpstats-connector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/skills/mpstats-connector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill for MPStats sales/stock analytics on a specific Ozon or Wildberries item \u2014 per-day sales, current price and stock, FBS/FBO warehouse split, seller/brand identity, and a rolling orders-per-day average. Trigger on \"\u043f\u0440\u043e\u0434\u0430\u0436\u0438 \u0442\u043e\u0432\u0430\u0440\u0430 \u043d\u0430 \u043e\u0437\u043e\u043d\", \"\u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430 ozon sku\", \"mpstats \u043f\u043e \u0430\u0440\u0442\u0438\u043a\u0443\u043b\u0443\", \"\u043f\u0440\u043e\u0434\u0430\u0436\u0438 \u0437\u0430 30 \u0434\u043d\u0435\u0439\", or English equivalents. Requires a paid MPStats account (MPSTATS_MP_AUTH env). Skip raw catalog price checks \u2014 use wb_/ozon_ connectors (no account needed)."
+}

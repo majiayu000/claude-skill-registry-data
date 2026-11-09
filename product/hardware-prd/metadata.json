@@ -1,0 +1,37 @@
+{
+  "name": "hardware-prd",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/hardware-prd/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "hardware-prd",
+  "downloaded_at": "2026-11-09T05:51:22.885037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "prd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/hardware-prd/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/hardware-prd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write a PRD for a physical hardware product \u2014 target cost (BOM and landed), industrial design constraints, regulatory certifications, reliability targets, serviceability, packaging, and forecast assumptions. Use when asked to write a hardware PRD, spec a new device, define requirements for a physical product, or kick off an NPI program."
+}

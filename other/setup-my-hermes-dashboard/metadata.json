@@ -1,0 +1,38 @@
+{
+  "name": "setup-my-hermes-dashboard",
+  "repo": "Melvynx/ai-maxxing-skills",
+  "path": "skills/setup-my-hermes-dashboard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Melvynx/ai-maxxing-skills",
+  "dir_name": "setup-my-hermes-dashboard",
+  "downloaded_at": "2026-11-09T05:13:35.279798Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Melvynx",
+  "source_url": "https://github.com/Melvynx/ai-maxxing-skills/blob/main/skills/setup-my-hermes-dashboard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Melvynx/ai-maxxing-skills/blob/main/skills/setup-my-hermes-dashboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Give the user their own personal dashboard on their VPS, in the same look and stack as the Hermes dashboard (TanStack Start, Tailwind, SQLite), at dashboard.their-domain behind the same sign-in gate. It starts with no module but a built-in System monitoring group (latest conversations, Infra with server health, daily audit and one-click fixes, and a Models page to pick the AI model); the user asks Hermes for the modules they want and Hermes builds and ships them. Use after setup-vps."
+}

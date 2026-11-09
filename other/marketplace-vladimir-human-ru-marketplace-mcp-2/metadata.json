@@ -1,0 +1,37 @@
+{
+  "name": "marketplace",
+  "repo": "Vladimir-Human/ru-marketplace-mcp",
+  "path": "dsh/skills/marketplace/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Vladimir-Human/ru-marketplace-mcp",
+  "dir_name": "marketplace-vladimir-human-ru-marketplace-mcp-2",
+  "downloaded_at": "2026-11-09T06:12:04.317411Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vladimir-Human",
+  "source_url": "https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/dsh/skills/marketplace/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/dsh/skills/marketplace/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the operator wants the full marketplace mount, routing metadata, or client setup. Trigger on \"\u043e\u0434\u0438\u043d MCP\", \"\u0432\u0441\u0435 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0438\", \"marketplace_sources\", \"\u043d\u0430\u0441\u0442\u0440\u043e\u0438\u0442\u044c marketplace\", or \"full marketplace\". Route price questions such as \"\u0433\u0434\u0435 \u0434\u0435\u0448\u0435\u0432\u043b\u0435\" and \"compare prices\" to compare-prices; skip single-source tasks."
+}

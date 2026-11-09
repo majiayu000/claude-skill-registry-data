@@ -1,0 +1,40 @@
+{
+  "name": "cerebro-architect-ui",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".claude/skills/cerebro-architect-ui/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "cerebro-architect-ui",
+  "downloaded_at": "2026-11-09T05:11:03.682627Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, component, figma",
+    "score": 5,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/cerebro-architect-ui/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/cerebro-architect-ui/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analiza maquetas y prototipos visuales del proyecto (exportaciones de Stitch en HTML o PNG, Figma, HTML a mano) y los traduce a especificaciones t\u00e9cnicas, mapeando CADA control a su regla de negocio del OKF con wikilink. Trae los guardarra\u00edles que impiden fake toggles, botones cosm\u00e9ticos, estados visuales hu\u00e9rfanos y reglas sin UI, m\u00e1s la trazabilidad inversa: toda RN del m\u00f3dulo tiene que tener un componente que la materialice. Trigger: \"dise\u00f1\u00e1 la UI de esta pantalla\", \"valid\u00e1 esta maqueta contra las reglas\", \"revis\u00e1 este mockup\", \"pas\u00e1 este dise\u00f1o a spec t\u00e9cnica\", \"\u00bfeste toggle tiene regla?\". NO genera el HTML del mockup (eso es cerebro-mockup-design) ni escribe c\u00f3digo de componentes (eso es desarrollo)."
+}

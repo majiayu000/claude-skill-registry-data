@@ -1,0 +1,37 @@
+{
+  "name": "pstack-statechart",
+  "repo": "MatiasFrangolini/pstack-portable",
+  "path": "skills/pstack-statechart/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/MatiasFrangolini/pstack-portable",
+  "dir_name": "pstack-statechart",
+  "downloaded_at": "2026-11-09T05:11:40.997926Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MatiasFrangolini",
+  "source_url": "https://github.com/MatiasFrangolini/pstack-portable/blob/main/skills/pstack-statechart/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MatiasFrangolini/pstack-portable/blob/main/skills/pstack-statechart/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check a TLA+ state-transition model with TLC and explain its reachable states or a counterexample as a chart. Use for statechart requests or when a modeled state path needs visual explanation."
+}

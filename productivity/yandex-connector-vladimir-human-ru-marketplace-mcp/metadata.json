@@ -1,0 +1,37 @@
+{
+  "name": "yandex-connector",
+  "repo": "Vladimir-Human/ru-marketplace-mcp",
+  "path": "dsh/skills/yandex-connector/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Vladimir-Human/ru-marketplace-mcp",
+  "dir_name": "yandex-connector-vladimir-human-ru-marketplace-mcp",
+  "downloaded_at": "2026-11-09T06:12:06.171017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vladimir-Human",
+  "source_url": "https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/dsh/skills/yandex-connector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vladimir-Human/ru-marketplace-mcp/blob/main/dsh/skills/yandex-connector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the operator needs Yandex Market data \u2014 price checks across many sellers, product ratings with their star breakdown, or buyer reviews. Trigger on Russian queries like \"\u0446\u0435\u043d\u0430 \u043d\u0430 \u042f\u043d\u0434\u0435\u043a\u0441 \u041c\u0430\u0440\u043a\u0435\u0442\u0435\", \"\u043e\u0442\u0437\u044b\u0432\u044b \u043d\u0430 \u043c\u0430\u0440\u043a\u0435\u0442\u0435\", \"\u043d\u0430\u0439\u0434\u0438 \u043d\u0430 \u044f\u043d\u0434\u0435\u043a\u0441 \u043c\u0430\u0440\u043a\u0435\u0442\u0435\", \"\u0441\u0440\u0430\u0432\u043d\u0438 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u043f\u0440\u043e\u0434\u0430\u0432\u0446\u043e\u0432\", or English equivalents. Skip for Wildberries/Ozon-specific tasks."
+}

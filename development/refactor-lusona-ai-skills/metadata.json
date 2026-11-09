@@ -1,0 +1,38 @@
+{
+  "name": "refactor",
+  "repo": "Lusona/ai-skills",
+  "path": "plugins/lusona/skills/refactor/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Lusona/ai-skills",
+  "dir_name": "refactor-lusona-ai-skills",
+  "downloaded_at": "2026-11-09T05:06:20.922681Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, refactor",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lusona",
+  "source_url": "https://github.com/Lusona/ai-skills/blob/main/plugins/lusona/skills/refactor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lusona/ai-skills/blob/main/plugins/lusona/skills/refactor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Refactor implemented product code in bounded increments while preserving observable behavior and compatibility. Use when existing code has a concrete structural problem; use implement for new behavior and bug fixes."
+}

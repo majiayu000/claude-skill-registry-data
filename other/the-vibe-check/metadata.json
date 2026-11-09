@@ -1,0 +1,37 @@
+{
+  "name": "the-vibe-check",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/the-vibe-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "the-vibe-check",
+  "downloaded_at": "2026-11-09T05:52:49.604037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/the-vibe-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/the-vibe-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Harden a vibe-coded app before strangers use it \u2014 the audit for prototypes built fast with AI: exposed secrets, missing auth checks, unvalidated input, data with no deletion path, and the five embarrassing holes every weekend build has. Use when someone says 'Claude built my app, is it safe to launch', 'harden my prototype', 'vibe check my project', or before putting real users on a hackathon build. Defensive review of YOUR OWN app."
+}

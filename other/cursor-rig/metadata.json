@@ -1,0 +1,37 @@
+{
+  "name": "cursor-rig",
+  "repo": "Moh4696/open-3d-skills",
+  "path": "skills/cursor-rig/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Moh4696/open-3d-skills",
+  "dir_name": "cursor-rig",
+  "downloaded_at": "2026-11-09T05:16:47.201522Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Moh4696",
+  "source_url": "https://github.com/Moh4696/open-3d-skills/blob/main/skills/cursor-rig/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Moh4696/open-3d-skills/blob/main/skills/cursor-rig/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes a painted or illustrated character turn its head to follow the visitor's cursor, looking like one continuous painting that moves, without a 3D model or face tracking. Generates head-pose keyframes with an image-editing model and head-turn clips with an image-to-video model, then builds a pose grid on one fixed body (selected by measured head position, aligned, masked, with optical-flow in-betweens) and plays it with a spring-driven canvas player that also blinks. Use when someone wants a hero character, mascot or portrait whose eyes or face follow the mouse, a \"look at the cursor\" effect, or an illustration that reacts to the visitor."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "agent-launcher-orchestrator",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/agent-launcher-orchestrator/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "agent-launcher-orchestrator",
+  "downloaded_at": "2026-11-09T05:50:03.457159Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/agent-launcher-orchestrator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/agent-launcher-orchestrator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a user wants to build, launch, grade, or schedule a Claude Managed Agent (CMA) in their own Anthropic account \u2014 \"build me an agent\", \"launch this as a managed agent\", \"run this on a schedule\", \"grade my agent against a rubric\", \"set up a nightly worker\". Reads the per-session goal (./my-agent/goal.json), routes deterministically to one of five phase sub-skills (interview \u2192 stage-launch \u2192 grade-iterate \u2192 run-without-you \u2192 wrap-up) via goal_router.py, and compiles the goal+phase into an execution shape (single-pass workflow / bounded grade\u2192iterate loop / recurring cron deployment loop) via loop_compiler.py. Forks context so heavy intake (build sheets, payloads, eval cases) stays out of the parent thread. All launches are emitted as BYOK curl the user runs with their own key; no tool makes API calls. Inspired by anthropics/launch-your-agent (Apache-2.0)."
+}

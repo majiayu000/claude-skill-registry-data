@@ -1,0 +1,38 @@
+{
+  "name": "pr-review",
+  "repo": "NVIDIA-NeMo/DataDesigner",
+  "path": ".github/review-policy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NVIDIA-NeMo/DataDesigner",
+  "dir_name": "review-policy",
+  "downloaded_at": "2026-11-09T05:19:42.296474Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA-NeMo",
+  "source_url": "https://github.com/NVIDIA-NeMo/DataDesigner/blob/main/.github/review-policy/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA-NeMo/DataDesigner/blob/main/.github/review-policy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review Data Designer changes for correctness, architecture, public contracts, and meaningful test gaps."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pi-orchestration",
+  "repo": "ahsanghalib/ai-workflow",
+  "path": "pi/agent/skills/pi-orchestration/SKILL.md",
+  "github_branch": "main",
+  "category": "orchestration",
+  "source": "github.com/ahsanghalib/ai-workflow",
+  "dir_name": "pi-orchestration",
+  "downloaded_at": "2026-11-09T06:34:34.524269Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "orchestration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for orchestration: orchestration, multi-agent",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "orchestration",
+      "multi-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahsanghalib",
+  "source_url": "https://github.com/ahsanghalib/ai-workflow/blob/main/pi/agent/skills/pi-orchestration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahsanghalib/ai-workflow/blob/main/pi/agent/skills/pi-orchestration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Route tasks among Pi custom subagents with minimal cost and clear boundaries. Use when the task concerns pi orchestration."
+}

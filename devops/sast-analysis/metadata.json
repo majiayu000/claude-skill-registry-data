@@ -1,0 +1,41 @@
+{
+  "name": "sast-analysis",
+  "repo": "aeroalgo/dev-hub",
+  "path": "harness/skills/sast-analysis/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/aeroalgo/dev-hub",
+  "dir_name": "sast-analysis",
+  "downloaded_at": "2026-11-09T06:30:06.222676Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, kubernetes, infra, infrastructure",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "kubernetes",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aeroalgo",
+  "source_url": "https://github.com/aeroalgo/dev-hub/blob/master/harness/skills/sast-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aeroalgo/dev-hub/blob/master/harness/skills/sast-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Perform codebase analysis and architecture mapping as the first phase of a security assessment. Explores the tech stack, frameworks, entry points, data flows, and trust boundaries. Outputs sast/architecture.md. Run this before any vulnerability detection skill. Use when asked to analyze a codebase for security or when sast/architecture.md does not yet exist."
+}

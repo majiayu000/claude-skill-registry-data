@@ -1,0 +1,38 @@
+{
+  "name": "seo-competitor",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/seo-competitor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "seo-competitor",
+  "downloaded_at": "2026-11-09T05:52:29.242292Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "seo",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/seo-competitor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/seo-competitor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a competitive SEO analysis comparing the user's site to chosen competitors across SERP overlap, content depth, backlink profiles, technical posture, and brand presence. Use this skill whenever the user wants to analyze competitors, find content gaps, identify backlink opportunities, understand why competitors outrank them, or benchmark against the rest of their category. Triggers on competitor analysis, competitive analysis, SERP analysis, content gap, backlink gap, why is X ranking, who is winning the SERP, beat my competitor, benchmark, market positioning. Also triggers when planning a content strategy and the question 'what are competitors doing' is implicit."
+}

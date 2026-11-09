@@ -1,0 +1,38 @@
+{
+  "name": "edl-edit",
+  "repo": "Wanfeng1028/muse",
+  "path": "source/skill/edl-edit/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Wanfeng1028/muse",
+  "dir_name": "edl-edit",
+  "downloaded_at": "2026-11-09T06:13:36.307870Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word, documentation",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Wanfeng1028",
+  "source_url": "https://github.com/Wanfeng1028/muse/blob/main/source/skill/edl-edit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Wanfeng1028/muse/blob/main/source/skill/edl-edit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a multi-clip edit as an auditable JSON \"edit decision list\" (EDL) \u2014 a list of clips with source/in/out and a written rationale per pick \u2014 that one command renders to a finished video. Use whenever you're stitching several cuts/takes/segments into one video and want the edit to be reviewable, diffable, and re-runnable instead of a throwaway ffmpeg filtergraph. Covers the schema, the rationale discipline, multicam cutaways, and verifying the output by re-transcribing it."
+}

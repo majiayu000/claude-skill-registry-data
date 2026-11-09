@@ -1,0 +1,37 @@
+{
+  "name": "taste-to-checks",
+  "repo": "MiniMax-AI/mcode-stack",
+  "path": "stacks/ronny/skills/taste-to-checks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MiniMax-AI/mcode-stack",
+  "dir_name": "taste-to-checks",
+  "downloaded_at": "2026-11-09T05:16:11.477339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MiniMax-AI",
+  "source_url": "https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/taste-to-checks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/ronny/skills/taste-to-checks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a review correction we keep making on agent output into something that runs on its own, a test, lint rule, hook, CI step or project rule, so the miss does not come back next session. Use when we keep correcting agents on the same mistake (import order, naming, a forbidden API, a missing test), when the same review comment shows up on a second PR, or after a review finds a miss that a check could have caught."
+}

@@ -1,0 +1,31 @@
+---
+name: paid-ads
+description: When the user wants help with paid advertising campaigns on Google Ads,
+  Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use
+  when the user mentions 'PPC,' 'paid media,' 'ad copy,' 'ad creative,' 'ROAS,' 'CPA,'
+  'ad campaign,' 'retargeting,' or 'audience targeting.' This skill covers campaign
+  strategy, ad creation, audience targeting, and optimization.
+license: MIT
+metadata:
+  source-package: claude-skills-main
+  adapted-for: Codex
+---
+
+# paid-ads
+
+## Работа в Codex
+
+Прочитай [предметную процедуру](WORKFLOW.md), затем только нужные разделы ресурсов;
+пути разрешай от содержащего их файла. Соблюдай AGENTS.md, цель, стек и полномочия
+пользователя. Навык не разрешает создание агентов, hooks или фоновые действия.
+Инструменты Claude — обозначения исходной платформы: используй реальные API Codex,
+не подменяй CLI механически. Недоступные зависимости укажи; MCP подключай штатно.
+До запуска скрипта проверь его код, зависимости, пути и побочные эффекты.
+Примеры не подтверждают факты; актуальные API и тарифы проверяй по официальным
+источникам. Уточняй существенное, обратимые действия в рамках задачи выполняй сам.
+
+
+
+## Особенности переноса
+
+- Исходные команды или настройки требуют проверки совместимости.

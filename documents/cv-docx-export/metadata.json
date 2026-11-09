@@ -1,0 +1,37 @@
+{
+  "name": "cv-docx-export",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/cv-docx-export/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "cv-docx-export",
+  "downloaded_at": "2026-11-09T05:50:48.070729Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, docx",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/cv-docx-export/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/cv-docx-export/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn a finished CV into a parsing-safe Word file ready to upload: one column, real heading styles, no tables, headers or images, the right paper size, and correct fonts for Chinese, Japanese or Korean text. Use when asked to give me my CV as a Word file, export my CV to docx, make an ATS-safe CV file, or produce my \u7b80\u5386 as a Word document."
+}

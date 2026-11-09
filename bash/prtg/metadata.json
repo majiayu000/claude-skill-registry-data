@@ -1,0 +1,38 @@
+{
+  "name": "prtg",
+  "repo": "Servosity/msp-skills",
+  "path": "skills/prtg/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Servosity/msp-skills",
+  "dir_name": "prtg",
+  "downloaded_at": "2026-11-09T05:46:49.110070Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Servosity",
+  "source_url": "https://github.com/Servosity/msp-skills/blob/main/skills/prtg/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Servosity/msp-skills/blob/main/skills/prtg/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Every PRTG API v2 endpoint, plus a fleet view across every client's PRTG core: alarms, status, handoffs, hygiene and safe bulk actions in one command. Trigger phrases: `what's down across all our PRTG cores`, `acknowledge this alarm on every client`, `pause monitoring for patch night`, `which PRTG cores are behind on version`, `use prtg`, `run prtg`."
+}

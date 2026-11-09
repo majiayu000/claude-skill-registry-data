@@ -1,0 +1,37 @@
+{
+  "name": "create-host-ai-scaffold",
+  "repo": "TimothyMeadows/Hephaera",
+  "path": "skills/create-host-ai-scaffold/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/TimothyMeadows/Hephaera",
+  "dir_name": "create-host-ai-scaffold",
+  "downloaded_at": "2026-11-09T06:03:24.436680Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TimothyMeadows",
+  "source_url": "https://github.com/TimothyMeadows/Hephaera/blob/main/skills/create-host-ai-scaffold/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TimothyMeadows/Hephaera/blob/main/skills/create-host-ai-scaffold/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Initialize durable project context at .hephaera/.cache, seed protected system memory, add Windows Bash guidance when applicable, and maintain the host AGENTS bootstrap for the fixed .hephaera installation. Use at first startup or when required memory, map, task, or bootstrap artifacts are absent."
+}

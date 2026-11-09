@@ -1,0 +1,38 @@
+{
+  "name": "build",
+  "repo": "MatheusCastro99/ProdHarnessConfig",
+  "path": "harness/.claude/skills/build/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/MatheusCastro99/ProdHarnessConfig",
+  "dir_name": "build-matheuscastro99-prodharnessconfig",
+  "downloaded_at": "2026-11-09T05:11:37.621080Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MatheusCastro99",
+  "source_url": "https://github.com/MatheusCastro99/ProdHarnessConfig/blob/main/harness/.claude/skills/build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MatheusCastro99/ProdHarnessConfig/blob/main/harness/.claude/skills/build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Block B of the harness workflow. Implements an approved plan sub-phase by sub-phase, then pushes a draft PR and writes the handoff. Use only when an approved plan in .harness/work/<issue>/plan.md says to invoke it."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "evidence-grading",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/evidence-grading/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "evidence-grading",
+  "downloaded_at": "2026-11-09T05:51:06.428380Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/evidence-grading/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/evidence-grading/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Grade the evidence behind a claim before betting on it \u2014 the hierarchy for business evidence (experiments  usage data  surveys  interviews  anecdotes  opinion), the fit-for-decision test, and the mixed-evidence verdicts that real questions produce. Use when asked how strong is our evidence for this, grade what we know before the decision, is this enough to bet on, or we have three anecdotes and a survey \u2014 now what."
+}

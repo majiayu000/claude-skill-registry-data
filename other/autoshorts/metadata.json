@@ -1,0 +1,38 @@
+{
+  "name": "autoshorts",
+  "repo": "Wanfeng1028/muse",
+  "path": "source/skill/autoshorts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Wanfeng1028/muse",
+  "dir_name": "autoshorts",
+  "downloaded_at": "2026-11-09T06:13:40.914112Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "Wanfeng1028",
+  "source_url": "https://github.com/Wanfeng1028/muse/blob/main/source/skill/autoshorts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Wanfeng1028/muse/blob/main/source/skill/autoshorts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Daily pipeline that picks one long video from a folder, transcribes it with Whisper, uses Gemini 3 Flash multimodal to find every viral short-form moment, cuts each candidate with FFmpeg, adds a hook-text overlay, presents the candidates to the user for approval, and publishes the approved clips to TikTok / Instagram Reels / YouTube Shorts via the Upload-Post API. Use when the user wants to create shorts/reels/clips from longer videos, mentions autoshorts, viral clips, or content repurposing, or asks for the daily clip batch."
+}

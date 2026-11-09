@@ -1,0 +1,37 @@
+{
+  "name": "doc-versioning-discipline",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/doc-versioning-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "doc-versioning-discipline",
+  "downloaded_at": "2026-11-09T05:50:59.170697Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/doc-versioning-discipline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/doc-versioning-discipline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Keep living documents trustworthy over time \u2014 the status header (draft/active/superseded) that tells readers what they're holding, the change-log-for-decisions inside the doc, the supersession chain that kills zombie versions, and the review-date heartbeat. Use when asked which version of this doc is current, our wiki is full of stale pages, set up doc lifecycle rules, or people keep following the old process doc."
+}

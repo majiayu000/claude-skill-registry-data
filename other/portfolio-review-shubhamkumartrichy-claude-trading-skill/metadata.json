@@ -1,0 +1,37 @@
+{
+  "name": "portfolio-review",
+  "repo": "Shubhamkumartrichy/claude-trading-skills-india",
+  "path": "skills/portfolio-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Shubhamkumartrichy/claude-trading-skills-india",
+  "dir_name": "portfolio-review-shubhamkumartrichy-claude-trading-skill",
+  "downloaded_at": "2026-11-09T05:48:35.957119Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Shubhamkumartrichy",
+  "source_url": "https://github.com/Shubhamkumartrichy/claude-trading-skills-india/blob/main/skills/portfolio-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Shubhamkumartrichy/claude-trading-skills-india/blob/main/skills/portfolio-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Health check for an Indian delivery (CNC) stock portfolio from a holdings CSV or a Zerodha Console,\nKite, Groww or broker-MCP export: value and unrealised P&L, position and sector weights, top-5/top-10\nconcentration, business-group exposure (Adani, Tata...), large/mid/small mix against a target,\npledged, SME and surveillance flags, a per-lot STCG\u2192LTCG countdown, volatility, beta vs NIFTY,\ndrawdown, correlated clusters, portfolio heat to stops, and a tax-aware rebalance plan with charges.\n\nUse when the user asks: \"review my portfolio\", \"am I too concentrated\", \"sector allocation of my\nholdings\", \"how risky is my portfolio / what is my beta\", \"how much am I risking to my stops\",\n\"rebalance to equal weight\", \"what should I trim\", \"which holdings turn long-term soon\", or\nuploads a holdings file from their broker."
+}

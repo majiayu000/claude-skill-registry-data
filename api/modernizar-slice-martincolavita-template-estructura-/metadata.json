@@ -1,0 +1,38 @@
+{
+  "name": "modernizar-slice",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".claude/skills/modernizar-slice/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "modernizar-slice-martincolavita-template-estructura-",
+  "downloaded_at": "2026-11-09T05:10:59.651146Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/modernizar-slice/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/main/.claude/skills/modernizar-slice/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ejecutar UN slice de la modernizaci\u00f3n decidida en DEC-004, de punta a punta y con barreras: el contrato sacado del c\u00f3digo viejo, la construcci\u00f3n por el pipeline normal (Tareas con TDD en el repositorio nuevo, o refactor en el lugar sobre la red de caracterizaci\u00f3n), la paridad contra el golden con bin/paridad.py, la clasificaci\u00f3n de cada diferencia (bug del port, cambio intencional aceptado por una persona, campo vol\u00e1til), el corte de tr\u00e1fico s\u00f3lo con bin/mapa-modernizacion.py corte en OK, y el apagado de la vieja con un \u00abs\u00ed\u00bb. Referencias aparte para refactor en el lugar, eliminar c\u00f3digo muerto y subir de versi\u00f3n. Usar cuando se pida \"migr\u00e1 el slice X\", \"segu\u00ed con la migraci\u00f3n\", \"refactoriz\u00e1 el m\u00f3dulo X\", \"cort\u00e1 el tr\u00e1fico de X\", \"/modernizar-slice\". La app vieja no se toca; nadie se aprueba a s\u00ed mismo; sin paridad no hay corte. Espa\u00f1ol (Argentina)."
+}

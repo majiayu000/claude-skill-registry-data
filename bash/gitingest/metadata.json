@@ -1,0 +1,38 @@
+{
+  "name": "gitingest",
+  "repo": "akillness/jeo-skills",
+  "path": ".agent-skills/gitingest/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/akillness/jeo-skills",
+  "dir_name": "gitingest",
+  "downloaded_at": "2026-11-09T06:37:13.922215Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akillness",
+  "source_url": "https://github.com/akillness/jeo-skills/blob/main/.agent-skills/gitingest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akillness/jeo-skills/blob/main/.agent-skills/gitingest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operate coderamp-labs/gitingest, the MIT-licensed tool that turns a Git repository or local directory into one prompt-friendly text digest (summary, directory tree, file contents, token estimate) through the `gitingest` CLI, the Python `ingest` API, the hosted gitingest.com site, or a self-hosted FastAPI server. Use when the user names gitingest or gitingest.com, wants to replace \"hub\" with \"ingest\" in a GitHub URL, or needs a whole-repository digest to paste into an LLM, with include or exclude patterns, size limits, a branch or subdirectory, or a private-repository token. Decide local CLI versus hosted site first. Do not use for repository-aware coding, semantic search of a codebase, or digesting a tree that contains secrets. Triggers on: gitingest, git ingest, hub to ingest, repo to prompt, \uae43\ud5c8\ube0c \ucf54\ub4dc \uc804\uccb4\ub97c \ud504\ub86c\ud504\ud2b8\ub85c, \ucf54\ub4dc\ubca0\uc774\uc2a4 \ud14d\uc2a4\ud2b8 \ub364\ud504, digest.txt."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dataset-datasheet",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/dataset-datasheet/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "dataset-datasheet",
+  "downloaded_at": "2026-11-09T05:50:50.303845Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/dataset-datasheet/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/dataset-datasheet/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Document a dataset so others know what it is, how it was made, and when not to use it. Use when asked to write a datasheet for a dataset, document training/eval data, or assess whether a dataset is fit for a use."
+}

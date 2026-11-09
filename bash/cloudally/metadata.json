@@ -1,0 +1,38 @@
+{
+  "name": "cloudally",
+  "repo": "Servosity/msp-skills",
+  "path": "skills/cloudally/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Servosity/msp-skills",
+  "dir_name": "cloudally",
+  "downloaded_at": "2026-11-09T05:46:50.816890Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Servosity",
+  "source_url": "https://github.com/Servosity/msp-skills/blob/main/skills/cloudally/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Servosity/msp-skills/blob/main/skills/cloudally/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks about CloudAlly backups of Microsoft 365 or Google Workspace: restores many mailboxes to one past backup date, builds and downloads year-end mailbox archives, lists a mailbox's past backups (which CloudAlly's documented API cannot), and finds stale or failing backups across every partner customer; also partner, reseller and customer accounts, backup tasks, users and billing through the Management API v2. Trigger phrases: `restore all mailboxes to a date in CloudAlly`, `batch restore CloudAlly mailboxes`, `download every mailbox as of December 31`, `year-end mailbox archive from CloudAlly`, `list a CloudAlly mailbox's past backups`, `which CloudAlly backups are failing`, `check CloudAlly restore progress`, `CloudAlly backup status for all customers`, `list CloudAlly backup tasks`, `run a CloudAlly backup now`, `CloudAlly billing`, `use cloudally`, `run cloudally-cli`."
+}

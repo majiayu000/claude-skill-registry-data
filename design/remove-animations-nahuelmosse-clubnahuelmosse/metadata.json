@@ -1,0 +1,38 @@
+{
+  "name": "remove-animations",
+  "repo": "NahuelMosse/ClubNahuelMosse",
+  "path": ".claude/skills/remove-animations/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/NahuelMosse/ClubNahuelMosse",
+  "dir_name": "remove-animations-nahuelmosse-clubnahuelmosse",
+  "downloaded_at": "2026-11-09T05:20:52.890971Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, animation",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "ui",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NahuelMosse",
+  "source_url": "https://github.com/NahuelMosse/ClubNahuelMosse/blob/main/.claude/skills/remove-animations/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NahuelMosse/ClubNahuelMosse/blob/main/.claude/skills/remove-animations/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find the animations an interface doesn't need and remove them \u2014 motion on keyboard actions, high-frequency surfaces, functional data, and decoration with no purpose \u2014 then clean up what they leave behind. Edits code, but only to subtract; it never adds or retunes motion. Use when the user says the app \"feels slow\", \"has too much animation\", \"feels over-animated\", wants to \"tone down the motion\", or asks what animations to remove. For finding places that should animate, use find-animation-opportunities; for fixing animations that should stay, use improve-animations or review-animations."
+}

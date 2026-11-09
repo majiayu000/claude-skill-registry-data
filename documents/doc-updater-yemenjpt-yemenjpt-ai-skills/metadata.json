@@ -1,0 +1,39 @@
+{
+  "name": "doc-updater",
+  "repo": "YemenJPT/YemenJPT-AI-Skills",
+  "path": "skills/core/doc-updater/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/YemenJPT/YemenJPT-AI-Skills",
+  "dir_name": "doc-updater-yemenjpt-yemenjpt-ai-skills",
+  "downloaded_at": "2026-11-09T06:18:49.150412Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "YemenJPT",
+  "source_url": "https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/core/doc-updater/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/core/doc-updater/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when documentation, READMEs, release notes, or operating docs have drifted from the current shipped behavior and need synchronized updates."
+}

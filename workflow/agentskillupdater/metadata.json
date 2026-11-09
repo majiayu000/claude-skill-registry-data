@@ -1,0 +1,38 @@
+{
+  "name": "agentskillupdater",
+  "repo": "SeaXen/agentskills",
+  "path": "skills/agentskillupdater/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/SeaXen/agentskills",
+  "dir_name": "agentskillupdater",
+  "downloaded_at": "2026-11-09T05:44:58.680081Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: process, automation, pipeline",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "process",
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SeaXen",
+  "source_url": "https://github.com/SeaXen/agentskills/blob/main/skills/agentskillupdater/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SeaXen/agentskills/blob/main/skills/agentskillupdater/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run, verify, and troubleshoot the Antigravity Agent Skills Vault & Skill.Sea automation pipeline (update.py, skillssh.py, skillleaderboard.py, Skill.Sea catalog \u2192 R2 \u2192 Cloudflare Worker). Use whenever the user asks to run or update the skills vault or update.py, check or verify the pipeline, update the Skill.Sea website or live counts, add or sync library repos, investigate skill/repo counts, or fix or avoid the known pipeline pitfalls (staging junk, duplicate skill dirs, stale doc numbers, install-count parsing, git lock and Windows command-length errors)."
+}

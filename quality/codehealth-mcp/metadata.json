@@ -1,0 +1,38 @@
+{
+  "name": "codehealth-mcp",
+  "repo": "YemenJPT/YemenJPT-AI-Skills",
+  "path": "skills/core/codehealth-mcp/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/YemenJPT/YemenJPT-AI-Skills",
+  "dir_name": "codehealth-mcp",
+  "downloaded_at": "2026-11-09T06:18:53.550496Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "YemenJPT",
+  "source_url": "https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/core/codehealth-mcp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/YemenJPT/YemenJPT-AI-Skills/blob/master/skills/core/codehealth-mcp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Real-time structural Code Health via CodeScene MCP \u2014 review before edits, verify score deltas after changes, gate commits and PRs. Use when reviewing code quality, refactoring, checking if AI changes degraded a file, or before commit/PR."
+}

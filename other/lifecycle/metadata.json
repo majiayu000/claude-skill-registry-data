@@ -1,0 +1,37 @@
+{
+  "name": "lifecycle",
+  "repo": "LounisBou/claude-plugins",
+  "path": "plugins/method/skills/lifecycle/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LounisBou/claude-plugins",
+  "dir_name": "lifecycle",
+  "downloaded_at": "2026-11-09T05:04:08.403796Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LounisBou",
+  "source_url": "https://github.com/LounisBou/claude-plugins/blob/main/plugins/method/skills/lifecycle/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LounisBou/claude-plugins/blob/main/plugins/method/skills/lifecycle/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The development method every role follows - the lifecycle, the definition of done, consent, the report and question formats. Load it once per session before planning, implementing or reviewing work that ends in a pull request."
+}

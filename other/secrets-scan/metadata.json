@@ -1,0 +1,38 @@
+{
+  "name": "secrets-scan",
+  "repo": "aeroalgo/dev-hub",
+  "path": "harness/skills/secrets-scan/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/aeroalgo/dev-hub",
+  "dir_name": "secrets-scan",
+  "downloaded_at": "2026-11-09T06:30:05.818197Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aeroalgo",
+  "source_url": "https://github.com/aeroalgo/dev-hub/blob/master/harness/skills/secrets-scan/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aeroalgo/dev-hub/blob/master/harness/skills/secrets-scan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Detect hardcoded credentials, API keys, tokens, and secrets in source code and configuration files. Use when reviewing code for leaked secrets before commit/merge, auditing a repository for credential exposure, or setting up secret detection."
+}

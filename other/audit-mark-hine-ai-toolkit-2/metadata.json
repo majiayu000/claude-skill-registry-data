@@ -1,0 +1,37 @@
+{
+  "name": "audit",
+  "repo": "Mark-Hine/ai-toolkit",
+  "path": "claude/plugins/toolkit/skills/audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Mark-Hine/ai-toolkit",
+  "dir_name": "audit-mark-hine-ai-toolkit-2",
+  "downloaded_at": "2026-11-09T05:10:17.865840Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Mark-Hine",
+  "source_url": "https://github.com/Mark-Hine/ai-toolkit/blob/main/claude/plugins/toolkit/skills/audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Mark-Hine/ai-toolkit/blob/main/claude/plugins/toolkit/skills/audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits the ai-toolkit standards against their cited sources and writes a dated findings register with proposed diffs. Run it from the ai-toolkit checkout every 90 days or when the freshness job warns. Never runs on its own."
+}

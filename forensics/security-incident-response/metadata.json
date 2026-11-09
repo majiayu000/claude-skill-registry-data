@@ -1,0 +1,38 @@
+{
+  "name": "security-incident-response",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/security-incident-response/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "security-incident-response",
+  "downloaded_at": "2026-11-09T05:52:26.389737Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/security-incident-response/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/security-incident-response/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run or document a security incident response \u2014 contain, eradicate, recover, and learn. Use when responding to a breach/compromise/security incident, writing an IR plan or runbook, or producing a post-incident report. For incidents on systems you own or defend."
+}

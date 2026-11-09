@@ -1,0 +1,37 @@
+{
+  "name": "sector-rotation",
+  "repo": "Shubhamkumartrichy/claude-trading-skills-india",
+  "path": "skills/sector-rotation/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Shubhamkumartrichy/claude-trading-skills-india",
+  "dir_name": "sector-rotation",
+  "downloaded_at": "2026-11-09T05:48:35.541838Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Shubhamkumartrichy",
+  "source_url": "https://github.com/Shubhamkumartrichy/claude-trading-skills-india/blob/main/skills/sector-rotation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Shubhamkumartrichy/claude-trading-skills-india/blob/main/skills/sector-rotation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sector rotation across NSE sectoral and thematic indices (BANK, IT, AUTO, PHARMA, FMCG, METAL,\nREALTY, ENERGY, PSU BANK, FIN SERVICE, INFRA, PSE, CONSUMPTION and more) against NIFTY 50:\n1W\u201312M returns, relative strength, an RRG-style RS-Ratio/RS-Momentum quadrant with recent\nquadrant changes, distance from 50/200 DMA, cyclical-vs-defensive tilt, the midcap/smallcap size\nfactor, and member breadth. sectors.py works offline from niftyindices.com CSVs or via yfinance.\n\nUse when the user asks: \"which sectors are leading\", \"sector rotation\", \"where is money moving\",\n\"is the market risk-on or defensive\", \"are midcaps and smallcaps outperforming\", \"RRG for NSE\nsectors\", \"which sector should I focus on\", \"is IT/PSU bank/metal turning\", or wants sector\ncontext before picking stocks."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "launch-runbook",
+  "repo": "Slipcast-dev/codex-user-skills",
+  "path": "skills/launch-runbook/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-user-skills",
+  "dir_name": "launch-runbook",
+  "downloaded_at": "2026-11-09T05:51:37.964889Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/launch-runbook/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-user-skills/blob/main/skills/launch-runbook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plan and execute a launch runbook covering pre-launch verification, go-live procedures, DNS cutover, post-launch monitoring, and rollback procedures. Use this skill whenever the user is preparing to launch a website or product, planning a DNS cutover, building a go-live checklist, or executing a launch day. Triggers on launch runbook, go-live, launch day, DNS cutover, deploy to production, site launch, product launch, cutover plan, launch checklist, deployment procedure. Also triggers when a launch is approaching and the team needs structured coordination, even if 'runbook' is not explicitly stated."
+}
