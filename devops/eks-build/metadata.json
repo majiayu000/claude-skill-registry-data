@@ -1,0 +1,40 @@
+{
+  "name": "eks-build",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/eks-build/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "eks-build",
+  "downloaded_at": "2026-11-10T06:39:28.567665Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-build/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building EKS clusters. Generates complete, production-ready Terraform projects with optional ArgoCD GitOps integration. Handles environment-specific constraints: air-gapped/VPC-endpoint-only networks, enterprise proxies, private container registries, compliance requirements. Supports 3 patterns: full Terraform, ArgoCD+Terraform, ArgoCD+ACK/KRO. Includes validated modules, two-phase webhook ordering, IRSA/Pod Identity, and 29+ addon configurations. Ask interactive questions or accept requirements YAML. Also use when (1) generating EKS Terraform code from scratch, (2) creating GitOps-managed EKS addons with ArgoCD, (3) scaffolding EKS projects with compliance constraints, (4) implementing two-phase webhook ordering for EKS addons, (5) configuring IRSA or Pod Identity for EKS workloads, (6) generating ArgoCD ApplicationSets for EKS addon management, or (7) comparing deployment patterns for implementation decisions. Skip for Amazon ECS (use ecs-build)."
+}

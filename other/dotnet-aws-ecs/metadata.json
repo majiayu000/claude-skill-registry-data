@@ -1,0 +1,38 @@
+{
+  "name": "dotnet-aws-ecs",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/dotnet-aws-ecs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "dotnet-aws-ecs",
+  "downloaded_at": "2026-11-10T06:39:32.140315Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/dotnet-aws-ecs/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/dotnet-aws-ecs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates IaC (CloudFormation or CDK) and a deployment guide to deploy a .NET workload to Amazon ECS Fargate on Linux containers with an Application Load Balancer. Produces a VPC, ECS cluster, task definition, ALB, and auto-scaling. NOT for Windows containers, EC2 launch type, or Kubernetes/EKS deployments."
+}

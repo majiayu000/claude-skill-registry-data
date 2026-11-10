@@ -1,0 +1,37 @@
+{
+  "name": "demo-studio",
+  "repo": "bitnormie01/build-system",
+  "path": "demo-studio/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/bitnormie01/build-system",
+  "dir_name": "demo-studio",
+  "downloaded_at": "2026-11-10T06:47:10.540791Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitnormie01",
+  "source_url": "https://github.com/bitnormie01/build-system/blob/main/demo-studio/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitnormie01/build-system/blob/main/demo-studio/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this at Step 2.5 \u2014 AFTER the orchestrator reports the build green, before the submission is filed \u2014 to produce the hackathon's demo video autonomously on the user's machine: it writes a scene-by-scene demo script from the brief/spec/event.md, records the built app scene-by-scene (Playwright screencast for browser scenes, ffmpeg gfxcapture/ddagrab for native/wallet-popup scenes), narrates with TTS and word-timed captions, assembles with Remotion, runs a frame-level QC loop, has the user WATCH the final cut, then \u2014 on a separate consent \u2014 uploads it and resolves the submission draft's demo-video URL. Trigger it ONLY on the user's ask: \"make the demo video\", \"record the demo\", \"create the hackathon video\", \"do the demo studio\", the user starting Step 2.5 after the orchestrator's offer, or an autopilot dispatch under a locked campaign contract (which counts as the user's start). NEVER self-trigger on build completion \u2014 the orchestrator offers, the user starts. It records under a foreground do-not-disturb session and never publishes without the user watching first \u2014 unless the locked contract's explicit WATCH policy delegates that watch (autopilot mode; references/campaign-contract.md). Do NOT use it to build (that's the orchestrator) or to run the faucet/deploy/signup gates (that's the gate-concierge)."
+}

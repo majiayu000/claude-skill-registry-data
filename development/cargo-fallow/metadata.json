@@ -1,0 +1,38 @@
+{
+  "name": "cargo-fallow",
+  "repo": "fallow-rs/fallow-skills",
+  "path": "fallow/skills/cargo-fallow/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fallow-rs/fallow-skills",
+  "dir_name": "cargo-fallow",
+  "downloaded_at": "2026-11-10T07:44:40.448861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fallow-rs",
+  "source_url": "https://github.com/fallow-rs/fallow-skills/blob/main/fallow/skills/cargo-fallow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fallow-rs/fallow-skills/blob/main/fallow/skills/cargo-fallow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Codebase analysis for Rust workspaces with `cargo fallow`. Finds unused dependencies, unused source files, `pub` items that can be private, boundary violations, large files and functions, complex functions, duplicated code and public API changes, and runs mutation testing. Use when asked to audit a Rust workspace or a Rust change before a commit or a PR, find unused dependencies or dead code in Rust, narrow visibility, check crate boundaries, detect duplication, gate CI, or run cargo fallow."
+}

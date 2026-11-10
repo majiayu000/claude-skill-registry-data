@@ -1,0 +1,38 @@
+{
+  "name": "cf-crawl",
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/utilities/cf-crawl/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/davila7/claude-code-templates",
+  "dir_name": "cf-crawl-davila7-claude-code-template",
+  "downloaded_at": "2026-11-10T07:21:29.003703Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "davila7",
+  "source_url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/utilities/cf-crawl/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/utilities/cf-crawl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Crawl entire websites using Cloudflare Browser Rendering /crawl API. Initiates async crawl jobs, polls for completion, and saves results as markdown files. Useful for ingesting documentation sites, knowledge bases, or any web content into your project context. Requires CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN environment variables."
+}

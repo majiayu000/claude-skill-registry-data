@@ -1,0 +1,38 @@
+{
+  "name": "video_toolkit",
+  "repo": "digitalsamba/claude-code-video-toolkit",
+  "path": "skills/video-toolkit/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/digitalsamba/claude-code-video-toolkit",
+  "dir_name": "video-toolkit",
+  "downloaded_at": "2026-11-10T07:26:33.032436Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitalsamba",
+  "source_url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/skills/video-toolkit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/skills/video-toolkit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make short explainer videos from a brief with claude-code-video-toolkit \u2014 submit a scene spec, poll a job, get a QC-checked MP4. Also covers the individual tools (AI voiceover, images, clips, music, talking heads) for custom work."
+}

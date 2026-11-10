@@ -1,0 +1,37 @@
+{
+  "name": "ci-triage",
+  "repo": "bitknox/kaeri",
+  "path": ".claude/skills/ci-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bitknox/kaeri",
+  "dir_name": "ci-triage-bitknox-kaeri",
+  "downloaded_at": "2026-11-10T06:47:03.511366Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitknox",
+  "source_url": "https://github.com/bitknox/kaeri/blob/main/.claude/skills/ci-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitknox/kaeri/blob/main/.claude/skills/ci-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find why a Kaeri CI run, beta release or promotion failed without reading whole logs, and check that a beta published. Use when a PR check, the Release or Promote workflow or a store image fails."
+}

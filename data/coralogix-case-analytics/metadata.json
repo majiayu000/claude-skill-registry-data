@@ -1,0 +1,38 @@
+{
+  "name": "coralogix-case-analytics",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/coralogix-case-analytics/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "coralogix-case-analytics",
+  "downloaded_at": "2026-11-10T06:39:47.691997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, pipeline",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-case-analytics/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-case-analytics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fleet/aggregate analytics across many cases via the `system/labs.cases.state_updates` DataPrime dataset. Load when the user asks counts, trends, distributions or rates across cases \u2014 e.g. \"MTTR last week\", \"how many P1 cases today\", \"active case count per team\", \"list active cases\", \"how long until activation on average\". Do NOT load for one specific case ID \u2014 use alert tools for single-case investigation. Load the `coralogix-dataprime` skill alongside this skill."
+}

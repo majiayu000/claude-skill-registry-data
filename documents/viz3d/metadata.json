@@ -1,0 +1,37 @@
+{
+  "name": "viz3d",
+  "repo": "codepawl/viz3d",
+  "path": "plugins/visualize-in-3d/skills/viz3d/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/codepawl/viz3d",
+  "dir_name": "viz3d",
+  "downloaded_at": "2026-11-10T07:08:39.425375Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "codepawl",
+  "source_url": "https://github.com/codepawl/viz3d/blob/main/plugins/visualize-in-3d/skills/viz3d/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/codepawl/viz3d/blob/main/plugins/visualize-in-3d/skills/viz3d/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Start the visualize-in-3d skill from a command, with an optional mode and look first and then the subject, for example \"/viz3d film white model the 1906 San Francisco earthquake\". With no request it shows the menu of modes and looks."
+}

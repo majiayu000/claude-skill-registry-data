@@ -1,0 +1,37 @@
+{
+  "name": "demo-reel-capture",
+  "repo": "artemisln/edit-reel",
+  "path": "plugins/edit-reel/skills/demo-reel-capture/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/artemisln/edit-reel",
+  "dir_name": "demo-reel-capture",
+  "downloaded_at": "2026-11-10T06:34:21.527642Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "artemisln",
+  "source_url": "https://github.com/artemisln/edit-reel/blob/main/plugins/edit-reel/skills/demo-reel-capture/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/artemisln/edit-reel/blob/main/plugins/edit-reel/skills/demo-reel-capture/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Produce a short-form reel that demos a live web product. Claude drives Chrome with Playwright in macOS fullscreen and records the screen itself, so there is no extension overlay, no AI cursor, no Dock, no tabs and no address bar. Plans beats from the script first, records only those, pulls full-resolution assets out of the page, and assembles the screen footage with a talking head without breaking lip sync. Use when someone wants a product demo reel, a sponsored or brand video that shows a web app working, or clean screen footage of a website. Usage - /demo-reel-capture <product name or URL>"
+}

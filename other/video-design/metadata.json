@@ -1,0 +1,37 @@
+{
+  "name": "video-design",
+  "repo": "digitalsamba/claude-code-video-toolkit",
+  "path": ".claude/skills/video-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/digitalsamba/claude-code-video-toolkit",
+  "dir_name": "video-design",
+  "downloaded_at": "2026-11-10T07:26:34.857784Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitalsamba",
+  "source_url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/video-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/video-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Visual design for videos - colour by act, type scale, chart and layout rules for 16:9 and 9:16 scenes, a design.md handoff that any design skill can fill, and a contact-sheet critique of the render. Use when designing or refining how a video looks (title cards, data scenes, slides, a whole video's palette), when a scene looks generic or busy, when choosing colours for a video, or when /design or /scene-review asks for visual work. Works on its own with a brand, or takes direction from a design source such as taste-skill, Anthropic's frontend-design, or the user's own design skill."
+}

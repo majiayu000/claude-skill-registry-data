@@ -1,0 +1,37 @@
+{
+  "name": "task",
+  "repo": "camoa/claude-skills",
+  "path": "aida/skills/task/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/camoa/claude-skills",
+  "dir_name": "task-camoa-claude-skills",
+  "downloaded_at": "2026-11-10T06:56:42.649751Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "camoa",
+  "source_url": "https://github.com/camoa/claude-skills/blob/main/aida/skills/task/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/camoa/claude-skills/blob/main/aida/skills/task/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user wants to \"create a task\", \"start a new task\", \"split a task\", \"make this an epic\", \"mark a task in progress\", \"mark a task done\", \"complete a task\", \"run this task autonomously\", \"set a budget on this task\", \"raise the budget\", \"save what we decided\", \"bring the site up\" for a task's worktree, or \"prune the worktrees\" of complete tasks. It makes a new task, moves an old one into the project's tasks folder, changes a task's state, splits one task into a parent with children, sets a task's run mode, sets the ceiling on its build, saves a mid-stage decision as a note, brings the worktree's own site up and down, or removes the worktrees of complete tasks."
+}

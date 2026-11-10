@@ -1,0 +1,38 @@
+{
+  "name": "dependency-audit",
+  "repo": "escoffier-labs/skillet",
+  "path": "skillet/skills/dependency-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/escoffier-labs/skillet",
+  "dir_name": "dependency-audit-escoffier-labs-skillet",
+  "downloaded_at": "2026-11-10T07:41:47.329913Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/dependency-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/dependency-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when auditing, updating, or migrating project dependencies, runtimes, package managers, lockfiles, or toolchains. Requires reading authoritative release and migration notes, changing one compatibility boundary at a time, and verifying the resolved dependency graph. (formerly stocktake)"
+}

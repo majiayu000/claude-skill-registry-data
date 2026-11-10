@@ -1,0 +1,40 @@
+{
+  "name": "open-design-docs",
+  "repo": "feimacode/open-design-agent-kit",
+  "path": ".agents/skills/open-design-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/feimacode/open-design-agent-kit",
+  "dir_name": "open-design-docs",
+  "downloaded_at": "2026-11-10T07:46:34.333051Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, word, markdown",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feimacode",
+  "source_url": "https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a folder of Markdown documents (ADRs, RFCs, runbooks, notes) into designed HTML pages, one per file, all in one style, and keep them in step when the Markdown changes \u2014 use whenever the user wants several Markdown files (a docs folder, ADRs, RFCs, runbooks, meeting notes) turned into HTML pages, or wants HTML versions of existing docs refreshed after edits"
+}

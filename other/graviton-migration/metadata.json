@@ -1,0 +1,37 @@
+{
+  "name": "graviton-migration",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/graviton-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "graviton-migration",
+  "downloaded_at": "2026-11-10T06:39:33.565972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/graviton-migration/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/graviton-migration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Execute a workload migration from x86 (amd64) to AWS Graviton (arm64) \u2014 set up the Arm migration MCP server for code, dependency, and container arm64-readiness scanning, then run the migration \u2014 pre-migration scanning, Karpenter arm64 node cutover, and multi-arch CI pipelines. Use when someone says \"migrate to Graviton\", \"move my workloads to arm64\", \"is my app arm64-ready\", \"graviton migration\", \"port this service to Graviton\", \"scan my code for arm64 blockers\", \"set up multi-arch container builds\", or \"cut my nodes over to arm64\". This skill owns migration EXECUTION (readiness scanning, NodePool cutover, multi-arch builds). Do NOT use for scoring Graviton cost savings, quantifying Spot/Graviton adoption, or \"how much would Graviton save me?\" (use eks-cost-intelligence); for advisory \"should I use Graviton?\" architecture guidance (use eks-best-practices); or for general, non-Graviton MCP server setup like the EKS MCP server (use eks-mcp-server)."
+}

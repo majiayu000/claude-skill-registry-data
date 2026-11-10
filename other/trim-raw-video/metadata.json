@@ -1,0 +1,36 @@
+{
+  "name": "trim-raw-video",
+  "repo": "artemisln/edit-reel",
+  "path": "plugins/edit-reel/skills/trim-raw-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/artemisln/edit-reel",
+  "dir_name": "trim-raw-video",
+  "downloaded_at": "2026-11-10T06:34:20.860389Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "artemisln",
+  "source_url": "https://github.com/artemisln/edit-reel/blob/main/plugins/edit-reel/skills/trim-raw-video/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/artemisln/edit-reel/blob/main/plugins/edit-reel/skills/trim-raw-video/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn super-raw talking-head footage (retakes, crew chatter, false starts, stumbles, dead air) into one clean trimmed cut. Transcribes with Whisper, separates the real script from chatter, keeps the clearest take of every line and splices them with matched loudness. Works in any language Whisper supports, including English and Greek. Keeps the original frame by default or re-crops to 9:16, 1:1 or 16:9 on request. Use when someone wants to trim, clean up, cut retakes from, or \"make a clean cut of\" a raw video. Usage - /trim-raw-video <path-to-video> [more clips...]"
+}

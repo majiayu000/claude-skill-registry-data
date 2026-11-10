@@ -1,0 +1,37 @@
+{
+  "name": "obsidian-second-brain",
+  "repo": "eugeniughelbur/obsidian-second-brain",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eugeniughelbur/obsidian-second-brain",
+  "dir_name": "obsidian-second-brain",
+  "downloaded_at": "2026-11-10T07:42:19.573276Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eugeniughelbur",
+  "source_url": "https://github.com/eugeniughelbur/obsidian-second-brain/blob/main/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eugeniughelbur/obsidian-second-brain/blob/main/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operate any Obsidian vault as a living, self-rewriting second brain (an evolution of Karpathy's LLM Wiki pattern: sources rewrite existing pages, contradictions reconcile automatically, scheduled agents maintain the vault while you sleep). Use this skill whenever the user asks Claude to read, write, update, search, or manage their Obsidian vault - including saving notes from conversation, creating daily entries, updating kanban boards, logging dev work, managing people notes, capturing decisions, tracking deals, or maintaining any vault structure. Also triggers when the user wants to bootstrap a new vault from scratch, run a vault health check, or drop a _CLAUDE.md into their vault so all Claude surfaces share the same operating rules. Also runs Crew (/crew): one shared logbook so Claude Code, Codex, Cursor, and Grok Bot know what each other did, in any plain folder or the vault. Includes a research toolkit (7 commands: /x-read, /x-pulse, /research, /research-deep, /notebooklm, /youtube, /podcast) for AI-powered research via Grok, Perplexity, NotebookLM, YouTube, and podcast feeds - findings save to the vault automatically following the AI-first vault rule. Use proactively whenever the conversation produces information worth preserving (decisions, people met, projects started, tasks completed, lessons learned, research findings)."
+}

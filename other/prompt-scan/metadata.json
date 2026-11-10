@@ -1,0 +1,37 @@
+{
+  "name": "prompt-scan",
+  "repo": "byronbroughten/byro-repo",
+  "path": ".claude/skills/prompt-scan/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/byronbroughten/byro-repo",
+  "dir_name": "prompt-scan",
+  "downloaded_at": "2026-11-10T06:55:14.921952Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "byronbroughten",
+  "source_url": "https://github.com/byronbroughten/byro-repo/blob/master/.claude/skills/prompt-scan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/byronbroughten/byro-repo/blob/master/.claude/skills/prompt-scan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cut permission prompts by replaying recent sessions through the tier gate. Use when the developer asks for fewer permission prompts or an allowlist, in place of the built-in /fewer-permission-prompts."
+}

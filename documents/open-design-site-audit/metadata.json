@@ -1,0 +1,38 @@
+{
+  "name": "open-design-site-audit",
+  "repo": "feimacode/open-design-agent-kit",
+  "path": ".agents/skills/open-design-site-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/feimacode/open-design-agent-kit",
+  "dir_name": "open-design-site-audit",
+  "downloaded_at": "2026-11-10T07:46:39.536598Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, word",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feimacode",
+  "source_url": "https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-site-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-site-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit a live website with Open Design's own checks \u2014 contrast, tap targets, phone layout, larger text, broken images, page weight and template looks \u2014 and get a short, plain-language report of the biggest problems with marked screenshots \u2014 use whenever the user wants a website audited, checked or reviewed for design, accessibility or mobile problems (\"audit this site\", \"what's wrong with our website\", \"find problems on example.com\", \"why does our site look bad on phones\"), or wants talking points before pitching a redesign, even if they don't mention Open Design"
+}

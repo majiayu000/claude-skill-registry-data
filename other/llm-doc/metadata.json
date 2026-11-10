@@ -1,0 +1,37 @@
+{
+  "name": "llm-doc",
+  "repo": "ezMbedded/EasyEmbeddedFramework",
+  "path": ".claude/skills/llm-doc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ezMbedded/EasyEmbeddedFramework",
+  "dir_name": "llm-doc",
+  "downloaded_at": "2026-11-10T07:43:30.059870Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ezMbedded",
+  "source_url": "https://github.com/ezMbedded/EasyEmbeddedFramework/blob/main/.claude/skills/llm-doc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ezMbedded/EasyEmbeddedFramework/blob/main/.claude/skills/llm-doc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate the LLM-friendly API cheat sheets in docs_llm/api from Doxygen XML. Use when public headers or their Doxygen comments changed and docs_llm/api must be refreshed."
+}

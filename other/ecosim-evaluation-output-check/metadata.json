@@ -1,0 +1,37 @@
+{
+  "name": "ecosim-evaluation-output-check",
+  "repo": "bioepic-data/ecosim-agent",
+  "path": ".agents/skills/ecosim-evaluation-output-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bioepic-data/ecosim-agent",
+  "dir_name": "ecosim-evaluation-output-check",
+  "downloaded_at": "2026-11-10T06:46:53.202577Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bioepic-data",
+  "source_url": "https://github.com/bioepic-data/ecosim-agent/blob/main/.agents/skills/ecosim-evaluation-output-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bioepic-data/ecosim-agent/blob/main/.agents/skills/ecosim-evaluation-output-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Verify EcoSIM evaluation-output coverage with an isolated one-year run. Use before model-data comparison or a full site run when observations need matching history variables, units, temporal/depth support and plant pools; also diagnose missing evaluation outputs. This checks output readiness, not model skill or a replacement for the two-year plant-trait smoke test."
+}

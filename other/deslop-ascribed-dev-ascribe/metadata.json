@@ -1,0 +1,37 @@
+{
+  "name": "deslop",
+  "repo": "ascribed-dev/ascribe",
+  "path": ".claude/skills/deslop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ascribed-dev/ascribe",
+  "dir_name": "deslop-ascribed-dev-ascribe",
+  "downloaded_at": "2026-11-10T06:35:32.505854Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, creative=2",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ascribed-dev",
+  "source_url": "https://github.com/ascribed-dev/ascribe/blob/main/.claude/skills/deslop/SKILL.md",
+  "license": "MPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ascribed-dev/ascribe/blob/main/.claude/skills/deslop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Edit Ascribe's prose so it says what a thing does: the docs in docs/content/, the site's pages in site/home/content/, the README, and the packages' descriptions. Finds the patterns models write in place of a fact (\"serves as\", \", ensuring\u2026\", \"robust\", \"it's important to note\", vague attribution, \"not X, but Y\") and fixes them without stripping the conditions docs need. Use when asked to deslop, de-AI, tighten, or edit a page for tone, when reviewing prose a model drafted, or before opening a pull request that adds or rewrites a page."
+}

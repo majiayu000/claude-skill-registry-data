@@ -1,0 +1,38 @@
+{
+  "name": "browser",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/research/skills/browser/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "browser-errorproofdev-skills",
+  "downloaded_at": "2026-11-10T07:41:15.029012Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/browser/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/browser/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user already has browser automation and wants it unblocked or run in the cloud: Playwright, Puppeteer, Selenium or another driver, a headless script that gets blocked, detected, or rate limited locally, or a computer-use AI that clicks by itself and needs somewhere to click. Also for asks that name CDP, connectOverCDP, browserWSEndpoint, a remote WebDriver, a websocket browser endpoint, or Browser API. Not for building the scraper for them (use scrape), not for one page as markdown, HTML, or a screenshot (use fetch), not for a search query (use search)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "merge-train",
+  "repo": "bitknox/kaeri",
+  "path": ".claude/skills/merge-train/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bitknox/kaeri",
+  "dir_name": "merge-train",
+  "downloaded_at": "2026-11-10T06:47:03.688845Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitknox",
+  "source_url": "https://github.com/bitknox/kaeri/blob/main/.claude/skills/merge-train/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitknox/kaeri/blob/main/.claude/skills/merge-train/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a Kaeri merge train - one branch from main merging several ready branches, checked locally, opened as one PR, reviewed by the maintainer on local builds, then auto-merged. Use when bundling ready branches for a single CI run and beta."
+}

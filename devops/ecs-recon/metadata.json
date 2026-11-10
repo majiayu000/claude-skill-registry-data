@@ -1,0 +1,39 @@
+{
+  "name": "ecs-recon",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/ecs-recon/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "ecs-recon",
+  "downloaded_at": "2026-11-10T06:39:29.608845Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, ci, cd, deploy",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "cd",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-recon/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-recon/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "ECS environment reconnaissance and discovery. Detects compute and capacity providers, task definitions, deployment configuration, auto scaling, networking, security posture, observability, and IaC/CI-CD tooling. Use when someone asks about their ECS environment, wants to describe a cluster, inspect a service, or document task definitions \u2014 even without naming the skill. Applies to Amazon ECS, not Amazon EKS (use eks-recon). Discovers current state only \u2014 does not score, audit, or design. Skip for operational audits and GREEN/AMBER/RED scoring (ecs-operation-review), deployment-model design, launch-type selection, and ECS best practices (ecs-architect), deployment strategy design and CI/CD engineering (ecs-devops), GPU/ML workloads (ecs-genai), security and compliance (ecs-security), cost/TCO (ecs-cost-intelligence, once available), observability design (ecs-observability), and replatform/migration (ecs-modernize)."
+}

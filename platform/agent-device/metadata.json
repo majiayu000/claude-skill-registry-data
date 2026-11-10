@@ -1,0 +1,40 @@
+{
+  "name": "agent-device",
+  "repo": "callstackincubator/apex-software-factory",
+  "path": ".agents/skills/agent-device/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/callstackincubator/apex-software-factory",
+  "dir_name": "agent-device",
+  "downloaded_at": "2026-11-10T06:56:32.541000Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for platform: platform, device, adb, android, ios",
+    "score": 5,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "adb",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "callstackincubator",
+  "source_url": "https://github.com/callstackincubator/apex-software-factory/blob/main/.agents/skills/agent-device/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/callstackincubator/apex-software-factory/blob/main/.agents/skills/agent-device/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive the Apex Factory app on a leased iOS simulator or Android emulator with agent-device through .agents/scripts/device-lane.sh \u2014 open the app, read the accessibility snapshot, tap, type, scroll, verify with wait/is/get, take screenshots, record evidence, and write or replay agent-device .ad scripts (the e2e tests under apps/mobile/e2e/). Use for any interaction with a device, when writing an e2e: test, or when someone says \"check it on the simulator\", \"tap through the app\" or \"dogfood the app\"."
+}

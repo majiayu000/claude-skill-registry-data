@@ -1,0 +1,37 @@
+{
+  "name": "launchdarkly-investigate",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-investigate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-investigate",
+  "downloaded_at": "2026-11-10T06:39:47.927729Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-investigate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-investigate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds the root cause of a production problem from observability data (logs, traces, errors, sessions, metrics): scope and onset, what changed (deploys and flag changes), which host, version, route or flag variation is over-represented against a baseline, then trace, log and error evidence and blast radius. Use when the user reports a bug, an outage, an error or latency spike, an incident, or asks about patterns across application data."
+}

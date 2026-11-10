@@ -1,0 +1,38 @@
+{
+  "name": "opendesk-support",
+  "repo": "fcakyon/claude-codex-settings",
+  "path": "plugins/reusable-app-components/skills/opendesk-support/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/fcakyon/claude-codex-settings",
+  "dir_name": "opendesk-support",
+  "downloaded_at": "2026-11-10T07:45:50.905947Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fcakyon",
+  "source_url": "https://github.com/fcakyon/claude-codex-settings/blob/main/plugins/reusable-app-components/skills/opendesk-support/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fcakyon/claude-codex-settings/blob/main/plugins/reusable-app-components/skills/opendesk-support/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when user asks to \"add OpenDesk support chat\", \"migrate from Tawk\", \"theme a support widget\", \"configure an OpenDesk AI bot\", \"sync chatbot knowledge\", or \"inspect OpenDesk chats through API or MCP\". Covers self-hosted deployment, signed identity, product workspaces, AI answers, knowledge automation and support operations."
+}

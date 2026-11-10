@@ -1,0 +1,39 @@
+{
+  "name": "feel",
+  "repo": "alencarljfrj/ui-skills",
+  "path": "skills/diip3sh--feel/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/alencarljfrj/ui-skills",
+  "dir_name": "diip3sh-feel",
+  "downloaded_at": "2026-11-10T06:20:31.254432Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: ui, css, component, animation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alencarljfrj",
+  "source_url": "https://github.com/alencarljfrj/ui-skills/blob/main/skills/diip3sh--feel/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alencarljfrj/ui-skills/blob/main/skills/diip3sh--feel/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build UI interactions whose motion comes from a physical model instead of durations and easing curves. Turn a feel described in words (\"a toggle that feels heavy\", \"a drawer with a magnetic snap\", \"a card you throw into a corner\", \"a knob with heavy detents\", \"a sticky slider\") into a production component driven by mass, stiffness, damping and force fields (magnets, friction, walls), on a line, in a plane or around a dial, plus a test rig that plots position, velocity and the force field, overlays the model's prediction on the measured motion, and exports the same spring to Framer Motion, react-spring, SwiftUI, Compose or CSS linear(). Use this whenever someone asks for an animation, transition, spring, gesture, drag, flick, snap points, bottom sheet, toggle, slider, carousel or any micro-interaction that should \"feel\" a certain way, or wants to tune or explain a spring, even if they never say \"physics\"."
+}

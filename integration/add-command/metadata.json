@@ -1,0 +1,38 @@
+{
+  "name": "add-command",
+  "repo": "coralogix/cx-cli",
+  "path": ".claude/skills/add-command/SKILL.md",
+  "github_branch": "master",
+  "category": "integration",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "add-command",
+  "downloaded_at": "2026-11-10T07:11:28.646834Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, connector, webhook",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "connector",
+      "webhook"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/.claude/skills/add-command/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/.claude/skills/add-command/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the user asks to \"add a command\", \"implement cx <something>\", \"new subcommand\", \"new CLI command\", \"add a new cx command\", \"create a command\", \"add subcommand\", \"implement a new command\", \"build a cx command\", \"wire up a new command\", \"extend the CLI\", \"add an API to cx\", \"new cx feature\", \"integrate a Coralogix API\", or wants to add new functionality to the cx CLI. Use this even when the user describes a feature that implies a new command without saying \"command\" explicitly."
+}

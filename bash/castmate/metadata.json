@@ -1,0 +1,39 @@
+{
+  "name": "castmate",
+  "repo": "coreyhaines31/makerskills",
+  "path": "skills/castmate/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/coreyhaines31/makerskills",
+  "dir_name": "castmate",
+  "downloaded_at": "2026-11-10T07:11:40.748496Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coreyhaines31",
+  "source_url": "https://github.com/coreyhaines31/makerskills/blob/main/skills/castmate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coreyhaines31/makerskills/blob/main/skills/castmate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When you want to pull in the right AI model for the right job: hand a task to another agent CLI (Codex, Claude, Gemini, Grok, Amp, OpenCode, Cursor, Kiro, Antigravity), or send one prompt to several at once for independent opinions, then synthesize. Delegate mode gives one castmate the job, optionally with write access ('have codex write the migration'). Fan-out mode runs read-only reviews in parallel. Rounds mode lets castmates build on and challenge each other's findings. Calls the official CLIs you already have installed and logged in (Gemini CLI needs an API key on personal accounts); no MCP. Triggers on '/castmate,' 'ask codex,' 'have gemini do this,' 'get a second opinion,' 'what would other models say,' 'fan this out,' 'cross-check this with another model,' 'delegate this to codex.' Advisor personas for founder questions go to maker-council. Personal models, casting rules, and run outputs live in ~/.config/makerskills/castmate/."
+}

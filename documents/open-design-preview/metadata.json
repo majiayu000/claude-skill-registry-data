@@ -1,0 +1,37 @@
+{
+  "name": "open-design-preview",
+  "repo": "feimacode/open-design-agent-kit",
+  "path": ".agents/skills/open-design-preview/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/feimacode/open-design-agent-kit",
+  "dir_name": "open-design-preview",
+  "downloaded_at": "2026-11-10T07:46:36.432175Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feimacode",
+  "source_url": "https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-preview/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-preview/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Open an Open Design artifact in a live browser preview, where you can see it update as it changes, click elements to comment on them, and compare check screenshots before and after \u2014 use whenever the user asks to see, show, preview or open an Open Design artifact, or wants to comment on one visually"
+}

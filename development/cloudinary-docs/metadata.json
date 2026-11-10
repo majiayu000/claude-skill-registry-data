@@ -1,0 +1,38 @@
+{
+  "name": "cloudinary-docs",
+  "repo": "cloudinary-devs/skills",
+  "path": "skills/platform/cloudinary-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/cloudinary-devs/skills",
+  "dir_name": "cloudinary-docs",
+  "downloaded_at": "2026-11-10T07:06:39.530135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cloudinary-devs",
+  "source_url": "https://github.com/cloudinary-devs/skills/blob/main/skills/platform/cloudinary-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cloudinary-devs/skills/blob/main/skills/platform/cloudinary-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Looks up implementation details in the latest Cloudinary docs via the relevant llms.txt file. Use when building code or answering questions relating to image or video uploads, asset management and search, the Media Library (DAM), account settings, SDKs, APIs, webhooks, or integrations. TRIGGER \u2014 read BEFORE writing or changing any code that calls a Cloudinary API, SDK, or delivery URL, even when Cloudinary is only a small part of a larger task (for example, a UI page that lists or displays assets) and even if you already know the API. For topics covered by a specialized Cloudinary skill, prefer that skill. Use this skill alongside it when the full use-case requires capabilities outside that skill's scope."
+}

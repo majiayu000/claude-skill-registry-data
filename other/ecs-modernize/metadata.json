@@ -1,0 +1,38 @@
+{
+  "name": "ecs-modernize",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/ecs-modernize/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "ecs-modernize",
+  "downloaded_at": "2026-11-10T06:39:31.039394Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-modernize/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-modernize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assess an existing app (VMware/EC2) by source code analysis for the replatform vs rearchitect decision, and execute the approved migration onto Amazon ECS. Covers: source code analysis; language/framework detection (Java, .NET, Spring, Struts, WebSphere tWAS/Liberty); cloud/container fit scoring; strategy recommendation; tWAS containerization and Liberty migration; migration planning; AWS Transform orchestration; containerization and ECR push; Replatform (ECS on EC2, bridge, sticky sessions) and Windows-container environment build; deploy and verification. Triggers: \"migrate this app from EC2 to ECS\", \"can we containerize this VMware-hosted app?\", \"replatform or rearchitect for ECS?\", \"modernize this WebSphere app\". Skip for greenfield design (ecs-architect), Rearchitect compute-model Terraform (ecs-build), live ECS inventory (ecs-recon), security hardening (ecs-security), cloud-ready .NET IaC (dotnet-aws-ecs), Kubernetes/EKS (eks-design), launch-type moves of an app already on ECS (ecs-architect)."
+}

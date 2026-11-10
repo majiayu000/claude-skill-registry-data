@@ -1,0 +1,39 @@
+{
+  "name": "local-checks",
+  "repo": "bitknox/kaeri",
+  "path": ".claude/skills/local-checks/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/bitknox/kaeri",
+  "dir_name": "local-checks",
+  "downloaded_at": "2026-11-10T06:47:03.870386Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitknox",
+  "source_url": "https://github.com/bitknox/kaeri/blob/main/.claude/skills/local-checks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitknox/kaeri/blob/main/.claude/skills/local-checks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How to compile and test a change locally in Kaeri before pushing (Rust, Android, Apple, website), under the HOME guard with the shared caches. Use before any push, and whenever running tests or builds."
+}

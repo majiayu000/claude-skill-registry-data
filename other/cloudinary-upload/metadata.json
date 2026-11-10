@@ -1,0 +1,37 @@
+{
+  "name": "cloudinary-upload",
+  "repo": "cloudinary-devs/skills",
+  "path": "skills/platform/cloudinary-upload/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cloudinary-devs/skills",
+  "dir_name": "cloudinary-upload",
+  "downloaded_at": "2026-11-10T07:06:39.927838Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cloudinary-devs",
+  "source_url": "https://github.com/cloudinary-devs/skills/blob/main/skills/platform/cloudinary-upload/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cloudinary-devs/skills/blob/main/skills/platform/cloudinary-upload/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reference for uploading assets to Cloudinary, covering signed and unsigned uploads, upload presets, transformations on upload, naming and folders, large files, remote uploads, and signature generation. Use when uploading files or URLs to Cloudinary, configuring upload presets, generating upload signatures, choosing between the SDK, REST API, or Upload widget, or debugging upload failures. For Next.js or React projects, use cloudinary-next or cloudinary-react alongside this skill."
+}

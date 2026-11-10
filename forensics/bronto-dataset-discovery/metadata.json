@@ -1,0 +1,38 @@
+{
+  "name": "bronto-dataset-discovery",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/bronto-dataset-discovery/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "bronto-dataset-discovery",
+  "downloaded_at": "2026-11-10T06:39:48.154767Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/bronto-dataset-discovery/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/bronto-dataset-discovery/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load this skill when investigating an incident or answering a question that needs logs from Bronto and the dataset that holds them is not already known - for example a service, host, function or resource that is failing, slow or throwing errors. It finds which Bronto datasets hold that service's logs, which key identifies the service, and whether there is data in the incident window, before any log search runs."
+}

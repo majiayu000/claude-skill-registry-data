@@ -1,0 +1,38 @@
+{
+  "name": "fleet-host",
+  "repo": "broomva/skills",
+  "path": "skills/compute/fleet-host/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/broomva/skills",
+  "dir_name": "fleet-host",
+  "downloaded_at": "2026-11-10T06:52:08.736931Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "broomva",
+  "source_url": "https://github.com/broomva/skills/blob/main/skills/compute/fleet-host/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/broomva/skills/blob/main/skills/compute/fleet-host/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Grow and shrink an agent fleet by GCP VMs with one command each way: `fleet_host.py add <name>` creates a private (Tailscale + IAP only), agentic-vps-hardened Compute Engine host with a full lane toolchain, per-host revocable credentials and a T3 server, and `remove <name>` drains it, saves unfinished work, revokes every credential with proof and deletes everything it created. Dry run by default; every step idempotent and re-runnable after a partial failure; all deployment specifics in one template file. USE WHEN adding heavy build/verify capacity to an agent fleet, spinning up or tearing down a cloud dev host for coding agents, \"add a GCP host\", \"remove the fleet host\", \"grow/shrink the fleet\", \"mint per-host credentials\", \"revoke a host's tokens\", or auditing that a removed host left nothing behind. NOT FOR hardening an existing non-GCP box (agentic-vps), one-off GPU jobs (remote-gpu, colab-remote), or Kubernetes/managed runners. Triggers on \"fleet host\", \"add host\", \"remove host\", \"gcp fleet\", \"fleet_host\", \"grow the fleet\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "cx-coding-agents",
+  "repo": "coralogix/cx-cli",
+  "path": "skills/cx-coding-agents/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-ml",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "cx-coding-agents",
+  "downloaded_at": "2026-11-10T07:11:26.021065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/skills/cx-coding-agents/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/skills/cx-coding-agents/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the user asks about AI Center Coding Agents data, wants to\nreproduce or extend the Coding Agents dashboards, or asks questions about usage,\ncost, tokens, sessions, tools, code impact, users, models, spans, or logs for\nClaude Code, Codex, Cursor, Gemini CLI, or Copilot CLI."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "spec-investigate",
+  "repo": "benjaminthomas/spec-driven-dev",
+  "path": "plugin/skills/spec-investigate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/benjaminthomas/spec-driven-dev",
+  "dir_name": "spec-investigate",
+  "downloaded_at": "2026-11-10T06:44:57.811378Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "benjaminthomas",
+  "source_url": "https://github.com/benjaminthomas/spec-driven-dev/blob/main/plugin/skills/spec-investigate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/benjaminthomas/spec-driven-dev/blob/main/plugin/skills/spec-investigate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deep, evidence-based technical investigation of a piece of work BEFORE any specification or implementation begins \u2014 starting from a ticket (Jira, GitHub Issues, Linear), a meeting/call transcript, a plain-text description, a doc/PRD file, a Slack/email thread, or an error log. Use when the user says \"investigate STP-123\", \"spec-investigate\", \"look into this before we plan it\", or hands over any of those inputs and wants the system understood (current behaviour, root cause, affected repos/files, risks, open questions) rather than fixed or built yet. This is the first stage of the investigate \u2192 create \u2192 (human approval) \u2192 implement \u2192 verify \u2192 ship pipeline \u2014 it hands off to the existing spec-create skill and does not replace, duplicate, or invoke spec-create, spec-implement, spec-verify, or spec-ship itself. Ticket-agnostic: works for bugs, features, refactors, security, performance, infra, or cross-repository tickets in any repo."
+}

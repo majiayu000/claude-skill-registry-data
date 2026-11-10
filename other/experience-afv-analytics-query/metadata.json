@@ -1,0 +1,37 @@
+{
+  "name": "experience-afv-analytics-query",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-afv-analytics-query/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-afv-analytics-query",
+  "downloaded_at": "2026-11-10T07:51:03.136387Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-afv-analytics-query/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-afv-analytics-query/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "System-of-record for the public Lightning Instrumentation Headless Connect REST API route that retrieves Agentforce Vibes (AFV) metrics, analytics, data, and adoption/usage insights, including token/LOC, weekly active-user, and per-user activity. Supports local result filtering by period (default current), orgType (default All), recordType, modelName (default All), and other explicitly returned row fields after one parameterless API call."
+}

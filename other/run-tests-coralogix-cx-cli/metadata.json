@@ -1,0 +1,37 @@
+{
+  "name": "run-tests",
+  "repo": "coralogix/cx-cli",
+  "path": ".claude/skills/run-tests/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "run-tests-coralogix-cx-cli",
+  "downloaded_at": "2026-11-10T07:11:30.427784Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/.claude/skills/run-tests/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/.claude/skills/run-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the user asks to \"run tests\", \"test this\", \"check if tests pass\", \"cargo test\", \"run clippy\", \"lint this\", \"check formatting\", \"cargo fmt\", \"CI checks\", \"verify changes\", \"does this pass tests\", \"run the full check\", \"pre-commit check\", or wants to verify that code changes are correct. Use this even when the user says something like \"make sure this works\" or \"check for issues\" in the context of code changes."
+}

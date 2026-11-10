@@ -1,0 +1,39 @@
+{
+  "name": "blazor-wasm-aot",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/blazor-wasm-aot/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "blazor-wasm-aot",
+  "downloaded_at": "2026-11-10T06:33:14.813722Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, compile, debug",
+    "score": 4,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/blazor-wasm-aot/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/blazor-wasm-aot/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build and publish Blazor WebAssembly apps with Mono AOT compilation on .NET 7 (net7.0), including toggling AOT on or off and explaining in plain English what the toggle changes (startup speed, publish time, download size, debugging, trimming risk). Use when asked to (1) build, publish or enable AOT / RunAOTCompilation for a Blazor WASM client, (2) turn AOT off or on for a fast vs release build, (3) fix AOT or publish failures such as NETSDK1147 missing wasm-tools workload, emcc/python3 errors, or unexpectedly long publishes, (4) verify an AOT publish really produced native output, or (5) tune Blazor WASM startup performance. Also use when a Blazor WASM build asks for wasm-tools-net7. Not for plain dotnet run dev-loop work, non-Blazor WebAssembly, or .NET 8+ server/MAUI AOT."
+}

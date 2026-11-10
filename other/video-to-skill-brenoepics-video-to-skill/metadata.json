@@ -1,0 +1,37 @@
+{
+  "name": "video-to-skill",
+  "repo": "brenoepics/video-to-skill",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/brenoepics/video-to-skill",
+  "dir_name": "video-to-skill-brenoepics-video-to-skill",
+  "downloaded_at": "2026-11-10T06:51:49.968020Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brenoepics",
+  "source_url": "https://github.com/brenoepics/video-to-skill/blob/main/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brenoepics/video-to-skill/blob/main/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Convert a video (local file or YouTube/URL) into structured, evidence-grounded knowledge \u2014 and ultimately into an installable agent skill. Use when the user provides a video file or video URL and wants it analyzed, summarized into steps, or turned into a skill; triggers include \"watch this video\", \"learn from this tutorial\", \"video to skill\", or a path/URL to .mp4/.mkv/.webm/.mov or youtube.com/youtu.be."
+}

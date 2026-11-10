@@ -1,0 +1,38 @@
+{
+  "name": "launchdarkly-metric-choose",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-metric-choose/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-metric-choose",
+  "downloaded_at": "2026-11-10T06:39:50.742539Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-metric-choose/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-metric-choose/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Choose the right metrics for a LaunchDarkly experiment, guarded rollout, or release policy. Use when the user wants to know which metrics to use, which is the primary metric for an experiment, what guardrails to add, or which events to monitor in a rollout. Surfaces what will auto-attach from existing release policies before making additional recommendations."
+}

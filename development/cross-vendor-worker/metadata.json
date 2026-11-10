@@ -1,0 +1,37 @@
+{
+  "name": "cross-vendor-worker",
+  "repo": "escoffier-labs/skillet",
+  "path": "skillet/skills/cross-vendor-worker/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/escoffier-labs/skillet",
+  "dir_name": "cross-vendor-worker",
+  "downloaded_at": "2026-11-10T07:41:47.707193Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/cross-vendor-worker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/cross-vendor-worker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the session needs an answer or work product from a model on ANOTHER vendor's stack - a second opinion from a different model family, a cheap fast model for bulk work, or a cross-model review. Triggers include \"ask grok/composer/gemini/claude/codex what it thinks\", \"get a second opinion from a different model\", \"cross-model review\", \"run this by another model\", \"poll several models\". If a Brigade roster exists, prefer `brigade run --worker`. (formerly stagiaire)"
+}

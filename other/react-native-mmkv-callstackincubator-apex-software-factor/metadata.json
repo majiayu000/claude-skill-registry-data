@@ -1,0 +1,37 @@
+{
+  "name": "react-native-mmkv",
+  "repo": "callstackincubator/apex-software-factory",
+  "path": ".agents/skills/react-native-mmkv/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/callstackincubator/apex-software-factory",
+  "dir_name": "react-native-mmkv-callstackincubator-apex-software-factor",
+  "downloaded_at": "2026-11-10T06:56:33.731293Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "callstackincubator",
+  "source_url": "https://github.com/callstackincubator/apex-software-factory/blob/main/.agents/skills/react-native-mmkv/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/callstackincubator/apex-software-factory/blob/main/.agents/skills/react-native-mmkv/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fast synchronous key-value storage for React Native via react-native-mmkv (Nitro-backed). Covers creating and configuring MMKV instances, reading/writing all value types (string, number, boolean, buffer), React hooks for reactive UI, value-change listeners, encryption, AsyncStorage migration, and state-management integrations (zustand, redux-persist, jotai, react-query). Also covers storage limits, multi-process mode, and the V4 upgrade from the class-based API."
+}

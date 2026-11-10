@@ -1,0 +1,37 @@
+{
+  "name": "vue-3-5",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/vue/vue-3-5/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "vue-3-5",
+  "downloaded_at": "2026-11-10T07:25:22.958177Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/vue/vue-3-5/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/vue/vue-3-5/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write, review and port Vue 3.5 components and composables (vue@3.5.x, checked against 3.5.44). Covers reactive props destructure and the destructured-prop-passed-as-a-value trap, composables taking MaybeRefOrGetter with toValue() inside an effect, watch semantics (shallow ref watching, numeric deep, once, pause/resume, onWatcherCleanup before the first await, effectScope cleanup), defineModel (local mode without v-model, custom modifiers, factory defaults, never push into a model array), declared emits and listener fallthrough, $attrs, useTemplateRef, defineExpose, useId with app.config.idPrefix for SSR hydration, provide/inject, and testing with Vitest and @vue/test-utils. Use when code imports vue or has .vue files, when writing a composable, a v-model component or SSR code, when props do not update, hydration mismatches appear or events fire twice, and when porting Vue 2 idioms such as value/input v-model, .sync, $listeners, this.$set, filters or beforeDestroy."
+}

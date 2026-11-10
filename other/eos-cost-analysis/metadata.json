@@ -1,0 +1,37 @@
+{
+  "name": "eos-cost-analysis",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/eos-cost-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "eos-cost-analysis",
+  "downloaded_at": "2026-11-10T06:39:44.238105Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/eos-cost-analysis/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/eos-cost-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill whenever a user asks about End of Standard Support (EOS) or Extended Support (ES) cost, exposure, or inventory for EKS, RDS/Aurora, Lambda, ElastiCache, or OpenSearch \u2014 for example \"what's my EOS cost exposure\", \"which resources are in Extended Support and what does it cost\", \"EOS cost report across all accounts\", or \"extended support charges\". Follow this skill directly rather than enumerating resources or pricing ad hoc; it defines the correct discovery APIs, per-version EOS date verification, and the AWS Pricing API usagetype rules (including region-prefix handling) needed to get the numbers right. Do not hand-roll this with raw API calls and do not delegate it \u2014 read and follow this runbook. It enumerates resources across all associated accounts and regions, classifies EOS status, retrieves live ES pricing, and produces a per-resource cost-impact report. Scope is EOS cost and inventory, not upgrade execution \u2014 for EKS upgrade planning/readiness use eks-upgrade-readiness."
+}

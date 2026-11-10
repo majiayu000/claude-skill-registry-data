@@ -1,0 +1,38 @@
+{
+  "name": "launchdarkly-configs-variations",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-configs-variations/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-configs-variations",
+  "downloaded_at": "2026-11-10T06:39:53.470354Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: optimize, latency, speed",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "optimize",
+      "latency",
+      "speed"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-configs-variations/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-configs-variations/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Experiment with configs by creating and managing variations. Helps you test different models, prompts, and parameters to find what works best through systematic experimentation."
+}

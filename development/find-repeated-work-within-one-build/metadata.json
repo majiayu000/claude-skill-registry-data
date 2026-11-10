@@ -1,0 +1,38 @@
+{
+  "name": "find-repeated-work-within-one-build",
+  "repo": "dotnet/skills",
+  "path": "plugins/dotnet-msbuild/skills/find-repeated-work-within-one-build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dotnet/skills",
+  "dir_name": "find-repeated-work-within-one-build",
+  "downloaded_at": "2026-11-10T07:29:54.812393Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dotnet",
+  "source_url": "https://github.com/dotnet/skills/blob/main/plugins/dotnet-msbuild/skills/find-repeated-work-within-one-build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dotnet/skills/blob/main/plugins/dotnet-msbuild/skills/find-repeated-work-within-one-build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use ONLY for auditing executed-task counts or batching/hoisting costs within ONE MSBuild invocation: per-project Exec, duplicate dependency builds, per-item generators, run-once races. NEVER load for evaluation-only global-property variants with once-only target/task execution, idle-node/serial-chain investigations, second/unchanged builds, restores across commands, required-variant bin/obj collisions or unranked slowness. Do not load to check scope or replace an unavailable specialist; answer directly."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "new-batch",
+  "repo": "alexwohlbruck/landmarks",
+  "path": ".claude/skills/new-batch/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/alexwohlbruck/landmarks",
+  "dir_name": "new-batch",
+  "downloaded_at": "2026-11-10T06:22:36.821540Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexwohlbruck",
+  "source_url": "https://github.com/alexwohlbruck/landmarks/blob/main/.claude/skills/new-batch/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexwohlbruck/landmarks/blob/main/.claude/skills/new-batch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lead a batch of 20 to 50 landmark models for one city or park, with builder sub-agents, ending in a draft pull request. Asks the user which city, then follows docs/briefs/lead.md."
+}

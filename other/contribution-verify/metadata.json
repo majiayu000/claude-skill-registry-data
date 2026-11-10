@@ -1,0 +1,37 @@
+{
+  "name": "contribution-verify",
+  "repo": "camoa/claude-skills",
+  "path": "drupal-ai-contrib/skills/contribution-verify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/camoa/claude-skills",
+  "dir_name": "contribution-verify",
+  "downloaded_at": "2026-11-10T06:56:46.441226Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "camoa",
+  "source_url": "https://github.com/camoa/claude-skills/blob/main/drupal-ai-contrib/skills/contribution-verify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/camoa/claude-skills/blob/main/drupal-ai-contrib/skills/contribution-verify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs the local verification inner loop for a Drupal contribution \u2014 the drupalci-parity gate set at CI strictness, the AI-policy gate, and the eval gate, every gate passing only on a captured artifact. Use when the user runs /drupal-ai-contrib:verify or asks to verify, check, or locally test a Drupal contribution before submitting. This is the centerpiece \u2014 evidence over assertion, never a bare 'passes'."
+}

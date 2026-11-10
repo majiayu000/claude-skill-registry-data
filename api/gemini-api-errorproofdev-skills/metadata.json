@@ -1,0 +1,38 @@
+{
+  "name": "gemini-api",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/ai/skills/gemini-api/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "gemini-api-errorproofdev-skills",
+  "downloaded_at": "2026-11-10T07:41:11.826436Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/ai/skills/gemini-api/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/ai/skills/gemini-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks about using Gemini in an enterprise environment or explicitly mentions Vertex AI, Google Cloud, or Agent Platform. Guides the usage of the Gemini API on Agent Platform with the Google Gen AI SDK. Covers SDK usage (Python, JS/TS, Go, Java, C#), capabilities like multimodal inputs, tools, media generation, caching, batch prediction, and Live API."
+}

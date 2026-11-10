@@ -1,0 +1,37 @@
+{
+  "name": "coralogix-cases",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/coralogix-cases/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "coralogix-cases",
+  "downloaded_at": "2026-11-10T06:39:43.101967Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-cases/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-cases/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triage and manage Coralogix Cases. Load when a user wants to inspect a case, update it, add a comment, assign or acknowledge it, resolve or close it, change its priority, inspect its events, or inspect notification deliveries."
+}

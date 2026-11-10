@@ -1,0 +1,38 @@
+{
+  "name": "grafana-cloud-investigation",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/grafana-cloud-investigation/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "grafana-cloud-investigation",
+  "downloaded_at": "2026-11-10T06:39:52.265937Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/grafana-cloud-investigation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/grafana-cloud-investigation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the Grafana Cloud connector to investigate incidents with the customer's Grafana Cloud telemetry. Covers choosing tools, when to use Grafana Assistant, the Read, Query and Write access levels, confirming every write with the operator, keeping results small, and querying Prometheus, Loki and Tempo data. Use when an investigation needs metrics, logs, traces or profiles from Grafana Cloud, when checking Grafana dashboards, alert rules, incidents or on-call schedules, or when the customer asks a question about their Grafana Cloud stack."
+}

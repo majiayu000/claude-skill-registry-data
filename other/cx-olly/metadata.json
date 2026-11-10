@@ -1,0 +1,37 @@
+{
+  "name": "cx-olly",
+  "repo": "coralogix/cx-cli",
+  "path": "skills/cx-olly/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "cx-olly",
+  "downloaded_at": "2026-11-10T07:11:21.973295Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-llm=2",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/skills/cx-olly/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/skills/cx-olly/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"chat with AI\", \"ask Olly\", \"ask the agent\", \"send message to AI\", \"continue a chat\", \"follow up on chat\", \"get artifact\", \"download artifact\", \"list artifacts\", \"retrieve generated content\", \"AI-generated charts\", \"AI analysis\", \"conversational observability\", \"natural language query\", or wants to interact with the Coralogix Observability Agent (Olly) using the cx CLI."
+}

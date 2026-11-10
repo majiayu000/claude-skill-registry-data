@@ -1,0 +1,37 @@
+{
+  "name": "launchdarkly-tools",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-tools/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-tools",
+  "downloaded_at": "2026-11-10T06:39:45.159603Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-tools/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-tools/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Give your agents capabilities through tools (function calling). Helps you identify what your agent needs to do, create tool definitions, and attach them to config variations."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "stress-next",
+  "repo": "frontierJS/frontierjs",
+  "path": ".claude/skills/stress-next/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/frontierJS/frontierjs",
+  "dir_name": "stress-next",
+  "downloaded_at": "2026-11-10T07:53:16.165336Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "frontierJS",
+  "source_url": "https://github.com/frontierJS/frontierjs/blob/main/.claude/skills/stress-next/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/frontierJS/frontierjs/blob/main/.claude/skills/stress-next/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build the first open step of a listed stressor app's PLAN.md in a worktree of the app's repo, filing every framework gap it meets with `fli file --area <app>` and ticking the box \u2014 one step per session. Use when asked to run the next stressor step."
+}

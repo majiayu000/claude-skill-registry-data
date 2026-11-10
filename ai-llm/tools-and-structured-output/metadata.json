@@ -1,0 +1,38 @@
+{
+  "name": "tools-and-structured-output",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/ai-sdk/tools-and-structured-output/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "tools-and-structured-output",
+  "downloaded_at": "2026-11-10T07:25:28.806008Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/ai-sdk/tools-and-structured-output/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/ai-sdk/tools-and-structured-output/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes and fixes Vercel AI SDK (npm package `ai`, version 7) code for tool calling, multi-step tool loops, agents and structured output, and tests it with the SDK's mock models. Use when code imports from 'ai' or 'ai/test' and calls generateText, streamText, tool(), ToolLoopAgent, Output.object, generateObject, stopWhen/isStepCount, or MockLanguageModelV4; when adding tools or an agent loop to a chatbot; when extracting typed JSON from an LLM; when persisting chat history with tool calls; or when upgrading from AI SDK 4, 5 or 6 (parameters, maxSteps, maxTokens, experimental_context, response.messages, system messages)."
+}

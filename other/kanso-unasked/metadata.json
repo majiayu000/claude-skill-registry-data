@@ -1,0 +1,37 @@
+{
+  "name": "kanso-unasked",
+  "repo": "blakecyze/kanso",
+  "path": "skills/kanso-unasked/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/blakecyze/kanso",
+  "dir_name": "kanso-unasked",
+  "downloaded_at": "2026-11-10T06:48:50.255637Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blakecyze",
+  "source_url": "https://github.com/blakecyze/kanso/blob/main/skills/kanso-unasked/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blakecyze/kanso/blob/main/skills/kanso-unasked/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to see or clean up what an agent did beyond the request, such as \"what did you add that I didn't ask for\", \"did you go beyond the brief\", \"scope creep\", \"what decisions did you make for me\", \"undo the extras\", or \"clean up what I didn't ask for\". Not for general code review (kanso-audit) or behaviour-preserving cleanup (kanso-refactor)."
+}

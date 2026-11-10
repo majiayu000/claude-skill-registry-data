@@ -1,0 +1,37 @@
+{
+  "name": "cx-cli",
+  "repo": "coralogix/cx-cli",
+  "path": "skills/cx-cli/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "cx-cli",
+  "downloaded_at": "2026-11-10T07:11:21.577168Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/skills/cx-cli/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/skills/cx-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used whenever the user runs any cx command, uses the cx CLI, Coralogix CLI, or mentions cx in the context of Coralogix observability. This skill provides cross-cutting concerns like update notifications that apply to all cx commands."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "coralogix-case-management",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/coralogix-case-management/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "coralogix-case-management",
+  "downloaded_at": "2026-11-10T06:39:49.218646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-case-management/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-case-management/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create and change Coralogix Cases \u2014 open a case, comment, re-prioritise, assign, acknowledge, retitle, resolve, close, mute, link and unlink. Load when the user asks to \"open a case\", \"create a case for this\", \"raise a case for X\", \"comment on CASE-123\", \"make CASE-123 a P1\", \"change the priority\", \"assign this case to \u2026\", \"acknowledge CASE-123\", \"resolve CASE-123\", \"close this case\", \"mute this case\", \"stop this case notifying\", \"link CASE-390 under CASE-383\", \"make this a child of\", or to find a case they described in words rather than by ID. The `coralogix-alerts` skill must be loaded alongside this skill for terminology. This skill performs mutations; for read-only investigation of one case use `coralogix-single-case`, and for counts, trends and fleet questions use `coralogix-case-analytics`."
+}

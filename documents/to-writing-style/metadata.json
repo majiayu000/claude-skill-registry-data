@@ -1,0 +1,38 @@
+{
+  "name": "to-writing-style",
+  "repo": "byronbroughten/byro-repo",
+  "path": ".claude/skills/to-writing-style/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/byronbroughten/byro-repo",
+  "dir_name": "to-writing-style",
+  "downloaded_at": "2026-11-10T06:55:19.952185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "byronbroughten",
+  "source_url": "https://github.com/byronbroughten/byro-repo/blob/master/.claude/skills/to-writing-style/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/byronbroughten/byro-repo/blob/master/.claude/skills/to-writing-style/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn the developer's rewrites and rejections of reader-facing prose an agent wrote (Google Docs, blog posts, in-app text, academic writing) into proposed updates to the writing style sheets (docs/writing-voice.md, docs/writing-craft.md, docs/academic-writing-style.md) and to the piece-spec grilling doc (docs/pieces/grilling.md). Mines a session transcript (this session or another agent's), or a Piece's Agent draft against its edited Deliverable. Not for code, comments, commits or agent docs; those go to /to-code-style."
+}

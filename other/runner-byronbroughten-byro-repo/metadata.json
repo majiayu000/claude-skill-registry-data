@@ -1,0 +1,36 @@
+{
+  "name": "runner",
+  "repo": "byronbroughten/byro-repo",
+  "path": "runner/skills/runner/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/byronbroughten/byro-repo",
+  "dir_name": "runner-byronbroughten-byro-repo",
+  "downloaded_at": "2026-11-10T06:55:09.553133Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "byronbroughten",
+  "source_url": "https://github.com/byronbroughten/byro-repo/blob/master/runner/skills/runner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/byronbroughten/byro-repo/blob/master/runner/skills/runner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Supervise one spec run or one Batch from an interactive session: launch or rejoin it, explain each of its events to the developer, do the work its steps can't, suggest replies, post the ones the developer approves, and stop it when they agree. Invoked as /runner <owner/repo> <n> [<n>\u2026], or /runner <owner/repo> standalone to list the repo's launchable Standalone tickets and launch them as a Batch after a yes."
+}

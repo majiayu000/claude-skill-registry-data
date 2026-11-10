@@ -1,0 +1,40 @@
+{
+  "name": "ecs-operation-review",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/ecs-operation-review/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "ecs-operation-review",
+  "downloaded_at": "2026-11-10T06:39:34.244002Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, cd, kubernetes, deploy",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "ci",
+      "cd",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-operation-review/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-operation-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a structured Amazon ECS operational-excellence assessment against a live estate (Fargate/EC2/Managed Instances/ECS Anywhere) and score it GREEN/AMBER/RED. Skip for EKS/Kubernetes (use eks-operation-review). Covers 8 domains \u2014 clusters & capacity, networking, task definitions, services & deployment safety (circuit breaker, blue/green, canary), service health & autoscaling (grace period, draining, AZ rebalancing), observability, security posture, and operational processes \u2014 producing a rated report with prioritized actions. Activate for \"audit my ECS estate\", \"ECS health check\", \"score my ECS posture\", \"review my ECS services\", \"GREEN/AMBER/RED my ECS clusters\", including single-domain reviews. For Day-0 design use ecs-architect; for security hardening use ecs-security; for cost/TCO use ecs-cost-intelligence (once available); for observability design use ecs-observability; for CI/CD engineering use ecs-devops; for replatform/refactor use ecs-modernize; for read-only inventory use ecs-recon."
+}

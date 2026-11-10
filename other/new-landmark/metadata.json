@@ -1,0 +1,37 @@
+{
+  "name": "new-landmark",
+  "repo": "alexwohlbruck/landmarks",
+  "path": ".claude/skills/new-landmark/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alexwohlbruck/landmarks",
+  "dir_name": "new-landmark",
+  "downloaded_at": "2026-11-10T06:22:37.089030Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexwohlbruck",
+  "source_url": "https://github.com/alexwohlbruck/landmarks/blob/main/.claude/skills/new-landmark/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexwohlbruck/landmarks/blob/main/.claude/skills/new-landmark/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build one new landmark model for this repo, from evidence to catalog entry. Asks the user which landmark, then finds its location, picks the id, gathers open evidence, writes the generator and checks it against photos."
+}

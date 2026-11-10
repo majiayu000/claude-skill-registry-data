@@ -1,0 +1,496 @@
+---
+name: scope
+description: This skill should be used when a task needs its scope contract written or changed, for example "define scope", "write acceptance criteria", "what does this task have to do", "add a non-goal", "add a criterion", "change the contract", or "scope this task". It runs a conversation that produces alignment.json, holding the goal, the expected result, the acceptance criteria and the non-goals a person approves before a build starts.
+argument-hint: "[approve] [<task-id>]"
+arguments: [taskId]
+allowed-tools: Bash(${CLAUDE_PLUGIN_ROOT}/skills/project/scripts/project-actions.sh report), Bash(${CLAUDE_PLUGIN_ROOT}/skills/scope/scripts/scope-actions.sh *), Bash(${CLAUDE_PLUGIN_ROOT}/skills/surfaces/scripts/surfaces-actions.sh decline *), Bash(${CLAUDE_PLUGIN_ROOT}/skills/surfaces/scripts/surfaces-actions.sh read), Bash(${CLAUDE_PLUGIN_ROOT}/skills/task/scripts/task-actions.sh defer-surface *), Agent, EnterWorktree
+---
+
+# Scope
+
+Scope decides exactly what a task will do, and writes it down so nothing later has to guess. It
+does not research, design or build, and it does not verify itself: it can be checked for shape,
+never for whether the contract is right. That is why this is a conversation with a person, not a
+form.
+
+The record is `alignment.json`, in the task's own folder, beside `task.json` and `task.md`.
+`alignment.md`, beside it, is rendered from it for a person to read. Nothing ever parses
+`alignment.md` back. Every write below goes through `scope-actions.sh`. A no to the surfaces offer
+below runs `surfaces-actions.sh decline`. Both are named in this skill's own grant, so they
+run without asking. Any other Bash command still asks for approval.
+
+`scope-actions.sh` takes a text value from a file. Write the text with the Write tool in the
+session's scratchpad folder. With no scratchpad, write it in the task folder, and delete it after
+the call. Then pass `@/<absolute path>` as the value. Use this for a text that names a command, such
+as git. Claude Code refuses a command whose quoted text names git when the session works in a
+worktree.
+
+## Determine the run mode
+
+Look for a stated run mode on the task active in this conversation. Found, and it says
+`autonomous` or `light`: act autonomously through this whole invocation, passing
+`--run-mode autonomous` on every call below that writes. Anything else, including no active
+task: act interactively, the safe default, and pass `--run-mode interactive` (or nothing; that
+is the same default) on every call below that writes. Decide this once, at the start. `read` needs no run mode: it changes
+nothing. A mode that names stages in brackets, such as `autonomous (implement)`, covers this
+stage only when the list names `scope`; otherwise this stage is interactive.
+
+## Find the task
+
+Scope runs against a task that already exists. It does not create one and it does not scaffold a
+stub for a name with no folder.
+
+Every action below needs the active project's own folder (the one holding `project.json`, never the
+code folder). Resolve that first, before using anything here. Take the project folder from the
+`project-folder:` line of the `## AIDA` block. Then run
+`"${CLAUDE_PLUGIN_ROOT}"/skills/project/scripts/project-actions.sh report` once, and show the lines
+it prints. When it exits non-zero, invoke the project skill, whose table reads that exit. With no
+`project-folder:` line, invoke the project skill. The task is `<taskId>` when given, or whichever
+task is already active in this conversation. Neither known, or the resolved
+`<projectPath>/tasks/<task-id>` holds no `task.json`: say so in one line and name the task skill.
+Stop; there is nowhere to write.
+
+An invocation line whose first word is `approve` is the person's yes on the contract. The task is
+the word after it, or the active one. Go straight to "Approval" below and run the call there.
+
+Once found, the task's own folder is `<projectPath>/tasks/<task-id>`. Every call below takes that
+folder, never the project's own folder and never `task.json` itself.
+
+## Read what is already there, before asking anything
+
+Run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh read "<task_folder>"
+```
+This prints `contract:` present or absent, and, when present, `contract-file:` with the path,
+the criterion and non-goal ids, and whether the goal is set. Present means an update: read the
+file at that path, so the conversation below reflects what is already recorded instead of
+re-asking for it. Absent means a first run: nothing is drafted yet.
+
+Every write below prints the line it changed and `rendered:`, and never the contract's text. `read`
+prints the summary. Read the file when a criterion's own words are needed.
+
+`read` is the one call here that runs from anywhere. Every other call refuses at exit 79 when
+the task builds in its worktree and this window is elsewhere. The refusal names the tree and the
+route that works from here, either the `EnterWorktree` tool or the call started with
+`cd <worktree> &&`. Take the route it names, the way `/aida:next` does, and run the call again.
+
+On a first run only, also read `task.md` directly. A task split by the task skill carries its
+handed-down criteria there, as plain prose with no id, no verify clause and no author. That prose
+is input for this conversation, exactly like anything else a person typed at the task. It is never
+a contract: this task has no contract until scope has run once.
+
+On a first run only, when `alignment.v5.md` exists in the task folder, read it too. It holds the
+person's earlier words: the goal, the expected result, each criterion in its order, and each
+non-goal. Propose the contract from it, through the same `init`, `set-goal`, `add` and
+`add-non-goal` calls below. Keep the criteria in the version 5 order, so the ids line up with the
+old numbering. Each criterion still needs its verify clause and its machine or person judgment.
+The version 5 text seldom states those. Draft them. When the draft is shown, say what changed from
+the version 5 text. The writes come first and the approval after, at "Approval" below, as that
+section says. Version 6 parses nothing back. So the stage that reads the old
+contract is the conversion, and there is no converter.
+
+The single freshest source of what the person wants is whatever they typed on the invocation line
+that started this conversation. Read it before asking anything. Setting it aside and opening a
+blank interview anyway is a fault, and it is exactly what version 5 shipped once: a run that threw
+away what the user had just said and asked them to restate it.
+
+## Choose a posture, then draft the whole contract
+
+Three postures, and the choice is how much is already on the table between the invocation line,
+an existing `alignment.json`, and, on a first run, the handed-down prose in `task.md` of a split
+child or the version 5 contract in `alignment.v5.md`:
+
+- **Reflect and refine.** A goal and most of a contract are already there. Render it, show the
+  whole rendered file, and ask what is wrong or missing.
+- **Draft and confirm.** Something is there, not enough to reflect. Draft the whole contract
+  from it, as "Draft the whole contract first" says.
+- **Explore openly.** Genuinely nothing is on the table. Ask one opening question: what should
+  be true when this is done? It carries no recommended answer, because nothing is on the table to
+  draw one from. Then draft the whole contract from the answer, the same way.
+
+Reaching "explore openly" because the invocation line was set aside is a fault, not a genuine
+third choice: check the two prior sections first.
+
+### Draft the whole contract first
+
+On a first run, draft every field before asking anything. The sources are the invocation line,
+`task.md`, `alignment.v5.md`, or the answer to the opening question. Draft the goal, the expected
+result, every criterion with its verify clause, and the candidate non-goals. Write them at once,
+through `init`, `set-goal`, `add --author designer` and `add-non-goal`, as the sections below say.
+Then `render`, as "Approval" says, and show the whole rendered file once. Ask one thing: what is
+wrong or missing. Say in one sentence that every line is a draft until the person approves.
+
+A whole draft shown once puts less work on the person than a chain of single questions. Version 5's
+ordinary mode drafted whole fields and asked what was missing; its one-question mode was opt-in.
+
+### Then converse on what is wrong
+
+Each correction the person gives becomes one write, in the person's words. The goal or the
+expected result they rephrase is `set-goal`; a criterion or non-goal they rephrase is `update`; a
+criterion they add is `add`; one they drop is `remove`; a non-goal they name is `add-non-goal`. A
+criterion the person rephrases or adds stays `designer` until `approve` promotes it. An owner
+author on `add` or `update` is a person's answer, as `approve` is, so a correction does not pass it.
+
+Answer a correction with the changed line the call printed: the `UPDATED:`, `ADDED:` or `REMOVED:`
+line. Then the turn ends. Do not run `render`, do not show the page, and do
+not ask whether the contract is now right. The person says when it is, in their own words or
+with `/aida:scope approve <task-id>`; that is "Approval" below. Show the whole document only
+when they ask to see it again.
+
+A question is one at a time, with a recommended answer. A draft is not a question: show the whole
+draft, and ask what is wrong. The draft carries everything that can be drafted, and what is left
+is asked once each:
+
+- A gap the draft could not fill: no goal anywhere, or a criterion with no observable outcome.
+- A non-goal probe whose recommended answer is in, or is unclear, as "Non-goals" says.
+- Whether the task has automated tests, under "Automated tests", asked once on every task.
+- The surfaces offer under "Tests and checks", which is asked once and only where the goal names
+  something a person sees.
+
+Never ask a blank question. State a recommended answer with each one, so the person confirms or
+corrects rather than starting from nothing. The opening question of "explore openly" is the one
+exception, for the reason given there.
+
+**Autonomous:** nobody answers. Take the draft as it is, and take the recommended answer on every
+single question. `set-tests` and `add-non-goal` record their own answer under an autonomous run.
+For each other question, run:
+  ```
+  "${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode autonomous \
+    record-decision "<task_folder>" --text "<the question, and the recommended answer taken>" \
+    [--field <the field the answer set>]
+  ```
+  to mark it as decided on the person's behalf, and continue. Never treat silence as the owner's
+  own answer. Give `--field` when the answer set a field: `goal`, `expectedResult`, or the
+  criterion ids, comma-separated, one entry each. A later interactive `set-goal`, `update` or
+  `remove` that changes that field then marks its entry superseded. So `approve` never approves
+  an answer the person reversed.
+
+### The goal and the expected result
+
+Draft both as plain sentences, in the person's own words where they gave them. No goal anywhere
+is a gap: ask for one, with a recommended answer. Then run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode <interactive|autonomous> \
+  init "<task_folder>"
+```
+only on a first run, before anything else is written. On a task that has `alignment.json` already,
+it changes nothing and says so. When its output holds `environment: none`, put the task skill's site offer to the person
+now, or say it waits when it says so. Then, on a first run and on any later correction to either
+sentence, run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode <interactive|autonomous> \
+  set-goal "<task_folder>" --goal "<goal text>" --expected-result "<expected result text>"
+```
+
+### The stated approach
+
+A task often says how it intends to solve the goal, not only what the goal is. When the person
+states one, record it as a claim, not a specification: it is challenged later, never trusted
+outright here. When they do not state one, record nothing; do not invent an approach on their
+behalf.
+
+Stated, run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode <interactive|autonomous> \
+  set-mechanism "<task_folder>" --approach "<the stated approach>" --status <suggested|required>
+```
+`required` when the person insists this is how it must be done; `suggested` otherwise. This writes
+into `task.json`'s own `mechanismHints`, never into `alignment.json`.
+
+### Each acceptance criterion
+
+A criterion is an outcome a person can see when the task is done, phrased like a user story: "An
+admin can download the user list as CSV." It is written from outside the code. It never names a
+class, a file, or a stage. It is not a note about how a stage should work, or a task for one
+stage to do.
+
+A criterion states what must work, in the person's words. Scope does not police those words.
+"Test that the export works", "check" and "make sure" mean that review verifies it: review runs
+the thing and keeps the evidence. They never mean "write an automated test".
+
+For each one, in order, in the draft:
+
+1. Draft the outcome, in that outward phrasing.
+2. Draft how it is observed, its verify clause, and whether a machine runs that check or a person
+   looks. A clause that only restates the criterion names no signal. A criterion with no
+   observable outcome is a gap: ask, one question, with a recommended answer, rather than write
+   the restatement. A machine clause names the behaviour a test proves, not a flow to run. A test
+   is what this page defines:
+   `${CLAUDE_PLUGIN_ROOT}/skills/implement/references/what-a-test-is.md`. See "Tests and
+   checks" below for what changes when the project has end to end testing on.
+3. Record who asked. `designer` for every line the draft wrote, until `approve` promotes it at
+   "Approval". `owner` when a person wrote or corrected this criterion, in this conversation.
+   There is no third value, and a missing answer is never `owner`.
+4. Write it:
+   ```
+   "${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode <interactive|autonomous> \
+     add "<task_folder>" --text "<outcome>" --verification "<verify clause>" \
+     --verified-by <machine|person> --author <owner|designer>
+   ```
+
+Recommend the kind from what the outcome is, never from the words that state it. Recommend
+`machine` for a behaviour of code with logic, which a small test or a named command observes. "An
+admin can download the user list as CSV" is `machine` when a test can observe the export. Review
+sees the journey around it. Recommend `person` for anything else: a document, configuration,
+metadata, layout, how a page looks, or a whole journey. A person or a reviewer reads it.
+Design refuses a `machine` criterion that only a document serves.
+
+Some facts exist only after a step the task never takes, such as a push behind a sudo gate. No
+build step runs after that step, so write `person`. Say the step in the outcome as the person's
+action. For such a step, name in the verify clause the command that reads the fact, not a page
+the person opens. At review's close, the session runs that command and shows its output. The
+person answers met or unmet; no script runs the clause.
+
+Never pass a verdict. It starts `unanswered` and stays there until an end of task review runs;
+scope never sets it, on `add` or on `update`.
+
+A criterion handed down from a split, found in `task.md` on a first run, is read exactly like this:
+its wording is the draft for step 1, not something already agreed. It is written `designer`, the
+same as any other drafted line.
+
+One criterion is the unit of a correction, not of the conversation. Each correction the person
+gives to a criterion is one `update`, `add` or `remove`, as "Then converse on what is wrong" says.
+
+**Autonomous:** for every criterion, draft steps 1 and 2 from what is on disk and record `author`
+as `designer`. Continue through the whole list; do not stop for lack of an answer.
+
+### Non-goals
+
+Non-goals are asked for, never waited for. The draft carries every non-goal the sources name
+outright. It also carries the probes: the things adjacent to the goal that nobody has mentioned.
+People skip these, so the draft raises them. Give each probe a recommended answer of in or out.
+
+Write each probe recommended out with the draft:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode <interactive|autonomous> \
+  add-non-goal "<task_folder>" --text "<what the task will not do>"
+```
+When you show the draft, list these probes in one block, each with its id and "recommended: out".
+The person corrects any they disagree with, in the one answer to the draft. A probe they move to
+in is a `remove`, and it becomes a criterion: go back to the criterion flow above.
+
+Ask a probe on its own, one per turn, only when its recommended answer is in or you are unsure
+of it. A single cheap question costs less than one missed criterion. On "out", write it with
+`add-non-goal` above. On "in", it becomes a criterion instead.
+
+**Autonomous:** take the recommended answer on each probe. The draft already wrote each out-probe
+with `add-non-goal`, which records the decision itself, with the non-goal's id. Do not run
+`record-decision` for a probe. A non-goal carries no author field; only criteria do. So the id
+in that entry is the only mark a non-goal this run wrote itself carries.
+
+## Automated tests
+
+Ask once, on every task, whether this task has automated tests. The answer is per task, never per
+project. Recommend yes, unless the invocation line, `task.md` or the person says there are none.
+Say what a no changes. Each code order is built and reviewed with no test. The person confirms
+each order's done-when sentences at review. Write the answer:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode <interactive|autonomous> \
+  set-tests "<task_folder>" --automated <yes|no>
+```
+The answer is part of the contract, so `approve` signs it with the rest. Research checks it
+later, and the person may change it there.
+
+**Autonomous:** take the recommended answer and write it with `set-tests`. It records the
+decision itself, so do not run `record-decision` for it.
+
+**Light:** do not ask, and do not run `set-tests`. `init` wrote no on a light task and logged the
+skip. Research changes it to yes when the test recipe's own checks find a runner.
+
+## Tests and checks
+
+Scope sets nothing up. It uses a kind that is already on, and offers the setup once when none is.
+Read `<projectPath>/project.json` once, at the point criteria are being drafted:
+
+- **`surfaces.e2e.enabled` is true.** The end to end test is the surface's own check, and review
+  runs it after the build. So do not ask a separate question about coverage, and do not ask per
+  criterion whether to automate it. Recommend each criterion's kind from its outcome, as above.
+- **A kind is off and not declined, or `surfaces` is null.** The decline is that kind's
+  `declined` field in `project.json`. Interactive only. Skip a kind that `read` names under
+  `surfaces-deferred:`. Look at the goal once, at this same point. Before you ask, run
+  `"${CLAUDE_PLUGIN_ROOT}"/skills/surfaces/scripts/surfaces-actions.sh read`. When its
+  `surface-branch:` names a branch, offer nothing. Name that branch, and say the surface file
+  reaches this task once that branch lands on the trunk.
+  When it names something a person opens in a browser, a page, a form, a screen, a journey, say so
+  in one line. Ask once, naming every kind still open, with a recommended answer per kind. Give
+  three answers per kind: yes, not this task, or no. Say the difference between "not this task"
+  and "no" in the ask itself, so the person knows what a "no" silences. A yes on a kind invokes the
+  `surfaces` skill through the Skill tool, naming that kind. Do this once per kind said yes to.
+  Then read `project.json` again, so the bullet above applies to this task. "Not this task" on
+  a kind runs `"${CLAUDE_PLUGIN_ROOT}"/skills/task/scripts/task-actions.sh defer-surface --project
+  "<projectPath>" <task-id> <kind>`, and no later stage of this task asks again. A no on a kind
+  runs `"${CLAUDE_PLUGIN_ROOT}"/skills/surfaces/scripts/surfaces-actions.sh decline <kind>`,
+  project-wide, and that kind is never asked again. Name `/aida:surfaces` as the way to turn it on
+  later. A goal that names nothing a person sees gets no question. Autonomous: nothing is offered,
+  and say so. The offer at review comes after the page has already changed, when no baseline can
+  be taken of what it was. Turning a capability on is a person's decision, made through this offer
+  or `/aida:surfaces`, never scope's to infer beyond it.
+
+## Approval
+
+Approval is an action the person takes, never a question this skill asks. The person approves by
+running `/aida:scope approve <task-id>`, or by saying the contract is right in their own words.
+Map those words to the call below. No reply from this skill asks for them.
+
+When the person says so, dispatch the `distiller` role once, as "The distill check" below says.
+The contract is final by then. Then run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode interactive \
+  approve "<task_folder>"
+```
+With no answer recorded, it refuses with exit 70 in every run mode, and prints the
+`person-answer.sh` command. It renders `alignment.md` first, and its words are that page, passed as
+`@<task_folder>/alignment.md`, so the yes is for the contract as the person reads it. Run that
+command: Claude Code shows its permission prompt with the page, and the person's yes there is the
+approval. Then run `approve` again. A change after the yes needs a new one (gap row 473).
+It promotes every criterion still `designer` to `owner` and prints `promoted:` with the count.
+It marks each decision an unattended run took as approved by the person, and prints
+`approved-decisions:` with the count. A marked decision is history, not an open question. A
+decision marked superseded is history too, and `approve` leaves it as it is. Then it
+commits the task folder and prints `standsAlone:` and one `gap:` line per gap. Show each
+`gap:` line. Acting on one is the relevant step above run again; the person then says it is
+right again, and the same call runs again. A second `approve` with nothing left to promote says
+so and is not a fault: it commits any later edit and reads the sidecar again.
+
+When `set-goal`, `set-tests`, `update` or `remove` prints `superseded-decisions:`, tell the
+person which unattended answer their change replaced.
+
+A decision can stop holding after it was approved, or name no field at all. When the person
+says one no longer holds, run `retire` on their answer. Attended at an interactive stage, the chat
+answer passes it. When it refuses for the answer, record it with `person-answer.sh`, step
+`scope retire`, and the words `entry <n>: <the person's reason>`. Then run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode interactive \
+  retire "<task_folder>" --entry <n> --reason "<the person's reason>"
+```
+`--entry` counts from 1 in the list. The entry becomes history with the reason. `retire` commits
+nothing, so run the distill check and `approve` again after it. It refuses an entry that does
+not exist, one already superseded or retired, and a call with no answer recorded.
+
+An earlier version of this skill rendered the whole document after every correction and asked
+for a yes on it, even for one small change. On one task it asked five times in a
+row, once per correction, until the person answered "Stop". A question the model decides when to
+ask is one it can repeat, so the question is gone and the action replaced it.
+
+The page is rendered on every write. Every action that writes `alignment.json` renders
+`alignment.md` again after its write and prints `rendered:` with its path, so the page never
+lags the contract. A page nothing re-rendered once still read "designer" on every criterion
+after `approve`, and three design critics reported it. `render` only shows the page. Run it once
+when the draft is first shown, and again only when the person asks to see the whole document:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode <interactive|autonomous> \
+  render "<task_folder>"
+```
+This prints `rendered:` with the file's path. Show the whole rendered file, never a summary.
+
+**Autonomous:** still render the whole document, for the record, but promote nothing and never
+run `approve`: a criterion `designer` because scope proposed it stays `designer`, since nobody
+approved it. Run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode autonomous \
+  record-decision "<task_folder>" --text "approved the rendered contract on the person's behalf"
+```
+to report it as approved on the person's behalf, then run the distill check below and finish.
+
+## The distill check
+
+The contract is committed when the stage closes. `approve` above, or `distill` below in the
+autonomous branch, commits the task folder; the mid-stage edits above commit nothing. Before
+either call, dispatch `distiller` once. The dispatch message is the role, the run mode and the
+paths, one per line, and nothing else. Name the role on the Agent call. Then write the run mode,
+the task folder, the stage `scope`, and the path of `alignment.json`. The role's rules and its
+return shape live in its agent definition, which reaches it on every dispatch, so the message
+restates neither. Never a summary of this conversation: it exists to be denied that account. It
+writes `records/scope-distill.json`. Interactive, `approve` reads it. Autonomous, run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh distill "<task_folder>"
+```
+**Light:** dispatch no distiller here. Run `distill` alone. It commits the contract and prints
+`distill: deferred to the design close`. Design's close dispatches one distiller over all three
+stages.
+
+Either call prints `standsAlone:` and one `gap:` line per gap, and exits 0 on every value. Show
+each `gap:` line. Acting on one is the relevant step above run again; the check never blocks.
+`standsAlone: stale` means the contract changed after the distiller read it. The call then prints
+a `stale:` line and no gap. Dispatch the distiller again with the same message, then run the
+same call again.
+
+`standsAlone: none` means the sidecar is missing or unusable, and the task record holds a warning.
+A malformed sidecar was set aside at the `setAside:` path the call printed. A dispatch that ended
+before the role's first write is the same case. One retry rule covers it, and the distiller, the
+split advisor and the design critics all follow it. Dispatch the role once more, with the same
+message. For a malformed file, quote the rule it broke from the role's agent definition. Then run
+the same call again. A second miss stays a warning, and the stage goes on, in both run modes. The
+research and design pages refer to this rule.
+
+Cancelled at any point, first run or later: stop without running `init`, `set-goal`, `add`,
+`add-non-goal`, `update`, `remove`, `set-tests` or `set-mechanism` again. A drafted line is
+`designer`, and stays so until the person approves the whole document, so a cancelled draft
+claims nobody's yes.
+A correction is written only after the person (or, in the autonomous branch, the recommended
+answer) has actually given that one change.
+
+Then hand off to `research`, as `${CLAUDE_PLUGIN_ROOT}/skills/next/references/handoff.md` says:
+interactive, name `/aida:research <task-id>` and stop; autonomous, invoke it when the run mode covers it.
+
+## Changing the contract
+
+Scope has an update path, not only an authoring path, reachable at any point, including in the
+middle of research or design when a goal turns out to be missing. Invoke this skill again on the
+same task. `read` above finds the existing `alignment.json`, and the posture is ordinarily "reflect
+and refine": state what changed and hold the relevant part of the conversation above for just that
+change. When the invocation line already carries the change, apply it, answer with the changed
+lines, and end the turn.
+
+To edit an existing criterion or non-goal rather than add or remove one:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode <interactive|autonomous> \
+  update "<task_folder>" --id <id> [--text "<text>"] [--verification "<verify clause>"] \
+  [--verified-by <machine|person>]
+```
+After implementation started, a corrected verify clause reaches the build through design's
+`close` and then implement's `start`. Unattended, run `record-decision --field <id>` with the
+reason first, or the change stops every started order that serves the criterion. The decision
+spares a change to the verify clause alone. When a started order serves a criterion, a change to
+its text stops every order that serves it, whatever is recorded. Those stops clear when the text
+goes back word for word.
+A non-goal's id only accepts `--text`; the others are a criterion's own fields. `approve`
+promotes every `designer` criterion. `--author owner` promotes one, and it is a person's answer.
+Attended at an interactive stage, the chat answer passes it. When it refuses for the answer, record
+it with `person-answer.sh`, step `scope update` and the words `<id> author owner`, or step
+`scope add` and the criterion's text. Both only ever move a criterion from `designer` to
+`owner`, and the other way round is refused.
+
+To drop one:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/scope/scripts/scope-actions.sh --run-mode <interactive|autonomous> \
+  remove "<task_folder>" --id <id>
+```
+An id is never reused after this. The next criterion or non-goal still takes the next number in
+its own space, `c` or `n`, whichever this was.
+
+It is the same producer as authoring, so this still ends at "Approval" above. The person runs
+`approve`, or says the change is right and that runs it. The yes is theirs to give, never this
+skill's to ask for.
+
+Editing `alignment.md` by hand changes nothing: nothing reads it back. That file says so on
+itself. The only way to change the contract is this skill.
+
+## Scope never blocks
+
+Scope refuses nothing here and halts nothing here. It never says a task cannot proceed without a
+contract; that requirement, where it exists, lives in whichever later stage would otherwise run
+without one, never in scope. A conversation that gets no answers still finishes, in the autonomous
+branch above, rather than stopping.
+
+## What this skill never does
+
+It never judges whether a criterion is the right one. A person judges that; scope only makes sure
+one gets written down and shown back.
+
+It never sets a criterion's `verdict`. Only the end of task review does.
+
+It never treats `alignment.md` as something to read back. `alignment.json` is the only store.
+
+It never invents a check the project has not turned on, and it never turns one on itself.

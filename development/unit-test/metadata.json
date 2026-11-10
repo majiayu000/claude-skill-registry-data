@@ -1,0 +1,39 @@
+{
+  "name": "unit-test",
+  "repo": "ezMbedded/EasyEmbeddedFramework",
+  "path": ".claude/skills/unit-test/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ezMbedded/EasyEmbeddedFramework",
+  "dir_name": "unit-test",
+  "downloaded_at": "2026-11-10T07:43:30.450789Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, debug",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ezMbedded",
+  "source_url": "https://github.com/ezMbedded/EasyEmbeddedFramework/blob/main/.claude/skills/unit-test/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ezMbedded/EasyEmbeddedFramework/blob/main/.claude/skills/unit-test/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or extend Catch2 + FFF unit tests for a module of the framework under tests/, build and run them, and report coverage. Use when the user asks to test a header or module, or to add tests for new or changed behaviour."
+}

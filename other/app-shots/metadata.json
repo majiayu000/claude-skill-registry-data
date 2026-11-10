@@ -1,0 +1,37 @@
+{
+  "name": "app-shots",
+  "repo": "bitknox/kaeri",
+  "path": ".claude/skills/app-shots/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bitknox/kaeri",
+  "dir_name": "app-shots",
+  "downloaded_at": "2026-11-10T06:47:03.316258Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitknox",
+  "source_url": "https://github.com/bitknox/kaeri/blob/main/.claude/skills/app-shots/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitknox/kaeri/blob/main/.claude/skills/app-shots/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take screenshots of the Kaeri apps and run UI checks safely - Apple and Android shots scripts, scenes and fixture ids, emulator and Simulator rules, and click tests. Use when capturing screens, comparing with design boards or measuring frames."
+}

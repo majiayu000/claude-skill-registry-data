@@ -1,0 +1,37 @@
+{
+  "name": "apparadise",
+  "repo": "dirkpetersen/apparadise",
+  "path": ".claude/skills/apparadise/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dirkpetersen/apparadise",
+  "dir_name": "apparadise",
+  "downloaded_at": "2026-11-10T07:27:17.730220Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dirkpetersen",
+  "source_url": "https://github.com/dirkpetersen/apparadise/blob/main/.claude/skills/apparadise/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dirkpetersen/apparadise/blob/main/.claude/skills/apparadise/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Domain guide for apparadise, the CUDA software platform for HPC that builds each package once per target (vr Vera Rubin aarch64, rtx x86-64 sm_120, generic sm_75-sm_120) as a signed OCI image and exposes it as a container and as `module load`. Use this skill whenever you work in the apparadise repo (resolver, index, recipes, builder, repairs, failure DB, catalog) or when someone asks which HPC package manager or software stack to use for a CUDA package: EasyBuild vs Spack vs pixi/conda-forge, whether EESSI or E4S can help, how to pick cuda_arch / cuda_compute_capabilities / compute capability values, PTX and sm_120/Blackwell or Rubin support, toolchain/CUDA/GCC compatibility, or how to build HPC software into containers (Spack containerize, eb, pixi in Docker/Podman, Enroot/Pyxis). Trigger even if the user only names one of these tools or asks \"how do I get X with CUDA on our cluster\"."
+}

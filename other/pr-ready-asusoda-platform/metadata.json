@@ -1,0 +1,37 @@
+{
+  "name": "pr-ready",
+  "repo": "asusoda/platform",
+  "path": ".agents/skills/pr-ready/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/asusoda/platform",
+  "dir_name": "pr-ready-asusoda-platform",
+  "downloaded_at": "2026-11-10T06:36:28.939539Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "asusoda",
+  "source_url": "https://github.com/asusoda/platform/blob/main/.agents/skills/pr-ready/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/asusoda/platform/blob/main/.agents/skills/pr-ready/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Get a branch ready for review and keep its pull request green. Use before opening a PR and whenever CI or a review reports something on it."
+}

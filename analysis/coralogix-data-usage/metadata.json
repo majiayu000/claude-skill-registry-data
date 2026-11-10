@@ -1,0 +1,37 @@
+{
+  "name": "coralogix-data-usage",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/coralogix-data-usage/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "coralogix-data-usage",
+  "downloaded_at": "2026-11-10T06:39:46.445204Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-data-usage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-data-usage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Data usage, billing units, plan consumption, quota metrics, anomaly detection, and time-series analysis concepts and query workflow. Load when the user asks about data usage, ingestion volumes, billing, plan limits, overage, quota attribution, usage anomalies, or usage trends over time."
+}

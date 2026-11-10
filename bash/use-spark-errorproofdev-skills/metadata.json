@@ -1,0 +1,37 @@
+{
+  "name": "use-spark",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/ai/skills/use-spark/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "use-spark-errorproofdev-skills",
+  "downloaded_at": "2026-11-10T07:41:10.143242Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/ai/skills/use-spark/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/ai/skills/use-spark/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the spark CLI to access the user's Spark email data - list emails, search by topic, read threads, check calendar events, find availability, look up contacts, and view team info. Use when the user asks about their emails, calendar, contacts, meetings, or scheduling."
+}

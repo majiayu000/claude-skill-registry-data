@@ -1,0 +1,39 @@
+{
+  "name": "technical-documentation",
+  "repo": "alexj11324/Mikka",
+  "path": ".claude/skills/technical-documentation/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/alexj11324/Mikka",
+  "dir_name": "technical-documentation-alexj11324-mikka",
+  "downloaded_at": "2026-11-10T06:21:53.906794Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "writing",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexj11324",
+  "source_url": "https://github.com/alexj11324/Mikka/blob/main/.claude/skills/technical-documentation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexj11324/Mikka/blob/main/.claude/skills/technical-documentation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit, write, and improve developer documentation using Google's Developer Documentation Style Guide and Technical Writing courses. Use this skill for any documentation work, even when the user names no style guide: \"audit our docs\", \"review this README\", \"write a README\", \"getting started guide\", \"how-to or tutorial\", \"API reference\", \"docstrings\", \"CLI help text\", \"changelog or release notes\", \"migration guide\", or \"our docs are confusing\". Also use it when writing docs from code, rewriting a doc for clarity, fixing headings, procedures, or code samples, or enforcing consistent voice and terminology across a docs set \u2014 prefer it over editing documentation unaided. Covers reader and doc-type fit, second person and active voice, procedures, headings, lists and tables, code samples and placeholders, link text, notices, the word list, timeless docs, and accessibility. For code comments and naming, see clean-code. For marketing or landing-page copy, see storybrand-messaging."
+}

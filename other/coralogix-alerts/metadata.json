@@ -1,0 +1,37 @@
+{
+  "name": "coralogix-alerts",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/coralogix-alerts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "coralogix-alerts",
+  "downloaded_at": "2026-11-10T06:39:43.752205Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-alerts/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-alerts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Alert and case terminology, alert definitions, alert events, cases, IDs, alert types, and skill routing. Load whenever working with alerts or cases to understand shared terminology."
+}

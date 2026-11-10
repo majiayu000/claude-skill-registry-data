@@ -1,0 +1,38 @@
+{
+  "name": "workflow-hardening",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/github-actions/workflow-hardening/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "workflow-hardening",
+  "downloaded_at": "2026-11-10T07:25:28.378877Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/github-actions/workflow-hardening/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/github-actions/workflow-hardening/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hardens GitHub Actions workflows against script injection, pwn requests, over-broad GITHUB_TOKEN permissions, unpinned or outdated actions and long-lived secrets, using the platform as it is in late 2026 (actions/checkout v7 fork-PR blocking, the pull_request_target default policy, Node 24 actions, npm trusted publishing with OIDC). Use when writing, reviewing or fixing any .github/workflows/*.yml file; when a workflow uses issues, issue_comment, pull_request_target or workflow_run triggers; when checkout refuses to check out fork pull request code; when asked to pin actions to SHAs, set least-privilege permissions, publish to npm or deploy to a cloud from CI without stored tokens, or make a release workflow safe."
+}

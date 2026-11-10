@@ -1,0 +1,37 @@
+{
+  "name": "fetch",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/research/skills/fetch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "fetch-errorproofdev-skills",
+  "downloaded_at": "2026-11-10T07:41:13.154338Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/fetch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/fetch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants one known URL returned as content: \"get me this page\", read this article, this page as markdown, save the raw HTML, screenshot this page, or page text for a RAG index or model context. Also when a plain fetch of a URL came back blocked or challenged instead of the real page: a 403 or another error status, a CAPTCHA, a bot wall, or an empty body. Wraps Bright Data Web Unlocker, so a blocked page still comes back. Not records or many pages of data from a site (use scrape), not a search query with no URL (use search), not driving a browser with your own Playwright, Puppeteer or Selenium code (use browser), not cost or credits (use billing), not auth or KYC failures (use agent-onboarding)."
+}

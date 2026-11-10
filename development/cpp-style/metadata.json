@@ -1,0 +1,37 @@
+{
+  "name": "cpp-style",
+  "repo": "clice-io/kotatsu",
+  "path": ".claude/skills/cpp-style/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/clice-io/kotatsu",
+  "dir_name": "cpp-style",
+  "downloaded_at": "2026-11-10T07:06:31.557248Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "clice-io",
+  "source_url": "https://github.com/clice-io/kotatsu/blob/main/.claude/skills/cpp-style/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/clice-io/kotatsu/blob/main/.claude/skills/cpp-style/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "kotatsu C++ coding conventions \u2014 redundancy elimination (the rule we care most about), file organization, macro.h isolation, dual-mode exception policy, template deduction and type-trait rules, naming, modern C++ preferences. Read BEFORE writing or modifying any C++ code."
+}

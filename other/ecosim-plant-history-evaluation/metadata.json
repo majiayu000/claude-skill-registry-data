@@ -1,0 +1,36 @@
+{
+  "name": "ecosim-plant-history-evaluation",
+  "repo": "bioepic-data/ecosim-agent",
+  "path": ".agents/skills/ecosim-plant-history-evaluation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bioepic-data/ecosim-agent",
+  "dir_name": "ecosim-plant-history-evaluation",
+  "downloaded_at": "2026-11-10T06:46:53.499813Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bioepic-data",
+  "source_url": "https://github.com/bioepic-data/ecosim-agent/blob/main/.agents/skills/ecosim-plant-history-evaluation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bioepic-data/ecosim-agent/blob/main/.agents/skills/ecosim-plant-history-evaluation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Evaluate plant physiology and realized traits in existing EcoSIM history output against selected plant parameters, model equations, site observations and literature. Use for seasonal plant diagnostics, implausible growth or uptake, and parameter-sensitivity comparisons. Output-coverage checks alone and static plant_trait.desc validation belong to their dedicated skills."
+}

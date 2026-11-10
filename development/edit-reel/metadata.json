@@ -1,0 +1,37 @@
+{
+  "name": "edit-reel",
+  "repo": "artemisln/edit-reel",
+  "path": "plugins/edit-reel/skills/edit-reel/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/artemisln/edit-reel",
+  "dir_name": "edit-reel",
+  "downloaded_at": "2026-11-10T06:34:20.444665Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "artemisln",
+  "source_url": "https://github.com/artemisln/edit-reel/blob/main/plugins/edit-reel/skills/edit-reel/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/artemisln/edit-reel/blob/main/plugins/edit-reel/skills/edit-reel/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Edit a raw talking-head video into a polished short-form reel (Instagram Reels, TikTok, YouTube Shorts) with word-by-word karaoke subtitles in any language, including English and Greek. Trims silence and retakes, crops to 9:16, adds subtle zooms, sound effects and image overlays. Use when someone wants to edit a reel, add subtitles to a talking-head video, or turn raw footage into a short. Usage - /edit-reel <path-to-video> [options]"
+}

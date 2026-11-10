@@ -1,0 +1,38 @@
+{
+  "name": "dotkernel-evolution-pattern",
+  "repo": "dotkernel/dotboost",
+  "path": ".claude/skills/dotkernel-evolution-pattern/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/dotkernel/dotboost",
+  "dir_name": "dotkernel-evolution-pattern",
+  "downloaded_at": "2026-11-10T07:29:49.422484Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dotkernel",
+  "source_url": "https://github.com/dotkernel/dotboost/blob/main/.claude/skills/dotkernel-evolution-pattern/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dotkernel/dotboost/blob/main/.claude/skills/dotkernel-evolution-pattern/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use whenever a change would break something a client already depends on in a Dotkernel project \u2014 renaming or removing a field, parameter, route or template variable; changing a type, status code or response shape; making an optional field required; deprecating or deleting an endpoint \u2014 or when someone proposes a /v2, a version prefix, a version header, or \"versioning the API\". Also use when working with ResourceDeprecation, Sunset and Link headers, or the deprecation middleware."
+}

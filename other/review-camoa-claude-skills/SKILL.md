@@ -1,0 +1,252 @@
+---
+name: review
+description: This skill should be used when a task's implementation has finished and the whole task needs one pass against its contract and its code, for example "review this task", "run the review", "gate check", "check this task before completion", or "Phase 4". It runs sixteen checks over the frozen contract, the diff at the final commit, the coding-standards and analysis and security and suite results, the mutation survivors, the research records and the surfaces a person can see. It dispatches one architecture reviewer over eight lenses and one acceptance verifier that runs the product, asks the person the rows only a person can answer, and records one verdict a person acts on.
+argument-hint: "[<task-id>]"
+arguments: [taskId]
+allowed-tools: Bash(${CLAUDE_PLUGIN_ROOT}/skills/review/scripts/review-actions.sh *), Bash(${CLAUDE_PLUGIN_ROOT}/skills/completion/scripts/completion-actions.sh follow-ups *), Bash(${CLAUDE_PLUGIN_ROOT}/skills/research/scripts/research-actions.sh record *), Bash(${CLAUDE_PLUGIN_ROOT}/skills/surfaces/scripts/surfaces-actions.sh decline *), Bash(${CLAUDE_PLUGIN_ROOT}/skills/task/scripts/task-actions.sh defer-surface *), Bash(${CLAUDE_PLUGIN_ROOT}/skills/project/scripts/project-actions.sh recipe-point *), Agent, EnterWorktree
+---
+
+# Review
+
+Review runs once per task, after implementation's `finish` wrote `implementation/finished.json`. It
+answers sixteen checks over three subjects: the contract, the code as written, and the surfaces a
+person can see. One step runs every check a script can decide. One step dispatches the architecture
+reviewer and records what it found. One step runs the surfaces and dispatches the acceptance
+verifier, which runs the product and records evidence. The last step asks the person the checklist
+rows, with the evidence beside them, and writes the verdict.
+
+**Review starts no fixer and runs no second pass.** A review fails only on a criterion that reads
+unmet. Every other check that is not met is a warning in the record. Either way the record goes to
+the person. The implement skill's `reopen` then sends each finding that fails a criterion back to
+the order that owns its file, whose own fixer repairs it. A reviewer holding no reference outside the
+code checks the code against itself, so a second round finds new things forever. The reference here
+is the frozen contract and the frozen tests.
+
+**Review is not completion.** It never marks the task complete, writes no pull request body, and
+repairs no finding. The task stays in progress, and the completion stage is what moves it. A person
+may run their own reviews in between. A task a person marked complete before its review stays
+complete, and review still runs on it and records its verdict.
+
+## Find the task
+
+Resolve the active project's own folder first, from the `project-folder:` line of the `## AIDA`
+block. Then resolve the task, `<taskId>` when given, or whichever task is already active in this
+conversation. Neither known: say so in one line, name the task skill, and stop. There is nowhere to
+act.
+
+The task's own folder is `<projectPath>/tasks/<task-id>`. Every call below takes that folder.
+
+## Read what is already there
+
+Run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/review/scripts/review-actions.sh read "<task_folder>"
+```
+This reports whether `implementation/finished.json` exists, and the commit range and the final commit
+it records. It reports how many criteria a machine verifies and how many a person does, the task's
+run mode for this stage, and the project's frameworks. It reports whether end to end and visual
+regression are on, and whether a registry is recorded. It says how far an existing review record got.
+It lists the warnings the earlier stages wrote into the task record, each with its step, its order
+and its words. A warning is a check that found something and let the work go on. Read each one to
+the person before the review closes.
+Last, it prints the checklist rows whole, because a person has to read those words to answer them.
+
+No `finished.json`: say so in one line, name the implementation skill's finish step, and stop. Exit
+66 says the same thing when a later action is run first.
+
+`read` is the one call here that runs from anywhere. Every other call refuses at exit 79 when
+the task builds in its worktree and this window is elsewhere. The refusal names the tree and the
+route that works from here, either the `EnterWorktree` tool or the call started with
+`cd <worktree> &&`. Take the route it names, the way `/aida:next` does, and run the call again.
+
+## Which step, and where its instructions are
+
+The report from `read` says where this task is. Match it to one step, open that step's own file
+through the script, and follow it. Each file holds its own step and nothing for another, so only the
+step being run is in this conversation.
+
+| The report says | The step | Step name |
+|---|---|---|
+| No review record, or a record with no check rows | Run the scripted checks | `checks` |
+| Checks 3 to 8 recorded, and no findings recorded | Dispatch the reviewer, then record the findings | `reviewer` |
+| The findings recorded, and no evidence rows | Run the surfaces, and verify by running the product | `acceptance` |
+| The evidence rows recorded, and no verdict | Ask the person's rows, and close | `close` |
+| A verdict recorded | Nothing is left. Read the verdict and the rows that caused it to the person | |
+
+A recorded verdict is the end of the pass, and `read` says so in that word. Start a second review
+only when a person asks for one, and start it at `checks`, because the range and the tools answer
+against the code as it stands now. Before anything is written, `checks` archives the
+closed record, `review/findings.json` and `review/brief.json`, each to `<name>-<date>-<commit>.json`.
+A taken name gets `-2`, `-3` and on. `brief` archives a findings file left at its path the same way.
+A fresh reviewer then finds no earlier findings there. Exit 63 refuses the write when a move fails.
+`close` on a closed record at the same commit archives the record alone and answers the rows again,
+with no fresh pass, per `references/close.md`.
+
+Open a step file through the script, never through the Read tool:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/review/scripts/review-actions.sh step <step name>
+```
+This prints `references/<step name>.md`. A `Read` rule naming that folder does not reliably expand
+`${CLAUDE_PLUGIN_ROOT}`, which is why this skill grants the one Bash rule above. Run `step` every
+time this table sends you to a file, even one already read this turn. A step run from memory of an
+earlier invocation is a step run against rules that may have changed.
+
+## Four rules every step repeats
+
+These hold for every step, and each step file names them rather than restating them. This file stays
+loaded; a step file is loaded only while its own step runs.
+
+**The records hold the bodies.** Every action prints `key: value` lines and a path. Never read a
+record, a diff, a tool output or a research finding into this conversation, and never paste one
+back. Name the path the script printed, and say the person can open it in an editor. **Only the
+dispatched reviewer reads bodies**, and it opens them itself, from the paths its brief names. A body
+pasted here costs the review the context its own steps need.
+
+**Name the role on every dispatch.** A dispatch that names none runs as the general agent, with
+every tool and this session's own model. Review opens no dispatch record, so the role's own
+frontmatter is the only thing bounding its tools, and an unnamed dispatch loses that bound too.
+
+**The dispatch message is the role, the run mode and the paths.** Name the role on the Agent
+call, and set the model where the step says. The message itself is one line per item: the run
+mode, `interactive` or `autonomous`, then each path the step hands over. Nothing else goes in.
+The role's rules and its return shape live in its agent definition, which reaches it on every
+dispatch. The data it needs lives in the brief the paths name. So the message restates neither,
+and two runs of one step hand the role the same words. The step file names this shape and lists
+its own paths. There are two exceptions. The message to `outward-searcher` carries the words to
+search and the bound in place of paths. The message to `acceptance-verifier` also carries the site
+address.
+
+**A recipe lookup answers four ways, and review passes the one that happened.** One answer is a path
+on disk. The other three are no recipe for this framework, a listing that could not be reached, and
+a failed fetch. Only the first of those three says anything about the framework, so pass the one that
+happened in its own word. No recipe records that framework's checks undeclared. An unreachable
+listing or a failed fetch records them unknown, because nobody looked.
+
+**The script reads a recipe's blocks, never you.** Pass a recipe path straight through to the action
+that takes it. The script parses each row's own argv, its `signal` and `extensions` keys, and which
+rows a framework declares absent. Nothing here retypes a command, so nothing here can drop a
+`signal` key and turn a check into one that always passes.
+Verdict words and a missing heading follow
+`${CLAUDE_PLUGIN_ROOT}/skills/tool/references/reading-a-recipe.md`.
+
+## The run mode decides who answers
+
+The run mode is the task's own for the review stage, read from `task.json` by every action. The
+ledger's copy records the mode the build ran under, and nothing here reads it. A person's answer
+is accepted only when a person is present. Every question has an autonomous branch, and the
+branch is recorded rather than assumed.
+
+| Question | Interactive | Autonomous |
+|---|---|---|
+| A person verified criterion | the person answers met or unmet | the person's recorded answer, step `review close`; else `unanswered`, and no sign off |
+| A verifier row not met on a surface whose run passed | the person reads the evidence and answers met or unmet | unanswered, and checks 13 to 15 read unknown |
+| A lens check whose findings are all low | the person confirms them, met, or rejects them, unmet | met, and named in the audit lines |
+| A finding citing neither a criterion nor a non-goal, or a low one citing a criterion | a follow up task is offered | recorded, and no task is created |
+| A new baseline for a surface | plan, show, confirm, then write | refused, and recorded as refused |
+| Setting up a surface | offered once | not offered, and recorded as not offered |
+
+`acceptance` refuses `--accept-baseline` on an autonomous run, and `close` refuses a `--row` there
+unless the person's answer is recorded. A session that does not report itself attended, or a task
+that stands at an autonomous stage, counts as an autonomous run here. The task skill's `person-answer.sh` records it, step
+`review close`, after Claude Code asks the person.
+A standing order never answers a changed non-goal or criterion: ask the person, who accepts or rejects it.
+A command surface needs no look, because its exit status is the whole answer.
+A run with nobody present and no recorded answer cannot sign off a task carrying one person
+verified criterion. That is intended: a check that could not run has established nothing.
+
+## The line the person is shown
+
+Claim only what the run measured. Name every check reading undeclared and every check reading
+unknown, in its own word, and give the count of criteria reading unanswered. Never report a check
+reading undeclared as one that passed. Version 5 printed that every layer ran and found nothing
+while one tool had not run.
+
+After `close` has written the record, run `audit` and print its lines before you say the
+verdict word, so a person sees what did not run first. `close` writes the last check, which is
+why `audit` runs after it.
+
+Name the catalog notes by count as well. A note is a guide the code contradicts, or a recipe whose
+command no longer runs. A change no tool row read is a note. So is a pattern the framework wants
+and no guide names. A recipe research or design judged not to fit this task is a note too.
+`checks` writes it from the `recipeFit` field of each research file and of `design-closed.json`,
+and a mismatch never fails a review. Review writes
+nothing to the catalog. A person decides whether a note becomes a proposal.
+
+## audit
+
+Run:
+```
+"${CLAUDE_PLUGIN_ROOT}"/skills/review/scripts/review-actions.sh audit "<task_folder>"
+```
+It reads the review record and changes nothing. It prints one line per check, in the record's
+order: the id, the verdict, and one word for how the verdict came about.
+
+| Word | What it says |
+|---|---|
+| `ran` | a command or a lens ran and returned the verdict |
+| `read` | a record field decided it, and nothing ran |
+| `off` | the project turned the thing off: a kind disabled, a row the recipe declares absent, mutation testing not opted in |
+| `could-not-look` | a recipe, a row, a file or a tool was absent, so the verdict is unknown or undeclared |
+| `awaiting-person` | the acceptance verifier read a row not met, and the person answers it at close |
+
+Then one line per surface: run, or not run with the reason, `disabled`, `unaffected` or `no harness`.
+Then one line with the counts per word. Exit 3 with no record, naming the file. Run it at any step
+after `checks`; the list grows as the record does.
+
+## What this skill records, and what it does not enforce
+
+The architecture reviewer runs under no dispatch record, so no hook bounds it. `dispatch-open`
+requires a work order id, and a task level review has no order. Widening that pattern would weaken
+the field protecting every per order permission, and this role needs no permission. Its tool list and
+its own instructions are therefore the whole of the bound. The acceptance verifier runs the same
+way, and it holds Bash and Write, so nothing but its instructions keeps it out of the code path. Say
+that plainly when a person asks what a dispatch enforces, rather than describing either role as fenced.
+
+The script names it when the code path moved, or its tree went dirty, since `checks` ran. A file
+the role left behind is caught there. With a person present it is a warning in the task record.
+On an autonomous run it refuses at exit 51. It is never a finding.
+
+The tool grants in this file's own frontmatter hold for one turn. The runtime clears them at your
+next message to the person, so a review spanning several turns asks again for the Bash rule. That is
+how a skill's grants work, not a fault in this one.
+
+## The exit codes
+
+One number never means two things, and these keep the meanings implementation gave them.
+
+| Code | What it says |
+|---|---|
+| 1 | the given path holds no `task.json`, so it is not a task folder |
+| 3 | the script could not do its job: a missing argument, a tool not on PATH, a folder or a record it could not resolve or read, or a head that is not where the range ends, or past it by more than removing the files `task environment up` added |
+| 5 | the recorded code path exists and is not a git repository |
+| 14 | the project's own `project.json` exists and is not valid JSON |
+| 15 | the recorded code path does not exist on disk |
+| 51 | on an autonomous run only: the code moved since `checks`, or a text the reviewer read changed since `brief`. With a person present each is a warning |
+| 52 | the findings file could not be read as a findings file, or the evidence file as the verifier's rows |
+| 61 | the code repository's tree is dirty |
+| 62 | a step ran out of order, and what it depends on recorded nothing |
+| 63 | the previous record could not be archived, so the write was refused |
+| 66 | implementation has not finished, so there is no `finished.json` |
+| 70 | a person's answer was passed on a run with nobody present |
+| 73 | the check recipe moved after this task's baseline was taken, and the baseline is pinned to the body it read |
+| 77 | the project records no framework |
+| 79 | the call ran outside the task's worktree. Enter the tree, the way `/aida:next` does, and run it again. `read` alone runs from anywhere |
+| 124 | a frozen test or support file changed after its freeze. The message names each order and file. Report it to the person: only a person puts the file back, then finish and review run again |
+
+Nine of these are review's own. The other eight arrive with the libraries both stages source, and each
+keeps the meaning implementation gave it. Code 70 is the one an autonomous run meets in ordinary use,
+the first time an `--accept-baseline` or a `--row` is passed.
+
+Code 73 has no review action behind it, so put its three routes to the person. The first: run
+`checks` again with `--check-recipe` naming the recipe body the baseline read, whose sha256 the
+refusal prints. Nothing here restores a body the catalog replaced. The second: adopt the new body
+with the implement skill's `recipe-refresh --check-recipe`, as its `references/preconditions.md`
+says. It adopts only when each tool row of the new body reads met or undeclared on the tree.
+Otherwise it refuses and names the row. The third: abandon the baseline, by moving
+`implementation/baseline.json` and `implementation/baseline-output/` aside and running the
+implement skill's `preconditions` again. Say what that costs. The new baseline reads the tree as it
+stands, which already holds this task's code. Checks 5 to 7 then subtract this task's own findings
+and read `met` whatever the tools found. No action retakes a baseline on its own, for that reason.
+A person moves the two files by hand, deliberately.
+
+Read a refusal and act on it. Do not repeat the same call unchanged.

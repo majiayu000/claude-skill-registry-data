@@ -1,0 +1,38 @@
+{
+  "name": "terraform-skill",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/terraform-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "terraform-skill-aws-samples-sample-apex-skills",
+  "downloaded_at": "2026-11-10T06:39:32.387080Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug, refactor",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/terraform-skill/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/terraform-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing, reviewing, or debugging Terraform/OpenTofu modules, tests, CI, scans, or state ops - diagnoses failure mode (identity churn, secrets, blast radius, CI drift, state corruption) with version-aware guards."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "build",
+  "repo": "clice-io/kotatsu",
+  "path": ".claude/skills/build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/clice-io/kotatsu",
+  "dir_name": "build-clice-io-kotatsu",
+  "downloaded_at": "2026-11-10T07:06:31.039021Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, compile, debug",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "clice-io",
+  "source_url": "https://github.com/clice-io/kotatsu/blob/main/.claude/skills/build/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/clice-io/kotatsu/blob/main/.claude/skills/build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build kotatsu. Optional arg = cmake preset (default `debug`; also coverage, relwithdebinfo, asan, ubsan, asan-ubsan, tsan, no-exceptions, no-exceptions-no-rtti). Runs in a forked context \u2014 compile output and mechanical fixes stay out of the main conversation; only the outcome returns."
+}

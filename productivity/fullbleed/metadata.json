@@ -1,0 +1,37 @@
+{
+  "name": "fullbleed",
+  "repo": "fullbleed-engine/fullbleed-official",
+  "path": "skills/fullbleed/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/fullbleed-engine/fullbleed-official",
+  "dir_name": "fullbleed",
+  "downloaded_at": "2026-11-10T07:54:06.457722Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fullbleed-engine",
+  "source_url": "https://github.com/fullbleed-engine/fullbleed-official/blob/master/skills/fullbleed/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fullbleed-engine/fullbleed-official/blob/master/skills/fullbleed/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use Fullbleed PDF Engine to create or modify document-generation projects for PDFs, reports, invoices, statements, forms, certificates, letters, accessible PDF/PDF-UA, archival PDF/PDF-A, print-ready PDF/PDF-X, transactional output, and fixed or reflowing variable-data/VDP jobs from structured content using Python and HTML/CSS. Trigger for agent-authored print documents, deterministic PDF workflows, existing PDF-template overlays, preview/inspection, validation, or compiled high-volume output; do not trigger merely to screenshot or automate an arbitrary live website."
+}

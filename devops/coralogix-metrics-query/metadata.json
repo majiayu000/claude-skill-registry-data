@@ -1,0 +1,39 @@
+{
+  "name": "coralogix-metrics-query",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/coralogix-metrics-query/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "coralogix-metrics-query",
+  "downloaded_at": "2026-11-10T06:39:47.420361Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-metrics-query/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-metrics-query/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "PromQL fundamentals and metric discovery/query workflow. Load when you need to explore metrics in your investigation or to answer a question about metrics. For service-level RED metrics (error rate, latency percentiles, throughput) or pod/JVM resource saturation, load the `coralogix-service-catalog` skill instead \u2014 it is a pre-aggregated path for that data; this skill is for custom, infrastructure, and hand-written PromQL work."
+}

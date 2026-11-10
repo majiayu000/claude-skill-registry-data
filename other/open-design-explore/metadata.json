@@ -1,0 +1,37 @@
+{
+  "name": "open-design-explore",
+  "repo": "feimacode/open-design-agent-kit",
+  "path": ".agents/skills/open-design-explore/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/feimacode/open-design-agent-kit",
+  "dir_name": "open-design-explore",
+  "downloaded_at": "2026-11-10T07:46:37.142538Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feimacode",
+  "source_url": "https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-explore/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-explore/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explore 2\u20134 deliberately different design directions for one brief, compare them side by side, then build out the one you pick \u2014 use whenever the user explicitly asks for several options, directions, alternatives or versions of a design to compare (\"show me three directions for\u2026\", \"a few different takes on\u2026\"), even if they don't mention Open Design; not for a single, ordinary design request"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "eks-recon",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/eks-recon/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "eks-recon",
+  "downloaded_at": "2026-11-10T06:39:28.294575Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-recon/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-recon/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "EKS cluster reconnaissance and environment discovery \u2014 reports the raw FACTS of a cluster and its environment. Detects compute (Karpenter, MNG, Auto Mode, Fargate, nodes/AMI), networking (VPC/CNI, subnets, load balancers, DNS), security facts (auth mode, IRSA/Pod Identity, RBAC, encryption), add-ons/Helm, observability, workloads (Deployments, StatefulSets, PDBs, HPAs), storage (CSI, StorageClasses, PVs, backup tooling), IaC (Terraform, CDK, eksctl), CI/CD (Actions, ArgoCD, Flux), and cluster insights. Use to discover or document the current state of an EKS cluster \u2014 'what am I running', 'tell me about my setup', 'what version am I on', inventory before an upgrade/migration/design. Reports facts only; it does not score, rate, plan, or recommend, and overlapping facts with other skills is fine. Route elsewhere for a JUDGMENT or ARTIFACT: readiness scoring/deprecated-API checks (eks-upgrade-check), GREEN/AMBER/RED audits (eks-operation-review), design docs/diagrams (eks-design)."
+}

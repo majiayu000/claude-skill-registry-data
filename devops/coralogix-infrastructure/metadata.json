@@ -1,0 +1,38 @@
+{
+  "name": "coralogix-infrastructure",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/coralogix-infrastructure/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "coralogix-infrastructure",
+  "downloaded_at": "2026-11-10T06:39:48.361000Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, infra, infrastructure",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-infrastructure/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-infrastructure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find and inspect infrastructure resources: monitored resource types, resource inventory, health history, raw source data, and configuration changes. Load when the user asks to \"show resource types\", \"list infrastructure resources\", \"what resources of this kind are monitored\", \"is this resource healthy\", \"resource health history\", \"when did this resource go critical\", \"get raw resource data\", \"what changed on this host\", \"which resources changed configuration\", \"infrastructure inventory\", \"find resources by name\", \"filter resources by service or environment\", or wants to explore infrastructure resources and their data."
+}

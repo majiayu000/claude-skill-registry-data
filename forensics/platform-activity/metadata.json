@@ -1,0 +1,37 @@
+{
+  "name": "platform-activity",
+  "repo": "asusoda/platform",
+  "path": "skills/platform-activity/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/asusoda/platform",
+  "dir_name": "platform-activity",
+  "downloaded_at": "2026-11-10T06:36:29.834605Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: evidence, triage",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "asusoda",
+  "source_url": "https://github.com/asusoda/platform/blob/main/skills/platform-activity/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/asusoda/platform/blob/main/skills/platform-activity/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when something in a Platform org broke or needs triage, such as errors, open notifications, the audit log, failed GitHub Actions runs, and fixing a failure with a pull request."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "coralogix-docs",
+  "repo": "coralogix/cx-cli",
+  "path": "skills/coralogix-docs/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "coralogix-docs-coralogix-cx-cli",
+  "downloaded_at": "2026-11-10T07:11:25.671984Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/skills/coralogix-docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/skills/coralogix-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search and read official Coralogix platform documentation using **`cx docs search`** and **`cx docs fetch`**.\nUse when the user asks how Coralogix features work, how to configure or use the UI, set up integrations\n(OpenTelemetry, agents, collectors, webhooks), manage API keys, explore spans/traces/logs in the product,\nconfigure alerts/SLOs/dashboards, or needs authoritative product docs \u2014 not live tenant telemetry."
+}

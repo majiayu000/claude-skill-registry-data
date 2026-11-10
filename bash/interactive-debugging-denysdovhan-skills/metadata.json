@@ -1,0 +1,38 @@
+{
+  "name": "interactive-debugging",
+  "repo": "denysdovhan/skills",
+  "path": "skills/interactive-debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/denysdovhan/skills",
+  "dir_name": "interactive-debugging-denysdovhan-skills",
+  "downloaded_at": "2026-11-10T07:23:44.512875Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "denysdovhan",
+  "source_url": "https://github.com/denysdovhan/skills/blob/main/skills/interactive-debugging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/denysdovhan/skills/blob/main/skills/interactive-debugging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when debugging runtime behavior requires live data from the running app, temporary instrumentation, or hypothesis verification through logs. Trigger for async timeouts, stale or incorrect state updates, race conditions, event ordering bugs, intermittent failures, browser/client behavior that static inspection cannot explain, or any issue where the agent should create a local debug HTTP server, insert temporary probes, ask the user to reproduce, inspect .debug/debug.log, then remove all debug instrumentation and assets."
+}

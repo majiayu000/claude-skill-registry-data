@@ -1,0 +1,37 @@
+{
+  "name": "cc-refactoring-core",
+  "repo": "bovinphang/frontend-craft",
+  "path": "skills/cc-refactoring-core/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/bovinphang/frontend-craft",
+  "dir_name": "cc-refactoring-core",
+  "downloaded_at": "2026-11-10T06:50:20.487726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bovinphang",
+  "source_url": "https://github.com/bovinphang/frontend-craft/blob/main/skills/cc-refactoring-core/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bovinphang/frontend-craft/blob/main/skills/cc-refactoring-core/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when reorganizing existing code, extracting responsibilities, moving modules, or simplifying structure while preserving observable behavior. Do not use for new functionality, behavior-changing defect fixes, or dependency upgrades."
+}

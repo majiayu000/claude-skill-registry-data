@@ -1,0 +1,37 @@
+{
+  "name": "billing",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/research/skills/billing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "billing-errorproofdev-skills",
+  "downloaded_at": "2026-11-10T07:41:17.439535Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/billing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/billing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the question is about money on a Bright Data account: current balance, credit left, what was charged, spend or cost history, credits or free tier used, cost per zone, product or dataset, or what a job will cost before it runs. Read-only, and it never buys or changes anything. Not scraping or extraction (use scrape), not how to drive the CLI itself (use brightdata-cli), not a refused or failing call (use agent-onboarding)."
+}

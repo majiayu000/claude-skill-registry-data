@@ -1,0 +1,37 @@
+{
+  "name": "cx-profiling",
+  "repo": "coralogix/cx-cli",
+  "path": "skills/cx-profiling/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "cx-profiling",
+  "downloaded_at": "2026-11-10T07:11:24.511008Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/skills/cx-profiling/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/skills/cx-profiling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Query Coralogix continuous-profiling data with the `cx profiling` CLI \u2014 find which services use the most CPU or memory, which profile types a service has, what profiles can be filtered by, when usage spiked and which pod or version caused it, and which code paths and functions a service spends its CPU or memory on (flame graphs). Use when the user asks \"which services use the most CPU\", \"top memory consumers\", \"what is service X spending CPU on\", \"hot functions\", \"flame graph for a service\", \"why is this service using so much CPU\", \"memory allocations by function\", \"CPU spike by pod\", \"which version increased CPU\", \"continuous profiling\", \"profiling data\", or wants to explore profiles of a service. For how much CPU or memory a service or pod uses and whether it is saturated, use `cx-service-catalog` instead."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "spring-boot-4",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/spring-boot/spring-boot-4/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "spring-boot-4",
+  "downloaded_at": "2026-11-10T07:25:25.260618Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/spring-boot/spring-boot-4/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/spring-boot/spring-boot-4/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build, review and upgrade Spring Boot 4 web services (checked against Boot 4.1.2, Spring Framework 7.0.10, Jackson 3.1.7). Covers the split starters and test starters, Jackson 3 (tools.jackson packages, @JacksonComponent, ValueSerializer, JsonMapperBuilderCustomizer, the ObjectMapper bean Boot 4 ignores, default changes that alter JSON silently), built-in method validation versus class-level @Validated, HandlerMethodValidationException and RFC 9457 problem details with per-field errors, Boot 4 test packages (@MockitoBean, RestTestClient, TestRestTemplate opt-in), RestTemplateBuilder and HTTP client moves, API versioning, core @Retryable and virtual threads. Use when a build uses spring-boot-starter-parent 4.x, when upgrading from Boot 3, when a build fails on com.fasterxml.jackson.databind, @MockBean, @WebMvcTest or TestRestTemplate, or when customizing JSON, validating requests, shaping error responses or writing Spring MVC tests."
+}

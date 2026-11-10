@@ -1,0 +1,37 @@
+{
+  "name": "merge-candidates",
+  "repo": "apache/magpie",
+  "path": "plugins/magpie-pr-management/skills/merge-candidates/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/apache/magpie",
+  "dir_name": "merge-candidates",
+  "downloaded_at": "2026-11-10T06:30:10.837057Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "apache",
+  "source_url": "https://github.com/apache/magpie/blob/main/plugins/magpie-pr-management/skills/merge-candidates/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/apache/magpie/blob/main/plugins/magpie-pr-management/skills/merge-candidates/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Identify trivial, low-risk PRs in the `ready for maintainer review` queue\nof <upstream> that pass every quality gate and touch only supplementary\nareas (docs, changelog, translations, tests) \u2014 the \"express lane\".\nSurfaces and ranks candidates with per-PR diff summaries, an\nall-gates-green attestation, and the exact merge command. On explicit\nper-PR confirmation it can submit an APPROVE review, exactly as\npr-management-code-review does. It never merges itself \u2014 automated merge\nis the deliberately-deferred Agentic Autonomous mode."
+}

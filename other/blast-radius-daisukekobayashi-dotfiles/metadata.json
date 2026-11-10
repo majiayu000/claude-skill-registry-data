@@ -1,0 +1,37 @@
+{
+  "name": "blast-radius",
+  "repo": "daisukekobayashi/dotfiles",
+  "path": "skills/local/blast-radius/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/daisukekobayashi/dotfiles",
+  "dir_name": "blast-radius-daisukekobayashi-dotfiles",
+  "downloaded_at": "2026-11-10T07:17:15.409274Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "daisukekobayashi",
+  "source_url": "https://github.com/daisukekobayashi/dotfiles/blob/main/skills/local/blast-radius/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/daisukekobayashi/dotfiles/blob/main/skills/local/blast-radius/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use only when the user explicitly invokes blast-radius to test the assumptions a change's safety depends on. May create isolated verification artifacts; does not repair the implementation."
+}

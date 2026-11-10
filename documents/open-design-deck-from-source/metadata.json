@@ -1,0 +1,39 @@
+{
+  "name": "open-design-deck-from-source",
+  "repo": "feimacode/open-design-agent-kit",
+  "path": ".agents/skills/open-design-deck-from-source/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/feimacode/open-design-agent-kit",
+  "dir_name": "open-design-deck-from-source",
+  "downloaded_at": "2026-11-10T07:46:45.720044Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, word, markdown",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feimacode",
+  "source_url": "https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-deck-from-source/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-deck-from-source/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a document (a report, spec, spreadsheet, PDF, existing deck, or repository files such as a CHANGELOG) into a deck or one-pager, storyline first, with every number traced back to the source \u2014 use whenever the user wants slides, a deck, a presentation or a one-pager made from an existing document, spreadsheet, PDF or deck, or from repository files (CHANGELOG, RFCs, architecture decision records, metrics CSVs), even if they don't mention Open Design"
+}

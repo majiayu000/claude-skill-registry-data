@@ -1,0 +1,39 @@
+{
+  "name": "ecs-security",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/ecs-security/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "ecs-security",
+  "downloaded_at": "2026-11-10T06:39:30.779056Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-security/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Security and compliance guidance for Amazon ECS \u2014 \"ECS was unable to assume the role\", task role vs execution role, iam:PassRole, confused-deputy aws:SourceArn trust, Fargate vs EC2 shared responsibility, injecting Secrets Manager/SSM secrets (trailing-colon JSON-key gotcha), readonlyRootFilesystem / non-root / drop capabilities, ECS Exec governance, security-group-per-task, VPC endpoint policies, GuardDuty ECS Runtime Monitoring, ECR Inspector scanning, image signing, Fargate FIPS, or PCI/HIPAA/FedRAMP. Walks a discovery-driven 7-layer stack plus the AWS-canonical baseline and a 30/60/90 roadmap. Trigger even if \"compliance\" is never said \u2014 any ECS hardening, task-trust fix, or secrets-injection qualifies. Skip for EKS/Kubernetes (eks-security), GenAI/GPU security (ecs-genai), App Runner/Lambda, auditing a live estate's operational posture (ecs-operation-review \u2014 \"audit my ECS security posture\" matches both), or account-level security with no ECS angle."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "humanize",
+  "repo": "alencarljfrj/ui-skills",
+  "path": "skills/aashaexo--humanize/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/alencarljfrj/ui-skills",
+  "dir_name": "aashaexo-humanize",
+  "downloaded_at": "2026-11-10T06:20:52.069876Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, blog",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "writer",
+      "blog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alencarljfrj",
+  "source_url": "https://github.com/alencarljfrj/ui-skills/blob/main/skills/aashaexo--humanize/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alencarljfrj/ui-skills/blob/main/skills/aashaexo--humanize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remove signs of AI-generated writing from prose, and keep it out of a repo.\nUse when drafting, editing, or reviewing text to make it sound natural and\nhuman, or when auditing a whole docs folder for AI slop. Detects 41 patterns\nacross content, language, style, communication, filler, and rhetoric,\nincluding: significance inflation, promotional language, -ing tails, vague\nattributions, AI vocabulary, copula avoidance, negative parallelisms, false\nagency, em dash overuse, chatbot artifacts, hedging stacks, staccato drama,\nand aphorism formulas. Includes voice calibration, a no-fabrication rule,\nstatistical tells, and a draft -> audit -> final rewrite loop."
+}

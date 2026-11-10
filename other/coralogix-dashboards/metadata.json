@@ -1,0 +1,38 @@
+{
+  "name": "coralogix-dashboards",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/coralogix-dashboards/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "coralogix-dashboards",
+  "downloaded_at": "2026-11-10T06:39:46.250472Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-dashboards/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/coralogix-dashboards/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Dashboard analysis and editing workflow and rules for using dashboard JSON, filters, variables, and time ranges. Load when the user provides dashboard context (for example a dashboard link) or asks to create or change a dashboard."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dotkernel-project-variants",
+  "repo": "dotkernel/dotboost",
+  "path": ".claude/skills/dotkernel-project-variants/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dotkernel/dotboost",
+  "dir_name": "dotkernel-project-variants",
+  "downloaded_at": "2026-11-10T07:29:49.065974Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dotkernel",
+  "source_url": "https://github.com/dotkernel/dotboost/blob/main/.claude/skills/dotkernel-project-variants/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dotkernel/dotboost/blob/main/.claude/skills/dotkernel-project-variants/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use at the start of any non-trivial task in a Dotkernel repository, and whenever a convention might differ between projects \u2014 to work out whether this is Dotkernel API, Admin, Frontend, Light, Queue or a derived project, and what that implies for handler naming, authorization config, responses, forms, templates, documentation and tests. Also use when a skill's guidance does not match what the repo actually contains, or when the same feature has to be built in more than one Dotkernel project."
+}

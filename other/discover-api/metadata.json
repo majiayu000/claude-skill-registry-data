@@ -1,0 +1,38 @@
+{
+  "name": "discover-api",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/research/skills/discover-api/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "discover-api",
+  "downloaded_at": "2026-11-10T07:41:26.856372Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/discover-api/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/discover-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use Bright Data's Discover API \u2014 intent-ranked, AI-relevance-scored web search\nat scale (not keyword SERP). Trigger a discovery job and retrieve ranked results\n(link, title, description, relevance_score) with optional parsed page content.\nUse when the user wants semantic/intent-based web search, \"find pages about\n<topic> that match <goal>\", web-grounded retrieval for an LLM, or results\nfiltered by relevance rather than raw keyword rank. Covers the REST API\n(POST/GET /discover), the CLI (`bdata discover`), and the Python/JS SDKs\n(`client.discover`), including the standard/zeroRanking/deep/fast modes. This is\nthe foundation skill for `live-research` and `rag-pipeline`. For keyword SERP use\n`search`; for structured platform data use `data-feeds`."
+}

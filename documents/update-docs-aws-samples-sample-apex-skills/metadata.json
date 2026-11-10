@@ -1,0 +1,38 @@
+{
+  "name": "update-docs",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/update-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "update-docs-aws-samples-sample-apex-skills",
+  "downloaded_at": "2026-11-10T06:39:30.307481Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/update-docs/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/update-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit and update every documentation surface in the APEX repo against the current state of skills, steering workflows, README marker tables, and the Docusaurus site under misc/website/. After any change to a skill (rename, retire, add, edit description), walk the repo, re-run script-managed surfaces if their --check fails, and reason through every tracked prose *.md to catch references that need updating. Use after adding/removing/renaming a skill, after editing SKILL.md frontmatter, after editing README marker blocks, or before publishing a docs change. Also use when the user says \"update docs\", \"sync docs\", \"check docs\", \"run update-docs\", or mentions that documentation might be stale."
+}

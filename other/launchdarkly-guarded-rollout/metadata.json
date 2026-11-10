@@ -1,0 +1,37 @@
+{
+  "name": "launchdarkly-guarded-rollout",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-guarded-rollout/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-guarded-rollout",
+  "downloaded_at": "2026-11-10T06:39:52.769081Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-guarded-rollout/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-guarded-rollout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure guarded rollouts with progressive traffic increases, metric monitoring, and automatic rollback. Use when releasing features gradually with safety thresholds."
+}

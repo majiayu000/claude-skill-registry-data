@@ -1,0 +1,36 @@
+{
+  "name": "ui-plugin-navigation",
+  "repo": "brenocmlo/AutomacaoGo",
+  "path": ".claude/skills/ui-plugin-navigation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/brenocmlo/AutomacaoGo",
+  "dir_name": "ui-plugin-navigation",
+  "downloaded_at": "2026-11-10T06:51:22.095473Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category communication scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brenocmlo",
+  "source_url": "https://github.com/brenocmlo/AutomacaoGo/blob/main/.claude/skills/ui-plugin-navigation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brenocmlo/AutomacaoGo/blob/main/.claude/skills/ui-plugin-navigation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Discover UI plugin panels relevant to the current task and surface a one-click pill in chat to open (toggle) them in the side pane. Use when a running UI plugin's panel would help with what the user is doing, or right after the user enables a new UI plugin pane and a shortcut to open it is handy."
+}

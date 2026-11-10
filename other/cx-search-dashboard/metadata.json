@@ -1,0 +1,37 @@
+{
+  "name": "cx-search-dashboard",
+  "repo": "coralogix/cx-cli",
+  "path": "skills/cx-search-dashboard/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "cx-search-dashboard",
+  "downloaded_at": "2026-11-10T07:11:28.293265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/skills/cx-search-dashboard/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/skills/cx-search-dashboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"find a dashboard\", \"search dashboards\", \"does a dashboard exist for X\", \"find widgets that query Y\", \"which dashboards use this field\", \"find a dashboard about errors\", \"look up dashboards by description\", \"search for existing monitoring dashboards\", \"find widgets that reference a field\", or wants to discover existing Coralogix dashboards or widgets using natural-language or field-based search."
+}

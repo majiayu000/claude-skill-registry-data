@@ -1,0 +1,38 @@
+{
+  "name": "oidc-client",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/oauth/oidc-client/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "oidc-client",
+  "downloaded_at": "2026-11-10T07:25:23.925133Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/oauth/oidc-client/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/oauth/oidc-client/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build and review OAuth 2.x and OpenID Connect clients and resource servers in Node.js/TypeScript with openid-client 6.x, jose 6.x and oauth4webapi 3.x (checked against 6.8.8, 6.2.14, 3.8.8), per the OAuth Security BCP (RFC 9700) and OAuth 2.1. Covers code flow + PKCE S256 login with state and nonce stored server-side and used once, the redirect_uri openid-client sends behind a proxy, RFC 9207 iss checks, what openid-client verifies in ID tokens, JWT access token validation in APIs (RFC 9068 typ at+jwt, issuer, audience, pinned algorithms, required exp, JWKS from discovery with rotation, RFC 6750 errors), refresh token rotation with reuse detection (single-flight refresh, storing the rotated token, invalid_grant vs outages) and logout. Use when code imports openid-client, jose or oauth4webapi, when adding login, SSO or OIDC to an app or BFF, protecting an API with bearer JWTs, refreshing tokens, or on openid-client v5 idioms (Issuer.discover, generators, client.callback) or hand-decoded JWTs."
+}

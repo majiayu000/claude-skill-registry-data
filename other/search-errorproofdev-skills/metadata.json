@@ -1,0 +1,37 @@
+{
+  "name": "search",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/research/skills/search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "search-errorproofdev-skills",
+  "downloaded_at": "2026-11-10T07:41:14.477282Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the task starts from a search query instead of a known URL: Google, Bing, Yandex or another search engine results, vertical result pages such as news, images, shopping, travel or maps, AI Mode, SERP API, \"top 100 results\", keyword rank tracking, or what ChatGPT, Gemini, Perplexity, Google AI Mode or another answer engine answers about a brand. Not one known page (use fetch), not records from a known place like Google Maps reviews or LinkedIn profiles (use scrape), not cost or credits (use billing), not auth failures (use agent-onboarding)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "orca-cli",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/ai/skills/orca-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "orca-cli-errorproofdev-skills",
+  "downloaded_at": "2026-11-10T07:41:09.401382Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/ai/skills/orca-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/ai/skills/orca-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operate Orca-managed worktrees, folder contexts, terminals, repos, automations, worktree comments, and Orca's embedded browser through the `orca` CLI. Use when the user says \"$orca-cli\", \"Orca worktree\", \"child worktree\", \"spawn codex/claude in a worktree\", \"read/wait/send Orca terminal\", \"handoff\" / \"handover\" / \"give this to another agent\", or \"Orca browser\". Prefer it over raw git worktree, ad hoc PTYs, or Computer Use when Orca state is involved. Use Computer Use only when a visible window needs GUI control that a CLI, filesystem, or API cannot do."
+}

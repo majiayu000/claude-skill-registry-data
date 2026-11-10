@@ -1,0 +1,38 @@
+{
+  "name": "omen",
+  "repo": "gabrielmoreira/agent-skills-mirror",
+  "path": "mirrors/repos/simota@agent-skills/omen/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/gabrielmoreira/agent-skills-mirror",
+  "dir_name": "omen-gabrielmoreira-agent-skills-mirror",
+  "downloaded_at": "2026-11-10T07:55:18.101533Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, vulnerability, audit",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gabrielmoreira",
+  "source_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/main/mirrors/repos/simota@agent-skills/omen/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gabrielmoreira/agent-skills-mirror/blob/main/mirrors/repos/simota@agent-skills/omen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Enumerating failure modes via pre-mortem analysis. Systematically identifies failure scenarios for plans, designs, and features, scoring them with RPN/AP. Does not write code."
+}

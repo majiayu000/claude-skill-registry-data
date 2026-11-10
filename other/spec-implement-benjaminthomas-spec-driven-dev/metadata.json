@@ -1,0 +1,37 @@
+{
+  "name": "spec-implement",
+  "repo": "benjaminthomas/spec-driven-dev",
+  "path": "plugin/skills/spec-implement/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/benjaminthomas/spec-driven-dev",
+  "dir_name": "spec-implement-benjaminthomas-spec-driven-dev",
+  "downloaded_at": "2026-11-10T06:44:57.365624Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: orchestration=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "orchestration",
+      "orchestrator"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "benjaminthomas",
+  "source_url": "https://github.com/benjaminthomas/spec-driven-dev/blob/main/plugin/skills/spec-implement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/benjaminthomas/spec-driven-dev/blob/main/plugin/skills/spec-implement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orchestrate parallel implementation of a feature specification by dispatching coder agents batch-by-batch with code review gates between batches. Use this skill when the user says \"implement this feature\", \"start implementing\", \"run the spec\", \"execute the plan\", \"continue implementing\", \"approved, run it through\", or wants to begin coding a previously planned feature from a specs/{feature}/ folder. Also use when the user says \"/spec-implement\" (or their host's equivalent invocation syntax) or drags a spec folder into the conversation and asks to implement it. This skill does NOT write code itself \u2014 it orchestrates coder subagents that work in parallel."
+}

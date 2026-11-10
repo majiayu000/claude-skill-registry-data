@@ -1,0 +1,37 @@
+{
+  "name": "network-log-analyzer",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/network-log-analyzer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "network-log-analyzer",
+  "downloaded_at": "2026-11-10T06:39:46.656356Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/network-log-analyzer/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/network-log-analyzer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a user is troubleshooting AWS network connectivity: a connection times out, is refused, or resets; traffic flows only one way; flow logs show REJECT and they need to know whether a security group or network ACL caused it; TCP handshakes fail; transfers are slow or retransmit; large packets hang; idle connections drop; or they want top talkers or the real source behind a NAT gateway or EKS pod. Also use it whenever the user shares or describes VPC Flow Logs or a packet capture (tcpdump, Wireshark, tshark), including traffic that is missing from flow logs or unexpected packet sizes in a capture, even if they don't name the problem. Not for name-resolution failures such as NXDOMAIN, SERVFAIL, or a name resolving to the wrong address; use the VPC DNS investigation skill for those."
+}

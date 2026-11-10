@@ -1,0 +1,40 @@
+{
+  "name": "eks-operation-review",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "devops-agent/eks-operation-review/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "eks-operation-review",
+  "downloaded_at": "2026-11-10T06:39:35.415814Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, kubernetes, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/devops-agent/eks-operation-review/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/devops-agent/eks-operation-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Perform a structured EKS operational excellence assessment against a live cluster. Covers 10 areas: cluster lifecycle, infrastructure as code, access and identity, observability, workload configuration, networking, autoscaling, deployment practices, operational processes, and add-on management. Produces a GREEN/AMBER/RED rated report with prioritized recommendations. Activate for any request to audit, review, health-check, or score an EKS cluster operational posture, including section-scoped reviews and version currency / current-state add-on and deprecated-API review with no target version. Not for upgrade readiness assessment against a target version, cluster discovery, or architectural design advice."
+}

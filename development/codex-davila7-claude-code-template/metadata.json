@@ -1,0 +1,40 @@
+{
+  "name": "codex",
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/development/codex/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/davila7/claude-code-templates",
+  "dir_name": "codex-davila7-claude-code-template",
+  "downloaded_at": "2026-11-10T07:21:26.958505Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, software, debug, refactor",
+    "score": 5,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "software",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "davila7",
+  "source_url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/development/codex/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/development/codex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to run Codex CLI (codex exec, codex resume) or references OpenAI Codex for code analysis, refactoring, or automated editing. Uses GPT-5.2 by default for state-of-the-art software engineering."
+}

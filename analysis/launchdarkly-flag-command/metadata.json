@@ -1,0 +1,37 @@
+{
+  "name": "launchdarkly-flag-command",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-flag-command/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-flag-command",
+  "downloaded_at": "2026-11-10T06:39:48.570702Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-flag-command/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-flag-command/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resolve `/flag` style requests into the right LaunchDarkly flag lookup flow. Use when the user types `/flag`, asks to quickly find a flag by name/key, wants a direct flag detail summary, or needs fast disambiguation between similar flags."
+}

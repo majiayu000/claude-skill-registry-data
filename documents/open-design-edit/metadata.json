@@ -1,0 +1,37 @@
+{
+  "name": "open-design-edit",
+  "repo": "feimacode/open-design-agent-kit",
+  "path": ".agents/skills/open-design-edit/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/feimacode/open-design-agent-kit",
+  "dir_name": "open-design-edit",
+  "downloaded_at": "2026-11-10T07:46:34.148185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feimacode",
+  "source_url": "https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-edit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feimacode/open-design-agent-kit/blob/main/.agents/skills/open-design-edit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Steer one part of an existing design in one direction \u2014 bolder, quieter, denser, roomier, simpler, more polished or sturdier \u2014 and change nothing else, with a check that proves only that part changed and a before and after to show \u2014 use whenever the user wants one part of an existing Open Design design changed in a direction rather than redesigned (\"make the hero pop\", \"tone down the footer\", \"the table feels cramped\", \"simplify this section\", \"clean up the pricing cards\", \"what if the names are really long?\", \"make it bolder\"), or clicked a verb in the preview, even if they don't mention Open Design; not for a new design or a whole new direction"
+}

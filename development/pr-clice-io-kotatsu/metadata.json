@@ -1,0 +1,40 @@
+{
+  "name": "pr",
+  "repo": "clice-io/kotatsu",
+  "path": ".claude/skills/pr/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/clice-io/kotatsu",
+  "dir_name": "pr-clice-io-kotatsu",
+  "downloaded_at": "2026-11-10T07:06:30.850259Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug, refactor",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "clice-io",
+  "source_url": "https://github.com/clice-io/kotatsu/blob/main/.claude/skills/pr/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/clice-io/kotatsu/blob/main/.claude/skills/pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The full pipeline from \"code is ready\" to \"ready to merge\" \u2014 pre-push verification, three-way self-review, opening the PR, watching CI and review threads. Read BEFORE committing, opening a PR, or checking on an open one."
+}

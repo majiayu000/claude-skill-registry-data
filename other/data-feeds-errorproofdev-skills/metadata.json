@@ -1,0 +1,37 @@
+{
+  "name": "data-feeds",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/research/skills/data-feeds/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "data-feeds-errorproofdev-skills",
+  "downloaded_at": "2026-11-10T07:41:20.923918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/data-feeds/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/research/skills/data-feeds/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extract structured data from thousands of pre-built Bright Data scrapers (e-commerce, social, jobs, maps, real estate and more) via the Bright Data CLI (`bdata pipelines search`, `info`, `run`). Use when the user wants clean JSON from a known site rather than raw HTML. Hands off to `scrape` when no scraper fits and to `search` when target URLs must be discovered first. Requires the Bright Data CLI 0.4.0+; proactively guides install + login if missing."
+}

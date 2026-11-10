@@ -1,0 +1,40 @@
+{
+  "name": "ecs-architect",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/ecs-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "ecs-architect",
+  "downloaded_at": "2026-11-10T06:39:31.308586Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, cd, kubernetes, deploy",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "cd",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-architect/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/ecs-architect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when choosing and architecting an Amazon ECS deployment model for a NEW workload \u2014 Fargate vs ECS on EC2 vs Managed Instances vs Express Mode vs ECS Anywhere/External \u2014 plus capacity-provider strategy, task sizing, awsvpc/ENI density, networking, service parameters, and launch-type or topology migration (EC2 launch type to capacity providers/Managed Instances; Service Discovery to Service Connect). Also the shared ECS best-practices corpus. Triggers include \"which ECS launch type\", \"Fargate or EC2\", \"should I use Managed Instances\", \"migrate off EC2 launch type\", \"App Mesh to Service Connect\", \"migrate off App Runner\". Skip for existing-app replatform (ecs-modernize); auditing a live estate (ecs-operation-review); cost/TCO (ecs-cost-intelligence); inventory (ecs-recon); security (ecs-security); deployment/CICD (ecs-devops); observability (ecs-observability); GPU/ML design AND GPU launch-type choice (ecs-genai); Kubernetes/EKS (eks-design); Terraform generation of a settled design (use ecs-build)."
+}

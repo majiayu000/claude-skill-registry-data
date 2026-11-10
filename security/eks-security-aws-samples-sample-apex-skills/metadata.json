@@ -1,0 +1,39 @@
+{
+  "name": "eks-security",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/eks-security/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "eks-security-aws-samples-sample-apex-skills",
+  "downloaded_at": "2026-11-10T06:39:30.519961Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-security/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only scripted security reviews of a live Amazon EKS cluster (exposed / not exposed / unknown), plus hardening and compliance guidance. (1) CVE and advisory review - \"am I exposed to CVE-...\", \"check this AWS bulletin or GHSA against my cluster\", \"CVE review for EKS\" - verdicts for add-ons and images; kubelet and node-OS items are review-only. (2) Security event response - compromised image or package, leaked credential, suspicious pod - scope, record, contain, snapshot, fix, verify. (3) Posture check - \"would my cluster contain a compromised pod\", IMDS, NetworkPolicy, PSA, identity, logging, GuardDuty, endpoint, supply chain. Also hardening and audit prep - 7-layer stack, CIS, HIPAA/PCI-DSS/FedRAMP/SOC 2, Pod Identity vs IRSA, Access Entries, image signing. Skip for EKS knowledge (eks-best-practices), Well-Architected review (eks-well-architected-review), upgrade readiness (eks-upgrade-check), an operational review (eks-operation-review), inventory (eks-recon), GenAI model security (eks-genai), non-EKS."
+}

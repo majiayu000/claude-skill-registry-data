@@ -1,0 +1,37 @@
+{
+  "name": "thread-mentor",
+  "repo": "apache/magpie",
+  "path": "plugins/magpie-pr-management/skills/thread-mentor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/apache/magpie",
+  "dir_name": "thread-mentor",
+  "downloaded_at": "2026-11-10T06:30:10.565518Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "apache",
+  "source_url": "https://github.com/apache/magpie/blob/main/plugins/magpie-pr-management/skills/thread-mentor/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/apache/magpie/blob/main/plugins/magpie-pr-management/skills/thread-mentor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft a teaching-register comment on a GitHub issue or PR thread on the\nconfigured `<upstream>` repo, aimed at a contributor missing context the\nmaintainer would spell out. Reads the thread, decides\nwhether an intervention is warranted, drafts one comment per the tone\nguide and convention pointers, and waits for explicit confirmation before\nposting via `gh`. Escalates on the four hand-off triggers."
+}

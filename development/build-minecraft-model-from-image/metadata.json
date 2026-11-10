@@ -1,0 +1,37 @@
+{
+  "name": "build-minecraft-model-from-image",
+  "repo": "codepawl/viz3d",
+  "path": "plugins/build-minecraft-model-from-image/skills/build-minecraft-model-from-image/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/codepawl/viz3d",
+  "dir_name": "build-minecraft-model-from-image",
+  "downloaded_at": "2026-11-10T07:08:40.019624Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "codepawl",
+  "source_url": "https://github.com/codepawl/viz3d/blob/main/plugins/build-minecraft-model-from-image/skills/build-minecraft-model-from-image/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/codepawl/viz3d/blob/main/plugins/build-minecraft-model-from-image/skills/build-minecraft-model-from-image/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a 2D picture of an object into a Minecraft-style 3D model, a few clean cuboids with pixel textures in the Blockbench look, never fine jagged voxels. Exports GLB, a viewer and renders. Use for \"make this photo a Minecraft model\", \"block model from an image\", \"turn this object into blocks\", \"voxel from a picture\", \"t\u1eeb \u1ea3nh l\u00e0m kh\u1ed1i 3D minecraft\", \"voxel t\u1eeb \u1ea3nh\", \"bi\u1ebfn \u1ea3nh \u0111\u1ed3 v\u1eadt th\u00e0nh block\", \"l\u00e0m model minecraft\"."
+}

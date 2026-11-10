@@ -1,0 +1,39 @@
+{
+  "name": "eks-genai",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/eks-genai/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "eks-genai",
+  "downloaded_at": "2026-11-10T06:39:27.845786Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model, training",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-genai/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-genai/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use whenever someone is building, training, fine-tuning, or serving a generative AI / LLM workload on Amazon EKS \u2014 phrased as \"GPU vs Trainium/Inferentia\", \"vLLM on EKS\", \"Ray Serve / KubeRay\", \"distributed training on EKS\", \"FSx for Lustre for ML\", \"Karpenter for GPU\", \"EFA / NCCL multi-node\", \"DCGM / Neuron Monitor\", \"LiteLLM / AI gateway\", \"RAG on EKS\", \"agentic AI on EKS\", or \"self-host Llama / Mistral / Qwen\". Walks the opinionated 6-layer stack (compute \u2192 cluster/scheduler \u2192 frameworks \u2192 storage \u2192 observability \u2192 AI gateway), the GPU-vs-Neuron decision, the JARK + vLLM + LiteLLM canonical reference, KV-cache tiering, cost levers (Neuron, Spot, Capacity Blocks), and a non-negotiable security baseline. Trigger even if \"GenAI\" is never said \u2014 any GPU/Neuron, inference-serving, or distributed-training decision on EKS qualifies. Skip for SageMaker-only or Bedrock-only (no self-hosting) asks, and for generic cluster design/build with no AI/ML workload (use eks-design / eks-build)."
+}

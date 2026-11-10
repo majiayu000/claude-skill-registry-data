@@ -1,0 +1,37 @@
+{
+  "name": "project-manager",
+  "repo": "coreyhaines31/makerskills",
+  "path": "skills/project-manager/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coreyhaines31/makerskills",
+  "dir_name": "project-manager-coreyhaines31-makerskills",
+  "downloaded_at": "2026-11-10T07:11:41.130594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coreyhaines31",
+  "source_url": "https://github.com/coreyhaines31/makerskills/blob/main/skills/project-manager/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coreyhaines31/makerskills/blob/main/skills/project-manager/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When you want to manage projects across your businesses using a kanban + Eisenhower methodology. One kanban per business (whatever portfolio of businesses, projects, or initiatives you run). Tool-agnostic \u2014 connects via API/MCP to whatever PM tool each business uses (Notion, GitHub Projects, Plane, Linear, Obsidian file-based, or manual mode). Async-first output. Six modes \u2014 setup (scaffold a new board for a business), triage (Eisenhower-sort the backlog), next (pick the next thing to work on, single board or across all), status (paste-ready async snapshot), unblock (diagnose Review/Blocked column), weekly (Friday pulse + week planning). Triggers on \"/project-manager,\" \"/pm,\" \"/pm setup,\" \"/pm triage,\" \"/pm next,\" \"/pm status,\" \"/pm unblock,\" \"/pm weekly,\" \"project manager,\" \"what should I work on next,\" \"kanban status,\" \"Eisenhower this,\" \"triage my backlog,\" \"what's blocked.\" Not for specing or launch-readiness checks on an app (see product-manager)."
+}

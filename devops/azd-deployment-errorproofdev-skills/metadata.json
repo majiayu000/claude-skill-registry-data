@@ -1,0 +1,39 @@
+{
+  "name": "azd-deployment",
+  "repo": "errorproofdev/skills",
+  "path": "plugins/azure/skills/azd-deployment/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/errorproofdev/skills",
+  "dir_name": "azd-deployment-errorproofdev-skills",
+  "downloaded_at": "2026-11-10T07:41:23.424708Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: docker, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "docker",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "errorproofdev",
+  "source_url": "https://github.com/errorproofdev/skills/blob/main/plugins/azure/skills/azd-deployment/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/errorproofdev/skills/blob/main/plugins/azure/skills/azd-deployment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy containerized frontend + backend applications to Azure Container Apps with remote builds, managed identity, and idempotent infrastructure."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "studio-module-systems-document-component",
+  "repo": "endlessm/prototyping-playground",
+  "path": ".agents/skills/studio-module-systems-document-component/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/endlessm/prototyping-playground",
+  "dir_name": "studio-module-systems-document-component",
+  "downloaded_at": "2026-11-10T07:38:25.949173Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "endlessm",
+  "source_url": "https://github.com/endlessm/prototyping-playground/blob/main/.agents/skills/studio-module-systems-document-component/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/endlessm/prototyping-playground/blob/main/.agents/skills/studio-module-systems-document-component/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Document a design system's Vue component with a page, live examples and a props table, using yarn component-docs. Use when asked to document, or add a page for, a component of a system in src/systems/."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "speech",
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/media/speech/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/davila7/claude-code-templates",
+  "dir_name": "speech-davila7-claude-code-template",
+  "downloaded_at": "2026-11-10T07:21:20.760323Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "davila7",
+  "source_url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/media/speech/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/media/speech/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation. OpenAI remains the default; Atlas Cloud is an explicit optional backend for asynchronous multilingual speech. Custom voice creation is out of scope."
+}

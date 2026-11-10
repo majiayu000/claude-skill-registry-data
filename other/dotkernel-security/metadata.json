@@ -1,0 +1,38 @@
+{
+  "name": "dotkernel-security",
+  "repo": "dotkernel/dotboost",
+  "path": ".claude/skills/dotkernel-security/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dotkernel/dotboost",
+  "dir_name": "dotkernel-security",
+  "downloaded_at": "2026-11-10T07:29:46.807404Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dotkernel",
+  "source_url": "https://github.com/dotkernel/dotboost/blob/main/.claude/skills/dotkernel-security/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dotkernel/dotboost/blob/main/.claude/skills/dotkernel-security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when touching anything security-relevant in a Dotkernel project \u2014 authentication, OAuth2 or session login, authorization config and role permissions or guards, CORS, content negotiation, session and cookie settings, error handling and error-reporting endpoints, documentation exposure, secrets and *.local.php versus *.global.php, demo credentials, ownership checks, raw DQL or SQL, or adding a dependency. Also use when reviewing a diff for security problems or when asked whether something is safe to commit."
+}

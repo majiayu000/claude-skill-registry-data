@@ -1,0 +1,38 @@
+{
+  "name": "synthetic-ui-demo",
+  "repo": "digitalsamba/claude-code-video-toolkit",
+  "path": ".claude/skills/synthetic-ui-demo/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/digitalsamba/claude-code-video-toolkit",
+  "dir_name": "synthetic-ui-demo",
+  "downloaded_at": "2026-11-10T07:26:35.728219Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitalsamba",
+  "source_url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/synthetic-ui-demo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/synthetic-ui-demo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Product demo and release-notes videos with no screen recording. Rebuild the app's screens as static React from its source code, then drive them in Remotion with a scripted cursor and camera (lib/components Stage + Cursor). Use when making a product walkthrough, feature demo, release-notes or changelog video for an app whose source you can read, or when a Playwright recording would be flaky, need test data, or go stale. Triggers include synthetic demo, rebuild the UI, release video, feature walkthrough, product demo from source, scripted cursor, camera zoom on UI, no screen recording."
+}

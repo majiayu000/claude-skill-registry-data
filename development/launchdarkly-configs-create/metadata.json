@@ -1,0 +1,39 @@
+{
+  "name": "launchdarkly-configs-create",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-configs-create/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-configs-create",
+  "downloaded_at": "2026-11-10T06:39:52.505076Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, debug",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-configs-create/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-configs-create/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create and configure configs in LaunchDarkly. Helps you choose between agent vs completion mode, create the config, add variations with models and prompts, and verify the setup."
+}

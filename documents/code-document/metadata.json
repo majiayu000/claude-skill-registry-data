@@ -1,0 +1,38 @@
+{
+  "name": "code-document",
+  "repo": "ezMbedded/EasyEmbeddedFramework",
+  "path": ".claude/skills/code-document/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ezMbedded/EasyEmbeddedFramework",
+  "dir_name": "code-document",
+  "downloaded_at": "2026-11-10T07:43:30.252731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ezMbedded",
+  "source_url": "https://github.com/ezMbedded/EasyEmbeddedFramework/blob/main/.claude/skills/code-document/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ezMbedded/EasyEmbeddedFramework/blob/main/.claude/skills/code-document/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate Doxygen documentation for the public C/C++ headers under inc/. Use when the user asks to document a header or module."
+}

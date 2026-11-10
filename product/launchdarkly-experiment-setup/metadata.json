@@ -1,0 +1,37 @@
+{
+  "name": "launchdarkly-experiment-setup",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-experiment-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-experiment-setup",
+  "downloaded_at": "2026-11-10T06:39:53.011998Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: feature, metrics",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-experiment-setup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-experiment-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up and run experiments in LaunchDarkly. Create experiments with metrics, treatments, and flag config, start iterations to collect data, swap design between iterations, and stop with a winner."
+}

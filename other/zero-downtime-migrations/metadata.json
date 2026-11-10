@@ -1,0 +1,37 @@
+{
+  "name": "zero-downtime-migrations",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/postgres/zero-downtime-migrations/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "zero-downtime-migrations",
+  "downloaded_at": "2026-11-10T07:25:28.604353Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/postgres/zero-downtime-migrations/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/postgres/zero-downtime-migrations/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes and reviews PostgreSQL schema migrations that run against large, busy production tables without blocking reads or writes. Covers CREATE INDEX CONCURRENTLY outside transactions, foreign keys and CHECKs added NOT VALID then validated in a later transaction, NOT NULL the PostgreSQL 18 way (NOT VALID) and the PG 12-17 way, unique constraints USING INDEX, which ADD COLUMN and ALTER TYPE forms rewrite the table, batched backfills that COMMIT, lock_timeout and the lock queue, and expand/contract for renames and type changes. Use when adding or changing an index, constraint, column, default or type on an existing Postgres table, when a migration must be online, zero-downtime or non-blocking, when backfilling data, or when reviewing migration SQL from Rails, Django, Drizzle, node-pg-migrate, dbmate, graphile-migrate or plain .sql files."
+}

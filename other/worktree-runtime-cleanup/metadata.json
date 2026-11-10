@@ -1,0 +1,37 @@
+{
+  "name": "worktree-runtime-cleanup",
+  "repo": "daisukekobayashi/dotfiles",
+  "path": "skills/local/worktree-runtime-cleanup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/daisukekobayashi/dotfiles",
+  "dir_name": "worktree-runtime-cleanup",
+  "downloaded_at": "2026-11-10T07:17:23.599944Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "daisukekobayashi",
+  "source_url": "https://github.com/daisukekobayashi/dotfiles/blob/main/skills/local/worktree-runtime-cleanup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/daisukekobayashi/dotfiles/blob/main/skills/local/worktree-runtime-cleanup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stop a worktree's Compose stacks and confirmed dev servers, watchers, and tool daemons, then clean up temporary files created by those runs."
+}

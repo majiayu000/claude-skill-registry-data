@@ -1,0 +1,39 @@
+{
+  "name": "implement-piece",
+  "repo": "byronbroughten/byro-repo",
+  "path": "runner/skills/implement-piece/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/byronbroughten/byro-repo",
+  "dir_name": "implement-piece",
+  "downloaded_at": "2026-11-10T06:55:17.704289Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, markdown",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "byronbroughten",
+  "source_url": "https://github.com/byronbroughten/byro-repo/blob/master/runner/skills/implement-piece/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/byronbroughten/byro-repo/blob/master/runner/skills/implement-piece/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement a writing Piece spec into its Deliverable, review it with /review-piece, fix the hard findings and report the rest, then commit its Agent draft. Invoked as /implement-piece <repo> <n>."
+}

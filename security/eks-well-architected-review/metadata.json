@@ -1,0 +1,38 @@
+{
+  "name": "eks-well-architected-review",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/eks-well-architected-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "eks-well-architected-review",
+  "downloaded_at": "2026-11-10T06:39:36.185968Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-well-architected-review/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-well-architected-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deterministic AWS Well-Architected Framework review of an Amazon EKS cluster (Linux nodes only). Unofficial \u2014 not the AWS Well-Architected Tool, no official EKS lens exists, and it maps to no compliance framework (CIS, PCI or otherwise). Collects live data via kubectl and aws, scores it across five of the six pillars (Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization; not Sustainability, not cluster-observable) using fixed jq detections so scores are stable, separates measured from governance findings, withholds a pillar score when under half its measured questions apply, and the overall when fewer than four pillars score or no Linux node is Ready, and renders a self-contained HTML report. Use ONLY when the user explicitly asks to run a Well-Architected review (WAFR) of an EKS cluster. Any other request \u2014 a cluster audit, score, cost, security, inventory, upgrade, best-practice or design question, even one naming a pillar \u2014 belongs to another skill."
+}

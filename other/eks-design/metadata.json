@@ -1,0 +1,38 @@
+{
+  "name": "eks-design",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/eks-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "eks-design",
+  "downloaded_at": "2026-11-10T06:39:29.824935Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-design/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when designing EKS architecture. Generates design documents with Mermaid diagrams, ADRs, security architecture, and validation reports. Translates requirements into tailored EKS designs guided by Well-Architected best practices. Covers cluster architecture, compute, networking, security, addons, observability, cost, and upgrade strategy. Also use when reviewing or validating existing EKS architectures, planning networking or security, evaluating deployment models, or generating architecture diagrams. Skip for short advisory recommendations without a formal document (eks-best-practices), Internal Developer Platforms or progressive delivery (eks-platform-engineering), and GenAI/LLM workload design \u2014 GPU vs Neuron, vLLM/Ray serving, distributed training (eks-genai)."
+}

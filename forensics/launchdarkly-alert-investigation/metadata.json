@@ -1,0 +1,38 @@
+{
+  "name": "launchdarkly-alert-investigation",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-alert-investigation/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-alert-investigation",
+  "downloaded_at": "2026-11-10T06:39:53.706171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-alert-investigation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-alert-investigation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Investigates a firing or recently fired observability alert: finds the firing and replays the value it evaluated, decides whether the alert is chronic noise or a new problem, reuses any automatic investigation, then finds the cause (what changed, which host, version or route is over-represented) and returns a structured diagnosis with cause, scope and next steps."
+}

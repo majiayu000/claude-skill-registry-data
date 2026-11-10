@@ -1,0 +1,37 @@
+{
+  "name": "add-skill",
+  "repo": "coralogix/cx-cli",
+  "path": ".claude/skills/add-skill/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "add-skill-coralogix-cx-cli",
+  "downloaded_at": "2026-11-10T07:11:26.752318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/.claude/skills/add-skill/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/.claude/skills/add-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the user asks to \"add a skill\", \"create a skill\", \"new skill\", \"write a skill for\", \"skill for cx <something>\", \"add a user-facing skill\", \"create a SKILL.md\", \"teach an agent how to use\", \"agent skill for\", \"document a command as a skill\", \"make a skill\", \"add skill to skills/\", \"create agent instructions for\", \"build a skill\", or wants to create a new user-facing skill in the skills/ directory that teaches AI agents how to use a cx CLI command. Use this even when the user is following the add-command workflow and reaches the skill creation step."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "next-16",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/nextjs/next-16/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "next-16-dgesteves-sigil",
+  "downloaded_at": "2026-11-10T07:25:23.474806Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/nextjs/next-16/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/nextjs/next-16/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build, review and upgrade Next.js 16 App Router code (next@16.x, checked against 16.4.3) the way 16 actually behaves. Covers the 15 to 16 changes that fail silently or only at runtime (sync cookies/headers/params removed, revalidateTag needing a profile and what each profile serves next, sitemap and image-metadata ids now Promises, images.qualities defaulting to [75], middleware renamed to proxy), the Cache Components model (cacheComponents, partialPrefetching, 'use cache', cacheLife, cacheTag, Suspense and \"uncached data during prerendering\" build errors), choosing updateTag vs revalidateTag vs revalidatePath vs refresh, and server actions as public endpoints (auth and ownership inside every action, forgeable .bind() arguments). Use when package.json has next 16, when a Next 15 app is upgraded, when adding caching, revalidation, webhooks, proxy.ts or server actions, or when you see unstable_cache, revalidateTag('x'), middleware.ts, UnsafeUnwrappedCookies, export const revalidate or experimental.dynamicIO."
+}

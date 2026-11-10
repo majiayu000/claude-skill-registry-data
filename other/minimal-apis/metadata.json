@@ -1,0 +1,39 @@
+{
+  "name": "minimal-apis",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/aspnet-core/minimal-apis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "minimal-apis",
+  "downloaded_at": "2026-11-10T07:25:24.819114Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=4, development=4",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/aspnet-core/minimal-apis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/aspnet-core/minimal-apis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds, reviews and fixes ASP.NET Core minimal APIs on .NET 10 (current LTS, checked on 10.0.14). Covers built-in request validation (AddValidation, DataAnnotations on records and parameters, nested paths, PascalCase error keys, IValidatableObject order, and the per-assembly source generator that silently skips endpoints in class libraries), TypedResults and Results<T1,T2> unions, problem details and exception handling that never leak internals, deny-by-default authorization with a fallback policy, the .NET 10 cookie change that returns 401/403 only for endpoints it sees as APIs, antiforgery for forms, and WebApplicationFactory tests with xunit v3 on Microsoft.Testing.Platform. Use when code calls MapGet/MapPost/MapGroup, when adding validation, error handling or auth to a .NET 8-10 web API, when an API answers 302 instead of 401, when DataAnnotations seem ignored, or when dotnet test fails on the .NET 10 SDK."
+}

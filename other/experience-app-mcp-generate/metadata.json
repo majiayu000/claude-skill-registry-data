@@ -1,0 +1,37 @@
+{
+  "name": "experience-app-mcp-generate",
+  "repo": "forcedotcom/sf-skills",
+  "path": "skills/experience-app-mcp-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/forcedotcom/sf-skills",
+  "dir_name": "experience-app-mcp-generate",
+  "downloaded_at": "2026-11-10T07:51:02.899647Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "forcedotcom",
+  "source_url": "https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-app-mcp-generate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/forcedotcom/sf-skills/blob/main/skills/experience-app-mcp-generate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, extend, deploy, review readiness for, or activate an App MCP, a Salesforce custom hosted MCP server for an Aura Experience Site. Trigger when the user wants to expose an Experience UI or backend action to agents, create local ECA and server metadata, add eligible global invocable Apex or autolaunched Flow tools, add Prompt Builder templates as MCP prompts or tools, preview or perform server activation, deploy the existing MCP stack, or review its readiness. For server setup, offer optional HXL widgets for eligible Apex-backed tools through platform-mcp-tool-widget-coordinate. For a standalone request to generate Custom Lightning Types or widgets for an Apex-backed MCP tool, route directly to platform-mcp-tool-widget-coordinate; do not trigger this skill for HXL generation alone. Do not trigger for remote MCP registration or generic Apex and Flow work unrelated to Experience Site agent access."
+}

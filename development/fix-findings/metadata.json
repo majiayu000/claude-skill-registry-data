@@ -1,0 +1,38 @@
+{
+  "name": "fix-findings",
+  "repo": "escoffier-labs/skillet",
+  "path": "skillet/skills/fix-findings/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/escoffier-labs/skillet",
+  "dir_name": "fix-findings",
+  "downloaded_at": "2026-11-10T07:41:46.367706Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug, refactor",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/fix-findings/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/fix-findings/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to act on an audit, fix the findings in a repo-audit/bug-hunt/security-sweep/latent-premises/retry-safety report, work a prioritized backlog, or asks to \"fix the findings\", \"work the backlog\", \"clear the audit\", or \"do the high-leverage items\". The step after the audit skills. (formerly expedite)"
+}

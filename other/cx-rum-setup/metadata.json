@@ -1,0 +1,38 @@
+{
+  "name": "cx-rum-setup",
+  "repo": "coralogix/cx-cli",
+  "path": "skills/cx-rum-setup/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "cx-rum-setup",
+  "downloaded_at": "2026-11-10T07:11:24.128147Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/skills/cx-rum-setup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/skills/cx-rum-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the user asks to \"add RUM\", \"set up RUM\", \"install the RUM SDK\", \"add Coralogix RUM to my app\", \"create a RUM API key\", \"RUM public key\", \"init Coralogix RUM\", \"CoralogixRum.init\", \"add the browser SDK\", \"real user monitoring\", \"frontend monitoring\", \"monitor my web app\", \"session replay\", \"track frontend errors\", \"add RUM to React\", \"add RUM to Next.js\", \"add RUM to my mobile app\", or wants to instrument a browser or mobile application with Coralogix Real User Monitoring end to end - RUM API key, SDK install, init code, and verifying data arrives."
+}

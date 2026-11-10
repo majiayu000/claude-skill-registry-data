@@ -1,0 +1,501 @@
+---
+name: eks-recon
+description: "EKS cluster reconnaissance and environment discovery — reports the raw FACTS of a cluster and its environment. Detects compute (Karpenter, MNG, Auto Mode, Fargate, nodes/AMI), networking (VPC/CNI, subnets, load balancers, DNS), security facts (auth mode, IRSA/Pod Identity, RBAC, encryption), add-ons/Helm, observability, workloads (Deployments, StatefulSets, PDBs, HPAs), storage (CSI, StorageClasses, PVs, backup tooling), IaC (Terraform, CDK, eksctl), CI/CD (Actions, ArgoCD, Flux), and cluster insights. Use to discover or document the current state of an EKS cluster — 'what am I running', 'tell me about my setup', 'what version am I on', inventory before an upgrade/migration/design. Reports facts only; it does not score, rate, plan, or recommend, and overlapping facts with other skills is fine. Route elsewhere for a JUDGMENT or ARTIFACT: readiness scoring/deprecated-API checks (eks-upgrade-check), GREEN/AMBER/RED audits (eks-operation-review), design docs/diagrams (eks-design)."
+---
+
+# EKS Reconnaissance
+
+Discover everything about an EKS cluster environment. Run this skill to gather comprehensive cluster context before making any decisions, changes, or recommendations.
+
+## When to Use This Skill
+
+**Run this skill when the user wants to discover or document cluster FACTS:**
+- Asks about their EKS cluster ("what's my cluster running?", "tell me about my setup")
+- Wants an inventory of current state before an upgrade, migration, or architecture change
+- Wants to document or review what exists in their cluster
+- Asks questions like "what version am I on?" or "am I using Karpenter?"
+
+**Also trigger this skill when:**
+- User mentions an EKS cluster name and seems to need its current-state facts
+- Another workflow needs raw cluster facts as input
+
+Recon reports **facts only**. Reporting facts that also matter to another skill (upgrade, security, design) is expected and fine — the dividing line is discovery-of-facts (here) vs. verdict/score/artifact (route elsewhere, below).
+
+**Do NOT use this skill for:**
+- **Upgrade readiness scoring or deprecated API checks** — questions like "score my upgrade readiness", "are there deprecated APIs blocking my upgrade", "can I safely upgrade to 1.33", "readiness score", or "breaking changes that would block a version bump" belong to `eks-upgrade-check`. Recon discovers *what version you're on*; it does NOT assess whether you're *ready* to move to the next version.
+- **Operational audits with maturity ratings** — questions like "run an operational excellence audit", "rate each area GREEN/AMBER/RED", or "audit my cluster's operational posture" belong to `eks-operation-review`. Recon inventories what exists; it does NOT score operational maturity or produce rated assessments.
+- **Architecture design documents or Mermaid diagrams** — questions like "create a security architecture document", "generate Mermaid diagrams for our EKS cluster", or "design document" belong to `eks-design`. Recon discovers current state; it does NOT produce design artifacts or architectural diagrams.
+- Creating or modifying cluster resources (this is read-only)
+- Troubleshooting specific issues (use `eks-best-practices`)
+- Learning about EKS concepts (use `eks-best-practices`)
+
+## Prerequisites
+
+### MCP Server (Preferred)
+
+This skill works best with the **EKS MCP Server** configured. Check if MCP tools are available:
+
+```
+If tools like `list_eks_resources`, `describe_eks_resource`, `list_k8s_resources` are available:
+  -> MCP Mode: Use MCP tools (pre-authorized, richer output)
+  
+If MCP tools are NOT available:
+  -> CLI Mode: Fall back to AWS CLI + kubectl (requires explicit permission)
+```
+
+**MCP Mode benefits:**
+- Pre-authorized read-only operations (no permission prompts)
+- Richer output with better formatting
+- Single tool call instead of piped commands
+
+**CLI Mode limitations:**
+- Requires user permission for each command
+- May need kubeconfig setup
+- Some detection patterns are less reliable
+
+### Required for CLI Mode
+
+| Tool | Required For |
+|------|-------------|
+| `aws` CLI | Cluster-level detection (describe-cluster, list-nodegroups, list-addons) |
+| `kubectl` | K8s resource detection (deployments, CRDs, service accounts) |
+| `helm` | Helm release inventory (optional) |
+| Python 3 | CLI GitOps metadata extractor (standard library) |
+| `jq` | CLI JSON filtering and projections across recon modules |
+
+If a projection cannot run because `jq` or Python 3 is missing, record
+the inspection gap in Coverage; never run the read without its projection.
+
+### MCP Troubleshooting
+
+**401 Unauthorized on K8s API calls** (`list_k8s_resources`, `read_k8s_resource`):
+
+The MCP server can access EKS APIs (clusters, nodegroups, addons) but may lack Kubernetes API access. This happens when the MCP server's IAM role doesn't have an EKS access entry.
+
+**Solutions (choose one):**
+
+1. **Grant MCP access**: Create an EKS access entry for the MCP server's IAM role.
+
+   **Surface these commands to the user — do NOT execute them. These are persistent IAM writes and violate the read-only contract of this skill.**
+
+   ```bash
+   aws eks create-access-entry \
+     --cluster-name <cluster> \
+     --region <region> \
+     --principal-arn <mcp-server-role-arn> \
+     --type STANDARD
+   aws eks associate-access-policy \
+     --cluster-name <cluster> \
+     --region <region> \
+     --principal-arn <mcp-server-role-arn> \
+     --policy-arn arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy \
+     --access-scope type=cluster
+   ```
+
+   If the user confirms and has permission, they can run these themselves out-of-band.
+
+2. **Fall back to kubectl**: If user has local kubectl access, use CLI commands instead:
+   > "MCP K8s access returned 401. I'll use kubectl instead if you have it configured locally."
+
+**Empty results from EKS API calls**:
+- Verify cluster name and region are correct
+- Check if the cluster exists: `aws eks list-clusters --region <region>`
+
+---
+
+## Reconnaissance Modes
+
+| Mode | When to Use | What Happens |
+|------|-------------|--------------|
+| **Full Recon** | First engagement with cluster | Runs all modules, generates complete report |
+| **Selective Recon** | Know what you need | Run specific modules (e.g., compute + iac) |
+| **Targeted Query** | Quick answer | "Is this cluster using Karpenter?" |
+
+### How to Invoke
+
+**Full reconnaissance:**
+> "Run EKS reconnaissance on cluster `my-cluster` in `us-west-2`"
+
+**Selective reconnaissance:**
+> "Run EKS recon but only check compute and IaC"
+
+**Targeted query:**
+> "What IaC tool manages cluster `my-cluster`?"
+
+---
+
+## Modules and Reference Loading
+
+Load only the references needed for the user's request — this keeps context focused. `references/cluster-basics.md` is **always loaded first** by every module; it provides the shared cluster context all other modules depend on. For targeted queries, load only the matching row(s); for full recon, load all references in parallel. When uncertain, ask the user or default to full recon.
+
+| Module | Intent / when to use | Reference file | Agent file |
+|--------|----------------------|----------------|------------|
+| Cluster Basics | Always loaded first by every module (name, region, version, platform version, endpoint) | [cluster-basics.md](references/cluster-basics.md) | — |
+| Compute | Karpenter, nodes, scaling, Auto Mode, node groups, Fargate, self-managed | [compute.md](references/compute.md) | [compute-recon.md](agents/compute-recon.md) |
+| Networking | VPC, ingress, CNI, service mesh, load balancer, connectivity | [networking.md](references/networking.md) | [networking-recon.md](agents/networking-recon.md) |
+| Security | IAM, IRSA, Pod Identity, RBAC, policies, encryption, secrets, webhooks | [security.md](references/security.md) | [security-recon.md](agents/security-recon.md) |
+| Add-ons | EKS-managed add-ons, Helm releases, plugins, "what's installed?" | [addons.md](references/addons.md) | [addons-recon.md](agents/addons-recon.md) |
+| Observability | Logging, metrics, monitoring, Container Insights, Prometheus | [observability.md](references/observability.md) | [observability-recon.md](agents/observability-recon.md) |
+| Workloads | Deployments, pods, services, ingresses, "what's running?" | [workloads.md](references/workloads.md) | [workloads-recon.md](agents/workloads-recon.md) |
+| Storage | PVCs, EBS, EFS, StorageClasses, CSI drivers, volumes, snapshots | [storage.md](references/storage.md) | [storage-recon.md](agents/storage-recon.md) |
+| IaC | Terraform, CloudFormation, CDK, eksctl, Pulumi, "how is it managed?" | [iac.md](references/iac.md) | [iac-recon.md](agents/iac-recon.md) |
+| CI/CD | GitHub Actions, GitLab CI, Jenkins, ArgoCD, Flux, GitOps, pipelines | [cicd.md](references/cicd.md) | [cicd-recon.md](agents/cicd-recon.md) |
+| Cluster Insights | EKS-reported upgrade-readiness & configuration insights (raw findings) | [cluster-insights.md](references/cluster-insights.md) | [cluster-insights-recon.md](agents/cluster-insights-recon.md) |
+
+---
+
+## Quick Detection Reference
+
+### MCP Commands (Preferred)
+
+| Detection | MCP Tool |
+|-----------|----------|
+| Cluster info | `describe_eks_resource(resource_type="cluster", cluster_name="<name>")` |
+| Node groups | `list_eks_resources(resource_type="nodegroup", cluster_name="<name>")` |
+| EKS add-ons | `list_eks_resources(resource_type="addon", cluster_name="<name>")` |
+| Karpenter | `list_k8s_resources(cluster_name="<name>", kind="NodePool", api_version="karpenter.sh/v1")` |
+| Deployments | `list_k8s_resources(cluster_name="<name>", kind="Deployment", api_version="apps/v1")` |
+| VPC config | `get_eks_vpc_config(cluster_name="<name>")` |
+| Insights | `get_eks_insights(cluster_name="<name>")` |
+
+### CLI Fallbacks
+
+| Detection | CLI Command |
+|-----------|-------------|
+| Cluster info | `aws eks describe-cluster --name <name> --region <region>` |
+| Node groups | `aws eks list-nodegroups --cluster-name <name> --region <region>` |
+| EKS add-ons | `aws eks list-addons --cluster-name <name> --region <region>` |
+| Fargate profiles | `aws eks list-fargate-profiles --cluster-name <name> --region <region>` |
+| Auto Mode | `aws eks describe-cluster --name <name> --region <region> --query 'cluster.computeConfig'` |
+| Karpenter | `kubectl get nodepools.karpenter.sh 2>/dev/null` |
+| Helm releases | `helm list -A` |
+
+---
+
+## Running Reconnaissance
+
+> **IMPORTANT: Load Reference Files**
+> 
+> Before running each module, you MUST read its reference file (e.g., `references/compute.md`).
+> References contain:
+> - Detection order and rationale (why check Auto Mode before Karpenter)
+> - Edge cases and how to handle them
+> - CLI fallback commands when MCP fails
+> - Output schema for structured reporting
+> 
+> Skipping references produces shallow results. The main skill provides orchestration;
+> the references provide detection intelligence.
+
+### Step 1: Gather Prerequisites
+
+```
+Required:
+- Cluster name (or auto-discover — see below)
+- AWS region (or detect from context/kubeconfig/CLI)
+
+Optional:
+- Specific modules to run (default: all)
+- Prior report: path to an earlier recon YAML artifact (optional; never auto-select one)
+- Output path prefix, without an extension (default: `EKS-Recon-<cluster>-<YYYY-MM-DD>-<HHMM>` → writes `<output-prefix>.md` + `<output-prefix>.yaml`)
+```
+
+When a prior report is supplied, load [report-comparison.md](references/report-comparison.md)
+and read the prior artifact before generating outputs. After collecting the current
+facts, append the comparison to the Markdown report using that contract. Without a
+prior report, omit the Changes since section.
+
+**Auto-discovery when cluster name is not explicit:**
+
+When the user says "my cluster", "current cluster", or does not name a specific cluster, discover it:
+
+1. `kubectl config current-context` — if set, extract cluster name from the context ARN
+2. If no kubeconfig context, try **AWS CLI directly** (credentials may come from `~/.aws/` config files, instance profile, or env vars — don't assume env vars are the only source):
+   ```bash
+   aws sts get-caller-identity  # verify we have working AWS access
+   aws eks list-clusters --region ${AWS_DEFAULT_REGION:-us-west-2}
+   ```
+3. If exactly one cluster is found, use it. If multiple clusters across regions, try common regions (us-west-2, us-east-1, the region in any ARN visible in kubeconfig).
+4. Only ask the user to specify a cluster if discovery yields multiple candidates and the prompt is ambiguous.
+
+**IMPORTANT:** Never give up after checking only environment variables. AWS credentials can come from `~/.aws/credentials`, `~/.aws/config`, instance metadata, or ECS task roles — none of which appear in `env | grep AWS_`. Always try `aws sts get-caller-identity` before concluding credentials are unavailable.
+
+**IMPORTANT — verify the kubectl context matches the TARGET cluster.** When the user names a specific cluster, do NOT assume `kubectl config current-context` points at it — the current context frequently points at a *different* cluster (even a different region). Before running any kubectl detection, confirm the active context resolves to the named cluster (compare the context's cluster ARN/endpoint, or run `aws eks update-kubeconfig --name <cluster> --region <region>` to bind kubectl to the intended cluster, then `--context <that-context>`). Reconning the wrong cluster silently produces a confident-but-wrong report. If you cannot confirm the context maps to the named cluster, say so rather than proceeding against an unverified context.
+
+### Step 2: Check MCP Availability
+
+If MCP tools are available, use them. Otherwise, inform the user:
+
+> "EKS MCP Server not detected. I'll use CLI commands instead, which will require your permission for each command. For a smoother experience, consider setting up the EKS MCP Server."
+
+### Step 3: Run Selected Modules
+
+Determine which modules to run based on user intent (see [Modules and Reference Loading](#modules-and-reference-loading)).
+
+For each selected module:
+1. **Load the reference file** (e.g., `references/compute.md`) - REQUIRED
+   - For targeted queries: load only the required reference(s) per decision matrix
+   - For full recon: load all references in parallel
+2. Run detection commands following the reference's guidance:
+   - Try MCP tool first
+   - If MCP returns error (401, empty), fall back to CLI from reference
+   - If CLI unavailable, note the limitation in report
+3. Collect output into report section using the reference's output schema
+
+### Step 4: Generate Report
+
+Produce **two** artifacts. The **markdown fact report is the primary deliverable** (rendered inline to the user); the YAML is a secondary facts snapshot for inspection/export.
+
+Resolve `<output-prefix>` once for both artifacts:
+- If the caller supplied a prefix, use it unchanged, including any directory component (for example, `reports/team-handoff` → `reports/team-handoff.md` + `reports/team-handoff.yaml`). Do not append a cluster name or timestamp to an explicit prefix. Do not strip a supplied suffix: `reports/x.md` produces `reports/x.md.md` + `reports/x.md.yaml`.
+- Otherwise, use `EKS-Recon-<cluster>-<YYYY-MM-DD>-<HHMM>` in the current directory, with the discovered target cluster name. Capture the current UTC timestamp once at report generation using `date -u '+%Y-%m-%dT%H:%M:%SZ'` or an equivalent UTC clock tool (24-hour clock); derive the filename date/minute and both report timestamps from that one reading rather than guessing the time.
+- Create the parent directory if needed. Check both destination paths before writing either report. If either destination already exists, write neither file, name both paths in the collision message, and request a different prefix. Concurrent runs for the same cluster within one minute should use distinct explicit prefixes.
+
+> **Facts only.** Both artifacts report what the cluster *is*. Never emit a verdict, score, readiness rating, or recommendation. A "Notable facts" line states an observation ("2 subnets have < 16 free IPs"); it never says "you should" or "this is a risk".
+
+Use one actual UTC clock reading for the default filename, Markdown
+`_generated` header and `report.generated_at`; label the header timestamp UTC.
+On an output collision, write neither artifact, identify both intended paths and
+show the current facts inline while requesting a different prefix.
+
+> Reports can contain cluster ARNs, account/resource identifiers and infrastructure
+> details. Review and redact before sharing; keep generated reports out of source control.
+
+#### 4a. Markdown fact report (primary) → `<output-prefix>.md`
+
+Render this structure, including **only modules that actually ran**. Replace `<output-prefix>` in the Machine artifact line with the resolved prefix so it names the actual YAML path:
+
+```markdown
+# EKS Recon — <cluster> (<region>)
+_generated <timestamp> · source: MCP | CLI · modules: N/N_
+
+## Cluster summary
+| Fact | Value |
+|------|-------|
+| version / platform | 1.31 / eks.5 |
+| support type | STANDARD |
+| status / created | ACTIVE / 2024-09-10 |
+| authentication mode | API_AND_CONFIG_MAP |
+| compute strategy | Karpenter + 1 MNG |
+| IaC | Terraform (high confidence) |
+| CI/CD | GitHub Actions + ArgoCD |
+
+## Per-module facts
+### Compute
+<small fact table per module — one H3 per RUN module>
+### Networking
+...
+
+## Notable facts
+<flat bullets: co-occurring or absent facts, stated neutrally, ZERO verdicts>
+- authentication_mode = API_AND_CONFIG_MAP; aws-auth ConfigMap present
+- compute.strategy = Karpenter; security.iam_for_pods.irsa.detected = false
+- 2 of 4 cluster subnets report < 16 available IPs
+
+## Coverage
+<modules that could not run + reason, AND sub-facts that ran but could not be confirmed — makes gaps visible>
+- storage: unavailable (reason: MCP 401 and kubectl not configured)
+- addons.helm_releases: unconfirmed (reason: helm CLI absent, secret fallback not run) — reported as `unconfirmed`, not `count: 0`
+
+## Machine artifact
+- `<output-prefix>.yaml` written (secondary point-in-time facts snapshot)
+```
+
+Keep every absence claim within the successfully inspected scope. State that
+scope with the claim, including in summaries and Notable facts; Coverage
+caveats do not qualify broader wording elsewhere.
+
+#### 4b. Machine YAML artifact → `<output-prefix>.yaml`
+
+The YAML is a **secondary, point-in-time facts snapshot**, not a versioned API.
+Workflows may use its facts as context; that intended use does not establish a
+versioned schema hand-off. Preserve the canonical reference shapes for inspection,
+export and existing workflow guidance.
+
+**Assembly rules (inline and subagent execution):**
+
+- Use cluster-basics for the shared `cluster:` block; deduplicate matching module
+  blocks. For the same target, preserve module facts and record differing values
+  and their sources in Markdown Coverage rather than silently overwriting them.
+  Compare identity using target context (such as cluster ARN); a cosmetic endpoint
+  difference such as a trailing `/` is not another cluster. If a module identifies another target cluster,
+  retain its key as `{unavailable: true, reason: "cluster context mismatch"}`.
+- On full recon, collect `cluster_detail:` directly from cluster-basics, which has
+  no subagent. Targeted queries may omit unrelated detail.
+- If a selected module returns no usable result, retain its key with
+  `unavailable: true` and a short `reason` in either mode. Partial reads retain
+  known facts alongside Coverage gaps. Unselected modules are out of scope.
+- For partial modules, retain observed facts and every schema-defined object/key,
+  even when all its values are unreadable: use `ingresses: {count: null, list: null}`,
+  not `ingresses: null`. Set unreadable leaf values to `null` and put reasons in
+  Markdown Coverage. Use another representation only when the module reference
+  explicitly prescribes it for that field and failure condition (for example, Helm or
+  `node_subnets`); do not invent generic `{unconfirmed, reason}` wrappers.
+  Carry each incomplete/denied read into `report.unconfirmed_paths`, even when
+  its canonical value is `null`. For partial inventories, record the entire
+  inventory path. Collect gaps alongside facts from every module result; never
+  infer complete coverage from a successful module response. A GitOps
+  `status: unconfirmed` records `cicd.gitops`, not just the status leaf.
+
+Assemble one top-level key per module, each emitted **verbatim in the canonical shape defined by that module's `references/<module>.md` "## Output Schema"**, plus the shared `cluster:` block and the `cluster_detail:` block (both from `references/cluster-basics.md`). Unavailable modules become `<module>: {unavailable: true, reason: "<short reason>"}`.
+
+Include a `report` metadata block alongside the canonical module blocks in every
+new YAML artifact. Capture `generated_at` from the actual UTC clock once for this
+report (reuse the filename's clock reading where applicable). Set `schema_revision`
+to `eks-recon/2026-10-31`, identifying the fact definitions used here, not a promised
+versioned API. Update this marker when fact types, value sets or meanings change,
+and document affected comparison boundaries in the comparison reference.
+`unconfirmed_paths` lists canonical dot-separated field paths whose reads were incomplete or denied;
+list the enclosing inventory path if only part of an inventory was collected.
+Use an empty list only when no collected sub-facts are unconfirmed. Omitted modules
+and explicit unavailable/unconfirmed markers remain authoritative coverage gaps.
+This metadata is not a recon module and is excluded from module counts and deltas.
+
+```yaml
+report:
+  schema_revision: "eks-recon/2026-10-31"
+  generated_at: "2026-10-29T08:30:00Z"  # actual report time, not this example
+  unconfirmed_paths: []                # e.g. [security.authentication.access_entries]
+```
+
+> **The reference Output Schemas are the single source of truth for each module's shape** — do not hand-copy a schema here (that is how the old example drifted). The illustrative fragment below shows only the envelope; the authoritative per-module shape lives in each reference.
+
+```yaml
+# EKS Reconnaissance Report — illustrative envelope only.
+# Canonical shape per module = references/<module>.md "## Output Schema".
+report:              # metadata defined above; not a module
+  schema_revision: "eks-recon/2026-10-31"
+  generated_at: "2026-10-29T08:30:00Z"  # replace with actual report time
+  unconfirmed_paths: []
+cluster:              # shape: references/cluster-basics.md "## Shared Cluster Block"
+  name: my-cluster
+  region: us-west-2
+  version: "1.31"
+  platform_version: eks.5
+  status: ACTIVE
+  tags: {team: platform}
+cluster_detail:       # shape: references/cluster-basics.md "## Cluster Detail (full recon)"
+  upgrade_policy: {support_type: STANDARD}
+  # ...zonal_shift.enabled, certificate_authority.present, health.issues, encryption_config
+compute:              # shape: references/compute.md "## Output Schema"
+  strategy: Karpenter
+  # ...every field the reference schema defines, null where undetected
+networking: { ... }   # shape: references/networking.md
+# ...one key per module that ran; unavailable modules:
+storage:
+  unavailable: true
+  reason: "MCP 401 and kubectl not configured"
+```
+
+---
+
+## Subagent Mode
+
+When running full reconnaissance, delegate each module to a specialized subagent. This keeps each module's context isolated and enables true parallel execution.
+
+### When to Use Subagents
+
+| Scenario | Mode | Reason |
+|----------|------|--------|
+| Full or multi-module recon | **USE subagents** | Isolated context, true parallel execution across modules |
+| Single-module targeted query | **Inline preferred** | One reference, one detection — a subagent spawn adds a full model turn for a one-line answer |
+| No Agent tool available | Inline | Subagents not supported |
+
+> **IMPORTANT:** If the Agent tool is available, use subagent mode for **full or multi-module** reconnaissance — one subagent per module, spawned in parallel — so each module's detection context stays isolated. For a **single-module targeted query** (e.g. "Is this cluster using Karpenter?"), inline is preferred: load the one reference and run detection directly. Escalate a targeted query to a subagent only if it fans out to 2+ modules or the raw tool output would flood the main context.
+
+### Subagent Files
+
+Each module has a corresponding subagent prompt in `agents/`:
+
+| Subagent | File | Purpose |
+|----------|------|---------|
+| Compute | `agents/compute-recon.md` | Detect compute strategy |
+| Networking | `agents/networking-recon.md` | Detect network config |
+| Security | `agents/security-recon.md` | Detect security posture, secrets, webhooks |
+| Add-ons | `agents/addons-recon.md` | Detect installed components |
+| Observability | `agents/observability-recon.md` | Detect monitoring/logging |
+| Storage | `agents/storage-recon.md` | Detect CSI, StorageClasses, PVCs |
+| Workloads | `agents/workloads-recon.md` | Detect running workloads |
+| IaC | `agents/iac-recon.md` | Detect IaC tooling |
+| CI/CD | `agents/cicd-recon.md` | Detect deployment pipelines |
+| Cluster Insights | `agents/cluster-insights-recon.md` | Collect EKS-reported insights (raw findings) |
+
+### Orchestration Steps
+
+**Step 1: Check subagent availability**
+```
+If Agent tool is available:
+  → Full or multi-module recon → use subagent mode (one subagent per module, in parallel)
+  → Single-module targeted query → inline is preferred (load the one reference, detect directly)
+Else:
+  → Use inline mode (load references directly)
+```
+
+**Step 2: Spawn module subagents in parallel**
+
+Spawn ALL module subagents in a SINGLE message for parallel execution. Include
+this coverage instruction in **every** module prompt: return canonical YAML facts
+with YAML comments `# Coverage: <canonical path> — <short reason>` for each
+incomplete/denied read. Use `# Coverage: complete` only when all selected reads
+succeeded. Comments carry coverage without adding fields to the module schema.
+
+```
+Agent(
+  description: "EKS compute recon",
+  prompt: "Recon compute for cluster {cluster_name} in {region}. 
+           Read agents/compute-recon.md and references/compute.md.
+           Return canonical YAML plus # Coverage: <path> — <reason> comments
+           for incomplete reads; # Coverage: complete only if all selected reads succeeded.",
+  subagent_type: "general-purpose"
+)
+
+Agent(
+  description: "EKS networking recon",
+  prompt: "Recon networking for cluster {cluster_name} in {region}.
+           Read agents/networking-recon.md and references/networking.md.
+           Return canonical YAML plus # Coverage: <path> — <reason> comments
+           for incomplete reads; # Coverage: complete only if all selected reads succeeded.",
+  subagent_type: "general-purpose"
+)
+
+... (spawn every selected module's subagent in parallel — up to all 10)
+```
+
+**Step 3: Aggregate results**
+
+When all subagents complete:
+1. Collect each subagent's YAML output and read its Coverage comments before parsing facts. If the coverage declaration is absent, retain the facts but mark the module path unconfirmed for comparison; do not infer complete reads.
+2. Merge into single report structure, applying these normalization rules:
+   - Apply the common assembly rules in Step 4b. Collect each subagent's partial-read paths and reasons alongside its facts, and union those paths into `report.unconfirmed_paths`; retain reasons in Markdown Coverage.
+   - Collect shared cluster-basics facts directly as described in Step 4b.
+   - Module outputs are already in the canonical shape defined by each `references/<module>.md` "## Output Schema". Preserve them verbatim under the matching top-level key: `compute:`, `networking:`, `security:`, `addons:`, `observability:`, `workloads:`, `storage:`, `iac:`, `cicd:`, `cluster_insights:`. Do not reshape, flatten, or rename keys.
+   - Treat subagent failures as selected-module failures under the common Step 4b rules.
+3. Note co-occurring or absent facts across modules — state the observation, draw no conclusion (e.g. "compute.strategy = Karpenter; security.iam_for_pods.irsa.detected = false"). These are neutral facts for the "Notable facts" section, never verdicts or recommendations.
+4. Render the **human-readable markdown fact report** (primary) and write the **machine YAML artifact** — see [Step 4](#step-4-generate-report).
+
+---
+
+## Integration with Other Workflows
+
+### Upgrade Workflow
+
+The upgrade workflow can invoke eks-recon to gather Phase 1 context:
+
+```
+1. Run eks-recon modules: cluster-basics, compute, iac, addons
+2. Extract:
+   - cluster.version -> Current version
+   - compute.strategy -> Determines upgrade approach
+   - iac.tools_detected -> Observed IaC tools (multiple tools and uncertainty are preserved)
+   - addons -> Compatibility matrix input
+```
+
+### Design Workflow
+
+The design workflow can use eks-recon for existing clusters:
+
+```
+1. Run eks-recon modules: all
+2. Pre-populate questionnaire from detected values
+3. Ask user: "I detected Karpenter + Terraform + ArgoCD. Correct?"
+4. Only ask questions for undetected values
+```

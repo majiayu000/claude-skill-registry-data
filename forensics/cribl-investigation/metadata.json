@@ -1,0 +1,38 @@
+{
+  "name": "cribl-investigation",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/cribl-investigation/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "cribl-investigation",
+  "downloaded_at": "2026-11-10T06:39:46.016889Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/cribl-investigation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/cribl-investigation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Investigate incidents that involve a Cribl observability pipeline. Decide whether Cribl caused the problem, witnessed it, or is not involved; trace missing or delayed telemetry from Source to Destination; and search the customer's ingested data with Cribl Search (KQL) and PromQL. Load this when an investigation involves Cribl, data-pipeline delivery, missing or delayed telemetry, or a Cribl-sourced alert."
+}

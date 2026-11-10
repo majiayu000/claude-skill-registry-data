@@ -1,0 +1,37 @@
+{
+  "name": "eks-cost-intelligence",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/eks-cost-intelligence/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "eks-cost-intelligence",
+  "downloaded_at": "2026-11-10T06:39:34.704988Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-cost-intelligence/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/eks-cost-intelligence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a live EKS cluster cost efficiency assessment \u2014 analyze spending across 6 dimensions (compute efficiency, Spot/Graviton adoption, networking, storage, observability, idle resources), calculate a weighted 0-100 Cost Score, and generate a prioritized report with dollar-quantified findings and ready-to-apply remediation snippets. Use this skill when someone asks \"how much am I wasting on EKS?\", \"run a cost audit on my cluster\", \"what's my biggest cost driver?\", \"analyze my cluster's cost efficiency\", or needs dollar-denominated findings for a FinOps review \u2014 even if they don't say \"cost intelligence\" or \"score\". Combines live Cost Explorer data, CloudWatch utilization metrics, and Kubernetes resource analysis. Falls back to AWS CLI and kubectl when the EKS MCP server is unavailable. Distinct from eks-best-practices (static advisory guidance), eks-operation-review (operational health), and eks-recon (cluster discovery). Distinct from graviton-migration, which EXECUTES the x86\u2192arm64 move, not scoring savings."
+}

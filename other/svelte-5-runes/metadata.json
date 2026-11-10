@@ -1,0 +1,37 @@
+{
+  "name": "svelte-5-runes",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/svelte/svelte-5-runes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "svelte-5-runes",
+  "downloaded_at": "2026-11-10T07:25:24.366950Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/svelte/svelte-5-runes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/svelte/svelte-5-runes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write, review and migrate Svelte 5 code (svelte@5.x, checked against 5.57.3) with runes - $state, $derived, $effect, $props, $bindable - snippets, callback props, shared state in .svelte.ts modules and the mount/unmount/flushSync API. Covers the Svelte 3/4 habits that break or fail silently in Svelte 5 (export let, $:, on:click, createEventDispatcher, slots, $$restProps, new Component(), $set/$on/$destroy, writable stores), state syncing in $effect, missing $bindable, runes outside .svelte.ts files, Map/Set in $state, proxies rejected by structuredClone/postMessage, deferred onMount and bind:this after mount, and testing with Vitest and jsdom. Use when editing .svelte, .svelte.ts or .svelte.js files, when a project turns on runes mode or upgrades to Svelte 5, when replacing svelte/store with runes, when embedding Svelte components from plain JavaScript, or when a Svelte component stops updating."
+}

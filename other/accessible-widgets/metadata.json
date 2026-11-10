@@ -1,0 +1,37 @@
+{
+  "name": "accessible-widgets",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/react/accessible-widgets/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "accessible-widgets",
+  "downloaded_at": "2026-11-10T07:25:25.043763Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/react/accessible-widgets/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/react/accessible-widgets/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds and repairs keyboard- and screen-reader-accessible interactive React components to the WAI-ARIA Authoring Practices (APG) - modal dialogs, menu buttons, comboboxes / autocomplete with a listbox popup, tabs, disclosures and accordions. Gives the exact roles, states, keyboard contracts and focus rules (roving tabindex vs aria-activedescendant, focus return, what Tab and Escape must do), React 19 implementation patterns (useId, refs and focus timing, inert, native dialog) and how to test them with Testing Library, user-event and axe-core in jsdom. Use when making a custom widget accessible, fixing an accessibility audit finding, adding keyboard navigation or ARIA attributes, or reviewing role/aria-* usage. Keywords - a11y, WCAG 2.1.1 keyboard, ARIA, role=\"menu\", role=\"combobox\", role=\"tablist\", aria-expanded, aria-controls, aria-activedescendant, aria-selected, focus trap, focus management, screen reader."
+}

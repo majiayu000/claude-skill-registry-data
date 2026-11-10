@@ -1,0 +1,37 @@
+{
+  "name": "shot-list",
+  "repo": "artemisln/edit-reel",
+  "path": "plugins/edit-reel/skills/shot-list/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/artemisln/edit-reel",
+  "dir_name": "shot-list-artemisln-edit-reel",
+  "downloaded_at": "2026-11-10T06:34:20.663892Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "artemisln",
+  "source_url": "https://github.com/artemisln/edit-reel/blob/main/plugins/edit-reel/skills/shot-list/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/artemisln/edit-reel/blob/main/plugins/edit-reel/skills/shot-list/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn an approved script (or a reference video) into a shot list the creator can film without making a single decision on set. Every setting chosen, every line of text written out, every beat given a \"must be visibly true\" check, recording order separated from video order. Use when planning a shoot, a product demo, a sponsored reel or a screen recording, or when asked for a shot list, takes, or filming plan. Usage - /shot-list <path-to-script.md or video.mp4> [product url]"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "launchdarkly-agent-graphs",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/launchdarkly-agent-graphs/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "launchdarkly-agent-graphs",
+  "downloaded_at": "2026-11-10T06:39:49.900498Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-agent-graphs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/launchdarkly-agent-graphs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create and manage agent graphs \u2014 directed graphs of configs connected by edges with handoff logic. Use when building multi-agent workflows where configs route to each other."
+}

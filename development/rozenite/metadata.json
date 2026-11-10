@@ -1,0 +1,39 @@
+{
+  "name": "rozenite",
+  "repo": "callstackincubator/apex-software-factory",
+  "path": ".agents/skills/rozenite/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/callstackincubator/apex-software-factory",
+  "dir_name": "rozenite",
+  "downloaded_at": "2026-11-10T06:56:31.341009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "callstackincubator",
+  "source_url": "https://github.com/callstackincubator/apex-software-factory/blob/main/.agents/skills/rozenite/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/callstackincubator/apex-software-factory/blob/main/.agents/skills/rozenite/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Inspect the live Apex Factory app through Rozenite for Agents \u2014 network requests, console messages, the React component tree and renders, performance traces, heap snapshots, and the app's own tools \u2014 on a debug build with Metro started by .agents/scripts/device-lane.sh metro start. Use to collect evidence for a failing simulator check or a bug report, or when someone asks to debug the running app."
+}

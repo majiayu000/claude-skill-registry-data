@@ -1,0 +1,37 @@
+{
+  "name": "find-state-machines",
+  "repo": "dzhng/skills",
+  "path": "skills/engineering/find-state-machines/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dzhng/skills",
+  "dir_name": "find-state-machines",
+  "downloaded_at": "2026-11-10T07:34:17.802358Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "orchestration",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dzhng",
+  "source_url": "https://github.com/dzhng/skills/blob/main/skills/engineering/find-state-machines/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dzhng/skills/blob/main/skills/engineering/find-state-machines/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find implicit state machines, where one lifecycle's state, transitions, and ownership are scattered across flags, effects, callbacks, and async work, and make them explicit. Use when auditing lifecycle coordination, async flows, impossible states, or a proposed stateful refactor."
+}

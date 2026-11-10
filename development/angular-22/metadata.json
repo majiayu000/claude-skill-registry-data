@@ -1,0 +1,38 @@
+{
+  "name": "angular-22",
+  "repo": "dgesteves/sigil",
+  "path": "catalog/skills/angular/angular-22/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dgesteves/sigil",
+  "dir_name": "angular-22",
+  "downloaded_at": "2026-11-10T07:25:24.158274Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, compile",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dgesteves",
+  "source_url": "https://github.com/dgesteves/sigil/blob/main/catalog/skills/angular/angular-22/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dgesteves/sigil/blob/main/catalog/skills/angular/angular-22/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write, review and migrate Angular 21-22 code (checked against @angular/core 22.2.4) the way the current framework works - zoneless change detection by default, components OnPush by default since v22, signal inputs/outputs/model/queries, computed and linkedSignal instead of effect-driven state, the resource/rxResource/httpResource APIs (params and stream, string statuses, value() throwing in the error state), built-in control flow with track, inject() and @Service, and Vitest-based TestBed tests without fakeAsync. Use when code imports @angular/*, when a view stops updating after removing zone.js or upgrading, when converting @Input/@Output/@ViewChild/*ngIf/*ngFor/ngOnChanges/EventEmitter, when loading data with HttpClient into signals, or when you see Angular 14-19 idioms like zone.run, provideExperimentalZonelessChangeDetection, resource({ request, loader }), ResourceStatus.Loading, fakeAsync or ChangeDetectionStrategy.Default."
+}
