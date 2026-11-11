@@ -1,0 +1,37 @@
+{
+  "name": "linkedin-voice",
+  "repo": "liftli-ai/linkedin-agent-skills",
+  "path": "plugins/liftli/skills/linkedin-voice/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/liftli-ai/linkedin-agent-skills",
+  "dir_name": "linkedin-voice",
+  "downloaded_at": "2026-11-11T06:14:35.106102Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liftli-ai",
+  "source_url": "https://github.com/liftli-ai/linkedin-agent-skills/blob/main/plugins/liftli/skills/linkedin-voice/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liftli-ai/linkedin-agent-skills/blob/main/plugins/liftli/skills/linkedin-voice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants drafts that sound like them, says the writing sounds generic or like AI, or is setting up the LinkedIn skills for the first time. Builds a voice file from three of their own posts that every Liftli writing skill reads before it writes."
+}

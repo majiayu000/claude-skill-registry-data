@@ -1,0 +1,37 @@
+{
+  "name": "api-contract-review",
+  "repo": "gatsby2008/sdd-plugin",
+  "path": "skills/api-contract-review/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/gatsby2008/sdd-plugin",
+  "dir_name": "api-contract-review-gatsby2008-sdd-plugin",
+  "downloaded_at": "2026-11-11T05:03:37.451979Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gatsby2008",
+  "source_url": "https://github.com/gatsby2008/sdd-plugin/blob/main/skills/api-contract-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gatsby2008/sdd-plugin/blob/main/skills/api-contract-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review REST API contracts for HTTP semantics, versioning, backward compatibility, and response consistency. Use when user asks \"review API\", \"check endpoints\", \"REST review\", or before releasing API changes."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "app-map",
+  "repo": "glebis/claude-skills",
+  "path": "app-map/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "app-map",
+  "downloaded_at": "2026-11-11T05:08:28.528151Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/app-map/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/app-map/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when mapping an application's screens, workflows and tests into one interactive page. It inventories every screen and touchpoint from the code, writes test scenarios and jobs to be done, reads the project's real tests, and builds a self-contained HTML map with a ranked \"Test next\" list, a flow graph, a state-by-state testing matrix, a jobs view and agent hand-off prompts. Trigger on \"map this app\", \"app map\", \"screen inventory\", \"what should we test next\", \"map the workflows\", \"which jobs are underrepresented\", or refreshing an existing map after tests change."
+}

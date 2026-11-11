@@ -1,0 +1,37 @@
+{
+  "name": "semantic-svg-diagrams",
+  "repo": "kirksw/nix-config",
+  "path": "agents/defs/skills/semantic-svg-diagrams/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/kirksw/nix-config",
+  "dir_name": "semantic-svg-diagrams",
+  "downloaded_at": "2026-11-11T06:01:57.715302Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirksw",
+  "source_url": "https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/semantic-svg-diagrams/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirksw/nix-config/blob/main/agents/defs/skills/semantic-svg-diagrams/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create and edit clear, standalone SVG diagrams with embedded semantic graphs. Use for architecture, systems, and data-flow diagrams, especially when editable SVG and machine-readable relationships must travel together."
+}

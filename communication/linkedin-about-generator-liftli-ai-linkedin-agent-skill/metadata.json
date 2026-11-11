@@ -1,0 +1,37 @@
+{
+  "name": "linkedin-about-generator",
+  "repo": "liftli-ai/linkedin-agent-skills",
+  "path": "skills/linkedin-about-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/liftli-ai/linkedin-agent-skills",
+  "dir_name": "linkedin-about-generator-liftli-ai-linkedin-agent-skill",
+  "downloaded_at": "2026-11-11T06:14:36.142247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liftli-ai",
+  "source_url": "https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/linkedin-about-generator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/linkedin-about-generator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants a LinkedIn About / summary section written or rewritten \u2014 produces a first-person, 150\u2013250 word About structured as a landing page (hook \u2192 who you help \u2192 proof \u2192 how \u2192 CTA), with the first 3 lines built to survive the see-more fold."
+}

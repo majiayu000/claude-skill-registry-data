@@ -1,0 +1,38 @@
+{
+  "name": "tdd",
+  "repo": "javimosch/supercli",
+  "path": ".agents/skills/tdd/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/javimosch/supercli",
+  "dir_name": "tdd-javimosch-supercli",
+  "downloaded_at": "2026-11-11T05:41:57.465688Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "javimosch",
+  "source_url": "https://github.com/javimosch/supercli/blob/master/.agents/skills/tdd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/javimosch/supercli/blob/master/.agents/skills/tdd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development."
+}

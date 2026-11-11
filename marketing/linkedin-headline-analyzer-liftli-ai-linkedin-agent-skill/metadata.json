@@ -1,0 +1,39 @@
+{
+  "name": "linkedin-headline-analyzer",
+  "repo": "liftli-ai/linkedin-agent-skills",
+  "path": "skills/linkedin-headline-analyzer/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/liftli-ai/linkedin-agent-skills",
+  "dir_name": "linkedin-headline-analyzer-liftli-ai-linkedin-agent-skill",
+  "downloaded_at": "2026-11-11T06:14:37.888700Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, content, brand",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "seo",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liftli-ai",
+  "source_url": "https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/linkedin-headline-analyzer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/linkedin-headline-analyzer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants an existing LinkedIn headline scored, reviewed, or checked \u2014 runs it through length, truncation, buzzword, pipe-count, and audience-signal checks and returns a score with a specific fix per failed check."
+}

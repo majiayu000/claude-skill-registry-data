@@ -1,0 +1,38 @@
+{
+  "name": "portal-relay-hetzner",
+  "repo": "gosuda/portal-tunnel",
+  "path": "plugins/portal-relay/skills/portal-relay-hetzner/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/gosuda/portal-tunnel",
+  "dir_name": "portal-relay-hetzner",
+  "downloaded_at": "2026-11-11T05:11:24.552678Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, docker, deploy",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gosuda",
+  "source_url": "https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-hetzner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-hetzner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a Hetzner Cloud server for a Portal relay with the hcloud CLI, attach a Hetzner Cloud Firewall that opens only the relay ports, keep a stable primary IPv4, and hand the host to portal-relay for deployment. Use when the user wants to run a Portal relay on Hetzner Cloud. Do not use for a server that already exists (portal-relay), for DNS changes at Cloudflare (portal-relay-cloudflare), or for Hetzner Robot dedicated servers."
+}

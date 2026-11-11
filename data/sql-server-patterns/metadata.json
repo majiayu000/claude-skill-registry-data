@@ -1,0 +1,38 @@
+{
+  "name": "sql-server-patterns",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/sql-server-patterns/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "sql-server-patterns",
+  "downloaded_at": "2026-11-11T06:19:43.281950Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/sql-server-patterns/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/sql-server-patterns/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Inject SQL Server schema-design knowledge into a task before the schema is written \u2014 partitioning, hierarchy modelling, SARGability, compression and temporal tables \u2014 by routing to .claude/templates/tsql-patterns.md rather than restating it. Distinct from migration-safety-reviewer (will this migration run cleanly on existing data?) and sql-performance-reviewer (is this existing query fast?): this one decides the SHAPE. Use when: user says /sql-server-patterns, asks how to model or index a table, proposes partitioning or a hierarchy, or when data-architect is designing persistence and dotnet-backend-architect is about to write an entity, configuration or migration."
+}

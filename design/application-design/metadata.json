@@ -1,0 +1,40 @@
+{
+  "name": "application-design",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/application-design/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "application-design",
+  "downloaded_at": "2026-11-11T06:19:42.640156Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, frontend, tailwind",
+    "score": 5,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "frontend",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/application-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/application-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The data-dense product-screen layer of the design method: density, the trading typography scale, metric grids, status badges, metric cards, loading skeletons, empty states, real-time value flashes, live regions and the sidebar-plus-content app shell, on top of the design foundation. Use when: designing or polishing an application screen, dashboard, data table or real-time panel; when the ui-ux-designer agent designs an application screen; or when the user says /application-design, 'make it denser', 'trading terminal look', 'metric card', 'status badge', 'loading skeleton' or 'price flash'."
+}

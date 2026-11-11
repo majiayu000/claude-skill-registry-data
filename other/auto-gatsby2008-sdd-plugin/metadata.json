@@ -1,0 +1,37 @@
+{
+  "name": "auto",
+  "repo": "gatsby2008/sdd-plugin",
+  "path": "skills/auto/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gatsby2008/sdd-plugin",
+  "dir_name": "auto-gatsby2008-sdd-plugin",
+  "downloaded_at": "2026-11-11T05:03:29.902974Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gatsby2008",
+  "source_url": "https://github.com/gatsby2008/sdd-plugin/blob/main/skills/auto/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gatsby2008/sdd-plugin/blob/main/skills/auto/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Non-interactive pipeline driver \u2014 chains /sdd:start \u2192 /sdd:spec \u2192 /sdd:plan \u2192 /sdd:implement \u2192 /sdd:commit \u2192 /sdd:mr without pausing, then stops once the MR is open (before /sdd:close). Never runs /sdd:close or /sdd:mr-address."
+}

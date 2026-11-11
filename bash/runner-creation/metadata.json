@@ -1,0 +1,37 @@
+{
+  "name": "runner-creation",
+  "repo": "lokeshrana9999/shipyard",
+  "path": "plugins/shipyard-delivery/skills/runner-creation/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/lokeshrana9999/shipyard",
+  "dir_name": "runner-creation",
+  "downloaded_at": "2026-11-11T06:20:28.886137Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lokeshrana9999",
+  "source_url": "https://github.com/lokeshrana9999/shipyard/blob/main/plugins/shipyard-delivery/skills/runner-creation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lokeshrana9999/shipyard/blob/main/plugins/shipyard-delivery/skills/runner-creation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates or hardens an unattended runner, the wrapper, pre-flight gate, permission profile, ledger, watchdog, and caps around a headless agent run. Use when asked to \"schedule this\", \"run it every N hours\", \"make a headless sweep\", or \"why does the runner waste tokens\", or when a runner double-launches, runs idle, dies silently, or invents data. Not for one-off scripts or interactive sessions."
+}

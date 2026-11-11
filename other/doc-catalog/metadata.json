@@ -1,0 +1,37 @@
+{
+  "name": "doc-catalog",
+  "repo": "gatsby2008/sdd-plugin",
+  "path": "skills/doc-catalog/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gatsby2008/sdd-plugin",
+  "dir_name": "doc-catalog",
+  "downloaded_at": "2026-11-11T05:03:36.223654Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gatsby2008",
+  "source_url": "https://github.com/gatsby2008/sdd-plugin/blob/main/skills/doc-catalog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gatsby2008/sdd-plugin/blob/main/skills/doc-catalog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a service catalog for the current microservice (Java Spring Boot or frontend) and store it in the central service-catalog registry (default ~/.claude/service-catalog/, override with $CLAUDE_DOC_HOME). Scans the codebase to extract endpoints, integrations, dependencies, and key configuration. Use when starting a new service, after adding a new endpoint or integration, or when the catalog is out of date. `/sdd:doc-catalog list` shows what is already registered."
+}

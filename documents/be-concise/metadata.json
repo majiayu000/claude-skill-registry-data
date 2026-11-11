@@ -1,0 +1,38 @@
+{
+  "name": "be-concise",
+  "repo": "jsath/claude-skills",
+  "path": "skills/writing/be-concise/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "be-concise",
+  "downloaded_at": "2026-11-11T05:50:56.682852Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/writing/be-concise/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/writing/be-concise/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stops Claude writing essays: adds a short 'be concise' instruction to the right CLAUDE.md (project or user) in Claude Code, or gives the exact text for Instructions for Claude / Project instructions in Claude.ai, then runs the same question before and after so you can see the difference. Use when someone says Claude is too wordy, answers are walls of text, make Claude shorter, be concise, stop the fluff, or asks what to put in CLAUDE.md for short answers."
+}

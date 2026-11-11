@@ -1,0 +1,39 @@
+{
+  "name": "assistant-advisory-triage",
+  "repo": "laimis91/assistant-framework",
+  "path": "skills/assistant-advisory-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/laimis91/assistant-framework",
+  "dir_name": "assistant-advisory-triage",
+  "downloaded_at": "2026-11-11T06:08:35.511682Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laimis91",
+  "source_url": "https://github.com/laimis91/assistant-framework/blob/main/skills/assistant-advisory-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laimis91/assistant-framework/blob/main/skills/assistant-advisory-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Decides what to do with an incoming security advisory, advisory draft, or vulnerability report such as a GHSA or CVE report: close, keep open, or keep open but narrow, checked against shipped releases. Use when triaging or dispositioning a reported vulnerability; not for threat modelling, code or dependency vulnerability audits (assistant-security), implementing a known fix, or writing release notes."
+}

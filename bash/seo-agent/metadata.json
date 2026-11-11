@@ -1,0 +1,38 @@
+{
+  "name": "seo-agent",
+  "repo": "jsath/claude-skills",
+  "path": "skills/web/seo-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "seo-agent",
+  "downloaded_at": "2026-11-11T05:50:53.827832Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/web/seo-agent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/web/seo-agent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Daily SEO audit-and-fix loop for a website you own, driven by one config file per site. Crawls the live site with free stdlib Python scripts (technical crawl, indexability, internal-link graph with day-over-day regression diff, JSON-LD validity, AI-crawler access, Core Web Vitals via Lighthouse/PageSpeed), pulls real queries from Google Search Console with your own credentials, ranks issues by impact vs effort, ships safe fixes as pull requests (and optional CMS patches) behind a human review gate, and writes a dated report. Use when asked to run an SEO audit, a technical SEO audit, find SEO quick wins, check indexing or AI crawlability, or run the daily SEO check: /seo-agent <slug> or /seo-agent <slug> technical. Requires Claude Code (runs scripts, git, gh); never merges, never direct-pushes."
+}

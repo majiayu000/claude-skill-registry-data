@@ -1,0 +1,37 @@
+{
+  "name": "resync",
+  "repo": "gatsby2008/sdd-plugin",
+  "path": "skills/resync/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/gatsby2008/sdd-plugin",
+  "dir_name": "resync-gatsby2008-sdd-plugin",
+  "downloaded_at": "2026-11-11T05:03:33.327779Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gatsby2008",
+  "source_url": "https://github.com/gatsby2008/sdd-plugin/blob/main/skills/resync/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gatsby2008/sdd-plugin/blob/main/skills/resync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resync SDD pipeline artifacts with the current branch. Renames .specwork files and updates state.json after a branch rename. Two modes \u2014 sync-only when called without args (assumes git rename already happened), atomic when called with --rename-branch <new-branch-name> (runs git branch -m first, then syncs)."
+}

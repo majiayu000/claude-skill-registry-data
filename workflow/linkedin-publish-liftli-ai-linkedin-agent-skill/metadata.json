@@ -1,0 +1,37 @@
+{
+  "name": "linkedin-publish",
+  "repo": "liftli-ai/linkedin-agent-skills",
+  "path": "skills/linkedin-publish/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/liftli-ai/linkedin-agent-skills",
+  "dir_name": "linkedin-publish-liftli-ai-linkedin-agent-skill",
+  "downloaded_at": "2026-11-11T06:14:40.033087Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: process, automation",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "process",
+      "automation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liftli-ai",
+  "source_url": "https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/linkedin-publish/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/linkedin-publish/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to post, publish or schedule a LinkedIn post, asks the agent to \"post this for me\", or asks whether the agent can post to LinkedIn. Explains what a local skill can't do, prepares the post for posting by hand, and connects Liftli, which publishes through LinkedIn's official API after the user approves."
+}

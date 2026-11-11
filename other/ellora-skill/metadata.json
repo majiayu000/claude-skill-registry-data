@@ -1,0 +1,37 @@
+{
+  "name": "ellora-skill",
+  "repo": "lambdasec/skills",
+  "path": "skills/ellora-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lambdasec/skills",
+  "dir_name": "ellora-skill",
+  "downloaded_at": "2026-11-11T06:09:09.428405Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "language-model",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lambdasec",
+  "source_url": "https://github.com/lambdasec/skills/blob/main/skills/ellora-skill/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lambdasec/skills/blob/main/skills/ellora-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fine-tune a language model with a LoRA adapter using the Ellora recipes (codelion/ellora), which generate their own training data instead of needing a labeled dataset. Use when the user wants to fine-tune, train a LoRA or adapter, recover accuracy lost to 4-bit quantization, teach a model step-by-step reasoning or tool calling, extend context for long code repositories, make generated code more secure, add execution awareness (predicting variable states), or go from a one-sentence data description to a fine-tuned model. Covers data generation, training, before/after evaluation and optional publishing, with scripts for CUDA and an MLX route for Apple silicon."
+}

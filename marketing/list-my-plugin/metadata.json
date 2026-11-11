@@ -1,0 +1,38 @@
+{
+  "name": "list-my-plugin",
+  "repo": "hashgraph-online/awesome-codex-plugins",
+  "path": ".agents/skills/list-my-plugin/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/hashgraph-online/awesome-codex-plugins",
+  "dir_name": "list-my-plugin",
+  "downloaded_at": "2026-11-11T05:19:21.262506Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, campaign",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hashgraph-online",
+  "source_url": "https://github.com/hashgraph-online/awesome-codex-plugins/blob/main/.agents/skills/list-my-plugin/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hashgraph-online/awesome-codex-plugins/blob/main/.agents/skills/list-my-plugin/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add a Codex plugin to the awesome-codex-plugins README as one correctly placed line, check it locally, and finish with the owner's next steps. Use when someone asks to list, submit or add their Codex plugin to this directory."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ai-search-visibility",
+  "repo": "liftli-ai/linkedin-agent-skills",
+  "path": "skills/ai-search-visibility/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/liftli-ai/linkedin-agent-skills",
+  "dir_name": "ai-search-visibility-liftli-ai-linkedin-agent-skill",
+  "downloaded_at": "2026-11-11T06:14:35.474781Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, content",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "seo",
+      "content"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liftli-ai",
+  "source_url": "https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/ai-search-visibility/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/ai-search-visibility/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks whether ChatGPT, Claude, or Perplexity can find or cite them, or wants a personal GEO / AI-search-visibility audit \u2014 runs ~12 checks across Presence, Consistency, and Citability, and returns a verdict tier (Invisible / Fragments / Citable) with next actions."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "north-star-review",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/north-star-review/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "north-star-review",
+  "downloaded_at": "2026-11-11T06:19:41.948017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/north-star-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/north-star-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the north-star review engine against every active thought in the\nproject. The engine reads each thought's anti-patterns, greps the live\ncodebase for hits, and emits a ranked list of suggested next-step\ncontracts. Optionally updates the `Current gap` and `Suggested next steps`\nsections of each thought file in place.\n\nUse when: the user types `/north-star-review`, \"what should we work on next\",\n\"review my goals\", \"show me how the codebase aligns with my aspirations\",\nor wants a weekly/monthly check-in on long-horizon direction."
+}

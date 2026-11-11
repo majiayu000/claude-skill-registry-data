@@ -1,0 +1,39 @@
+{
+  "name": "pair-next",
+  "repo": "learnn-com/designn",
+  "path": ".claude/skills/pair-next/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/learnn-com/designn",
+  "dir_name": "pair-next",
+  "downloaded_at": "2026-11-11T06:11:26.325519Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=4, product=4",
+    "score": 4,
+    "runner_up": "product",
+    "runner_up_score": 4,
+    "signals": [
+      "ci",
+      "cd",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "learnn-com",
+  "source_url": "https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-next/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-next/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Determines the most relevant next action for your project by reading adoption files and PM tool state. Suggests which skill to invoke next. Use at the start of a session, when switching tasks, or whenever you need guidance on what to work on."
+}

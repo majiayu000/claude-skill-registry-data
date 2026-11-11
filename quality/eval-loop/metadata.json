@@ -1,0 +1,38 @@
+{
+  "name": "eval-loop",
+  "repo": "jmagly/aiwg",
+  "path": "agentic/code/addons/nlp-prod/skills/eval-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/jmagly/aiwg",
+  "dir_name": "eval-loop",
+  "downloaded_at": "2026-11-11T05:46:40.275226Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jmagly",
+  "source_url": "https://github.com/jmagly/aiwg/blob/main/agentic/code/addons/nlp-prod/skills/eval-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jmagly/aiwg/blob/main/agentic/code/addons/nlp-prod/skills/eval-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure and run the isolated eval loop pattern \u2014 generate, evaluate, refine until pass threshold met"
+}

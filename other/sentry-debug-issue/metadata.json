@@ -1,0 +1,37 @@
+{
+  "name": "sentry-debug-issue",
+  "repo": "mdugue/bridge",
+  "path": ".agents/skills/sentry-debug-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mdugue/bridge",
+  "dir_name": "sentry-debug-issue",
+  "downloaded_at": "2026-11-11T06:35:24.999269Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mdugue",
+  "source_url": "https://github.com/mdugue/bridge/blob/main/.agents/skills/sentry-debug-issue/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mdugue/bridge/blob/main/.agents/skills/sentry-debug-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Debug and fix a Sentry issue \u2014 find it (by link, ID, or search), pull full context (stack trace, breadcrumbs, trace, logs), optionally run Seer root-cause / autofix, apply the code fix, and resolve it via a `Fixes PROJECT-NAME-12A` commit/PR. Use when working a known error or hunting one down to fix."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "linkedin-writer",
+  "repo": "jsath/claude-skills",
+  "path": "skills/writing/linkedin-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "linkedin-writer",
+  "downloaded_at": "2026-11-11T05:51:02.283698Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: creative=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "story",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/writing/linkedin-writer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/writing/linkedin-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes LinkedIn posts in the user's own voice, learned from 5 to 10 of their best posts, using formats ranked by measured reach and engagement (milestone, short prediction, origin story, lesson-learned, comparison hook, comment-keyword lead magnet) and a hard anti-slop test. Also researches what is winning in a niche from public posts, and returns ranked idea banks. Use when someone asks for a LinkedIn post, LinkedIn ideas, to turn a story or result into a post, or to make a LinkedIn draft sound less like AI. Drafts only; never posts."
+}

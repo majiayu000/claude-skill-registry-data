@@ -1,0 +1,37 @@
+{
+  "name": "code-review",
+  "repo": "itsaspacestation/natural-intelligence",
+  "path": "skills/code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/itsaspacestation/natural-intelligence",
+  "dir_name": "code-review-itsaspacestation-natural-intelligence",
+  "downloaded_at": "2026-11-11T05:37:41.288752Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "itsaspacestation",
+  "source_url": "https://github.com/itsaspacestation/natural-intelligence/blob/main/skills/code-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/itsaspacestation/natural-intelligence/blob/main/skills/code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks for a full review of a change, pull request, or merge request against the personal checklist, covering design, tests, performance, security, and correctness \u2014 including local changes before pushing or opening an MR/PR. Also use when the user asks to read, address, answer, or reply to reviewer comments or threads, to post findings as applicable suggestions on GitLab or GitHub, or to prepare a plan from reviewer feedback, on any forge, including GitLab merge requests through glab (MR discussions, unresolved threads, suggestion blocks, glab auth) and GitHub pull requests through gh (PR discussions, review threads, suggestion blocks, gh auth)."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "website-design",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/website-design/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "website-design",
+  "downloaded_at": "2026-11-11T06:19:39.828610Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, frontend, tailwind",
+    "score": 5,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "frontend",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/website-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/website-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The design foundation for any page of a project: theme polarity per application, the Material-to-Tailwind @theme token bridge, the inline-style ban, WCAG 2.1 AA contrast, keyboard and ARIA rules, purposeful motion and the never-do list. Use when: designing or restyling a website page, a marketing or content page, or any frontend page's colours, theming, accessibility or layout; when the ui-ux-designer agent designs a website page; or when the user says /website-design, 'design this page', 'fix the theme', 'colour contrast', or 'replace this inline style'."
+}

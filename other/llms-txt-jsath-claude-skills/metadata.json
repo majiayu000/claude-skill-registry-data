@@ -1,0 +1,37 @@
+{
+  "name": "llms-txt",
+  "repo": "jsath/claude-skills",
+  "path": "skills/web/llms-txt/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "llms-txt-jsath-claude-skills",
+  "downloaded_at": "2026-11-11T05:50:53.645609Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/web/llms-txt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/web/llms-txt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes and publishes an llms.txt for a business website: reads the site, pulls out what the business does, who it serves, how it helps and the key pages, writes the file in the llmstxt.org format, validates it with an included checker, and puts it live at yoursite.com/llms.txt with a check that it is served correctly. Honest that llms.txt is a proposal and does not guarantee rankings. Use when someone says write my llms.txt, add llms.txt to my site, help AI tools understand my business, or how do I show up in ChatGPT or Claude answers. Best in Claude Code (or Codex) with access to the site's code; can also just write the file for you to upload."
+}

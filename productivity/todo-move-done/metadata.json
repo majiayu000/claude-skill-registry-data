@@ -1,0 +1,37 @@
+{
+  "name": "todo-move-done",
+  "repo": "gpsaggese/helpers",
+  "path": ".claude/skills/todo.move_done/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/gpsaggese/helpers",
+  "dir_name": "todo-move-done",
+  "downloaded_at": "2026-11-11T05:11:50.398231Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gpsaggese",
+  "source_url": "https://github.com/gpsaggese/helpers/blob/master/.claude/skills/todo.move_done/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gpsaggese/helpers/blob/master/.claude/skills/todo.move_done/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Move completed tasks from ai_task_queue.md into DONE.md, organized by the topics in ai_task_queue.md's ALL TOPICS section"
+}

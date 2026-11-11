@@ -1,0 +1,38 @@
+{
+  "name": "erp-sql",
+  "repo": "microsoft/Dataverse-skills",
+  "path": ".github/plugins/dataverse/skills/erp-sql/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/microsoft/Dataverse-skills",
+  "dir_name": "erp-sql",
+  "downloaded_at": "2026-11-11T06:38:49.068729Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/Dataverse-skills/blob/main/.github/plugins/dataverse/skills/erp-sql/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/Dataverse-skills/blob/main/.github/plugins/dataverse/skills/erp-sql/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Temporary Finance and Operations SQL access and bounded physical-table reads for unified development environments (UDEs) only, requiring the environment System administrator (sysAdmin) role. Use when the user explicitly requests direct ERP SQL access, a temporary SQL password, a sqlcmd connection, or a table read in an established ERP SQL workflow."
+}

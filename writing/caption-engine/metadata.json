@@ -1,0 +1,37 @@
+{
+  "name": "caption-engine",
+  "repo": "jsath/claude-skills",
+  "path": "skills/video/caption-engine/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "caption-engine",
+  "downloaded_at": "2026-11-11T05:50:58.706347Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writer, copy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/video/caption-engine/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/video/caption-engine/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes captions for a finished video from its transcript: pulls the line worth repeating, writes first-line options, writes per-platform versions (Instagram, TikTok, YouTube title and description, others on request), keeps the creator's voice using their best past captions, and checks the call to action matches what the video actually says. Use when a creator asks for captions, a caption hook, a YouTube title and description, or a CTA check. Drafts only; never posts or schedules."
+}

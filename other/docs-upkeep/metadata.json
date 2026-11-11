@@ -1,0 +1,37 @@
+{
+  "name": "docs-upkeep",
+  "repo": "mdugue/bridge",
+  "path": ".claude/skills/docs-upkeep/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mdugue/bridge",
+  "dir_name": "docs-upkeep",
+  "downloaded_at": "2026-11-11T06:35:22.671334Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mdugue",
+  "source_url": "https://github.com/mdugue/bridge/blob/main/.claude/skills/docs-upkeep/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mdugue/bridge/blob/main/.claude/skills/docs-upkeep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before finishing any change that alters what the viewer shows, adds or drops a data source or transformation, makes a decision that binds future work, or sends visitor data somewhere new; also when writing or revising an ADR, AGENTS.md or a skill."
+}

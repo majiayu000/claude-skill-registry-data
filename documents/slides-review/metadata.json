@@ -1,0 +1,37 @@
+{
+  "name": "slides-review",
+  "repo": "gpsaggese/helpers",
+  "path": ".claude/skills/slides.review/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/gpsaggese/helpers",
+  "dir_name": "slides-review",
+  "downloaded_at": "2026-11-11T05:11:48.627556Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, markdown",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gpsaggese",
+  "source_url": "https://github.com/gpsaggese/helpers/blob/master/.claude/skills/slides.review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gpsaggese/helpers/blob/master/.claude/skills/slides.review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review slide structure and content, then propose and apply improvements"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "looot-amazon-product",
+  "repo": "loootai/looot-skills",
+  "path": "skills/looot-amazon-product/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/loootai/looot-skills",
+  "dir_name": "looot-amazon-product",
+  "downloaded_at": "2026-11-11T06:20:45.092408Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loootai",
+  "source_url": "https://github.com/loootai/looot-skills/blob/main/skills/looot-amazon-product/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loootai/looot-skills/blob/main/skills/looot-amazon-product/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Look up an Amazon product. Use when the user says things like \"get the details for ASIN B09B8V1LZ3\", \"what does this Amazon listing say about price and reviews\" or \"compare these three products from their pages\". Runs through looot, billed per call."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "journal-add",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/journal-add/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "journal-add",
+  "downloaded_at": "2026-11-11T06:19:38.229045Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/journal-add/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/journal-add/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Append a lesson-learned entry to the journal (.claude/registries/JOURNAL.md root or a .claude/registries/JOURNAL/<domain>.md file) with registry_append.py. Use when: the user says /journal-add, 'log a lesson', 'add to the journal', 'record this for next time', or after a production incident / debugging session / contract review surfaces a non-obvious insight that future contracts should heed. The journal is read by data-architect (Step 1) and contract-critic on every run."
+}

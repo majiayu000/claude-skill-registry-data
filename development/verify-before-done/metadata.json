@@ -1,0 +1,38 @@
+{
+  "name": "verify-before-done",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/verify-before-done/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "verify-before-done",
+  "downloaded_at": "2026-11-11T06:19:42.275873Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/verify-before-done/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/verify-before-done/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the verification gauntlet before claiming a task is complete. Executes build, tests, migration check, generated-model drift check, and HANDOFF completeness check. Blocks on any failure. Use when: an agent or the user is about to declare Status=complete, before committing, before opening a PR, or whenever the phrase 'done', 'complete', 'ready to ship', 'finished' is used. Mandatory final step in /tdd-first and recommended final step in /design-first."
+}

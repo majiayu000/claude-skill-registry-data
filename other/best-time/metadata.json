@@ -1,0 +1,37 @@
+{
+  "name": "best-time",
+  "repo": "jsath/claude-skills",
+  "path": "skills/social/best-time/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "best-time",
+  "downloaded_at": "2026-11-11T05:50:55.129207Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/social/best-time/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/social/best-time/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads a creator's own Instagram, TikTok and YouTube analytics exports and puts every post in one table, finds the posts that beat the creator's own normal by 3x or more and what they share, compares how the same content did on each platform, reads when their followers are online from each app's own insights, and writes next week's plan, saying what to post, on which platform, at what time. Use when a creator asks when to post, what to post where, for a posting schedule, a weekly content plan from their numbers, or to merge analytics from several platforms. Works from exports and pasted numbers; never logs in to any account and never posts."
+}

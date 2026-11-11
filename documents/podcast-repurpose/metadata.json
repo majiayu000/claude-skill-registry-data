@@ -1,0 +1,38 @@
+{
+  "name": "podcast-repurpose",
+  "repo": "jsath/claude-skills",
+  "path": "skills/video/podcast-repurpose/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "podcast-repurpose",
+  "downloaded_at": "2026-11-11T05:51:02.639817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word, docx",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/video/podcast-repurpose/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/video/podcast-repurpose/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns one podcast episode transcript into a week of written content: an Episode Prep agent that checks the transcript and speaker names, a Clip Spotter that picks the best short-clip moments with exact timestamps and hooks for an editor to cut, a Show Notes Writer that writes show notes and chapter markers, a Repurpose Writer that turns the big ideas into a newsletter, a LinkedIn post and Instagram captions, and an Episode Planner that spreads it all over the week. Works from a transcript the user supplies or exports from their transcription tool. It does not edit audio or video and does not cut clips. Use when a podcaster asks for show notes, chapters, clip timestamps, or posts from an episode, or says \"repurpose this episode\". Drafts only; never posts."
+}

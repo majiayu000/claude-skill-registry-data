@@ -1,0 +1,37 @@
+{
+  "name": "debugging",
+  "repo": "jgarner9/bud-plugins",
+  "path": "plugins/bud/skills/debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jgarner9/bud-plugins",
+  "dir_name": "debugging-jgarner9-bud-plugins",
+  "downloaded_at": "2026-11-11T05:44:06.575408Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgarner9",
+  "source_url": "https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud/skills/debugging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud/skills/debugging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find the cause before fixing. Use for a bug, failing test or unexpected behavior, before proposing a change."
+}

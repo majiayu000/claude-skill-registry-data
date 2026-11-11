@@ -1,0 +1,38 @@
+{
+  "name": "bud-dev",
+  "repo": "jgarner9/bud-plugins",
+  "path": "plugins/bud-ide/skills/bud-dev/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/jgarner9/bud-plugins",
+  "dir_name": "bud-dev",
+  "downloaded_at": "2026-11-11T05:44:06.955247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgarner9",
+  "source_url": "https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud-ide/skills/bud-dev/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud-ide/skills/bud-dev/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How the bud repo (a Neovim IDE driven by a small Go CLI) is built and extended. Use when working in a bud checkout, or when asked to add a language spec, a tool, a layout or a kit entry to bud."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "matlab-fit-tire-model",
+  "repo": "matlab/matlab-agentic-toolkit",
+  "path": "skills-catalog/automotive/matlab-fit-tire-model/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matlab/matlab-agentic-toolkit",
+  "dir_name": "matlab-fit-tire-model",
+  "downloaded_at": "2026-11-11T06:31:40.811082Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matlab",
+  "source_url": "https://github.com/matlab/matlab-agentic-toolkit/blob/main/skills-catalog/automotive/matlab-fit-tire-model/SKILL.md",
+  "license": "https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matlab/matlab-agentic-toolkit/blob/main/skills-catalog/automotive/matlab-fit-tire-model/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Fit a tire model (Magic Formula 6.2/5.2/5.1, Dugoff, or Fiala) to measured tire force and moment data using the Vehicle Dynamics Blockset Extended Tire Features API (tireData.import, tireModel.new, tireModel.fit, tireModel.export). Use when fitting, parameterizing, or calibrating a tire model from tire measurement data (TYDEX, Calspan, MTS, or text/CSV from any test source), creating a .tir file, or building a Magic Formula tire model from test data. Also use for the individual steps: importing TYDEX, Calspan, MTS, or CSV tire data (file extensions `.tdx` for TYDEX; `.data`, `.tim`, `.rsp` for MTS; any other extension read as text) into a tireData object, exporting a tire model to .tir, inspecting, smoothing, cropping, or plotting tire measurement data or a model's response, or converting a fitted model to another type."
+}

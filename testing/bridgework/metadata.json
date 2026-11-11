@@ -1,0 +1,37 @@
+{
+  "name": "bridgework",
+  "repo": "glebis/claude-skills",
+  "path": "bridgework/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "bridgework",
+  "downloaded_at": "2026-11-11T05:08:29.715915Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/bridgework/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/bridgework/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when someone wants to see what their tech stack could do in combination. It first audits the stack (an optional, consent-gated, read-only scan of this Mac plus a short interview), then builds and serves Bridgework, a local canvas for practising \"what could these two capabilities do together?\", with a prompt for an agent at every step. Triggers on \"audit my stack\", \"what could my tools do together\", \"map my tech stack\", \"find combinations in my stack\", \"bridgework\", \"open the bridgework canvas\", or \"show the bridgework demo\"."
+}

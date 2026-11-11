@@ -1,0 +1,38 @@
+{
+  "name": "database",
+  "repo": "mblode/agent-skills",
+  "path": "skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/database/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/mblode/agent-skills",
+  "dir_name": "database-mblode-agent-skills",
+  "downloaded_at": "2026-11-11T06:34:19.174158Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblode",
+  "source_url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/database/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/database/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Comprehensive guidance for all database work in the Mossback platform. Covers models, schemas, tables, columns, indexes, constraints, relations, entities, data models, model definitions, model fields, migrations, seeds, queries, joins, transactions, connection pooling, query performance, the ORM, repositories, and data access patterns in general. Also covers Postgres configuration, extensions, backups, restores, replication, and local database setup. Helps with designing a new model, changing an existing model, understanding how models relate to one another, and debugging anything that touches persisted data. Use when the user mentions a model, a schema, a table, the database, data, SQL, Postgres, the ORM, a query, a record, an entity, storage, or persistence, or asks anything about how data is structured, stored, loaded, saved, or changed anywhere in the platform. Always follows the Mossback platform conventions, house style, and established best practices."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "design-first",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/design-first/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "design-first",
+  "downloaded_at": "2026-11-11T06:19:38.533429Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/design-first/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/design-first/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Kick off the Data-First Engineering Protocol for any non-trivial task. Classifies the task, invokes the data-architect to produce a concept contract at .claude/concepts/, resolves Open Questions with the user, and hands off to implementer agents with the contract as their authoritative input. Use when: user says /design-first, 'design this feature', 'start a new feature', or is about to request any non-trivial implementation. The concept-gate.py hook will block Edit/Write without an approved contract, so this skill is the entry point."
+}

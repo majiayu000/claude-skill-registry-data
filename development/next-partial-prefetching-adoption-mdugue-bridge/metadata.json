@@ -1,0 +1,38 @@
+{
+  "name": "next-partial-prefetching-adoption",
+  "repo": "mdugue/bridge",
+  "path": ".agents/skills/next-partial-prefetching-adoption/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mdugue/bridge",
+  "dir_name": "next-partial-prefetching-adoption-mdugue-bridge",
+  "downloaded_at": "2026-11-11T06:35:27.626077Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, framework, build",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mdugue",
+  "source_url": "https://github.com/mdugue/bridge/blob/main/.agents/skills/next-partial-prefetching-adoption/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mdugue/bridge/blob/main/.agents/skills/next-partial-prefetching-adoption/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn on Partial Prefetching in a Next.js app and work through the insights it surfaces. Use when the user wants to enable or adopt Partial Prefetching, flip the `partialPrefetching` flag, opt routes in with `export const prefetch = 'partial'`, audit `Link prefetch={true}` behavior, preserve existing prefetched UI with `instant()` tests, or resolve the instant-link-prefetch-partial and instant-shell-url-data insights."
+}

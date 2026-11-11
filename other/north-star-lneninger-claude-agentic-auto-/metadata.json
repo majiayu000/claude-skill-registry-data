@@ -1,0 +1,37 @@
+{
+  "name": "north-star",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/north-star/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "north-star-lneninger-claude-agentic-auto-",
+  "downloaded_at": "2026-11-11T06:19:37.862108Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/north-star/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/north-star/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Capture an aspirational direction-setting thought as a north-star file at\n.claude/north-stars/<YYYY-MM-DD>-<slug>.md. North-stars are the\nWHAT-WE-WANT register; distinct from JOURNAL.md (lessons from what already\nhappened) and contracts (concrete tasks). Read by data-architect Step 0.5\non every /design-first and reviewed via /north-star-review to emit ranked\nsuggestions of contracts that would move the codebase toward the aspiration.\n\nUse when: the user types `/north-star \"<aspiration>\"`, or says \"capture\nthis as a goal\", \"record this direction\", \"I want the system to eventually X\",\nor describes a future-state intent that should influence design decisions\nbeyond the current task."
+}

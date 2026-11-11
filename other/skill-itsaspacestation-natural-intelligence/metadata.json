@@ -1,0 +1,37 @@
+{
+  "name": "skill",
+  "repo": "itsaspacestation/natural-intelligence",
+  "path": "skills/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/itsaspacestation/natural-intelligence",
+  "dir_name": "skill-itsaspacestation-natural-intelligence",
+  "downloaded_at": "2026-11-11T05:37:42.790075Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "itsaspacestation",
+  "source_url": "https://github.com/itsaspacestation/natural-intelligence/blob/main/skills/skill/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/itsaspacestation/natural-intelligence/blob/main/skills/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when creating or editing a skill, agent, or command inside the ni plugin, when a skill does not trigger or triggers too often, when moving content between skills or into a reference file, or when the user asks how ni skills are structured, linked, tested, or installed."
+}

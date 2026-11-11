@@ -1,0 +1,38 @@
+{
+  "name": "maplibre-native-gl-js-parity",
+  "repo": "maplibre/maplibre-agent-skills",
+  "path": "skills/maplibre-native-gl-js-parity/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/maplibre/maplibre-agent-skills",
+  "dir_name": "maplibre-native-gl-js-parity",
+  "downloaded_at": "2026-11-11T06:28:05.422862Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, android, ios",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "platform",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maplibre",
+  "source_url": "https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-native-gl-js-parity/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maplibre/maplibre-agent-skills/blob/main/skills/maplibre-native-gl-js-parity/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Six places where MapLibre Native (Android, iOS) and MapLibre GL JS differ, release by release \u2014 custom URL schemes (`addProtocol`), globe projection, 3D terrain, `interpolate-hcl` and `interpolate-lab`, the `color-relief` layer, and PMTiles \u2014 with the Native release that closed each gap, the tracking issue for each still open, and what to do on Native instead. Use when a style or feature that works in the browser does nothing in an Android or iOS app, or when porting MapLibre GL JS code to Kotlin or Swift."
+}

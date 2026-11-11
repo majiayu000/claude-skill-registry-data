@@ -1,0 +1,38 @@
+{
+  "name": "learnings",
+  "repo": "kortix-ai/CompanyOS",
+  "path": ".agents/skills/learnings/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/kortix-ai/CompanyOS",
+  "dir_name": "learnings",
+  "downloaded_at": "2026-11-11T06:04:22.923646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, planning, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/CompanyOS/blob/main/.agents/skills/learnings/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/CompanyOS/blob/main/.agents/skills/learnings/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The project's episodic memory: a timestamped ledger of rules paid for with real outages and near-misses, one entry per incident, plus `work/`: the plans, designs and open thoughts behind planned or parked work. Load WHENEVER you write or review a DB migration or schema change, touch deploy/release workflows (.github/workflows/deploy-*, promote.yml, vercel config), plan a promote/release, respond to a prod incident, or when another skill references a learning. ALSO load after resolving any incident or near-miss: it must leave a new ledger entry in the same session. ALSO load before picking up or planning a larger initiative (goals, workflows, the factory as a state machine), and to persist a plan or open thought so someone else can continue it."
+}

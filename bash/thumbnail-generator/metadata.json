@@ -1,0 +1,38 @@
+{
+  "name": "thumbnail-generator",
+  "repo": "jsath/claude-skills",
+  "path": "skills/video/thumbnail-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "thumbnail-generator",
+  "downloaded_at": "2026-11-11T05:51:03.375873Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/video/thumbnail-generator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/video/thumbnail-generator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a 1280x720 YouTube thumbnail (or a banner/cover) that reads at phone size: a text-free background plate (generated or from a real frame), a real cutout of the person, 1 to 3 words in tight colour blocks, an official logo, composed by a script that checks overlaps and frame edges and renders the 320px and 168px views you must look at. Use when asked for a thumbnail, cover, banner, 'make this clickable', or to fix a thumbnail that looks cluttered or small."
+}

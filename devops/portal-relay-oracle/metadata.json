@@ -1,0 +1,38 @@
+{
+  "name": "portal-relay-oracle",
+  "repo": "gosuda/portal-tunnel",
+  "path": "plugins/portal-relay/skills/portal-relay-oracle/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/gosuda/portal-tunnel",
+  "dir_name": "portal-relay-oracle",
+  "downloaded_at": "2026-11-11T05:11:24.350263Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra, infrastructure",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gosuda",
+  "source_url": "https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-oracle/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-oracle/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create an Oracle Cloud Infrastructure (OCI) compute instance for a Portal relay, including Always Free Ampere A1 shapes, open the VCN and host firewall for the relay ports, attach a stable public IP, and hand the host to portal-relay for deployment. Use when the user wants to run a Portal relay on Oracle Cloud or OCI, or asks to use an Oracle free-tier VM as a relay. Do not use for a host that already exists (portal-relay), for DNS changes at Cloudflare (portal-relay-cloudflare), or for other clouds."
+}

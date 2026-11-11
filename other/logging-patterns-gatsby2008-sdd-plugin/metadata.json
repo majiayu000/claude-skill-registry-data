@@ -1,0 +1,37 @@
+{
+  "name": "logging-patterns",
+  "repo": "gatsby2008/sdd-plugin",
+  "path": "skills/logging-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gatsby2008/sdd-plugin",
+  "dir_name": "logging-patterns-gatsby2008-sdd-plugin",
+  "downloaded_at": "2026-11-11T05:03:36.823411Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gatsby2008",
+  "source_url": "https://github.com/gatsby2008/sdd-plugin/blob/main/skills/logging-patterns/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gatsby2008/sdd-plugin/blob/main/skills/logging-patterns/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Java logging best practices with SLF4J, structured logging (JSON), and MDC for request tracing. Includes AI-friendly log formats for Claude Code debugging. Use when user asks about logging, debugging application flow, or analyzing logs."
+}

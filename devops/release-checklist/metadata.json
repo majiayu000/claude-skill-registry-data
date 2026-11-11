@@ -1,0 +1,37 @@
+{
+  "name": "release-checklist",
+  "repo": "mblode/agent-skills",
+  "path": "skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/release-checklist/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/mblode/agent-skills",
+  "dir_name": "release-checklist",
+  "downloaded_at": "2026-11-11T06:34:16.607096Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblode",
+  "source_url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/release-checklist/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/release-checklist/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepares a Saltmarsh Booking production release for a person to start. Use when asked to \"prepare the release\", \"is main ready to ship\", or \"what is going out\"."
+}

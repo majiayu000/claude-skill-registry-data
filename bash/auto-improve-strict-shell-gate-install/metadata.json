@@ -1,0 +1,38 @@
+{
+  "name": "auto-improve-strict-shell-gate-install",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/auto-improve-strict-shell-gate-install/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "auto-improve-strict-shell-gate-install",
+  "downloaded_at": "2026-11-11T06:19:45.309590Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/auto-improve-strict-shell-gate-install/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/auto-improve-strict-shell-gate-install/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Install the strict-shell-gate add-on of the agentic-auto-improve plugin in this project: a hook that reads each shell command before it runs and blocks a write into a source file that no approved contract covers. Says plainly what it gets wrong. Previews the files and the settings.json change, asks for one confirmation, then writes. The name carries the plugin name because you may have several plugins installed. Use when: user says /auto-improve-strict-shell-gate-install, 'install the strict shell gate', 'block shell writes before they happen', or 'turn on bash-gate'. Never overwrites a file that differs and never removes a row."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "threejs-animation",
+  "repo": "mdugue/bridge",
+  "path": ".agents/skills/threejs-animation/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/mdugue/bridge",
+  "dir_name": "threejs-animation-mdugue-bridge",
+  "downloaded_at": "2026-11-11T06:35:24.812341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: component, animation",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mdugue",
+  "source_url": "https://github.com/mdugue/bridge/blob/main/.agents/skills/threejs-animation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mdugue/bridge/blob/main/.agents/skills/threejs-animation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keyframe, skeletal and morph-target animation, procedural motion and clip blending, on WebGL or with WebGPU and TSL. Use when animating objects, playing glTF animations, posing bones, driving morph targets, or mixing and crossfading clips."
+}

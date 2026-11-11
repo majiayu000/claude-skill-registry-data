@@ -1,0 +1,38 @@
+{
+  "name": "hiring-replacement",
+  "repo": "jsath/claude-skills",
+  "path": "skills/business/hiring-replacement/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "hiring-replacement",
+  "downloaded_at": "2026-11-11T05:51:04.474562Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: communication, email, chat",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "communication",
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/business/hiring-replacement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/business/hiring-replacement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs five agents that cover the admin, sales-support and account-management work a small service business would otherwise hire for: lead intake and scoring, client onboarding, recurring SOP tasks, a weekly numbers report and client reply drafts. Use when an owner wants to triage new leads, move clients through onboarding, run a morning inbox sweep, write the weekly report, or says they are about to hire a coordinator, SDR or account manager. Drafts only; the owner approves and sends."
+}

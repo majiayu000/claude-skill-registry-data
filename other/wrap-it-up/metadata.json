@@ -1,0 +1,37 @@
+{
+  "name": "wrap-it-up",
+  "repo": "jpantsjoha/ai-native-developer-experience",
+  "path": "skills/wrap-it-up/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jpantsjoha/ai-native-developer-experience",
+  "dir_name": "wrap-it-up",
+  "downloaded_at": "2026-11-11T05:50:15.607738Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jpantsjoha",
+  "source_url": "https://github.com/jpantsjoha/ai-native-developer-experience/blob/main/skills/wrap-it-up/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jpantsjoha/ai-native-developer-experience/blob/main/skills/wrap-it-up/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End a long engineering session cleanly under token and attention pressure: freeze the in-flight set, delegate execution to subagents and judgement to an independent reviewer, and drive every item to one of three exits \u2014 merged, deferred with a record, or operator-blocked with a decision brief \u2014 then a clean baseline, a reconciled tracker, and a release-worthiness advisory. Use when the operator says \"wrap it up\", \"clean baseline\", \"close out the session\", \"ready for the next iteration\", or the context is filling. Not `get-it-done` (which grows the set); this closes a set frozen at invocation."
+}

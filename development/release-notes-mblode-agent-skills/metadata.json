@@ -1,0 +1,37 @@
+{
+  "name": "release-notes",
+  "repo": "mblode/agent-skills",
+  "path": "skills/agents-md/evals/fixtures/shared-triage-skill/base/skills/release-notes/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mblode/agent-skills",
+  "dir_name": "release-notes-mblode-agent-skills",
+  "downloaded_at": "2026-11-11T06:34:15.390618Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblode",
+  "source_url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/shared-triage-skill/base/skills/release-notes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/shared-triage-skill/base/skills/release-notes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drafts customer-facing release notes for Copper Kettle from merged pull requests. Use when asked to \"write the release notes\", \"draft the changelog\", or \"what shipped this week\"."
+}

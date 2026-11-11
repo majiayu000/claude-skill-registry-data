@@ -1,0 +1,38 @@
+{
+  "name": "project-write-prd",
+  "repo": "gpsaggese/helpers",
+  "path": ".claude/skills/project.write_prd/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/gpsaggese/helpers",
+  "dir_name": "project-write-prd",
+  "downloaded_at": "2026-11-11T05:11:56.168641Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gpsaggese",
+  "source_url": "https://github.com/gpsaggese/helpers/blob/master/.claude/skills/project.write_prd/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gpsaggese/helpers/blob/master/.claude/skills/project.write_prd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn an idea into a product requirements doc (PRD) for a project"
+}

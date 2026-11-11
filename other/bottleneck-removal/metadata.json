@@ -1,0 +1,37 @@
+{
+  "name": "bottleneck-removal",
+  "repo": "jsath/claude-skills",
+  "path": "skills/business/bottleneck-removal/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "bottleneck-removal",
+  "downloaded_at": "2026-11-11T05:51:04.308164Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/business/bottleneck-removal/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/business/bottleneck-removal/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds the one process in a business that waits on the owner the most, turns it into a written runbook Claude can follow the same way every time, handles edge cases with owner-approved rules, monitors each run and writes a handoff manual for a team member. Use when an owner says everything waits on them, asks to find their bottleneck, wants to systemise or document a process (quoting, approvals, scheduling, screening, invoicing checks) or wants to hand a task off without training someone."
+}

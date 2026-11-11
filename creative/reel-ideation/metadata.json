@@ -1,0 +1,38 @@
+{
+  "name": "reel-ideation",
+  "repo": "jsath/claude-skills",
+  "path": "skills/social/reel-ideation/SKILL.md",
+  "github_branch": "main",
+  "category": "creative",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "reel-ideation",
+  "downloaded_at": "2026-11-11T05:50:59.857825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "creative",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for creative: ideation, story, writing",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ideation",
+      "story",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/social/reel-ideation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/social/reel-ideation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds the top creators in your niche and their recent viral reels and Shorts with proof (likes, views, comments, date, link, multiple of the creator's own median) using Agent Reach and yt-dlp, turns raw voice-dictation dumps (Wispr Flow, voice notes) into numbered ideas so none get lost, and writes full word-for-word scripts that copy a proven viral's format and structure (never its words), with 3 hooks of different types per idea, both CTA endings, and a RECORD-SHEET.md you read off while filming. Use for 'what should I post', 'find me virals in my niche', 'turn my rant into ideas', 'write tomorrow's scripts', 'make a record sheet'."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "pair-capability-assess-infrastructure",
+  "repo": "learnn-com/designn",
+  "path": ".claude/skills/pair-capability-assess-infrastructure/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/learnn-com/designn",
+  "dir_name": "pair-capability-assess-infrastructure",
+  "downloaded_at": "2026-11-11T06:11:42.863287Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "learnn-com",
+  "source_url": "https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-capability-assess-infrastructure/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-capability-assess-infrastructure/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assess infrastructure strategy using resolution cascade (Argument > Adoption > Assessment). Reads infrastructure guidelines, proposes cloud/CI/CD/deployment choices, writes infrastructure.md adoption, composes /pair-capability-record-decision. Idempotent."
+}

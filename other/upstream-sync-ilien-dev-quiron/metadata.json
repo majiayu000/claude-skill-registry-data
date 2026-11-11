@@ -1,0 +1,37 @@
+{
+  "name": "upstream-sync",
+  "repo": "ilien-dev/quiron",
+  "path": ".claude/skills/upstream-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ilien-dev/quiron",
+  "dir_name": "upstream-sync-ilien-dev-quiron",
+  "downloaded_at": "2026-11-11T05:31:23.850074Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ilien-dev",
+  "source_url": "https://github.com/ilien-dev/quiron/blob/main/.claude/skills/upstream-sync/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ilien-dev/quiron/blob/main/.claude/skills/upstream-sync/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Weekly intake of improvements from the reference repos (humanizer, stop-slop, no-ai-slop, avoid-ai-writing, slop-score, antislop-sampler, unslop, humanize) into quir\u00f3n. Pulls their latest, proposes candidates, implements and measures the ones the owner approves, and opens a PR for the next version. Run it when the owner asks for the weekly upstream sync."
+}

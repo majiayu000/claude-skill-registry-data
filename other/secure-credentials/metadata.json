@@ -1,0 +1,37 @@
+{
+  "name": "secure-credentials",
+  "repo": "jsath/claude-skills",
+  "path": "skills/dev/secure-credentials/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "secure-credentials",
+  "downloaded_at": "2026-11-11T05:51:00.629225Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/dev/secure-credentials/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/dev/secure-credentials/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Handles API keys, passwords, tokens and one-time secret links with Claude without the secret ever showing up in chat, logs, tool output or git. You put the value straight into a locked-down .env file, the OS keychain or a password manager; Claude reads it by name, checks it with one read-only call, reports only the status and the last 4 characters, and cleans up after itself. Covers .gitignore and gitleaks pre-commit scanning, redacting output, least-privilege keys, shell history cleanup and a rotation checklist for when a key leaks. Use when someone says \"here is my API key\", \"save this key\", \"set up my .env\", \"store this token safely\", \"I got a one-time secret link\", \"is my key working\", \"I pasted my key in chat\", \"I committed a secret\" or \"rotate this key\"."
+}

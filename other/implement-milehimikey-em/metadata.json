@@ -1,0 +1,37 @@
+{
+  "name": "implement",
+  "repo": "milehimikey/em",
+  "path": "plugin/skills/implement/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/milehimikey/em",
+  "dir_name": "implement-milehimikey-em",
+  "downloaded_at": "2026-11-11T06:41:03.354705Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "milehimikey",
+  "source_url": "https://github.com/milehimikey/em/blob/main/plugin/skills/implement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/milehimikey/em/blob/main/plugin/skills/implement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building a single ratified event-modeling slice (status: ready-to-implement) into merged, tested code \u2014 the one phase where the agent builds rather than facilitates. Gates on readiness, treats the slice doc as the read-only spec, surfaces gaps instead of deciding them silently, and requires tests traceable to the doc's invariants and scenarios."
+}

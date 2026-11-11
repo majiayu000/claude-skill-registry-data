@@ -1,0 +1,37 @@
+{
+  "name": "pair-capability-map-contexts",
+  "repo": "learnn-com/designn",
+  "path": ".claude/skills/pair-capability-map-contexts/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-llm",
+  "source": "github.com/learnn-com/designn",
+  "dir_name": "pair-capability-map-contexts",
+  "downloaded_at": "2026-11-11T06:11:37.048104Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "learnn-com",
+  "source_url": "https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-capability-map-contexts/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-capability-map-contexts/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Maps subdomains to DDD bounded contexts and derives the integration pattern between them (integration strength, socio-technical distance, volatility), scoped to items just touched. Composed by /pair-process-refine-story, /pair-process-plan-tasks, /pair-process-brainstorm; full-scope re-mapping only via /pair-process-bootstrap."
+}

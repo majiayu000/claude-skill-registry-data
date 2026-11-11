@@ -1,0 +1,40 @@
+{
+  "name": "visual-review",
+  "repo": "kalliome/dotfiles",
+  "path": "claude/skills/visual-review/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/kalliome/dotfiles",
+  "dir_name": "visual-review",
+  "downloaded_at": "2026-11-11T05:55:14.242640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e, playwright, cypress",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 4,
+    "signals": [
+      "test",
+      "qa",
+      "e2e",
+      "playwright",
+      "cypress"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kalliome",
+  "source_url": "https://github.com/kalliome/dotfiles/blob/master/claude/skills/visual-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kalliome/dotfiles/blob/master/claude/skills/visual-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "End-to-end visual QA of work that was just done or of a named part of the app. Discovers how to run, log in to, and exercise the app from the codebase, captures screenshots with agent-browser, reports severity-ranked findings, and implements the fixes. Use whenever the user asks to check how changes look, verify UI work in a real browser, visually review a screen or feature, or run visual QA \u2014 even if they never say \"visual QA\" or \"screenshots\"."
+}

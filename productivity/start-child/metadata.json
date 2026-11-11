@@ -1,0 +1,38 @@
+{
+  "name": "start-child",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-swarm/skills/start-child/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "start-child",
+  "downloaded_at": "2026-11-11T06:04:12.740775Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-swarm/skills/start-child/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-swarm/skills/start-child/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a manager session is asked to start a child session for part of its task \u2014 writes the child's task file, a row in the manager's task file and a self-contained brief, then starts it. Not for the state of running children (children-status)."
+}

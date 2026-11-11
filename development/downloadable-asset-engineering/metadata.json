@@ -1,0 +1,38 @@
+{
+  "name": "downloadable-asset-engineering",
+  "repo": "jsath/claude-skills",
+  "path": "skills/dev/downloadable-asset-engineering/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "downloadable-asset-engineering",
+  "downloaded_at": "2026-11-11T05:51:05.691579Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/dev/downloadable-asset-engineering/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/dev/downloadable-asset-engineering/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds and releases self-contained downloadable ZIP assets (skill packs, template kits, example projects, small local tools) so the released bytes, not just the source folder, are proven to work: deterministic packaging, a manifest and checksums, archive-safety checks, validators with negative fixtures, and honest PASS/BLOCKED/NOT RUN evidence. Use when someone says 'package this as a download', 'make a release zip', 'ship this kit', 'is this zip safe to publish', or when a lead magnet or skill bundle must install cleanly for a stranger. Bundled scripts are Python standard library only."
+}

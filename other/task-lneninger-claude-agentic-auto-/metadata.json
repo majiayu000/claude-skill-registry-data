@@ -1,0 +1,37 @@
+{
+  "name": "task",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/task/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "task-lneninger-claude-agentic-auto-",
+  "downloaded_at": "2026-11-11T06:19:35.771861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/task/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/task/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Intake a work item \u2014 a GitHub issue (this project's tracker), or a Jira/ADO item, or a free-text request \u2014 and turn it into a normalized Work Item Brief at .claude/work-items/, with acceptance criteria, size classification, and an issue-linked branch cut inside a flat worktree of its own (every change is made in a worktree, never in the main checkout). Resolves ambiguity with the user BEFORE any design happens, grades the item against the active north-stars at .claude/north-stars/ (capturing a new one via /north-star when the intake text carries an aspiration), then runs /design-first automatically in the same turn \u2014 the handoff is pre-authorized by the /task invocation, not a question to put to the user. Use when: user says /task, '/task #123', 'start on this issue', 'pick up issue 42', 'work on this in a worktree', pastes a GitHub issue URL, or begins any piece of tracked work. This is the front door of the delivery chain."
+}

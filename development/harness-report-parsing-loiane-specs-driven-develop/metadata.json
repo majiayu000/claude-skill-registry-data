@@ -1,0 +1,38 @@
+{
+  "name": "harness-report-parsing",
+  "repo": "loiane/specs-driven-development-spring-angular",
+  "path": ".windsurf/skills/harness-report-parsing/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/loiane/specs-driven-development-spring-angular",
+  "dir_name": "harness-report-parsing-loiane-specs-driven-develop",
+  "downloaded_at": "2026-11-11T06:20:15.444158Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loiane",
+  "source_url": "https://github.com/loiane/specs-driven-development-spring-angular/blob/main/.windsurf/skills/harness-report-parsing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loiane/specs-driven-development-spring-angular/blob/main/.windsurf/skills/harness-report-parsing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Parse harness output (Surefire/Failsafe XML, JaCoCo XML, PIT XML, Checkstyle/SpotBugs XML, OpenAPI diff JSON, dependency-check JSON) into a single structured summary. Use when writing `07-validation-report.md` or when a CI run failed and the agent must explain why."
+}

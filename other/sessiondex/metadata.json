@@ -1,0 +1,37 @@
+{
+  "name": "sessiondex",
+  "repo": "glebis/claude-skills",
+  "path": "sessiondex/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "sessiondex",
+  "downloaded_at": "2026-11-11T05:08:29.486250Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/sessiondex/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/sessiondex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when finding, listing, or reading past AI agent sessions across Codex, Claude Code, OpenCode, and Pi from one local full-text index. Triggers on \"recent sessions\", \"recent Codex sessions\", \"what did I work on\", \"find the session where\", \"which agent did I ask about X\", \"show that Codex session\", \"resume that session\", and any search of past agent conversations that is not limited to Claude Code."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "forecast-models",
+  "repo": "mblode/agent-skills",
+  "path": "skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/forecast-models/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mblode/agent-skills",
+  "dir_name": "forecast-models",
+  "downloaded_at": "2026-11-11T06:34:20.582981Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblode",
+  "source_url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/forecast-models/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/forecast-models/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guidance for the demand forecasting models that predict parcel volume per depot for the Mossback capacity planner. Covers model training, model features, feature engineering, training data, holdout windows, model accuracy, error metrics, model retraining, model versions, model registry entries, model rollout, and model rollback. Also covers the nightly training job, the weekly accuracy report, how forecasts are written to the planner tables, and how a depot manager's manual override interacts with a forecast. Helps with adding a feature, diagnosing a bad forecast, retraining after a holiday period, and promoting a new model version. Use when the user mentions a forecast, the planner, demand, capacity, volume prediction, a model, training, accuracy, features, or retraining, or asks why a depot's forecast is wrong or how to improve it. Always follows the Mossback platform conventions, house style, and established best practices."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "reel-scorecard",
+  "repo": "jsath/claude-skills",
+  "path": "skills/social/reel-scorecard/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "reel-scorecard",
+  "downloaded_at": "2026-11-11T05:51:00.269458Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, pipeline",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/social/reel-scorecard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/social/reel-scorecard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads trial-reel and TikTok results at 72 hours and says which hook won each idea, which reel to graduate to the main feed (the creator taps it), which hooks to kill and which ideas to retire, using matched windows and one data source so numbers are comparable. Pulls Zernio analytics read-only (or a CSV export), joins them to the trial-post ledger, and writes SCORECARD.md plus a weekly learning log that changes at most one rule a week. Use for 'scorecard', 'which hook won', 'what should I graduate', '72 hour results', 'how did the trials do'."
+}

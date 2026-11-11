@@ -1,0 +1,37 @@
+{
+  "name": "linkedin-post-preview",
+  "repo": "liftli-ai/linkedin-agent-skills",
+  "path": "skills/linkedin-post-preview/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/liftli-ai/linkedin-agent-skills",
+  "dir_name": "linkedin-post-preview-liftli-ai-linkedin-agent-skill",
+  "downloaded_at": "2026-11-11T06:14:39.485271Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liftli-ai",
+  "source_url": "https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/linkedin-post-preview/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liftli-ai/linkedin-agent-skills/blob/main/skills/linkedin-post-preview/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to see how a LinkedIn draft will look in the feed, what shows before \"see more\", or whether their hook survives the fold \u2014 cuts the draft at ~210 chars (desktop) and ~140 (mobile), flags mid-word/mid-idea cuts, and judges the amputated hook."
+}

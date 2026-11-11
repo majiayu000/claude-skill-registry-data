@@ -1,0 +1,38 @@
+{
+  "name": "sentry-setup-releases",
+  "repo": "mdugue/bridge",
+  "path": ".agents/skills/sentry-setup-releases/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mdugue/bridge",
+  "dir_name": "sentry-setup-releases",
+  "downloaded_at": "2026-11-11T06:35:25.976675Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mdugue",
+  "source_url": "https://github.com/mdugue/bridge/blob/main/.agents/skills/sentry-setup-releases/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mdugue/bridge/blob/main/.agents/skills/sentry-setup-releases/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up Sentry releases and deploy tracking \u2014 tag events with a version and environment, create the release in CI with its commits, and wire up suspect commits and code mappings, so Sentry can show which release introduced an issue, which commit is responsible, and release health. Use when asked to set up releases, track deploys, see what changed, or when issues show an unknown release or no suspect commit."
+}

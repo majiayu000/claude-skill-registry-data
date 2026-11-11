@@ -1,0 +1,37 @@
+{
+  "name": "trial-post",
+  "repo": "jsath/claude-skills",
+  "path": "skills/social/trial-post/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "trial-post",
+  "downloaded_at": "2026-11-11T05:50:56.089285Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/social/trial-post/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/social/trial-post/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Posts finished, QA-passed reels as Instagram Trial Reels (shown to non-followers first, graduation stays a human tap) plus public TikToks through the Zernio MCP connector, with the safety rails that stop the classic mistakes: IG trials only via call_tool posts_create_post with trialParams (the simple posts_create tool publishes a normal FEED reel), trial proof checked in every response, spacing and daily caps, a duplicate-file guard, the right CTA ending per platform, the platform AI flag on avatar footage, and a STOP file on anything unexpected. Includes a scheduler adapter for other tools (Metricool, Buffer, Later, or any other scheduler). Use for 'post the trials', 'post this as a trial reel', 'send it to TikTok', 'schedule the reels'."
+}

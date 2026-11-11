@@ -1,0 +1,37 @@
+{
+  "name": "slides-lint",
+  "repo": "gpsaggese/helpers",
+  "path": ".claude/skills/slides.lint/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/gpsaggese/helpers",
+  "dir_name": "slides-lint",
+  "downloaded_at": "2026-11-11T05:11:47.126477Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gpsaggese",
+  "source_url": "https://github.com/gpsaggese/helpers/blob/master/.claude/skills/slides.lint/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gpsaggese/helpers/blob/master/.claude/skills/slides.lint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lint the slides incrementally to follow the conventions"
+}

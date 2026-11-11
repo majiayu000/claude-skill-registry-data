@@ -1,0 +1,38 @@
+{
+  "name": "replicating-a-protocol",
+  "repo": "linuxarena/ct-replications",
+  "path": ".agents/skills/replicating-a-protocol/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/linuxarena/ct-replications",
+  "dir_name": "replicating-a-protocol",
+  "downloaded_at": "2026-11-11T06:16:03.725270Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "linuxarena",
+  "source_url": "https://github.com/linuxarena/ct-replications/blob/main/.agents/skills/replicating-a-protocol/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/linuxarena/ct-replications/blob/main/.agents/skills/replicating-a-protocol/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for replicating a blue-team protocol from an AI control paper as a ct-replications entry, with a decision log against the paper, a fidelity check, a replay of Control Tower's committed recording and a PR description ready to open. Use when the user gives a paper or arXiv link whose mechanism is a protocol, or asks to implement, port or replicate a published protocol (defer, edit, resample, gate, block, audit). For a paper whose novelty is only the judge, use `replicating-a-monitor`; for a protocol the team designs itself, use `adding-a-protocol` in the control-tower repository."
+}

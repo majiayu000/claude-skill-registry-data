@@ -1,0 +1,37 @@
+{
+  "name": "instagram-reels-research",
+  "repo": "ishort-pro/instagram-claude-skills",
+  "path": "skills/instagram-reels-research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ishort-pro/instagram-claude-skills",
+  "dir_name": "instagram-reels-research",
+  "downloaded_at": "2026-11-11T05:36:38.967959Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ishort-pro",
+  "source_url": "https://github.com/ishort-pro/instagram-claude-skills/blob/main/skills/instagram-reels-research/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ishort-pro/instagram-claude-skills/blob/main/skills/instagram-reels-research/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find the Instagram Reels that are actually working in a niche right now and turn them into a swipe file: ranks reels by outlier multiple (views divided by the account's own median, not raw views), names the hook formula each used, and flags which to transcribe. Use when the user says \"find viral reels\", \"what's working in my niche\", \"content research\", \"outlier reels\", \"reverse engineer this account\", \"build a swipe file\", \"what should I make next\", or exports reels from IShort. Reads IShort CSV exports and the IShort MCP (list_my_scripts, get_competitor_report, get_reel_details)."
+}

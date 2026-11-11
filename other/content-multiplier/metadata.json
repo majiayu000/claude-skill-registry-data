@@ -1,0 +1,37 @@
+{
+  "name": "content-multiplier",
+  "repo": "jsath/claude-skills",
+  "path": "skills/video/content-multiplier/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "content-multiplier",
+  "downloaded_at": "2026-11-11T05:51:03.196429Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/video/content-multiplier/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/video/content-multiplier/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns one published long-form video or podcast transcript into up to thirty pieces: 10 clips with new hooks and exact timestamps, 8 X posts, 4 LinkedIn posts, 3 carousels, 2 threads, a newsletter, a community post and a blog post, laid out on a two-week plan, all built only from what was said. In Claude Code it also cuts, reframes and captions the clips with ffmpeg. Use when someone wants to repurpose a long video, find clips, or write social posts from a transcript. Never posts or schedules."
+}

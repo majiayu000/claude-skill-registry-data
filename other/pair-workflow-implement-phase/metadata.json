@@ -1,0 +1,37 @@
+{
+  "name": "pair-workflow-implement-phase",
+  "repo": "learnn-com/designn",
+  "path": ".claude/skills/pair-workflow-implement-phase/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/learnn-com/designn",
+  "dir_name": "pair-workflow-implement-phase",
+  "downloaded_at": "2026-11-11T06:11:38.357778Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: creative=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "story",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "learnn-com",
+  "source_url": "https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-workflow-implement-phase/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-workflow-implement-phase/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stage 3 (initial) of the delivery workflow \u2014 implementation of one refined story inside its persistent worktree: on a fresh card above the base, writing the story's tests and code together test-first (no up-front contract) and fixing what an informal, unrecorded self-review against the AC and the review rules finds; on a run already carrying a sealed `a0` contract, strictly above its RED snapshot, never touching a sealed test byte \u2014 following the project's implement process, verifying the tier-resolved quality gate, recording decisions, writing the checkpoint, and then publishing exactly one review-ready PR through the project's publish-pr skill in the same execution. Resolves the durable cycle state first and redirects when another step is due. Never reviews, never merges. Dispatched by the batch engine (pair-implement-batch)."
+}

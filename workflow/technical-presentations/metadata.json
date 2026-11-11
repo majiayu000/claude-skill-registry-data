@@ -1,0 +1,39 @@
+{
+  "name": "technical-presentations",
+  "repo": "jsath/claude-skills",
+  "path": "skills/writing/technical-presentations/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "technical-presentations",
+  "downloaded_at": "2026-11-11T05:51:05.504683Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, automation, pipeline",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "process",
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/writing/technical-presentations/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/writing/technical-presentations/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs, red-teams and revises technical talks, workshops and decks for mixed business and technical audiences so they have real depth instead of framework cards and AI slop: fixes the narrative contract first, picks slide counts by runtime, builds one case progressively, shows a real failure and recovery, labels every claim's evidence, then verifies timing, notes and rendering. Use when someone says 'this talk is too basic', 'cut my deck to 15 minutes', 'review my AI agents talk', 'make a leave-behind PDF deck', 'prep a workshop from this transcript', or 'write a brief so an agent can edit my deck'. Pairs with a pptx or HTML-deck skill for the actual file."
+}

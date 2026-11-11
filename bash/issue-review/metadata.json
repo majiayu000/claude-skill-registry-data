@@ -1,0 +1,39 @@
+{
+  "name": "issue-review",
+  "repo": "mdnaimul22/human-skills",
+  "path": "skills/storage/affaan-m_ECC/issue-review/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/mdnaimul22/human-skills",
+  "dir_name": "issue-review",
+  "downloaded_at": "2026-11-11T06:35:03.981355Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mdnaimul22",
+  "source_url": "https://github.com/mdnaimul22/human-skills/blob/main/skills/storage/affaan-m_ECC/issue-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mdnaimul22/human-skills/blob/main/skills/storage/affaan-m_ECC/issue-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a GitHub issue the way /code-review reviews a PR. Fetches the issue with the gh CLI, checks the report against the current codebase, searches for duplicates and prior fixes, scores completeness, assigns severity, and writes a triage report plus a draft reply. Posting comments or labels is opt-in only. Use when the user asks to check, triage, validate, or review a GitHub issue."
+}

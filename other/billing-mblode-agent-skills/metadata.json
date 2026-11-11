@@ -1,0 +1,37 @@
+{
+  "name": "billing",
+  "repo": "mblode/agent-skills",
+  "path": "skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/billing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mblode/agent-skills",
+  "dir_name": "billing-mblode-agent-skills",
+  "downloaded_at": "2026-11-11T06:34:18.318247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblode",
+  "source_url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/billing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/billing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Comprehensive guidance for billing, invoicing, and payments in the Mossback platform. Covers plans, pricing, subscriptions, usage metering, invoices, invoice lines, credits, refunds, proration, tax, currencies, payment methods, payment attempts, dunning, the payment provider integration, provider webhooks, and reconciliation. Also covers how usage is recorded per shipment, how an invoice is assembled at the end of a billing period, how a plan change takes effect, and how a failed payment is retried. Helps with adding a plan, changing a price, explaining an invoice amount, issuing a credit, and debugging a payment webhook. Use when the user mentions billing, an invoice, a payment, a charge, a refund, a subscription, a plan, pricing, usage, tax, or asks why a customer was charged an amount. Always follows the Mossback platform conventions, house style, and established best practices."
+}

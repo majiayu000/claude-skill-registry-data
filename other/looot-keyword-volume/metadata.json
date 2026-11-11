@@ -1,0 +1,37 @@
+{
+  "name": "looot-keyword-volume",
+  "repo": "loootai/looot-skills",
+  "path": "skills/looot-keyword-volume/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/loootai/looot-skills",
+  "dir_name": "looot-keyword-volume",
+  "downloaded_at": "2026-11-11T06:20:44.886955Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loootai",
+  "source_url": "https://github.com/loootai/looot-skills/blob/main/skills/looot-keyword-volume/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loootai/looot-skills/blob/main/skills/looot-keyword-volume/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check keyword volume and CPC. Use when the user says things like \"how many people search for crm for startups\", \"get volume and cost per click for these keywords\" or \"which of these keywords is worth writing about\". Runs through looot, billed per call."
+}

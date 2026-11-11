@@ -1,0 +1,38 @@
+{
+  "name": "tweet-writer",
+  "repo": "jsath/claude-skills",
+  "path": "skills/writing/tweet-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "tweet-writer-jsath-claude-skills",
+  "downloaded_at": "2026-11-11T05:50:59.299157Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/writing/tweet-writer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/writing/tweet-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes X (Twitter) posts and threads in the user's own voice, learned from 5 to 10 of their best posts, using format rules measured on real post data: numbered tutorials and copy-paste config tips beat stories, numbered lists beat arrow lists, link cards die. Use when someone asks for a tweet, a thread, tweet ideas, or to turn a demo, lesson or result into an X post. Drafts only; never posts."
+}

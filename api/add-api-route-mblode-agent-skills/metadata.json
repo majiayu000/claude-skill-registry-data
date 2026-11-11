@@ -1,0 +1,37 @@
+{
+  "name": "add-api-route",
+  "repo": "mblode/agent-skills",
+  "path": "skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/add-api-route/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/mblode/agent-skills",
+  "dir_name": "add-api-route-mblode-agent-skills",
+  "downloaded_at": "2026-11-11T06:34:16.109214Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblode",
+  "source_url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/add-api-route/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/add-api-route/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Adds a Fastify route to the Saltmarsh Booking API with its schema, auth level, repository call, and registration. Use when asked to \"add an endpoint\", \"add a route\", or \"expose this over the API\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "pair-process-plan-epics",
+  "repo": "learnn-com/designn",
+  "path": ".claude/skills/pair-process-plan-epics/SKILL.md",
+  "github_branch": "master",
+  "category": "product",
+  "source": "github.com/learnn-com/designn",
+  "dir_name": "pair-process-plan-epics",
+  "downloaded_at": "2026-11-11T06:11:29.209453Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: prd, feature, metrics",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "prd",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "learnn-com",
+  "source_url": "https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-process-plan-epics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-process-plan-epics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Breaks initiatives into epics through structured analysis and collaborative validation. Composes /pair-capability-write-issue with $type: epic. Idempotent: detects existing epics, creates only missing ones. Includes Epic 0 assessment for new projects."
+}

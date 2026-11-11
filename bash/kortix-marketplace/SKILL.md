@@ -1,0 +1,107 @@
+---
+name: kortix-marketplace
+description: "The Kortix marketplace — how to discover capabilities and IMPORT them into this workspace. The marketplace is a catalog of open git repos: whole ready-made WORKSPACES (registry:project) and individual skills/agents/tools. There is no deterministic 'installer' — you (the agent) import an item by reading its source and merging the files that fit into this workspace, then opening a change request. Use when the user wants to browse/search the Kortix catalog, 'add/clone the <X> workspace', 'import that skill/agent', pull in a marketplace capability, or add a new source."
+---
+
+<skill name="kortix-marketplace">
+
+The **Kortix marketplace** is the Kortix-native catalog. Every item is an **open
+git repo** made of plain files — a whole clonable **workspace** (its `kortix.yaml`,
+agents, skills, tools) or an individual **skill / agent / tool**. There is **no
+deterministic installer, no version lock, and no update system**: you add an item
+by **importing** it — reading its source and merging what fits into this
+workspace's own files, then opening a change request. Everything you import becomes
+**100% user-owned files** in this repo, exactly like any other code you write.
+
+Why it works this way: the Kortix *system* layer (this `kortix-*` family, the
+`kortix` CLI) is served live and always-latest, so it never goes stale. Marketplace
+items are the opposite — they're *yours* to own and edit, so they're imported as
+files, not pinned to an upstream that could clobber your changes.
+
+<discovery>
+Browse/search the catalog from the `kortix` CLI (already authenticated here):
+
+```bash
+kortix marketplace search "<query>" --json    # find items (parse the JSON)
+kortix marketplace show <id> --json           # inspect one item: type, files, source repo
+```
+
+`search`, `list` and `show` are read-only. There is no `update` subcommand.
+
+- `kortix marketplace install <id>` starts a workspace session that runs the
+  import flow below, and waits for it to finish. It exits `0` only
+  when the item's files are on the default branch, and `3` when the change
+  request still waits for approval or setup. Inside a session, run the
+  import flow yourself instead.
+- `kortix marketplace uninstall <folder> --yes` deletes one workspace skill
+  folder, including edits.
+</discovery>
+
+<importing>
+**The standard import recipe.** To add a marketplace item to this workspace:
+
+1. **Get the source.** From `kortix marketplace show <id> --json`, take the item's
+   source git repo/ref (or its inline files). Clone/read it in the sandbox.
+2. **Detect what it is** from its file structure:
+   - a `kortix.yaml` at the repo root → a **workspace** (agents + skills + tools +
+     config),
+   - a `SKILL.md` → a **skill**,
+   - an agent prompt (an `agents/*.md`) → an **agent**,
+   - a tool file (a `tools/*.ts`) → a **tool**.
+3. **Merge what fits into this workspace**, in the right place. Every file
+   reaches an agent only through `kortix.yaml`:
+   - skills → `skills/<name>/`, registered as `skills: { <name>: skills/<name> }`
+     and added to the `skills` grant of each agent that should load it,
+   - agents → the prompt in `agents/<name>.md`, plus an `agents.<name>` block
+     with `prompt_file: agents/<name>.md` and its model, permission and grants
+     (`tools` included),
+   - tools → `tools/<name>.ts`, registered as `tools: { <name>: tools/<name>.ts }`.
+     An agent gets it when its `agents.<name>.tools` grant includes it,
+   - for a **whole workspace**: pull in its skills/agents/tools and reconcile its
+     `kortix.yaml` into this workspace's (merge registries, connectors, triggers
+     and agents — never blindly overwrite the user's manifest). Use judgment;
+     keep what's relevant.
+   `kortix validate` checks the result before you commit.
+4. **Adapt it to this workspace.** If a skill carries a "TODO: make this yours"
+   placeholder or generic copy, tailor it to what this workspace actually does.
+5. **Wire up its needs.** If the item requires a connector/secret, don't hardcode
+   anything. A value the user already gave you goes in with
+   `kortix secrets set NAME=-`; otherwise mint a setup link
+   (`kortix secrets request …` / `kortix connectors connect …`) and surface it.
+6. **Commit + open a CR.** In your clone (`kortix workspaces clone`):
+   `git add`/`commit`, `git push origin HEAD`, then
+   `kortix cr open --title "Import <item>"`. The user reviews the diff and merges
+   — that's how it becomes permanent (see `kortix-system` for the CR mandate).
+
+Importing is just you reading files and writing files, landed through a change
+request. No lock file, no tracked "installed" state — **git is the source of
+truth** for what's in this workspace.
+</importing>
+
+<workspaces>
+A whole **workspace** item is the richest thing in the marketplace — a working,
+end-to-end Kortix workspace focused on a function. You can spin it up as its **own
+new workspace** (from the web UI's "Add to a workspace" → new workspace, which seeds
+the files deterministically), or **import/merge it into this existing workspace**
+via the recipe above to make this workspace bigger. It's all just files.
+</workspaces>
+
+<adding-a-source>
+To make another registry's items discoverable here, add it as a **source** — any
+public git repo that ships `SKILL.md` files or a `marketplace.json` (e.g.
+`anthropics/skills`, community repos from skills.sh). Curated sources enable in
+one click; an arbitrary git URL is admin-gated. Once added, its items show up in
+`kortix marketplace search`, and you import them the same way.
+</adding-a-source>
+
+<outside-the-catalog>
+This skill covers the Kortix catalog: whole workspaces + skills/agents/tools,
+imported into this repo as owned files via a CR.
+
+When the catalog has nothing that fits, the wider open ecosystem is still fair
+game — `npx skills find "<query>"` searches skills.sh, and a skill from there is
+just a `SKILL.md` plus references, so it merges in through the exact same import
+recipe above. Either way you end up importing plain files you own.
+</outside-the-catalog>
+
+</skill>

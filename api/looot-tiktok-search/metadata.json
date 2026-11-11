@@ -1,0 +1,37 @@
+{
+  "name": "looot-tiktok-search",
+  "repo": "loootai/looot-skills",
+  "path": "skills/looot-tiktok-search/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/loootai/looot-skills",
+  "dir_name": "looot-tiktok-search",
+  "downloaded_at": "2026-11-11T06:20:44.510135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loootai",
+  "source_url": "https://github.com/loootai/looot-skills/blob/main/skills/looot-tiktok-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loootai/looot-skills/blob/main/skills/looot-tiktok-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search TikTok. Use when the user says things like \"find TikTok videos about home workouts\", \"what is trending on TikTok for this keyword\" or \"show the top videos and their view counts\". Runs through looot, billed per call."
+}

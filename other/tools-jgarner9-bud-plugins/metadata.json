@@ -1,0 +1,37 @@
+{
+  "name": "tools",
+  "repo": "jgarner9/bud-plugins",
+  "path": "plugins/bud/skills/tools/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jgarner9/bud-plugins",
+  "dir_name": "tools-jgarner9-bud-plugins",
+  "downloaded_at": "2026-11-11T05:44:05.740731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgarner9",
+  "source_url": "https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud/skills/tools/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud/skills/tools/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Which tool to reach for and in what order. Code navigation (repomap, ripgrep, ast-grep, Serena, language servers), the lookup ladder for facts and docs (own knowledge only for things that can't change, then Context7, then Exa), notes and memory in Basic Memory for Jason's own projects and setup, tasks in Linear, and compressed output. Use when you need to find or understand code, for a fact or doc you can't answer from knowledge, and before reading or writing notes. Not needed to answer a chat question you already know."
+}

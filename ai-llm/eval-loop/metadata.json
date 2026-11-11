@@ -1,0 +1,37 @@
+{
+  "name": "eval-loop",
+  "repo": "lokeshrana9999/shipyard",
+  "path": "plugins/shipyard-delivery/skills/eval-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/lokeshrana9999/shipyard",
+  "dir_name": "eval-loop",
+  "downloaded_at": "2026-11-11T06:20:28.504642Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: llm, prompt",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lokeshrana9999",
+  "source_url": "https://github.com/lokeshrana9999/shipyard/blob/main/plugins/shipyard-delivery/skills/eval-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lokeshrana9999/shipyard/blob/main/plugins/shipyard-delivery/skills/eval-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Improves prompt, skill, or instruction text in scored rounds against locked eval cases, with a frozen grader hash, replicates, holdout cases, and a human read of raw transcripts before pass. Use when asked to \"run the evals and fix the prompt\", \"make the bot pass its cases\", \"is the new prompt better\", or \"iterate on this SKILL.md until the evals pass\". Not for test suites or a one-off eval run."
+}

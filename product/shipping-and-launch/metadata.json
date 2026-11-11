@@ -1,0 +1,38 @@
+{
+  "name": "shipping-and-launch",
+  "repo": "loiane/specs-driven-development-spring-angular",
+  "path": ".claude/skills/shipping-and-launch/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/loiane/specs-driven-development-spring-angular",
+  "dir_name": "shipping-and-launch",
+  "downloaded_at": "2026-11-11T06:20:12.178872Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loiane",
+  "source_url": "https://github.com/loiane/specs-driven-development-spring-angular/blob/main/.claude/skills/shipping-and-launch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loiane/specs-driven-development-spring-angular/blob/main/.claude/skills/shipping-and-launch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pre-deploy hygiene for a Spring Boot 4 feature \u2014 verify gates, capture rollback plan, sign off observability, generate release notes, and stage the rollout. Used by `/ship` after `/review` approves the diff. The agent never deploys; it produces the plan a human executes."
+}

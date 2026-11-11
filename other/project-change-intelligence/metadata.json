@@ -1,0 +1,38 @@
+{
+  "name": "project-change-intelligence",
+  "repo": "larchanka/skills",
+  "path": "project-change-intelligence/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/larchanka/skills",
+  "dir_name": "project-change-intelligence",
+  "downloaded_at": "2026-11-11T06:09:37.838829Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "software",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "larchanka",
+  "source_url": "https://github.com/larchanka/skills/blob/main/project-change-intelligence/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/larchanka/skills/blob/main/project-change-intelligence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Progressively investigate PRs, commits, releases, and project evolution. Start with a lightweight assessment, dynamically deepen analysis based on complexity and risk, use subagents for independent investigations, and maintain evidence-backed project knowledge."
+}

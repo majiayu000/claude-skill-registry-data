@@ -1,0 +1,37 @@
+{
+  "name": "linkfox-amazon-reviews-list",
+  "repo": "linkfox-ai/linkfox-skills",
+  "path": "skills/linkfox-amazon-reviews-list/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/linkfox-ai/linkfox-skills",
+  "dir_name": "linkfox-amazon-reviews-list",
+  "downloaded_at": "2026-11-11T06:15:50.916638Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "linkfox-ai",
+  "source_url": "https://github.com/linkfox-ai/linkfox-skills/blob/main/skills/linkfox-amazon-reviews-list/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/linkfox-ai/linkfox-skills/blob/main/skills/linkfox-amazon-reviews-list/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u6309 ASIN \u83b7\u53d6\u5e76\u5206\u6790\u4e9a\u9a6c\u900a\u5546\u54c1\u4e70\u5bb6\u8bc4\u8bba\uff0c\u8986\u76d6\u542b\u7f8e\u56fd\u7ad9\u5728\u5185\u7684 15 \u4e2a\u7ad9\u70b9\uff0c\u652f\u6301\u661f\u7ea7\u3001\u5173\u952e\u8bcd\u3001\u8ba4\u8bc1\u8d2d\u4e70\u548c\u56fe\u7247\u89c6\u9891\u7b5b\u9009\uff0c\u4ee5\u53ca\u6309\u65f6\u95f4\u6216\u6709\u7528\u7a0b\u5ea6\u6392\u5e8f\u3002\u9002\u7528\u4e8e\u5dee\u8bc4\u75db\u70b9\u3001\u597d\u8bc4\u5356\u70b9\u3001Vine \u8bc4\u8bba\u3001\u7ade\u54c1\u8bc4\u8bba\u7814\u7a76\u548c\u4ea7\u54c1\u6539\u826f\u5efa\u8bae\uff1b\u4e0d\u9002\u7528\u4e8e\u641c\u7d22\u91cf\u4e0e\u5173\u952e\u8bcd\u6392\u540d\u3001\u9500\u91cf\u4e0e\u5e02\u573a\u89c4\u6a21\u4f30\u7b97\u3001Listing \u6216 A+ \u521b\u4f5c\u3001\u5e7f\u544a\u7b56\u7565\u53ca\u5b9a\u4ef7\u5229\u6da6\u5206\u6790\u3002"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "image-outpainting",
+  "repo": "gencraft-labs/skills",
+  "path": "image-outpainting/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gencraft-labs/skills",
+  "dir_name": "image-outpainting-gencraft-labs-skills",
+  "downloaded_at": "2026-11-11T05:05:28.132075Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, campaign, brand",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gencraft-labs",
+  "source_url": "https://github.com/gencraft-labs/skills/blob/main/image-outpainting/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gencraft-labs/skills/blob/main/image-outpainting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Image outpainting on RunComfy via the `runcomfy` CLI \u2014 extend a still beyond its original canvas, fill in what the camera didn't capture, change aspect ratio (square \u2192 16:9, portrait \u2192 landscape) while preserving the original content. Routes across Nano Banana 2 Edit (default, spatial-language driven), GPT Image 2 Edit (multi-ref with reference-style matching), FLUX Kontext Pro (single-shot maximum-preservation), and the brand edit endpoints (Seedream / Dreamina / Qwen / FLUX 2). Picks the right route based on whether the outpaint is prose-driven, reference-driven, or brand-locked. Triggers on \"outpaint\", \"outpainting\", \"extend image canvas\", \"expand the image\", \"fill in around the photo\", \"uncrop\", \"change aspect ratio\", \"extend frame\", \"wide-screen from square\", or any explicit ask to add canvas around an existing still."
+}

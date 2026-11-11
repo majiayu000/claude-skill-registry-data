@@ -1,0 +1,40 @@
+{
+  "name": "cloud-engineering",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/cloud-engineering/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "cloud-engineering",
+  "downloaded_at": "2026-11-11T06:19:41.347176Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: docker, kubernetes, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/cloud-engineering/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/cloud-engineering/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cloud and infrastructure knowledge for design, review, non-mutating validation and troubleshooting across Azure, AWS and Google Cloud, with Terraform, Bicep, Docker and Kubernetes. Reads cloud.providers and cloud.iac from the project profile and opens only the matching references. Never runs a live-changing command; writes it out for the user to run. Use when: user says /cloud-engineering, asks to design, review, validate or debug cloud infrastructure or infrastructure-as-code, or when a task touches the paths in cloud.roots."
+}

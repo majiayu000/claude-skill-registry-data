@@ -1,0 +1,38 @@
+{
+  "name": "assistant-ui-qa",
+  "repo": "laimis91/assistant-framework",
+  "path": "skills/assistant-ui-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/laimis91/assistant-framework",
+  "dir_name": "assistant-ui-qa",
+  "downloaded_at": "2026-11-11T06:08:35.129599Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laimis91",
+  "source_url": "https://github.com/laimis91/assistant-framework/blob/main/skills/assistant-ui-qa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laimis91/assistant-framework/blob/main/skills/assistant-ui-qa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explores a running web or app UI for unknown defects through the session's browser tools: flows, valid, invalid and empty states, console and network errors, screenshots, and reproducible issue reports with severity and coverage. Use when the user asks to test, dogfood, or click through a running app or page in a test environment. Not for writing UI tests, diagnosing a known failure, code review, or acceptance verdicts."
+}

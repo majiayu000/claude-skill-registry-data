@@ -1,0 +1,37 @@
+{
+  "name": "auto-improve-codegraph-uninstall",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/auto-improve-codegraph-uninstall/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "auto-improve-codegraph-uninstall",
+  "downloaded_at": "2026-11-11T06:19:44.255450Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/auto-improve-codegraph-uninstall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/auto-improve-codegraph-uninstall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remove the codegraph add-on of the agentic-auto-improve plugin from this project: the settings.json rows of the code-search-first guard (and of the retired tracker and reset hooks, when an older install left them), then the hook files. Previews every row and file, asks for one confirmation, then writes: rows first with a backup, then the files. Keeps any hook file you edited, and keeps the shared helpers. The add-on has no kill switch, so this skill is the way out. The name carries the plugin name because you may have several plugins installed. Use when: user says /auto-improve-codegraph-uninstall, 'remove the codegraph add-on', 'turn off the code-search-first guard', or 'uninstall the CodeGraph gate'. Never deletes a helper."
+}

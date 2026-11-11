@@ -1,0 +1,37 @@
+{
+  "name": "looot-meta-ads-library",
+  "repo": "loootai/looot-skills",
+  "path": "skills/looot-meta-ads-library/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/loootai/looot-skills",
+  "dir_name": "looot-meta-ads-library",
+  "downloaded_at": "2026-11-11T06:20:45.694104Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, creative=2",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loootai",
+  "source_url": "https://github.com/loootai/looot-skills/blob/main/skills/looot-meta-ads-library/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loootai/looot-skills/blob/main/skills/looot-meta-ads-library/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read a company's Meta ads. Use when the user says things like \"what ads is nike.com running on Facebook\", \"show me the active Instagram ads of this brand\" or \"find ads that mention this keyword\". Runs through looot, billed per call."
+}

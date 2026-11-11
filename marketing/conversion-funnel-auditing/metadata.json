@@ -1,0 +1,38 @@
+{
+  "name": "conversion-funnel-auditing",
+  "repo": "jsath/claude-skills",
+  "path": "skills/web/conversion-funnel-auditing/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "conversion-funnel-auditing",
+  "downloaded_at": "2026-11-11T05:51:05.280546Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, campaign, brand",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/web/conversion-funnel-auditing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/web/conversion-funnel-auditing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits a live website funnel end to end (traffic promise, landing page, CTAs, forms, scheduler, payment, confirmation page, nurture handoff, client-visible tracking, consent and mobile layout) without submitting anything, separates what was observed from what was inferred, and turns it into copy/reject/improve findings, a P0/P1/P2 fix list and a target funnel. Use for competitor funnel teardowns, CRO audits, 'why aren't we getting bookings', 'check our tracking', launch-readiness checks, event QR funnels and AI-search (LLM) visibility audits. Works best in Claude Code with a headless browser (Playwright); web fetch alone covers the text-only parts."
+}

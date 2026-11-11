@@ -1,0 +1,38 @@
+{
+  "name": "promote-ui-rule",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/promote-ui-rule/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "promote-ui-rule",
+  "downloaded_at": "2026-11-11T06:19:40.752594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/promote-ui-rule/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/promote-ui-rule/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Promote a recurring UI mistake from the journal (JOURNAL.md and JOURNAL/*.md) into an automated guard rule\nin architecture-guard.rules.json. The promotion is gated: requires 3+ journal\nentries tagged `ui-evolution + recurring-mistake` matching the same pattern.\nUse when: the user says `/promote-ui-rule`, \"promote this UI rule\", \"the\ndesigner keeps catching X, automate the check\", or after a code review\nsurfaces the third occurrence of the same UI anti-pattern."
+}

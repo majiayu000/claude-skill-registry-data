@@ -1,0 +1,37 @@
+{
+  "name": "ready-to-film",
+  "repo": "jsath/claude-skills",
+  "path": "skills/video/ready-to-film/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "ready-to-film",
+  "downloaded_at": "2026-11-11T05:50:57.964975Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/video/ready-to-film/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/video/ready-to-film/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns notes, voice-note transcripts and half ideas into Reel, TikTok and YouTube scripts in the creator's own voice: ranks an idea bank, writes ten hooks per idea, writes the script at the right length, rewrites anything that sounds like AI using transcripts of the creator's past videos, and fact-checks every claim with a source and date. Use when someone wants a video script, hooks, a ranked list of what to film, a voice pass, a claims check, or a record sheet to read from while filming."
+}

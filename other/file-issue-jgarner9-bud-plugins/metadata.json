@@ -1,0 +1,37 @@
+{
+  "name": "file-issue",
+  "repo": "jgarner9/bud-plugins",
+  "path": "plugins/bud-ide/skills/file-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jgarner9/bud-plugins",
+  "dir_name": "file-issue-jgarner9-bud-plugins",
+  "downloaded_at": "2026-11-11T05:44:07.128254Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgarner9",
+  "source_url": "https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud-ide/skills/file-issue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud-ide/skills/file-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a problem report or feature request (often sent from bud's <leader>ai / <leader>aB keys, with editor context attached) into one or more well-formed Linear issues. Proposes them as a bud-issues JSON block first and files only after an explicit \"File these\" message. Use when asked to file, report or log an issue, bug or feature request in Linear."
+}

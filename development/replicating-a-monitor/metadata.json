@@ -1,0 +1,38 @@
+{
+  "name": "replicating-a-monitor",
+  "repo": "linuxarena/ct-replications",
+  "path": ".agents/skills/replicating-a-monitor/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/linuxarena/ct-replications",
+  "dir_name": "replicating-a-monitor",
+  "downloaded_at": "2026-11-11T06:16:03.562433Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "linuxarena",
+  "source_url": "https://github.com/linuxarena/ct-replications/blob/main/.agents/skills/replicating-a-monitor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/linuxarena/ct-replications/blob/main/.agents/skills/replicating-a-monitor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for replicating a monitor from an AI control paper as a ct-replications entry, with a decision log against the paper, the source text copied verbatim, a fidelity check, a run on Control Tower's committed recordings and a PR description ready to open. Use when the user gives a paper or arXiv link whose mechanism is a monitor, or asks to implement, port or replicate a published monitor. For a paper whose mechanism is a protocol, use `replicating-a-protocol`; for a monitor the team designs itself, use `adding-a-monitor` in the control-tower repository."
+}

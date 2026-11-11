@@ -1,0 +1,37 @@
+{
+  "name": "spreadsheet-dashboard",
+  "repo": "jsath/claude-skills",
+  "path": "skills/business/spreadsheet-dashboard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "spreadsheet-dashboard",
+  "downloaded_at": "2026-11-11T05:51:05.104011Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "operations"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/business/spreadsheet-dashboard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/business/spreadsheet-dashboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cleans a messy sales or operations spreadsheet (mixed date formats, product names typed different ways, prices stored as text, duplicates, blank, test and dummy rows) and builds an Excel dashboard your team can read: totals at the top, sales by week, best and worst products, a chart. The dashboard runs on formulas over a Data table, so next month's rows update it, and a checker catches the paste-new-rows trap before you send it. Use when someone shares a messy spreadsheet, asks for a dashboard or report from an .xlsx or .csv, or says \"clean this sheet\", \"build me a dashboard\" or \"new month, add this\"."
+}

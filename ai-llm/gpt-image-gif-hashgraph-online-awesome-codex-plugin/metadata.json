@@ -1,0 +1,38 @@
+{
+  "name": "gpt-image-gif",
+  "repo": "hashgraph-online/awesome-codex-plugins",
+  "path": "plugins/vargHQ/skills/gpt-image-gif/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/hashgraph-online/awesome-codex-plugins",
+  "dir_name": "gpt-image-gif-hashgraph-online-awesome-codex-plugin",
+  "downloaded_at": "2026-11-11T05:19:25.312930Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt, prompting",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hashgraph-online",
+  "source_url": "https://github.com/hashgraph-online/awesome-codex-plugins/blob/main/plugins/vargHQ/skills/gpt-image-gif/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hashgraph-online/awesome-codex-plugins/blob/main/plugins/vargHQ/skills/gpt-image-gif/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a still, mascot, logo or a plain prompt into a looping animated GIF with GPT Image 2.6 on varg (output_format gif): the sprite-sheet pixel budget with a measured table of frame sizes that fit 2, 4, 6, 9, 12 and 16 frames, the approve-a-still-first workflow, loop-lock prompt wording, frame_duration_ms, transparent backgrounds, the failure modes (text in frames, fast motion, boiling backgrounds) and post-processing to animated WebP and MP4 with scripts/gif2web.sh. Use when someone asks for a GIF, an animated mascot or logo, a looping wave, blink or bounce, a reaction GIF, \"animate this image\" as a GIF, or a GIF that was rejected or came back broken. Not for sticker packs per messenger (gpt-image-sticker-pack), game sprite sheets and atlases (gpt-image-sprite-sheet) or real video clips (varg-ai, kling-4-prompting)."
+}

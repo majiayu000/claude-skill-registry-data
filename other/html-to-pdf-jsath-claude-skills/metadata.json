@@ -1,0 +1,37 @@
+{
+  "name": "html-to-pdf",
+  "repo": "jsath/claude-skills",
+  "path": "skills/dev/html-to-pdf/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "html-to-pdf-jsath-claude-skills",
+  "downloaded_at": "2026-11-11T05:50:54.380284Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/dev/html-to-pdf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/dev/html-to-pdf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds polished PDF documents (one-pagers, reports, guides, proposals, briefs) as HTML and CSS with exact page layout, renders them with headless Chromium through Playwright, then checks every page as an image before handing the file over. Fixed page sizes, controlled page breaks, no split tables, no orphan headings, a page count you can promise. Use when someone says \"make a PDF\", \"turn this into a PDF report\", \"make a one-pager\", \"PDF version of this doc\", \"export this as a printable guide\", \"it has to fit on two pages\" or \"the PDF layout is broken\"."
+}

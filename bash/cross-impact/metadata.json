@@ -1,0 +1,38 @@
+{
+  "name": "cross-impact",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/cross-impact/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "cross-impact",
+  "downloaded_at": "2026-11-11T06:19:39.170279Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/cross-impact/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/cross-impact/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the cross-area scanner against a concept contract or a list of files and\nprint the top-3 adjacent areas with score breakdowns. Use when: the user\ntypes `/cross-impact <contract-path>` or `/cross-impact <comma-separated-files>`,\nor asks \"what other areas would this contract affect?\", \"what's adjacent to\nthis set of files?\", or \"before I run /design-first, what would this touch?\".\n\nThis is the user-invocable wrapper around `.claude/scripts/cross_area_scan.py`.\nThe same script is invoked by `data-architect` Step 4.5 automatically; this\nskill is the manual exploration path."
+}

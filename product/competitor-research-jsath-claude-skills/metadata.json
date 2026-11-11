@@ -1,0 +1,38 @@
+{
+  "name": "competitor-research",
+  "repo": "jsath/claude-skills",
+  "path": "skills/business/competitor-research/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "competitor-research-jsath-claude-skills",
+  "downloaded_at": "2026-11-11T05:51:04.726985Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, roadmap, feature",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "roadmap",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/business/competitor-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/business/competitor-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs a competitor deep dive on a company or product and turns it into a claim-safe battlecard. Starts from the competitor's own sources (site, docs, pricing page, changelog, filings, job posts, app store listings), checks them against independent sources, and labels every claim VERIFIED, CORROBORATED, VENDOR-CLAIMED, INFERRED or UNKNOWN with a source and a date. Separates what they sell from what they actually deliver, pricing evidence from guesses, and real weaknesses from wishful ones, then writes what your team can say and must not say. Works with web search in Claude.ai or Claude Code. Use when someone says \"research my competitor\", \"competitor deep dive\", \"make a battlecard\", \"how does X compare to us\", \"what does X actually offer\", \"how do we position against X\" or \"what can we say about X\"."
+}

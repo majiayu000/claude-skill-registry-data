@@ -1,0 +1,37 @@
+{
+  "name": "comment-reply",
+  "repo": "jsath/claude-skills",
+  "path": "skills/social/comment-reply/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "comment-reply",
+  "downloaded_at": "2026-11-11T05:50:59.118693Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/social/comment-reply/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/social/comment-reply/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Works through a YouTube channel's comments: pulls new public comments since the last check with the YouTube Data API (commentThreads.list) and the user's API key in Claude Code, or takes pasted comments, labels each, drafts short replies in the creator's voice that answer the actual question, turns repeat questions into video ideas, and puts anyone asking to buy, hire or work together at the top. Use when a creator asks to check comments, draft comment replies, find leads or find video ideas in comments. Drafts only; never posts a reply."
+}

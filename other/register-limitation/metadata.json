@@ -1,0 +1,37 @@
+{
+  "name": "register-limitation",
+  "repo": "jfarcand/mirroir-mcp",
+  "path": ".claude/skills/register-limitation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jfarcand/mirroir-mcp",
+  "dir_name": "register-limitation",
+  "downloaded_at": "2026-11-11T05:43:53.719322Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jfarcand",
+  "source_url": "https://github.com/jfarcand/mirroir-mcp/blob/main/.claude/skills/register-limitation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jfarcand/mirroir-mcp/blob/main/.claude/skills/register-limitation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Register a known gap in the limitation register \u2014 file the issue in the private tracker, write the LIMITATION(registre#n) marker, or ledger a dark-launched feature. Use when the register gates fail, or when you are about to document why something is incomplete."
+}

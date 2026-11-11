@@ -1,0 +1,37 @@
+{
+  "name": "portal-relay-aws",
+  "repo": "gosuda/portal-tunnel",
+  "path": "plugins/portal-relay/skills/portal-relay-aws/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gosuda/portal-tunnel",
+  "dir_name": "portal-relay-aws",
+  "downloaded_at": "2026-11-11T05:11:23.926436Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gosuda",
+  "source_url": "https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-aws/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-aws/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create an AWS host for a Portal relay - an EC2 instance with a security group and an Elastic IP, or a Lightsail instance with its public ports and a static IP - using the user's existing AWS CLI profile or IAM Identity Center sign-in, and hand the host to portal-relay for deployment. Use when the user wants to run a Portal relay on AWS, EC2, or Lightsail. Do not use for a host that already exists (portal-relay), for Route 53 as the relay's ACME DNS provider (relay configuration), or for other clouds."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "raw-to-reel",
+  "repo": "jsath/claude-skills",
+  "path": "skills/video/raw-to-reel/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "raw-to-reel",
+  "downloaded_at": "2026-11-11T05:50:55.917662Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/video/raw-to-reel/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/video/raw-to-reel/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns one raw talking-head take into a finished 1080x1920 vertical reel in Claude Code with free local tools (ffmpeg, whisper.cpp, headless Playwright): transcribes, keeps the last take of repeated lines, cuts pauses, captions every word, adds real screenshots and official logos, and runs measured QA gates. Use when someone wants a raw phone take edited into a Reel, TikTok or Short, retakes and silences cut, word-by-word captions, or a finished video checked. In Claude.ai it only produces a cut list, shot plan and .srt from a pasted transcript."
+}

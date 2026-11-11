@@ -1,0 +1,37 @@
+{
+  "name": "review",
+  "repo": "milehimikey/em",
+  "path": "plugin/skills/review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/milehimikey/em",
+  "dir_name": "review-milehimikey-em",
+  "downloaded_at": "2026-11-11T06:41:02.807885Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "milehimikey",
+  "source_url": "https://github.com/milehimikey/em/blob/main/plugin/skills/review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/milehimikey/em/blob/main/plugin/skills/review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when starting em's live browser viewer (`em watch --serve`) so a team can watch a model update in real time, or facilitating a SCHEDULED stakeholder walkthrough that steps through slices one at a time in Review mode, capturing anything the room raises live as `issue \"...\"` red notes. Drives `em`'s watch and review phases."
+}

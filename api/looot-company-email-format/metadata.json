@@ -1,0 +1,37 @@
+{
+  "name": "looot-company-email-format",
+  "repo": "loootai/looot-skills",
+  "path": "skills/looot-company-email-format/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/loootai/looot-skills",
+  "dir_name": "looot-company-email-format",
+  "downloaded_at": "2026-11-11T06:20:47.077795Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loootai",
+  "source_url": "https://github.com/loootai/looot-skills/blob/main/skills/looot-company-email-format/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loootai/looot-skills/blob/main/skills/looot-company-email-format/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find a company's email format. Use when the user says things like \"what is the email format at example.com\", \"how are emails written at this company\" or \"guess the email pattern for example.com\". Runs through looot, billed per call."
+}

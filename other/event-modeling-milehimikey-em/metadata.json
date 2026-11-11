@@ -1,0 +1,37 @@
+{
+  "name": "event-modeling",
+  "repo": "milehimikey/em",
+  "path": ".claude/skills/event-modeling/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/milehimikey/em",
+  "dir_name": "event-modeling-milehimikey-em",
+  "downloaded_at": "2026-11-11T06:41:03.909738Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "milehimikey",
+  "source_url": "https://github.com/milehimikey/em/blob/main/.claude/skills/event-modeling/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/milehimikey/em/blob/main/.claude/skills/event-modeling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user runs `/event-modeling` (with or without a phase name), or wants to resume an event-modeling session without specifying which part of the process applies. Reads the model's `.event-modeling.md` state (or the given phase name) and routes to the right focused skill \u2014 event-modeling-discover, event-modeling-design, event-modeling-implement, event-modeling-conform, or event-modeling-review \u2014 or, for building a planned set of ready slices through scoped sub-agents to one PR per slice against main (an `em engagement`), event-modeling-engagement. If you already know which of those applies \u2014 starting a new model, extracting from existing code, slicing/writing specs, implementing a ratified slice, leading an engagement, checking drift, or running a live/stakeholder view \u2014 invoke that skill directly instead of this one."
+}

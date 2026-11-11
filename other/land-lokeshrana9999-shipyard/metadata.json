@@ -1,0 +1,36 @@
+{
+  "name": "land",
+  "repo": "lokeshrana9999/shipyard",
+  "path": "plugins/shipyard-delivery/skills/land/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lokeshrana9999/shipyard",
+  "dir_name": "land-lokeshrana9999-shipyard",
+  "downloaded_at": "2026-11-11T06:20:28.314527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lokeshrana9999",
+  "source_url": "https://github.com/lokeshrana9999/shipyard/blob/main/plugins/shipyard-delivery/skills/land/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lokeshrana9999/shipyard/blob/main/plugins/shipyard-delivery/skills/land/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lands a verified, reviewed branch on its base. Takes the repo lock, syncs the base, runs the project gate, merges as the project settings allow, records the merge with a read-back, waits a bounded time for the deploy, closes linked issues, and writes a report with a named verdict. Takes the branch to land (default the current one). Use when asked to \"land this branch\" or \"merge it\", or when ship routes a verified, reviewed branch here; not for opening or describing a pull request."
+}

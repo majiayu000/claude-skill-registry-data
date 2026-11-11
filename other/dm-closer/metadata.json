@@ -1,0 +1,37 @@
+{
+  "name": "dm-closer",
+  "repo": "jsath/claude-skills",
+  "path": "skills/social/dm-closer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "dm-closer",
+  "downloaded_at": "2026-11-11T05:50:54.757219Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "messaging",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/social/dm-closer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/social/dm-closer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs an Instagram DM funnel from the user's own past conversations: finds the questions people ask before they buy, writes a reply bank in their voice, writes two or three qualifying questions, sets the rule for who gets the booking link, and writes a click-by-click ManyChat build for the user to set up. Use when someone wants a DM funnel, DM reply templates, lead qualifying in DMs, a booking-link rule, or a ManyChat flow. Claude designs it; ManyChat sends. This skill never sends a DM."
+}

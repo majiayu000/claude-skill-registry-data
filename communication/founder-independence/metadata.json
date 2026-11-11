@@ -1,0 +1,37 @@
+{
+  "name": "founder-independence",
+  "repo": "jsath/claude-skills",
+  "path": "skills/business/founder-independence/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "founder-independence",
+  "downloaded_at": "2026-11-11T05:51:04.940138Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: communication, email",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "communication",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/business/founder-independence/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/business/founder-independence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Interviews a founder to capture the knowledge that only lives in their head into a structured founder playbook, then runs four agents from that playbook: low-stakes decisions within set limits, relationship follow-ups, emails and posts in the founder's voice, and delegation of tasks to agents or named team members. Use when a founder says the business cannot run without them, wants to document how they decide, wants follow-ups and drafts in their voice, or wants to delegate a task end to end."
+}

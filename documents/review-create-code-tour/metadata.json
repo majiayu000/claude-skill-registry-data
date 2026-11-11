@@ -1,0 +1,38 @@
+{
+  "name": "review-create-code-tour",
+  "repo": "gpsaggese/helpers",
+  "path": ".claude/skills/review.create_code_tour/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/gpsaggese/helpers",
+  "dir_name": "review-create-code-tour",
+  "downloaded_at": "2026-11-11T05:12:14.221586Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gpsaggese",
+  "source_url": "https://github.com/gpsaggese/helpers/blob/master/.claude/skills/review.create_code_tour/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gpsaggese/helpers/blob/master/.claude/skills/review.create_code_tour/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write code_tour.md, a leveled checklist to understand the code, docs, and tests of a dir"
+}

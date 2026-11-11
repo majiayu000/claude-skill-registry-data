@@ -1,0 +1,39 @@
+{
+  "name": "sounds-like-me",
+  "repo": "jsath/claude-skills",
+  "path": "skills/writing/sounds-like-me/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "sounds-like-me",
+  "downloaded_at": "2026-11-11T05:51:01.411314Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy, blog",
+    "score": 4,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "writing",
+      "writer",
+      "copy",
+      "blog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/writing/sounds-like-me/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/writing/sounds-like-me/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Learns how a person writes and talks from their own captions, newsletters, emails and video transcripts, writes a one-page voice guide with real examples, rewrites any draft to sound like them, and filters out phrases that make text read as machine-written. Use when someone wants a brand voice guide, a draft made to sound like them, AI-sounding phrases removed, or writing checked against their voice. Drafts only; never posts or sends."
+}

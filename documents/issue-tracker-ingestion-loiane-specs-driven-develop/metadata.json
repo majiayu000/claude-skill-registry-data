@@ -1,0 +1,37 @@
+{
+  "name": "issue-tracker-ingestion",
+  "repo": "loiane/specs-driven-development-spring-angular",
+  "path": ".windsurf/skills/issue-tracker-ingestion/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/loiane/specs-driven-development-spring-angular",
+  "dir_name": "issue-tracker-ingestion-loiane-specs-driven-develop",
+  "downloaded_at": "2026-11-11T06:20:17.240232Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loiane",
+  "source_url": "https://github.com/loiane/specs-driven-development-spring-angular/blob/main/.windsurf/skills/issue-tracker-ingestion/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loiane/specs-driven-development-spring-angular/blob/main/.windsurf/skills/issue-tracker-ingestion/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pull issue/PR/ticket details from Jira, GitHub Issues, Linear, or Azure Boards via MCP into `01-spec.md` `## Source`. Use at the start of `/spec` whenever the user references an external ticket."
+}

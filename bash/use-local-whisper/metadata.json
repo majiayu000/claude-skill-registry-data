@@ -1,0 +1,39 @@
+{
+  "name": "use-local-whisper",
+  "repo": "jsath/claude-skills",
+  "path": "skills/video/use-local-whisper/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "use-local-whisper",
+  "downloaded_at": "2026-11-11T05:51:01.647309Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/video/use-local-whisper/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/video/use-local-whisper/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Transcribe audio or video on your own machine with Whisper (mlx-whisper, faster-whisper or whisper.cpp) and get word-level timestamps as words.json, a plain .txt and an .srt. No API key, nothing uploaded. This is the transcription step the editing skills (edit-style, longform-edit, reel-captions) depend on. Use when asked to transcribe a take, get word timings, make an SRT, re-transcribe a final render for a caption sync check, or 'run whisper locally'."
+}

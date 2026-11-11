@@ -1,0 +1,38 @@
+{
+  "name": "pii-pdf",
+  "repo": "glebis/claude-skills",
+  "path": "pii-pdf/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "pii-pdf",
+  "downloaded_at": "2026-11-11T05:08:28.839731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/pii-pdf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/pii-pdf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detect and replace personal names, addresses, contacts, bank accounts and IBANs in PDF files or folders using the local pii-pdf JSON CLI. Use for PDF anonymization, coordinate-based PII review, and setup of this PDF engine; not for general PDF editing or ordinary text anonymization."
+}

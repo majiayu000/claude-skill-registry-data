@@ -1,0 +1,37 @@
+{
+  "name": "event-modeling-design",
+  "repo": "milehimikey/em",
+  "path": ".claude/skills/event-modeling-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/milehimikey/em",
+  "dir_name": "event-modeling-design",
+  "downloaded_at": "2026-11-11T06:41:04.301154Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "milehimikey",
+  "source_url": "https://github.com/milehimikey/em/blob/main/.claude/skills/event-modeling-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/milehimikey/em/blob/main/.claude/skills/event-modeling-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when structuring a draft event model into swimlanes and the four patterns (State Change, State View, Automation, Translation), evaluating a model's structural completeness, or writing implementation-ready deep slice documents (field tables, invariants, Given/When/Then scenarios, error flows) for a model that already has its happy-path spine. Drives `em`'s model and slice phases \u2014 the core modeling work between discovery and implementation."
+}

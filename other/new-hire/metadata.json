@@ -1,0 +1,37 @@
+{
+  "name": "new-hire",
+  "repo": "jsath/claude-skills",
+  "path": "skills/business/new-hire/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "new-hire",
+  "downloaded_at": "2026-11-11T05:50:55.509439Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/business/new-hire/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/business/new-hire/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Onboards a new team member from the team's own documents with five agents: a two-week day-by-day training plan, a docs-only Q&A Project that says \"ask your manager\" when the docs are silent, end-of-day quiz questions for a Google Form, a gap list of what the docs could not answer, and a Friday progress check from the quiz and checklist Sheet. Use when a manager is onboarding someone, wants a training plan, a docs Q&A setup, daily quizzes, a list of doc gaps, or says \"build training\", \"quiz day 3\", \"find gaps\" or \"friday progress\". It never messages the new hire itself."
+}

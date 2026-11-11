@@ -1,0 +1,39 @@
+{
+  "name": "security-auditor",
+  "repo": "jsath/claude-skills",
+  "path": "skills/dev/security-auditor/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "security-auditor-jsath-claude-skills",
+  "downloaded_at": "2026-11-11T05:50:59.469263Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/dev/security-auditor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/dev/security-auditor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs an evidence-backed security audit of a code repository (secrets, dependency advisories, commit history, then a Claude code review against a threat model) and produces a findings JSON plus a report with a remediation roadmap. Also covers read-only triage of a suspected live incident such as stored XSS, Docker/UFW host exposure reviews, LLM email-to-SMS automation design, identity-export sanitising, 2FA setups and pre-transfer repo backups. Use when someone says 'security audit this repo', 'check for leaked secrets', 'is this host exposed', 'review this automation for prompt injection', or 'someone put a script tag in our booking form'. Needs Claude Code (or any shell) with bash, git and python3; extra scanners are used if installed."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pair-workflow-review-phase",
+  "repo": "learnn-com/designn",
+  "path": ".claude/skills/pair-workflow-review-phase/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/learnn-com/designn",
+  "dir_name": "pair-workflow-review-phase",
+  "downloaded_at": "2026-11-11T06:11:33.967900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: security=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "learnn-com",
+  "source_url": "https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-workflow-review-phase/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-workflow-review-phase/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stage 4 of the delivery workflow \u2014 independent final verification of one exact PR head: the deterministic custody check first (red-snapshot.mjs verify / verify-chain: snapshot ancestry, sealed blobs byte-identical, no unlisted test change, fixScope respected, revisions as successors), then the fixer's evidence re-run, the approved witnesses and controls, every prior blocking finding with an explicit transition, the source delta and its directly affected consumers, cross-group interactions, the adopted risk-tier review passes (general via /pair-process-review, plus security / boundary / architecture lenses as the tier rises) \u2014 unioned into one finding set with stable ids, one verdict and the head it reviewed. Publishes the one first review or the one synthesis idempotently (pr-comment.mjs upsert by marker) and states readiness only when the remote head equals the verified head. Read-only on code; never fixes, never merges. Dispatched by the batch engine (pair-implement-batch)."
+}

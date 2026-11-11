@@ -1,0 +1,37 @@
+{
+  "name": "mirroir",
+  "repo": "jfarcand/mirroir-mcp",
+  "path": "plugins/hermes/skills/mirroir/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/jfarcand/mirroir-mcp",
+  "dir_name": "mirroir",
+  "downloaded_at": "2026-11-11T05:43:53.299601Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, ios",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jfarcand",
+  "source_url": "https://github.com/jfarcand/mirroir-mcp/blob/main/plugins/hermes/skills/mirroir/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jfarcand/mirroir-mcp/blob/main/plugins/hermes/skills/mirroir/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drive a real iPhone through macOS iPhone Mirroring with the mirroir MCP tools: read the screen, tap, type, swipe, open apps, and replay skills. Use whenever a task needs the user's phone."
+}

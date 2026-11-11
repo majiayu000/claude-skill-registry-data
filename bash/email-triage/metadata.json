@@ -1,0 +1,38 @@
+{
+  "name": "email-triage",
+  "repo": "larchanka/skills",
+  "path": "email-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/larchanka/skills",
+  "dir_name": "email-triage",
+  "downloaded_at": "2026-11-11T06:09:36.937270Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "larchanka",
+  "source_url": "https://github.com/larchanka/skills/blob/main/email-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/larchanka/skills/blob/main/email-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Autonomous multi-agent email triage system powered by Google Workspace CLI (gog). Discovers accounts dynamically, prioritizes the default account, delegates each thread to an isolated sub-agent for classification and state management, and safely creates draft replies and applies triage labels without raw CLI execution."
+}

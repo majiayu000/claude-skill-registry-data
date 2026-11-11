@@ -1,0 +1,37 @@
+{
+  "name": "flow",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/flow/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "flow-lneninger-claude-agentic-auto-",
+  "downloaded_at": "2026-11-11T06:19:35.069848Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/flow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/flow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the whole contract-driven delivery chain end to end in one invocation: intake, design contract, test-first implementation, adversarial review, verification, commit and pull request. Drives the working agent chain (/task, /design-first, /tdd-first, the reviewer agents, /verify-before-done, /git-commit, /ship) and pauses only at the gates a human must answer. Use when: user says /flow, 'run the whole flow', 'take this all the way to a PR', 'do the full autonomous flow', 'end to end', or hands over a request and expects a pull request back rather than a plan. Replaces the Contract Orchestrator scripts, which were removed; see the section at the end."
+}

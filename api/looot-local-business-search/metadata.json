@@ -1,0 +1,37 @@
+{
+  "name": "looot-local-business-search",
+  "repo": "loootai/looot-skills",
+  "path": "skills/looot-local-business-search/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/loootai/looot-skills",
+  "dir_name": "looot-local-business-search",
+  "downloaded_at": "2026-11-11T06:20:47.674738Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loootai",
+  "source_url": "https://github.com/loootai/looot-skills/blob/main/skills/looot-local-business-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loootai/looot-skills/blob/main/skills/looot-local-business-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find local businesses. Use when the user says things like \"find coffee shops in Austin\", \"list dentists near this address with their phone numbers\" or \"build a list of gyms in Lisbon\". Runs through looot, billed per call."
+}

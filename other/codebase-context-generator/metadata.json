@@ -1,0 +1,37 @@
+{
+  "name": "codebase-context-generator",
+  "repo": "larchanka/skills",
+  "path": "codebase-context-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/larchanka/skills",
+  "dir_name": "codebase-context-generator",
+  "downloaded_at": "2026-11-11T06:09:37.656729Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "larchanka",
+  "source_url": "https://github.com/larchanka/skills/blob/main/codebase-context-generator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/larchanka/skills/blob/main/codebase-context-generator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates comprehensive AI context, AGENTS.md, and structured documentation in a context/ directory for any brownfield codebase using Tree-sitter AST extraction, dependency analysis, predefined python scripts, and orchestrated subagents."
+}

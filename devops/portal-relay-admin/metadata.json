@@ -1,0 +1,37 @@
+{
+  "name": "portal-relay-admin",
+  "repo": "gosuda/portal-tunnel",
+  "path": "plugins/portal-relay/skills/portal-relay-admin/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/gosuda/portal-tunnel",
+  "dir_name": "portal-relay-admin",
+  "downloaded_at": "2026-11-11T05:11:24.116790Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: docker, deploy",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gosuda",
+  "source_url": "https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-admin/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-admin/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operate a running Portal relay through its admin and policy API - sign in with the relay ADMIN_TOKEN without exposing it, list leases and their approval state, approve, deny, ban, or rate-limit one identity, switch approval mode between auto and manual, change UDP and TCP lease limits, and read admin metrics. Use when the user runs a Portal relay and asks to approve or deny a tunnel, ban an identity, throttle a lease, change approval mode or lease limits, or check who is connected. Do not use for first deployment (portal-relay), for failure diagnosis (portal-relay-diagnose), or for exposing an app (portal-expose)."
+}

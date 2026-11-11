@@ -1,0 +1,37 @@
+{
+  "name": "reel-captions",
+  "repo": "jsath/claude-skills",
+  "path": "skills/video/reel-captions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "reel-captions",
+  "downloaded_at": "2026-11-11T05:50:57.786076Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/video/reel-captions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/video/reel-captions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write CAPTIONS-PLATFORMS.md for one finished short video: a per-platform post caption for Instagram, TikTok, YouTube Shorts (title + description), Facebook, Threads, Bluesky and X, each within that platform's limits, with your comment-keyword CTA on the platforms where it belongs and never on X. Keyword, CTA, platforms, hashtags and limits come from a config file; a checker script fails the file on any miss. Use after an edit is finished, when asked to 'write the captions', 'caption this reel for every platform', or before scheduling."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "longform-edit",
+  "repo": "jsath/claude-skills",
+  "path": "skills/video/longform-edit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "longform-edit",
+  "downloaded_at": "2026-11-11T05:50:57.410232Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, bash=3",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/video/longform-edit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/video/longform-edit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Edits a raw long-form YouTube recording (screen recording export, camera file, or either plus a separate mic) into a publish-ready video automatically, like Descript on autopilot: transcribes with word timestamps, removes retakes and keeps the last take, tightens dead space while keeping silent on-screen action (speeding up long waits), masters the voice to -14 LUFS / -1.5 dBTP with no music bed, re-transcribes the FINAL render for an every-word SRT (optional burned-in captions), drafts chapters, titles and a description, and fails loudly on QA gates (words, A/V sync, caption sync per chapter, caption coverage, loudness) plus contact sheets you look at. Use when someone says edit this long-form, clean up my recording, cut the retakes and dead space, process the long-form inbox, or descript this. Needs Claude Code with ffmpeg, whisper.cpp and Python 3."
+}

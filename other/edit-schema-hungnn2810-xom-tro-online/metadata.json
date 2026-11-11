@@ -1,0 +1,37 @@
+{
+  "name": "edit-schema",
+  "repo": "hungnn2810/xom-tro-online",
+  "path": ".claude/skills/edit-schema/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hungnn2810/xom-tro-online",
+  "dir_name": "edit-schema-hungnn2810-xom-tro-online",
+  "downloaded_at": "2026-11-11T05:27:31.227117Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hungnn2810",
+  "source_url": "https://github.com/hungnn2810/xom-tro-online/blob/main/.claude/skills/edit-schema/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hungnn2810/xom-tro-online/blob/main/.claude/skills/edit-schema/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Change V\u1ec9a H\u00e8 Online's synced Colyseus state (server/src/schema.ts) and regenerate the C# classes for Unity with npm run schema-cs. Use this skill whenever a field has to be added, removed or retyped on StreetState, Player, Stall or Customer, or when the user wants the client to \"see\" something new about the street (\"cho hi\u1ec7n s\u1ed1 kh\u00e1ch \u0111ang x\u1ebfp h\u00e0ng\", \"th\u00eam tr\u1ea1ng th\u00e1i nh\u00e2n vi\u00ean\"). Forgetting the codegen step leaves client and server silently out of sync, which is miserable to track down."
+}

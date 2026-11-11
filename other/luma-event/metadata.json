@@ -1,0 +1,37 @@
+{
+  "name": "luma-event",
+  "repo": "glebis/claude-skills",
+  "path": "luma-event/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "luma-event",
+  "downloaded_at": "2026-11-11T05:08:30.623143Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/luma-event/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/luma-event/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end AGENCY Community event on Lu.ma - cover image, Zoom meeting, the Lu.ma event page, invites to calendar contacts, and a social announcement draft. Use when creating a community meetup, talk, workshop or discussion on Lu.ma, or when the user says \"/luma-event\", \"set up a luma event\", \"create the meetup on luma\"."
+}

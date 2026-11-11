@@ -1,0 +1,37 @@
+{
+  "name": "undo",
+  "repo": "gatsby2008/sdd-plugin",
+  "path": "skills/undo/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/gatsby2008/sdd-plugin",
+  "dir_name": "undo-gatsby2008-sdd-plugin",
+  "downloaded_at": "2026-11-11T05:03:30.146784Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gatsby2008",
+  "source_url": "https://github.com/gatsby2008/sdd-plugin/blob/main/skills/undo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gatsby2008/sdd-plugin/blob/main/skills/undo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Discard uncommitted code changes \u2014 from /sdd:implement in a pipeline, or from free-hand vibe coding \u2014 reversibly. Works standalone (no .specwork/ required). Reversible by default (stash), with --restore to recover and --hard to discard irreversibly. Preserves .specwork/ when a pipeline is active."
+}

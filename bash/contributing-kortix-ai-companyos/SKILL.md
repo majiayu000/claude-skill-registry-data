@@ -1,0 +1,232 @@
+---
+name: contributing
+description: "The pull request loop for this repo: branch → commit → verify in your own box (local tests + local stack) → PR into dev → demo video recorded with agent-browser on the local stack → `gh --attach` → self-merge → verify on dev. A PR into dev runs no CI unless a person adds the `test` or `preview` label (one run each). Load when opening, updating, or finishing a pull request; when asking what CI runs where; when adding or explaining PR labels or the per-PR preview environment; or when attaching an image or video to a PR, issue, or comment. The PR title and body are the create-pr skill."
+---
+
+# Contributing: the pull request loop
+
+Every change reaches `dev` through a pull request. A pull request into `dev` runs **no**
+GitHub Actions job: your development machine runs every test, the stack, and the demo before
+the PR opens, and the PR is mergeable at once. Each PR carries a demo video of the change,
+recorded with **agent-browser** against your local stack. The video is uploaded with `gh --attach` and appears
+in the PR body. This skill is that loop, end to end.
+
+`AGENTS.md` owns the policy: canonical branches, when to self-merge, and the customer-data
+rule. This skill is the procedure. Read `AGENTS.md` → "First, at session start" and
+"Default delivery" before step 1 if you have not.
+
+## Preflight (once per machine)
+
+```bash
+gh --version                 # ≥ 2.99.0: first release with --attach
+agent-browser --version      # installed: npm i -g agent-browser && agent-browser install
+agent-browser doctor         # "Recording" must pass: ffmpeg with libvpx + libx264
+gh auth status               # token prefix gho_, ghp_, or github_pat_ (see attachments reference)
+```
+
+Done when all four pass. A `ghs_` or `ghu_` token cannot attach. See
+[references/attachments.md](references/attachments.md) → "Token types".
+
+## Steps
+
+### 1. Branch and worktree
+
+Join the canonical branch for the work, or create one:
+`pnpm worktree create --name <slug> --yes --no-start` (the **worktree** skill). All edits and
+runs happen under `../suna-<slug>`.
+
+Done when `git branch --show-current` prints the canonical branch inside its worktree.
+
+### 2. Commit
+
+- Use the Conventional Commits subject style that `git log` shows:
+  `fix(sandbox): …`, `feat(web): …`, `refactor(api): …`, `docs(repo): …`.
+- `pnpm install` arms `.githooks`. The hooks encrypt staged `.env` files, block plaintext
+  secrets, refuse blocked customer terms, and refuse a crash dump or a file over 20 MB. When a
+  hook fires, fix the content and commit again. Keep the hooks on every commit (never
+  `--no-verify`).
+- Stage files by name: `git add <path> <path>`. Never `git add -A`, `git add .`, or
+  `git commit -a` outside one named directory. A blanket add once committed a worker's core
+  dump, and a core dump holds every secret in the process environment.
+- Ship the tests with the behaviour change (the **testing** skill).
+
+Done when the commit exists and the hooks passed.
+
+### 3. Verify in your box
+
+Run T0 (`tsc` and lint for the packages you touched) and the one test you wrote or changed
+(the **testing** skill). On a Mac, suite-wide `pnpm test` modes exit `2`: the suite runs in
+CI. A diff that no test reads (docs, a skill, a standalone script) needs no run. Then run
+the changed behaviour on your worktree's stack: `pnpm worktree start <slug>` prints the web
+and API ports. Exercise the real surface: the HTTP route with `curl`, the real CLI process,
+or the page with agent-browser. No CI lane runs these for you before the merge.
+No hook or merge gate requires a test run on a PR into `dev`. The attestation system was
+removed on 2026-10-16: delete any `tests/attestations/` or `tests/test-attestation.json` file
+that an older branch or a merge brings back.
+
+Done when the commands you will list under "Verification" passed, with output
+captured.
+
+### 4. Record the demo video on the local stack
+
+The demo is a short video of the changed behaviour on a real surface: your worktree's web
+app (`http://localhost:<web port>`). Run it as a bash script from the repo root. zsh does
+not word-split, so a command stored in a variable fails there.
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+S=http://localhost:<web port>        # from `pnpm worktree start <slug>` or `pnpm worktree ls`
+SESSION=$(agent-browser session id --scope worktree --prefix pr-demo)
+ab() { agent-browser --session "$SESSION" "$@"; }
+
+# Sign in before recording, so the video never shows an auth form.
+.agents/skills/contributing/scripts/preview-sign-in.sh "$S" "$SESSION"   # prints the synthetic email
+
+# Absolute paths only: the agent-browser daemon is shared by every session on
+# the machine and resolves a relative path against the cwd of whichever
+# session started it, which can be another worktree.
+OUT="$PWD/output/pr"
+mkdir -p "$OUT"
+ab set viewport 1440 900
+ab open "$S/<changed route>"
+ab wait --load networkidle          # record a rendered page, not a hydrating one
+ab record start "$OUT/demo.mp4" --cursor
+#   Drive the change: `ab snapshot -i`, then `ab click @eN`, `ab fill @eN …`.
+#   Put `ab wait 800` between actions so a person can follow.
+ab record stop
+ab close
+```
+
+`preview-sign-in.sh` creates `pr-demo-<epoch>@example.test` and requests the sign-in email.
+On a local origin it reads the link or code from local Supabase's Mailpit
+(`127.0.0.1:54324`), and it waits until the browser leaves `/auth`. Load
+`agent-browser skills get core` for the full command set.
+
+Rules for the video:
+
+- Show the change, from the starting state to the visible result, in under 60 s. One flow
+  per video. Use more videos for more flows.
+- Use synthetic data only (`@example.test` emails, invented names). The repo is public, and
+  every attachment URL is public.
+- `.mp4` plays in every browser. Keep each file under 100 MB (`ls -lh output/pr/`).
+- For a change with no UI (API, CLI, infra), record the terminal output or the rendered
+  result on GitHub. For example, open the changed file on the branch at
+  `https://github.com/kortix-ai/CompanyOS/blob/<branch>/<path>`. Or state in the PR why a video
+  adds nothing.
+
+Look at the video before you attach it. Extract four frames and read them:
+
+```bash
+for t in 1 5 10 15; do ffmpeg -v error -y -ss $t -i output/pr/demo.mp4 -frames:v 1 -vf scale=720:-1 output/pr/frame-$t.png; done
+```
+
+Blank frames mean the page had not rendered. An oversized pointer means the page's CSS
+broke the `--cursor` overlay: record that page without `--cursor`.
+
+Done when the frames show the change from start to result, with only synthetic data.
+
+### 5. Open the PR
+
+```bash
+git push -u origin HEAD
+gh pr create --base dev \
+  --title "<type>(<scope>): <outcome a user notices>" --body-file output/pr/body.md \
+  --attach ./output/pr/demo.mp4
+```
+
+- Write the title and `body.md` with the **create-pr** skill. It owns the PR text: English
+  only, written for a reviewer who decides "merge or iterate" without the diff, in the
+  section order of `.github/pull_request_template.md`. The
+  line `![Demo](./output/pr/demo.mp4)` holds the video; `--attach` uploads it and rewrites
+  the path in one step, so skip step 6.
+- Put `body.md` and the recordings in the gitignored `output/pr/` directory. Keep them out
+  of tracked paths.
+- Open it as a draft (`--draft`) only when the work is not finished. A verified change goes
+  straight to review-ready.
+- The PR runs no CI job. Add `test` or `preview` only when you need that one explicit run. See "What runs where" and "Labels" below.
+
+Done when `gh pr view --json url` prints the PR.
+
+### 6. Attach the video to the PR
+
+```bash
+# body.md contains the line:  ![Demo](./output/pr/demo.mp4)
+gh pr edit <pr> --body-file output/pr/body.md --attach ./output/pr/demo.mp4
+```
+
+`gh` uploads the file to GitHub and replaces the local reference in the body with the
+uploaded URL. The URL renders as a video player. Run the command from the directory the
+body's relative paths resolve from: the repo root. The full rules and failure modes are in
+[references/attachments.md](references/attachments.md).
+
+Done when the body has the asset URL and no local link is left:
+
+```bash
+gh pr view <pr> --json body --jq .body | grep -oE 'https://github.com/user-attachments/assets/[0-9a-f-]+'  # ≥ 1 URL
+gh pr view <pr> --json body --jq .body | grep -cE '\]\(\./output/'                                        # 0
+```
+
+### 7. Keep it current
+
+- Keep the PR mergeable: `gh pr view <pr> --json mergeable` must not say `CONFLICTING`.
+  Merge `origin/dev` into the branch and push.
+- When the behaviour in the video changes, record the video again and repeat step 6.
+- Edit the body after an upload from the live copy (**create-pr** → "Update an existing
+  PR").
+- Merge `origin/dev` into the branch daily. Git's rename detection carries `dev`'s edits
+  through moved files. GitHub's conflict check does not, so push the merge.
+
+### 8. Merge and hand off
+
+- Self-merge when the change is verified (`AGENTS.md` → "Default delivery", rule 5): the
+  local checks passed and the PR is mergeable. Do not wait for the user's approval, and do
+  not wait for a CI check: none runs. `gh pr merge <pr> --squash`.
+- A PR that adds a file under `packages/db/migrations/`: run
+  `sh scripts/check-migration-order.sh --pr <pr>` right before `gh pr merge`. It fetches
+  `origin/dev` and the PR head, and exits 1 when a new migration sorts at or before dev's
+  newest. The pre-push hook checked against `dev` as it was at your last push; `dev` can
+  have a newer migration by merge time, and `gh pr merge` runs no hook. On exit 1, rename
+  the file to a fresh timestamp, push, and check again. The "Migrations are sequential"
+  job on the push to `dev` is the backstop after the merge, and a missed one stops every
+  `migrate-db` on dev.
+- A push to `dev` does not deploy dev and does not run `Tests`. Deploy deliberately:
+  `gh workflow run deploy-dev.yml -f surface=changed` (`changed` diffs each surface against
+  the commit it serves, so it ships every merge since that surface's last deploy and retries
+  a surface whose last roll failed; `all` forces every surface; `frontend` builds the web app
+  only). A dispatch from a branch (`--ref <branch>`) never migrates the dev database and
+  never rolls the dev API. Follow the
+  run to the "Live on dev" comment, then verify the change on dev.
+- Report the PR URL, the merge SHA, the local test commands and their results, the dev
+  verification, and anything still unverified.
+- Merging into `staging` or `prod`, and every release step, still needs the user's explicit
+  approval (the **kortix-release** skill).
+
+## What runs where
+
+| Event | Workflows | Blocks? |
+| --- | --- | --- |
+| PR into `dev` | none. Adding `test` runs the `Tests` lanes once (~20 min); adding `preview` deploys once (~7 min), with no tests. A push re-runs neither. | no |
+| Push to `dev` (the merge) | no `Tests` lane. `secret-scan`, `secrets-guard`, path-gated `DB Migrations`, `i18n-catalogs`, `deploy-api-router-dev`, `Terraform Apply Global`. | no |
+| Dispatch / schedule on `dev` | `Deploy Dev` and `Desktop`: dispatch only. `Tests`: nightly (a red night comments on the commit). `drata`: daily. `CI`, `CodeQL`: weekly. | no |
+| PR into `staging` | none: Promote to Production opens and merges it | no |
+| PR into `prod` (release PR) | the release suite, once: `tests-release.yml` (contract lanes, deployed API smoke, browser journeys against staging) plus `CI`, `CodeQL`, `secret-scan`, `secrets-guard`, path-gated `DB Migrations`, `Terraform CI`, `Security Scan`, `i18n-catalogs`, `drata`. `full suite + quality gates` requires every one green and is the only required check in the repo. | **yes, the only gate** |
+
+`tests/unit/sandbox-workflow.test.ts` fails when a workflow other than the label-gated
+`tests.yml` and `deploy-preview.yml` triggers on a pull request into `dev`. Put a new check in the release suite on the PR into `prod`
+(one run per release tree), a schedule, or a dispatch. Never on PRs into `dev`, and never on the push to
+`dev` unless it is a seconds-long guard. GitHub-hosted runners are
+free on this public repo; the limit is the organization's concurrent-job cap, so a
+new `push: dev` workflow must queue (`cancel-in-progress: false` per ref), never run
+once per merge in parallel.
+
+## Labels
+
+| Label | Effect | Who can add it |
+| --- | --- | --- |
+| `test` | Runs the `Tests` lanes (~20 min) once, on the head SHA when the label is added. A push does not re-run it; remove and re-add the label to run again. | Triage access. |
+| `preview` | Builds one self-host environment for the branch on Platinum (~7 min), once, and runs no tests. A push does not redeploy. To deploy a newer head, dispatch: `gh workflow run deploy-preview.yml -f pr_number=<N> -f run_tests=false` (redeploy only), or without `run_tests=false` to also run `pnpm test -- --target-full` (40–80 min). **Never remove and re-add the label to redeploy:** removing it tears the environment down and deletes its Postgres volume. See [references/preview-environments.md](references/preview-environments.md). | Needs write access, and a PR from a branch of this repo (not a fork). |
+| `i18n-reorder` | Lets `i18n-catalogs.yml` accept an intentional key reorder in `apps/web/translations/*.json` on a release PR. On `dev`, the same reorder needs `I18N_REORDER=1` past `.githooks/pre-commit` and the commit trailer `I18n-Reorder: intentional`. | Triage access. |
+
+Both labels are explicit, rare requests. Never add one by default, from a template, or from
+automation.

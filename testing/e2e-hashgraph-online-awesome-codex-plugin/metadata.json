@@ -1,0 +1,39 @@
+{
+  "name": "e2e",
+  "repo": "hashgraph-online/awesome-codex-plugins",
+  "path": "plugins/tester-army/e2e/skills/e2e/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/hashgraph-online/awesome-codex-plugins",
+  "dir_name": "e2e-hashgraph-online-awesome-codex-plugin",
+  "downloaded_at": "2026-11-11T05:19:23.303592Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e, playwright",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hashgraph-online",
+  "source_url": "https://github.com/hashgraph-online/awesome-codex-plugins/blob/main/plugins/tester-army/e2e/skills/e2e/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hashgraph-online/awesome-codex-plugins/blob/main/plugins/tester-army/e2e/skills/e2e/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes, runs, and debugs end-to-end tests for web and mobile apps with e2e, the agentic test runner, which mixes agent.act goals with exact locator assertions on a Playwright browser or an iOS or Android device. Also drives a project's running app live over the e2e MCP server to look at a screen, check a UI change, take a screenshot or record a video, and try a locator; and runs bug bashes, parallel e2e explore runs with each bug proven by a repro test. Use when a project depends on e2e or has an e2e.config.ts, when asked for end-to-end, browser, mobile, or agentic UI tests, to check a change in the running app, to QA or bug bash an app or branch, or when an e2e run fails."
+}

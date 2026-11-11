@@ -1,0 +1,37 @@
+{
+  "name": "assistant-spike",
+  "repo": "laimis91/assistant-framework",
+  "path": "skills/assistant-spike/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/laimis91/assistant-framework",
+  "dir_name": "assistant-spike",
+  "downloaded_at": "2026-11-11T06:08:35.345009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laimis91",
+  "source_url": "https://github.com/laimis91/assistant-framework/blob/main/skills/assistant-spike/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laimis91/assistant-framework/blob/main/skills/assistant-spike/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answers one observable feasibility question by running a small disposable experiment outside tracked files, then reports a validated, partial, or invalidated verdict and builds no production change. Use when the user asks to spike, try out, or prove whether an approach can work and only execution can settle it, not reading sources, scoring trade-offs, building the real change, or diagnosing a failure."
+}

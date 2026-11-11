@@ -1,0 +1,37 @@
+{
+  "name": "export-sprites",
+  "repo": "hungnn2810/xom-tro-online",
+  "path": ".claude/skills/export-sprites/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hungnn2810/xom-tro-online",
+  "dir_name": "export-sprites-hungnn2810-xom-tro-online",
+  "downloaded_at": "2026-11-11T05:27:31.397337Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, gaming=2",
+    "score": 2,
+    "runner_up": "gaming",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hungnn2810",
+  "source_url": "https://github.com/hungnn2810/xom-tro-online/blob/main/.claude/skills/export-sprites/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hungnn2810/xom-tro-online/blob/main/.claude/skills/export-sprites/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Export V\u1ec9a H\u00e8 Online's sprite set from canvas code (client/Tools/sprites.js) to PNGs under client/Assets/Resources/Sprites/. Use this skill right after changing anything in sprites.js, and whenever the user says \"xu\u1ea5t h\u00ecnh\", \"c\u1eadp nh\u1eadt h\u00ecnh\", \"\u0111\u1ed5i m\u00e0u \u00e1o\", \"th\u00eam ki\u1ec3u t\u00f3c\", \"v\u1ebd l\u1ea1i qu\u1ea7y\", \"sao h\u00ecnh ch\u01b0a \u0111\u1ed5i\", or when Unity logs \"Missing sprite ...\". It needs a real browser because the art is Canvas 2D \u2014 drive it through the Chrome tools instead of asking the user to type in a console."
+}

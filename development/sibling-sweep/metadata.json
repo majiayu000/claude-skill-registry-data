@@ -1,0 +1,37 @@
+{
+  "name": "sweeping-defect-siblings",
+  "repo": "kajisho5/ffmpeg-skill",
+  "path": ".claude/skills/sibling-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/kajisho5/ffmpeg-skill",
+  "dir_name": "sibling-sweep",
+  "downloaded_at": "2026-11-11T05:54:43.280190Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kajisho5",
+  "source_url": "https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/sibling-sweep/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/sibling-sweep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn one reported defect in ffmpeg-skill into the full list of places the same thing happens \u2014 naming the defect's class (an input property, a shared step, a convention that differs between two code paths, an FFmpeg-version behaviour), sweeping every tool with tests/sweep.py and a path-parity probe, separating decided refusals from real siblings, and landing the fix with one regression test per class rather than per report. Use whenever an issue or PR comment reports a bug in this repository, before writing the fix, and again when triaging an external review or audit."
+}

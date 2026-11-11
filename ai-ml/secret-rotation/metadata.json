@@ -1,0 +1,37 @@
+{
+  "name": "secret-rotation",
+  "repo": "mblode/agent-skills",
+  "path": "skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/secret-rotation/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/mblode/agent-skills",
+  "dir_name": "secret-rotation",
+  "downloaded_at": "2026-11-11T06:34:18.671834Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mblode",
+  "source_url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/secret-rotation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/secret-rotation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rotates a Thistle Commons service secret without downtime. Use when asked to \"rotate the signing key\", \"rotate a secret\", or \"this credential leaked\"."
+}

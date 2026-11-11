@@ -1,0 +1,37 @@
+{
+  "name": "pair-capability-analyze-delivery-metrics",
+  "repo": "learnn-com/designn",
+  "path": ".claude/skills/pair-capability-analyze-delivery-metrics/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/learnn-com/designn",
+  "dir_name": "pair-capability-analyze-delivery-metrics",
+  "downloaded_at": "2026-11-11T06:11:43.187881Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "learnn-com",
+  "source_url": "https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-capability-analyze-delivery-metrics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/learnn-com/designn/blob/master/.claude/skills/pair-capability-analyze-delivery-metrics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generates the delivery/AI-metrics retro panel for a period \u2014 bug resolution time, PR lead time, process adoption \u2014 computed from the adopted PM tool/code host against the delivery-metrics guideline (definitions, aggregation, low-sample rule, bug mapping) and written as ONE period-keyed panel under .pair/working/reports/metrics/: headline numbers + trend first, raw breakdowns collapsed, idempotent by period key. Invoke on demand for a retro or a periodic delivery review ('delivery metrics for July', 'how long are bugs taking', 'AI metrics report'); cadence stays the caller's concern, an automation loop may drive it. Report-only: writes exactly that panel \u2014 no adoption content, no backlog items, no merge authority. Tool-agnostic by construction: adding a tracker touches adoption/KB only, never this skill."
+}

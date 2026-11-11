@@ -1,0 +1,38 @@
+{
+  "name": "event-modeling-engagement",
+  "repo": "milehimikey/em",
+  "path": ".claude/skills/event-modeling-engagement/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/milehimikey/em",
+  "dir_name": "event-modeling-engagement",
+  "downloaded_at": "2026-11-11T06:41:05.065159Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "milehimikey",
+  "source_url": "https://github.com/milehimikey/em/blob/main/.claude/skills/event-modeling-engagement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/milehimikey/em/blob/main/.claude/skills/event-modeling-engagement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when leading an engagement: building a named set of ratified event-modeling slices (`em engagement`) into one independent PR per slice, each against main, by dispatching the em-implementer, em-validator, em-reviewer and em-critic sub-agents, level by level, and handing the human each PR with its evidence as it passes review. The lead session orchestrates and never writes slice code itself. To build one slice by hand, use event-modeling-implement instead."
+}

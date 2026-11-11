@@ -1,0 +1,40 @@
+{
+  "name": "marketing-team",
+  "repo": "jsath/claude-skills",
+  "path": "skills/social/marketing-team/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "marketing-team",
+  "downloaded_at": "2026-11-11T05:51:00.461665Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, social, campaign, brand",
+    "score": 5,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "social",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/social/marketing-team/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/social/marketing-team/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs five agents that do the routine work of a small marketing team from the business's own material: a Voice Builder that writes a brand voice guide from past posts and emails, an Analytics Reader that pulls numbers from a connected tool or a pasted CSV export, a What Worked agent that finds last month's winners and the likely reasons with evidence, a Content Planner that turns that into next month's plan, and a Marketing Drafter that writes the posts and emails and packages them for the user's own scheduler. Ends with a one-page marketing brief that replaces the catch-up meeting. Use when a founder or marketer asks for a brand voice guide, what worked last month, a content plan, post or email drafts, a scheduler import file, or says \"marketing run\" or \"marketing brief\". Drafts only; never posts, schedules or sends."
+}

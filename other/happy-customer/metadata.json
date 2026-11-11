@@ -1,0 +1,37 @@
+{
+  "name": "happy-customer",
+  "repo": "jsath/claude-skills",
+  "path": "skills/business/happy-customer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "happy-customer",
+  "downloaded_at": "2026-11-11T05:51:01.839070Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/business/happy-customer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/business/happy-customer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Works through a small business's customer support inbox with five agents: labels every email (question, order status, bug, complaint, refund, legal or risk, feedback, spam), builds one answer sheet from past replies and help docs, drafts routine replies in the owner's tone as Gmail drafts, puts refunds, angry customers and legal or data issues in a hard pile without drafting promises, and reports the top five things customers asked about each week. Use when an owner wants the support inbox cleared, replies drafted, a support FAQ built from old replies, or says \"support sweep\", \"hard pile\" or \"weekly support report\". Drafts only; never sends, refunds or promises."
+}

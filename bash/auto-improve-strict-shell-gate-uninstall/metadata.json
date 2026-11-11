@@ -1,0 +1,38 @@
+{
+  "name": "auto-improve-strict-shell-gate-uninstall",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/auto-improve-strict-shell-gate-uninstall/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "auto-improve-strict-shell-gate-uninstall",
+  "downloaded_at": "2026-11-11T06:19:45.922034Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/auto-improve-strict-shell-gate-uninstall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/auto-improve-strict-shell-gate-uninstall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remove the strict-shell-gate add-on of the agentic-auto-improve plugin from this project: the settings.json row of the bash-gate hook (PreToolUse on Bash), then the file .claude/hooks/bash-gate.py. Previews the row and the file, asks for one confirmation, then writes: the row first with a backup, then the file. Keeps the file when you edited it, and keeps the shared helpers. The add-on has no kill switch, so this skill is the way out. The name carries the plugin name because you may have several plugins installed. Use when: user says /auto-improve-strict-shell-gate-uninstall, 'remove the strict shell gate', 'turn off bash-gate', or 'uninstall the shell write gate'. Never deletes a helper."
+}

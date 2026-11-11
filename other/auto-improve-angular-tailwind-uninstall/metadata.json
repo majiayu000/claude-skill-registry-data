@@ -1,0 +1,37 @@
+{
+  "name": "auto-improve-angular-tailwind-uninstall",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/auto-improve-angular-tailwind-uninstall/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "auto-improve-angular-tailwind-uninstall",
+  "downloaded_at": "2026-11-11T06:19:45.621884Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/auto-improve-angular-tailwind-uninstall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/auto-improve-angular-tailwind-uninstall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remove the angular-tailwind add-on of the agentic-auto-improve plugin from this project: the four rule documents under .claude/references/angular-tailwind/ and their entries in the project profile's review.documents slot, and any copy of the retired prompt advisor hook (a settings.json row and a file, under the name angular-tailwind-advisor.py or the older architecture-advisor.py). Previews every row, file and profile change, asks for one confirmation, then writes: rows first, then the profile, then the files. Keeps any file you edited. The name carries the plugin name because you may have several plugins installed. Use when: user says /auto-improve-angular-tailwind-uninstall, 'remove the angular tailwind add-on', 'uninstall the Angular and Tailwind rule documents', 'remove the architecture advisor', or when the install refuses with disabled-hook-present. Never deletes a helper or the stylesheet snippet."
+}

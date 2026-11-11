@@ -1,0 +1,37 @@
+{
+  "name": "meeting-follow-up",
+  "repo": "jsath/claude-skills",
+  "path": "skills/business/meeting-follow-up/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "meeting-follow-up",
+  "downloaded_at": "2026-11-11T05:51:04.127618Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/business/meeting-follow-up/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/business/meeting-follow-up/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns one or more meetings into a verified follow-up plan and review-ready email drafts. Reads your notes or transcripts, plus the calendar invite and email threads if you have connectors, then works out who attended (names and emails checked against sources, never guessed), what was promised both ways (owed by us vs owed by them), who gets each follow-up (To and CC, one owner per action), what to send and when. Checks for replies and booked calls before suggesting a nudge. Drafts only; never sends, schedules or writes to a CRM. Use when someone says \"follow up on this call\", \"who do I email after the meeting\", \"what did we promise\", \"draft the follow-ups\", \"map the attendees\", \"recap and next steps\" or pastes meeting notes and asks what to do next."
+}

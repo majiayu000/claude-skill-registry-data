@@ -1,0 +1,38 @@
+{
+  "name": "portal-relay-diagnose",
+  "repo": "gosuda/portal-tunnel",
+  "path": "plugins/portal-relay/skills/portal-relay-diagnose/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/gosuda/portal-tunnel",
+  "dir_name": "portal-relay-diagnose",
+  "downloaded_at": "2026-11-11T05:11:24.720519Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: cd, docker, deploy",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "cd",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gosuda",
+  "source_url": "https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-diagnose/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gosuda/portal-tunnel/blob/main/plugins/portal-relay/skills/portal-relay-diagnose/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find which layer of a self-hosted Portal relay is failing - container and process, open ports, embedded DNS and NS/glue delegation, DNSSEC and the parent DS, TLS and SNI routing, the QUIC UDP backhaul and TCP/UDP lease ports, or approval and source policy - with bounded read-only checks, then report the cause and the fix. Use when a relay operator says the relay, its DNS, its certificates, its tunnels, or its game ports do not work. Do not use when the user is a publisher or visitor of one tunnel (portal-expose or portal-connect), for approving or banning leases (portal-relay-admin), or for first deployment (portal-relay)."
+}

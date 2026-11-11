@@ -1,0 +1,37 @@
+{
+  "name": "plan-questions",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/plan-questions/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "plan-questions",
+  "downloaded_at": "2026-11-11T06:19:40.445999Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/plan-questions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/plan-questions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Question-quality rubric for AskUserQuestion calls during /plan mode. Triggers when the developer says /plan-questions, \"ask better questions\", \"that question was confusing\", or as a mid-session reset. Invoke it by name; the plugin no longer injects it automatically (the plan-question advisor hook was retired in 0.7.0)."
+}

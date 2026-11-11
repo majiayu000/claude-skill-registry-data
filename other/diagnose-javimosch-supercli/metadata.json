@@ -1,0 +1,39 @@
+{
+  "name": "diagnose",
+  "repo": "javimosch/supercli",
+  "path": ".agents/skills/diagnose/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/javimosch/supercli",
+  "dir_name": "diagnose-javimosch-supercli",
+  "downloaded_at": "2026-11-11T05:41:59.301742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, testing=4",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "javimosch",
+  "source_url": "https://github.com/javimosch/supercli/blob/master/.agents/skills/diagnose/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/javimosch/supercli/blob/master/.agents/skills/diagnose/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce \u2192 minimise \u2192 hypothesise \u2192 instrument \u2192 fix \u2192 regression-test. Use when user says \"diagnose this\" / \"debug this\", reports a bug, says something is broken/throwing/failing, or describes a performance regression."
+}

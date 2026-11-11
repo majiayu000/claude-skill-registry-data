@@ -1,0 +1,37 @@
+{
+  "name": "daily-social",
+  "repo": "jsath/claude-skills",
+  "path": "skills/social/daily-social/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "daily-social",
+  "downloaded_at": "2026-11-11T05:50:57.032415Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: social, brand",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/social/daily-social/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/social/daily-social/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs a brand's social accounts day to day the way a social media manager would. Checks the industry news with web search and picks the one thing worth talking about, turns it into one clear post idea, rewrites it natively for LinkedIn, an Instagram caption and X, loads the posts into a scheduler such as Metricool or Buffer as drafts at the brand's best times (or writes a ready-to-load file), and on Fridays reports what was posted, what worked, what flopped and what changes next week. Use when a user asks for daily social posts, a morning news-to-post routine, cross-platform rewrites, or a weekly social report. Can run every morning as a scheduled task. Never publishes."
+}

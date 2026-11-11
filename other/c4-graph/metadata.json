@@ -1,0 +1,37 @@
+{
+  "name": "c4-graph",
+  "repo": "itsaspacestation/natural-intelligence",
+  "path": "skills/c4-graph/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/itsaspacestation/natural-intelligence",
+  "dir_name": "c4-graph",
+  "downloaded_at": "2026-11-11T05:37:41.119957Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "itsaspacestation",
+  "source_url": "https://github.com/itsaspacestation/natural-intelligence/blob/main/skills/c4-graph/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/itsaspacestation/natural-intelligence/blob/main/skills/c4-graph/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when drawing or converting a software architecture diagram following the C4 model \u2014 system context, container, or landscape \u2014 as a draw.io file rendered in VS Code or draw.io and embedded as .drawio.svg in GitLab, GitHub, or a README, from a text description, a DOT digraph, or a draw.io file or model. Also use when the user mentions C4, draw.io C4 shapes, line jumps, crossing arrows, diagram unreadable on dark theme, or asks to convert a .drawio file or a draw.io SVG export."
+}

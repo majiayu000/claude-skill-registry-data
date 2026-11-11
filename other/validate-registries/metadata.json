@@ -1,0 +1,37 @@
+{
+  "name": "validate-registries",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/validate-registries/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "validate-registries",
+  "downloaded_at": "2026-11-11T06:19:42.975909Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/validate-registries/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/validate-registries/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scan the registries (.claude/registries/MECHANISMS.md with MECHANISMS/*.md, and VOCABULARY.md with VOCABULARY/*.md) for dead file references, and with --check-structure lint their layout (bodiless entries, duplicate titles, project content in the Universal root, digest freshness). Reports any backticked path entries whose files no longer exist. Use to prevent the reusable mechanism registry from rotting when files are renamed or deleted. Use when: user says /validate-registries, 'check the registry', 'find dead links in MECHANISMS', or as a weekly sanity check."
+}

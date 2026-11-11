@@ -1,0 +1,37 @@
+{
+  "name": "precision-pdf-editing",
+  "repo": "jsath/claude-skills",
+  "path": "skills/dev/precision-pdf-editing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "precision-pdf-editing",
+  "downloaded_at": "2026-11-11T05:51:03.547505Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/dev/precision-pdf-editing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/dev/precision-pdf-editing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes surgical edits to an existing PDF (change every value in one table column, fix a few labels, replace text in fixed cells) while keeping page geometry, fonts, highlights, images, metadata and every unrelated pixel unchanged, then proves it with a mapping CSV, a pixel diff outside the edit masks and rendered before/after checks. Use when someone says 'add 150 to every price in this PDF', 'change these numbers but keep the layout', 'edit the PDF without regenerating it', or when a natural-language PDF editor would be too loose. Needs Python with PyMuPDF; works in Claude Code or any environment that can run Python."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "list-contracts",
+  "repo": "lneninger/claude-agentic-auto-improve",
+  "path": "skills/list-contracts/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lneninger/claude-agentic-auto-improve",
+  "dir_name": "list-contracts",
+  "downloaded_at": "2026-11-11T06:19:40.147041Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lneninger",
+  "source_url": "https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/list-contracts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lneninger/claude-agentic-auto-improve/blob/master/skills/list-contracts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Show every concept contract under .claude/concepts/ grouped by project and status. Highlights contracts needing user action (drafts with unresolved Open Questions, approved contracts not yet implemented). Use when: user says /list-contracts, 'show my contracts', 'what's pending', or after finishing a feature to see what's next."
+}

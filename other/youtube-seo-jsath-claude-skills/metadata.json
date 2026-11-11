@@ -1,0 +1,37 @@
+{
+  "name": "youtube-seo",
+  "repo": "jsath/claude-skills",
+  "path": "skills/social/youtube-seo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jsath/claude-skills",
+  "dir_name": "youtube-seo-jsath-claude-skills",
+  "downloaded_at": "2026-11-11T05:50:56.273373Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsath",
+  "source_url": "https://github.com/jsath/claude-skills/blob/main/skills/social/youtube-seo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsath/claude-skills/blob/main/skills/social/youtube-seo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs five agents that keep a YouTube channel's titles and descriptions matched to what people search for now: a Channel Reader that pulls the user's own video list and stats with their YouTube Data API key, YouTube Analytics OAuth or a pasted YouTube Studio export, a Niche Watcher that finds what is working right now for similar-size channels from public search results the API returns or the user provides, a Title Writer that drafts titles, descriptions and chapters for new videos, a Back Catalogue agent that picks old videos worth a refresh and drafts new versions, and a Change Tracker that records every change the user makes and compares before and after on matched windows. Use when a creator asks for YouTube SEO, better titles or descriptions, what is working in their niche, a back catalogue refresh, or says \"seo run\". Never invents search volumes or stats and never changes a video; drafts only."
+}
