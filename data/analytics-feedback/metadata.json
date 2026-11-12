@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Close the learning loop from real YouTube performance. Reads the newest YouTube Studio \"Table data.csv\" export, attributes each video's views/CTR/retention to topic + named-entity tokens, and rewrites the AUTO-managed block of schedule-drip's topics.scorelist (GO winners / HOLD dead niches) plus appends proven-winner search queries to scout-sources' niches.txt. Deterministic, no Claude, idempotent (no-op unless the export's mtime changed). The analytics half of the autopilot loop \u2014 runs at the top of every autopilot tick so scout + schedule-drip always reflect what actually performed."
+  "description": "Close the learning loop from real YouTube performance. Reads the newest YouTube Studio \"Table data.csv\" export, attributes each video's views/CTR/retention to topic + named-entity tokens, and rewrites the AUTO-managed block of schedule-drip's topics.scorelist (GO winners / HOLD dead niches) plus appends proven-winner search queries to scout-sources' niches.txt. Deterministic, no Claude, idempotent (no-op unless the export's mtime changed). The analytics half of the autopilot loop — runs at the top of every autopilot tick so scout + schedule-drip always reflect what actually performed.",
+  "content_fingerprint": "34b0d6869fbb8761adbd9670ae6f7d4151ca84984ab0fa2ff5458da9e64bda04"
 }

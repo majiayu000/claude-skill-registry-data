@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dotnet/skills/blob/main/plugins/dotnet-upgrade/skills/thread-abort-migration/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "714fc887ad5b00a8c8154484c51cc4e995ae3024038e1ab90b1e767b07577706",
+  "description": "Guides migration of .NET Framework Thread.Abort usage to cooperative cancellation in modern .NET. USE FOR: modernizing code that calls Thread.Abort, catching ThreadAbortException, replacing Thread.Res"
 }

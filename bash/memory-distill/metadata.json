@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "memory/{gotchas,learned}/observations.jsonl raw \uad00\ucc30\uc744 \uc815\uc81c .md\ub85c \ubcc0\ud658\ud558\ub294 \uc0ac\uc6a9\uc790 \ud2b8\ub9ac\uac70 \uc2a4\ud0ac. \ud578\ub4dc\uc624\ud504 \uc758\uc874\uc774 \uc57d\ud560 \ub54c \uc758\uc9c0\ub85c \ud638\ucd9c. Dreaming-like rebuild \ubaa8\ub4dc \uc9c0\uc6d0 (\uae30\uc874 \uc815\uc81c .md + \uc0c8 \uad00\ucc30 \ud1b5\ud569 + \uc911\ubcf5/\ubaa8\uc21c \uc81c\uac70). /memory-distill\ub85c \uc2e4\ud589. \ub610\ud55c \ud578\ub4dc\uc624\ud504 \uc790\ub3d9 \uc815\uc81c\uc640 \ub3d9\uc77c \ub85c\uc9c1\uc744 \uacf5\uc720. \ub300\uc0c1\uc740 \ud504\ub85c\uc81d\ud2b8 \ub8e8\ud2b8 memory/ \uc804\uc6a9 \u2014 \ud638\uc2a4\ud2b8 \ub124\uc774\ud2f0\ube0c \uba54\ubaa8\ub9ac\ub098 Antigravity /learn\uacfc \ubb34\uad00."
+  "description": "memory/{gotchas,learned}/observations.jsonl raw 관찰을 정제 .md로 변환하는 사용자 트리거 스킬. 핸드오프 의존이 약할 때 의지로 호출. Dreaming-like rebuild 모드 지원 (기존 정제 .md + 새 관찰 통합 + 중복/모순 제거). /memory-distill로 실행. 또한 핸드오프 자동 정제와 동일 로직을 공유. 대상은 프로젝트 루트 memory/ 전용 — 호스트 네이티브 메모리나 Antigravity /learn과 무관.",
+  "content_fingerprint": "de765e1f0a65b6dddf828ea4d77a1f2f2ec9c5a71c5df6cc98fd0dad450ae703"
 }

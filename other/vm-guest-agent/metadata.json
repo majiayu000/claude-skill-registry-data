@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Maintains the ansible/roles/guest_agent Ansible role (this skill is named vm_guest_agent, but the actual role directory is guest_agent \u2014 see the note in the file body) that detects the hypervisor a system runs under and installs/enables the matching guest agent (qemu-guest-agent, open-vm-tools, hyperv-daemons/WALinuxAgent) as part of the Linux SOE, removing guest-agent packages on bare metal or unrecognized/Nutanix virtualization instead. Use when checking guest-agent presence or state on a virtual machine."
+  "description": "Maintains the ansible/roles/guest_agent Ansible role (this skill is named vm_guest_agent, but the actual role directory is guest_agent — see the note in the file body) that detects the hypervisor a system runs under and installs/enables the matching guest agent (qemu-guest-agent, open-vm-tools, hyperv-daemons/WALinuxAgent) as part of the Linux SOE, removing guest-agent packages on bare metal or unrecognized/Nutanix virtualization instead. Use when checking guest-agent presence or state on a virtual machine.",
+  "content_fingerprint": "2938ada6d638027bad0509006f0d37b08704c1eb89bba3cb649e1ce308beaa79"
 }

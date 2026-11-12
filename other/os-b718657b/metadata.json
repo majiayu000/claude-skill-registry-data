@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u591a\u6838\u5747\u8861 / \u8c03\u5ea6-\u591a\u6838\u5747\u8861 / SMP\u2014\u2014\u591a / assign \u5206\u3002\u7528\u6237\u63d0\u5230\u8fd9\u4e9b\u8bcd\u65f6\u4f7f\u7528\u672c\u6280\u80fd\u3002 \u573a\u666f\uff1a\u5bf9\u7167\uff1aSMP\u2014\u2014\u591a\u6838\u8d1f\u8f7d\u5747\u8861\uff08\u6700\u5c0f\u8d1f\u8f7d\u6838\u5206\u914d\uff09\u3002 \u3010\u4e0d\u9002\u7528\u3011Not for \u4ee5\u4e0b\u573a\u666f\uff1acores \u4e3a\u7a7a/\u975e\u6cd5\u65f6\uff1bop \u975e {assign, balance, loads} \u65f6"
+  "description": "多核均衡 / 调度-多核均衡 / SMP——多 / assign 分。用户提到这些词时使用本技能。 场景：对照：SMP——多核负载均衡（最小负载核分配）。 【不适用】Not for 以下场景：cores 为空/非法时；op 非 {assign, balance, loads} 时",
+  "content_fingerprint": "993388c56430da6c582f4ef1982973a6d073414d5562c0151318b338284a0f28"
 }

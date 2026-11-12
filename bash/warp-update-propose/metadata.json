@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Orchestrator skill that takes a warp-apply receipts directory and proposes each batch to its corresponding multisig signer \u2014 Safe Transaction Service via `safes/propose-warp-batch.ts` for EVM batches (auto-detects governance context: AW / Foundation / Regular / etc. per filename), Squads via `squads/propose-warp-batch.ts` for SVM batches. Persists a per-ticket proposal summary at `~/.hyperlane/proposals/ticket-id.yaml` so the human can track signing progress in Heimdall or Squads."
+  "description": "Orchestrator skill that takes a warp-apply receipts directory and proposes each batch to its corresponding multisig signer — Safe Transaction Service via `safes/propose-warp-batch.ts` for EVM batches (auto-detects governance context: AW / Foundation / Regular / etc. per filename), Squads via `squads/propose-warp-batch.ts` for SVM batches. Persists a per-ticket proposal summary at `~/.hyperlane/proposals/ticket-id.yaml` so the human can track signing progress in Heimdall or Squads.",
+  "content_fingerprint": "a79ba11a47068d504294fdc05aba43a1135da997983719fdb16896e19039470e"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/shiiman/claude-code-plugins/blob/main/plugins/shiiman-claude/skills/switch-model/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "5aa40d322c00e9b1dbdc2a57ff09ab2a96474f1867d20163a95c1285f2e60294",
+  "description": "タスクの複雑さに応じて Claude のモデルを自動的に切り替える。複雑なタスク（アーキテクチャ設計、大規模リファクタリング、難解なバグ修正）では opus を、単純なタスク（小さな修正、フォーマット、簡単な質問）では sonnet を自動選択。コストと品質のバランスを最適化。"
 }

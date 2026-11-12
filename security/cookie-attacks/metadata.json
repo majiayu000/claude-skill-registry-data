@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit and attack session cookies via missing Secure/HttpOnly/SameSite attributes, overly broad Domain/Path scope, non-expiring persistent cookies, absent __Host- and __Secure- prefixes, browser cache leakage (Cache-Control: no-store missing), session token predictability via Burp Sequencer analysis, server-side session not invalidated on logout, and SSO single-logout bypass. Tools: Burp Suite Repeater/Sequencer, OWASP ZAP, EditThisCookie, Tamper Data, Cookiebro."
+  "description": "Audit and attack session cookies via missing Secure/HttpOnly/SameSite attributes, overly broad Domain/Path scope, non-expiring persistent cookies, absent __Host- and __Secure- prefixes, browser cache leakage (Cache-Control: no-store missing), session token predictability via Burp Sequencer analysis, server-side session not invalidated on logout, and SSO single-logout bypass. Tools: Burp Suite Repeater/Sequencer, OWASP ZAP, EditThisCookie, Tamper Data, Cookiebro.",
+  "content_fingerprint": "8ce4d63d1b4f9119256b824ca2247a2e6279b4178e54e5bd554d3006a24da8a5"
 }

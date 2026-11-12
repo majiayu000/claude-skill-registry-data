@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `practices-discovery` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage practices-discovery --single`: the engine emits one run-stage directive for practices-discovery and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `practices-discovery` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage practices-discovery --single`: the engine emits one run-stage directive for practices-discovery and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "21a067ea0c877a2f9be5f79e8d7c9b1cbef3cddbf422c583f8a9c7b7efcec7ca"
 }

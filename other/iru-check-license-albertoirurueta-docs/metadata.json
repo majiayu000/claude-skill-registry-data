@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Check for a license file (LICENSE, LICENSE.txt, LICENSE.md, COPYING, etc.) in the repository root, and if one exists, verify every source and test file carries a header consistent with it. Learns the header format from files that already have one; if none carry a header yet, generates a standard header for that license type. Invoke as `/iru-check-license` to scan the whole repository, or `/iru-check-license <path-or-glob>` to scope the check to specific files/directories. Use whenever the user wants license-header compliance checked or backfilled, instead of eyeballing individual files."
+  "description": "Check for a license file (LICENSE, LICENSE.txt, LICENSE.md, COPYING, etc.) in the repository root, and if one exists, verify every source and test file carries a header consistent with it. Learns the header format from files that already have one; if none carry a header yet, generates a standard header for that license type. Invoke as `/iru-check-license` to scan the whole repository, or `/iru-check-license <path-or-glob>` to scope the check to specific files/directories. Use whenever the user wants license-header compliance checked or backfilled, instead of eyeballing individual files.",
+  "content_fingerprint": "7d45264bb658550da44cea23a7458bcfa0cab6c9d5d4c491efd8e3aefe1b34b3"
 }

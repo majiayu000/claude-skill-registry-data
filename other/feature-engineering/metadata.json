@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Transforms raw game, player, and goalie data into model-ready features with built-in leakage detection. Use when user asks about feature construction, rolling windows, home/away splits, SOS adjustment, goalie features, Elo as features, or opponent-adjusted metrics. Strictly enforces .shift(1) before any rolling calculation. Do not use for raw data exploration -- see game-lookup or team-analysis. Do not use for understanding hockey metrics -- see hockey-analytics. Do not use for xG feature construction -- see xg-model-building."
+  "description": "Transforms raw game, player, and goalie data into model-ready features with built-in leakage detection. Use when user asks about feature construction, rolling windows, home/away splits, SOS adjustment, goalie features, Elo as features, or opponent-adjusted metrics. Strictly enforces .shift(1) before any rolling calculation. Do not use for raw data exploration -- see game-lookup or team-analysis. Do not use for understanding hockey metrics -- see hockey-analytics. Do not use for xG feature construction -- see xg-model-building.",
+  "content_fingerprint": "8fe8775fcc6a5bf548521650ef8630ac1a674b832215c85a698432095926a1ba"
 }

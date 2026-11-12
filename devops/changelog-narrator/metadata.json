@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Changelog narrator: reads the diff between two tags/commits, clusters changes into logical groups (features, bugfixes, refactoring, dependencies), and writes a semantic changelog with breaking changes, migration notes, and deployment risk. Collector extracts git diff and clusters by module; LLM classifies each change as feature/bugfix/chore/refactor/breaking, writes migration notes, and assesses deployment risk. Read-only. Audience: Both. Trigger: /changelog"
+  "description": "Changelog narrator: reads the diff between two tags/commits, clusters changes into logical groups (features, bugfixes, refactoring, dependencies), and writes a semantic changelog with breaking changes, migration notes, and deployment risk. Collector extracts git diff and clusters by module; LLM classifies each change as feature/bugfix/chore/refactor/breaking, writes migration notes, and assesses deployment risk. Read-only. Audience: Both. Trigger: /changelog",
+  "content_fingerprint": "16c1ec3b694d1a8725234486b60662047a7453590b5c2b74c4fac15bae15f9c7"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "How to cut a Kortix production release \u2014 the versioning philosophy (when patch vs minor vs major) and the exact flow: promote CURRENT main to staging, let the staging PR's checks be the gate, fix forward on main until it is green, then run Promote to Production and deploy + verify prod. Load WHENEVER the user wants to release, promote, cut/ship a version, publish a release, bump the version, or asks why a promotion is stuck. Load it too whenever another skill or doc needs to describe the release/promotion flow \u2014 this file is the one place it is written out in full."
+  "description": "How to cut a Kortix production release — the versioning philosophy (when patch vs minor vs major) and the exact flow: promote CURRENT main to staging, let the staging PR's checks be the gate, fix forward on main until it is green, then run Promote to Production and deploy + verify prod. Load WHENEVER the user wants to release, promote, cut/ship a version, publish a release, bump the version, or asks why a promotion is stuck. Load it too whenever another skill or doc needs to describe the release/promotion flow — this file is the one place it is written out in full.",
+  "content_fingerprint": "d1e0e2a09e3e84bdd06e8f6cbb284cc97e673f87808a27a5ee93a05ca07b8e1c"
 }

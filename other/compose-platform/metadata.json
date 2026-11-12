@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Owns platform splits for Compose Multiplatform apps: places declarations in commonMain, chooses expect/actual vs interface plus DI, wires host adapters and ports, and validates iOS/Swift interop, desktop and web targets, and platform lifecycle. Use when touching commonMain, expect, actual, iosMain, Swift, SKIE, Flow to Swift, desktop, wasm, web target, or platform-specific code. Do NOT use for routing or architecture (compose-architecture), feature slices (compose-feature), composables or resources (compose-ui), repositories or persistence (compose-data), or Gradle target setup (compose-project)."
+  "description": "Owns platform splits for Compose Multiplatform apps: places declarations in commonMain, chooses expect/actual vs interface plus DI, wires host adapters and ports, and validates iOS/Swift interop, desktop and web targets, and platform lifecycle. Use when touching commonMain, expect, actual, iosMain, Swift, SKIE, Flow to Swift, desktop, wasm, web target, or platform-specific code. Do NOT use for routing or architecture (compose-architecture), feature slices (compose-feature), composables or resources (compose-ui), repositories or persistence (compose-data), or Gradle target setup (compose-project).",
+  "content_fingerprint": "518babac9554d8609ceda6f456a7334ab4e8cda37896b99ec49cd58814c83ca4"
 }

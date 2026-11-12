@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Create, update, or check the plan for one issue \u2014 what gets done, in what order, and why, never how \u2014 written to the issue's STM as specs/plan.md in the canonical plan format. Called by an agent after it has gathered the plan context (the issue, its parent, its child issues, any plan already on disk). Use before work starts (create), whenever work finishes, starts, or the order changes (update), and before an issue is called done (check). The check runs a script, so a play's done check can rely on it."
+  "description": "Create, update, or check the plan for one issue — what gets done, in what order, and why, never how — written to the issue's STM as specs/plan.md in the canonical plan format. Called by an agent after it has gathered the plan context (the issue, its parent, its child issues, any plan already on disk). Use before work starts (create), whenever work finishes, starts, or the order changes (update), and before an issue is called done (check). The check runs a script, so a play's done check can rely on it.",
+  "content_fingerprint": "4e7fc16cef15da823c4cc7c45a230d9bffd1b4548f5d949779cbd336f551aa18"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Post-implementation simplification pass. Reduces complexity without changing behavior. Use after Phase 3 (Build GREEN) and before Phase 4 (Review). Catches dead code, unnecessary abstractions, over-engineering, and redundant patterns. Triggers on \"simplify\", \"clean up\", \"reduce complexity\", \"too complex\". NOT for style/convention enforcement (see mk:clean-code); NOT for reviewing diffs or PRs (see mk:review)."
+  "description": "Post-implementation simplification pass. Reduces complexity without changing behavior. Use after Phase 3 (Build GREEN) and before Phase 4 (Review). Catches dead code, unnecessary abstractions, over-engineering, and redundant patterns. Triggers on \"simplify\", \"clean up\", \"reduce complexity\", \"too complex\". NOT for style/convention enforcement (see mk:clean-code); NOT for reviewing diffs or PRs (see mk:review).",
+  "content_fingerprint": "8971d8b139cb40cb1123fa6f79deb763a338487cb99089ad0715921e94344c66"
 }

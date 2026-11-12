@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pattern for adding derived edge types in the Grafema Rust orchestrator (main.rs).\nUse when: (1) need to create new graph edges derived from existing edges (e.g., MODULE-level\nDEPENDS_ON from IMPORTS_FROM), (2) Datalog joins on large edge sets time out,\n(3) adding enrichment steps that combine data from multiple resolver outputs,\n(4) need to understand how resolver outputs flow through the orchestrator pipeline."
+  "description": "Pattern for adding derived edge types in the Grafema Rust orchestrator (main.rs).\nUse when: (1) need to create new graph edges derived from existing edges (e.g., MODULE-level\nDEPENDS_ON from IMPORTS_FROM), (2) Datalog joins on large edge sets time out,\n(3) adding enrichment steps that combine data from multiple resolver outputs,\n(4) need to understand how resolver outputs flow through the orchestrator pipeline.",
+  "content_fingerprint": "b8a99f1649edc7a7ea66e60e2f7cc02a9105d8371d74169066e8d5dcd8211ab4"
 }

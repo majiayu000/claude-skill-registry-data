@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u65e2\u5b58\u30c6\u30b9\u30c8\u304b\u3089\u516c\u958b\u9762\u306e\u4fdd\u8a3c\u3092\u62bd\u51fa\u3057\u3001\u4fdd\u8a3c\u53f0\u5e33 docs/guarantees.md \u306e\u30c9\u30e9\u30d5\u30c8\u3092\u66f8\u304d\u51fa\u3057\u3066 user \u306e\u88c1\u53ef\u3092\u53d7\u3051\u3001\u88c1\u53ef\u6e08\u307f\u306e\u6b20\u843d\u30c6\u30b9\u30c8\u3092\u305d\u306e\u5834\u3067\u8ffd\u52a0\u3057\u3001\u53f0\u5e33\u3092\u6b63\u5f0f\u904b\u7528\u3078\u683c\u4e0a\u3052\u3059\u308b\u3002\u30c6\u30b9\u30c8\u3092\u6301\u3064\u30ea\u30dd\u306b\u53f0\u5e33\u3092\u521d\u3081\u3066\u6577\u304f\u3068\u304d\u3001\u307e\u305f\u306f\u53f0\u5e33\u3068\u30c6\u30b9\u30c8\u306e\u4e56\u96e2\u3092\u7591\u3046\u3068\u304d\u306b\u4f7f\u3046\u3002"
+  "description": "既存テストから公開面の保証を抽出し、保証台帳 docs/guarantees.md のドラフトを書き出して user の裁可を受け、裁可済みの欠落テストをその場で追加し、台帳を正式運用へ格上げする。テストを持つリポに台帳を初めて敷くとき、または台帳とテストの乖離を疑うときに使う。",
+  "content_fingerprint": "9e74640bafd21fc446ed9326c2f3c8d5c47b24ddacdb47c3b0527f2480275167"
 }

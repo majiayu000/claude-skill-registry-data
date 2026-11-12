@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants to authenticate to a NocoBase v2 instance, asks \"how do I get a token for NocoBase\", \"how do I log in via API or CLI\", \"how do I connect an agent or MCP client\", \"why is my request returning 401 from NocoBase\", or needs working curl/Node samples that send the bearer token. Covers the CLI path (`nb env add` / `nb env auth`), the upstream login flow (NB_USER + NB_PASSWORD \u2192 auth:signIn \u2192 token), the long-lived API Key path, OAuth through the IdP: OAuth plugin, and the separate Auth: OIDC SSO plugin."
+  "description": "Use when the user wants to authenticate to a NocoBase v2 instance, asks \"how do I get a token for NocoBase\", \"how do I log in via API or CLI\", \"how do I connect an agent or MCP client\", \"why is my request returning 401 from NocoBase\", or needs working curl/Node samples that send the bearer token. Covers the CLI path (`nb env add` / `nb env auth`), the upstream login flow (NB_USER + NB_PASSWORD → auth:signIn → token), the long-lived API Key path, OAuth through the IdP: OAuth plugin, and the separate Auth: OIDC SSO plugin.",
+  "content_fingerprint": "e8b54739add87c8702bd923314384fe004175031f96730c11308661393f12793"
 }

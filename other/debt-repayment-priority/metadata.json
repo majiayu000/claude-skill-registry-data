@@ -1,5 +1,5 @@
 {
-  "name": "\u507f\u8fd8\u4f18\u5148\u7ea7\u6392\u5e8fSkill",
+  "name": "偿还优先级排序Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/debt-repayment-priority/SKILL.md",
   "github_branch": "main",
@@ -30,5 +30,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u503a\u52a1\u507f\u8fd8\u4f18\u5148\u7ea7\u7684\u6253\u5206\u6a21\u578b(\u98ce\u9669\u00d7\u5f71\u54cd\u00d7\u6210\u672c)\u3002\u5f53\u5b58\u5728\u591a\u6761\u5df2\u5206\u7ea7\u503a\u52a1,\u9700\u8981\u91cf\u5316\u6392\u5e8f\u786e\u5b9a\u507f\u8fd8\u5148\u540e\u4e0e\u6279\u6b21\u65f6\u4f7f\u7528\u3002"
+  "description": "债务偿还优先级的打分模型(风险×影响×成本)。当存在多条已分级债务,需要量化排序确定偿还先后与批次时使用。",
+  "content_fingerprint": "360beeea8373c747a895ca6689b053e53a8bfcf294b1dff9db042387d46984aa"
 }

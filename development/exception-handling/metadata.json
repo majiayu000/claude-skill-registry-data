@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when writing, reviewing, or debugging Apex exception handling, DmlException behavior, custom exception hierarchies, or user-safe error messages. Triggers: 'DmlException', 'swallowed exception', 'AuraHandledException', 'trigger rollback', 'try catch'. NOT for a specific runtime error \u2014 use apex/common-apex-runtime-errors. Also: 'LimitException', 'getDmlIndex', 'SaveResult', 'Savepoint rollback callout', 'Assert.fail', 'finalizer getException', 'Apex exception email'. NOT for a cross-cutting error framework \u2014 use apex/error-handling-framework."
+  "description": "Use when writing, reviewing, or debugging Apex exception handling, DmlException behavior, custom exception hierarchies, or user-safe error messages. Triggers: 'DmlException', 'swallowed exception', 'AuraHandledException', 'trigger rollback', 'try catch'. NOT for a specific runtime error — use apex/common-apex-runtime-errors. Also: 'LimitException', 'getDmlIndex', 'SaveResult', 'Savepoint rollback callout', 'Assert.fail', 'finalizer getException', 'Apex exception email'. NOT for a cross-cutting error framework — use apex/error-handling-framework.",
+  "content_fingerprint": "f084fa0ee30064c6aa7e3adf0f131d5b31223f9f172c0c7ffb658d261b796e71"
 }

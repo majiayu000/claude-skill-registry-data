@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Route a TCP client through SOCKS/HTTP proxies with the host's proxychains4 config (dynamic_chain, proxy_dns, 127.0.0.1:1080) and the pp alias. Use when a tool has no proxy flag but must egress through a pivot; Not for UDP, ICMP or static binaries (use ligolo-ng) or for intercepting and rewriting traffic (use mitmproxy)."
+  "description": "Route a TCP client through SOCKS/HTTP proxies with the host's proxychains4 config (dynamic_chain, proxy_dns, 127.0.0.1:1080) and the pp alias. Use when a tool has no proxy flag but must egress through a pivot; Not for UDP, ICMP or static binaries (use ligolo-ng) or for intercepting and rewriting traffic (use mitmproxy).",
+  "content_fingerprint": "1987e7256c2eceac2ad847025c931f0ccbb1885a92fa4602d9954f58c7d5a91e"
 }

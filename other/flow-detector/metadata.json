@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Analyzes a task description plus the surrounding codebase and produces a list of candidate end-to-end flows. Activates when a developer describes a task using vague verbs (send, notify, sync, handle, process, integrate) without specifying entity, trigger, or recipient. Returns 1 candidate when the flow is unambiguous, 2+ when multiple plausible interpretations exist. Each candidate is a complete proposed execution context, never a question."
+  "description": "Analyzes a task description plus the surrounding codebase and produces a list of candidate end-to-end flows. Activates when a developer describes a task using vague verbs (send, notify, sync, handle, process, integrate) without specifying entity, trigger, or recipient. Returns 1 candidate when the flow is unambiguous, 2+ when multiple plausible interpretations exist. Each candidate is a complete proposed execution context, never a question.",
+  "content_fingerprint": "831aaf5e0c49be709e96bddf0b48b97efbbe4db86f347fa52f334dfe2054148c"
 }

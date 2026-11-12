@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Cygnusfear/agent-skills/blob/main/skills/obsidian-plan-wiki/playbook/30-refactor/30-04-ts-closure-monolith-decomposition/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "5b484c7e95e821e3ede13cf2b42113eb469d4bd240e0e27900543e3bf2c04a93",
+  "description": "Decompose a large closure-based module into domain modules with shared state. Use when a single function/closure owns 1000+ lines of state and logic trapped by closure capture."
 }

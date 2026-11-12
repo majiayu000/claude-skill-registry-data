@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Inject spatial understanding into VLMs via language-guided multi-turn Chain-of-Thought reasoning over hierarchical spatial knowledge (pixel\u2192object\u2192scene). Implement dual-channel attention mechanism preserving pre-trained vision features while progressively incorporating dense 3D spatial information. Frozen original parameters prevent catastrophic forgetting; only new channel and mixture weights update. Maintains visual fidelity while enabling precise spatial reasoning (depth, relative positions, distances)."
+  "description": "Inject spatial understanding into VLMs via language-guided multi-turn Chain-of-Thought reasoning over hierarchical spatial knowledge (pixel→object→scene). Implement dual-channel attention mechanism preserving pre-trained vision features while progressively incorporating dense 3D spatial information. Frozen original parameters prevent catastrophic forgetting; only new channel and mixture weights update. Maintains visual fidelity while enabling precise spatial reasoning (depth, relative positions, distances).",
+  "content_fingerprint": "46f1bf99c1f296d0710e930904cde1dd33b45f29b6d950379776049725db278f"
 }

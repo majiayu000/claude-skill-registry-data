@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc784\uc2dc \ubcc0\uc218\ub97c \uba54\uc11c\ub4dc \ud638\ucd9c(query)\ub85c \uce58\ud658\ud558\uc5ec \uc911\ubcf5 \uc81c\uac70\u00b7\ucd94\ucd9c \uc6a9\uc774\uc131 \ud655\ubcf4. \"\uc784\uc2dc \ubcc0\uc218 \uba54\uc11c\ub4dc\ub85c\", \"temp \uc81c\uac70\", \"\uc9c0\uc5ed \ubcc0\uc218\ub97c \ucffc\ub9ac\ub85c\", \"/replace-temp-with-query\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \uc784\uc2dc \ubcc0\uc218\uac00 \uc11c\ub85c \uc5bd\ud600 \uce58\ud658 \ubd88\uac00\uba74 /extract-method-object\uac00 \uc801\ud569. /replace-temp-with-query [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "임시 변수를 메서드 호출(query)로 치환하여 중복 제거·추출 용이성 확보. \"임시 변수 메서드로\", \"temp 제거\", \"지역 변수를 쿼리로\", \"/replace-temp-with-query\" 요청 시 사용. 단, 임시 변수가 서로 얽혀 치환 불가면 /extract-method-object가 적합. /replace-temp-with-query [commit-ref]로 호출.",
+  "content_fingerprint": "d171a0f108f485dbb4635f895e6d82f6616539f398540adb83e994b0bc0d5759"
 }

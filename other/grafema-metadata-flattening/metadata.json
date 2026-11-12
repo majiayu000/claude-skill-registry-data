@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix silent metadata issues in RFDB node storage. Covers two traps:\n(1) metadata flattening \u2014 nested metadata fields become top-level after\nserialization, so node.metadata.field is undefined but node.field works.\n(2) reserved keys \u2014 fields named \"type\", \"id\", \"name\", \"file\", \"exported\"\nare silently stripped from metadata by _parseNode() to prevent overwriting\ntop-level node fields."
+  "description": "Fix silent metadata issues in RFDB node storage. Covers two traps:\n(1) metadata flattening — nested metadata fields become top-level after\nserialization, so node.metadata.field is undefined but node.field works.\n(2) reserved keys — fields named \"type\", \"id\", \"name\", \"file\", \"exported\"\nare silently stripped from metadata by _parseNode() to prevent overwriting\ntop-level node fields.",
+  "content_fingerprint": "85229173237a4ee7cd3937b805293f3499fcc259d54c10cfab5ec602aefc9f32"
 }

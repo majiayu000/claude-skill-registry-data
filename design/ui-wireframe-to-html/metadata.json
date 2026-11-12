@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PRD \u5230 UI \u7ebf\u6846 / \u7ed3\u6784\u9636\u6bb5\uff1a\u5f53\u9700\u8981\u628a PRD \u7684\u754c\u9762\u5b9a\u4e49\u5148\u8f6c\u6210 screen inventory\u3001\u72b6\u6001\u6a21\u578b\u3001ASCII \u5e03\u5c40\u3001\u4f4e\u4fdd\u771f HTML mockup\uff0c \u5e76\u5148\u786e\u8ba4\u7ed3\u6784/\u72b6\u6001\u800c\u4e0d\u662f\u89c6\u89c9 polish \u65f6\u4f7f\u7528\u3002\u8fd9\u4e2a Skill \u53ea\u8d1f\u8d23 UI mockup \u7684\u7ed3\u6784\u9636\u6bb5\uff1b\u5982\u679c\u7528\u6237\u8981\u9ad8\u4fdd\u771f\u3001\u771f\u5b9e\u524d\u7aef\u9879\u76ee\u5bf9\u9f50\u3001 project-native preview\u3001component map\u3001implementation notes \u6216\u201c\u5f00\u53d1\u5b8c\u5168\u590d\u523b\u201d\uff0c\u5fc5\u987b\u8f6c\u7528 ui-mockup-desktop-workbench\u3002"
+  "description": "PRD 到 UI 线框 / 结构阶段：当需要把 PRD 的界面定义先转成 screen inventory、状态模型、ASCII 布局、低保真 HTML mockup， 并先确认结构/状态而不是视觉 polish 时使用。这个 Skill 只负责 UI mockup 的结构阶段；如果用户要高保真、真实前端项目对齐、 project-native preview、component map、implementation notes 或“开发完全复刻”，必须转用 ui-mockup-desktop-workbench。",
+  "content_fingerprint": "4f3f75298c091b0492b512d29a00a5c02632d9b552dbcdc950bbadbf3217a36d"
 }

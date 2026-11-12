@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Evaluate a FlowGoal against its evidence ledger: run every deterministic verification command first, dispatch the goal-evaluator-judge only for fuzzy criteria, then return a structured verdict and write non-terminal lifecycle updates. Use when /flow:goal evaluate runs, when the Stop hook fires in evaluator-loop mode, or when /flow:start Phase 4 or /flow:debug converts AC evidence into a verdict. A lifecycle transition without deterministic evidence is silent premature completion."
+  "description": "Evaluate a FlowGoal against its evidence ledger: run every deterministic verification command first, dispatch the goal-evaluator-judge only for fuzzy criteria, then return a structured verdict and write non-terminal lifecycle updates. Use when /flow:goal evaluate runs, when the Stop hook fires in evaluator-loop mode, or when /flow:start Phase 4 or /flow:debug converts AC evidence into a verdict. A lifecycle transition without deterministic evidence is silent premature completion.",
+  "content_fingerprint": "89f824f346dc71ed87cca082479311c67291abdd40aba06d7919d38f0d0d174f"
 }

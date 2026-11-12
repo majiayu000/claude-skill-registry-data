@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Program the target MCU's flash memory via S32 Debug Probe and verify success. Confirms the project is built without errors, locates the debug/launch configuration, launches the debug session (which internally programs flash), waits for completion, and verifies the target is halted at the entry point using GDB. Supports both 'flash and debug' and 'flash only (disconnect after programming)' patterns."
+  "description": "Program the target MCU's flash memory via S32 Debug Probe and verify success. Confirms the project is built without errors, locates the debug/launch configuration, launches the debug session (which internally programs flash), waits for completion, and verifies the target is halted at the entry point using GDB. Supports both 'flash and debug' and 'flash only (disconnect after programming)' patterns.",
+  "content_fingerprint": "feb793010bcaa7dd9bd06e16a80013a6a42853d9ca58fe88d28d1ba1177a865c"
 }

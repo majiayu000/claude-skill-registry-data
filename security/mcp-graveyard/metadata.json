@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit which MCP server tools your Claude Code sessions actually invoke. Use when the user wants to find dead MCP servers (configured but never called), hallucinated MCP tool calls, or per-project MCP usage. Triggers on \"which MCP servers don't I use?\", \"clean up MCP config\", \"remove unused MCP servers\", \"audit MCP tools\". Runs locally; reads ~/.claude session JSONL logs and ~/.claude.json. No network calls."
+  "description": "Audit which MCP server tools your Claude Code sessions actually invoke. Use when the user wants to find dead MCP servers (configured but never called), hallucinated MCP tool calls, or per-project MCP usage. Triggers on \"which MCP servers don't I use?\", \"clean up MCP config\", \"remove unused MCP servers\", \"audit MCP tools\". Runs locally; reads ~/.claude session JSONL logs and ~/.claude.json. No network calls.",
+  "content_fingerprint": "bfbc51415f9830154afd2a07b3a0d6f884850fedcf0b1243d3963636c77bf3b2"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "One-time pipeline configurator. Inspects the repo (default branch, validation scripts, labels), asks a few questions, writes .ai/agentic.config.json \u2014 the file every other skill reads \u2014 installs the tracker descriptor, and generates missing project docs (SDLC.md, CODE_REVIEW.md, BACKWARD_COMPATIBILITY.md, AGENTS.md starter). Re-run when the toolchain or label taxonomy changes. Verifies cross-skill coverage and prints the install command for missing skills."
+  "description": "One-time pipeline configurator. Inspects the repo (default branch, validation scripts, labels), asks a few questions, writes .ai/agentic.config.json — the file every other skill reads — installs the tracker descriptor, and generates missing project docs (SDLC.md, CODE_REVIEW.md, BACKWARD_COMPATIBILITY.md, AGENTS.md starter). Re-run when the toolchain or label taxonomy changes. Verifies cross-skill coverage and prints the install command for missing skills.",
+  "content_fingerprint": "1f6ca15cacab058c592d8dc5ffca709b65ddf64f5df5d31630d28fa75da5783a"
 }

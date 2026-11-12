@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4f7f\u7528\u4f60\u672c\u673a\u914d\u7f6e\u597d\u7684 Flow2API \u63a5\u53e3\u751f\u6210\u56fe\u7247\uff0c\u9ed8\u8ba4\u4f18\u5148\u8d70 http://localhost:38000/v1\uff0c\u4e0d\u51fa\u7f51\u66f4\u7a33\u5b9a\u3002\u9002\u7528\u4e8e\u7528\u6237\u8bf4\u201c\u5e2e\u6211\u751f\u56fe\u201d\u201c\u751f\u6210\u4e00\u5f20\u56fe\u201d\u201c\u753b\u4e00\u4e2a\u5c01\u9762\u201d\u201c\u505a\u4e00\u5f20\u6d77\u62a5\u201d\u201c\u7528\u6211\u7684\u672c\u5730 Flow2API \u6a21\u578b\u51fa\u56fe\u201d\u8fd9\u7c7b\u573a\u666f\uff0c\u652f\u6301 square\u3001landscape\u3001portrait\u3001four_three\u3001three_four \u4e94\u79cd\u9884\u8bbe\uff0c\u4e5f\u652f\u6301\u624b\u52a8\u6307\u5b9a\u6a21\u578b\u3002"
+  "description": "使用你本机配置好的 Flow2API 接口生成图片，默认优先走 http://localhost:38000/v1，不出网更稳定。适用于用户说“帮我生图”“生成一张图”“画一个封面”“做一张海报”“用我的本地 Flow2API 模型出图”这类场景，支持 square、landscape、portrait、four_three、three_four 五种预设，也支持手动指定模型。",
+  "content_fingerprint": "642410af5463d1e0cc9139fae6db4597e76014fb1cc3ccc9573eafd0a6fcb3d1"
 }

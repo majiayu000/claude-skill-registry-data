@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implements the Android Kotlin bridge layer for a React-Native MoEngage SDK feature. This is Step 2a of the React-Native feature pipeline \u2014 run AFTER plugin-base-feature-implementation has completed. Produces the BridgeHandler, arch bridges (new/old), Package, EventEmitterImpl, PayloadGenerator, Constants, and build.gradle for a new sdk/<featureName> module in the React-Native repo, following the Cards module standard. On completion, asks the user whether to also run react-native-ts-implementation (Step 2b). Do NOT use for iOS-only features or JS-only changes."
+  "description": "Implements the Android Kotlin bridge layer for a React-Native MoEngage SDK feature. This is Step 2a of the React-Native feature pipeline — run AFTER plugin-base-feature-implementation has completed. Produces the BridgeHandler, arch bridges (new/old), Package, EventEmitterImpl, PayloadGenerator, Constants, and build.gradle for a new sdk/<featureName> module in the React-Native repo, following the Cards module standard. On completion, asks the user whether to also run react-native-ts-implementation (Step 2b). Do NOT use for iOS-only features or JS-only changes.",
+  "content_fingerprint": "6ce5ce1c176b0cef6862bee08be65fa43ccc7edc993add6877d1f5fd372ea58f"
 }

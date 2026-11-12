@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/X-McKay/kubani/blob/main/kubani/skills/k8s/remediation/restart-imagepullbackoff/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "22d319bbc8f8352775c63d4e653f6a4067aed4ef1e184e417d4536418671b9ba",
+  "description": "Handle a pod stuck in ImagePullBackOff state. First investigates the image pull error, then restarts to retry. Keywords: imagepull, image pull backoff, ErrImagePull, registry, container image, pull fa"
 }

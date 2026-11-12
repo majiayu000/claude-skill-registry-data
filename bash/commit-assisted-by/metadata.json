@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Add an `Assisted-by: <agent-name>/<model-id>` git trailer to commits made during an AI-assisted coding session. Trigger on any `git commit` activity visible in the session \u2014 either commits you make yourself, or commits the user makes outside your tool calls that surface in the conversation \u2014 even without an explicit request. Also trigger when the user explicitly asks to tag existing commits in a branch (e.g. \"add assisted-by to commits in this branch\")."
+  "description": "Add an `Assisted-by: <agent-name>/<model-id>` git trailer to commits made during an AI-assisted coding session. Trigger on any `git commit` activity visible in the session — either commits you make yourself, or commits the user makes outside your tool calls that surface in the conversation — even without an explicit request. Also trigger when the user explicitly asks to tag existing commits in a branch (e.g. \"add assisted-by to commits in this branch\").",
+  "content_fingerprint": "2089dc840caf519e5cdd1c6e80aad787386adb4a946b44d8d87f1f050903ebf1"
 }

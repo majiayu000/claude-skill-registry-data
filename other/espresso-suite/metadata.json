@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Authors Espresso UI tests for Android - uses `onView(withId(...)).perform(...).check(matches(...))`, leans on Espresso's automatic synchronization (no `Thread.sleep`), wires `IdlingResource` for app-specific async, runs via `./gradlew connectedAndroidTest` and parses the JUnit XML output. Use when an Android app needs UI tests in Google's first-party framework."
+  "description": "Authors Espresso UI tests for Android - uses `onView(withId(...)).perform(...).check(matches(...))`, leans on Espresso's automatic synchronization (no `Thread.sleep`), wires `IdlingResource` for app-specific async, runs via `./gradlew connectedAndroidTest` and parses the JUnit XML output. Use when an Android app needs UI tests in Google's first-party framework.",
+  "content_fingerprint": "2aa7bcb2d2be2f7b2401f0f8e74864ae2d5be905ce37e5f2f9d99ab62108d6ed"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6279\u91cf\u6587\u4ef6\u6e05\u5355\u91c7\u96c6\u5668\u3002\u626b\u63cf\u4e00\u4e2a\u6216\u591a\u4e2a\u672c\u5730\u6587\u4ef6/\u76ee\u5f55\uff0c\u6216\u4ece\u4efb\u52a1\u5217\u8868\u52a0\u8f7d\u8def\u5f84\uff0c\n\u6309\u652f\u6301\u7684\u6269\u5c55\u540d\u751f\u6210\u6587\u4ef6\u5143\u4fe1\u606f\u6e05\u5355\uff0c\u4f9b\u540e\u7eed\u6587\u672c\u3001\u8868\u683c\u3001\u6587\u6863\u3001\u56fe\u50cf\u7b49\u91c7\u96c6\u6d41\u7a0b\u7ee7\u7eed\u5904\u7406\u3002\n\u5f53\u7528\u6237\u9700\u8981\u6279\u91cf\u76d8\u70b9\u5f85\u91c7\u96c6\u6587\u4ef6\u3001\u751f\u6210\u672c\u5730\u6587\u4ef6 manifest\u3001\u7edf\u8ba1\u8f93\u5165\u6587\u4ef6\u7c7b\u578b\u6216\u4e3a\u540e\u7eed\u91c7\u96c6\u7b97\u5b50\u51c6\u5907\u6587\u4ef6\u6e05\u5355\u65f6\u4f7f\u7528\u6b64 skill\u3002"
+  "description": "批量文件清单采集器。扫描一个或多个本地文件/目录，或从任务列表加载路径，\n按支持的扩展名生成文件元信息清单，供后续文本、表格、文档、图像等采集流程继续处理。\n当用户需要批量盘点待采集文件、生成本地文件 manifest、统计输入文件类型或为后续采集算子准备文件清单时使用此 skill。",
+  "content_fingerprint": "433bc49f32c752f52b95d92203d6af971ddf5daa4c71666efb6b3c13204b6275"
 }

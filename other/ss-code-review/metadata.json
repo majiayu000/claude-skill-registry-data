@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use for a comprehensive code review of a diff \u2014 standalone (a pull request, a SHA range, or the current branch) or as the post-coding review step invoked by ss-coding. Dispatches independent subagents for general code quality, coding-standard compliance (global, stack, and project level, plus OpenSpec compliance when specs are present), and, in post-coding mode with enough scope, a cross-task integration review; then filters by confidence, deduplicates, and produces one consolidated verdict."
+  "description": "Use for a comprehensive code review of a diff — standalone (a pull request, a SHA range, or the current branch) or as the post-coding review step invoked by ss-coding. Dispatches independent subagents for general code quality, coding-standard compliance (global, stack, and project level, plus OpenSpec compliance when specs are present), and, in post-coding mode with enough scope, a cross-task integration review; then filters by confidence, deduplicates, and produces one consolidated verdict.",
+  "content_fingerprint": "d1f977fd22de7b5076ef8355b9bfcfcf47b0463fbb60840802c86c6fe9558627"
 }

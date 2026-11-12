@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Post-install setup for foundry plugin. Run once after installing on a new machine, or after a plugin version upgrade to sync settings and symlinks. Merges statusLine, permissions.allow, enabledPlugins, advisorModel, and env defaults (CLAUDE_CODE_ENABLE_TODO_TOOLS) into ~/.claude/settings.json; symlinks rules and TEAM_PROTOCOL.md into ~/.claude/; purges orphaned plugin cache versions."
+  "description": "Post-install setup for foundry plugin. Run once after installing on a new machine, or after a plugin version upgrade to sync settings and symlinks. Merges statusLine, permissions.allow, enabledPlugins, advisorModel, and env defaults (CLAUDE_CODE_ENABLE_TODO_TOOLS) into ~/.claude/settings.json; symlinks rules and TEAM_PROTOCOL.md into ~/.claude/; purges orphaned plugin cache versions.",
+  "content_fingerprint": "e34f1a45daad1f334aaa23b0bed75ffa1edb89c50f33f6c19d4b830dfdf08cc6"
 }

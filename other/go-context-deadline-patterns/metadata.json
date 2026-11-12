@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when writing any I/O method whose first param is ctx context.Context, wrapping another ctx-aware client, designing Close(ctx)/Drain(ctx) shutdown contracts, choosing a package-default timeout, or responding to reviewer flags about missing deadline checks or undeferred cancels. Covers ctx.Deadline() inheritance, cancellation safety, deadline-to-timeout bridging, and shortest-deadline-wins composition for stacked clients. Triggers: ctx.Deadline, context.WithTimeout, context.WithDeadline, cancel, defer cancel, deadline propagation, timeout, context.Canceled, shortest deadline wins."
+  "description": "Use this when writing any I/O method whose first param is ctx context.Context, wrapping another ctx-aware client, designing Close(ctx)/Drain(ctx) shutdown contracts, choosing a package-default timeout, or responding to reviewer flags about missing deadline checks or undeferred cancels. Covers ctx.Deadline() inheritance, cancellation safety, deadline-to-timeout bridging, and shortest-deadline-wins composition for stacked clients. Triggers: ctx.Deadline, context.WithTimeout, context.WithDeadline, cancel, defer cancel, deadline propagation, timeout, context.Canceled, shortest deadline wins.",
+  "content_fingerprint": "fb68a24b4642675f6ab485ac3fdcafc312bc45667166e0d11aa7d5c0c933edbb"
 }

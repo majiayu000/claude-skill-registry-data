@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/plugins/beagle-core/skills/review-llm-artifacts/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "451592ff63f1b353ad7bef71297a7973ad1ec2191c7f27ef880e3cbaefcfcde4",
+  "description": "Detects common LLM coding agent artifacts by spawning four parallel subagents over the project or changed files. Scans files changed since main by default; use --all for full-project scan. Triggers on"
 }

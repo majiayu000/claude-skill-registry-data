@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Schema-vs-usage contract auditor: compares schema declarations (DDL, ORM models, TypeScript interfaces, GraphQL types, OpenAPI schemas) against actual usage sites (API responses, form handlers, import parsers, ORM writes) and has the LLM judge whether each violation is a real contract break, harmless flexibility, or schema too strict. Read-only. Trigger: /data-contract"
+  "description": "Schema-vs-usage contract auditor: compares schema declarations (DDL, ORM models, TypeScript interfaces, GraphQL types, OpenAPI schemas) against actual usage sites (API responses, form handlers, import parsers, ORM writes) and has the LLM judge whether each violation is a real contract break, harmless flexibility, or schema too strict. Read-only. Trigger: /data-contract",
+  "content_fingerprint": "4f632c9b744bd8626e6cb66100c99159b07d8103f2caf8b4f3f1520b31929f73"
 }

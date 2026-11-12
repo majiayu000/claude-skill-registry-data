@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The stage machine from a task number to a shipped task: intake, draw, design (precut.py), build, the leak reader and judge together, ship, then the next task at once. Owns pipeline.json, the stage gates, effort per role, the commit points, returned tasks (routed to /fix-determinism and /fix-rubric), freeze.py, status.py, re-rooting and retirement. Invoked by /build, the two fix commands, and when resuming a build in flight."
+  "description": "The stage machine from a task number to a shipped task: intake, draw, design (precut.py), build, the leak reader and judge together, ship, then the next task at once. Owns pipeline.json, the stage gates, effort per role, the commit points, returned tasks (routed to /fix-determinism and /fix-rubric), freeze.py, status.py, re-rooting and retirement. Invoked by /build, the two fix commands, and when resuming a build in flight.",
+  "content_fingerprint": "7d4c7a595069bdf451663ffcbfdd2daf1f40ac7f168c5844b633c88d13dcb969"
 }

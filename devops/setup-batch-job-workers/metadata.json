@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Edgame2/castiel2/blob/main/.cursor/skills/setup-batch-job-workers/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "439b904ee8544628cb0b4a06840feb7b08e83b3cfd2cbca4dd4fb4d192780380",
+  "description": "Sets up scheduled batch jobs via RabbitMQ following ModuleImplementationGuide.md §9.6. Creates BatchJobScheduler (node-cron, publish workflow.job.trigger) in workflow-orchestrator and BatchJobWorker ("
 }

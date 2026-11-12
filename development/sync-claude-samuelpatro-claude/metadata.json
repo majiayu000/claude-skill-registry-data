@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Sync the live ~/.claude global config (settings.json, CLAUDE.md, statusline.ts, own skills, skills.sh lock file) into this git backup repo, then commit. Allowlist-based so credentials, history, and project transcripts are never copied. Use when the user says \"sync my claude config\", \"back up .claude\", \"update the .claude repo\", or runs \"/sync-claude\"."
+  "description": "Sync the live ~/.claude global config (settings.json, CLAUDE.md, statusline.ts, own skills, skills.sh lock file) into this git backup repo, then commit. Allowlist-based so credentials, history, and project transcripts are never copied. Use when the user says \"sync my claude config\", \"back up .claude\", \"update the .claude repo\", or runs \"/sync-claude\".",
+  "content_fingerprint": "d4ba30731eacf27bf5720443b8b8b5370827fa266bd50d22dd39874486943ec4"
 }

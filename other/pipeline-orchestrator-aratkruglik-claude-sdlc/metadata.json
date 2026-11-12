@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Universal SDLC pipeline orchestrator with stack provider auto-discovery.\nReads stack.md profiles from installed plugins, picks the highest-priority match,\nexecutes a 5-phase pipeline (BA \u2192 Dev \u2192 QA \u2192 Sec \u2192 Docs) plus stack-defined extra phases.\n\nUse when:\n- User invokes /sdlc:start \"<feature>\"\n- User asks to \"run the SDLC pipeline\" or \"go through the full pipeline\"\n- You need to coordinate specialist agents to deliver a complete feature\n\nDo NOT use for:\n- Trivial single-file edits (just edit directly)\n- Read-only questions about the codebase\n- Casual conversation"
+  "description": "Universal SDLC pipeline orchestrator with stack provider auto-discovery.\nReads stack.md profiles from installed plugins, picks the highest-priority match,\nexecutes a 5-phase pipeline (BA → Dev → QA → Sec → Docs) plus stack-defined extra phases.\n\nUse when:\n- User invokes /sdlc:start \"<feature>\"\n- User asks to \"run the SDLC pipeline\" or \"go through the full pipeline\"\n- You need to coordinate specialist agents to deliver a complete feature\n\nDo NOT use for:\n- Trivial single-file edits (just edit directly)\n- Read-only questions about the codebase\n- Casual conversation",
+  "content_fingerprint": "925f4066135ff4f6b37984747af178947c58758a5357f48e57ff520307c89d86"
 }

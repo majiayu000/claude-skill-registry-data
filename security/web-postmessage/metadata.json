@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Exploit insecure cross-window messaging (`window.postMessage`) \u2014 handlers that trust `event.data` without checking `event.origin`, leading to XSS, token theft, or state change. Load when the app uses iframes/popups/SSO widgets, on \"postMessage\", or when JS registers a `message` listener. Signals: `addEventListener(\"message\", ...)`, embedded third-party frames, SSO/login popups."
+  "description": "Exploit insecure cross-window messaging (`window.postMessage`) — handlers that trust `event.data` without checking `event.origin`, leading to XSS, token theft, or state change. Load when the app uses iframes/popups/SSO widgets, on \"postMessage\", or when JS registers a `message` listener. Signals: `addEventListener(\"message\", ...)`, embedded third-party frames, SSO/login popups.",
+  "content_fingerprint": "f9aad7a5f8c1b20012d2afbca129604fd14e48bb6d8725e6fa322258ab9a23ee"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Gate a candidate diff behind an independent, multi-reviewer consensus before integrating it. Spawn several biased reviewers (architect, quality, tests) that each judge the SAME diff in isolation, then apply a fixed truth table - integrate only when no reviewer rejects and at least one approves. Use when a single-pass review (marshal-orchestrate step 4) is not enough: a high-stakes merge, or when you want a quorum instead of one opinion. The engine runs the agents; this playbook is the judgment."
+  "description": "Gate a candidate diff behind an independent, multi-reviewer consensus before integrating it. Spawn several biased reviewers (architect, quality, tests) that each judge the SAME diff in isolation, then apply a fixed truth table - integrate only when no reviewer rejects and at least one approves. Use when a single-pass review (marshal-orchestrate step 4) is not enough: a high-stakes merge, or when you want a quorum instead of one opinion. The engine runs the agents; this playbook is the judgment.",
+  "content_fingerprint": "e3004aa477ca1bedbd5488b3194b3eca26e85436c1d0115873e076feb045af78"
 }

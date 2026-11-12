@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "How to add or change an IPC channel in Struq Voice end to end. Use whenever a task involves IPC, a preload bridge, a channel, a payload type, window.struqVoice, invoke/send/on across main and renderer, or the PRELOAD_CHANNELS mechanism. Explains the single-source rule, the sandboxed-preload argv trick, the three file touch points (shared/ipc.ts, src/main/ipc.ts, preload + api), and the testing pattern. NOT for general gating (use verification-gates) or the capture state machine (use capture-session)."
+  "description": "How to add or change an IPC channel in Struq Voice end to end. Use whenever a task involves IPC, a preload bridge, a channel, a payload type, window.struqVoice, invoke/send/on across main and renderer, or the PRELOAD_CHANNELS mechanism. Explains the single-source rule, the sandboxed-preload argv trick, the three file touch points (shared/ipc.ts, src/main/ipc.ts, preload + api), and the testing pattern. NOT for general gating (use verification-gates) or the capture state machine (use capture-session).",
+  "content_fingerprint": "6f4073fdbba941731951388690aae4cc9b1670df56c4bb91828f7286da6413e6"
 }

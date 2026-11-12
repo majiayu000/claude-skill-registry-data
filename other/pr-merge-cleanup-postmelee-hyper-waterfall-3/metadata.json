@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728\u786e\u8ba4 PR merge \u540e\u5e94\u7528 cleanup\u3002\n\u5173\u95ed GitHub Issue\uff0c\u5220\u9664\u8fdc\u7a0b publish/task{N} branch\uff0c\n\u6e05\u7406\u672c\u5730 local/task{N} branch \u548c separate worktree\uff0c\u5e76\u8fd4\u56de {BASE_BRANCH}\u3002\n\u53ea\u5728 PR \u5b9e\u9645 merge \u540e\u8c03\u7528\u3002"
+  "description": "在确认 PR merge 后应用 cleanup。\n关闭 GitHub Issue，删除远程 publish/task{N} branch，\n清理本地 local/task{N} branch 和 separate worktree，并返回 {BASE_BRANCH}。\n只在 PR 实际 merge 后调用。",
+  "content_fingerprint": "de6d7ac9047ef9c4f2d4dd1cdc3236ba1f4a2720dba1c23179bbb445736500df"
 }

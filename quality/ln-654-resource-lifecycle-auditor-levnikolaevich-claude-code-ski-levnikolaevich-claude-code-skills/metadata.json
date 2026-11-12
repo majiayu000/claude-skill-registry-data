@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-654-resource-lifecycle-auditor/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "fdd30907cb77df36a24e3a08b5d2ce93543468f5b8e93423ba318a77a91132e4",
+  "description": "Checks session scope mismatch, missing cleanup, pool config, error path leaks, resource holding. Use when auditing resource lifecycle."
 }

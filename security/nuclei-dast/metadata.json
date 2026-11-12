@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Installs and runs ProjectDiscovery Nuclei template-based HTTP scanning: selects templates via `-t {path}` and `-tags`/`-severity` filters, controls request rate with `-rl`, emits JSONL output via `-j` for cross-tool finding aggregation, authors custom YAML matchers for app-specific checks, and gates CI on severity thresholds. Use when the team runs Nuclei alongside ZAP for template-driven DAST coverage, needs fuzzing-style probes beyond ZAP passive scan, or wants to operationalize community CVE templates in a pipeline."
+  "description": "Installs and runs ProjectDiscovery Nuclei template-based HTTP scanning: selects templates via `-t {path}` and `-tags`/`-severity` filters, controls request rate with `-rl`, emits JSONL output via `-j` for cross-tool finding aggregation, authors custom YAML matchers for app-specific checks, and gates CI on severity thresholds. Use when the team runs Nuclei alongside ZAP for template-driven DAST coverage, needs fuzzing-style probes beyond ZAP passive scan, or wants to operationalize community CVE templates in a pipeline.",
+  "content_fingerprint": "f154ed426e60abd927c9e6d83952efb0653a9fd7832a9a5be811688e99f57a1d"
 }

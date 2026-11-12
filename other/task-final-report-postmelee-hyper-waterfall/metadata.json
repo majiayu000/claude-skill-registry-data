@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ud558\uc774\ud37c-\uc6cc\ud130\ud3f4 \ud0c0\uc2a4\ud06c\uc758 \ucd5c\uc885 \ubcf4\uace0\uc640 PR \uac8c\uc2dc \uc808\ucc28\ub97c \uc801\uc6a9\ud55c\ub2e4.\n\ucd5c\uc885 \uacb0\uacfc \ubcf4\uace0\uc11c(`_report.md`) \uc791\uc131, \uc624\ub298\ud560\uc77c \uc644\ub8cc \ucc98\ub9ac, \ucd5c\uc885 \ucee4\ubc0b,\npublish/task{N} \uc6d0\uaca9 push, {BASE_BRANCH} \ub300\uc0c1 Open PR \uc0dd\uc131\uc744 \uc218\ud589\ud55c\ub2e4.\n\ubaa8\ub4e0 \ub2e8\uacc4 \uc644\ub8cc \ud6c4 PR \uc9c1\uc804\uc5d0\ub9cc \ud638\ucd9c."
+  "description": "하이퍼-워터폴 타스크의 최종 보고와 PR 게시 절차를 적용한다.\n최종 결과 보고서(`_report.md`) 작성, 오늘할일 완료 처리, 최종 커밋,\npublish/task{N} 원격 push, {BASE_BRANCH} 대상 Open PR 생성을 수행한다.\n모든 단계 완료 후 PR 직전에만 호출.",
+  "content_fingerprint": "b9698987f5bf292808532b0ac632e17e5f1b223ace89eb83108eaffb5f6e7bf5"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build RL reward signals using the OpenJudge framework. Covers choosing between pointwise and pairwise reward strategies based on RL algorithm, task type, and cost; aggregating multi-dimensional pointwise scores into a scalar reward; pairwise tournament reward for GRPO on subjective tasks (net win rate across group rollouts); generating preference pairs for DPO/RLAIF; and normalizing scores for training stability. Use when building reward models, scoring rollouts for GRPO/REINFORCE, generating preference data for DPO, or doing Best-of-N selection."
+  "description": "Build RL reward signals using the OpenJudge framework. Covers choosing between pointwise and pairwise reward strategies based on RL algorithm, task type, and cost; aggregating multi-dimensional pointwise scores into a scalar reward; pairwise tournament reward for GRPO on subjective tasks (net win rate across group rollouts); generating preference pairs for DPO/RLAIF; and normalizing scores for training stability. Use when building reward models, scoring rollouts for GRPO/REINFORCE, generating preference data for DPO, or doing Best-of-N selection.",
+  "content_fingerprint": "b38134de3c6959b3fe206faa787fa58e75dd908c2dad6a4661ebe40006f2d17a"
 }

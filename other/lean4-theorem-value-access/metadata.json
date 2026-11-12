@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix missing theorem proof terms when analyzing Lean 4 environments via importModules.\nUse when: (1) ConstantInfo.value? returns none for theorems despite TheoremVal.value being Expr,\n(2) building code graph / dependency extractor for Lean 4 and getting 0 proof dependency edges,\n(3) Lean 4.30+ project where theorem proofs appear missing from loaded environment,\n(4) analyzing Mathlib or any Lean 4 project and proof terms are empty.\nRoot cause: breaking change in Lean 4.30 \u2014 value? treats theorems as opaque by default."
+  "description": "Fix missing theorem proof terms when analyzing Lean 4 environments via importModules.\nUse when: (1) ConstantInfo.value? returns none for theorems despite TheoremVal.value being Expr,\n(2) building code graph / dependency extractor for Lean 4 and getting 0 proof dependency edges,\n(3) Lean 4.30+ project where theorem proofs appear missing from loaded environment,\n(4) analyzing Mathlib or any Lean 4 project and proof terms are empty.\nRoot cause: breaking change in Lean 4.30 — value? treats theorems as opaque by default.",
+  "content_fingerprint": "68d626832e277d21b320ae3f2ccc0e0c0c35a87458ebaf6b6b2a58a4aacd59ca"
 }

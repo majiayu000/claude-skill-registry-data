@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7cfb\u7edf\u5316\u6392\u9519\uff1a\u4ee5\u8fd0\u884c\u65f6\u8bc1\u636e\u8d70\"\u590d\u73b0 \u2192 \u5047\u8bbe \u2192 \u9a8c\u8bc1 \u2192 \u5b9a\u4f4d \u2192 \u4fee\u590d \u2192 \u56de\u5f52\"\u95ed\u73af\uff0c\u6392\u67e5\u62a5\u9519\u3001\u6d4b\u8bd5\u5931\u8d25\u3001\u884c\u4e3a\u5f02\u5e38\u3002\u89e6\u53d1\uff1a\"\u6392\u67e5\u8fd9\u4e2a bug\"\u3001\"debug \u4e00\u4e0b\"\u3001\"\u4e3a\u4ec0\u4e48\u4f1a\u62a5\u9519\"\u3001\"\u5b9a\u4f4d\u4e00\u4e0b\u95ee\u9898\"\u3001\"\u8fd9\u4e2a\u6d4b\u8bd5\u4e3a\u4ec0\u4e48\u6302\u4e86\"\uff0c\u6216\u88ab api-testing / e2e-testing / demo-verify \u8f6c\u4ea4\u5b9a\u4f4d\u6839\u56e0\u3002"
+  "description": "系统化排错：以运行时证据走\"复现 → 假设 → 验证 → 定位 → 修复 → 回归\"闭环，排查报错、测试失败、行为异常。触发：\"排查这个 bug\"、\"debug 一下\"、\"为什么会报错\"、\"定位一下问题\"、\"这个测试为什么挂了\"，或被 api-testing / e2e-testing / demo-verify 转交定位根因。",
+  "content_fingerprint": "9e989eab6e07e3020de98fcd0515f6b72cab276e024d482c0debd9a584f1eb48"
 }

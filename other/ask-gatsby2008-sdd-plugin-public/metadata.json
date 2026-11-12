@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Unified cross-service knowledge query over the docs-registry. Answers ANY question about services, decisions, specs, or investigations \u2014 grounding every claim in the `raw/` registries (the source of truth) and, when a `wiki/` layer exists, navigating its `[[backlink]]` graph to answer cross-cutting questions. Warns when the wiki is stale. Optional `type:` filter to scope. Supersedes the per-registry doc-*-query commands. Ask \"who consumes the LeadCreated event and why did we design it that way?\", \"what breaks if leads-service goes down?\", \"have we seen ReportToken reuse before?\"."
+  "description": "Unified cross-service knowledge query over the docs-registry. Answers ANY question about services, decisions, specs, or investigations — grounding every claim in the `raw/` registries (the source of truth) and, when a `wiki/` layer exists, navigating its `[[backlink]]` graph to answer cross-cutting questions. Warns when the wiki is stale. Optional `type:` filter to scope. Supersedes the per-registry doc-*-query commands. Ask \"who consumes the LeadCreated event and why did we design it that way?\", \"what breaks if leads-service goes down?\", \"have we seen ReportToken reuse before?\".",
+  "content_fingerprint": "4438cd7d66dde4fa68734ae9f3b3ddb8a06b8544acab1de920bf380a03a93503"
 }

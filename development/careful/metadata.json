@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Session-scoped safety guardrails for destructive commands. Warns before rm -rf,\nDROP TABLE, force-push, git reset --hard, kubectl delete, and similar destructive\noperations. User can override each warning. Active for the current session only.\nUse when touching prod, debugging live systems, or working in a shared environment.\nUse when asked to \"be careful\", \"safety mode\", \"prod mode\", or \"careful mode\".\nNOT for scoping edits to a specific directory (see mk:freeze)."
+  "description": "Session-scoped safety guardrails for destructive commands. Warns before rm -rf,\nDROP TABLE, force-push, git reset --hard, kubectl delete, and similar destructive\noperations. User can override each warning. Active for the current session only.\nUse when touching prod, debugging live systems, or working in a shared environment.\nUse when asked to \"be careful\", \"safety mode\", \"prod mode\", or \"careful mode\".\nNOT for scoping edits to a specific directory (see mk:freeze).",
+  "content_fingerprint": "5d0022a1e116748ca348b15729c3e31a68ec02b27be27009c9fe36a99e1136d9"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the TMDb integration tests against the live TMDb API (the Integration test plan; requires TMDB_API_KEY/USERNAME/PASSWORD). Use before a PR, or after model/fixture changes, to validate against real API responses \u2014 delegates to the tooling-runner agent (Haiku) and returns counts + failures, distinguishing genuine failures from transient live-API/env issues. For mocked unit tests, use /test."
+  "description": "Run the TMDb integration tests against the live TMDb API (the Integration test plan; requires TMDB_API_KEY/USERNAME/PASSWORD). Use before a PR, or after model/fixture changes, to validate against real API responses — delegates to the tooling-runner agent (Haiku) and returns counts + failures, distinguishing genuine failures from transient live-API/env issues. For mocked unit tests, use /test.",
+  "content_fingerprint": "69667ca616f735c98b1a2247dc0874f1bc06ab7453dedb2e9cdfe125e9df702b"
 }

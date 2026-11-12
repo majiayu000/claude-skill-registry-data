@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cut a release of the Lyrion Dashboard. Use this whenever a task is about shipping a new version \u2014 bumping the version, tagging, the Release workflow, or how the Android APK and the Docker image get built and published. Covers the single source of truth for the version, the manual `Release` \u2192 publish \u2192 `android.yml` + `docker.yml` chain, the versionCode packing, and the F-Droid constraint that keeps versions static in source. Reach for it before touching `VERSION`, `release.yml`, or the Android `versionName`/`versionCode`."
+  "description": "Cut a release of the Lyrion Dashboard. Use this whenever a task is about shipping a new version — bumping the version, tagging, the Release workflow, or how the Android APK and the Docker image get built and published. Covers the single source of truth for the version, the manual `Release` → publish → `android.yml` + `docker.yml` chain, the versionCode packing, and the F-Droid constraint that keeps versions static in source. Reach for it before touching `VERSION`, `release.yml`, or the Android `versionName`/`versionCode`.",
+  "content_fingerprint": "8ec561b227321c44ae9856611db4d1eeda6cdbc6a762c3a6aaee35e47e35be8b"
 }

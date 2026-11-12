@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7ba1\u7406 GitNexus \u4ee3\u7801\u7d22\u5f15\uff1a\u521b\u5efa\uff08\u9996\u6b21 analyze\uff09\u3001\u589e\u91cf\u66f4\u65b0\uff08status \u68c0\u6d4b\u8fc7\u671f\u540e\u81ea\u52a8\u66f4\u65b0\uff09\u3001\u5f3a\u5236\u91cd\u5efa\u4e0e\u4fee\u590d\uff08--force / --repair-fts / --embeddings\uff09\u3002\u89e6\u53d1\uff1a\"\u521b\u5efa\u4ee3\u7801\u7d22\u5f15\"\u3001\"\u66f4\u65b0\u4ee3\u7801\u7d22\u5f15\"\u3001\"\u7d22\u5f15\u8fc7\u671f\u4e86\"\u3001\"\u91cd\u65b0\u5efa\u7d22\u5f15\"\u3001\"\u4fee\u590d\u7d22\u5f15\"\u3001\"gitnexus \u7d22\u5f15\"\u3002"
+  "description": "管理 GitNexus 代码索引：创建（首次 analyze）、增量更新（status 检测过期后自动更新）、强制重建与修复（--force / --repair-fts / --embeddings）。触发：\"创建代码索引\"、\"更新代码索引\"、\"索引过期了\"、\"重新建索引\"、\"修复索引\"、\"gitnexus 索引\"。",
+  "content_fingerprint": "6ff4fc4d05b956221e59c1aa935e2b68836ab02a97eaeb0768288a39d17c21fe"
 }

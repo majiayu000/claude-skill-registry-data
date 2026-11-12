@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Composite skill \u2014 configure a fresh or under-configured repo for the release-branch workflow in one pass. Creates the `release` branch on origin, seeds `CHANGELOG.md` (Keep-a-Changelog format), drops in `.claude/dep-sweep-config.json` + `.claude/branch-hygiene-config.json` + a `release-cadence.md` standard stub, opens a `chore/repo-bootstrap` PR to main. Use instead of manually setting these up before the first `/pr-to-release` \u2014 without this, none of the release-branch composites can fire. Idempotent: skips any artifact that already exists. Replaces ad-hoc \"set up the new repo\" scripts."
+  "description": "Composite skill — configure a fresh or under-configured repo for the release-branch workflow in one pass. Creates the `release` branch on origin, seeds `CHANGELOG.md` (Keep-a-Changelog format), drops in `.claude/dep-sweep-config.json` + `.claude/branch-hygiene-config.json` + a `release-cadence.md` standard stub, opens a `chore/repo-bootstrap` PR to main. Use instead of manually setting these up before the first `/pr-to-release` — without this, none of the release-branch composites can fire. Idempotent: skips any artifact that already exists. Replaces ad-hoc \"set up the new repo\" scripts.",
+  "content_fingerprint": "b28a5c4d0518660809a0ff322afa39f37f366b9a7ef0443506020624964b0426"
 }

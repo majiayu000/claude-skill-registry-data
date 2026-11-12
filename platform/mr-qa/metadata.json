@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Parallel QA of one or more merge requests across desktop/iOS/Android, including cross-client sync. Use when the user wants MRs tested \u2014 \"test MR !123\", \"QA these five MRs in parallel\", \"spin up QA for my open MRs\", \"test this branch on mobile\" \u2014 or wants a full spec pass. Works the open MRs oldest-first and skips drafts. Creates a git worktree per MR for isolation, pre-builds, fans out one app-qa subagent per MR/platform leg concurrently, aggregates verdicts, and calls SHIP/NO SHIP on each \u2014 merging the SHIPs."
+  "description": "Parallel QA of one or more merge requests across desktop/iOS/Android, including cross-client sync. Use when the user wants MRs tested — \"test MR !123\", \"QA these five MRs in parallel\", \"spin up QA for my open MRs\", \"test this branch on mobile\" — or wants a full spec pass. Works the open MRs oldest-first and skips drafts. Creates a git worktree per MR for isolation, pre-builds, fans out one app-qa subagent per MR/platform leg concurrently, aggregates verdicts, and calls SHIP/NO SHIP on each — merging the SHIPs.",
+  "content_fingerprint": "0ad5cc084599e797d7503e28314c9c372a7d947416a6bc6ebbe6ca06e78c6c24"
 }

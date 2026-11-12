@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8bb0\u5fc6\u68c0\u7d22\u8bbe\u8ba1\u3002\u4fee\u6539\u68c0\u7d22\u903b\u8f91\u3001\u76f8\u4f3c\u5ea6\u8ba1\u7b97\u65f6\u5fc5\u987b\u52a0\u8f7d\u3002\u6d89\u53ca LLM \u5206\u7c7b\u5224\u65ad\u3001\u5411\u91cf\u68c0\u7d22\u3001\u5206\u7c7b\u5185\u68c0\u7d22\u3001\u68c0\u7d22\u5206\u6570\u8ba1\u7b97\u3001\u4e0a\u4e0b\u6587\u6784\u5efa\u65f6\u89e6\u53d1\u3002"
+  "description": "记忆检索设计。修改检索逻辑、相似度计算时必须加载。涉及 LLM 分类判断、向量检索、分类内检索、检索分数计算、上下文构建时触发。",
+  "content_fingerprint": "d6b34be7cab03737baf6ca7f7364336ba969db9ec0b458b3df9ca44b8d4a80b0"
 }

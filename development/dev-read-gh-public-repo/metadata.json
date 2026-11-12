@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read files from a PUBLIC GitHub repo that the Claude Code web/remote environment reports as out-of-scope for its GitHub MCP tools. Use when (1) running in the web/remote container (claude.ai/code, NOT a local Mac/terminal session), AND (2) a `mcp__github__*` call fails with \"Access denied: repository ... is not configured for this session\", AND (3) the repo is public. Triggers: \"can't see that repo\", \"access denied repository not configured\", \"read a public repo that's not in scope\", \"clone a public repo to read it\"."
+  "description": "Read files from a PUBLIC GitHub repo that the Claude Code web/remote environment reports as out-of-scope for its GitHub MCP tools. Use when (1) running in the web/remote container (claude.ai/code, NOT a local Mac/terminal session), AND (2) a `mcp__github__*` call fails with \"Access denied: repository ... is not configured for this session\", AND (3) the repo is public. Triggers: \"can't see that repo\", \"access denied repository not configured\", \"read a public repo that's not in scope\", \"clone a public repo to read it\".",
+  "content_fingerprint": "f1e74d92e6fcbf17c5e32c8c1649d70f2aa5f809d8db74f3c4ddaaad3ab1aa19"
 }

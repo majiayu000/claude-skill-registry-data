@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Builds the classification matrix by applying the quality model (KB default + `tech/risk-matrix.md` adoption delta) \u2014 from the story context in refinement, from the code/diff in review (confirm-or-raise, never lower). Emits chromatic tags only when the adoption declares the matrix\u2192tag projection. Composed by /pair-process-refine-story (refinement context) and /pair-process-review (review context); invoke directly to classify a card or PR on demand."
+  "description": "Builds the classification matrix by applying the quality model (KB default + `tech/risk-matrix.md` adoption delta) — from the story context in refinement, from the code/diff in review (confirm-or-raise, never lower). Emits chromatic tags only when the adoption declares the matrix→tag projection. Composed by /pair-process-refine-story (refinement context) and /pair-process-review (review context); invoke directly to classify a card or PR on demand.",
+  "content_fingerprint": "7ebca117adbc308e3344b4fa0da3e6306693edb7a2edd0f2d7a3e8e7c1c24672"
 }

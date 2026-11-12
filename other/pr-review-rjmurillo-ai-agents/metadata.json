@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Respond to review comments on one or more pull requests. Clusters the threads, fixes and pushes, then runs the dispatchable completion gate for a verdict. Use when you say `respond to PR review comments`, `pr-review 1234`, or `address the review feedback`. Do NOT use to fix a red check that carries no review comments (use pr-autofix), and do NOT use to work one PR's threads as a step inside another workflow (use pr-comment-responder)."
+  "description": "Respond to review comments on one or more pull requests. Clusters the threads, fixes and pushes, then runs the dispatchable completion gate for a verdict. Use when you say `respond to PR review comments`, `pr-review 1234`, or `address the review feedback`. Do NOT use to fix a red check that carries no review comments (use pr-autofix), and do NOT use to work one PR's threads as a step inside another workflow (use pr-comment-responder).",
+  "content_fingerprint": "8fa061b5db321bca4915629f438aa0d1f4d596ae80122cf73dfdd622131be607"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prepare a feature or PR for manual testing on the local dev server and hand the user a ready-to-follow test document. Reads the change, derives test scenarios, gets the dev server and database running, independently makes sure the local database holds good test data for every scenario (seeding it if missing), resolves the real local URLs from env vars (custom domains), and delivers one numbered checklist with links, logins, steps and expected results. Use for \"test this PR\", \"help me test this feature\", \"QA this branch locally\", \"set up test data for X\"."
+  "description": "Prepare a feature or PR for manual testing on the local dev server and hand the user a ready-to-follow test document. Reads the change, derives test scenarios, gets the dev server and database running, independently makes sure the local database holds good test data for every scenario (seeding it if missing), resolves the real local URLs from env vars (custom domains), and delivers one numbered checklist with links, logins, steps and expected results. Use for \"test this PR\", \"help me test this feature\", \"QA this branch locally\", \"set up test data for X\".",
+  "content_fingerprint": "9cd56c80ecd4f1326151700f0c21d834e47240e844c4a67c169dd45dcfc6d4ca"
 }

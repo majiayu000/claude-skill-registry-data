@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/enuno/claude-command-and-control/blob/main/skills-templates/orchestration/circuit-breaker-skill.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "0e2162b3967896c3adbd1c55bded88e753f4e5c6e2eedd27ec4e923db580b856",
+  "description": "Implements circuit breaker pattern with 3-state FSM (CLOSED, OPEN, HALF_OPEN) to prevent cascading failures"
 }

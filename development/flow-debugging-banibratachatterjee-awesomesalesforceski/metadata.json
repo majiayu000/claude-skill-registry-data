@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when diagnosing a Flow that does not run, runs but produces wrong results, fails silently, or shows an unexpected fault email. Triggers: 'flow debug mode', 'flow not running', 'flow interview log', 'fault email', 'record-triggered flow not firing', 'debug run as user', 'flow test suite'. NOT for Apex debugging (use debug-and-logging), NOT for designing fault connectors (use fault-handling), NOT for fixing governor-limit failures caused by bulk volume (use flow-bulkification)."
+  "description": "Use when diagnosing a Flow that does not run, runs but produces wrong results, fails silently, or shows an unexpected fault email. Triggers: 'flow debug mode', 'flow not running', 'flow interview log', 'fault email', 'record-triggered flow not firing', 'debug run as user', 'flow test suite'. NOT for Apex debugging (use debug-and-logging), NOT for designing fault connectors (use fault-handling), NOT for fixing governor-limit failures caused by bulk volume (use flow-bulkification).",
+  "content_fingerprint": "8b76e534d10f9a8f748bb8cee2014ff198c591291a3cc2055dfd6d1a1ee84d5a"
 }

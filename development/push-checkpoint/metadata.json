@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the every-10-pushes quality checkpoint \u2014 a scoped code review of everything since the last checkpoint, plus a test-and-lint debug pass. Use this skill whenever a hook reports that a push count hit a multiple of 10, whenever the user types /push-checkpoint, and whenever the user asks for a checkpoint, a periodic review, a \"review the last batch of work\" pass, or asks what has accumulated since the last review. Prefer this over an ad-hoc review whenever the request is about reviewing recent pushes as a batch."
+  "description": "Run the every-10-pushes quality checkpoint — a scoped code review of everything since the last checkpoint, plus a test-and-lint debug pass. Use this skill whenever a hook reports that a push count hit a multiple of 10, whenever the user types /push-checkpoint, and whenever the user asks for a checkpoint, a periodic review, a \"review the last batch of work\" pass, or asks what has accumulated since the last review. Prefer this over an ad-hoc review whenever the request is about reviewing recent pushes as a batch.",
+  "content_fingerprint": "59d2bc4e48df1f49318d67cac0fb15a76bd94144f890e886722760377652663f"
 }

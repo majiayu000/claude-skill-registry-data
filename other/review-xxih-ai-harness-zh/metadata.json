@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u843d\u5730\u524d PR review\u3002\u6309 diff \u5bf9\u7167 base branch\uff0c\u67e5 SQL \u5b89\u5168\u3001LLM \u4fe1\u4efb\u8fb9\u754c\u3001\n\u6761\u4ef6\u526f\u4f5c\u7528\u3001\u6587\u6863\u6f02\u79fb\u3001scope drift\uff0c\u5e76\u5728\u9002\u5408\u65f6\u81ea\u52a8\u4fee\u590d\u7b80\u5355\u95ee\u9898\u3002 (gstack)"
+  "description": "落地前 PR review。按 diff 对照 base branch，查 SQL 安全、LLM 信任边界、\n条件副作用、文档漂移、scope drift，并在适合时自动修复简单问题。 (gstack)",
+  "content_fingerprint": "1cf9d7d0c7cdae30a598ead807249c5b902dc8b2fe928b6448432c53176f8aa8"
 }

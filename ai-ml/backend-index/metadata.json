@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7ed9\u672c\u5730\u540e\u7aef\u9879\u76ee\u5efa\u300c\u6a21\u5757 \u2194 \u76ee\u5f55/\u4f9d\u8d56/\u6570\u636e\u8868\u300d\u7d22\u5f15\uff08.fe-index/\uff09\uff1a\u6539\u6a21\u5757\u524d\u67e5\u4f9d\u8d56\u4e0e\u88ab\u4f9d\u8d56\uff0c\u6539\u8868\u524d\u67e5\u5f71\u54cd\u6a21\u5757\uff0c\u63a5\u4efb\u52a1\u5148\u770b\u6a21\u5757\u5730\u56fe\u3002\u89e6\u53d1\uff1a\"\u540e\u7aef\u7d22\u5f15\"\u3001\"\u540e\u7aef\u6a21\u5757\u5730\u56fe\"\u3001\"\u6539\u8fd9\u4e2a\u6a21\u5757\u5f71\u54cd\u8c01\"\u3001\"\u6539\u8fd9\u5f20\u8868\u5f71\u54cd\u54ea\u4e9b\u6a21\u5757\"\u3002"
+  "description": "给本地后端项目建「模块 ↔ 目录/依赖/数据表」索引（.fe-index/）：改模块前查依赖与被依赖，改表前查影响模块，接任务先看模块地图。触发：\"后端索引\"、\"后端模块地图\"、\"改这个模块影响谁\"、\"改这张表影响哪些模块\"。",
+  "content_fingerprint": "34c0a004de8618c0c87ca8b3af32c668c00158c7f68ed5945296051c25a291c1"
 }

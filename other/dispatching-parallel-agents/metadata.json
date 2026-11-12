@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The parallel fan-out primitive. Routed to by any skill or command that splits work across independent units and dispatches an agent per unit \u2014 subagent-driven-development, /sprint, parallel /review. It owns the dispatch/collect/funnel discipline: bound concurrency, isolate units, collect every result, dedupe overlap, and funnel through finding-triage then checkpoint-aggregator. Raw agent output is never consumed before the funnel runs; an agent that errors drops its unit without corrupting the batch."
+  "description": "The parallel fan-out primitive. Routed to by any skill or command that splits work across independent units and dispatches an agent per unit — subagent-driven-development, /sprint, parallel /review. It owns the dispatch/collect/funnel discipline: bound concurrency, isolate units, collect every result, dedupe overlap, and funnel through finding-triage then checkpoint-aggregator. Raw agent output is never consumed before the funnel runs; an agent that errors drops its unit without corrupting the batch.",
+  "content_fingerprint": "9bd9d4d0d0afa9b9223ec472ad0d62ede22e48fb71923b2908c2ee6753ab0515"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review the working tree before committing to Git. Triggers on: the user asks to commit or push, a large task is complete, or a PR is about to be created. Rules: ensure `svelte-check` passes (see the verify-svelte-check skill), use `git status` to inspect all files, use `git diff` for staged and unstaged changes, classify pre-existing versus new changes, match the repo style (see `git log --oneline -10`), do not stage irrelevant files, do not commit secrets, do not amend, and do not force-push."
+  "description": "Review the working tree before committing to Git. Triggers on: the user asks to commit or push, a large task is complete, or a PR is about to be created. Rules: ensure `svelte-check` passes (see the verify-svelte-check skill), use `git status` to inspect all files, use `git diff` for staged and unstaged changes, classify pre-existing versus new changes, match the repo style (see `git log --oneline -10`), do not stage irrelevant files, do not commit secrets, do not amend, and do not force-push.",
+  "content_fingerprint": "137162f29dffb6b319287dcf2c35d7a54a24be260709c91bd8ef7f8e98cc95ac"
 }

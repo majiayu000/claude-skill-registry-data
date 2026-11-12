@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scaffold a new EmptyOS plugin end-to-end in the right shape \u2014 service (exposes a named service via self.require), enhancer (injects a capability provider at boot), or both \u2014 optionally wiring the external-service launch pattern (auto_start + CREATE_NO_WINDOW) for a local binary like ComfyUI / voice-api / Blender. Use when the user says \"new plugin\", \"create plugin\", \"scaffold plugin <id>\", or \"wrap <service> as a plugin\". NOT for anything with a UI/page \u2014 that is an app (use eos-new-app)."
+  "description": "Scaffold a new EmptyOS plugin end-to-end in the right shape — service (exposes a named service via self.require), enhancer (injects a capability provider at boot), or both — optionally wiring the external-service launch pattern (auto_start + CREATE_NO_WINDOW) for a local binary like ComfyUI / voice-api / Blender. Use when the user says \"new plugin\", \"create plugin\", \"scaffold plugin <id>\", or \"wrap <service> as a plugin\". NOT for anything with a UI/page — that is an app (use eos-new-app).",
+  "content_fingerprint": "57b35b10a9d379ab27007667dcd1fa16d2a80e1c49e4c63ba97b05f97b1bdec3"
 }

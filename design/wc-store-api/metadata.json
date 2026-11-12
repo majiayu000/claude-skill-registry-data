@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build against the WooCommerce Store API (`/wp-json/wc/store/v1`) for shopper-facing products, cart, checkout, Cart/Checkout Blocks, and headless carts. Covers route choice, Nonce header (`wp_create_nonce('wc_store_api')`) vs Cart-Token, Store API sessions/CORS/rate limits, `woocommerce_store_api_register_endpoint_data`, `/cart/extensions` + `extensionCartUpdate`, payment requirements, product query pitfalls such as `related`, and when to use WC REST `wc/v4` instead. Use when adding checkout-block data, Store API calls, custom cart state, Store API payment availability, or headless cart/checkout behavior."
+  "description": "Build against the WooCommerce Store API (`/wp-json/wc/store/v1`) for shopper-facing products, cart, checkout, Cart/Checkout Blocks, and headless carts. Covers route choice, Nonce header (`wp_create_nonce('wc_store_api')`) vs Cart-Token, Store API sessions/CORS/rate limits, `woocommerce_store_api_register_endpoint_data`, `/cart/extensions` + `extensionCartUpdate`, payment requirements, product query pitfalls such as `related`, and when to use WC REST `wc/v4` instead. Use when adding checkout-block data, Store API calls, custom cart state, Store API payment availability, or headless cart/checkout behavior.",
+  "content_fingerprint": "d4efe41fea5d2dbf9f63a27e3d5d4a0a11acc984dbd9bb6295e3d46e24ee07c4"
 }

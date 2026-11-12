@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uceec\ub809\uc158\uacfc \uadf8\uc5d0 \ubd99\uc740 \ub85c\uc9c1(\ud544\ud130\u00b7\ud569\uacc4\u00b7\uac80\uc99d)\uc744 \uc804\uc6a9 \ud074\ub798\uc2a4\ub85c \ucd94\ucd9c\ud558\uc5ec First Class Collection \uc0dd\uc131. \"\uc77c\uae09 \uceec\ub809\uc158\", \"List<Order> \uac10\uc2f8\ub294 \ud074\ub798\uc2a4\", \"\uceec\ub809\uc158 \ub85c\uc9c1 \ubaa8\uc544\", \"/first-class-collection\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, getter \ub178\ucd9c \ubc29\uc9c0\ub9cc \ud544\uc694\ud558\uba74 /encapsulate-collection, \ub2e8\uc77c \uac12 \ud0c0\uc785\uc740 /discover-value-object\uac00 \uc801\ud569. /first-class-collection [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "컬렉션과 그에 붙은 로직(필터·합계·검증)을 전용 클래스로 추출하여 First Class Collection 생성. \"일급 컬렉션\", \"List<Order> 감싸는 클래스\", \"컬렉션 로직 모아\", \"/first-class-collection\" 요청 시 사용. 단, getter 노출 방지만 필요하면 /encapsulate-collection, 단일 값 타입은 /discover-value-object가 적합. /first-class-collection [commit-ref]로 호출.",
+  "content_fingerprint": "bcdbeaf828e1b8be1c06c0e7fbe386fda11a36a9243f88a211d048caf6b390f7"
 }

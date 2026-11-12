@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Takes a structured returns or RMA export with reason codes tied to SKUs and finds which SKUs have a genuine return concentration problem, and which coded reason is the likely root cause. Use when a return rate is rising, a specific SKU returns far above the catalog average, or returns are logged as a cost line instead of mined for the fix behind them. Boundary: this skill works from structured, coded return reasons tied to SKUs. If the input is free-text reviews or support tickets with no reason-code field, say so: the coded-reason analysis here does not apply and the raw text needs reading rather than tallying."
+  "description": "Takes a structured returns or RMA export with reason codes tied to SKUs and finds which SKUs have a genuine return concentration problem, and which coded reason is the likely root cause. Use when a return rate is rising, a specific SKU returns far above the catalog average, or returns are logged as a cost line instead of mined for the fix behind them. Boundary: this skill works from structured, coded return reasons tied to SKUs. If the input is free-text reviews or support tickets with no reason-code field, say so: the coded-reason analysis here does not apply and the raw text needs reading rather than tallying.",
+  "content_fingerprint": "46ced3d8df8237f9aae4514e0618a37077a5ece3f9c91a490d1a21e3ab906d3a"
 }

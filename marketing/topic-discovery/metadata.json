@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Layer 0 of the keyword research pipeline. Builds a topic-graph snapshot for the brand's category before any seed work, approximated from Semrush phrase_related + phrase_questions on the category seeds plus the brand's own ranking footprint (domain_organic_unique). Idempotent on brand-config hash; never blocks the pipeline; cheap."
+  "description": "Layer 0 of the keyword research pipeline. Builds a topic-graph snapshot for the brand's category before any seed work, approximated from Semrush phrase_related + phrase_questions on the category seeds plus the brand's own ranking footprint (domain_organic_unique). Idempotent on brand-config hash; never blocks the pipeline; cheap.",
+  "content_fingerprint": "472131f1911205364c342def71d6f0ee3b570d68eb4d4813d16413a0831e3b47"
 }

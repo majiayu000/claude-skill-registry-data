@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9488\u5bf9\u6607\u817e NPU \u4e0a\u7684 PyTorch \u6a21\u578b\uff0c\u8bc6\u522b\u53ef\u505a\u878d\u5408\u7b97\u5b50\u66ff\u6362\u7684\u4ee3\u7801\u6bb5\u3001\u66ff\u6362\u4e3a torch_npu \u878d\u5408\u7b97\u5b50\u5e76\u505a\u6027\u80fd/\u7cbe\u5ea6\u9a8c\u8bc1\u3002\u5f53\u7528\u6237\u63d0\u5230\u878d\u5408\u7b97\u5b50\u3001NPU \u7b97\u5b50\u66ff\u6362\u3001RMSNorm/SwiGLU/RoPE/Attention \u878d\u5408\u3001torch_npu \u4eb2\u548c\u7b97\u5b50\u7b49\u5173\u952e\u8bcd\u662f\uff0c\u4f7f\u7528\u672c Skill\u3002"
+  "description": "针对昇腾 NPU 上的 PyTorch 模型，识别可做融合算子替换的代码段、替换为 torch_npu 融合算子并做性能/精度验证。当用户提到融合算子、NPU 算子替换、RMSNorm/SwiGLU/RoPE/Attention 融合、torch_npu 亲和算子等关键词是，使用本 Skill。",
+  "content_fingerprint": "b55f95019b3e4bbd8d7e02ef93fb9d0a545ed0e63e905b78043bae0f43eaac84"
 }

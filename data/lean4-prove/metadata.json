@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/grahama1970/agent-skills/blob/main/skills/lean4-prove/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "5cb561843bdf7256f745be20c6550d6760e701ece810b7e9c8b78f1b857c8e1a",
+  "description": "Retrieval-augmented Lean4 proof generation. Queries 94k+ exemplars from DeepSeek-Prover V1+V2, uses hybrid search (BM25 + semantic + graph), generates via Claude, compiles in Docker, retries on failur"
 }

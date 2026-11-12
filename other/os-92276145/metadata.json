@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u62a2\u5360\u8f6e\u8f6c / \u8c03\u5ea6-\u65f6\u95f4\u7247\u8f6e\u8f6c / \u65f6\u95f4\u7247\u8f6e\u8f6c / run \u6267\u3002\u7528\u6237\u63d0\u5230\u8fd9\u4e9b\u8bcd\u65f6\u4f7f\u7528\u672c\u6280\u80fd\u3002 \u573a\u666f\uff1a\u5bf9\u7167\uff1aRR \u65f6\u95f4\u7247\u8f6e\u8f6c\u2014\u2014\u961f\u9996\u6267\u884c/\u65f6\u95f4\u7247\u8017\u5c3d\u56de\u961f\u5c3e\u3002 \u3010\u4e0d\u9002\u7528\u3011Not for \u4ee5\u4e0b\u573a\u666f\uff1aready \u4e3a\u7a7a/\u975e\u6cd5\u65f6\uff1bop \u975e {preempt, run, status} \u65f6"
+  "description": "抢占轮转 / 调度-时间片轮转 / 时间片轮转 / run 执。用户提到这些词时使用本技能。 场景：对照：RR 时间片轮转——队首执行/时间片耗尽回队尾。 【不适用】Not for 以下场景：ready 为空/非法时；op 非 {preempt, run, status} 时",
+  "content_fingerprint": "8fd609630438492c6b8d1d3a3dfd76f1c3296c5babc10a5c2b64f008b6d1cf80"
 }

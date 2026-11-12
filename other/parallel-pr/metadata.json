@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8907\u6570\u306e\u72ec\u7acbPR\u3092\u30c1\u30fc\u30e0\u00d7worktree\u3067\u4e26\u5217\u4f5c\u6210\u3059\u308b\u3002\u30bf\u30b9\u30af\u4e00\u89a7\u3092\u53d7\u3051\u53d6\u308a\u3001worktree\u6e96\u5099\u2192\u30c1\u30fc\u30e0\u7d44\u6210\u2192\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u8d77\u52d5\u2192CI\u78ba\u8a8d\u2192\u30af\u30ea\u30fc\u30f3\u30a2\u30c3\u30d7\u307e\u3067\u4e00\u6c17\u306b\u5b9f\u884c\u3059\u308b\u3002"
+  "description": "複数の独立PRをチーム×worktreeで並列作成する。タスク一覧を受け取り、worktree準備→チーム組成→エージェント起動→CI確認→クリーンアップまで一気に実行する。",
+  "content_fingerprint": "b7a27bb5e18e39221328e247e8c72595f6f39de252ad977aefde0bd7f6f41225"
 }

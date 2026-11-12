@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Status pass \u2014 where are we, what's next. Trigger when the user asks for \"daily review\", \"what to work on\", \"what to focus on\", \"where are we\", or any near-equivalent. ALSO runs automatically every morning before the user wakes (team-lead daily cron) to produce the day's status + hit list. Reviews peer transcripts + hive messages + open PRs + the weekly plan, asks each agent for context where needed, then writes a prioritized review doc to `.claude/reviews/YYYY-MM-DD.md` under live-feedback."
+  "description": "Status pass — where are we, what's next. Trigger when the user asks for \"daily review\", \"what to work on\", \"what to focus on\", \"where are we\", or any near-equivalent. ALSO runs automatically every morning before the user wakes (team-lead daily cron) to produce the day's status + hit list. Reviews peer transcripts + hive messages + open PRs + the weekly plan, asks each agent for context where needed, then writes a prioritized review doc to `.claude/reviews/YYYY-MM-DD.md` under live-feedback.",
+  "content_fingerprint": "b4737ae75df8ccb6329efc3954256fec39be4174b81a87e73c6ca6becb82a80b"
 }

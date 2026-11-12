@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Smooth-Operation/household-expense-tracker/blob/main/.claude/skills/testing/condition-based-waiting/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "cf7d957dba1664a58c6830d8b1a068272d506f3eec6dee869f046b7f25dc259b",
+  "description": "Use when tests fail intermittently. Replace arbitrary timeouts with condition polling. Eliminates flaky tests caused by timing assumptions."
 }

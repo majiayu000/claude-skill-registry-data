@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ee3\u7801\u7d22\u5f15\uff08.fe-index/\uff09\u7684\u7edf\u4e00\u67e5\u8be2\u5165\u53e3\uff1a\u6309\u4ee3\u7801\u8def\u5f84\u81ea\u52a8\u5224\u5b9a\u8be5\u67e5\u524d\u7aef\u9875\u9762\u7d22\u5f15\u8fd8\u662f\u540e\u7aef\u6a21\u5757\u7d22\u5f15\uff0c\u7ed9\u51fa\u65b0\u9c9c\u5ea6\u6821\u9a8c\u4e0e\u67e5\u8be2\u5165\u53e3\uff1b\u65e0\u7d22\u5f15\u81ea\u52a8\u964d\u7ea7\u3002\u89e6\u53d1\uff1a\"\u67e5\u7d22\u5f15\"\u3001\"\u8fd9\u6bb5\u4ee3\u7801\u6709\u7d22\u5f15\u5417\"\u3001\"\u6539\u8fd9\u4e2a\u8981\u67e5\u54ea\u4e2a\u7d22\u5f15\"\u3001\"index lookup\"\u3002"
+  "description": "代码索引（.fe-index/）的统一查询入口：按代码路径自动判定该查前端页面索引还是后端模块索引，给出新鲜度校验与查询入口；无索引自动降级。触发：\"查索引\"、\"这段代码有索引吗\"、\"改这个要查哪个索引\"、\"index lookup\"。",
+  "content_fingerprint": "2388765cb8125d631193c2caf2731aefc80d930f1a36566c62adc4296d7d1568"
 }

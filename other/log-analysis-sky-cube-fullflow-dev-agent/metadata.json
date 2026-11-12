@@ -1,5 +1,5 @@
 {
-  "name": "\u65e5\u5fd7\u5206\u6790\u5b9a\u4f4dSkill",
+  "name": "日志分析定位Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/log-analysis/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u65e5\u5fd7\u5206\u6790\u5b9a\u4f4d\u95ee\u9898\u7684\u65b9\u6cd5(traceId\u4e32\u8054\u3001\u9519\u8bef\u6808\u3001\u65f6\u95f4\u7ebf\u8fd8\u539f)\u3002\u5f53\u9700\u8981\u901a\u8fc7\u65e5\u5fd7\u5b9a\u4f4d\u7ebf\u4e0a\u95ee\u9898\u6216\u8fd8\u539f\u8bf7\u6c42\u94fe\u8def\u65f6\u4f7f\u7528\u3002"
+  "description": "日志分析定位问题的方法(traceId串联、错误栈、时间线还原)。当需要通过日志定位线上问题或还原请求链路时使用。",
+  "content_fingerprint": "5a61d0a7745fecef2a669704be228d3817b70b923f5821313cf001d8fbe4fc78"
 }

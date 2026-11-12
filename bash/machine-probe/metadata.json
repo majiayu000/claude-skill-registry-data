@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Tell the user (or an agent) exactly what machine they are on \u2014 chip, cores, RAM, NPU TOPS, memory bandwidth, security posture, DSH tier, and the right Ollama model to pull. Refreshes the canonical profile at agents/core/.mesh/machine.json on every call. Reads the result via agents.core.machine \u2014 zero re-probing in application code."
+  "description": "Tell the user (or an agent) exactly what machine they are on — chip, cores, RAM, NPU TOPS, memory bandwidth, security posture, DSH tier, and the right Ollama model to pull. Refreshes the canonical profile at agents/core/.mesh/machine.json on every call. Reads the result via agents.core.machine — zero re-probing in application code.",
+  "content_fingerprint": "910e03e4847eb7424e5cd16c2a5231af74ccb1bcc6f08aa4a1724f8719faec2b"
 }

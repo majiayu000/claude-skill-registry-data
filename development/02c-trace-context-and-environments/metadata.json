@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when adding user, session, environment, or version context to MLflow traces \u2014 Python or TypeScript. Covers the reserved metadata fields (`mlflow.trace.user`, `mlflow.trace.session`), auto-populated environment metadata (`mlflow.source.*`, Git provenance, model id), the `APP_ENVIRONMENT` override pattern for production, custom deployment metadata, and how this composes with `client_request_id` and `gen_ai.*`. Foundation Step 2c. Sibling to F2 (Python tracing) and F2b (TS tracing)."
+  "description": "Use when adding user, session, environment, or version context to MLflow traces — Python or TypeScript. Covers the reserved metadata fields (`mlflow.trace.user`, `mlflow.trace.session`), auto-populated environment metadata (`mlflow.source.*`, Git provenance, model id), the `APP_ENVIRONMENT` override pattern for production, custom deployment metadata, and how this composes with `client_request_id` and `gen_ai.*`. Foundation Step 2c. Sibling to F2 (Python tracing) and F2b (TS tracing).",
+  "content_fingerprint": "f47ad2fd5efe23a8305dae3874065428733f0865af323f6099ce31252b3f2fc7"
 }

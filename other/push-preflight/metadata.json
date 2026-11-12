@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Secret-scans the commits a git push would send (gitleaks + regex layer; never history), then checks clean tree, forbidden files and fast-forward, with size and open-issue advisories. Refuses on any secret hit, no bypass. Triggers on: push to origin, push to github, push to remote, git push, can we push, safe to push, ready to push, pre-push check, /push-preflight (formerly push-gate)."
+  "description": "Secret-scans the commits a git push would send (gitleaks + regex layer; never history), then checks clean tree, forbidden files and fast-forward, with size and open-issue advisories. Refuses on any secret hit, no bypass. Triggers on: push to origin, push to github, push to remote, git push, can we push, safe to push, ready to push, pre-push check, /push-preflight (formerly push-gate).",
+  "content_fingerprint": "14cc36ed62b95c5f2830d2cda96ccac57f9e1a930fcb3f281add2ec8889be5b1"
 }

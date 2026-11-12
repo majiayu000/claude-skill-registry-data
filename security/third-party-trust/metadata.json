@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Third-party trust boundary analyzer: inventories every outbound HTTP/RPC call (fetch, axios, got, requests, curl, Invoke-RestMethod). For each, identifies literal-vs-template URL, classifies known-trusted vs unknown domain, detects auth-header presence in call window, flags webhook handlers missing signature verification. Read-only. Audience: Senior. Trigger: /third-party-trust"
+  "description": "Third-party trust boundary analyzer: inventories every outbound HTTP/RPC call (fetch, axios, got, requests, curl, Invoke-RestMethod). For each, identifies literal-vs-template URL, classifies known-trusted vs unknown domain, detects auth-header presence in call window, flags webhook handlers missing signature verification. Read-only. Audience: Senior. Trigger: /third-party-trust",
+  "content_fingerprint": "006162e852f1dc2d18dff34fabd5b747f7dc21931fd28c9ba38ef1624a804aab"
 }

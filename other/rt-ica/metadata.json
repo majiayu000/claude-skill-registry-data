@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Works backward from the stated goal through its prerequisite chain \u2014 what must exist to reach the goal, then what each of those requires, back to the current state \u2014 classifying each prerequisite as AVAILABLE, DERIVABLE, or MISSING, and blocking planning until nothing is MISSING. Use before creating plans, delegating to agents, or defining acceptance criteria. Activates on specs, PRDs, tickets, RFCs, architecture designs, and multi-step engineering tasks. Always pass `#N` or an inline goal \u2014 invoking with no argument and no inline context returns BLOCKED. Integrates with CoVe-style planning pipelines."
+  "description": "Works backward from the stated goal through its prerequisite chain — what must exist to reach the goal, then what each of those requires, back to the current state — classifying each prerequisite as AVAILABLE, DERIVABLE, or MISSING, and blocking planning until nothing is MISSING. Use before creating plans, delegating to agents, or defining acceptance criteria. Activates on specs, PRDs, tickets, RFCs, architecture designs, and multi-step engineering tasks. Always pass `#N` or an inline goal — invoking with no argument and no inline context returns BLOCKED. Integrates with CoVe-style planning pipelines.",
+  "content_fingerprint": "415af3342f1ecebd01449ddac05b658ab9ef39c45d6a7dacb5d83a215ec8b888"
 }

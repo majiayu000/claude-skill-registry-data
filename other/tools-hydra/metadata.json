@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run online password attacks against live services with hydra and its alternatives (medusa, ncrack, patator, crowbar) \u2014 service modules, http-post-form failure strings, thread tuning, resume, and lockout avoidance. Load when scope allows credential guessing against SSH/FTP/RDP/MySQL/web login forms and offline cracking is not an option. Signals: hydra -l -P, http-post-form, ^USER^ ^PASS^, ssh:// rdp:// mysql:// targets, medusa -M, ncrack, patator, login brute force."
+  "description": "Run online password attacks against live services with hydra and its alternatives (medusa, ncrack, patator, crowbar) — service modules, http-post-form failure strings, thread tuning, resume, and lockout avoidance. Load when scope allows credential guessing against SSH/FTP/RDP/MySQL/web login forms and offline cracking is not an option. Signals: hydra -l -P, http-post-form, ^USER^ ^PASS^, ssh:// rdp:// mysql:// targets, medusa -M, ncrack, patator, login brute force.",
+  "content_fingerprint": "efbc70f46f90ea55d34ae66e5a5b71197954011774130cb5cd50e491d3debb54"
 }

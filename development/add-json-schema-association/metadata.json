@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a\u7279\u5b9a JSON \u6587\u4ef6\uff08\u6309\u6587\u4ef6\u540d/glob \u5339\u914d\uff09\u63a5 schema \u667a\u80fd\u63d0\u793a\uff08\u8865\u5168/\u6821\u9a8c/hover\uff09\u3002\u5f53\u7528\u6237\u8bf4\u6253\u5f00\u67d0\u7c7b JSON \u7ed9\u4e13\u5c5e\u63d0\u793a\u3001\u50cf settings.json \u90a3\u6837\u4e3a *.xxx.json \u914d schema\u3001\u7ed9\u914d\u7f6e JSON \u52a0\u6821\u9a8c\u548c\u8865\u5168\uff0c\u6216\u8981\u65b0\u589e\u4e00\u79cd JSON \u6587\u4ef6\u7c7b\u578b\u7684 schema \u5173\u8054\u65f6\u4f7f\u7528\u3002"
+  "description": "为特定 JSON 文件（按文件名/glob 匹配）接 schema 智能提示（补全/校验/hover）。当用户说打开某类 JSON 给专属提示、像 settings.json 那样为 *.xxx.json 配 schema、给配置 JSON 加校验和补全，或要新增一种 JSON 文件类型的 schema 关联时使用。",
+  "content_fingerprint": "7c03519cdfbb1be07bb5bf74595c174c03ddb2e813c1e9ba02099615aaa1168b"
 }

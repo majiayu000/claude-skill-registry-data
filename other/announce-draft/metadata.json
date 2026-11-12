@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Draft the `[ANNOUNCE]` email body and open (not merge) the site-bump PR\nfor a promoted release of `<upstream>`. Reads release metadata from the\nplanning issue and `<project-config>/release-management-config.md`;\nproduces a ready-to-copy `[ANNOUNCE]` subject + body and proposes the\nsite-bump PR. Never sends mail and never merges the PR without explicit\nRM confirmation."
+  "description": "Draft the `[ANNOUNCE]` email body and open (not merge) the site-bump PR\nfor a promoted release of `<upstream>`. Reads release metadata from the\nplanning issue and `<project-config>/release-management-config.md`;\nproduces a ready-to-copy `[ANNOUNCE]` subject + body and proposes the\nsite-bump PR. Never sends mail and never merges the PR without explicit\nRM confirmation.",
+  "content_fingerprint": "57639beed7043389c92b3b600b7f772f15d2fb76b14180d02cda0423670c7112"
 }

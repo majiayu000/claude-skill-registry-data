@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u751f\u6210 MaaFramework Pipeline \u9879\u76ee\u7684\u53ef\u4ea4\u4e92\u72b6\u6001\u673a\u56fe\u8c31\u3002\u5f53\u7528\u6237\u60f3\"\u770b Pipeline \u8282\u70b9\u5173\u7cfb\"\u3001\"\u753b\u72b6\u6001\u673a\u56fe\"\u3001\"\u753b Mermaid \u56fe\"\u3001\"\u770b node \u95f4\u5173\u7cfb\"\u3001\"\u627e\u5b64\u7acb\u8282\u70b9 / orphan node\"\u3001\"\u770b Python \u600e\u4e48\u9a71\u52a8 Pipeline\"\u3001\"\u770b interface.json \u5165\u53e3\"\u3001\"\u8c03\u8bd5\u8de8\u6587\u4ef6 next \u5f15\u7528\"\u3001\"\u91cd\u6784\u524d\u7406\u6e05\u67b6\u6784\" \u65f6\u4f7f\u7528\u3002**\u4efb\u4f55\u6d89\u53ca MaaFramework \u8282\u70b9\u5173\u7cfb\u53ef\u89c6\u5316\u7684\u9700\u6c42\u90fd\u7528\u8fd9\u4e2a skill**,\u5373\u4fbf\u7528\u6237\u6ca1\u660e\u786e\u8bf4\"\u753b\u56fe\"\u3002"
+  "description": "生成 MaaFramework Pipeline 项目的可交互状态机图谱。当用户想\"看 Pipeline 节点关系\"、\"画状态机图\"、\"画 Mermaid 图\"、\"看 node 间关系\"、\"找孤立节点 / orphan node\"、\"看 Python 怎么驱动 Pipeline\"、\"看 interface.json 入口\"、\"调试跨文件 next 引用\"、\"重构前理清架构\" 时使用。**任何涉及 MaaFramework 节点关系可视化的需求都用这个 skill**,即便用户没明确说\"画图\"。",
+  "content_fingerprint": "952cbf868377573e145578d494ba2195fe7117bb4bb07ab5de401663baf7bac1"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ryu-qqq/AuthHub/blob/main/.claude/skills/transaction-expert/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "418149c103ff2a0340e6be9b954c027631a5dad08af8e946ab57ccef0c1a68e4",
+  "description": "Transaction 경계 전문가. TransactionManager(단일 Port persist), ReadManager(단일 Query Port findBy/get),\nCommandFacade(2+ Manager persist* 조합), QueryFacade(2+ ReadManager fetch* 조합).\n@Transactional 메서드 단위 필수. "
 }

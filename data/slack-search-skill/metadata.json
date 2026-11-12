@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/minicoohei/aiagent-base/blob/main/.claude/skills/slack-search.skill/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "20e034d0336d7b3c2f09da4d4e4a56070c90f79e51c71771411be6669a7c41c4",
+  "description": "Slackチャンネルやメッセージをセマンティック検索する。\nBookRAGに基づく階層的インデックスを活用した検索機能を提供。\n以下のようなリクエストで使用:\n- 「Slackで〜を検索」「〜のチャンネルを探して」\n- 「〜さんの発言を探して」「〜に関連するチャンネル」\n- 「DX展示会のチャンネル」「プロジェクトの状況」\n- 「最近のイベント」「12月のアクティビティ」\n"
 }

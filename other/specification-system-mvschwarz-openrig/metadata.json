@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when authoring rig specs, agent specs, workflow specs, startup/context fragments, operating-mode declarations, or designing the user spec library. Covers the 4 failure modes (spec instantiates topology but not workflow/mode; spec depends on local paths and fails on another host; agents modify specs as one-off files instead of preserving reusable intent; validation proves YAML shape but not whether topology can run) and the validation-vs-runtime-realization distinction."
+  "description": "Use when authoring rig specs, agent specs, workflow specs, startup/context fragments, operating-mode declarations, or designing the user spec library. Covers the 4 failure modes (spec instantiates topology but not workflow/mode; spec depends on local paths and fails on another host; agents modify specs as one-off files instead of preserving reusable intent; validation proves YAML shape but not whether topology can run) and the validation-vs-runtime-realization distinction.",
+  "content_fingerprint": "56151282427256327b17ee837f74617dcbc8a1be2981bf3463e5a47c22f73304"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review and implement WordPress query-cache usage on WP 6.9+, especially direct interaction with query cache groups now using salted cache helpers. Covers wp_cache_get_salted, wp_cache_set_salted, wp_cache_get_multiple_salted, wp_cache_get_last_changed, affected query groups like post-queries, term-queries, user-queries, comment-queries, site-queries, and why plugins should usually use WP_Query APIs instead of writing query cache entries directly. Use when optimizing expensive reads, persistent object cache behavior, or cache invalidation bugs."
+  "description": "Review and implement WordPress query-cache usage on WP 6.9+, especially direct interaction with query cache groups now using salted cache helpers. Covers wp_cache_get_salted, wp_cache_set_salted, wp_cache_get_multiple_salted, wp_cache_get_last_changed, affected query groups like post-queries, term-queries, user-queries, comment-queries, site-queries, and why plugins should usually use WP_Query APIs instead of writing query cache entries directly. Use when optimizing expensive reads, persistent object cache behavior, or cache invalidation bugs.",
+  "content_fingerprint": "496bb61858d94f7575592eb7e300fd33e329c56ca404616e6918f1df3f322d4d"
 }

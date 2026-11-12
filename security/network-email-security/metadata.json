@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Email security review: dissect phishing samples (headers, URLs, attachments), assess a domain's spoofability via SPF/DKIM/DMARC alignment, recognize BEC patterns, and audit tenant anti-phishing controls incl. OAuth consent abuse. Load on phishing email analysis, .eml header review, \"can this domain be spoofed\", DMARC/SPF checks, or BEC investigation. Signals: Received chain, Authentication-Results, dmarc p=none, ~all vs -all, reply-to mismatch, lookalike domains."
+  "description": "Email security review: dissect phishing samples (headers, URLs, attachments), assess a domain's spoofability via SPF/DKIM/DMARC alignment, recognize BEC patterns, and audit tenant anti-phishing controls incl. OAuth consent abuse. Load on phishing email analysis, .eml header review, \"can this domain be spoofed\", DMARC/SPF checks, or BEC investigation. Signals: Received chain, Authentication-Results, dmarc p=none, ~all vs -all, reply-to mismatch, lookalike domains.",
+  "content_fingerprint": "0c5725169080fa3d07bc6a60b2a6f0490a89ade9ba0a090c959d69997395fd47"
 }

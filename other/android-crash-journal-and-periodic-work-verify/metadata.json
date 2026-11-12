@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prove an Android app's own crash journal records a real crash and that its periodic WorkManager job is actually registered with the OS \u2014 covers the am crash routing, the below-the-fold Settings trap that reads as \"no crashes\", identifying the job as yours via its constraints, and what dumpsys does not tell you. Use when an app substitutes a local crash log for a crash-reporting SDK, or when a \"syncs daily\" claim rests only on schedule() being called."
+  "description": "Prove an Android app's own crash journal records a real crash and that its periodic WorkManager job is actually registered with the OS — covers the am crash routing, the below-the-fold Settings trap that reads as \"no crashes\", identifying the job as yours via its constraints, and what dumpsys does not tell you. Use when an app substitutes a local crash log for a crash-reporting SDK, or when a \"syncs daily\" claim rests only on schedule() being called.",
+  "content_fingerprint": "914ff65f73d05bb0daeb37ba2690bf3dda37bf5b2348684a17227086a59b9d70"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Daily GDPR data-subject-access-request runbook. Verifies each incoming request from Gmail, locates the subject's data read-only across every relevant Postgres table, compiles an access-or-deletion report in Google Docs within the {{sla_days}}-day SLA, and flags it to {{legal_review_channel}} for a lawyer to approve. Never deletes data and never replies to the subject."
+  "description": "Daily GDPR data-subject-access-request runbook. Verifies each incoming request from Gmail, locates the subject's data read-only across every relevant Postgres table, compiles an access-or-deletion report in Google Docs within the {{sla_days}}-day SLA, and flags it to {{legal_review_channel}} for a lawyer to approve. Never deletes data and never replies to the subject.",
+  "content_fingerprint": "fc5fd3a74fd17eeac2583a0a1cd47e6ec14a1fd5d94acd1a271c641b49924144"
 }

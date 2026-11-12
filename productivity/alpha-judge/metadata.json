@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "LLM-judge stage of an alpha-mining pipeline: take a miner's deterministic candidate list, keep only real signal, drop noise, and propose additions to that miner's curated note. Use after any zero-token detector run. Reads only the candidate digest and the home note, never the corpus. Triggers: \"/alpha-judge <miner>\", \"judge the candidates\"."
+  "description": "LLM-judge stage of an alpha-mining pipeline: take a miner's deterministic candidate list, keep only real signal, drop noise, and propose additions to that miner's curated note. Use after any zero-token detector run. Reads only the candidate digest and the home note, never the corpus. Triggers: \"/alpha-judge <miner>\", \"judge the candidates\".",
+  "content_fingerprint": "95cebcf4f31a6413288bb54efee47ee4e504847ff36ab95f81fe81f32b42f4f5"
 }

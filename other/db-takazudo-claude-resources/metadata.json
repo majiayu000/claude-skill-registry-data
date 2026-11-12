@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Resolve and load any file or directory the user shares through Dropbox, from the Dropbox root. Use whenever the user invokes /db, including inline forms like '/db foobar/ check its docs' \u2014 '/db <path>' always means the Dropbox path <path>. Handles Dropbox sync delay, online-only placeholders, directory settling, and recursive search that a plain ls/Read misses. Covers /db (root listing), /db dirname/, /db path/to/file.png, /db env/ (shared dev credentials), and multiple files at once. /ss is the shorthand for /db screenshots/."
+  "description": "Resolve and load any file or directory the user shares through Dropbox, from the Dropbox root. Use whenever the user invokes /db, including inline forms like '/db foobar/ check its docs' — '/db <path>' always means the Dropbox path <path>. Handles Dropbox sync delay, online-only placeholders, directory settling, and recursive search that a plain ls/Read misses. Covers /db (root listing), /db dirname/, /db path/to/file.png, /db env/ (shared dev credentials), and multiple files at once. /ss is the shorthand for /db screenshots/.",
+  "content_fingerprint": "95ede8e23f8b9fc130298207415427b74f9caa7d8e7555f48dd3cd4961819fd4"
 }

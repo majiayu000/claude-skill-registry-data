@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ensures proper Python dependency management, avoiding global `pip install` and\nadhering to project-specific tooling.\n\nUse this skill if any of the following are true:\n  1. Attempting to run `pip install {package_name}`.\n  2. Python packages or dependencies need to be added or modified.\n  3. Initiating a new Python project.\n  4. Creating a new notebook, even if just using BigQuery cells.\n  5. Generating Python code that includes `import` statements for third-party libraries.\n  6. Before executing Python scripts via the terminal to ensure the correct virtual environment is active."
+  "description": "Ensures proper Python dependency management, avoiding global `pip install` and\nadhering to project-specific tooling.\n\nUse this skill if any of the following are true:\n  1. Attempting to run `pip install {package_name}`.\n  2. Python packages or dependencies need to be added or modified.\n  3. Initiating a new Python project.\n  4. Creating a new notebook, even if just using BigQuery cells.\n  5. Generating Python code that includes `import` statements for third-party libraries.\n  6. Before executing Python scripts via the terminal to ensure the correct virtual environment is active.",
+  "content_fingerprint": "b3d8d07ac4b67a62fb610aa420671de82e9c7f14548b39bd89842dbb19b1acbf"
 }

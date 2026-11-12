@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Query Grafana Loki logs that are organized by labels such as `project_name` or `project`, `env`, and `filename`, where `filename` distinguishes `nginx`, `web`, `worker`, `stdout`, and `stderr` streams. Use when Codex needs to inspect logs with `logcli`, discover available projects or environments, list a project's log files, narrow to a specific component such as web or worker, or check a recent time window for errors in test or local environments."
+  "description": "Query Grafana Loki logs that are organized by labels such as `project_name` or `project`, `env`, and `filename`, where `filename` distinguishes `nginx`, `web`, `worker`, `stdout`, and `stderr` streams. Use when Codex needs to inspect logs with `logcli`, discover available projects or environments, list a project's log files, narrow to a specific component such as web or worker, or check a recent time window for errors in test or local environments.",
+  "content_fingerprint": "193c9171cf3605ada538a341171c86b184c792677ec27f9f7c2b5621a295b328"
 }

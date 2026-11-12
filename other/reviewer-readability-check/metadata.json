@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7ae0\u306e\u57f7\u7b46\u30fb\u6539\u8a02\u5b8c\u4e86\u6642\u30fb\u539f\u7a3f\u30d3\u30eb\u30c9\u524d\u306b\u3001\u672c\u6587\u304c\u67fb\u8aad\u8005\u306b\u8aad\u3081\u308b\u8a9e\u5f59\u30ec\u30d9\u30eb\u304b\uff08\u5185\u90e8\u8a18\u53f7\u30fb\u6642\u523b\u30fb\u30d0\u30fc\u30b8\u30e7\u30f3\u756a\u53f7\u304c\u672c\u6587\u304b\u3089\u9664\u53bb\u3055\u308c\u3066\u3044\u308b\u304b\uff09\u3068\u7bc0\u756a\u53f7\u306e\u6574\u5408\uff08\u679d\u756a\u30fb\u6b20\u756a\u30fb\u91cd\u8907\u30fb dangling \u53c2\u7167\uff09\u3092 check_reviewer_readability.py \u3067\u691c\u67fb\u3057\u3001\u691c\u51fa\u9805\u76ee\u3092\u300c\u8981\u4fee\u6b63 / \u8981\u78ba\u8a8d / \u5bfe\u5fdc\u4e0d\u8981\u300d\u306e3\u5206\u985e\u3067\u5224\u65ad\u30fb\u8a18\u9332\u3059\u308b\u30b9\u30ad\u30eb"
+  "description": "章の執筆・改訂完了時・原稿ビルド前に、本文が査読者に読める語彙レベルか（内部記号・時刻・バージョン番号が本文から除去されているか）と節番号の整合（枝番・欠番・重複・ dangling 参照）を check_reviewer_readability.py で検査し、検出項目を「要修正 / 要確認 / 対応不要」の3分類で判断・記録するスキル",
+  "content_fingerprint": "c04ca8b9ad92561e05e714a09952cf42d3ee86f55cd408d237b584c9662646c3"
 }

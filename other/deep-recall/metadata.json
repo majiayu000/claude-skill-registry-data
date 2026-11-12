@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "4-layer recall procedure (durable \u2192 semantic \u2192 PostgreSQL \u2192 daily notes) before claiming \"no context\".\nInvoke when user explicitly asks \"do you remember\", \"what did we discuss about X\", \"search history\".\nNOT a general assistant \u2014 only fires when recall is the explicit task. Drop the prior \"use proactively\" rule.\nTriggers: \"do you remember\", \"what did we discuss\", \"when did\", \"find that conversation about\"."
+  "description": "4-layer recall procedure (durable → semantic → PostgreSQL → daily notes) before claiming \"no context\".\nInvoke when user explicitly asks \"do you remember\", \"what did we discuss about X\", \"search history\".\nNOT a general assistant — only fires when recall is the explicit task. Drop the prior \"use proactively\" rule.\nTriggers: \"do you remember\", \"what did we discuss\", \"when did\", \"find that conversation about\".",
+  "content_fingerprint": "975be8038a041ac1f7e3ed7af931e16a5d0712717da3dc736b61ce52875da9ab"
 }

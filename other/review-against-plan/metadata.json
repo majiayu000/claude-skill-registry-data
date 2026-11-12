@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Load this skill when auditing that the codebase matches a SKELETON.md or ITER_NN.md planning document, including variants like SKELETON_v2.md. For each in-scope section, checks the implementation against the spec, fixes gaps and deviations, and reports a compliance table. Trigger on \"review against plan\", \"verify the plan is implemented\", \"does the build match the skeleton\". Not for building the plan (use implement-from-plan), writing the plan (use plan-fullstack-app), or reviewing a pull request (use ceh-git-workflow:code-review)."
+  "description": "Load this skill when auditing that the codebase matches a SKELETON.md or ITER_NN.md planning document, including variants like SKELETON_v2.md. For each in-scope section, checks the implementation against the spec, fixes gaps and deviations, and reports a compliance table. Trigger on \"review against plan\", \"verify the plan is implemented\", \"does the build match the skeleton\". Not for building the plan (use implement-from-plan), writing the plan (use plan-fullstack-app), or reviewing a pull request (use ceh-git-workflow:code-review).",
+  "content_fingerprint": "9c2c9e76090c4805ad011a3b29f0e5c2e106d3ab367bbcfe27d1dbe617cf9f10"
 }

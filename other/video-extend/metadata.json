@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Extend / continue a video temporally with Pusa 2.2 in ComfyUI \u2014 temporal flowmatching (the flowmatch_pusa scheduler + WanVideoAddPusaNoise) on the WanVideoWrapper stack with WAN 2.2 T2V A14B (HIGH/LOW) models and the Pusa V1 LoRAs, conditioning on the loaded clip via WanVideoEncode so the existing motion carries into the continuation. Covers the kijai wanvideo_2_2_14B_Pusa_extension graph, model/LoRA slots + downloads, noise/length/scheduler settings, chaining multiple extensions, VRAM tiers, gotchas, and the extend\u2192upscale handoff."
+  "description": "Extend / continue a video temporally with Pusa 2.2 in ComfyUI — temporal flowmatching (the flowmatch_pusa scheduler + WanVideoAddPusaNoise) on the WanVideoWrapper stack with WAN 2.2 T2V A14B (HIGH/LOW) models and the Pusa V1 LoRAs, conditioning on the loaded clip via WanVideoEncode so the existing motion carries into the continuation. Covers the kijai wanvideo_2_2_14B_Pusa_extension graph, model/LoRA slots + downloads, noise/length/scheduler settings, chaining multiple extensions, VRAM tiers, gotchas, and the extend→upscale handoff.",
+  "content_fingerprint": "8e53ac6a170ef80260df947a9768b04460c7324db49877b4baa5d4a390e1e448"
 }

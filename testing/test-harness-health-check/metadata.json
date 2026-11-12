@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use before trusting a green integration test run, after editing tests/fixtures/db-test-helpers.ts or tests/integration/docker-compose.test.yml, when adding a new migration file to schemas/migrations, or when integration tests are flaky/failing in a way that looks environmental (auth failures, \"relation does not exist\", container crash loops). Verifies the test harness itself genuinely exercises a fresh environment instead of silently passing against a broken or partial setup."
+  "description": "Use before trusting a green integration test run, after editing tests/fixtures/db-test-helpers.ts or tests/integration/docker-compose.test.yml, when adding a new migration file to schemas/migrations, or when integration tests are flaky/failing in a way that looks environmental (auth failures, \"relation does not exist\", container crash loops). Verifies the test harness itself genuinely exercises a fresh environment instead of silently passing against a broken or partial setup.",
+  "content_fingerprint": "84b1387820653664db5bc47a629288696e0b26d9777bdcba26b8fdfc81130a0a"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a set of open PRs needs landing together: run the QA gate ladder on each, fix minor findings on the PR branch, comment the blocking ones, and merge the stack parent-first. Use when the user says \"land these PRs\", \"merge the stack\", \"clear the PR queue\", or names a merge train. Fixing one PR review thread goes to resolve-pr-feedback; diagnosing a red check goes to gh-fix-ci."
+  "description": "Use when a set of open PRs needs landing together: run the QA gate ladder on each, fix minor findings on the PR branch, comment the blocking ones, and merge the stack parent-first. Use when the user says \"land these PRs\", \"merge the stack\", \"clear the PR queue\", or names a merge train. Fixing one PR review thread goes to resolve-pr-feedback; diagnosing a red check goes to gh-fix-ci.",
+  "content_fingerprint": "250aa4e8158a2e7e0a3b545277cce021eeb9dba49df938a8cc3540af179538ef"
 }

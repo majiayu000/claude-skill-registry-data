@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pre-flight before spawning a sub-agent or any task involving >5 file reads / >3 greps. Forces the \"conclusion-only?\" test and requires an explicit output contract (goal, allowed tools, return-format). Use before invoking the Agent tool, before exploratory codebase audits, or when about to do many sequential reads to answer a single question."
+  "description": "Pre-flight before spawning a sub-agent or any task involving >5 file reads / >3 greps. Forces the \"conclusion-only?\" test and requires an explicit output contract (goal, allowed tools, return-format). Use before invoking the Agent tool, before exploratory codebase audits, or when about to do many sequential reads to answer a single question.",
+  "content_fingerprint": "427562268fdf4858bd2d806c59d498409d1382d7bd5ca5c423473b31e8a0e690"
 }

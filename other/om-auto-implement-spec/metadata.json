@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implement an existing spec and ship a verified, reviewed, ready PR. Resolves the spec by path, name, issue, or spec-PR number (clean stop with candidates when not found). A spec PR stays design-only \u2014 implementation ships on its own PR referencing it. Delegates to om-auto-create-pr (om-auto-continue-pr for an existing implementation PR), then runs the review loop and UI verification with screenshots. Use for \"implement the spec X\", \"build spec from issue 123\"."
+  "description": "Implement an existing spec and ship a verified, reviewed, ready PR. Resolves the spec by path, name, issue, or spec-PR number (clean stop with candidates when not found). A spec PR stays design-only — implementation ships on its own PR referencing it. Delegates to om-auto-create-pr (om-auto-continue-pr for an existing implementation PR), then runs the review loop and UI verification with screenshots. Use for \"implement the spec X\", \"build spec from issue 123\".",
+  "content_fingerprint": "3fa0197a29610c39b61e07ebbcf6a23d4a9f97e8a275f483c9ba477b5329624a"
 }

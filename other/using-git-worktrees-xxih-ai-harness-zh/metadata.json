@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u4f60\u8981\u628a\u5b9e\u73b0\u5de5\u4f5c\u4e0e\u5f53\u524d\u5de5\u4f5c\u533a\u9694\u79bb\uff0c\u6216\u51c6\u5907\u5728\u72ec\u7acb\u5206\u652f\u4e2d\u6267\u884c\u4e2d\u5927\u578b\u4fee\u6539\u65f6\u4f7f\u7528\uff1b\u5b83\u8d1f\u8d23\u9009\u62e9 worktree \u76ee\u5f55\u3001\u6821\u9a8c ignore\u3001\u521b\u5efa\u9694\u79bb\u5de5\u4f5c\u533a\u5e76\u786e\u8ba4\u57fa\u7ebf\u3002"
+  "description": "当你要把实现工作与当前工作区隔离，或准备在独立分支中执行中大型修改时使用；它负责选择 worktree 目录、校验 ignore、创建隔离工作区并确认基线。",
+  "content_fingerprint": "9087786318788b38ef6e173dedff3c2d33452a91905c861b2d4063e23041fcce"
 }

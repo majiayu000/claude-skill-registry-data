@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Skill 1 de 2 do sistema GaaS. L\u00ea a planilha \"Or\u00e7amento B2C (B2C Produ\u00e7\u00e3o di\u00e1ria)\" em XLSX ou CSV e numa \u00fanica passada grava dois registros por data na tabela b2c_daily_metrics: um com tipo='total' (Total B2C) e outro com tipo='serasa_api' (canal integrado Serasa). A tabela precisa ter PK composta (data, tipo) \u2014 ver se\u00e7\u00e3o de migration. Acionar quando o usu\u00e1rio mencionar: atualizar origina\u00e7\u00e3o B2C, subir planilha de produ\u00e7\u00e3o di\u00e1ria, sincronizar resultados B2C, produ\u00e7\u00e3o di\u00e1ria B2C, Serasa API."
+  "description": "Skill 1 de 2 do sistema GaaS. Lê a planilha \"Orçamento B2C (B2C Produção diária)\" em XLSX ou CSV e numa única passada grava dois registros por data na tabela b2c_daily_metrics: um com tipo='total' (Total B2C) e outro com tipo='serasa_api' (canal integrado Serasa). A tabela precisa ter PK composta (data, tipo) — ver seção de migration. Acionar quando o usuário mencionar: atualizar originação B2C, subir planilha de produção diária, sincronizar resultados B2C, produção diária B2C, Serasa API.",
+  "content_fingerprint": "520688d63931f9fee591ced0a83e94f2233e72f948b6889cdec3beffe3754dd2"
 }

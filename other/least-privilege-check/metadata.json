@@ -1,5 +1,5 @@
 {
-  "name": "\u6743\u9650\u6700\u5c0f\u5316\u6821\u9a8cSkill",
+  "name": "权限最小化校验Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/least-privilege-check/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8d26\u53f7/\u89d2\u8272/\u670d\u52a1\u6743\u9650\u7684\u6700\u5c0f\u53ef\u7528\u539f\u5219\u6838\u5bf9\u6e05\u5355\u3002\u5f53\u9700\u8981\u6838\u67e5\u4eba\u5458\u8d26\u53f7\u3001\u670d\u52a1\u8d26\u53f7\u3001IAM \u89d2\u8272\u4e0e\u6570\u636e\u5e93\u6743\u9650\u662f\u5426\u8d85\u51fa\u6700\u5c0f\u53ef\u7528\u8303\u56f4\u65f6\u4f7f\u7528\u3002"
+  "description": "账号/角色/服务权限的最小可用原则核对清单。当需要核查人员账号、服务账号、IAM 角色与数据库权限是否超出最小可用范围时使用。",
+  "content_fingerprint": "22d57efd399160e7ba9a60601a011828d34b5acb151419849623dc61801a930f"
 }

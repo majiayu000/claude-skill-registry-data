@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Firm-fixed-price cost buildup mirroring 1102 IGCE FFP wrap-rate math (BLS OEWS + GSA CALC+ + GSA Per Diem). USE WHEN the user asks to \"build an FFP IGCE\", \"wrap rate buildup\", \"FFP cost estimate\", \"layer fringe overhead G&A fee\", \"how should we price this FFP task order\", or \"IGCE parity for our bid\". Pulls labor categories from pursuit vault or defaults, stacks fringe/overhead/G&A/fee, exports JSON + XLSX to Studio. DO NOT USE FOR T&M/LH pricing (`igce-builder-lh-tm`), cost-reimbursement (`igce-builder-cr`), OT milestones (`ot-prototype-strategist`), or obligation intel (`competitive-intel`)."
+  "description": "Firm-fixed-price cost buildup mirroring 1102 IGCE FFP wrap-rate math (BLS OEWS + GSA CALC+ + GSA Per Diem). USE WHEN the user asks to \"build an FFP IGCE\", \"wrap rate buildup\", \"FFP cost estimate\", \"layer fringe overhead G&A fee\", \"how should we price this FFP task order\", or \"IGCE parity for our bid\". Pulls labor categories from pursuit vault or defaults, stacks fringe/overhead/G&A/fee, exports JSON + XLSX to Studio. DO NOT USE FOR T&M/LH pricing (`igce-builder-lh-tm`), cost-reimbursement (`igce-builder-cr`), OT milestones (`ot-prototype-strategist`), or obligation intel (`competitive-intel`).",
+  "content_fingerprint": "409d318907398047c91fbd6632dd8b1c38fbec08d8a48bd72a4fe3058acb22a6"
 }

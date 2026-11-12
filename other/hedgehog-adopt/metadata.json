@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use once, at the start of bringing Hedgehog's discipline to an existing repo whose code Hedgehog didn't build \u2014 \"adopt this repo\", \"add Hedgehog here\", \"I want scope/verify enforcement on my changes to this existing codebase\". Invoked by the `planner` agent as Phase 0's fourth outcome, in place of any bootstrap skill. Reads the repo read-only, proposes a linear-chain `.hedgehog/core.yaml` whose `verify` commands are the repo's own, and writes only `.hedgehog/` \u2014 never touches working code. Also invoked again, briefly, whenever new change-work enters play on an already-adopted repo."
+  "description": "Use once, at the start of bringing Hedgehog's discipline to an existing repo whose code Hedgehog didn't build — \"adopt this repo\", \"add Hedgehog here\", \"I want scope/verify enforcement on my changes to this existing codebase\". Invoked by the `planner` agent as Phase 0's fourth outcome, in place of any bootstrap skill. Reads the repo read-only, proposes a linear-chain `.hedgehog/core.yaml` whose `verify` commands are the repo's own, and writes only `.hedgehog/` — never touches working code. Also invoked again, briefly, whenever new change-work enters play on an already-adopted repo.",
+  "content_fingerprint": "76f351c454cc40ae58667dc4dbdf017a8c5374768d50865082a085b011a56315"
 }

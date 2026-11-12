@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fan out a one-shot or flat parallel batch of cc-fleet PROVIDER subagents (headless `cc-fleet subagent`) that return a result \u2014 DeepSeek / GLM / Kimi / Qwen / MiniMax, or a Codex/Claude subscription. Trigger ONLY to delegate a task to a cc-fleet provider worker (parallel research, bulk per-file work, a specialized model). Do NOT trigger for a multi-phase pipeline (that is /cc-fleet:workflow), for ordinary local shell/coding, or for editing or researching cc-fleet's own code."
+  "description": "Fan out a one-shot or flat parallel batch of cc-fleet PROVIDER subagents (headless `cc-fleet subagent`) that return a result — DeepSeek / GLM / Kimi / Qwen / MiniMax, or a Codex/Claude subscription. Trigger ONLY to delegate a task to a cc-fleet provider worker (parallel research, bulk per-file work, a specialized model). Do NOT trigger for a multi-phase pipeline (that is /cc-fleet:workflow), for ordinary local shell/coding, or for editing or researching cc-fleet's own code.",
+  "content_fingerprint": "9345df2b9946b8e25fa4b108fac6fda3fd02cc42fe2014c8c520e00b9bc27342"
 }

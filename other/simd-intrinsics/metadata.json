@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "SIMD intrinsics skill for x86 (SSE/AVX) and ARM (NEON) vectorization. Use when reading auto-vectorization reports, writing SSE2/AVX2/NEON intrinsics, checking CPU feature flags at runtime, choosing between compiler builtins and raw intrinsics, or diagnosing why auto-vectorization failed. Activates on queries about SIMD, SSE2, AVX2, NEON, intrinsics, -fopt-info-vec, auto-vectorization, or vectorization failures."
+  "description": "SIMD intrinsics skill for x86 (SSE/AVX) and ARM (NEON) vectorization. Use when reading auto-vectorization reports, writing SSE2/AVX2/NEON intrinsics, checking CPU feature flags at runtime, choosing between compiler builtins and raw intrinsics, or diagnosing why auto-vectorization failed. Activates on queries about SIMD, SSE2, AVX2, NEON, intrinsics, -fopt-info-vec, auto-vectorization, or vectorization failures.",
+  "content_fingerprint": "4b645ea9ffd2bc2377b26511634a124fc70068d590b9b5051e3a6ae4371a81bf"
 }

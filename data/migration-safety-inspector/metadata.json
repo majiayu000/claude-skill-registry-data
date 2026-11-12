@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Database migration safety inspector: scans SQL migration files for 20+ safety rules (table rewrites, missing CONCURRENTLY, destructive DROP, unsafe constraints, missing IF EXISTS, DML on existing tables, missing transaction wrappers), then the LLM assesses blast radius per finding against actual schema and usage patterns, recommending safer alternatives. Read-only. Trigger: /migration-safety"
+  "description": "Database migration safety inspector: scans SQL migration files for 20+ safety rules (table rewrites, missing CONCURRENTLY, destructive DROP, unsafe constraints, missing IF EXISTS, DML on existing tables, missing transaction wrappers), then the LLM assesses blast radius per finding against actual schema and usage patterns, recommending safer alternatives. Read-only. Trigger: /migration-safety",
+  "content_fingerprint": "7aed44b7995d4ef82565fef8ba6782f14705d3214e686314b1a031073d0cad50"
 }

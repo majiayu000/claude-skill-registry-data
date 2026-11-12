@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/codebar-ag/coding-guidelines/blob/main/resources/boost/skills/migrations/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8300a78a64e2705dc66a403adfedda66327d7409fa0547f9e49ffb1a11a44eb5",
+  "description": "Database schema change files. Always create new files for changes — never modify existing migrations. Use descriptive names, proper foreign key constraints, and reversible `down()` methods."
 }

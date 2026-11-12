@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review whether a change still behaves correctly as users, data, and backend instances grow \u2014 unbounded reads, missing indexes, replica-unsafe in-memory state and crons, request-path work that belongs on a queue, connection and provider budgets. Use when a change adds or modifies list endpoints, queries on growing tables, @Cron tasks, BullMQ producers/consumers, process-local state, or LLM/embedding/crawl provider calls."
+  "description": "Review whether a change still behaves correctly as users, data, and backend instances grow — unbounded reads, missing indexes, replica-unsafe in-memory state and crons, request-path work that belongs on a queue, connection and provider budgets. Use when a change adds or modifies list endpoints, queries on growing tables, @Cron tasks, BullMQ producers/consumers, process-local state, or LLM/embedding/crawl provider calls.",
+  "content_fingerprint": "e2de9fff3e444bd242356b77d8686ffa1696dd0e5f9ef1243f8c5e9abbce55fb"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pre-planning readiness gate \u2014 the skeptical interrogator. Runs on the RAW input (ticket(s), PRD, brief, existing SPEC) inside che-spec \u00a71.6, and on the approved/draft SPEC inside che-act \u00a70.6 before scope capture. Checks sufficiency, internal coherence (including contradictions across multiple tickets), consistency with the code already implemented, past decisions, established conventions and \u2014 last \u2014 market practice. Emits a bounded set of high-leverage questions and blocks on BLOCKER/MAJOR only. Max 5 questions per round, max 2 rounds. Invoke ONLY from che-spec and che-act, never standalone."
+  "description": "Pre-planning readiness gate — the skeptical interrogator. Runs on the RAW input (ticket(s), PRD, brief, existing SPEC) inside che-spec §1.6, and on the approved/draft SPEC inside che-act §0.6 before scope capture. Checks sufficiency, internal coherence (including contradictions across multiple tickets), consistency with the code already implemented, past decisions, established conventions and — last — market practice. Emits a bounded set of high-leverage questions and blocks on BLOCKER/MAJOR only. Max 5 questions per round, max 2 rounds. Invoke ONLY from che-spec and che-act, never standalone.",
+  "content_fingerprint": "d9024b06387809e2449c14cd367097353d36c7c1bd51db6cfb8562e89579a978"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Designs the actual assignment logic for an already-qualified lead, round-robin, territory, account-owner, or score-threshold, with explicit tie-break and fallback rules. Use when leads are qualified but nobody has decided, in writing, exactly who they go to next. Boundary: `lead-management` designs the scoring model and lifecycle stages that decide whether a lead is qualified in the first place. This skill is the layer after that: once a lead is qualified, who actually gets it."
+  "description": "Designs the actual assignment logic for an already-qualified lead, round-robin, territory, account-owner, or score-threshold, with explicit tie-break and fallback rules. Use when leads are qualified but nobody has decided, in writing, exactly who they go to next. Boundary: `lead-management` designs the scoring model and lifecycle stages that decide whether a lead is qualified in the first place. This skill is the layer after that: once a lead is qualified, who actually gets it.",
+  "content_fingerprint": "16cafcc6835c259b4f97a0cf2a7a35ee3c136d3f776827b205fa17936074a3e1"
 }

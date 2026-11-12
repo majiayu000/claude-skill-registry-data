@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5171\u4eab page \u4e0b\u7528\u4f8b\u79bb\u5f00\u8d77\u70b9\u540e\u5fc5\u987b UI \u8fd4\u56de\u5e76\u65ad\u8a00\u3002\u89e6\u53d1\uff1a\u5f80\u8fd4\u95ed\u5408\u3001case round trip\u3001\u590d\u4f4d\u8d85\u65f6\u3001scope \u5171\u4eab page\u3002"
+  "description": "共享 page 下用例离开起点后必须 UI 返回并断言。触发：往返闭合、case round trip、复位超时、scope 共享 page。",
+  "content_fingerprint": "d7eb23d74ddaf184e83c145eef422bdd31931472555aa813f85d29a3433bf0cb"
 }

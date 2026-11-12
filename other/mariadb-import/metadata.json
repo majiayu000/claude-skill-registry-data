@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific behavior of the mariadb-import client \u2014 a command-line wrapper around LOAD DATA INFILE for bulk-loading text files. Covers the table-name-from-filename rule, TAB (not CSV) defaults, the --local vs server-side fork, --replace/--ignore, --columns vs --ignore-lines, --parallel and its --lock-tables interaction, and the locale-autodetected charset. Use when invoking or reviewing mariadb-import commands, or scripting bulk CSV/TSV imports into MariaDB."
+  "description": "MariaDB-specific behavior of the mariadb-import client — a command-line wrapper around LOAD DATA INFILE for bulk-loading text files. Covers the table-name-from-filename rule, TAB (not CSV) defaults, the --local vs server-side fork, --replace/--ignore, --columns vs --ignore-lines, --parallel and its --lock-tables interaction, and the locale-autodetected charset. Use when invoking or reviewing mariadb-import commands, or scripting bulk CSV/TSV imports into MariaDB.",
+  "content_fingerprint": "4fb502f96a6aed3a27de7e836c39c979fcc2715e255990f93e3001f0686147fc"
 }

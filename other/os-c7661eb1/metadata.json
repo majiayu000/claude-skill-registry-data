@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6587\u4ef6\u7cfb\u7edf\u8c03\u7528 / \u7cfb\u7edf\u8c03\u7528-\u6587\u4ef6\u5206\u6d3e / OS \u7cfb / read / write / close \u6587 / \u7cfb\u7edf\u8c03\u7528 / open/read/wr\u3002\u7528\u6237\u63d0\u5230\u8fd9\u4e9b\u8bcd\u65f6\u4f7f\u7528\u672c\u6280\u80fd\u3002 \u573a\u666f\uff1a\u5bf9\u7167\uff1aOS \u7cfb\u7edf\u8c03\u7528\u2014\u2014open/read/write/close \u6587\u4ef6\u64cd\u4f5c\uff08fd \u8868\u5206\u6d3e\uff09\u3002 \u3010\u4e0d\u9002\u7528\u3011Not for \u4ee5\u4e0b\u573a\u666f\uff1aop \u975e {close, open, read, write} \u65f6"
+  "description": "文件系统调用 / 系统调用-文件分派 / OS 系 / read / write / close 文 / 系统调用 / open/read/wr。用户提到这些词时使用本技能。 场景：对照：OS 系统调用——open/read/write/close 文件操作（fd 表分派）。 【不适用】Not for 以下场景：op 非 {close, open, read, write} 时",
+  "content_fingerprint": "60cdb00a8e12dbc08a803f5a36cc61ed387931203518b88a949f0976f3b66336"
 }

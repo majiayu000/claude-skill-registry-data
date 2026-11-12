@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u57fa\u4e8e\u9886\u661f ASIN 360 \u6216\u540c\u7c7b\u65e5\u4e1a\u52a1\u62a5\u8868\uff0c\u4ee5\u53ca\u7528\u6237\u81ea\u5df1 SIF MCP \u5bfc\u51fa\u7684\u65e5\u7ea7\u5173\u952e\u8bcd\u81ea\u7136\u6392\u540d JSON\uff0c\u56de\u6d4b CVR \u4e0e\u6838\u5fc3\u8bcd/\u7a33\u5b9a\u8bcd\u81ea\u7136\u6392\u540d\u6ce2\u52a8\u7684\u5173\u7cfb\uff0c\u5e76\u8f93\u51fa\u89c2\u5bdf\u7ebf\u3001\u5371\u9669\u7ebf\u3001\u5e7f\u544a CVR \u786e\u8ba4\u7ebf\u3002\n\u4f7f\u7528\u65f6\u673a\uff1a\u7ad9\u5916\u653e\u91cf\u3001\u8fbe\u4eba\u6295\u653e\u3001\u8054\u76df\u6295\u653e\u6216\u5185\u5bb9\u79cd\u8349\u540e\uff0c\u9700\u8981\u5224\u65ad CVR \u4f4e\u5230\u4ec0\u4e48\u533a\u95f4\u4f1a\u589e\u52a0\u81ea\u7136\u6392\u540d\u6ce2\u52a8\u98ce\u9669\u3002\n\u89e6\u53d1\u8bcd\uff1a/zach-sif-cvr-threshold-analyzer"
+  "description": "基于领星 ASIN 360 或同类日业务报表，以及用户自己 SIF MCP 导出的日级关键词自然排名 JSON，回测 CVR 与核心词/稳定词自然排名波动的关系，并输出观察线、危险线、广告 CVR 确认线。\n使用时机：站外放量、达人投放、联盟投放或内容种草后，需要判断 CVR 低到什么区间会增加自然排名波动风险。\n触发词：/zach-sif-cvr-threshold-analyzer",
+  "content_fingerprint": "b3de17225a5d572bc0b84ba7db69ea0f2c7ed55ff87122b583c1e1909b1302d6"
 }

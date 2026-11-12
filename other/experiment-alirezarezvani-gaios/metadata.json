@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use to run an autoresearch-style experiment loop \u2014 improve a measurable artifact by trying changes, measuring against one objective metric, keeping if better and reverting if not, on an isolated git branch with a logged trail. Trigger on \"/experiment\", \"run an experiment loop\", \"autoresearch X\", \"tune/optimize X against a metric\", \"hill-climb X\". Follows references/sops/experiment-loop.md. Enforces the autonomy gate (objective metric + reversible sandbox + no PHI/external) before any unsupervised looping."
+  "description": "Use to run an autoresearch-style experiment loop — improve a measurable artifact by trying changes, measuring against one objective metric, keeping if better and reverting if not, on an isolated git branch with a logged trail. Trigger on \"/experiment\", \"run an experiment loop\", \"autoresearch X\", \"tune/optimize X against a metric\", \"hill-climb X\". Follows references/sops/experiment-loop.md. Enforces the autonomy gate (objective metric + reversible sandbox + no PHI/external) before any unsupervised looping.",
+  "content_fingerprint": "9dafb899e4159f7e48a67add072a082b889ed11d4531a272b4e3cd1046eb758a"
 }

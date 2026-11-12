@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when designing or reshaping a module, or when callers coordinate too many steps. Also use it when the user says \"this is hard to test\", \"callers know too much\", or \"simplify this interface\". Puts related state and decisions behind a small interface that states what the caller wants. Tests then use that interface instead of the internal steps. Not for typing values at a boundary (use `typescript-type-safety`)."
+  "description": "Use when designing or reshaping a module, or when callers coordinate too many steps. Also use it when the user says \"this is hard to test\", \"callers know too much\", or \"simplify this interface\". Puts related state and decisions behind a small interface that states what the caller wants. Tests then use that interface instead of the internal steps. Not for typing values at a boundary (use `typescript-type-safety`).",
+  "content_fingerprint": "9f2e1f8f5db2bdb7fbd562c9c7187acc7915f193c8637e27351c6d5486b11e0b"
 }

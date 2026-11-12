@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pre-write quality gate for content entering the brain. No raw copies: a bare cp/mv into the brain repo is a bug. Before any new page lands, resolve named entities registry-first (a vector score is a floor for prose, never a gate for named things), then run the read-the-top-hit dedup decision tree (clear-dup / plausible-dup / clear). Owns dedup; delegates enrichment to the shipped ingestion skills. Routing convention, not an operation-boundary enforcement."
+  "description": "Pre-write quality gate for content entering the brain. No raw copies: a bare cp/mv into the brain repo is a bug. Before any new page lands, resolve named entities registry-first (a vector score is a floor for prose, never a gate for named things), then run the read-the-top-hit dedup decision tree (clear-dup / plausible-dup / clear). Owns dedup; delegates enrichment to the shipped ingestion skills. Routing convention, not an operation-boundary enforcement.",
+  "content_fingerprint": "94e74dd3c23bafb4e965a64b0f37baaa75dc95869917e879b134df3ac47e8351"
 }

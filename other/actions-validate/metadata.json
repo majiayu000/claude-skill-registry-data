@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Validate GitHub Actions workflow files locally with the actionlint then zizmor loop \u2014 actionlint for syntax, expression typing, and shellcheck of run steps; zizmor for security audits (expression injection, pull_request_target risks, unpinned actions, over-broad permissions). Use after editing any .github/workflows/*.yaml or action.yml, before committing workflow changes, when asked to lint, validate, or security-audit GitHub Actions workflows, when a workflow fails in CI, or when setting up actionlint/zizmor for a repository."
+  "description": "Validate GitHub Actions workflow files locally with the actionlint then zizmor loop — actionlint for syntax, expression typing, and shellcheck of run steps; zizmor for security audits (expression injection, pull_request_target risks, unpinned actions, over-broad permissions). Use after editing any .github/workflows/*.yaml or action.yml, before committing workflow changes, when asked to lint, validate, or security-audit GitHub Actions workflows, when a workflow fails in CI, or when setting up actionlint/zizmor for a repository.",
+  "content_fingerprint": "ed4e7dbef4546128910776f3eaf8ddada868a3e7dd65be404c9b551d131a0982"
 }

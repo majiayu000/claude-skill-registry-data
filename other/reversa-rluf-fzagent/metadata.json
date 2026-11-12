@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Operador da skill `reversa` (https://github.com/sandeco/reversa) para engenharia reversa de sistemas legados. Use quando o usuario digitar `/reversa`, `iniciar engenharia reversa` ou pedir para gerar especificacoes a partir de codigo existente. Esta skill instala o reversa via npx, conduz o pipeline de 5 fases (Reconhecimento -> Escavacao -> Interpretacao -> Geracao -> Revisao) e mantem checkpoints em `.reversa/state.json` para retomada apos interrupcao."
+  "description": "Operador da skill `reversa` (https://github.com/sandeco/reversa) para engenharia reversa de sistemas legados. Use quando o usuario digitar `/reversa`, `iniciar engenharia reversa` ou pedir para gerar especificacoes a partir de codigo existente. Esta skill instala o reversa via npx, conduz o pipeline de 5 fases (Reconhecimento -> Escavacao -> Interpretacao -> Geracao -> Revisao) e mantem checkpoints em `.reversa/state.json` para retomada apos interrupcao.",
+  "content_fingerprint": "7a1f819bc9e8b6e667b5cc7c99ddba4781dd0cbebb9be5e6baca49855a2bf0d7"
 }

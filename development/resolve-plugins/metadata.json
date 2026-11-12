@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Curate Claude Code skill / MCP / hook picks against live upstream sources and pin them in .claude/settings.json. Adding a process harness (a paired skill set) is an ordinary pick this door handles. Reads stack from docs/techstack.md, workflow signal from docs/overview.md + existing pins, then live-queries six source pools, dedupes, scores trust tier, presents diff vs pinned, writes settings.json. Standalone refresh path; also run as gated tier-2 curation by /super-bootstrap:setup. Solo dev workflow. Requires `docs/techstack.md` (seeded by `/super-bootstrap:harness-bootstrap`)."
+  "description": "Curate Claude Code skill / MCP / hook picks against live upstream sources and pin them in .claude/settings.json. Adding a process harness (a paired skill set) is an ordinary pick this door handles. Reads stack from docs/techstack.md, workflow signal from docs/overview.md + existing pins, then live-queries six source pools, dedupes, scores trust tier, presents diff vs pinned, writes settings.json. Standalone refresh path; also run as gated tier-2 curation by /super-bootstrap:setup. Solo dev workflow. Requires `docs/techstack.md` (seeded by `/super-bootstrap:harness-bootstrap`).",
+  "content_fingerprint": "99c687dd1caa181c4044ca2d5bed86824bd10da2eca1662c0c3d01a491e08317"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Upgrade a Node repo's dependencies in three rounds (patch \u2192 minor \u2192 major) using npm-check-updates, respecting the project's release-age cooldown. Researches each update's changelog in parallel, bumps the uneventful ones silently, runs the tests, commits, and surfaces only the packages that need a human decision -- a few at a time, most severe first. Works in monorepos (--workspaces, syncpack). Use when the user runs /upgrade-deps, or asks to \"upgrade deps\", \"bump dependencies\", \"update packages\", or \"run ncu\"."
+  "description": "Upgrade a Node repo's dependencies in three rounds (patch → minor → major) using npm-check-updates, respecting the project's release-age cooldown. Researches each update's changelog in parallel, bumps the uneventful ones silently, runs the tests, commits, and surfaces only the packages that need a human decision -- a few at a time, most severe first. Works in monorepos (--workspaces, syncpack). Use when the user runs /upgrade-deps, or asks to \"upgrade deps\", \"bump dependencies\", \"update packages\", or \"run ncu\".",
+  "content_fingerprint": "d19802ef961b0072dd92aa3e55ccb9a53f511348ce3b4ffccfd5d6b49cf6b372"
 }

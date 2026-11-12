@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when you need to know what kind of project the working directory is (Sage theme, Acorn mu-plugin, Radicle, Bedrock, plain WordPress), when the session context is missing or contradicts the files, when there is no .roots-stack.json, or when a detector warning (ACORN_BASEPATH, misplaced env_file, truncated scan, flag drift) needs explaining. Runs scripts/detect-roots-project.mjs and writes .roots-stack.json. For choosing a skill after triage use roots-router; for Lando commands use lando-wp."
+  "description": "Use when you need to know what kind of project the working directory is (Sage theme, Acorn mu-plugin, Radicle, Bedrock, plain WordPress), when the session context is missing or contradicts the files, when there is no .roots-stack.json, or when a detector warning (ACORN_BASEPATH, misplaced env_file, truncated scan, flag drift) needs explaining. Runs scripts/detect-roots-project.mjs and writes .roots-stack.json. For choosing a skill after triage use roots-router; for Lando commands use lando-wp.",
+  "content_fingerprint": "6e6a6e045f4faa49454f7605ec1c20e3cf2418f6b6376053738bdeca306c0b0d"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when Codex should run a broad, same-layer, parallel scouting pass over a fuzzy problem before choosing a direction to deepen. Triggers include \"\u5e7f\u5ea6\u4f18\u5148\", \"\u540c\u5c42\u5e76\u884c\u6492\u7f51\", \"wide scout\", \"parallel sweep\", \"try many directions first\", early-stage ambiguous research/design/debugging, or cases where each lane may use multiple subagents to surface surprising leads. Do not use for known implementation tasks, final cleanup, review-only work, or deep frontier search after a lead has already been selected; route those to codex-completion-loop, review skills, or codex-exploration-loop."
+  "description": "Use when Codex should run a broad, same-layer, parallel scouting pass over a fuzzy problem before choosing a direction to deepen. Triggers include \"广度优先\", \"同层并行撒网\", \"wide scout\", \"parallel sweep\", \"try many directions first\", early-stage ambiguous research/design/debugging, or cases where each lane may use multiple subagents to surface surprising leads. Do not use for known implementation tasks, final cleanup, review-only work, or deep frontier search after a lead has already been selected; route those to codex-completion-loop, review skills, or codex-exploration-loop.",
+  "content_fingerprint": "fc1ed20c885da1b924516b833be753b075aefccdce3f603c24dcd9d4a313de1f"
 }

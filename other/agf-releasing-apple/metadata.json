@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when apple-release-engineer is about to build the signed distributable (TestFlight build / notarized DMG / internal package) from merged-to-main code (after apple code review + SIT Audit pass and merge, before apple-qa-engineer runs E2E/UAT). Provides the applicability gate, pre-flight checks, lane execution per channel, notarization, real-output smoke test, hand-off, and the release-report skeleton. Pairs with deployment.md \u00a77 \"Apple \u53d1\u5e03\" contract and slash /agf-apple-release."
+  "description": "Use when apple-release-engineer is about to build the signed distributable (TestFlight build / notarized DMG / internal package) from merged-to-main code (after apple code review + SIT Audit pass and merge, before apple-qa-engineer runs E2E/UAT). Provides the applicability gate, pre-flight checks, lane execution per channel, notarization, real-output smoke test, hand-off, and the release-report skeleton. Pairs with deployment.md §7 \"Apple 发布\" contract and slash /agf-apple-release.",
+  "content_fingerprint": "99ef326fcbf4c4bb787f9f987eb6329bfa1b8af8a76735853c90134716a21043"
 }

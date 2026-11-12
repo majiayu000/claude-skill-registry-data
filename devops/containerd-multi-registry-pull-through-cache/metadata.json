@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/main/.claude/skills/containerd-multi-registry-pull-through-cache/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "5316b226a16a45cbbaf2fb8db0da1dbf69c3db6ee4cd2dce5dd356f32a70f1fc",
+  "description": "Set up pull-through caches for multiple container registries (ghcr.io, quay.io,\nregistry.k8s.io, reg.kyverno.io) using Docker Registry v2 instances. Use when:\n(1) ImagePullBackOff for non-Docker-Hub i"
 }

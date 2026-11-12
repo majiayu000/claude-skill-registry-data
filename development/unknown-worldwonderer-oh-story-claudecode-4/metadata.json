@@ -1,6 +1,6 @@
 {
   "name": "unknown",
-  "description": "",
+  "description": "多视角对抗式审查。4 个 Agent 并行 spawn（full 模式），各自从不同角度找问题，主线程综合裁决。\n触发方式：/story-review、/审查、「审查一下」「帮我审一下」\n",
   "repo": "worldwonderer/oh-story-claudecode",
   "path": "skills/story-review/SKILL.md",
   "github_branch": "main",
@@ -9,19 +9,14 @@
   "stars": 0,
   "source": "discovered",
   "dir_name": "unknown-worldwonderer-oh-story-claudecode-4",
-  "archive_mode": "directory",
-  "bundled_files": [
-    "references/banned-words.md",
-    "references/quality-rubric.md",
-    "references/rubrics/fanqie.md",
-    "references/rubrics/qidian.md",
-    "references/rubrics/zhihu.md"
-  ],
+  "archive_mode": "skill-md",
+  "bundled_files": [],
   "author": "worldwonderer",
   "source_url": "https://github.com/worldwonderer/oh-story-claudecode/blob/main/skills/story-review/SKILL.md",
   "license": "NOASSERTION",
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/worldwonderer/oh-story-claudecode/blob/main/skills/story-review/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "02977a45ad292e3e9bf99db2f35c440bb6e138b99cca595632268ab94056923f"
 }

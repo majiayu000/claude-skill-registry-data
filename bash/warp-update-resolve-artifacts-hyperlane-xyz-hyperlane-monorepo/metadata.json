@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Foundation skill for warp-route updates. Reads the current on-chain config of a warp route via `hyperlane warp read`, enumerates every artifact (router, ProxyAdmin, ISM, hook, fee contracts) per chain, classifies each artifact's owner (auto-detects Safe / ICA / EOA; asks the user for everything else \u2014 Turnkey, Privy, MPC, custom multisig, timelock, etc.), and persists a per-artifact owner table that downstream update skills consume to know which signing path each batch needs. Read-only \u2014 no signing, no on-chain mutations."
+  "description": "Foundation skill for warp-route updates. Reads the current on-chain config of a warp route via `hyperlane warp read`, enumerates every artifact (router, ProxyAdmin, ISM, hook, fee contracts) per chain, classifies each artifact's owner (auto-detects Safe / ICA / EOA; asks the user for everything else — Turnkey, Privy, MPC, custom multisig, timelock, etc.), and persists a per-artifact owner table that downstream update skills consume to know which signing path each batch needs. Read-only — no signing, no on-chain mutations.",
+  "content_fingerprint": "6af19967d58dd04f2ceeff59e9e82dbe5da2bcc9e9c850d20bb10395e38f4c6d"
 }

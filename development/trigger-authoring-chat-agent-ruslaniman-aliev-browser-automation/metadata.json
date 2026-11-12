@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Author and run a durable AI chat agent with chat.agent from @trigger.dev/sdk/ai: the per-turn run loop, why you MUST spread ...chat.toStreamTextOptions() first, returning a StreamTextResult vs calling chat.pipe(), the two server actions (chat.createStartSessionAction + auth.createPublicToken), and wiring useChat to useTriggerChatTransport. Load this when building, modifying, or debugging a chat backend (the agent task or its lifecycle hooks) or its React transport, when declaring typed tools or custom data parts, or when migrating a plain AI SDK streamText route to chat.agent."
+  "description": "Author and run a durable AI chat agent with chat.agent from @trigger.dev/sdk/ai: the per-turn run loop, why you MUST spread ...chat.toStreamTextOptions() first, returning a StreamTextResult vs calling chat.pipe(), the two server actions (chat.createStartSessionAction + auth.createPublicToken), and wiring useChat to useTriggerChatTransport. Load this when building, modifying, or debugging a chat backend (the agent task or its lifecycle hooks) or its React transport, when declaring typed tools or custom data parts, or when migrating a plain AI SDK streamText route to chat.agent.",
+  "content_fingerprint": "fcb823cd5902cef1d5e3a906e168ac03669d8efd19f171b5b903e46f620a8020"
 }

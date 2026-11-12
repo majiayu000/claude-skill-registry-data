@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the two blind pre-merge reviews from delivery rule 14 on a PR \u2014 a spec review blind to the rules and a code review blind to the issue, each by a fresh subagent reading only the inputs directory prepared for it \u2014 then have a third fresh subagent verify every blocking finding and sort the nits, and hand back a fixed report block. Never edits code. Use when the deliver orchestrator reaches review, or when someone says \"review PR N\" or \"/review N\"."
+  "description": "Run the two blind pre-merge reviews from delivery rule 14 on a PR — a spec review blind to the rules and a code review blind to the issue, each by a fresh subagent reading only the inputs directory prepared for it — then have a third fresh subagent verify every blocking finding and sort the nits, and hand back a fixed report block. Never edits code. Use when the deliver orchestrator reaches review, or when someone says \"review PR N\" or \"/review N\".",
+  "content_fingerprint": "d68239be4545b2fca2e79947ff41d10a7dc816cb363159d19931009f92b85d5b"
 }

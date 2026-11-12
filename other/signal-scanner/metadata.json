@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect buying signals across TAM companies and watchlist personas. Three-phase architecture: (1) free diff-based signals from existing data (headcount growth, tech stack changes, funding rounds), (2) Apify-powered signals (job postings, LinkedIn content analysis, profile changes), and (3) post-processing with dedup, scoring, and lead status updates. Writes signals to Supabase signals table for downstream activation."
+  "description": "Detect buying signals across TAM companies and watchlist personas. Three-phase architecture: (1) free diff-based signals from existing data (headcount growth, tech stack changes, funding rounds), (2) Apify-powered signals (job postings, LinkedIn content analysis, profile changes), and (3) post-processing with dedup, scoring, and lead status updates. Writes signals to Supabase signals table for downstream activation.",
+  "content_fingerprint": "de3fc16b517682ce4cdd7f0b5030f02839dbd16a22799fe494ffbdebf3992171"
 }

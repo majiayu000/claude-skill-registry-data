@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MSVC cl.exe and clang-cl skill for Windows C/C++ projects. Use when configuring Visual Studio builds, MSBuild, or clang-cl as a drop-in MSVC replacement. Covers translating GCC/Clang flags to MSVC equivalents, runtime library selection, Windows SDK setup, and diagnosing MSVC-specific errors. Activates on queries about cl.exe, clang-cl, /O flags, /MT vs /MD, PDB files, Windows ABI, or MSVC project settings."
+  "description": "MSVC cl.exe and clang-cl skill for Windows C/C++ projects. Use when configuring Visual Studio builds, MSBuild, or clang-cl as a drop-in MSVC replacement. Covers translating GCC/Clang flags to MSVC equivalents, runtime library selection, Windows SDK setup, and diagnosing MSVC-specific errors. Activates on queries about cl.exe, clang-cl, /O flags, /MT vs /MD, PDB files, Windows ABI, or MSVC project settings.",
+  "content_fingerprint": "a0c77aa3b598a7cd3f569a134a0ab4ed48ccc13ae8b4bf3f292d98c681637e16"
 }

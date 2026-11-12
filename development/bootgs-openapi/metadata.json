@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generates an OpenAPI 3.0 specification from bootgs @RestController classes via static TypeScript AST analysis (not runtime reflection), and documents the DTO-first contract workflow between a bootgs backend and its client. Use when adding or changing a bootgs endpoint, keeping openapi.json in sync with controllers, or generating a typed client from a bootgs backend. Not for writing the client that consumes the spec or for debugging a route miss (`bootgs-client`), nor for entry-point wiring (`bootgs-quickstart`)."
+  "description": "Generates an OpenAPI 3.0 specification from bootgs @RestController classes via static TypeScript AST analysis (not runtime reflection), and documents the DTO-first contract workflow between a bootgs backend and its client. Use when adding or changing a bootgs endpoint, keeping openapi.json in sync with controllers, or generating a typed client from a bootgs backend. Not for writing the client that consumes the spec or for debugging a route miss (`bootgs-client`), nor for entry-point wiring (`bootgs-quickstart`).",
+  "content_fingerprint": "b0aa0e8c7fac0a66669583f4c674445b797ff65067d5c94432218fb8ab1ef8fd"
 }

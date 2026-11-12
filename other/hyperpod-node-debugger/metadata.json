@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diagnose and remediate per-node issues on a HyperPod cluster (EKS or Slurm) \u2014 a specific node is unhealthy, unresponsive, stuck, or needs replacing. Covers on-node EFA, GPU / accelerator hardware (XID, ECC, NVLink, row-remap, DCGM), Slurm node down/drained, disk and memory pressure, per-node lifecycle-script failures, SSM agent, container runtime, kernel panics, pod networking. Read-only. Not for cluster-wide provisioning (\u2192 hyperpod-cluster-debugger), NCCL (\u2192 hyperpod-nccl), or MFU (\u2192 hyperpod-mfu-debugger)."
+  "description": "Diagnose and remediate per-node issues on a HyperPod cluster (EKS or Slurm) — a specific node is unhealthy, unresponsive, stuck, or needs replacing. Covers on-node EFA, GPU / accelerator hardware (XID, ECC, NVLink, row-remap, DCGM), Slurm node down/drained, disk and memory pressure, per-node lifecycle-script failures, SSM agent, container runtime, kernel panics, pod networking. Read-only. Not for cluster-wide provisioning (→ hyperpod-cluster-debugger), NCCL (→ hyperpod-nccl), or MFU (→ hyperpod-mfu-debugger).",
+  "content_fingerprint": "0eae083d887bc72333c67ae61b26e15a198642abb0efdb159267e7dfa3611680"
 }

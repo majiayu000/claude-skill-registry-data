@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/athola/claude-night-market/blob/master/plugins/leyline/skills/progressive-loading/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "72e329b6d63fa01f3b792bc5006de09bc1dc502ffa14d686f399a0804e0f72ba",
+  "description": "Implements hub-and-spoke lazy loading to minimize token usage in large skills. Use when building multi-module skills that need conditional on-demand loading."
 }

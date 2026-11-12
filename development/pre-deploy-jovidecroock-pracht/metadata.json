@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adapter-aware pre-deployment checklist (Node, Cloudflare Workers, Vercel, static)\nfor the failures that only surface in production: missing env vars, Node-only\nAPIs in edge bundles, absent ISG manifest, oversized bundles, missing\nwrangler/vercel config, and static hosts without clean URLs, 404, or security\nheaders.\nUse for \"pre-deploy check\", \"ready to ship?\", \"deployment checklist\", \"is my\nbuild production-safe\", before `wrangler deploy` or `vercel deploy`."
+  "description": "Adapter-aware pre-deployment checklist (Node, Cloudflare Workers, Vercel, static)\nfor the failures that only surface in production: missing env vars, Node-only\nAPIs in edge bundles, absent ISG manifest, oversized bundles, missing\nwrangler/vercel config, and static hosts without clean URLs, 404, or security\nheaders.\nUse for \"pre-deploy check\", \"ready to ship?\", \"deployment checklist\", \"is my\nbuild production-safe\", before `wrangler deploy` or `vercel deploy`.",
+  "content_fingerprint": "a9cbe3a075a3eb869ec94824b3a43ca63f068c2c5c8418d58ab9599c0c37dc35"
 }

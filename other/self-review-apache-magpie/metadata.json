@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run a structured pre-flight self-review on local changes before opening a PR.\nReads the diff against a configurable base (default: the merge base of HEAD and\norigin/<default-branch>), checks correctness, security, and project conventions,\nand returns a structured report. No state changes, no PR, no external writes \u2014\nthe report is the output."
+  "description": "Run a structured pre-flight self-review on local changes before opening a PR.\nReads the diff against a configurable base (default: the merge base of HEAD and\norigin/<default-branch>), checks correctness, security, and project conventions,\nand returns a structured report. No state changes, no PR, no external writes —\nthe report is the output.",
+  "content_fingerprint": "3dbabad3c908438b8ed319e81a8e3b9d3ee86bc02f54e113874b10d358d00f9a"
 }

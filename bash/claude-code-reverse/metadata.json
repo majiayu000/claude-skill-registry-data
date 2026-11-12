@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5bf9\u7528\u6237\u62e5\u6709\u6216\u660e\u786e\u83b7\u6388\u6743\u7684\u672c\u673a\u53ef\u6267\u884c\u6587\u4ef6\u3001\u5e94\u7528\u4e8c\u8fdb\u5236\u548c\u7248\u672c\u4ea7\u7269\u505a\u53ea\u8bfb\u9759\u6001\u9006\u5411\uff0c\u5305\u62ec Claude Code \u53ca\u5176\u4ed6 CLI\u3001Mach-O\u3001ELF\u3001PE\u3001Wasm \u6216\u6253\u5305\u5e94\u7528\u3002\u4ec5\u5728\u7528\u6237\u660e\u786e\u8981\u6c42\u201c\u9006\u5411\u3001\u6252\u5b9e\u73b0\u3001\u67e5\u4e8c\u8fdb\u5236\u5b57\u7b26\u4e32/\u7b26\u53f7/\u4f9d\u8d56\u3001\u9a8c\u8bc1\u5185\u90e8\u884c\u4e3a\u3001\u6bd4\u8f83\u4e24\u4e2a\u7248\u672c\u201d\u65f6\u4f7f\u7528\uff1b\u4e0d\u8981\u56e0\u666e\u901a\u63d0\u53ca\u8f6f\u4ef6\u800c\u89e6\u53d1\uff0c\u4e5f\u4e0d\u8981\u7528\u4e8e\u6267\u884c\u672a\u77e5\u6837\u672c\u3001\u7ed5\u8fc7\u6388\u6743/\u8ba1\u8d39\u3001\u7834\u89e3\u6216\u518d\u5206\u53d1\u3002"
+  "description": "对用户拥有或明确获授权的本机可执行文件、应用二进制和版本产物做只读静态逆向，包括 Claude Code 及其他 CLI、Mach-O、ELF、PE、Wasm 或打包应用。仅在用户明确要求“逆向、扒实现、查二进制字符串/符号/依赖、验证内部行为、比较两个版本”时使用；不要因普通提及软件而触发，也不要用于执行未知样本、绕过授权/计费、破解或再分发。",
+  "content_fingerprint": "08f9feb205396d6152f0ec2ac7cd53e1a991698a2147e0168af902010bc01ec1"
 }

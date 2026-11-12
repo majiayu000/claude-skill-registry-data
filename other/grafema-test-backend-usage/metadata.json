@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix node query issues in Grafema tests when nodes have numeric IDs instead of\nhuman-readable IDs, or when `type` field is undefined. Use when: (1) queryNodes\nreturns nodes with numeric IDs like \"52710336597754872375318185843222727675\"\ninstead of semantic IDs like \"net:request#__network__\", (2) node.type is undefined\nbut node.nodeType has a value, (3) metadata is a JSON string instead of parsed object,\n(4) tests fail with \"Cannot read property 'length' of undefined\" after queryNodes.\nCovers RFDBServerBackend vs RFDBClient distinction and async generator handling."
+  "description": "Fix node query issues in Grafema tests when nodes have numeric IDs instead of\nhuman-readable IDs, or when `type` field is undefined. Use when: (1) queryNodes\nreturns nodes with numeric IDs like \"52710336597754872375318185843222727675\"\ninstead of semantic IDs like \"net:request#__network__\", (2) node.type is undefined\nbut node.nodeType has a value, (3) metadata is a JSON string instead of parsed object,\n(4) tests fail with \"Cannot read property 'length' of undefined\" after queryNodes.\nCovers RFDBServerBackend vs RFDBClient distinction and async generator handling.",
+  "content_fingerprint": "62a5853c2a6e94076c2b253481d66bdd44f7d0f6d7e4e37007e095fe317c7eb5"
 }

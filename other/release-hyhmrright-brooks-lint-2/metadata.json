@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cut a brooks-lint release: set the version in package.json, propagate it across all four plugin manifests and every version-bearing text file (README badges, docs site metadata), write the CHANGELOG entry, validate, then commit, push, tag, and publish the GitHub release. Triggers when the maintainer asks to \"release\", \"cut a release\", \"ship a new version\", or \"bump and publish\" brooks-lint. Do NOT trigger for: propagating an already-decided version without releasing (use `npm run bump` directly), CHANGELOG edits alone, or questions about the release process that don't ask to perform it."
+  "description": "Cut a brooks-lint release: set the version in package.json, propagate it across all four plugin manifests and every version-bearing text file (README badges, docs site metadata), write the CHANGELOG entry, validate, then commit, push, tag, and publish the GitHub release. Triggers when the maintainer asks to \"release\", \"cut a release\", \"ship a new version\", or \"bump and publish\" brooks-lint. Do NOT trigger for: propagating an already-decided version without releasing (use `npm run bump` directly), CHANGELOG edits alone, or questions about the release process that don't ask to perform it.",
+  "content_fingerprint": "7a6ff49e98639daaa1db59e92a73e3dd38f735701d5f5d991b414c8d4a7da160"
 }

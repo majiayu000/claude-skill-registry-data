@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5e94\u7528\u5916\u90e8\u8d21\u732e\u8005 PR review \u6d41\u7a0b\u3002\n\u6536\u96c6 PR \u4fe1\u606f\uff0c\u7f16\u5199 mydocs/pr/pr_{N}_review.md\uff0c\u6267\u884c\u9a8c\u8bc1\uff0c\u7f16\u5199 pr_{N}_report.md\uff0c\n\u5e76\u5728\u5904\u7406\u5b8c\u6210\u65f6\u5c06\u6587\u6863\u79fb\u52a8\u5230 archives/\u3002\u53ea\u7528\u4e8e\u5916\u90e8\u8d21\u732e\u8005 PR\uff0c\u4e0d\u7528\u4e8e\u5185\u90e8 task\u3002"
+  "description": "应用外部贡献者 PR review 流程。\n收集 PR 信息，编写 mydocs/pr/pr_{N}_review.md，执行验证，编写 pr_{N}_report.md，\n并在处理完成时将文档移动到 archives/。只用于外部贡献者 PR，不用于内部 task。",
+  "content_fingerprint": "417fef4fce27776c2f48a30dceac6b51d3379ed98b503078bde7f2f44fc925ee"
 }

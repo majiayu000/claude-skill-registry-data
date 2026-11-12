@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u591a\u89c6\u89d2\u5bf9\u6297\u5f0f\u5ba1\u67e5\u3002full/lean \u6a21\u5f0f\u5728\u5df2\u90e8\u7f72 reviewer agents \u65f6\u5e76\u884c spawn\uff1b\u7f3a\u5931/\u5f02\u5e38 agents \u6216 spawn \u5931\u8d25\u65f6\u81ea\u52a8\u964d\u7ea7 solo\uff0c\u53c2\u8003\u6587\u4ef6\u4e0d\u53ef\u8bfb\u65f6\u4f7f\u7528\u5185\u7f6e rubric fallback\u3002\u89e6\u53d1\u65b9\u5f0f\uff1a/story-review\u3001/\u5ba1\u67e5\u3001\u300c\u5ba1\u67e5\u4e00\u4e0b\u300d\u300c\u5e2e\u6211\u5ba1\u4e00\u4e0b\u300d\u3002"
+  "description": "多视角对抗式审查。full/lean 模式在已部署 reviewer agents 时并行 spawn；缺失/异常 agents 或 spawn 失败时自动降级 solo，参考文件不可读时使用内置 rubric fallback。触发方式：/story-review、/审查、「审查一下」「帮我审一下」。",
+  "content_fingerprint": "faee35840350ad1ea340e5e2b6e56e962283280347092ec54f0b76e81de69afd"
 }

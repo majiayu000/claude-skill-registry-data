@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Load this skill when patching an already-implemented version of a planned app: a small, non-feature change made after that version was built (bug fix, copy or config tweak, validation tightening, dependency bump). Records the change as a patch ITER_NN.md so the plan stays truthful, then implements only the touched sections. Trigger on \"patch this version\", \"small change to the shipped version\", \"non-feature fix\". Not for anything that adds or changes a feature (use plan-fullstack-app), and not for the version bump or release (use ceh-git-workflow:release)."
+  "description": "Load this skill when patching an already-implemented version of a planned app: a small, non-feature change made after that version was built (bug fix, copy or config tweak, validation tightening, dependency bump). Records the change as a patch ITER_NN.md so the plan stays truthful, then implements only the touched sections. Trigger on \"patch this version\", \"small change to the shipped version\", \"non-feature fix\". Not for anything that adds or changes a feature (use plan-fullstack-app), and not for the version bump or release (use ceh-git-workflow:release).",
+  "content_fingerprint": "1416448abfa8fa39dd41be64519f1cd4c8e50cb6c36cc72c905970fcd6b28097"
 }

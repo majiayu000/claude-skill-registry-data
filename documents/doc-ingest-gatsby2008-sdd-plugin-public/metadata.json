@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Compile new or changed material from the docs-registry `raw/` layer into the `wiki/` knowledge layer \u2014 extract entities & concepts, write typed markdown pages with [[backlinks]], update the indexes, and append to the log. This is the \"raw \u2192 wiki\" step of the two-layer (Karpathy) knowledge base, and the producer that keeps `/sdd:ask` sharp. Only runs where `$CLAUDE_DOC_HOME` is a two-layer vault (a `wiki/` sibling of `raw/`)."
+  "description": "Compile new or changed material from the docs-registry `raw/` layer into the `wiki/` knowledge layer — extract entities & concepts, write typed markdown pages with [[backlinks]], update the indexes, and append to the log. This is the \"raw → wiki\" step of the two-layer (Karpathy) knowledge base, and the producer that keeps `/sdd:ask` sharp. Only runs where `$CLAUDE_DOC_HOME` is a two-layer vault (a `wiki/` sibling of `raw/`).",
+  "content_fingerprint": "bd15289b7c63c993c465e5525a5c875a8e6001c01066b6af0ceed41ee6c4bdbf"
 }

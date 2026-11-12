@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Harden a Kubernetes cluster's data plane and control plane. Covers Pod Security Standards (Restricted, Baseline, Privileged), RBAC with least privilege, NetworkPolicy default-deny, secrets management without raw env vars, admission controllers (Kyverno, OPA Gatekeeper), image scanning, and audit logging. Invoke when provisioning a new cluster, inheriting one, or before adding a new tenant to a shared cluster."
+  "description": "Harden a Kubernetes cluster's data plane and control plane. Covers Pod Security Standards (Restricted, Baseline, Privileged), RBAC with least privilege, NetworkPolicy default-deny, secrets management without raw env vars, admission controllers (Kyverno, OPA Gatekeeper), image scanning, and audit logging. Invoke when provisioning a new cluster, inheriting one, or before adding a new tenant to a shared cluster.",
+  "content_fingerprint": "3e692bbc9a967d884ec42e818f93093b146b86720ae10633aef8851075bff056"
 }

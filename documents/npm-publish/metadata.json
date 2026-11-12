@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Release an npm package end to end: commit pending work, pick the semver bump, write the CHANGELOG (or consume .changeset files manually), publish with the lockfile's package manager (never npm publish in pnpm/bun repos, workspace:^ leaks), tag, push, create the GitHub release, and deploy the website/ folder via its deploy script. Covers monorepo order and prerelease --tag. ALWAYS load when asked to publish, release, or bump a package version. This skill is also called changepub; load it when the user says changepub."
+  "description": "Release an npm package end to end: commit pending work, pick the semver bump, write the CHANGELOG (or consume .changeset files manually), publish with the lockfile's package manager (never npm publish in pnpm/bun repos, workspace:^ leaks), tag, push, create the GitHub release, and deploy the website/ folder via its deploy script. Covers monorepo order and prerelease --tag. ALWAYS load when asked to publish, release, or bump a package version. This skill is also called changepub; load it when the user says changepub.",
+  "content_fingerprint": "76441a20be86f7e85c7bc8a2969a6f8cad0c1ca674f4ef1354ded479e966f9c7"
 }

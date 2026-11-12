@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Faz a verifica\u00e7\u00e3o de seguran\u00e7a completa do projeto - an\u00e1lise est\u00e1tica (bandit), auditoria de depend\u00eancias (pip-audit, npm audit), revis\u00e3o OWASP Top 10 do c\u00f3digo alterado e pentest da API rodando localmente (inje\u00e7\u00e3o/SQLi, upload malicioso, arquivos gigantes, headers forjados, m\u00e9todos inesperados, CORS). Corrige o que encontrar e cria teste de regress\u00e3o para cada falha. Use antes de abrir PR que mexa em endpoint, upload, banco ou autentica\u00e7\u00e3o, ou quando pedirem \"pentest\", \"teste de seguran\u00e7a\", \"teste de invas\u00e3o\"."
+  "description": "Faz a verificação de segurança completa do projeto - análise estática (bandit), auditoria de dependências (pip-audit, npm audit), revisão OWASP Top 10 do código alterado e pentest da API rodando localmente (injeção/SQLi, upload malicioso, arquivos gigantes, headers forjados, métodos inesperados, CORS). Corrige o que encontrar e cria teste de regressão para cada falha. Use antes de abrir PR que mexa em endpoint, upload, banco ou autenticação, ou quando pedirem \"pentest\", \"teste de segurança\", \"teste de invasão\".",
+  "content_fingerprint": "854173d96d36c6ba9fdd10b4dc4cb872cefd15c2c630af8913522a6c87c88db9"
 }

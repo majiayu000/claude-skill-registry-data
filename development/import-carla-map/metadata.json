@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Imports a custom RoadRunner map (FBX geometry + XODR OpenDRIVE) into a CARLA source build as a drivable map \u2014 reads the map from the directory the user names, runs CARLA's Import.py to cook the level, Traffic Manager graph and (standard maps only) pedestrian navmesh, and verifies it loads on a server. Handles both standard maps and large tiled maps; large maps get no navmesh, matching upstream CARLA. Use when the user asks to \"import a map into CARLA\", \"add a custom/RoadRunner map\", \"ingest an FBX+XODR map\", \"make import\", bring in a \"large/tiled map\", or fix missing walkers / a missing pedestrian navmesh."
+  "description": "Imports a custom RoadRunner map (FBX geometry + XODR OpenDRIVE) into a CARLA source build as a drivable map — reads the map from the directory the user names, runs CARLA's Import.py to cook the level, Traffic Manager graph and (standard maps only) pedestrian navmesh, and verifies it loads on a server. Handles both standard maps and large tiled maps; large maps get no navmesh, matching upstream CARLA. Use when the user asks to \"import a map into CARLA\", \"add a custom/RoadRunner map\", \"ingest an FBX+XODR map\", \"make import\", bring in a \"large/tiled map\", or fix missing walkers / a missing pedestrian navmesh.",
+  "content_fingerprint": "72b8f3714a2be707c9a47c2bbb8c532b530b84ccc56b737b2a71463adca21c61"
 }

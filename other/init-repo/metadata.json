@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Get this repo's Shipyard config from zero (or partially done) to genuinely usable: write `.shipyard/config.json` (shared, tracked) and `.shipyard/config.local.json` (personal, gitignored), retire any leftover `SY_*` variables from a legacy `env` block, then prove it live with the same preflight check every other command runs. Asks only for what is actually missing, so a teammate joining an already-configured repo is a short exchange, not a full interview."
+  "description": "Get this repo's Shipyard config from zero (or partially done) to genuinely usable: write `.shipyard/config.json` (shared, tracked) and `.shipyard/config.local.json` (personal, gitignored), retire any leftover `SY_*` variables from a legacy `env` block, then prove it live with the same preflight check every other command runs. Asks only for what is actually missing, so a teammate joining an already-configured repo is a short exchange, not a full interview.",
+  "content_fingerprint": "98b60ddc2ee0a869ed750943f18d48ccb17ce56b38ca7efebfe078b3b3c46dc9"
 }

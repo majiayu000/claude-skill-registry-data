@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728 wiki/cbb/ \u641c\u7d22\u53ef\u590d\u7528 Common Building Block\uff08sync-fifo / 2ff-sync / clock-gate \u7b49\uff09\uff0c\u8fd4\u56de\u5339\u914d\u6a21\u677f\u8def\u5f84\u3002bba-architect \u5728 MAS \u4e2d\u8bc6\u522b\u590d\u7528\u7ec4\u4ef6\u65f6\u8c03\u7528\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bba-architect \u62c6\u5206\u5b50\u6a21\u5757\u8bc6\u522b CBB\uff1b(2) \u663e\u5f0f /bb-search-cbb\u3002"
+  "description": "在 wiki/cbb/ 搜索可复用 Common Building Block（sync-fifo / 2ff-sync / clock-gate 等），返回匹配模板路径。bba-architect 在 MAS 中识别复用组件时调用。触发场景：(1) bba-architect 拆分子模块识别 CBB；(2) 显式 /bb-search-cbb。",
+  "content_fingerprint": "1e180df37d9adc153b001999cc5138c539073e9cb6ddb341159f1961d0096243"
 }

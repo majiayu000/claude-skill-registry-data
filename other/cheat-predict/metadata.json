@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a\u6700\u7ec8\u7a3f\u521b\u5efa\u4e0d\u53ef\u53d8\u76f2\u9884\u6d4b\u65e5\u5fd7\uff0c\u5e76\u5728\u5df2\u6709\u9884\u6d4b\u65f6\u8ffd\u52a0\u65b0\u7248\u672c\u3002\u901a\u8fc7 cheat-score-blind \u505a\u9694\u79bb\u8bc4\u5206\uff0c\u518d\u7531\u4e3b\u7a97\u53e3\u590d\u6838\u843d\u76d8\u3002\u89e6\u53d1\u8bcd\u5305\u62ec\u542f\u52a8\u9884\u6d4b\u3001start prediction\u3001\u6253\u5206\u5e76\u9884\u6d4b\u3001\u5199\u9884\u6d4b\u65e5\u5fd7\u3002"
+  "description": "为最终稿创建不可变盲预测日志，并在已有预测时追加新版本。通过 cheat-score-blind 做隔离评分，再由主窗口复核落盘。触发词包括启动预测、start prediction、打分并预测、写预测日志。",
+  "content_fingerprint": "a293861e49be7b324568d092b3ea68ddbd205c4e406d442c5f14b0548f623ce9"
 }

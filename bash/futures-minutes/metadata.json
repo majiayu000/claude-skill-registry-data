@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u671f\u8d27\u5386\u53f2\u5206\u949f K \u7ebf\uff0c\u5355\u5408\u7ea6\u6216\u6279\u91cf\uff08futures_minutes\uff0cGET /api/v2/market/data/futures_minutes\uff09\u3002\u7528\u6237\u95ee\u671f\u8d27\u5206\u949f\u884c\u60c5\u30011/5/15/30/60 \u5206\u949f K \u7ebf\u3001\u591a\u53ea\u671f\u8d27\u5408\u7ea6\u5206\u949f\u8d70\u52bf\u65f6\u4f7f\u7528\u3002\u5fc5\u586b --start\u3001--end \u4e0e --symbol / --symbols \u4e4b\u4e00\uff1b\u53ef\u9009 --interval\u3001--limit\u3002"
+  "description": "期货历史分钟 K 线，单合约或批量（futures_minutes，GET /api/v2/market/data/futures_minutes）。用户问期货分钟行情、1/5/15/30/60 分钟 K 线、多只期货合约分钟走势时使用。必填 --start、--end 与 --symbol / --symbols 之一；可选 --interval、--limit。",
+  "content_fingerprint": "c1f4226e13dde76f1cf883ebba432c7233a0c4b436b838f2976f393569f7f1fb"
 }

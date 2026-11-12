@@ -14,5 +14,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dawiddutoit/custom-claude/blob/main/skills/python-micrometer-cardinality-control/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a421d3b271608b4a61ed8bc87de93d6e3eade1b6e478502363ccd403f0b88451",
+  "description": "Prevent OutOfMemoryError from unbounded metric tags by implementing cardinality limits.\nUse when adding tags to Micrometer metrics, normalizing URIs or IDs to bounded categories,\nmonitoring metric exp"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/IKcoding-jp/Roast-Plus/blob/main/.claude/skills/fix-issue/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "e1db94f7035d0bdcf4d7ce037cf1d48314bdc88cd39e9b34795e619750237d07",
+  "description": "GitHub Issueを自動解決するワークフロー。Working Documents読み込み→Issue説明→計画→実装→動作確認→要件確認→検証→独立レビュー→Steering更新→PR作成・自動マージまで。Issue番号を引数に取る。「/fix-issue 123」のように使用。トピックブランチ必須、main直接コミット禁止。"
 }

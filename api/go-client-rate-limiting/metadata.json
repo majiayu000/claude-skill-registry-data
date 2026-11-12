@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when an SDK client calls a remote API with documented rate limits (HTTP 429, gRPC RESOURCE_EXHAUSTED) and needs token-bucket pacing, Retry-After honouring, and per-method vs per-client scope decisions. Covers golang.org/x/time/rate, ctx-aware Wait, and adaptive shaping. Triggers: rate.Limiter, token bucket, leaky bucket, Retry-After, rate.NewLimiter, Wait(ctx), Allow()."
+  "description": "Use this when an SDK client calls a remote API with documented rate limits (HTTP 429, gRPC RESOURCE_EXHAUSTED) and needs token-bucket pacing, Retry-After honouring, and per-method vs per-client scope decisions. Covers golang.org/x/time/rate, ctx-aware Wait, and adaptive shaping. Triggers: rate.Limiter, token bucket, leaky bucket, Retry-After, rate.NewLimiter, Wait(ctx), Allow().",
+  "content_fingerprint": "7d8bf1e136fd37721437340c85662701f477299102442873ec743e9fff516de1"
 }

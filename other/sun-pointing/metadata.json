@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when you must evaluate spacecraft sun pointing for the ADCS safe hold: compute the angle between the sun vector and the pointing axis, check it against the pointing tolerance, estimate the solar illumination factor at the sun angle, and size the slew rate to acquire the sun. Produces the sun pointing angle, the safe hold verdict, the illumination factor, and the required slew rate that gate sun acquisition. Trigger: sun pointing, safe hold, sun acquisition, solar illumination, slew rate."
+  "description": "Use when you must evaluate spacecraft sun pointing for the ADCS safe hold: compute the angle between the sun vector and the pointing axis, check it against the pointing tolerance, estimate the solar illumination factor at the sun angle, and size the slew rate to acquire the sun. Produces the sun pointing angle, the safe hold verdict, the illumination factor, and the required slew rate that gate sun acquisition. Trigger: sun pointing, safe hold, sun acquisition, solar illumination, slew rate.",
+  "content_fingerprint": "6fb1852f434c3443cbe850192873947ba4e6ea4533ef39e1efa2f79dba1bd9b7"
 }

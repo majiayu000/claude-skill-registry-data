@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reclaim disk space on WSL2 by purging dev caches and orphaned build artifacts, then guide the user through compacting the ext4.vhdx from Windows. Use when: (1) the user says 'dev-clean-wsl', 'clean wsl', 'wsl disk full', 'free disk space', 'reclaim space', 'purge caches', or 'disk almost full' on a WSL machine; (2) a build or tool fails with ENOSPC / no space left; (3) the user wants to shrink the WSL virtual disk. Covers cargo target/registry, pnpm/npm caches, node_modules, and the vhdx-compaction step that actually returns space to the Windows drive holding it (C: or wherever it was moved)."
+  "description": "Reclaim disk space on WSL2 by purging dev caches and orphaned build artifacts, then guide the user through compacting the ext4.vhdx from Windows. Use when: (1) the user says 'dev-clean-wsl', 'clean wsl', 'wsl disk full', 'free disk space', 'reclaim space', 'purge caches', or 'disk almost full' on a WSL machine; (2) a build or tool fails with ENOSPC / no space left; (3) the user wants to shrink the WSL virtual disk. Covers cargo target/registry, pnpm/npm caches, node_modules, and the vhdx-compaction step that actually returns space to the Windows drive holding it (C: or wherever it was moved).",
+  "content_fingerprint": "1854085a73ebe9196a7030b490b80b3cdf3484e89fd704600c4019483cbdb882"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Overlay the branded like/subscribe CTA animation \u2014 channel gem avatar + @C0BALT_CUT handle + subscribe/like/bell click choreography \u2014 for ~4 seconds WITHIN THE FIRST THIRD of a finished short (start clamped to end by the 1/3 mark, floored after the ~2.5s title card; early placement so viewers who bail never miss it). The animation source is cta.html (HTML+CSS+JS driving the pill pop-in, cursor moves, click punches, bell ring, thumb fill); build-cta.sh renders it frame-by-frame via headless Chromium (Playwright, omitBackground) and ffmpeg-encodes to assets/cta.mov (ProRes 4444 with alpha)."
+  "description": "Overlay the branded like/subscribe CTA animation — channel gem avatar + @C0BALT_CUT handle + subscribe/like/bell click choreography — for ~4 seconds WITHIN THE FIRST THIRD of a finished short (start clamped to end by the 1/3 mark, floored after the ~2.5s title card; early placement so viewers who bail never miss it). The animation source is cta.html (HTML+CSS+JS driving the pill pop-in, cursor moves, click punches, bell ring, thumb fill); build-cta.sh renders it frame-by-frame via headless Chromium (Playwright, omitBackground) and ffmpeg-encodes to assets/cta.mov (ProRes 4444 with alpha).",
+  "content_fingerprint": "467b70c1e86dd94716b38710d1adf7ddbe8bed70476ec82075d4ac41b5359467"
 }

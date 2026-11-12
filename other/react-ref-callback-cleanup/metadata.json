@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a React 19 component forwards a ref and also uses it internally \u2014 a ref-merge helper, a `React.RefCallback` built with useCallback, or an effect that writes the forwarded ref \u2014 and a consumer's cleanup function returned from `ref={node => () => ...}` never runs on unmount."
+  "description": "Use when a React 19 component forwards a ref and also uses it internally — a ref-merge helper, a `React.RefCallback` built with useCallback, or an effect that writes the forwarded ref — and a consumer's cleanup function returned from `ref={node => () => ...}` never runs on unmount.",
+  "content_fingerprint": "137b1129df1395751bc169e134cccb2588fc0bb122e42387cc4b3dbc8425202a"
 }

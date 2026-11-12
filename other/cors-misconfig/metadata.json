@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CORS misconfiguration allows attacker-controlled origins to read sensitive cross-origin responses when servers echo the `Origin` header in `Access-Control-Allow-Origin` or set it to `*` with `Access-Control-Allow-Credentials: true`. Detect via `Origin: https://attacker.com` reflection in `Access-Control-Allow-Origin` response header, wildcard `*` on credentialed endpoints, and null origin acceptance. Tools: OWASP ZAP, Burp Suite, manual `fetch()` with `credentials: include`."
+  "description": "CORS misconfiguration allows attacker-controlled origins to read sensitive cross-origin responses when servers echo the `Origin` header in `Access-Control-Allow-Origin` or set it to `*` with `Access-Control-Allow-Credentials: true`. Detect via `Origin: https://attacker.com` reflection in `Access-Control-Allow-Origin` response header, wildcard `*` on credentialed endpoints, and null origin acceptance. Tools: OWASP ZAP, Burp Suite, manual `fetch()` with `credentials: include`.",
+  "content_fingerprint": "ec17e5696cbdbc7a41528e5584eed4845111735dc66f550b0cb7b336ce862187"
 }

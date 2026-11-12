@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u8bbe\u8ba1\u6216\u4fee\u6539 REST API \u54cd\u5e94\u7ed3\u6784\u3001\u5904\u7406 API \u8fd4\u56de\u503c\uff0c\u6216\u751f\u6210 Excel/CSV/PDF/\u5bf9\u8d26\u6587\u4ef6\u7b49\u4e0b\u6e38\u4ea7\u7269\u65f6\u89e6\u53d1\u3002\u9632\u6b62 API \u8bbe\u8ba1\u7f3a\u9677\u5bfc\u81f4\u7684\u5b57\u6bb5\u9519\u4f4d\u3001\u7c7b\u578b\u6b67\u4e49\uff0c\u4ee5\u53ca\u751f\u6210\u4ea7\u7269\u65f6\u5173\u952e\u5b57\u6bb5\u7f3a\u5931\u4f46\u9759\u9ed8\u6210\u529f\u7684\u95ee\u9898\u3002"
+  "description": "当设计或修改 REST API 响应结构、处理 API 返回值，或生成 Excel/CSV/PDF/对账文件等下游产物时触发。防止 API 设计缺陷导致的字段错位、类型歧义，以及生成产物时关键字段缺失但静默成功的问题。",
+  "content_fingerprint": "8e39da4e899341f7460ecbe32ee72510dc3e4825bde22a3685b233c978387249"
 }

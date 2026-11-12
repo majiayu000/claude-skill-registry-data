@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "XML External Entity injection \u2192 file read, SSRF, sometimes RCE. Load when the app parses XML you supply: SOAP, SAML, XML APIs, SVG/DOCX/XLSX upload, RSS import, `Content-Type: application/xml`. Signals: XML request bodies, \"<?xml\", SAML responses, file parsers."
+  "description": "XML External Entity injection → file read, SSRF, sometimes RCE. Load when the app parses XML you supply: SOAP, SAML, XML APIs, SVG/DOCX/XLSX upload, RSS import, `Content-Type: application/xml`. Signals: XML request bodies, \"<?xml\", SAML responses, file parsers.",
+  "content_fingerprint": "55474f788fb19b1470bf3574d8fd2bbca4738d28bf7b0a981a05f6b099af1bf3"
 }

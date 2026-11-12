@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Select alternative execution paths when a plan step fails \u2014 branch on outcomes instead of blind retry. Load when a structured plan step fails, an unexpected observation arrives, or the user asks what to try next after an error. Also triggers on \"try another approach\", \"route around this failure\", \"replan on failure\", \"if X fails try Y\", or outcome-based branching during multi-step work. Pairs with structured-planning and debug-and-fix. Does not replace root-cause debugging \u2014 adds plan-level path selection."
+  "description": "Select alternative execution paths when a plan step fails — branch on outcomes instead of blind retry. Load when a structured plan step fails, an unexpected observation arrives, or the user asks what to try next after an error. Also triggers on \"try another approach\", \"route around this failure\", \"replan on failure\", \"if X fails try Y\", or outcome-based branching during multi-step work. Pairs with structured-planning and debug-and-fix. Does not replace root-cause debugging — adds plan-level path selection.",
+  "content_fingerprint": "087201b2459654187f699dcf9987eb4d01b19f2a6c4d262a236aaa413b02ba8e"
 }

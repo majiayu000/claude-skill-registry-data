@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Drive one AI agent from another through kolu's terminals: spawn a Claude Code / Codex / opencode session in a PTY, prompt it, watch the screen, read the reply, prompt again. PRIMARY PATH: the kolu MCP tools (`lifecycle_create`/`lifecycle_sendInput`, `wait_outputSettled`/ `wait_agentState`, `screen_text`, the `terminals` resource). FALLBACK: the `kolu` CLI \u2014 same verbs, same discipline. Triggers on \"drive another agent\", \"agent drives agent\", \"make Claude drive Codex\", or wiring a loop where one coding agent supervises another."
+  "description": "Drive one AI agent from another through kolu's terminals: spawn a Claude Code / Codex / opencode session in a PTY, prompt it, watch the screen, read the reply, prompt again. PRIMARY PATH: the kolu MCP tools (`lifecycle_create`/`lifecycle_sendInput`, `wait_outputSettled`/ `wait_agentState`, `screen_text`, the `terminals` resource). FALLBACK: the `kolu` CLI — same verbs, same discipline. Triggers on \"drive another agent\", \"agent drives agent\", \"make Claude drive Codex\", or wiring a loop where one coding agent supervises another.",
+  "content_fingerprint": "14e6a3051715c0eeeb433e93fea0aee41b3bdd89339ec99912ad95faee298376"
 }

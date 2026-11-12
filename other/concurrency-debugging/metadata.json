@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Concurrency debugging skill for diagnosing data races and deadlocks. Use when reading TSan race reports, debugging deadlocks with GDB thread inspection, analyzing lock-order graphs with Helgrind, identifying std::atomic misuse patterns, or reasoning about happens-before in C++ and Rust. Activates on queries about data races, TSan reports, deadlocks, Helgrind, lock ordering, thread sanitizer output, or atomic ordering issues."
+  "description": "Concurrency debugging skill for diagnosing data races and deadlocks. Use when reading TSan race reports, debugging deadlocks with GDB thread inspection, analyzing lock-order graphs with Helgrind, identifying std::atomic misuse patterns, or reasoning about happens-before in C++ and Rust. Activates on queries about data races, TSan reports, deadlocks, Helgrind, lock ordering, thread sanitizer output, or atomic ordering issues.",
+  "content_fingerprint": "48e3fe4c75afc862f4a56627c4344f8d1ff22d5fe8f50f98680193976d759504"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when inspecting or diagnosing storage hardware - which disk hangs off which controller, whether a SATA, SAS or NVMe link runs at the speed both ends support, whether a controller sits in a slot worthy of it, how worn an SSD is, whether reallocated or pending sectors are climbing, drive temperatures, controller firmware, or where there is room for another drive. Also use when reaching for lspci, lsblk, smartctl or nvme-cli to answer any of those, and when reading an lsdsk report and deciding what to actually do about a finding."
+  "description": "Use when inspecting or diagnosing storage hardware - which disk hangs off which controller, whether a SATA, SAS or NVMe link runs at the speed both ends support, whether a controller sits in a slot worthy of it, how worn an SSD is, whether reallocated or pending sectors are climbing, drive temperatures, controller firmware, or where there is room for another drive. Also use when reaching for lspci, lsblk, smartctl or nvme-cli to answer any of those, and when reading an lsdsk report and deciding what to actually do about a finding.",
+  "content_fingerprint": "e96a4cf38874f4a9552847bfff93d77a17cab31740ee6e8c9881ee48b7ff30dc"
 }

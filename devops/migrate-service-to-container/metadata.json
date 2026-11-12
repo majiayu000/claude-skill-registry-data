@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Edgame2/castiel2/blob/main/.cursor/skills/migrate-service-to-container/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "dec60b7f9fd416c3ab36161c2529193086a7f4b5dc1336595050c8bc824a888b",
+  "description": "Guides migration from old_code/ to containers/ following SERVICE_MIGRATION_GUIDE.md. Transforms imports to use @coder/shared, adds tenantId to database queries, replaces hardcoded URLs with config, up"
 }

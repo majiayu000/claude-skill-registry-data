@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PyPTO \u7b97\u5b50\u7cbe\u5ea6\u95ee\u9898\u8c03\u8bd5\u6280\u80fd\u3002\u63d0\u4f9b\u4e24\u79cd\u7cbe\u5ea6\u5bf9\u6bd4\u65b9\u6cd5\uff1a\u6587\u4ef6\u4fdd\u5b58\u65b9\u6cd5\uff08\u4f7f\u7528 pypto.pass_verify_save \u548c torch.save\uff09\u548c\u4e8c\u5206\u5bf9\u6bd4\u65b9\u6cd5\uff08\u4f7f\u7528\u68c0\u67e5\u70b9 tensor\uff09\u3002\u5f53\u9700\u8981\u8c03\u8bd5 PyPTO \u7b97\u5b50\u7cbe\u5ea6\u3001\u5b9a\u4f4d\u7cbe\u5ea6\u5dee\u5f02\u6765\u6e90\u3001\u8fdb\u884c\u4e2d\u95f4\u7ed3\u679c\u5bf9\u6bd4\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002"
+  "description": "PyPTO 算子精度问题调试技能。提供两种精度对比方法：文件保存方法（使用 pypto.pass_verify_save 和 torch.save）和二分对比方法（使用检查点 tensor）。当需要调试 PyPTO 算子精度、定位精度差异来源、进行中间结果对比时使用此技能。",
+  "content_fingerprint": "88888708c76790317d0fe8b1c05d73443b76d1cd1c83df068a210a6ce3c16713"
 }

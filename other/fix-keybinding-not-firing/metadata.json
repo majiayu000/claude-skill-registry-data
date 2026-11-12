@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6392\u67e5\u300c\u5feb\u6377\u952e\u4e0d\u751f\u6548\u300d\uff1a\u6309\u952e\u540e\u547d\u4ee4\u6ca1\u6267\u884c\uff0c\u6216\u65e5\u5fd7\u62a5 NO MATCH / no binding registered\u3002\u5f53\u7528\u6237\u8bf4\u5feb\u6377\u952e\u6309\u4e86\u6ca1\u53cd\u5e94\u3001keybindings.json \u914d\u7684\u952e\u4e0d\u5de5\u4f5c\u3001\u6539\u952e\u4ecd\u89e6\u53d1\u65e7\u7684\u3001when \u5b50\u53e5\u6ee1\u8db3\u5374\u4e0d\u6267\u884c\u65f6\u4f7f\u7528\u3002\u533a\u522b\u4e8e register-monaco-command\uff08\u90a3\u4e2a\u662f\u628a\u547d\u4ee4\u63a5\u8fdb\u6765\uff0c\u672c skill \u662f\u952e\u5df2\u914d\u4f46\u4e0d\u89e6\u53d1\u7684\u8bca\u65ad\uff09\u3002"
+  "description": "排查「快捷键不生效」：按键后命令没执行，或日志报 NO MATCH / no binding registered。当用户说快捷键按了没反应、keybindings.json 配的键不工作、改键仍触发旧的、when 子句满足却不执行时使用。区别于 register-monaco-command（那个是把命令接进来，本 skill 是键已配但不触发的诊断）。",
+  "content_fingerprint": "9a4f4f686f5ce8232ca8d86f33417a607c4ffb80ad24dac8ea0a15683bdc7aeb"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate, test, audit, debug, and migrate Kyverno policies using the new CEL-based policy types (ValidatingPolicy, MutatingPolicy, GeneratingPolicy, ImageValidatingPolicy \u2014 all apiVersion policies.kyverno.io/v1). Covers matchConstraints, matchConditions, CEL validations/mutations, generator.Apply(), Audit\u2192Deny promotion, PolicyException, kyverno-cli testing, and migration from legacy ClusterPolicy or PodSecurityPolicy. Use when asked to \"write a Kyverno policy\", \"test a ValidatingPolicy\", \"audit my cluster for violations\", \"why is my policy not firing\", or \"migrate from ClusterPolicy\"."
+  "description": "Generate, test, audit, debug, and migrate Kyverno policies using the new CEL-based policy types (ValidatingPolicy, MutatingPolicy, GeneratingPolicy, ImageValidatingPolicy — all apiVersion policies.kyverno.io/v1). Covers matchConstraints, matchConditions, CEL validations/mutations, generator.Apply(), Audit→Deny promotion, PolicyException, kyverno-cli testing, and migration from legacy ClusterPolicy or PodSecurityPolicy. Use when asked to \"write a Kyverno policy\", \"test a ValidatingPolicy\", \"audit my cluster for violations\", \"why is my policy not firing\", or \"migrate from ClusterPolicy\".",
+  "content_fingerprint": "c9ce21c05872fe9bfa291fcf9d5d19322373d655d6d4dc44e8c0a62652a8a686"
 }

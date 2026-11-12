@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7ae0\u306e\u57f7\u7b46\u30fb\u6539\u8a02\u5b8c\u4e86\u6642\u30fb\u539f\u7a3f\u30d3\u30eb\u30c9\u524d\u306b\u3001\u30bb\u30f3\u30b7\u30c6\u30a3\u30d6\u8868\u73fe\uff08\u7d76\u5bfe\u91cf\u8a5e\u30fb\u6b20\u9665\u30e2\u30c7\u30eb\u8a9e\u5f59\u30fb\u8457\u8005\u8aa4\u8a8d\u30ea\u30b9\u30af\u306e\u5171\u8d77\u30fb\u30a2\u30d6\u30b9\u30c8\u30e9\u30af\u30c8\u8a9e\u5f59\u30dd\u30ea\u30b7\u30fc\u30fb\u975e\u8a3a\u65ad\u5ba3\u8a00\u306e\u5b58\u5728\uff09\u3092 check_sensitive_expression.py \u3067\u6a5f\u68b0\u691c\u67fb\u3057\u3001\u3042\u308f\u305b\u3066 LLM \u306b\u3088\u308b\u300c\u6d45\u304f\u8aad\u3080\u6575\u5bfe\u7684\u8aad\u8005\u300d\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3\u3067\u610f\u5473\u30ec\u30d9\u30eb\u306e\u77ed\u7d61\u30ea\u30b9\u30af\u3092\u767a\u898b\u3057\u3001\u5224\u65ad\u3092 sensitive-expressions.yml \u306b\u84c4\u7a4d\u3059\u308b\u30b9\u30ad\u30eb\u3002\u81ea\u5df1\u8a00\u53ca\u30b1\u30fc\u30b9\u3092\u542b\u3080 DSR \u8ad6\u6587\u3067\u7279\u306b\u91cd\u8981"
+  "description": "章の執筆・改訂完了時・原稿ビルド前に、センシティブ表現（絶対量詞・欠陥モデル語彙・著者誤認リスクの共起・アブストラクト語彙ポリシー・非診断宣言の存在）を check_sensitive_expression.py で機械検査し、あわせて LLM による「浅く読む敵対的読者」シミュレーションで意味レベルの短絡リスクを発見し、判断を sensitive-expressions.yml に蓄積するスキル。自己言及ケースを含む DSR 論文で特に重要",
+  "content_fingerprint": "62662ac3d5969bb8a456956dd40c9347bab52848c8c3bfebe6dde9672b103e84"
 }

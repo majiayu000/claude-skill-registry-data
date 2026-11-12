@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a gate matches source with a regex or an AST selector \u2014 a check script under `scripts/ci/`, an esquery `no-restricted-syntax` entry, a drift guard that greps source for a helper call \u2014 and it may miss a spelling (bracket access, quoted or shorthand key, namespace import) or count a commented-out or quoted occurrence as executable, letting the gate pass while enforcing nothing."
+  "description": "Use when a gate matches source with a regex or an AST selector — a check script under `scripts/ci/`, an esquery `no-restricted-syntax` entry, a drift guard that greps source for a helper call — and it may miss a spelling (bracket access, quoted or shorthand key, namespace import) or count a commented-out or quoted occurrence as executable, letting the gate pass while enforcing nothing.",
+  "content_fingerprint": "6bc1b717f9a9f8fb67ad2e32f9f8a36bb7abba67b982fe59b4d9e6d8a1b7b062"
 }

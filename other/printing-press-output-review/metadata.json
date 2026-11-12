@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Internal sub-skill: agentic review of a printed CLI's sampled command output for plausibility issues that rule-based checks can't encode (substring-match relevance, format bugs, silent source drops, ranking failures). Invoked via the Skill tool by main printing-press SKILL.md (Phase 4.85) and printing-press-polish SKILL.md during the diagnostic loop. Not for direct user invocation \u2014 its actionable wrappers are /printing-press and /printing-press-polish."
+  "description": "Internal sub-skill: agentic review of a printed CLI's sampled command output for plausibility issues that rule-based checks can't encode (substring-match relevance, format bugs, silent source drops, ranking failures). Invoked via the Skill tool by main printing-press SKILL.md (Phase 4.85) and printing-press-polish SKILL.md during the diagnostic loop. Not for direct user invocation — its actionable wrappers are /printing-press and /printing-press-polish.",
+  "content_fingerprint": "b9fffdc296f9a66c98bf9f81219c2aa8589eaa6097e049b73b817b5e4f53c401"
 }

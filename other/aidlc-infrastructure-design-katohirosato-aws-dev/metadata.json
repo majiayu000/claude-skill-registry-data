@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `infrastructure-design` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage infrastructure-design --single`: the engine emits one run-stage directive for infrastructure-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `infrastructure-design` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage infrastructure-design --single`: the engine emits one run-stage directive for infrastructure-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "3a55fa05c563d21b2090160be4afe9f30d9769daa97f15e0c6ebe592c3d5c8c2"
 }

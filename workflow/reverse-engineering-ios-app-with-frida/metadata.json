@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Local wrapper around the upstream Anthropic skill. Use for iOS reverse engineering, Frida dynamic instrumentation, Objective-C / Swift method tracing, encryption key extraction, and runtime secret extraction. The upstream skill lives at skills/_upstream/anthropic-cybersecurity-skills/skills/reverse-engineering-ios-app-with-frida/ \u2014 read its SKILL.md and references/ for the procedural detail. When you would write your own Frida hook, prefer adding it to frida_layer/hooks/ and loading it via FridaRunner.load_hook so it streams events into the engagement store."
+  "description": "Local wrapper around the upstream Anthropic skill. Use for iOS reverse engineering, Frida dynamic instrumentation, Objective-C / Swift method tracing, encryption key extraction, and runtime secret extraction. The upstream skill lives at skills/_upstream/anthropic-cybersecurity-skills/skills/reverse-engineering-ios-app-with-frida/ — read its SKILL.md and references/ for the procedural detail. When you would write your own Frida hook, prefer adding it to frida_layer/hooks/ and loading it via FridaRunner.load_hook so it streams events into the engagement store.",
+  "content_fingerprint": "b2bc49f4ab8faf544765fa79bf15988cf2839fd0042de5047f6790a967b39c3a"
 }

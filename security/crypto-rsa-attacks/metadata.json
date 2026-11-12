@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Break RSA when parameters or padding are weak \u2014 recover plaintext or the private key from a public key and ciphertext. Load when you meet RSA in auth/tokens/TLS/custom crypto and have (n, e) + a ciphertext. Signals: a public key or n/e/c values, small exponent e=3, \"textbook RSA\", a JWT signed RS256 with a suspicious key, RsaCtfTool, factordb, close/shared primes, key you can't verify."
+  "description": "Break RSA when parameters or padding are weak — recover plaintext or the private key from a public key and ciphertext. Load when you meet RSA in auth/tokens/TLS/custom crypto and have (n, e) + a ciphertext. Signals: a public key or n/e/c values, small exponent e=3, \"textbook RSA\", a JWT signed RS256 with a suspicious key, RsaCtfTool, factordb, close/shared primes, key you can't verify.",
+  "content_fingerprint": "2119b443381134f09a773bbdf57d76dde99b8631238ac699a4fb66d1a777d25f"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/H2OSLabs/SynnovatorZero/blob/main/.claude/skills/seed-designer/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "9c3d99742fdabb2cf8081da2d9f98e04f13dbdeb5a9e482975d0e22e58900b97",
+  "description": "Derive seed data requirements from test cases. Reads specs/testcases/*.md, extracts implicit data preconditions from each test scenario, deduplicates and organizes by entity type, then produces a seed"
 }

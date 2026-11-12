@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Installs CARLA's ScenarioRunner (the official scenario engine) and picks the branch that matches the CARLA in use \u2014 master for 0.9.14-0.9.16 (UE4), ue5-master for 0.10.0 (UE5), leaderboard-1.0/2.0/2.1 when driving the Leaderboard. Clones or checks out the branch, installs requirements, wires PYTHONPATH (including the `agents` package the carla wheel does not ship), and verifies the import. Use when the user asks to \"install scenario runner\", \"set up SR\", \"run CARLA scenarios\", \"use OpenSCENARIO\", or has a scenario_runner that fails to import."
+  "description": "Installs CARLA's ScenarioRunner (the official scenario engine) and picks the branch that matches the CARLA in use — master for 0.9.14-0.9.16 (UE4), ue5-master for 0.10.0 (UE5), leaderboard-1.0/2.0/2.1 when driving the Leaderboard. Clones or checks out the branch, installs requirements, wires PYTHONPATH (including the `agents` package the carla wheel does not ship), and verifies the import. Use when the user asks to \"install scenario runner\", \"set up SR\", \"run CARLA scenarios\", \"use OpenSCENARIO\", or has a scenario_runner that fails to import.",
+  "content_fingerprint": "ccc8ff884e7ce5df0aca482362441639419ca859e8a669def1d0d80cb321d768"
 }

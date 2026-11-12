@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a msModelSlim \u9002\u914d\u5668\u6267\u884c\u529f\u80fd\u6027\u9a8c\u8bc1\u3002\u9002\u7528\u4e8e\u57fa\u7840\u9002\u914d\u5668\u5f00\u53d1\u5b8c\u6210\u540e\uff0c\u81ea\u52a8\u6267\u884c\u56db\u6b65\u9a8c\u8bc1\uff08\u6d4b\u8bd5\u6a21\u578b\u3001\u5168\u56de\u9000\u91cf\u5316\u3001\u6743\u91cd\u4e00\u81f4\u6027\u4e0e\u53ef\u52a0\u8f7d/\u4fdd\u5b58\u3001\u5b9e\u9645\u91cf\u5316\u89c4\u5219\u6821\u9a8c\uff09\u5e76\u8f93\u51fa\u901a\u8fc7/\u5931\u8d25\u7ed3\u8bba\u3002"
+  "description": "为 msModelSlim 适配器执行功能性验证。适用于基础适配器开发完成后，自动执行四步验证（测试模型、全回退量化、权重一致性与可加载/保存、实际量化规则校验）并输出通过/失败结论。",
+  "content_fingerprint": "8475ca9dc6b076a5304d9c09aaa293a9f65265bd2de03aa5c9cb48b10d0f32e4"
 }

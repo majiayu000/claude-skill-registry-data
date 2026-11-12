@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Workflow Phase 3 \u2014 Research and Solution Exploration. Surfaces 2\u20134 candidate solution approaches with concrete tradeoffs, grounded in current library docs (fetched through the provider named in `.claude/docs-provider.json`) \u2014 never in training-data recall. Output lives at `docs/research/<slug>.md`. Candidate ranking and the memo execute in main context; doc/source gathering MAY be delegated to read-only advisory subagents (seed.md \u00a74.2-A)."
+  "description": "Workflow Phase 3 — Research and Solution Exploration. Surfaces 2–4 candidate solution approaches with concrete tradeoffs, grounded in current library docs (fetched through the provider named in `.claude/docs-provider.json`) — never in training-data recall. Output lives at `docs/research/<slug>.md`. Candidate ranking and the memo execute in main context; doc/source gathering MAY be delegated to read-only advisory subagents (seed.md §4.2-A).",
+  "content_fingerprint": "3437ab58ba00ce37b646e5ebfff5cc2c1c8836cc9e10920b1624c2d15f34290e"
 }

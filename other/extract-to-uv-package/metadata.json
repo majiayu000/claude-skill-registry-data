@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Extract a directory or set of Python files from an existing repo into a fresh standalone uv-managed package using the src layout, so it can be added as an editable dependency (`uv add --editable`, preferred) from sibling uv projects. Verifies byte-perfect preservation with sha256 checksums; hides originals as dotted .bak files instead of deleting so the move is reversible. Use when the user says \"move X to its own repo\", \"make X pip-installable\", \"extract X as a package\", or wants to break a monorepo into smaller installable units."
+  "description": "Extract a directory or set of Python files from an existing repo into a fresh standalone uv-managed package using the src layout, so it can be added as an editable dependency (`uv add --editable`, preferred) from sibling uv projects. Verifies byte-perfect preservation with sha256 checksums; hides originals as dotted .bak files instead of deleting so the move is reversible. Use when the user says \"move X to its own repo\", \"make X pip-installable\", \"extract X as a package\", or wants to break a monorepo into smaller installable units.",
+  "content_fingerprint": "e520dc644332f69c14d6f4443e1e79e27e093a71d1a63b22dbb5f69cb87b28d9"
 }

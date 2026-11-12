@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use as the schema build stage of the Butterbase journey, after journey-plan and journey-preflight. Implements the Tables section of 02-plan.md by delegating to schema-design, previewing the diff (manage_schema dry_run) and applying it (manage_schema apply). In hackathon_mode, also folds in the RLS stage by invoking journey-rls inline before returning."
+  "description": "Use as the schema build stage of the Butterbase journey, after journey-plan and journey-preflight. Implements the Tables section of 02-plan.md by delegating to schema-design, previewing the diff (manage_schema dry_run) and applying it (manage_schema apply). In hackathon_mode, also folds in the RLS stage by invoking journey-rls inline before returning.",
+  "content_fingerprint": "3b842313b515925c366bcc768cac631a0d40814c383cf33d260f529aa85bdb7e"
 }

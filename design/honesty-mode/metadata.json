@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Toggle the badges-page Honesty Mode build-time flag on or off. ON makes the README badge generator emit direct /badges/_assets/<handle>/<file>.svg URLs (no Cloudflare Worker, no ?repo= validation). OFF restores worker-validated URLs. Use when the user says \"/honesty-mode on\", \"/honesty-mode off\", \"turn honesty mode on/off\", or asks for the current honesty-mode state."
+  "description": "Toggle the badges-page Honesty Mode build-time flag on or off. ON makes the README badge generator emit direct /badges/_assets/<handle>/<file>.svg URLs (no Cloudflare Worker, no ?repo= validation). OFF restores worker-validated URLs. Use when the user says \"/honesty-mode on\", \"/honesty-mode off\", \"turn honesty mode on/off\", or asks for the current honesty-mode state.",
+  "content_fingerprint": "19cd23481418c4e575b1284558e9de23f23400235970c09a56a3366f74797bef"
 }

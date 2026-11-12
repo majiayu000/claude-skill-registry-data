@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Instar-specific development skill used by the instar-developing agent (Echo, or any agent assigned instar-dev responsibilities). Wraps /build with mandatory side-effects review, signal-vs-authority principle check, and artifact generation. Structural enforcement via pre-commit/pre-push hooks \u2014 the instar repo refuses commits and pushes that didn't come through this skill. NOT a user-facing skill \u2014 end users should never invoke it."
+  "description": "Instar-specific development skill used by the instar-developing agent (Echo, or any agent assigned instar-dev responsibilities). Wraps /build with mandatory side-effects review, signal-vs-authority principle check, and artifact generation. Structural enforcement via pre-commit/pre-push hooks — the instar repo refuses commits and pushes that didn't come through this skill. NOT a user-facing skill — end users should never invoke it.",
+  "content_fingerprint": "604f21e0e8655590e62a1959698c1c85101cfa0c2753373bb171dadc30cc62e6"
 }

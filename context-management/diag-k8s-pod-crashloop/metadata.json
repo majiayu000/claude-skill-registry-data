@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "K8s Pod CrashLoopBackOff \u5168\u94fe\u6392\u67e5\u3002\u4ece kubectl describe \u2192 events \u2192 logs \u2192 restart policy \u2192 resource limits \u2192 liveness/readiness probe \u2192 image pull \u2192 configmap/secret \u6302\u8f7d\uff0c\u5b9a\u4f4d\u6839\u56e0\u5e76\u8f93\u51fa\u4fee\u590d\u5efa\u8bae\u3002"
+  "description": "K8s Pod CrashLoopBackOff 全链排查。从 kubectl describe → events → logs → restart policy → resource limits → liveness/readiness probe → image pull → configmap/secret 挂载，定位根因并输出修复建议。",
+  "content_fingerprint": "a245255caef0f340edae190bba86bbdda4d94e9661d1f2f7930843dce9a5fecf"
 }

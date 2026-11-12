@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Triage Windows Event Logs across one or many servers. Pulls Critical/Error events (System + Application by default; Security opt-in) over a time window via PowerShell Remoting (WinRM), groups them deterministically, and returns JSON the agent turns into a short, critical-first summary. Use when the user wants to check/triage/investigate Windows server event logs \u2014 e.g. \"what happened on SRV01 overnight\", \"triage the event logs on these servers\", or \"any errors across the file servers in the last 12 hours\". Requires PowerShell 7+ and a tier-admin credential (always prompted)."
+  "description": "Triage Windows Event Logs across one or many servers. Pulls Critical/Error events (System + Application by default; Security opt-in) over a time window via PowerShell Remoting (WinRM), groups them deterministically, and returns JSON the agent turns into a short, critical-first summary. Use when the user wants to check/triage/investigate Windows server event logs — e.g. \"what happened on SRV01 overnight\", \"triage the event logs on these servers\", or \"any errors across the file servers in the last 12 hours\". Requires PowerShell 7+ and a tier-admin credential (always prompted).",
+  "content_fingerprint": "c8c07f5aa26808cacae832c0091262d633590df7c80046fb0a33ed3975863f74"
 }

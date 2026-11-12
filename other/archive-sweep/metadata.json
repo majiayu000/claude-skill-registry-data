@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scan the release distribution area (`dist/release/<project>/` when `release_dist_backend = svnpubsub`, or the configured distribution location),\nidentify releases past the project's retention rule, and propose the\nbackend-shaped command set to move them to the archive area. Read-only on\nthe distribution surface; the RM executes every archival command as\nthemselves."
+  "description": "Scan the release distribution area (`dist/release/<project>/` when `release_dist_backend = svnpubsub`, or the configured distribution location),\nidentify releases past the project's retention rule, and propose the\nbackend-shaped command set to move them to the archive area. Read-only on\nthe distribution surface; the RM executes every archival command as\nthemselves.",
+  "content_fingerprint": "183daab8f87b0d252b4457842015885fb73ab2ba7353bebb38593729626b11db"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Agent-to-Agent (A2A) bidireccional OpenClaw\u2194Hermes \u2014 ambas direcciones operacionales. OpenClaw\u2192Hermes: \u2705 ask_hermes_agent via MCP :8000. Fix: max_iterations=15 (era 90). Hermes\u2192OpenClaw: \u2705 bridge.js stateful Node.js :18790 (no supergateway). ask_hermes_agent PONG en 9s (era 37s). E2E 13/13 PASS 2026-05-28."
+  "description": "Agent-to-Agent (A2A) bidireccional OpenClaw↔Hermes — ambas direcciones operacionales. OpenClaw→Hermes: ✅ ask_hermes_agent via MCP :8000. Fix: max_iterations=15 (era 90). Hermes→OpenClaw: ✅ bridge.js stateful Node.js :18790 (no supergateway). ask_hermes_agent PONG en 9s (era 37s). E2E 13/13 PASS 2026-05-28.",
+  "content_fingerprint": "314118a62ba631da9640c65e390045a870303518e0a4da385a2ae33dc759e7f5"
 }

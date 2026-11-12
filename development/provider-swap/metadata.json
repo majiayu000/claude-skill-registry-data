@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Swap the external provider/library that backs a crouton package (e.g. the map renderer, geocoder, editor engine, storage SDK) while keeping the package's public API stable so consuming apps need no changes. Use when asked to \"change the X provider\", \"replace library Y in package Z\", \"switch from <vendor A> to <vendor B>\" inside packages/. Encodes the keep-the-API-stable playbook + the gotchas (dist .d.ts over docs, generator templates, fixtures, dup-dep type clashes)."
+  "description": "Swap the external provider/library that backs a crouton package (e.g. the map renderer, geocoder, editor engine, storage SDK) while keeping the package's public API stable so consuming apps need no changes. Use when asked to \"change the X provider\", \"replace library Y in package Z\", \"switch from <vendor A> to <vendor B>\" inside packages/. Encodes the keep-the-API-stable playbook + the gotchas (dist .d.ts over docs, generator templates, fixtures, dup-dep type clashes).",
+  "content_fingerprint": "c8386829df476b343e9092c7d32eda6c68d7562be55b41d99f6f321c96a28d97"
 }

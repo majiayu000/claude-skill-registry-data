@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/CharlesHoskinson/dancesWithClaws/blob/main/.agents/archive/prepare-pr-v1/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "87fb9368d37a0ac1148814dbdd8e913a3b9867c2dd5956d837f54e29e3d62ced",
+  "description": "Prepare a GitHub PR for merge by rebasing onto main, fixing review findings, running gates, committing fixes, and pushing to the PR head branch. Use after /review-pr. Never merge or push to main."
 }

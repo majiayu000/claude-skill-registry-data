@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Close out a finished memex milestone slice by writing the handoff trail: update `docs/CONTINUE_HERE.md` \u00a71 current-state and \u00a73 next-slice, tick the `docs/ROADMAP.md` scoreboard (milestone header \u2705 + version, `- [x]` items), confirm any new observation is logged (deferring to memex-observe), and propose the git tag plus a `MN Slice X:` commit subject. Use after you finish a milestone slice in the memex repo and before you commit/tag it, when handing the next slice to a fresh session, or whenever CONTINUE_HERE and ROADMAP have drifted behind what actually shipped."
+  "description": "Close out a finished memex milestone slice by writing the handoff trail: update `docs/CONTINUE_HERE.md` §1 current-state and §3 next-slice, tick the `docs/ROADMAP.md` scoreboard (milestone header ✅ + version, `- [x]` items), confirm any new observation is logged (deferring to memex-observe), and propose the git tag plus a `MN Slice X:` commit subject. Use after you finish a milestone slice in the memex repo and before you commit/tag it, when handing the next slice to a fresh session, or whenever CONTINUE_HERE and ROADMAP have drifted behind what actually shipped.",
+  "content_fingerprint": "d3eb110dc05b4b926ff259d1f457d41af03ed630627ab7f865529655c9cc162c"
 }

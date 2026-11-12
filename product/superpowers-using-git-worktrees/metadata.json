@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use after design approval and before starting implementation \u2014 creates an isolated Git worktree with verified clean test baseline so new work cannot affect main. Selects directory (.worktrees/ preferred, worktrees/ alternative), verifies Git-ignore safety for project-local paths, auto-detects project setup from package.json/Cargo.toml/go.mod, and runs baseline tests to confirm the worktree is production-clean. Also for: parallel feature work without branch juggling; enabling subagent worktrees for independent tasks; and keeping main branch pristine during experimental or risky work."
+  "description": "Use after design approval and before starting implementation — creates an isolated Git worktree with verified clean test baseline so new work cannot affect main. Selects directory (.worktrees/ preferred, worktrees/ alternative), verifies Git-ignore safety for project-local paths, auto-detects project setup from package.json/Cargo.toml/go.mod, and runs baseline tests to confirm the worktree is production-clean. Also for: parallel feature work without branch juggling; enabling subagent worktrees for independent tasks; and keeping main branch pristine during experimental or risky work.",
+  "content_fingerprint": "8e77a6f9d27e75cee15729f19d40ceb4b8453d04e7a07e39be9379cdbbe1b4a6"
 }

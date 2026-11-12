@@ -38,5 +38,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate frontend code (HTML, CSS, React, Vue, Svelte, Tailwind, vanilla, etc.) from an existing UI spec \u2014 and only from a spec. The hard rule is no silent invention of design decisions. Use this skill whenever the user says \"now write the code\", \"implement this spec\", \"generate the React component\", or otherwise asks for an implementation of a UI that has been specced. Always run after ui-component-spec and ui-system. Refuse to proceed if a spec doesn't exist; instead, ask the user to run ui-brief, ui-blueprint, or ui-component-spec first, or document spec-gap assumptions explicitly before any code is written."
+  "description": "Generate frontend code (HTML, CSS, React, Vue, Svelte, Tailwind, vanilla, etc.) from an existing UI spec — and only from a spec. The hard rule is no silent invention of design decisions. Use this skill whenever the user says \"now write the code\", \"implement this spec\", \"generate the React component\", or otherwise asks for an implementation of a UI that has been specced. Always run after ui-component-spec and ui-system. Refuse to proceed if a spec doesn't exist; instead, ask the user to run ui-brief, ui-blueprint, or ui-component-spec first, or document spec-gap assumptions explicitly before any code is written.",
+  "content_fingerprint": "e63aace6e5cdbe4786787691fd2f3700d89bc4c608a8a1d3bacb21aec690c1ad"
 }

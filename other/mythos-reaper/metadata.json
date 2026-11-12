@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Mythos-style audit harness built into bountyreaper \u2014 one engine, two modes. WHITE-BOX (source in scope): rank every file 1-5 by sink density, audit top files, Gate A: a finding only counts if a probe TRIGGERS it. BLACK-BOX/GRAY-BOX (no source): build a threat model from recon inventory, same Gate A promotion discipline. Findings are promoted only by probe evidence, never by agent assertion."
+  "description": "Mythos-style audit harness built into bountyreaper — one engine, two modes. WHITE-BOX (source in scope): rank every file 1-5 by sink density, audit top files, Gate A: a finding only counts if a probe TRIGGERS it. BLACK-BOX/GRAY-BOX (no source): build a threat model from recon inventory, same Gate A promotion discipline. Findings are promoted only by probe evidence, never by agent assertion.",
+  "content_fingerprint": "aea94f38df7038ec919ec004e7ff03c42882c445b86d03b0bb13dd38006629db"
 }

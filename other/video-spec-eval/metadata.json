@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "LLM-as-judge eval of the spec.yaml produced by /ace:video-spec-generate (or /ace:video-from-program-page, or hand-authored) for an ace-web video program. Scores 6 quality dimensions and emits a verdict YAML with concrete improvement recommendations. Gated by video-spec-qa. Prompt-independent: derives all anchors from the template bundle (intent + example) and the universal rubric \u2014 no generate.prompt.md required."
+  "description": "LLM-as-judge eval of the spec.yaml produced by /ace:video-spec-generate (or /ace:video-from-program-page, or hand-authored) for an ace-web video program. Scores 6 quality dimensions and emits a verdict YAML with concrete improvement recommendations. Gated by video-spec-qa. Prompt-independent: derives all anchors from the template bundle (intent + example) and the universal rubric — no generate.prompt.md required.",
+  "content_fingerprint": "6faac0d07cb4ae84ccb1ddd3a323d7458cd3ea9e530443d1e28cecf19e156f49"
 }

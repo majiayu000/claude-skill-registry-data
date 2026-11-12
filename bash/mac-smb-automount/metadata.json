@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Auto-mount another Mac's SMB shares on macOS at login and keep them mounted (LaunchAgent + NetFS), over Tailscale or LAN, authenticating with the shared Apple ID (Kerberos LKDC) so no password is stored. Use when mounting a Mac's shares automatically; when an SMB connection to a Mac prompts for a password or returns \"Authentication error\" despite the right password; when a mount agent keeps declaring healthy mounts stale; or when replacing local Dropbox/Google Drive sync clients with mounts of the server's copies."
+  "description": "Auto-mount another Mac's SMB shares on macOS at login and keep them mounted (LaunchAgent + NetFS), over Tailscale or LAN, authenticating with the shared Apple ID (Kerberos LKDC) so no password is stored. Use when mounting a Mac's shares automatically; when an SMB connection to a Mac prompts for a password or returns \"Authentication error\" despite the right password; when a mount agent keeps declaring healthy mounts stale; or when replacing local Dropbox/Google Drive sync clients with mounts of the server's copies.",
+  "content_fingerprint": "7a0741700cf639c247e7fe259d50236cbaf9c4b9f6f723dd5406fb4f51a267b7"
 }

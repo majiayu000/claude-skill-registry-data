@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6570\u636e\u5e93\u6301\u4e45\u5316\u5c42\u4e0e ORM \u8bbe\u8ba1\u89c4\u8303\u3002\u4fee\u6539 tables/ \u6216 repositories/ \u76ee\u5f55\u65f6\u5fc5\u987b\u52a0\u8f7d\u3002\u6d89\u53ca\u8868\u7ed3\u6784\u53d8\u66f4\u3001\u5b57\u6bb5\u4fee\u6539\u3001Repository \u65b9\u6cd5\u6dfb\u52a0\u65f6\u89e6\u53d1\u3002"
+  "description": "数据库持久化层与 ORM 设计规范。修改 tables/ 或 repositories/ 目录时必须加载。涉及表结构变更、字段修改、Repository 方法添加时触发。",
+  "content_fingerprint": "2d4784cb4d820c80c999b56b3ff0ed8d0e92ef567641387e79babcef0cc2727a"
 }

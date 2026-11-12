@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Self-hosted Honcho memory platform \u2014 Postgres + Redis + API + Worker. Workspace-scoped JWT auth (HS256). Alembic migrations via init container. Serves as persistent memory for OpenClaw and Hermes with workspace isolation. Critical Cilium gotcha: NetworkPolicy must use pod targetPort (8000), not service port (80)."
+  "description": "Self-hosted Honcho memory platform — Postgres + Redis + API + Worker. Workspace-scoped JWT auth (HS256). Alembic migrations via init container. Serves as persistent memory for OpenClaw and Hermes with workspace isolation. Critical Cilium gotcha: NetworkPolicy must use pod targetPort (8000), not service port (80).",
+  "content_fingerprint": "342ba7601ede936cc7e4e938950b3d8fffa216b11c1df8dd7beb60f1ac6b99b2"
 }

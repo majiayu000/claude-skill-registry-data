@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/asermax/shinsenkyou/blob/main/.claude/skills/create-prd-from-deltas/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d2e2b24d5a3dc2f0c36a6efaadaa83ae95b88d00fcb03a91c43fef59edc91d9a",
+  "description": "Generate a prd.json file from deltas ready to implement. Picks deltas with ✓ Plan status, dispatches parallel agents to split each delta into stories, combines results with cross-delta dependencies. T"
 }

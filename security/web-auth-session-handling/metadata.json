@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Legitimately acquire and KEEP an authenticated session (through MFA/OTP) so you can test the post-auth attack surface, and hand that session to your tools without leaking secrets. Load when the high-value classes (IDOR/BOLA, mass assignment, injection on real data APIs) are blocked behind login/SMS-OTP/TOTP, when tokens keep expiring mid-test, or when Burp/Playwright keep logging you out. Distinct from attacking auth \u2014 this one authenticates and reuses the session."
+  "description": "Legitimately acquire and KEEP an authenticated session (through MFA/OTP) so you can test the post-auth attack surface, and hand that session to your tools without leaking secrets. Load when the high-value classes (IDOR/BOLA, mass assignment, injection on real data APIs) are blocked behind login/SMS-OTP/TOTP, when tokens keep expiring mid-test, or when Burp/Playwright keep logging you out. Distinct from attacking auth — this one authenticates and reuses the session.",
+  "content_fingerprint": "c481d4f80e6dfe4e3224f0407c4442abea607c11a5e9a8d674b43232811bff79"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Quy tr\u00ecnh \u0111\u1ed3ng b\u1ed9 khi thi\u1ebft k\u1ebf l\u1ea1i 1 trang Website c\u1ea7n hi\u1ec3n th\u1ecb tr\u01b0\u1eddng d\u1eef li\u1ec7u m\u1edbi (rating, m\u00f4 t\u1ea3 d\u00e0i, b\u1ea3ng th\u00f4ng s\u1ed1, \u0111\u00e1nh gi\u00e1 kh\u00e1ch h\u00e0ng...) ch\u01b0a c\u00f3 trong response API JGameApi. D\u00f9ng khi: redesign trang chi ti\u1ebft/danh s\u00e1ch ki\u1ec3u Shopee, th\u00eam field m\u1edbi v\u00e0o type, ph\u00e1t hi\u1ec7n API \u0111\u00e3 tr\u1ea3 field m\u00e0 UI \u0111ang b\u1ecf qua, c\u1ea7n test Website v\u1edbi BE local thay v\u00ec mock n\u1ed9i b\u1ed9."
+  "description": "Quy trình đồng bộ khi thiết kế lại 1 trang Website cần hiển thị trường dữ liệu mới (rating, mô tả dài, bảng thông số, đánh giá khách hàng...) chưa có trong response API JGameApi. Dùng khi: redesign trang chi tiết/danh sách kiểu Shopee, thêm field mới vào type, phát hiện API đã trả field mà UI đang bỏ qua, cần test Website với BE local thay vì mock nội bộ.",
+  "content_fingerprint": "4577747450f27ba9e7a8fcab0b9f58c028110d516c8097cda50288962a9c31ce"
 }

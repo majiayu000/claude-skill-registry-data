@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u591a\u5361\u5206\u5e03\u5f0f\u8bad\u7ec3\u4e2d\u7684 loss/gnorm \u7cbe\u5ea6\u6ea2\u51fa\u68c0\u6d4b\u4e0e\u6839\u56e0\u8ffd\u6eaf\u3002\u57fa\u4e8e MSProbe dump \u6570\u636e\uff0c\u5148\u8de8 rank \u5b9a\u4f4d\u9996\u6b21\u51fa\u73b0 NaN \u7684\u6e90\u5361\uff0c\u518d\u5728\u6e90\u5361\u4e0a\u8ffd\u6eaf\u5177\u4f53\u7684\u6ea2\u51fa\u6839\u56e0\u7b97\u5b50\u3002\n\u5f53\u7528\u6237\u9700\u8981\uff1a(1) \u591a\u5361\u5206\u5e03\u5f0f\u8bad\u7ec3\u573a\u666f\u4e0b\u7684 NaN/Inf \u6ea2\u51fa\u68c0\u6d4b (2) \u627e\u51fa\u9996\u5148\u51fa\u73b0 NaN \u7684\u6e90\u5361 (3) \u8ffd\u6eaf\u6839\u56e0\u8ba1\u7b97\u7b97\u5b50 (4) loss/gnorm NaN \u95ee\u9898\u5b9a\u4f4d\n\u65f6\u4f7f\u7528\u6b64 skill\u3002"
+  "description": "多卡分布式训练中的 loss/gnorm 精度溢出检测与根因追溯。基于 MSProbe dump 数据，先跨 rank 定位首次出现 NaN 的源卡，再在源卡上追溯具体的溢出根因算子。\n当用户需要：(1) 多卡分布式训练场景下的 NaN/Inf 溢出检测 (2) 找出首先出现 NaN 的源卡 (3) 追溯根因计算算子 (4) loss/gnorm NaN 问题定位\n时使用此 skill。",
+  "content_fingerprint": "19be6eb4d75acf52697ebcb826e32d8a99e6042a9b4c9cd72efc19e7b6293211"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/BerryKuipers/claude-code-toolkit/blob/main/.claude/api-skills-source/audit-dependencies/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a83ffc7584b40090d498fecf5494127a27e01e4281666e6eb05e26a474d8d82b",
+  "description": "Run npm audit and check for outdated/vulnerable dependencies. Returns structured output with vulnerability counts by severity, outdated packages, and recommended updates. Used for security validation "
 }

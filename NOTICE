@@ -1,0 +1,27 @@
+Claude Skill Registry - data archive
+https://github.com/majiayu000/claude-skill-registry-data
+
+This repository archives third-party Agent Skills collected by the Claude Skill
+Registry pipeline (https://github.com/majiayu000/claude-skill-registry-core).
+
+This repository does not grant a license to any archived content. Each archived
+skill remains the work of its upstream author(s) under its own license. The
+`author`, `source_url`, `license`, `copyright` and `distribution` fields in each
+`<category>/<skill>/metadata.json`, and any LICENSE or NOTICE file inside a skill
+directory, record the upstream terms, including copyleft and attribution
+requirements. They are not a license grant from the registry maintainer.
+
+A skill's SKILL.md is kept only when its recorded license is an open-source
+license: OSI-approved licenses, copyleft included (for example GPL, AGPL, LGPL,
+MPL, EPL), and open content licenses such as CC0, CC-BY and CC-BY-SA. Bundled
+support files additionally require an approved compatible license. Skills with
+no license, NOASSERTION, proprietary or "all rights reserved" terms, or
+non-commercial / no-derivatives licenses keep only metadata.json, which
+describes the skill and links to the upstream source; obtain those skills from
+the source under their own terms.
+
+The registry pipeline code in the core repository is MIT-licensed. That license
+does not apply to archived third-party content.
+
+Authors can request attribution corrections or removal:
+https://github.com/majiayu000/claude-skill-registry-core/blob/main/REMOVAL.md

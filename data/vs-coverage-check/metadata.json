@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/tikazyq/agentic-spec-forge/blob/main/AGENTIC_SPEC_FORGE/spec_stage_skill/design/vs-coverage-check/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "2a72dcba134caf8718b1481222009334d89ef31ebf4adf9f61c2af8bae8387a4",
+  "description": "检查每个US是否有对应的VS，生成覆盖率报告和修复建议。当设计文档创建后、CONSTRAINT验收前使用，避免US→VS覆盖率<100%导致验收失败。"
 }

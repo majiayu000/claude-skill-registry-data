@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "A server function is addressed by its place in its file, and only the build guard keeps a tab from another build from calling the wrong one. Applies whenever adding, removing, moving or changing the parameters of a function whose body opens with 'use server', and whenever touching the build guard or anything that calls the server outside `fetch`."
+  "description": "A server function is addressed by its place in its file, and only the build guard keeps a tab from another build from calling the wrong one. Applies whenever adding, removing, moving or changing the parameters of a function whose body opens with 'use server', and whenever touching the build guard or anything that calls the server outside `fetch`.",
+  "content_fingerprint": "1154417c6183d024b030e8e553cddf037ddf967f8a453e508bb20784f1048020"
 }

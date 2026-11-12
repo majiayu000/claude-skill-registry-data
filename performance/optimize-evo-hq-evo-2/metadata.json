@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Drive structured autoresearch iteration after evo:discover and the baseline commit. Use when the user invokes /evo:optimize or asks to try ideas, try variants, run experiments, use available GPUs, improve the current best/frontier, continue an evo search, or compare candidate changes in an evo workspace. The orchestrator plans and spawns optimization subagents; candidate edits/runs belong to those subagents. Width is set via subagents=N (1 for serial workloads, larger for parallel); the loop's structural value applies at any width."
+  "description": "Drive structured autoresearch iteration after evo:discover and the baseline commit. Use when the user invokes /evo:optimize or asks to try ideas, try variants, run experiments, use available GPUs, improve the current best/frontier, continue an evo search, or compare candidate changes in an evo workspace. The orchestrator plans and spawns optimization subagents; candidate edits/runs belong to those subagents. Width is set via subagents=N (1 for serial workloads, larger for parallel); the loop's structural value applies at any width.",
+  "content_fingerprint": "8dd136f6ea07c11de4a6969b61aa5a39c16a294152d08914350e7f9c847abaa1"
 }

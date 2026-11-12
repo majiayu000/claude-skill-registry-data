@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this whenever a downstream Vue project needs to absorb upstream Devkit Vue changes \u2014 triggers on \"update stack\", \"sync with devkit\", \"merge upstream\", \"pull stack updates\", \"resolve stack conflicts\". Two-phase: ISO merge (stack modules stay byte-identical to upstream) then project alignment (apply MIGRATIONS.md, diff project modules vs `tasks` reference, /verify). Stack-code failures get an issue on `pierreb-devkit/Vue`."
+  "description": "Use this whenever a downstream Vue project needs to absorb upstream Devkit Vue changes — triggers on \"update stack\", \"sync with devkit\", \"merge upstream\", \"pull stack updates\", \"resolve stack conflicts\". Two-phase: ISO merge (stack modules stay byte-identical to upstream) then project alignment (apply MIGRATIONS.md, diff project modules vs `tasks` reference, /verify). Stack-code failures get an issue on `pierreb-devkit/Vue`.",
+  "content_fingerprint": "813cad272f35ad900b3469574f92ff40138b9ca280888b1f292bc293e95b98ca"
 }

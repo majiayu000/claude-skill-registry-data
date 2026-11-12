@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adds -Xdoclint:none to Ant <javadoc> elements so the JDK 8 javadoc tool's default-on DocLint checker does not turn pre-existing malformed Javadoc comments into build failures. Agent-mode recipe: verifying the fix means actually running `ant doc` under the JDK 8 Docker image."
+  "description": "Adds -Xdoclint:none to Ant <javadoc> elements so the JDK 8 javadoc tool's default-on DocLint checker does not turn pre-existing malformed Javadoc comments into build failures. Agent-mode recipe: verifying the fix means actually running `ant doc` under the JDK 8 Docker image.",
+  "content_fingerprint": "1ff4ea6ede47560fad624a280be6fdb1fe1d71db506b291a6431082cf7d69819"
 }

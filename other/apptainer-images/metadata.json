@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build and run Apptainer/Singularity images on HPC (PSC Bridges-2 and similar) when the host glibc or system ABI is too old for pip wheels (e.g. Isaac Sim manylinux_2_35). Use when creating .def files, building .sif images, binding ocean/scratch paths, wiring uv sync --locked inside containers, fixing UV_CACHE_DIR vs uv.toml conflicts, GPU passthrough with --nv, or non-interactive EULA prompts blocking imports."
+  "description": "Build and run Apptainer/Singularity images on HPC (PSC Bridges-2 and similar) when the host glibc or system ABI is too old for pip wheels (e.g. Isaac Sim manylinux_2_35). Use when creating .def files, building .sif images, binding ocean/scratch paths, wiring uv sync --locked inside containers, fixing UV_CACHE_DIR vs uv.toml conflicts, GPU passthrough with --nv, or non-interactive EULA prompts blocking imports.",
+  "content_fingerprint": "b1b51977976870188cb991fa481e6b07b5a49dcb701b2c06ada7de61df3e81fe"
 }

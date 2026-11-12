@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Port Dart data models (classes with fromJson/toJson/copyWith, enums, sealed results) into TypeScript types plus tolerant parse functions, and Dart repositories into the @vidaxl/api style (ApiClient, ApiError, one class per repository, same method names). Use it when porting anything under lib/data/models or lib/data/repositories (or a model-like class inside a service or state file), when a parser needs to match a Dart fromJson exactly, or when adding an endpoint method to a repository."
+  "description": "Port Dart data models (classes with fromJson/toJson/copyWith, enums, sealed results) into TypeScript types plus tolerant parse functions, and Dart repositories into the @vidaxl/api style (ApiClient, ApiError, one class per repository, same method names). Use it when porting anything under lib/data/models or lib/data/repositories (or a model-like class inside a service or state file), when a parser needs to match a Dart fromJson exactly, or when adding an endpoint method to a repository.",
+  "content_fingerprint": "8a6b71f38282da130325d1228364dec481b5f73bc11687a43dad57adc7e0e795"
 }

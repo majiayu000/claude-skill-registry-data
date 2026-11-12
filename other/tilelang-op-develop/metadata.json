@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "TileLang NPU \u7b97\u5b50\u5b9e\u73b0\u4e0e\u7cbe\u5ea6\u9a8c\u8bc1\u5165\u53e3\u3002\u9002\u7528\u4e8e\u7528\u6237\u9700\u8981\u7b97\u5b50\u5b9e\u73b0\u4e0e\u7cbe\u5ea6\u9a8c\u8bc1\u65f6\uff0c\u6839\u636e\u5df2\u9009 Ascend910 \u6216 Ascend950 \u5e73\u53f0\u8bfb\u53d6\u72ec\u7acb\u6280\u80fd\uff1b\u4e24\u5957\u89c4\u5219\u4e0d\u6df7\u7528\u3002"
+  "description": "TileLang NPU 算子实现与精度验证入口。适用于用户需要算子实现与精度验证时，根据已选 Ascend910 或 Ascend950 平台读取独立技能；两套规则不混用。",
+  "content_fingerprint": "855e01383ab4068a95d3f223ee2a156828eff7016c3d3082170ab489e4b29fcf"
 }

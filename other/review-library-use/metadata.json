@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review code for correct use of the repo's third-party libraries \u2014 checks the scoped files against the version-specific conventions recorded in the repo's `library-use` reference (docs-derived correct-usage rules, API contracts, footguns). Catches stale-API usage, deprecated patterns, and doc-violating misuse a general reviewer misses. Auto-invoked by `code-review` when a `library-use` reference exists. Triggers \"review library use\", \"check library usage\", \"are we using this library correctly\", \"library convention review\"."
+  "description": "Review code for correct use of the repo's third-party libraries — checks the scoped files against the version-specific conventions recorded in the repo's `library-use` reference (docs-derived correct-usage rules, API contracts, footguns). Catches stale-API usage, deprecated patterns, and doc-violating misuse a general reviewer misses. Auto-invoked by `code-review` when a `library-use` reference exists. Triggers \"review library use\", \"check library usage\", \"are we using this library correctly\", \"library convention review\".",
+  "content_fingerprint": "8e5d0430142a94dd9ab240cb435ed800fdee740a447154f84afa1f2e2784b6e0"
 }

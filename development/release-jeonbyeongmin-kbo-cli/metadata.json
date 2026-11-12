@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "kbo-cli \uc0c8 \ubc84\uc804\uc744 \ub9b4\ub9ac\uc988\ud55c\ub2e4. develop \uc5d0\uc11c package.json \ubc84\uc804\uc744 \uc62c\ub9ac\uace0 \ucee4\ubc0b\u00b7\ud0dc\uadf8\ub97c \ub9cc\ub4e0 \ub4a4, main \uc744 develop \uc73c\ub85c fast-forward \ub3d9\uae30\ud654\ud574 origin \uc73c\ub85c push \ud558\uba74, GitHub Actions \uac00 npm \ubc30\ud3ec\uc640 GitHub Release \uc0dd\uc131\uc744 \ucc98\ub9ac\ud55c\ub2e4. \uc778\uc790 \ud615\uc2dd \u2014 `/release` (patch), `/release minor`, `/release major`, `/release 1.2.3` (\uba85\uc2dc \ubc84\uc804)."
+  "description": "kbo-cli 새 버전을 릴리즈한다. develop 에서 package.json 버전을 올리고 커밋·태그를 만든 뒤, main 을 develop 으로 fast-forward 동기화해 origin 으로 push 하면, GitHub Actions 가 npm 배포와 GitHub Release 생성을 처리한다. 인자 형식 — `/release` (patch), `/release minor`, `/release major`, `/release 1.2.3` (명시 버전).",
+  "content_fingerprint": "a0a64344badeecbfb55e6ca04268d9ccea686c2db7567b63f7a76c474db3b904"
 }

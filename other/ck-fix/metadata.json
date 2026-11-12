@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix a bug using Scout \u2192 Diagnose \u2192 Fix \u2192 Review \u2192 Finalize. Use when the user pastes an error message, stack trace, or test failure, or says \"fix this bug\", \"something's broken\", \"tests are failing\", \"I'm getting an error\". Also accepts `--from-quality <report>` or `--from-test <report>` to fix exactly the findings/failures a report lists. Modes (pick one): --fast (trivial errors \u2014 lint, type, build \u2014 skip scout and review), --hard (mandatory review, no auto-approve)."
+  "description": "Fix a bug using Scout → Diagnose → Fix → Review → Finalize. Use when the user pastes an error message, stack trace, or test failure, or says \"fix this bug\", \"something's broken\", \"tests are failing\", \"I'm getting an error\". Also accepts `--from-quality <report>` or `--from-test <report>` to fix exactly the findings/failures a report lists. Modes (pick one): --fast (trivial errors — lint, type, build — skip scout and review), --hard (mandatory review, no auto-approve).",
+  "content_fingerprint": "c554ca4798954204c8c72d3f6941dcf0dae88b6d7c2c9c0196284c658ca4e129"
 }

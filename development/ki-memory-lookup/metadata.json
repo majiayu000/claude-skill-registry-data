@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2 ki-search \u8bb0\u5fc6\u7684 SSOT\uff1a\u5c01\u88c5\u67e5 ki \u7684\u516c\u5171\u52a8\u4f5c\uff08\u53ef\u7528\u6027\u68c0\u6d4b\u3001scope \u786e\u5b9a\u3001\u7b26\u53f7\u63d0\u51c6\u3001\u964d\u7ea7\u4e0d\u963b\u585e\uff09\uff0c\u6309\u8bb0\u5fc6\u7c7b\u578b\u5206\u53d1\u5230\u4e13\u9898\u3001\u63a5\u53e3\u3001\u6570\u636e\u6d41\u3001\u5f3a\u5173\u8054\u3001\u51b3\u7b56\u3001\u9519\u8bef\u5e93\u3001\u5f85\u751f\u6548\u53d8\u66f4\u5404\u53c2\u8003\u7b56\u7565\u3002\u89e6\u53d1\uff1a\"\u67e5\u8bb0\u5fc6\"\u3001\"\u67e5\u5f3a\u5173\u8054\"\u3001\"\u8fd9\u4e2a\u6a21\u5757\u7275\u52a8\u54ea\u4e9b\"\u3001\"\u6539A\u8981\u8fde\u5e26\u6539B\u5417\"\u3001\"\u5f53\u521d\u4e3a\u4ec0\u4e48\u8fd9\u4e48\u5b9a\"\u3001\"\u8fd9\u4e2a\u62a5\u9519\u89c1\u8fc7\u5417\"\u3001\"ki memory lookup\"\u3002"
+  "description": "查询 ki-search 记忆的 SSOT：封装查 ki 的公共动作（可用性检测、scope 确定、符号提准、降级不阻塞），按记忆类型分发到专题、接口、数据流、强关联、决策、错误库、待生效变更各参考策略。触发：\"查记忆\"、\"查强关联\"、\"这个模块牵动哪些\"、\"改A要连带改B吗\"、\"当初为什么这么定\"、\"这个报错见过吗\"、\"ki memory lookup\"。",
+  "content_fingerprint": "defb8dc7cb6c320327c1dfe668dc7cb00945c2a9a41ffbe20b4c76d2aceedbb1"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runtime i18n correctness audit \u2014 catches the non-Latin data corruption bugs that gettext-style audits miss. Scans every wp_json_encode / json_encode call in paths that store post_meta, options, REST output, or LLM/external-API request bodies; flags any missing JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES flag. Also verifies Content-Type charset=utf-8 on REST responses. Use when the user says \"i18n runtime\", \"Unicode encoding\", \"non-Latin characters\", \"Turkish broken\", \"CJK garbage\", \"data corruption on save\", or before any release that ships to non-English locales."
+  "description": "Runtime i18n correctness audit — catches the non-Latin data corruption bugs that gettext-style audits miss. Scans every wp_json_encode / json_encode call in paths that store post_meta, options, REST output, or LLM/external-API request bodies; flags any missing JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES flag. Also verifies Content-Type charset=utf-8 on REST responses. Use when the user says \"i18n runtime\", \"Unicode encoding\", \"non-Latin characters\", \"Turkish broken\", \"CJK garbage\", \"data corruption on save\", or before any release that ships to non-English locales.",
+  "content_fingerprint": "cae9cd061003a200498b3b0552a5b431f7fd23ef3cc3dbaa691aef8dd3e12e5b"
 }

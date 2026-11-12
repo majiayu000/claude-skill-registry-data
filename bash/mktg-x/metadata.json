@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read tweets, threads, bookmarks, articles, and user timelines on X (formerly Twitter) using an authenticated GraphQL flow. Use this skill whenever the user mentions a tweet URL, a Twitter thread, an X bookmark, a Twitter article, reading their X bookmarks, pulling a thread, or grabbing X content \u2014 even if they don't explicitly say 'use mktg-x'. Requires MKTG_X_AUTH_TOKEN and MKTG_X_CT0 env vars. Do NOT firecrawl x.com URLs \u2014 Twitter serves a degraded logged-out page and firecrawl will return the login wall. mktg-x is the only path for auth-walled X content."
+  "description": "Read tweets, threads, bookmarks, articles, and user timelines on X (formerly Twitter) using an authenticated GraphQL flow. Use this skill whenever the user mentions a tweet URL, a Twitter thread, an X bookmark, a Twitter article, reading their X bookmarks, pulling a thread, or grabbing X content — even if they don't explicitly say 'use mktg-x'. Requires MKTG_X_AUTH_TOKEN and MKTG_X_CT0 env vars. Do NOT firecrawl x.com URLs — Twitter serves a degraded logged-out page and firecrawl will return the login wall. mktg-x is the only path for auth-walled X content.",
+  "content_fingerprint": "4a1054bd19babc8435716405a09b29bf39ec127523cb886456f25593a08c3afc"
 }

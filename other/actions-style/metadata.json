@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "GitHub Actions workflow authoring conventions for readable, least-privilege workflows \u2014 .github/workflows/*.yaml layout, explicit scoped triggers, boolean logic with truthy/falsey expressions (if ${{ inputs.flag }} over == 'true'), concurrency, matrix builds, job outputs, and authoring reusable (workflow_call) and composite actions. Use when writing, reviewing, or refactoring GitHub Actions workflows or composite actions (.github/workflows/*.yaml, action.yml), adding a job, matrix, or if-condition, or deciding how to structure triggers, inputs, and expressions."
+  "description": "GitHub Actions workflow authoring conventions for readable, least-privilege workflows — .github/workflows/*.yaml layout, explicit scoped triggers, boolean logic with truthy/falsey expressions (if ${{ inputs.flag }} over == 'true'), concurrency, matrix builds, job outputs, and authoring reusable (workflow_call) and composite actions. Use when writing, reviewing, or refactoring GitHub Actions workflows or composite actions (.github/workflows/*.yaml, action.yml), adding a job, matrix, or if-condition, or deciding how to structure triggers, inputs, and expressions.",
+  "content_fingerprint": "0919d6f85160dead389d6cc97122c2532ef6cf339b0c663de5cf07565ea68933"
 }

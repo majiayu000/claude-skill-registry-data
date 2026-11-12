@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cite-or-Block \u67b6\u6784\u4e0b\u7684\u836f\u540d cross-check \u539f\u5b50 skill\u3002\u7ed9\u5b9a\u62a5\u544a\u6587\u672c\u4e0e .cache/<slug>/sources/,\u626b\u63cf\u6bcf\u4e2a\u836f\u54c1\u63d0\u53ca \u2192 \u627e\u6700\u8fd1 citation \u951a\u70b9 \u2192 \u6838\u5bf9\u951a\u70b9\u6307\u5411\u7684\u6e90\u91cc\u662f\u5426\u771f\u7684\u63d0\u5230\u4e86\u6b64\u836f(\u901a\u7528\u540d + \u5546\u54c1\u540d)\u3002\u65e0\u5b57\u5178\u3001\u65e0 fallback\u3001\u6e90\u91cc\u6ca1 = critical\u3002"
+  "description": "Cite-or-Block 架构下的药名 cross-check 原子 skill。给定报告文本与 .cache/<slug>/sources/,扫描每个药品提及 → 找最近 citation 锚点 → 核对锚点指向的源里是否真的提到了此药(通用名 + 商品名)。无字典、无 fallback、源里没 = critical。",
+  "content_fingerprint": "922a9db78cf83c809b6ee479ca5ffa294e59cc29453e4ce818eae3a1793f5055"
 }

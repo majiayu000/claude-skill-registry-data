@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when any agent or downstream skill needs Unity Catalog schemas and managed volumes (knowledge_sources, agent_outputs, memory tables, benchmark tables, etc.) provisioned idempotently. Foundation Step 0 \u2014 runs before MLflow tracing setup and before any track-specific skill. Owned by no track. Reads the resolved spec to discover which volumes a use case needs and creates them alongside the canonical agent + ops UC schemas."
+  "description": "Use when any agent or downstream skill needs Unity Catalog schemas and managed volumes (knowledge_sources, agent_outputs, memory tables, benchmark tables, etc.) provisioned idempotently. Foundation Step 0 — runs before MLflow tracing setup and before any track-specific skill. Owned by no track. Reads the resolved spec to discover which volumes a use case needs and creates them alongside the canonical agent + ops UC schemas.",
+  "content_fingerprint": "18ebfa7d88042f80ab4149457ddfce3fb2687cfbd5654cad0bd43c0310b1cf5c"
 }

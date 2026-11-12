@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Render a React/Vite (or any bundled) web app on the pi-dashboard canvas, which loads loopback URLs in a sandboxed opaque-origin iframe. Use when a canvas(target:{kind:\"url\"|\"server\"}) target shows up blank white, an empty surface, or a /live/<id> 500 ECONNREFUSED. Covers why Vite dev servers and non-CORS static servers fail there, and the static-build + CORS-server recipe that works."
+  "description": "Render a React/Vite (or any bundled) web app on the pi-dashboard canvas, which loads loopback URLs in a sandboxed opaque-origin iframe. Use when a canvas(target:{kind:\"url\"|\"server\"}) target shows up blank white, an empty surface, or a /live/<id> 500 ECONNREFUSED. Covers why Vite dev servers and non-CORS static servers fail there, and the static-build + CORS-server recipe that works.",
+  "content_fingerprint": "6f555baecc5af61fc2118f9cd0b5b8b70093a89f01e87dc4d5ad75ebedfcf905"
 }

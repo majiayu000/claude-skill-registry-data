@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/phrazzld/claude-config/blob/main/skills/fix-observability/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "6a11a3d3ac5697e130c2f40289dd9c7879782c80ad9c6d719d41343352f2be32",
+  "description": "Run /check-observability, then fix the highest priority observability issue.\nCreates one fix per invocation. Invoke again for next issue.\nUse /log-observability-issues to create issues without fixing."
 }

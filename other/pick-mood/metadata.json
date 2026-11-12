@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pick the best `./songs/<mood>/` folder for a clip's background music. Reads the clip transcript and asks Claude to choose one mood label from the live list of mood subfolders. Emits a one-line mood string for bg-music to use as its category argument. Falls back to \"ALL SONGS\" on any failure."
+  "description": "Pick the best `./songs/<mood>/` folder for a clip's background music. Reads the clip transcript and asks Claude to choose one mood label from the live list of mood subfolders. Emits a one-line mood string for bg-music to use as its category argument. Falls back to \"ALL SONGS\" on any failure.",
+  "content_fingerprint": "861bc36959af5fc5eea28e33de873ddee55825c61ea89908dd2b2cdb5cf7eecd"
 }

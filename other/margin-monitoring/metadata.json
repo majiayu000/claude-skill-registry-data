@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Watches per-SKU contribution margin on a recurring cadence and flags the SKUs that crossed from profitable to unprofitable since the last run, separating the ones killed by ad spend from the ones that were already losing money. Use weekly, or after any price, supplier, or shipping change. Boundary: `contribution-margin` computes the margin stack once from numbers handed over now. This loop runs that stack repeatedly, diffs it against the last run, and reports crossings rather than levels."
+  "description": "Watches per-SKU contribution margin on a recurring cadence and flags the SKUs that crossed from profitable to unprofitable since the last run, separating the ones killed by ad spend from the ones that were already losing money. Use weekly, or after any price, supplier, or shipping change. Boundary: `contribution-margin` computes the margin stack once from numbers handed over now. This loop runs that stack repeatedly, diffs it against the last run, and reports crossings rather than levels.",
+  "content_fingerprint": "8d5a26ae38bd07dc104b8e0890f9f34ac67ce025a1f87f826f331db19621452e"
 }

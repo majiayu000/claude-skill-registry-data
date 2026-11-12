@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Confirmation gate before any bulk delete, cleanup, or destructive operation that could result in data loss \u2014 shell-level (rm -rf, git rm, bulk sed) or brain-level (bulk forget, delete sweeps, purge-deleted, source removal, raw-SQL truncation). Presents a recoverability card and requires an explicit \"yes\" from the user before proceeding. Routing convention, not an operation-boundary enforcement."
+  "description": "Confirmation gate before any bulk delete, cleanup, or destructive operation that could result in data loss — shell-level (rm -rf, git rm, bulk sed) or brain-level (bulk forget, delete sweeps, purge-deleted, source removal, raw-SQL truncation). Presents a recoverability card and requires an explicit \"yes\" from the user before proceeding. Routing convention, not an operation-boundary enforcement.",
+  "content_fingerprint": "dbc1d03ff60a8745cac7eb089ee4879ce120b1671c53fb2044d0ecfa45ca12a8"
 }

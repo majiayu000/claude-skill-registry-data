@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when changing TypeScript types, parsing input that enters typed code, or removing unsafe casts. Also use it when the user says \"fix the types\", \"remove the as casts\", or \"make invalid states impossible\". Models each valid state with types, so that invalid combinations fail to compile. Checks outside input with a type guard or a schema instead of an assertion. Not for designing module boundaries (use `design-deep-modules`)."
+  "description": "Use when changing TypeScript types, parsing input that enters typed code, or removing unsafe casts. Also use it when the user says \"fix the types\", \"remove the as casts\", or \"make invalid states impossible\". Models each valid state with types, so that invalid combinations fail to compile. Checks outside input with a type guard or a schema instead of an assertion. Not for designing module boundaries (use `design-deep-modules`).",
+  "content_fingerprint": "378eac6780cfe5d0391a42e56de5e29612ea9f0d5406ec78a0d4a927be11b483"
 }

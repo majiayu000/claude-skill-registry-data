@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Full build-and-debug workflow for S32DS projects. Checks whether the project contains .mex files (requiring code regeneration), selects the project, triggers either 'Update Code and Build' or a plain incremental build, waits for jobs to finish, verifies zero build errors, then launches a debug session via S32 Debug Probe. Covers the complete path from source code to halted-at-main on target hardware."
+  "description": "Full build-and-debug workflow for S32DS projects. Checks whether the project contains .mex files (requiring code regeneration), selects the project, triggers either 'Update Code and Build' or a plain incremental build, waits for jobs to finish, verifies zero build errors, then launches a debug session via S32 Debug Probe. Covers the complete path from source code to halted-at-main on target hardware.",
+  "content_fingerprint": "fa77ea13c4280e7bdd476c306b5ea14f6f601cb296190322599433fc1ef4043b"
 }

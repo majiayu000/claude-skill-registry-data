@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Abuse Kerberos delegation to impersonate users and take over hosts \u2014 unconstrained, constrained (S4U2Self/S4U2Proxy), and resource-based (RBCD), including the coercion \u2192 NTLM-relay-to-LDAP \u2192 RBCD chain. Load in an AD environment when BloodHound/enum shows delegation rights, a machine account you control, GenericWrite/GenericAll over a computer, or coercion is possible. Signals: msDS-AllowedToActOnBehalfOfOtherIdentity, TRUSTED_FOR_DELEGATION, msDS-AllowedToDelegateTo, PetitPotam."
+  "description": "Abuse Kerberos delegation to impersonate users and take over hosts — unconstrained, constrained (S4U2Self/S4U2Proxy), and resource-based (RBCD), including the coercion → NTLM-relay-to-LDAP → RBCD chain. Load in an AD environment when BloodHound/enum shows delegation rights, a machine account you control, GenericWrite/GenericAll over a computer, or coercion is possible. Signals: msDS-AllowedToActOnBehalfOfOtherIdentity, TRUSTED_FOR_DELEGATION, msDS-AllowedToDelegateTo, PetitPotam.",
+  "content_fingerprint": "7f9cf84cf758850c582f6758ebc677dbccb04f05894983857212580c484aa1af"
 }

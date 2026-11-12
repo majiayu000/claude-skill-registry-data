@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scaffold a new SeldonFrame block from a natural-language intent. Use when the builder says \"build me a block that ...\", \"scaffold a block that ...\", or similar. Produces a real, validated block skeleton in packages/crm/src/blocks/ \u2014 BLOCK.md with composition contract, tools.ts with Zod schemas, subscription handler stubs (when reactive), and test.todo stubs per tool. Does NOT commit, does NOT install into any workspace. Builder owns review + git."
+  "description": "Scaffold a new SeldonFrame block from a natural-language intent. Use when the builder says \"build me a block that ...\", \"scaffold a block that ...\", or similar. Produces a real, validated block skeleton in packages/crm/src/blocks/ — BLOCK.md with composition contract, tools.ts with Zod schemas, subscription handler stubs (when reactive), and test.todo stubs per tool. Does NOT commit, does NOT install into any workspace. Builder owns review + git.",
+  "content_fingerprint": "9168cc8a2ccab7a0034c1c87717c9fabc9f597604f037659fae44acb2187828f"
 }

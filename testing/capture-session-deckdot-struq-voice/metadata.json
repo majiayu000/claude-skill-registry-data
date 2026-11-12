@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The capture state machine, hotkeys and audio pipeline in Struq Voice. Use whenever a task involves capture state, the session, phases (idle/arming/listening/transcribing/delivering/error), PTT or the keyboard hook, toggle/escape shortcuts, the recorder window, getUserMedia, the AudioWorklet, pre-roll, or live levels. Explains the single-authority rule, the phase transitions, the debounce/watchdog behavior, the warm-mic design, and how tests drive the session. NOT for IPC wiring (use ipc-architecture) or gating (use verification-gates)."
+  "description": "The capture state machine, hotkeys and audio pipeline in Struq Voice. Use whenever a task involves capture state, the session, phases (idle/arming/listening/transcribing/delivering/error), PTT or the keyboard hook, toggle/escape shortcuts, the recorder window, getUserMedia, the AudioWorklet, pre-roll, or live levels. Explains the single-authority rule, the phase transitions, the debounce/watchdog behavior, the warm-mic design, and how tests drive the session. NOT for IPC wiring (use ipc-architecture) or gating (use verification-gates).",
+  "content_fingerprint": "676a76cc02ec8487bd9541f58709f8de0e5c3b190d5bea4ca686072b866c4224"
 }

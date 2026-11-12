@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc601\uc0c1 \uc694\uccad\uc758 \uc9c4\uc785\uc810. Remotion \ub610\ub294 HyperFrames \uc911 \uc5d4\uc9c4 \ud558\ub098\ub97c \uace8\ub77c \uc2a4\ud06c\ub9bd\ud2b8\u2192\uc74c\uc131(TTS)\u2192\ucef4\ud3ec\uc9c0\uc158\u2192\uc790\ub9c9\u2192\ub80c\ub354\ub97c \ucf54\ub4dc \uae30\ubc18\uc73c\ub85c \uc124\uacc4\u00b7\uad6c\ud604\u00b7\uac80\uc99d\ud55c\ub2e4. \uc81c\ud488 \uc18c\uac1c \uc601\uc0c1, \ub370\ubaa8 \ube44\ub514\uc624, SNS \uc20f\ud3fc, \ub370\uc774\ud130 \uc2dc\uac01\ud654 \uc601\uc0c1, \ub098\ub808\uc774\uc158\u00b7\uc790\ub9c9 \uc601\uc0c1, MP4 \ub80c\ub354\ub9c1, Remotion, HyperFrames \uc694\uccad\uc5d0 /video-maker\ub85c \uc0ac\uc6a9\ud55c\ub2e4. \uc804\uc5ed\uc5d0 \uc124\uce58\ub41c HyperFrames \uc2a4\ud0ac \ubc88\ub4e4\uc758 \ub77c\uc6b0\ud130\ub294 \uc9c4\uc785\uc810\uc73c\ub85c \uc4f0\uc9c0 \uc54a\ub294\ub2e4."
+  "description": "영상 요청의 진입점. Remotion 또는 HyperFrames 중 엔진 하나를 골라 스크립트→음성(TTS)→컴포지션→자막→렌더를 코드 기반으로 설계·구현·검증한다. 제품 소개 영상, 데모 비디오, SNS 숏폼, 데이터 시각화 영상, 나레이션·자막 영상, MP4 렌더링, Remotion, HyperFrames 요청에 /video-maker로 사용한다. 전역에 설치된 HyperFrames 스킬 번들의 라우터는 진입점으로 쓰지 않는다.",
+  "content_fingerprint": "7f6a6aa71746512f600a84dccb4fafc75114811526119b86a52caac1e2eecb55"
 }

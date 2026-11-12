@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when adding, changing, or reviewing tests. Also use it when the user says \"add a regression test\", \"write the test first\", or \"make sure this cannot break again\". Writes a few tests that each name a bug and check the result where the user sees it. Expected values come from an independent source, and each test fails without the change. Test first is an ordering choice inside this skill. Not for checking finished work against the real command output (use `verify-and-review`)."
+  "description": "Use when adding, changing, or reviewing tests. Also use it when the user says \"add a regression test\", \"write the test first\", or \"make sure this cannot break again\". Writes a few tests that each name a bug and check the result where the user sees it. Expected values come from an independent source, and each test fails without the change. Test first is an ordering choice inside this skill. Not for checking finished work against the real command output (use `verify-and-review`).",
+  "content_fingerprint": "9c5134ed31508de1b4d5308ebcbce642adb0c22763b7475b181ed041bacf490b"
 }

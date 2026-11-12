@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Security-focused audit for the Luke codebase. Covers IDOR, auth bypass, session security, input validation, rate limiting gaps, sensitive data exposure, LDAP injection, JWT/token issues, and invokes Trail of Bits sharp-edges and insecure-defaults plugins. Use when asked to audit security or find vulnerabilities. Scoping: default = diff vs merge-base. /luke-security apps/api | --since <ref> | --full"
+  "description": "Security-focused audit for the Luke codebase. Covers IDOR, auth bypass, session security, input validation, rate limiting gaps, sensitive data exposure, LDAP injection, JWT/token issues, and invokes Trail of Bits sharp-edges and insecure-defaults plugins. Use when asked to audit security or find vulnerabilities. Scoping: default = diff vs merge-base. /luke-security apps/api | --since <ref> | --full",
+  "content_fingerprint": "301f7b453417ef9d00ec0c6d9ea625821a32e9b0e73ef16c97941aaa6d947adb"
 }

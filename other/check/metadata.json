@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read-only drift detector. Diffs SPEC.md against current code and reports\nviolations grouped by severity. Writes nothing \u2014 suggests remedies via\nthe spec or build skills but never invokes them. Triggers when the user\nasks to check drift, audit the spec, verify invariants, or ask whether\ncode still matches the spec. Phrasings: \"check drift\", \"audit the spec\",\n\"does the code still match \u00a7V\", \"check invariants\", \"spec vs code\"."
+  "description": "Read-only drift detector. Diffs SPEC.md against current code and reports\nviolations grouped by severity. Writes nothing — suggests remedies via\nthe spec or build skills but never invokes them. Triggers when the user\nasks to check drift, audit the spec, verify invariants, or ask whether\ncode still matches the spec. Phrasings: \"check drift\", \"audit the spec\",\n\"does the code still match §V\", \"check invariants\", \"spec vs code\".",
+  "content_fingerprint": "a6e726cbacb5e9c76e02344c5d85ef9cc471375b7062e8d77f127ed07bf5c877"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Error message leakage detector: harvests every HTTP-error-return and log-error-call, classifies what kind of information leaks (stacktrace, SQL error message, env-vars, user input echo, request dump). LLM validates each finding as legitimate production-leak and proposes sanitization. Read-only. Audience: Both. Trigger: /error-leakage"
+  "description": "Error message leakage detector: harvests every HTTP-error-return and log-error-call, classifies what kind of information leaks (stacktrace, SQL error message, env-vars, user input echo, request dump). LLM validates each finding as legitimate production-leak and proposes sanitization. Read-only. Audience: Both. Trigger: /error-leakage",
+  "content_fingerprint": "de0d87d48cdb17a55620eadffb19ac70153417251ba4ca1d7e1d197c30bdff75"
 }

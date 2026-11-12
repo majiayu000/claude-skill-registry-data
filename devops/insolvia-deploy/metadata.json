@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "How Insolvia ships \u2014 and the rule that deploys happen in CI, never from your CLI. Use this whenever a task is about deploying, shipping, releasing, or \"applying\" infrastructure/services to staging or prod: \"deploy to prod\", \"ship the API\", \"apply the terraform\", \"push a new version live\", \"run terraform apply\", \"update the lambda\", \"release\". Read it BEFORE running any `terraform apply`, `docker push` to ECR, `aws lambda update-function-code`, or `aws`/`gh` deploy command against staging or prod \u2014 those are CI's job, and doing them by hand bypasses the OIDC deploy role and the environment gates."
+  "description": "How Insolvia ships — and the rule that deploys happen in CI, never from your CLI. Use this whenever a task is about deploying, shipping, releasing, or \"applying\" infrastructure/services to staging or prod: \"deploy to prod\", \"ship the API\", \"apply the terraform\", \"push a new version live\", \"run terraform apply\", \"update the lambda\", \"release\". Read it BEFORE running any `terraform apply`, `docker push` to ECR, `aws lambda update-function-code`, or `aws`/`gh` deploy command against staging or prod — those are CI's job, and doing them by hand bypasses the OIDC deploy role and the environment gates.",
+  "content_fingerprint": "d432155d52f01096c474c4a5dd9b29768f9ca0f7d9f5eb1544ea016e5bcf56b7"
 }

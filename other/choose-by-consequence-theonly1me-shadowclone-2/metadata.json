@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when code must decide what happens on an unusual or failing path. Also use it when the user says \"just handle that case\", \"skip it if it fails\", or \"is this the best way?\". Compares the easy route with each alternative by what it does to the user's files, data, and output. Picks the option that fails loudly and keeps every count and exit code true. Never writes through a file that the change does not own. Not for checking finished work against the real command output (use `verify-and-review`)."
+  "description": "Use when code must decide what happens on an unusual or failing path. Also use it when the user says \"just handle that case\", \"skip it if it fails\", or \"is this the best way?\". Compares the easy route with each alternative by what it does to the user's files, data, and output. Picks the option that fails loudly and keeps every count and exit code true. Never writes through a file that the change does not own. Not for checking finished work against the real command output (use `verify-and-review`).",
+  "content_fingerprint": "04843c2ac2cb593c475320278ab0e4903a80c874937998b39f787b24ed7f2407"
 }

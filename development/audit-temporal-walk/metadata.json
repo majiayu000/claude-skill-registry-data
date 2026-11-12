@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Heavyweight history-mining bug audit. Walks the caffeine module's git history chronologically (oldest to HEAD), maintains a forward-tracked issue database, and surfaces concerns introduced by past commits that were never resolved. Catches bugs that snapshot mining cannot \u2014 half-fixes invisible from current state, latent+trigger pairs across multi-commit interactions, and partial refactors. Slow (model/effort-dependent; ~24h on Opus + max effort) and rare-run (every several months or before a major release)."
+  "description": "Heavyweight history-mining bug audit. Walks the caffeine module's git history chronologically (oldest to HEAD), maintains a forward-tracked issue database, and surfaces concerns introduced by past commits that were never resolved. Catches bugs that snapshot mining cannot — half-fixes invisible from current state, latent+trigger pairs across multi-commit interactions, and partial refactors. Slow (model/effort-dependent; ~24h on Opus + max effort) and rare-run (every several months or before a major release).",
+  "content_fingerprint": "10b9e9de63102403fef0dc02346f9d2e8dc28bf28439a64ce92b842c28b14d43"
 }

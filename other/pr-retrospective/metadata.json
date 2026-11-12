@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Per-PR process retrospective, run as a PR's finalizing step before merge. Surfaces what went well, what caused friction, recurring patterns, and proposed improvements. Output is one entry per PR in the improvement-log register; recurring patterns become candidates for pack-rule updates, worker-brief template additions, or new audit gates. Invoke after the PR-scoped validation sweep (`validation-sweep-pr-scoped`; the parent library's `/validate-pr`) returns and before the next-PR planning step."
+  "description": "Per-PR process retrospective, run as a PR's finalizing step before merge. Surfaces what went well, what caused friction, recurring patterns, and proposed improvements. Output is one entry per PR in the improvement-log register; recurring patterns become candidates for pack-rule updates, worker-brief template additions, or new audit gates. Invoke after the PR-scoped validation sweep (`validation-sweep-pr-scoped`; the parent library's `/validate-pr`) returns and before the next-PR planning step.",
+  "content_fingerprint": "99d539e0d6ee891c66a604313b1c380319d9457d622ed246d3de37a677677c04"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Put sources back in the queue after a policy, type template or generation rule changed, so the next generate re-runs entity extraction against them. Use this only when someone explicitly asks to requeue sources after such a change. It rewrites source management files, so do not use it to process the queue or to see what is pending \u2014 wikicommit-generate processes it and wikicommit-status reports it without writing."
+  "description": "Put sources back in the queue after a policy, type template or generation rule changed, so the next generate re-runs entity extraction against them. Use this only when someone explicitly asks to requeue sources after such a change. It rewrites source management files, so do not use it to process the queue or to see what is pending — wikicommit-generate processes it and wikicommit-status reports it without writing.",
+  "content_fingerprint": "3c895232ce90806a370ccdcc07c325f21ee7bf9844ea1e98b57b5cf4a201fb62"
 }

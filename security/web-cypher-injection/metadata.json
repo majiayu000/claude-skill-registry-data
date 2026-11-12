@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Inject into Neo4j Cypher queries to bypass auth, exfiltrate graph data, and reach SSRF/RCE. Load when user input reaches a Cypher query (Neo4j-backed app, GraphQL/REST over a graph DB) \u2014 a login, search, or filter that builds `MATCH (n {prop:'<input>'})`. Signals: Neo4j/Bolt (7687), `MATCH`/ `RETURN` in errors, `neo4j` cookies/stack traces, apoc procedures, a graph-backed search field."
+  "description": "Inject into Neo4j Cypher queries to bypass auth, exfiltrate graph data, and reach SSRF/RCE. Load when user input reaches a Cypher query (Neo4j-backed app, GraphQL/REST over a graph DB) — a login, search, or filter that builds `MATCH (n {prop:'<input>'})`. Signals: Neo4j/Bolt (7687), `MATCH`/ `RETURN` in errors, `neo4j` cookies/stack traces, apoc procedures, a graph-backed search field.",
+  "content_fingerprint": "8e5847eca1ad85b9e2b7d791ffe7cfd943f88eddfd98633074e864fb01b58b03"
 }

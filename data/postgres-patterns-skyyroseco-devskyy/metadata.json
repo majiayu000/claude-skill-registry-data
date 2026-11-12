@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PostgreSQL patterns for query optimization, schema design, indexing, RLS, and connection pooling. Use when writing or reviewing SQL against the devskyy Postgres, choosing an index, diagnosing a slow query, or hardening database security. Do NOT use for versioning schema changes (that is database-migrations \u2014 Alembic owns every DDL change here), for Redis/cache semantics (redis-patterns), or for the container/compose layer around the database (docker-patterns)."
+  "description": "PostgreSQL patterns for query optimization, schema design, indexing, RLS, and connection pooling. Use when writing or reviewing SQL against the devskyy Postgres, choosing an index, diagnosing a slow query, or hardening database security. Do NOT use for versioning schema changes (that is database-migrations — Alembic owns every DDL change here), for Redis/cache semantics (redis-patterns), or for the container/compose layer around the database (docker-patterns).",
+  "content_fingerprint": "84c782598f3f92cab3b42d7bae616a16fa934058f6c40d4c6b47f9193b4c4646"
 }

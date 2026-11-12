@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Dark Factory two-phase spec workflow (/factory-spec, /fs): create a main spec (spec.md) AND an attractor spec (attractor_spec.md) via the spec_gen pipeline, review an existing spec of either kind, or display the pipeline node graphs \u2014 spec-review pipelines, factory gates, node types, edge conditions, handler mappings. Create mode runs dark-factory --pipeline slim/spec_gen.dot; both the main and attractor specs must be codex-cold-reviewed and pass before exit. Review and show modes are in-session only."
+  "description": "Dark Factory two-phase spec workflow (/factory-spec, /fs): create a main spec (spec.md) AND an attractor spec (attractor_spec.md) via the spec_gen pipeline, review an existing spec of either kind, or display the pipeline node graphs — spec-review pipelines, factory gates, node types, edge conditions, handler mappings. Create mode runs dark-factory --pipeline slim/spec_gen.dot; both the main and attractor specs must be codex-cold-reviewed and pass before exit. Review and show modes are in-session only.",
+  "content_fingerprint": "e2ea208a5095233d401716ad31cda539061d2235ab3d0dc6a0a23e058993fe05"
 }

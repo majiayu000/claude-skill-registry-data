@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a durable technical decision was just made in conversation and should be recorded, or when user asks to write/record an ADR (\u958b ADR / \u8a18\u500b\u6c7a\u7b56 / \u9019\u8981\u4e0d\u8981 ADR). Runs a three-gate check FIRST and actively talks the user out of writing one when the decision doesn't qualify \u2014 then writes a lightweight (title + 1-3 sentences) ADR following the repo's own ADR conventions if any exist. Repo conventions always override this skill's defaults. NOT for requirement specs (spec / prd-create) or for rewriting history (superseded ADRs get a new ADR, never an edit)."
+  "description": "Use when a durable technical decision was just made in conversation and should be recorded, or when user asks to write/record an ADR (開 ADR / 記個決策 / 這要不要 ADR). Runs a three-gate check FIRST and actively talks the user out of writing one when the decision doesn't qualify — then writes a lightweight (title + 1-3 sentences) ADR following the repo's own ADR conventions if any exist. Repo conventions always override this skill's defaults. NOT for requirement specs (spec / prd-create) or for rewriting history (superseded ADRs get a new ADR, never an edit).",
+  "content_fingerprint": "9d17fdc7d44e434497f9d83595273c7dadf11bc70e8cbdbb913f61bfa004d39f"
 }

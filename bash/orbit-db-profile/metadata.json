@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Database query profiling for a WordPress plugin \u2014 query count per page, slow queries (>100ms), N+1 detection, autoload bloat (`wp_options` autoload size), transient explosion, missing indexes, and cron-induced churn. Uses Query Monitor + MySQL `performance_schema` against a wp-env site. Use when the user says \"DB profile\", \"query count\", \"N+1\", \"slow query\", \"autoload bloat\", \"Query Monitor\", or after any feature that adds DB writes/reads."
+  "description": "Database query profiling for a WordPress plugin — query count per page, slow queries (>100ms), N+1 detection, autoload bloat (`wp_options` autoload size), transient explosion, missing indexes, and cron-induced churn. Uses Query Monitor + MySQL `performance_schema` against a wp-env site. Use when the user says \"DB profile\", \"query count\", \"N+1\", \"slow query\", \"autoload bloat\", \"Query Monitor\", or after any feature that adds DB writes/reads.",
+  "content_fingerprint": "099e51ce790aee868b4a85203e21c562d7e6a69012c60274f4b4f9baf896d536"
 }

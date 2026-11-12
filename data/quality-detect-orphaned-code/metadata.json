@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dawiddutoit/custom-claude/blob/main/skills/quality-detect-orphaned-code/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "80277de3ebc861ee7b26de4d6847ea7f0acf224a97e67af6b531e3ab2dc511c7",
+  "description": "Detects orphaned code (files/functions that exist but are never imported or called in production),\npreventing \"created but not integrated\" failures. Use before marking features complete, before moving"
 }

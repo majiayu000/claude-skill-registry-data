@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when merging a long-lived feature branch whose conflicts are architectural rather than textual \u2014 the branch built a route manifest while the base adopted a route registry, reads `process.env` directly while the base adopted a typed env layer, or news up a service while the base moved to a DI composition root. Applies when two competing patterns both compile and a reviewer has to decide which layer owns the concern."
+  "description": "Use when merging a long-lived feature branch whose conflicts are architectural rather than textual — the branch built a route manifest while the base adopted a route registry, reads `process.env` directly while the base adopted a typed env layer, or news up a service while the base moved to a DI composition root. Applies when two competing patterns both compile and a reviewer has to decide which layer owns the concern.",
+  "content_fingerprint": "0bd512fc8c575151ed453b97c543e8061038eccaf69b2f1441710ffe582692c7"
 }

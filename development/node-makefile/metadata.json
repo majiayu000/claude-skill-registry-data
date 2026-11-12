@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The Makefile for a Node Web Only project - vendoring pinned frontend assets into public/, compiling a native addon from source, verifying it loads, and the semver version calculation. Use when creating or changing the Makefile, adding a vendored asset, or wiring the native addon build. Triggers on make vendor, make verify, make setup, npm ci, npm_config_build_from_source, node-gyp, fnm, uv tool run, and fonttools woff2 compression."
+  "description": "The Makefile for a Node Web Only project - vendoring pinned frontend assets into public/, compiling a native addon from source, verifying it loads, and the semver version calculation. Use when creating or changing the Makefile, adding a vendored asset, or wiring the native addon build. Triggers on make vendor, make verify, make setup, npm ci, npm_config_build_from_source, node-gyp, fnm, uv tool run, and fonttools woff2 compression.",
+  "content_fingerprint": "fe3d8eee094ee8bb07513baa06dc80a2b22b7023f2209d57cefd2043cdbadfbd"
 }

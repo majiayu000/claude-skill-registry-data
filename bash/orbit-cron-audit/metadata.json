@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit `wp_schedule_event` / `wp_schedule_single_event` calls in a WordPress plugin \u2014 check for missed schedules, duplicate registrations on every page load, missing unschedule on deactivation, hooks scheduled but never registered (zombie crons), and overlapping cron windows that cause performance regressions. Use when the user says \"cron audit\", \"wp_schedule_event\", \"scheduled tasks\", \"WP-Cron\", or has a customer report of \"site slow at certain times\"."
+  "description": "Audit `wp_schedule_event` / `wp_schedule_single_event` calls in a WordPress plugin — check for missed schedules, duplicate registrations on every page load, missing unschedule on deactivation, hooks scheduled but never registered (zombie crons), and overlapping cron windows that cause performance regressions. Use when the user says \"cron audit\", \"wp_schedule_event\", \"scheduled tasks\", \"WP-Cron\", or has a customer report of \"site slow at certain times\".",
+  "content_fingerprint": "023dd1242b593ec857367bc3342636b10d94723ccb6a816abee10c2cd2f4f297"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Make the build step a real gate on what you actually distribute \u2014 build scripts that warn and exit 0 on a missing input, size checks with only an upper bound, hand-maintained file lists that drift from the entrypoints they must cover, committed bundles that go stale when only the source changes, GNU-only shell in release scripts that aborts on the other OS, and verification that runs against the source tree instead of the artifact. Use when writing or reviewing a build/package script, a `dist/` copy step, a release workflow that uploads a zip or installer, or a committed compiled asset."
+  "description": "Make the build step a real gate on what you actually distribute — build scripts that warn and exit 0 on a missing input, size checks with only an upper bound, hand-maintained file lists that drift from the entrypoints they must cover, committed bundles that go stale when only the source changes, GNU-only shell in release scripts that aborts on the other OS, and verification that runs against the source tree instead of the artifact. Use when writing or reviewing a build/package script, a `dist/` copy step, a release workflow that uploads a zip or installer, or a committed compiled asset.",
+  "content_fingerprint": "77ab4deef8628d0370c0d3f630f20081e37fc8b9c0a23ce93e3ba43105bd43bb"
 }

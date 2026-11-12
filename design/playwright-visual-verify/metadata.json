@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use the Playwright MCP to verify the visual appearance of the site under development. Triggers on: questions about appearance, layout, UX, after editing CSS/tokens or UI components with visual impact, debugging 'why does it look like this', wanting to check interactions (click, scroll, language switch), or wanting a real screenshot. Rule: navigate to the dev server first (usually http://localhost:5173), then act \u2014 use snapshot for logical verification and screenshot for visual verification. Always use `wait_for` after navigation before acting."
+  "description": "Use the Playwright MCP to verify the visual appearance of the site under development. Triggers on: questions about appearance, layout, UX, after editing CSS/tokens or UI components with visual impact, debugging 'why does it look like this', wanting to check interactions (click, scroll, language switch), or wanting a real screenshot. Rule: navigate to the dev server first (usually http://localhost:5173), then act — use snapshot for logical verification and screenshot for visual verification. Always use `wait_for` after navigation before acting.",
+  "content_fingerprint": "7229658ad1b7af457e1d785b388a0c60111876708c5fdb09a59d22d5bfb0cf30"
 }

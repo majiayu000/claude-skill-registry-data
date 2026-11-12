@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Create Kani harnesses for a Certus component from BOTH its spec and its Rust code \u2014 at function granularity, calling the real function under spec-derived pre/postconditions \u2014 run them, and record what was verified (with evidence) by writing each property's status/symbol/fidelity/evidence into the shared `unified_properties.yaml` under its `kani:` block. Attempt every property you can express as a harness \u2014 do not pre-filter by lane, effort, or difficulty. Use for the normal verify-and-document workflow (not the blind property-extraction experiment)."
+  "description": "Create Kani harnesses for a Certus component from BOTH its spec and its Rust code — at function granularity, calling the real function under spec-derived pre/postconditions — run them, and record what was verified (with evidence) by writing each property's status/symbol/fidelity/evidence into the shared `unified_properties.yaml` under its `kani:` block. Attempt every property you can express as a harness — do not pre-filter by lane, effort, or difficulty. Use for the normal verify-and-document workflow (not the blind property-extraction experiment).",
+  "content_fingerprint": "293e57d67b78837ef21bcb713c22bc32c54a774b570fb46ffba84abdc2c7f57f"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/terraform-state-identity-mismatch/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a1a0da906171cbb5d802e974f2b2e4429f17953016b8862d0c67f9539b0edee4",
+  "description": "Fix Terraform \"Unexpected Identity Change\" errors during plan/apply. Use when:\n(1) Terraform fails with \"the Terraform Provider unexpectedly returned a different \nidentity\", (2) State refresh shows id"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Launch the kolu dev server on two RANDOM free ports so it never collides with the running production `kolu.service`, remember the ports for the rest of the session, and tear down only the dev instance. Load before running the app locally \u2014 for evidence capture, driving a live kolu with the chrome-devtools MCP, or any `just dev` you'd otherwise run by hand. Triggers on \"run kolu locally\", \"launch the dev server\", \"boot kolu\", \"drive a live kolu\", \"start the app to screenshot it\", or before pointing chrome-devtools at a local kolu."
+  "description": "Launch the kolu dev server on two RANDOM free ports so it never collides with the running production `kolu.service`, remember the ports for the rest of the session, and tear down only the dev instance. Load before running the app locally — for evidence capture, driving a live kolu with the chrome-devtools MCP, or any `just dev` you'd otherwise run by hand. Triggers on \"run kolu locally\", \"launch the dev server\", \"boot kolu\", \"drive a live kolu\", \"start the app to screenshot it\", or before pointing chrome-devtools at a local kolu.",
+  "content_fingerprint": "b0e08877d6fc6c51eff7eff843452083875463cb424c3d42fa981125c45c569d"
 }

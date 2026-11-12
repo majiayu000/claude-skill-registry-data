@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MySQL \u4e3b\u4ece\u5ef6\u8fdf\u5168\u94fe\u8bca\u65ad\u3002\u68c0\u67e5 replication \u72b6\u6001\u3001\u5b9a\u4f4d\u5ef6\u8fdf\u6839\u56e0\uff08\u5927\u4e8b\u52a1/\u7f51\u7edc/\u4ece\u5e93\u8d1f\u8f7d/ binlog \u683c\u5f0f/\u5e76\u884c\u590d\u5236\u914d\u7f6e\uff09\uff0c\u8f93\u51fa\u7ed3\u6784\u5316\u62a5\u544a\u4e0e\u4fee\u590d\u5efa\u8bae\u3002\u652f\u6301\u5f02\u6b65/\u534a\u540c\u6b65/GTID \u590d\u5236\u3002"
+  "description": "MySQL 主从延迟全链诊断。检查 replication 状态、定位延迟根因（大事务/网络/从库负载/ binlog 格式/并行复制配置），输出结构化报告与修复建议。支持异步/半同步/GTID 复制。",
+  "content_fingerprint": "065f446d47763a07ba184a7d3b3b06e222dd3b56818cacb3cb1cdaa5b1e30cd1"
 }

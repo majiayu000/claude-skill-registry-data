@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Dark Factory spec workflow (`/factory-spec`, `/fs`): create a main spec and an attractor spec through the spec-generation pipeline, review an existing spec against acceptance criteria, or display the canonical reference for pipeline node graphs \u2014 gates, node types, edge conditions, handler mappings. Create mode runs `dark-factory --pipeline slim/spec_gen.dot` and must produce a codex-cold-reviewed `spec.md` and `attractor_spec.md`; review and show modes stay in-session."
+  "description": "Dark Factory spec workflow (`/factory-spec`, `/fs`): create a main spec and an attractor spec through the spec-generation pipeline, review an existing spec against acceptance criteria, or display the canonical reference for pipeline node graphs — gates, node types, edge conditions, handler mappings. Create mode runs `dark-factory --pipeline slim/spec_gen.dot` and must produce a codex-cold-reviewed `spec.md` and `attractor_spec.md`; review and show modes stay in-session.",
+  "content_fingerprint": "41be2d260e973b71497909f7c4d5e1f265fafe2f2d0c8c8df4a54f6cf469327a"
 }

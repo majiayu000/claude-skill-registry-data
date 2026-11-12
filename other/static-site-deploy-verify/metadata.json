@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9759\u6001\u7ad9\uff08GitHub Pages / Cloudflare Pages / \u4efb\u610f CDN\uff09\u63a8\u5b8c\u4e4b\u540e\u505a\u4e00\u6b21\u5230\u4f4d\u6821\u9a8c\uff0c\u4e13\u95e8\u6293\"\u7f13\u5b58\u540d bump \u4e86\u4f46\u6587\u4ef6\u5185\u5bb9\u8fd8\u662f\u65e7\u7684\"\u8fd9\u7c7b\u7248\u672c\u6495\u88c2\u3002\u9002\u7528\u4e8e\u7528\u6237\u8bf4\"\u6211\u66f4\u65b0\u4e86\u4f46\u7ebf\u4e0a\u8fd8\u662f\u8001\u6837\u5b50\"\"\u5e2e\u6211\u786e\u8ba4\u7ebf\u4e0a\u662f\u4e0d\u662f\u6700\u65b0\u7684\"\"\u63a8\u5b8c\u518d\u9a8c\u4e00\u904d\"\u3002"
+  "description": "静态站（GitHub Pages / Cloudflare Pages / 任意 CDN）推完之后做一次到位校验，专门抓\"缓存名 bump 了但文件内容还是旧的\"这类版本撕裂。适用于用户说\"我更新了但线上还是老样子\"\"帮我确认线上是不是最新的\"\"推完再验一遍\"。",
+  "content_fingerprint": "90f571b32d51d0ced02d47e88e3bfdd70822cdb9d08f1562128d4fa46f0d3b25"
 }

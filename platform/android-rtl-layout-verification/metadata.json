@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prove an Android/Compose app's supportsRtl claim on a device \u2014 covers the two traps that produce a false \"clean\" sweep (developer-options force_rtl doing nothing, and a per-app ar-XB locale silently filtered out because the APK ships no pseudolocale resources), the mirroring control that exposes both, and the limit that en-XA cannot test expansion when UI strings are Kotlin literals. Use when checking RTL support, before claiming a layout mirrors correctly, or when an RTL sweep reports no problems."
+  "description": "Prove an Android/Compose app's supportsRtl claim on a device — covers the two traps that produce a false \"clean\" sweep (developer-options force_rtl doing nothing, and a per-app ar-XB locale silently filtered out because the APK ships no pseudolocale resources), the mirroring control that exposes both, and the limit that en-XA cannot test expansion when UI strings are Kotlin literals. Use when checking RTL support, before claiming a layout mirrors correctly, or when an RTL sweep reports no problems.",
+  "content_fingerprint": "0ce16ef217811bb15a9d2cece026e6b57cfbba8d543fe18ff617dca56e0355ea"
 }

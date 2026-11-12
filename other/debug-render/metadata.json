@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Debug a WRONG or imperfect render (not a hard error) by inspecting inputs and intermediate steps with run-to-node \u2014 render one branch up to an output, preview-tap latents/masks/preprocessor maps, localize the first bad stage, then fix. Use when a final image/video comes out wrong \u2014 artifacts, wrong subject/pose/composition/color, blur, a ControlNet/IPAdapter/mask/LoRA not taking, a two-stage refiner or upscale degrading the result \u2014 rather than the run failing with an error (for errors/OOM/missing nodes use the troubleshooting skill)."
+  "description": "Debug a WRONG or imperfect render (not a hard error) by inspecting inputs and intermediate steps with run-to-node — render one branch up to an output, preview-tap latents/masks/preprocessor maps, localize the first bad stage, then fix. Use when a final image/video comes out wrong — artifacts, wrong subject/pose/composition/color, blur, a ControlNet/IPAdapter/mask/LoRA not taking, a two-stage refiner or upscale degrading the result — rather than the run failing with an error (for errors/OOM/missing nodes use the troubleshooting skill).",
+  "content_fingerprint": "7e07df714098cb9e50c3037e1126d5633e8a891ed0976abf922d72179a0bb757"
 }

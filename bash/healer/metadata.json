@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run moflo's Healer (`flo healer`, alias for `flo doctor`) from inside the Claude session. Audit-only by default; pass `--fix` to apply auto-repairs, `-c <component>` for a single check. Use when something feels off (missing moflo.yaml, daemon dead, statusline empty, hooks not firing) or as a periodic health check. Distinct from Claude Code's built-in `/doctor`, which diagnoses Claude Code itself, not moflo."
+  "description": "Run moflo's Healer (`flo healer`, alias for `flo doctor`) from inside the Claude session. Audit-only by default; pass `--fix` to apply auto-repairs, `-c <component>` for a single check. Use when something feels off (missing moflo.yaml, daemon dead, statusline empty, hooks not firing) or as a periodic health check. Distinct from Claude Code's built-in `/doctor`, which diagnoses Claude Code itself, not moflo.",
+  "content_fingerprint": "5a531e3e5c0054873e6821fa8428e3b5cbc484596e0efa8a89e318552383e7ff"
 }

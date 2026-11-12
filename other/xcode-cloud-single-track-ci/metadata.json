@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when setting up or changing CI for an Apple-platform project on Xcode Cloud \u2014 choosing Xcode Cloud vs GitHub Actions, splitting PR / Main / Release / scheduled workflows, writing `ci_scripts/ci_post_clone.sh` / `ci_pre_xcodebuild.sh` / `ci_post_xcodebuild.sh`, or wiring `CI_BUILD_NUMBER`, `MARKETING_VERSION`, `agvtool` numbering. Or asked \"do I need dual-track CI\", \"main failed after the PR passed\", \"Xcode Cloud build number collides\". Does NOT cover shipping a build by hand when Xcode Cloud is down \u2192 local-archive-export-upload, nor ASC REST calls after upload \u2192 asc-api-automation."
+  "description": "Use when setting up or changing CI for an Apple-platform project on Xcode Cloud — choosing Xcode Cloud vs GitHub Actions, splitting PR / Main / Release / scheduled workflows, writing `ci_scripts/ci_post_clone.sh` / `ci_pre_xcodebuild.sh` / `ci_post_xcodebuild.sh`, or wiring `CI_BUILD_NUMBER`, `MARKETING_VERSION`, `agvtool` numbering. Or asked \"do I need dual-track CI\", \"main failed after the PR passed\", \"Xcode Cloud build number collides\". Does NOT cover shipping a build by hand when Xcode Cloud is down → local-archive-export-upload, nor ASC REST calls after upload → asc-api-automation.",
+  "content_fingerprint": "f5d7bea4188af8656561569b74cb3face3110b075bace3300895592017ce557f"
 }

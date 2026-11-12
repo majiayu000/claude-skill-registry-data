@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect XML External Entity (XXE) vulnerabilities in a codebase using a three-phase approach: recon (find XML parsing sites without external-entity hardening), batched verify (trace user input to each site in parallel subagents, 3 sites each), and merge (consolidate batch results). Requires sast/architecture.md (run sast-analysis first). Outputs findings to sast/xxe-results.md. Use when asked to find XXE or XML injection bugs."
+  "description": "Detect XML External Entity (XXE) vulnerabilities in a codebase using a three-phase approach: recon (find XML parsing sites without external-entity hardening), batched verify (trace user input to each site in parallel subagents, 3 sites each), and merge (consolidate batch results). Requires sast/architecture.md (run sast-analysis first). Outputs findings to sast/xxe-results.md. Use when asked to find XXE or XML injection bugs.",
+  "content_fingerprint": "306c6a96249790575646422b9b98b86726e176563f32478f9ce493ff470ab28a"
 }

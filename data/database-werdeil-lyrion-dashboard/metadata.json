@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read data from Lyrion's SQLite databases \u2014 library stats, stored lyrics, album covers, recent plays. Use this whenever a task queries `library.db` or `persist.db`, adds or changes a statistic, or touches `services/database.py`. Covers the read-only connection model (RO open + `ATTACH persist.db`), the key tables, the `play_counts` view over the Alternative Play Count plugin, the single-flight stats cache, and why the app must never write to these DBs. Reach for it before writing any SQL against the Lyrion databases."
+  "description": "Read data from Lyrion's SQLite databases — library stats, stored lyrics, album covers, recent plays. Use this whenever a task queries `library.db` or `persist.db`, adds or changes a statistic, or touches `services/database.py`. Covers the read-only connection model (RO open + `ATTACH persist.db`), the key tables, the `play_counts` view over the Alternative Play Count plugin, the single-flight stats cache, and why the app must never write to these DBs. Reach for it before writing any SQL against the Lyrion databases.",
+  "content_fingerprint": "4810c6c17c31258c829b1052a6b1055b74af9a972bbdef30905d7f971bd17498"
 }

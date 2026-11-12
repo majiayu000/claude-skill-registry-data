@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit Hugging Face or local model repositories before MLX conversion or inference. Use this skill when the user asks whether a model is MLX-compatible, which MLX stack to use, whether an MLX Community variant exists, or how a fine-tuned checkpoint differs from a base model. It covers repo files, config/tokenizer/processor/chat template, adapters, task type, licensing, and conversion risk. Do not use it for actually converting, benchmarking, or troubleshooting after a concrete error unless the repo has not been audited yet."
+  "description": "Audit Hugging Face or local model repositories before MLX conversion or inference. Use this skill when the user asks whether a model is MLX-compatible, which MLX stack to use, whether an MLX Community variant exists, or how a fine-tuned checkpoint differs from a base model. It covers repo files, config/tokenizer/processor/chat template, adapters, task type, licensing, and conversion risk. Do not use it for actually converting, benchmarking, or troubleshooting after a concrete error unless the repo has not been audited yet.",
+  "content_fingerprint": "c079e2b1964acfc8a6b614c7e447f91c9e586834040fd3dc7f569ca608dc9ac6"
 }

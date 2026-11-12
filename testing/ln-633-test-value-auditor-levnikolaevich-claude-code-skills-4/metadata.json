@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-633-test-value-auditor/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "0a06ad3ef7ea2a3c644b09bf5caf9665ac64ad001c2d0e6f3c12424e8e54e18d",
+  "description": "Scores each test by Impact x Probability, returns KEEP/REVIEW/REMOVE decisions. Use when auditing test value and pruning low-value tests."
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Production-grade scanner that reads a breaking-changes manifest, scans workspace sources against rule patterns using regex, injects deterministic inline // JADE-FLAG:<rule_id> markers into matched source lines, and writes flag index and scan summary artifacts. Fully idempotent \u2014 re-running never duplicates tags. Use after manifest is ready and before build gate verification."
+  "description": "Production-grade scanner that reads a breaking-changes manifest, scans workspace sources against rule patterns using regex, injects deterministic inline // JADE-FLAG:<rule_id> markers into matched source lines, and writes flag index and scan summary artifacts. Fully idempotent — re-running never duplicates tags. Use after manifest is ready and before build gate verification.",
+  "content_fingerprint": "2be70e3733d84b13f8e98a2494b59dd72b669ad71c11d2417adda556d685f8a9"
 }

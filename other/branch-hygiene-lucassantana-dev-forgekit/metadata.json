@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Composite skill \u2014 one-pass cleanup of stale local branches, dead worktrees, merged branches, and abandoned remote PR branches. Chains `git fetch --prune` \u2192 `clean_gone` (kill [gone] branches) \u2192 worktree prune + offer-to-remove dead worktrees \u2192 list-and-delete branches merged to main and release \u2192 delete remote PR branches whose PRs merged >7 days ago. Use instead of running `clean_gone` alone \u2014 that only catches half the rot. Daily-friction composite; fires on \"clean up branches\", \"branch hygiene\", \"stale worktrees\", and on session start when local branch count > 30."
+  "description": "Composite skill — one-pass cleanup of stale local branches, dead worktrees, merged branches, and abandoned remote PR branches. Chains `git fetch --prune` → `clean_gone` (kill [gone] branches) → worktree prune + offer-to-remove dead worktrees → list-and-delete branches merged to main and release → delete remote PR branches whose PRs merged >7 days ago. Use instead of running `clean_gone` alone — that only catches half the rot. Daily-friction composite; fires on \"clean up branches\", \"branch hygiene\", \"stale worktrees\", and on session start when local branch count > 30.",
+  "content_fingerprint": "5a3b59a399044037d0fa3c3b12deee9535f0c87eefab07618f36ee1a919bfe32"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read-only discovery step of the auto-improvement loop. One bounded agent turn per cycle reads the focus files (Read/Grep/Glob only, no shell, no subagents) and replies with a JSON array of testable surfaces {file, line, symbol, rule, message, hypothesis}; the spine authors fixes and verifies them. Discovery only \u2014 no code changes and no verification happen here."
+  "description": "Read-only discovery step of the auto-improvement loop. One bounded agent turn per cycle reads the focus files (Read/Grep/Glob only, no shell, no subagents) and replies with a JSON array of testable surfaces {file, line, symbol, rule, message, hypothesis}; the spine authors fixes and verifies them. Discovery only — no code changes and no verification happen here.",
+  "content_fingerprint": "85eb04db30644bf0cb3ee3694fa7099b8a510b61c000c13948ea3d5d5afa1679"
 }

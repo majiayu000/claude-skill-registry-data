@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "NPU \u4eff\u771f\u5668\u6280\u80fd\u3002\u63d0\u4f9b CANN Simulator \u7684\u4f7f\u7528\u6307\u5bfc\uff0c\u5305\u62ec\u7cbe\u5ea6\u4eff\u771f\u3001\u6027\u80fd\u4eff\u771f\u3001\u6d41\u6c34\u7ebf\u5206\u6790\u3002\u5f53\u9700\u8981\u5728\u65e0 NPU \u786c\u4ef6\u73af\u5883\u4e0b\u9a8c\u8bc1\u7b97\u5b50\u529f\u80fd\u3001\u5206\u6790\u6027\u80fd\u74f6\u9888\u3001\u5b9a\u4f4d\u7cbe\u5ea6\u95ee\u9898\u65f6\u4f7f\u7528\u3002\u4e5f\u7528\u4e8e\u5206\u6790\u5df2\u6709\u7684 npusim \u6027\u80fd\u62a5\u544a\uff08summary.json\uff09\u5e76\u7ed9\u51fa\u4f18\u5316\u5efa\u8bae\u3002"
+  "description": "NPU 仿真器技能。提供 CANN Simulator 的使用指导，包括精度仿真、性能仿真、流水线分析。当需要在无 NPU 硬件环境下验证算子功能、分析性能瓶颈、定位精度问题时使用。也用于分析已有的 npusim 性能报告（summary.json）并给出优化建议。",
+  "content_fingerprint": "8c59b3b4d9da07ceb99dc44fc07d647afa09d3269bc9fafc584786c19db8cfd4"
 }

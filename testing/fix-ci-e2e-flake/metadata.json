@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8bca\u65ad\u5e76\u4fee\u590d CI \u5076\u53d1\u3001\u672c\u5730\u7a33\u8fc7\u7684 Playwright e2e \u5931\u8d25\uff08flake\uff09\u3002\u5f53\u7528\u6237\u63d0\u5230 CI e2e \u5076\u53d1\u5931\u8d25 / flaky / \u672c\u5730\u8dd1\u6ca1\u95ee\u9898\u4f46 CI \u6302\u4e86 / e2e \u4e0d\u7a33\u5b9a\uff0c\u6216\u8d34\u51fa toHaveCount / toBeVisible / timeout \u62a5\u9519\u3001expect(locator) call log \u65f6\u4f7f\u7528\u3002"
+  "description": "诊断并修复 CI 偶发、本地稳过的 Playwright e2e 失败（flake）。当用户提到 CI e2e 偶发失败 / flaky / 本地跑没问题但 CI 挂了 / e2e 不稳定，或贴出 toHaveCount / toBeVisible / timeout 报错、expect(locator) call log 时使用。",
+  "content_fingerprint": "3c494aef2b9654cddbe6681bafabbf1a5d4493ce5c5915a1fb4e1bcfc4778c03"
 }

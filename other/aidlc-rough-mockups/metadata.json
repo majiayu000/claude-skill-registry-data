@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `rough-mockups` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage rough-mockups --single`: the engine emits one run-stage directive for rough-mockups and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `rough-mockups` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage rough-mockups --single`: the engine emits one run-stage directive for rough-mockups and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "02d956fd4edc1990d429f47de39e105fc3bb9de621a809fad72550f626dcacbc"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/astronomer/agents/blob/main/skills/warehouse-init/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "7ae58669c4c17cf54a7ca5efdd6cdd00acabc03d18b9b62e403fc9e2bf0c6ca3",
+  "description": "Initialize warehouse schema discovery. Generates .astro/warehouse.md with all table metadata for instant lookups. Run once per project, refresh when schema changes. Use when user says \"/data:warehouse"
 }

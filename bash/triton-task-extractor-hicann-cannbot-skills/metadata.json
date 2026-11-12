@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ece\u7528\u6237 PyTorch/Python \u4ee3\u7801\u4e2d\u63d0\u53d6\u7b97\u5b50\u5b9e\u73b0\uff0c\u6784\u5efa\u4e3a\u7b97\u5b50\u4efb\u52a1\u683c\u5f0f\u7684\u6807\u51c6\u5316 \u4efb\u52a1\u6587\u4ef6\u3002\u652f\u6301\u4e24\u79cd\u6a21\u5f0f\uff1a\u5355 case\uff08\u5355\u4e00\u81ea\u5305\u542b .py\uff0cget_inputs \u8fd4\u56de\u5355\u7ec4\uff09\u548c \u591a case\uff08.py + \u540c\u540d .json \u914d\u5bf9\uff0cget_input_groups \u8fd4\u56de\u591a\u7ec4\uff09\u3002 \u89e6\u53d1\uff1a\u5f53\u7528\u6237\u9700\u8981\u5c06 PyTorch/Python \u4ee3\u7801\u63d0\u53d6\u5e76\u8f6c\u6362\u4e3a\u6807\u51c6\u5316\u7b97\u5b50\u4efb\u52a1\u6587\u4ef6\u65f6\u4f7f\u7528\u3002"
+  "description": "从用户 PyTorch/Python 代码中提取算子实现，构建为算子任务格式的标准化 任务文件。支持两种模式：单 case（单一自包含 .py，get_inputs 返回单组）和 多 case（.py + 同名 .json 配对，get_input_groups 返回多组）。 触发：当用户需要将 PyTorch/Python 代码提取并转换为标准化算子任务文件时使用。",
+  "content_fingerprint": "c5c4fa3369970f3593297041e091fb25d4ba06f29501ff1f42c94a455e637a2f"
 }

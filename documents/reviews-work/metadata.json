@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when asked to review a spec or plan doc and collaborate asynchronously with another agent (often invoked with tony:does-work) that is or will be editing the same doc. Leaves change requests in a Changelog section at the bottom of the file, then sleeps in rounds of 5 checks, starting at 3-minute intervals and shrinking to 2, re-reviewing whenever the other agent responds. Triggers: 'review this spec and wait for the other agent', 'reviews:work', 'collaborate on this plan doc'."
+  "description": "Use when asked to review a spec or plan doc and collaborate asynchronously with another agent (often invoked with tony:does-work) that is or will be editing the same doc. Leaves change requests in a Changelog section at the bottom of the file, then sleeps in rounds of 5 checks, starting at 3-minute intervals and shrinking to 2, re-reviewing whenever the other agent responds. Triggers: 'review this spec and wait for the other agent', 'reviews:work', 'collaborate on this plan doc'.",
+  "content_fingerprint": "45e3c1619e89371ede7c2c5486a334c3d631a2b5d933fbd055d7cf76a52914e6"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "SSRF through link-preview / URL-unfurl / oEmbed features. Load when the app generates a preview card for a user-supplied URL: chat/forum/comment link unfurling, \"add a link\" in posts or profiles, oEmbed endpoints, rich-text editors that auto-embed, bookmark/save-for-later tools, or any UI that shows an Open Graph title/image/description for a pasted link. Signals: params like url=, link=, embed=, preview=; a \"fetching preview\" spinner; response JSON with og:title / og:image fields; User-Agents like *bot, *crawler, Slackbot, Discordbot, or a fetch from a different egress IP than the app."
+  "description": "SSRF through link-preview / URL-unfurl / oEmbed features. Load when the app generates a preview card for a user-supplied URL: chat/forum/comment link unfurling, \"add a link\" in posts or profiles, oEmbed endpoints, rich-text editors that auto-embed, bookmark/save-for-later tools, or any UI that shows an Open Graph title/image/description for a pasted link. Signals: params like url=, link=, embed=, preview=; a \"fetching preview\" spinner; response JSON with og:title / og:image fields; User-Agents like *bot, *crawler, Slackbot, Discordbot, or a fetch from a different egress IP than the app.",
+  "content_fingerprint": "fb9465720e0a7191973a2063b81c8e9f1d8e9cad1fb0e09cf40c2b3a2a8cf87b"
 }

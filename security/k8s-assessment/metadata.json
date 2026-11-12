@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Kubernetes security assessment playbook. Use when probing an API server, kubelet, etcd, dashboard, or ingress surface from outside or with limited credentials. Covers unauthenticated /version and /api probes, anonymous auth and system:anonymous bindings, the system:unauthenticated group, kubelet 10250/10255 exec and log endpoints, etcd exposure, dashboard and ingress misconfiguration, RBAC enumeration with kubectl auth can-i --list, service-account token hunting, secret decoding, admission-controller and PodSecurity bypass checks, and exposed-service triage."
+  "description": "Kubernetes security assessment playbook. Use when probing an API server, kubelet, etcd, dashboard, or ingress surface from outside or with limited credentials. Covers unauthenticated /version and /api probes, anonymous auth and system:anonymous bindings, the system:unauthenticated group, kubelet 10250/10255 exec and log endpoints, etcd exposure, dashboard and ingress misconfiguration, RBAC enumeration with kubectl auth can-i --list, service-account token hunting, secret decoding, admission-controller and PodSecurity bypass checks, and exposed-service triage.",
+  "content_fingerprint": "306db06fdccc0cb664daa609b60dd38dec7d1203a6f58232f3425b9cff9e0d7d"
 }

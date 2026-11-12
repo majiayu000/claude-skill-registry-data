@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Inspect and debug errors via logs across the harness-kit monorepo. Reads the right log file based on the error layer \u2014 backend, frontend, celery, odin CLI, or odin task execution. Use this skill whenever someone mentions a 500 error, a stack trace, a crash, 'check the logs', 'what went wrong', a service not starting, celery task failures, or any runtime error. Also triggers on: 'getting 500', 'backend error', 'celery error', 'odin failed', 'check logs', 'tail logs', 'debug this error', or /hk-local-logs."
+  "description": "Inspect and debug errors via logs across the harness-kit monorepo. Reads the right log file based on the error layer — backend, frontend, celery, odin CLI, or odin task execution. Use this skill whenever someone mentions a 500 error, a stack trace, a crash, 'check the logs', 'what went wrong', a service not starting, celery task failures, or any runtime error. Also triggers on: 'getting 500', 'backend error', 'celery error', 'odin failed', 'check logs', 'tail logs', 'debug this error', or /hk-local-logs.",
+  "content_fingerprint": "86ea7f1fc2295d594d541e7b05219dd0f28b1c55dd2d833a48d99e12802c6ee2"
 }

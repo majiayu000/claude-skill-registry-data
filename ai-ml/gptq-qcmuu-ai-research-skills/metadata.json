@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Post-training 4-bit quantization for LLMs with minimal accuracy loss. Use for deploying large models (70B, 405B) on consumer GPUs, when you need 4\u00d7 memory reduction with <2% perplexity degradation, or for faster inference (3-4\u00d7 speedup) vs FP16. Integrates with transformers and PEFT for QLoRA fine-tuning."
+  "description": "Post-training 4-bit quantization for LLMs with minimal accuracy loss. Use for deploying large models (70B, 405B) on consumer GPUs, when you need 4× memory reduction with <2% perplexity degradation, or for faster inference (3-4× speedup) vs FP16. Integrates with transformers and PEFT for QLoRA fine-tuning.",
+  "content_fingerprint": "9ae035f5e46e01d27b67aef8f2c87da6bfc6f8b60a27f45f865f1de197c8bfdf"
 }

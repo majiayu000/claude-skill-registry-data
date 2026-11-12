@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Trick a CDN/cache into storing a victim's authenticated response at a public URL, then read it. Load on \"web cache deception\", when a CDN/cache sits in front of an app that serves per-user content, or to test whether private pages can be cached. Signals: `X-Cache`/`CF-Cache-Status` headers, caching by file extension, static-looking suffixes on dynamic endpoints."
+  "description": "Trick a CDN/cache into storing a victim's authenticated response at a public URL, then read it. Load on \"web cache deception\", when a CDN/cache sits in front of an app that serves per-user content, or to test whether private pages can be cached. Signals: `X-Cache`/`CF-Cache-Status` headers, caching by file extension, static-looking suffixes on dynamic endpoints.",
+  "content_fingerprint": "b67adfb4e8632ac4d21f12410b8f34148f99e8ef6f57ea42022c0061f97dc5f3"
 }

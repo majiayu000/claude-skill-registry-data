@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when traffic is growing or about to spike and the system bends under concurrency \u2014 deciding what to add and in what order (cache, connection pool, async queue, read replica, more instances) and proving it with a load test against explicit RPS and p95 targets rather than guessing. NOT making one slow request faster or profiling an N+1 (that is `performance`), NOT race-free Redis caches, locks and queue semantics (that is `redis`)."
+  "description": "Use when traffic is growing or about to spike and the system bends under concurrency — deciding what to add and in what order (cache, connection pool, async queue, read replica, more instances) and proving it with a load test against explicit RPS and p95 targets rather than guessing. NOT making one slow request faster or profiling an N+1 (that is `performance`), NOT race-free Redis caches, locks and queue semantics (that is `redis`).",
+  "content_fingerprint": "a61d0a57946c57f97bfa5fcfcca943d9a5dc8c2628a43f975108802a48610353"
 }

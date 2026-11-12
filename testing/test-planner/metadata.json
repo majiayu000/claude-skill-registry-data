@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8bfb\u53d6\u6d4b\u8bd5\u6765\u6e90\u6587\u6863\uff08\u9700\u6c42 / \u8bbe\u8ba1 / API \u8bbe\u8ba1\uff09\uff0c\u751f\u6210\u53ef\u76f4\u63a5\u843d\u5730\u4e3a\u53ef\u8fd0\u884c\u6d4b\u8bd5\u4ee3\u7801\u7684\u7ed3\u6784\u5316\u6d4b\u8bd5\u8ba1\u5212\uff08\u6d4b\u8bd5\u7b56\u7565\u3001\u6846\u67b6\u4e0e\u65ad\u8a00\u65b9\u5f0f\u3001\u843d\u76d8\u4f4d\u7f6e\uff09\u3002\u89e6\u53d1\uff1a\"\u751f\u6210\u6d4b\u8bd5\u8ba1\u5212\"\u3001\"\u5199\u6d4b\u8bd5\u7528\u4f8b\"\u3001\"test plan\"\u3001\"\u4ece\u8bbe\u8ba1\u751f\u6210\u6d4b\u8bd5\"\u3001\"\u6839\u636e\u9700\u6c42\u5199\u6d4b\u8bd5\"\u3001\"API \u5951\u7ea6\u6d4b\u8bd5\"\u3002"
+  "description": "读取测试来源文档（需求 / 设计 / API 设计），生成可直接落地为可运行测试代码的结构化测试计划（测试策略、框架与断言方式、落盘位置）。触发：\"生成测试计划\"、\"写测试用例\"、\"test plan\"、\"从设计生成测试\"、\"根据需求写测试\"、\"API 契约测试\"。",
+  "content_fingerprint": "51ab93d7c16aa550e02d02fcc876b97814f34ba67bbc8b5cde3843616d3bd421"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Send a message from an external agent or script to a running Claude Code session on the same machine. Use when a manually started Codex session needs to tell any Claude session something, Codex needs to report back to the Claude session that launched it, a hook or long job should notify Claude, or the user asks to \"send this to Claude\", \"tell another Claude session\", \"notify the Claude session\", or \"report back to Claude\". Not for messaging from inside Claude Code when ListAgents and SendMessage are available. For messages to Codex sessions, use message-codex."
+  "description": "Send a message from an external agent or script to a running Claude Code session on the same machine. Use when a manually started Codex session needs to tell any Claude session something, Codex needs to report back to the Claude session that launched it, a hook or long job should notify Claude, or the user asks to \"send this to Claude\", \"tell another Claude session\", \"notify the Claude session\", or \"report back to Claude\". Not for messaging from inside Claude Code when ListAgents and SendMessage are available. For messages to Codex sessions, use message-codex.",
+  "content_fingerprint": "6f095d6271d83e34f9950bd3418b16e247b6425168e0928fbc25a0b884602961"
 }

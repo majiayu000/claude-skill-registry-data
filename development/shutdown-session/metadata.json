@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cleanly shut down peer Claude Code session(s). Maps project paths to the actual claude binary PIDs (NOT the hive-mcp child PIDs that `list_peers` returns), kills them, sweeps any orphan MCP servers, and verifies. Use when spinning down agents that aren't needed for the current week's goals, or freeing memory after a /weekly-plan pass."
+  "description": "Cleanly shut down peer Claude Code session(s). Maps project paths to the actual claude binary PIDs (NOT the hive-mcp child PIDs that `list_peers` returns), kills them, sweeps any orphan MCP servers, and verifies. Use when spinning down agents that aren't needed for the current week's goals, or freeing memory after a /weekly-plan pass.",
+  "content_fingerprint": "856195d33903e3944ffdae83b1b608b5980428986cd2c4452852abc0b6da6f80"
 }

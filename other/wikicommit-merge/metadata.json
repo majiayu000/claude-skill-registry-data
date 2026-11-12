@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run WikiCommit's quality gates over the uncommitted changes under .wikicommit/, then branch, open a PR, merge it into the repository's default branch, and file one review tracking Issue per page. Use this only to land WikiCommit's own output \u2014 the uncommitted changes under .wikicommit/, including your own edits to its policy files \u2014 including inside an unattended run that works through sources in batches. It squash-merges to the default branch and publishes, so do not use it as a general way to commit, push or open a PR for ordinary repository changes \u2014 use git and gh directly for those."
+  "description": "Run WikiCommit's quality gates over the uncommitted changes under .wikicommit/, then branch, open a PR, merge it into the repository's default branch, and file one review tracking Issue per page. Use this only to land WikiCommit's own output — the uncommitted changes under .wikicommit/, including your own edits to its policy files — including inside an unattended run that works through sources in batches. It squash-merges to the default branch and publishes, so do not use it as a general way to commit, push or open a PR for ordinary repository changes — use git and gh directly for those.",
+  "content_fingerprint": "6ccf60da3f1d4a674b148c0f448241017037b0b98a47d92ddf39b62b5718437e"
 }

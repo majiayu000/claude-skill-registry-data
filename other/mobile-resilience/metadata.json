@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detects weak reverse engineering and tampering protections in mobile apps (Android/iOS). Trigger on: root detection bypass, jailbreak detection bypass, Frida detection, debugger detection, anti-debugging, ptrace, sysctl, emulator detection, code obfuscation absent, debug symbols present, get-task-allow, ProGuard disabled, R8 disabled, string encryption, integrity check, file tampering, repackaging, dynamic instrumentation, runtime hook, Magisk hide, Magisk, frida-server, objection bypass, signing verification, apk resign. Covers MASVS-RESILIENCE-1/2/3/4."
+  "description": "Detects weak reverse engineering and tampering protections in mobile apps (Android/iOS). Trigger on: root detection bypass, jailbreak detection bypass, Frida detection, debugger detection, anti-debugging, ptrace, sysctl, emulator detection, code obfuscation absent, debug symbols present, get-task-allow, ProGuard disabled, R8 disabled, string encryption, integrity check, file tampering, repackaging, dynamic instrumentation, runtime hook, Magisk hide, Magisk, frida-server, objection bypass, signing verification, apk resign. Covers MASVS-RESILIENCE-1/2/3/4.",
+  "content_fingerprint": "d67314ad0fadedb28d5b639c73d35fc905abd3c706b640c328ca578d3dd1c47c"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Quality gate for agent-flow. Runs the repo's own test, typecheck and lint commands in the issue worktree, re-runs failures once to separate flaky tests from real failures, and reports raw output verbatim as JSON. Never modifies code. Use when the orchestrator launches you with AGENT_FLOW_ROLE=qa after a review is approved."
+  "description": "Quality gate for agent-flow. Runs the repo's own test, typecheck and lint commands in the issue worktree, re-runs failures once to separate flaky tests from real failures, and reports raw output verbatim as JSON. Never modifies code. Use when the orchestrator launches you with AGENT_FLOW_ROLE=qa after a review is approved.",
+  "content_fingerprint": "02df3bd8964e0a4934d7708a390d97edacf379a1d2eaa4ae0e4449bf636658c9"
 }

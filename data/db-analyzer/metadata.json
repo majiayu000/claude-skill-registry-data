@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Database schema analysis, optimization, and health check for PostgreSQL databases in Spring Boot / JPA projects. Use when user says \"analyze database\", \"check schema\", \"optimize DB\", \"db health\", \"missing indexes\", \"schema drift\", \"database review\", or when investigating slow queries, data integrity issues, or planning schema migrations. This skill connects to the actual database via MCP postgres to perform live analysis \u2014 it does not just review code. Use it proactively when PRs touch JPA entities, repositories, or Flyway/Liquibase migrations."
+  "description": "Database schema analysis, optimization, and health check for PostgreSQL databases in Spring Boot / JPA projects. Use when user says \"analyze database\", \"check schema\", \"optimize DB\", \"db health\", \"missing indexes\", \"schema drift\", \"database review\", or when investigating slow queries, data integrity issues, or planning schema migrations. This skill connects to the actual database via MCP postgres to perform live analysis — it does not just review code. Use it proactively when PRs touch JPA entities, repositories, or Flyway/Liquibase migrations.",
+  "content_fingerprint": "b30054fef945b64d9cbd3f0dfa35e53d0a53430c91ba580929904cafd9eb50f3"
 }

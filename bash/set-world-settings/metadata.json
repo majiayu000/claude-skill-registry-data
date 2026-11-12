@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reads and changes a running CARLA server's WorldSettings via apply_settings \u2014 synchronous vs asynchronous mode, fixed_delta_seconds (fps), physics substepping, and no_rendering_mode \u2014 and keeps the Traffic Manager's sync state matched automatically. Use when the user asks to \"enable/disable sync mode\", \"set synchronous mode\", \"run at a fixed fps/step\", \"turn off rendering\", \"make the sim deterministic\", or \"restore async mode\", and as the prerequisite for keeping settings across a map load."
+  "description": "Reads and changes a running CARLA server's WorldSettings via apply_settings — synchronous vs asynchronous mode, fixed_delta_seconds (fps), physics substepping, and no_rendering_mode — and keeps the Traffic Manager's sync state matched automatically. Use when the user asks to \"enable/disable sync mode\", \"set synchronous mode\", \"run at a fixed fps/step\", \"turn off rendering\", \"make the sim deterministic\", or \"restore async mode\", and as the prerequisite for keeping settings across a map load.",
+  "content_fingerprint": "7f45e4485109e9ed4ffe6afb47566930f1f2687f92f1423371b528502b78380d"
 }

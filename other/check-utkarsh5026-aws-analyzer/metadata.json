@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run this repo's CI locally - ruff, each module imported with only boto3, pytest - plus project-rule checks CI doesn't have (read-only AWS calls, lazy optional imports, View conventions, IAM permissions listed in README, copies of the shared code). Use after changing src/aws_analyzer/ or tests/, before saying the work is done, and before committing."
+  "description": "Run this repo's CI locally - ruff, each module imported with only boto3, pytest - plus project-rule checks CI doesn't have (read-only AWS calls, lazy optional imports, View conventions, IAM permissions listed in README, copies of the shared code). Use after changing src/aws_analyzer/ or tests/, before saying the work is done, and before committing.",
+  "content_fingerprint": "1a77f92533976fa30d1e03e69091d17bc4e90e5be086f9598af9074382a288be"
 }

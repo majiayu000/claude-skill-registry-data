@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scaffold a new brooks-lint analysis skill so it passes `npm run validate` and `npm run evals` on the first try \u2014 generates skills/{name}/SKILL.md (with the mandatory \"Do NOT trigger for:\" clause and a Process section citing guide step ranges) plus skills/{name}/{name}-guide.md (sequentially numbered steps), then appends paired eval scenarios. Triggers when the maintainer asks to \"add a new skill\", \"scaffold a skill\", or \"create a brooks-lint mode\". Do NOT trigger for: editing an existing skill's content, adding a single eval to an existing skill, or authoring skills for some other plugin."
+  "description": "Scaffold a new brooks-lint analysis skill so it passes `npm run validate` and `npm run evals` on the first try — generates skills/{name}/SKILL.md (with the mandatory \"Do NOT trigger for:\" clause and a Process section citing guide step ranges) plus skills/{name}/{name}-guide.md (sequentially numbered steps), then appends paired eval scenarios. Triggers when the maintainer asks to \"add a new skill\", \"scaffold a skill\", or \"create a brooks-lint mode\". Do NOT trigger for: editing an existing skill's content, adding a single eval to an existing skill, or authoring skills for some other plugin.",
+  "content_fingerprint": "dc2bb421923d49687bec0feffae821b06a962e8b5be015e3d214177c1921b876"
 }

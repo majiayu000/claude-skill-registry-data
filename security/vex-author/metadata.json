@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Authors and validates OpenVEX documents - produces `not_affected`, `affected`, `fixed`, and `under_investigation` statements with justification codes using `vexctl create`; attaches VEX assertions to container images; outputs `.openvex.json` files consumed on a downstream VEX-filter / vulnerability-prioritization path. Use when a scanner flags a CVE that analysis confirms is not exploitable in your deployment, and a machine-readable `not_affected` assertion is needed to suppress false positives without discarding the finding from the audit trail."
+  "description": "Authors and validates OpenVEX documents - produces `not_affected`, `affected`, `fixed`, and `under_investigation` statements with justification codes using `vexctl create`; attaches VEX assertions to container images; outputs `.openvex.json` files consumed on a downstream VEX-filter / vulnerability-prioritization path. Use when a scanner flags a CVE that analysis confirms is not exploitable in your deployment, and a machine-readable `not_affected` assertion is needed to suppress false positives without discarding the finding from the audit trail.",
+  "content_fingerprint": "bca2d94f0eead4cc784583fe9a5683a25c9d7bd52d96aecc0e9b840b96587487"
 }

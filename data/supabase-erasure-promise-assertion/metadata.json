@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prove an app's \"delete my cloud data\" promise actually erases everything, by asserting the cascade in SQL against a real Postgres \u2014 covers the silent orphan case a schema review misses, the two different failure shapes, and keeping the assertion re-runnable. Use when a privacy policy or Play Data Safety sheet claims in-app deletion, or after adding any table to a Supabase schema."
+  "description": "Prove an app's \"delete my cloud data\" promise actually erases everything, by asserting the cascade in SQL against a real Postgres — covers the silent orphan case a schema review misses, the two different failure shapes, and keeping the assertion re-runnable. Use when a privacy policy or Play Data Safety sheet claims in-app deletion, or after adding any table to a Supabase schema.",
+  "content_fingerprint": "4a88e130d9aac499ec31b1823153fec55aee8af7717204a3ee6101116d661e6c"
 }

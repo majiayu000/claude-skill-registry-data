@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adds a new topic to CARLA's native ROS 2 interface \u2014 a publisher (BasePublisher + PublisherImpl, topic suffix, QoS, registration in ROS2::GetOrCreateSensor, a ProcessDataFrom* entry point and its call site in the UE4 plugin) or a subscriber that lets ROS drive an actor. Also covers adding a middleware (RMW) behind IPublisherMiddleware. Use when the user asks to \"publish X to ROS from CARLA\", \"add a ROS topic/publisher/subscriber\", \"make the obstacle/lane-invasion sensor publish\", \"add odometry to ROS\", or \"add another RMW\"."
+  "description": "Adds a new topic to CARLA's native ROS 2 interface — a publisher (BasePublisher + PublisherImpl, topic suffix, QoS, registration in ROS2::GetOrCreateSensor, a ProcessDataFrom* entry point and its call site in the UE4 plugin) or a subscriber that lets ROS drive an actor. Also covers adding a middleware (RMW) behind IPublisherMiddleware. Use when the user asks to \"publish X to ROS from CARLA\", \"add a ROS topic/publisher/subscriber\", \"make the obstacle/lane-invasion sensor publish\", \"add odometry to ROS\", or \"add another RMW\".",
+  "content_fingerprint": "09e5b3d812e64513a6fb990c723509b8d0d0715e49ea4f9d10f54470ef945620"
 }

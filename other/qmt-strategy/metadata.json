@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "QMT \u5ba2\u6237\u7aef\uff08\u8fc5\u6295\u6781\u901f\u7b56\u7565\u4ea4\u6613\u7cfb\u7edf\uff09\u5185\u7f6e Python \u7b56\u7565\u5f15\u64ce\u5f00\u53d1\u6307\u5357\uff0c\u6db5\u76d6\u7b56\u7565\u7f16\u5199\u3001\u56de\u6d4b\u3001\u5b9e\u76d8\u4ea4\u6613\u3001\u5185\u7f6e API \u53c2\u8003\u4e0e\u4ee3\u7801\u793a\u4f8b\uff08\u57fa\u4e8e ContextInfo/passorder/get_trade_detail_data \u7b49\uff0c\u975e xtquant \u5e93\uff09\u3002\u5f53\u7528\u6237\u9700\u8981\u5728 QMT \u5ba2\u6237\u7aef\u4e2d\u7f16\u5199/\u56de\u6d4b/\u8fd0\u884c\u7b56\u7565\u3001\u67e5\u8be2 QMT \u5185\u7f6e API\u3001\u4ece\u805a\u5bbd\u8fc1\u79fb\u81f3 QMT\uff0c\u6216\u63d0\u53ca QMT \u7b56\u7565\u3001\u8fc5\u6295\u7b56\u7565\u3001QMT \u56de\u6d4b\u65f6\u4f7f\u7528\u3002\u82e5\u9700\u7528\u5916\u90e8 Python \u7a0b\u5e8f\u901a\u8fc7 xtquant \u5e93\u8fde\u63a5 QMT \u83b7\u53d6\u884c\u60c5\u6216\u4e0b\u5355\uff0c\u8bf7\u6539\u7528 miniqmt \u6280\u80fd\u3002"
+  "description": "QMT 客户端（迅投极速策略交易系统）内置 Python 策略引擎开发指南，涵盖策略编写、回测、实盘交易、内置 API 参考与代码示例（基于 ContextInfo/passorder/get_trade_detail_data 等，非 xtquant 库）。当用户需要在 QMT 客户端中编写/回测/运行策略、查询 QMT 内置 API、从聚宽迁移至 QMT，或提及 QMT 策略、迅投策略、QMT 回测时使用。若需用外部 Python 程序通过 xtquant 库连接 QMT 获取行情或下单，请改用 miniqmt 技能。",
+  "content_fingerprint": "6a17196e6113095badd8a59c4fe7e987242545cce62a509d6464ebd509d9fc65"
 }

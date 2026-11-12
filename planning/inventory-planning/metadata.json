@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turns a SKU-level inventory export and sales history into a stockout/overstock risk brief, using a stated days-of-cover method against sales velocity and lead time, not a gut read of a stock report. Use when deciding which SKUs are safe to promote, which to protect from a planned campaign, or which are quietly overstocked. Boundary: differs from `anomaly-detection`, which flags one metric's time series against its own trailing average. This skill scores SKU-level stockout/overstock risk from on-hand units, sales velocity, and lead time, not a single metric's history."
+  "description": "Turns a SKU-level inventory export and sales history into a stockout/overstock risk brief, using a stated days-of-cover method against sales velocity and lead time, not a gut read of a stock report. Use when deciding which SKUs are safe to promote, which to protect from a planned campaign, or which are quietly overstocked. Boundary: differs from `anomaly-detection`, which flags one metric's time series against its own trailing average. This skill scores SKU-level stockout/overstock risk from on-hand units, sales velocity, and lead time, not a single metric's history.",
+  "content_fingerprint": "ee940513fcdd16038673514e827109a0c8ed66f7f45a9c3967c4bb43d685435a"
 }

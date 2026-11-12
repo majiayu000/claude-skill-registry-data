@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the ISR rolling-restart chaos drill for RobustMQ \u2014 10 rounds of kill-one-node + write + restart + verify across a 3-replica shard. Use when the user wants to verify replica replication / ISR health, failover, or behaviour under churn \u2014 e.g. \"\u6f14\u7ec3 isr \u526f\u672c\u540c\u6b65\", \"\u9a8c\u8bc1\u4e09\u526f\u672c\u540c\u6b65\", \"kill leader \u6f14\u7ec3\", \"\u9a8c\u8bc1 leader \u5207\u6362/\u6545\u969c\u8f6c\u79fb\", \"\u6eda\u52a8\u91cd\u542f/\u9891\u7e41\u5207\u6362 isr \u662f\u5426\u6b63\u5e38\", \"test ISR replication\", \"\u526f\u672c\u540c\u6b65\u662f\u5426\u6b63\u5e38\"."
+  "description": "Run the ISR rolling-restart chaos drill for RobustMQ — 10 rounds of kill-one-node + write + restart + verify across a 3-replica shard. Use when the user wants to verify replica replication / ISR health, failover, or behaviour under churn — e.g. \"演练 isr 副本同步\", \"验证三副本同步\", \"kill leader 演练\", \"验证 leader 切换/故障转移\", \"滚动重启/频繁切换 isr 是否正常\", \"test ISR replication\", \"副本同步是否正常\".",
+  "content_fingerprint": "c7773969292fdd43d642a49ca207ead6782ff2a2d8888f9c826b95f0b7d80c5b"
 }

@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when refactoring how CI executes rather than what it checks \u2014 moving a gate between host and container, changing compose service orchestration, altering how a workflow invokes a make target, or adding a CI-only compose overlay. Covers the runner-only defect classes (bind mounts hiding installed dependencies, NODE_ENV leaking through exec, Compose health-check differences, root-owned artifacts) that code review cannot see."
+  "description": "Use when refactoring how CI executes rather than what it checks — moving a gate between host and container, changing compose service orchestration, altering how a workflow invokes a make target, or adding a CI-only compose overlay. Covers the runner-only defect classes (bind mounts hiding installed dependencies, NODE_ENV leaking through exec, Compose health-check differences, root-owned artifacts) that code review cannot see.",
+  "content_fingerprint": "61a764412a492392b3139b4afec5600102e102460fa9ecf36ca37bbffc7aa92d"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pre-commit quality gate. Invoke before every git commit, after /flagrare:staleness-audit. Seven checks, plan gaps, use-case coverage gaps, missing test scenarios, test philosophy violations (Kent Dodds Testing Trophy), SOLID violations, Clean Code violations, and security vulnerabilities. Each check is delegated to a parallel subagent. Surfaces findings before they land in history. Also invoke when the user says review this, am I done, did I miss anything, or check the quality."
+  "description": "Pre-commit quality gate. Invoke before every git commit, after /flagrare:staleness-audit. Seven checks, plan gaps, use-case coverage gaps, missing test scenarios, test philosophy violations (Kent Dodds Testing Trophy), SOLID violations, Clean Code violations, and security vulnerabilities. Each check is delegated to a parallel subagent. Surfaces findings before they land in history. Also invoke when the user says review this, am I done, did I miss anything, or check the quality.",
+  "content_fingerprint": "dabd4eddc30af392984ff5d720bcae5f61c662f44b1ae010c76833559cbe7b59"
 }

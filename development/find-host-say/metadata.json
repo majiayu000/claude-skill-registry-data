@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Find and identify the Host_Say function in the CS2 server binary using IDA Pro MCP. Use this skill when\nreverse engineering CS2 server.dll or libserver.so to locate the chat-broadcast/say-command handler by finding\nthe code that references the console chat-relay log format string \"%s %s @ %s: \".\nTrigger: Host_Say"
+  "description": "Find and identify the Host_Say function in the CS2 server binary using IDA Pro MCP. Use this skill when\nreverse engineering CS2 server.dll or libserver.so to locate the chat-broadcast/say-command handler by finding\nthe code that references the console chat-relay log format string \"%s %s @ %s: \".\nTrigger: Host_Say",
+  "content_fingerprint": "84c046dcf611bfe559c30e8d01b05e65455b6964357ecd3b0f56f437012608d3"
 }

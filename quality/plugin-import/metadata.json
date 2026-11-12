@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u8981\u5b89\u88c5\u6216\u66f4\u65b0\u6765\u81ea Git\u3001GitHub\u3001\u5916\u90e8\u63d2\u4ef6\u5e02\u573a\u6216\u5176\u4ed6\u8fdc\u7a0b\u6765\u6e90\u7684 Plugin \u65f6\u4f7f\u7528\uff1b\u8d1f\u8d23\u628a\u8fdc\u7a0b\u6765\u6e90\u56fa\u5b9a\u5e76\u53d6\u5f97\u5230\u672c\u5730\uff0c\u518d\u4ea4\u7ed9 plugin_manage \u81ea\u52a8\u8bc6\u522b Portable/OpenAI/Claude \u683c\u5f0f\u3001\u5ba1\u6838\u548c\u5b89\u88c5\u3002"
+  "description": "当用户要安装或更新来自 Git、GitHub、外部插件市场或其他远程来源的 Plugin 时使用；负责把远程来源固定并取得到本地，再交给 plugin_manage 自动识别 Portable/OpenAI/Claude 格式、审核和安装。",
+  "content_fingerprint": "a258e58400187ada0857c56ef83a0f85411b0bc6c0ccbb7a297a3b95fcc20d41"
 }

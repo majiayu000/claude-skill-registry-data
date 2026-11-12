@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when reasoning about the rig lifecycle operations family (create / start / stop / resume / restore / snapshot / release / unclaim / destroy), reading or trusting `rig ps` / lifecycle projections after recovery, or designing proof for a lifecycle scenario. Covers the 4 failure modes (auto-restore creates partial rig; projections report healthier than reality; provider auth treated as impl work; resume succeeds for one runtime fails another) plus the restore-honesty rule (failed resume is FAILED loudly \u2014 no auto fresh fallback)."
+  "description": "Use when reasoning about the rig lifecycle operations family (create / start / stop / resume / restore / snapshot / release / unclaim / destroy), reading or trusting `rig ps` / lifecycle projections after recovery, or designing proof for a lifecycle scenario. Covers the 4 failure modes (auto-restore creates partial rig; projections report healthier than reality; provider auth treated as impl work; resume succeeds for one runtime fails another) plus the restore-honesty rule (failed resume is FAILED loudly — no auto fresh fallback).",
+  "content_fingerprint": "55ff97a2fa28ca4b243a6a7d96afad7e24b36f27edb3e1f059e88fc1d8aaa2f3"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Platform abstraction decision-making for Amethyst KMP project. Guides when to abstract vs keep platform-specific,\nsource set placement (commonMain, jvmAndroid, platform-specific), expect/actual patterns. Covers primary targets\n(Android, JVM/Desktop, iOS) with web/wasm future considerations. Integrates with gradle-expert for dependency issues.\nTriggers on: abstraction decisions (\"should I share this?\"), source set placement questions, expect/actual creation,\nbuild.gradle.kts work, incorrect placement detection, KMP dependency suggestions."
+  "description": "Platform abstraction decision-making for Amethyst KMP project. Guides when to abstract vs keep platform-specific,\nsource set placement (commonMain, jvmAndroid, platform-specific), expect/actual patterns. Covers primary targets\n(Android, JVM/Desktop, iOS) with web/wasm future considerations. Integrates with gradle-expert for dependency issues.\nTriggers on: abstraction decisions (\"should I share this?\"), source set placement questions, expect/actual creation,\nbuild.gradle.kts work, incorrect placement detection, KMP dependency suggestions.",
+  "content_fingerprint": "d94830cd1b79a76c75da3c01be937e2fd38f007a55e008c9ffe818dc684a4676"
 }

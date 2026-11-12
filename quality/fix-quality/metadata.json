@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/phrazzld/claude-config/blob/main/skills/fix-quality/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "56a5baa1d44c3eff3d2c4ebc99b55213c956b04349941637ae2e5a9ad2a849e6",
+  "description": "Run /check-quality, then fix the highest priority quality issue.\nCreates one fix per invocation. Invoke again for next issue.\nUse /log-quality-issues to create issues without fixing.\n"
 }

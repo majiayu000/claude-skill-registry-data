@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when `hedgehog init`, `hedgehog update`, or `hedgehog status` reports CODE INTELLIGENCE NOT SET UP, or when the user asks to set up, install, repair, or re-index code intelligence / CodeGraphContext / CGC. Installs Python 3.10+ where absent, installs CodeGraphContext into its own isolated environment, indexes the repository, writes `.hedgehog/code-intelligence.json` with the commit the index was built from, and re-runs the CLI's own check. Also covers refreshing an index that has drifted from HEAD."
+  "description": "Use when `hedgehog init`, `hedgehog update`, or `hedgehog status` reports CODE INTELLIGENCE NOT SET UP, or when the user asks to set up, install, repair, or re-index code intelligence / CodeGraphContext / CGC. Installs Python 3.10+ where absent, installs CodeGraphContext into its own isolated environment, indexes the repository, writes `.hedgehog/code-intelligence.json` with the commit the index was built from, and re-runs the CLI's own check. Also covers refreshing an index that has drifted from HEAD.",
+  "content_fingerprint": "4b779c67fb999e364c6ba91956abecfb1f2252661d080da8791577b4b2d8a6ca"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5408\u6210\u89c6\u9891\u89e3\u8bf4\u6700\u7ec8\u6210\u7247\uff1a\u628a\u65c1\u767d\u97f3\u9891\u94fa\u5230\u6e90\u89c6\u9891\u4e0a\uff0c\u6309\u65c1\u767d\u7a97\u53e3\u538b\u4f4e\u539f\u58f0\uff0c\u751f\u6210 SRT / ASS \u5b57\u5e55\u5e76\u53ef\u70e7\u5f55\uff0c \u6700\u540e\u505a\u54cd\u5ea6\u6807\u51c6\u5316\u3002\u4f5c\u4e3a\u6700\u7ec8\u5408\u6210\u9636\u6bb5\u4f7f\u7528\u3002\u8f93\u5165\u6e90\u89c6\u9891\u3001tts_meta.json \u4e0e\u65c1\u767d\u4f4d\u7f6e\uff1b \u8f93\u51fa recap \u6210\u7247\u548c\u5b57\u5e55\u3002\u89e6\u53d1\u8bcd\uff1a\u89c6\u9891\u5408\u6210\u3001\u6df7\u97f3\u3001\u5b57\u5e55\u3001\u538b\u5b57\u5e55\u3001assemble video\u3001mux\u3001ducking\u3001subtitles\u3001\u6210\u7247\u3002"
+  "description": "合成视频解说最终成片：把旁白音频铺到源视频上，按旁白窗口压低原声，生成 SRT / ASS 字幕并可烧录， 最后做响度标准化。作为最终合成阶段使用。输入源视频、tts_meta.json 与旁白位置； 输出 recap 成片和字幕。触发词：视频合成、混音、字幕、压字幕、assemble video、mux、ducking、subtitles、成片。",
+  "content_fingerprint": "4acf72c09c4d8f3db955032470050b983bac7fe3160c9dbb30f2c2748c71cbbc"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Thesis report synthesis \u2014 turn a thesis's markdown artifacts into its letter-size thesis-report.html, then OPTIMIZE it against real page renders. Four-step loop \u2014 pack (deterministic Python bundle of all sources + report/metrics.json), author (the LLM writes report/content.html \u2014 narrative, KPI tiles, badges, timeline, tables and citations are LLM judgment), assemble (deterministic validation, template injection, Q50 pins, Q47 overflow gate), render + optimize (Chrome headless per-page PNGs \u2014 the LLM reads them and iterates until every page is visually clean). Spec 046 Q46\u2013Q50."
+  "description": "Thesis report synthesis — turn a thesis's markdown artifacts into its letter-size thesis-report.html, then OPTIMIZE it against real page renders. Four-step loop — pack (deterministic Python bundle of all sources + report/metrics.json), author (the LLM writes report/content.html — narrative, KPI tiles, badges, timeline, tables and citations are LLM judgment), assemble (deterministic validation, template injection, Q50 pins, Q47 overflow gate), render + optimize (Chrome headless per-page PNGs — the LLM reads them and iterates until every page is visually clean). Spec 046 Q46–Q50.",
+  "content_fingerprint": "68cfbf56f85d25d695e03916fd3effa6ee1f7f9f184bfa518858e66d04eb7804"
 }

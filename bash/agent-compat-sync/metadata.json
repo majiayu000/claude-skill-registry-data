@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Keep repository-level Claude and Codex agent instructions compatible by creating safe symlinks between CLAUDE.md and AGENTS.md, and between .claude/skills/* and .agents/skills/*. Use when a repository should work with both Claude and Codex, when one agent instruction file exists but the other is missing, when migrating agent skills between .claude and .agents directories, or when asked to improve Claude/Codex compatibility for a repo."
+  "description": "Keep repository-level Claude and Codex agent instructions compatible by creating safe symlinks between CLAUDE.md and AGENTS.md, and between .claude/skills/* and .agents/skills/*. Use when a repository should work with both Claude and Codex, when one agent instruction file exists but the other is missing, when migrating agent skills between .claude and .agents directories, or when asked to improve Claude/Codex compatibility for a repo.",
+  "content_fingerprint": "2c0c22416292191d1fb270f587ba4210e8048da3758a8cf5c2a6c167ba4ee759"
 }

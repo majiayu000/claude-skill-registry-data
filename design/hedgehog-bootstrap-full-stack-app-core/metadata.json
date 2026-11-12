@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use once, at the start of a new Hedgehog project on the full-stack-app core, before hedgehog-bootstrap's add-on steps, to land the full-stack-app core workspace (Nx, packages/config, packages/db, apps/api, apps/web, and every enforcement file) and verify it's green. Runs as the first move of the `bootstrap` agent, which `planner` invokes automatically after Confirm & Lock. No per-project decisions, no add-on awareness."
+  "description": "Use once, at the start of a new Hedgehog project on the full-stack-app core, before hedgehog-bootstrap's add-on steps, to land the full-stack-app core workspace (Nx, packages/config, packages/db, apps/api, apps/web, and every enforcement file) and verify it's green. Runs as the first move of the `bootstrap` agent, which `planner` invokes automatically after Confirm & Lock. No per-project decisions, no add-on awareness.",
+  "content_fingerprint": "fa3ccabfefd92f0b5d2ce30053ae44ed4009c1c7664ff60de9ed8c5e67d950a4"
 }

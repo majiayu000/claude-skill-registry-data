@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "User-invoked session handoff. `/session-summary pause` writes a structured resume file capturing what the session was doing, what changed, what was decided, and what is unfinished, folding any summary already there into a shorter form above it. `/session-summary resume` reads that file back and reports it as a few bullets, without starting any work it names. Invoked explicitly by name only. Never write or read the resume file on your own initiative, and never at the end of an ordinary task."
+  "description": "User-invoked session handoff. `/session-summary pause` writes a structured resume file capturing what the session was doing, what changed, what was decided, and what is unfinished, folding any summary already there into a shorter form above it. `/session-summary resume` reads that file back and reports it as a few bullets, without starting any work it names. Invoked explicitly by name only. Never write or read the resume file on your own initiative, and never at the end of an ordinary task.",
+  "content_fingerprint": "8245d3383eca851e37df9ccea648c9e0fc37b789a3ebef34477f720fc008a7f4"
 }

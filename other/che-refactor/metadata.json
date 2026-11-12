@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Behaviour-preserving refactoring in the Fowler sense. Takes existing code and applies established refactorings (extract function, inline, extract variable, replace conditional with polymorphism, split phase, ...) to improve readability, maintainability, scalability and testability WITHOUT changing observable behaviour. PRECONDITION: a green test safety net; if coverage is missing the first step is characterization tests, not refactoring. Each step is small, tests green after it, atomic commit. Invocable standalone and recommendable by che-pair. NEVER run inside che-ship."
+  "description": "Behaviour-preserving refactoring in the Fowler sense. Takes existing code and applies established refactorings (extract function, inline, extract variable, replace conditional with polymorphism, split phase, ...) to improve readability, maintainability, scalability and testability WITHOUT changing observable behaviour. PRECONDITION: a green test safety net; if coverage is missing the first step is characterization tests, not refactoring. Each step is small, tests green after it, atomic commit. Invocable standalone and recommendable by che-pair. NEVER run inside che-ship.",
+  "content_fingerprint": "e523ab4011f6f14e60d0ccb0d4e1403424e6e0c00902b904df8665b4a4c14f8c"
 }

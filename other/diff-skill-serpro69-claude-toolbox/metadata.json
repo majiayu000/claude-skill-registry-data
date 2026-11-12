@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Compare two versions of a skill's instructions to detect degradations and complexity increases.\nTRIGGER when: user asks to diff, compare, or review changes to a skill's markdown instructions.\nAsymmetric check \u2014 only regressions count. Additions, clarifications, and strengthenings are not degradations.\nCompares HEAD \u2192 working tree by default. Walks the full reachable file set from SKILL.md via markdown links.\nProduces a report file under docs/reviews/diff-skill/ and an inline summary."
+  "description": "Compare two versions of a skill's instructions to detect degradations and complexity increases.\nTRIGGER when: user asks to diff, compare, or review changes to a skill's markdown instructions.\nAsymmetric check — only regressions count. Additions, clarifications, and strengthenings are not degradations.\nCompares HEAD → working tree by default. Walks the full reachable file set from SKILL.md via markdown links.\nProduces a report file under docs/reviews/diff-skill/ and an inline summary.",
+  "content_fingerprint": "5925b755593745519adbd359f257ac8b7c20a725108652911b23f1d212a3e991"
 }

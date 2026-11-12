@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manual-QA pass over recent changes \u2014 files concrete bug reports (blocker/major/minor) for UI, navigation, and cross-feature regressions a tester would catch. Auto-detects the platform (Android, iOS, web) from the changed files and audits against that platform's bar; off-platform changes are judged against existing behavior. Builds and tests the branch first, then optionally drives a device or browser to confirm visual bugs. Read-only; output is a fix list, not a test plan. Triggers on \"manual QA\", \"QA pass\", \"what's broken\", \"did this break anything\", \"find bugs in my diff\"."
+  "description": "Manual-QA pass over recent changes — files concrete bug reports (blocker/major/minor) for UI, navigation, and cross-feature regressions a tester would catch. Auto-detects the platform (Android, iOS, web) from the changed files and audits against that platform's bar; off-platform changes are judged against existing behavior. Builds and tests the branch first, then optionally drives a device or browser to confirm visual bugs. Read-only; output is a fix list, not a test plan. Triggers on \"manual QA\", \"QA pass\", \"what's broken\", \"did this break anything\", \"find bugs in my diff\".",
+  "content_fingerprint": "a6f47a366ec4b549f2061e0baf4a2e566d15b416371d197fa4dd050827b6054d"
 }

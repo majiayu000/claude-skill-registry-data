@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728Claude Code\u4f1a\u8bdd\u671f\u95f4\uff0c\u5c06\u505a\u51fa\u7684\u67b6\u6784\u51b3\u7b56\u6355\u83b7\u4e3a\u7ed3\u6784\u5316\u7684\u67b6\u6784\u51b3\u7b56\u8bb0\u5f55\uff08ADR\uff09\u3002\u81ea\u52a8\u68c0\u6d4b\u51b3\u7b56\u65f6\u523b\uff0c\u8bb0\u5f55\u4e0a\u4e0b\u6587\u3001\u8003\u8651\u7684\u66ff\u4ee3\u65b9\u6848\u548c\u7406\u7531\u3002\u7ef4\u62a4\u4e00\u4e2aADR\u65e5\u5fd7\uff0c\u4ee5\u4fbf\u672a\u6765\u7684\u5f00\u53d1\u4eba\u5458\u7406\u89e3\u4ee3\u7801\u5e93\u4e3a\u4f55\u4ee5\u5f53\u524d\u65b9\u5f0f\u6784\u5efa\u3002"
+  "description": "在Claude Code会话期间，将做出的架构决策捕获为结构化的架构决策记录（ADR）。自动检测决策时刻，记录上下文、考虑的替代方案和理由。维护一个ADR日志，以便未来的开发人员理解代码库为何以当前方式构建。",
+  "content_fingerprint": "544dd54052366b9db6b86d6d7d21c7621b28d67a95e13034432585b9ac2cbfe0"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use curl as the ground-truth HTTP client during recon and verification \u2014 browser-impersonation headers for CDN/WAF 403s, --globoff for bracket params, Windows curl.exe quirks, SPA false-200 traps. Load when bare tooling gets 403/blocked at a CDN edge, an API needs precise hand-crafted requests, or scanner output needs a clean manual repro. Signals: curl, 403 access-policy, CF-RAY, Cf-Mitigated, \"bad range in position\", --globoff, data-center UA blocked."
+  "description": "Use curl as the ground-truth HTTP client during recon and verification — browser-impersonation headers for CDN/WAF 403s, --globoff for bracket params, Windows curl.exe quirks, SPA false-200 traps. Load when bare tooling gets 403/blocked at a CDN edge, an API needs precise hand-crafted requests, or scanner output needs a clean manual repro. Signals: curl, 403 access-policy, CF-RAY, Cf-Mitigated, \"bad range in position\", --globoff, data-center UA blocked.",
+  "content_fingerprint": "df986f9a1efb0da87575b6ef3b70d2ebca2d111544658bb6ece8198c503239aa"
 }

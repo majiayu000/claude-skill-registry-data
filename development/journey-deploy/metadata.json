@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use as the deploy-verification stage of the Butterbase journey, after journey-frontend (or after any build stage if there is no frontend). Smoke-tests the deployed app \u2014 hits the live URL, invokes any deployed functions, checks auth round-trip. Writes results to docs/butterbase/04-build-log.md. Blocks journey-submit if smoke fails."
+  "description": "Use as the deploy-verification stage of the Butterbase journey, after journey-frontend (or after any build stage if there is no frontend). Smoke-tests the deployed app — hits the live URL, invokes any deployed functions, checks auth round-trip. Writes results to docs/butterbase/04-build-log.md. Blocks journey-submit if smoke fails.",
+  "content_fingerprint": "d355cae9fd3be632c11d7a442c6b60328d91cd2b7b4cc0094f321711480dca49"
 }

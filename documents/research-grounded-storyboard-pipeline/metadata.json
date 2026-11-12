@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Internal production pipeline behind the storyboard entry point. Turns a confirmed production config into shots, keyframes, five prompt routes, generated frames, and a combined XLSX. Do not trigger this directly on a user request \u2014 the `storyboard` skill routes here after scope is confirmed. Read it when following that route, when resuming an existing `storyboard_runs/` directory, or when a caller names this pipeline explicitly."
+  "description": "Internal production pipeline behind the storyboard entry point. Turns a confirmed production config into shots, keyframes, five prompt routes, generated frames, and a combined XLSX. Do not trigger this directly on a user request — the `storyboard` skill routes here after scope is confirmed. Read it when following that route, when resuming an existing `storyboard_runs/` directory, or when a caller names this pipeline explicitly.",
+  "content_fingerprint": "129a34e38c962761f69790ac45e43c2d2e3bfb036e66ce37a00ff1129f1d6467"
 }

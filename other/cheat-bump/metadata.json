@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u63d0\u8bae\u5e76\u6267\u884c rubric \u6216 bucket \u5347\u7ea7\u3002\u4e24\u79cd\u6a21\u5f0f\uff1a**\u5b8c\u6574 rubric bump**\uff08\u6700\u9ad8\u98ce\u9669\u52a8\u4f5c\uff0c5 \u6b65\u5f3a\u5236 + \u8de8\u6a21\u578b\u5ba1\u6838\uff09\u548c **--bucket-only \u8f7b\u91cf\u91cd\u6821**\uff08\u53ea\u6362 bucket \u8fb9\u754c\uff0c\u4e0d\u52a8 rubric \u516c\u5f0f\uff09\u3002**Phase 2 \u5f3a\u5236\u8d70 cheat-score-blind sub-agent \u7ed9\u6821\u51c6\u6c60\u91cd\u6253\u5206**\u2014\u2014\u4e0d\u63a5\u53d7 self-scored fallback\u3002\u89e6\u53d1\u8bcd\uff1a\"\u5347\u7ea7 rubric\"/\"bump rubric\"/\"\u66f4\u65b0\u516c\u5f0f\"/\"\u6211\u60f3\u52a0\u4e00\u4e2a\u7ef4\u5ea6\"/\"\u8c03\u6574\u6743\u91cd\"/\"\u91cd\u6821\u6876\"/\"recalibrate bucket\"\u3002"
+  "description": "提议并执行 rubric 或 bucket 升级。两种模式：**完整 rubric bump**（最高风险动作，5 步强制 + 跨模型审核）和 **--bucket-only 轻量重校**（只换 bucket 边界，不动 rubric 公式）。**Phase 2 强制走 cheat-score-blind sub-agent 给校准池重打分**——不接受 self-scored fallback。触发词：\"升级 rubric\"/\"bump rubric\"/\"更新公式\"/\"我想加一个维度\"/\"调整权重\"/\"重校桶\"/\"recalibrate bucket\"。",
+  "content_fingerprint": "d8b5f5a242f9fdb14c9d94eae2765a4be7621a1d1eb0fe1c0e69588290f26861"
 }

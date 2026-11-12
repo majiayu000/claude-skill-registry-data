@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants to configure LLM integration for a DataRobot agent application. This skill helps to change LLM model, switch between the LLM integrations the project supports (LLM Gateway, a DataRobot-deployed LLM, an external provider, an LLM Blueprint, and any others its config declares), or set up provider credentials. The skill reads the project's .datarobot/cli/llm.yml for the real options, interviews the user, then runs sync_llm_env.py with the chosen values as CLI args to merge into .env."
+  "description": "Use when the user wants to configure LLM integration for a DataRobot agent application. This skill helps to change LLM model, switch between the LLM integrations the project supports (LLM Gateway, a DataRobot-deployed LLM, an external provider, an LLM Blueprint, and any others its config declares), or set up provider credentials. The skill reads the project's .datarobot/cli/llm.yml for the real options, interviews the user, then runs sync_llm_env.py with the chosen values as CLI args to merge into .env.",
+  "content_fingerprint": "fd383bf6974c0c796f22efca805def91bd1833eda6339b87ff4f3f511a14ff4d"
 }

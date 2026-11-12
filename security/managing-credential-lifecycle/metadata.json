@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manages the lifecycle of API keys, tokens, and credentials across a multi-service production stack \u2014 inventory, rotation schedules, audit procedures, and emergency revocation for Vercel env vars, Supabase service keys, the n8n credential store, Anthropic API keys, and MCP server tokens. Activates on rotate credentials, API key rotation, credential audit, service key expired, key compromised, secrets management, credential sprawl, or preparing a security review. Not for writing application auth or login flows (use kyle-vibe-coding) and not for storing secrets in code."
+  "description": "Manages the lifecycle of API keys, tokens, and credentials across a multi-service production stack — inventory, rotation schedules, audit procedures, and emergency revocation for Vercel env vars, Supabase service keys, the n8n credential store, Anthropic API keys, and MCP server tokens. Activates on rotate credentials, API key rotation, credential audit, service key expired, key compromised, secrets management, credential sprawl, or preparing a security review. Not for writing application auth or login flows (use kyle-vibe-coding) and not for storing secrets in code.",
+  "content_fingerprint": "45a87b477ce7bdf9599b2dbdd44ee8066e4ff3e748de3b95843a768f1677376b"
 }

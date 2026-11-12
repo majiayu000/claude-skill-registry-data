@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Captures the context of a survey \u2014 purpose, subject, recruiting, who is missing, audience and expectations \u2014 in a short interview and stores it as a Markdown document next to the CSV (<name>.context.md). Every other survey skill reads it when present, so reports state the study design instead of guessing it. Use before the first analysis of a new data set, to update an existing context document, or to turn an existing briefing into one. Invoke with your CSV path or briefing text as the argument, e.g. /survey-context [CSV path]."
+  "description": "Captures the context of a survey — purpose, subject, recruiting, who is missing, audience and expectations — in a short interview and stores it as a Markdown document next to the CSV (<name>.context.md). Every other survey skill reads it when present, so reports state the study design instead of guessing it. Use before the first analysis of a new data set, to update an existing context document, or to turn an existing briefing into one. Invoke with your CSV path or briefing text as the argument, e.g. /survey-context [CSV path].",
+  "content_fingerprint": "d32c0bdca713031bb5d29cfffc9dfb691269f776a9def893e40ac9615a9e1196"
 }

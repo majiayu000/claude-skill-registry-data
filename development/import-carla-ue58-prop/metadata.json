@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Imports FBX meshes into CARLA on UE 5.8 as spawnable props \u2014 drives the editor headlessly to import the mesh, derives the prop size from its measured bounds, and registers it in PropParameters.json so it appears in the blueprint library as static.prop.<name>. Handles the FBX unit-scale problem, verifies the result against a running server, and can revert cleanly. Use when the user asks to \"import a prop\", \"add a custom mesh/object to CARLA\", \"make my model spawnable\", or a prop imports but never shows up in the blueprint library."
+  "description": "Imports FBX meshes into CARLA on UE 5.8 as spawnable props — drives the editor headlessly to import the mesh, derives the prop size from its measured bounds, and registers it in PropParameters.json so it appears in the blueprint library as static.prop.<name>. Handles the FBX unit-scale problem, verifies the result against a running server, and can revert cleanly. Use when the user asks to \"import a prop\", \"add a custom mesh/object to CARLA\", \"make my model spawnable\", or a prop imports but never shows up in the blueprint library.",
+  "content_fingerprint": "af3614f5fa4dd3e4338cb8f5b18277201f6d9cd282c95978a56af9c387a9e67c"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants to send/push/transfer/upload a folder or files from the local machine to the VPS (or pull the other way) and a peer Claude Code runs on the VPS. HYBRID model \u2014 the two instances coordinate over Claude's built-in Remote Control (SendMessage), and the file bytes move over git (preferred) or rsync/tar-over-SSH, verified with a manifest. Triggers on \"push this folder to the VPS\", \"send files to the VPS\", \"transfer <dir> to the server\", \"upload to VPS\", \"copy to the remote\"."
+  "description": "Use when the user wants to send/push/transfer/upload a folder or files from the local machine to the VPS (or pull the other way) and a peer Claude Code runs on the VPS. HYBRID model — the two instances coordinate over Claude's built-in Remote Control (SendMessage), and the file bytes move over git (preferred) or rsync/tar-over-SSH, verified with a manifest. Triggers on \"push this folder to the VPS\", \"send files to the VPS\", \"transfer <dir> to the server\", \"upload to VPS\", \"copy to the remote\".",
+  "content_fingerprint": "bdb86c8a0c4430fa1b250c513fc20c5cdcfe827d9a095d003eb68895972a171f"
 }

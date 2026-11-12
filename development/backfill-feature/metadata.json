@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user says \"/backfill-feature\", \"backfill the ADR\", \"this feature has no ADR\", \"I need to document what's already there before I change it\", or wants to capture an existing feature's architectural rationale and behaviour *before* modifying it. Reads the relevant code, drafts a reverse-engineered ADR (what is, why it probably looks like this) + Gherkin spec (current behaviour) + characterization tests that lock the current behaviour green. Hands off to /plan-change so the actual change can be layered on top of a documented, tested baseline."
+  "description": "Use when the user says \"/backfill-feature\", \"backfill the ADR\", \"this feature has no ADR\", \"I need to document what's already there before I change it\", or wants to capture an existing feature's architectural rationale and behaviour *before* modifying it. Reads the relevant code, drafts a reverse-engineered ADR (what is, why it probably looks like this) + Gherkin spec (current behaviour) + characterization tests that lock the current behaviour green. Hands off to /plan-change so the actual change can be layered on top of a documented, tested baseline.",
+  "content_fingerprint": "0925c629f4857a2901dd54e881922787a26a8d5a9efc91fbaf8fcd9f317839d2"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prep a release: detect the repo's release convention (lockstep tag vs per-service tag vs plain semver), draft the changelog from recent commits, propose the bump kind, and show the exact command to run. Does NOT run the release without explicit user approval.\nTrigger this skill when: - User says \"cut a release\", \"bump version\", \"release\", or invokes\n  `/release-brief`.\n- After merging a big PR that closes a milestone."
+  "description": "Prep a release: detect the repo's release convention (lockstep tag vs per-service tag vs plain semver), draft the changelog from recent commits, propose the bump kind, and show the exact command to run. Does NOT run the release without explicit user approval.\nTrigger this skill when: - User says \"cut a release\", \"bump version\", \"release\", or invokes\n  `/release-brief`.\n- After merging a big PR that closes a milestone.",
+  "content_fingerprint": "ddc2f9fdbb4317596b5d6f347e35be60e7b7895cae5f711549496eaf4908d3c2"
 }

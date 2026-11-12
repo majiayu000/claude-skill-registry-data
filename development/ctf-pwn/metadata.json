@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CTF pwn challenge playbook \u2014 fast pwntools workflow against \"nc host port\" services: reproduce the remote environment locally with the provided libc/ld (patchelf, Docker), exploit format-string bugs (the CTF staple) for leaks and writes, and iterate a script from crash to flag. Load when the handout is a binary plus connection info. Signals: \"pwn\" category, nc host port, checksec output, provided libc.so.6/ld-linux, Dockerfile, \"%p\" reflections, menu-driven heap note apps."
+  "description": "CTF pwn challenge playbook — fast pwntools workflow against \"nc host port\" services: reproduce the remote environment locally with the provided libc/ld (patchelf, Docker), exploit format-string bugs (the CTF staple) for leaks and writes, and iterate a script from crash to flag. Load when the handout is a binary plus connection info. Signals: \"pwn\" category, nc host port, checksec output, provided libc.so.6/ld-linux, Dockerfile, \"%p\" reflections, menu-driven heap note apps.",
+  "content_fingerprint": "e5b3d4cab7189fe0795b4af26fb21344659e9ae865ff570877a48416cfa5f858"
 }

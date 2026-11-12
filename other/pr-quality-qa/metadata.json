@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Judge a local diff on test coverage, error handling, and whether the tests would fail if the code regressed, and return a PASS/WARN/CRITICAL_FAIL verdict. Use when you say `qa review my changes`, `run the qa gate`, or `are these tests good enough`. Do NOT use to run all six axes (use pr-quality-all), and do NOT use to write the tests themselves (use test)."
+  "description": "Judge a local diff on test coverage, error handling, and whether the tests would fail if the code regressed, and return a PASS/WARN/CRITICAL_FAIL verdict. Use when you say `qa review my changes`, `run the qa gate`, or `are these tests good enough`. Do NOT use to run all six axes (use pr-quality-all), and do NOT use to write the tests themselves (use test).",
+  "content_fingerprint": "9516bf3c41928e702dc66bacfb697a08872caf539facc22af840629407dce5fc"
 }

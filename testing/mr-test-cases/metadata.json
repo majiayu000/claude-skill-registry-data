@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/openhive-network/denser/blob/main/.claude/skills/mr-test-cases/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "7311e017d9e9582ba0349a01783b5c33903737ae3e07db355894acc721addd97",
+  "description": "Generate test cases for Merge Request changes. Analyzes diff between MR branch and develop, identifies affected areas (components, utilities, API calls, styling), and generates prioritized test cases."
 }

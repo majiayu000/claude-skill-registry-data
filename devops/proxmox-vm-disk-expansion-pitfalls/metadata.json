@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/proxmox-vm-disk-expansion-pitfalls/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c5bd2cf08fd18e278ca7efca2402a7e2b34fd39b85ed7a13cade6442c8563cc7",
+  "description": "Troubleshoot common failures when expanding Proxmox VM disks on Ubuntu 24.04\ncloud-init images and draining Kubernetes nodes. Use when: (1) growpart fails\nwith \"command not found\" on Ubuntu cloud-init"
 }

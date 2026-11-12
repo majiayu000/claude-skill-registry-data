@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Delta MERGE deduplication pattern for Gold layer to prevent duplicate source key errors. Use when merging from Silver to Gold tables where Silver may contain duplicate business keys due to incremental DLT streaming, CDC patterns, SCD Type 2 tracking, or multiple batch loads. Prevents DELTA_MULTIPLE_SOURCE_ROW_MATCHING_TARGET_ROW_IN_MERGE errors by deduplicating before merge."
+  "description": "Delta MERGE deduplication pattern for Gold layer to prevent duplicate source key errors. Use when merging from Silver to Gold tables where Silver may contain duplicate business keys due to incremental DLT streaming, CDC patterns, SCD Type 2 tracking, or multiple batch loads. Prevents DELTA_MULTIPLE_SOURCE_ROW_MATCHING_TARGET_ROW_IN_MERGE errors by deduplicating before merge.",
+  "content_fingerprint": "dbea038c3bafa6dc44e712498d8bb617323b87576ca8c1bcf6e2324720bd7309"
 }

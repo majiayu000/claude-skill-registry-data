@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8bfb\u53d6\u533b\u5b66\u8bba\u6587\u9879\u76ee\u72b6\u6001\u4e0e\u73b0\u6709\u5de5\u4ef6\uff0c\u751f\u6210\u5f53\u524d\u8fdb\u5ea6\u5730\u56fe\u3001\u5173\u952e\u98ce\u9669\u548c\u4e00\u4e2a\u6700\u5408\u9002\u7684\u4e0b\u4e00\u6b65\u5efa\u8bae\u3002\u5f53\u7528\u6237\u95ee\u201c\u73b0\u5728 \u5230\u54ea\u4e00\u6b65\u201d\u201c\u4e0b\u4e00\u6b65\u505a\u4ec0\u4e48\u201d\u201c\u4ece\u54ea\u91cc\u5f00\u59cb\u201d\u6216\u9700\u8981\u6f84\u6e05\u591a\u79cd\u533b\u5b66\u4efb\u52a1\u7684\u9009\u62e9\u65f6\u4f7f\u7528\uff1b\u72b6\u6001\u67e5\u8be2\u53ea\u63a8\u8350\u4e0b\u4e00\u6b65\uff0c \u660e\u786e\u7684\u81ea\u7136\u8bed\u8a00\u4efb\u52a1\u76f4\u63a5\u5339\u914d\u6700\u7a84\u804c\u8d23 Skill\uff0c\u65e0\u9700\u8bf4\u51fa\u6280\u80fd\u540d\uff1b\u4e0d\u81ea\u52a8\u4e32\u8054\u540e\u7eed\u9636\u6bb5\u6216\u5ba3\u544a\u7a3f\u4ef6\u53ef\u6295\u7a3f\u3002 Use to review medical research workflow progress and recommend the next task."
+  "description": "读取医学论文项目状态与现有工件，生成当前进度地图、关键风险和一个最合适的下一步建议。当用户问“现在 到哪一步”“下一步做什么”“从哪里开始”或需要澄清多种医学任务的选择时使用；状态查询只推荐下一步， 明确的自然语言任务直接匹配最窄职责 Skill，无需说出技能名；不自动串联后续阶段或宣告稿件可投稿。 Use to review medical research workflow progress and recommend the next task.",
+  "content_fingerprint": "e40355e6b3db4bce67d192358d61fffb7aef968914ffa5a2cdeb31bf241bfe13"
 }

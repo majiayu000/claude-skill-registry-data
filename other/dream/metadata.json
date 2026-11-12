@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prunes and consolidates the project's auto-memory to keep it minimal \u2014 deletes stale, wrong, or redundant memories, merges overlapping ones into existing files, and trims the index. Strong bias against growth: never creates new memory files and never stores new facts. Verifies staleness against the current codebase, then presents the plan and asks before deleting. Requires Claude Code auto-memory; run periodically after heavy stretches of work."
+  "description": "Prunes and consolidates the project's auto-memory to keep it minimal — deletes stale, wrong, or redundant memories, merges overlapping ones into existing files, and trims the index. Strong bias against growth: never creates new memory files and never stores new facts. Verifies staleness against the current codebase, then presents the plan and asks before deleting. Requires Claude Code auto-memory; run periodically after heavy stretches of work.",
+  "content_fingerprint": "b4a40d1239ca9d90b05f3c5db1d09d3bfc6345f741426481aa125d28d7b3bafe"
 }

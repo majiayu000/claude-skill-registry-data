@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLHY/ruoyi-develop-claude/blob/main/.claude/skills/uniapp-platform/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a719dd4a85244f022ecd3979c624d21de285cdac0febda5e5b7697c2c1a965b7",
+  "description": "基于若依-vue-plus框架的移动端（Uni-app）跨平台开发规范，定义条件编译的使用标准。通过特定语法处理H5、微信小程序、支付宝小程序及App端的差异化逻辑与样式，确保一套代码多端运行。\n\n触发场景：\n- 调用平台特有API（如微信支付、App推送、H5路由等）\n- 处理平台样式差异（状态栏、安全区域、导航栏）\n- 屏蔽不兼容功能（某些API仅在特定平台可用）\n- 实现差异化业务逻辑（不同"
 }

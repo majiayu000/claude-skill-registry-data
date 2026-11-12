@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Container build and runtime standards: multi-stage builds into a minimal runtime (Alpine/Distroless/Scratch), manifest-before-source layer ordering for cache hits, non-root user, vulnerability scan failing on HIGH/CRITICAL, no secrets in the image, tini/dumb-init as PID 1, HEALTHCHECK, and semver+SHA tags that are never reused. Load when writing or reviewing a Dockerfile, docker-compose file, container build pipeline, or image tagging scheme."
+  "description": "Container build and runtime standards: multi-stage builds into a minimal runtime (Alpine/Distroless/Scratch), manifest-before-source layer ordering for cache hits, non-root user, vulnerability scan failing on HIGH/CRITICAL, no secrets in the image, tini/dumb-init as PID 1, HEALTHCHECK, and semver+SHA tags that are never reused. Load when writing or reviewing a Dockerfile, docker-compose file, container build pipeline, or image tagging scheme.",
+  "content_fingerprint": "01246d460a2f94c310d36736321ef2c6568db09042c592c5a3d36be51b0fa710"
 }

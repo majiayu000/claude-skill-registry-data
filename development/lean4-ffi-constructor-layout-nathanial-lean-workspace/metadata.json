@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/nathanial/lean-workspace/blob/main/.claude/skills/lean4-ffi-constructor-layout/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "47bdb6cb5f7915417fa0626bee60ed3554991cb366941b72aef17ef1efbfb4ee",
+  "description": "Lean 4 FFI memory layout for constructors with mixed object and scalar fields.\nUse when: (1) assertion violation \"i < lean_ctor_num_objs(o)\" accessing constructor fields,\n(2) assertion violation \"offs"
 }

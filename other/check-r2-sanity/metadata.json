@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run a deterministic, read-only quality audit of Apple Health and Health Auto Export JSON archived in the project's private Cloudflare R2 bucket. Use when the user invokes /check-r2-sanity or $check-r2-sanity, asks whether an R2 health export is complete or suitable for backfilling, compares export settings/providers, or wants metric coverage, workout-detail, duplicate, timestamp, parse, and temporal-consistency checks without exposing private health values."
+  "description": "Run a deterministic, read-only quality audit of Apple Health and Health Auto Export JSON archived in the project's private Cloudflare R2 bucket. Use when the user invokes /check-r2-sanity or $check-r2-sanity, asks whether an R2 health export is complete or suitable for backfilling, compares export settings/providers, or wants metric coverage, workout-detail, duplicate, timestamp, parse, and temporal-consistency checks without exposing private health values.",
+  "content_fingerprint": "864b3c0e759917766c861c423759d0741ab7dc21581b38b3032b62a1582825fa"
 }

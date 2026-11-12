@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wire an AppKit frontend (Databricks App) to a separate Agent App backend (Databricks App hosting mlflow.genai.agent_server or ResponsesAgent) with OBO token forwarding via x-forwarded-access-token, app-to-app service principal auth, dual-format SSE streaming, and the /api/chat contract. Use this skill when the agent is deployed as its own Databricks App \u2014 not as a Model Serving endpoint. Triggers on \"agent app backend\", \"two apps\", \"appkit plus agent app\", \"proxy agent app\", \"agent-backend resource\", \"x-forwarded-access-token\", \"migrate agent to apps\", \"agent app proxy\"."
+  "description": "Wire an AppKit frontend (Databricks App) to a separate Agent App backend (Databricks App hosting mlflow.genai.agent_server or ResponsesAgent) with OBO token forwarding via x-forwarded-access-token, app-to-app service principal auth, dual-format SSE streaming, and the /api/chat contract. Use this skill when the agent is deployed as its own Databricks App — not as a Model Serving endpoint. Triggers on \"agent app backend\", \"two apps\", \"appkit plus agent app\", \"proxy agent app\", \"agent-backend resource\", \"x-forwarded-access-token\", \"migrate agent to apps\", \"agent app proxy\".",
+  "content_fingerprint": "eb53b48f67d266fb0f26dfa19a8a6bafc5f6d5c91a9b1b1774fdfe07b7d628dd"
 }

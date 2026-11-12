@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when adding Nix-based local runs for an existing Playwright e2e suite. Provides a self-contained `tests/shell.nix` that uses `nixpkgs-latest` for `playwright-driver.browsers`, plus a justfile entry \u2014 works on NixOS where `npx playwright install --with-deps` cannot."
+  "description": "Use this when adding Nix-based local runs for an existing Playwright e2e suite. Provides a self-contained `tests/shell.nix` that uses `nixpkgs-latest` for `playwright-driver.browsers`, plus a justfile entry — works on NixOS where `npx playwright install --with-deps` cannot.",
+  "content_fingerprint": "2451252c2e96deaf60e6b2054d8af5c268fdd83c19b7e0927030977559e72765"
 }

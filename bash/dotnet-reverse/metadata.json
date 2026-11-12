@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": ".NET / C# \u4e8c\u8fdb\u5236\u9006\u5411\u3002\u5f53\u76ee\u6807\u662f .NET assembly\uff08PE \u5934\u542b CLR\u3001.exe/.dll \u6258\u7ba1\u7a0b\u5e8f\uff09\u3001C# \u7f16\u8bd1\u4ea7\u7269\uff08\u542b NativeAOT\uff09\u3001\u7ea2\u961f Sharp* \u5de5\u5177\uff08Rubeus / SharpHound / SharpHound \u7b49\uff09\u3001.NET \u6df7\u6dc6\u7a0b\u5e8f\uff08ConfuserEx / SmartAssembly / Babel / Eazfuscator\uff09\u3001.NET loader / info-stealer / \u5957\u58f3 malware \u65f6\u4f7f\u7528\u3002\u4f18\u5148\u7528 dnSpyEx + de4dot\uff0c\u9700\u8981 AI \u76f4\u63a5\u64cd\u4f5c\u65f6\u8054\u52a8 dnSpy MCP\u3002\u4e0d\u7528\u4e8e\u7eaf native \u4e8c\u8fdb\u5236\uff08\u8d70 reverse-engineering / ida-reverse\uff09\u3002"
+  "description": ".NET / C# 二进制逆向。当目标是 .NET assembly（PE 头含 CLR、.exe/.dll 托管程序）、C# 编译产物（含 NativeAOT）、红队 Sharp* 工具（Rubeus / SharpHound / SharpHound 等）、.NET 混淆程序（ConfuserEx / SmartAssembly / Babel / Eazfuscator）、.NET loader / info-stealer / 套壳 malware 时使用。优先用 dnSpyEx + de4dot，需要 AI 直接操作时联动 dnSpy MCP。不用于纯 native 二进制（走 reverse-engineering / ida-reverse）。",
+  "content_fingerprint": "8ac35fb858577660fb20d31ba3587894de1cc049464a91997e76f80d9a145338"
 }

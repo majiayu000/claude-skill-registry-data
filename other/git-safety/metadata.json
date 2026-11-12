@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Stops an agent from destroying uncommitted work with git. Requires git status and git diff before any command that discards changes, treats \"revert\" and \"undo\" as manual edits, and never runs reset, checkout, clean, stash drop, or force push without explicit approval. Use when a task involves reverting, undoing, resetting, cleaning, rebasing, or force pushing, or before any git command in a repo with uncommitted changes."
+  "description": "Stops an agent from destroying uncommitted work with git. Requires git status and git diff before any command that discards changes, treats \"revert\" and \"undo\" as manual edits, and never runs reset, checkout, clean, stash drop, or force push without explicit approval. Use when a task involves reverting, undoing, resetting, cleaning, rebasing, or force pushing, or before any git command in a repo with uncommitted changes.",
+  "content_fingerprint": "b7d8baaeee0fe8e6c9d5d1086c222dc8faa700c8804e29280a0e3badaf1948f1"
 }

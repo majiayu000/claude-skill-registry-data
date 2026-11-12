@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/brave-experiments/brave-core-bot/blob/main/.claude/skills/prd-clean/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "7f990c17cb83037b64bfd138c27f13f7d762e04b2400f004ce14ce11bd6393d9",
+  "description": "Archive merged and invalid stories from prd.json to prd.archived.json, keeping only active work in the main PRD. Triggers on: clean prd, archive merged stories, clean up prd, move merged stories."
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `code-generation` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage code-generation --single`: the engine emits one run-stage directive for code-generation and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `code-generation` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage code-generation --single`: the engine emits one run-stage directive for code-generation and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "f34ba3741c2a7430d0a7e5afea67b812689baa480b87d55f18a0c52c1bae4fd8"
 }

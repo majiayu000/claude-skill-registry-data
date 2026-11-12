@@ -1,5 +1,5 @@
 {
-  "name": "RAG\u53ec\u56de\u6548\u679c\u8bc4\u6d4bSkill",
+  "name": "RAG召回效果评测Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/rag-evaluation/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "RAG \u53ec\u56de\u8bc4\u6d4b\u6307\u6807(\u53ec\u56de\u7387/\u51c6\u786e\u7387/MRR)\u4e0e\u5207\u7247\u8d28\u91cf\u8bc4\u4f30\u65b9\u6cd5\u3002\u5f53\u9700\u8981\u91cf\u5316\u8bc4\u6d4b RAG \u68c0\u7d22\u6548\u679c\u4e0e\u5207\u7247\u8d28\u91cf\u65f6\u4f7f\u7528\u3002"
+  "description": "RAG 召回评测指标(召回率/准确率/MRR)与切片质量评估方法。当需要量化评测 RAG 检索效果与切片质量时使用。",
+  "content_fingerprint": "ac91690535ee1e0f20f4e0fd91880c9cb3492f08f69c39e6dabd8b2b775a948a"
 }

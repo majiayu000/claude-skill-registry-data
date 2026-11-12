@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Credential operations: secret discovery, classification, extraction, conversion, offline cracking of hashes the operator already has as a credential job, policy-aware spraying, NetNTLM capture, generic SMB relay, and Windows/Linux harvest. Do not hijack an in-progress /ad-attack Kerberoast/AS-REP chain (that module cracks and uses the ticket itself). Do not DCSync, read LAPS LDAP, or escalate cloud IAM. Usable credentials are recorded; the operator chooses the next module."
+  "description": "Credential operations: secret discovery, classification, extraction, conversion, offline cracking of hashes the operator already has as a credential job, policy-aware spraying, NetNTLM capture, generic SMB relay, and Windows/Linux harvest. Do not hijack an in-progress /ad-attack Kerberoast/AS-REP chain (that module cracks and uses the ticket itself). Do not DCSync, read LAPS LDAP, or escalate cloud IAM. Usable credentials are recorded; the operator chooses the next module.",
+  "content_fingerprint": "c0e80ab8e1d8fabac0eec11188349d7d2c9d5ae24b79f6aa4eb0c71a990c8bef"
 }

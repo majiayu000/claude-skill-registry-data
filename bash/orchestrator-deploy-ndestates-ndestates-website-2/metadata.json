@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deploy orchestrator .grok skills, prompts, agents, and root chains (CHAIN.md, chains/registry.yaml) to any target project. Tracks customized files in deploy-state.json; prompts overwrite, skip, or merge on conflict. Pre-deploy backups with --rollback. Selectable bundles include .claude and .copilot. Use with `.github/prompts/orchestrator-v2.prompt.md`-deploy or .github/skills/chain/SKILL.md template-deploy. Run from orchestrator repo."
+  "description": "Deploy orchestrator .grok skills, prompts, agents, and root chains (CHAIN.md, chains/registry.yaml) to any target project. Tracks customized files in deploy-state.json; prompts overwrite, skip, or merge on conflict. Pre-deploy backups with --rollback. Selectable bundles include .claude and .copilot. Use with `.github/prompts/orchestrator-v2.prompt.md`-deploy or .github/skills/chain/SKILL.md template-deploy. Run from orchestrator repo.",
+  "content_fingerprint": "f645dacf6d29d648d6b3e17114693ef8a7cdff2f1db489685e77a650110878d5"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Probe the dev environment for the recurring Windows quirks documented in `.claude/rules/environment.md` \u2014 Python version + 3.13 dep gaps, stdout encoding (cp1252 trap, tested by actually writing a non-ASCII char), and daemon reachability on :9000 + :9001. Use when the shell is behaving oddly, when a non-ASCII print just crashed, or when the user says \"env-check\" / \"/env-check\". NOT a git/daemon state check at session start (use preflight) and NOT a diagnosis of why the daemon died (use eos-wedge-postmortem)."
+  "description": "Probe the dev environment for the recurring Windows quirks documented in `.claude/rules/environment.md` — Python version + 3.13 dep gaps, stdout encoding (cp1252 trap, tested by actually writing a non-ASCII char), and daemon reachability on :9000 + :9001. Use when the shell is behaving oddly, when a non-ASCII print just crashed, or when the user says \"env-check\" / \"/env-check\". NOT a git/daemon state check at session start (use preflight) and NOT a diagnosis of why the daemon died (use eos-wedge-postmortem).",
+  "content_fingerprint": "a4dee863e0cafcd86918a99130445159c6ce7e8375de0a696d79f7dd3c430625"
 }

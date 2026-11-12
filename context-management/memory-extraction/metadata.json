@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "End-of-session pass that persists durable facts from the CURRENT session into .claude/memory/. Runs IN-SESSION in the main agent (never via Task \u2014 a subagent starts cold with no transcript), prompted by the Stop hook's nudge. Triggers on \"persist durable facts from this session\", \"run memory-extraction\", \"flush session memory\", or \"extract memory before close\". Reads the in-context transcript plus existing memory, applies the durable-fact predicate below, and writes one file per fact plus one MEMORY.md index line \u2014 append-or-update, never clobbering a consumer's existing memory."
+  "description": "End-of-session pass that persists durable facts from the CURRENT session into .claude/memory/. Runs IN-SESSION in the main agent (never via Task — a subagent starts cold with no transcript), prompted by the Stop hook's nudge. Triggers on \"persist durable facts from this session\", \"run memory-extraction\", \"flush session memory\", or \"extract memory before close\". Reads the in-context transcript plus existing memory, applies the durable-fact predicate below, and writes one file per fact plus one MEMORY.md index line — append-or-update, never clobbering a consumer's existing memory.",
+  "content_fingerprint": "94ab19f2d07faadfd8677473b15206c9bf980112095ba510d1a4dce931e2c74d"
 }

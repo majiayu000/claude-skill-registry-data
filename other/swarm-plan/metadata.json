@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decompose an approved spec into a dependency-ordered swarm plan \u2014 one task per component, each with an explicit write_set. Produces `.claude/state/swarm/<slug>.json` with tasks + waves. The wave scheduler guarantees pairwise-disjoint write_sets within each wave so parallel dispatch is provably conflict-free."
+  "description": "Decompose an approved spec into a dependency-ordered swarm plan — one task per component, each with an explicit write_set. Produces `.claude/state/swarm/<slug>.json` with tasks + waves. The wave scheduler guarantees pairwise-disjoint write_sets within each wave so parallel dispatch is provably conflict-free.",
+  "content_fingerprint": "d6ba779a7617c801b701dfd037a4470c024d997a7ecc06b8b08783710af1836b"
 }

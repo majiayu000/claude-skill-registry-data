@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fetch a ready-to-run SWMM model for any Canadian area from the SWMMCanada upstream service \u2014 real published municipal storm pipes where a supported city covers the AOI, synthesized elsewhere in Canada. Input is a bbox or GeoJSON polygon plus a rainfall date window. Use for Canadian locations; outside Canada route to swmm-anywhere instead. Documentation contract only \u2014 the runtime tool is the in-process fetch_swmm_from_canada; there is no script or MCP server in this skill."
+  "description": "Fetch a ready-to-run SWMM model for any Canadian area from the SWMMCanada upstream service — real published municipal storm pipes where a supported city covers the AOI, synthesized elsewhere in Canada. Input is a bbox or GeoJSON polygon plus a rainfall date window. Use for Canadian locations; outside Canada route to swmm-anywhere instead. Documentation contract only — the runtime tool is the in-process fetch_swmm_from_canada; there is no script or MCP server in this skill.",
+  "content_fingerprint": "0fb1fe4f9bd11692153824a68ed4f5855e4c6b1a87eaa0b3e56942301bb93fb8"
 }

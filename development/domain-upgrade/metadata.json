@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Domain stack \u7684\u6301\u7e8c\u5347\u7d1a\u670d\u52d9\u3002\u50be\u807d\u7528\u6236\u9700\u6c42\u3001\u6536\u96c6\u6e2c\u8a66\u56de\u994b\u3001\u7de8\u6392\u6539\u9032\u3002\nTrigger: \u7528\u6236\u8aaa\u300c\u5347\u7d1a\u300d\u3001\u300c\u6539\u9032\u300d\u3001\u300c\u6e2c\u8a66\u56de\u994b\u300d\u3001\u300c\u9019\u88e1\u4e0d\u597d\u7528\u300d\u3001\u300c\u6211\u6709\u65b0\u9700\u6c42\u300d\u3002\nDo NOT use when: \u8981\u505a\u5177\u9ad4\u7684 skill \u4fee\u6539\uff08\u7528 /skill-edit\uff09\u3002\nDo NOT use when: \u8981\u65b0\u589e skill\uff08\u7528 /skill-gen\uff09\u3002\n\u4e0a\u6e38\uff1a\u7528\u6236\u9700\u6c42 / \u6e2c\u8a66\u56de\u994b\u3002\n\u4e0b\u6e38\uff1a/skill-edit, /source-convert, /tool-builder, /workflow-edit\u3002\n\u7522\u51fa\uff1a\u5347\u7d1a\u5f8c\u7684 domain stack\u3002"
+  "description": "Domain stack 的持續升級服務。傾聽用戶需求、收集測試回饋、編排改進。\nTrigger: 用戶說「升級」、「改進」、「測試回饋」、「這裡不好用」、「我有新需求」。\nDo NOT use when: 要做具體的 skill 修改（用 /skill-edit）。\nDo NOT use when: 要新增 skill（用 /skill-gen）。\n上游：用戶需求 / 測試回饋。\n下游：/skill-edit, /source-convert, /tool-builder, /workflow-edit。\n產出：升級後的 domain stack。",
+  "content_fingerprint": "ddff568808edbfec6100ff0086218e2c5622a43089e3dc46fc8e71e266e32dce"
 }

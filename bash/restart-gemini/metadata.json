@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u91cd\u555f LazyGravity \u2192 Antigravity\uff08Google \u7684 Gemini IDE\uff09\u6574\u689d\u9059\u63a7\u93c8\u4e26\u9a57\u8b49\u6709\u5728\u52d5\u3002\u7576\u4f7f\u7528\u8005\u8aaa\u300c\u91cd\u555f gemini / antigravity / lazygravity\u300d\u3001Discord \u56de\u5831 \"Workbench page for workspace ... not found within 30 seconds\"\u3001workspace \u9023\u4e0d\u4e0a\u3001\u6216 /restart-gemini \u6642\u4f7f\u7528\u3002\u6703\u4f9d\u5e8f\uff1a\u8d77 Xvfb :99\u3001\u5728 CDP 9223 \u4e0a\u555f\u52d5 Antigravity\u3001\u91cd\u555f lazygravity-bot \u8207 autoapprove service\uff0c\u6700\u5f8c\u900f\u904e CDP \u5be6\u969b\u9a57\u8b49 workbench \u9801\u9762\u53ef\u9023\u3002"
+  "description": "重啟 LazyGravity → Antigravity（Google 的 Gemini IDE）整條遙控鏈並驗證有在動。當使用者說「重啟 gemini / antigravity / lazygravity」、Discord 回報 \"Workbench page for workspace ... not found within 30 seconds\"、workspace 連不上、或 /restart-gemini 時使用。會依序：起 Xvfb :99、在 CDP 9223 上啟動 Antigravity、重啟 lazygravity-bot 與 autoapprove service，最後透過 CDP 實際驗證 workbench 頁面可連。",
+  "content_fingerprint": "a307f230d1c6b280e560b3588a93ba52474e115819f5f54d81c2facd7f5f50e0"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u65e0 CDP \u68c0\u67e5\u5e76\u5b89\u88c5\u9879\u76ee\u5185\u7f6e Chrome unpacked \u63d2\u4ef6\u3002BrowserWorker \u662f\u64cd\u63a7\u6d4f\u89c8\u5668\u5de5\u5177\uff0c\u5fc5\u987b\u5b89\u88c5\u3002\u5fc5\u987b\u5148\u68c0\u67e5\u76ee\u6807\u63d2\u4ef6\uff1b\u5df2\u5b89\u88c5\u65f6\u7acb\u5373\u6210\u529f\u8fd4\u56de\uff0c\u4e0d\u542f\u52a8\u6216\u5173\u95ed Chrome\u3002\u9ed8\u8ba4\u76ee\u6807\u662f BrowserWorker\uff0c\u4e5f\u53ef\u5b89\u88c5 1688 \u63d2\u4ef6\u3002Windows \u672a\u5b89\u88c5\u65f6\u4f18\u5148\u7528 pywinauto\uff0cmacOS \u672a\u5b89\u88c5\u65f6\u6253\u5f00 chrome://extensions/ \u5e76\u5f15\u5bfc\u7528\u6237\u624b\u52a8\u52a0\u8f7d\u3002"
+  "description": "无 CDP 检查并安装项目内置 Chrome unpacked 插件。BrowserWorker 是操控浏览器工具，必须安装。必须先检查目标插件；已安装时立即成功返回，不启动或关闭 Chrome。默认目标是 BrowserWorker，也可安装 1688 插件。Windows 未安装时优先用 pywinauto，macOS 未安装时打开 chrome://extensions/ 并引导用户手动加载。",
+  "content_fingerprint": "ed80c37feaf56bf1f0d2f30178614829ce587cfb22b854cfc7461b99d0a19aa6"
 }

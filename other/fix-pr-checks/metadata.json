@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix the currently-failing status checks on the current branch's PR in one sweep \u2014 route each failing check to the right diagnosis skill (via a Haiku subagent, escalating to Opus on a repeat failure), apply and verify the fix, commit, and push once \u2014 then return a summary. Use standalone when CI is red, or as the check-fixing step invoked by /watch-pr. Repo is adamayoung/TMDb."
+  "description": "Fix the currently-failing status checks on the current branch's PR in one sweep — route each failing check to the right diagnosis skill (via a Haiku subagent, escalating to Opus on a repeat failure), apply and verify the fix, commit, and push once — then return a summary. Use standalone when CI is red, or as the check-fixing step invoked by /watch-pr. Repo is adamayoung/TMDb.",
+  "content_fingerprint": "5feedf1ebb12677f86091c6a0f2fa9d2a3f5919d559bf1c23c3b59594c65e559"
 }

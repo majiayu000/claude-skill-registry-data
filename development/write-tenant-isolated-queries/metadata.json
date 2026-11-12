@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Edgame2/castiel2/blob/main/.cursor/skills/write-tenant-isolated-queries/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "ab9d0f873be3adbad5761dc95b6d0dc068266e02d0a184711aab9cfc13205566",
+  "description": "Transforms database queries to include tenantId in partition keys following ModuleImplementationGuide.md Section 8 and .cursorrules tenant isolation requirements. Adds tenantId to all Cosmos DB querie"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use Exasol Cloud Storage Extension workflows for moving structured object-storage files through extension UDFs. Covers setup prerequisites, the fixed `CLOUD_STORAGE_EXTENSION.IMPORT_PATH` and `CLOUD_STORAGE_EXTENSION.EXPORT_PATH` entrypoints used with `FROM SCRIPT` and `INTO SCRIPT`, Parquet, Avro, ORC, and Delta files on S3, Google Cloud Storage, Azure Blob Storage, Azure Data Lake, HDFS, and Alluxio, connection-object credential patterns, and routing away from native IMPORT or EXPORT when the extension path is the right fit."
+  "description": "Use Exasol Cloud Storage Extension workflows for moving structured object-storage files through extension UDFs. Covers setup prerequisites, the fixed `CLOUD_STORAGE_EXTENSION.IMPORT_PATH` and `CLOUD_STORAGE_EXTENSION.EXPORT_PATH` entrypoints used with `FROM SCRIPT` and `INTO SCRIPT`, Parquet, Avro, ORC, and Delta files on S3, Google Cloud Storage, Azure Blob Storage, Azure Data Lake, HDFS, and Alluxio, connection-object credential patterns, and routing away from native IMPORT or EXPORT when the extension path is the right fit.",
+  "content_fingerprint": "59d6e3821ef95114e6d626d937f26e49a34cedce14679f95f056945a88b88198"
 }

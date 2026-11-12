@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "RK1 NPU inference pool: 4\u00d7 rkllama servers using the RK3588S NPU (6 TOPS) with Llama-3.1-8B w8a8 model. Covers NPU device mapping (/dev/dri/renderD129), Modelfile requirements (FROM + HUGGINGFACE_PATH), Longhorn NVMe storage, and LiteLLM least_busy load balancing."
+  "description": "RK1 NPU inference pool: 4× rkllama servers using the RK3588S NPU (6 TOPS) with Llama-3.1-8B w8a8 model. Covers NPU device mapping (/dev/dri/renderD129), Modelfile requirements (FROM + HUGGINGFACE_PATH), Longhorn NVMe storage, and LiteLLM least_busy load balancing.",
+  "content_fingerprint": "086af2ae3b7910bbf7f0696ffddafe6d6d96d0ba8a69fc053511d36134b0153d"
 }

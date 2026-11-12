@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user asks for spot-perp basis trade, basis arbitrage, cash-and-carry, perp discount, or any setup that reads the spot\u2013perp basis as a positioning signal. Long-perp leg only \u2014 pure two-leg basis arb requires a paired spot short (or long) which Freqtrade can't run cleanly. The strategy below captures the directional read, not the hedged carry."
+  "description": "Use when the user asks for spot-perp basis trade, basis arbitrage, cash-and-carry, perp discount, or any setup that reads the spot–perp basis as a positioning signal. Long-perp leg only — pure two-leg basis arb requires a paired spot short (or long) which Freqtrade can't run cleanly. The strategy below captures the directional read, not the hedged carry.",
+  "content_fingerprint": "2890f5de4ebddf830b796452c5a650fa73507b50d87323893601bb575e806781"
 }

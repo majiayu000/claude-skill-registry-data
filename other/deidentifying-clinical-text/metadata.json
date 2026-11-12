@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Remove, mask, or replace PHI/PII in clinical free text on-device with OpenMed's deidentify(). Use when the user needs to de-identify medical notes, strip patient identifiers, redact PHI before sharing or analysis, anonymize discharge summaries, or pick a de-id method (mask vs remove vs replace vs hash vs shift_dates). Covers confidence_threshold for safety, consistent+seed for stable surrogates, keep_mapping for reversible de-id, policy= profiles, and the DeidentificationResult fields. Pairs with OpenMed extract_pii (detect spans), reidentify (restore), configuring-privacy-policies, and auditing-deidentification-runs."
+  "description": "Remove, mask, or replace PHI/PII in clinical free text on-device with OpenMed's deidentify(). Use when the user needs to de-identify medical notes, strip patient identifiers, redact PHI before sharing or analysis, anonymize discharge summaries, or pick a de-id method (mask vs remove vs replace vs hash vs shift_dates). Covers confidence_threshold for safety, consistent+seed for stable surrogates, keep_mapping for reversible de-id, policy= profiles, and the DeidentificationResult fields. Pairs with OpenMed extract_pii (detect spans), reidentify (restore), configuring-privacy-policies, and auditing-deidentification-runs.",
+  "content_fingerprint": "ebd6e55aafc5fd65b77648788b841c358f0dc26126c60185552d83fdb0892d89"
 }

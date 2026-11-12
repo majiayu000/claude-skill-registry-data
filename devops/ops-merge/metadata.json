@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/davepoon/buildwithclaude/blob/main/plugins/claude-ops/skills/ops-merge/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "82f95f9d28a026d4689495375caae28e2ac15f1e26e3d9c16ab58cb39325957f",
+  "description": "Autonomous PR merge pipeline. Scans all repos for open PRs, dispatches subagents to fix CI, resolve conflicts, address review comments, then merges. Use --main to also sync dev↔main branches."
 }

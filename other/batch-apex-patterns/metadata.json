@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when designing, reviewing, or debugging Batch Apex contracts, scope sizing, stateful behavior, chaining, and AsyncApexJob monitoring. Triggers: 'Database.Batchable', 'Database.Stateful', 'executeBatch', 'batch scope', 'AsyncApexJob'. NOT for choosing Batch vs Queueable vs Future \u2014 use apex/async-apex. NOT for running one batch after another \u2014 use apex/apex-batch-chaining."
+  "description": "Use when designing, reviewing, or debugging Batch Apex contracts, scope sizing, stateful behavior, chaining, and AsyncApexJob monitoring. Triggers: 'Database.Batchable', 'Database.Stateful', 'executeBatch', 'batch scope', 'AsyncApexJob'. NOT for choosing Batch vs Queueable vs Future — use apex/async-apex. NOT for running one batch after another — use apex/apex-batch-chaining.",
+  "content_fingerprint": "b2d5a8fcf3d4a9a8db13b6540892893b683bdbd54e28dc4363d1f78de8605547"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9762\u5411\u771f\u6b63\u590d\u6742\u4efb\u52a1\u7684\u91cd\u578b\u7ba1\u7406\u7cfb\u7edf\uff0c\u4f7f\u7528 anchor\u3001checkpoint\u3001design\u3001\u6062\u590d\u548c\u9a8c\u6536\u8ffd\u8e2a\u3002\n\u4ec5\u5728\u7528\u6237\u660e\u786e\u8981\u6c42\u4f7f\u7528 unified-taskflow\u3001taskflow\u3001.taskflow\uff0c\u6216\u4efb\u52a1\u786e\u5b9e\u9700\u8981\u8de8\u591a\u8f6e\u3001\u591a\u6587\u4ef6\u3001\u591a\u9636\u6bb5\u7684\u53ef\u6062\u590d\u8bb0\u5f55\u65f6\u4f7f\u7528\u3002\n\u4e0d\u7528\u4e8e\u5c0f\u4fee\u3001\u666e\u901a\u4f18\u5316\u3001\u666e\u901a\u91cd\u6784\u3001\u5355\u4e2a Skill \u5c0f\u6539\u3001\u65e5\u5e38 bug fix\uff0c\u6216 task-mode-router / minimal-implementation \u5df2\u8db3\u591f\u5904\u7406\u7684\u4efb\u52a1\u3002"
+  "description": "面向真正复杂任务的重型管理系统，使用 anchor、checkpoint、design、恢复和验收追踪。\n仅在用户明确要求使用 unified-taskflow、taskflow、.taskflow，或任务确实需要跨多轮、多文件、多阶段的可恢复记录时使用。\n不用于小修、普通优化、普通重构、单个 Skill 小改、日常 bug fix，或 task-mode-router / minimal-implementation 已足够处理的任务。",
+  "content_fingerprint": "b468b8d060f89001c9a0dbf2e84c8b3b1a9b068b3146c5137e97b4c26cb6d34b"
 }

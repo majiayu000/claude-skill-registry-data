@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Quy t\u1eafc JWT refresh token service trong SASUCO InvoiceEasy. D\u00f9ng khi: implement TokenRefreshService, auto refresh access token tr\u01b0\u1edbc khi h\u1ebft h\u1ea1n, JWT decode client-side, smart scheduling v\u1edbi setTimeout (kh\u00f4ng d\u00f9ng setInterval), login start service, logout stop service, retry logic t\u1ed1i \u0111a 3 l\u1ea7n, c\u1ea5u h\u00ecnh REFRESH_THRESHOLD 30 gi\u00e2y, JwtUtils decode."
+  "description": "Quy tắc JWT refresh token service trong SASUCO InvoiceEasy. Dùng khi: implement TokenRefreshService, auto refresh access token trước khi hết hạn, JWT decode client-side, smart scheduling với setTimeout (không dùng setInterval), login start service, logout stop service, retry logic tối đa 3 lần, cấu hình REFRESH_THRESHOLD 30 giây, JwtUtils decode.",
+  "content_fingerprint": "151fc0d05f19dd2ff30981a67dad4f59391c2bd9f7a7e30b25bffe4bf7aee424"
 }

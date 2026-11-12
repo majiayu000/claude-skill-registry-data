@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/benmarte/codemunch/blob/main/skills/fetch/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "96ac0a5e627efdf618371c55ae3bdbd30f182f989d5409514803645217b7588c",
+  "description": "Fetch the exact source code of a named symbol (function, class, method, type) from the codebase using the codemunch index. Reads only the lines for that symbol — not the whole file. Uses LSP for hover"
 }

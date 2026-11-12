@@ -14,5 +14,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ryu-qqq/AuthHub/blob/main/.claude/skills/entity-mapper-expert/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "1cee103569aba1576d21246d7efe628cdc8fb6e2a12e26add69915316696d63b",
+  "description": "JPA Entity Long FK 전략, BaseAuditEntity/SoftDeletableEntity 상속, EntityMapper Domain⇄Entity 변환.\nJPA 관계 어노테이션(@ManyToOne, @OneToMany) 금지. Lombok 금지, Setter 금지.\nEntity는 of() static factory method만 public,"
 }

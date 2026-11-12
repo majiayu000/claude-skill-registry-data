@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Containerizing any project - multi-stage builds, choosing a base image, packaging the runtime, clearing package-manager caches, and running as a non-root user. Use when writing or changing a Dockerfile, picking a base image, deciding between alpine and debian-slim, building an image for more than one architecture, adding a docker-compose file, or when a container runs as root. Triggers on Dockerfile, docker-compose.yaml, FROM, multi-stage builds, buildx, BUILDPLATFORM, TARGETARCH, apk add, apt-get install, USER, adduser, groupadd, ENTRYPOINT, EXPOSE, musl, and glibc."
+  "description": "Containerizing any project - multi-stage builds, choosing a base image, packaging the runtime, clearing package-manager caches, and running as a non-root user. Use when writing or changing a Dockerfile, picking a base image, deciding between alpine and debian-slim, building an image for more than one architecture, adding a docker-compose file, or when a container runs as root. Triggers on Dockerfile, docker-compose.yaml, FROM, multi-stage builds, buildx, BUILDPLATFORM, TARGETARCH, apk add, apt-get install, USER, adduser, groupadd, ENTRYPOINT, EXPOSE, musl, and glibc.",
+  "content_fingerprint": "8742796bbe90f2712f0ae73c8d4a2bfb001857a50b467544b880c39dce766448"
 }

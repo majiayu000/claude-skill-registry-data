@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fast path for a minimal CloudBase Web + database demo (\u6700\u5c0f\u524d\u540e\u7aef / \u6700\u5c0f\u53ef\u7528 fullstack / Lovable-like BaaS). Defaults to @cloudbase/js-sdk client CRUD (NoSQL app.database / PG app.rdb), MCP-only schema, preview-first, and forbids cloud functions unless secrets, cron/background jobs, or logic that security rules/RLS cannot express. Use for \u642d\u4e00\u5957 demo\u3001\u7559\u8a00\u677f\u3001Todo\u3001Notes\u3001Kanban, or when users say \u5e26\u4e91\u51fd\u6570+\u4e91\u6570\u636e\u5e93 but only need CRUD. NOT for production multi-service backends, CloudRun, WeChat Mini Programs, or tasks that truly need server secrets."
+  "description": "Fast path for a minimal CloudBase Web + database demo (最小前后端 / 最小可用 fullstack / Lovable-like BaaS). Defaults to @cloudbase/js-sdk client CRUD (NoSQL app.database / PG app.rdb), MCP-only schema, preview-first, and forbids cloud functions unless secrets, cron/background jobs, or logic that security rules/RLS cannot express. Use for 搭一套 demo、留言板、Todo、Notes、Kanban, or when users say 带云函数+云数据库 but only need CRUD. NOT for production multi-service backends, CloudRun, WeChat Mini Programs, or tasks that truly need server secrets.",
+  "content_fingerprint": "2319643904c924efb6c7bddad56583dd5a0ec2440673edc56ff23a741ae7dd89"
 }

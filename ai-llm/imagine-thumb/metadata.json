@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "YouTube \uc378\ub124\uc77c \uc804\uc6a9 \uc0dd\uc131\uae30. \ubc30\uacbd/\uc778\ubb3c \uc77c\ub7ec\uc2a4\ud2b8\ub294 Codex \uc774\ubbf8\uc9c0 \ubaa8\ub378\ub85c \ubf51\uace0, \uc81c\ubaa9 \ud14d\uc2a4\ud2b8\ub294 **AI\uac00 \uc544\ub2c8\ub77c Node \ud6c4\ucc98\ub9ac**(`scripts/lib/compose-text.js`)\ub85c \ud569\uc131\ud55c\ub2e4. \ud55c\uad6d\uc5b4 \uae00\uc790 \uae68\uc9d0\uc744 \uc6d0\ucc9c \ucc28\ub2e8\ud55c\ub2e4. \uc0ac\uc6a9\uc790\uac00 \"\uc378\ub124\uc77c \ub9cc\ub4e4\uc5b4\uc918\", \"imagine-thumb <\uc81c\ubaa9>\", \"\uc720\ud29c\ube0c \uc378\ub124\uc77c\" \ub4f1\uc744 \ub9d0\ud558\uba74 \uc774 \uc2a4\ud0ac\uc774 \ub2f4\ub2f9\ud55c\ub2e4. \uae30\ubcf8 A/B\uc6a9 2\uc7a5\uc744 \uac19\uc740 \uc81c\ubaa9 \ud14d\uc2a4\ud2b8\ub85c \ud569\uc131\ud574 \uc800\uc7a5\ud55c\ub2e4."
+  "description": "YouTube 썸네일 전용 생성기. 배경/인물 일러스트는 Codex 이미지 모델로 뽑고, 제목 텍스트는 **AI가 아니라 Node 후처리**(`scripts/lib/compose-text.js`)로 합성한다. 한국어 글자 깨짐을 원천 차단한다. 사용자가 \"썸네일 만들어줘\", \"imagine-thumb <제목>\", \"유튜브 썸네일\" 등을 말하면 이 스킬이 담당한다. 기본 A/B용 2장을 같은 제목 텍스트로 합성해 저장한다.",
+  "content_fingerprint": "72122fefe6b17f39d28ec6cac100bb39bd1396ed0f4804fce3d5ddcb9f62bd82"
 }

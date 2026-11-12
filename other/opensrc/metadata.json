@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Give coding agents the actual source code of any dependency. `opensrc path <pkg>` shallow-clones a package at the right version and caches it locally, printing a path you can grep/read \u2014 for npm, PyPI, crates.io, and GitHub/GitLab/Bitbucket repos. Use when you need to read a library's real implementation (not just docs) to understand internals, verify behavior, find an undocumented API, debug a dependency, or check what changed between versions. Compose with ripgrep/cat/find."
+  "description": "Give coding agents the actual source code of any dependency. `opensrc path <pkg>` shallow-clones a package at the right version and caches it locally, printing a path you can grep/read — for npm, PyPI, crates.io, and GitHub/GitLab/Bitbucket repos. Use when you need to read a library's real implementation (not just docs) to understand internals, verify behavior, find an undocumented API, debug a dependency, or check what changed between versions. Compose with ripgrep/cat/find.",
+  "content_fingerprint": "7f900968c45abf7eab33258cc03e28ac30afdda8b84745855bd2e39f5534f289"
 }

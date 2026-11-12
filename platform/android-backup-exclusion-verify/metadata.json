@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verify an Android app's auto-backup/device-transfer exclusions actually protect private data \u2014 covers the derived-copy trap (snapshots/exports/journals in the file domain defeating a database exclusion), checking rules inside the packaged APK rather than the source tree, and why the emulator's local transport cannot prove payload contents (control build required). Use when an app claims data \"never leaves the device\", after adding any on-disk copy of a database, or before a first store release."
+  "description": "Verify an Android app's auto-backup/device-transfer exclusions actually protect private data — covers the derived-copy trap (snapshots/exports/journals in the file domain defeating a database exclusion), checking rules inside the packaged APK rather than the source tree, and why the emulator's local transport cannot prove payload contents (control build required). Use when an app claims data \"never leaves the device\", after adding any on-disk copy of a database, or before a first store release.",
+  "content_fingerprint": "1c0ea816f59e1ba26bc82c451d029be49df2493ff3acc2c719c08264888a86f7"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read X/Twitter as the logged-in user from the CLI without a browser and without a dev app \u2014 a tweet with its replies, the home timeline, a user's tweets (@handle), or a search. Auth is the logged-in cookie (auth_token+ct0) + the public web Bearer; transport is curl_cffi Chrome TLS impersonation against X's internal GraphQL. Output is optimized for LLM consumption (compact text + stable --json). Use whenever the user wants to read, check, browse, or digest X/Twitter, a tweet/thread, their timeline, an account, or a topic search."
+  "description": "Read X/Twitter as the logged-in user from the CLI without a browser and without a dev app — a tweet with its replies, the home timeline, a user's tweets (@handle), or a search. Auth is the logged-in cookie (auth_token+ct0) + the public web Bearer; transport is curl_cffi Chrome TLS impersonation against X's internal GraphQL. Output is optimized for LLM consumption (compact text + stable --json). Use whenever the user wants to read, check, browse, or digest X/Twitter, a tweet/thread, their timeline, an account, or a topic search.",
+  "content_fingerprint": "6b069cebbd9cd0b47b99e60f7e96cd6f538de20e338dcb38307af0b8ad629fe0"
 }

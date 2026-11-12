@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Records the outcome half of a feature's workflow evaluation at the end of a /feature session: which steps ran or were skipped, cycle counts, what each critic caught and what was adopted, plus a short judgment section. Writes one fixed-schema file per feature branch to .workflow-log/ (gitignored), including the session IDs the companion /workflow-inspect skill needs to append the cost half later. Run manually, optionally, at the end of a feature session."
+  "description": "Records the outcome half of a feature's workflow evaluation at the end of a /feature session: which steps ran or were skipped, cycle counts, what each critic caught and what was adopted, plus a short judgment section. Writes one fixed-schema file per feature branch to .workflow-log/ (gitignored), including the session IDs the companion /workflow-inspect skill needs to append the cost half later. Run manually, optionally, at the end of a feature session.",
+  "content_fingerprint": "002d90e7612e11e126544b0cf71762ab8396096421de7d7b679c99d8be025157"
 }

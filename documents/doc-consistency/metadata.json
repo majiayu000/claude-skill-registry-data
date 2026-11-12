@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "docs/ \u914d\u4e0b\u3092\u6a2a\u65ad\u7684\u306b\u8d70\u67fb\u3057\u3001\u6587\u66f8\u9593\u306e\u91cd\u8907\uff08DRY\u9055\u53cd\uff09\u3068\u77db\u76fe\u3092\u691c\u51fa\u3059\u308b\u3002\u9031\u6b21\u306e\u5b9a\u671f\u30c1\u30a7\u30c3\u30af Issue \u3068\u4eba\u9593\u306e\u6307\u793a\u3067\u8d77\u52d5\u3059\u308b\u3002\u901a\u5e38\u958b\u767a\u306e Issue \u306e\u5b9f\u88c5\u30d5\u30ed\u30fc\u306b\u306f\u5165\u308c\u306a\u3044\u3002\u305f\u3060\u3057\u6587\u66f8\u306e\u5206\u5272\u30fb\u7d71\u5408\u30fb\u898f\u5b9a\u306e\u79fb\u52d5\u305d\u306e\u3082\u306e\u304c\u4f5c\u696d\u3067\u3042\u308b Issue \u306f\u4f8b\u5916\u3068\u3057\u3066\u5165\u308c\u3066\u3088\u3044\u3002\u300cdoc-consistency\u300d\u300c\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u6574\u5408\u6027\u3092\u898b\u3066\u300d\u3068\u6307\u793a\u3055\u308c\u305f\u3068\u304d\u3002\u5358\u4e00\u6587\u66f8\u306e\u54c1\u8cea\u30ec\u30d3\u30e5\u30fc\u306f /doc-review\u3002"
+  "description": "docs/ 配下を横断的に走査し、文書間の重複（DRY違反）と矛盾を検出する。週次の定期チェック Issue と人間の指示で起動する。通常開発の Issue の実装フローには入れない。ただし文書の分割・統合・規定の移動そのものが作業である Issue は例外として入れてよい。「doc-consistency」「ドキュメントの整合性を見て」と指示されたとき。単一文書の品質レビューは /doc-review。",
+  "content_fingerprint": "05bdf04547893c5e642c70650329b35ba3bb57c8da8614dbfd82149a33c82aaf"
 }

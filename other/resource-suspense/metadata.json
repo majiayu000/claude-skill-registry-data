@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "A component that calls `createResource` must not read it. The declaration lives in one component body and every read of the data signal lives in a child, wrapped in `Suspense`. A signal filled in by an effect that only loads something is a resource written out longhand. Applies whenever adding a resource to a component, writing a new component that reads one, or writing an effect that loads."
+  "description": "A component that calls `createResource` must not read it. The declaration lives in one component body and every read of the data signal lives in a child, wrapped in `Suspense`. A signal filled in by an effect that only loads something is a resource written out longhand. Applies whenever adding a resource to a component, writing a new component that reads one, or writing an effect that loads.",
+  "content_fingerprint": "d46edbaf03911c6e028d8537140b98854a8f34b1d7a09ce5d69dad4201dfc928"
 }

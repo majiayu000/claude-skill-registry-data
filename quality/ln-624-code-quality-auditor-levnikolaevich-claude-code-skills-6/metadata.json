@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-624-code-quality-auditor/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "46ddfbbc9129a4fb48ac63b72918a7e7685e5339a0802a39ca7fcefeee03ddc9",
+  "description": "Checks cyclomatic complexity, nesting, long methods, god classes, O(n2), N+1 queries, constants management. Use when auditing code quality."
 }

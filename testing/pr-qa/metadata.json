@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Persistent-session, per-sweep QA runbook for {{target_repo}}. Discovers PRs since the last check, then for each one checks out the branch, runs the full verification suite, deploys the change to the test environment, exercises it through the edge, and posts a pass/fail result as a GitHub check and comment. Test environment only \u2014 no production access, no merge."
+  "description": "Persistent-session, per-sweep QA runbook for {{target_repo}}. Discovers PRs since the last check, then for each one checks out the branch, runs the full verification suite, deploys the change to the test environment, exercises it through the edge, and posts a pass/fail result as a GitHub check and comment. Test environment only — no production access, no merge.",
+  "content_fingerprint": "6e7636aa20c1cc6b7e4b9cfd3099f3c3f14599571dd52780b25c638bb377d029"
 }

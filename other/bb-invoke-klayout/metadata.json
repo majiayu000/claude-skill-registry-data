@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8c03\u7528 KLayout 0.30.8 \u6267\u884c GDSII \u5bfc\u51fa\uff08stream out\uff09\u3001GDS-level DRC\u3001\u6216\u5bfc\u51fa\u540e verify\u3002PD \u6d41\u7a0b\u672b\u5c3e\u4ea7\u51fa\u6700\u7ec8 .gds\uff08signoff \u4ea7\u7269\uff09\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bba-guru-pd routed \u540e GDS export\uff1b(2) GDS \u5c42 DRC \u68c0\u67e5\uff1b(3) \u5bfc\u51fa\u540e verify\uff1b(4) \u663e\u5f0f /bb-invoke-klayout\u3002"
+  "description": "调用 KLayout 0.30.8 执行 GDSII 导出（stream out）、GDS-level DRC、或导出后 verify。PD 流程末尾产出最终 .gds（signoff 产物）。触发场景：(1) bba-guru-pd routed 后 GDS export；(2) GDS 层 DRC 检查；(3) 导出后 verify；(4) 显式 /bb-invoke-klayout。",
+  "content_fingerprint": "d693b3afe0c0ee836708b741f8a699aeee683d1ad262d16487e764f9b37a103a"
 }

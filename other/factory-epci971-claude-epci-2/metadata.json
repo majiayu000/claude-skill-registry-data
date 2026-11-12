@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Creates production-ready Claude skills for EPCI v6.0 through guided 6-phase workflow. Generates complete skill packages: SKILL.md, steps/, references/. Supports user skills (user-invocable: true) and internal core skills (user-invocable: false). Default: generates skills with steps/ for multi-phase workflows. Use when: creating new skill, migrating prompts, improving existing skills, generating core components. Triggers: create skill, new skill, factory, generate component. Not for: one-time prompts, volatile procedures, runtime configuration."
+  "description": "Creates production-ready Claude skills for EPCI v6.0 through guided 6-phase workflow. Generates complete skill packages: SKILL.md, steps/, references/. Supports user skills (user-invocable: true) and internal core skills (user-invocable: false). Default: generates skills with steps/ for multi-phase workflows. Use when: creating new skill, migrating prompts, improving existing skills, generating core components. Triggers: create skill, new skill, factory, generate component. Not for: one-time prompts, volatile procedures, runtime configuration.",
+  "content_fingerprint": "d9a666ea6d694669bd2b5ce6b07a1957f30741a8507eaf3598ff39a539b1e3ab"
 }

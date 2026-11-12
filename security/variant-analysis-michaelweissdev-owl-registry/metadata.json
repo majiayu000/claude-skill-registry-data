@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "After one vulnerability is confirmed, find its siblings: extract the root cause, generalize it in steps (exact, structural, semantic), search the codebase and its history with grep, Semgrep, and manual tracing, and record coverage so the hunt has a stopping point. Use when a bug was just fixed or reported and you need to know where else the same mistake exists, or when turning a CVE or advisory into a codebase-wide check. Not for first-pass auditing (use security-code-review) or deciding if one finding is real (use vulnerability-validation)."
+  "description": "After one vulnerability is confirmed, find its siblings: extract the root cause, generalize it in steps (exact, structural, semantic), search the codebase and its history with grep, Semgrep, and manual tracing, and record coverage so the hunt has a stopping point. Use when a bug was just fixed or reported and you need to know where else the same mistake exists, or when turning a CVE or advisory into a codebase-wide check. Not for first-pass auditing (use security-code-review) or deciding if one finding is real (use vulnerability-validation).",
+  "content_fingerprint": "ee9f37a2700464def34471a2f2347ef5c35dfbc188bd13394d294f9e96373262"
 }

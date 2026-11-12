@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `approval-handoff` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage approval-handoff --single`: the engine emits one run-stage directive for approval-handoff and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `approval-handoff` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage approval-handoff --single`: the engine emits one run-stage directive for approval-handoff and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "a2ad4873283c0b646e2cf1d611c64f60179b53f713ccf95c8802399cf7dee29b"
 }

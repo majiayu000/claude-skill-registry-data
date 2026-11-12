@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "External knowledge, from quick lookup to multi-source synthesis, for library/framework docs, API facts, config keys, method signatures, comparisons, deep dives, or recency-sensitive topics. Auto-detects depth, answers with sources, and hands off to implementation when the next action is obvious. Unlike b-debug or b-plan, it fetches docs and web information rather than tracing code or choosing implementation. Routing signals: library docs, API docs, look up, compare APIs, versioned docs, external documentation. Delegated: runs only in the `b-researcher` subagent; the main session never executes it itself."
+  "description": "External knowledge, from quick lookup to multi-source synthesis, for library/framework docs, API facts, config keys, method signatures, comparisons, deep dives, or recency-sensitive topics. Auto-detects depth, answers with sources, and hands off to implementation when the next action is obvious. Unlike b-debug or b-plan, it fetches docs and web information rather than tracing code or choosing implementation. Routing signals: library docs, API docs, look up, compare APIs, versioned docs, external documentation. Delegated: runs only in the `b-researcher` subagent; the main session never executes it itself.",
+  "content_fingerprint": "574258c34f5132f9d808ecf5e9fa4553782226cb3fa3f6d185f54f86fb288e35"
 }

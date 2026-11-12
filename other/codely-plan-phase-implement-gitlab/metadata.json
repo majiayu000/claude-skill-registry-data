@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implement one phase of a plan stored as GitLab issues in the repository of the current working directory. Given the URL of a phase (child) issue it implements that phase; given the parent plan issue it finds and implements the current phase. Only implements a single phase per invocation, then stops for user review. It opens a merge request that references the phase issue and keeps the plan issues reconciled, closing them explicitly when the instance does not auto-close on merge. Never merges the merge request."
+  "description": "Implement one phase of a plan stored as GitLab issues in the repository of the current working directory. Given the URL of a phase (child) issue it implements that phase; given the parent plan issue it finds and implements the current phase. Only implements a single phase per invocation, then stops for user review. It opens a merge request that references the phase issue and keeps the plan issues reconciled, closing them explicitly when the instance does not auto-close on merge. Never merges the merge request.",
+  "content_fingerprint": "dbbfbbf34189d19bd9e3628d44a692442ccb623115532b5052522b73d86e3743"
 }

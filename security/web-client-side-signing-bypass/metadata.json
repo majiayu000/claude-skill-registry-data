@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reverse client-side request signing / obfuscated JS so you can replay and fuzz a protected API outside the browser. Load when requests carry a computed guard you must reproduce: an X-Signature / X-Sign / sign / hmac / _s / token header or body field, a nonce+timestamp, a \"signature invalid\" 401, encrypted request bodies, or minified/webpack/WASM/JSVMP signer code."
+  "description": "Reverse client-side request signing / obfuscated JS so you can replay and fuzz a protected API outside the browser. Load when requests carry a computed guard you must reproduce: an X-Signature / X-Sign / sign / hmac / _s / token header or body field, a nonce+timestamp, a \"signature invalid\" 401, encrypted request bodies, or minified/webpack/WASM/JSVMP signer code.",
+  "content_fingerprint": "b8b9538bcfb5319cb7a242e49ca1febc823a41e8a3201cc31edab4e8b67bbce7"
 }

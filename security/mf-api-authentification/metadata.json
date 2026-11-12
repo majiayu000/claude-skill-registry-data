@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Obtenir et g\u00e9rer un access token pour l'API Merci Facteur (envoi de courrier papier, recommand\u00e9, recommand\u00e9 \u00e9lectronique). Utiliser d\u00e8s qu'un appel \u00e0 l'API Merci Facteur doit \u00eatre authentifi\u00e9, ou quand appara\u00eet une erreur de signature, de timestamp, de restriction d'IP ou un token expir\u00e9. Couvre le calcul HMAC-SHA256 de la secret key, getToken, la dur\u00e9e de vie du token jusqu'\u00e0 365 jours (timeLimit, force) et le stockage des identifiants."
+  "description": "Obtenir et gérer un access token pour l'API Merci Facteur (envoi de courrier papier, recommandé, recommandé électronique). Utiliser dès qu'un appel à l'API Merci Facteur doit être authentifié, ou quand apparaît une erreur de signature, de timestamp, de restriction d'IP ou un token expiré. Couvre le calcul HMAC-SHA256 de la secret key, getToken, la durée de vie du token jusqu'à 365 jours (timeLimit, force) et le stockage des identifiants.",
+  "content_fingerprint": "ad05f2eef8d72024b5ebfa486901479e5a42b6081c089fb86cdd4124617ffad1"
 }

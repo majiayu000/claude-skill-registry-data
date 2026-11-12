@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "AI\uac00 \uc4f4 \ud55c\uae00 \ud14d\uc2a4\ud2b8\ub97c \uc790\uc5f0\uc2a4\ub7fd\uac8c \uc724\ubb38\ud558\ub294 \uc9c4\uc785 \uba85\ub839. humanize-korean \ud30c\uc774\ud504\ub77c\uc778\uc744 shim \uc758 route_hint \uac00 \uc815\ud55c \uacbd\ub85c(light 1\ucf5c \u00b7 standard 2\ucf5c \u00b7 heavy 3+\ucf5c)\ub85c \uc2e4\ud589\ud558\uace0 `--strict`\uba74 heavy \uace0\uc815. \ud2b8\ub9ac\uac70 \u2014 \"/humanize\"."
+  "description": "AI가 쓴 한글 텍스트를 자연스럽게 윤문하는 진입 명령. humanize-korean 파이프라인을 shim 의 route_hint 가 정한 경로(light 1콜 · standard 2콜 · heavy 3+콜)로 실행하고 `--strict`면 heavy 고정. 트리거 — \"/humanize\".",
+  "content_fingerprint": "968d50f5b75373ef462b38449f453595a2dedc2554f82498383af37f2f815b09"
 }

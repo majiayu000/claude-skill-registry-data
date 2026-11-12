@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u70ba\u76ee\u6a19\u9818\u57df\u63a8\u5c0e\u5b8c\u6574\u7684 gstack skill map + workflow + artifact flow\u3002\nTrigger: \u7528\u6236\u8aaa\u300c\u6211\u505a X \u9818\u57df\u300d\u3001\u300c\u5e6b\u6211\u898f\u5283 skill\u300d\u3001\u300c\u6211\u60f3\u5efa\u4e00\u5957 domain stack\u300d\u3002\nDo NOT use when: \u5df2\u7d93\u6709 skill map\uff0c\u8981\u642d\u5efa\uff08\u7528 /domain-build\uff09\u3002\nDo NOT use when: \u8981\u52a0\u55ae\u4e00 skill\uff08\u7528 /skill-gen\uff09\u3002\n\u4e0a\u6e38\uff1a\u7121\uff08\u5165\u53e3 skill\uff09\u3002\n\u4e0b\u6e38\uff1a/domain-build\u3002\n\u7522\u51fa\uff1askill-map-{datetime}.md + workflow-graph-{datetime}.md"
+  "description": "為目標領域推導完整的 gstack skill map + workflow + artifact flow。\nTrigger: 用戶說「我做 X 領域」、「幫我規劃 skill」、「我想建一套 domain stack」。\nDo NOT use when: 已經有 skill map，要搭建（用 /domain-build）。\nDo NOT use when: 要加單一 skill（用 /skill-gen）。\n上游：無（入口 skill）。\n下游：/domain-build。\n產出：skill-map-{datetime}.md + workflow-graph-{datetime}.md",
+  "content_fingerprint": "5696875a86daab79c504fc1deb3e3db9fe01bb3ec53b6837eed8c0527d2df861"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Takes a time series of one metric and flags which recent points are genuinely outside its normal range, using a stated trailing-average-and-deviation method, not a gut read of a chart. Use when the user has a week's or month's worth of numbers for a metric and wants to know if something in it is actually unusual. Boundary: this skill flags anomalies in data the user provides. For designing the dashboard that surfaces this metric in the first place, use `kpi-dashboard`."
+  "description": "Takes a time series of one metric and flags which recent points are genuinely outside its normal range, using a stated trailing-average-and-deviation method, not a gut read of a chart. Use when the user has a week's or month's worth of numbers for a metric and wants to know if something in it is actually unusual. Boundary: this skill flags anomalies in data the user provides. For designing the dashboard that surfaces this metric in the first place, use `kpi-dashboard`.",
+  "content_fingerprint": "e047c55a4ef5665c0b08ba694a13c1752e104178010ef3ccadee22a95e2e7029"
 }

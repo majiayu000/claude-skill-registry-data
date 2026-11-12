@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u3010\u6865\u63a5\u3011\u628a\u4e00\u4e2a skill \u6216\u6574\u4e2a skills/ \u76ee\u5f55\u7528\u8f6f\u94fe\u6302\u5230\u672c\u673a\u5df2\u5b89\u88c5\u7684\u5404\u4e2a Agent \u5bbf\u4e3b\uff08\u516c\u5171\u5165\u53e3 ~/.agents/skills\u3001Claude Code\u3001WorkBuddy\u3001Trae \u7b49\u4e13\u5c5e\u5165\u53e3\uff0cGrok \u751f\u6210\u8584 bridge\uff09\uff0c\u4e5f\u8d1f\u8d23\u67e5\u6865\u63a5\u72b6\u6001\u548c\u62c6\u6865\u3002\u7528\u6237\u8bf4\u300c\u6865\u63a5\u8fd9\u4e2a skill\u300d\u300c\u628a skill \u63a5\u5230 Codex/\u8c46\u5305/WorkBuddy\u300d\u300c\u8ba9\u6240\u6709 Agent \u90fd\u80fd\u7528\u300d\u300c\u6865\u597d\u4e86\u6ca1\u300d\u300c\u53d6\u6d88\u6865\u63a5\u300d\u300c\u62c6\u6865\u300d\u65f6\u4f7f\u7528\u3002\uff5c\u5c0f\u7237\u51fa\u54c1"
+  "description": "【桥接】把一个 skill 或整个 skills/ 目录用软链挂到本机已安装的各个 Agent 宿主（公共入口 ~/.agents/skills、Claude Code、WorkBuddy、Trae 等专属入口，Grok 生成薄 bridge），也负责查桥接状态和拆桥。用户说「桥接这个 skill」「把 skill 接到 Codex/豆包/WorkBuddy」「让所有 Agent 都能用」「桥好了没」「取消桥接」「拆桥」时使用。｜小爷出品",
+  "content_fingerprint": "f5fda96a1d9a665393ac8471287162ab318dd36f285f713f3935ea56036ecb82"
 }

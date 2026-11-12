@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adversarial security review of a change (branch diff, PR, or working tree) before merge. Use when the user asks to \"review this for security\", \"security review\", \"check for vulnerabilities\", \"is this safe to merge\", or before merging anything that touches a trust boundary \u2014 auth/authz, input parsing, secrets/keychains, file writes, shelling out, untrusted-input-into-shell/YAML, CI workflows that run on privileged runners, or generated LLM instructions. Also the standing gate this repo runs on every lacquer PR."
+  "description": "Adversarial security review of a change (branch diff, PR, or working tree) before merge. Use when the user asks to \"review this for security\", \"security review\", \"check for vulnerabilities\", \"is this safe to merge\", or before merging anything that touches a trust boundary — auth/authz, input parsing, secrets/keychains, file writes, shelling out, untrusted-input-into-shell/YAML, CI workflows that run on privileged runners, or generated LLM instructions. Also the standing gate this repo runs on every lacquer PR.",
+  "content_fingerprint": "b5c5103dee2af5ab256f764e2ad7865afbae57d9d5df07bd5d068ea3e0c0ac55"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PDF/\uc774\ubbf8\uc9c0\ub97c Claude vision\uc73c\ub85c OCR\ud558\uc5ec \ub9c8\ud06c\ub2e4\uc6b4 \ubcc0\ud658. MUST use this skill when user: (1) asks to convert PDF/image to markdown, (2) asks to OCR any file, (3) sends PDF/image file and asks to extract/read/\ubcc0\ud658/\ucd94\ucd9c, (4) mentions 'OCR', 'PDF \ubcc0\ud658', '\uc774\ubbf8\uc9c0 \ubcc0\ud658', '\ud14d\uc2a4\ud2b8 \ucd94\ucd9c'. This skill uses Task agent to protect main context - NEVER process files directly in main context."
+  "description": "PDF/이미지를 Claude vision으로 OCR하여 마크다운 변환. MUST use this skill when user: (1) asks to convert PDF/image to markdown, (2) asks to OCR any file, (3) sends PDF/image file and asks to extract/read/변환/추출, (4) mentions 'OCR', 'PDF 변환', '이미지 변환', '텍스트 추출'. This skill uses Task agent to protect main context - NEVER process files directly in main context.",
+  "content_fingerprint": "b40365573da3b938a1923b44191a8231477e6b2e3701b9889c4db737d6e2875f"
 }

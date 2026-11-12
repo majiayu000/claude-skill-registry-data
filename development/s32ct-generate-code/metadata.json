@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Triggers headless code generation in S32 Configuration Tools for a single specific tool (Pins, Clocks, Peripherals, DCD, IVT, eFUSE, GTM, QuadSPI, or FFC) of an existing .mex project and exports the regenerated files to a target folder. Use when the user says \"regenerate the pin mux\", \"refresh the clocks code\", \"export the peripherals HTML report\", or wants to apply .mex edits to disk in a scoped way. Fronts nxp_s32ct_execute_action(action_name=\"s32ct.generate_code\", params={...})"
+  "description": "Triggers headless code generation in S32 Configuration Tools for a single specific tool (Pins, Clocks, Peripherals, DCD, IVT, eFUSE, GTM, QuadSPI, or FFC) of an existing .mex project and exports the regenerated files to a target folder. Use when the user says \"regenerate the pin mux\", \"refresh the clocks code\", \"export the peripherals HTML report\", or wants to apply .mex edits to disk in a scoped way. Fronts nxp_s32ct_execute_action(action_name=\"s32ct.generate_code\", params={...})",
+  "content_fingerprint": "66ae7dc1c1315a2db02899bc9565af760487751bff0e4f91f65cb9d2a64c1329"
 }

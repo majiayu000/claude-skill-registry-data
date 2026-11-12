@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Move domain events from BullMQ queues to a log-based broker (Kafka, Redpanda, NATS JetStream). Use when the user decides event volume, ordering, replay or fan-out has outgrown Redis queues, or asks about changing the event bus. Not for debugging; when something fails, use the debug skill."
+  "description": "Move domain events from BullMQ queues to a log-based broker (Kafka, Redpanda, NATS JetStream). Use when the user decides event volume, ordering, replay or fan-out has outgrown Redis queues, or asks about changing the event bus. Not for debugging; when something fails, use the debug skill.",
+  "content_fingerprint": "2a7223e326a0b71124c27adcc397ffb36413d376938d77edb334f8c8558f05bd"
 }

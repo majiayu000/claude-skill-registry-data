@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Set up or execute backup + restore procedures for AICP/fleet runtime state \u2014 `~/.aicp/` (DLQ + history + state.yaml), config YAMLs, KB Collections, model GGUF inventory, sister-project Plane DBs. Authors backup scripts, runs them, verifies integrity, documents restore, tests restore in a safe environment. Loads when the operator says \"back up X\", \"set up backups\", \"restore from backup\", \"what if we lose Y\"."
+  "description": "Set up or execute backup + restore procedures for AICP/fleet runtime state — `~/.aicp/` (DLQ + history + state.yaml), config YAMLs, KB Collections, model GGUF inventory, sister-project Plane DBs. Authors backup scripts, runs them, verifies integrity, documents restore, tests restore in a safe environment. Loads when the operator says \"back up X\", \"set up backups\", \"restore from backup\", \"what if we lose Y\".",
+  "content_fingerprint": "0fa06aa4cfc5064757b6203d1d38f5b73bcaee5447a2758c53babdb6834b685c"
 }

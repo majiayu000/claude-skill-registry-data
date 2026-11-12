@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific GRANT behavior \u2014 privilege scope levels (global/db/table/column/routine), implicit account creation interacting with the NO_AUTO_CREATE_USER sql_mode (on by default), MariaDB-only privileges LLMs won't know (BINLOG MONITOR, DELETE HISTORY, SET USER, FEDERATED ADMIN, READ_ONLY ADMIN, etc.) and the SUPER-privilege split, GRANT PROXY, resource limits, REQUIRE TLS options, and MariaDB roles (GRANT role TO user/role, WITH ADMIN OPTION, single-active-role semantics). Use when writing, generating, or reviewing GRANT statements or privilege/role designs that target MariaDB."
+  "description": "MariaDB-specific GRANT behavior — privilege scope levels (global/db/table/column/routine), implicit account creation interacting with the NO_AUTO_CREATE_USER sql_mode (on by default), MariaDB-only privileges LLMs won't know (BINLOG MONITOR, DELETE HISTORY, SET USER, FEDERATED ADMIN, READ_ONLY ADMIN, etc.) and the SUPER-privilege split, GRANT PROXY, resource limits, REQUIRE TLS options, and MariaDB roles (GRANT role TO user/role, WITH ADMIN OPTION, single-active-role semantics). Use when writing, generating, or reviewing GRANT statements or privilege/role designs that target MariaDB.",
+  "content_fingerprint": "b1c9d5efa64432b6ce522debac9f062c7c5720a626052690f8afd3e7d29d7841"
 }

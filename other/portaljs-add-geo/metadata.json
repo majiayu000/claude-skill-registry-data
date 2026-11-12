@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Auto-ingest a geospatial file (GeoJSON, Shapefile, GeoPackage, KML/KMZ, FlatGeobuf, CSV-with-geometry) into a PortalJS portal on the user's own machine, with no server. Normalizes CRS to EPSG:4326, derives a PMTiles render tier and a GeoParquet query tier, pushes all three artifacts to Cloudflare R2 via Git LFS, and appends one dual-tier datasets.json entry the showcase auto-renders. Use when the source is a vector geo format that needs a map or spatial-query view."
+  "description": "Auto-ingest a geospatial file (GeoJSON, Shapefile, GeoPackage, KML/KMZ, FlatGeobuf, CSV-with-geometry) into a PortalJS portal on the user's own machine, with no server. Normalizes CRS to EPSG:4326, derives a PMTiles render tier and a GeoParquet query tier, pushes all three artifacts to Cloudflare R2 via Git LFS, and appends one dual-tier datasets.json entry the showcase auto-renders. Use when the source is a vector geo format that needs a map or spatial-query view.",
+  "content_fingerprint": "bd9dcd7a5fb37ddcb6753f52665156c18b2d3256f550caecd388b6a4b3d8a47b"
 }

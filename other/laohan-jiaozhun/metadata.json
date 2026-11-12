@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5185\u5bb9\u6821\u51c6\u5de5\u4f5c\u6d41\u9002\u914d\u5668\u3002\u4e3a episode \u9009\u62e9\u6b63\u786e\u7684 cheat-on-content \u6821\u51c6 lane\uff0c\u4fdd\u5b58\u53ef\u8ffd\u6eaf\u7684\u6821\u51c6\u5165\u53e3\uff1b\u8bc4\u5206\u3001\u76f2\u9884\u6d4b\u3001\u53d1\u5e03\u767b\u8bb0\u3001\u590d\u76d8\u548c rubric \u66f4\u65b0\u4e00\u5f8b\u7531\u4e0a\u6e38 cheat-on-content \u6267\u884c\u3002Use when \u7528\u6237\u8bf4\u6821\u51c6\u8fd9\u671f\u3001\u7ed9\u672c\u671f\u6253\u5206\u5e76\u9884\u6d4b\u3001\u628a episode \u63a5\u5165 cheat\u3001\u9009\u62e9\u6821\u51c6\u8f68\u9053\u3001\u8fdb\u5165\u2463\u6821\u51c6\u3002"
+  "description": "内容校准工作流适配器。为 episode 选择正确的 cheat-on-content 校准 lane，保存可追溯的校准入口；评分、盲预测、发布登记、复盘和 rubric 更新一律由上游 cheat-on-content 执行。Use when 用户说校准这期、给本期打分并预测、把 episode 接入 cheat、选择校准轨道、进入④校准。",
+  "content_fingerprint": "17f929a99006581c48c2320339ad32c4a25d2269ac3ce6c640acc1f42bcdb4ea"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect Kerberoasting attacks by monitoring for anomalous Kerberos TGS requests (Event ID 4769) targeting service accounts with SPNs, which attackers request offline to crack service account passwords. Use when hunting for MITRE T1558 credential access activity or investigating suspected service account password cracking attempts in Active Directory Kerberos logs."
+  "description": "Detect Kerberoasting attacks by monitoring for anomalous Kerberos TGS requests (Event ID 4769) targeting service accounts with SPNs, which attackers request offline to crack service account passwords. Use when hunting for MITRE T1558 credential access activity or investigating suspected service account password cracking attempts in Active Directory Kerberos logs.",
+  "content_fingerprint": "6d541755a75393e6600f542048445327ad22cb5b3419c66df54bf40c2cec5232"
 }

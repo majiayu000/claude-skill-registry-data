@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/HomericIntelligence/ProjectOdyssey/blob/main/plugins/ci-cd/fix-docker-image-org-mismatch/skills/fix-docker-image-org-mismatch/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a747c93bfa36a00c02823e4f312cb53eb77bdc619b32ff1a7b8ddb435b3e952d",
+  "description": "Fix Docker GHCR push failures when repository organization changes but IMAGE\\_NAME remains hardcoded to old org"
 }

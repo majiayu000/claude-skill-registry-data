@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "push \u3057\u305f\u5f8c\u306b\u843d\u3061\u305f CI \u3092\u3001\u4eba\u9593\u3078\u306e\u78ba\u8a8d\u306a\u3057\u306b\u76f4\u3057\u3066 push \u3057\u76f4\u3059\u3002\u7121\u4eba\u3067\u306f `npm run auto-programmer` \u304c AI \u5c02\u7528 clone \u306e\u4e2d\u3067\u8d77\u52d5\u3059\u308b\u3002\u5bfe\u8a71\u3067\u306f\u3001CI \u306e\u5931\u6557\u3092\u77e5\u3089\u305b\u308b hook\uff08wake-on-ci-failure\uff09\u306b\u8d77\u3053\u3055\u308c\u305f\u30bb\u30c3\u30b7\u30e7\u30f3\u304c\u3001\u305d\u306e\u6587\u9762\u306e\u6307\u793a\u3067\u5b9f\u884c\u3059\u308b\u3002"
+  "description": "push した後に落ちた CI を、人間への確認なしに直して push し直す。無人では `npm run auto-programmer` が AI 専用 clone の中で起動する。対話では、CI の失敗を知らせる hook（wake-on-ci-failure）に起こされたセッションが、その文面の指示で実行する。",
+  "content_fingerprint": "38c8e57bc20649a86e397301d413015a5f048edf48a6d34b07ce3277424714b8"
 }

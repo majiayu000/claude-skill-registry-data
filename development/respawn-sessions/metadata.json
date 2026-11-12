@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Respawn Bryan's long-running Claude Code sessions in detached tmux sessions. Four modes \u2014 `missing` (default, fill gaps), `plugin` (kill+respawn anyone lacking the fleet plugin), `all` (kill+respawn every registry entry), `running` (kill+respawn what is actually up, at its own cwd \u2014 the mode to use after a /login account switch). Auto-accepts dev-channel permission dialogs and sweeps orphan claude-hive servers. Also holds `self-respawn.sh` for the team-lead to cycle its own session (which the modes never kill) onto a new binary/plugin/settings."
+  "description": "Respawn Bryan's long-running Claude Code sessions in detached tmux sessions. Four modes — `missing` (default, fill gaps), `plugin` (kill+respawn anyone lacking the fleet plugin), `all` (kill+respawn every registry entry), `running` (kill+respawn what is actually up, at its own cwd — the mode to use after a /login account switch). Auto-accepts dev-channel permission dialogs and sweeps orphan claude-hive servers. Also holds `self-respawn.sh` for the team-lead to cycle its own session (which the modes never kill) onto a new binary/plugin/settings.",
+  "content_fingerprint": "5ed027485533785a6daf8a0af7c4fe47b6b26eae3dc9f4fa9524b4a924b21999"
 }

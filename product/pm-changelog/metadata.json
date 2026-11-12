@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate or update CHANGELOG.md from git history \u2014 group commits by Conventional-Commits prefix (feat/fix/refactor/docs/test/chore/breaking), translate raw subject lines into human-readable entries, link to PRs/issues, prepend a new versioned section. Reads the range from `$ARGUMENTS` (since tag/SHA), the last CHANGELOG entry, or last tag fallback. Distinct from `pm-status-report` (now-state outward report) and `pm-retrospective` (reflective, not log-driven). Loads when the operator says \"changelog\", \"release notes\", \"what shipped\", \"summarize commits since X\", \"update CHANGELOG\"."
+  "description": "Generate or update CHANGELOG.md from git history — group commits by Conventional-Commits prefix (feat/fix/refactor/docs/test/chore/breaking), translate raw subject lines into human-readable entries, link to PRs/issues, prepend a new versioned section. Reads the range from `$ARGUMENTS` (since tag/SHA), the last CHANGELOG entry, or last tag fallback. Distinct from `pm-status-report` (now-state outward report) and `pm-retrospective` (reflective, not log-driven). Loads when the operator says \"changelog\", \"release notes\", \"what shipped\", \"summarize commits since X\", \"update CHANGELOG\".",
+  "content_fingerprint": "aa6a55461f9179771b48bb276276ce3043b5eee91d291b09c9d4a5a298abba67"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8ddf\u7528\u6237\u5bf9\u8bdd\u8ba8\u8bba\u9009\u9898\u2014\u2014**\u9ed8\u8ba4\u4e00\u6b21\u4e00\u4e2a**\uff0c\u7528\u6237\u4e3b\u52a8\u7ed9\u4e3b\u9898\u6216\u7ecf\u5386\uff0cAI \u56f4\u7ed5\u7528\u6237\u7684\u8f93\u5165\u6df1\u6316\u3001\u63d0\u70bc\u89d2\u5ea6\u3001\u5199\u4e00\u4efd draft\u3002\u4e0d\u662f AI \u62ff\u4e09\u4e2a\u5f00\u653e\u95ee\u9898\u8ffd\u7528\u6237\uff0c\u4e5f\u4e0d\u662f\u4e00\u6b21\u7ed9 5 \u4e2a\u5019\u9009\u3002\u89e6\u53d1\u8bcd\uff1a\"\u627e\u9009\u9898\"/\"\u6211\u60f3\u505a\u4e00\u6761 X\"/\"\u6700\u8fd1\u6709\u4e2a\u60f3\u6cd5\"/\"seed\"/\"\u542f\u52a8\u79cd\u5b50\"\u3002\u53ef\u9009 batch \u6a21\u5f0f\uff1a`/cheat-seed --batch 5` \u8d70\u65e7\u7684 brainstorm 5 \u5019\u9009 + \u5199 5 draft \u6d41\u7a0b\u3002"
+  "description": "跟用户对话讨论选题——**默认一次一个**，用户主动给主题或经历，AI 围绕用户的输入深挖、提炼角度、写一份 draft。不是 AI 拿三个开放问题追用户，也不是一次给 5 个候选。触发词：\"找选题\"/\"我想做一条 X\"/\"最近有个想法\"/\"seed\"/\"启动种子\"。可选 batch 模式：`/cheat-seed --batch 5` 走旧的 brainstorm 5 候选 + 写 5 draft 流程。",
+  "content_fingerprint": "f36cfdfebe44296767d20ea612fa51a5d063e23815d6e7d22d8f20c65ef580e4"
 }

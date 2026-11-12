@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific syntax and behavior for DELETE \u2014 RETURNING deleted rows in one statement, both multi-table forms (DELETE \u2026 FROM and DELETE FROM \u2026 USING) with ORDER BY/LIMIT (since 11.8), single-table ORDER BY/LIMIT/PARTITION/alias/index hints, DELETE HISTORY for system-versioned tables, FOR PORTION OF for application-time periods, QUICK/LOW_PRIORITY/IGNORE modifiers and their engine limits, deleting from a table referenced in its own subquery, and DELETE-vs-TRUNCATE differences. Use when writing, generating, or reviewing DELETE statements that target MariaDB."
+  "description": "MariaDB-specific syntax and behavior for DELETE — RETURNING deleted rows in one statement, both multi-table forms (DELETE … FROM and DELETE FROM … USING) with ORDER BY/LIMIT (since 11.8), single-table ORDER BY/LIMIT/PARTITION/alias/index hints, DELETE HISTORY for system-versioned tables, FOR PORTION OF for application-time periods, QUICK/LOW_PRIORITY/IGNORE modifiers and their engine limits, deleting from a table referenced in its own subquery, and DELETE-vs-TRUNCATE differences. Use when writing, generating, or reviewing DELETE statements that target MariaDB.",
+  "content_fingerprint": "4834ff9c11b399fc5ba0764bf44c33abff6cdba6f957519539bfeaa8d3ec75cd"
 }

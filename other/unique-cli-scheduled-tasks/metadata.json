@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "ALWAYS use this skill when the user asks to schedule, automate, set up recurring tasks, create a cron job, or anything involving timed / periodic execution.  Do NOT use the local system crontab \u2014 scheduled tasks are stored on the Unique AI Platform and executed by a Kubernetes CronJob, not locally.  Scheduled tasks always run on the current assistant (`$UNIQUE_ASSISTANT_ID`); never ask the user which assistant to use, neither in chat nor via `unique-cli elicit ask`. This skill covers creating, listing, updating, enabling, disabling, and deleting scheduled tasks via the unique-cli schedule command."
+  "description": "ALWAYS use this skill when the user asks to schedule, automate, set up recurring tasks, create a cron job, or anything involving timed / periodic execution.  Do NOT use the local system crontab — scheduled tasks are stored on the Unique AI Platform and executed by a Kubernetes CronJob, not locally.  Scheduled tasks always run on the current assistant (`$UNIQUE_ASSISTANT_ID`); never ask the user which assistant to use, neither in chat nor via `unique-cli elicit ask`. This skill covers creating, listing, updating, enabling, disabling, and deleting scheduled tasks via the unique-cli schedule command.",
+  "content_fingerprint": "79c377e3c4062b0cb10fbf51c55cf977de083c4531afb0b657f05ba6235ae57a"
 }

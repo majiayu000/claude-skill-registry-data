@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Local Windows privilege escalation on a STANDALONE / workgroup host, or a local shell on a domain member - foothold to SYSTEM. Token privileges (SeImpersonate/Potato), service misconfig (weak perms / unquoted path / writable binary), registry autologon creds, scheduled-task + writable-script abuse, DLL hijack, AlwaysInstallElevated, UAC bypass, credential loot. For DOMAIN escalation (kerberoast/DCSync/ADCS/BloodHound) use hunt-ad instead. Wiki-first, FIND schema output."
+  "description": "Local Windows privilege escalation on a STANDALONE / workgroup host, or a local shell on a domain member - foothold to SYSTEM. Token privileges (SeImpersonate/Potato), service misconfig (weak perms / unquoted path / writable binary), registry autologon creds, scheduled-task + writable-script abuse, DLL hijack, AlwaysInstallElevated, UAC bypass, credential loot. For DOMAIN escalation (kerberoast/DCSync/ADCS/BloodHound) use hunt-ad instead. Wiki-first, FIND schema output.",
+  "content_fingerprint": "a4f19663b06fcfba1925df3c5233e18eae190f0fd57a2cc003744870ed8326b8"
 }

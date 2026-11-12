@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Embed every file under targets/<name>/sources/ into a ChromaDB collection named target_<name> via the TLX rag module (Google text-embedding-004). Run after sourcemap-explode when status.json.rag.collection is missing. Enables docs_query(collection=\"target_<name>\", query=...) for retrieval during static + dynamic analysis."
+  "description": "Embed every file under targets/<name>/sources/ into a ChromaDB collection named target_<name> via the TLX rag module (Google text-embedding-004). Run after sourcemap-explode when status.json.rag.collection is missing. Enables docs_query(collection=\"target_<name>\", query=...) for retrieval during static + dynamic analysis.",
+  "content_fingerprint": "44b30ad90d3016ed27e513ed720c2bdd80f2af6b02cb32498be198ff81ff912d"
 }

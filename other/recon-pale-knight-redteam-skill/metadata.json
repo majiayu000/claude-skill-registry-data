@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u901a\u7528\u7f51\u7edc\u4e0e\u8d44\u4ea7\u4fe1\u606f\u6536\u96c6\u3002\u9762\u5411 IP\u3001CIDR\u3001\u4e3b\u673a\u540d\u3001\u4f01\u4e1a/\u57df\u540d\u7b49\u5c1a\u672a\u660e\u786e\u653b\u51fb\u9762\u7684\u76ee\u6807\uff0c\u5b8c\u6210\u8d44\u4ea7\u6269\u5c55\u3001\u4e3b\u673a\u53d1\u73b0\u3001TCP/UDP\u7aef\u53e3\u53d1\u73b0\u3001\u670d\u52a1/\u7248\u672c/\u534f\u8bae\u8bc6\u522b\u3001\u53ea\u8bfb\u670d\u52a1\u679a\u4e3e\u3001\u7f51\u7edc\u8bbe\u5907\u8bc6\u522b\u548c\u6f0f\u6d1e\u5019\u9009\u7814\u5224\u3002Recon only\uff1a\u4e0d\u6267\u884c\u6f0f\u6d1e\u5229\u7528\u3001\u53e3\u4ee4\u7206\u7834\u3001\u670d\u52a1\u914d\u7f6e\u4fee\u6539\u6216\u6301\u4e45\u5316\u3002"
+  "description": "通用网络与资产信息收集。面向 IP、CIDR、主机名、企业/域名等尚未明确攻击面的目标，完成资产扩展、主机发现、TCP/UDP端口发现、服务/版本/协议识别、只读服务枚举、网络设备识别和漏洞候选研判。Recon only：不执行漏洞利用、口令爆破、服务配置修改或持久化。",
+  "content_fingerprint": "23f0730b51a32994767d26a4d26d47cb7bf32392ff42d6a8c4d806628dc67f3b"
 }

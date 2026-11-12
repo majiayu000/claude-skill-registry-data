@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Symbol-level code context for LLM coder-agents: tree-sitter extracts symbols, PageRank ranks them over the cross-file reference graph, and the top class/function signatures are fed to the LLM as a token-budgeted read-only map (not RAG, no vector index, human-auditable). Use when an agent must locate the right files in a large/multi-file repo, when builds/refreshes/scopes a repo-map, or when \"model edits the wrong file\" needs fixing."
+  "description": "Symbol-level code context for LLM coder-agents: tree-sitter extracts symbols, PageRank ranks them over the cross-file reference graph, and the top class/function signatures are fed to the LLM as a token-budgeted read-only map (not RAG, no vector index, human-auditable). Use when an agent must locate the right files in a large/multi-file repo, when builds/refreshes/scopes a repo-map, or when \"model edits the wrong file\" needs fixing.",
+  "content_fingerprint": "4f44ad317c0ff7a6545398b21847500e83d02a276b97ece9d899a42f21342aff"
 }

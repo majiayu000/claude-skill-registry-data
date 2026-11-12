@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2\u80a1\u7968\u5206\u7ea2\u8bb0\u5f55\u3002\u63a5\u53e3\uff1aGET /api/v1/market/data/stock-dividends\u3002\u6240\u6709\u8bf7\u6c42\u5fc5\u987b\u8bbe\u7f6e FTSHARE_API_KEY\u3002"
+  "description": "查询股票分红记录。接口：GET /api/v1/market/data/stock-dividends。所有请求必须设置 FTSHARE_API_KEY。",
+  "content_fingerprint": "8e1493bbc45b3657e1fff20a44cd65b6e269f2f4dd53537b94cd7f74bdb7f103"
 }

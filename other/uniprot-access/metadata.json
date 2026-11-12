@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Query UniProt's REST API (post-2022 endpoint at rest.uniprot.org) for protein sequences, annotations, GO terms, cross-references, ID mappings, and proteomes. Use when fetching UniProtKB entries, navigating the JSON schema, choosing between UniProtKB/UniRef/UniParc/Proteomes resources, deciding stream vs search endpoint for batch retrieval, running ID-mapping jobs with the async pattern, handling isoform suffixes, or filtering reviewed Swiss-Prot vs auto-annotated TrEMBL. Encodes the legacy URL migration (2022), the new JSON schema layout, and bulk-pull patterns."
+  "description": "Query UniProt's REST API (post-2022 endpoint at rest.uniprot.org) for protein sequences, annotations, GO terms, cross-references, ID mappings, and proteomes. Use when fetching UniProtKB entries, navigating the JSON schema, choosing between UniProtKB/UniRef/UniParc/Proteomes resources, deciding stream vs search endpoint for batch retrieval, running ID-mapping jobs with the async pattern, handling isoform suffixes, or filtering reviewed Swiss-Prot vs auto-annotated TrEMBL. Encodes the legacy URL migration (2022), the new JSON schema layout, and bulk-pull patterns.",
+  "content_fingerprint": "ddd47d94b804c4e7575613fa6692317aa3b9835df27cc2adb709687a5f2fe827"
 }

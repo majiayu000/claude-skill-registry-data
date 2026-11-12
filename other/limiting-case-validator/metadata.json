@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u6709\u4e00\u6761\u516c\u5f0f\u3001\u6807\u5ea6\u5f8b\u6216\u6a21\u578b\u7ed3\u679c\uff0c\u60f3\u5728\u76f8\u4fe1\u5b83\u4e4b\u524d\u67e5\u5b83\u5728\u6781\u9650\u4e0b\u8fd8\u8bb2\u4e0d\u8bb2\u5f97\u901a\u65f6\u4f7f\u7528\u3002\u5148\u627e\u51fa\u63a7\u5236\u53c2\u6570\u4e0e\u65e0\u91cf\u7eb2\u7ec4\uff0c\u6311\u6700\u5c0f\u4e00\u7ec4\u6709\u7528\u7684\u6781\u9650\uff0c\u5728\u52a8\u624b\u7b97\u4e4b\u524d\u5148\u5199\u4e0b\u7269\u7406\u4e0a\u5e94\u8be5\u53d1\u751f\u4ec0\u4e48\uff0c\u518d\u505a\u6570\u5b66\u5316\u7b80\u4e24\u76f8\u5bf9\u7167\uff1b\u4e13\u6293\u5728\u67d0\u4e2a\u6781\u9650\u4e0b\u53d1\u6563\u3001\u53d8\u53f7\u3001\u6216\u4e22\u6389\u5df2\u77e5\u7279\u4f8b\u7684\u8868\u8fbe\u5f0f\u3002manifest \u7684\u5b8c\u6574\u6027\u7531 scripts/check_limit_manifest.py \u6821\u9a8c\u3002"
+  "description": "当有一条公式、标度律或模型结果，想在相信它之前查它在极限下还讲不讲得通时使用。先找出控制参数与无量纲组，挑最小一组有用的极限，在动手算之前先写下物理上应该发生什么，再做数学化简两相对照；专抓在某个极限下发散、变号、或丢掉已知特例的表达式。manifest 的完整性由 scripts/check_limit_manifest.py 校验。",
+  "content_fingerprint": "d6fb4ef37983b1ea9b24cb2f36a5410619bdd3cb983715898d3d2ed6fbb8628e"
 }

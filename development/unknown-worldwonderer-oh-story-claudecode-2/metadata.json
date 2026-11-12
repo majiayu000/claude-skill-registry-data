@@ -1,6 +1,6 @@
 {
   "name": "unknown",
-  "description": "",
+  "description": "网络小说工具箱主入口。根据用户需求自动路由到对应 skill。\n触发方式：/story、/网文、「我想写小说」「帮我写书」「写网文」\n当用户意图不明确时触发此 skill，由路由逻辑分发到具体的扫榜/拆文/写作/去AI味/封面 skill。\n",
   "repo": "worldwonderer/oh-story-claudecode",
   "path": "skills/story/SKILL.md",
   "github_branch": "main",
@@ -17,5 +17,6 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/worldwonderer/oh-story-claudecode/blob/main/skills/story/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "e53b1c975dac383471d0cef8e0abbc4336b7d872b5453e81376576121fa8eaa1"
 }

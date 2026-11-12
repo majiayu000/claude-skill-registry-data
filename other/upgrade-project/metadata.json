@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reconcile baseline-versioned files that the `create-baseline upgrade` CLI staged for LLM-assisted semantic merge. Use when the CLI prints \"Open Claude Code and run /upgrade-project to reconcile\". Reads the stage manifest at `.claude/state/upgrade/<ts>/manifest.json`, reasons through each pending file's three-way delta in main context, writes a reconciled LOCAL, then deletes the stage when every file lands. Supports `--dry-run` (preview the reconciled diff without writing) and a structured \"needs-user-input\" fallback when the conflict cannot be disambiguated automatically."
+  "description": "Reconcile baseline-versioned files that the `create-baseline upgrade` CLI staged for LLM-assisted semantic merge. Use when the CLI prints \"Open Claude Code and run /upgrade-project to reconcile\". Reads the stage manifest at `.claude/state/upgrade/<ts>/manifest.json`, reasons through each pending file's three-way delta in main context, writes a reconciled LOCAL, then deletes the stage when every file lands. Supports `--dry-run` (preview the reconciled diff without writing) and a structured \"needs-user-input\" fallback when the conflict cannot be disambiguated automatically.",
+  "content_fingerprint": "6976e277ab1f74a257aa957cedd02d8e24e3eb6f3243c3afdb06b8e2bf09f5e5"
 }

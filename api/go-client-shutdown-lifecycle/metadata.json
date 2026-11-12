@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when designing the Close() contract for an SDK client that owns goroutines, connection pools, or buffered channels \u2014 idempotency via sync.Once or atomic.Bool CAS, context-driven abort, drain-with-timeout, ordered sub-resource teardown so goleak.VerifyTestMain stays clean. Triggers: Close(), sync.Once, atomic.Bool, CompareAndSwap, drain, goleak.VerifyTestMain, t.Cleanup, context.Canceled."
+  "description": "Use this when designing the Close() contract for an SDK client that owns goroutines, connection pools, or buffered channels — idempotency via sync.Once or atomic.Bool CAS, context-driven abort, drain-with-timeout, ordered sub-resource teardown so goleak.VerifyTestMain stays clean. Triggers: Close(), sync.Once, atomic.Bool, CompareAndSwap, drain, goleak.VerifyTestMain, t.Cleanup, context.Canceled.",
+  "content_fingerprint": "6df601f7ac9e9eea364ca63422433745afe99575059eb2788be9b020eacda7fd"
 }

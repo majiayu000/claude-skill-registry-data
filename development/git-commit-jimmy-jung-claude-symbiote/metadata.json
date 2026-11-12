@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jimmy-Jung/claude_symbiote/blob/main/.claude/skills/git-commit/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "642a1c0696a48cd6aa3177b2f5336215c73bea3d86219d6643118e71bf348bb7",
+  "description": "프로젝트 커밋 컨벤션에 맞는 커밋 메시지 자동 생성. git diff 분석 후 Conventional Commits 형식으로 생성합니다. Use when committing changes or when the user asks to commit."
 }

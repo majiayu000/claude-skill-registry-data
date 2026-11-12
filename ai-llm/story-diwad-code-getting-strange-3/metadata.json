@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7f51\u7edc\u5c0f\u8bf4\u5de5\u5177\u7bb1\u4e3b\u5165\u53e3\u3002\u6839\u636e\u7528\u6237\u9700\u6c42\u81ea\u52a8\u8def\u7531\u5230\u5bf9\u5e94 skill\uff1b\u5f53\u7528\u6237\u610f\u56fe\u4e0d\u660e\u786e\u65f6\u89e6\u53d1\uff0c\u7531\u8def\u7531\u903b\u8f91\u5206\u53d1\u5230\u5177\u4f53\u7684\u626b\u699c/\u62c6\u6587/\u5199\u4f5c/\u53bbAI\u5473/\u5c01\u9762/\u5bfc\u5165/\u5ba1\u67e5 skill\u3002\u89e6\u53d1\u65b9\u5f0f\uff1a/story\u3001$story\u3001/\u7f51\u6587\u3001\u300c\u6211\u60f3\u5199\u5c0f\u8bf4\u300d\u300c\u5e2e\u6211\u5199\u4e66\u300d\u300c\u5199\u7f51\u6587\u300d\u300c\u68c0\u67e5\u66f4\u65b0\u300d\u300c\u6709\u65b0\u7248\u672c\u5417\u300d\u3002"
+  "description": "网络小说工具箱主入口。根据用户需求自动路由到对应 skill；当用户意图不明确时触发，由路由逻辑分发到具体的扫榜/拆文/写作/去AI味/封面/导入/审查 skill。触发方式：/story、$story、/网文、「我想写小说」「帮我写书」「写网文」「检查更新」「有新版本吗」。",
+  "content_fingerprint": "ab38a4a1d7ad1da5143df489e5a089d3f644d9113bbcac525df228c35e28bfc7"
 }

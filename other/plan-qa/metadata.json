@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Post-implementation QA planning \u2014 independent of /review (the developer chooses whether to run them sequentially or in parallel), only when the change has a running surface worth driving. Interviews the developer to turn the specs and the diff into an executable QA specification (specs/qa/QA-<N>-<slug>.md) that /execute-qa runs. The agent drives browser and shell; the human steps in only at named handoff points. Use only when the user asks to plan manual QA \u2014 never trigger automatically."
+  "description": "Post-implementation QA planning — independent of /review (the developer chooses whether to run them sequentially or in parallel), only when the change has a running surface worth driving. Interviews the developer to turn the specs and the diff into an executable QA specification (specs/qa/QA-<N>-<slug>.md) that /execute-qa runs. The agent drives browser and shell; the human steps in only at named handoff points. Use only when the user asks to plan manual QA — never trigger automatically.",
+  "content_fingerprint": "8545c157571ca19c3e70cc192705e2e7aa7114f6f1ae7bd8404f23bad500227e"
 }

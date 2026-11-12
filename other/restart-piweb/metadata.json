@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u91cd\u555f Pi agent gateway\u3001piweb host worker\u3001Docker web app \u8207 Tailscale sidecar\uff0c\u4e26\u9a57\u8b49 tailnet Serve \u548c\u771f\u6b63\u7684\u516c\u958b Funnel\u3002\u7576\u4f7f\u7528\u8005\u8aaa\u300c\u91cd\u555f piweb / pi web\u300d\u3001\u7db2\u9801\u56de\u50b3 502\u3001Tailscale host/serve \u4e0d\u6b63\u5e38\u3001agent \u6216 worker \u6c92\u56de\u8986\uff0c\u6216\u8f38\u5165 /restart-piweb \u6642\u4f7f\u7528\u3002\u7279\u5225\u9632\u6b62 app \u91cd\u5efa\u5f8c sidecar \u7559\u5728 stale network namespace \u7684\u9677\u9631\u3002"
+  "description": "重啟 Pi agent gateway、piweb host worker、Docker web app 與 Tailscale sidecar，並驗證 tailnet Serve 和真正的公開 Funnel。當使用者說「重啟 piweb / pi web」、網頁回傳 502、Tailscale host/serve 不正常、agent 或 worker 沒回覆，或輸入 /restart-piweb 時使用。特別防止 app 重建後 sidecar 留在 stale network namespace 的陷阱。",
+  "content_fingerprint": "cbb7e4466e084b50786ee4a0194d7fba061dbbea425a600b95c7be7bd0f56011"
 }

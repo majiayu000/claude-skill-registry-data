@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn scanned faxes, images, and CSV/CDA exports into clean text ready for OpenMed de-identification and NER, fully on-device. Use when the user has clinical documents (image scans, photographed/faxed notes, tabular CSV/TSV exports, C-CDA XML) and needs OCR or structured intake before openmed.deidentify and openmed.analyze_text, asks about openmed.multimodal, OCR engines (Tesseract / PaddleOCR), tabular redaction, or layout and reading order. Covers the verified ocr() and redact_document() entry points and the ExtractedDocument contract. Pairs before deidentifying-clinical-text and extracting-clinical-entities."
+  "description": "Turn scanned faxes, images, and CSV/CDA exports into clean text ready for OpenMed de-identification and NER, fully on-device. Use when the user has clinical documents (image scans, photographed/faxed notes, tabular CSV/TSV exports, C-CDA XML) and needs OCR or structured intake before openmed.deidentify and openmed.analyze_text, asks about openmed.multimodal, OCR engines (Tesseract / PaddleOCR), tabular redaction, or layout and reading order. Covers the verified ocr() and redact_document() entry points and the ExtractedDocument contract. Pairs before deidentifying-clinical-text and extracting-clinical-entities.",
+  "content_fingerprint": "46403a3f17792d1ad5b1a09b32ed79b62dddd0f012813ffa12e74b4d120fc6ec"
 }

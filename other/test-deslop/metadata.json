@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "One-shot cleanup of low-signal tests in an existing repo \u2014 tests that restate the code, mirror constants, or mock the unit under test, so they pass on bugs and break on refactors. Deletes by default, keeps only tests that catch a named plausible bug nothing else catches, fans out per area, and ends with an inventory table plus prevention rules in the project CLAUDE.md. Use when the user says \"test slop\", \"deslop the tests\", \"too many useless tests\", \"prune the test suite\", or complains that agent-written tests are brittle or slow."
+  "description": "One-shot cleanup of low-signal tests in an existing repo — tests that restate the code, mirror constants, or mock the unit under test, so they pass on bugs and break on refactors. Deletes by default, keeps only tests that catch a named plausible bug nothing else catches, fans out per area, and ends with an inventory table plus prevention rules in the project CLAUDE.md. Use when the user says \"test slop\", \"deslop the tests\", \"too many useless tests\", \"prune the test suite\", or complains that agent-written tests are brittle or slow.",
+  "content_fingerprint": "d3346c9ddaaa247b6d58369b5fa60aafc15a18534a9d5e6accd1da0ac1cec672"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Crainax/War3Lib/blob/master/.codex/skills/zinc-unittest/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "bae23b9028a14974b77b8e789f7fc27db33aab5cf7124fa2d1f0e68c68707746",
+  "description": "War3Lib 的 Zinc 单元测试流程规范（.j + .cfg + _Test.j + 可选 w3a/w3u/w3i）：使用 TaskCreateUT.lua 生成测试壳、维护 cfg 注入与 chain 依赖、使用 UnitTestFramwork.assert 断言与 Trace 日志输出。用于创建/重构 Jass 模块单测时。"
 }

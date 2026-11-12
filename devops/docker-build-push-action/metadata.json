@@ -14,5 +14,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/daishiman/AIWorkflowOrchestrator/blob/main/docs/99-claude/skills/docker-build-push-action/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f9a2a2d3ef235cbb96af60b062671717c2df4719e40e9bdc6f8b29cc3735eb28",
+  "description": "GitHub ActionsでのDockerビルド/プッシュを設計・実装するスキル。\nレジストリ認証、キャッシュ戦略、マルチプラットフォーム対応を整理する。\n\nAnchors:\n• docker/build-push-action / 適用: ビルドとプッシュ / 目的: 自動化\n• BuildKit / 適用: キャッシュ最適化 / 目的: ビルド高速化\n• Registry Authentic"
 }

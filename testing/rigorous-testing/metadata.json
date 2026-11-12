@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/cityfish91159/maihouses/blob/main/.claude/skills/rigorous_testing/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "11e5114ebd7b117d4aab9781c303ba7cde78926a302aa27942861341f83d2aab",
+  "description": "嚴格測試協議。強制執行「如果沒測試，就不算完成」原則。\n\n觸發時機：\n- 修復 bug 時（必須新增回歸測試）\n- 實作新功能時（必須有對應測試）\n- 修改現有代碼時（確保測試仍通過）\n- 用戶提到「測試」、「test」、「驗證功能」\n"
 }

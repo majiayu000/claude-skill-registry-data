@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the right lint/format/type/test gates BEFORE committing or pushing. Sniffs the current repo's stack (poetry/uv/yarn/pnpm/go/rust) and runs the correct commands. Blocks commit if any gate is red.\nTrigger this skill when: - User says \"commit\", \"ready to push\", \"prep for PR\", \"preflight\", or invokes\n  `/preflight`.\n- After a batch of edits before the user asks for a commit. - Before running `git commit`."
+  "description": "Run the right lint/format/type/test gates BEFORE committing or pushing. Sniffs the current repo's stack (poetry/uv/yarn/pnpm/go/rust) and runs the correct commands. Blocks commit if any gate is red.\nTrigger this skill when: - User says \"commit\", \"ready to push\", \"prep for PR\", \"preflight\", or invokes\n  `/preflight`.\n- After a batch of edits before the user asks for a commit. - Before running `git commit`.",
+  "content_fingerprint": "35deccfbd117186433f7833403412187bad34c36ea1722d10b90a8e3314a39b5"
 }

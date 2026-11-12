@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Judge board subskill for simmer. Dispatches a panel of judges with different lenses, runs one deliberation round where they challenge each other's scores, then synthesizes consensus scores + single ASI. Drop-in replacement for simmer-judge that produces identical output format. Do not invoke directly \u2014 dispatched by the simmer orchestrator when JUDGE_MODE is board."
+  "description": "Judge board subskill for simmer. Dispatches a panel of judges with different lenses, runs one deliberation round where they challenge each other's scores, then synthesizes consensus scores + single ASI. Drop-in replacement for simmer-judge that produces identical output format. Do not invoke directly — dispatched by the simmer orchestrator when JUDGE_MODE is board.",
+  "content_fingerprint": "d5ee24c71ade482bd94494ad9b4cdbf994becc867ad614e9fba03df03ed2e13a"
 }

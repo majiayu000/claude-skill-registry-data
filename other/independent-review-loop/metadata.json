@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Independent review loop run before delivery in code work. An independent reviewer (Codex, or fresh Codex-style subagents) reads the whole PR against the approved outcome; the lead fixes in-scope functional findings and re-reviews until none remain. Its differentiator is independence and exhaustiveness \u2014 a reviewer that fails differently from the authors, run to clean \u2014 distinct from the recursive-refinement ladder. Invoked by the team lead from the unified pre-ship gate (code-mode and /swarm:refine) after the ship steps."
+  "description": "Independent review loop run before delivery in code work. An independent reviewer (Codex, or fresh Codex-style subagents) reads the whole PR against the approved outcome; the lead fixes in-scope functional findings and re-reviews until none remain. Its differentiator is independence and exhaustiveness — a reviewer that fails differently from the authors, run to clean — distinct from the recursive-refinement ladder. Invoked by the team lead from the unified pre-ship gate (code-mode and /swarm:refine) after the ship steps.",
+  "content_fingerprint": "7213a36e0db16ffa97c2b6908aa827d48ee24ecba4fa53cc51294f6fbbfec0c5"
 }

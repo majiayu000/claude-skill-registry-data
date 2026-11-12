@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Destructive Command Guard. Installs a pre-tool-use hook that blocks unrecoverable shell commands (rm -rf /, git reset --hard, git clean -fd, rm of .env / credentials, force-pushing to main, fork bombs, shred / dd, etc.) before the agent executes them. Use when the user says \"install dcg\", \"destructive command guard\", \"guard rails for destructive commands\", or invokes /dcg."
+  "description": "Destructive Command Guard. Installs a pre-tool-use hook that blocks unrecoverable shell commands (rm -rf /, git reset --hard, git clean -fd, rm of .env / credentials, force-pushing to main, fork bombs, shred / dd, etc.) before the agent executes them. Use when the user says \"install dcg\", \"destructive command guard\", \"guard rails for destructive commands\", or invokes /dcg.",
+  "content_fingerprint": "4c0092084d67119f926513c05e27ec7292cbd6da79131519a1b17064098e2af3"
 }

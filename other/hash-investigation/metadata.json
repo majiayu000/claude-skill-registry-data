@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a user asks to check, identify, or characterize a file hash (MD5, SHA-1, SHA-256). Chains VirusTotal and OTX, optionally triggers /malware-analysis for deeper behavioral review. Returns detection signals, malware family, behavioral tags, and pivot candidates (communicating IPs, dropped files). Invoked by /cti-orchestrator when the target is a hash."
+  "description": "Use when a user asks to check, identify, or characterize a file hash (MD5, SHA-1, SHA-256). Chains VirusTotal and OTX, optionally triggers /malware-analysis for deeper behavioral review. Returns detection signals, malware family, behavioral tags, and pivot candidates (communicating IPs, dropped files). Invoked by /cti-orchestrator when the target is a hash.",
+  "content_fingerprint": "ef01f00d8db03ee6d406c77e98b5fda61a82603ed4df2e6f822932beada7c598"
 }

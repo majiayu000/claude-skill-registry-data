@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Download a YouTube video, use Breeze ASR 26 for Taiwanese audio or the Breeze-compatible Transformers/ROCm Whisper Turbo pipeline for other languages, then upload the raw transcript and a timestamped section breakdown to GitHub Gist. No external LLM calls. Triggers automatically when a YouTube URL is detected in the user's message. Also triggered by /youtube-summary command."
+  "description": "Download a YouTube video, use Breeze ASR 26 for Taiwanese audio or the Breeze-compatible Transformers/ROCm Whisper Turbo pipeline for other languages, then upload the raw transcript and a timestamped section breakdown to GitHub Gist. No external LLM calls. Triggers automatically when a YouTube URL is detected in the user's message. Also triggered by /youtube-summary command.",
+  "content_fingerprint": "e024a32eff0e824c5cc85e7ab9b5b7097f8479823edea1e62a80a65b3a16b0c1"
 }

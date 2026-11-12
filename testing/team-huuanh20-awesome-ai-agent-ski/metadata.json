@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Full-pipeline orchestrator. Runs all 7 roles (BA \u2192 TechLead \u2192 PM \u2192 BE Dev \u2192 FE Dev \u2192 Tester \u2192 QA/QC) in sequence by loading and following each per-role skill. Uses pre_write_validator.py hook enforcement and each role's self-validation. Use per-agent commands ($team-ba, $team-techlead, etc.) for manual control."
+  "description": "Full-pipeline orchestrator. Runs all 7 roles (BA → TechLead → PM → BE Dev → FE Dev → Tester → QA/QC) in sequence by loading and following each per-role skill. Uses pre_write_validator.py hook enforcement and each role's self-validation. Use per-agent commands ($team-ba, $team-techlead, etc.) for manual control.",
+  "content_fingerprint": "77615f15622fad0265dfd557ef8cdefb399aa463bf68435f86b807f5c5033a56"
 }

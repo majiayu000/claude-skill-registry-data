@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configures Bats-core (Bash Automated Testing System) for testing CLI tools, shell scripts, and Unix programs - `.bats` test files with `@test` blocks, `run` to capture command exit + output, `[ \"$status\" -eq 0 ]` and `[ \"$output\" = ... ]` assertions, `setup`/`teardown` hooks, `load` for shared helpers, parallel execution via `--jobs N`, TAP-compliant output for CI integration. Use whenever the unit-under-test is a shell script, CLI binary, or anything invokable from Bash."
+  "description": "Configures Bats-core (Bash Automated Testing System) for testing CLI tools, shell scripts, and Unix programs - `.bats` test files with `@test` blocks, `run` to capture command exit + output, `[ \"$status\" -eq 0 ]` and `[ \"$output\" = ... ]` assertions, `setup`/`teardown` hooks, `load` for shared helpers, parallel execution via `--jobs N`, TAP-compliant output for CI integration. Use whenever the unit-under-test is a shell script, CLI binary, or anything invokable from Bash.",
+  "content_fingerprint": "d79c29640a3f9eb1776827a5601e312b2a0aaea1c8353b6a9ff0e992dd3f4261"
 }

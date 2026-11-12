@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Atom Game GUI pipeline \u7b2c 4 \u9636\u6bb5\uff08\u6309\u9700\uff0c\u53ef\u8df3\u8fc7\uff09\u3002\u7f16\u8f91 design/tables \u4e0b\u7684 Excel \u914d\u7f6e\u6e90\u8868\uff0c \u5e76\u955c\u50cf\u6539\u52a8\u5230\u5bf9\u5e94 *_data.lua\uff08\u6a21\u62df\u5bfc\u8868\uff0c\u96f6\u4eba\u5de5\u4e2d\u65ad\uff09\u3002\u81ea\u5305\u542b\u7684\u914d\u7f6e\u8868\u7f16\u8f91\u6307\u5f15\uff0c\u4e0d\u4f9d\u8d56\u5916\u90e8 edit-excel skill\u3002\u4ec5\u5f53\u529f\u80fd\u6d89\u53ca\u914d\u7f6e\u6570\u636e\u65f6\u4f7f\u7528\u3002\u63a7\u5236\u914d\u7f6e\u6570\u636e\u6f02\u79fb\u3002"
+  "description": "Atom Game GUI pipeline 第 4 阶段（按需，可跳过）。编辑 design/tables 下的 Excel 配置源表， 并镜像改动到对应 *_data.lua（模拟导表，零人工中断）。自包含的配置表编辑指引，不依赖外部 edit-excel skill。仅当功能涉及配置数据时使用。控制配置数据漂移。",
+  "content_fingerprint": "cee0815ae0129d6466ed97bcdf200bfbdc2ceab4ca8ffd0177699ccd1c949a88"
 }

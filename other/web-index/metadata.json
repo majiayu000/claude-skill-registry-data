@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7ed9\u9700\u53cd\u590d\u67e5\u9605\u7684\u7f51\u7ad9 / \u6587\u6863\u7ad9\u5efa\u672c\u5730\u7f51\u9875\u7d22\u5f15\uff08.web-index/{site}/\uff09\uff1a\u6293 llms.txt / sitemap.xml / \u5bfc\u822a\uff0c\u4ea7\u51fa\u300c\u8981\u505a\u4ec0\u4e48 \u2192 \u53bb\u54ea\u4e00\u9875\uff08\u542b\u951a\u70b9\uff09\u300d\u7684\u8def\u7531\u8868\uff1b\u5df2\u7d22\u5f15\u7ad9\u70b9\u6309\u8def\u7531\u8868\u76f4\u63a5\u67e5\uff08\u6d88\u8d39\u6a21\u5f0f\uff09\uff0c\u53ea\u505a\u94fe\u63a5\u7d22\u5f15\u3001\u4e0d\u955c\u50cf\u6b63\u6587\u3002\u89e6\u53d1\uff1a\"\u7ed9\u8fd9\u4e2a\u7f51\u7ad9\u5efa\u4e2a\u7d22\u5f15\"\u3001\"\u6574\u7406\u4e00\u4e0b\u8fd9\u4e2a\u6587\u6863\u7684\u94fe\u63a5\"\u3001\"\u7f51\u9875\u7d22\u5f15\"\u3001\"\u67e5\u4e00\u4e0b\u7f51\u9875\u7d22\u5f15\"\u3001\"web index\"\u3001\"\u8fd9\u7ad9\u8981\u53cd\u590d\u53c2\u8003\"\uff1b\u53ea\u67e5\u4e00\u6b21\u7684\u7ad9\u70b9\u4e0d\u8981\u5efa\u3002"
+  "description": "给需反复查阅的网站 / 文档站建本地网页索引（.web-index/{site}/）：抓 llms.txt / sitemap.xml / 导航，产出「要做什么 → 去哪一页（含锚点）」的路由表；已索引站点按路由表直接查（消费模式），只做链接索引、不镜像正文。触发：\"给这个网站建个索引\"、\"整理一下这个文档的链接\"、\"网页索引\"、\"查一下网页索引\"、\"web index\"、\"这站要反复参考\"；只查一次的站点不要建。",
+  "content_fingerprint": "8f6272ba84e8bb65644d2592f1ca8c5888e0a5cd82857195dfba45bc0ebd478f"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Patch packaged QClaw.app (no source code) by modifying app.asar frontend bundles. Use when users have older QClaw versions and need to: (1) make invite-code checks only active on localhost with DEV_MODE=true and bypassed in production, (2) remove visibility restrictions for `other` and `system-config` model providers, and (3) ensure these providers appear in the model vendor dropdown."
+  "description": "Patch packaged QClaw.app (no source code) by modifying app.asar frontend bundles. Use when users have older QClaw versions and need to: (1) make invite-code checks only active on localhost with DEV_MODE=true and bypassed in production, (2) remove visibility restrictions for `other` and `system-config` model providers, and (3) ensure these providers appear in the model vendor dropdown.",
+  "content_fingerprint": "c24f3bdd8e3559dbe5f8727840d9a04efaf12f9c88dafc1ac2f6e51345b72d77"
 }

@@ -5,5 +5,7 @@
   "source": "github.com/aAAaqwq/cc-skills",
   "downloaded_at": "2026-02-02T04:35:13.196309Z",
   "dir_name": "permission-manager",
-  "category": "platform"
+  "category": "platform",
+  "content_fingerprint": "34062205be26204e921433dc876859599e1a0de47dd8620b5e6c885fefba7262",
+  "description": "管理Claude Code的全局工具权限配置，自动将MCP命令或其他工具添加到allowedTools中，避免每次使用时都需要手动批准。工作流程：确认用户需要添加的命令 -> 确认添加级别(默认全局~/.claude.json) -> 执行添加 -> 验证并提醒重启。"
 }

@@ -7,5 +7,7 @@
   "dir_name": "ln-300-task-coordinator",
   "category": "product",
   "github_path": "ln-300-task-coordinator",
-  "github_branch": "main"
+  "github_branch": "main",
+  "content_fingerprint": "dc5b87a37498781de9c7099f547200cd5ccca53e820dd3a7638ed5e8d63e2292",
+  "description": "Orchestrates task operations. Analyzes Story, builds optimal plan (1-6 implementation tasks), delegates to ln-301-task-creator (CREATE/ADD) or ln-302-task-replanner (REPLAN). Auto-discovers team ID."
 }

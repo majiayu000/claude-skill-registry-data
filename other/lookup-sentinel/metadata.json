@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when you need to hunt in the organisation's own Microsoft Sentinel workspace \u2014 sweep the logs for IOC hits (IP, domain, hash, URL, account), hunt behavioural TTPs from MITRE ATT&CK techniques, run KQL against live data, or check which tables the workspace actually ingests. Discovers available tables first and only generates KQL for tables that verifiably exist, so hunts adapt to each environment's connectors. Commonly chained by the /*-investigation skills to answer \"were we exposed?\". Reads $SENTINEL_TENANT_ID, $SENTINEL_CLIENT_ID, $SENTINEL_CLIENT_SECRET, $SENTINEL_WORKSPACE_ID. Read-only."
+  "description": "Use when you need to hunt in the organisation's own Microsoft Sentinel workspace — sweep the logs for IOC hits (IP, domain, hash, URL, account), hunt behavioural TTPs from MITRE ATT&CK techniques, run KQL against live data, or check which tables the workspace actually ingests. Discovers available tables first and only generates KQL for tables that verifiably exist, so hunts adapt to each environment's connectors. Commonly chained by the /*-investigation skills to answer \"were we exposed?\". Reads $SENTINEL_TENANT_ID, $SENTINEL_CLIENT_ID, $SENTINEL_CLIENT_SECRET, $SENTINEL_WORKSPACE_ID. Read-only.",
+  "content_fingerprint": "c8ed9d01be42b74a67892bb1dd08facc61e9cfc3c0c34a41c7c7cee72459ee70"
 }

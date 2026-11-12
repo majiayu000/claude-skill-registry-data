@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Classify code changes as in-context, uncertain, or out-of-context using primary signals (branch diff, issue keywords, active tasks), secondary signals (directory proximity, test naming), and red-flag patterns (secrets, large binaries). Use when preparing commits or reviewing staged changes. This skill MUST be consulted because committing without classification is how out-of-context changes, secrets, and unintended modifications reach the repository."
+  "description": "Classify code changes as in-context, uncertain, or out-of-context using primary signals (branch diff, issue keywords, active tasks), secondary signals (directory proximity, test naming), and red-flag patterns (secrets, large binaries). Use when preparing commits or reviewing staged changes. This skill MUST be consulted because committing without classification is how out-of-context changes, secrets, and unintended modifications reach the repository.",
+  "content_fingerprint": "94cea676deb4a9c5d58cb33c88991b9751a2bd380b0ecb1430e795ef4a599f64"
 }

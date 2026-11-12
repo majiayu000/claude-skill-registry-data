@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Find and fix Jetpack Compose screens that render an unbounded, growing list eagerly (forEach inside a scrolling Column instead of LazyColumn), and prove the LazyColumn conversion by content rather than by compiling. Use after measuring a data layer at scale, or when a history/journal/feed screen will grow for years."
+  "description": "Find and fix Jetpack Compose screens that render an unbounded, growing list eagerly (forEach inside a scrolling Column instead of LazyColumn), and prove the LazyColumn conversion by content rather than by compiling. Use after measuring a data layer at scale, or when a history/journal/feed screen will grow for years.",
+  "content_fingerprint": "e56382a0c462a376de8ba70eefaec63784b7845e716bdfe099d297726d97af37"
 }

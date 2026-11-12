@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when designing or reviewing Salesforce Platform Cache usage in Apex, including org cache versus session cache, cache-aside patterns, invalidation, and safe key design. Triggers: 'Platform Cache', 'Cache.Org', 'Cache.Session', 'cache-aside', 'cache invalidation'. NOT for caching user-specific sensitive data, and NOT for durable configuration storage \u2014 use apex/custom-metadata-in-apex. NOT for caching inside an OmniStudio Integration Procedure \u2014 use omnistudio/integration-procedure-cacheable-patterns."
+  "description": "Use when designing or reviewing Salesforce Platform Cache usage in Apex, including org cache versus session cache, cache-aside patterns, invalidation, and safe key design. Triggers: 'Platform Cache', 'Cache.Org', 'Cache.Session', 'cache-aside', 'cache invalidation'. NOT for caching user-specific sensitive data, and NOT for durable configuration storage — use apex/custom-metadata-in-apex. NOT for caching inside an OmniStudio Integration Procedure — use omnistudio/integration-procedure-cacheable-patterns.",
+  "content_fingerprint": "34f7e68628811dd24c6a8002595c7043bf27e0f834d9cc184f68afad3acc9148"
 }

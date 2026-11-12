@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Compute group fairness metrics (selection rate, demographic parity, equalized odds) per sensitive feature with `MetricFrame`, then mitigate disparities using Reductions algorithms (`ExponentiatedGradient` with constraint = `DemographicParity`/`EqualizedOdds`). Wire group-disaggregated assertions into the model-evaluation gate. Use when a model's decisions affect people and a stakeholder, auditor, or regulation (ECOA, GDPR Art. 22, EU AI Act high-risk) requires evidence of per-group outcomes, or when someone reports the model treats a specific group worse."
+  "description": "Compute group fairness metrics (selection rate, demographic parity, equalized odds) per sensitive feature with `MetricFrame`, then mitigate disparities using Reductions algorithms (`ExponentiatedGradient` with constraint = `DemographicParity`/`EqualizedOdds`). Wire group-disaggregated assertions into the model-evaluation gate. Use when a model's decisions affect people and a stakeholder, auditor, or regulation (ECOA, GDPR Art. 22, EU AI Act high-risk) requires evidence of per-group outcomes, or when someone reports the model treats a specific group worse.",
+  "content_fingerprint": "506cfe41e53b371d0a62b817ce7211b96b4805705710873b9b9c54d34ac92621"
 }

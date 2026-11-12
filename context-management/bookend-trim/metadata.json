@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Snap each picked segment's [t0, t1] to a sentence boundary so shorts begin and end on full thoughts instead of mid-sentence. Claude reads \u00b1extend seconds of context per span and picks clean sentence-completing endpoints from whisper transcript-line boundaries. Runs after verify-coherence, before cut-clip."
+  "description": "Snap each picked segment's [t0, t1] to a sentence boundary so shorts begin and end on full thoughts instead of mid-sentence. Claude reads ±extend seconds of context per span and picks clean sentence-completing endpoints from whisper transcript-line boundaries. Runs after verify-coherence, before cut-clip.",
+  "content_fingerprint": "6781288183c324a6e1288f3faa45a4d19a79704296991377a48cdb26c771d047"
 }

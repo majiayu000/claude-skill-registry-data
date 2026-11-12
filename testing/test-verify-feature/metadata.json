@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/aalmada/BookStore/blob/main/.claude/skills/test__verify_feature/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c67f89eb92a1620f89a8a84826f3a94a7432b09c0282c51863797dd5e1693796",
+  "description": "Strict feature verification gate. Runs compilation, dotnet format, and all tests to confirm the Definition of Done is met. Use this as the final step before marking a feature complete or opening a PR."
 }

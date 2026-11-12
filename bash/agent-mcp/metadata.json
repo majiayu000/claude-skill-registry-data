@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage and health-check the machine's MCP servers (mcp_agents.py CLI) - inventory the declared servers from user and repo configs, audit declared vs running via localhost probes, deep-probe one server (daemon reachability, corpus freshness via BUILT_AT-style globs, referenced paths in its config file), run the doctor CI gate, or start/stop/restart through declared lifecycle commands. Use when an MCP-dependent feature fails silently, before claiming a daemon is up, or on any session bootstrap that depends on local search/indexer daemons."
+  "description": "Manage and health-check the machine's MCP servers (mcp_agents.py CLI) - inventory the declared servers from user and repo configs, audit declared vs running via localhost probes, deep-probe one server (daemon reachability, corpus freshness via BUILT_AT-style globs, referenced paths in its config file), run the doctor CI gate, or start/stop/restart through declared lifecycle commands. Use when an MCP-dependent feature fails silently, before claiming a daemon is up, or on any session bootstrap that depends on local search/indexer daemons.",
+  "content_fingerprint": "ff7400eb16a3f5ae8b9c452bda2dda690fd6737d96005d1700ff9689d37fb75f"
 }

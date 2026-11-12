@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when designing the internal package layout of a Go microservice, defining port interfaces for repositories/messaging/external integrations, implementing PostgreSQL/NATS/third-party adapters, wiring application services with DI, or reviewing service structure for domain isolation. Covers cmd/, internal/domain/, internal/application/, internal/ports/, internal/adapters/ layout and DI wiring. Triggers: hexagonal, ports and adapters, internal/domain, internal/ports, internal/adapters, DI wiring, package layout."
+  "description": "Use this when designing the internal package layout of a Go microservice, defining port interfaces for repositories/messaging/external integrations, implementing PostgreSQL/NATS/third-party adapters, wiring application services with DI, or reviewing service structure for domain isolation. Covers cmd/, internal/domain/, internal/application/, internal/ports/, internal/adapters/ layout and DI wiring. Triggers: hexagonal, ports and adapters, internal/domain, internal/ports, internal/adapters, DI wiring, package layout.",
+  "content_fingerprint": "7545779bf04e7293bab9ad1240ede5eea77440ddb1d929241243feda8255682b"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user runs /working [JIRA-number] [type] to begin a Jira ticket. Resolves the ticket (prompts a list when none given), checks out an existing feature branch or cuts a new one from the chosen base, transitions the ticket to In Progress in Jira, then pushes the branch and opens a draft PR/MR self-assigned to the author \u2014 a GitHub PR via `gh` or a GitLab MR via `glab`, whichever the origin remote points to \u2014 when the forge CLI is authenticated."
+  "description": "Use when the user runs /working [JIRA-number] [type] to begin a Jira ticket. Resolves the ticket (prompts a list when none given), checks out an existing feature branch or cuts a new one from the chosen base, transitions the ticket to In Progress in Jira, then pushes the branch and opens a draft PR/MR self-assigned to the author — a GitHub PR via `gh` or a GitLab MR via `glab`, whichever the origin remote points to — when the forge CLI is authenticated.",
+  "content_fingerprint": "16a379f403156b815e76414ff7ef14b789b7d06564b86d864c7b4d67fdc09766"
 }

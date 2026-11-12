@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc704\ud5d8 \ubcc0\uacbd \ud2b8\ub79c\uc7ad\uc158 \ub798\ud37c. \ub9c8\uc774\uadf8\ub808\uc774\uc158 / \ub300\uaddc\ubaa8 \ub9ac\ud329\ud130 / refactor_* \ub3c4\uad6c /\n\"\ub3cc\uc774\ud0ac \uc218 \uc5c6\ub294 \ubcc0\uacbd\" \uc2dc \uc790\ub3d9 \ud638\ucd9c. history_snapshot + tx_begin \ud544\uc218,\nverify green \uc774\uba74 tx_commit, \uc544\ub2c8\uba74 tx_rollback."
+  "description": "위험 변경 트랜잭션 래퍼. 마이그레이션 / 대규모 리팩터 / refactor_* 도구 /\n\"돌이킬 수 없는 변경\" 시 자동 호출. history_snapshot + tx_begin 필수,\nverify green 이면 tx_commit, 아니면 tx_rollback.",
+  "content_fingerprint": "09b8f1519ba9ef5eee1329dd4ec0ee14ae47a73f0a6bda2f4718c72f3459f87f"
 }

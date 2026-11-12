@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit security headers in a pracht app. The framework sets four defaults on\nevery response path; this covers the exceptions \u2014 static output served outside\nfirst-party adapters, `headers()` exports that weaken defaults, and the choices\nonly you can make (HSTS, CSP).\nUse for \"audit security headers\", \"check CSP\", \"harden headers\", \"set up HSTS\",\n\"review header policy\"."
+  "description": "Audit security headers in a pracht app. The framework sets four defaults on\nevery response path; this covers the exceptions — static output served outside\nfirst-party adapters, `headers()` exports that weaken defaults, and the choices\nonly you can make (HSTS, CSP).\nUse for \"audit security headers\", \"check CSP\", \"harden headers\", \"set up HSTS\",\n\"review header policy\".",
+  "content_fingerprint": "48d6364638df24aece3c9303763ac52580834e97651a81be26f419983385a5c9"
 }

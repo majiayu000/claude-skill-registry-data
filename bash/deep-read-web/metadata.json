@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4f7f\u7528 Playwright \u8bfb\u53d6\u516c\u5f00\u7f51\u9875\u6216\u767b\u5f55\u540e\u7f51\u9875\u7684\u6700\u7ec8 HTML\u3002\u9002\u7528\u4e8e\u7528\u6237\u60f3\u8981\u7f51\u9875 HTML\u3001\u9700\u8981\u5728\u624b\u52a8\u767b\u5f55\u540e\u7ee7\u7eed\u8bfb\u53d6\u9875\u9762\uff0c\u6216\u5e0c\u671b\u5206\u6790\u767b\u5f55\u540e\u6700\u7ec8\u6e32\u67d3\u5185\u5bb9\u7684\u573a\u666f\u3002\u4f18\u5148\u4f7f\u7528\u672c\u5730 exe\uff1b\u5982\u679c\u53ea\u6709 skill \u4e14\u6ca1\u6709 Python\uff0c\u5219\u4f18\u5148\u8fd0\u884c skill \u81ea\u5e26\u7684\u4e8c\u8fdb\u5236\u5b89\u88c5\u811a\u672c\u5e76\u9ed8\u8ba4\u4e0b\u8f7d\u7cbe\u7b80 small \u5305\uff0c\u4e0d\u591f\u65f6\u518d\u5347\u7ea7\u4e3a full \u5305\u3002"
+  "description": "使用 Playwright 读取公开网页或登录后网页的最终 HTML。适用于用户想要网页 HTML、需要在手动登录后继续读取页面，或希望分析登录后最终渲染内容的场景。优先使用本地 exe；如果只有 skill 且没有 Python，则优先运行 skill 自带的二进制安装脚本并默认下载精简 small 包，不够时再升级为 full 包。",
+  "content_fingerprint": "f57d3eb5da7fa610595e7e604663de5195766098460dc8447fbccf4280724962"
 }

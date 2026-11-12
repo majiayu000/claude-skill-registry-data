@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Hermes ships FOUR user-facing surfaces (CLI prompt_toolkit, Ink TUI in\nPython, Node ui-tui bundle, Electron desktop, web dashboard, messaging\ngateway). Each has its OWN gate for destructive operations, env var\ninheritance, and config persistence. A `config.yaml` flip in one does NOT\nsilence the modal in another. Use when the user says \"I turned off X but it\nstill pops up\", \"why doesn't this config take effect\", \"I set\nHERMES_*_NO_CONFIRM=1 but the dialog is back\", or asks to disable/inspect\nany cross-cutting runtime behavior (confirmations, telemetry, key bindings,\napproval gates, resume semantics)."
+  "description": "Hermes ships FOUR user-facing surfaces (CLI prompt_toolkit, Ink TUI in\nPython, Node ui-tui bundle, Electron desktop, web dashboard, messaging\ngateway). Each has its OWN gate for destructive operations, env var\ninheritance, and config persistence. A `config.yaml` flip in one does NOT\nsilence the modal in another. Use when the user says \"I turned off X but it\nstill pops up\", \"why doesn't this config take effect\", \"I set\nHERMES_*_NO_CONFIRM=1 but the dialog is back\", or asks to disable/inspect\nany cross-cutting runtime behavior (confirmations, telemetry, key bindings,\napproval gates, resume semantics).",
+  "content_fingerprint": "d3c92a8230f7b83f6229805a4ed380d05b2e56dd9adde1186b495d4621423cc6"
 }

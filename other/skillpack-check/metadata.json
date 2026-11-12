@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run `gbrain skillpack-check` to produce an agent-readable JSON health report\nfor the gbrain install. Wraps `gbrain doctor` + `gbrain apply-migrations\n--list` so a host agent (your OpenClaw's morning-briefing, any OpenClaw cron)\ncan see at a glance whether the skillpack needs attention.\n\nUse when the user asks \"is gbrain healthy?\", when a cron fires a morning\ncheck, or proactively when something seems off (jobs not running, brain\nnot updating, autopilot silent)."
+  "description": "Run `gbrain skillpack-check` to produce an agent-readable JSON health report\nfor the gbrain install. Wraps `gbrain doctor` + `gbrain apply-migrations\n--list` so a host agent (your OpenClaw's morning-briefing, any OpenClaw cron)\ncan see at a glance whether the skillpack needs attention.\n\nUse when the user asks \"is gbrain healthy?\", when a cron fires a morning\ncheck, or proactively when something seems off (jobs not running, brain\nnot updating, autopilot silent).",
+  "content_fingerprint": "18fbd5ff0e2195e300353e16118d96037625e93e33fc8edacbd5e493ac6a4737"
 }

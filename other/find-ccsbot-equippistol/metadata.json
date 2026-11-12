@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Locate CCSBot::EquipPistol in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"CCSBot::EquipPistol\" (symbol CCSBot_EquipPistol). This is a non-virtual function - emit a byte signature (func_sig), not an offset.\nLocate it via cross-references, distinctive constants/strings in its body, or callers\nof related symbols; verify by decompilation before committing to a candidate.\nTrigger: CCSBot_EquipPistol, CCSBot::EquipPistol"
+  "description": "Locate CCSBot::EquipPistol in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"CCSBot::EquipPistol\" (symbol CCSBot_EquipPistol). This is a non-virtual function - emit a byte signature (func_sig), not an offset.\nLocate it via cross-references, distinctive constants/strings in its body, or callers\nof related symbols; verify by decompilation before committing to a candidate.\nTrigger: CCSBot_EquipPistol, CCSBot::EquipPistol",
+  "content_fingerprint": "1f6865a047f240a74f4f2d6c36e1faa6317fd2bbf2fe1f4084a368070a634363"
 }

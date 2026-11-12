@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Forensic Google Ads Search-term waste audit. Pareto-filters down to the 80% of spend that matters (campaign-level, then search-term-level), then flags wasteful terms using campaign-relative triggers: low engagement (CTR \u226540% below campaign avg) and low conversion (CVR \u226540% below campaign avg, including zeros). Surfaces a \"Red List\" with suggested negative-keyword exclusions and identifies common \"waste words\" for root-level negatives. Read-only \u2014 proposes exclusions, never executes them. Use weekly for waste cleanup."
+  "description": "Forensic Google Ads Search-term waste audit. Pareto-filters down to the 80% of spend that matters (campaign-level, then search-term-level), then flags wasteful terms using campaign-relative triggers: low engagement (CTR ≥40% below campaign avg) and low conversion (CVR ≥40% below campaign avg, including zeros). Surfaces a \"Red List\" with suggested negative-keyword exclusions and identifies common \"waste words\" for root-level negatives. Read-only — proposes exclusions, never executes them. Use weekly for waste cleanup.",
+  "content_fingerprint": "54cc20066042b086d487c1d72348b456b7af74c5a9a4b4a9b931c0c5145eb84b"
 }

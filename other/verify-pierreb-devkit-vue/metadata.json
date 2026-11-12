@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run this after every code change in this Vue project, before committing, before opening a PR, or whenever the user says \"verify\", \"check\", \"lint\", \"run tests\", \"build\", \"audit\". Diff audit (router guards, store boundaries, UX, /ui consistency, error handling) \u2192 lint \u2192 tests + coverage gate \u2192 build. Coverage drops \u2192 add tests, never lower thresholds. Triggers on \"is this ready to commit?\", \"any issues?\", \"tests passing?\"."
+  "description": "Run this after every code change in this Vue project, before committing, before opening a PR, or whenever the user says \"verify\", \"check\", \"lint\", \"run tests\", \"build\", \"audit\". Diff audit (router guards, store boundaries, UX, /ui consistency, error handling) → lint → tests + coverage gate → build. Coverage drops → add tests, never lower thresholds. Triggers on \"is this ready to commit?\", \"any issues?\", \"tests passing?\".",
+  "content_fingerprint": "f89a140dab02b171263398fa98ec00a8af72088d58ca47a777b34aebb16b9690"
 }

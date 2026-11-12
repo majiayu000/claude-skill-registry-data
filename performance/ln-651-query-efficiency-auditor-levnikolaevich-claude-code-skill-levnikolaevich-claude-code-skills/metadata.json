@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/levnikolaevich/claude-code-skills/blob/master/skills-catalog/ln-651-query-efficiency-auditor/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d83c3502ab0cc19435925573f7520acf1e6405adbf8badb4d335d6e9fbbc6d46",
+  "description": "Checks redundant fetches, N+1 loops, over-fetching, missing bulk operations, wrong caching scope. Use when auditing query efficiency."
 }

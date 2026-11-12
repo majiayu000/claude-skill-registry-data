@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect cross-app duplication and extract the smallest honest shared unit into emptyos/sdk/, codifying CLAUDE.md Dev Rule 9 (extract on the *second* caller, not the first). Use when the user says \"extract\", \"sdk-extract\", \"dedupe the apps\", \"what's been copy-pasted\", when you notice a familiar pattern while editing an app, or as a periodic health pass. NOT for single-app refactors or speculative design-for-the-future helpers \u2014 two real callers is the floor."
+  "description": "Detect cross-app duplication and extract the smallest honest shared unit into emptyos/sdk/, codifying CLAUDE.md Dev Rule 9 (extract on the *second* caller, not the first). Use when the user says \"extract\", \"sdk-extract\", \"dedupe the apps\", \"what's been copy-pasted\", when you notice a familiar pattern while editing an app, or as a periodic health pass. NOT for single-app refactors or speculative design-for-the-future helpers — two real callers is the floor.",
+  "content_fingerprint": "48ab26ad33c59e4d695301ce926ccdeaf564fbe0767b79a56457dbc6fb8b596d"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/joaquimscosta/arkhe-claude-plugins/blob/main/plugins/devtools/skills/sops-encrypt/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "4c6bbfa9b20d1e8382aed523e0df4f8e98f8d73901d491f9ffe6380151ded5ff",
+  "description": "Encrypt .env files using SOPS + age. Converts dotenv to YAML format (avoids SOPS bug #1435), then encrypts. Auto-detects unencrypted .env files. Use when user mentions \"encrypt env\", \"sops encrypt\", \""
 }

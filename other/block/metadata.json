@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Block a sender so their messages are dropped before decryption (and the relay is told to refuse their resends); re-allow one with `--remove`, or list blocked senders with `--list`. Use to stop unwanted or abusive mail from a specific sender, undo a block, or audit your block list. If the sender is not specified, ask with AskUserQuestion."
+  "description": "Block a sender so their messages are dropped before decryption (and the relay is told to refuse their resends); re-allow one with `--remove`, or list blocked senders with `--list`. Use to stop unwanted or abusive mail from a specific sender, undo a block, or audit your block list. If the sender is not specified, ask with AskUserQuestion.",
+  "content_fingerprint": "936cbdb7a19041e5b025120b19c0150f68a5539e4e7f34f3f558c382dc792c3c"
 }

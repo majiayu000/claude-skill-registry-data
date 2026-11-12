@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u628a mas/verif_plan_seed.md \u6269\u5c55\u4e3a\u5b8c\u6574\u9a8c\u8bc1\u8ba1\u5212 markdown\uff08\u529f\u80fd\u68c0\u67e5\u70b9\u3001\u8986\u76d6\u7387\u76ee\u6807\u3001\u8fb9\u754c\u3001\u968f\u673a\u7ea6\u675f\u3001test case \u6e05\u5355\uff09\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bba-guru-verification \u542f\u52a8\u65f6\uff1b(2) \u663e\u5f0f /bb-create-verif-plan\u3002"
+  "description": "把 mas/verif_plan_seed.md 扩展为完整验证计划 markdown（功能检查点、覆盖率目标、边界、随机约束、test case 清单）。触发场景：(1) bba-guru-verification 启动时；(2) 显式 /bb-create-verif-plan。",
+  "content_fingerprint": "4f5a4812854b2ed3825bd8ac9eeeff5e4e059ea9cf0123e488760f4c9fd5d7a3"
 }

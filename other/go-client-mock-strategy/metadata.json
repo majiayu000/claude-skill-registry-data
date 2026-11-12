@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when picking test doubles for a new SDK client \u2014 choosing between in-memory wire-protocol fakes (miniredis, embedded NATS), gomock against a caller-owned narrow interface, or testcontainers for integration. Covers compile-time interface assertions and the interface-size ceiling rule. Triggers: miniredis, interface assertion, var _ Interface, newTestCache, fake vs mock, gomock.Controller, testcontainers."
+  "description": "Use this when picking test doubles for a new SDK client — choosing between in-memory wire-protocol fakes (miniredis, embedded NATS), gomock against a caller-owned narrow interface, or testcontainers for integration. Covers compile-time interface assertions and the interface-size ceiling rule. Triggers: miniredis, interface assertion, var _ Interface, newTestCache, fake vs mock, gomock.Controller, testcontainers.",
+  "content_fingerprint": "db810e221d1e0da303e33d5715a6025c500829c74e5eb6e40d9779eb3576f562"
 }

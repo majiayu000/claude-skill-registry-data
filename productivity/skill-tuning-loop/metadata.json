@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Empirically test whether a lacquer skill needs an edit by mining real session transcripts for friction, proposing a bounded fix, and validating it against held-out cases before it ships. Use when a skill in core/skills/ or profiles/*/skills/ keeps getting corrected in practice, when triaging a scheduled tuning-pass PR, or when skill-authoring-standard's manual rubric isn't enough to tell whether a proposed edit actually helps. Distinct from skill-authoring-standard (a static prose rubric checked by a human) \u2014 this is an empirical, evidence-gated loop checked by rollouts."
+  "description": "Empirically test whether a lacquer skill needs an edit by mining real session transcripts for friction, proposing a bounded fix, and validating it against held-out cases before it ships. Use when a skill in core/skills/ or profiles/*/skills/ keeps getting corrected in practice, when triaging a scheduled tuning-pass PR, or when skill-authoring-standard's manual rubric isn't enough to tell whether a proposed edit actually helps. Distinct from skill-authoring-standard (a static prose rubric checked by a human) — this is an empirical, evidence-gated loop checked by rollouts.",
+  "content_fingerprint": "c7f60dce7e4c0147821074ce18c4cb5b108dff6d91a2a9d977d34b1589641224"
 }

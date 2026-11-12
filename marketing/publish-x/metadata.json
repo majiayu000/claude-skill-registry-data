@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Playwright \u3067 X (Twitter) \u306e\u6295\u7a3f\u3092\u81ea\u52d5\u5b9f\u884c\u3059\u308b\u3002content/sns/x/draft/ \u914d\u4e0b\u306e tweets.md \u3092\u8aad\u307f\u53d6\u308a\u3001 ## Tweet XX \u30d6\u30ed\u30c3\u30af\u30921\u4ef6\u305a\u3064\u6295\u7a3f\uff08\u5373\u6642 or \u4e88\u7d04\uff09\u3002 Use when user says \"X\u6295\u7a3f\", \"X\u4e88\u7d04\u6295\u7a3f\", \"\u30c4\u30a4\u30fc\u30c8\u6295\u7a3f\". **\u521d\u56de\u5b9f\u884c\u6642 or \u30bb\u30ec\u30af\u30bf\u66f4\u65b0\u5f8c\u306f\u5fc5\u305a --dry-run \u3067\u4e8b\u524d\u691c\u8a3c\u3059\u308b\u3053\u3068**."
+  "description": "Playwright で X (Twitter) の投稿を自動実行する。content/sns/x/draft/ 配下の tweets.md を読み取り、 ## Tweet XX ブロックを1件ずつ投稿（即時 or 予約）。 Use when user says \"X投稿\", \"X予約投稿\", \"ツイート投稿\". **初回実行時 or セレクタ更新後は必ず --dry-run で事前検証すること**.",
+  "content_fingerprint": "d9648e93f7647ab7f0938c5826d3306476e8ed1c6685c62e431a0d9805d0b455"
 }

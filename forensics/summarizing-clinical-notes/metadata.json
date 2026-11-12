@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Produces structured, citation-anchored summaries of clinical notes \u2014 one-liner, hospital course, and problem-oriented views \u2014 where every claim cites a source span so nothing is hallucinated. Use after de-identifying notes when the user wants a discharge summary draft, handoff/SBAR, problem list, or chart-abstraction summary. De-identify FIRST with openmed.deidentify, then anchor summary claims to entity spans from openmed.analyze_text. Trigger keywords: summarize note, discharge summary, hospital course, problem-oriented, one-liner, SOAP, SBAR, handoff, chart abstraction."
+  "description": "Produces structured, citation-anchored summaries of clinical notes — one-liner, hospital course, and problem-oriented views — where every claim cites a source span so nothing is hallucinated. Use after de-identifying notes when the user wants a discharge summary draft, handoff/SBAR, problem list, or chart-abstraction summary. De-identify FIRST with openmed.deidentify, then anchor summary claims to entity spans from openmed.analyze_text. Trigger keywords: summarize note, discharge summary, hospital course, problem-oriented, one-liner, SOAP, SBAR, handoff, chart abstraction.",
+  "content_fingerprint": "b97685686273b2bdc42cbc312db5996a97bb07650d251a9c414f9975f1867332"
 }

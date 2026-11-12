@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configures helm-unittest for Helm chart unit testing - installs the `helm-unittest` plugin, authors `tests/*.yaml` per template, asserts on rendered manifests (`isKind`, `equal`, `matchRegex`, snapshots), plus `helm lint` and `helm template` render testing. Use to verify a chart's template logic and rendered shape; this is unit-level correctness testing, not security scanning - to enforce policy on rendered manifests use policy-as-code-runner, and to scan charts for misconfigurations use checkov-policy or trivy-config."
+  "description": "Configures helm-unittest for Helm chart unit testing - installs the `helm-unittest` plugin, authors `tests/*.yaml` per template, asserts on rendered manifests (`isKind`, `equal`, `matchRegex`, snapshots), plus `helm lint` and `helm template` render testing. Use to verify a chart's template logic and rendered shape; this is unit-level correctness testing, not security scanning - to enforce policy on rendered manifests use policy-as-code-runner, and to scan charts for misconfigurations use checkov-policy or trivy-config.",
+  "content_fingerprint": "1acdb949fdf16a3515d2d108ac9dc3d6751c49a761aeb20644397aaa0e62b97c"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when the user needs a \"unique ID generator\", \"distributed IDs\", a \"Snowflake ID\", asks \"UUID vs auto-increment\", wants a \"time-sortable ID\", a \"monotonic sequence\", a \"ticket server\", or \"ID generation at scale\". It gives a menu of ID schemes (UUID/ULID, Snowflake-style, DB ticket/range) with their causality, ordering, and clock-skew trade-offs. Use it whenever a design needs collision-free identifiers across many nodes, even if the user doesn't say \"sequencer\"."
+  "description": "This skill should be used when the user needs a \"unique ID generator\", \"distributed IDs\", a \"Snowflake ID\", asks \"UUID vs auto-increment\", wants a \"time-sortable ID\", a \"monotonic sequence\", a \"ticket server\", or \"ID generation at scale\". It gives a menu of ID schemes (UUID/ULID, Snowflake-style, DB ticket/range) with their causality, ordering, and clock-skew trade-offs. Use it whenever a design needs collision-free identifiers across many nodes, even if the user doesn't say \"sequencer\".",
+  "content_fingerprint": "74811501a05c509933f21583ecc2292f52a86ee3cb89965fd510605ee8d898b4"
 }

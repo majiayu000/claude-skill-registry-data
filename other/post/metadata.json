@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "OS post-exploitation after a stable host foothold: quiet host recon, host-native persistence (Windows Run/tasks/services/COM/WMI and Linux SSH/cron/systemd/SUID), long-term C2 (Sliver primary, Mythic/Havoc optional), targeted collection and exfil, and engagement cleanup. Does not own AD/cloud/K8s native persistence, Ligolo pivoting, LSASS dumping, or EDR bypass. Operator selects objectives; success is a live callback, verified persistence, delivered loot, or restored host \u2014 not generating an unused implant."
+  "description": "OS post-exploitation after a stable host foothold: quiet host recon, host-native persistence (Windows Run/tasks/services/COM/WMI and Linux SSH/cron/systemd/SUID), long-term C2 (Sliver primary, Mythic/Havoc optional), targeted collection and exfil, and engagement cleanup. Does not own AD/cloud/K8s native persistence, Ligolo pivoting, LSASS dumping, or EDR bypass. Operator selects objectives; success is a live callback, verified persistence, delivered loot, or restored host — not generating an unused implant.",
+  "content_fingerprint": "959915ee58bdd623eefc2a4c440c4da4820bd489196ad786c43971e6459c454f"
 }

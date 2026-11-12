@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/buddypia/kaiju-voice/blob/master/.claude/skills/skill-health-check/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "761edd71afcaa870859dd666edbbb6b0b6394e2956dd43932a7f385baadfcb6e",
+  "description": "プロジェクト プロジェクトのスキルシステムガバナンスを自動検証するスキル。\nGOVERNANCE.md 規則遵守状況をチェックし、ヘルスレポートを生成する。\n\n**自動化された監査項目**:\n- MANIFEST.json 保有有無\n- 依存関係一貫性 (calls ↔ called_by マッチング)\n- Deprecated スキル経過時間\n- バージョンスキーマ遵守\n- 状態遷移規則検証\n\n"
 }

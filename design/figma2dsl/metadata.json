@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "figma \u8282\u70b9\u6811 \u2192 \u9ad8\u4fdd\u771f\u754c\u9762\u8fd8\u539f + \u53ef\u4ea4\u4e92 harness\u3002\u4e24\u6761\u4ea7\u7269:\u5168\u4fdd\u771f .ui.json(\u6e32\u67d3\u771f\u6e90,\u9010\u8282\u70b9\u771f\u6837\u5f0f\u4e0d\u6298\u53e0)+ DSL .md(\u8bed\u4e49\u62bd\u8c61,\u5582 aigd/KB)\u3002\u8981\u628a figma \u8bbe\u8ba1\u5e27\u5bfc\u6210\"\u53ef\u8fd8\u539f/\u53ef\u70b9/\u53ef\u8dd1\"\u7684\u5ba2\u6237\u7aef\u3001\u6216\u5bfc\u6210\u7ed3\u6784\u5316 DSL \u65f6\u7528\u3002\u6587\u6cd5\u6743\u5a01\u5728 references/\u754c\u9762DSL\u89c4\u8303-figma2dsl\u6269\u5c55.md;\u672c skill \u53ea\u7f16\u6392\u3001\u4e0d\u590d\u5236\u6587\u6cd5\u3002\u53ef\u79fb\u690d\u3001\u9879\u76ee\u65e0\u5173\u3002"
+  "description": "figma 节点树 → 高保真界面还原 + 可交互 harness。两条产物:全保真 .ui.json(渲染真源,逐节点真样式不折叠)+ DSL .md(语义抽象,喂 aigd/KB)。要把 figma 设计帧导成\"可还原/可点/可跑\"的客户端、或导成结构化 DSL 时用。文法权威在 references/界面DSL规范-figma2dsl扩展.md;本 skill 只编排、不复制文法。可移植、项目无关。",
+  "content_fingerprint": "5fe71f156e27d6e442400e2f30eaf23dc1d11269a2ef4dfb7248e24849a859e5"
 }

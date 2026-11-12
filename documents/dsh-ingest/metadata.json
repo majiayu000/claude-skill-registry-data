@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Rebuild the DSH node's persistent knowledge state. Runs register-claude.py to (re)create the dome.db schema and upsert agents/skills/tools/stack rows, then runs ingest.py to re-index kb/, logs/, docs, and agent core source into ChromaDB's dome-kb collection, then runs pre-spore-verify.py to confirm all 7 skill modules load and the akashic write+query roundtrip works. Idempotent \u2014 safe to run any time."
+  "description": "Rebuild the DSH node's persistent knowledge state. Runs register-claude.py to (re)create the dome.db schema and upsert agents/skills/tools/stack rows, then runs ingest.py to re-index kb/, logs/, docs, and agent core source into ChromaDB's dome-kb collection, then runs pre-spore-verify.py to confirm all 7 skill modules load and the akashic write+query roundtrip works. Idempotent — safe to run any time.",
+  "content_fingerprint": "bd48f167ed19b011e707c2b45c71203e3df7eafda7e48481dfe45419bb38cb3c"
 }

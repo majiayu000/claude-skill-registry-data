@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reviews YUP audio plugin code for YUP-specific correctness issues: AudioProcessor lifecycle, AudioParameterBuilder and AudioParameterHandle usage, editor gestures, AudioBusLayout handling, CLAP/VST3 wrapper contracts, state recall, and MIDI safety. Use when the user asks to review a YUP plugin, check a processBlock, audit parameter smoothing, or asks \"is this YUP code safe?\". Trigger when you see yup::AudioProcessor, yup_audio_plugin, AudioParameterBuilder, AudioParameterHandle, AudioProcessorEditor, or createPluginProcessor in the code."
+  "description": "Reviews YUP audio plugin code for YUP-specific correctness issues: AudioProcessor lifecycle, AudioParameterBuilder and AudioParameterHandle usage, editor gestures, AudioBusLayout handling, CLAP/VST3 wrapper contracts, state recall, and MIDI safety. Use when the user asks to review a YUP plugin, check a processBlock, audit parameter smoothing, or asks \"is this YUP code safe?\". Trigger when you see yup::AudioProcessor, yup_audio_plugin, AudioParameterBuilder, AudioParameterHandle, AudioProcessorEditor, or createPluginProcessor in the code.",
+  "content_fingerprint": "ea4ad60953b3fc0a63850d3af375f48b307601888975550abb357588027bffc0"
 }

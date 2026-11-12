@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Static analysis with Semgrep: detects languages in the current working directory, selects appropriate rulesets (OWASP, security-audit, language-specific), and runs semgrep scan. Prompts to install semgrep if not present. Use when source code is available and you want to find injection sinks, hardcoded secrets, insecure patterns, or taint-flow vulnerabilities via static analysis. Pairs with all hunt-* skills for white-box validation."
+  "description": "Static analysis with Semgrep: detects languages in the current working directory, selects appropriate rulesets (OWASP, security-audit, language-specific), and runs semgrep scan. Prompts to install semgrep if not present. Use when source code is available and you want to find injection sinks, hardcoded secrets, insecure patterns, or taint-flow vulnerabilities via static analysis. Pairs with all hunt-* skills for white-box validation.",
+  "content_fingerprint": "0aa1d35a7cb64d6cac41637710abc48cb1556fbb163bf29f7247bf50c510d117"
 }

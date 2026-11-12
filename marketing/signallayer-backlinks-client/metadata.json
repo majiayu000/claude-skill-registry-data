@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4f7f\u7528 SignalLayer.io \u7684\u771f\u5b9e OpenClaw API \u521b\u5efa\u3001\u67e5\u8be2\u548c\u5206\u9875\u7ba1\u7406\u5916\u94fe Campaign\u3002\u9002\u7528\u4e8e\u7528\u6237\u8981\u6c42\u914d\u7f6e SignalLayer API Key\u3001\u67e5\u8be2\u79ef\u5206\u3001\u521b\u5efa\u5916\u94fe\u4efb\u52a1\u3001\u67e5\u770b\u4efb\u52a1\u72b6\u6001\u6216\u5217\u51fa Campaign\uff1b\u5ba2\u6237\u7aef\u672a\u6307\u5b9a\u6570\u91cf\u65f6\u9ed8\u8ba4 200\uff0c\u4f46\u670d\u52a1\u7aef linkCount \u59cb\u7ec8\u5fc5\u586b\u3002"
+  "description": "使用 SignalLayer.io 的真实 OpenClaw API 创建、查询和分页管理外链 Campaign。适用于用户要求配置 SignalLayer API Key、查询积分、创建外链任务、查看任务状态或列出 Campaign；客户端未指定数量时默认 200，但服务端 linkCount 始终必填。",
+  "content_fingerprint": "26fcf947713a9e250afe1b74fb74cd1004975a7be0f90ed2256e116fd72a8e8d"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2\u6807\u7684\u6628\u6536\u4ef7\u3002\u63a5\u53e3\uff1aGET /api/v1/market/data/daec/history/prev-closes\u3002\u6240\u6709\u8bf7\u6c42\u5fc5\u987b\u8bbe\u7f6e FTSHARE_API_KEY\u3002"
+  "description": "查询标的昨收价。接口：GET /api/v1/market/data/daec/history/prev-closes。所有请求必须设置 FTSHARE_API_KEY。",
+  "content_fingerprint": "772c019a4a89f9e98ffedfe66ee2bbf411ac5d86737cfc302565ed1a7ee55f90"
 }

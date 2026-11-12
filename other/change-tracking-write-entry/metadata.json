@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Composes a CHANGELOG entry (substantive or terse form) for a PR. Use when about to commit, open a PR, or finalize a change. Every PR carries an entry, even if terse; there is no skip path. The entry's required parts (date-and-version header, structured Keep a Changelog sections for substantive entries, file references as markdown links, the \"why\" not just the \"what\", verification evidence, phase context) are walked step by step so an entry that would fail the link-coverage gate, the version-monotonicity audit, or the PR-time delta gate is caught at the draft stage rather than at CI."
+  "description": "Composes a CHANGELOG entry (substantive or terse form) for a PR. Use when about to commit, open a PR, or finalize a change. Every PR carries an entry, even if terse; there is no skip path. The entry's required parts (date-and-version header, structured Keep a Changelog sections for substantive entries, file references as markdown links, the \"why\" not just the \"what\", verification evidence, phase context) are walked step by step so an entry that would fail the link-coverage gate, the version-monotonicity audit, or the PR-time delta gate is caught at the draft stage rather than at CI.",
+  "content_fingerprint": "fc93e5d39e80196777e7bf8983e10a7bbc1256d8eac37ff82d696221045c8d06"
 }

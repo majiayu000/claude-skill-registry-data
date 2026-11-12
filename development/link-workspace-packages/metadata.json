@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Link workspace packages in the Hedgehog pnpm monorepo. USE WHEN: (1) you just created or generated new packages and need to wire up their dependencies, (2) code imports from a sibling package and needs it added as a dependency, (3) you get resolution errors for workspace packages (@org/*) like \"cannot find module\", \"failed to resolve import\", \"TS2307\", or \"cannot resolve\". DO NOT patch around with tsconfig paths or manual package.json edits - use pnpm's workspace commands to fix actual linking."
+  "description": "Link workspace packages in the Hedgehog pnpm monorepo. USE WHEN: (1) you just created or generated new packages and need to wire up their dependencies, (2) code imports from a sibling package and needs it added as a dependency, (3) you get resolution errors for workspace packages (@org/*) like \"cannot find module\", \"failed to resolve import\", \"TS2307\", or \"cannot resolve\". DO NOT patch around with tsconfig paths or manual package.json edits - use pnpm's workspace commands to fix actual linking.",
+  "content_fingerprint": "d6bc3b81a44cd9a48d3bd87fb408cb7d406270d88623421dc1668f5e01749050"
 }

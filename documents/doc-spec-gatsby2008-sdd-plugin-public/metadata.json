@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Store a feature spec.md in the central spec registry (default ~/.claude/spec-registry/<service>/, override with $CLAUDE_DOC_HOME for team-shared registries), or list the specs registered for the current repo's service. For vibe-coding / standalone flows where the SDD pipeline's /sdd:mr did not publish a spec. Run `/sdd:doc-spec <path>` to store a spec file, or `/sdd:doc-spec list` to inspect this service's specs."
+  "description": "Store a feature spec.md in the central spec registry (default ~/.claude/spec-registry/<service>/, override with $CLAUDE_DOC_HOME for team-shared registries), or list the specs registered for the current repo's service. For vibe-coding / standalone flows where the SDD pipeline's /sdd:mr did not publish a spec. Run `/sdd:doc-spec <path>` to store a spec file, or `/sdd:doc-spec list` to inspect this service's specs.",
+  "content_fingerprint": "9530668b2bc3be5e60ba7acb247df0a986eab3d23a6a028eaa7259dc05b2c5ee"
 }

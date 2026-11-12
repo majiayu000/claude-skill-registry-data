@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user says \"fetch investments\", \"fetch ibkr\", \"fetch interactive brokers\", \"pull portfolio\", \"fetch brokerage\", \"snapshot ibkr\", or any portfolio-snapshot equivalent \u2014 and as the best-effort IBKR source inside `sync-finance-data`. The connector is only reachable from a signed-in Claude session, so a session without it skips with a warning. Attaches IBKR as a source feed to the matching logical brokerage account, ingests raw trade evidence without double-counting wrapper statements, and writes position/cash reconciliation snapshots. Skips gracefully when the connector isn't connected."
+  "description": "Use when the user says \"fetch investments\", \"fetch ibkr\", \"fetch interactive brokers\", \"pull portfolio\", \"fetch brokerage\", \"snapshot ibkr\", or any portfolio-snapshot equivalent — and as the best-effort IBKR source inside `sync-finance-data`. The connector is only reachable from a signed-in Claude session, so a session without it skips with a warning. Attaches IBKR as a source feed to the matching logical brokerage account, ingests raw trade evidence without double-counting wrapper statements, and writes position/cash reconciliation snapshots. Skips gracefully when the connector isn't connected.",
+  "content_fingerprint": "72d30406d498a86527250d985cc19cd8fde6f023c8389be6b91c1ffcdfeb9f39"
 }

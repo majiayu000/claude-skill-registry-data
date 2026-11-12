@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Drive an auto run: chain the plan-loop \u2192 handoff \u2192 work-loop using the self-pacing pulse (lib/pulse.py), the agent-managed dispatcher (lib/dispatcher.py), and a deliberate-stop /goal binding. Use when invoked via /auto, when continuing after a handoff, or when resuming a run. This skill IS the driving agent: arms the pulse chain, decides the work-loop fan-out cap per wave (resizable in flight), reads the run-record's cached exit predicate to know when the loop is done. NEVER re-evaluates the predicate itself."
+  "description": "Drive an auto run: chain the plan-loop → handoff → work-loop using the self-pacing pulse (lib/pulse.py), the agent-managed dispatcher (lib/dispatcher.py), and a deliberate-stop /goal binding. Use when invoked via /auto, when continuing after a handoff, or when resuming a run. This skill IS the driving agent: arms the pulse chain, decides the work-loop fan-out cap per wave (resizable in flight), reads the run-record's cached exit predicate to know when the loop is done. NEVER re-evaluates the predicate itself.",
+  "content_fingerprint": "88d32f0c60dbb83b55bf8aa36e0b253422a3c60cf7dad66c3aeec80fa767bacd"
 }

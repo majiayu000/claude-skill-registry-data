@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn an exposed container daemon or an over-privileged container into host compromise \u2014 a Docker API on 2375/2376, a mounted docker.sock, or a privileged/`-v /:/host` container. Load when you find an open Docker/containerd socket, port 2375/2376, a container you can run images in, or you landed inside a container and want the host. Signals: 2375/tcp open, /var/run/docker.sock reachable, `docker` group membership, privileged container, host paths mounted in."
+  "description": "Turn an exposed container daemon or an over-privileged container into host compromise — a Docker API on 2375/2376, a mounted docker.sock, or a privileged/`-v /:/host` container. Load when you find an open Docker/containerd socket, port 2375/2376, a container you can run images in, or you landed inside a container and want the host. Signals: 2375/tcp open, /var/run/docker.sock reachable, `docker` group membership, privileged container, host paths mounted in.",
+  "content_fingerprint": "4ca299ed22bec9bb2298c004a168c501ece5996d7b67abdd57917d1404ad63de"
 }

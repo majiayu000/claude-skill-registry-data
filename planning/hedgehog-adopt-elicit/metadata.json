@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when `hedgehog-adopt` is about to add an intent for a large or under-specified unit of change on an already-adopted repo \u2014 \"add billing,\" \"support multi-tenancy,\" anything whose scope isn't already obvious from how the user asked for it. Runs a short, targeted clarifying pass (a handful of questions, not a shelf) and returns goal/outcome text ready for `hedgehog intent add`. Invoked by `hedgehog-adopt`'s \"Adding the first (or next) change-work\" step; don't run standalone, and don't run for a clear, bounded request \u2014 that goes straight to `hedgehog intent add` without this skill."
+  "description": "Use when `hedgehog-adopt` is about to add an intent for a large or under-specified unit of change on an already-adopted repo — \"add billing,\" \"support multi-tenancy,\" anything whose scope isn't already obvious from how the user asked for it. Runs a short, targeted clarifying pass (a handful of questions, not a shelf) and returns goal/outcome text ready for `hedgehog intent add`. Invoked by `hedgehog-adopt`'s \"Adding the first (or next) change-work\" step; don't run standalone, and don't run for a clear, bounded request — that goes straight to `hedgehog intent add` without this skill.",
+  "content_fingerprint": "4913e63bb9dbfcee6a397256d823efc879bae81fc2093a15a8c8e4dc450a71a8"
 }

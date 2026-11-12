@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read a bounded window of recent Lark group history to recover a missing referent. Use only for a current human message delivered through lark-channel-bridge when structured bridge_context has chatType group, senderType user, and a real mention of this bot, and the request is context-dependent or underspecified (for example \u201c\u9510\u8bc4\u4e00\u4e0b\u201d, \u201c\u8fd9\u4e2a\u5462\u201d, \u201c\u662f\u771f\u7684\u5417\u201d, \u201c\u600e\u4e48\u529e\u201d, or \u201c\u7ee7\u7eed\u201d). Never use in p2p chats, for bot-originated messages, for self-contained requests, or when quoted/forwarded content, a card, attachment, URL, pasted text, or named target already supplies the context."
+  "description": "Read a bounded window of recent Lark group history to recover a missing referent. Use only for a current human message delivered through lark-channel-bridge when structured bridge_context has chatType group, senderType user, and a real mention of this bot, and the request is context-dependent or underspecified (for example “锐评一下”, “这个呢”, “是真的吗”, “怎么办”, or “继续”). Never use in p2p chats, for bot-originated messages, for self-contained requests, or when quoted/forwarded content, a card, attachment, URL, pasted text, or named target already supplies the context.",
+  "content_fingerprint": "84db34fdf382fa8c2604889712d601ac018303fcd939805ce2bcd9caf7532cfb"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configures an agent harness (pi, opencode, Claude Code) to execute pair's process: resolves the harness explicitly (never inferred), verifies its fitness against the project's declared harness/access-path requirements before writing anything, provisions access path / skill paths / context / model provider per the harness's guide, and confirms rather than rewrites on re-run. Invoke directly to configure a harness ('configure pi for this project', 'set up opencode'). Optionally composed by /pair-process-bootstrap in its finalization phase."
+  "description": "Configures an agent harness (pi, opencode, Claude Code) to execute pair's process: resolves the harness explicitly (never inferred), verifies its fitness against the project's declared harness/access-path requirements before writing anything, provisions access path / skill paths / context / model provider per the harness's guide, and confirms rather than rewrites on re-run. Invoke directly to configure a harness ('configure pi for this project', 'set up opencode'). Optionally composed by /pair-process-bootstrap in its finalization phase.",
+  "content_fingerprint": "b24dcc30ed7238dd8959ab133a7bed6c7f34121d15fd52cac438434d1a3735e1"
 }

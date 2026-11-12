@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Dispatch an independent, skeptical agent to re-derive whether a fix/claim/artifact actually worked, instead of trusting the builder's self-assessment. Use when a subagent, Workflow stage, or parallel candidate reports \"fixed it\" and the cost of a false green is high \u2014 code fixes, pipeline output, generated assets, live-site claims. Do NOT use for verifying your OWN uncommitted work (that is verification-loop \u2014 just run the gates), and do NOT use for vetting a plan before anyone builds (that is adversarial-planning)."
+  "description": "Dispatch an independent, skeptical agent to re-derive whether a fix/claim/artifact actually worked, instead of trusting the builder's self-assessment. Use when a subagent, Workflow stage, or parallel candidate reports \"fixed it\" and the cost of a false green is high — code fixes, pipeline output, generated assets, live-site claims. Do NOT use for verifying your OWN uncommitted work (that is verification-loop — just run the gates), and do NOT use for vetting a plan before anyone builds (that is adversarial-planning).",
+  "content_fingerprint": "a8f5342d24f63942caf86aa27b15a95a43179399e23d0e28c2c1697d474cefe8"
 }

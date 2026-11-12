@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Rename the current auto-generated session branch (e.g. `claude/<adjective>-<noun>-<hash>`) to a semantic name derived from the current PR or branch diff. Usually invoked with no args as `/branch-rename`; an optional argument overrides the derived slug, and `force` (`/branch-rename force [<slug>]`) re-slugs a branch that is already semantically named. Use when the user says \"rename branch\", \"rename the branch\", or \"/branch-rename\"."
+  "description": "Rename the current auto-generated session branch (e.g. `claude/<adjective>-<noun>-<hash>`) to a semantic name derived from the current PR or branch diff. Usually invoked with no args as `/branch-rename`; an optional argument overrides the derived slug, and `force` (`/branch-rename force [<slug>]`) re-slugs a branch that is already semantically named. Use when the user says \"rename branch\", \"rename the branch\", or \"/branch-rename\".",
+  "content_fingerprint": "6e1fefd563b201493d9803019e4514ea06733cd5210e3c050a953f03b66cf763"
 }

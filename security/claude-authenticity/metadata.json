@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentscope-ai/OpenJudge/blob/main/skills/claude-authenticity/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a4d551b05f1d5de173181726140042d2e47368cc39b933c5a86e4c9138c646a3",
+  "description": "Detect whether an API endpoint is backed by genuine Claude (not a wrapper, proxy, or impersonator) using 9 weighted rule-based checks that mirror the claude-verify project. Also extracts injected syst"
 }

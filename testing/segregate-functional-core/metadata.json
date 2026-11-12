@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "I/O + \uacc4\uc0b0 \ud63c\uc7ac \ub610\ub294 Mock stub + \uacc4\uc0b0 \ud63c\uc7ac \uba54\uc11c\ub4dc\ub97c Functional Core / Imperative Shell(\ube75\uc18d\ube75, Impure-Pure-Impure Sandwich)\ub85c \ubd84\ub9ac. \"\uc21c\uc218 \ud568\uc218 \ubd84\ub9ac\", \"I/O\uc640 \uacc4\uc0b0 \ub098\ub220\", \"mock \uc5c6\uc774 \ud14c\uc2a4\ud2b8\ud558\uac8c\", \"functional core\", \"/segregate-functional-core\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \uac12 \ubc18\ud658\uacfc \ubd80\uc218\ud6a8\uacfc \ubd84\ub9ac(CQS)\ub9cc\uc774\uba74 /separate-query-modifier\uac00 \uc801\ud569. /segregate-functional-core [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "I/O + 계산 혼재 또는 Mock stub + 계산 혼재 메서드를 Functional Core / Imperative Shell(빵속빵, Impure-Pure-Impure Sandwich)로 분리. \"순수 함수 분리\", \"I/O와 계산 나눠\", \"mock 없이 테스트하게\", \"functional core\", \"/segregate-functional-core\" 요청 시 사용. 단, 값 반환과 부수효과 분리(CQS)만이면 /separate-query-modifier가 적합. /segregate-functional-core [commit-ref]로 호출.",
+  "content_fingerprint": "5e6724174ba9ec5ad66889f36d2f00c41b2923093e41b3b2a82d8f87c2b6442e"
 }

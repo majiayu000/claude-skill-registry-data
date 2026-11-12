@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prove a Room upgrade keeps the user's DATA, not just that the schema validates \u2014 covers the passing migration test that only seeds one settings/profile row, which any migration that drops user tables would also pass, and the mutation that proves the new assertions bite. Use when a repo has MigrationTestHelper coverage, before shipping any update over existing installs, or when a migration test's name promises more than it asserts."
+  "description": "Prove a Room upgrade keeps the user's DATA, not just that the schema validates — covers the passing migration test that only seeds one settings/profile row, which any migration that drops user tables would also pass, and the mutation that proves the new assertions bite. Use when a repo has MigrationTestHelper coverage, before shipping any update over existing installs, or when a migration test's name promises more than it asserts.",
+  "content_fingerprint": "14d9cde6adf7d1013566ea02b01ec2eb43df79e3d242a034e3ff8d7c9feae850"
 }

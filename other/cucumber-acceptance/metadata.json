@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uae30\ub2a5\uc758 external behavior\ub97c Cucumber \uc778\uc218 \ud14c\uc2a4\ud2b8(\uc8fc \uac80\uc99d\uce35)\ub85c \uad6c\ucd95 \u2014 .feature \uc2e4\ud589\uc73c\ub85c \ubb38\uc11c\u2194\ucf54\ub4dc \ub4dc\ub9ac\ud504\ud2b8\ub97c \uad6c\uc870\uc801\uc73c\ub85c \ucc28\ub2e8, Four Layer(Steps\u2192Protocol Driver\u2192SUT), \ud0dc\uadf8 \uae30\ubc18 \uac00\uc5ed \uc81c\uc678, \uae30\uc874 JUnit \uc778\uc218 \ud14c\uc2a4\ud2b8 \uc774\uad00. \"\uc778\uc218 \ud14c\uc2a4\ud2b8 \ub3c4\uc785\", \"Gherkin\uc744 \uc2e4\ud589 \uac00\ub2a5\ud558\uac8c\", \"cucumber \uc14b\uc5c5\" \uc694\uccad \uc2dc \uc0ac\uc6a9. /cucumber-acceptance\ub85c \ud638\ucd9c."
+  "description": "기능의 external behavior를 Cucumber 인수 테스트(주 검증층)로 구축 — .feature 실행으로 문서↔코드 드리프트를 구조적으로 차단, Four Layer(Steps→Protocol Driver→SUT), 태그 기반 가역 제외, 기존 JUnit 인수 테스트 이관. \"인수 테스트 도입\", \"Gherkin을 실행 가능하게\", \"cucumber 셋업\" 요청 시 사용. /cucumber-acceptance로 호출.",
+  "content_fingerprint": "47307f6abdda8949448bd054f94415f43ac4db533a1437e92a924a6ab78946b4"
 }

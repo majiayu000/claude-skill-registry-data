@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5bf9 physics-wiki \u6267\u884c\u7ed3\u6784\u5316\u5065\u5eb7\u68c0\u67e5\uff0c\u5305\u62ec\u8fd0\u884c lint\u3001\u5206\u7c7b broken-link warning\u3001\u68c0\u67e5 index \u8986\u76d6\u4e0e log \u5b8c\u6574\u6027\u3001\u8bc4\u4f30 raw \u79ef\u538b\u548c\u9875\u9762\u8d28\u91cf\uff0c\u5e76\u6309\u8f7b\u91cf/\u4e13\u9898/\u5168\u91cf\u4e09\u79cd\u7c92\u5ea6\u751f\u6210\u7ef4\u62a4\u62a5\u544a\u3002\u5f53\u7528\u6237\u8bf4\"\u68c0\u67e5 wiki \u5065\u5eb7\"\u3001\"\u8dd1\u4e00\u4e0b lint\"\u3001\"wiki \u6700\u8fd1\u600e\u4e48\u6837\u4e86\"\u3001\"\u6709\u6ca1\u6709 broken link\"\u3001\"\u68c0\u67e5\u6700\u8fd1\u7ef4\u62a4\u662f\u5426\u5b8c\u6574\"\u6216\u4e13\u9898\u5b66\u4e60\u5b8c\u6210\u540e\u5e94\u89e6\u53d1\u672c skill\u3002\u4e5f\u9002\u5408\u5728\u5927\u91cf\u9875\u9762\u53d8\u66f4\u540e\u3001\u5f00\u59cb\u65b0\u5b66\u4e60\u9636\u6bb5\u524d\u6216 wiki \u7ed3\u6784\u6df7\u4e71\u65f6\u4f7f\u7528\u3002"
+  "description": "对 physics-wiki 执行结构化健康检查，包括运行 lint、分类 broken-link warning、检查 index 覆盖与 log 完整性、评估 raw 积压和页面质量，并按轻量/专题/全量三种粒度生成维护报告。当用户说\"检查 wiki 健康\"、\"跑一下 lint\"、\"wiki 最近怎么样了\"、\"有没有 broken link\"、\"检查最近维护是否完整\"或专题学习完成后应触发本 skill。也适合在大量页面变更后、开始新学习阶段前或 wiki 结构混乱时使用。",
+  "content_fingerprint": "dd4f98d39064e7d61af572e47f2f0c9386be9172aea168ca5876d660c1c11687"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Receive Tikkie (ABN AMRO) API v2 notifications. Use when setting up a Tikkie payment request, refund or transaction bundle webhook handler, subscribing via POST /paymentrequestssubscription or /transactionssubscription, or asking how to verify a Tikkie webhook signature. Tikkie notifications are UNSIGNED (no signature header, no secret, no HMAC), so this skill teaches the subscriptionId check plus re-fetching the record from the Tikkie API, and dispatching on notificationType PAYMENT, REFUND and BUNDLE."
+  "description": "Receive Tikkie (ABN AMRO) API v2 notifications. Use when setting up a Tikkie payment request, refund or transaction bundle webhook handler, subscribing via POST /paymentrequestssubscription or /transactionssubscription, or asking how to verify a Tikkie webhook signature. Tikkie notifications are UNSIGNED (no signature header, no secret, no HMAC), so this skill teaches the subscriptionId check plus re-fetching the record from the Tikkie API, and dispatching on notificationType PAYMENT, REFUND and BUNDLE.",
+  "content_fingerprint": "99ae338daf6e509f284535fdbd8dfe9f96e5d2aee441509f9447e4d62172bb17"
 }

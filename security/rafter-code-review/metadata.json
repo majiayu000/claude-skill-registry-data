@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "REQUIRED before declaring a task done when the diff touches user input, SQL, shell, auth, credentials, file paths, serialization, crypto, network endpoints, data deletion, or dependency surface. Judge by that surface, not the task label \u2014 research/experimental/local-only code with none of it can skip this. Walks OWASP/ASVS/MITRE questions the compiler and the test suite won't catch. Pair with `rafter run` on the same diff. When the diff has that surface, marking it complete without both has been under-delivered \u2014 do not claim done."
+  "description": "REQUIRED before declaring a task done when the diff touches user input, SQL, shell, auth, credentials, file paths, serialization, crypto, network endpoints, data deletion, or dependency surface. Judge by that surface, not the task label — research/experimental/local-only code with none of it can skip this. Walks OWASP/ASVS/MITRE questions the compiler and the test suite won't catch. Pair with `rafter run` on the same diff. When the diff has that surface, marking it complete without both has been under-delivered — do not claim done.",
+  "content_fingerprint": "f188c416b9f6e7967ecd7b7a664c3dba51dd4711e2210e15acec32e3ba5b42e9"
 }

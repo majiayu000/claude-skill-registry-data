@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decrypts statically embedded malware configuration blobs by trying common schemes (single-byte and multi-byte XOR, RC4, base64 layers) and scoring decoded output for config-like content. Activates for requests to decrypt an embedded config, recover hardcoded settings from a blob, or brute-force a configuration encryption scheme."
+  "description": "Decrypts statically embedded malware configuration blobs by trying common schemes (single-byte and multi-byte XOR, RC4, base64 layers) and scoring decoded output for config-like content. Activates for requests to decrypt an embedded config, recover hardcoded settings from a blob, or brute-force a configuration encryption scheme.",
+  "content_fingerprint": "981c1cc773eadcb5df22e5ac829d14749776a5ee1c5a5568120988027a75bacf"
 }

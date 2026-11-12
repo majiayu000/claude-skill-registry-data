@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Log injection detector: harvests every console.log/logger.info/log.Error/etc call, classifies arguments for attacker-controlled input (CWE-117), CRLF injection surface, sensitive data leakage (passwords, tokens, secrets). LLM validates each finding as injectable and proposes sanitization (parameterized logging, newline stripping, sensitive-field redaction). Read-only. Audience: Senior. Trigger: /log-injection"
+  "description": "Log injection detector: harvests every console.log/logger.info/log.Error/etc call, classifies arguments for attacker-controlled input (CWE-117), CRLF injection surface, sensitive data leakage (passwords, tokens, secrets). LLM validates each finding as injectable and proposes sanitization (parameterized logging, newline stripping, sensitive-field redaction). Read-only. Audience: Senior. Trigger: /log-injection",
+  "content_fingerprint": "9363cce67a183543fb3d0b4aed4d884ab1bb0e27ef0e7800155ae362e8c2049f"
 }

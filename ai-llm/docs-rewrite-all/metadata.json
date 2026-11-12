@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "`docs/**/*.md` + `README.md` + `CHANGELOG.md` \u3092\u4e00\u62ec\u68da\u5378\u3057\u3057\u3001 `.claude/rules/document-writing.md` \u3068\u6a5f\u68b0\u7684\u306b\u7167\u5408\u3059\u308b\u3002 \u9818\u57df\u5225\u306b C*O \u3078\u66f8\u304d\u63db\u3048\u3092\u59d4\u8b72\u3057\u3001diff \u63d0\u6848 \u2192 CEO \u627f\u8a8d \u2192 \u66f8\u63db\u306e 2 \u6bb5\u968e\u3067\u81ea\u52d5\u30de\u30fc\u30b8\u3092\u7981\u3058\u308b\u3002`LICENSE` \u306f\u9664\u5916\u3059\u308b\u3002 \u300c/vibecorp:docs-rewrite-all\u300d\u300c\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u5168\u66f8\u304d\u76f4\u3057\u300d\u300c\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u68da\u5378\u3057\u300d \u3068\u8a00\u3063\u305f\u6642\u306b\u4f7f\u7528\u3002"
+  "description": "`docs/**/*.md` + `README.md` + `CHANGELOG.md` を一括棚卸しし、 `.claude/rules/document-writing.md` と機械的に照合する。 領域別に C*O へ書き換えを委譲し、diff 提案 → CEO 承認 → 書換の 2 段階で自動マージを禁じる。`LICENSE` は除外する。 「/vibecorp:docs-rewrite-all」「ドキュメント全書き直し」「ドキュメント棚卸し」 と言った時に使用。",
+  "content_fingerprint": "3cda1847fb215a71b19d2599ba3ef4fcd8d995361d344d55014b2779ec801699"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Schedule a prompt to fire on a fixed cadence (recurring loop). Use when the user asks to \"run X every N minutes/hours/days\", \"loop X\", \"babysit Y\", \"be proactive about Y every N\", or invokes `/loop` directly. Parses `[interval] <prompt>`, picks a clean cron expression, registers the job via the `cron` tool, and executes the prompt once immediately so the user sees activity without waiting for the first cron tick."
+  "description": "Schedule a prompt to fire on a fixed cadence (recurring loop). Use when the user asks to \"run X every N minutes/hours/days\", \"loop X\", \"babysit Y\", \"be proactive about Y every N\", or invokes `/loop` directly. Parses `[interval] <prompt>`, picks a clean cron expression, registers the job via the `cron` tool, and executes the prompt once immediately so the user sees activity without waiting for the first cron tick.",
+  "content_fingerprint": "66cbc15e66b55a3fbc377b9272533e03c4eb4c402ea788b6d041d68dcb549d79"
 }

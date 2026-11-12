@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Refresh plainworks' vendored shadcn atoms the canonical way \u2014 bump the shadcn CLI in the catalog, rerun registry:update for every locked atom, reconcile any upstream change through the deviation ladder (theme tokens \u2192 call sites \u2192 @plainworks/ui wrappers) instead of editing the atom, and rerun the gallery browser gate. Use when bumping the shadcn CLI, pulling upstream atom fixes, adding an atom, or when registry:validate reports a lock mismatch."
+  "description": "Refresh plainworks' vendored shadcn atoms the canonical way — bump the shadcn CLI in the catalog, rerun registry:update for every locked atom, reconcile any upstream change through the deviation ladder (theme tokens → call sites → @plainworks/ui wrappers) instead of editing the atom, and rerun the gallery browser gate. Use when bumping the shadcn CLI, pulling upstream atom fixes, adding an atom, or when registry:validate reports a lock mismatch.",
+  "content_fingerprint": "666a6779347fe12b22578907bfdd99bf7317e6eadd63b2addcb4062f2dfca9eb"
 }

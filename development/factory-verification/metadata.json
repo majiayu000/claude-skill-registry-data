@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "How we know the software the factory produces is correct, and how we know the kit's own conventions are followed. Defines the four-tier eval spectrum (CLI rule / test / agent / human gate), the rule that evals graduate downward to their cheapest home, the banded coverage score with severity-aware disclosure, and the delta-gated GitHub Action that guards the PR boundary without disrupting the inner loop. The recipe locks to `factory-kit-check` + GitHub Actions; the principles are stack-agnostic. Read at project kickoff, when wiring the conformance gate, and whenever asking \"how do we know the agent did this right?\""
+  "description": "How we know the software the factory produces is correct, and how we know the kit's own conventions are followed. Defines the four-tier eval spectrum (CLI rule / test / agent / human gate), the rule that evals graduate downward to their cheapest home, the banded coverage score with severity-aware disclosure, and the delta-gated GitHub Action that guards the PR boundary without disrupting the inner loop. The recipe locks to `factory-kit-check` + GitHub Actions; the principles are stack-agnostic. Read at project kickoff, when wiring the conformance gate, and whenever asking \"how do we know the agent did this right?\"",
+  "content_fingerprint": "7541797a2c2908d7777d5fc9ba1e923da67f314da8249edf4325cdf7aed2f0d4"
 }

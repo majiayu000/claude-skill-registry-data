@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when sizing motadatagosdk/core/pool \u2014 memorypool (PoolSize \u2264 64, PoolLength = p95), resourcepool (MaxSize, OnCreate/OnReset/OnDestroy), workerpool (MinWorkers, MaxWorkers, MaxQueueSize). Covers healthcheck cadence, backoff on exhaustion, and the symptom-to-dial decision table. Triggers: pool sizing, MaxSize, MinWorkers, MaxWorkers, pool exhaustion, ErrPoolOverload, ErrPoolExhausted, connection pool, worker pool, resource pool."
+  "description": "Use this when sizing motadatagosdk/core/pool — memorypool (PoolSize ≤ 64, PoolLength = p95), resourcepool (MaxSize, OnCreate/OnReset/OnDestroy), workerpool (MinWorkers, MaxWorkers, MaxQueueSize). Covers healthcheck cadence, backoff on exhaustion, and the symptom-to-dial decision table. Triggers: pool sizing, MaxSize, MinWorkers, MaxWorkers, pool exhaustion, ErrPoolOverload, ErrPoolExhausted, connection pool, worker pool, resource pool.",
+  "content_fingerprint": "ba12d86494b07283ca7e86beda202c9eb3fcede12afbe55fb2d1e9f3b0f75426"
 }

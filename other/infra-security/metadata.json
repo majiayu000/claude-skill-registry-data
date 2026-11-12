@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit AICP's security posture across 4 layers \u2014 secrets management (.env, gitignored), backend guardrails (paths/response/mode enforcement in aicp/guardrails/), runtime exposure (LocalAI port 8090 + MCP server + cloud backend tokens), and supply chain (Python deps, model GGUF integrity). Loads when the operator says \"security audit\", \"check secrets\", \"what's exposed\", \"harden AICP\"."
+  "description": "Audit AICP's security posture across 4 layers — secrets management (.env, gitignored), backend guardrails (paths/response/mode enforcement in aicp/guardrails/), runtime exposure (LocalAI port 8090 + MCP server + cloud backend tokens), and supply chain (Python deps, model GGUF integrity). Loads when the operator says \"security audit\", \"check secrets\", \"what's exposed\", \"harden AICP\".",
+  "content_fingerprint": "f49cd87c014249c0650e0ad1ed984f32bcb682a35bda2d6c1dd07838f33bfc3c"
 }

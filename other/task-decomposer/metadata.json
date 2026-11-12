@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Breaks natural-language problem descriptions into sub-tasks suitable for DAG nodes. The entry point of the meta-DAG. Identifies phases, dependencies, parallelization opportunities, and vague/pluripotent nodes that can't yet be specified. Uses domain meta-skills when available. Activate on \"decompose task\", \"break down problem\", \"plan workflow\", \"what are the steps\", \"sub-tasks\", \"task breakdown\". NOT for executing the decomposed tasks (use dag-runtime), building the DAG structure (use dag-planner), or matching skills to nodes (use dag-skills-matcher)."
+  "description": "Breaks natural-language problem descriptions into sub-tasks suitable for DAG nodes. The entry point of the meta-DAG. Identifies phases, dependencies, parallelization opportunities, and vague/pluripotent nodes that can't yet be specified. Uses domain meta-skills when available. Activate on \"decompose task\", \"break down problem\", \"plan workflow\", \"what are the steps\", \"sub-tasks\", \"task breakdown\". NOT for executing the decomposed tasks (use dag-runtime), building the DAG structure (use dag-planner), or matching skills to nodes (use dag-skills-matcher).",
+  "content_fingerprint": "8365f9d6a87ad255946f9298f3510e5194679b68d63215c94c5a618bc1607670"
 }

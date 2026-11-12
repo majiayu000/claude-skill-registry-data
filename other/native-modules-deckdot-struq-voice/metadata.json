@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Handle the native modules in Struq Voice: better-sqlite3, uiohook-napi, sherpa-onnx-node, and the Electron 39 rebuild story. Use whenever a task involves native modules, electron-builder rebuilds, the postinstall script, 'module failed to load', history unavailable, PTT broken, Parakeet not starting, @electron/rebuild, or an Electron version bump. Explains the rebuild script, the degradation paths (every module fails soft), and the rule never to upgrade Electron without explicit approval. NOT for IPC (use ipc-architecture) or gating (use verification-gates)."
+  "description": "Handle the native modules in Struq Voice: better-sqlite3, uiohook-napi, sherpa-onnx-node, and the Electron 39 rebuild story. Use whenever a task involves native modules, electron-builder rebuilds, the postinstall script, 'module failed to load', history unavailable, PTT broken, Parakeet not starting, @electron/rebuild, or an Electron version bump. Explains the rebuild script, the degradation paths (every module fails soft), and the rule never to upgrade Electron without explicit approval. NOT for IPC (use ipc-architecture) or gating (use verification-gates).",
+  "content_fingerprint": "a543d6efee1925dd9a53830bb89b6a282cd597fb803d44e7b3fd549b9230563b"
 }

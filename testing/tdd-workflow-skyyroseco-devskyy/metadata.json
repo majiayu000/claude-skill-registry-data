@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Drives RED \u2192 GREEN \u2192 IMPROVE in this repo's actual runners \u2014 pytest via `rtk proxy`, vitest in frontend/, Playwright for flows \u2014 and requires the RED state to be observed, not assumed. Use when writing a new feature, fixing a bug, or refactoring anything under the Python API, frontend/, or the theme's JS. Do NOT use for retrofitting tests onto code that already shipped green (that is a coverage-gap task), and do NOT use it to decide whether an existing suite's result is trustworthy \u2014 that is verification-loop."
+  "description": "Drives RED → GREEN → IMPROVE in this repo's actual runners — pytest via `rtk proxy`, vitest in frontend/, Playwright for flows — and requires the RED state to be observed, not assumed. Use when writing a new feature, fixing a bug, or refactoring anything under the Python API, frontend/, or the theme's JS. Do NOT use for retrofitting tests onto code that already shipped green (that is a coverage-gap task), and do NOT use it to decide whether an existing suite's result is trustworthy — that is verification-loop.",
+  "content_fingerprint": "56815bc18c577918ba8a5e03d4bac10aae72f57757af47103ba49fe2eef6879d"
 }

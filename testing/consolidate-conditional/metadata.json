@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ub3d9\uc77c\ud55c \uacb0\uacfc\ub97c \ub0b4\ub294 \uc5ec\ub7ec \uc870\uac74\ubb38(OR \ub098\uc5f4\u00b7\uc911\ucca9 AND)\uc744 \ud558\ub098\ub85c \ud1b5\ud569\ud558\uace0 \uc758\ubbf8 \uc788\ub294 boolean \uba54\uc11c\ub4dc\ub85c \ucd94\ucd9c. \"\uc870\uac74\ubb38 \ud569\uccd0\", \"\uac19\uc740 \uacb0\uacfc \ubc18\ud658\ud558\ub294 if \uc815\ub9ac\", \"\uc911\ucca9 if \ud3c9\ud0c4\ud654\", \"/consolidate-conditional\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \uc5ec\ub7ec \uba54\uc11c\ub4dc\uc5d0 \ud769\uc5b4\uc9c4 \ub3d9\uc77c \uc870\uac74\uc744 \ud638\ucd9c\uc790 \ucabd\uc73c\ub85c \uc62c\ub9ac\ub294 \uac83\uc740 /lift-up-conditional, \ubcf5\uc7a1\ud55c \uc870\uac74\uc2dd\u00b7\ubd84\uae30\ub97c \uba54\uc11c\ub4dc\ub85c \ucabc\uac1c\ub294 \uac83\uc740 /decompose-conditional\uc774 \uc801\ud569. /consolidate-conditional [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "동일한 결과를 내는 여러 조건문(OR 나열·중첩 AND)을 하나로 통합하고 의미 있는 boolean 메서드로 추출. \"조건문 합쳐\", \"같은 결과 반환하는 if 정리\", \"중첩 if 평탄화\", \"/consolidate-conditional\" 요청 시 사용. 단, 여러 메서드에 흩어진 동일 조건을 호출자 쪽으로 올리는 것은 /lift-up-conditional, 복잡한 조건식·분기를 메서드로 쪼개는 것은 /decompose-conditional이 적합. /consolidate-conditional [commit-ref]로 호출.",
+  "content_fingerprint": "f7b859f944114dbe6dbc672e6a40d2427bb6e1ad0e995a901dbd5b0c5164e1a9"
 }

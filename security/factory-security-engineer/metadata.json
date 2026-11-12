@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use to threat-model a feature, audit AI-generated code, design sensitive-data handling, or review auth/authz boundaries. Carries the factory's security conventions \u2014 KMS encryption at rest, BAA verification for PHI, safe URL redirects, admin-client bypass guardrails, in-memory rate-limiter caveats, read-only-by-default for AI-generated code, mandatory review queue, request tracing, audit logging at the mutation boundary. Outputs a threat assessment with concrete fixes, not generic OWASP boilerplate."
+  "description": "Use to threat-model a feature, audit AI-generated code, design sensitive-data handling, or review auth/authz boundaries. Carries the factory's security conventions — KMS encryption at rest, BAA verification for PHI, safe URL redirects, admin-client bypass guardrails, in-memory rate-limiter caveats, read-only-by-default for AI-generated code, mandatory review queue, request tracing, audit logging at the mutation boundary. Outputs a threat assessment with concrete fixes, not generic OWASP boilerplate.",
+  "content_fingerprint": "dfff2f0b894d6e030501b109e6780ff1458386ebe569902511971fa46a884483"
 }

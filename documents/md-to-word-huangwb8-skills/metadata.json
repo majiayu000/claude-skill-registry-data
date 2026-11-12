@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5c06\u4e00\u4e2a\u6216\u591a\u4e2a Markdown \u6587\u6863\u8f6c\u6362\u4e3a\u683c\u5f0f\u4f18\u7f8e\u7684 Word\uff08.docx\uff09\uff0c\u57fa\u4e8e Pandoc + \u5185\u7f6e reference.docx \u6a21\u677f\uff08\u53ef\u9009\u81ea\u5b9a\u4e49\u6a21\u677f\uff09\uff0c\u5e76\u786e\u4fdd\u4e0d\u4fee\u6539\u4efb\u4f55\u539f\u59cb Markdown \u6587\u4ef6\u3002\u5185\u7f6e\u6a21\u677f\u5df2\u4fee\u590d\u547d\u540d\u7a7a\u95f4\u517c\u5bb9\u6027\u95ee\u9898\uff0c\u652f\u6301 RGBA \u56fe\u7247\u81ea\u52a8\u8f6c\u6362\u3002"
+  "description": "将一个或多个 Markdown 文档转换为格式优美的 Word（.docx），基于 Pandoc + 内置 reference.docx 模板（可选自定义模板），并确保不修改任何原始 Markdown 文件。内置模板已修复命名空间兼容性问题，支持 RGBA 图片自动转换。",
+  "content_fingerprint": "579de6f4ebbd36dbe1db1a2cc553f23e53dc14803e037df416a94491bbfc523d"
 }

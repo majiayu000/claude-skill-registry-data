@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Resolve the minimum set of knowledge-graph nodes needed for a task before reading any source file. Use at the start of every non-trivial task once a project has a knowledge graph \u2014 when changing a subsystem, tracing a bug, planning work, answering a question about how something works, or onboarding. This is the mechanism that keeps a large or multi-repo codebase inside a context window: it decides what to load, what to deliberately skip, and forces the agent to declare both before working. Pairs with the knowledge-graph skill, which builds and lints the graph this one traverses."
+  "description": "Resolve the minimum set of knowledge-graph nodes needed for a task before reading any source file. Use at the start of every non-trivial task once a project has a knowledge graph — when changing a subsystem, tracing a bug, planning work, answering a question about how something works, or onboarding. This is the mechanism that keeps a large or multi-repo codebase inside a context window: it decides what to load, what to deliberately skip, and forces the agent to declare both before working. Pairs with the knowledge-graph skill, which builds and lints the graph this one traverses.",
+  "content_fingerprint": "efc66ae75ceaaf707b14d38f8b8dae2887193a3a02d1d73ef5de767b868a3c3c"
 }

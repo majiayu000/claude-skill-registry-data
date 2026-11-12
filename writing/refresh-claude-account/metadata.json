@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Repair a dead or expired Claude Code account by restoring a full OAuth login \u2014 re-seed it from a machine that still has a live copy, or re-authenticate with `claude auth login` \u2014 then capture it with `cswap add` and export `claude-accounts.json` for the `sync-claude-accounts` skill to distribute. Use when `cswap list` says \"re-login needed \u2014 refresh token dead\", when `cux status` shows an account as EXPRD, when `cswap auto --dry-run` reports null headroom, or when `fleet-refresh-credentials` aborts because the refresh authority holds a dead account."
+  "description": "Repair a dead or expired Claude Code account by restoring a full OAuth login — re-seed it from a machine that still has a live copy, or re-authenticate with `claude auth login` — then capture it with `cswap add` and export `claude-accounts.json` for the `sync-claude-accounts` skill to distribute. Use when `cswap list` says \"re-login needed — refresh token dead\", when `cux status` shows an account as EXPRD, when `cswap auto --dry-run` reports null headroom, or when `fleet-refresh-credentials` aborts because the refresh authority holds a dead account.",
+  "content_fingerprint": "85afc8395a0ebfd799f28aebd492c0dfc1514b32922d9dd89ee797dca0b48723"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5bf9\u5df2\u786e\u8ba4\u7684 Bug \u505a\u6839\u56e0\u5b9a\u4f4d\u3001\u5f71\u54cd\u5206\u6790\u3001\u56de\u5f52\u5efa\u8bae\u65f6\u4f7f\u7528\u2014\u2014\u590d\u73b0 \u2192 \u8bfb\u4ee3\u7801\u5b9a\u4f4d\u6839\u56e0 \u2192 \u5f71\u54cd\u4e94\u9762\u5206\u6790 \u2192 \u56de\u5f52\u5efa\u8bae\uff0c\u6761\u76ee\uff08\u6839\u56e0/\u5f71\u54cd/Severity \u4f9d\u636e/\u4fee\u590d\u5efa\u8bae/\u56de\u5f52\u5efa\u8bae\u4e94\u4e2a\u6269\u5c55\u5b57\u6bb5\uff09\u843d\u76d8\u4e3a Bug \u6761\u76ee\u3002\u4e0d\u7528\u4e8e\uff1a\u4ec5\u6536\u96c6 Bug \u8bc1\u636e\uff08automated-e2e-testing / api-testing\uff09\u3001\u7591\u4f3c\u672a\u5b9a\u6027\u7f3a\u9677\uff08test-case-writing \u7684 Cx \u8bb0\u5f55\uff09\u3002"
+  "description": "对已确认的 Bug 做根因定位、影响分析、回归建议时使用——复现 → 读代码定位根因 → 影响五面分析 → 回归建议，条目（根因/影响/Severity 依据/修复建议/回归建议五个扩展字段）落盘为 Bug 条目。不用于：仅收集 Bug 证据（automated-e2e-testing / api-testing）、疑似未定性缺陷（test-case-writing 的 Cx 记录）。",
+  "content_fingerprint": "e731e66b7ec601780cf7ab15c9b6639eb09665cd4462dba150b8f81d33fccb4f"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn a KOL roster + subreddit brand-fit analysis into a deployable creator network. Splits creators into KOL (authority) and KOC (grassroots) layers, matches each to a main + secondary subreddits by real gear/shooting-type \u2229 community fit, and emits an account\u00d7subreddit deployment_matrix (with a \u22643-per-sub ceiling + no-cross-interaction rule) plus per-creator persona_cards. Route A disclosed-compliance baked into every card (FTC disclosure required on any material connection). Consumes reddit-kol-finder's kol_roster.json natively. READ-ONLY, deterministic, no LLM key needed."
+  "description": "Turn a KOL roster + subreddit brand-fit analysis into a deployable creator network. Splits creators into KOL (authority) and KOC (grassroots) layers, matches each to a main + secondary subreddits by real gear/shooting-type ∩ community fit, and emits an account×subreddit deployment_matrix (with a ≤3-per-sub ceiling + no-cross-interaction rule) plus per-creator persona_cards. Route A disclosed-compliance baked into every card (FTC disclosure required on any material connection). Consumes reddit-kol-finder's kol_roster.json natively. READ-ONLY, deterministic, no LLM key needed.",
+  "content_fingerprint": "ff5dc489c5a9607ee7e8d2fbad82163ac94e102b56b8808fbc81c3669482f310"
 }

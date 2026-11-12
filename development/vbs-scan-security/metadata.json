@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when scanning code for security vulnerabilities. Use when user says \"scan security\", \"ki\u1ec3m tra b\u1ea3o m\u1eadt\", \"security audit\", \"review security\", or invokes `/vbs-scan-security`. Auto-delegates to sub-agents for large scans (>20 main-language files OR >30 total OR >14 days). Outputs bilingual reports (vi/en). Optional `--auto-fix` (agentic patch + verify loop) and `--sca` (live CVE lookup via OSV.dev)."
+  "description": "Use when scanning code for security vulnerabilities. Use when user says \"scan security\", \"kiểm tra bảo mật\", \"security audit\", \"review security\", or invokes `/vbs-scan-security`. Auto-delegates to sub-agents for large scans (>20 main-language files OR >30 total OR >14 days). Outputs bilingual reports (vi/en). Optional `--auto-fix` (agentic patch + verify loop) and `--sca` (live CVE lookup via OSV.dev).",
+  "content_fingerprint": "a48ab6f2e83df1d502c5453394486a14b9059bcccd5676dde629044ce6773b6a"
 }

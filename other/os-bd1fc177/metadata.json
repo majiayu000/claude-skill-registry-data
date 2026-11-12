@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5171\u4eab\u5185\u5b58 / IPC-\u5171\u4eab\u5185\u5b58 / OS IPC \u5171 / write / read / detach / attach \u6302 / \uff08\u591a\u8fdb\u7a0b\u6620\u5c04\u540c\u4e00\u7269\u7406\u9875\u3002\u7528\u6237\u63d0\u5230\u8fd9\u4e9b\u8bcd\u65f6\u4f7f\u7528\u672c\u6280\u80fd\u3002 \u573a\u666f\uff1a\u5bf9\u7167\uff1aOS IPC \u5171\u4eab\u5185\u5b58\u2014\u2014attach/write/read/detach\uff08\u7269\u7406\u9875\u5171\u4eab\uff0c\u5f15\u7528\u8ba1\u6570\uff09\u3002 \u3010\u4e0d\u9002\u7528\u3011Not for \u4ee5\u4e0b\u573a\u666f\uff1aop \u975e {attach, detach, read, write} \u65f6"
+  "description": "共享内存 / IPC-共享内存 / OS IPC 共 / write / read / detach / attach 挂 / （多进程映射同一物理页。用户提到这些词时使用本技能。 场景：对照：OS IPC 共享内存——attach/write/read/detach（物理页共享，引用计数）。 【不适用】Not for 以下场景：op 非 {attach, detach, read, write} 时",
+  "content_fingerprint": "c046c3f03921eb45d60444f03796e9c9b47c8d2aa68087eb65192decfc45f424"
 }

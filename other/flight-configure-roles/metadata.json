@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728\u7528\u6237\u7ea7\u6216\u9879\u76ee\u7ea7\u68c0\u67e5\u3001\u9a8c\u8bc1\u3001\u663e\u5f0f\u8bbe\u7f6e\u6216\u663e\u5f0f\u91cd\u7f6e Codex Flight Control \u7684\u89d2\u8272\u6a21\u578b\u4e0e reasoning effort \u7b56\u7565\u3002\u4ec5\u5f53\u7528\u6237\u76f4\u63a5\u8c03\u7528 $flight-configure-roles \u65f6\u4f7f\u7528\uff1b\u7981\u6b62\u9690\u5f0f\u89e6\u53d1\uff0c\u4e5f\u7981\u6b62\u5728\u666e\u901a\u98de\u63a7\u5f00\u53d1\u6d41\u7a0b\u4e2d\u987a\u4fbf\u4fee\u6539\u914d\u7f6e\u3002"
+  "description": "在用户级或项目级检查、验证、显式设置或显式重置 Codex Flight Control 的角色模型与 reasoning effort 策略。仅当用户直接调用 $flight-configure-roles 时使用；禁止隐式触发，也禁止在普通飞控开发流程中顺便修改配置。",
+  "content_fingerprint": "36325c6e11e10ca7564fa9b2f1bbe4a26058bf8c6837d5c11b8ef5c470e31173"
 }

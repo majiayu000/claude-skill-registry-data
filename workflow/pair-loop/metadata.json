@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Unattended delivery loop: per iteration, selects eligible cards via pair-next, runs a dependency + mutex analysis, composes implement-batch for a mutex-safe parallel batch (or drives one card sequentially), hands the autonomy policy (until / prepare / merge) to the batch \u2014 which merges a review-approved card only when the merge gate allows it \u2014 and evaluates the stop predicate. In an environment with a fan-out runner it delegates the whole unattended run to the pair-loop workflow; elsewhere it drives exactly one eligible card and reports a continue-token."
+  "description": "Unattended delivery loop: per iteration, selects eligible cards via pair-next, runs a dependency + mutex analysis, composes implement-batch for a mutex-safe parallel batch (or drives one card sequentially), hands the autonomy policy (until / prepare / merge) to the batch — which merges a review-approved card only when the merge gate allows it — and evaluates the stop predicate. In an environment with a fan-out runner it delegates the whole unattended run to the pair-loop workflow; elsewhere it drives exactly one eligible card and reports a continue-token.",
+  "content_fingerprint": "3389629600aadc4757c59f181641a219c45f7cface4a9372746a5d9dfcd308dc"
 }

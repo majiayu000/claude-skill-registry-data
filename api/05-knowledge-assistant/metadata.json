@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when creating, syncing, or managing a Databricks Agent Bricks Knowledge Assistant (KA) as a document Q&A source for an agent. Covers source mode selection (UC Files vs Vector Search index), Python SDK lifecycle (create/update/sync/delete), REST API equivalents, readiness polling, and emitting the ka_endpoint_name handoff that downstream agent skills wire as a knowledge_assistant tool. Track-neutral foundation skill. Optional but recommended whenever document Q&A is part of the agent."
+  "description": "Use when creating, syncing, or managing a Databricks Agent Bricks Knowledge Assistant (KA) as a document Q&A source for an agent. Covers source mode selection (UC Files vs Vector Search index), Python SDK lifecycle (create/update/sync/delete), REST API equivalents, readiness polling, and emitting the ka_endpoint_name handoff that downstream agent skills wire as a knowledge_assistant tool. Track-neutral foundation skill. Optional but recommended whenever document Q&A is part of the agent.",
+  "content_fingerprint": "fa9d1a36f35edb5f162690fa5cc5272d12a2bbe9c669bf7b68372f4d07a36468"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "DAO \u5c42\u901a\u7528 SQL \u65b9\u8a00\u517c\u5bb9\u6027\u68c0\u67e5 + \u7cfb\u7edf\u6027\u4fee\u590d\u5de5\u4f5c\u6d41\u3002\u652f\u6301 MyBatis/JPA/MyBatis-Plus/SQLAlchemy \u56db\u79cd\u6301\u4e45\u5c42\u6846\u67b6\uff0c\u626b\u63cf\u6e90\u7801\u8bc6\u522b Oracle/PostgreSQL/MySQL \u65b9\u8a00\u6df7\u7528\u98ce\u9669\uff0c\u81ea\u52a8\u4fee\u590d 80% \u5e38\u89c1\u9677\u9631\uff0c\u5269\u4f59 20% \u7531 Agent \u8f85\u52a9\u4eba\u5de5\u786e\u8ba4\u3002\u4e03\u9636\u6bb5\u6d41\u7a0b + adapter \u6a21\u5f0f\u6846\u67b6\u9002\u914d\u3002\u89e6\u53d1\u8bcd\uff1aSQL \u517c\u5bb9\u6027\u3001\u65b9\u8a00\u6df7\u7528\u3001Oracle \u8f6c PG\u3001PG \u8f6c Oracle\u3001MyBatis \u8fc1\u79fb\u3001JPA \u65b9\u8a00\u3001Hibernate SQL\u3001SQLAlchemy raw SQL\u3001\u6570\u636e\u5e93\u56fd\u4ea7\u5316\u6539\u9020\u3001DAO \u5c42 SQL \u68c0\u67e5\u3002"
+  "description": "DAO 层通用 SQL 方言兼容性检查 + 系统性修复工作流。支持 MyBatis/JPA/MyBatis-Plus/SQLAlchemy 四种持久层框架，扫描源码识别 Oracle/PostgreSQL/MySQL 方言混用风险，自动修复 80% 常见陷阱，剩余 20% 由 Agent 辅助人工确认。七阶段流程 + adapter 模式框架适配。触发词：SQL 兼容性、方言混用、Oracle 转 PG、PG 转 Oracle、MyBatis 迁移、JPA 方言、Hibernate SQL、SQLAlchemy raw SQL、数据库国产化改造、DAO 层 SQL 检查。",
+  "content_fingerprint": "ee96efad05b3afae1833f0be343812c78f096125be0de4c4144ee4ca68cd1607"
 }

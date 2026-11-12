@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage skill-concierge's always-ON allowlist \u2014 the skills kept fully described in every turn instead of name-only. Use this skill when the user wants to view, add, or remove always-on skills, asks \"which skills are always on\", \"add X to always-on\", \"remove X from the keep-on list\", \"manage the always-on skills\", or wants to curate what stays injected vs retrieved on demand. Runs scripts/keep-on.py (list / add / remove), which edits the always-on allowlist under the canonical durable home (~/.claude/skill-concierge/keep-on.json) and re-applies the settings.json overrides."
+  "description": "Manage skill-concierge's always-ON allowlist — the skills kept fully described in every turn instead of name-only. Use this skill when the user wants to view, add, or remove always-on skills, asks \"which skills are always on\", \"add X to always-on\", \"remove X from the keep-on list\", \"manage the always-on skills\", or wants to curate what stays injected vs retrieved on demand. Runs scripts/keep-on.py (list / add / remove), which edits the always-on allowlist under the canonical durable home (~/.claude/skill-concierge/keep-on.json) and re-applies the settings.json overrides.",
+  "content_fingerprint": "ed965b483dea4f03762f940ae14975f4d202cfcecab0cf2eeacd0d9ed861147b"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dadbodgeoff/drift/blob/main/skills/retry-fallback/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "9e57280e1e747cf49ad7aecd93f5e1efc342ef0401963fc44302b708c2000fe8",
+  "description": "Handle transient failures with exponential backoff and graceful fallbacks. Retry on network blips, fall back to cached data when services fail."
 }

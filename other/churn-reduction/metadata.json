@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Designs the systemic churn machinery: the cancel flow and its offramps, dynamic save offers ranked by cost against the margin they protect, churn risk scoring, and dunning sequences for failed payments. Splits the churn number into voluntary and involuntary before designing anything, because the two need opposite fixes. Use when reducing churn systemically rather than winning back one gone-dark account. Boundary: `opportunity-scoring` reads risk on one named account, and `repeat-purchase-rate` addresses a missing second order rather than a cancellation."
+  "description": "Designs the systemic churn machinery: the cancel flow and its offramps, dynamic save offers ranked by cost against the margin they protect, churn risk scoring, and dunning sequences for failed payments. Splits the churn number into voluntary and involuntary before designing anything, because the two need opposite fixes. Use when reducing churn systemically rather than winning back one gone-dark account. Boundary: `opportunity-scoring` reads risk on one named account, and `repeat-purchase-rate` addresses a missing second order rather than a cancellation.",
+  "content_fingerprint": "2134577043243163d258ad3738c407b908c55afe331efac91513b0745f90eafa"
 }

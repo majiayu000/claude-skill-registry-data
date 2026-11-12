@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when diagnosing Apex behavior with debug logs, choosing log levels, or replacing `System.debug` habits with structured production logging and async job monitoring. Triggers: 'debug log', 'System.debug', 'logging framework', 'AsyncApexJob monitoring', 'production logs', 'log truncated', 'publish immediately', 'correlation id', 'Limits snapshot', 'log lost on rollback', 'Test.getEventBus().deliver()'. NOT for trace flag setup, reading a log, or the Developer Console \u2014 use apex/debug-logs-and-developer-console. NOT for building a custom Log__c framework \u2014 use apex/custom-logging-and-monitoring."
+  "description": "Use when diagnosing Apex behavior with debug logs, choosing log levels, or replacing `System.debug` habits with structured production logging and async job monitoring. Triggers: 'debug log', 'System.debug', 'logging framework', 'AsyncApexJob monitoring', 'production logs', 'log truncated', 'publish immediately', 'correlation id', 'Limits snapshot', 'log lost on rollback', 'Test.getEventBus().deliver()'. NOT for trace flag setup, reading a log, or the Developer Console — use apex/debug-logs-and-developer-console. NOT for building a custom Log__c framework — use apex/custom-logging-and-monitoring.",
+  "content_fingerprint": "9d6671ebcd8b5a97c5538fa9c726ac1d89d310bcbd37f937331b7a2ef364836f"
 }

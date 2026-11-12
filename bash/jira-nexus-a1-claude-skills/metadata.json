@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read a Jira work item and its recent comments from the terminal via the Atlassian CLI (acli). The key is optional \u2014 with no arguments, proposes one from the session and asks you to confirm before reading. Can also add a comment, transition a status, assign/unassign, or create a new work item \u2014 each requires an explicit confirmation and is independently re-verified before success is reported; off by default per project (jira.write.enabled). Requires acli installed and authenticated."
+  "description": "Read a Jira work item and its recent comments from the terminal via the Atlassian CLI (acli). The key is optional — with no arguments, proposes one from the session and asks you to confirm before reading. Can also add a comment, transition a status, assign/unassign, or create a new work item — each requires an explicit confirmation and is independently re-verified before success is reported; off by default per project (jira.write.enabled). Requires acli installed and authenticated.",
+  "content_fingerprint": "629cfaff44800b0f4fb4b2981d4a155426ed3949fb6185572759563b5a0eed55"
 }

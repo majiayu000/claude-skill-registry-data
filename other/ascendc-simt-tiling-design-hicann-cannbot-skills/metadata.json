@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "AscendC SIMT \u7b97\u5b50\u5207\u5206\u8bbe\u8ba1\u6307\u5357\u3002\u63d0\u4f9b SIMT \u7b97\u5b50\u72ec\u6709\u7684\u6838\u6570\u5207\u5206\u3001\u7ebf\u7a0b\u6570\u8bbe\u7f6e\u3001DCache/UB\u7a7a\u95f4\u5206\u914d\u3001\u6a21\u677f\u8def\u7531\u4e0e tilingKey \u5206\u53d1\u3001workspace \u5951\u7ea6\u65b9\u6cd5\u3002SIMT\u5207\u5206\u4e0eSIMD\u5b8c\u5168\u4e0d\u540c\uff08\u7ebf\u7a0b\u7ea7\u5e76\u884c vs \u5411\u91cf\u7ea7UB\u5207\u5206\uff09\uff0c\u672cskill\u805a\u7126SIMT\u5207\u5206\u8303\u5f0f\u3002\u89e6\u53d1\uff1a\u8bbe\u8ba1SIMT\u7b97\u5b50Tiling\u7b56\u7565\u3001\u8bbe\u7f6eSIMT\u7ebf\u7a0b\u6570\u3001\u89c4\u5212SIMT\u6838\u6570\u5207\u5206\u3001\u9009\u62e9SIMT/SIMD\u6a21\u677f\u3001\u89c4\u5212SIMT workspace\u3001blockDim\u5c01\u9876\u3001DCache \u53d6\u503c\u8303\u56f4\u3001SetScheduleMode\u65f6\u3002"
+  "description": "AscendC SIMT 算子切分设计指南。提供 SIMT 算子独有的核数切分、线程数设置、DCache/UB空间分配、模板路由与 tilingKey 分发、workspace 契约方法。SIMT切分与SIMD完全不同（线程级并行 vs 向量级UB切分），本skill聚焦SIMT切分范式。触发：设计SIMT算子Tiling策略、设置SIMT线程数、规划SIMT核数切分、选择SIMT/SIMD模板、规划SIMT workspace、blockDim封顶、DCache 取值范围、SetScheduleMode时。",
+  "content_fingerprint": "77eea406121ffed079079551f46fbeeca41f16d80f4fadd79cbb526308edc793"
 }

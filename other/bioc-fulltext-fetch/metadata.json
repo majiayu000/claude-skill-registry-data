@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7ed9\u5b9a PMID/PMCID \u53d6\u7ed3\u6784\u5316\u5168\u6587\uff08NLM BioC XML/JSON\uff09\u3002\u5c01\u88c5 BioC PubMed\uff08\u6807\u9898+\u6458\u8981\uff09\u548c BioC PMC OA\uff08\u5f00\u653e\u83b7\u53d6\u5168\u6587\uff09\u7aef\u70b9\uff0c\u8f93\u51fa\u6309\u7ae0\u8282\u5207\u5206\u7684\u6bb5\u843d\u3001\u8868\u683c\u4e0a\u4e0b\u6587\u3001RAG \u53cb\u597d chunk\uff0c\u9002\u5408\u5927\u6279\u91cf\u5165\u5411\u91cf\u5e93\u3002Fetches structured fulltext from NLM BioC API for PMID/PMCID, outputs section-segmented paragraphs and RAG-ready chunks. \u89e6\u53d1\u8bcd\uff1a\u5168\u6587\u62bd\u53d6 / BioC / RAG \u5165\u5e93 / \u6587\u732e\u5168\u6587 / PMC \u5f00\u653e\u83b7\u53d6 / structured fulltext / \u6bb5\u843d\u62bd\u53d6 / \u8868\u683c\u62bd\u53d6 / chunking / fulltext to vector store / paragraph extraction."
+  "description": "给定 PMID/PMCID 取结构化全文（NLM BioC XML/JSON）。封装 BioC PubMed（标题+摘要）和 BioC PMC OA（开放获取全文）端点，输出按章节切分的段落、表格上下文、RAG 友好 chunk，适合大批量入向量库。Fetches structured fulltext from NLM BioC API for PMID/PMCID, outputs section-segmented paragraphs and RAG-ready chunks. 触发词：全文抽取 / BioC / RAG 入库 / 文献全文 / PMC 开放获取 / structured fulltext / 段落抽取 / 表格抽取 / chunking / fulltext to vector store / paragraph extraction.",
+  "content_fingerprint": "3ec211d0926d4255d249834cecec846e8e6f8434c487e7707047584f4091260f"
 }

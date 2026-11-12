@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when using PostgreSQL for application data or personal tooling \u2014 running a user-level instance without root (initdb and pg_ctl on a private port, listening on localhost only), schema migrations, constraints and indexes, EXPLAIN ANALYZE, safe upserts, backups with pg_dump, and connecting from scripts. Also use when a query is slow, a tool must start its own database on demand, or data integrity relies on application code alone."
+  "description": "Use when using PostgreSQL for application data or personal tooling — running a user-level instance without root (initdb and pg_ctl on a private port, listening on localhost only), schema migrations, constraints and indexes, EXPLAIN ANALYZE, safe upserts, backups with pg_dump, and connecting from scripts. Also use when a query is slow, a tool must start its own database on demand, or data integrity relies on application code alone.",
+  "content_fingerprint": "e6d96824961e0ce8b39fda426537b1e67c7ebb31a2344c9d5816188945565c70"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/pfsense-dnsmasq-interface-binding/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "b75df2f92100b0b7dc7029f9e6d5d8d7c4fc2c7730bb5f19740390273537cb5e",
+  "description": "Restrict pfSense dnsmasq (DNS Forwarder) to specific interfaces to free port 53 on\nother interfaces for port forwarding. Use when: (1) pfSense blocks port 53 NAT port\nforward because dnsmasq is listen"
 }

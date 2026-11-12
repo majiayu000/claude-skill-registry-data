@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "ALWAYS use this skill when the user says \"check\", \"/check\", \"check my code\", \"run the\nchecks\", \"lint and fix\", \"typecheck\", or \"make it green locally before I commit\".\nDetects the repo's own toolchain\n(package.json scripts, Turbo, Makefile, pyproject.toml, Cargo.toml, go.mod) and runs it \u2014\nnever hardcodes a stack. This is the fast LOCAL loop \u2014 it fixes mechanical failures (types,\nlint, format, build, test), it does not hunt correctness bugs (use `code-review`) and does\nnot exercise runtime behavior (use `verify`)."
+  "description": "ALWAYS use this skill when the user says \"check\", \"/check\", \"check my code\", \"run the\nchecks\", \"lint and fix\", \"typecheck\", or \"make it green locally before I commit\".\nDetects the repo's own toolchain\n(package.json scripts, Turbo, Makefile, pyproject.toml, Cargo.toml, go.mod) and runs it —\nnever hardcodes a stack. This is the fast LOCAL loop — it fixes mechanical failures (types,\nlint, format, build, test), it does not hunt correctness bugs (use `code-review`) and does\nnot exercise runtime behavior (use `verify`).",
+  "content_fingerprint": "573e3cf708071d5f19a746b1187b8873352d6ad1e8a757ba5f28ab00b1ce8707"
 }

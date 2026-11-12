@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/main/.claude/skills/traefik-http3-quic/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "bb7525bd9cc487fe88a09909ebc0d885188e888ac31951255c998d5f7c412134",
+  "description": "Enable HTTP/3 (QUIC) on a Traefik ingress controller in Kubernetes, managed via\nTerraform Helm charts. Use when: (1) you want to enable HTTP/3 on Traefik,\n(2) Alt-Svc header shows wrong port (e.g., 84"
 }

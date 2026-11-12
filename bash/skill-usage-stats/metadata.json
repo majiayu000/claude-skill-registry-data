@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u626b\u63cf\u672c\u673a Claude Code \u548c Codex \u7684\u4f1a\u8bdd\u65e5\u5fd7\uff0c\u7edf\u8ba1\u54ea\u4e9b skill \u6709\u672c\u5730\u8c03\u7528\u8bc1\u636e\u3001\u54ea\u4e9b\u5728\u672c\u673a\u65e0\u8bc1\u636e\uff08\u5df2\u5b89\u88c5\u4f46\u65e5\u5fd7\u65e0\u75d5\u8ff9\uff0c\u4e0d\u7b49\u4e8e\u4ece\u672a\u4f7f\u7528\uff09\u3001\u8c03\u7528\u6392\u884c\u3001\u6708\u5ea6\u8d8b\u52bf\u3001\u9879\u76ee\u5206\u5e03\uff0c\u8f93\u51fa\u7ec8\u7aef\u8868\u683c\u548c Markdown \u62a5\u544a\uff0c\u53ef\u5bfc\u51fa CSV/JSON\u3002Use when the user asks to \u7edf\u8ba1 skill \u4f7f\u7528, \u770b skill usage, find zombie skills, \u50f5\u5c38 skill, which skills are installed but never used, skill \u8c03\u7528\u6392\u884c, skill usage report, skill \u4f7f\u7528\u5065\u5eb7\u5ea6, audit personal skill arsenal, or manage which skills to keep or remove."
+  "description": "扫描本机 Claude Code 和 Codex 的会话日志，统计哪些 skill 有本地调用证据、哪些在本机无证据（已安装但日志无痕迹，不等于从未使用）、调用排行、月度趋势、项目分布，输出终端表格和 Markdown 报告，可导出 CSV/JSON。Use when the user asks to 统计 skill 使用, 看 skill usage, find zombie skills, 僵尸 skill, which skills are installed but never used, skill 调用排行, skill usage report, skill 使用健康度, audit personal skill arsenal, or manage which skills to keep or remove.",
+  "content_fingerprint": "b50bd54c2d93a31c4dc702c0534c3a476d6b8f0ff72a4214e8193c57d27223c2"
 }

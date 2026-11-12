@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u98de\u4e66 / Lark \u901a\u8baf\u5f55,\u7528\u4e8e\u6309\u59d3\u540d / \u90ae\u7bb1\u628a\u5458\u5de5\u89e3\u6790\u6210 open_id,\u4ee5\u53ca\u6309 open_id \u53cd\u67e5\u5458\u5de5\u7684\u59d3\u540d / \u90e8\u95e8 / \u90ae\u7bb1 / \u8054\u7cfb\u65b9\u5f0f\u3002\u5f53\u7528\u6237\u8bf4\u51fa\u67d0\u4eba\u59d3\u540d\u800c\u4e0b\u4e00\u6b65\u9700\u8981\u53d1\u6d88\u606f / \u52a0\u7fa4 / \u6392\u65e5\u7a0b\u65f6,\u5148\u7528\u672c skill \u628a\u59d3\u540d\u6362\u6210 ID;\u5f53\u8f93\u51fa\u91cc\u51fa\u73b0 open_id \u9700\u8981\u5c55\u793a\u6210\u59d3\u540d\u7ed9\u7528\u6237\u770b,\u6216\u7528\u6237\u76f4\u63a5\u8be2\u95ee\u67d0\u4eba\u7684\u90e8\u95e8 / \u90ae\u7bb1 / \u8054\u7cfb\u65b9\u5f0f\u65f6,\u7528\u672c skill \u67e5\u3002\u4e0d\u8d1f\u8d23\u90e8\u95e8\u6811\u904d\u5386\u3001\u6309\u90e8\u95e8\u5217\u5458\u5de5\u3001\u7ec4\u7ec7\u67b6\u6784\u56fe,\u8fd9\u7c7b\u9700\u6c42\u8d70\u539f\u751f OpenAPI\u3002"
+  "description": "飞书 / Lark 通讯录,用于按姓名 / 邮箱把员工解析成 open_id,以及按 open_id 反查员工的姓名 / 部门 / 邮箱 / 联系方式。当用户说出某人姓名而下一步需要发消息 / 加群 / 排日程时,先用本 skill 把姓名换成 ID;当输出里出现 open_id 需要展示成姓名给用户看,或用户直接询问某人的部门 / 邮箱 / 联系方式时,用本 skill 查。不负责部门树遍历、按部门列员工、组织架构图,这类需求走原生 OpenAPI。",
+  "content_fingerprint": "588b1f6eedb88744c74f89fb804d7be7986d5b0db59d1c08b4a018e83bd9f15d"
 }

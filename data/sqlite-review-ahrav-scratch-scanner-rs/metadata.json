@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahrav/scratch-scanner-rs/blob/main/.claude/skills/sqlite-review/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "51e59c997151644a7c86bef5b5bde0731d79fa9ece35eb7db0ee27b769bcb09d",
+  "description": "Review and tune SQLite schemas, queries, indexes, and pragmas. Connects to the actual database to gather concrete evidence (EXPLAIN QUERY PLAN, page counts, table stats) before recommending changes."
 }

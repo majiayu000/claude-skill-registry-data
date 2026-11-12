@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u77e5\u4e4e\uff08Zhihu\uff09\u516c\u5f00\u5185\u5bb9\u4e0e\u7528\u6237\u6570\u636e\u5206\u6790 skill\uff0c\u901a\u8fc7 MaxHub API \u67e5\u8be2\u95ee\u9898\u3001\u56de\u7b54\u3001\u6587\u7ae0\u3001\u4e13\u680f\u3001\u8bc4\u8bba\u3001\u70ed\u699c\u3001\u641c\u7d22\u548c\u7528\u6237\u753b\u50cf\u3002\u9002\u5408\u95ee\u7b54\u5185\u5bb9\u7814\u7a76\u3001KOL \u5206\u6790\u3001\u8206\u60c5\u76d1\u63a7\u3001\u9009\u9898\u6316\u6398\u548c\u8425\u9500\u6d1e\u5bdf\u3002\u9ed8\u8ba4 read-only\uff1bagent \u5e94\u6309 recipes \u9009\u62e9\u95ee\u9898/\u56de\u7b54/\u6587\u7ae0/\u7528\u6237/\u641c\u7d22\u94fe\u8def\uff0c\u6b63\u786e\u4f20\u9012 question_id/answer_id/article_id/url_token \u7b49\u53c2\u6570\uff0c\u907f\u514d\u6df7\u7528 ID\u3002\u6240\u6709\u8bf7\u6c42\u53d1\u9001\u5230 https://www.aconfig.cn\u3002"
+  "description": "知乎（Zhihu）公开内容与用户数据分析 skill，通过 MaxHub API 查询问题、回答、文章、专栏、评论、热榜、搜索和用户画像。适合问答内容研究、KOL 分析、舆情监控、选题挖掘和营销洞察。默认 read-only；agent 应按 recipes 选择问题/回答/文章/用户/搜索链路，正确传递 question_id/answer_id/article_id/url_token 等参数，避免混用 ID。所有请求发送到 https://www.aconfig.cn。",
+  "content_fingerprint": "47e4ca16063a82e0ea02eb687a3ad6622ea63e34a5ddbd839d6a38b3ee2a76c7"
 }

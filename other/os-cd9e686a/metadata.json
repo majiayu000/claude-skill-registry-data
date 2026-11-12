@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e2d\u65ad\u5411\u91cf / \u4e2d\u65ad-\u5411\u91cf\u8868 / OS \u4e2d / \u4e2d\u65ad\u5411\u91cf\u8868 / IRQ \u53f7\u3002\u7528\u6237\u63d0\u5230\u8fd9\u4e9b\u8bcd\u65f6\u4f7f\u7528\u672c\u6280\u80fd\u3002 \u573a\u666f\uff1a\u5bf9\u7167\uff1aOS \u4e2d\u65ad\u2014\u2014\u5411\u91cf\u8868\uff08IRQ\u2192handler \u67e5\u8868\u5206\u6d3e\uff0c\u672a\u6ce8\u518c\u8fd4\u56de None\uff09\u3002 \u3010\u4e0d\u9002\u7528\u3011Not for \u4ee5\u4e0b\u573a\u666f\uff1a\u6761\u4ef6\u4e0d\u6ee1\u8db3\u5373\u4e0d\u9002\u7528\uff08\u8d1f\u8def\u7531\uff1a\u8f93\u5165\u4e0d\u6ee1\u8db3\u751f\u6548\u6761\u4ef6\u65f6\u8fd4\u56de None/\u4e0d\u6267\u884c\uff09"
+  "description": "中断向量 / 中断-向量表 / OS 中 / 中断向量表 / IRQ 号。用户提到这些词时使用本技能。 场景：对照：OS 中断——向量表（IRQ→handler 查表分派，未注册返回 None）。 【不适用】Not for 以下场景：条件不满足即不适用（负路由：输入不满足生效条件时返回 None/不执行）",
+  "content_fingerprint": "1036a9f43b45ab347db2f91b0b751f89caa07871fad4d702f787aaf200905176"
 }

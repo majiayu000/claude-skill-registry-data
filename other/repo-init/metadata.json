@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u751f\u6210\u6216\u589e\u91cf\u66f4\u65b0\u8de8\u5de5\u5177\u901a\u7528\u7684 AGENTS.md\uff08Claude Code / Cursor / Codex \u7b49 60+ \u5de5\u5177\u81ea\u52a8\u8bfb\u53d6\uff09\uff0c \u66f4\u65b0\u65f6\u4fdd\u7559\u7528\u6237\u624b\u5199\u5185\u5bb9\uff0c\u4e0d\u6574\u4efd\u8986\u76d6\uff1b\u517c\u5bb9\u65e2\u6709 CLAUDE.md\u2014\u2014\u8fc1\u79fb\u5176\u5185\u5bb9\u8fdb AGENTS.md \u540e\u964d\u4e3a\u4e00\u884c\u5f15\u7528\uff08@AGENTS.md\uff09\u3002 \u89e6\u53d1\u8bcd\uff1a\u751f\u6210/\u66f4\u65b0 AGENTS.md\u3001init\u3001\u521d\u59cb\u5316\u6216\u4f18\u5316\u9879\u76ee\u4e0a\u4e0b\u6587\u3001\u8fc1\u79fb/\u5408\u5e76 CLAUDE.md\u3001\u8ba9\u5de5\u5177\u5feb\u901f\u4e86\u89e3\u9879\u76ee\u3002 \u4ec5\u7528\u6237\u660e\u793a\u89e6\u53d1\uff0c\u4e0d\u81ea\u52a8\u76d1\u542c\u3002"
+  "description": "生成或增量更新跨工具通用的 AGENTS.md（Claude Code / Cursor / Codex 等 60+ 工具自动读取）， 更新时保留用户手写内容，不整份覆盖；兼容既有 CLAUDE.md——迁移其内容进 AGENTS.md 后降为一行引用（@AGENTS.md）。 触发词：生成/更新 AGENTS.md、init、初始化或优化项目上下文、迁移/合并 CLAUDE.md、让工具快速了解项目。 仅用户明示触发，不自动监听。",
+  "content_fingerprint": "c7da788542394045cd98688fb046c898d7a962731a3a26df305636c7c0d43a4e"
 }

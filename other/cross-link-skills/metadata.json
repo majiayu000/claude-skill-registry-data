@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Repair and verify cross-references between SKILL.md files after a skill is created, renamed, removed, or restructured. Ensures every skill that calls another skill references the correct name, and every skill that is called has accurate \"Called by\" context. Load after universal-skill-creator creates a skill, after improve-skills completes a cycle, after a skill is renamed or removed, or when the user asks to fix cross-references, sync skill links, repair broken skill references, update skill cross-links, check skill references, or \"are cross-links correct\"."
+  "description": "Repair and verify cross-references between SKILL.md files after a skill is created, renamed, removed, or restructured. Ensures every skill that calls another skill references the correct name, and every skill that is called has accurate \"Called by\" context. Load after universal-skill-creator creates a skill, after improve-skills completes a cycle, after a skill is renamed or removed, or when the user asks to fix cross-references, sync skill links, repair broken skill references, update skill cross-links, check skill references, or \"are cross-links correct\".",
+  "content_fingerprint": "8078719ef0f4d29776555781a2ad4832f1a8b5ca5514edf1c7a3814214b31c41"
 }

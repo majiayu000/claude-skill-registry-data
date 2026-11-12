@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5b89\u5168\u5199\u5165 OpenClaw cron jobs.json\u3002\u5728\u5199\u5165\u524d\u5f3a\u5236\u6267\u884c\u683c\u5f0f\u6821\u9a8c\uff0c\u786e\u4fdd payload \u4e0e sessionTarget \u5339\u914d\uff0c\u907f\u514d JSON \u89e3\u6790\u5931\u8d25\u5bfc\u81f4 Gateway \u65e0\u6cd5\u542f\u52a8\u3002"
+  "description": "安全写入 OpenClaw cron jobs.json。在写入前强制执行格式校验，确保 payload 与 sessionTarget 匹配，避免 JSON 解析失败导致 Gateway 无法启动。",
+  "content_fingerprint": "bfb1dfd4b3275e96ecfb2322c59550f36d71290b88a1bf47dc3f3e789c7cd501"
 }

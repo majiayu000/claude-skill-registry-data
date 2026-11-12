@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ingest a large dataset into memory as a skimmed map. Cold-store the raw files under a workspace imports directory, census them into a slice plan, skim each slice into compact map pages that point back at the raw files, ingest the map with the memory ingest CLI, and author a drill-in retrieval skill so the corpus stays searchable on demand. For recording archives, transcript collections, document dumps, and any corpus too large to hold in memory directly."
+  "description": "Ingest a large dataset into memory as a skimmed map. Cold-store the raw files under a workspace imports directory, census them into a slice plan, skim each slice into compact map pages that point back at the raw files, ingest the map with the memory ingest CLI, and author a drill-in retrieval skill so the corpus stays searchable on demand. For recording archives, transcript collections, document dumps, and any corpus too large to hold in memory directly.",
+  "content_fingerprint": "394c95567bde5fe6cb826111b2afb2815b66398e362b96f81fb1de091ee30da2"
 }

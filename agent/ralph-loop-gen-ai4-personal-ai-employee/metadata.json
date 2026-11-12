@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Gen-AI4/Personal-AI-Employee/blob/main/.claude/skills/ralph-loop/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "59b2301b178d2814bc51f31da8d88b41bf806e35f135ab093706fee3d1a79ad7",
+  "description": "Start a Ralph Wiggum autonomous task loop that keeps Claude working until a task\nis complete. Uses the Stop hook pattern to re-inject prompts when Claude tries\nto exit before finishing. Supports two c"
 }

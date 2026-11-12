@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ascend C \u7b97\u5b50\u5f00\u53d1\u73af\u5883\u68c0\u67e5\u6280\u80fd\u3002\u7528\u4e8e\uff1a(1) \u901a\u8fc7 npu-smi \u67e5\u8be2 NPU \u8bbe\u5907\u4fe1\u606f\uff08\u8bbe\u5907\u5217\u8868\u3001\u72b6\u6001\u3001\u8d44\u6e90\u4f7f\u7528\uff09\uff0c(2) \u68c0\u67e5 CANN \u73af\u5883\u914d\u7f6e\uff08CANN Toolkit\u3001Ops\u3001\u81ea\u5b9a\u4e49\u7b97\u5b50\u5305\uff09\uff0c(3) \u9a8c\u8bc1\u5f00\u53d1\u4f9d\u8d56\u662f\u5426\u5b8c\u6574\uff0c(4) \u8fd0\u884c\u65f6\u68c0\u6d4b\u5f53\u524d\u8bbe\u5907 NPU \u67b6\u6784\u3002\u89e6\u53d1\u5173\u952e\u8bcd\uff1a\u73af\u5883\u68c0\u67e5\u3001NPU\u8bbe\u5907\u3001npu-smi\u3001CANN\u5b89\u88c5\u3001\u8bbe\u5907\u67e5\u8be2\u3001\u8d44\u6e90\u76d1\u63a7\u3001\u68c0\u67e5CANN\u73af\u5883\u53d8\u91cf\u3001NPU\u67b6\u6784\u3001npu arch\u3002"
+  "description": "Ascend C 算子开发环境检查技能。用于：(1) 通过 npu-smi 查询 NPU 设备信息（设备列表、状态、资源使用），(2) 检查 CANN 环境配置（CANN Toolkit、Ops、自定义算子包），(3) 验证开发依赖是否完整，(4) 运行时检测当前设备 NPU 架构。触发关键词：环境检查、NPU设备、npu-smi、CANN安装、设备查询、资源监控、检查CANN环境变量、NPU架构、npu arch。",
+  "content_fingerprint": "fa5e1693625c1be9236c913558da9d5f847f0ad35c8aa7f3ca2eadd436812495"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u628a\u8001\u7528\u6237\u7684 .cheat-state.json \u5347\u7ea7\u5230\u5f53\u524d schema_version\u3002\u8bfb migrations/registry.md \u7b97\u8fc1\u79fb\u94fe\uff0c\u6309\u987a\u5e8f\u5e94\u7528\u6bcf\u4e00\u6b65\u8fc1\u79fb\u6587\u4ef6\u3002\u5e42\u7b49\uff1a\u8dd1\u4e24\u6b21\u7ed3\u679c\u4e00\u6837\u3002\u5931\u8d25\u505c\u5728\u4e2d\u95f4\u7248\u672c\u4e0d\u524d\u8fdb\u3002\u89e6\u53d1\u8bcd\uff1a\"\u8fc1\u79fb\"/\"\u5347\u7ea7 state\"/\"migrate\"/\"\u6211\u7684 state \u662f\u8001\u7248\u672c\"/\"schema \u7248\u672c\u4e0d\u5bf9\"\u3002"
+  "description": "把老用户的 .cheat-state.json 升级到当前 schema_version。读 migrations/registry.md 算迁移链，按顺序应用每一步迁移文件。幂等：跑两次结果一样。失败停在中间版本不前进。触发词：\"迁移\"/\"升级 state\"/\"migrate\"/\"我的 state 是老版本\"/\"schema 版本不对\"。",
+  "content_fingerprint": "5d67b9096b544e47852a9ef41977a3c6c171b3e06f95a0712e58b7aed54bb552"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/codingSamss/all-my-ai-needs/blob/master/platforms/claude/skills/midea-recall-diagnose-playwright/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c268a3556ec33c10620196f89eaedf347e22e2e524cf9652a11b33a34eb32bd0",
+  "description": "用于排查 sit/uat/prod 环境下 `/rag-recall/api/search/keyword` 未召回目标 doc/faq 的问题。支持两种输入：1) 完整请求（headers+body；若 `headers.appId` 缺失但 `body.appId` 存在，可回填）；2) requestId+targetId。统一走“回放 -> ELK -> ES -> 代码最小核对”，禁止 "
 }

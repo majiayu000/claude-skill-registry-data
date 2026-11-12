@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Transcribe local audio or video files into timestamped JSON and readable Markdown with resumable processing and source provenance. Use when a user asks to transcribe, extract spoken content, create subtitles or text from local media, or passes a supported video URL for transcription. For URLs, invoke $download-video first and consume its verified artifact manifest. After a non-empty transcript is complete, ask whether the user wants to invoke $ingest-knowledge; never write to a knowledge base without confirmation."
+  "description": "Transcribe local audio or video files into timestamped JSON and readable Markdown with resumable processing and source provenance. Use when a user asks to transcribe, extract spoken content, create subtitles or text from local media, or passes a supported video URL for transcription. For URLs, invoke $download-video first and consume its verified artifact manifest. After a non-empty transcript is complete, ask whether the user wants to invoke $ingest-knowledge; never write to a knowledge base without confirmation.",
+  "content_fingerprint": "6e283ebb2536a3990fdc66b5e671dc6bdcd8993295b39e6d5a36b82f4139ac0d"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Upload one or many videos to YouTube. Use when the user wants to \"\u4e0a\u4f20\u5230 YouTube\", \"\u53d1 YouTube\", \"\u6279\u91cf\u4e0a\u4f20\", \"upload to YouTube\", \"post videos to YouTube\", or to publish a finished `final/` directory of MP4s. Reads per-video metadata (title / description / tags) from a sibling `UPLOAD_META.md` file when present (the user's standard markdown format), or from command-line flags. Survives behind a SOCKS/HTTP proxy by using `requests` directly for the resumable upload (the stock `google-api-python-client` MediaFileUpload stalls under this user's proxy setup)."
+  "description": "Upload one or many videos to YouTube. Use when the user wants to \"上传到 YouTube\", \"发 YouTube\", \"批量上传\", \"upload to YouTube\", \"post videos to YouTube\", or to publish a finished `final/` directory of MP4s. Reads per-video metadata (title / description / tags) from a sibling `UPLOAD_META.md` file when present (the user's standard markdown format), or from command-line flags. Survives behind a SOCKS/HTTP proxy by using `requests` directly for the resumable upload (the stock `google-api-python-client` MediaFileUpload stalls under this user's proxy setup).",
+  "content_fingerprint": "1c6bf09c43f39e926b0cfbfcd0a87bd7468ec793549eb6c90dd8b27b59902b7b"
 }

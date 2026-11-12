@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a Universe Editor \u4ece\u96f6\u521b\u5efa\u6269\u5c55(\u63d2\u4ef6)\u3002\u5f53\u7528\u6237\u60f3\u65b0\u5efa/\u5f00\u53d1\u7f16\u8f91\u5668\u63d2\u4ef6,\u6216\u60f3\u7ed9\u7f16\u8f91\u5668\u52a0\u547d\u4ee4\u3001webview \u9762\u677f\u3001\u81ea\u5b9a\u4e49\u7f16\u8f91\u5668\u3001\u8bed\u8a00\u652f\u6301\u7b49\u80fd\u529b\u65f6\u4f7f\u7528\u3002\u8986\u76d6\u9700\u6c42\u786e\u8ba4\u2192\u811a\u624b\u67b6\u2192\u5b9e\u73b0\u2192e2e \u6d4b\u8bd5\u2192\u53d1\u5e03\u5168\u6d41\u7a0b\u3002\u82e5\u7528\u6237\u8981\u79fb\u690d\u73b0\u6709 VSCode \u63d2\u4ef6,\u6539\u7528 port-vscode-extension\u3002"
+  "description": "为 Universe Editor 从零创建扩展(插件)。当用户想新建/开发编辑器插件,或想给编辑器加命令、webview 面板、自定义编辑器、语言支持等能力时使用。覆盖需求确认→脚手架→实现→e2e 测试→发布全流程。若用户要移植现有 VSCode 插件,改用 port-vscode-extension。",
+  "content_fingerprint": "fb4f1578ebb9f9a6684b25cac67c830583a41b915b72ee3219c61ad83b56922f"
 }

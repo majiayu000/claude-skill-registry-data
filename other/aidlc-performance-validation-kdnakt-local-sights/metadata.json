@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `performance-validation` stage (operation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage performance-validation --single`: the engine emits one run-stage directive for performance-validation and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `performance-validation` stage (operation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage performance-validation --single`: the engine emits one run-stage directive for performance-validation and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "085edd9e9884d9a36815acbcfff6a2714cf84b01374f45617719dce4ad1c4022"
 }

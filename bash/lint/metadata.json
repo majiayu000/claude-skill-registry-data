@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deterministic, differential hygiene gate. Runs static-analysis / style / spelling tools over the files a change touches and reports ONLY newly-introduced findings, so pre-existing debt never blocks. Run it before spending model-review budget (cpp-abi-guard, cycles-parity-reviewer, pr-reviewer) on mechanical issues. Never installs anything; a missing linter is 'unavailable', never a silent pass."
+  "description": "Deterministic, differential hygiene gate. Runs static-analysis / style / spelling tools over the files a change touches and reports ONLY newly-introduced findings, so pre-existing debt never blocks. Run it before spending model-review budget (cpp-abi-guard, cycles-parity-reviewer, pr-reviewer) on mechanical issues. Never installs anything; a missing linter is 'unavailable', never a silent pass.",
+  "content_fingerprint": "88e83d9cd311c22e67e815b1264505ad31335296276664d0f605d4c9a9581433"
 }

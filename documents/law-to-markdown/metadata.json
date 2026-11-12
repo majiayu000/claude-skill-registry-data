@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5c06\u6cd5\u6761/\u89c4\u8303\u6587\u4ef6\uff08.txt/.docx/.pdf\uff09\u8f6c\u4e3a Markdown\u3002\u9002\u7528\u4e8e\u7528\u6237\u8981\u6c42\u201c\u6cd5\u6761\u8f6c markdown\u201d\u201cpdf/docx \u8f6c markdown\u201d\u3002\u5904\u7406 .pdf/.docx \u65f6\u5148\u68c0\u67e5\u662f\u5426\u5df2\u5b89\u88c5 mineru-ocr skill\uff1b\u672a\u5b89\u88c5\u5148\u5f15\u5bfc\u5b89\u88c5\uff0c\u5b89\u88c5\u540e\u4f18\u5148\u7528 mineru-ocr\uff1b\u4ec5\u5728\u7528\u6237\u660e\u786e\u540c\u610f\u65f6\u518d\u7528\u672c\u5730\u56de\u9000\u65b9\u6848\u3002"
+  "description": "将法条/规范文件（.txt/.docx/.pdf）转为 Markdown。适用于用户要求“法条转 markdown”“pdf/docx 转 markdown”。处理 .pdf/.docx 时先检查是否已安装 mineru-ocr skill；未安装先引导安装，安装后优先用 mineru-ocr；仅在用户明确同意时再用本地回退方案。",
+  "content_fingerprint": "c5ca05a7746bf1e0353b33d5258dc75e5fd8e1b7a85dbdbea8c8abbf700524b7"
 }

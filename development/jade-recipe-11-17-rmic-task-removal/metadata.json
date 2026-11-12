@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Removes the two Ant <rmic> pregeneration steps from build.xml. The rmic tool they drive was removed in JDK 15, and Ant refuses the task on JDK 15+, which is the only thing stopping the JADE build on JDK 17. Agent-mode recipe: the shard contract names the file; this document defines the transform and the one condition under which the agent must stop instead."
+  "description": "Removes the two Ant <rmic> pregeneration steps from build.xml. The rmic tool they drive was removed in JDK 15, and Ant refuses the task on JDK 15+, which is the only thing stopping the JADE build on JDK 17. Agent-mode recipe: the shard contract names the file; this document defines the transform and the one condition under which the agent must stop instead.",
+  "content_fingerprint": "59a71ed4f9855f932a4c882ff480ef3fcc3dc81454f0d8a2337fa280e00b47ae"
 }

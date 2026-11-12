@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants to lint a repo following the Karpathy LLM Wiki pattern (raw/ + wiki/ + SCHEMA.md / index.md / log.md). The skill detects path, scans wiki pages + schema layer, reports frontmatter gaps, broken in-body links, source traceability breaks, stale claims, orphan pages, index synopsis contradictions, and SCHEMA-vs-reality drift. Phase 1 is read-only report; Phase 2 (fix + log.md LINT entry) only runs after the user explicitly approves."
+  "description": "Use when the user wants to lint a repo following the Karpathy LLM Wiki pattern (raw/ + wiki/ + SCHEMA.md / index.md / log.md). The skill detects path, scans wiki pages + schema layer, reports frontmatter gaps, broken in-body links, source traceability breaks, stale claims, orphan pages, index synopsis contradictions, and SCHEMA-vs-reality drift. Phase 1 is read-only report; Phase 2 (fix + log.md LINT entry) only runs after the user explicitly approves.",
+  "content_fingerprint": "c5e3295b61aec286ca8f13cc6a1871ad95fb71c79eda636dcbb19af625dcef87"
 }

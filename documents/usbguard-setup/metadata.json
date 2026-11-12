@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Maintains the ansible/roles/usbguard_setup Ansible role that installs USBGuard and enables/starts its service by default with a reject-all policy on RHEL-family systems as part of the Linux SOE. Use when checking or configuring USB device allow/block policy via usbguard. There is NO opt-in gate on service enablement \u2014 enforcement is on by default with policy=reject."
+  "description": "Maintains the ansible/roles/usbguard_setup Ansible role that installs USBGuard and enables/starts its service by default with a reject-all policy on RHEL-family systems as part of the Linux SOE. Use when checking or configuring USB device allow/block policy via usbguard. There is NO opt-in gate on service enablement — enforcement is on by default with policy=reject.",
+  "content_fingerprint": "7e27d22a50a451714af950bee6bed9f07b3e48528615f8e6a73e5bf270707a73"
 }

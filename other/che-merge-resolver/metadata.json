@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Per-hunk merge conflict resolver with MIN BLAST RADIUS. DEFAULT strategy = OURS (current worktree wins, incoming loses). 3 canonical cases per hunk: TRIVIAL auto-resolve, CLASH ask 2 options with agent rationale hint, AMBIGUOUS ask with explicit ambiguity rationale. NEVER decides ambiguous cases alone. Every resolution logged with decisions.log MERGE_RESOLVE entries."
+  "description": "Per-hunk merge conflict resolver with MIN BLAST RADIUS. DEFAULT strategy = OURS (current worktree wins, incoming loses). 3 canonical cases per hunk: TRIVIAL auto-resolve, CLASH ask 2 options with agent rationale hint, AMBIGUOUS ask with explicit ambiguity rationale. NEVER decides ambiguous cases alone. Every resolution logged with decisions.log MERGE_RESOLVE entries.",
+  "content_fingerprint": "e801f8de56899555eb3c45903d8fef95e768b849aa9d08bbfb469cf7984c4607"
 }

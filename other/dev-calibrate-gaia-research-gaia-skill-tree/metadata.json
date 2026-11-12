@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Playbook for correcting a named skill's star level to match its computed Trust Magnitude grade, with an independent post-calibration verification pass and a CLI-logged timeline event (never hand-written). Use when: recalibrating a skill's level, fixing a stale or drifted star rating, running a batch of `gaia dev calibrate` corrections, or confirming a past calibration actually landed. Triggers: \"calibrate <skill>\", \"recalibrate the trust magnitude backlog\", \"promote/demote <skill> to N stars\", \"why is <skill> still N stars\", \"verify a calibration actually landed\", \"Hall of Heroes ranking is wrong\"."
+  "description": "Playbook for correcting a named skill's star level to match its computed Trust Magnitude grade, with an independent post-calibration verification pass and a CLI-logged timeline event (never hand-written). Use when: recalibrating a skill's level, fixing a stale or drifted star rating, running a batch of `gaia dev calibrate` corrections, or confirming a past calibration actually landed. Triggers: \"calibrate <skill>\", \"recalibrate the trust magnitude backlog\", \"promote/demote <skill> to N stars\", \"why is <skill> still N stars\", \"verify a calibration actually landed\", \"Hall of Heroes ranking is wrong\".",
+  "content_fingerprint": "c075853481b2bd456907b9875d588d4aaaeba71e06ec9ff449d2502e3f44379b"
 }

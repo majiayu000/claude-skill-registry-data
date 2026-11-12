@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manually unpacks a runtime-packed Windows binary by finding the original entry point (OEP) through tail-jump and entropy analysis, then guiding a memory dump at OEP. Activates for requests to manually unpack a sample, find the OEP, or unpack a custom/unknown packer that generic tools cannot handle."
+  "description": "Manually unpacks a runtime-packed Windows binary by finding the original entry point (OEP) through tail-jump and entropy analysis, then guiding a memory dump at OEP. Activates for requests to manually unpack a sample, find the OEP, or unpack a custom/unknown packer that generic tools cannot handle.",
+  "content_fingerprint": "e2ae2024cf981005f0f896054637f449d07788903918c4d4f11c3a390a3b2280"
 }

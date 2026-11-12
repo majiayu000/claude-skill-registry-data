@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/pfsense-nat-rule-creation/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f31e2932e1f7d8cf528fb7c3c016e001a6c0b90ca1037dc468e4e1a881634f0d",
+  "description": "Create NAT port forward rules on pfSense programmatically via PHP/SSH.\nUse when: (1) adding port forwards for new K8s services, (2) NAT rules\nadded via PHP don't appear in pfctl output, (3) config_rea"
 }

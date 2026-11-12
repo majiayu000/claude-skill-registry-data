@@ -38,5 +38,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MinerU\u6587\u4ef6\u89e3\u6790\u7b97\u5b50\u3002\u901a\u8fc7\u8fdc\u7a0b\u8c03\u7528MinerU\u63a5\u53e3\uff0c\u89e3\u6790\u672c\u5730\u6587\u4ef6\uff08\u652f\u6301PDF\u3001DOC\u3001PPT\u3001Excel\u3001\u56fe\u7247\u7b49\u683c\u5f0f\uff09\uff0c\u83b7\u53d6\u6587\u4ef6\u89e3\u6790\u7ed3\u679c\uff08\u5185\u5bb9\u3001\u516c\u5f0f\u3001\u56fe\u7247\u7b49\uff09\uff0c\u6700\u7ec8\u8fd4\u56deZIP\u538b\u7f29\u5305\u3002\n\n\u672cSKILL\u4f9d\u8d56requests\u5e93\uff0c\u8bf7\u786e\u4fdd\u5df2\u5b89\u88c5\u3002"
+  "description": "MinerU文件解析算子。通过远程调用MinerU接口，解析本地文件（支持PDF、DOC、PPT、Excel、图片等格式），获取文件解析结果（内容、公式、图片等），最终返回ZIP压缩包。\n\n本SKILL依赖requests库，请确保已安装。",
+  "content_fingerprint": "2f593476843e75d6cda889772d6b7502d9b39a138eab59cf2e3ed162370b9703"
 }

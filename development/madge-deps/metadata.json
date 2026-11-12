@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run Madge against a JS/TS production source tree to detect circular dependencies, find orphan modules, and visualize the module graph. Scoped to production code via `excludeRegExp` for test files. Use when a build compiles but throws `Cannot read property X of undefined` on a module that is clearly imported, or when a repo needs a CI gate that blocks new import cycles."
+  "description": "Run Madge against a JS/TS production source tree to detect circular dependencies, find orphan modules, and visualize the module graph. Scoped to production code via `excludeRegExp` for test files. Use when a build compiles but throws `Cannot read property X of undefined` on a module that is clearly imported, or when a repo needs a CI gate that blocks new import cycles.",
+  "content_fingerprint": "e96d48ce7f5e6af0239099c1f5fe89b53a60b756f3836702021e64558b5e9b8f"
 }

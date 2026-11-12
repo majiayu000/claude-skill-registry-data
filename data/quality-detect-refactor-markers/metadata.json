@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dawiddutoit/custom-claude/blob/main/skills/quality-detect-refactor-markers/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d66e34f0075ec9248d89ee1e0cc73df1d1557e0ec235e5b18a7c3858b7e7a796",
+  "description": "Finds all REFACTOR markers in codebase, validates associated ADRs exist, identifies stale markers\n(30+ days old), and detects orphaned markers (no ADR reference). Use during status checks, before\nfeat"
 }

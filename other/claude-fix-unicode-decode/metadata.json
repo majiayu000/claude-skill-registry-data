@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diagnose and fix UnicodeDecodeError, UnicodeEncodeError, mojibake, and corrupted Chinese text in Claude Code tasks. Use this skill whenever a file, command, test, CSV, JSON, HTTP response, Git diff, or Windows terminal shows broken Chinese, replacement characters, strings such as \"\u00e4\u00b8\u00ad\u00e6\u2013\u2021\" or \"\u6d93\ue15f\u6783\", an unknown codec, or any decode/encode exception. Use it even when the user only says Chinese text is garbled or a file cannot be read."
+  "description": "Diagnose and fix UnicodeDecodeError, UnicodeEncodeError, mojibake, and corrupted Chinese text in Claude Code tasks. Use this skill whenever a file, command, test, CSV, JSON, HTTP response, Git diff, or Windows terminal shows broken Chinese, replacement characters, strings such as \"ä¸­æ–‡\" or \"涓枃\", an unknown codec, or any decode/encode exception. Use it even when the user only says Chinese text is garbled or a file cannot be read.",
+  "content_fingerprint": "4b9a02b22a7040882fc25022231cd4c27a387655b04296ec7634dc89c5d0c44c"
 }

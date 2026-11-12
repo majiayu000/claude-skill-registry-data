@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Hunt modern CSRF \u2014 content-type-blocklist bypasses (typeless Blob POSTs, Chromium safelist additions like message/ad-auction-trusted-signals-request, missing-Content-Type-means-JSON parsers), GraphQL CSRF via GET and APQ hash smuggling, alias-amplified timing XS-Leaks, OAuth/MCP consent-screen CSRF, and classic token/Referer check gaps. Use whenever the user mentions CSRF, XSRF, cross-site request forgery, state-changing endpoints without tokens, content-type defenses, preflight bypasses, or \"can I trigger this action from another site\"."
+  "description": "Hunt modern CSRF — content-type-blocklist bypasses (typeless Blob POSTs, Chromium safelist additions like message/ad-auction-trusted-signals-request, missing-Content-Type-means-JSON parsers), GraphQL CSRF via GET and APQ hash smuggling, alias-amplified timing XS-Leaks, OAuth/MCP consent-screen CSRF, and classic token/Referer check gaps. Use whenever the user mentions CSRF, XSRF, cross-site request forgery, state-changing endpoints without tokens, content-type defenses, preflight bypasses, or \"can I trigger this action from another site\".",
+  "content_fingerprint": "e09750906e6f5387e28a50ad08fbc5868f8eb421affaf0ef017414fbe95d4257"
 }

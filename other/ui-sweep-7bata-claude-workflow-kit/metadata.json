@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728 SOP \u622a\u56fe\u524d\u628a\u5168\u7ad9\u53ef\u4ea4\u4e92\u5143\u7d20\u7cfb\u7edf\u6027\u70b9\u4e00\u904d\u3001\u6539\u5b8c\u4e00\u6279 UI \u540e\u505a\u56de\u5f52\u626b\u63cf\u3001\u7528\u6237\u8bf4\u201c\u628a\u6240\u6709\u6309\u94ae\u70b9\u4e00\u904d\u201d\u3001\u6216\u9700\u8981\u4e00\u6b21\u4ea4\u4e92\u5192\u70df\u6d4b\u8bd5\u65f6\u89e6\u53d1\u3002\u7528 agent-browser \u9a71\u52a8 + \u901a\u7528\u5316\u904d\u5386\u5f15\u64ce,\u9010\u5c4f\u9010\u5143\u7d20\u70b9\u51fb\u89c2\u5bdf\u5e76\u516b\u5206\u7c7b\u8bb0\u8d26,\u4ea7\u51fa JSONL \u53f0\u8d26\u3001\u6bcf\u5c4f\u622a\u56fe\u4e0e\u62a5\u544a\u3002"
+  "description": "在 SOP 截图前把全站可交互元素系统性点一遍、改完一批 UI 后做回归扫描、用户说“把所有按钮点一遍”、或需要一次交互冒烟测试时触发。用 agent-browser 驱动 + 通用化遍历引擎,逐屏逐元素点击观察并八分类记账,产出 JSONL 台账、每屏截图与报告。",
+  "content_fingerprint": "f19dcbe40d859307965d5496a31dc40458426acc087b6dbd3a15f2c8000afc03"
 }

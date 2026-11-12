@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/eriklieben/agentic-dev-workflow/blob/main/.claude/skills/dev-tdd/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8b3e1ddda9258d4a2787821e6ca47bb7e3bee81380fbd6e99202900a5f9fde36",
+  "description": "Test-driven development workflow. Auto-detects backend (.NET) and frontend (Angular/TypeScript) from project files. Loops RED→GREEN→REFACTOR cycles until 80%+ coverage is reached. Filter with \"dotnet\""
 }

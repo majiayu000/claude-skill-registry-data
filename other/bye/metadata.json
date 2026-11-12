@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc9c0\uae08 \ub300\ud654 \uc911\uc778 Claude Code \uc138\uc158 \ud504\ub85c\uc138\uc2a4(\uc640 \uadf8 MCP \uc11c\ubc84 \uc790\uc2dd\ub4e4)\ub9cc \uc885\ub8cc\ud55c\ub2e4. VSCode \ud655\uc7a5\uc5d4 /exit \uac00 \uc5c6\uc5b4 \uc138\uc158\uc774 \ubc31\uadf8\ub77c\uc6b4\ub4dc\uc5d0 \uc313\uc774\uba70 \uba54\ubaa8\ub9ac\ub97c \uba39\ub294 \ubb38\uc81c\uc758 \uc6b0\ud68c. \uc0ac\uc6a9\uc790\uac00 \"/bye\", \"\uc774 \uc138\uc158 \uc8fd\uc5ec\", \"\uc138\uc158 \ub05d\ub0b4\" \ub77c\uace0 \ud558\uba74 \uc0ac\uc6a9. \ub2e4\ub978 \uc138\uc158\uc740 \uac74\ub4dc\ub9ac\uc9c0 \uc54a\ub294\ub2e4."
+  "description": "지금 대화 중인 Claude Code 세션 프로세스(와 그 MCP 서버 자식들)만 종료한다. VSCode 확장엔 /exit 가 없어 세션이 백그라운드에 쌓이며 메모리를 먹는 문제의 우회. 사용자가 \"/bye\", \"이 세션 죽여\", \"세션 끝내\" 라고 하면 사용. 다른 세션은 건드리지 않는다.",
+  "content_fingerprint": "e868657a25bcf561b191976072351da3ad0df3e3443d911359e314bdd5801b91"
 }

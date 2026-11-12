@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when running GPU compute on RunPod and deciding between Pods (hourly, always-on) and Serverless (per-second, autoscaling) for training, fine-tuning or inference \u2014 serverless endpoints, handler workers, worker Docker templates, network volumes, timeout and worker-count tuning, cold starts, and runaway bills. NOT Python-native serverless GPU with snapshot autoscaling (that is `modal`), NOT calling hosted prebuilt model APIs (that is `replicate`), NOT pulling weights from the Hub (that is `huggingface`)."
+  "description": "Use when running GPU compute on RunPod and deciding between Pods (hourly, always-on) and Serverless (per-second, autoscaling) for training, fine-tuning or inference — serverless endpoints, handler workers, worker Docker templates, network volumes, timeout and worker-count tuning, cold starts, and runaway bills. NOT Python-native serverless GPU with snapshot autoscaling (that is `modal`), NOT calling hosted prebuilt model APIs (that is `replicate`), NOT pulling weights from the Hub (that is `huggingface`).",
+  "content_fingerprint": "a89e0747d390321e9de0a4a072cefd0f4bf34c71f570a3b6c722010c68f8cad8"
 }

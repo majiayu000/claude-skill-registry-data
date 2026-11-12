@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implements the iOS bridge layer for a React-Native MoEngage SDK feature. This is Step 2b of the React-Native feature pipeline (parallel to or after react-native-android-bridge-implementation). Produces the Bridge .h/.mm, Handler .h/.m, Constants .h/.m, optional Util .h/.m, and podspec for a new sdk/<featureName> module in the React-Native repo, following the Cards module standard. On completion, asks the user whether to also run react-native-ts-implementation. Do NOT use for Android-only features or JS-only changes."
+  "description": "Implements the iOS bridge layer for a React-Native MoEngage SDK feature. This is Step 2b of the React-Native feature pipeline (parallel to or after react-native-android-bridge-implementation). Produces the Bridge .h/.mm, Handler .h/.m, Constants .h/.m, optional Util .h/.m, and podspec for a new sdk/<featureName> module in the React-Native repo, following the Cards module standard. On completion, asks the user whether to also run react-native-ts-implementation. Do NOT use for Android-only features or JS-only changes.",
+  "content_fingerprint": "bd53161e58f4fe837848defb97582214dce226914ec024bd90b02732cae5ba4e"
 }

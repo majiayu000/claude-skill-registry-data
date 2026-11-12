@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when acquiring options history via ThetaData (option_bulk_hist_oi_by_day / greeks routes) and hitting transient 502s or rate limits \u2014 distinguish rate-limit noise from genuinely missing data, and apply backoff/concurrency discipline."
+  "description": "Use when acquiring options history via ThetaData (option_bulk_hist_oi_by_day / greeks routes) and hitting transient 502s or rate limits — distinguish rate-limit noise from genuinely missing data, and apply backoff/concurrency discipline.",
+  "content_fingerprint": "aaa52780eaff7af10da79de6d172a0c1d632747fd94f1a73afe505ed13ee4633"
 }

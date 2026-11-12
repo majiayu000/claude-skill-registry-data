@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Saves a user correction so future queries learn from it. Always appends a (question, corrected_sql) pair to the subject area's example library under <artifacts_dir>/<profile>/prompt_examples/<area>/. Additionally, classifies the correction and \u2014 when applicable \u2014 applies a surgical edit to the semantic model itself (relationship fix, column metadata, or new metric) via the curation engine. Every model edit is validated before write; the validator is the binding gate, and a failed validation reverts. Shows the user a model diff for approval before any model mutation."
+  "description": "Saves a user correction so future queries learn from it. Always appends a (question, corrected_sql) pair to the subject area's example library under <artifacts_dir>/<profile>/prompt_examples/<area>/. Additionally, classifies the correction and — when applicable — applies a surgical edit to the semantic model itself (relationship fix, column metadata, or new metric) via the curation engine. Every model edit is validated before write; the validator is the binding gate, and a failed validation reverts. Shows the user a model diff for approval before any model mutation.",
+  "content_fingerprint": "eda179c5fa6795c4deb915c66cef49866bf9e4eea8e40a3038fe79a7f1710046"
 }

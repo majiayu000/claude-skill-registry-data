@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8c03\u7528 babel-lsp / verible-verilog-lint \u68c0\u67e5 SV \u6e90\u7801\u3002src \u5fc5\u987b\u53ef\u7efc\u5408\uff08\u96f6 syntax error\uff09\uff0ctb \u5141\u8bb8 verification constructs\u3002\u53d1\u73b0 src error \u65f6\u81ea\u52a8\u4fee\u590d\u91cd\u68c0\uff08max 3 iter\uff09\u3002\u89e6\u53d1\uff1a(1) bba-guru-rtl \u751f\u6210\u540e\uff1b(2) RTL \u4fee\u590d\u91cd\u68c0\uff1b(3) \u663e\u5f0f /bb-check-lint\u3002"
+  "description": "调用 babel-lsp / verible-verilog-lint 检查 SV 源码。src 必须可综合（零 syntax error），tb 允许 verification constructs。发现 src error 时自动修复重检（max 3 iter）。触发：(1) bba-guru-rtl 生成后；(2) RTL 修复重检；(3) 显式 /bb-check-lint。",
+  "content_fingerprint": "5a15c31f85023197982b5c73bf40a82fab87a8779a3fee41bd52375b0cf4335c"
 }

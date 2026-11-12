@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Imports an FBX pedestrian into a CARLA source build as a spawnable walker.pedestrian.NNNN \u2014 checks the FBX is skinned to CARLA's GEN3 rig, imports the mesh, physics asset and materials, builds the walker blueprint from a GEN3 donor, registers it in WalkerFactory through CARLA's own add_walker_to_walker_factory.py, and verifies it spawns, stands on the ground and walks. Use when the user asks to \"add a pedestrian to CARLA\", \"import a walker/character FBX\", or needs a custom human spawnable from the Python API."
+  "description": "Imports an FBX pedestrian into a CARLA source build as a spawnable walker.pedestrian.NNNN — checks the FBX is skinned to CARLA's GEN3 rig, imports the mesh, physics asset and materials, builds the walker blueprint from a GEN3 donor, registers it in WalkerFactory through CARLA's own add_walker_to_walker_factory.py, and verifies it spawns, stands on the ground and walks. Use when the user asks to \"add a pedestrian to CARLA\", \"import a walker/character FBX\", or needs a custom human spawnable from the Python API.",
+  "content_fingerprint": "a4a229faef072b3acc151342b03779ee2f408a099d3bb968cb7c6dea65dd1ed0"
 }

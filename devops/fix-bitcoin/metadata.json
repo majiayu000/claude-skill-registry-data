@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/phrazzld/claude-config/blob/main/skills/fix-bitcoin/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "eca9daa6b1fc9dcee0b3f2f39a136ae002a43884c56e846b2a33c3bfbc7e5d35",
+  "description": "Run /check-bitcoin, then fix the highest priority Bitcoin issue.\nCreates one fix per invocation. Invoke again for next issue.\nUse /log-bitcoin-issues to create issues without fixing.\n"
 }

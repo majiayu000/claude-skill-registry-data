@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scaffolds a complete scheduled \"doctor\" agent directly into the user's repo. The doctor audits app health on a recurring schedule, routes code-fixable findings to an automated repair pipeline that opens pull requests, and files deduped tracker tickets for everything else. A Slack (or equivalent) digest posts after every run, even if remediation fails. Use when a team wants to deploy an autonomous health-auditing agent alongside their application without copying a pre-built engine \u2014 the skill generates the engine in the user's chosen stack by following the bundled reference docs."
+  "description": "Scaffolds a complete scheduled \"doctor\" agent directly into the user's repo. The doctor audits app health on a recurring schedule, routes code-fixable findings to an automated repair pipeline that opens pull requests, and files deduped tracker tickets for everything else. A Slack (or equivalent) digest posts after every run, even if remediation fails. Use when a team wants to deploy an autonomous health-auditing agent alongside their application without copying a pre-built engine — the skill generates the engine in the user's chosen stack by following the bundled reference docs.",
+  "content_fingerprint": "77ea667625ce2d412a3852070cafcf7717472f5a1e2b6f85ed85ef838f9088ba"
 }

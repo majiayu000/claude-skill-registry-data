@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "VNX feature-execution kickoff preflight. USE THIS when starting or resuming a feature or track from its plan: checking worktree/queue/staging health, finding the first promoteable dispatch, and handing off to @t0-orchestrator. Reads the feature's track + plan doc from Horizon's tracks DB (`vnx horizon`, alias `vnx objective`); the repo FEATURE_PLAN.md/PR_QUEUE.md are generic examples, not the source."
+  "description": "VNX feature-execution kickoff preflight. USE THIS when starting or resuming a feature or track from its plan: checking worktree/queue/staging health, finding the first promoteable dispatch, and handing off to @t0-orchestrator. Reads the feature's track + plan doc from Horizon's tracks DB (`vnx horizon`, alias `vnx objective`); the repo FEATURE_PLAN.md/PR_QUEUE.md are generic examples, not the source.",
+  "content_fingerprint": "432111bf34d39bc3211458ffed913b1db7449212c14a06032e190f20d6b94940"
 }

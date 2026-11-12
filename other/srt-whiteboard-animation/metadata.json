@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5c06 SRT \u5b57\u5e55\u505a\u6210\u6696\u7c73\u9ec4\u7eb8\u5f20\u5e95\u7684\u767d\u677f\u624b\u7ed8\u52a8\u753b\uff1a\u8bfb\u5b57\u5e55\u2192\u8f93\u51fa\u914d\u56fe\u7b56\u7565\u2192\u786e\u8ba4\u540e\u751f\u6210\u7edf\u4e00\u98ce\u683c\u7ebf\u7a3f\u2192\u6309\u53d9\u4e8b\u8bed\u4e49\u6807\u6ce8\u5206\u533a\u2192\u9884\u89c8\u53f0\u8c03\u6574\u2192\u6e32\u67d3 MP4\u3002\u7f16\u6392\u6cbf\u7528\u5206\u533a\u906e\u7f69\u63ed\u793a\uff08annotation.json / sequence / startMs / protectedRegions\uff09\uff0c\u4f46\u6bcf\u4e2a\u533a\u57df\u5185\u7684\u843d\u58a8\u6362\u6210 stream \u7684\u8fde\u7eed\u7b14\u8ff9\uff08\u9aa8\u67b6/\u7f51\u683c ink\u2192color\uff09\u3002\u5f53\u7528\u6237\u63d0\u4f9b SRT \u5b57\u5e55\u5e76\u8981\u6c42\"\u5b57\u5e55\u505a\u6210\u767d\u677f\u624b\u7ed8/\u6d41\u5f0f\u7b14\u8ff9\u89c6\u9891\"\"SRT \u751f\u6210\u767d\u677f\u52a8\u753b\"\"\u6309\u5b57\u5e55\u5206\u955c\u753b\u624b\u7ed8\"\u65f6\u89e6\u53d1\u3002"
+  "description": "将 SRT 字幕做成暖米黄纸张底的白板手绘动画：读字幕→输出配图策略→确认后生成统一风格线稿→按叙事语义标注分区→预览台调整→渲染 MP4。编排沿用分区遮罩揭示（annotation.json / sequence / startMs / protectedRegions），但每个区域内的落墨换成 stream 的连续笔迹（骨架/网格 ink→color）。当用户提供 SRT 字幕并要求\"字幕做成白板手绘/流式笔迹视频\"\"SRT 生成白板动画\"\"按字幕分镜画手绘\"时触发。",
+  "content_fingerprint": "a41a31bf368053087bddc04e01ac3004bffe5f51da6e22176ba26d98f46a8de8"
 }

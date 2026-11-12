@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Own the feature spec.md \u2014 draft it the first time from the source captured by /sdd:start, or refine an existing spec by feeding additional context (files, Jira tickets, pasted text, free text). Draft mode runs when no spec.md exists yet; refine mode integrates new context into an existing spec and is append-only on Open Questions. Refine with no arguments is a strict no-op. Runs triage on the first draft. Detects downstream staleness (plan.md, uncommitted changes) and only warns \u2014 never deletes downstream artifacts."
+  "description": "Own the feature spec.md — draft it the first time from the source captured by /sdd:start, or refine an existing spec by feeding additional context (files, Jira tickets, pasted text, free text). Draft mode runs when no spec.md exists yet; refine mode integrates new context into an existing spec and is append-only on Open Questions. Refine with no arguments is a strict no-op. Runs triage on the first draft. Detects downstream staleness (plan.md, uncommitted changes) and only warns — never deletes downstream artifacts.",
+  "content_fingerprint": "2ea7742e82daaacb98b6565e52669d80dca1ee35964a9462d2803229143443bd"
 }

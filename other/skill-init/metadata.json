@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "cheat-on-skill \u7684\u9996\u6b21 onboarding\u3002\u76d8\u70b9\u7528\u6237\u80fd\u529b\uff08\u73b0\u6709\u6280\u80fd/\u53ef\u8fc1\u79fb\u5e95\u5b50/\u5b66\u5386\u7ecf\u9a8c/\u6bcf\u5468\u53ef\u5b66\u65f6\u95f4/\u80fd\u575a\u6301\u51e0\u4e2a\u6708/\u5b66\u4e60\u80fd\u529b\u81ea\u8bc4/\u5730\u533a/\u76ee\u6807\u85aa\u8d44/\u8f6c\u578b\u7d27\u8feb\u5ea6\uff09\uff0c\u5224\u5b9a\u8d77\u70b9\u6863\u4f4d\uff0c\u521b\u5efa .skill-state.json \u72b6\u6001\u6587\u4ef6\uff0c\u662f skill-scan / skill-plan \u7684\u524d\u7f6e\u3002\u89e6\u53d1\u8bcd\uff1a\"\u80fd\u529b\u76d8\u70b9\"/\"\u6211\u60f3\u8f6cAI\u76f8\u5173\u5de5\u4f5c\"/\"\u627eAI\u65f6\u4ee3\u9ad8\u85aa\u5de5\u4f5c\"/\"skill init\"/\"\u804c\u4e1a\u8f6c\u578b\u521d\u59cb\u5316\"\u3002**\u5f53\u7528\u6237\u60f3\u627e/\u89c4\u5212 AI \u65f6\u4ee3\u5de5\u4f5c\u4f46 .skill-state.json \u4e0d\u5b58\u5728\u65f6\uff0c\u5148\u8def\u7531\u5230\u6b64\u3002**"
+  "description": "cheat-on-skill 的首次 onboarding。盘点用户能力（现有技能/可迁移底子/学历经验/每周可学时间/能坚持几个月/学习能力自评/地区/目标薪资/转型紧迫度），判定起点档位，创建 .skill-state.json 状态文件，是 skill-scan / skill-plan 的前置。触发词：\"能力盘点\"/\"我想转AI相关工作\"/\"找AI时代高薪工作\"/\"skill init\"/\"职业转型初始化\"。**当用户想找/规划 AI 时代工作但 .skill-state.json 不存在时，先路由到此。**",
+  "content_fingerprint": "93f007da141d9e7f75f06e2cb8fc8bd524358bfc7af0c762c93b172435744fb4"
 }

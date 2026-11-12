@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/RustyLindquist/EnhancedHR/blob/main/.claude/skills/plan-lint/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "67976d0e0cd87b0a4180c070993de9bf87319c0a26a1be2ff2f8f35585fb965a",
+  "description": "Validates a plan against documentation constraints before coding. Use after doc-discovery and before implementation. Returns PASS, WARN, or FAIL with specific issues. Gate 1 of 2-gate flow."
 }

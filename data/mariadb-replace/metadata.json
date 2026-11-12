@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific syntax and behavior for REPLACE \u2014 why REPLACE is DELETE-then-INSERT (not an upsert/UPDATE), when it triggers (PRIMARY/UNIQUE conflicts only), its data-loss footguns (unlisted columns reset to DEFAULT, AUTO_INCREMENT burned, ON DELETE cascades and DELETE+INSERT triggers fired), the INSERT \u2026 ON DUPLICATE KEY UPDATE alternative, REPLACE \u2026 RETURNING, the SET and SELECT forms, PARTITION targeting, and the INSERT+DELETE privilege requirement. Use when writing, generating, or reviewing REPLACE statements, or when an upsert is being considered."
+  "description": "MariaDB-specific syntax and behavior for REPLACE — why REPLACE is DELETE-then-INSERT (not an upsert/UPDATE), when it triggers (PRIMARY/UNIQUE conflicts only), its data-loss footguns (unlisted columns reset to DEFAULT, AUTO_INCREMENT burned, ON DELETE cascades and DELETE+INSERT triggers fired), the INSERT … ON DUPLICATE KEY UPDATE alternative, REPLACE … RETURNING, the SET and SELECT forms, PARTITION targeting, and the INSERT+DELETE privilege requirement. Use when writing, generating, or reviewing REPLACE statements, or when an upsert is being considered.",
+  "content_fingerprint": "d6f8ce91723b06bc160e63617517443f9598c7970399205d40e2a233899f0cb4"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Query and mutate Upbound Hub, the central API for an Upbound Platform deployment, which gives one cross-fleet view of control planes, spaces, realms, types, packages, resources, identity providers, and the image catalog. Use when asked about fleet-wide state (\"how many resources are unhealthy\", \"list control planes\", \"what types are deployed across the fleet\", \"show resources in <control plane>\"), or to create, update, or delete Hub objects. Not for a single control plane's own API server, and not for Crossplane resources managed inside one."
+  "description": "Query and mutate Upbound Hub, the central API for an Upbound Platform deployment, which gives one cross-fleet view of control planes, spaces, realms, types, packages, resources, identity providers, and the image catalog. Use when asked about fleet-wide state (\"how many resources are unhealthy\", \"list control planes\", \"what types are deployed across the fleet\", \"show resources in <control plane>\"), or to create, update, or delete Hub objects. Not for a single control plane's own API server, and not for Crossplane resources managed inside one.",
+  "content_fingerprint": "95530d5f548c167251d493b0b76bfa269e2bab5c195c5658a3457283e6b36852"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Analyze git repository history to produce a codebase risk profile before code review. Probes repo size, runs 7 parallel git analysis pipelines (hotspots, bug magnets, bus factor, contributor momentum, firefighting frequency, newly added files), cross-references hotspots with bug magnets to identify high-risk files with primary owner annotation, and writes walkthrough/recon-report.md. Use before code review to prioritize reviewer attention, at the start of linear-walkthrough Phase 1 Discovery to weight file coverage, or when onboarding to an unfamiliar codebase."
+  "description": "Analyze git repository history to produce a codebase risk profile before code review. Probes repo size, runs 7 parallel git analysis pipelines (hotspots, bug magnets, bus factor, contributor momentum, firefighting frequency, newly added files), cross-references hotspots with bug magnets to identify high-risk files with primary owner annotation, and writes walkthrough/recon-report.md. Use before code review to prioritize reviewer attention, at the start of linear-walkthrough Phase 1 Discovery to weight file coverage, or when onboarding to an unfamiliar codebase.",
+  "content_fingerprint": "d6325e6045cb04799296190852efc945ef2215f1615f7c8b8ad155a25ec8ab0d"
 }

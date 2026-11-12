@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/ingress-factory-migration/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "4ce4902e2fe364dde2b6efd84f8925f5394b73dac42e73a2cdadd8da408a02ca",
+  "description": "Migrate raw kubernetes_ingress_v1 resources to the centralized ingress_factory module.\nUse when: (1) a service defines a raw kubernetes_ingress_v1 with hand-rolled Traefik\nmiddleware annotations, (2) "
 }

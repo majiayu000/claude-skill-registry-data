@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when writing async I/O methods, fan-out work, background workers, or bridging blocking code into a Python SDK client. Covers asyncio.TaskGroup structured concurrency, strong-ref task storage to prevent mid-flight GC, gather vs wait selection, asyncio.to_thread / run_in_executor for sync bridging, and Task.cancel() semantics. Triggers: asyncio, create_task, ensure_future, TaskGroup, gather, wait, run_in_executor, fire-and-forget, async, await."
+  "description": "Use this when writing async I/O methods, fan-out work, background workers, or bridging blocking code into a Python SDK client. Covers asyncio.TaskGroup structured concurrency, strong-ref task storage to prevent mid-flight GC, gather vs wait selection, asyncio.to_thread / run_in_executor for sync bridging, and Task.cancel() semantics. Triggers: asyncio, create_task, ensure_future, TaskGroup, gather, wait, run_in_executor, fire-and-forget, async, await.",
+  "content_fingerprint": "8e70d3073066de7da153ba0fa9972850e1e61c8eec74bcd9a83ad0c2dd7d8102"
 }

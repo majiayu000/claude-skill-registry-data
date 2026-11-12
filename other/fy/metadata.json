@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u8f93\u5165\u4ee5 \"fy \" \u5f00\u5934\u7684\u7ffb\u8bd1\u8bf7\u6c42\u65f6\u4f7f\u7528\u6b64 skill\u3002\u652f\u6301\u4e2d\u82f1\u4e92\u8bd1\uff0c\u5982\u679c\u662f\u5176\u4ed6\u8bed\u79cd\u5219\u7ffb\u8bd1\u6210\u4e2d\u6587\u3002\u89e6\u53d1\u6761\u4ef6\uff1a\u8f93\u5165 \"fy\" \u540e\u9762\u8ddf\u8981\u7ffb\u8bd1\u7684\u5185\u5bb9\uff0c\u4f8b\u5982 \"fy test\" \u8fd4\u56de \"\u6d4b\u8bd5\"\u3002"
+  "description": "当用户输入以 \"fy \" 开头的翻译请求时使用此 skill。支持中英互译，如果是其他语种则翻译成中文。触发条件：输入 \"fy\" 后面跟要翻译的内容，例如 \"fy test\" 返回 \"测试\"。",
+  "content_fingerprint": "84fda48f1e075ecef0b389b8b52d029f3e445c534892c1ed603ca39ebf9a2a56"
 }

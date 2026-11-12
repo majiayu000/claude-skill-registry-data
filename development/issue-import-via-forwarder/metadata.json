@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Sub-skill for reports relayed onto `<security-list>` by a broker\n(the ASF security team, a disclosure platform, a SOC) rather than\nsent by the reporter. Detects the relay, extracts the credit and the\nreporter-addressing rules through the adapters in\n`forwarders.enabled`, and hands the routing back. Never mutates the\ntracker."
+  "description": "Sub-skill for reports relayed onto `<security-list>` by a broker\n(the ASF security team, a disclosure platform, a SOC) rather than\nsent by the reporter. Detects the relay, extracts the credit and the\nreporter-addressing rules through the adapters in\n`forwarders.enabled`, and hands the routing back. Never mutates the\ntracker.",
+  "content_fingerprint": "62ecce6e1a68f5f2c93e63f36f8e20bf12bbd7e31b5d28600cb562c1a71bab3f"
 }

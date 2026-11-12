@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Checks that the components a design board names actually appear at that board's route in the running build. Walks React's fiber tree in Playwright, collects each rendered component's name, and compares it with the board's `components` in design-map.json. React and react-native-web only; on any other stack, and for a parts board, it runs no walk and reports \"not verifiable here\"."
+  "description": "Checks that the components a design board names actually appear at that board's route in the running build. Walks React's fiber tree in Playwright, collects each rendered component's name, and compares it with the board's `components` in design-map.json. React and react-native-web only; on any other stack, and for a parts board, it runs no walk and reports \"not verifiable here\".",
+  "content_fingerprint": "82fa2ea956e146b9af638044dee90191740811b128b3019462211ad9b1934fd0"
 }

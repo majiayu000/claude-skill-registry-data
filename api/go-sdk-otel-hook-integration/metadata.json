@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when wiring a new motadatagosdk client into the motadatagosdk/otel facade (tracer, metrics, logger) \u2014 NEVER raw go.opentelemetry.io/otel. Covers the instrumented-call wrapper pattern, bounded-cardinality label rules, lazy sync.Once metric handles, and span.End discipline. Triggers: tracer.Start, metrics.NewCounter, metrics.Histogram, logger.L, instrumentedCall, span.SetAttributes, otel.Init, OTLP."
+  "description": "Use this when wiring a new motadatagosdk client into the motadatagosdk/otel facade (tracer, metrics, logger) — NEVER raw go.opentelemetry.io/otel. Covers the instrumented-call wrapper pattern, bounded-cardinality label rules, lazy sync.Once metric handles, and span.End discipline. Triggers: tracer.Start, metrics.NewCounter, metrics.Histogram, logger.L, instrumentedCall, span.SetAttributes, otel.Init, OTLP.",
+  "content_fingerprint": "075392be2600b2a7dcacc9ea21e588b6533c83599c5100dc71f4b6477eb2e667"
 }

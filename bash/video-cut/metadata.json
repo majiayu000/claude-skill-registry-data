@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cut a long video down to selected source ranges (montage / clip assembly). Part of the video-recap bundle: in the orchestrated (two-pass) flow, consumes clip_plan.json + the source video, produces edited_source.mp4; the agent then writes narration.json against the output timeline. When invoked standalone WITHOUT --no-narration-map, also remaps an existing narration.json \u2192 narration_mapped.json (legacy single-pass path). \u89e6\u53d1\u8bcd: \u89c6\u9891\u526a\u8f91, \u526a\u8f91\u5f0f\u89e3\u8bf4, video cut, clip plan, \u62fc\u526a."
+  "description": "Cut a long video down to selected source ranges (montage / clip assembly). Part of the video-recap bundle: in the orchestrated (two-pass) flow, consumes clip_plan.json + the source video, produces edited_source.mp4; the agent then writes narration.json against the output timeline. When invoked standalone WITHOUT --no-narration-map, also remaps an existing narration.json → narration_mapped.json (legacy single-pass path). 触发词: 视频剪辑, 剪辑式解说, video cut, clip plan, 拼剪.",
+  "content_fingerprint": "a7bfc60d7739643c99e06638cbcb54217620e308550ac648624001fac79c680d"
 }

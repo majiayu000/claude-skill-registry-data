@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "How xberg versions are synced and released \u2014 Cargo.toml is the single source of truth, `task version:sync` propagates it to alef-managed binding manifests AND the integrations under integrations/, which are versioned and published in lockstep with core (including -rc.N). Load before bumping a version, editing the version-sync task, or touching an integration's version/xberg dependency."
+  "description": "How xberg versions are synced and released — Cargo.toml is the single source of truth, `task version:sync` propagates it to alef-managed binding manifests AND the integrations under integrations/, which are versioned and published in lockstep with core (including -rc.N). Load before bumping a version, editing the version-sync task, or touching an integration's version/xberg dependency.",
+  "content_fingerprint": "c8c82a03adee043250cbe02c35afd91fe62a4f64d54a0289ad625e52aa72b70f"
 }

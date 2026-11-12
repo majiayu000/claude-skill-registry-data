@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when an Android/Gradle GitHub Actions workflow is assumed working but every run is red, before claiming CI passes, after adding a workflow, or when local replays of CI are taken as proof. Symptoms: ./gradlew Permission denied (exit 126), a job that stops mid-Gradle with no ##[error] line, or android-emulator-runner reporting Task not found for a backslash continuation."
+  "description": "Use when an Android/Gradle GitHub Actions workflow is assumed working but every run is red, before claiming CI passes, after adding a workflow, or when local replays of CI are taken as proof. Symptoms: ./gradlew Permission denied (exit 126), a job that stops mid-Gradle with no ##[error] line, or android-emulator-runner reporting Task not found for a backslash continuation.",
+  "content_fingerprint": "cede9f524600701fa36a50678e8b253c42329433f8ee1060995d652cbb9305e0"
 }

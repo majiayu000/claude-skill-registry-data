@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build the interprocedural callgraph + framework detection + tag table for an exploded source tree by calling the tlx MCP js_index_target tool. Run after rag-ingest when status.json.phases.index is missing or stale (sources mtime > index mtime). Writes index/{nodes,edges}.jsonl and frameworks.json into the target dir."
+  "description": "Build the interprocedural callgraph + framework detection + tag table for an exploded source tree by calling the tlx MCP js_index_target tool. Run after rag-ingest when status.json.phases.index is missing or stale (sources mtime > index mtime). Writes index/{nodes,edges}.jsonl and frameworks.json into the target dir.",
+  "content_fingerprint": "08a937ada75cf9463e04b56d8663a514b82d94816e29be1084b32627a5fa8768"
 }

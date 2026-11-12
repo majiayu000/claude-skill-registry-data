@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Transfer cell-type labels from the CELLxGENE Census to a query scRNA-seq dataset: pull a reference slice keeping its scVI embedding, project the query into that space on CPU, then take a local sklearn KNN vote. Use for supplementary label transfer without the tiledb stack. For cross-atlas embedding search use single-cell-vector-search."
+  "description": "Transfer cell-type labels from the CELLxGENE Census to a query scRNA-seq dataset: pull a reference slice keeping its scVI embedding, project the query into that space on CPU, then take a local sklearn KNN vote. Use for supplementary label transfer without the tiledb stack. For cross-atlas embedding search use single-cell-vector-search.",
+  "content_fingerprint": "38ea70784d7e636e2b213f0fae1db9b6d85304afb56c66e30d4b6a499fe39816"
 }

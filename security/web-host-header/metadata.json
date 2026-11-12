@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Host header injection \u2014 abuse a trusted Host/X-Forwarded-Host to poison password-reset links, routing, and caches. Load when the app builds absolute URLs from the request host, on password-reset flows, or behind a proxy/CDN. Signals: reset emails with links, X-Forwarded-Host reflected, virtual hosting, cache in front."
+  "description": "Host header injection — abuse a trusted Host/X-Forwarded-Host to poison password-reset links, routing, and caches. Load when the app builds absolute URLs from the request host, on password-reset flows, or behind a proxy/CDN. Signals: reset emails with links, X-Forwarded-Host reflected, virtual hosting, cache in front.",
+  "content_fingerprint": "317a46d315a81c57d7cb63b4ad27c83789cc92c9a072bbd4f3ffb379c74217b6"
 }

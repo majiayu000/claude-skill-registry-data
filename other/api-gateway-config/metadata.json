@@ -1,5 +1,5 @@
 {
-  "name": "API\u7f51\u5173\u914d\u7f6eSkill",
+  "name": "API网关配置Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/api-gateway-config/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7f51\u5173\u8def\u7531\u3001\u9274\u6743\u3001\u9650\u6d41\u3001\u7194\u65ad\u3001\u65e5\u5fd7\u7684\u914d\u7f6e\u89c4\u8303\u3002\u5f53\u9700\u8981\u914d\u7f6e API \u7f51\u5173(\u8def\u7531\u8f6c\u53d1\u3001\u7edf\u4e00\u9274\u6743\u3001\u9650\u6d41\u7194\u65ad\u3001\u8bbf\u95ee\u65e5\u5fd7)\u65f6\u4f7f\u7528\u3002"
+  "description": "网关路由、鉴权、限流、熔断、日志的配置规范。当需要配置 API 网关(路由转发、统一鉴权、限流熔断、访问日志)时使用。",
+  "content_fingerprint": "a9e9bdde4600c7051b5455ac2312b2de6f72f652d38965db7ce018dbaee326d5"
 }

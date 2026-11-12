@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when choosing between DML statements and Database class methods, handling partial success, or using Database.DMLOptions for assignment rules and duplicate handling. Trigger keywords: 'Database.insert allOrNone false', 'partial DML success apex', 'SaveResult isSuccess', 'database merge apex', 'DML exception handling'. NOT for savepoint placement and rollback after a failure \u2014 use apex/apex-savepoint-and-rollback. NOT for SOQL query patterns \u2014 use apex/soql-fundamentals."
+  "description": "Use when choosing between DML statements and Database class methods, handling partial success, or using Database.DMLOptions for assignment rules and duplicate handling. Trigger keywords: 'Database.insert allOrNone false', 'partial DML success apex', 'SaveResult isSuccess', 'database merge apex', 'DML exception handling'. NOT for savepoint placement and rollback after a failure — use apex/apex-savepoint-and-rollback. NOT for SOQL query patterns — use apex/soql-fundamentals.",
+  "content_fingerprint": "c0b5b6477d8239afdbba331873a7cb413de06b19f09cb6758217eaf7ccb5d374"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when hunting Broken Object Level Authorization (BOLA) or Insecure Direct Object Reference (IDOR) vulnerabilities in APIs or web applications. Trigger on: \"BOLA\", \"IDOR\", \"broken object level\", \"access other users\", \"object reference\", numeric or UUID IDs in URLs or request bodies, user-scoped resources, horizontal privilege escalation, \"change the ID in the request\", second-order IDOR, blind IDOR, indirect reference, encoded ID, deprecated API version, JSON globbing."
+  "description": "Use when hunting Broken Object Level Authorization (BOLA) or Insecure Direct Object Reference (IDOR) vulnerabilities in APIs or web applications. Trigger on: \"BOLA\", \"IDOR\", \"broken object level\", \"access other users\", \"object reference\", numeric or UUID IDs in URLs or request bodies, user-scoped resources, horizontal privilege escalation, \"change the ID in the request\", second-order IDOR, blind IDOR, indirect reference, encoded ID, deprecated API version, JSON globbing.",
+  "content_fingerprint": "b6a6dca0537eb5165914d7f531d5e930d2b7ce8d09b49ffcf4c0aecae3086777"
 }

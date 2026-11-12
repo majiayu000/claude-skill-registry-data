@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Consolida de forma determinista observations.jsonl, deduplicando, filtrando ruido y archivando entradas antiguas, sin LLM ni cron. Usar cuando se cierra la sesion tras session_close_observations o cuando observations.jsonl ha crecido mucho. No usar para escribir observaciones nuevas (ver session-close-observations)."
+  "description": "Consolida de forma determinista observations.jsonl, deduplicando, filtrando ruido y archivando entradas antiguas, sin LLM ni cron. Usar cuando se cierra la sesion tras session_close_observations o cuando observations.jsonl ha crecido mucho. No usar para escribir observaciones nuevas (ver session-close-observations).",
+  "content_fingerprint": "7445b7e50fa0c6e66d85c4c505ad530b2b9c212891cea5978d4ed4382d942368"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ronnythedev/dotnet-clean-architecture-skills/blob/main/skills/18-audit-trail/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "565aa3d51a028f4334c1d17dd00b49133375bc17e2aacd890e79b176ba05f007",
+  "description": "Generates audit trail infrastructure for entities. Implements IAuditable interface, EF Core SaveChanges interceptor, and automatic population of CreatedAt, UpdatedAt, CreatedBy, and UpdatedBy fields."
 }

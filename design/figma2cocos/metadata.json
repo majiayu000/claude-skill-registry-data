@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u628a figma2html \u7ba1\u7ebf\u4ea7\u7684 IR(.ui.json \u50cf\u7d20\u5feb\u7167 + flow.json \u4ea4\u4e92\u58f0\u660e)\u843d\u5230 Cocos Creator 3.x \u2014\u2014 TS \u8fd0\u884c\u65f6\u89e3\u91ca\u5668(\u7ec4\u4ef6\u52a0\u8f7d ui.json \u52a8\u6001\u5efa\u8282\u70b9\u6811 + flow \u7ed1\u5b9a\u5668)+ python \u79bb\u7ebf\u6821\u9a8c\u5668(\u5f15\u7528\u5b8c\u6574\u6027 + \u8d44\u4ea7\u6e05\u5355)\u3002\u8981\u5728 Cocos \u5de5\u7a0b\u91cc\u8fd8\u539f figma \u754c\u9762\u4e0e\u4ea4\u4e92(\u5e95\u5c4f+\u5f39\u7a97/\u5b88\u536b/\u5217\u8868/\u52fe\u9009)\u65f6\u4f7f\u7528;capture \u672c\u8eab\u5f52 figma2html\u3002"
+  "description": "把 figma2html 管线产的 IR(.ui.json 像素快照 + flow.json 交互声明)落到 Cocos Creator 3.x —— TS 运行时解释器(组件加载 ui.json 动态建节点树 + flow 绑定器)+ python 离线校验器(引用完整性 + 资产清单)。要在 Cocos 工程里还原 figma 界面与交互(底屏+弹窗/守卫/列表/勾选)时使用;capture 本身归 figma2html。",
+  "content_fingerprint": "aa12fce59ed4b24085d72354f2c5d1ac156f5aa264e193ba60130c708c0d2538"
 }

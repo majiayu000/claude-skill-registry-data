@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cross-Site Request Forgery (CSRF) tricks authenticated users into submitting forged requests to a target application by exploiting browser automatic cookie attachment. Detect via missing or predictable CSRF tokens in state-changing requests (POST/PUT/DELETE), absent `SameSite` cookie attributes, and JSON endpoints accepting `text/plain` Content-Type. Test using HTML auto-submitting forms, XHR requests, and CORS-enabled fetch. Tools: Burp Suite (Generate CSRF PoC), OWASP ZAP."
+  "description": "Cross-Site Request Forgery (CSRF) tricks authenticated users into submitting forged requests to a target application by exploiting browser automatic cookie attachment. Detect via missing or predictable CSRF tokens in state-changing requests (POST/PUT/DELETE), absent `SameSite` cookie attributes, and JSON endpoints accepting `text/plain` Content-Type. Test using HTML auto-submitting forms, XHR requests, and CORS-enabled fetch. Tools: Burp Suite (Generate CSRF PoC), OWASP ZAP.",
+  "content_fingerprint": "c67fa48991cc599a35f525b3240a94c624fbacbb220b97548410df303ca6705d"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7ed9\u5355\u7bc7\u7a3f\u5b50\u6253 rubric \u5206\u3002**\u53ea\u5728\u63a7\u5236\u53f0\u8f93\u51fa\uff0c\u4e0d\u5199\u6587\u4ef6\uff0c\u4e0d\u9884\u6d4b**\u3002\u89e6\u53d1\u8bcd\uff1a\"\u6253\u5206\u8fd9\u7bc7 [path]\"/\"score this [path]\"/\"\u7ed9\u8fd9\u7a3f\u5b50\u6253\u5206\"/\"\u5148\u6253\u5206\u770b\u770b\"\u3002\u662f cheat-predict \u4e4b\u524d\u7684\u8f7b\u91cf\u63a2\u7d22\u52a8\u4f5c\u3002"
+  "description": "给单篇稿子打 rubric 分。**只在控制台输出，不写文件，不预测**。触发词：\"打分这篇 [path]\"/\"score this [path]\"/\"给这稿子打分\"/\"先打分看看\"。是 cheat-predict 之前的轻量探索动作。",
+  "content_fingerprint": "162ca8408769e5809b90665fa8a3b8f8d2dab2dd5e3d401f3f15eb3903da0875"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ud504\ub860\ud2b8\uc5d4\ub4dc \uad6c\ud604 + UI \uac80\uc99d \ub8e8\ud504 + \ucd5c\uc885 \ucf54\ub4dc \ub9ac\ubdf0\ub97c \ud55c \ubc88\uc5d0 \ub3cc\ub9ac\ub294 \ud30c\uc774\ud504\ub77c\uc778. \uc778\uc790\ub85c \ubb38\uc11c \uacbd\ub85c\ub97c \ubc1b\uac70\ub098, IDE \uc5f4\ub9b0 \ud30c\uc77c/\ub300\ud654 \ub9e5\ub77d\uc5d0\uc11c \uad6c\ud604 \uc758\ub3c4\ub97c \ucd94\ucd9c\ud55c\ub2e4. \ud638\ucd9c \uc2dc \uc785\ub825\uc774 \ubd88\uba85\ud655\ud558\uba74 AskUserQuestion \uc73c\ub85c \uc9c1\uc811 \ubb3c\uc5b4\ubcf8\ub2e4. \ud2b8\ub9ac\uac70 - \"front-execute\", \"\ud504\ub860\ud2b8 \uad6c\ud604\ud558\uace0 \uac80\uc99d\ud574\uc918\", \"UI \uc2a4\ud399\ub300\ub85c \uad6c\ud604\ud558\uace0 \ub9c8\ubb34\ub9ac\", \"/front-execute {\uacbd\ub85c}\" \ub4f1."
+  "description": "프론트엔드 구현 + UI 검증 루프 + 최종 코드 리뷰를 한 번에 돌리는 파이프라인. 인자로 문서 경로를 받거나, IDE 열린 파일/대화 맥락에서 구현 의도를 추출한다. 호출 시 입력이 불명확하면 AskUserQuestion 으로 직접 물어본다. 트리거 - \"front-execute\", \"프론트 구현하고 검증해줘\", \"UI 스펙대로 구현하고 마무리\", \"/front-execute {경로}\" 등.",
+  "content_fingerprint": "1d1653ffcdfcfca547ba6a402bda98b12208326920b9f153557d02c65c357bb1"
 }

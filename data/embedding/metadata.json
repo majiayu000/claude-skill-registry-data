@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/grahama1970/agent-skills/blob/main/skills/embedding/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f28f90e56c085391f557df913c51d3b0b640eb97038f2cd74e901f15e01981ad",
+  "description": "Standalone embedding service for semantic search. Runs as persistent FastAPI server for millisecond-latency embeddings. Supports model swapping via env vars. Use when you need vectors for any database"
 }

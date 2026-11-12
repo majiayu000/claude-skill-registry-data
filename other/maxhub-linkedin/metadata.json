@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "LinkedIn \u804c\u4e1a\u793e\u4ea4\u516c\u5f00\u6570\u636e\u67e5\u8be2 skill\uff0c\u901a\u8fc7 MaxHub API \u67e5\u8be2\u516c\u53f8\u3001\u804c\u4f4d\u3001\u4eba\u5458\u8d44\u6599\u3001\u5458\u5de5\u5217\u8868\u3001\u5e16\u5b50\u3001\u8bc4\u8bba\u3001\u641c\u7d22\u548c\u5173\u8054\u6570\u636e\u3002\u9002\u5408 B2B \u5e02\u573a\u7814\u7a76\u3001\u62db\u8058\u7ebf\u7d22\u3001\u516c\u53f8\u753b\u50cf\u3001\u884c\u4e1a\u60c5\u62a5\u548c\u804c\u4e1a\u5185\u5bb9\u5206\u6790\u3002\u9ed8\u8ba4 read-only\uff0c\u4f46\u6570\u636e\u53ef\u80fd\u6d89\u53ca\u4e2a\u4eba\u804c\u4e1a\u4fe1\u606f\uff1bagent \u5fc5\u987b\u9075\u5b88\u6700\u5c0f\u5316\u4e0e\u6388\u6743\u539f\u5219\uff0c\u4f18\u5148\u8c03\u7528 recipes\uff0c\u6309\u5b57\u6bb5\u6d41\u4f20\u9012 company_id/profile_id/job_id \u7b49\u53c2\u6570\u3002\u6240\u6709\u8bf7\u6c42\u53d1\u9001\u5230 https://www.aconfig.cn\u3002"
+  "description": "LinkedIn 职业社交公开数据查询 skill，通过 MaxHub API 查询公司、职位、人员资料、员工列表、帖子、评论、搜索和关联数据。适合 B2B 市场研究、招聘线索、公司画像、行业情报和职业内容分析。默认 read-only，但数据可能涉及个人职业信息；agent 必须遵守最小化与授权原则，优先调用 recipes，按字段流传递 company_id/profile_id/job_id 等参数。所有请求发送到 https://www.aconfig.cn。",
+  "content_fingerprint": "481ab0898e611e8d8832661f6e1cb5b79c7763580aeadefe93aecefcd321479d"
 }

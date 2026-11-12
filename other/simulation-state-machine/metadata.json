@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill whenever writing the simulator runtime, step gating logic, session state object, restart/reset controls, wrong-order interaction handling, completion transitions, or any code that reads or writes the simulation's current state. This is the authoritative runtime contract for the simulator. Load this skill before writing any simulator state, session, or progression logic. Use alongside loto-interaction-mechanics for step-specific physics and tolerances."
+  "description": "Use this skill whenever writing the simulator runtime, step gating logic, session state object, restart/reset controls, wrong-order interaction handling, completion transitions, or any code that reads or writes the simulation's current state. This is the authoritative runtime contract for the simulator. Load this skill before writing any simulator state, session, or progression logic. Use alongside loto-interaction-mechanics for step-specific physics and tolerances.",
+  "content_fingerprint": "1646aaf0ccd2bbc24c5a25ff7bbef8446fac3469d3bac0f51738f9d32a8941a4"
 }

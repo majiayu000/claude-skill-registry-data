@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Vectorless, reasoning-based RAG for long professional documents (financial reports, regulatory filings, legal contracts, technical manuals, medical literature, textbooks). Replaces chunk-embed-vector-search with a hierarchical tree index that an LLM reasons through, so answers trace back to exact pages. Use when similarity search keeps returning plausible-but-wrong passages from a long PDF, when you need page-level citations, or when scoping a document-QA build and deciding between vector RAG and tree-index RAG. SDK is `pip install -U pageindex` (MIT)."
+  "description": "Vectorless, reasoning-based RAG for long professional documents (financial reports, regulatory filings, legal contracts, technical manuals, medical literature, textbooks). Replaces chunk-embed-vector-search with a hierarchical tree index that an LLM reasons through, so answers trace back to exact pages. Use when similarity search keeps returning plausible-but-wrong passages from a long PDF, when you need page-level citations, or when scoping a document-QA build and deciding between vector RAG and tree-index RAG. SDK is `pip install -U pageindex` (MIT).",
+  "content_fingerprint": "4dd46737067448b1f746c9f52da1c1a6ea13d05cccd543f37e5729d06bfde788"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage AICP's caching surfaces \u2014 LocalAI prompt cache (`prompt_cache_path`/`prompt_cache_all` per model YAML), KV cache quantization (`cache_type_k`/`cache_type_v` per asymmetric-KV-cache decision), Anthropic prompt caching (cloud backend), nomic-embed embedding cache. AICP has no general-purpose Redis/Memcached layer \u2014 these are inference-specific caches. Loads when the operator says \"tune prompt cache\" / \"KV cache settings\" / \"Anthropic cache hit rate\" / \"embedding cache\" / \"why is LocalAI re-processing the same prompt\"."
+  "description": "Manage AICP's caching surfaces — LocalAI prompt cache (`prompt_cache_path`/`prompt_cache_all` per model YAML), KV cache quantization (`cache_type_k`/`cache_type_v` per asymmetric-KV-cache decision), Anthropic prompt caching (cloud backend), nomic-embed embedding cache. AICP has no general-purpose Redis/Memcached layer — these are inference-specific caches. Loads when the operator says \"tune prompt cache\" / \"KV cache settings\" / \"Anthropic cache hit rate\" / \"embedding cache\" / \"why is LocalAI re-processing the same prompt\".",
+  "content_fingerprint": "5b0d91d2c95e1b8edd1feac5c26a1cfeaa4925c9188a630d852e3b9d65b7d1af"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Inspects a skill's SKILL.md and its observations/runs.md log, identifies failure patterns, and proposes a targeted amendment to improve the skill. Trigger on: \"improve this skill\", \"fix this skill\", \"update this skill\", \"why does X keep failing\", \"this skill is wrong\", \"add this to the skill\", or automatically when observations/<skill-name>/runs.md contains 3 or more failure entries. Outputs the amendment as a diff the user can review before applying. Records the amendment rationale in observations/<skill-name>/runs.md after user confirmation."
+  "description": "Inspects a skill's SKILL.md and its observations/runs.md log, identifies failure patterns, and proposes a targeted amendment to improve the skill. Trigger on: \"improve this skill\", \"fix this skill\", \"update this skill\", \"why does X keep failing\", \"this skill is wrong\", \"add this to the skill\", or automatically when observations/<skill-name>/runs.md contains 3 or more failure entries. Outputs the amendment as a diff the user can review before applying. Records the amendment rationale in observations/<skill-name>/runs.md after user confirmation.",
+  "content_fingerprint": "fa11a9797b4aed3c2b091c4a6ac9d5a9276ecc71434c2479ee516b25573a4673"
 }

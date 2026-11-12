@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Identify trivial, low-risk PRs in the `ready for maintainer review` queue\nof <upstream> that pass every quality gate and touch only supplementary\nareas (docs, changelog, translations, tests) \u2014 the \"express lane\".\nSurfaces and ranks candidates with per-PR diff summaries, an\nall-gates-green attestation, and the exact merge command. On explicit\nper-PR confirmation it can submit an APPROVE review, exactly as\npr-management-code-review does. It never merges itself \u2014 automated merge\nis the deliberately-deferred Agentic Autonomous mode."
+  "description": "Identify trivial, low-risk PRs in the `ready for maintainer review` queue\nof <upstream> that pass every quality gate and touch only supplementary\nareas (docs, changelog, translations, tests) — the \"express lane\".\nSurfaces and ranks candidates with per-PR diff summaries, an\nall-gates-green attestation, and the exact merge command. On explicit\nper-PR confirmation it can submit an APPROVE review, exactly as\npr-management-code-review does. It never merges itself — automated merge\nis the deliberately-deferred Agentic Autonomous mode.",
+  "content_fingerprint": "98286110a9d26e9376e4fed4f2eef45edb9e4ca34252b77c1934893eb3e3dbd4"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cross-validation of Gold layer design artifacts during the design phase. Use when validating that YAML schemas, ERDs, lineage CSVs, and PK/FK references are internally consistent before handing off to implementation. Catches design-time inconsistencies (e.g., column in ERD but not in YAML, FK referencing non-existent table) that would otherwise surface as runtime bugs."
+  "description": "Cross-validation of Gold layer design artifacts during the design phase. Use when validating that YAML schemas, ERDs, lineage CSVs, and PK/FK references are internally consistent before handing off to implementation. Catches design-time inconsistencies (e.g., column in ERD but not in YAML, FK referencing non-existent table) that would otherwise surface as runtime bugs.",
+  "content_fingerprint": "34931675211740c81fdaaa60664401c65deab2ebb810573ce049a6b1af1b54a1"
 }

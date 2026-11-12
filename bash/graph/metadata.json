@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Rebuild the vault dependency graph (_graph.md) via the deterministic generator script. $graph forces a full rebuild; $graph last (run after every $sync) rebuilds only if the vault changed; $graph [N] is treated as last. The generator reads the vault and writes _graph.md directly, so the file never streams through a model response."
+  "description": "Rebuild the vault dependency graph (_graph.md) via the deterministic generator script. $graph forces a full rebuild; $graph last (run after every $sync) rebuilds only if the vault changed; $graph [N] is treated as last. The generator reads the vault and writes _graph.md directly, so the file never streams through a model response.",
+  "content_fingerprint": "75360145e18b0f39288c25d831bb9cc044e50d11ce8e187db305884a7795d8c2"
 }

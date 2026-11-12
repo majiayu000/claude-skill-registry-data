@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lin-A1/skills-agent/blob/main/services/memory_service/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a119bdba0b8ce31892d0bff2061af78936717a5e7f2ae76bec5f745bab7d3ca8",
+  "description": "记忆检索服务。让 Agent 自主决定是否需要回忆过去的对话。\n**使用场景**：\n1. 用户问\"之前我们讨论过什么\"、\"上次说的那个...\"\n2. 需要参考之前的上下文来回答当前问题\n3. 用户提到某个之前讨论过的主题\n**不要滥用**：简单问题（如写代码、解释概念）不需要检索记忆\n"
 }

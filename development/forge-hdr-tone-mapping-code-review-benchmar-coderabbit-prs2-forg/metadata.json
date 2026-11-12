@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/code-review-benchmark/coderabbit_prs2__forge-gpu__coderabbit__PR323__20260317/blob/main/.claude/skills/forge-hdr-tone-mapping/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "5d27915cf6cb8a6b96440176b9b86fc9269810ddc006ba2bd4d7f508f8d765b7",
+  "description": "Add HDR rendering and tone mapping to an SDL GPU project. Render to a floating-point render target, then tone map to the swapchain with Reinhard or ACES filmic operators. Includes exposure control and"
 }

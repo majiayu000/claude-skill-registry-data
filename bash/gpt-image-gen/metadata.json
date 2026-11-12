@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user asks to generate OR edit an image via GPT/Codex (e.g. \u300c\u53eb gpt \u751f\u5716\u300d\u300c\u5e6b\u6211\u7528 gpt \u751f\u5716\u300d\u300cgpt \u756b\u4e00\u500b X\u300d\u300c\u5e6b\u6211\u53bb\u80cc\u300d\u300c\u628a\u9019\u5f35\u5716\u7684\u80cc\u666f\u53bb\u6389\u300d). The skill drafts a Chinese + English prompt pair and waits for explicit approval. After approval it uses the host-native executor: Codex calls its built-in image_gen tool directly, while Claude Code keeps the Codex CLI background workflow. Supports text-to-image, img2img, and precise EDIT mode with preservation constraints and verification where local artifacts are available."
+  "description": "Use when the user asks to generate OR edit an image via GPT/Codex (e.g. 「叫 gpt 生圖」「幫我用 gpt 生圖」「gpt 畫一個 X」「幫我去背」「把這張圖的背景去掉」). The skill drafts a Chinese + English prompt pair and waits for explicit approval. After approval it uses the host-native executor: Codex calls its built-in image_gen tool directly, while Claude Code keeps the Codex CLI background workflow. Supports text-to-image, img2img, and precise EDIT mode with preservation constraints and verification where local artifacts are available.",
+  "content_fingerprint": "fe61981985020df1897bcb043173991322dd9fbeccbda886ecfe4ac2a7b262f5"
 }

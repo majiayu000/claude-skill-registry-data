@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detects differential alternative splicing between conditions using rMATS-turbo (binomial LRT on junction counts), leafcutter (Dirichlet-multinomial GLM on intron clusters), MAJIQ V3 deltapsi/HET (Bayesian posterior on LSVs), SUPPA2 (empirical-null on TPM-derived PSI), or Shiba (junction-imbalance-corrected, 2025 SOTA at low coverage). Reports FDR-corrected significance and delta PSI effect sizes. Tools differ in statistical model, annotation dependence, calibration regime, and replicate-count requirements. Use when comparing splicing patterns between treatment groups, tissues, or disease states."
+  "description": "Detects differential alternative splicing between conditions using rMATS-turbo (binomial LRT on junction counts), leafcutter (Dirichlet-multinomial GLM on intron clusters), MAJIQ V3 deltapsi/HET (Bayesian posterior on LSVs), SUPPA2 (empirical-null on TPM-derived PSI), or Shiba (junction-imbalance-corrected, 2025 SOTA at low coverage). Reports FDR-corrected significance and delta PSI effect sizes. Tools differ in statistical model, annotation dependence, calibration regime, and replicate-count requirements. Use when comparing splicing patterns between treatment groups, tissues, or disease states.",
+  "content_fingerprint": "9e26f9604477a879f3eca59e79ca6716c96ef6f3f067a9594b555dca5951b270"
 }

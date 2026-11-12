@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review a GitHub stacked pull request as one unit on `<upstream>`: resolve\nthe stack from any member PR or its stack number, check that the chain is\nlinear and current, map every file to the layers that touch it, trace\ndefinitions removed in one layer and still used in another, and read code\nby tier with a coverage table instead of line by line. Drafts one rolling\n`COMMENT` on the lowest open layer and names the layers that deserve a\n`pr-management-code-review` pass. Never approves."
+  "description": "Review a GitHub stacked pull request as one unit on `<upstream>`: resolve\nthe stack from any member PR or its stack number, check that the chain is\nlinear and current, map every file to the layers that touch it, trace\ndefinitions removed in one layer and still used in another, and read code\nby tier with a coverage table instead of line by line. Drafts one rolling\n`COMMENT` on the lowest open layer and names the layers that deserve a\n`pr-management-code-review` pass. Never approves.",
+  "content_fingerprint": "098cec6931160f37a7666e9f49337b38bd15fa3441c9ec00ddd7363707dc5c94"
 }

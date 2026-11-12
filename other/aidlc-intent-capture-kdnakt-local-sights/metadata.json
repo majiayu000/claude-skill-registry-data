@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `intent-capture` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage intent-capture --single`: the engine emits one run-stage directive for intent-capture and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `intent-capture` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage intent-capture --single`: the engine emits one run-stage directive for intent-capture and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "28b2f460ab9014a17acb8aa4fe1dcb9a20098221577c15f535a57b915c63ec21"
 }

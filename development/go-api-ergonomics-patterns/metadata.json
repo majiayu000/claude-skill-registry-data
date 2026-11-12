@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this for the Go-specific realization of the api-ergonomics-audit checklist \u2014 `(*Cache).Close()` shape, `errors.Is(err, ErrX)` discoverability, `Example_*` runnable godoc with `// Output:`, ctx-as-first-param convention, godoc starting with the symbol name, package-level sentinels with `[traces-to:]` markers, and stdlib-shaped constructors. Triggers: Example_, godoc, errors.Is, ErrX sentinel, ctx context.Context, var Err, http.Client, // Output:."
+  "description": "Use this for the Go-specific realization of the api-ergonomics-audit checklist — `(*Cache).Close()` shape, `errors.Is(err, ErrX)` discoverability, `Example_*` runnable godoc with `// Output:`, ctx-as-first-param convention, godoc starting with the symbol name, package-level sentinels with `[traces-to:]` markers, and stdlib-shaped constructors. Triggers: Example_, godoc, errors.Is, ErrX sentinel, ctx context.Context, var Err, http.Client, // Output:.",
+  "content_fingerprint": "4661dfe4623e98277a698b0690a180311f768ddbe24ca60055612c219465145b"
 }

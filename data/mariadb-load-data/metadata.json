@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific syntax and behavior for LOAD DATA [LOCAL] INFILE (and LOAD XML) \u2014 the LOCAL vs server-side fork and its security/privilege requirements (local_infile, FILE privilege, secure_file_priv), tab/newline (not CSV) defaults, how LOCAL silently downgrades duplicate handling to IGNORE and disables strict-mode aborts, IGNORE n LINES, user-variable + SET transformation, the CHARACTER SET clause, and priority/concurrency. Use when writing, generating, or reviewing LOAD DATA / LOAD XML statements, or bulk-loading CSV/TSV/XML into MariaDB."
+  "description": "MariaDB-specific syntax and behavior for LOAD DATA [LOCAL] INFILE (and LOAD XML) — the LOCAL vs server-side fork and its security/privilege requirements (local_infile, FILE privilege, secure_file_priv), tab/newline (not CSV) defaults, how LOCAL silently downgrades duplicate handling to IGNORE and disables strict-mode aborts, IGNORE n LINES, user-variable + SET transformation, the CHARACTER SET clause, and priority/concurrency. Use when writing, generating, or reviewing LOAD DATA / LOAD XML statements, or bulk-loading CSV/TSV/XML into MariaDB.",
+  "content_fingerprint": "4cf6a3af5afe92c6eeff9e2b1030031de544ac47f53ba37d88b66c1d4a3135f7"
 }

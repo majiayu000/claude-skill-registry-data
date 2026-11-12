@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Break-test an HTTP API the user runs locally before shipping it. Sends malformed bodies, hostile paths, raw parser errors, concurrent duplicate creates, never-ending bodies, LIKE/SQL injection in search, database faults, missing auth, IDOR and CSRF, and reports each failure with its severity and the correct response. Use when asked to attack, harden, fuzz or break-test a local API, or to check it never answers 500. Not for code review, load tests, full OpenAPI conformance, or hosts the user does not own."
+  "description": "Break-test an HTTP API the user runs locally before shipping it. Sends malformed bodies, hostile paths, raw parser errors, concurrent duplicate creates, never-ending bodies, LIKE/SQL injection in search, database faults, missing auth, IDOR and CSRF, and reports each failure with its severity and the correct response. Use when asked to attack, harden, fuzz or break-test a local API, or to check it never answers 500. Not for code review, load tests, full OpenAPI conformance, or hosts the user does not own.",
+  "content_fingerprint": "4d90930fe9f1ed72505ab860296537d34e70658f566ab0ff2771c05037cc432d"
 }

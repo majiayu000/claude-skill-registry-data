@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/park-kyungchan/palantir/blob/main/.claude/skills/commit-push-pr/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c88fe27625ecb7faad3ba13f1316b684e3a8535a342f4cf198e5e5df43cd2e2d",
+  "description": "Boris Cherny Pattern 6: Commit changes, push to remote, create/update PR.\nAutomates: git add -> git commit -> git push -> gh pr create.\nTerminal skill (pipeline endpoint) after /synthesis COMPLETE.\n"
 }

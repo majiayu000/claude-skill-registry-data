@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pre-work safety check at the start of a session. Inspects git state for unexpected staged files or parallel-session commits, confirms the main daemon (:9000) and dogfood daemon (:9001) are reachable, and surfaces anomalies before any code work begins. Use when the user says \"preflight\", \"/preflight\", \"check state\", or whenever you suspect another Claude/user session may have been editing in parallel. NOT a shell/dependency probe (use env-check) and NOT a code audit (use eos-architecture-review / eos-bug-audit)."
+  "description": "Pre-work safety check at the start of a session. Inspects git state for unexpected staged files or parallel-session commits, confirms the main daemon (:9000) and dogfood daemon (:9001) are reachable, and surfaces anomalies before any code work begins. Use when the user says \"preflight\", \"/preflight\", \"check state\", or whenever you suspect another Claude/user session may have been editing in parallel. NOT a shell/dependency probe (use env-check) and NOT a code audit (use eos-architecture-review / eos-bug-audit).",
+  "content_fingerprint": "dac51b1844af83a1a7597efc72a3dadbb5b98297d9e693704d09e18a023bd2bd"
 }

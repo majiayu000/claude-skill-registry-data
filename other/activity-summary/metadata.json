@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when an agent is asked \"what did I (or my team) work on yesterday / this week / today\" across provider data in a relayfile mount (Linear, GitHub, Notion, Slack, Confluence, Jira, etc.). Tells the agent to consult the pre-computed `digests/yesterday.md` (and sibling digest files) at the workspace root BEFORE doing manual exploration with `ls`/`grep`/`find`. The digest is deterministic, exhaustive over the window, and costs one file read instead of dozens of provider queries."
+  "description": "Use when an agent is asked \"what did I (or my team) work on yesterday / this week / today\" across provider data in a relayfile mount (Linear, GitHub, Notion, Slack, Confluence, Jira, etc.). Tells the agent to consult the pre-computed `digests/yesterday.md` (and sibling digest files) at the workspace root BEFORE doing manual exploration with `ls`/`grep`/`find`. The digest is deterministic, exhaustive over the window, and costs one file read instead of dozens of provider queries.",
+  "content_fingerprint": "4aa888ae9043e6815e86dfae52f55a65042f943decb1dfa1177ee2818d5b679e"
 }

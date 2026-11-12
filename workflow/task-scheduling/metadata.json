@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when the user designs a \"task scheduler\", \"job scheduler\", \"job queue\", \"cron at scale\", \"distributed cron\", \"delayed / scheduled / recurring tasks\", a \"worker pool\", reaches for \"Celery / Sidekiq / Airflow\", or wrestles with \"task leasing\", visibility timeouts, job priorities, fairness, or duplicate task execution. Use it whenever work must run later, on a schedule, or be reliably leased to a pool of workers, even if the user doesn't say \"scheduler\". (For plain queue transport and delivery guarantees, that is `messaging-streaming`.)"
+  "description": "This skill should be used when the user designs a \"task scheduler\", \"job scheduler\", \"job queue\", \"cron at scale\", \"distributed cron\", \"delayed / scheduled / recurring tasks\", a \"worker pool\", reaches for \"Celery / Sidekiq / Airflow\", or wrestles with \"task leasing\", visibility timeouts, job priorities, fairness, or duplicate task execution. Use it whenever work must run later, on a schedule, or be reliably leased to a pool of workers, even if the user doesn't say \"scheduler\". (For plain queue transport and delivery guarantees, that is `messaging-streaming`.)",
+  "content_fingerprint": "2d28d66eaa0f3506977a68b906d8cb83b9f70938ace1c2a6e93b39b6e01bda4e"
 }

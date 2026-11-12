@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill during Phase 6 to deploy code that has passed Phase 5 Test. Updates tickets with deployment details when a ticketing system is configured; otherwise generates deployment artifacts as markdown or JSON under .claude/sdlc/deployments/. Never auto-executes a deployment \u2014 always proposes and waits for explicit human confirmation. Trigger after test is signed off, or when the user says \"deploy\", \"release\", or \"ship\"."
+  "description": "Use this skill during Phase 6 to deploy code that has passed Phase 5 Test. Updates tickets with deployment details when a ticketing system is configured; otherwise generates deployment artifacts as markdown or JSON under .claude/sdlc/deployments/. Never auto-executes a deployment — always proposes and waits for explicit human confirmation. Trigger after test is signed off, or when the user says \"deploy\", \"release\", or \"ship\".",
+  "content_fingerprint": "30d62d543659a493926494b6558eaff1f4c79770eeb6d4754bab2c5a30d6672a"
 }

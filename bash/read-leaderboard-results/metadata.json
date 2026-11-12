@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reads a CARLA Leaderboard results.json \u2014 per-route driving score, route completion, infraction penalty and the infraction lists \u2014 explains how the score was computed for that leaderboard version, and rescores an existing result under the other version's rules (2.0 multiplicative vs 2.1 additive) without re-running anything. Also diffs two runs and merges sharded result files. Use when the user asks \"what did I score\", \"why is my score low\", \"did my agent pass\", \"why don't my scores match the leaderboard\", or hands over a results.json."
+  "description": "Reads a CARLA Leaderboard results.json — per-route driving score, route completion, infraction penalty and the infraction lists — explains how the score was computed for that leaderboard version, and rescores an existing result under the other version's rules (2.0 multiplicative vs 2.1 additive) without re-running anything. Also diffs two runs and merges sharded result files. Use when the user asks \"what did I score\", \"why is my score low\", \"did my agent pass\", \"why don't my scores match the leaderboard\", or hands over a results.json.",
+  "content_fingerprint": "441757e3f2866cbbf9cb41bdb4fd9bf12b6f29ed940b78b888f09580c88be659"
 }

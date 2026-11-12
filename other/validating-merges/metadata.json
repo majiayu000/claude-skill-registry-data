@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when a session's job is POST-MERGE VERIFICATION \u2014 taking merged PRs and establishing whether the change actually does what it claimed, then recording the result against its `pr_verifications` obligation. \"validate the merged PRs\", \"work the verification backlog\", \"did that PR actually work\", \"run the post-merge E2E\". It owns the obligation ledger the repo-pulse worker fills. Do NOT load it for building a change and opening its PR (that is `genesis-development`), or for driving open PRs to merge (that is `closing-session`)."
+  "description": "This skill should be used when a session's job is POST-MERGE VERIFICATION — taking merged PRs and establishing whether the change actually does what it claimed, then recording the result against its `pr_verifications` obligation. \"validate the merged PRs\", \"work the verification backlog\", \"did that PR actually work\", \"run the post-merge E2E\". It owns the obligation ledger the repo-pulse worker fills. Do NOT load it for building a change and opening its PR (that is `genesis-development`), or for driving open PRs to merge (that is `closing-session`).",
+  "content_fingerprint": "f90fc458e6800129a5f369a1853e9e01a189b3b7982ef02c1b045318ecf849c0"
 }

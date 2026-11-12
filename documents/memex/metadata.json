@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cross-session shared memory for agents. Use at session start to load the persistent bias-log via `mcp__memex__recent_observations`, mid-session to search prior context with `mcp__memex__search`, and immediately when a bias surfaces to log a new `observation` via `mcp__memex__add`. The six-layer reconstruction trail (raw \u2192 embedded \u2192 indexed \u2192 graphed \u2192 curated \u2192 reflexive) means memex stores facts AND the agent's own reasoning patterns across sessions. Prefer querying memex before re-deriving prior architectural decisions; re-derivation is itself evidence that the trail is incomplete."
+  "description": "Cross-session shared memory for agents. Use at session start to load the persistent bias-log via `mcp__memex__recent_observations`, mid-session to search prior context with `mcp__memex__search`, and immediately when a bias surfaces to log a new `observation` via `mcp__memex__add`. The six-layer reconstruction trail (raw → embedded → indexed → graphed → curated → reflexive) means memex stores facts AND the agent's own reasoning patterns across sessions. Prefer querying memex before re-deriving prior architectural decisions; re-derivation is itself evidence that the trail is incomplete.",
+  "content_fingerprint": "1cf32fd7e6e1a6dcf3920646b3f2fb3d03080f9887ad05757482b9570e76c755"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn a server-side request (SSRF) into RCE by speaking the Redis protocol over gopher:// to an internal, unauthenticated Redis \u2014 write a cron job, an SSH key, or a webshell. Load when: SSRF is confirmed (URL fetch, webhook, PDF/URL preview, image proxy) AND an internal Redis/6379 (or similar line-protocol service) is reachable. Authorized targets only."
+  "description": "Turn a server-side request (SSRF) into RCE by speaking the Redis protocol over gopher:// to an internal, unauthenticated Redis — write a cron job, an SSH key, or a webshell. Load when: SSRF is confirmed (URL fetch, webhook, PDF/URL preview, image proxy) AND an internal Redis/6379 (or similar line-protocol service) is reachable. Authorized targets only.",
+  "content_fingerprint": "3bff376d42a4788a6fd3f5ce400abb78dc1005abad5d0f4f0894a37d8cf79854"
 }

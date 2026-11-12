@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6570\u4ed3 ETL \u5f00\u53d1\u6d41\u7a0b\uff0c\u9002\u7528\u4e8e\u751f\u6210 ODPS/MaxCompute \u5efa\u8868 DDL\u3001INSERT SQL \u548c SR \u5efa\u8868\u8bed\u53e5\uff0c\u5e76\u914d\u5408 hooks \u81ea\u52a8\u6821\u9a8c SQL \u89c4\u8303\u3002\u76f4\u63a5\u8c03\u7528\u547d\u4ee4\uff1a/dw-etl\u3002"
+  "description": "数仓 ETL 开发流程，适用于生成 ODPS/MaxCompute 建表 DDL、INSERT SQL 和 SR 建表语句，并配合 hooks 自动校验 SQL 规范。直接调用命令：/dw-etl。",
+  "content_fingerprint": "50d4310d349ff1d775087a4d64706a0363fc2349bbf8f5217638733b1ac70720"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage AICP's per-environment configuration \u2014 environment variables (`.env`, `AICP_*` family), config file overlays (default \u2192 profile \u2192 ~/.aicp/config.yaml \u2192 project .aicp/config.yaml \u2192 --config), per-environment profile selection (dev / staging / prod). Distinct from `config-secrets` (secrets specifically) and `config-deploy` (deployment-time profile selection); this skill is the broader env-var + config-file lifecycle. Loads when the operator says \"set env var X\" / \"add a config\" / \"what env vars does AICP read\" / \"different config for dev vs prod\" / \"override config X for this run\"."
+  "description": "Manage AICP's per-environment configuration — environment variables (`.env`, `AICP_*` family), config file overlays (default → profile → ~/.aicp/config.yaml → project .aicp/config.yaml → --config), per-environment profile selection (dev / staging / prod). Distinct from `config-secrets` (secrets specifically) and `config-deploy` (deployment-time profile selection); this skill is the broader env-var + config-file lifecycle. Loads when the operator says \"set env var X\" / \"add a config\" / \"what env vars does AICP read\" / \"different config for dev vs prod\" / \"override config X for this run\".",
+  "content_fingerprint": "3ef187834f7f17636e3bd808dd94095979c5e5b68829f682cc5338d03992f14f"
 }

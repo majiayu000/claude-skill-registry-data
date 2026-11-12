@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a Makefile target and its coverage manifest have drifted apart \u2014 the `bats` check failing with a `diff` between the Makefile target list and the target column of `tests/bats/make-target-coverage.tsv`, a manifest row whose `evidence` file does not exist or never names the target as a whole token, a row left behind by a renamed or deleted target, or a linter added to the `lint` aggregate but missing from `CI_LINT_TARGETS`."
+  "description": "Use when a Makefile target and its coverage manifest have drifted apart — the `bats` check failing with a `diff` between the Makefile target list and the target column of `tests/bats/make-target-coverage.tsv`, a manifest row whose `evidence` file does not exist or never names the target as a whole token, a row left behind by a renamed or deleted target, or a linter added to the `lint` aggregate but missing from `CI_LINT_TARGETS`.",
+  "content_fingerprint": "9450f31df887706df0bfd355da554d6143ad0f16e6271e56ca2590755e1cbc94"
 }

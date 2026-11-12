@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run Chain-of-Verification (CoVe) on a draft or a block of text with factual claims. Spawns the `claim-verifier` agent in a forked (fresh) context so it never sees the draft \u2014 then reports which claims are supported, contradicted, or unverifiable. Use when user says \"verify these citations\", \"check the claims in X\", \"did I hallucinate anything\", \"fact-check this draft\", \"run CoVe on this\", or after any text generation that asserts facts about papers, datasets, or numerical results. NOT for style/grammar review (use `/proofread`) or substance review (use `/review-paper`)."
+  "description": "Run Chain-of-Verification (CoVe) on a draft or a block of text with factual claims. Spawns the `claim-verifier` agent in a forked (fresh) context so it never sees the draft — then reports which claims are supported, contradicted, or unverifiable. Use when user says \"verify these citations\", \"check the claims in X\", \"did I hallucinate anything\", \"fact-check this draft\", \"run CoVe on this\", or after any text generation that asserts facts about papers, datasets, or numerical results. NOT for style/grammar review (use `/proofread`) or substance review (use `/review-paper`).",
+  "content_fingerprint": "e084f88143078c3f4f80d731151a51ab0fdc7a3dad724d33fc22e1b9f7a3c172"
 }

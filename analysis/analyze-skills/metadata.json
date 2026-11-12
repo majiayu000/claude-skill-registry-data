@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dlupiak/claude-session-dashboard/blob/main/.claude/skills/analyze-skills/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "54bfc1e778d5c779470cac76545c7fc163c505f5b3bf37f99263bba0dd00c7b4",
+  "description": "Analyze ~/.claude session files to find unused agent skills and reduce context token waste. Scans subagent JSONL files for injected skills and cross-references with agent responses."
 }

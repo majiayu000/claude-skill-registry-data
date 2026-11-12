@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Establishes a strict layered architecture for a bootgs project \u2014 Controller \u2192 Service \u2192 Repository \u2192 Domain, one-directional dependencies, an Interface+Impl naming convention, and a working eslint-plugin-boundaries config that enforces it mechanically. Use when structuring a bootgs backend beyond a single controller, reviewing a PR that adds a repository or service, or when \"hold the layering by discipline\" has already broken down once. Not for initial project setup or entry-point wiring (`bootgs-quickstart`), nor for validating a handler's inputs (`bootgs-validation`)."
+  "description": "Establishes a strict layered architecture for a bootgs project — Controller → Service → Repository → Domain, one-directional dependencies, an Interface+Impl naming convention, and a working eslint-plugin-boundaries config that enforces it mechanically. Use when structuring a bootgs backend beyond a single controller, reviewing a PR that adds a repository or service, or when \"hold the layering by discipline\" has already broken down once. Not for initial project setup or entry-point wiring (`bootgs-quickstart`), nor for validating a handler's inputs (`bootgs-validation`).",
+  "content_fingerprint": "12c02b45e9392f113b71dd8032d334e132d3275df4d07968caa9e6ad4b45f5d5"
 }

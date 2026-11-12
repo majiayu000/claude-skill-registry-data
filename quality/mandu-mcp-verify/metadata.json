@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ud3b8\uc9d1 \ud6c4 \uac80\uc99d \ub8e8\ud504. \ud30c\uc77c \ud3b8\uc9d1 \uc9c1\ud6c4, \"check \ud574\uc918\", stop-hook \uc790\ub3d9 \ud638\ucd9c.\nate_auto_pipeline + guard_check + doctor \ub97c \ubcd1\ub82c\ub85c. \uac1c\ubcc4 ate_* \ub3c4\uad6c\ub85c\n\uc218\ub3d9 \ubd84\ud574 \uae08\uc9c0 \u2014 \uc2e4\ud328\ud588\uc744 \ub54c\ub9cc drill-down."
+  "description": "편집 후 검증 루프. 파일 편집 직후, \"check 해줘\", stop-hook 자동 호출.\nate_auto_pipeline + guard_check + doctor 를 병렬로. 개별 ate_* 도구로\n수동 분해 금지 — 실패했을 때만 drill-down.",
+  "content_fingerprint": "a5862d3b55ee5dc0f5a4864be71db62315b22b3ad9cf1e53cf5e19afcbb2ad62"
 }

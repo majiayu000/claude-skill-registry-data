@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when writing or reviewing database queries, views, indexes, or schema for correctness and performance. Invoke whenever you: add or change ANY query (ORM or raw), touch an EntitySchema/entity/migration, design an index, build or tune a (materialized) view or read model, or investigate \"this endpoint/list is slow\". In a TypeORM project, load this before writing ORM code \u2014 it carries live-verified gotchas unit tests do not catch. Do NOT use for deciding which service owns a table or where logic lives \u2014 that's service-architecture; do NOT use for how to run/migrate a project locally \u2014 that's project-config."
+  "description": "Use when writing or reviewing database queries, views, indexes, or schema for correctness and performance. Invoke whenever you: add or change ANY query (ORM or raw), touch an EntitySchema/entity/migration, design an index, build or tune a (materialized) view or read model, or investigate \"this endpoint/list is slow\". In a TypeORM project, load this before writing ORM code — it carries live-verified gotchas unit tests do not catch. Do NOT use for deciding which service owns a table or where logic lives — that's service-architecture; do NOT use for how to run/migrate a project locally — that's project-config.",
+  "content_fingerprint": "5ce3257bc186b14463e61e191cbc05ec37cd0a4e1ed91a0cca9a78b9ad429c73"
 }

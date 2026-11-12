@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reviewing Rust code - what to flag, and what rustc and clippy already flag for you\n\nUSE WHEN: you are reviewing, critiquing or auditing existing Rust code - a\n\"code review\", a \"review\" of a .rs file, a diff, a PR or a pull request;\ndeciding what to comment on in Rust; avoiding false positives on Rust code\n\nDO NOT USE FOR: writing, explaining or learning Rust - use `languages/rust`;\nanything rustc or a default clippy run already reports (this skill lists those\nso you can stay silent about them); async runtime specifics - use the tokio\nmaterial; FFI binding generation - use `languages/uniffi`"
+  "description": "Reviewing Rust code - what to flag, and what rustc and clippy already flag for you\n\nUSE WHEN: you are reviewing, critiquing or auditing existing Rust code - a\n\"code review\", a \"review\" of a .rs file, a diff, a PR or a pull request;\ndeciding what to comment on in Rust; avoiding false positives on Rust code\n\nDO NOT USE FOR: writing, explaining or learning Rust - use `languages/rust`;\nanything rustc or a default clippy run already reports (this skill lists those\nso you can stay silent about them); async runtime specifics - use the tokio\nmaterial; FFI binding generation - use `languages/uniffi`",
+  "content_fingerprint": "0c194d734ee98e83c027876d88a95544ad6cfa363d39ab01e674b68ea102e92d"
 }

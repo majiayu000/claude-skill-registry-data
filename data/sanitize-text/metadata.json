@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/iamgrewal/rolesense/blob/main/.agent/skills/sanitize-text/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "364bc50f644cc59974c69a9c59df26e9f75d499b06d3555f19b02997da40e58c",
+  "description": "Normalize raw text by removing excessive whitespace, non-printable characters, and standardizing unicode. Use this to clean up text extracted from PDFs or DOCX files before processing with LLMs."
 }

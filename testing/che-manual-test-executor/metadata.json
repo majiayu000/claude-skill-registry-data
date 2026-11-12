@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Executes the manual_test_plan.md step-by-step using Playwright MCP (browser interactions + screenshots) or HTTP/curl requests for API-only scenarios, generates evidence files (PNG screenshots, JSON logs), and delivers a structured pass/fail report per AC. Call this AFTER manual_test_plan.md is written by che-act and BEFORE che-ship, or standalone when user passes a worktree + task-id or a manual test plan path explicitly."
+  "description": "Executes the manual_test_plan.md step-by-step using Playwright MCP (browser interactions + screenshots) or HTTP/curl requests for API-only scenarios, generates evidence files (PNG screenshots, JSON logs), and delivers a structured pass/fail report per AC. Call this AFTER manual_test_plan.md is written by che-act and BEFORE che-ship, or standalone when user passes a worktree + task-id or a manual test plan path explicitly.",
+  "content_fingerprint": "39456b33c5bd521d0e0578cda5fa1147f5c37aa3d4cfc2e4db103019543af72b"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8c03\u7528 Verilator 5.012 \u7f16\u8bd1 RTL + TB \u5e76\u8dd1 coverage-driven simulation\uff0c\u4ea7\u51fa sim log / coverage.dat / VCD\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bba-guru-verification \u5b8c\u6210 TB \u540e\u8dd1\u56de\u5f52\uff1b(2) RTL \u4fee\u590d\u540e\u56de\u5f52\u9a8c\u8bc1\uff1b(3) \u663e\u5f0f /bb-invoke-verilator\u3002"
+  "description": "调用 Verilator 5.012 编译 RTL + TB 并跑 coverage-driven simulation，产出 sim log / coverage.dat / VCD。触发场景：(1) bba-guru-verification 完成 TB 后跑回归；(2) RTL 修复后回归验证；(3) 显式 /bb-invoke-verilator。",
+  "content_fingerprint": "cdf407ff22d919e04a22d2bb089bef06e3acff6084bd1452614a802e89fdc1fc"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "XML External Entity (XXE) injection exploits XML parsers that process DTD external entity declarations, enabling local file disclosure (`file:///etc/passwd`), SSRF via `http://` entities, and DoS via Billion Laughs. Vulnerable Java APIs include `DocumentBuilder`, `SAXParser`, `dom4j`, `TransformerFactory`, `SAXReader`, `XMLInputFactory`, Xerces. Detect by injecting `<!DOCTYPE>` DTD with `SYSTEM` entity references. Tools: Burp Suite, wfuzz XML fuzz strings."
+  "description": "XML External Entity (XXE) injection exploits XML parsers that process DTD external entity declarations, enabling local file disclosure (`file:///etc/passwd`), SSRF via `http://` entities, and DoS via Billion Laughs. Vulnerable Java APIs include `DocumentBuilder`, `SAXParser`, `dom4j`, `TransformerFactory`, `SAXReader`, `XMLInputFactory`, Xerces. Detect by injecting `<!DOCTYPE>` DTD with `SYSTEM` entity references. Tools: Burp Suite, wfuzz XML fuzz strings.",
+  "content_fingerprint": "297d2acb1fd6d270587d7472b60ff89267043e702e441092662fb325f0dd3372"
 }

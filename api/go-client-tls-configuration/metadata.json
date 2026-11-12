@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when wiring tls.Config into a new SDK client that dials a remote endpoint \u2014 TLS 1.2 floor (1.3 preferred), SNI ServerName required, mTLS via LoadX509KeyPair, custom CA layered on x509.SystemCertPool, and ErrTLS sentinel wrapping. Covers Mozilla / CIS / NIST guidance. Triggers: tls.Config, MinVersion, RootCAs, ServerName, InsecureSkipVerify, x509.SystemCertPool, LoadX509KeyPair."
+  "description": "Use this when wiring tls.Config into a new SDK client that dials a remote endpoint — TLS 1.2 floor (1.3 preferred), SNI ServerName required, mTLS via LoadX509KeyPair, custom CA layered on x509.SystemCertPool, and ErrTLS sentinel wrapping. Covers Mozilla / CIS / NIST guidance. Triggers: tls.Config, MinVersion, RootCAs, ServerName, InsecureSkipVerify, x509.SystemCertPool, LoadX509KeyPair.",
+  "content_fingerprint": "28a257347c53dd8e1588c52dedee119fcc979980a1dc2c9524cd048f535d53d7"
 }

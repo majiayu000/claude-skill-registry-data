@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "HTTP request smuggling (CL.TE/TE.CL/TE.TE/CL.0) \u2014 desync front-end and back-end to poison other users' requests. Load behind a proxy/CDN/load-balancer, on \"smuggling/desync\", or when Content-Length vs Transfer-Encoding handling differs. Signals: front-end + back-end chain, timing anomalies, HTTP/1.1 keep-alive."
+  "description": "HTTP request smuggling (CL.TE/TE.CL/TE.TE/CL.0) — desync front-end and back-end to poison other users' requests. Load behind a proxy/CDN/load-balancer, on \"smuggling/desync\", or when Content-Length vs Transfer-Encoding handling differs. Signals: front-end + back-end chain, timing anomalies, HTTP/1.1 keep-alive.",
+  "content_fingerprint": "20c6612036422929a06cfaca565f360d341c8746d86c537c5131220c7a06c4b6"
 }

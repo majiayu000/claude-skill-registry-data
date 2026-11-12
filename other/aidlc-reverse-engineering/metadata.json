@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `reverse-engineering` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage reverse-engineering --single`: the engine emits one run-stage directive for reverse-engineering and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `reverse-engineering` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage reverse-engineering --single`: the engine emits one run-stage directive for reverse-engineering and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "c984362b4f4ca366f251f9f1fe992837ee5d1f7618af6d48a89e654e78b474ec"
 }

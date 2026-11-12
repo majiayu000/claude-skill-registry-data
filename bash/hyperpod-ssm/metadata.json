@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Remote command execution and file transfer on SageMaker HyperPod cluster nodes via AWS Systems Manager (SSM). This is the primary interface for accessing HyperPod nodes \u2014 direct SSH is not available. Use when any skill, workflow, or user request needs to execute commands on cluster nodes, upload files to nodes, read/download files from nodes, run diagnostics, install packages, or perform any operation requiring shell access to HyperPod instances. Other HyperPod skills depend on this skill for all node-level operations."
+  "description": "Remote command execution and file transfer on SageMaker HyperPod cluster nodes via AWS Systems Manager (SSM). This is the primary interface for accessing HyperPod nodes — direct SSH is not available. Use when any skill, workflow, or user request needs to execute commands on cluster nodes, upload files to nodes, read/download files from nodes, run diagnostics, install packages, or perform any operation requiring shell access to HyperPod instances. Other HyperPod skills depend on this skill for all node-level operations.",
+  "content_fingerprint": "8cc033ac70323e0ea82ff88277caa9c6f875b20ce3ee5b2d7c830c511e4c178e"
 }

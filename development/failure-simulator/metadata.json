@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Failure simulator on code level: inventories every external touchpoint (HTTP clients, DB access, filesystem, queues, caches) with its surrounding error handling, then for a chosen failure scenario (DB down, API timeouts, disk full) mentally executes the failure path at each touchpoint and reports the resulting behavior - retry, degradation, crash or silent loss - plus inconsistencies and hardening recommendations. Pure thought experiment, nothing is ever shut down. Read-only. Trigger: /failsim"
+  "description": "Failure simulator on code level: inventories every external touchpoint (HTTP clients, DB access, filesystem, queues, caches) with its surrounding error handling, then for a chosen failure scenario (DB down, API timeouts, disk full) mentally executes the failure path at each touchpoint and reports the resulting behavior - retry, degradation, crash or silent loss - plus inconsistencies and hardening recommendations. Pure thought experiment, nothing is ever shut down. Read-only. Trigger: /failsim",
+  "content_fingerprint": "c645f6adac0e65bf64b5684f5a34fc1944e605ebd7d737830144620a7c6c0934"
 }

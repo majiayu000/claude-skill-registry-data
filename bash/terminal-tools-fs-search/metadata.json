@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use terminal_rg / terminal_glob for all filesystem search \u2014 your project tree as well as system configs, /var/log, /etc, archive contents. Teaches the rg vs glob vs terminal_exec(\"find/ls/du/tree\") split, common rg flag combos for code/logs/configs, glob patterns for finding files by name, the rule that mtime/size/type predicate queries drop to terminal_exec(\"find ...\"), and that for tree views or single-file stat info you should just use terminal_exec instead of inventing a tool. Read before reaching for raw shell to grep or find anything."
+  "description": "Use terminal_rg / terminal_glob for all filesystem search — your project tree as well as system configs, /var/log, /etc, archive contents. Teaches the rg vs glob vs terminal_exec(\"find/ls/du/tree\") split, common rg flag combos for code/logs/configs, glob patterns for finding files by name, the rule that mtime/size/type predicate queries drop to terminal_exec(\"find ...\"), and that for tree views or single-file stat info you should just use terminal_exec instead of inventing a tool. Read before reaching for raw shell to grep or find anything.",
+  "content_fingerprint": "126b71b062fad9646990de7bb0721cb23454de86ea14b7ef836aaffbb26b1678"
 }

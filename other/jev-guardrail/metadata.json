@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Uses the Jev System One model to score the risk of a shell command or file edit before it runs, returning a calibrated probability plus a three-way gate (allow, confirm, block). Invoke when a command is plausibly destructive (recursive delete, truncate, dd, mass rewrite, unreviewed pipe to shell) and the approval gate alone cannot tell how risky it is. Never blocks on its own \u2014 the calling agent applies the gate in code."
+  "description": "Uses the Jev System One model to score the risk of a shell command or file edit before it runs, returning a calibrated probability plus a three-way gate (allow, confirm, block). Invoke when a command is plausibly destructive (recursive delete, truncate, dd, mass rewrite, unreviewed pipe to shell) and the approval gate alone cannot tell how risky it is. Never blocks on its own — the calling agent applies the gate in code.",
+  "content_fingerprint": "3b4644f47a22fe5385dfdf56ccfd72fd586d863d2b52911a37e9a8a15957dfa5"
 }

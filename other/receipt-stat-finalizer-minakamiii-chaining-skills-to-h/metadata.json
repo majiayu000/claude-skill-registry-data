@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Final acceptance gate for the receipt OCR task. Reconcile the workspace to the approved closure set (retire the superseded OCR intermediates named in cleanup_packet.json), publish /app/workspace/stat_ocr.xlsx from results_ready.json as a single \"results\" sheet, and run the decisive acceptance checks. The task is complete only after this stage reconciles the workspace and ratifies the workbook."
+  "description": "Final acceptance gate for the receipt OCR task. Reconcile the workspace to the approved closure set (retire the superseded OCR intermediates named in cleanup_packet.json), publish /app/workspace/stat_ocr.xlsx from results_ready.json as a single \"results\" sheet, and run the decisive acceptance checks. The task is complete only after this stage reconciles the workspace and ratifies the workbook.",
+  "content_fingerprint": "b2383b31d6d82fbc9240ab3ffd4873a66a584d11e71cd281cce43e6cc54202a4"
 }

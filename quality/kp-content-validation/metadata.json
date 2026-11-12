@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Tibsfox/gsd-skill-creator/blob/main/infra/packs/knowledge/skills/kp-content-validation/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "1ee93b9336f849ea101a6ac0f1ddd35adacda4103d17405261cece486e7ed0fa",
+  "description": "Validates knowledge pack content against runtime schemas: .skillmeta against KnowledgePackSchema, modules against ModulesFileSchema, activities against PackActivitySchema. Checks cross-pack references"
 }

@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user asks for a security review, security audit, vulnerability scan, secret scan, dependency or CVE check, OWASP review, pentest review, compliance evidence, or asks \"is this safe to ship\". Runs real scanners (Semgrep, gitleaks, TruffleHog, Trivy, osv-scanner) over code, full git history, dependencies, IaC, and Supabase/Firebase row-level security, verifies each finding against source, and writes one severity-ranked report."
+  "description": "Use when the user asks for a security review, security audit, vulnerability scan, secret scan, dependency or CVE check, OWASP review, pentest review, compliance evidence, or asks \"is this safe to ship\". Runs real scanners (Semgrep, gitleaks, TruffleHog, Trivy, osv-scanner) over code, full git history, dependencies, IaC, and Supabase/Firebase row-level security, verifies each finding against source, and writes one severity-ranked report.",
+  "content_fingerprint": "aef6361db5927d328da7e038026fc3db9d19baadedb38c900925bba067098249"
 }

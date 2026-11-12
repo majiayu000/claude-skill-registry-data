@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Design the app-side event pipeline that fans one `telemetry.observe(event)` call out to logging, tracking, MetricKit and Game Center sinks. Use when deciding whether Logger and analytics tracking share one interface; when adding a `TelemetrySink` / `MetricKitSink` / `GameCenterSink`; when a wired-looking sink never fires (score not submitted, achievement not unlocked, `GKLeaderboard.submitScore` unreached); when sink order or UI-blocking sink I/O matters. Does NOT choose the Logger API (oslog-logger-defaults) or which analytics sources to use (apple-three-piece-analytics)."
+  "description": "Design the app-side event pipeline that fans one `telemetry.observe(event)` call out to logging, tracking, MetricKit and Game Center sinks. Use when deciding whether Logger and analytics tracking share one interface; when adding a `TelemetrySink` / `MetricKitSink` / `GameCenterSink`; when a wired-looking sink never fires (score not submitted, achievement not unlocked, `GKLeaderboard.submitScore` unreached); when sink order or UI-blocking sink I/O matters. Does NOT choose the Logger API (oslog-logger-defaults) or which analytics sources to use (apple-three-piece-analytics).",
+  "content_fingerprint": "25a2a11801f17e4a9f51cb39e04b891068ae15ab51bac58f3c1030abb141ee53"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u30b3\u30fc\u30c9\u5909\u66f4\u306b\u5bfe\u3059\u308b docs/, knowledge/, README.md \u306e\u6574\u5408\u6027\u30c1\u30a7\u30c3\u30af\uff08\u8aad\u307f\u53d6\u308a\u5c02\u7528\uff09\u3002 \u5404\u8077\u7a2e\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u3092\u7acb\u3061\u4e0a\u3052\u3001\u7ba1\u8f44\u30d5\u30a1\u30a4\u30eb\u306e\u307f\u3092\u30c1\u30a7\u30c3\u30af\u3055\u305b\u308b\u3002 push \u524d\u306b\u5fc5\u305a\u5b9f\u884c\u3055\u308c\u308b\u3002\u300c/vibecorp:sync-check\u300d\u300c\u6574\u5408\u6027\u30c1\u30a7\u30c3\u30af\u300d\u3068\u8a00\u3063\u305f\u6642\u306b\u4f7f\u7528\u3002"
+  "description": "コード変更に対する docs/, knowledge/, README.md の整合性チェック（読み取り専用）。 各職種エージェントを立ち上げ、管轄ファイルのみをチェックさせる。 push 前に必ず実行される。「/vibecorp:sync-check」「整合性チェック」と言った時に使用。",
+  "content_fingerprint": "572995ff8d082eb52e141337b04401c7902537f9def85ac895582cfb52c85b52"
 }

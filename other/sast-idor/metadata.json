@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect Insecure Direct Object Reference (IDOR) vulnerabilities in a codebase using a three-phase approach: recon (find candidates), batched verify (check authorization in parallel subagents, 3 candidates each), and merge (consolidate batch results). Checks endpoints for missing ownership or authorization checks on user-supplied identifiers. Requires sast/architecture.md (run sast-analysis first). Outputs findings to sast/idor-results.md. Use when asked to find IDOR or authorization bypass bugs."
+  "description": "Detect Insecure Direct Object Reference (IDOR) vulnerabilities in a codebase using a three-phase approach: recon (find candidates), batched verify (check authorization in parallel subagents, 3 candidates each), and merge (consolidate batch results). Checks endpoints for missing ownership or authorization checks on user-supplied identifiers. Requires sast/architecture.md (run sast-analysis first). Outputs findings to sast/idor-results.md. Use when asked to find IDOR or authorization bypass bugs.",
+  "content_fingerprint": "fcfceb2c187beac2e1e19de210022e092c4d81a5250d64d23dbed418a2517d25"
 }

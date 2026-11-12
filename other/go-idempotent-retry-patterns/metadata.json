@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this for the Go-specific realization of idempotent-retry-safety \u2014 sentinel-based `IsRetryable` predicate using `errors.Is`/`errors.As`, context-aware backoff with `select` on `ctx.Done()`, the `motadatagosdk/events/middleware/retry.go` composition pattern, and `crypto/rand` jitter math. Pairs with shared-core `idempotent-retry-safety` (taxonomy + decision criteria). Triggers: errors.Is, errors.As, IsRetryable, RetryMiddleware, MaxAttempts, time.After, ctx.Done, crypto/rand, jitter, HeaderMessageID, JetStream WithMsgID."
+  "description": "Use this for the Go-specific realization of idempotent-retry-safety — sentinel-based `IsRetryable` predicate using `errors.Is`/`errors.As`, context-aware backoff with `select` on `ctx.Done()`, the `motadatagosdk/events/middleware/retry.go` composition pattern, and `crypto/rand` jitter math. Pairs with shared-core `idempotent-retry-safety` (taxonomy + decision criteria). Triggers: errors.Is, errors.As, IsRetryable, RetryMiddleware, MaxAttempts, time.After, ctx.Done, crypto/rand, jitter, HeaderMessageID, JetStream WithMsgID.",
+  "content_fingerprint": "a574ffdb56614830595c2bb758a605e75f5807a821fd7208e14383487f8acf06"
 }

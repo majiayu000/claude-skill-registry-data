@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Type-aware TypeScript lint rules in .lintcn/ Go files. Only load this skill when creating, editing, or debugging rule files.\n\nTo just run the linter: `npx lintcn lint` (or `--fix`, `--tsconfig <path>`). Finds .lintcn/ by walking up from cwd. First build ~30s, cached ~1s. In monorepos, run from each package folder, not the root.\n\nWarnings don't fail CI and only show for git-changed files by default. Use `--all-warnings` to see them across the entire codebase."
+  "description": "Type-aware TypeScript lint rules in .lintcn/ Go files. Only load this skill when creating, editing, or debugging rule files.\n\nTo just run the linter: `npx lintcn lint` (or `--fix`, `--tsconfig <path>`). Finds .lintcn/ by walking up from cwd. First build ~30s, cached ~1s. In monorepos, run from each package folder, not the root.\n\nWarnings don't fail CI and only show for git-changed files by default. Use `--all-warnings` to see them across the entire codebase.",
+  "content_fingerprint": "f618f83d583fac1cacc13ff59a52294c7c5442db5b65ee17fadfc1a25c5e1923"
 }

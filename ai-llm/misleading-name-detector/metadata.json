@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Misleading name detector: harvests every prefixed function with reader/mutator/predicate cues (get*/find*/fetch*/set*/write*/is*/has*/can*/...) and extracts the first 600 chars of brace-balanced body. LLM judges whether the code does what the name promises. Severity scales with call count and visibility. Read-only. Audience: Both. Trigger: /name-lies"
+  "description": "Misleading name detector: harvests every prefixed function with reader/mutator/predicate cues (get*/find*/fetch*/set*/write*/is*/has*/can*/...) and extracts the first 600 chars of brace-balanced body. LLM judges whether the code does what the name promises. Severity scales with call count and visibility. Read-only. Audience: Both. Trigger: /name-lies",
+  "content_fingerprint": "d4af5bfb4004ed9583a20a844f082e75803887b5087b00cbfe1a8c52bdea7c35"
 }

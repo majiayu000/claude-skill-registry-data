@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Author and validate Hotwire Native path configuration (the JSON that drives native push/replace/modal/tab navigation on iOS + Android), and the Rails-side turbo_native_app? + request-variant setup. Use when a native screen opens with the wrong presentation (pushed instead of modal, doesn't switch tabs), when adding a new native route, when setting up native navigation for one Rails app across iOS + Android, or when web chrome (top nav) leaks into the native apps. Provides a starter config, a schema/footgun validator, and an iOS\u2194Android drift check."
+  "description": "Author and validate Hotwire Native path configuration (the JSON that drives native push/replace/modal/tab navigation on iOS + Android), and the Rails-side turbo_native_app? + request-variant setup. Use when a native screen opens with the wrong presentation (pushed instead of modal, doesn't switch tabs), when adding a new native route, when setting up native navigation for one Rails app across iOS + Android, or when web chrome (top nav) leaks into the native apps. Provides a starter config, a schema/footgun validator, and an iOS↔Android drift check.",
+  "content_fingerprint": "25ff3b9fb118bdead4e6f8bbb193bce451b52287aae92aa253bc7957cf3d0f95"
 }

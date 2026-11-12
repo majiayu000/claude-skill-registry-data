@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Testing conventions across builds. Vitest + Playwright as the locked stack; tests co-located in `__tests__` next to the code they verify; shared test primitives (provider wrappers, mock factories) centralized in `src/lib/test-utils.tsx`; coverage thresholds enforced at the merge gate (CI ownership lives in `factory-ci.md`). Read at project kickoff and whenever you write or review a test."
+  "description": "Testing conventions across builds. Vitest + Playwright as the locked stack; tests co-located in `__tests__` next to the code they verify; shared test primitives (provider wrappers, mock factories) centralized in `src/lib/test-utils.tsx`; coverage thresholds enforced at the merge gate (CI ownership lives in `factory-ci.md`). Read at project kickoff and whenever you write or review a test.",
+  "content_fingerprint": "2e52dd68d4fe44eb4b444be728ebb2fa0ba53e4ac23b26d49b81ff82163a9141"
 }

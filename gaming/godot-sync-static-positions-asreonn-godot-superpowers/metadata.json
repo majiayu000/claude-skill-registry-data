@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Asreonn/godot-superpowers/blob/main/mini-skills/godot-sync-static-positions/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8056b9a1dd1929a1d1cd7e0bb23b3be28de11350d9a40efa846b7c2e61dac243",
+  "description": "Use when Godot nodes have position set in both .tscn (editor) and _ready() (code), creating confusion about actual runtime position. Detects static position assignments that conflict with editor value"
 }

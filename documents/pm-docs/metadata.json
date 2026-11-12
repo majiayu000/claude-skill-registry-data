@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when: \u9700\u8981\u8f93\u51faPRD/BRD/MRD\u4ea7\u54c1\u6587\u6863\u3001\u65b9\u6848\u6587\u6863\u3001\u5546\u4e1a\u8ba1\u5212\u6587\u6863\u3001\u9700\u8981\u6587\u6863\u6a21\u677f\nDo NOT auto-select when: \u7528\u6237\u7528\u81ea\u7136\u8bed\u8a00\u8bf4\"\u5199\u9700\u6c42\u6587\u6863\"\"\u5199PRD\"\"\u5e2e\u6211\u8bbe\u8ba1\u9700\u6c42\"\u7b49\u65b0\u4ea7\u54c1\u8bf7\u6c42\n  \u2192 \u8fd9\u4e9b\u5fc5\u987b\u5148\u8def\u7531\u5230 start-super-pm\nDirect slash-command use is allowed: \u7528\u6237\u663e\u5f0f\u8f93\u5165 /pm-docs \u65f6\u53ef\u76f4\u63a5\u8fdb\u5165\uff0c\u4f46\u5fc5\u987b\u901a\u8fc7\u672c skill \u7684\u524d\u7f6e\u95e8\u7981\nDo NOT use when: \u6587\u6863\u5df2\u5b8c\u5907\u65e0\u9700\u751f\u6210\u3001\u4ec5\u9700\u53e3\u5934\u8ba8\u8bba\u65e0\u9700\u4e66\u9762\u8f93\u51fa"
+  "description": "Use when: 需要输出PRD/BRD/MRD产品文档、方案文档、商业计划文档、需要文档模板\nDo NOT auto-select when: 用户用自然语言说\"写需求文档\"\"写PRD\"\"帮我设计需求\"等新产品请求\n  → 这些必须先路由到 start-super-pm\nDirect slash-command use is allowed: 用户显式输入 /pm-docs 时可直接进入，但必须通过本 skill 的前置门禁\nDo NOT use when: 文档已完备无需生成、仅需口头讨论无需书面输出",
+  "content_fingerprint": "0dc4c332bd10ba2742f9249ae63d89fa5e5b6cd951730668335d46adaedaf934"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Query and download NCI Imaging Data Commons (IDC) cancer radiology and pathology datasets via the idc-index Python client. No authentication required: the parquet index ships inside the pip wheel, SQL runs locally via DuckDB, and DICOM downloads stream from public S3/GCS buckets through s5cmd. Use sql_query() for DuckDB cohort selection, get_collections/get_patients/get_dicom_studies/get_dicom_series for hierarchical browsing, download_from_selection() for downloads, and get_viewer_URL() for OHIF/Slim links. Use pydicom-medical-imaging for local DICOM reading; histolab for whole-slide pathology preprocessing."
+  "description": "Query and download NCI Imaging Data Commons (IDC) cancer radiology and pathology datasets via the idc-index Python client. No authentication required: the parquet index ships inside the pip wheel, SQL runs locally via DuckDB, and DICOM downloads stream from public S3/GCS buckets through s5cmd. Use sql_query() for DuckDB cohort selection, get_collections/get_patients/get_dicom_studies/get_dicom_series for hierarchical browsing, download_from_selection() for downloads, and get_viewer_URL() for OHIF/Slim links. Use pydicom-medical-imaging for local DICOM reading; histolab for whole-slide pathology preprocessing.",
+  "content_fingerprint": "872868433a46a0090fe3afd525ef5598641f77c3ead47df37acbd6975c7a9813"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Set up logging for an Apple-platform Swift app with `os.Logger` and decide its `subsystem` / `category` naming and `privacy:` interpolation. Use when choosing a logging library (`os.Logger` vs swift-log `import Logging` vs CocoaLumberjack); when writing the first `Logger(subsystem:category:)`; when deciding `.private` vs `.public` for a value; when asked what `.private` hides in Console.app, sysdiagnose, or `OSLogStore`. Does NOT cover `os_signpost` / Instruments profiling (ios-performance-engineering) or fanning logs out to trackers (telemetry-facade-pattern)."
+  "description": "Set up logging for an Apple-platform Swift app with `os.Logger` and decide its `subsystem` / `category` naming and `privacy:` interpolation. Use when choosing a logging library (`os.Logger` vs swift-log `import Logging` vs CocoaLumberjack); when writing the first `Logger(subsystem:category:)`; when deciding `.private` vs `.public` for a value; when asked what `.private` hides in Console.app, sysdiagnose, or `OSLogStore`. Does NOT cover `os_signpost` / Instruments profiling (ios-performance-engineering) or fanning logs out to trackers (telemetry-facade-pattern).",
+  "content_fingerprint": "353a7cc9295042ad59b56e69ae7f2adc2f60d59ce6bccb759e58e1f563f16201"
 }

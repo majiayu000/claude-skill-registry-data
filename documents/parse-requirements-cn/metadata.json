@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5c06 PRD\u3001\u9700\u6c42\u6587\u6863\u3001\u804a\u5929\u6587\u672c\u3001\u622a\u56fe\u6216\u7ebf\u6846\u56fe\u62c6\u5206\u4e3a\u53ef\u8ffd\u6eaf\u7684\u539f\u5b50\u9700\u6c42\uff0c\u5e76\u7ed3\u5408\u5f53\u524d\u4ee3\u7801\u5e93\u751f\u6210\u4e2d\u6587 Markdown\uff0c\u5305\u542b\u9700\u6c42\u6982\u62ec\u3001\u73b0\u72b6\u53ca\u539f\u56e0\u3001\u6d89\u53ca\u6a21\u5757\u3001\u5b9e\u73b0\u65b9\u6cd5\u548c\u9a8c\u8bc1\u65b9\u6cd5\u3002\u7528\u6237\u8c03\u7528 /parse-requirements-cn\uff0c\u6216\u660e\u786e\u8981\u6c42\u4f7f\u7528\u4e2d\u6587\u7248\u89e3\u6790\u9700\u6c42\u3001\u5206\u6790 PRD\u3001\u62c6\u89e3\u9700\u6c42\u6587\u6863\u65f6\u4f7f\u7528\u3002"
+  "description": "将 PRD、需求文档、聊天文本、截图或线框图拆分为可追溯的原子需求，并结合当前代码库生成中文 Markdown，包含需求概括、现状及原因、涉及模块、实现方法和验证方法。用户调用 /parse-requirements-cn，或明确要求使用中文版解析需求、分析 PRD、拆解需求文档时使用。",
+  "content_fingerprint": "7c999e7ba3b9e70779e73052cebad8c525078285c584ba0a2f4b421cd4ce6e95"
 }

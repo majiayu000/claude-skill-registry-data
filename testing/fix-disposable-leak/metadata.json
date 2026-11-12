@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8bca\u65ad\u5e76\u4fee\u590d Disposable \u5185\u5b58\u6cc4\u6f0f\u3002\u5f53\u7528\u6237\u63d0\u5230\u5185\u5b58\u6cc4\u6f0f / memory leak / \u672a\u91ca\u653e\u7684 Disposable / Disposable leak(s) detected\uff0c\u6216\u8d34\u51fa\u5e26 trackDisposable / lifecycle.ts / computeLeakingDisposables \u7684\u6cc4\u6f0f\u5806\u6808\u65f6\u4f7f\u7528\u3002"
+  "description": "诊断并修复 Disposable 内存泄漏。当用户提到内存泄漏 / memory leak / 未释放的 Disposable / Disposable leak(s) detected，或贴出带 trackDisposable / lifecycle.ts / computeLeakingDisposables 的泄漏堆栈时使用。",
+  "content_fingerprint": "82cc28de11a795cc12ebc8ec871d0415b862c12896b5b8370cc67573bdd3ec82"
 }

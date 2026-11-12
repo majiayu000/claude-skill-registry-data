@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6309\u6e2f\u80a1\u4ee3\u7801\u67e5\u8be2\u65e5/\u6708/\u5b63/\u5e74 K \u7ebf\u3002\u7528\u6237\u95ee\u6e2f\u80a1 K \u7ebf\u3001\u65e5 K / \u6708 K / \u5b63 K / \u5e74 K\u300100700 \u5386\u53f2\u884c\u60c5\u3001\u6e2f\u80a1\u5f00\u9ad8\u4f4e\u6536\u3001OHLC\u3001\u6210\u4ea4\u91cf\u6210\u4ea4\u989d\u3001\u524d\u590d\u6743\u4e0d\u590d\u6743\u6e2f\u80a1\u65f6\u4f7f\u7528\u3002\u5fc5\u586b trade_code\u3001interval_unit\u3001until_date\uff1b\u53ef\u9009 since_date\u3001adjust_kind\u3001limit\u3002"
+  "description": "按港股代码查询日/月/季/年 K 线。用户问港股 K 线、日 K / 月 K / 季 K / 年 K、00700 历史行情、港股开高低收、OHLC、成交量成交额、前复权不复权港股时使用。必填 trade_code、interval_unit、until_date；可选 since_date、adjust_kind、limit。",
+  "content_fingerprint": "df4cbeec5d3daac813dc4c1726264fa5a089ee99d894ae9c041e311223e52315"
 }

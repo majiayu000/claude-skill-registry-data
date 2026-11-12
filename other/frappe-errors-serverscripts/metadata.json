@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when debugging or preventing errors in Frappe Server Scripts. Prevents ImportError (the #1 error), NameError for restricted builtins, sandbox violations, doc_events not firing, wrong script type selection, SQL injection, permission denied in scheduled scripts, infinite loops, and API scripts not returning JSON. Covers error message mapping table. Keywords: server script error, ImportError, NameError, sandbox,, ImportError in server script, script not running, sandbox error, restricted function. restricted, frappe.throw, doc_events, scheduler, API script, SQL injection."
+  "description": "Use when debugging or preventing errors in Frappe Server Scripts. Prevents ImportError (the #1 error), NameError for restricted builtins, sandbox violations, doc_events not firing, wrong script type selection, SQL injection, permission denied in scheduled scripts, infinite loops, and API scripts not returning JSON. Covers error message mapping table. Keywords: server script error, ImportError, NameError, sandbox,, ImportError in server script, script not running, sandbox error, restricted function. restricted, frappe.throw, doc_events, scheduler, API script, SQL injection.",
+  "content_fingerprint": "13953051460c0420e63247a85fa1ec24623c13f278335dd1ac9dd90f8ce2f8d0"
 }

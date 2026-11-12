@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a database schema or data-meaning change needs Parallel Change, including expand, migrate, and contract sequencing for column renames, type or data reinterpretation, large-table backfills, relationship-table changes, enum/status transitions, timezone/default changes, and index or uniqueness changes. This should trigger before framework-specific Flyway implementation guidance when deciding whether a migration needs a compatibility window or whether a simpler migration is sufficient. Part of Plinth Toolkit"
+  "description": "Use when a database schema or data-meaning change needs Parallel Change, including expand, migrate, and contract sequencing for column renames, type or data reinterpretation, large-table backfills, relationship-table changes, enum/status transitions, timezone/default changes, and index or uniqueness changes. This should trigger before framework-specific Flyway implementation guidance when deciding whether a migration needs a compatibility window or whether a simpler migration is sufficient. Part of Plinth Toolkit",
+  "content_fingerprint": "ba572c162fc8810c20de61066bea09c6ec2080de2ec5c0cd7b81e711827f206e"
 }

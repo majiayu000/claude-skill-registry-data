@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Port flutter_test files (unit `test()` and widget `testWidgets()`) from the poc_vedaxl test/ folder to Jest + @testing-library/react-native v14 in the workspace that owns the code, with fixtures, fake repositories and fake services. Use it when porting or writing parity tests for a ported Dart file, when asked to \"port the tests for X\", \"convert <name>_test.dart\", or to check test parity; also when a ported RN test needs pumpVida-style setup, 360px/French variants, timers or fake HTTP. Remember RNTL v14 `render` is async."
+  "description": "Port flutter_test files (unit `test()` and widget `testWidgets()`) from the poc_vedaxl test/ folder to Jest + @testing-library/react-native v14 in the workspace that owns the code, with fixtures, fake repositories and fake services. Use it when porting or writing parity tests for a ported Dart file, when asked to \"port the tests for X\", \"convert <name>_test.dart\", or to check test parity; also when a ported RN test needs pumpVida-style setup, 360px/French variants, timers or fake HTTP. Remember RNTL v14 `render` is async.",
+  "content_fingerprint": "a3860fa8ea5bf06846c25e1107827f8258975c5a43df7d4dcd57a62763805c9a"
 }

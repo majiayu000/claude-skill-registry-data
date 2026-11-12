@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cross-cutting reference manager for medical manuscripts. Single entry point for citation-key validation, journal-CSL pandoc rendering, manuscript \u2194 DOCX cross-reference QC, marker conversion (``[N]`` \u2194 ``[@key]``), and native Zotero CWYW field-code injection. Replaces the inline reference-handling that previously lived in ``/write-paper`` Phase 7.6 and is reused by ``/revise``, ``/peer-review``, ``/sync-submission``, and any skill that produces a journal submission. Audit-only verification stays in ``/verify-refs`` \u2014 this skill writes (renders, injects, converts); that skill only reads."
+  "description": "Cross-cutting reference manager for medical manuscripts. Single entry point for citation-key validation, journal-CSL pandoc rendering, manuscript ↔ DOCX cross-reference QC, marker conversion (``[N]`` ↔ ``[@key]``), and native Zotero CWYW field-code injection. Replaces the inline reference-handling that previously lived in ``/write-paper`` Phase 7.6 and is reused by ``/revise``, ``/peer-review``, ``/sync-submission``, and any skill that produces a journal submission. Audit-only verification stays in ``/verify-refs`` — this skill writes (renders, injects, converts); that skill only reads.",
+  "content_fingerprint": "a0b71892f3052d2cc9703fc864e9add64e8e5898fb6af6b441def5aa2d55caed"
 }

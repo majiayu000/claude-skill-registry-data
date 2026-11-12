@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review a production UX checkout harness run against the deployed Studio (daikonic). Use after `pnpm --filter @rune-langium/studio run test:prod-ux` (or test:prod-smoke) completes, when the user asks to review/triage a prod checkout run, or when a nightly prod-ux artifact needs auditing. Consumes report/run-manifest.json + screenshots + traces and produces a severity-ranked UX review with per-journey verdicts."
+  "description": "Review a production UX checkout harness run against the deployed Studio (daikonic). Use after `pnpm --filter @rune-langium/studio run test:prod-ux` (or test:prod-smoke) completes, when the user asks to review/triage a prod checkout run, or when a nightly prod-ux artifact needs auditing. Consumes report/run-manifest.json + screenshots + traces and produces a severity-ranked UX review with per-journey verdicts.",
+  "content_fingerprint": "45fb93d1bfc90cb6d4ac8cbba7201aa737c13b7e3a6afc89e12dafba433e6e4e"
 }

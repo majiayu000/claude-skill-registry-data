@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Route VASP DFT requests to task-specific subskills based on user intent. Use when the user asks for VASP workflows and you must decide between static SCF, relaxation, DOS, or band-structure task preparation. This orchestration skill does not own detailed input generation logic; it dispatches to the correct VASP subskill and enforces consistent handoff to submission skills."
+  "description": "Route VASP DFT requests to task-specific subskills based on user intent. Use when the user asks for VASP workflows and you must decide between static SCF, relaxation, DOS, or band-structure task preparation. This orchestration skill does not own detailed input generation logic; it dispatches to the correct VASP subskill and enforces consistent handoff to submission skills.",
+  "content_fingerprint": "f4b98727272a357e74816ae33beae39bc89b82bea56a644178f7b204c8d1a0fe"
 }

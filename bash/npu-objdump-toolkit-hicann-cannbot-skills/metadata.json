@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4f7f\u7528 npu-objdump/msobjdump \u5206\u6790 Ascend \u7b97\u5b50\u7f16\u8bd1\u4ea7\u7269\u3002\u89e6\u53d1\uff1a\u67e5\u770b\u5143\u6570\u636e\u3001\u63d0\u53d6 device ELF\u3001\u53cd\u6c47\u7f16 AIC/AIV \u6307\u4ee4\uff0c\u6216\u7ed3\u5408\u62a5\u9519\u65e5\u5fd7\u4e2d\u7684\u5f02\u5e38 PC \u5b9a\u4f4d\u6307\u4ee4\u65f6\u3002"
+  "description": "使用 npu-objdump/msobjdump 分析 Ascend 算子编译产物。触发：查看元数据、提取 device ELF、反汇编 AIC/AIV 指令，或结合报错日志中的异常 PC 定位指令时。",
+  "content_fingerprint": "b084d23ebef5797406608576499746afb2e327ac3ede3ed63e87dc94fd9ac9a4"
 }

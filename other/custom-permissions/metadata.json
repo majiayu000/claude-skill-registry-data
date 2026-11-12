@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when creating, assigning, or checking custom permissions to control feature access beyond CRUD and FLS. Trigger keywords: 'custom permission', 'FeatureManagement.checkPermission', '$Permission global variable', 'feature gate', 'named access grant', 'beta feature flag', 'SetupEntityAccess', 'requiredPermission', 'who has this custom permission'. NOT for gating Apex service code and its tests \u2014 use apex/apex-custom-permissions-check. NOT for permission set design \u2014 use admin/permission-set-architecture."
+  "description": "Use when creating, assigning, or checking custom permissions to control feature access beyond CRUD and FLS. Trigger keywords: 'custom permission', 'FeatureManagement.checkPermission', '$Permission global variable', 'feature gate', 'named access grant', 'beta feature flag', 'SetupEntityAccess', 'requiredPermission', 'who has this custom permission'. NOT for gating Apex service code and its tests — use apex/apex-custom-permissions-check. NOT for permission set design — use admin/permission-set-architecture.",
+  "content_fingerprint": "1ea3b567e0791c4146aa797864849478c00ed239a59856f6618b2942288fc423"
 }

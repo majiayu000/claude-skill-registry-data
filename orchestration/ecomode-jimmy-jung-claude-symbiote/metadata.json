@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jimmy-Jung/claude_symbiote/blob/main/.claude/skills/ecomode/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "6512229e86448e4814b4fdf7c3645802017dd0719e38ee49efac2ef8c150dfc9",
+  "description": "토큰 효율적 실행 모드. 비용을 최소화하면서 작업을 수행합니다. 간단한 작업에 fast 모델을 자동 선택하고, 병렬 에이전트 수를 제한하며, 불필요한 컨텍스트 로딩을 줄입니다. Use when budget-conscious execution is needed or when the user requests token-efficient processing."
 }

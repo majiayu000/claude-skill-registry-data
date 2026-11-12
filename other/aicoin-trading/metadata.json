@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e0b\u5355\u4ea4\u6613\u5de5\u5177\u3002\u4e25\u683c\u89c4\u5219\uff1a(1) \u6240\u6709\u8ba2\u5355\u5fc5\u987b\u901a\u8fc7 node scripts/exchange.mjs create_order \u6267\u884c\uff0c\u7981\u6b62\u5199\u81ea\u5b9a\u4e49\u4ee3\u7801\u4e0b\u5355 (2) create_order \u5206\u4e24\u6b65\uff1a\u7b2c\u4e00\u6b21\u8fd4\u56de\u9884\u89c8\uff0c\u5c55\u793a\u7ed9\u7528\u6237\u7b49\u786e\u8ba4\uff0c\u7528\u6237\u8bf4\u786e\u8ba4\u540e\u7b2c\u4e8c\u6b21\u52a0 confirmed=true \u6267\u884c (3) \u7981\u6b62\u81ea\u52a8\u786e\u8ba4\uff0c\u7981\u6b62\u8df3\u8fc7\u9884\u89c8 (4) \u5e73\u4ed3\u5fc5\u987b\u7528 close_position\uff0c\u7981\u6b62\u7528 create_order \u6784\u5efa\u5e73\u4ed3\u5355\u3002Trigger: 'buy', 'sell', 'order', 'long', 'short', 'leverage', 'close position', '\u4e70', '\u5356', '\u4e0b\u5355', '\u505a\u591a', '\u505a\u7a7a', '\u6760\u6746', '\u5f00\u4ed3', '\u5e73\u4ed3', '\u5e73\u6389', '\u5173\u4ed3'."
+  "description": "下单交易工具。严格规则：(1) 所有订单必须通过 node scripts/exchange.mjs create_order 执行，禁止写自定义代码下单 (2) create_order 分两步：第一次返回预览，展示给用户等确认，用户说确认后第二次加 confirmed=true 执行 (3) 禁止自动确认，禁止跳过预览 (4) 平仓必须用 close_position，禁止用 create_order 构建平仓单。Trigger: 'buy', 'sell', 'order', 'long', 'short', 'leverage', 'close position', '买', '卖', '下单', '做多', '做空', '杠杆', '开仓', '平仓', '平掉', '关仓'.",
+  "content_fingerprint": "d24a59d8f9277c6599dc873046993ad79f4efa51dbe7017b04b38acbecb2a20c"
 }

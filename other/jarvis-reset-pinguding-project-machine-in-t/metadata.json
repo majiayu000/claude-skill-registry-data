@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "jarvis \uc6cc\uce58\uc758 \ub85c\uceec \uc0c1\ud0dc(.jarvis/baseline\u00b7args\u00b7status\u00b7stopped)\ub97c \uc0ad\uc81c\ud574 \uc644\uc804 \ucd08\uae30\ud654\ud558\uace0, \ud655\uc778\uc744 \ubc1b\uc740 \ub4a4 \uacc4\ud68d/\uccb4\ud06c\ub9ac\uc2a4\ud2b8(.jarvis/plan.md\u00b7checklist.md)\ub3c4 \uc0ad\uc81c\ud55c\ub2e4. \ub2e4\uc74c /loop /jarvis\ub294 \ucd5c\ucd08 \ubd80\ud305(\ubc30\ub108\u00b7\uacc4\ud68d \uc635\ud2b8\uc778\u00b7\uac15\ub3c4 \uc9c8\ubb38)\ubd80\ud130 \uc0c8\ub85c \uc2dc\uc791\ud55c\ub2e4. \ub8e8\ud504 \uc790\uccb4\ub97c \uba48\ucd94\ub294 \uac8c \uc544\ub2c8\ub77c \ub204\uc801 \ucd94\uc801\u00b7\uc800\uc7a5\ub41c \uc124\uc815\uc744 \ube44\uc6b0\ub294 \ub3c5\ub9bd \uba85\ub839\uc774\ub2e4. \"jarvis \ucd08\uae30\ud654\", \"jarvis reset\", \"\uc6cc\uce58 \uc0c1\ud0dc \ube44\uc6b0\uae30\", \"\ucc98\uc74c\ubd80\ud130 \ub2e4\uc2dc\" \uc694\uccad \uc2dc \uc0ac\uc6a9."
+  "description": "jarvis 워치의 로컬 상태(.jarvis/baseline·args·status·stopped)를 삭제해 완전 초기화하고, 확인을 받은 뒤 계획/체크리스트(.jarvis/plan.md·checklist.md)도 삭제한다. 다음 /loop /jarvis는 최초 부팅(배너·계획 옵트인·강도 질문)부터 새로 시작한다. 루프 자체를 멈추는 게 아니라 누적 추적·저장된 설정을 비우는 독립 명령이다. \"jarvis 초기화\", \"jarvis reset\", \"워치 상태 비우기\", \"처음부터 다시\" 요청 시 사용.",
+  "content_fingerprint": "5119de9a85fdb61a98722b129749fd31d8316f0403373c9b6cffddcd966474c8"
 }

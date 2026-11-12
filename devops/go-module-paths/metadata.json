@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this before generating any Go import statement, when creating Dockerfiles that build Go services, configuring Makefile build commands, or setting up CI build steps in a monorepo where go.mod is not at the repo root. Covers module-root derivation from go.mod, import path construction, Dockerfile COPY context, and the most common path mistakes. Triggers: go.mod, import path, monorepo, Dockerfile COPY, module root."
+  "description": "Use this before generating any Go import statement, when creating Dockerfiles that build Go services, configuring Makefile build commands, or setting up CI build steps in a monorepo where go.mod is not at the repo root. Covers module-root derivation from go.mod, import path construction, Dockerfile COPY context, and the most common path mistakes. Triggers: go.mod, import path, monorepo, Dockerfile COPY, module root.",
+  "content_fingerprint": "3e3bb55ac7517dcfa8ada81cb560ab01a28f94037d4cfb7aa9a5f1f34f878646"
 }

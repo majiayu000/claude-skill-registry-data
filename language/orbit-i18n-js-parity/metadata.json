@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PHP\u2194JS label parity audit \u2014 verifies every label key consumed by JS via `wp_localize_script` / `wp_set_script_translations` is actually emitted from PHP. Catches the silent-English-fallback bug where JS reads `myObject.someLabel` but PHP never put `someLabel` into the localized object. Use when the user says \"JS label\", \"wp_localize_script\", \"Elementor editor label\", \"Gutenberg block label\", \"missing translation in JS\", or before any release that touches block editor / Elementor / admin JS."
+  "description": "PHP↔JS label parity audit — verifies every label key consumed by JS via `wp_localize_script` / `wp_set_script_translations` is actually emitted from PHP. Catches the silent-English-fallback bug where JS reads `myObject.someLabel` but PHP never put `someLabel` into the localized object. Use when the user says \"JS label\", \"wp_localize_script\", \"Elementor editor label\", \"Gutenberg block label\", \"missing translation in JS\", or before any release that touches block editor / Elementor / admin JS.",
+  "content_fingerprint": "672ff08d90051c8a8e75bbcf089da3dbd2eba64c044e6879cd84bb84922bba3b"
 }

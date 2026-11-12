@@ -1,6 +1,6 @@
 {
   "name": "unknown",
-  "description": "",
+  "description": "Scaffold or absorb new SKILL.md files against the unified AgentOps template. Triggers: \"create a skill\", \"scaffold skill\", \"absorb external skill\", \"new skill\".",
   "repo": "boshu2/agentops",
   "path": "skills/skill-builder/SKILL.md",
   "github_branch": "main",
@@ -9,18 +9,14 @@
   "stars": 0,
   "source": "discovered",
   "dir_name": "unknown-boshu2-agentops-4",
-  "archive_mode": "directory",
-  "bundled_files": [
-    "references/skill-template.md",
-    "scripts/build.sh",
-    "scripts/init.sh",
-    "scripts/validate.sh"
-  ],
+  "archive_mode": "skill-md",
+  "bundled_files": [],
   "author": "boshu2",
   "source_url": "https://github.com/boshu2/agentops/blob/main/skills/skill-builder/SKILL.md",
   "license": "NOASSERTION",
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/boshu2/agentops/blob/main/skills/skill-builder/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "499238cfce1e1b94ac96180f87e72c78739014803d338ce6575ac89d9e5649b8"
 }

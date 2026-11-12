@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Red-green test-first workflow for behavior with a clear, user-confirmed seam. Use when: user asks for TDD/test-first/red-green, adding non-trivial domain logic with an existing test harness, or fixing a bug that needs a regression test under mode tdd. Do NOT use when: config/docs/Nix/home-manager only, pure styling/copy, renames, scaffolding, prototypes, no test runner for this surface, user said skip tests, verification is build/flake-check only, or AGENTS test mode is skip|verify-only|add-tests-after."
+  "description": "Red-green test-first workflow for behavior with a clear, user-confirmed seam. Use when: user asks for TDD/test-first/red-green, adding non-trivial domain logic with an existing test harness, or fixing a bug that needs a regression test under mode tdd. Do NOT use when: config/docs/Nix/home-manager only, pure styling/copy, renames, scaffolding, prototypes, no test runner for this surface, user said skip tests, verification is build/flake-check only, or AGENTS test mode is skip|verify-only|add-tests-after.",
+  "content_fingerprint": "96ba739ef493135f9870f20ef32869ed0266ca1c267275226fa7ade3ecdd9972"
 }

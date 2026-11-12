@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "For a batch of findings from a non-security audit tool (`<audit-tool>`\n\u2014 ruff / flake8 / mypy / pylint / CodeQL / Apache Verum / Apache Caer /\nequivalent; full list in the body) against `<upstream>`, draft the\nsmallest fix per finding, re-running the tool after each batch to\nconfirm clearance. Produces a commit and a hand-back artefact;\nnever opens a PR on autopilot or merges."
+  "description": "For a batch of findings from a non-security audit tool (`<audit-tool>`\n— ruff / flake8 / mypy / pylint / CodeQL / Apache Verum / Apache Caer /\nequivalent; full list in the body) against `<upstream>`, draft the\nsmallest fix per finding, re-running the tool after each batch to\nconfirm clearance. Produces a commit and a hand-back artefact;\nnever opens a PR on autopilot or merges.",
+  "content_fingerprint": "2dc9434920fb8587fd7e350435548904a4f4a4afb5e72d00321136801000e9d5"
 }

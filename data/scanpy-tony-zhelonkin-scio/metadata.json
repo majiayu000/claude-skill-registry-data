@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Standard scanpy scRNA-seq pipeline: normalization, HVG selection, PCA/UMAP/t-SNE, Leiden clustering, rank_genes_groups markers, score_genes, and scverse plots. Use for exploratory analysis once cells are QC'd \u2014 its own QC is fixed-threshold only, so for MAD-based QC or doublet detection use single-cell-rna-qc; for batch correction use scvi-basic."
+  "description": "Standard scanpy scRNA-seq pipeline: normalization, HVG selection, PCA/UMAP/t-SNE, Leiden clustering, rank_genes_groups markers, score_genes, and scverse plots. Use for exploratory analysis once cells are QC'd — its own QC is fixed-threshold only, so for MAD-based QC or doublet detection use single-cell-rna-qc; for batch correction use scvi-basic.",
+  "content_fingerprint": "2df0bb0dc10fb832f9c43dcd9c04cbe4607a21e7a89ed54f060b3bd04dcc0277"
 }

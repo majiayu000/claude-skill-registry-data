@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diagnose a slow SQL query and produce a concrete optimization plan. Use when asked to optimize SQL, speed up a slow query, reduce a query's cost/scan, fix a timeout, or review a query plan. Produces an analysis \u2014 the likely bottleneck, what the plan is doing wrong (full scans, bad joins, spills), the specific rewrite and index/partition changes, and the expected impact, with the optimized query."
+  "description": "Diagnose a slow SQL query and produce a concrete optimization plan. Use when asked to optimize SQL, speed up a slow query, reduce a query's cost/scan, fix a timeout, or review a query plan. Produces an analysis — the likely bottleneck, what the plan is doing wrong (full scans, bad joins, spills), the specific rewrite and index/partition changes, and the expected impact, with the optimized query.",
+  "content_fingerprint": "10323917b5cb2070771e5f2bb411b7fe71b5af21ee3d418476572f665585a185"
 }

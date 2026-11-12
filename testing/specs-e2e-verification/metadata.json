@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Executes real end-to-end verification against a running application after specification implementation. Detects the application type, starts the local runtime (Docker, Node, Spring Boot, etc.), runs real tests (curl for REST APIs, Playwright for web SPAs, computer-use for desktop apps), verifies acceptance criteria from the functional specification, generates a markdown report, and tears down the environment. Use when: user asks to verify a completed spec with real tests, run e2e checks after implementation, validate acceptance criteria in a live environment, or test the feature for real after task completion."
+  "description": "Executes real end-to-end verification against a running application after specification implementation. Detects the application type, starts the local runtime (Docker, Node, Spring Boot, etc.), runs real tests (curl for REST APIs, Playwright for web SPAs, computer-use for desktop apps), verifies acceptance criteria from the functional specification, generates a markdown report, and tears down the environment. Use when: user asks to verify a completed spec with real tests, run e2e checks after implementation, validate acceptance criteria in a live environment, or test the feature for real after task completion.",
+  "content_fingerprint": "7af78f4663832df8c3e12e8016453b77a018391017eaa82c840976a869445ee3"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Lightweight refactor: audit \u2192 plan \u2192 approve \u2192 implement in a single Opus context, no sub-agent fan-out. Behavior preservation is the goal \u2014 verifies tests still pass, optionally commits, and offers a separate /code-review pass at the end. Use by default; reach for /refactor only when the cleanup needs parallel fan-out or exceeds one context."
+  "description": "Lightweight refactor: audit → plan → approve → implement in a single Opus context, no sub-agent fan-out. Behavior preservation is the goal — verifies tests still pass, optionally commits, and offers a separate /code-review pass at the end. Use by default; reach for /refactor only when the cleanup needs parallel fan-out or exceeds one context.",
+  "content_fingerprint": "8950a7192cf983e78e16dcdbce48e24bfa714911870f20e3cdcc60b3e8275a5e"
 }

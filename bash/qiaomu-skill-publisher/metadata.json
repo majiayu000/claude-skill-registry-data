@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e00\u952e\u53d1\u5e03 agent skill \u5230 GitHub\uff0c\u81ea\u52a8\u9a8c\u8bc1 SKILL.md\u3001\u751f\u6210\u6216\u68c0\u67e5\u66f4\u5438\u5f15\u4eba\u7684 README\u3001\u533a\u5206 skill name \u4e0e GitHub repo name\u3001\u521b\u5efa\u6216\u66f4\u65b0\u4ed3\u5e93\u3001\u63a8\u9001\u5e76\u901a\u8fc7 npx skills \u771f\u5b9e\u5b89\u88c5\u9a8c\u8bc1\u3002\u5f53\u7528\u6237\u8bf4\"\u53d1\u5e03\u8fd9\u4e2askill\"\u3001\"publish skill\"\u3001\"\u628askill\u53d1\u5230GitHub\"\u3001\"\u5206\u4eab\u8fd9\u4e2askill\"\u3001\"/publish-skill\"\u65f6\u89e6\u53d1\u3002\u652f\u6301\u53d1\u5e03\u5f53\u524d\u76ee\u5f55\u6216\u6307\u5b9a\u8def\u5f84\u7684 skill\u3002"
+  "description": "一键发布 agent skill 到 GitHub，自动验证 SKILL.md、生成或检查更吸引人的 README、区分 skill name 与 GitHub repo name、创建或更新仓库、推送并通过 npx skills 真实安装验证。当用户说\"发布这个skill\"、\"publish skill\"、\"把skill发到GitHub\"、\"分享这个skill\"、\"/publish-skill\"时触发。支持发布当前目录或指定路径的 skill。",
+  "content_fingerprint": "0f8eb443e75c7a565590ffa5043c76f45f3ea8299a3c5bcc09e37242b957e76e"
 }

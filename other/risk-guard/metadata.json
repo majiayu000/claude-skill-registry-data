@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Account ban risk monitor for Claude Code. Detects dangerous usage patterns\nthat could trigger rate limiting, account suspension, or banning.\nAuto-triggers on session start. Manual trigger: /risk-guard.\nChecks: concurrent sessions, tool call velocity, automation loops,\nsession frequency, config risks, secret exposure, telemetry leaks,\nfile permissions. Triggers on: 'risk', '\u98ce\u9669\u68c0\u67e5', '\u5c01\u53f7\u68c0\u67e5',\n'ban check', 'account safety', '\u8d26\u53f7\u5b89\u5168'."
+  "description": "Account ban risk monitor for Claude Code. Detects dangerous usage patterns\nthat could trigger rate limiting, account suspension, or banning.\nAuto-triggers on session start. Manual trigger: /risk-guard.\nChecks: concurrent sessions, tool call velocity, automation loops,\nsession frequency, config risks, secret exposure, telemetry leaks,\nfile permissions. Triggers on: 'risk', '风险检查', '封号检查',\n'ban check', 'account safety', '账号安全'.",
+  "content_fingerprint": "bf6650e7b950bda13982f0d319deab0c416bc93c92820e8b0f3a248db4df9172"
 }

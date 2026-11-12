@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Phase 2 of the prd-taskmaster pipeline: spec generation and task parsing. Loads a template (comprehensive|minimal), fills it with DISCOVER-phase constraints and answers, validates the spec (placeholders_found, grade thresholds), parses the PRD into tasks via task-master, runs TaskMaster's native complexity analysis, and expands every task into verifiable subtasks. Autonomous-safe. Declares GENERATE complete so HANDOFF can follow."
+  "description": "Phase 2 of the prd-taskmaster pipeline: spec generation and task parsing. Loads a template (comprehensive|minimal), fills it with DISCOVER-phase constraints and answers, validates the spec (placeholders_found, grade thresholds), parses the PRD into tasks via task-master, runs TaskMaster's native complexity analysis, and expands every task into verifiable subtasks. Autonomous-safe. Declares GENERATE complete so HANDOFF can follow.",
+  "content_fingerprint": "08d4599c89533b2b1a23a08340c8816b656a94170ece995f1c8af26cb9d90878"
 }

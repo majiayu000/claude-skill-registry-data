@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Chat \u5bf9\u8bdd\u4fdd\u5b58\u6d41\u7a0b\u8bbe\u8ba1\u3002\u4fee\u6539 API \u8def\u7531\u3001\u5bf9\u8bdd\u6d41\u7a0b\u3001\u7528\u6237\u8bc6\u522b\u903b\u8f91\u65f6\u5fc5\u987b\u52a0\u8f7d\u3002\u6d89\u53ca chat API\u3001\u591a\u8f6e\u5bf9\u8bdd\u7f13\u5b58\u3001\u540e\u7aef\u521d\u59cb\u5316\u5904\u7406\u65f6\u89e6\u53d1\u3002"
+  "description": "Chat 对话保存流程设计。修改 API 路由、对话流程、用户识别逻辑时必须加载。涉及 chat API、多轮对话缓存、后端初始化处理时触发。",
+  "content_fingerprint": "c09444e53576636019f6daca3711f8574823b5261e33e5f0da7055dfe8605f15"
 }

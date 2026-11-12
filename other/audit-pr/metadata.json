@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit a whole PR against the delivery contract and return MERGE-READY or evidenced blockers with the full URL. Consumes the current review-change REVIEW-PASS receipt instead of re-running review axes; posts a SHA-bound ready comment; never edits or merges. Triggers: \"audit-pr\", \"is this PR ready\", \"merge gate\"."
+  "description": "Audit a whole PR against the delivery contract and return MERGE-READY or evidenced blockers with the full URL. Consumes the current review-change REVIEW-PASS receipt instead of re-running review axes; posts a SHA-bound ready comment; never edits or merges. Triggers: \"audit-pr\", \"is this PR ready\", \"merge gate\".",
+  "content_fingerprint": "7324a5ea1205e1c520a34391f4cd29ca7797ba1fc067b6d30f67ec01e7241815"
 }

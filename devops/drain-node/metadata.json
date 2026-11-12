@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/X-McKay/kubani/blob/main/kubani/skills/k8s/remediation/drain-node/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "03e4ff50cf2fb856245e2b4f9cc18b8a8c824a21b35dd929c8f44c8299aab211",
+  "description": "Safely evict all pods from a node for maintenance. Cordons the node first, then evicts pods respecting PodDisruptionBudgets. Use before node maintenance or decommissioning. Keywords: drain, evict, nod"
 }

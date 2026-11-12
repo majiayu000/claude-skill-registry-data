@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Crainax/War3Lib/blob/master/.codex/skills/zinc-ui-async-separation/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "b7895a582b4eec0eddced363305d343e0ed8bf4bc71d096289993f8d3236045a",
+  "description": "War3Lib UI 组件开发行为规范（Zinc in .j）：约束 UI 本地异步行为与同步数据逻辑分离；规范 onClick/onEnter/onLeave 与 spClick/spEnter/spLeave 的使用边界；规范本地事件转同步事件时的数据打包与触发器接收。用于创建或重构 Jass/ui/composite 下的 UI（如 HeroSelector/Selector/Museum）"
 }

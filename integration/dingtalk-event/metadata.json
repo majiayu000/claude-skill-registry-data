@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9489\u9489\u4e2a\u4eba IM\u3001OA \u5ba1\u6279\u3001VoIP \u901a\u8bdd\u9080\u8bf7\u4e0e\u5f85\u529e\u4e8b\u4ef6\u957f\u8fde\u63a5\u76d1\u542c\u3002Use when \u7528\u6237\u8bf4\u76d1\u542c\u6d88\u606f/@\u6211/\u67d0\u4eba/\u67d0\u7fa4/\u5168\u90e8\u6d88\u606f\u3001\u5df2\u8bfb/\u64a4\u56de/reaction\u3001\u7fa4\u6210\u5458\u52a0\u5165/\u7fa4\u6210\u5458\u9000\u51fa/\u7fa4\u72b6\u6001\u53d8\u5316\uff0c\u76d1\u542c\u5ba1\u6279\u4efb\u52a1\u521b\u5efa/\u5b8c\u6210/\u8f6c\u4ea4\u3001\u5ba1\u6279\u5b9e\u4f8b\u53d1\u8d77/\u6284\u9001/\u7ec8\u6b62/\u5b8c\u6210\u3001VoIP \u901a\u8bdd\u9080\u8bf7\uff0c\u6216\u76d1\u542c\u5f85\u529e\u521b\u5efa/\u66f4\u65b0/\u5220\u9664\u3002\u547d\u4ee4\u524d\u7f00\uff1adws event\u3002"
+  "description": "钉钉个人 IM、OA 审批、VoIP 通话邀请与待办事件长连接监听。Use when 用户说监听消息/@我/某人/某群/全部消息、已读/撤回/reaction、群成员加入/群成员退出/群状态变化，监听审批任务创建/完成/转交、审批实例发起/抄送/终止/完成、VoIP 通话邀请，或监听待办创建/更新/删除。命令前缀：dws event。",
+  "content_fingerprint": "3ff3681d0a537cd98c9423460b0fbd996f9d408c5ef784a3114a8118f3b8dc19"
 }

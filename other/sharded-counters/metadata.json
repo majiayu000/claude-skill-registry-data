@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when the user needs a \"sharded counter\", \"distributed counter\", to \"count likes / views at scale\", handles a \"high-write counter\" or \"hot counter contention\", asks about \"approximate counting\", \"real-time counts\", or \"HyperLogLog\". It gives the recipe for absorbing write-heavy counting without a single hot row. Use it whenever one row/key takes concurrent increments faster than it can serialize them, even if the user doesn't say \"sharded counter\"."
+  "description": "This skill should be used when the user needs a \"sharded counter\", \"distributed counter\", to \"count likes / views at scale\", handles a \"high-write counter\" or \"hot counter contention\", asks about \"approximate counting\", \"real-time counts\", or \"HyperLogLog\". It gives the recipe for absorbing write-heavy counting without a single hot row. Use it whenever one row/key takes concurrent increments faster than it can serialize them, even if the user doesn't say \"sharded counter\".",
+  "content_fingerprint": "a6f9e9550b2b6243ab7e02de9a791f1caafc032a2197728c9f87a880023c9f20"
 }

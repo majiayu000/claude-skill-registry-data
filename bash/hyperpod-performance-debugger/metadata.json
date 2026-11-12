@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diagnose performance issues on Amazon SageMaker HyperPod clusters \u2014 uneven NCCL bandwidth across nodes and poor filesystem throughput. Read-only. Surfaces host-side signals (Xid, ECC, NVLink, EFA reachability, FSx saturation) and routes to the appropriate sibling skill (hyperpod-node-debugger, hyperpod-nccl, hyperpod-version-checker, hyperpod-issue-report) for any remediation. Triggers on uneven NCCL across nodes, straggler node, FSx slow, checkpoint slow, dataloader slow, filesystem bottleneck, FSx throughput, cross-AZ latency, topology mismatch."
+  "description": "Diagnose performance issues on Amazon SageMaker HyperPod clusters — uneven NCCL bandwidth across nodes and poor filesystem throughput. Read-only. Surfaces host-side signals (Xid, ECC, NVLink, EFA reachability, FSx saturation) and routes to the appropriate sibling skill (hyperpod-node-debugger, hyperpod-nccl, hyperpod-version-checker, hyperpod-issue-report) for any remediation. Triggers on uneven NCCL across nodes, straggler node, FSx slow, checkpoint slow, dataloader slow, filesystem bottleneck, FSx throughput, cross-AZ latency, topology mismatch.",
+  "content_fingerprint": "98d1e43476309d7bfaf009973a1ca30e693c4950901740ee5496d08a988d2e8a"
 }

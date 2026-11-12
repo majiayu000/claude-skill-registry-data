@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review+fix protocol with optional pre-core git diff review and safety guardrails (unsoundness, invariants, footguns, incidental complexity). Use when prompts say \"/tw-fix this PR\", \"fix current branch\", \"fix this diff\", \"repair CI red\", or \"apply a minimal patch\", and when crash/corruption/invariant-break issues need correction with a validation signal. Stop only after self-review exhausts actionable changes, each full cycle reaches post-self-review rerun plus terminal diff-review closure, and two consecutive zero-edit full cycles are clean."
+  "description": "Review+fix protocol with optional pre-core git diff review and safety guardrails (unsoundness, invariants, footguns, incidental complexity). Use when prompts say \"/tw-fix this PR\", \"fix current branch\", \"fix this diff\", \"repair CI red\", or \"apply a minimal patch\", and when crash/corruption/invariant-break issues need correction with a validation signal. Stop only after self-review exhausts actionable changes, each full cycle reaches post-self-review rerun plus terminal diff-review closure, and two consecutive zero-edit full cycles are clean.",
+  "content_fingerprint": "9e0e39a4b20e5e558449da3a8f8c212aa702178e152543339323103fee6eb440"
 }

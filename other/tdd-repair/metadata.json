@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Test-Driven Repair \u2014 given a failing test, spawn a bounded headless `claude -p` (Read/Edit/Bash only) that makes the test pass without modifying it. Modeled on agent-harness-generator's ADR-175 Test-Driven Repair mode. Bounded cost via --max-budget-usd, bounded capability via --allowedTools. Closes the loop the TDD plugins didn't \u2014 we generate tests, this fixes the code to satisfy them."
+  "description": "Test-Driven Repair — given a failing test, spawn a bounded headless `claude -p` (Read/Edit/Bash only) that makes the test pass without modifying it. Modeled on agent-harness-generator's ADR-175 Test-Driven Repair mode. Bounded cost via --max-budget-usd, bounded capability via --allowedTools. Closes the loop the TDD plugins didn't — we generate tests, this fixes the code to satisfy them.",
+  "content_fingerprint": "5f948e0b2cecaa191f7adfc22af3033cb9af311596d733f0f07453ac9e6665e4"
 }

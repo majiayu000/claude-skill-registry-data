@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Receive and verify Favro webhooks. Use when setting up Favro webhook handlers, debugging X-Favro-Webhook signature verification, accepting the setup ping, or handling card events (card.created, card.committed, card.moved, card.updated, card.deleted) and comment events (comment.created, comment.updated, comment.deleted). Note: Favro does NOT use Standard Webhooks \u2014 the signature is base64(HMAC-SHA1(secret, payloadId + the URL you registered)), signed over the payloadId concatenated with the target URL, NOT the raw request body."
+  "description": "Receive and verify Favro webhooks. Use when setting up Favro webhook handlers, debugging X-Favro-Webhook signature verification, accepting the setup ping, or handling card events (card.created, card.committed, card.moved, card.updated, card.deleted) and comment events (comment.created, comment.updated, comment.deleted). Note: Favro does NOT use Standard Webhooks — the signature is base64(HMAC-SHA1(secret, payloadId + the URL you registered)), signed over the payloadId concatenated with the target URL, NOT the raw request body.",
+  "content_fingerprint": "fd706b0db326bad211bc1eaf7f7dd5bfe25378ca596d628d084d76bc604c32d5"
 }

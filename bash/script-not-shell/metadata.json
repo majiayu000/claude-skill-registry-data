@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Avoid inline shell escaping failures by writing script files first. Use when running multi-line Python/bash, heredocs, nested quotes, YAML/JSON in shell, audit logic, or after heredoc/syntax errors. Creates temp scripts (/tmp) or permanent scripts (scripts/). Invoke with /script-not-shell. Reduces retry loops and token waste."
+  "description": "Avoid inline shell escaping failures by writing script files first. Use when running multi-line Python/bash, heredocs, nested quotes, YAML/JSON in shell, audit logic, or after heredoc/syntax errors. Creates temp scripts (/tmp) or permanent scripts (scripts/). Invoke with /script-not-shell. Reduces retry loops and token waste.",
+  "content_fingerprint": "05b8512400c44bef7241de30535f9294f0dd49c155b2ef4f8368412190f83841"
 }

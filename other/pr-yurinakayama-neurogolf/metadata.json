@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pull Request creation flow based on GitHub flow. Use whenever the user wants to open a PR, create a pull request, \"PR \u3092\u4f5c\u3063\u3066\", merge feature work into main, or prepare changes for review. The skill walks through commit history checks, fills the repo's `.github/PULL_REQUEST_TEMPLATE.md`, picks an appropriate label, and runs `gh pr create --base main`. It does not handle release tagging \u2014 for that see the release-tag skill."
+  "description": "Pull Request creation flow based on GitHub flow. Use whenever the user wants to open a PR, create a pull request, \"PR を作って\", merge feature work into main, or prepare changes for review. The skill walks through commit history checks, fills the repo's `.github/PULL_REQUEST_TEMPLATE.md`, picks an appropriate label, and runs `gh pr create --base main`. It does not handle release tagging — for that see the release-tag skill.",
+  "content_fingerprint": "0e94450c8e7887c7dfe5f417d145972758c8e46cc886f88e3125086d88043455"
 }

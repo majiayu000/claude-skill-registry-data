@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user hands over a GitHub issue to be delivered end to end \u2014 'resolver a issue #42', 'loop na issue 42', 'deliver issue https://github.com/o/r/issues/42' \u2014 or when an Orca worker preamble dispatches `feat-loop #N`. Turns the issue into a plan, executes it, reviews the result and runs at most 2 fix cycles until APPROVED, then opens a pull request that closes the issue. Never merges. Do NOT use without an issue (feat-feature / feat-quick), to only plan (feat-feature), to only review (feat-review) or to execute an existing plan (feat-exec)."
+  "description": "Use when the user hands over a GitHub issue to be delivered end to end — 'resolver a issue #42', 'loop na issue 42', 'deliver issue https://github.com/o/r/issues/42' — or when an Orca worker preamble dispatches `feat-loop #N`. Turns the issue into a plan, executes it, reviews the result and runs at most 2 fix cycles until APPROVED, then opens a pull request that closes the issue. Never merges. Do NOT use without an issue (feat-feature / feat-quick), to only plan (feat-feature), to only review (feat-review) or to execute an existing plan (feat-exec).",
+  "content_fingerprint": "4be904fdb4cde300979b6460afe73d0e24a39099438ce7f7e75c45aa721d2018"
 }

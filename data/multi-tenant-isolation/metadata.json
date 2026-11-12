@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill whenever writing database queries, API handlers, analytics pipelines, export functions, background jobs, or any data access code in the Myelin platform. This defines the row-level isolation contract, cross-tenant prohibition rules, feature-flag gating model, and the package entitlement tiers. A tenantId filter is not optional \u2014 it is structurally required on every query. Load this skill before writing any data access or API code."
+  "description": "Use this skill whenever writing database queries, API handlers, analytics pipelines, export functions, background jobs, or any data access code in the Myelin platform. This defines the row-level isolation contract, cross-tenant prohibition rules, feature-flag gating model, and the package entitlement tiers. A tenantId filter is not optional — it is structurally required on every query. Load this skill before writing any data access or API code.",
+  "content_fingerprint": "f64e3234b3ed022d55979c4efd7856dd961d1f739776b47d27354e687acefc51"
 }

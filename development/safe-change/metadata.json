@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Apply one logical code change with mandatory impact mapping, git snapshot, verification, and automatic revert on failure. Load when the user asks for a safe edit, verified change, one change at a time with rollback, or codespine-style edit loop. Also triggers on \"safe change\", \"edit with verification\", \"don't break the build\", \"revert if tests fail\", or any non-trivial code edit where blast radius matters. Always runs dependency-mapping first. Pairs with incremental-implementation for multi-slice work; this skill is one atomic verify cycle per invocation."
+  "description": "Apply one logical code change with mandatory impact mapping, git snapshot, verification, and automatic revert on failure. Load when the user asks for a safe edit, verified change, one change at a time with rollback, or codespine-style edit loop. Also triggers on \"safe change\", \"edit with verification\", \"don't break the build\", \"revert if tests fail\", or any non-trivial code edit where blast radius matters. Always runs dependency-mapping first. Pairs with incremental-implementation for multi-slice work; this skill is one atomic verify cycle per invocation.",
+  "content_fingerprint": "f629c12509997fe7293cf6a470660db071f07afc8d60f7ff96987a6ec31c3111"
 }

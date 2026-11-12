@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Push OData query options into the SQL of a Mendix resource served by a read microflow, so $filter, $orderby, $top, $skip, $count and the key lookup reach the database instead of being silently dropped. Use when publishing an OData resource over data Mendix has no table for \u2014 a warehouse view, a legacy database, a Databricks catalogue, a stored procedure, a CSV read through a connector \u2014 or when a published resource returns 200 with the wrong rows and nothing appears in the log."
+  "description": "Push OData query options into the SQL of a Mendix resource served by a read microflow, so $filter, $orderby, $top, $skip, $count and the key lookup reach the database instead of being silently dropped. Use when publishing an OData resource over data Mendix has no table for — a warehouse view, a legacy database, a Databricks catalogue, a stored procedure, a CSV read through a connector — or when a published resource returns 200 with the wrong rows and nothing appears in the log.",
+  "content_fingerprint": "8c1a00ff6df44eeaf56f6cbc344a72245753b7518ccdc954c204f1a5b03836e4"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Sets up, regenerates or debugs the shared MyAdmin plugin contract harness for this package \u2014 tests/ContractTest.php, the contract inspectors, and `composer myadmin:scaffold-tests`. Use when the user says 'add tests to this plugin', 'set up the harness', 'scaffold tests', 'why is ContractTest failing', or when deciding whether a contract failure is the plugin's fault or the harness's. This is a type=service package, so the service lifecycle assertions apply too. Do NOT use for this package's own non-plugin classes \u2014 its other testing skills cover those."
+  "description": "Sets up, regenerates or debugs the shared MyAdmin plugin contract harness for this package — tests/ContractTest.php, the contract inspectors, and `composer myadmin:scaffold-tests`. Use when the user says 'add tests to this plugin', 'set up the harness', 'scaffold tests', 'why is ContractTest failing', or when deciding whether a contract failure is the plugin's fault or the harness's. This is a type=service package, so the service lifecycle assertions apply too. Do NOT use for this package's own non-plugin classes — its other testing skills cover those.",
+  "content_fingerprint": "aa67b11aead4a4c9c71ca923931cfbb9729c6603dcb3485de126d968f5b8fc3a"
 }

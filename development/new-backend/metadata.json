@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Add a pluggable adapter/backend to plainworks the canonical way \u2014 a state store, channel transport (sse/ws), auth mechanism (oidc/jwt/apikey/BYO), or query wiring \u2014 implementing the core package's seam, selected via config through an explicit register()/createX({...}), with no import-time side effects and the lean default kept in core. Use when integrating a transport, an auth style, or a state/query backend."
+  "description": "Add a pluggable adapter/backend to plainworks the canonical way — a state store, channel transport (sse/ws), auth mechanism (oidc/jwt/apikey/BYO), or query wiring — implementing the core package's seam, selected via config through an explicit register()/createX({...}), with no import-time side effects and the lean default kept in core. Use when integrating a transport, an auth style, or a state/query backend.",
+  "content_fingerprint": "39ee1137238fe287c26c8037aa884831942f05c9a97562c75e55878cb5dbc97e"
 }

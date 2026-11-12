@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Gate a build on browser fingerprint regressions with liarjs - save a baseline scan as JSON, diff later runs against it, and fail the job when the consistency score falls below a floor. Use when asked to add a fingerprint or headless-detection check to GitHub Actions, GitLab CI or another pipeline, to catch a regression in a Chromium build or scraping harness before it ships, or to track how a fingerprint score changes across commits."
+  "description": "Gate a build on browser fingerprint regressions with liarjs - save a baseline scan as JSON, diff later runs against it, and fail the job when the consistency score falls below a floor. Use when asked to add a fingerprint or headless-detection check to GitHub Actions, GitLab CI or another pipeline, to catch a regression in a Chromium build or scraping harness before it ships, or to track how a fingerprint score changes across commits.",
+  "content_fingerprint": "57bf1f757d829ba69cdf30f0d6f7dcdcf469cef9d66fc7507d84213a5648fda5"
 }

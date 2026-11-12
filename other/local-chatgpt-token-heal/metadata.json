@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Re-mint a ChatGPT bearer token when a nightly sync exits with a token-expired code: the session cookie lives for months and deterministically produces a fresh bearer, with no LLM and no browser. Triggers: \"/chatgpt-token-heal\", \"chatgpt token dead\", or the sync failing on that error."
+  "description": "Re-mint a ChatGPT bearer token when a nightly sync exits with a token-expired code: the session cookie lives for months and deterministically produces a fresh bearer, with no LLM and no browser. Triggers: \"/chatgpt-token-heal\", \"chatgpt token dead\", or the sync failing on that error.",
+  "content_fingerprint": "08e61a0555a7c8d8dbea7bcdea6ff65fda5905978a765299ca59a3cc71abcbac"
 }

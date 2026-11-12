@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Toggle PD showcase mode on/off for live demos. When ON, /pd-spawn and /pd-resume spawn PDs in the foreground with verbose narration so the audience sees every tool call, reasoning step, and decision in real-time. When OFF (default), PDs run silently in the background as usual. Invoke as /pd-showcase on, off, or status. State is a single marker file at ~/.claude/state/pd-showcase.flag \u2014 read by pd-spawn and pd-resume at spawn-time."
+  "description": "Toggle PD showcase mode on/off for live demos. When ON, /pd-spawn and /pd-resume spawn PDs in the foreground with verbose narration so the audience sees every tool call, reasoning step, and decision in real-time. When OFF (default), PDs run silently in the background as usual. Invoke as /pd-showcase on, off, or status. State is a single marker file at ~/.claude/state/pd-showcase.flag — read by pd-spawn and pd-resume at spawn-time.",
+  "content_fingerprint": "c8439297f798fcbf649ddb35335a18c5927d2fd5eb0951ea02ce72c8da99e1ce"
 }

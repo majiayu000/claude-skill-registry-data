@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when the user asks to \"minimize the repro path\", \"/minimize\", \"shrink the crash steps\", \"\u7cbe\u7b80\u590d\u73b0\u8def\u5f84\", \"\u627e\u6700\u5c0f\u590d\u73b0\", \"\u628a 12 \u6b65\u538b\u6210 3 \u6b65\", or wants to compress a recorded crash repro_path into the shortest sequence that still reproduces the same crash signature. Drives live Android replay via mobile-mcp + ui-mcp + log-mcp, validates each candidate subset with analyzer-mcp's signature, and updates the session's crash record with the verified minimal path; iOS sessions use the static fallback because ui-mcp replay is Android-only."
+  "description": "This skill should be used when the user asks to \"minimize the repro path\", \"/minimize\", \"shrink the crash steps\", \"精简复现路径\", \"找最小复现\", \"把 12 步压成 3 步\", or wants to compress a recorded crash repro_path into the shortest sequence that still reproduces the same crash signature. Drives live Android replay via mobile-mcp + ui-mcp + log-mcp, validates each candidate subset with analyzer-mcp's signature, and updates the session's crash record with the verified minimal path; iOS sessions use the static fallback because ui-mcp replay is Android-only.",
+  "content_fingerprint": "305c409892f5880d1d33ce3d8e5ae311a2a54f2dbf8408f7537fb95f09778e99"
 }

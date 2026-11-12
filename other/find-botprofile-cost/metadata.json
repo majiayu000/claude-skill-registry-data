@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Locate BotProfile::Cost in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"BotProfile::Cost\" (symbol BotProfile_Cost). This is a VIRTUAL function - resolve the BotProfile::Cost vtable via RTTI and identify the\nslot, then emit the slot. Verify by xrefs from expected call sites. vtable slots\ncommonly differ between platforms - never assume identical indices.\nTrigger: BotProfile_Cost, BotProfile::Cost"
+  "description": "Locate BotProfile::Cost in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"BotProfile::Cost\" (symbol BotProfile_Cost). This is a VIRTUAL function - resolve the BotProfile::Cost vtable via RTTI and identify the\nslot, then emit the slot. Verify by xrefs from expected call sites. vtable slots\ncommonly differ between platforms - never assume identical indices.\nTrigger: BotProfile_Cost, BotProfile::Cost",
+  "content_fingerprint": "915799eeb4d9844c586ffd0ab3d9f14014df518f52bf95c7a40378500cbfc8bc"
 }

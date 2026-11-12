@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scans a codebase for security vulnerabilities using CodeQL's interprocedural data flow and taint tracking analysis. Triggers on \"run codeql\", \"codeql scan\", \"codeql analysis\", \"build codeql database\", or \"find vulnerabilities with codeql\". Supports \"run all\" (security-and-quality suite) and \"important only\" (high-precision security findings) scan modes. Also handles creating data extension models and processing CodeQL SARIF output."
+  "description": "Scans a codebase for security vulnerabilities using CodeQL's interprocedural data flow and taint tracking analysis. Triggers on \"run codeql\", \"codeql scan\", \"codeql analysis\", \"build codeql database\", or \"find vulnerabilities with codeql\". Supports \"run all\" (security-and-quality suite) and \"important only\" (high-precision security findings) scan modes. Also handles creating data extension models and processing CodeQL SARIF output.",
+  "content_fingerprint": "5a93f972f3ad14b0cd93b72bf04233aeacd7b7246a721d0e1e95e8aa97ffdd60"
 }

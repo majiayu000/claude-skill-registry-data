@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5e94\u7528 Hyper-Waterfall task \u7684 Stage \u5b8c\u6210\u6d41\u7a0b\u3002\n\u7f16\u5199 stage report\uff08`_stage{N}.md`\uff09\uff0c\u5c06 Stage source \u548c report \u4e00\u8d77 commit\uff0c\n\u5e76\u8fd0\u884c Stage \u9a8c\u8bc1\u547d\u4ee4\u3002\u5728\u4e00\u4e2a Stage \u5b8c\u6210\u540e\u3001\u8fdb\u5165\u4e0b\u4e00 Stage \u524d\u8c03\u7528\u3002"
+  "description": "应用 Hyper-Waterfall task 的 Stage 完成流程。\n编写 stage report（`_stage{N}.md`），将 Stage source 和 report 一起 commit，\n并运行 Stage 验证命令。在一个 Stage 完成后、进入下一 Stage 前调用。",
+  "content_fingerprint": "05175b266c2ff0e509b57acb70c3af393d69812413279248ff8c6a5b4d3697ee"
 }

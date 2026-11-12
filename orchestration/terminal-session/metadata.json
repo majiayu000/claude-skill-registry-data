@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/countbot-ai/CountBot/blob/main/workspace/skills/terminal-session/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "0cd679d51aadb62156bc209277c4b5451a00abb535a166b150b0b84d850939ac",
+  "description": "tmux 持久化终端会话控制。通过向 tmux 发送按键、读取输出，管理 Claude Code、Codex、SSH 等长时间运行的交互式进程。跨多轮对话保持进程状态。需预装 tmux（Linux/macOS 默认提供；Windows 用户需 WSL2）。"
 }

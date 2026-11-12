@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Layer 3 of the keyword research pipeline. For every BID-passing keyword, detects AI Overview **presence** by default (via the Ahrefs keywords-explorer-overview `serp_features` array \u2014 NOT serp-overview, which has no serp_features column) \u2014 non-exempt AIO-present rows are flagged RISKY so the writer differentiates. An OPT-IN heavier path (Brand Radar body-fetch + per-keyword AIO completeness scoring) can reject fully \"AIO-cannibalized\" keywords, but that is behind a flag, not the default."
+  "description": "Layer 3 of the keyword research pipeline. For every BID-passing keyword, detects AI Overview **presence** by default (via the Ahrefs keywords-explorer-overview `serp_features` array — NOT serp-overview, which has no serp_features column) — non-exempt AIO-present rows are flagged RISKY so the writer differentiates. An OPT-IN heavier path (Brand Radar body-fetch + per-keyword AIO completeness scoring) can reject fully \"AIO-cannibalized\" keywords, but that is behind a flag, not the default.",
+  "content_fingerprint": "b3c00c2d1abf56909265a7f31966ba4b22a32dd0247e8bbc9383ba5f2888ecd0"
 }

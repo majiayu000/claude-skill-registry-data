@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u663e\u5f0f\u6682\u505c\u3001\u6062\u590d\u6216\u53d6\u6d88\u4e00\u4e2a\u53d7\u6cbb\u7406 Run \u7684 exact Mission Controller\u3002\u4ec5\u5f53\u7528\u6237\u4f7f\u7528\u7cbe\u786e\u547d\u4ee4 `$flight-control-run` \u5e76\u4f9d\u6b21\u63d0\u4f9b run_id\u3001controller_id\u3001expected_controller_version \u4e0e PAUSE\u3001RESUME \u6216 CANCEL \u65f6\u4f7f\u7528\uff1b\u4e0d\u80fd\u628a\u81ea\u7136\u8bed\u8a00\u610f\u56fe\u3001Lead credential\u3001Controller \u7684 allowed_next_actions \u6216\u5386\u53f2\u6388\u6743\u5f53\u4f5c\u672c\u6b21\u7528\u6237\u6388\u6743\u3002"
+  "description": "显式暂停、恢复或取消一个受治理 Run 的 exact Mission Controller。仅当用户使用精确命令 `$flight-control-run` 并依次提供 run_id、controller_id、expected_controller_version 与 PAUSE、RESUME 或 CANCEL 时使用；不能把自然语言意图、Lead credential、Controller 的 allowed_next_actions 或历史授权当作本次用户授权。",
+  "content_fingerprint": "025a148bf37ff4832ce283560e75ca5b57b23bd799047835831d9ef72b77345e"
 }

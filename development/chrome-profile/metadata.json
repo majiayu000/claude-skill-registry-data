@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Target a specific Google Chrome user profile for browser automation via CDP. Discovers installed profiles from the Chrome Local State file, launches Chrome with the requested profile attached to a debug port, and connects agent-browser via `agent-browser connect <port>`. Use when \"automate using my Work/Personal Chrome\", \"open site with my saved session\", or \"use Chrome profile named <name>\". NOT for headless scraping without an existing user profile (use mk:agent-browser directly); NOT for importing cookies only (use agent-browser --auto-connect state save)."
+  "description": "Target a specific Google Chrome user profile for browser automation via CDP. Discovers installed profiles from the Chrome Local State file, launches Chrome with the requested profile attached to a debug port, and connects agent-browser via `agent-browser connect <port>`. Use when \"automate using my Work/Personal Chrome\", \"open site with my saved session\", or \"use Chrome profile named <name>\". NOT for headless scraping without an existing user profile (use mk:agent-browser directly); NOT for importing cookies only (use agent-browser --auto-connect state save).",
+  "content_fingerprint": "855068bffc2080b4afec4386b24467c5a6e6910035b475e85ee490e96f489c37"
 }

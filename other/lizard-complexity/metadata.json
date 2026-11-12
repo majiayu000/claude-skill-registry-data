@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run Lizard against production source to enforce per-function cyclomatic complexity (CCN), NLOC, and parameter-count thresholds - language-agnostic (30+ languages). Scoped to production code via `-x\"./tests/*\"`; test complexity is reviewed separately. Use when a codebase spans several languages and needs one complexity gate across all of them, or when a function has grown unreviewable and the team wants a numeric threshold in CI."
+  "description": "Run Lizard against production source to enforce per-function cyclomatic complexity (CCN), NLOC, and parameter-count thresholds - language-agnostic (30+ languages). Scoped to production code via `-x\"./tests/*\"`; test complexity is reviewed separately. Use when a codebase spans several languages and needs one complexity gate across all of them, or when a function has grown unreviewable and the team wants a numeric threshold in CI.",
+  "content_fingerprint": "325552271c127338a158813a10378c9667560ed9db117d226e7b890a9c52eca4"
 }

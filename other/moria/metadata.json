@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user runs /moria [--scope mine|all] [--dry-run] [--auto] [--confirm]. Sweeps every repo in your global mend list (mend_repos.md) for open PRs/MRs bearing unaddressed comments \u2014 loops /durin --repo over each root in turn, then prints one combined report ending in a plain STIRRED/QUIET verdict. Mend follows comments across all your repos, on no project's schedule. The forge of each repo is auto-detected from its origin (github | gitlab). Per-repo behavior matches /durin exactly; one global list, set once."
+  "description": "Use when the user runs /moria [--scope mine|all] [--dry-run] [--auto] [--confirm]. Sweeps every repo in your global mend list (mend_repos.md) for open PRs/MRs bearing unaddressed comments — loops /durin --repo over each root in turn, then prints one combined report ending in a plain STIRRED/QUIET verdict. Mend follows comments across all your repos, on no project's schedule. The forge of each repo is auto-detected from its origin (github | gitlab). Per-repo behavior matches /durin exactly; one global list, set once.",
+  "content_fingerprint": "8a887b5854119d7bc03df53e0a15f478232c336bed946cfc5d21910c7d78d7e5"
 }

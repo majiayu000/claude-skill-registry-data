@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ub300\ud654\ud615 System-wide Refactoring \u2014 \ubcc0\uacbd \ud30c\uc77c\uc5d0\uc11c Extract Method\u00b7Domain Logic \uc774\ub3d9\u00b7Pull Up \ub4f1 \ud074\ub798\uc2a4 \uacbd\uacc4\ub97c \ub118\ub294 \uad6c\uc870 \ubcc0\uacbd \ud6c4\ubcf4\ub97c \ucc3e\uc544 \uc2b9\uc778 \ud6c4 \uae30\ubc95\ubcc4 \ucee4\ubc0b\uc73c\ub85c \uc801\uc6a9. \"\uad6c\uc870 \ub9ac\ud329\ud1a0\ub9c1\", \"\ub3c4\uba54\uc778 \ub85c\uc9c1 \uc774\ub3d9\", \"\ud074\ub798\uc2a4 \ubd84\ub9ac\", \"system-wide\", \"/system-wide-refactoring\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \uba54\uc11c\ub4dc \ub0b4\ubd80 \uc815\ub3c8(guard clause\u00b7extract variable \ub4f1)\uc740 /tdd-tidy\uac00 \uc801\ud569. /system-wide-refactoring [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "대화형 System-wide Refactoring — 변경 파일에서 Extract Method·Domain Logic 이동·Pull Up 등 클래스 경계를 넘는 구조 변경 후보를 찾아 승인 후 기법별 커밋으로 적용. \"구조 리팩토링\", \"도메인 로직 이동\", \"클래스 분리\", \"system-wide\", \"/system-wide-refactoring\" 요청 시 사용. 단, 메서드 내부 정돈(guard clause·extract variable 등)은 /tdd-tidy가 적합. /system-wide-refactoring [commit-ref]로 호출.",
+  "content_fingerprint": "fbf023ac1ccf80244fffa10b53db299794f5ff6bf26dab4f8648ea4038416909"
 }

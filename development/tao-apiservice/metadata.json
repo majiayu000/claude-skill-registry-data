@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Quy t\u1eafc t\u1ea1o API Service t\u1eeb backend docs trong SASUCO. D\u00f9ng khi: vi\u1ebft class ApiService t\u1eeb t\u00e0i li\u1ec7u API backend, import apiCall/buildApiUrl/buildApiUrlWithParams/ApiResponse/PagingInfo, tr\u00e1nh deprecated buildApiHeaders/handleApiError/ApiLogger, \u0111\u1ecbnh ngh\u0129a enums v\u00e0 interfaces \u0111\u1ea7y \u0111\u1ee7 theo docs, c\u1ea5u tr\u00fac BASE_PATH/static methods, ph\u00e2n bi\u1ec7t Admin vs Business portal."
+  "description": "Quy tắc tạo API Service từ backend docs trong SASUCO. Dùng khi: viết class ApiService từ tài liệu API backend, import apiCall/buildApiUrl/buildApiUrlWithParams/ApiResponse/PagingInfo, tránh deprecated buildApiHeaders/handleApiError/ApiLogger, định nghĩa enums và interfaces đầy đủ theo docs, cấu trúc BASE_PATH/static methods, phân biệt Admin vs Business portal.",
+  "content_fingerprint": "c180910cedf3cff4b3140d6d8cd3a28b8174280e41bcbb8da7d8539106be3275"
 }

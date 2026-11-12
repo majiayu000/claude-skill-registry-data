@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audits WordPress plugin or theme PHP code for the most common security mistakes \u2014 missing nonce checks, capability checks, input normalization/validation, output escaping, unslashing, SQL preparation, AJAX nopriv exposure, file/path traversal, and unsafe redirects. Use when reviewing pull requests, before releasing a plugin, when the user asks \"is this secure\", or when handling code that touches $_GET / $_POST / $_REQUEST / $_COOKIE / $_FILES / $_SERVER, admin-ajax / admin-post, REST endpoints, options, user meta, custom DB queries, or file uploads."
+  "description": "Audits WordPress plugin or theme PHP code for the most common security mistakes — missing nonce checks, capability checks, input normalization/validation, output escaping, unslashing, SQL preparation, AJAX nopriv exposure, file/path traversal, and unsafe redirects. Use when reviewing pull requests, before releasing a plugin, when the user asks \"is this secure\", or when handling code that touches $_GET / $_POST / $_REQUEST / $_COOKIE / $_FILES / $_SERVER, admin-ajax / admin-post, REST endpoints, options, user meta, custom DB queries, or file uploads.",
+  "content_fingerprint": "22e1fd2cac78a953d2f421becd4f9c4af88dcc16bddc20b741e84c6105b69840"
 }

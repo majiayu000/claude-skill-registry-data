@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "[WHAT] Fast LLM inference via Groq API (chat) + Ollama (embeddings)\n[HOW] Groq for chat completions (llama-3.3-70b-versatile), Ollama nomic-embed-text for embeddings\n[WHEN] Need fast inference, embedding text for RAG, chat completions\n[WHY] Groq provides fastest LLM inference; Ollama handles local embeddings (Groq has no embedding API)\n\nTriggers: \"groq embed\", \"groq chat\", \"groq complete\", \"embed with groq\", \"fast llm\""
+  "description": "[WHAT] Fast LLM inference via Groq API (chat) + Ollama (embeddings)\n[HOW] Groq for chat completions (llama-3.3-70b-versatile), Ollama nomic-embed-text for embeddings\n[WHEN] Need fast inference, embedding text for RAG, chat completions\n[WHY] Groq provides fastest LLM inference; Ollama handles local embeddings (Groq has no embedding API)\n\nTriggers: \"groq embed\", \"groq chat\", \"groq complete\", \"embed with groq\", \"fast llm\"",
+  "content_fingerprint": "2a050eeb07622d9e5ebd2bc1bc1a410a289c1fdecacda7f6d85336e451342795"
 }

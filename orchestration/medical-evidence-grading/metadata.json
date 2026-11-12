@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Medical evidence grading orchestrator. \u5f53\u7528\u6237\u9700\u8981\u8bc4\u4f30\u533b\u5b66\u6587\u732e\u7684\u8bc1\u636e\u5f3a\u5ea6\u3001\u6bd4\u8f83\u591a\u7bc7\u8bba\u6587\u7684\u8d28\u91cf\u3001\u67e5\u627e\u67d0\u75be\u75c5\u7684\u9ad8\u7b49\u7ea7\u8bc1\u636e(\u6307\u5357\u6216 RCT)\u3001\u6216\u9a8c\u8bc1\u4e34\u5e8a\u58f0\u660e\u7684\u8bc1\u636e\u652f\u6301\u5ea6\u65f6,\u8c03\u7528\u672c skill\u3002\u6574\u5408 6 \u4e2a\u539f\u5b50 skill \u7684\u68c0\u7d22\u7ed3\u679c,\u6309\u8bc1\u636e\u91d1\u5b57\u5854\u81ea\u52a8\u5206\u7ea7\u4e3a A/B/C/D\u3002\u4f18\u5148\u4f7f\u7528 BioMCP fast-path(~3-5s),\u65e0 BioMCP \u65f6\u56de\u9000 slow-path(~15-25s)\u3002"
+  "description": "Medical evidence grading orchestrator. 当用户需要评估医学文献的证据强度、比较多篇论文的质量、查找某疾病的高等级证据(指南或 RCT)、或验证临床声明的证据支持度时,调用本 skill。整合 6 个原子 skill 的检索结果,按证据金字塔自动分级为 A/B/C/D。优先使用 BioMCP fast-path(~3-5s),无 BioMCP 时回退 slow-path(~15-25s)。",
+  "content_fingerprint": "1b940d597f2ce960cb90c82b7d6a357f8bcf14891bfad930225d752cd7bd39f5"
 }

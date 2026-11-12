@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when wrapping an external-dependency call site (Redis, NATS, HTTP, SQL) with motadatagosdk/core/circuitbreaker \u2014 picking thresholds, classifying caller-bug vs server-fault errors, wiring OnStateChange + ErrCircuitOpen through the public error model, and observing transitions without leaking goroutines. Triggers: circuit breaker, CircuitBreaker, ErrCircuitOpen, gobreaker, FailureThreshold, half-open, StateOpen, fail-fast, transient failure."
+  "description": "Use this when wrapping an external-dependency call site (Redis, NATS, HTTP, SQL) with motadatagosdk/core/circuitbreaker — picking thresholds, classifying caller-bug vs server-fault errors, wiring OnStateChange + ErrCircuitOpen through the public error model, and observing transitions without leaking goroutines. Triggers: circuit breaker, CircuitBreaker, ErrCircuitOpen, gobreaker, FailureThreshold, half-open, StateOpen, fail-fast, transient failure.",
+  "content_fingerprint": "96d4baf6d449d0d35335ac8eed5db40bd5e7070c5bfe032082e75fd670e21f5a"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Enter thin-orchestrator mode for a large, multi-step task with several heterogeneous or investigation-heavy parts \u2014 decompose and delegate rather than execute directly, capping context/token cost by keeping the main session lean and pushing all file I/O and execution into cheap isolated subagents. Not for mechanical single-pass changes where a scripted edit plus a typecheck is cheaper than delegating (e.g. a repo-wide rename), nor for a single one-off subagent dispatch. Stays in effect for the rest of the session once entered."
+  "description": "Enter thin-orchestrator mode for a large, multi-step task with several heterogeneous or investigation-heavy parts — decompose and delegate rather than execute directly, capping context/token cost by keeping the main session lean and pushing all file I/O and execution into cheap isolated subagents. Not for mechanical single-pass changes where a scripted edit plus a typecheck is cheaper than delegating (e.g. a repo-wide rename), nor for a single one-off subagent dispatch. Stays in effect for the rest of the session once entered.",
+  "content_fingerprint": "913c4a5323a3445810d97717a37bfb596259ce58b2e1ff22148e4d1991674ad6"
 }

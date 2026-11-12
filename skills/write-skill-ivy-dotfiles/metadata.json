@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ivy/dotfiles/blob/main/home/dot_claude/skills/write-skill/SKILL.md.tmpl/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "e41cef460074df0f72463a8c3758af4b1403071cceffaca962b5ba257f774d01",
+  "description": "CRITICAL: Before deploying any skill, spawn a reviewer agent with REVIEW.md to audit allowed-tools. Overly permissive tool access (e.g., Bash(git:)) can cause data loss or leak secrets."
 }

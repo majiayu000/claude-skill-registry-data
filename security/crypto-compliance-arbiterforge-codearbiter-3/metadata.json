@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The banned-primitive gate. Routed to when changed code hashes, signs, encrypts, derives keys, generates security-relevant randomness, configures TLS, or imports a crypto library. Rejects broken primitives, disabled TLS verification, and home-rolled crypto; the approved-primitive list lives in security-controls.md. The auth-crypto-reviewer agent is dispatched as the reviewer."
+  "description": "The banned-primitive gate. Routed to when changed code hashes, signs, encrypts, derives keys, generates security-relevant randomness, configures TLS, or imports a crypto library. Rejects broken primitives, disabled TLS verification, and home-rolled crypto; the approved-primitive list lives in security-controls.md. The auth-crypto-reviewer agent is dispatched as the reviewer.",
+  "content_fingerprint": "e6bdb2eee0ea3132854a9a255fbe22f0eb7f94a81a515a3e9ba0b9b4368db534"
 }

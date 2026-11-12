@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6392\u67e5\u5e76\u4fee\u590d\u300c\u7528\u6237\u53ef\u89c1\u6587\u672c\u6ca1\u8d70 localize / \u4e2d\u6587\u786c\u7f16\u7801\u6f0f\u672c\u5730\u5316 / \u4e2d\u6587 defaultMessage \u6cc4\u6f0f\u5230\u82f1\u6587\u754c\u9762\u300d\u3002\u5f53\u7528\u6237\u8bf4\u67d0\u6587\u6848\u6ca1\u672c\u5730\u5316\u3001\u627e\u672a\u672c\u5730\u5316\u7684\u6587\u672c\u3001\u672c\u5730\u5316\u67e5\u6f0f\u8865\u7f3a\u3001\u82f1\u6587\u754c\u9762\u5192\u51fa\u4e2d\u6587\uff08\u6216\u4e2d\u6587\u754c\u9762\u5192\u51fa\u82f1\u6587\uff09\u65f6\u4f7f\u7528\u3002\u8986\u76d6\u4e09\u79cd\u9057\u6f0f\u5f62\u6001\u7684\u626b\u63cf\u3001\u4fee\u590d\u5199\u6cd5\u7ea6\u5b9a\u3001zh-CN.ts \u8865\u8bd1\u4e0e\u9a8c\u8bc1\u94fe\u3002"
+  "description": "排查并修复「用户可见文本没走 localize / 中文硬编码漏本地化 / 中文 defaultMessage 泄漏到英文界面」。当用户说某文案没本地化、找未本地化的文本、本地化查漏补缺、英文界面冒出中文（或中文界面冒出英文）时使用。覆盖三种遗漏形态的扫描、修复写法约定、zh-CN.ts 补译与验证链。",
+  "content_fingerprint": "6e23538f3c1fe09b2b336889d9ce69523c2bc41cd05401003500d5a130b2ca37"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u628a\u73b0\u6709 VSCode \u63d2\u4ef6\u79fb\u690d\u4e3a Universe Editor \u6269\u5c55\u3002\u5f53\u7528\u6237\u7ed9\u51fa\u67d0 VSCode \u63d2\u4ef6\u7684\u4ed3\u5e93/\u540d\u79f0\u5e0c\u671b\u5728\u672c\u7f16\u8f91\u5668\u5b9e\u73b0\u540c\u6837\u529f\u80fd,\u6216\u8be2\u95ee\u67d0 VSCode \u63d2\u4ef6\u80fd\u5426\u5728 Universe Editor \u4f7f\u7528\u65f6\u4f7f\u7528\u3002\u5148\u505a API \u517c\u5bb9\u6027\u56db\u6863\u8bc4\u4f30\u4e0e license \u68c0\u67e5\u5e76\u8ba9\u7528\u6237\u786e\u8ba4,\u518d\u63a5 new-extension \u6d41\u7a0b\u5b8c\u6210\u642d\u5efa\u3001e2e \u4e0e\u53d1\u5e03\u3002"
+  "description": "把现有 VSCode 插件移植为 Universe Editor 扩展。当用户给出某 VSCode 插件的仓库/名称希望在本编辑器实现同样功能,或询问某 VSCode 插件能否在 Universe Editor 使用时使用。先做 API 兼容性四档评估与 license 检查并让用户确认,再接 new-extension 流程完成搭建、e2e 与发布。",
+  "content_fingerprint": "c952bd14a3a59055a7f0d4b68917328d6fbe5154b0856cee9e1bd051af0fbc82"
 }

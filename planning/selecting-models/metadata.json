@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wraps host.bridge.model_registry_client.discover() so the planner can ask \"which models are installed for capability X?\". Returns either a list of ModelHandle dicts or a MissingModelEnvelope. Used during planning, before any comfyui_execute sub-goal lands."
+  "description": "Wraps host.bridge.model_registry_client.discover() so the planner can ask \"which models are installed for capability X?\". Returns either a list of ModelHandle dicts or a MissingModelEnvelope. Used during planning, before any comfyui_execute sub-goal lands.",
+  "content_fingerprint": "b5f1aeac234db8bb8df93e2a361e96ee3bedf3b08e983fb4366acba37933eb89"
 }

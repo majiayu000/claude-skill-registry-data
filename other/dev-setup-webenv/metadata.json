@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "(Re)apply the Claude Code on the web profile setup. Use when: (1) User says '/dev-setup-webenv', 'set up web env', 'enable my skills on web', (2) A web session boots without the profile, (3) A new web environment or account needs the Setup script re-applied. Runs LOCALLY (Mac/terminal) \u2014 prints the canonical env setup script (PRIMARY: per-account, pre-launch, covers multi-repo sessions) and/or commits a single-repo SessionStart top-up hook from the bundled template."
+  "description": "(Re)apply the Claude Code on the web profile setup. Use when: (1) User says '/dev-setup-webenv', 'set up web env', 'enable my skills on web', (2) A web session boots without the profile, (3) A new web environment or account needs the Setup script re-applied. Runs LOCALLY (Mac/terminal) — prints the canonical env setup script (PRIMARY: per-account, pre-launch, covers multi-repo sessions) and/or commits a single-repo SessionStart top-up hook from the bundled template.",
+  "content_fingerprint": "056f5eeacc68e9585e4c76b7c38f327c1c2cb202562865b5ee8076f0bacddb26"
 }

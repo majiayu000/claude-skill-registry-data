@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Extract DOM sinks and event handlers via mock_extract and probe hot chains for reachability with mock_run. Run after chain-triage. Filters chains/hot.jsonl down to chains/dom_reachable.jsonl \u2014 the chains where a synthetic source actually flows into a DOM sink in a headless mock execution. Cheaper than full Opus audit, used as a TP-rate booster."
+  "description": "Extract DOM sinks and event handlers via mock_extract and probe hot chains for reachability with mock_run. Run after chain-triage. Filters chains/hot.jsonl down to chains/dom_reachable.jsonl — the chains where a synthetic source actually flows into a DOM sink in a headless mock execution. Cheaper than full Opus audit, used as a TP-rate booster.",
+  "content_fingerprint": "08ebd817b4e323a64c4975774f6f79f7470b61b61d87e96779cc87ef3fbe3fd3"
 }

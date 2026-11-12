@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ryu-qqq/AuthHub/blob/main/.claude/skills/controller-expert/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "ec3a86f475f3988f424ebef357299f173c8a1998eef7e679e7dddd6578c23919",
+  "description": "REST Controller 전문가. Thin Controller 패턴, CQRS Command/Query Controller 분리,\nResponseEntity<ApiResponse<T>> 래핑, @Valid 검증 필수. DELETE 금지(PATCH 사용).\nTestRestTemplate 필수 (MockMvc 금지). UseCase 의존. Mapper DI"
 }

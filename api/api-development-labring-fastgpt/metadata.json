@@ -12,5 +12,7 @@
   "copyright": "© 2023 Sealos.",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8d4ae7d51a549e34305e1c9be0f17d7a729893a36764518a5322f74bad8e0246",
+  "description": "FastGPT API 开发规范。重点强调使用 zod schema 定义入参和出参,在 API 文档中声明路由信息,编写对应的 OpenAPI 文档,以及在 API 路由中使用 schema.parse 进行验证。"
 }

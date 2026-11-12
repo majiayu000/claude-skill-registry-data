@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Parse laboratory values and reference ranges from clinical text and flag results as low, normal, high, or critical with OpenMed. Use when the user needs to interpret lab results, compute abnormal flags, parse reference ranges like \"135-145\" or \"<5\", honor an originating-lab flag (H/L/critical), or turn extracted lab entities into structured high/low/critical signals. Covers openmed.clinical.parse_reference_range, derive_abnormal_flag, ReferenceRange, and AbnormalFlag, with UCUM/LOINC framing. Unit-agnostic \u2014 it does not convert units. Pairs after extracting-clinical-entities (lab entities from analyze_text)."
+  "description": "Parse laboratory values and reference ranges from clinical text and flag results as low, normal, high, or critical with OpenMed. Use when the user needs to interpret lab results, compute abnormal flags, parse reference ranges like \"135-145\" or \"<5\", honor an originating-lab flag (H/L/critical), or turn extracted lab entities into structured high/low/critical signals. Covers openmed.clinical.parse_reference_range, derive_abnormal_flag, ReferenceRange, and AbnormalFlag, with UCUM/LOINC framing. Unit-agnostic — it does not convert units. Pairs after extracting-clinical-entities (lab entities from analyze_text).",
+  "content_fingerprint": "88b2126049359b7a8681db4fce85b810fc6c395d4d75790aa144224dedebca89"
 }

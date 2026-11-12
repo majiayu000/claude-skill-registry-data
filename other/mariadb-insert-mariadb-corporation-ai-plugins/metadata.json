@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific syntax and behavior for INSERT \u2014 RETURNING to get inserted rows in one round trip, INSERT \u2026 ON DUPLICATE KEY UPDATE with VALUE()/VALUES(), INSERT IGNORE warning and error-coercion behavior, INSERT \u2026 SELECT, the SET form, PARTITION targeting, multi-row VALUES, priority/DELAYED modifiers and their engine limits, and LAST_INSERT_ID() semantics after multi-row inserts. Use when writing, generating, or reviewing INSERT statements that target MariaDB, or when an upsert is needed."
+  "description": "MariaDB-specific syntax and behavior for INSERT — RETURNING to get inserted rows in one round trip, INSERT … ON DUPLICATE KEY UPDATE with VALUE()/VALUES(), INSERT IGNORE warning and error-coercion behavior, INSERT … SELECT, the SET form, PARTITION targeting, multi-row VALUES, priority/DELAYED modifiers and their engine limits, and LAST_INSERT_ID() semantics after multi-row inserts. Use when writing, generating, or reviewing INSERT statements that target MariaDB, or when an upsert is needed.",
+  "content_fingerprint": "aaa69f1d358830a6b917848a9fa4baf5061b9032199244cd02bd3eb1010ef404"
 }

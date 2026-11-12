@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Provision the nixpi Raspberry Pi 4 SD card via the FAT FIRMWARE partition \u2014 the Cloudflare connector token and Wi-Fi credentials that a fresh flash needs. Use when asked to \"reflash nixpi\", \"flash the Pi\", \"plant the tunnel token\", \"update the connector token\", \"rotate the tunnel key\", \"set up / change nixpi Wi-Fi\", or \"nixpi can't reach the tunnel after a reflash\". Everything is an all-Nix flake app (`nix run .#nixpi-*`) on the macOS host; pairs with the in-tree firmware-secrets capsule, hosts/nixpi.nix, and docs/nixpi-sd-flashing-runbook.md."
+  "description": "Provision the nixpi Raspberry Pi 4 SD card via the FAT FIRMWARE partition — the Cloudflare connector token and Wi-Fi credentials that a fresh flash needs. Use when asked to \"reflash nixpi\", \"flash the Pi\", \"plant the tunnel token\", \"update the connector token\", \"rotate the tunnel key\", \"set up / change nixpi Wi-Fi\", or \"nixpi can't reach the tunnel after a reflash\". Everything is an all-Nix flake app (`nix run .#nixpi-*`) on the macOS host; pairs with the in-tree firmware-secrets capsule, hosts/nixpi.nix, and docs/nixpi-sd-flashing-runbook.md.",
+  "content_fingerprint": "df90d283c8698ee995ecefce85d25d489367b97b1504ab6b8cb1615a8bdaf1fe"
 }

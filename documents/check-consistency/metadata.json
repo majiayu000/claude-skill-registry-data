@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit ytstack internal consistency. Compares README (source of truth) against docs/concept.md, .ytstack/DECISIONS.md, and actual plugin content (skills/, hooks/, agents/, artifacts). Reports drift: missing or extra skills, workflow mentions that do not resolve to real skills, trigger-map gaps, hook-list mismatches, skill-count drift, banned-words hits. Run before approving doc changes or after a vendor subtree pull. Does not fix anything -- humans decide how to reconcile."
+  "description": "Audit ytstack internal consistency. Compares README (source of truth) against docs/concept.md, .ytstack/DECISIONS.md, and actual plugin content (skills/, hooks/, agents/, artifacts). Reports drift: missing or extra skills, workflow mentions that do not resolve to real skills, trigger-map gaps, hook-list mismatches, skill-count drift, banned-words hits. Run before approving doc changes or after a vendor subtree pull. Does not fix anything -- humans decide how to reconcile.",
+  "content_fingerprint": "e7dd1ce0b469a58150267a26945e3f54ea7e391d3b5016cf52ab31190a8deec7"
 }

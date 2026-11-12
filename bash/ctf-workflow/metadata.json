@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Autonomous CTF / boot-to-root campaign driver. Runs a box end to end with no operator approvals - the deterministic driver (scripts/campaign.py) owns pass state, generates the killchain board from recon, and prints the exact next action (Skill + tool) every turn. Use when handed a box/IP to own end to end, \"run the ctf workflow\", \"root this box\", \"foothold to root\". Single agent, wiki-first, tool-first. OSINT is OFF unless you invoke with an osint argument. Delegates box recipes to ctf-box."
+  "description": "Autonomous CTF / boot-to-root campaign driver. Runs a box end to end with no operator approvals - the deterministic driver (scripts/campaign.py) owns pass state, generates the killchain board from recon, and prints the exact next action (Skill + tool) every turn. Use when handed a box/IP to own end to end, \"run the ctf workflow\", \"root this box\", \"foothold to root\". Single agent, wiki-first, tool-first. OSINT is OFF unless you invoke with an osint argument. Delegates box recipes to ctf-box.",
+  "content_fingerprint": "5526879d84f76fd4c22096b7fd5b045e44c0db31bc04ea6f30ea09bb059009d4"
 }

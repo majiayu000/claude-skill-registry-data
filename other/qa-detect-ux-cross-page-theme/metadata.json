@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detects color/theme drift ACROSS pages \u2014 sidebar background color changes between routes, header bar uses different hues on different pages, theme primary varies across the audit run, active-state color drifts. The per-cell probe records color fingerprints; scripts/check-cross-page-theme.cjs aggregates them after the run and emits findings."
+  "description": "Detects color/theme drift ACROSS pages — sidebar background color changes between routes, header bar uses different hues on different pages, theme primary varies across the audit run, active-state color drifts. The per-cell probe records color fingerprints; scripts/check-cross-page-theme.cjs aggregates them after the run and emits findings.",
+  "content_fingerprint": "abdc98ad96b320d8253d1c4761f595073b3fb8e9be5b5dfd7fbc8856850dfc04"
 }

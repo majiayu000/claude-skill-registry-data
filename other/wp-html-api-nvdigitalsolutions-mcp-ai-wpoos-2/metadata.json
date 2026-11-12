@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use WordPress' HTML API for safe server-side HTML inspection and mutation instead of regex, fragile string replacement, or DOMDocument. Covers WP_HTML_Tag_Processor, WP_HTML_Processor, set_attribute, remove_attribute, add_class, remove_class, set_modifiable_text, serialize_token, custom data attribute name mapping, and WP 6.9 behavior where attribute/text setters escape character references. Use when plugin code modifies rendered HTML, block output, shortcodes, content filters, widget markup, email fragments, or user-provided HTML."
+  "description": "Use WordPress' HTML API for safe server-side HTML inspection and mutation instead of regex, fragile string replacement, or DOMDocument. Covers WP_HTML_Tag_Processor, WP_HTML_Processor, set_attribute, remove_attribute, add_class, remove_class, set_modifiable_text, serialize_token, custom data attribute name mapping, and WP 6.9 behavior where attribute/text setters escape character references. Use when plugin code modifies rendered HTML, block output, shortcodes, content filters, widget markup, email fragments, or user-provided HTML.",
+  "content_fingerprint": "2aba2b82b060a864ec233b30b32d9913116ec146b1bb34632d210f406eca7571"
 }

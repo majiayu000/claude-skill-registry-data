@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Move live UI updates off the shared Redis (a dedicated Redis, NATS, a hosted pub/sub). Use when the user decides realtime fan-out should leave the main Redis, or asks how live updates scale. Not for debugging; when something fails, use the debug skill."
+  "description": "Move live UI updates off the shared Redis (a dedicated Redis, NATS, a hosted pub/sub). Use when the user decides realtime fan-out should leave the main Redis, or asks how live updates scale. Not for debugging; when something fails, use the debug skill.",
+  "content_fingerprint": "38939b38e13f3c2235ccc33c3e7715412cfc2aa73a179811064b8b373a4935dd"
 }

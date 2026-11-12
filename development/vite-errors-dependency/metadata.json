@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when encountering pre-bundling errors, dependency resolution failures, stale cache issues, or slow development server startup. Prevents excluding CJS dependencies from pre-bundling (which breaks runtime module resolution) and misconfiguring optimizeDeps. Covers CJS/ESM conversion failures, missing dependency auto-discovery, optimizeDeps configuration, monorepo linked dependencies, cache invalidation, browser cache staleness, and large dependency tree performance. Keywords: pre-bundling, optimizeDeps, CJS, ESM, cache, dependency resolution, monorepo, node_modules/.vite."
+  "description": "Use when encountering pre-bundling errors, dependency resolution failures, stale cache issues, or slow development server startup. Prevents excluding CJS dependencies from pre-bundling (which breaks runtime module resolution) and misconfiguring optimizeDeps. Covers CJS/ESM conversion failures, missing dependency auto-discovery, optimizeDeps configuration, monorepo linked dependencies, cache invalidation, browser cache staleness, and large dependency tree performance. Keywords: pre-bundling, optimizeDeps, CJS, ESM, cache, dependency resolution, monorepo, node_modules/.vite.",
+  "content_fingerprint": "737729485be3cee60aa45cfa0946bde2bc134916f63a8c41c285e129719f6b75"
 }

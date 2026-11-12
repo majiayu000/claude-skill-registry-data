@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The model-generator shape for Skmtc: one definition per component schema, built by copying the shipped SKELETON package and filling its SLOT markers with the target library's syntax. Covers the edge cases every model generator must survive \u2014 refs, recursion, optional vs nullable, additionalProperties, enums, readOnly/writeOnly. Use when authoring or editing a generator that maps schemas to a validator/schema/type library (\"write a gen-<lib>\", \"map OpenAPI models to <lib>\"). Load ALONGSIDE skmtc-generator (engine rules) and skmtc-lang-typescript (TS layer)."
+  "description": "The model-generator shape for Skmtc: one definition per component schema, built by copying the shipped SKELETON package and filling its SLOT markers with the target library's syntax. Covers the edge cases every model generator must survive — refs, recursion, optional vs nullable, additionalProperties, enums, readOnly/writeOnly. Use when authoring or editing a generator that maps schemas to a validator/schema/type library (\"write a gen-<lib>\", \"map OpenAPI models to <lib>\"). Load ALONGSIDE skmtc-generator (engine rules) and skmtc-lang-typescript (TS layer).",
+  "content_fingerprint": "0d147dbbe2e851caf2dffa6255bed509ec01cdcf7b408f593b2df535827ff19e"
 }

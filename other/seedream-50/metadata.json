@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u660e\u786e\u8981\u6c42\u4f7f\u7528\u201c5.0\u201d\u201c5.0 Pro\u201d\u201c5.0pro\u201d\u201cSeedream 5.0 Pro\u201d\u751f\u6210\u3001\u7f16\u8f91\u3001\u91cd\u7ed8\u6216\u5ef6\u5c55\u56fe\u7247\u65f6\uff0c\u5fc5\u987b\u8c03\u7528\u6b64 Skill\uff1b\u8d1f\u8d23\u6309\u7167 5.0 Pro \u89c4\u5219\u7ec4\u88c5 Prompt\uff0c\u5e76\u5c06\u4efb\u52a1\u4ea4\u63a5\u7ed9 doubao-creative-design Skill\uff0c\u7531\u5176\u4ee5 modelversion=\"seedream_5.0_pro\" \u8c03\u7528\u5b9e\u9645\u56fe\u7247\u5de5\u5177\u3002"
+  "description": "当用户明确要求使用“5.0”“5.0 Pro”“5.0pro”“Seedream 5.0 Pro”生成、编辑、重绘或延展图片时，必须调用此 Skill；负责按照 5.0 Pro 规则组装 Prompt，并将任务交接给 doubao-creative-design Skill，由其以 modelversion=\"seedream_5.0_pro\" 调用实际图片工具。",
+  "content_fingerprint": "1c97922ebe6b289c71910ec92a03993dfbad1819bad855f06e5eb5182ca0ebaf"
 }

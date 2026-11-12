@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ronnythedev/dotnet-clean-architecture-skills/blob/main/skills/14-outbox-pattern/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "20524c00e10b58232ac96d243d547082408d03f60e500db2ac96944014ca4378",
+  "description": "Implements the Outbox pattern for reliable domain event processing. Ensures events are persisted in the same transaction as the aggregate changes and processed asynchronously with guaranteed delivery."
 }

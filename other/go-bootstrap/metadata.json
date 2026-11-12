@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wire a new clean-arch feature into the app \u2014 DI and route registration under internal/bootstrap/, internal/bootstrap/registry/, and cmd/api/main.go. Use when adding a feature's Setup() wiring, adding a repository/gateway accessor to the registry, or deciding whether new routes need Firebase auth, an internal API key, or no auth. Enforces the conventions below."
+  "description": "Wire a new clean-arch feature into the app — DI and route registration under internal/bootstrap/, internal/bootstrap/registry/, and cmd/api/main.go. Use when adding a feature's Setup() wiring, adding a repository/gateway accessor to the registry, or deciding whether new routes need Firebase auth, an internal API key, or no auth. Enforces the conventions below.",
+  "content_fingerprint": "55d5dbd4a40952051b1a1e53d010520ce9608b3a9244ca1075a8418ca78cb862"
 }

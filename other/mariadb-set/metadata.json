@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific syntax and behavior for SET \u2014 GLOBAL/SESSION/LOCAL scope rules and their session-isolation semantics, the SET STATEMENT ... FOR extension (and its fixed list of 13 variables it cannot touch), `=`/`:=` equivalence for user variables inside SET (but not outside it), var = DEFAULT restore semantics, the SUPER privilege gate on SET GLOBAL, and the absence of SET PERSIST (MariaDB persists via config file, not SQL). Use when writing, generating, or reviewing SET statements (system/session/user variables, options, and SET STATEMENT ... FOR) that target MariaDB."
+  "description": "MariaDB-specific syntax and behavior for SET — GLOBAL/SESSION/LOCAL scope rules and their session-isolation semantics, the SET STATEMENT ... FOR extension (and its fixed list of 13 variables it cannot touch), `=`/`:=` equivalence for user variables inside SET (but not outside it), var = DEFAULT restore semantics, the SUPER privilege gate on SET GLOBAL, and the absence of SET PERSIST (MariaDB persists via config file, not SQL). Use when writing, generating, or reviewing SET statements (system/session/user variables, options, and SET STATEMENT ... FOR) that target MariaDB.",
+  "content_fingerprint": "477f080581b3637fc2b00d9f311f08cb5a1a716900e26e326a3fce1fb4a751f0"
 }

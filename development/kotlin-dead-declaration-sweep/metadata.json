@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Find and safely remove unused declarations in a Kotlin/Android repo without deleting live code \u2014 filtering runner-invoked test functions that look dead to a reference count, checking imports orphaned by the removal, and avoiding the false-negative search that \"proves\" a feature is missing when it is only named differently. Use when pruning dead code, after a feature is superseded, or when a reference count is about to justify a deletion."
+  "description": "Find and safely remove unused declarations in a Kotlin/Android repo without deleting live code — filtering runner-invoked test functions that look dead to a reference count, checking imports orphaned by the removal, and avoiding the false-negative search that \"proves\" a feature is missing when it is only named differently. Use when pruning dead code, after a feature is superseded, or when a reference count is about to justify a deletion.",
+  "content_fingerprint": "a2dde5d7681f704054074e3b2de08bbbb48e13483eee14e27955bbb28abb5dae"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MUST USE when an existing .NET test project was excluded from a .slnf/CI solution filter, disappeared from .sln/.slnx discovery, or lost its production ProjectReference; also for requests to set up, create, reuse, add, register, include, or repair a test project. Handles \"tests pass directly but CI discovers zero\", exact solution wiring, xUnit/NUnit/MSTest, and central packages. DO NOT USE to only author tests in an already-wired project (code-testing-agent), run tests, migrate, or correct MSTest syntax/configuration without changing project or CI files (writing-mstest-tests)."
+  "description": "MUST USE when an existing .NET test project was excluded from a .slnf/CI solution filter, disappeared from .sln/.slnx discovery, or lost its production ProjectReference; also for requests to set up, create, reuse, add, register, include, or repair a test project. Handles \"tests pass directly but CI discovers zero\", exact solution wiring, xUnit/NUnit/MSTest, and central packages. DO NOT USE to only author tests in an already-wired project (code-testing-agent), run tests, migrate, or correct MSTest syntax/configuration without changing project or CI files (writing-mstest-tests).",
+  "content_fingerprint": "a538d301143bbe69a685859ca96bbf3ebc524fcd56ff7a3203752bac6ef76f6e"
 }

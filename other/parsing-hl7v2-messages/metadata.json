@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decodes pipe-delimited HL7 v2.x messages (ADT, ORU, MDM, ORM) into structured segments/fields/components and surfaces OBX-5 and NTE-3 free-text narrative for OpenMed. Use before OpenMed processing when ingesting HL7 v2 feeds from an interface engine, lab/results system, or ADT stream and you need the embedded clinical note text de-identified and analyzed. Flatten OBX/NTE text then call openmed.deidentify and openmed.analyze_text; segment-aware redaction is available via openmed.interop.hl7v2. Trigger keywords: HL7, HL7 v2, ADT, ORU, OBX, MSH, PID, pipe-delimited, interface engine, Mirth, lab results."
+  "description": "Decodes pipe-delimited HL7 v2.x messages (ADT, ORU, MDM, ORM) into structured segments/fields/components and surfaces OBX-5 and NTE-3 free-text narrative for OpenMed. Use before OpenMed processing when ingesting HL7 v2 feeds from an interface engine, lab/results system, or ADT stream and you need the embedded clinical note text de-identified and analyzed. Flatten OBX/NTE text then call openmed.deidentify and openmed.analyze_text; segment-aware redaction is available via openmed.interop.hl7v2. Trigger keywords: HL7, HL7 v2, ADT, ORU, OBX, MSH, PID, pipe-delimited, interface engine, Mirth, lab results.",
+  "content_fingerprint": "1ab68a139c852fa89b54adb69dd474f1a8a07649e033af6bdc48a82f2c57c096"
 }

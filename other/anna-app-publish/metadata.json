@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u628a\u7eaf\u524d\u7aef\u9759\u6001 SPA \u6253\u5305\u5e76\u4e0a\u67b6\u5230 Anna AI OS \u5e94\u7528\u5e73\u53f0\uff08anna.partners\uff09\u3002\u8986\u76d6 manifest schema \u9009\u62e9\u3001\u4e09\u6761\u4f1a\u88ab Pydantic extra=\"forbid\" \u76f4\u63a5\u62d2\u7684\u786c\u89c4\u5219\u3001CSP \u5185\u8054\u4e8b\u4ef6\u5904\u7406\u5668\u6539\u9020\u3001bundle \u4e0a\u4f20\u4e0e\"\u53d1\u5e03\u2260\u4e0a\u67b6\"\u7684\u72b6\u6001\u673a\u3002\u9002\u7528\u4e8e\u7528\u6237\u8981\u6c42\"\u4e0a\u67b6 Anna\"\"\u628a\u6211\u7684\u7f51\u9875\u5e94\u7528\u505a\u6210 Anna App\"\u7b49\u573a\u666f\u3002"
+  "description": "把纯前端静态 SPA 打包并上架到 Anna AI OS 应用平台（anna.partners）。覆盖 manifest schema 选择、三条会被 Pydantic extra=\"forbid\" 直接拒的硬规则、CSP 内联事件处理器改造、bundle 上传与\"发布≠上架\"的状态机。适用于用户要求\"上架 Anna\"\"把我的网页应用做成 Anna App\"等场景。",
+  "content_fingerprint": "124ad69d61869019dbeec1832a73fc5104a7f4ef6ba3320cd9c9434f1012da40"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Delegate work between LibrAgent AI agent sessions using sub-agent sessions. Use when an agent needs to spawn, brief, monitor, or troubleshoot a child session with `agent__spawnSession`, `agent__checkSession`, or `agent__messageToSession`, especially when deciding whether the child really needs parent workspace state, workspace instructions, or workspace-scoped skills. For generator-evaluator / strict acceptance criteria / proof before done, load `delegation-eval-loop` after this skill's spawn mechanics."
+  "description": "Delegate work between LibrAgent AI agent sessions using sub-agent sessions. Use when an agent needs to spawn, brief, monitor, or troubleshoot a child session with `agent__spawnSession`, `agent__checkSession`, or `agent__messageToSession`, especially when deciding whether the child really needs parent workspace state, workspace instructions, or workspace-scoped skills. For generator-evaluator / strict acceptance criteria / proof before done, load `delegation-eval-loop` after this skill's spawn mechanics.",
+  "content_fingerprint": "be8e34fd068f14cf7d8519d4ef0eaad629d5a51a5bda8551d49e6701eacadebf"
 }

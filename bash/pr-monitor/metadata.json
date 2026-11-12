@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Monitor open GitHub PRs across all repos in ~/Dev. Checks PR age, flags stale PRs,\nand optionally alerts via Aivena/Telegram. Uses `gh pr list` for accurate GitHub data.\n\n**TRIGGERS - Use this skill when:**\n- User asks about open PRs, pull requests, or PR status\n- User says \"check PRs\", \"any stale PRs?\", \"PR review status\"\n- Cron job `pr-monitor` fires\n- User asks \"what needs review?\" or \"what's waiting for merge?\"\n- User wants a PR dashboard or PR age report"
+  "description": "Monitor open GitHub PRs across all repos in ~/Dev. Checks PR age, flags stale PRs,\nand optionally alerts via Aivena/Telegram. Uses `gh pr list` for accurate GitHub data.\n\n**TRIGGERS - Use this skill when:**\n- User asks about open PRs, pull requests, or PR status\n- User says \"check PRs\", \"any stale PRs?\", \"PR review status\"\n- Cron job `pr-monitor` fires\n- User asks \"what needs review?\" or \"what's waiting for merge?\"\n- User wants a PR dashboard or PR age report",
+  "content_fingerprint": "d2f055209226ddecb9747524646ef7af154de615ff7d7e5a43104c4b571c91e7"
 }

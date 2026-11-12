@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `user-stories` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage user-stories --single`: the engine emits one run-stage directive for user-stories and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `user-stories` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage user-stories --single`: the engine emits one run-stage directive for user-stories and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "4c96d1ede04050916325062cbc2b4722e2f6c3ee30b11ba7ed57f83da9a61432"
 }

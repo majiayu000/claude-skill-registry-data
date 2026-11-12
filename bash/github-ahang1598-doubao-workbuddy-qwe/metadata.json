@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u901a\u8fc7 `gh` CLI \u4e0e GitHub \u4ea4\u4e92\u3002\u652f\u6301 `gh issue`\u3001`gh pr`\u3001`gh run`\u3001`gh api` \u7b49\u547d\u4ee4\uff0c\u7528\u4e8e\u7ba1\u7406 Issue\u3001PR\u3001CI \u8fd0\u884c\u548c\u9ad8\u7ea7\u67e5\u8be2\u3002\u4e0d\u8981\u5728\u975e GitHub \u573a\u666f\uff08\u5982 GitLab\u3001Bitbucket\u3001\u7eaf git \u64cd\u4f5c\uff09\u65f6\u89e6\u53d1\u3002"
+  "description": "通过 `gh` CLI 与 GitHub 交互。支持 `gh issue`、`gh pr`、`gh run`、`gh api` 等命令，用于管理 Issue、PR、CI 运行和高级查询。不要在非 GitHub 场景（如 GitLab、Bitbucket、纯 git 操作）时触发。",
+  "content_fingerprint": "eea740b2f6c2d6d84b73b4cf6151f4e63e9edba86369f3ddee64d05b15ffa03d"
 }

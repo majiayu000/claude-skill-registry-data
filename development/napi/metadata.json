@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build native Node.js addons in Rust with napi-rs. Covers the napi config, #[napi] attributes, ThreadsafeFunction callbacks, what `napi build` generates and which inputs control it, cross-compiling, the multi-platform publish pipeline, and the loader contract. ALWAYS load this skill when a repo has a build.rs calling napi_build::setup(), a \"napi\" key in package.json, a @napi-rs/cli dependency, or any .node binary. Load it before editing Cargo.toml, package.json, or CI for a native addon, and before debugging why a binding fails to load or why the published package is huge."
+  "description": "Build native Node.js addons in Rust with napi-rs. Covers the napi config, #[napi] attributes, ThreadsafeFunction callbacks, what `napi build` generates and which inputs control it, cross-compiling, the multi-platform publish pipeline, and the loader contract. ALWAYS load this skill when a repo has a build.rs calling napi_build::setup(), a \"napi\" key in package.json, a @napi-rs/cli dependency, or any .node binary. Load it before editing Cargo.toml, package.json, or CI for a native addon, and before debugging why a binding fails to load or why the published package is huge.",
+  "content_fingerprint": "3ff6f6b0f0681adb1dfe27899927879a5b593ca610a20e72c13cf3469bc512ec"
 }

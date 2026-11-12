@@ -1,6 +1,6 @@
 {
   "name": "triage-alert",
-  "description": "",
+  "description": "Triage a security alert or case. Use when given an ALERT_ID or CASE_ID to assess if it's a real threat. Enriches IOCs, searches SIEM for context, and determines if the alert should be closed (false po",
   "repo": "dandye/ai-runbooks",
   "category": "security",
   "tags": [],
@@ -16,5 +16,6 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dandye/ai-runbooks/blob/main/skills/triage-alert/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c2f0be8fcddfd26393f70c8f3d3223b5b554844ad6f6c7f0c23945cc97f147ca"
 }

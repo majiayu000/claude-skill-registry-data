@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a Bats helper, stub or fixture in `tests/bats/` has been edited and the change is about to be staged. Symptoms include a filtered `bats -f \"pattern\"` run passing while the full suite fails, a helper name defined twice in one file, and a ShellCheck `SC2329` unreachable-function warning on the first of the two definitions."
+  "description": "Use when a Bats helper, stub or fixture in `tests/bats/` has been edited and the change is about to be staged. Symptoms include a filtered `bats -f \"pattern\"` run passing while the full suite fails, a helper name defined twice in one file, and a ShellCheck `SC2329` unreachable-function warning on the first of the two definitions.",
+  "content_fingerprint": "623ad8a5d44eadeb72da5542c7a2864d18066d35a48be209cfe37ce8670f0fb1"
 }

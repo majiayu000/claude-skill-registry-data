@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Develop a scheduled or background job design as a DESIGN SEED in `.aid/design/job.md` -- the trigger, the work it performs, and its idempotency and failure handling. Use this skill when a job's schedule, its work, and its retry behaviour are still being decided. Grounded in the Knowledge Base (`.aid/knowledge/`) and the project source. It WRITES NO production code and NO KB document -- realize the seed into the built job with `/aid-create-job` once it is ready. Produced by the aid-architect agent and independently verified by aid-reviewer (full verify). Allocates a work-NNN folder."
+  "description": "Develop a scheduled or background job design as a DESIGN SEED in `.aid/design/job.md` -- the trigger, the work it performs, and its idempotency and failure handling. Use this skill when a job's schedule, its work, and its retry behaviour are still being decided. Grounded in the Knowledge Base (`.aid/knowledge/`) and the project source. It WRITES NO production code and NO KB document -- realize the seed into the built job with `/aid-create-job` once it is ready. Produced by the aid-architect agent and independently verified by aid-reviewer (full verify). Allocates a work-NNN folder.",
+  "content_fingerprint": "aa35565e4dd8ec09d3c6a99ad662940e1b694e5c30252f057d75d0eb9e656842"
 }

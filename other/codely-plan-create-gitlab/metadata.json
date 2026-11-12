@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Create a plan for the specified task and store it as GitLab issues in the repository of the current working directory. Given the URL of a GitLab issue, it turns that issue into the parent \"plan\" issue (Goal, Context and a checklist of phases) and creates one child issue per phase, linking every phase to the parent with GitLab related-issue links. Stops for user approval before creating any issue. After creation, the plan is meant to be implemented with the codely-plan-phase-implement-gitlab skill."
+  "description": "Create a plan for the specified task and store it as GitLab issues in the repository of the current working directory. Given the URL of a GitLab issue, it turns that issue into the parent \"plan\" issue (Goal, Context and a checklist of phases) and creates one child issue per phase, linking every phase to the parent with GitLab related-issue links. Stops for user approval before creating any issue. After creation, the plan is meant to be implemented with the codely-plan-phase-implement-gitlab skill.",
+  "content_fingerprint": "6c3cc10fb31092827c5256a47817e20a5e1786eb3b7f035196d32ef2b00b23be"
 }

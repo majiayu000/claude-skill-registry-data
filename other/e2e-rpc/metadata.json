@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "E2E-Steuerung von zid \u00fcber den RPC-Port 9999 und den Interactive-Modus: RPC-Referenz (key_press, ui_state, editor_state, element_bounds, get_active_tab, explorer_open), Screenshot-Koordinaten, Threading der Handler (gepuffert, onMain, Sperren), Fixtures. Use when writing or debugging scripts/e2e_*.py, adding or changing an RPC in src/e2e_server.zig, drainInputs/serviceScreenshot/onMain, --headless/--interactive, or when a test flakes on timing or thread races."
+  "description": "E2E-Steuerung von zid über den RPC-Port 9999 und den Interactive-Modus: RPC-Referenz (key_press, ui_state, editor_state, element_bounds, get_active_tab, explorer_open), Screenshot-Koordinaten, Threading der Handler (gepuffert, onMain, Sperren), Fixtures. Use when writing or debugging scripts/e2e_*.py, adding or changing an RPC in src/e2e_server.zig, drainInputs/serviceScreenshot/onMain, --headless/--interactive, or when a test flakes on timing or thread races.",
+  "content_fingerprint": "d81ed37aee77126600fd030bdfb7c19b40feb3e056e68e43e9bc6e42585254dd"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Append-only gap closure and the cadence engine for research theses. Evaluates artifact CURRENT state (never git history, never task checkboxes) against current pins and wrong_if falsifiers, then appends a Convergence section to tasks.md re-proposing the gaps. A clean run leaves tasks.md byte-identical. Deterministic gaps (stale, invalidated) are uncapped; judgment-class gaps are capped per spec 046 Q40."
+  "description": "Append-only gap closure and the cadence engine for research theses. Evaluates artifact CURRENT state (never git history, never task checkboxes) against current pins and wrong_if falsifiers, then appends a Convergence section to tasks.md re-proposing the gaps. A clean run leaves tasks.md byte-identical. Deterministic gaps (stale, invalidated) are uncapped; judgment-class gaps are capped per spec 046 Q40.",
+  "content_fingerprint": "82b77ef3db576248809fc96a5b49a291a75478a6af0729e5668025c19ffcce70"
 }

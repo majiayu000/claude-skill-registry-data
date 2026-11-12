@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u660e\u786e\u8981\u6c42\"\u63d0\u4ea4 Git \u6539\u52a8\"\u3001\"\u751f\u6210 commit \u4fe1\u606f\"\u6216\"\u521b\u5efa git commit\"\u65f6\u4f7f\u7528\u3002\u4ec5\u7528 Git \u5206\u6790\u6539\u52a8\u5e76\u81ea\u52a8\u751f\u6210 conventional commit \u4fe1\u606f\uff08\u53ef\u9009 emoji\uff09\uff1b\u5fc5\u8981\u65f6\u5efa\u8bae\u62c6\u5206\u63d0\u4ea4\uff0c\u9ed8\u8ba4\u8fd0\u884c\u672c\u5730 Git \u94a9\u5b50\uff08\u53ef --no-verify \u8df3\u8fc7\uff09\uff0c\u63d0\u4ea4\u540e\u9ed8\u8ba4\u81ea\u52a8 push\uff08\u53ef --no-push \u8df3\u8fc7\uff09\u3002"
+  "description": "当用户明确要求\"提交 Git 改动\"、\"生成 commit 信息\"或\"创建 git commit\"时使用。仅用 Git 分析改动并自动生成 conventional commit 信息（可选 emoji）；必要时建议拆分提交，默认运行本地 Git 钩子（可 --no-verify 跳过），提交后默认自动 push（可 --no-push 跳过）。",
+  "content_fingerprint": "aa2cbec4c99478700f1fce99840e0461c0cd9e8139da2076959fbc431910bf69"
 }

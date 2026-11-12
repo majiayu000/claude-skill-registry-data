@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cut a release of THIS repo (the AID methodology repo) end-to-end: bump the version, update the release notes, gate, tag, publish to every channel, and verify all checks green. One level argument decides the bump: major | minor | patch | beta. Maintainer-only ops tooling \u2014 NOT an AID methodology skill, never rendered to profiles/, never shipped to adopters. Sequence: RESOLVE -> PRECHECK -> BUMP -> DOCS+NOTES -> PR(merge=human) -> DRY-RUN -> TAG -> VERIFY -> CONFIRM -> close-out."
+  "description": "Cut a release of THIS repo (the AID methodology repo) end-to-end: bump the version, update the release notes, gate, tag, publish to every channel, and verify all checks green. One level argument decides the bump: major | minor | patch | beta. Maintainer-only ops tooling — NOT an AID methodology skill, never rendered to profiles/, never shipped to adopters. Sequence: RESOLVE -> PRECHECK -> BUMP -> DOCS+NOTES -> PR(merge=human) -> DRY-RUN -> TAG -> VERIFY -> CONFIRM -> close-out.",
+  "content_fingerprint": "def99f755d36e510c1a55c2e384c0eec98d66eb41fe8b059b412795c741f23ac"
 }

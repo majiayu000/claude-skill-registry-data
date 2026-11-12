@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific behavior of EXPLAIN and its relatives (ANALYZE, EXPLAIN FORMAT=JSON, SHOW EXPLAIN/ANALYZE FOR) \u2014 MariaDB has no `EXPLAIN ANALYZE`; it uses a standalone `ANALYZE <statement>` that actually executes the query (and, for UPDATE/DELETE/INSERT, actually writes); plain EXPLAIN never runs anything; only FORMAT=JSON/TRADITIONAL exist (no TREE); and EXPLAIN covers INSERT/REPLACE directly. Use when writing, generating, or reviewing query-plan/EXPLAIN statements that target MariaDB."
+  "description": "MariaDB-specific behavior of EXPLAIN and its relatives (ANALYZE, EXPLAIN FORMAT=JSON, SHOW EXPLAIN/ANALYZE FOR) — MariaDB has no `EXPLAIN ANALYZE`; it uses a standalone `ANALYZE <statement>` that actually executes the query (and, for UPDATE/DELETE/INSERT, actually writes); plain EXPLAIN never runs anything; only FORMAT=JSON/TRADITIONAL exist (no TREE); and EXPLAIN covers INSERT/REPLACE directly. Use when writing, generating, or reviewing query-plan/EXPLAIN statements that target MariaDB.",
+  "content_fingerprint": "4d1d1e0a440930829b9f8b6c3944b34b7fbc82700c02d256b399c4b418c59a25"
 }

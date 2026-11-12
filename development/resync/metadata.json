@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Resync SDD pipeline artifacts with the current branch. Renames .specwork files and updates state.json after a branch rename. Two modes \u2014 sync-only when called without args (assumes git rename already happened), atomic when called with --rename-branch <new-branch-name> (runs git branch -m first, then syncs)."
+  "description": "Resync SDD pipeline artifacts with the current branch. Renames .specwork files and updates state.json after a branch rename. Two modes — sync-only when called without args (assumes git rename already happened), atomic when called with --rename-branch <new-branch-name> (runs git branch -m first, then syncs).",
+  "content_fingerprint": "c86f7f723b8cf2e36dd33901170d41fd62f06897a979829c6bcefe9e53a13503"
 }

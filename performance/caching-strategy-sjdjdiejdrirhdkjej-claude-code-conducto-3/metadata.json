@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Sjdjdiejdrirhdkjej/Claude-code-conductor/blob/main/.claude/skills/caching-strategy/SKILL.md.tmp.157752.1763608954130/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "cd5c5c89407a172db82fa80f53f2541e6c867586aa1c4392dbb24678dae14238",
+  "description": "Cache expensive operations to avoid redundant work across workflow phases. Caches project docs (15min TTL), npm info (60min), grep results (30min), token counts (until file modified), web searches (15"
 }

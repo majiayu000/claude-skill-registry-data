@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when asked to review a code change (diff, branch, or PR) for merge readiness and collaborate asynchronously with another agent (often invoked with tony:does-work) that is or will be pushing fixes to the same change. Leaves P0-P* findings in a Changelog section, then sleeps in 5-minute checks (up to 4) waiting for the other agent to respond, re-reviewing whenever it does. Triggers: 'review this PR and wait for the other agent', 'reviews:code', 'is this ready to merge, check back as they fix it'."
+  "description": "Use when asked to review a code change (diff, branch, or PR) for merge readiness and collaborate asynchronously with another agent (often invoked with tony:does-work) that is or will be pushing fixes to the same change. Leaves P0-P* findings in a Changelog section, then sleeps in 5-minute checks (up to 4) waiting for the other agent to respond, re-reviewing whenever it does. Triggers: 'review this PR and wait for the other agent', 'reviews:code', 'is this ready to merge, check back as they fix it'.",
+  "content_fingerprint": "0159e1fcc841611853c4b8b2c59c917d0b4ea37ea2cd97d8f66368f36ed4e417"
 }

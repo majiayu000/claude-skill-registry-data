@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use before running ANY script that touches a database from a worktree or local shell. Every worktree binds the PRODUCTION DATABASE_URL, so a \"local\" script hits prod \u2014 and a --dry-run flag is not a guard until a non-executing check proves it returns before the write."
+  "description": "Use before running ANY script that touches a database from a worktree or local shell. Every worktree binds the PRODUCTION DATABASE_URL, so a \"local\" script hits prod — and a --dry-run flag is not a guard until a non-executing check proves it returns before the write.",
+  "content_fingerprint": "2c5a4b976f5118d1cee07fb147e5f323914fefb09ed7704e9c21732f0ddc2edc"
 }

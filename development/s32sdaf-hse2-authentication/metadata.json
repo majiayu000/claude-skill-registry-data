@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Perform S32SDAF HSE2-oriented authentication workflows by selecting the correct response-calculation scheme and key path documented by the knowledge base. Distinguishes HSE1 from HSE2, separates BootROM vs HSE-FW response schemes, and guides the agent through UID/OID/key-selection prerequisites for ADKP and ADK1-backed flows. Explicitly guards against assuming that the generic MCP get-response wrapper can represent raw Volkano HSE2 command semantics."
+  "description": "Perform S32SDAF HSE2-oriented authentication workflows by selecting the correct response-calculation scheme and key path documented by the knowledge base. Distinguishes HSE1 from HSE2, separates BootROM vs HSE-FW response schemes, and guides the agent through UID/OID/key-selection prerequisites for ADKP and ADK1-backed flows. Explicitly guards against assuming that the generic MCP get-response wrapper can represent raw Volkano HSE2 command semantics.",
+  "content_fingerprint": "3f70d9481f696fa3bee6b680466af19f8676ea2d027d82ae69393424ba41a2b0"
 }

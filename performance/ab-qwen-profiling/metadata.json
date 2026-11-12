@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run a controlled A/B between llama-server variants on the local Qwen MTP stack \u2014 pick the right workload, switch between screening/sustained/end-to-end workloads, get medians with cold restarts and interleaving \u2014 then hand the winner to rocm-kernel-trace for per-kernel attribution. Use when comparing two builds, binaries, KV-cache types, quantizations, or env-gated candidates, when deciding which workload length to benchmark at, or when a change needs to be proven before it is committed or deployed."
+  "description": "Run a controlled A/B between llama-server variants on the local Qwen MTP stack — pick the right workload, switch between screening/sustained/end-to-end workloads, get medians with cold restarts and interleaving — then hand the winner to rocm-kernel-trace for per-kernel attribution. Use when comparing two builds, binaries, KV-cache types, quantizations, or env-gated candidates, when deciding which workload length to benchmark at, or when a change needs to be proven before it is committed or deployed.",
+  "content_fingerprint": "a3dad81824c5677ce101799d8f79ed3036764223a1f0066f9cab1d0cce4901a5"
 }

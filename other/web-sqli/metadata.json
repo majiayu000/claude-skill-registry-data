@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect and exploit SQL injection (error-based, UNION, boolean/time blind, stacked). Load when a param feeds a query, you see DB errors, numeric/string params change result sets, login forms, search, sort/order-by, or ORM raw queries. Signals: \"id=\", 500 on a quote, \"You have an error in your SQL syntax\", MySQL/Postgres/MSSQL/Oracle banners."
+  "description": "Detect and exploit SQL injection (error-based, UNION, boolean/time blind, stacked). Load when a param feeds a query, you see DB errors, numeric/string params change result sets, login forms, search, sort/order-by, or ORM raw queries. Signals: \"id=\", 500 on a quote, \"You have an error in your SQL syntax\", MySQL/Postgres/MSSQL/Oracle banners.",
+  "content_fingerprint": "f8a1f39223b698572e86dac0e07b3bfa33871bc1af54907e72c1a031912d86fc"
 }

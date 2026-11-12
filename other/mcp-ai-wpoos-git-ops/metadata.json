@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Git/GitHub workflow discipline for the mcp-ai-wpoos repo \u2014 PRs against `alpha-working` with owner-merge, commit style, staged commits (no `git add -A`), the stacked-PR rebase recipe for when a parent PR gets squash-merged, shared-worktree discipline for the multi-agent repo (check the branch before committing, never `reset --hard` over other agents' unstaged edits, `--autostash` rebases), conflict verification via `git merge-tree`, and gh CLI gotchas (`gh workflow run` 404 on non-default branches, long PHP lint checks). Use when creating/rebasing/fixing PRs, resolving PR conflicts, or dispatching workflows."
+  "description": "Git/GitHub workflow discipline for the mcp-ai-wpoos repo — PRs against `alpha-working` with owner-merge, commit style, staged commits (no `git add -A`), the stacked-PR rebase recipe for when a parent PR gets squash-merged, shared-worktree discipline for the multi-agent repo (check the branch before committing, never `reset --hard` over other agents' unstaged edits, `--autostash` rebases), conflict verification via `git merge-tree`, and gh CLI gotchas (`gh workflow run` 404 on non-default branches, long PHP lint checks). Use when creating/rebasing/fixing PRs, resolving PR conflicts, or dispatching workflows.",
+  "content_fingerprint": "752d46c7ea1a4e6fe773bdf5f0bdc044d2d3d19b784b5171cbedfb6af38416bb"
 }

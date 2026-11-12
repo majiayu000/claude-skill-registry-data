@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read-only audit of `.claude/` structural overhead. Reports prioritized\n\"remove X save Y tokens\" recommendations against the model context window.\nNOT for monetary cost tracking \u2014 that's /mk:budget. NOT for transcript\nsize monitoring \u2014 long-session continuity defers to Claude Code native\ncompaction. NOT for runtime context decisions (what to read, when to\ncompact) \u2014 see mk:context-engineering. Use when planning to add context\ncapacity, diagnosing perceived slowdowns, or auditing health."
+  "description": "Read-only audit of `.claude/` structural overhead. Reports prioritized\n\"remove X save Y tokens\" recommendations against the model context window.\nNOT for monetary cost tracking — that's /mk:budget. NOT for transcript\nsize monitoring — long-session continuity defers to Claude Code native\ncompaction. NOT for runtime context decisions (what to read, when to\ncompact) — see mk:context-engineering. Use when planning to add context\ncapacity, diagnosing perceived slowdowns, or auditing health.",
+  "content_fingerprint": "0ac0feb5d8bcb430d907a2b2b4aab7a386774a066c0ee8814eb86c823664091f"
 }

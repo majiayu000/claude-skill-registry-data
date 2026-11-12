@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u8bf4\u53d1\u7248/\u53d1\u5e03/release/publish/bump version/tag\uff0c\u6216\u51c6\u5907\u53d1\u5e03\u65b0\u7248\u672c\u65f6\u4f7f\u7528\u3002\u81ea\u52a8\u68c0\u6d4b Git Flow\uff08\u5b58\u5728 develop\uff09\u4e0e Trunk-based\uff08\u65e0 develop\uff09\u4e24\u79cd\u5206\u652f\u6a21\u578b\uff0c\u8d70\u5bf9\u5e94\u53d1\u7248\u6d41\u7a0b\u3002"
+  "description": "当用户说发版/发布/release/publish/bump version/tag，或准备发布新版本时使用。自动检测 Git Flow（存在 develop）与 Trunk-based（无 develop）两种分支模型，走对应发版流程。",
+  "content_fingerprint": "dcf23e17ac1dddb5fcef1bc757edde2545974b44d38788513396aab48860bbde"
 }

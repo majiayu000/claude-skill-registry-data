@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CORS config drift scanner: harvests every Access-Control-Allow-Origin header, cors()-middleware call, @cross_origin decorator, options-handler with cors config, and per-route origin/credentials settings. LLM analyses each per-route CORS posture: credentials+wildcard = fatal, permissive origin patterns, preflight gaps. Read-only. Audience: Senior. Trigger: /cors-drift"
+  "description": "CORS config drift scanner: harvests every Access-Control-Allow-Origin header, cors()-middleware call, @cross_origin decorator, options-handler with cors config, and per-route origin/credentials settings. LLM analyses each per-route CORS posture: credentials+wildcard = fatal, permissive origin patterns, preflight gaps. Read-only. Audience: Senior. Trigger: /cors-drift",
+  "content_fingerprint": "b48202171d684681bc6b649d122d063ae94d56f23588d18b489a370932185fda"
 }

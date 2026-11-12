@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill when running an autonomous session-orchestration loop. Chains session-start \u2192 session-plan \u2192 wave-executor \u2192 session-end for N iterations with all 10 kill-switches (SPIRAL, FAILED wave, carryover > 50%, max-hours, max-sessions, resource-overload, token-budget, stall-timeout, sub-threshold confidence, user-abort). Reads Mode-Selector output (Phase B) to decide auto-execute vs. fallback. Writes one autopilot.jsonl record per loop run. Phase C scaffold (issue #277); implementation lives in scripts/lib/autopilot.mjs (Phase C-1 follow-up)."
+  "description": "Use this skill when running an autonomous session-orchestration loop. Chains session-start → session-plan → wave-executor → session-end for N iterations with all 10 kill-switches (SPIRAL, FAILED wave, carryover > 50%, max-hours, max-sessions, resource-overload, token-budget, stall-timeout, sub-threshold confidence, user-abort). Reads Mode-Selector output (Phase B) to decide auto-execute vs. fallback. Writes one autopilot.jsonl record per loop run. Phase C scaffold (issue #277); implementation lives in scripts/lib/autopilot.mjs (Phase C-1 follow-up).",
+  "content_fingerprint": "1b7cbeac76c3f9f3a578bff94143270741a4616a5bf68e969087473fb9b9209d"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fetch a Linear ticket's title + description (the source of all warp route parameters) from a ticket ID or URL, using whichever Linear access the agent has \u2014 a Linear integration/tool if present, otherwise the Linear GraphQL API with LINEAR_API_KEY \u2014 and halt clearly if no access is configured. Referenced by every warp deploy/update skill that reads a ticket."
+  "description": "Fetch a Linear ticket's title + description (the source of all warp route parameters) from a ticket ID or URL, using whichever Linear access the agent has — a Linear integration/tool if present, otherwise the Linear GraphQL API with LINEAR_API_KEY — and halt clearly if no access is configured. Referenced by every warp deploy/update skill that reads a ticket.",
+  "content_fingerprint": "f5bcf2325d69ac4613b182c809bb388e9156e70fe5e597359f55516e7334146f"
 }

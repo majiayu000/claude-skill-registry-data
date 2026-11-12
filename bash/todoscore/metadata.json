@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn the prompt scores of Prompt TODO on or off \u2014 the ` (N/5)` Claude appends to an item line when it rewrites the item to its ideal prompt, rating how close the original prompt was. Writes `promptScores` in .claude/prompt-todo/config.json and re-renders .claude/prompt-todo/RULES.md; touches no todo file. Existing scores stay either way. Runs only when the user invokes it: '/todoScore', '/todoScore on', '/todoScore off'."
+  "description": "Turn the prompt scores of Prompt TODO on or off — the ` (N/5)` Claude appends to an item line when it rewrites the item to its ideal prompt, rating how close the original prompt was. Writes `promptScores` in .claude/prompt-todo/config.json and re-renders .claude/prompt-todo/RULES.md; touches no todo file. Existing scores stay either way. Runs only when the user invokes it: '/todoScore', '/todoScore on', '/todoScore off'.",
+  "content_fingerprint": "0dd0a4456bdb3a51b88196df6c188828c874ff9aaf6dc5caed0357383933d5af"
 }

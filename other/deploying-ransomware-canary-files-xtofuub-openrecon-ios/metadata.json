@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deploys and monitors ransomware canary files across critical directories using Python's watchdog library for real-time filesystem event detection. Places strategically named decoy files that mimic high-value targets (financial records, credentials, database exports) in locations ransomware typically enumerates first. Monitors for any read, modify, rename, or delete operations on canary files and triggers immediate alerts via email, Slack webhook, or syslog when interaction is detected, providing early warning before full encryption begins."
+  "description": "Deploys and monitors ransomware canary files across critical directories using Python's watchdog library for real-time filesystem event detection. Places strategically named decoy files that mimic high-value targets (financial records, credentials, database exports) in locations ransomware typically enumerates first. Monitors for any read, modify, rename, or delete operations on canary files and triggers immediate alerts via email, Slack webhook, or syslog when interaction is detected, providing early warning before full encryption begins.",
+  "content_fingerprint": "2f4bba18f42f0907f716fc6f2668115cac338ac35a3e737cdda3975cb91d747c"
 }

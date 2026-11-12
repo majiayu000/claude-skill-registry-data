@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run benchmark-style evaluations on AI agents or tools using parent-child session delegation.\nUse when the user wants to test an agent's performance on a set of problems (e.g. SWE-bench style,\ntool capability benchmark, coding challenge evaluation). The parent session orchestrates:\nspawns child sessions to solve individual problems, collects answers via checkSession,\nand generates a consolidated report with pass/fail scores and analysis.\nTriggers on: \"bench \ud14c\uc2a4\ud2b8 \ud574\uc918\", \"SWE-bench \ub3cc\ub824\uc918\", \"agent benchmark\", \"tool evaluation\"."
+  "description": "Run benchmark-style evaluations on AI agents or tools using parent-child session delegation.\nUse when the user wants to test an agent's performance on a set of problems (e.g. SWE-bench style,\ntool capability benchmark, coding challenge evaluation). The parent session orchestrates:\nspawns child sessions to solve individual problems, collects answers via checkSession,\nand generates a consolidated report with pass/fail scores and analysis.\nTriggers on: \"bench 테스트 해줘\", \"SWE-bench 돌려줘\", \"agent benchmark\", \"tool evaluation\".",
+  "content_fingerprint": "e3c2c8f75aac7c07af89a8be951903e70b1632c357fbeb68f171337489e7c4e8"
 }

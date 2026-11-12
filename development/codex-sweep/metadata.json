@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Kill stale OpenAI Codex plugin processes (orphaned app-server brokers, codex app-server/exec orphans) and clean their cxc-* temp dirs. Use when: (1) User says 'codex sweep', 'stale codex', 'codex processes', 'too many codex processes', or 'kill codex orphans', (2) A build fails with EMFILE, 'too many open files', or fs.inotify.max_user_instances exhaustion (e.g. Vite dev server on WSL2), (3) ps shows many app-server-broker.mjs or codex app-server processes, (4) After force-killing terminals or removing worktrees that had codex review sessions."
+  "description": "Kill stale OpenAI Codex plugin processes (orphaned app-server brokers, codex app-server/exec orphans) and clean their cxc-* temp dirs. Use when: (1) User says 'codex sweep', 'stale codex', 'codex processes', 'too many codex processes', or 'kill codex orphans', (2) A build fails with EMFILE, 'too many open files', or fs.inotify.max_user_instances exhaustion (e.g. Vite dev server on WSL2), (3) ps shows many app-server-broker.mjs or codex app-server processes, (4) After force-killing terminals or removing worktrees that had codex review sessions.",
+  "content_fingerprint": "4794b0e2dd1cb0cf52d65b15aa52b4e3b33a5873edc0328394109b4090225c86"
 }

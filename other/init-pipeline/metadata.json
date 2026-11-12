@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Infrastructure skill for scaffolding pipeline enforcement into a project. Sets up Claude Code hooks (TDD classification gate, git guardrails, optional quality gate), pre-commit hooks (detects existing tools, defaults to Lefthook + Biome + pnpm if none found). Run when setting up a project for pipeline work, and again to re-scaffold a hook that predates the post-review edit lock or a classification marker; /execute Step 0 auto-invokes it when the hook is missing or stale."
+  "description": "Infrastructure skill for scaffolding pipeline enforcement into a project. Sets up Claude Code hooks (TDD classification gate, git guardrails, optional quality gate), pre-commit hooks (detects existing tools, defaults to Lefthook + Biome + pnpm if none found). Run when setting up a project for pipeline work, and again to re-scaffold a hook that predates the post-review edit lock or a classification marker; /execute Step 0 auto-invokes it when the hook is missing or stale.",
+  "content_fingerprint": "6e07faca655d9bc197bcacf319106f570ae02479ea2b688f3d13fa3aa9ba05a7"
 }

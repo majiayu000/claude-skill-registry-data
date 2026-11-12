@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Production-readiness preflight check for a directory, repo, or single file. Auto-detects file types (Kubernetes manifests, Terraform, GitHub Actions workflows, Helm values/charts, Flux Kustomizations/HelmReleases, Dockerfiles, shell scripts) and applies type-specific checks across the whole scope. Returns a per-file summary table and aggregated verdict. Use before deploying, merging, or applying a folder of config. For PR diffs spanning multiple files use /platform-skills:pr-review instead. For deep Helm chart work use /platform-skills:helmchart instead."
+  "description": "Production-readiness preflight check for a directory, repo, or single file. Auto-detects file types (Kubernetes manifests, Terraform, GitHub Actions workflows, Helm values/charts, Flux Kustomizations/HelmReleases, Dockerfiles, shell scripts) and applies type-specific checks across the whole scope. Returns a per-file summary table and aggregated verdict. Use before deploying, merging, or applying a folder of config. For PR diffs spanning multiple files use /platform-skills:pr-review instead. For deep Helm chart work use /platform-skills:helmchart instead.",
+  "content_fingerprint": "0d81c70b02967597368396817123b81a181e0c8f9578ef0a492dea268d52031f"
 }

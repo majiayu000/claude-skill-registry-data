@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reflected XSS occurs when user-supplied input is echoed in an HTTP response without sanitization, allowing script execution in the victim's browser. Detect via injecting `<script>alert(1)</script>`, event handlers like `onfocus`, HTML entity bypass, and encoding variants. Tools: Burp Suite, OWASP ZAP, PHP Charset Encoder (PCE), Hackvertor, XSS-Proxy, ratproxy."
+  "description": "Reflected XSS occurs when user-supplied input is echoed in an HTTP response without sanitization, allowing script execution in the victim's browser. Detect via injecting `<script>alert(1)</script>`, event handlers like `onfocus`, HTML entity bypass, and encoding variants. Tools: Burp Suite, OWASP ZAP, PHP Charset Encoder (PCE), Hackvertor, XSS-Proxy, ratproxy.",
+  "content_fingerprint": "18650de44303bd5b93555aa5e544247e4d3627105412c37d0ed579299eb2d952"
 }

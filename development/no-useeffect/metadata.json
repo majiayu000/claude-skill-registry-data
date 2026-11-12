@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Enforce a strict ban on direct useEffect calls in React code. Replace with derived state, event handlers, data-fetching libraries, useMountEffect, or key-based remounting. Use when: (1) Writing new React components, (2) Reviewing React code for effect usage, (3) Refactoring existing useEffect calls, (4) AI agent is about to add useEffect. Triggers on: useEffect, effect hook, side effect, sync state, dependency array, infinite loop, race condition, effect cleanup."
+  "description": "Enforce a strict ban on direct useEffect calls in React code. Replace with derived state, event handlers, data-fetching libraries, useMountEffect, or key-based remounting. Use when: (1) Writing new React components, (2) Reviewing React code for effect usage, (3) Refactoring existing useEffect calls, (4) AI agent is about to add useEffect. Triggers on: useEffect, effect hook, side effect, sync state, dependency array, infinite loop, race condition, effect cleanup.",
+  "content_fingerprint": "00dfe0c16e596d4dfb83383fcd56f891bfe31737fda5057c106669c25f596038"
 }

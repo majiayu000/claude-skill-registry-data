@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verify code works at runtime through build verification (mandatory), LSP diagnostics, ad-hoc verification for projects without frameworks, E2E and smoke tests, and visual verification (screenshot-analyze-verify for UI changes). Skip whitelist strictly enforced (markdown-only, config-only, dependency-bump-only with evidence); all other skips require Proactive-Autonomy escalation. Use after quality checks pass to confirm the code actually runs. This skill MUST be consulted because no test framework is not an excuse to skip; build failure IS a finding and must be fixed."
+  "description": "Verify code works at runtime through build verification (mandatory), LSP diagnostics, ad-hoc verification for projects without frameworks, E2E and smoke tests, and visual verification (screenshot-analyze-verify for UI changes). Skip whitelist strictly enforced (markdown-only, config-only, dependency-bump-only with evidence); all other skips require Proactive-Autonomy escalation. Use after quality checks pass to confirm the code actually runs. This skill MUST be consulted because no test framework is not an excuse to skip; build failure IS a finding and must be fixed.",
+  "content_fingerprint": "861ebf9a531d1b8123918f14841cb7b8bbf49eea7e9117e4fc45554a0e666f0c"
 }

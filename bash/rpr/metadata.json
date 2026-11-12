@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review the most recent permission requests in the current session, generalize them into safe allowlist rules, and append them to .claude/settings.local.json to reduce future prompts. Triggers when the user runs \"/rpr\", \"/rpr <N>\", \"/rpr session\", or says things like \"stop asking me\", \"I keep getting permission prompts\", or \"reduce these requests\". Differentiates from read-only (which pre-approves safe reads) and fewer-permission-prompts (which mines all history) by reacting only to the recent, specific commands that just prompted in this session."
+  "description": "Review the most recent permission requests in the current session, generalize them into safe allowlist rules, and append them to .claude/settings.local.json to reduce future prompts. Triggers when the user runs \"/rpr\", \"/rpr <N>\", \"/rpr session\", or says things like \"stop asking me\", \"I keep getting permission prompts\", or \"reduce these requests\". Differentiates from read-only (which pre-approves safe reads) and fewer-permission-prompts (which mines all history) by reacting only to the recent, specific commands that just prompted in this session.",
+  "content_fingerprint": "a528b8a74ed512887a0841a44a6f9a8e5ce044768e8e607bd998a8691944ed4c"
 }

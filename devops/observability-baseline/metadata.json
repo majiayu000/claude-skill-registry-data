@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scaffold-time observability so a shipped product is not blind in prod from day one \u2014 error capture (Sentry), request-id structured logging, and /healthz + /readyz endpoints. stack-baseline pins Sentry but nothing wires it; this is the wiring. Loaded by app-scaffolder (bake into the scaffold), infra-provisioner (prod env + probes), and consumed by l3-support (traces) and devops (deploy gate)."
+  "description": "Scaffold-time observability so a shipped product is not blind in prod from day one — error capture (Sentry), request-id structured logging, and /healthz + /readyz endpoints. stack-baseline pins Sentry but nothing wires it; this is the wiring. Loaded by app-scaffolder (bake into the scaffold), infra-provisioner (prod env + probes), and consumed by l3-support (traces) and devops (deploy gate).",
+  "content_fingerprint": "2006c803213c34bec917e71469b269e739377b4e6160880d61446ffcf78ce1b4"
 }

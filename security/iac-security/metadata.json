@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Performs a security review of Infrastructure as Code templates against the OWASP IaC Security Cheat Sheet, SLSA v1.0, and CIS Benchmarks. Auto-invoked when reviewing Terraform, CloudFormation, or Pulumi configurations. Detects hardcoded secrets, public exposure patterns, encryption gaps, overly permissive IAM, and misconfigurations equivalent to Checkov, tfsec, and KICS rules. Produces a structured findings report with remediation guidance."
+  "description": "Performs a security review of Infrastructure as Code templates against the OWASP IaC Security Cheat Sheet, SLSA v1.0, and CIS Benchmarks. Auto-invoked when reviewing Terraform, CloudFormation, or Pulumi configurations. Detects hardcoded secrets, public exposure patterns, encryption gaps, overly permissive IAM, and misconfigurations equivalent to Checkov, tfsec, and KICS rules. Produces a structured findings report with remediation guidance.",
+  "content_fingerprint": "c5fdd1d86380805591b22bbfa895bebc2dc8897b4708260e499d005da8e5fb9a"
 }

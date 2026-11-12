@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5c06 UrhoX/TapMaker \u7684 UMD2 .mdl 3D \u6a21\u578b\u8d44\u4ea7\u548c diffuse \u8d34\u56fe\u8f6c\u6362\u4e3a\u751f\u4ea7\u53ef\u7528\u7684 voxel JSON \u8d44\u4ea7\uff0c\u4f9b TapMaker \u4f53\u7d20\u6e32\u67d3\u4f7f\u7528\u3002\u5f53 Codex \u9700\u8981\u4f53\u7d20\u5316 .mdl\u3001\u751f\u6210\u6216\u6821\u9a8c TapMaker voxel JSON \u8d44\u4ea7\u3001\u51c6\u5907 Higgsfield \u98ce\u683c\u4f53\u7d20\u8d44\u4ea7\u3001\u89e3\u91ca MDL \u5230\u4f53\u7d20 JSON \u7684\u4ea4\u63a5\u6d41\u7a0b\u65f6\u4f7f\u7528\u3002\u7528\u6237\u63d0\u4f9b prefab/model UUID\u3001\u8d44\u4ea7\u641c\u7d22\u7ed3\u679c\u3001Tripo \u751f\u6210\u6a21\u578b\u6216\u672c\u5730 TapMaker \u9879\u76ee\u8d44\u4ea7\uff0c\u5e76\u5e0c\u671b\u8f6c\u6210 voxel JSON \u65f6\u4e5f\u4f7f\u7528\u672c skill\u3002"
+  "description": "将 UrhoX/TapMaker 的 UMD2 .mdl 3D 模型资产和 diffuse 贴图转换为生产可用的 voxel JSON 资产，供 TapMaker 体素渲染使用。当 Codex 需要体素化 .mdl、生成或校验 TapMaker voxel JSON 资产、准备 Higgsfield 风格体素资产、解释 MDL 到体素 JSON 的交接流程时使用。用户提供 prefab/model UUID、资产搜索结果、Tripo 生成模型或本地 TapMaker 项目资产，并希望转成 voxel JSON 时也使用本 skill。",
+  "content_fingerprint": "1c8c10e3e99581ed15f97f20d4b7232915a6ddd2ec682cb17ec758970de45e59"
 }

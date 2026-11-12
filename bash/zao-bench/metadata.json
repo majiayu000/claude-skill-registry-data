@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Benchmark ZOE's model stack - cost, latency, and EMPIRICAL prompt-cache hit rate per model tier (claude haiku/sonnet via the CLI, deepseek via OpenRouter), plus a live wiring check of ZOE's shipped features (cross-family critic, tracing, verify-replan, nudge-ladder, cost-ledger). Use when Zaal asks to \"benchmark ZOE\", \"test the model tiers\", \"prove caching is working\", \"how much does a ZOE call cost\", \"is the deploy healthy / are the features live\", or types /zao-bench. Produces a dated markdown report. Read-only + cheap (a few tiny model calls) - no prod writes, no deploys."
+  "description": "Benchmark ZOE's model stack - cost, latency, and EMPIRICAL prompt-cache hit rate per model tier (claude haiku/sonnet via the CLI, deepseek via OpenRouter), plus a live wiring check of ZOE's shipped features (cross-family critic, tracing, verify-replan, nudge-ladder, cost-ledger). Use when Zaal asks to \"benchmark ZOE\", \"test the model tiers\", \"prove caching is working\", \"how much does a ZOE call cost\", \"is the deploy healthy / are the features live\", or types /zao-bench. Produces a dated markdown report. Read-only + cheap (a few tiny model calls) - no prod writes, no deploys.",
+  "content_fingerprint": "c393e2c73701f92ccb883b0145630976d1c53059ea86a4803e6617e241864e1e"
 }

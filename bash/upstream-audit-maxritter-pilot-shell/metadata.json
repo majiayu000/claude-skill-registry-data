@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit and update Pilot Shell upstream dependencies in installer/upstreams.yaml. Checks npm, PyPI, brew, and curl-pipe entries for newer stable versions, known security advisories, and sha256 drift. Verifies each update installs successfully before committing. Use when: \"check upstreams\", \"update dependencies\", \"audit upstreams.yaml\", \"are our dependencies up to date\", \"supply chain check\"."
+  "description": "Audit and update Pilot Shell upstream dependencies in installer/upstreams.yaml. Checks npm, PyPI, brew, and curl-pipe entries for newer stable versions, known security advisories, and sha256 drift. Verifies each update installs successfully before committing. Use when: \"check upstreams\", \"update dependencies\", \"audit upstreams.yaml\", \"are our dependencies up to date\", \"supply chain check\".",
+  "content_fingerprint": "ac5f1cd167ce09c444d115135e86aedae65cf90631fef226ae990b086999ef99"
 }

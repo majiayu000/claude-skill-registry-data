@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "KDE Plasma / PipeWire(PulseAudio\u4e92\u63db) \u74b0\u5883\u3067\u901a\u77e5\u97f3\u30fb\u52b9\u679c\u97f3\u30fb\u30c6\u30b9\u30c8\u30c8\u30fc\u30f3\u30fbVOICEVOX\u767a\u8a71\uff08VOICEBOX\u8868\u8a18\u542b\u3080\uff09\u3092\u78ba\u5b9f\u306b\u518d\u751f\u3059\u308b\u3002\u73fe\u5728\u306f repos/acaption \u306e IPC \u3092\u4f7f\u3063\u305f\u5b57\u5e55\u4ed8\u304d\u518d\u751f/\u901a\u77e5\u3092\u4e3b\u7d4c\u8def\u3068\u3057\u3001paplay/notify-send \u3092\u30d5\u30a9\u30fc\u30eb\u30d0\u30c3\u30af\u3068\u3057\u3066\u6271\u3046\u3002"
+  "description": "KDE Plasma / PipeWire(PulseAudio互換) 環境で通知音・効果音・テストトーン・VOICEVOX発話（VOICEBOX表記含む）を確実に再生する。現在は repos/acaption の IPC を使った字幕付き再生/通知を主経路とし、paplay/notify-send をフォールバックとして扱う。",
+  "content_fingerprint": "409fd30cc3ec8fab835a0f05dbbd441dc0bfb2605aecdba395e5a10d5f823df5"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc2a4\ud399 \uc6b0\uc120 \uc0dd\uc131 \uc6cc\ud06c\ud50c\ub85c\uc6b0. \"\ub9cc\ub4e4\uc5b4\uc918\", \ud53c\ucc98/\ub9ac\uc18c\uc2a4/\ub77c\uc6b0\ud2b8 \ucd94\uac00 \uc2dc \uc790\ub3d9 \ud638\ucd9c.\ncontract \u2192 generate \uc21c\uc11c\ub97c \uac15\uc81c\ud558\uace0 \uc0dd\uc131 \uc9c1\ud6c4 verify loop \ub85c \uc804\uc774.\ngranular \ub3c4\uad6c (add_route + create_contract + generate) \ub97c \uc190\uc73c\ub85c \uc5ee\uc9c0 \uc54a\ub294\ub2e4."
+  "description": "스펙 우선 생성 워크플로우. \"만들어줘\", 피처/리소스/라우트 추가 시 자동 호출.\ncontract → generate 순서를 강제하고 생성 직후 verify loop 로 전이.\ngranular 도구 (add_route + create_contract + generate) 를 손으로 엮지 않는다.",
+  "content_fingerprint": "70103c0b1fdd9389fe84775ac355c7757384e7f7599ea8e41ef3e3c7d40cd18d"
 }

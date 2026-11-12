@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "EXPERIMENTAL. Join or leave an org-team coordination channel as a session peer. `/companion on <channel_id> [peer_id]` registers this Claude Code session as a `pclass:\"session\"` peer and works the claim \u2192 execute \u2192 signal loop, escalating un-decidable forks to the lead (never deciding). `/companion off` deregisters. `/companion status` reports the current peer. Part of org mode (Article X), which is opt-in via `velocity.org_mode.enabled` and OFF by default. Use when a human launches a second session to act as a peer alongside a lead."
+  "description": "EXPERIMENTAL. Join or leave an org-team coordination channel as a session peer. `/companion on <channel_id> [peer_id]` registers this Claude Code session as a `pclass:\"session\"` peer and works the claim → execute → signal loop, escalating un-decidable forks to the lead (never deciding). `/companion off` deregisters. `/companion status` reports the current peer. Part of org mode (Article X), which is opt-in via `velocity.org_mode.enabled` and OFF by default. Use when a human launches a second session to act as a peer alongside a lead.",
+  "content_fingerprint": "b97ef0a19e151b4e83cf1f4ad1a53a62b74cf281fd664c49308876dba77e7ea1"
 }

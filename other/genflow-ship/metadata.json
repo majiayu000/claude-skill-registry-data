@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The ship routine for GenFlow Pro \u2014 merge a tested branch into main and put it live on genflow-pro.vercel.app safely. Start check, merge --no-ff, tests/lint/build, Derek still BCC'd, no secret files tracked, push, confirm the GitHub-built production deployment, a no-email production smoke test through the real app as QA with the safety guard in prod-readonly mode, rollback by promoting the previous deployment, and a plain-English summary. Use ONLY when the owner explicitly asks to ship / merge to main / deploy to production."
+  "description": "The ship routine for GenFlow Pro — merge a tested branch into main and put it live on genflow-pro.vercel.app safely. Start check, merge --no-ff, tests/lint/build, Derek still BCC'd, no secret files tracked, push, confirm the GitHub-built production deployment, a no-email production smoke test through the real app as QA with the safety guard in prod-readonly mode, rollback by promoting the previous deployment, and a plain-English summary. Use ONLY when the owner explicitly asks to ship / merge to main / deploy to production.",
+  "content_fingerprint": "78600b24b5f78957ddf476bb1764160b6666aa2b53ea19e6b0de55eac2f8bf13"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Keep the canonical, LAYERED Open Lakehouse architecture model (LikeC4, in architecture/) in sync with the estate. Logical layer = abstract capabilities, concerns, asset kinds, and the technology catalog (no repo names in the reference); deployment layer = our services realizing them. Traverses sibling repos' docs/ADRs, proposes minimal .likec4 patches for human approval, then regenerates artifacts. Use when a service/deployment changes, a new capability or asset kind appears, an instanceOf mapping changes, or designed work becomes built."
+  "description": "Keep the canonical, LAYERED Open Lakehouse architecture model (LikeC4, in architecture/) in sync with the estate. Logical layer = abstract capabilities, concerns, asset kinds, and the technology catalog (no repo names in the reference); deployment layer = our services realizing them. Traverses sibling repos' docs/ADRs, proposes minimal .likec4 patches for human approval, then regenerates artifacts. Use when a service/deployment changes, a new capability or asset kind appears, an instanceOf mapping changes, or designed work becomes built.",
+  "content_fingerprint": "569ea7b52fe2af259d2441153339dbf3256f022078a279113205d498edb7afa9"
 }

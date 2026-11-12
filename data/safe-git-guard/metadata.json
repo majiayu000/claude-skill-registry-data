@@ -12,5 +12,7 @@
   "copyright": "Copyright (c) 2025 Lara Knuth / Dresden AI Insights",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "1e304f8a67ec490ac20569e13cd058a2e22fde3fcd7e2d070932ddfca015d2af",
+  "description": "Prevents destructive Git operations by requiring backup and confirmation. Blocks git reset --hard, git push --force on main, git clean -fd. Requires backup before git checkout, git reset, git rebase. "
 }

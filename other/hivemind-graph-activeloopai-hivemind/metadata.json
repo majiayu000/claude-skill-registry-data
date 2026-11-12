@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Query the local code graph (functions, classes, calls, imports) through the Deeplake mount at memory/graph/. Use when the user asks structural questions about the codebase \u2014 \"what calls X?\", \"what does Y import?\", \"where is Z defined?\", \"what is the architecture / which subsystems exist?\". The graph is an AST-derived map of the repo, queried as files (no build needed \u2014 it rebuilds automatically)."
+  "description": "Query the local code graph (functions, classes, calls, imports) through the Deeplake mount at memory/graph/. Use when the user asks structural questions about the codebase — \"what calls X?\", \"what does Y import?\", \"where is Z defined?\", \"what is the architecture / which subsystems exist?\". The graph is an AST-derived map of the repo, queried as files (no build needed — it rebuilds automatically).",
+  "content_fingerprint": "f90f19cfc1f81fd7da531bb4d09d664336e5effa096c5f49ec4f0a19f10e64f3"
 }

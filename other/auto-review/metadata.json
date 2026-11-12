@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5199\u5165 .md / \u4ee3\u7801\u6587\u4ef6\u540e\u81ea\u52a8\u505a\u8d28\u91cf\u5ba1\u67e5\u4e0e\u4fee\u590d\u95ed\u73af\uff0c\u5e76\u5224\u65ad\u662f\u5426\u5c5e\u590d\u6742\u573a\u666f\uff0c\u662f\u5219\u63a5\u529b challenger \u4e8c\u6b21\u8d28\u7591\u3002\u89e6\u53d1\uff1a\u6bcf\u6b21 write_to_file / replace_in_file \u5199\u5165\u540e\u81ea\u52a8\u6267\u884c\u3002"
+  "description": "写入 .md / 代码文件后自动做质量审查与修复闭环，并判断是否属复杂场景，是则接力 challenger 二次质疑。触发：每次 write_to_file / replace_in_file 写入后自动执行。",
+  "content_fingerprint": "9bca38080b7d1cab54bebe182712f2f0bc736b0587208bdb39cd94748726beab"
 }

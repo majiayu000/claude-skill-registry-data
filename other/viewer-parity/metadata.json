@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when adding or changing what the rezolus viewer exposes \u2014 an /api/v1 endpoint, a dashboard section, the metric catalog, metadata/description derivation, or the frontend data those depend on \u2014 or when editing src/viewer/ or crates/viewer/, or reviewing a viewer change. The viewer ships as two separate Rust backends (server + WASM) behind one shared frontend; changing one silently diverges them."
+  "description": "Use when adding or changing what the rezolus viewer exposes — an /api/v1 endpoint, a dashboard section, the metric catalog, metadata/description derivation, or the frontend data those depend on — or when editing src/viewer/ or crates/viewer/, or reviewing a viewer change. The viewer ships as two separate Rust backends (server + WASM) behind one shared frontend; changing one silently diverges them.",
+  "content_fingerprint": "166e2afaf7410a4005d3d56bbd9d4719972deeb6e419ffd80818913b51d2cc4a"
 }

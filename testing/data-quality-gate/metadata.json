@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Builds a release-readiness gate for a data pipeline by gathering check results from one or more engines (dbt, Great Expectations, Soda), applying severity-aware pass/fail thresholds, and emitting a single go / no-go decision with per-check rationale. Use when authoring a CI step that must fail the build when data quality drops below thresholds."
+  "description": "Builds a release-readiness gate for a data pipeline by gathering check results from one or more engines (dbt, Great Expectations, Soda), applying severity-aware pass/fail thresholds, and emitting a single go / no-go decision with per-check rationale. Use when authoring a CI step that must fail the build when data quality drops below thresholds.",
+  "content_fingerprint": "5e7ab78e69edc29c547298a8ee498e82b0261f9fa74a1d9009f50d59356c78f6"
 }

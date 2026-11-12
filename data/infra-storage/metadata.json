@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage AICP's storage surfaces \u2014 model GGUF files (`models/` host volume mounted into LocalAI container), config YAMLs (`config/` source-controlled), runtime state (`~/.aicp/dlq/`, `~/.aicp/history/`, `.aicp/state.yaml`), KB vector store (LocalAI Collections at `localhost:8090/app/collections`), per-model prompt caches. AICP has no SQL database \u2014 storage is files + LocalAI Collections. Loads when the operator says \"where does AICP store X\" / \"disk usage growing\" / \"back up state\" / \"move models to bigger disk\" / \"migrate to faster storage\"."
+  "description": "Manage AICP's storage surfaces — model GGUF files (`models/` host volume mounted into LocalAI container), config YAMLs (`config/` source-controlled), runtime state (`~/.aicp/dlq/`, `~/.aicp/history/`, `.aicp/state.yaml`), KB vector store (LocalAI Collections at `localhost:8090/app/collections`), per-model prompt caches. AICP has no SQL database — storage is files + LocalAI Collections. Loads when the operator says \"where does AICP store X\" / \"disk usage growing\" / \"back up state\" / \"move models to bigger disk\" / \"migrate to faster storage\".",
+  "content_fingerprint": "fe1dea7f325f85776fe10344ac7c6ac0d4c24b40638d7a1fa9e3facc97c235f9"
 }

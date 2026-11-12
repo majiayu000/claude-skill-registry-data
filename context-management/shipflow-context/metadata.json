@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dianedef/ShipFlow/blob/main/.claude/skills/shipflow-context/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f0aeff06e0e2b5c3b0330396238bfd1b663a01085e75ec4a032cb254a0d5042a",
+  "description": "Prime context for a task — calls context_continue + context_retrieve to find relevant files before starting work. Minimizes token usage by reusing cached context and only reading what's needed."
 }

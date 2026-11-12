@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "unknown",
-  "description": "\u6839\u636e\u7528\u6237\u8f93\u5165\u81ea\u52a8\u5224\u65ad\u8d70\u4e24\u6761\u8def\u5f84\u4e4b\u4e00\uff1a(PR\u8def\u5f84) \u7528\u6237\u63d0\u4f9b GitCode PR \u94fe\u63a5\u65f6\uff0c\u6309\u53d8\u66f4\u7c7b\u578b\u81ea\u52a8\u9009\u7528 Issue \u6a21\u677f\uff0c\u901a\u8fc7 GitCode API \u521b\u5efa Issue \u5e76\u5b8c\u6210 PR \u2194 Issue \u53cc\u5411\u5173\u8054\uff1b(\u624b\u52a8\u8def\u5f84) \u7528\u6237\u76f4\u63a5\u63cf\u8ff0\u95ee\u9898\u6216\u8981\u6c42\"\u63d0 Issue / \u751f\u6210\u8349\u7a3f\"\u65f6\uff0c\u4ea4\u4e92\u5f0f\u6536\u96c6\u4fe1\u606f\u3001\u751f\u6210\u8349\u7a3f\u3001\u67e5\u91cd\uff0c\u7ecf\u786e\u8ba4\u540e\u63d0\u4ea4\u3002\u5f53\u7528\u6237\u63d0\u4f9b PR \u94fe\u63a5\u3001\u8981\u6c42\"\u521b\u5efa Issue / \u5173\u8054 Issue / \u7ed9 PR \u5efa Issue\"\uff0c\u6216\u7528\u6237\u76f4\u63a5\u63cf\u8ff0\u95ee\u9898\u3001\u8981\u6c42\"\u63d0\u5355 / \u751f\u6210\u8349\u7a3f\"\u65f6\u89e6\u53d1\u6b64 skill\u3002"
+  "description": "根据用户输入自动判断走两条路径之一：(PR路径) 用户提供 GitCode PR 链接时，按变更类型自动选用 Issue 模板，通过 GitCode API 创建 Issue 并完成 PR ↔ Issue 双向关联；(手动路径) 用户直接描述问题或要求\"提 Issue / 生成草稿\"时，交互式收集信息、生成草稿、查重，经确认后提交。当用户提供 PR 链接、要求\"创建 Issue / 关联 Issue / 给 PR 建 Issue\"，或用户直接描述问题、要求\"提单 / 生成草稿\"时触发此 skill。",
+  "content_fingerprint": "b0c0f30bf67246e0de8b773854a00dbcac436c9c9ac3e72ca1ba2e7bc6a2b907"
 }

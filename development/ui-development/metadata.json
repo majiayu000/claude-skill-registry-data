@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLHY/ruoyi-develop-claude/blob/main/.claude/skills/ui-development/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f76ba4bdf3119aeff3ed00f9dca66592361d08987e82afbc58fc90d292185400",
+  "description": "RuoYi-Vue-Plus框架前端开发规范技能。强制使用Vue3 Composition API与`<script setup>`语法，严格遵循\"查询区-工具栏-表格区-分页区-弹窗区\"五区标准布局。规定接口统一封装在`@/api/`目录、按钮必须配置`v-hasPermi`权限指令、表单必须配置校验规则。禁止硬编码URL、禁用Vue2 Options API、禁止忽略权限控制、禁止直接使用索引"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7528\u4e8e\u7ba1\u7406\u201c\u5148\u6709\u65b9\u6848\u3001\u518d\u5199 todolist/issues\u3001\u5f85\u7528\u6237\u5ba1\u6838\u65b9\u6848\u3001\u518d\u6309 issue \u987a\u5e8f\u5b9e\u73b0\u5e76\u9010\u9879 review\u201d\u7684\u4ea4\u4ed8\u6d41\u7a0b\u3002\u65b9\u6848\u53ef\u4ee5\u6765\u81ea\u7528\u6237\u76f4\u63a5\u63d0\u4f9b\u3001\u7528\u6237\u4e0e Codex \u5171\u521b\u3001\u6216 Codex \u6309\u9700\u6574\u7406\u751f\u6210\u3002\u5f53\u7528\u6237\u5e0c\u671b\u628a\u65b9\u6848\u843d\u5230\u4ed3\u5e93\u6839\u76ee\u5f55 `.work-plans/` \u4e0b\uff0c\u5e76\u5728\u5ba1\u6838\u901a\u8fc7\u540e\u6309 issue \u987a\u5e8f\u63a8\u8fdb\u5b9e\u73b0\u4e0e review \u65f6\uff0c\u4f7f\u7528\u8fd9\u4e2a skill\u3002"
+  "description": "用于管理“先有方案、再写 todolist/issues、待用户审核方案、再按 issue 顺序实现并逐项 review”的交付流程。方案可以来自用户直接提供、用户与 Codex 共创、或 Codex 按需整理生成。当用户希望把方案落到仓库根目录 `.work-plans/` 下，并在审核通过后按 issue 顺序推进实现与 review 时，使用这个 skill。",
+  "content_fingerprint": "e0bc37bf3446e6a89b981a2d27b6acb04de77be7292929dbdf4782c4bad0f66b"
 }

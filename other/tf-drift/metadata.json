@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Backport AWS drift into terraform code so that `terraform plan` is clean (or shows only an explicitly intended diff). Fans out one sub-agent per drifted resource, each working from `terraform plan -target=<addr>` and `terraform state show <addr>` to update the .tf source until that resource's diff disappears. Use when the user asks to \"reconcile drift\", \"backport drift\", \"make plan clean\", or \"update code to match AWS\"."
+  "description": "Backport AWS drift into terraform code so that `terraform plan` is clean (or shows only an explicitly intended diff). Fans out one sub-agent per drifted resource, each working from `terraform plan -target=<addr>` and `terraform state show <addr>` to update the .tf source until that resource's diff disappears. Use when the user asks to \"reconcile drift\", \"backport drift\", \"make plan clean\", or \"update code to match AWS\".",
+  "content_fingerprint": "548f914b42c4c82d7075fe24832623c54aa25112cf1885dff5099a9f0e1d28ff"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLHY/ruoyi-develop-claude/blob/main/.claude/skills/error-handler/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "64a17c59c88099da92a189a71e97b9b556d1fbf868111760028197d7885b58ad",
+  "description": "基于若依-vue-plus框架的后端全局异常处理规范。定义业务异常抛出、全局异常捕获、标准错误响应返回的完整规范体系。\n确保系统错误统一处理，避免直接暴露堆栈信息，保障事务一致性和前后端交互的标准化。\n\n触发场景：\n- 编写Service层业务逻辑需要抛出异常时\n- 配置或修改GlobalExceptionHandler全局异常处理器时\n- 处理Controller层错误响应时\n- 实现事务回滚机"
 }

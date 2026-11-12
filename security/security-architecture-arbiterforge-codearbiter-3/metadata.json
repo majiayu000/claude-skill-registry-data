@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Optional, opt-in STRIDE threat pass for a sensitive feature \u2014 invoked deliberately via /threat-model, never forced on ordinary changes. Walks the change's attack surface and security boundaries (governed by <project-root>/.codearbiter/security-controls.md), surfaces threats and unmitigated gaps, and MAY dispatch security-reviewer or auth-crypto-reviewer. Not a routine gate; it can hard-STOP only on a genuinely critical unmitigated threat it surfaces."
+  "description": "Optional, opt-in STRIDE threat pass for a sensitive feature — invoked deliberately via /threat-model, never forced on ordinary changes. Walks the change's attack surface and security boundaries (governed by <project-root>/.codearbiter/security-controls.md), surfaces threats and unmitigated gaps, and MAY dispatch security-reviewer or auth-crypto-reviewer. Not a routine gate; it can hard-STOP only on a genuinely critical unmitigated threat it surfaces.",
+  "content_fingerprint": "5837ddd9385201e6e363c2686414ad50166889eefd0b9fae642d8df0be01ba10"
 }

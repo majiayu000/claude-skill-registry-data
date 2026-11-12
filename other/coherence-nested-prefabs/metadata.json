@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when authoring a CoherenceSync prefab whose hierarchy contains a reference to another prefab that is itself CoherenceSync (one networked prefab nested inside another in the prefab asset, at edit time) in coherence. Covers detecting that asset-level nesting and synchronizing the nested entities with PrefabSyncGroup. NOT for runtime parenting/reparenting of independent networked entities \u2014 that is CoherenceNode / parent-child sync, a different concern."
+  "description": "Use when authoring a CoherenceSync prefab whose hierarchy contains a reference to another prefab that is itself CoherenceSync (one networked prefab nested inside another in the prefab asset, at edit time) in coherence. Covers detecting that asset-level nesting and synchronizing the nested entities with PrefabSyncGroup. NOT for runtime parenting/reparenting of independent networked entities — that is CoherenceNode / parent-child sync, a different concern.",
+  "content_fingerprint": "ed4d963b51244b2ca04c1afda794da5f2835c1b720449615abaea7e938c2214e"
 }

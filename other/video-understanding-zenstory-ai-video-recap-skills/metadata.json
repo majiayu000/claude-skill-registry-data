@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u628a\u89c6\u9891\u5206\u6790\u4e3a\u7ed3\u6784\u5316\u7406\u89e3\u7d22\u5f15\uff1a\u573a\u666f\u68c0\u6d4b\u3001ASR \u8f6c\u5199\u3001\u9010\u573a\u666f VLM \u89c2\u5bdf\u3001\u9759\u97f3\u7a97\u53e3\u3001\u878d\u5408\u65f6\u95f4\u7ebf\u548c\u5199\u4f5c brief\u3002 \u7528\u4e8e\u7406\u89e3\u3001\u7d22\u5f15\u6216\u603b\u7ed3\u89c6\u9891\uff0c\u4e5f\u4f5c\u4e3a\u540e\u7eed\u521b\u4f5c\u524d\u7684\u5206\u6790\u9636\u6bb5\u3002\u8f93\u5165\u89c6\u9891\u6587\u4ef6\uff1b\u8f93\u51fa scenes.json\u3001 asr_result.json\u3001vlm_analysis.json\u3001silence_periods.json\u3001timeline_fusion.json\u3001agent_narration_brief.md\u3002 \u89e6\u53d1\u8bcd\uff1a\u89c6\u9891\u7406\u89e3\u3001\u89c6\u9891\u5206\u6790\u3001\u89c6\u9891\u7d22\u5f15\u3001video understanding\u3001analyze video\u3001\u770b\u61c2\u89c6\u9891\u3002"
+  "description": "把视频分析为结构化理解索引：场景检测、ASR 转写、逐场景 VLM 观察、静音窗口、融合时间线和写作 brief。 用于理解、索引或总结视频，也作为后续创作前的分析阶段。输入视频文件；输出 scenes.json、 asr_result.json、vlm_analysis.json、silence_periods.json、timeline_fusion.json、agent_narration_brief.md。 触发词：视频理解、视频分析、视频索引、video understanding、analyze video、看懂视频。",
+  "content_fingerprint": "b80d96fabc458986be3558b74294caca3311e06217f5d9a8bac7631fef15a424"
 }

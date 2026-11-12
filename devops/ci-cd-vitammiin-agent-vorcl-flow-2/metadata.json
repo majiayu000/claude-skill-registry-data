@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CI/CD \u043d\u0430 GitHub Actions \u2014 PR-workflow (lint+typecheck+test \u0441 \u043a\u044d\u0448\u0435\u043c npm/pnpm), deploy-workflow \u0441 environment/secrets, concurrency, matrix, \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c (\u043c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0435 permissions, pull_request_target, fork-PR), \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044f \u0441 Render (deploy hook / auto-deploy). Use \u0434\u043b\u044f \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438/\u043f\u043e\u0447\u0438\u043d\u043a\u0438 GitHub Actions \u0438 \u0434\u0435\u043f\u043b\u043e\u044f \u043f\u043e \u043f\u0443\u0448\u0443."
+  "description": "CI/CD на GitHub Actions — PR-workflow (lint+typecheck+test с кэшем npm/pnpm), deploy-workflow с environment/secrets, concurrency, matrix, безопасность (минимальные permissions, pull_request_target, fork-PR), интеграция с Render (deploy hook / auto-deploy). Use для настройки/починки GitHub Actions и деплоя по пушу.",
+  "content_fingerprint": "f3d5df911264c85c19c608b57615870af2c212dc2c895cf3f5085fd2afd5b3be"
 }

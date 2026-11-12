@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific syntax and behavior for ALTER USER and SET PASSWORD \u2014 IF EXISTS warning-not-error semantics, IDENTIFIED BY vs IDENTIFIED BY PASSWORD vs IDENTIFIED VIA/WITH multi-plugin auth, PASSWORD EXPIRE variants and default_password_lifetime interaction, ACCOUNT LOCK/UNLOCK, resource limits, TLS/REQUIRE options, and SET PASSWORD's three literal forms (PASSWORD(), OLD_PASSWORD(), pre-hashed string \u2014 there is no cleartext-string form). Use when writing, generating, or reviewing statements that create/change account credentials, expire or lock accounts, or set passwords on MariaDB."
+  "description": "MariaDB-specific syntax and behavior for ALTER USER and SET PASSWORD — IF EXISTS warning-not-error semantics, IDENTIFIED BY vs IDENTIFIED BY PASSWORD vs IDENTIFIED VIA/WITH multi-plugin auth, PASSWORD EXPIRE variants and default_password_lifetime interaction, ACCOUNT LOCK/UNLOCK, resource limits, TLS/REQUIRE options, and SET PASSWORD's three literal forms (PASSWORD(), OLD_PASSWORD(), pre-hashed string — there is no cleartext-string form). Use when writing, generating, or reviewing statements that create/change account credentials, expire or lock accounts, or set passwords on MariaDB.",
+  "content_fingerprint": "4666b0c68b76077b003fea11ce951b2428f83e57e770d8a95d77e881384392fe"
 }

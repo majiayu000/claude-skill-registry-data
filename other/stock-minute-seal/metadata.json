@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2\u80a1\u7968\u5206\u949f\u5c01\u5355\u91d1\u989d\u3002\u63a5\u53e3\uff1aGET /api/v2/market/data/stock-minute-seal\u3002\u7528\u6237\u95ee\u4e2a\u80a1\u67d0\u65e5\u7684\u5206\u949f\u5c01\u5355\u91d1\u989d\u3001\u6da8\u505c\u6216\u8dcc\u505c\u5c01\u5355\u7684\u53d8\u5316\u3001\u5c01\u5355\u91d1\u989d\u65f6\u95f4\u5e8f\u5217\u65f6\u4f7f\u7528\u3002\u6240\u6709\u8bf7\u6c42\u5fc5\u987b\u8bbe\u7f6e FTSHARE_API_KEY\u3002"
+  "description": "查询股票分钟封单金额。接口：GET /api/v2/market/data/stock-minute-seal。用户问个股某日的分钟封单金额、涨停或跌停封单的变化、封单金额时间序列时使用。所有请求必须设置 FTSHARE_API_KEY。",
+  "content_fingerprint": "45c864c4b9a1c81ca57848fef293e3db02e171c15c4c87f4bf3973ca113c11b0"
 }

@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when using Redis or any Redis-protocol store (Valkey, ElastiCache, Upstash, Dragonfly, Memorystore) as a cache, queue, rate limiter or distributed lock and it has to be CORRECT rather than merely connected \u2014 stampede-proof caching, locks that cannot release someone else's hold, race-free rate limits, and jobs that survive a worker crash. NOT durable SQL queues with SELECT FOR UPDATE SKIP LOCKED (that is `postgresdb`), NOT vector similarity search over embeddings (that is `vector-db`)."
+  "description": "Use when using Redis or any Redis-protocol store (Valkey, ElastiCache, Upstash, Dragonfly, Memorystore) as a cache, queue, rate limiter or distributed lock and it has to be CORRECT rather than merely connected — stampede-proof caching, locks that cannot release someone else's hold, race-free rate limits, and jobs that survive a worker crash. NOT durable SQL queues with SELECT FOR UPDATE SKIP LOCKED (that is `postgresdb`), NOT vector similarity search over embeddings (that is `vector-db`).",
+  "content_fingerprint": "ce8cb1fcf60c09541061728419ccc7b252d612b3a515964976c2dd4b41dba872"
 }

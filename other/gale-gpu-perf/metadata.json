@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MANDATORY performance discipline whenever writing or modifying GPU code in gale-gpu \u2014 new/changed CUDA `#[kernel]`s, host launch wrappers, or wiring a GPU op into a per-step/per-stage integrator path. Enforces persistent handles, device residency, and an ncu/nsys/dmon profiling gate BEFORE the code is declared done. Use it every time GPU code changes; do not skip the profile step."
+  "description": "MANDATORY performance discipline whenever writing or modifying GPU code in gale-gpu — new/changed CUDA `#[kernel]`s, host launch wrappers, or wiring a GPU op into a per-step/per-stage integrator path. Enforces persistent handles, device residency, and an ncu/nsys/dmon profiling gate BEFORE the code is declared done. Use it every time GPU code changes; do not skip the profile step.",
+  "content_fingerprint": "79b31d4624a16a551899b32d76537efd02b21640e3a7e6c10da3542f8e1204c8"
 }

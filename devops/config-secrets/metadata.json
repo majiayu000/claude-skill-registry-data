@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage AICP's runtime secrets \u2014 env vars in `.env` (gitignored) consumed by `aicp/config/loader.py`, cloud-backend tokens (Anthropic, OpenRouter, ntfy), HuggingFace tokens for model downloads. Add new secrets, rotate existing ones, audit `.env.example` placeholders, set up CI/CD secret injection. Distinct from infra-security (audits posture) \u2014 this skill is the operational lifecycle. Loads when the operator says \"add a secret\" / \"rotate token X\" / \"configure secret Y\" / \"what env vars does AICP need\"."
+  "description": "Manage AICP's runtime secrets — env vars in `.env` (gitignored) consumed by `aicp/config/loader.py`, cloud-backend tokens (Anthropic, OpenRouter, ntfy), HuggingFace tokens for model downloads. Add new secrets, rotate existing ones, audit `.env.example` placeholders, set up CI/CD secret injection. Distinct from infra-security (audits posture) — this skill is the operational lifecycle. Loads when the operator says \"add a secret\" / \"rotate token X\" / \"configure secret Y\" / \"what env vars does AICP need\".",
+  "content_fingerprint": "548794b42d8697bdc35a0200d7b6db695db2e64bd6d179f9de661b5a27244531"
 }

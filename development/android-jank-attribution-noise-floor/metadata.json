@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Measure Android scroll jank at realistic data volume and decide whether a frame-time difference is real \u2014 seeding the app's LIVE database via am instrument (the Gradle task uninstalls the app and takes the data with it), using a data-independent screen as a control, and establishing the emulator's noise floor before attributing anything. Use when a screen \"feels slow at scale\", before accepting a Compose remember/memoisation optimisation, or when dumpsys gfxinfo numbers are about to be quoted."
+  "description": "Measure Android scroll jank at realistic data volume and decide whether a frame-time difference is real — seeding the app's LIVE database via am instrument (the Gradle task uninstalls the app and takes the data with it), using a data-independent screen as a control, and establishing the emulator's noise floor before attributing anything. Use when a screen \"feels slow at scale\", before accepting a Compose remember/memoisation optimisation, or when dumpsys gfxinfo numbers are about to be quoted.",
+  "content_fingerprint": "e793dca39f00c885357b530d84362460048e198b6a41216e7c17eac8764a3982"
 }

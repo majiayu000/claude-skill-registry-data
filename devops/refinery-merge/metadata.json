@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Tibsfox/gsd-skill-creator/blob/main/examples/skills/workflow/refinery-merge/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "da99fcdfcce2282663a2cf4058f6ff698d96444524e5dc047b228420584fa1cf",
+  "description": "DMA merge queue pattern for sequential, deterministic merge request processing. Checks out branches, rebases onto main, runs tests, merges, and pushes. Never auto-resolves conflicts."
 }

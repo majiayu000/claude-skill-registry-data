@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user asks to check the cortex vault, refers to earlier work (\"last time\", \"that project\", \"we discussed\", \"\u4e4b\u524d\u90a3\u500b\", \"\u4e0a\u6b21\u7684\"), asks to resume something from a previous session, or names a topic the SessionStart hook listed for this vault. Routes the request to the cortex-query skill so the answer is grounded in the user's own notes instead of re-derived. Do not use for general questions, for fresh work with no prior-context signal, or when the user has asked to skip the vault."
+  "description": "Use when the user asks to check the cortex vault, refers to earlier work (\"last time\", \"that project\", \"we discussed\", \"之前那個\", \"上次的\"), asks to resume something from a previous session, or names a topic the SessionStart hook listed for this vault. Routes the request to the cortex-query skill so the answer is grounded in the user's own notes instead of re-derived. Do not use for general questions, for fresh work with no prior-context signal, or when the user has asked to skip the vault.",
+  "content_fingerprint": "7f2bf031151e11d354d5eeebdb0bd77261ac1e575fdb86dddfc85fe702378844"
 }

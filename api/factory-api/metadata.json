@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "API conventions for both server actions and tRPC builds. Covers the decision between them, per-mutation Zod input schemas, central router composition, pagination shape, multi-field search via Drizzle `ilike` + `or()`, mutation lifecycle hooks, conditional query enabling, stale-time defaults, error response shape and custom error class taxonomy, mutation-boundary audit logging, fetch adapter for tRPC routes. Read when designing or implementing any data-mutation endpoint."
+  "description": "API conventions for both server actions and tRPC builds. Covers the decision between them, per-mutation Zod input schemas, central router composition, pagination shape, multi-field search via Drizzle `ilike` + `or()`, mutation lifecycle hooks, conditional query enabling, stale-time defaults, error response shape and custom error class taxonomy, mutation-boundary audit logging, fetch adapter for tRPC routes. Read when designing or implementing any data-mutation endpoint.",
+  "content_fingerprint": "6e27a8b5f5f20fe2ac6f3c95b516c06f5f4868e1be398b1546ee83801788b8f3"
 }

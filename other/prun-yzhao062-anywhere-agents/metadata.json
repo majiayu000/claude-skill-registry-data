@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Parallel delegation fan-out on Agy. The coordinating session decomposes and integrates while task units run in parallel as Agy processes (Gemini through the Antigravity CLI), never on the coordinator and never on Claude-side workers such as Sonnet subagents. Each unit runs unattended in a scratch dir or throwaway clone and gets follow-up turns while slower units finish. Codex is not a prun executor either. Unit count follows the dependency graph rather than a small fixed cap. Units may read or write code; workers never commit or push, and the session plus the user are the final integration gate."
+  "description": "Parallel delegation fan-out on Agy. The coordinating session decomposes and integrates while task units run in parallel as Agy processes (Gemini through the Antigravity CLI), never on the coordinator and never on Claude-side workers such as Sonnet subagents. Each unit runs unattended in a scratch dir or throwaway clone and gets follow-up turns while slower units finish. Codex is not a prun executor either. Unit count follows the dependency graph rather than a small fixed cap. Units may read or write code; workers never commit or push, and the session plus the user are the final integration gate.",
+  "content_fingerprint": "d35802b4421a2affffe6174b89f5b11f1b752f00a46cf162aef6e4e3111aed75"
 }

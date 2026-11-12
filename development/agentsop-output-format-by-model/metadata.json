@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pick an LM output format per (task x consumer x model) rather than by reflex: different formats carry different cognitive load (e.g. code-in-JSON makes the same model write worse code than plain-text+diff, while asking for prose when you need a typed object fails the other way). Use when designing or debugging an LM's output schema, choosing between plain text / diff / JSON / tool-call / grammar-constrained output, or when a model's quality drops after wrapping its output in a structured format."
+  "description": "Pick an LM output format per (task x consumer x model) rather than by reflex: different formats carry different cognitive load (e.g. code-in-JSON makes the same model write worse code than plain-text+diff, while asking for prose when you need a typed object fails the other way). Use when designing or debugging an LM's output schema, choosing between plain text / diff / JSON / tool-call / grammar-constrained output, or when a model's quality drops after wrapping its output in a structured format.",
+  "content_fingerprint": "03301abee97f90719d0dba9f724cfe3f6a4603d94db79906af4ac3b5869b4999"
 }

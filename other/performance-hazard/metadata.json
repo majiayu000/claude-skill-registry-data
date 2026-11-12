@@ -1,5 +1,5 @@
 {
-  "name": "\u6027\u80fd\u9690\u60a3\u8bc6\u522bSkill",
+  "name": "性能隐患识别Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/performance-hazard/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ee3\u7801\u4e2d\u6027\u80fd\u9690\u60a3\u7684\u8bc6\u522b\u65b9\u6cd5\u4e0e\u5e38\u89c1\u53cd\u6a21\u5f0f\u6e05\u5355\u3002\u5f53\u9700\u8981\u5ba1\u67e5\u4ee3\u7801\u662f\u5426\u5b58\u5728\u6027\u80fd\u98ce\u9669(N+1\u67e5\u8be2\u3001\u65e0\u7d22\u5f15\u626b\u63cf\u3001\u5185\u5b58\u6cc4\u6f0f\u7b49)\u65f6\u4f7f\u7528\u3002"
+  "description": "代码中性能隐患的识别方法与常见反模式清单。当需要审查代码是否存在性能风险(N+1查询、无索引扫描、内存泄漏等)时使用。",
+  "content_fingerprint": "1984ade53657d739a6989960a7bfe0cfc7a7aa31cc9b5983da882d04e0b3851e"
 }

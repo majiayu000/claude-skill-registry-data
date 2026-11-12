@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Plan a feature or system before implementation. Use when the user says \"plan this\", \"I want to build X\", \"how do I implement Y\", or when /ck:brainstorm produces a spec.md. Always run before /ck:cook. Modes (pick one): --fast (simple, single-file), --hard (research + red-team + validate). Composable flag (combine with any mode): --tdd \u2014 propagates into the cook pipeline. Every phase gets Design Constraints and Quality/Testing State; ck:cook confirms optional test and quality checks per phase."
+  "description": "Plan a feature or system before implementation. Use when the user says \"plan this\", \"I want to build X\", \"how do I implement Y\", or when /ck:brainstorm produces a spec.md. Always run before /ck:cook. Modes (pick one): --fast (simple, single-file), --hard (research + red-team + validate). Composable flag (combine with any mode): --tdd — propagates into the cook pipeline. Every phase gets Design Constraints and Quality/Testing State; ck:cook confirms optional test and quality checks per phase.",
+  "content_fingerprint": "46691b8cbd92b7a6b07e44baf7d786f843da53cb72cd4f17939b0331b3c8ddbc"
 }

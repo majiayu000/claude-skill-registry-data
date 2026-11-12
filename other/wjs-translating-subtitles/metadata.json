@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user has an SRT (or transcript text) in one language and wants it translated to another, with punctuation-bounded re-segmentation so cues end at real sentence breaks. Simplified Chinese (zh-CN) and English (en) are first-class targets; other targets follow the same rules. Outputs a target-language SRT or bilingual SRT \u2014 no audio, no burn-in. Triggers \u2014 \"\u7ffb\u8bd1\u5b57\u5e55\", \"\u7ffb\u6210\u4e2d\u6587\", \"translate this SRT\", \"\u4e2d\u82f1\u53cc\u8bed\u5b57\u5e55\", \"\u628a\u8fd9\u4e2a SRT \u7ffb\u8bd1\u6210 X\", \"bilingual subtitles\"."
+  "description": "Use when the user has an SRT (or transcript text) in one language and wants it translated to another, with punctuation-bounded re-segmentation so cues end at real sentence breaks. Simplified Chinese (zh-CN) and English (en) are first-class targets; other targets follow the same rules. Outputs a target-language SRT or bilingual SRT — no audio, no burn-in. Triggers — \"翻译字幕\", \"翻成中文\", \"translate this SRT\", \"中英双语字幕\", \"把这个 SRT 翻译成 X\", \"bilingual subtitles\".",
+  "content_fingerprint": "6f1f7bb490d69793a8e2882ccf410c0ccf0e0b2c3ba0574fec3bf1accf4c2782"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Optional design-improvement pass for when you have spare usage to drain. Finds\nthe shallowest modules in the code the spec touches, researches a deeper\ndesign, and proposes refactors that shrink interfaces and hide decisions \u2014\nbehavior held constant, tests green before and after. Proposes \u00a7I/\u00a7V/\u00a7T edits,\nnever silent rewrites. Triggers when the user says \"deepen this\", \"improve the\ndesign\", \"this module feels shallow\", \"pull complexity down\", \"use spare\nbudget on the codebase\", or invokes /ck:deepen. Leans on the codebase-design\nskill's deep-module vocabulary when present."
+  "description": "Optional design-improvement pass for when you have spare usage to drain. Finds\nthe shallowest modules in the code the spec touches, researches a deeper\ndesign, and proposes refactors that shrink interfaces and hide decisions —\nbehavior held constant, tests green before and after. Proposes §I/§V/§T edits,\nnever silent rewrites. Triggers when the user says \"deepen this\", \"improve the\ndesign\", \"this module feels shallow\", \"pull complexity down\", \"use spare\nbudget on the codebase\", or invokes /ck:deepen. Leans on the codebase-design\nskill's deep-module vocabulary when present.",
+  "content_fingerprint": "4e0ee7ad3263147357d2d4fbb1d065f531dbf9e6a2abf5cdaf3db969aa034ac1"
 }

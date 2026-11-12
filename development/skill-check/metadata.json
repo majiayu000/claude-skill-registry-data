@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prismstack \u7684\u54c1\u8cea\u5be9\u67e5 meta-skill\u3002\u4e09\u500b mode\uff1a\n- design\uff1a\u898f\u5283\u968e\u6bb5 7 \u554f\u5feb\u901f\u5224\u65b7\uff08\u5019\u9078 skill \u8a72\u4e0d\u8a72\u5efa\uff09\n- review\uff1a\u5b8c\u6210\u5f8c 15 \u7dad\u5ea6 + 6 \u96f7\u5340\u6383\u63cf\uff08skill \u54c1\u8cea\u5920\u4e0d\u5920\uff09\n- pack\uff1a\u6574\u9ad4\u7d50\u69cb\u5065\u5eb7\u5ea6 7 \u9805\u8a55\u4f30\uff08pack \u6709\u6c92\u6709\u7d50\u69cb\u554f\u984c\uff09\nTrigger: \u7528\u6236\u8aaa\u300c\u6aa2\u67e5\u54c1\u8cea\u300d\u3001\u300cskill-check\u300d\u3001\u6216\u81ea\u52d5\u89f8\u767c\uff08/domain-plan \u5f8c\u3001/domain-build \u5f8c\u3001/skill-gen \u5f8c\uff09\u3002\nDo NOT use when: \u8981\u6539 skill \u5167\u5bb9\uff08\u7528 /skill-edit\uff09\u3002"
+  "description": "Prismstack 的品質審查 meta-skill。三個 mode：\n- design：規劃階段 7 問快速判斷（候選 skill 該不該建）\n- review：完成後 15 維度 + 6 雷區掃描（skill 品質夠不夠）\n- pack：整體結構健康度 7 項評估（pack 有沒有結構問題）\nTrigger: 用戶說「檢查品質」、「skill-check」、或自動觸發（/domain-plan 後、/domain-build 後、/skill-gen 後）。\nDo NOT use when: 要改 skill 內容（用 /skill-edit）。",
+  "content_fingerprint": "9d8f607e753787db4aefca04d89a2e68d2745a56776ccef0855fb1de524cd882"
 }

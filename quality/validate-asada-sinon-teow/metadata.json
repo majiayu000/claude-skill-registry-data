@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5bf9\u7167 plan.md \u5bf9 git diff \u505a\u5bf9\u6297\u5f0f\u9a8c\u6536\uff1a\u6d3e plan-critic subagent \u9010\u6761\u6838\u5bf9\u9700\u6c42\u5b9e\u73b0\u3001\u8fb9\u754c\u6d4b\u8bd5\u3001\u4ee5\u53ca\u6709\u6ca1\u6709 plan \u4e4b\u5916\u7684\u6539\u52a8\uff0c\u8f93\u51fa\u300c\u5fc5\u987b\u4fee / \u5efa\u8bae\u4fee / \u4ec5\u8bb0\u5f55\u300d\u4e09\u6863\u3002\u5b9e\u73b0\u5b8c\u6210\u540e\u7528\u3002"
+  "description": "对照 plan.md 对 git diff 做对抗式验收：派 plan-critic subagent 逐条核对需求实现、边界测试、以及有没有 plan 之外的改动，输出「必须修 / 建议修 / 仅记录」三档。实现完成后用。",
+  "content_fingerprint": "f1170b9e913e364bfb33840d40ece579ba2d0aa7acb31ca8607d86a1da89e438"
 }

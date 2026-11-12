@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configuration cartographer: maps a system's complete config surface - every env var, setting and flag, where it is defined (.env, yaml/json configs, compose, Dockerfile) versus where it is read in code - and reports read-but-never-defined keys (crash candidates), defined-but-never-read orphans and divergent defaults. Never outputs values, keys only. Read-only. Trigger: /config-map"
+  "description": "Configuration cartographer: maps a system's complete config surface - every env var, setting and flag, where it is defined (.env, yaml/json configs, compose, Dockerfile) versus where it is read in code - and reports read-but-never-defined keys (crash candidates), defined-but-never-read orphans and divergent defaults. Never outputs values, keys only. Read-only. Trigger: /config-map",
+  "content_fingerprint": "f9eea7fee0d3d2b98fb6c0ec4f73341ada38afd5fbb9c37cad7a5a27451fa3b2"
 }

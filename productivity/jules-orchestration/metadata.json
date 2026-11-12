@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Dispatch and manage Google Jules coding sessions via the Jules REST API using the JULES_API_KEY environment variable \u2014 without an interactive `jules login`. Use when the user wants to offload a scoped task to Jules, orchestrate Jules, or review/open Jules sessions. Note the API key auth (x-goog-api-key header), session lifecycle, AUTO_CREATE_PR, and the always-review-before-merge rule (Jules has clobbered external fixes by rebasing from a stale view)."
+  "description": "Dispatch and manage Google Jules coding sessions via the Jules REST API using the JULES_API_KEY environment variable — without an interactive `jules login`. Use when the user wants to offload a scoped task to Jules, orchestrate Jules, or review/open Jules sessions. Note the API key auth (x-goog-api-key header), session lifecycle, AUTO_CREATE_PR, and the always-review-before-merge rule (Jules has clobbered external fixes by rebasing from a stale view).",
+  "content_fingerprint": "f7bc7d41488651ba4a12699ef707ff1ae5459ea26a723701503eb87b64cf7739"
 }

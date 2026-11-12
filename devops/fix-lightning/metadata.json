@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/phrazzld/claude-config/blob/main/skills/fix-lightning/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a8bf947b480c928e95fbaf05a884132e71b61349499e7155aedcf5fd9c35a5ea",
+  "description": "Run /check-lightning, then fix the highest priority Lightning issue.\nCreates one fix per invocation. Invoke again for next issue.\nUse /log-lightning-issues to create issues without fixing.\n"
 }

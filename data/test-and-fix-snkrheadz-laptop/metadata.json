@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/snkrheadz/laptop/blob/main/claude/skills/test-and-fix/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a02d7340c1f7d004675db3d6bdd131793029d20ae95511e1bdb34d1d262bb8f6",
+  "description": "テスト実行と失敗時の自動修復ループ。テストを実行し、失敗があれば原因を分析して修正を試みる。トリガー: /test-and-fix, テスト修復, CI修復"
 }

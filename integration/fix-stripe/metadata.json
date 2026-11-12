@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/phrazzld/claude-config/blob/main/skills/fix-stripe/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "00729ba7a7bdb07391ddee509a66747a7a1bfb590436d33af2096d748220cc79",
+  "description": "Run /check-stripe, then fix the highest priority Stripe issue.\nCreates one fix per invocation. Invoke again for next issue.\nUse /log-stripe-issues to create issues without fixing.\n"
 }

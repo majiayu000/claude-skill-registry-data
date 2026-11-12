@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5206\u6790 Amazon Ads SP / SB / SD \u641c\u7d22\u8bcd\u62a5\u544a\u3002\u786e\u5b9a\u6027\u811a\u672c\u8d1f\u8d23\u6e05\u6d17\u3001\u65f6\u95f4\u7a97\u805a\u5408\u3001\u8bcd\u6839\u805a\u7c7b\u548c\u51b3\u7b56\u8ba1\u7b97\uff0cAI \u52a9\u624b\u6216\u4eba\u5de5\u8d1f\u8d23\u8bcd\u6839\u7ea7\u8bed\u4e49\u5206\u7c7b\uff1b\u901a\u8fc7\u8bcd\u6839\u7ee7\u627f\u51cf\u5c11\u957f\u5c3e\u8bcd\u7684\u5f85\u5224\u5b9a\u6bd4\u4f8b\uff0c\u8f93\u51fa Markdown\u3001CSV\u3001HTML \u548c JSON \u516d\u7c7b\u7ed3\u679c\u3002\n\u4f7f\u7528\u65f6\u673a\uff1a\u5224\u65ad\u641c\u7d22\u8bcd\u662f\u5426\u5e94\u8be5\u5426\u5b9a\u3001\u63a7\u6210\u672c\u3001\u7ee7\u7eed\u6d4b\u8bd5\u6216\u653e\u91cf\uff0c\u5206\u6790 7/14/30 \u5929 CVR \u4e0e ACOS \u53d8\u5316\uff0c\u6216\u8005\u63d0\u70bc\u53ef\u53cd\u9988\u7ed9 Listing \u7684\u5c5e\u6027\u8bcd\u548c\u573a\u666f\u8bcd\u3002\n\u89e6\u53d1\u8bcd\uff1a/zach-search-term-report-analyzer"
+  "description": "分析 Amazon Ads SP / SB / SD 搜索词报告。确定性脚本负责清洗、时间窗聚合、词根聚类和决策计算，AI 助手或人工负责词根级语义分类；通过词根继承减少长尾词的待判定比例，输出 Markdown、CSV、HTML 和 JSON 六类结果。\n使用时机：判断搜索词是否应该否定、控成本、继续测试或放量，分析 7/14/30 天 CVR 与 ACOS 变化，或者提炼可反馈给 Listing 的属性词和场景词。\n触发词：/zach-search-term-report-analyzer",
+  "content_fingerprint": "cfbecf94be3aa22299473a6b388071c504fa1a12ea2649415ff1043d822fec2d"
 }

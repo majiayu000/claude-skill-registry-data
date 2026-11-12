@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/worldwonderer/oh-story-claudecode/blob/main/skills/story-import/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "6a16ae09177a8e267d43421cc158fa4f3026d9e1f11b95358834297ae303434a",
+  "description": "逆向导入已有小说。将已写好的小说（半成品或完本）反向解析为标准项目目录结构，\n兼容 story-long-write / story-short-write 后续写作流程。内部复用 story-long-analyze /\nstory-short-analyze 的拆解管线，按篇幅自动分流。\n触发方式：/story-import、「导入小说」「反向解析」「导入」「把我的书导进来」\n"
 }

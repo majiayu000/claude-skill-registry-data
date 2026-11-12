@@ -12,5 +12,7 @@
   "copyright": "Copyright (c) 2019 Marcelo Glasberg",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "dc38aa35c9de18feeac2c871ed67fcb6ef41e0d9ea03d697e1ce4d9a5caf2986",
+  "description": "Add the NonReentrant mixin to prevent an action from dispatching while already in progress. Covers preventing duplicate form submissions, avoiding race conditions, and protecting long-running operatio"
 }

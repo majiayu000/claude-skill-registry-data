@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user says \"sync finance\", \"daily sync\", \"run the morning sync\", \"fetch my finances\", \"ingest new docs\", \"run everything\", or any full financial-data update. Runs all configured sources \u2014 bank/card fetch, IBKR, Drive/manual staging \u2014 then ingests and reconciles SQLite, refreshes deterministic market caches, sorts Drive drops, and performs the gated backup. It writes SQLite only; the live dashboard is run separately."
+  "description": "Use when the user says \"sync finance\", \"daily sync\", \"run the morning sync\", \"fetch my finances\", \"ingest new docs\", \"run everything\", or any full financial-data update. Runs all configured sources — bank/card fetch, IBKR, Drive/manual staging — then ingests and reconciles SQLite, refreshes deterministic market caches, sorts Drive drops, and performs the gated backup. It writes SQLite only; the live dashboard is run separately.",
+  "content_fingerprint": "86edd90c1f8dab72131c95dccc68678eb52d1e9c91e3cfe92fe60d5473e58cac"
 }

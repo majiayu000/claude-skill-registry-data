@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use as the default entry point for any CTI request that doesn't name a specific skill. Activates when a user asks to investigate an indicator, profile a threat actor, write an assessment, enrich IOCs, or build detection rules, and when a user asks where a report or article comes from, how reliable it is, to grade a source, check a report, or split a report into claims, or pastes a bare article URL. Routes to the right investigation, provenance, grading or analysis skill, then auto-applies rigor skills (source rating, TLP, confidence, likelihood) on the output."
+  "description": "Use as the default entry point for any CTI request that doesn't name a specific skill. Activates when a user asks to investigate an indicator, profile a threat actor, write an assessment, enrich IOCs, or build detection rules, and when a user asks where a report or article comes from, how reliable it is, to grade a source, check a report, or split a report into claims, or pastes a bare article URL. Routes to the right investigation, provenance, grading or analysis skill, then auto-applies rigor skills (source rating, TLP, confidence, likelihood) on the output.",
+  "content_fingerprint": "12977eeea9e4384deddeb06dc4f16c1f408f96421f3530223cb83255c506a290"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u89c6\u89c9\u5b50\u4ee3\u7406\u3002\u5f53\u4e3b\u6a21\u578b\u4e0d\u652f\u6301\u56fe\u50cf\u8f93\u5165\u65f6\uff0c\u7528 workflow \u6d3e\u751f\u4e00\u4e2a\u6307\u5b9a\u5f53\u524d\u73af\u5883\u53ef\u7528\u89c6\u89c9\u6a21\u578b\u7684\u5b50\u4ee3\u7406\uff0c\u901a\u8fc7 read_image \u67e5\u770b\u6216\u6838\u9a8c\u56fe\u7247\u5185\u5bb9\u5e76\u7ed3\u6784\u5316\u8fd4\u56de\u7ed3\u8bba\u3002\u9002\u7528\u4e8e\"\u9700\u8981\u770b\u56fe\u3001\u4f46\u4e3b\u6a21\u578b\u8bfb\u4e0d\u4e86\u56fe\"\u7684\u4efb\u4f55\u4f1a\u8bdd\u3002"
+  "description": "视觉子代理。当主模型不支持图像输入时，用 workflow 派生一个指定当前环境可用视觉模型的子代理，通过 read_image 查看或核验图片内容并结构化返回结论。适用于\"需要看图、但主模型读不了图\"的任何会话。",
+  "content_fingerprint": "322433110fc4c22074e2905fafbab5e503378e306c50a0130c731e46c6f66811"
 }

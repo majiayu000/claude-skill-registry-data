@@ -1,6 +1,6 @@
 {
   "name": "unknown",
-  "description": "",
+  "description": "Checks runtime lifecycle and config validation: bootstrap, shutdown, probes, cleanup, env sync, and fail-fast startup. Use for runtime readiness.",
   "repo": "levnikolaevich/claude-code-skills",
   "path": "plugins/codebase-audit-suite/skills/ln-629-runtime-lifecycle-config-auditor/SKILL.md",
   "github_branch": "master",
@@ -9,22 +9,14 @@
   "stars": 0,
   "source": "discovered",
   "dir_name": "unknown-levnikolaevich-claude-code-skills-13",
-  "archive_mode": "directory",
-  "bundled_files": [
-    "references/audit_output_schema.md",
-    "references/audit_scoring.md",
-    "references/audit_summary_contract.md",
-    "references/audit_worker_core_contract.md",
-    "references/mcp_integration_patterns.md",
-    "references/mcp_tool_preferences.md",
-    "references/templates/audit_worker_report_template.md",
-    "references/two_layer_detection.md"
-  ],
+  "archive_mode": "skill-md",
+  "bundled_files": [],
   "author": "levnikolaevich",
   "source_url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-629-runtime-lifecycle-config-auditor/SKILL.md",
   "license": "NOASSERTION",
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-629-runtime-lifecycle-config-auditor/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "7e1922d3fd2d695a5453377b447f211679310464d17eac90f0796c9efcf7e0a3"
 }

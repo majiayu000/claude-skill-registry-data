@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/emaarco/easy-zeebe/blob/main/.claude/skills/test-worker/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "98f71fc4011c0b8a6d54d193a26c260703d51e2775bc7dc6ca229c902567b1fb",
+  "description": "Generate a unit test for a Zeebe `@JobWorker` class using mockk (Kotlin) or Mockito (Java), without any Spring context or Camunda test runtime. Use when the user asks to \"write tests for a job worker\""
 }

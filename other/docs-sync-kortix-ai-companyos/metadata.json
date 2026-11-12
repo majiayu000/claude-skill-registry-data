@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Daily reusable-session docs sync for {{target_repo}}. Reads the commits that landed since the last run, maps each change to the documentation pages it made inaccurate, rewrites those pages under {{docs_path}} to match the code, and opens a PR only when there's real drift to fix."
+  "description": "Daily reusable-session docs sync for {{target_repo}}. Reads the commits that landed since the last run, maps each change to the documentation pages it made inaccurate, rewrites those pages under {{docs_path}} to match the code, and opens a PR only when there's real drift to fix.",
+  "content_fingerprint": "97746e87c958753c4b4c7e43cfdfffed69a12614e4a6a5937e0bb3568c83ef39"
 }

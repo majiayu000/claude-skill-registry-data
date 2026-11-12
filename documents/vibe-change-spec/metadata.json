@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scope change workflow for modifying, adding, or removing requirements at any point during a build. Triggers on \"change:\" prefix, \"I forgot to add\", \"actually I also want\", \"can we add\", \"remove X from scope\", \"I changed my mind about\", \"before we continue add\", \"one more thing\", \"I want to change the spec\", \"revert the X change\". Handles new additions, removals, renames, backlog operations, and reverting previous changes. Assesses impact before touching any file. Updates all affected docs in the correct order. If BRIEF.md doesn't exist, updates SPEC.md and DECISIONS.md only."
+  "description": "Scope change workflow for modifying, adding, or removing requirements at any point during a build. Triggers on \"change:\" prefix, \"I forgot to add\", \"actually I also want\", \"can we add\", \"remove X from scope\", \"I changed my mind about\", \"before we continue add\", \"one more thing\", \"I want to change the spec\", \"revert the X change\". Handles new additions, removals, renames, backlog operations, and reverting previous changes. Assesses impact before touching any file. Updates all affected docs in the correct order. If BRIEF.md doesn't exist, updates SPEC.md and DECISIONS.md only.",
+  "content_fingerprint": "b6f28150c4a137569a5db33b9fb4a5f3ee5a5ba629141af8207d9f37fefcd3ac"
 }

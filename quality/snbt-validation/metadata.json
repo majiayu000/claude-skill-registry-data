@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Validate and lint FTB SNBT files (FTB Quests SNBT, FTB Library / Chunks / Ultimine / Teams configs, KubeJS data files, vanilla-SNBT typed arrays). Use when adding, editing, or reviewing any ``*.snbt`` file in this repo \u2014 including when the pre-commit hook blocks a commit, when CI surfaces an SNBT diagnostic, when authoring FTB Quests chapters, when receiving a quest-validator JSON report, or when porting SNBT between tools. Surfaces precise line:col diagnostics for malformed grammar; never silently passes broken input."
+  "description": "Validate and lint FTB SNBT files (FTB Quests SNBT, FTB Library / Chunks / Ultimine / Teams configs, KubeJS data files, vanilla-SNBT typed arrays). Use when adding, editing, or reviewing any ``*.snbt`` file in this repo — including when the pre-commit hook blocks a commit, when CI surfaces an SNBT diagnostic, when authoring FTB Quests chapters, when receiving a quest-validator JSON report, or when porting SNBT between tools. Surfaces precise line:col diagnostics for malformed grammar; never silently passes broken input.",
+  "content_fingerprint": "c2421caad29ad4db989093a417c6cc4fe6f70b987d1940d7aff3afdaef69213c"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Enforce the correct order when removing a branch that's pinned by a git worktree: `git worktree remove --force <path>` THEN `git branch -D <branch>`. Trying to delete the branch first fails with `error: cannot delete branch X used by worktree at Y`.\nTrigger this skill when: - User says \"remove branch\", \"delete branch\", \"cleanup worktree\", \"prune\n  branches\".\n- `gh pr merge --delete-branch` errors with `worktree` in the message. - `git branch -D` errors with `used by worktree`. - After merging a PR that has an associated worktree."
+  "description": "Enforce the correct order when removing a branch that's pinned by a git worktree: `git worktree remove --force <path>` THEN `git branch -D <branch>`. Trying to delete the branch first fails with `error: cannot delete branch X used by worktree at Y`.\nTrigger this skill when: - User says \"remove branch\", \"delete branch\", \"cleanup worktree\", \"prune\n  branches\".\n- `gh pr merge --delete-branch` errors with `worktree` in the message. - `git branch -D` errors with `used by worktree`. - After merging a PR that has an associated worktree.",
+  "content_fingerprint": "41db61bebab4cefd4ba029216afe0bda804ddd808fb36b1845d2c401f7a6484e"
 }

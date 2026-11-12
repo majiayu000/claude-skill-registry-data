@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use to design the verification strategy for a change \u2014 what would prove it correct, given its blast radius, and what is currently unverifiable. Read-only \u2014 outputs a verification plan and a gap list, not a review and not code. Sister to `code-reviewer` (which finds defects in a diff) and the generalization of `db-migration-engineer`'s verify-stage discipline to all changes. Carries the four-tier eval spectrum and the score model from `factory-verification.md`. Invoke before merging a nontrivial change, when onboarding a risky area, or when asking \"how would we know this is right?\""
+  "description": "Use to design the verification strategy for a change — what would prove it correct, given its blast radius, and what is currently unverifiable. Read-only — outputs a verification plan and a gap list, not a review and not code. Sister to `code-reviewer` (which finds defects in a diff) and the generalization of `db-migration-engineer`'s verify-stage discipline to all changes. Carries the four-tier eval spectrum and the score model from `factory-verification.md`. Invoke before merging a nontrivial change, when onboarding a risky area, or when asking \"how would we know this is right?\"",
+  "content_fingerprint": "bf209790407057d71febfa4656bba8042038225ac546764034e93344c82ec7b0"
 }

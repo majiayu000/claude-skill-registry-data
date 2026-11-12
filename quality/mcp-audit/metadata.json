@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read-only diagnostic that scans Claude Code session transcripts to surface which MCP servers and tools you actually use, ranked by call frequency, with zero-use servers flagged for removal. Use when planning an MCP cleanup, evaluating whether to keep a newly-added server, deciding which servers warrant token cost in the catalog, or before authoring an MCP-removal PR. Outputs a markdown report (last N days) \u2014 does not modify any settings. Pair with the manual `claude mcp remove <name>` step once findings are reviewed."
+  "description": "Read-only diagnostic that scans Claude Code session transcripts to surface which MCP servers and tools you actually use, ranked by call frequency, with zero-use servers flagged for removal. Use when planning an MCP cleanup, evaluating whether to keep a newly-added server, deciding which servers warrant token cost in the catalog, or before authoring an MCP-removal PR. Outputs a markdown report (last N days) — does not modify any settings. Pair with the manual `claude mcp remove <name>` step once findings are reviewed.",
+  "content_fingerprint": "da72eb03235eaceaf92e800f4741c7f00e296d161403791f5b08efd3e41301e8"
 }

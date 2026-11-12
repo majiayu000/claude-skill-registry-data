@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Escalate SSRF to cloud credential theft via the instance metadata service (IMDS). Load when SSRF is confirmed AND the target runs on AWS/GCP/Azure. Signals: 169.254.169.254 reachable, cloud-hosted app, SSRF that can set arbitrary Host/headers, \"metadata\"."
+  "description": "Escalate SSRF to cloud credential theft via the instance metadata service (IMDS). Load when SSRF is confirmed AND the target runs on AWS/GCP/Azure. Signals: 169.254.169.254 reachable, cloud-hosted app, SSRF that can set arbitrary Host/headers, \"metadata\".",
+  "content_fingerprint": "97a66d49f962132b5f8825103b926a5a28d44d3cccbd189157abc5bebbd530d2"
 }

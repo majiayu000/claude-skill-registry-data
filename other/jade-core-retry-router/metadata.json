@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Routes failed JADE migration rule tasks back into the same rule batch with bounded retries. Use when the orchestrator encounters VERIFICATION_FAILED or RULE_GATE_FAILED and the user wants automatic requeue with back-off before escalation. Reads verification outputs and fix results to decide requeue vs escalate per failed rule."
+  "description": "Routes failed JADE migration rule tasks back into the same rule batch with bounded retries. Use when the orchestrator encounters VERIFICATION_FAILED or RULE_GATE_FAILED and the user wants automatic requeue with back-off before escalation. Reads verification outputs and fix results to decide requeue vs escalate per failed rule.",
+  "content_fingerprint": "c6ab8cd63b8c95882d70298fb4d683aa154e09b248814da04a3fcb031a1eda2d"
 }

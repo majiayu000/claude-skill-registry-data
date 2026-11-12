@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reversibly de-identify clinical text with OpenMed and later restore the original PHI from a saved mapping. Use when the user needs pseudonymization rather than permanent anonymization, wants to mask PHI now and re-link it later under authorization (e.g. recontact, adjudication, GDPR pseudonymization), asks about deidentify keep_mapping, reidentify, or how to store and protect the re-identification mapping. Covers when reversibility is and is not appropriate (pseudonymization vs HIPAA Safe Harbor anonymization). Pairs after extracting-pii-entities and deidentifying-clinical-text."
+  "description": "Reversibly de-identify clinical text with OpenMed and later restore the original PHI from a saved mapping. Use when the user needs pseudonymization rather than permanent anonymization, wants to mask PHI now and re-link it later under authorization (e.g. recontact, adjudication, GDPR pseudonymization), asks about deidentify keep_mapping, reidentify, or how to store and protect the re-identification mapping. Covers when reversibility is and is not appropriate (pseudonymization vs HIPAA Safe Harbor anonymization). Pairs after extracting-pii-entities and deidentifying-clinical-text.",
+  "content_fingerprint": "660991dd9660d71ab57266673d6e3e0dcb53c9b645850622212cfbdecc59d694"
 }

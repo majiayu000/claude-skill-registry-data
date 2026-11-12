@@ -12,5 +12,7 @@
   "copyright": "Copyright (c) 2025 Nomarr Contributors",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "411d78b78d227da9ffd6ed7b02acb950d89fca72e45471320cda783b2340f0e0",
+  "description": "Use when creating or modifying code in nomarr/services/. Services own runtime wiring, long-lived resources (DB, queues, workers), and call workflows. No complex business logic here."
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u65b9\u6848\u95ed\u73af\uff1a\u5f53\u7528\u6237\u663e\u5f0f\u8c03\u7528 `$solution-loop`\uff0c\u6216\u660e\u786e\u8981\u6c42\u8fdb\u5165\u201c\u65b9\u6848\u95ed\u73af\u201d\u65f6\u4f7f\u7528\u3002 \u9762\u5411\u5df2\u7ecf\u5b58\u5728\u5019\u9009\u65b9\u6848\u3001\u4f46\u9700\u8981\u53cd\u65b9\u6311\u6218\u548c\u5b9a\u70b9\u4fee\u8ba2\u7684\u573a\u666f\uff0c\u5728 brainstorming Maker \u4e0e grill-me Critic \u4e4b\u95f4\u6700\u591a\u5faa\u73af\u4e09\u8f6e\uff0c\u76f4\u5230\u65b9\u6848\u786e\u8ba4\u6216\u8fdb\u5165 Human Gate\uff1b\u4e0d\u7528\u4e8e\u4ece\u96f6\u8111\u66b4\u65b9\u6848\u3002"
+  "description": "方案闭环：当用户显式调用 `$solution-loop`，或明确要求进入“方案闭环”时使用。 面向已经存在候选方案、但需要反方挑战和定点修订的场景，在 brainstorming Maker 与 grill-me Critic 之间最多循环三轮，直到方案确认或进入 Human Gate；不用于从零脑暴方案。",
+  "content_fingerprint": "d53cd986fb844655a749f00d786711f931e5802d06d3a44a1997e50eba76a6b2"
 }

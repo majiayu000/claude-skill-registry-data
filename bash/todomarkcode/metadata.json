@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn the code markers of Prompt TODO on or off \u2014 the `[<name>#N]` tag Claude appends to a comment at each change site so grep leads from code back to the todo item. Writes `codeMarkers` in .claude/prompt-todo/config.json and re-renders .claude/prompt-todo/RULES.md; touches no code and no todo file. Existing markers stay either way. Runs only when the user invokes it: '/todoMarkCode', '/todoMarkCode on', '/todoMarkCode off'."
+  "description": "Turn the code markers of Prompt TODO on or off — the `[<name>#N]` tag Claude appends to a comment at each change site so grep leads from code back to the todo item. Writes `codeMarkers` in .claude/prompt-todo/config.json and re-renders .claude/prompt-todo/RULES.md; touches no code and no todo file. Existing markers stay either way. Runs only when the user invokes it: '/todoMarkCode', '/todoMarkCode on', '/todoMarkCode off'.",
+  "content_fingerprint": "3876a4d36b3956f0b95439e85fdf0634a3b1291d8f7b51fb620561380098b7fe"
 }

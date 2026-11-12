@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Sentry (Read-only Observability) workflow skill. Use this skill when the user needs Inspect Sentry issues, summarize production errors, and pull health data via the Sentry API (read-only). Use when user says \"check Sentry\", \"what errors in production?\", \"summarize Sentry issues\", \"recent crashes\", or \"production error report\". Requires SENTRYAUTHTOKEN. Do NOT use for setting up Sentry SDK, configuring alerts, or non-Sentry error monitoring and the operator should preserve the upstream workflow, copied support files, and provenance before merging or handing off."
+  "description": "Sentry (Read-only Observability) workflow skill. Use this skill when the user needs Inspect Sentry issues, summarize production errors, and pull health data via the Sentry API (read-only). Use when user says \"check Sentry\", \"what errors in production?\", \"summarize Sentry issues\", \"recent crashes\", or \"production error report\". Requires SENTRYAUTHTOKEN. Do NOT use for setting up Sentry SDK, configuring alerts, or non-Sentry error monitoring and the operator should preserve the upstream workflow, copied support files, and provenance before merging or handing off.",
+  "content_fingerprint": "8c3fdb82ccfaa410966d120cadb64900483cbe5fa4e80ce437e633457b195dbb"
 }

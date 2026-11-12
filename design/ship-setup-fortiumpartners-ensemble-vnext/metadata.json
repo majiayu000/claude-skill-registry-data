@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Interviews the owner, one topic at a time, and writes `.claude/rules/ship.md` \u2014 the ordered string of shipping steps (push, open a pull request, review rounds, merge, release, and whatever the contracts directory offers) that `/ship-build` runs. Offers the most common string first so accepting it is one answer, asks each offered step's own parameters, and, on the owner's yes, installs the workflow that resumes a parked run when a reviewer approves. Owner-invoked only \u2014 no command or agent may reach it."
+  "description": "Interviews the owner, one topic at a time, and writes `.claude/rules/ship.md` — the ordered string of shipping steps (push, open a pull request, review rounds, merge, release, and whatever the contracts directory offers) that `/ship-build` runs. Offers the most common string first so accepting it is one answer, asks each offered step's own parameters, and, on the owner's yes, installs the workflow that resumes a parked run when a reviewer approves. Owner-invoked only — no command or agent may reach it.",
+  "content_fingerprint": "890281824ab09939053e2c673f374a294b634b75dd77c75578b9a060f6d9b0ad"
 }

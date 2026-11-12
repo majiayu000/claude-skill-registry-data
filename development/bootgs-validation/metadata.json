@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Documents bootgs' parameter-level validation decorators (@Min, @Max, @Email, @Pattern, @Size, @NotBlank, @NotEmpty, @AssertTrue, @AssertFalse, @Positive, @PositiveOrZero, @Negative, @NegativeOrZero), the built-in Parse pipes, and how to write custom pipes with @UsePipes. Use when adding input validation or type coercion to a bootgs controller method, or when invalid input reaches a handler unrejected. Not for requests that never reach the handler at all \u2014 an apiPrefix or event-shape problem belongs to `bootgs-client` \u2014 nor for layering rules (`bootgs-architecture`)."
+  "description": "Documents bootgs' parameter-level validation decorators (@Min, @Max, @Email, @Pattern, @Size, @NotBlank, @NotEmpty, @AssertTrue, @AssertFalse, @Positive, @PositiveOrZero, @Negative, @NegativeOrZero), the built-in Parse pipes, and how to write custom pipes with @UsePipes. Use when adding input validation or type coercion to a bootgs controller method, or when invalid input reaches a handler unrejected. Not for requests that never reach the handler at all — an apiPrefix or event-shape problem belongs to `bootgs-client` — nor for layering rules (`bootgs-architecture`).",
+  "content_fingerprint": "e411765ebdd61413bd92612d2fa8be7c09be64ce11bd619725424e955e652549"
 }

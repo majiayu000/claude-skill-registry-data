@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7ba1\u7406\u9879\u76ee\u7a33\u5b9a\u9886\u57df\u4e0a\u4e0b\u6587\u4e0e\u96be\u56de\u9000\u51b3\u7b56\uff1a\u6309\u9700\u5efa\u7acb\u8fb9\u754c\u4e25\u683c\u7684 CONTEXT.md\uff0c\u5e76\u7528 docs/adr/README.md \u7edf\u4e00\u7d22\u5f15\u3001\u4e00\u9879\u51b3\u7b56\u4e00\u4e2a ADR \u6587\u4ef6\u3002\u7528\u4e8e\u9886\u57df\u672f\u8bed\u53cd\u590d\u89e3\u91ca\u3001\u540c\u8bcd\u5f02\u4e49\u3001\u67b6\u6784\u6216\u6570\u636e\u5e93\u9009\u578b\u3001\u8ba4\u8bc1/\u90e8\u7f72/\u6570\u636e\u6a21\u578b/API \u7248\u672c\u7b56\u7565\u3001\u9700\u8981\u8bb0\u5f55\u4e3a\u4ec0\u4e48\u8fd9\u6837\u505a\u53ca\u5982\u4f55\u9000\u51fa\u65f6\u3002English triggers: domain context, context governance, architecture decision record, ADR, database decision, architectural decision."
+  "description": "管理项目稳定领域上下文与难回退决策：按需建立边界严格的 CONTEXT.md，并用 docs/adr/README.md 统一索引、一项决策一个 ADR 文件。用于领域术语反复解释、同词异义、架构或数据库选型、认证/部署/数据模型/API 版本策略、需要记录为什么这样做及如何退出时。English triggers: domain context, context governance, architecture decision record, ADR, database decision, architectural decision.",
+  "content_fingerprint": "b981039cd04ac9ad85ee4734d605a430a3e957943193a5625489d9e0dbe70964"
 }

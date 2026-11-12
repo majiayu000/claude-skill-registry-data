@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Query the Lyrion Music Server over its JSON-RPC API from the Flask app. Use this whenever a task needs live data from Lyrion \u2014 the now-playing track, player list, transport state, album art, or any `slim.request` command \u2014 or when adding a feature that reads from the music server. Covers the request format, the tag system, the shared cache, and the self-signed-TLS rules, so new calls match how `services/lyrion.py` already talks to the server."
+  "description": "Query the Lyrion Music Server over its JSON-RPC API from the Flask app. Use this whenever a task needs live data from Lyrion — the now-playing track, player list, transport state, album art, or any `slim.request` command — or when adding a feature that reads from the music server. Covers the request format, the tag system, the shared cache, and the self-signed-TLS rules, so new calls match how `services/lyrion.py` already talks to the server.",
+  "content_fingerprint": "a21e262acdebdc677f37db7f96fba3a770d4c1be017ef804fbec9840fa4cc492"
 }

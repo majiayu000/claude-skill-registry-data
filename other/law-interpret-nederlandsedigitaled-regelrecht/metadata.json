@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Orchestrates the full law interpretation pipeline: MvT research, machine_readable generation with validation/BDD testing, and reverse validation. Invokes /law-mvt-research, /law-generate, and /law-reverse-validate sequentially. Use this skill proactively when: user wants to make a law executable, add machine_readable sections, or mentions \"interpret\" in the context of a Dutch law YAML file. Activate automatically when user opens a corpus YAML file without machine_readable sections and wants to make it executable."
+  "description": "Orchestrates the full law interpretation pipeline: MvT research, machine_readable generation with validation/BDD testing, and reverse validation. Invokes /law-mvt-research, /law-generate, and /law-reverse-validate sequentially. Use this skill proactively when: user wants to make a law executable, add machine_readable sections, or mentions \"interpret\" in the context of a Dutch law YAML file. Activate automatically when user opens a corpus YAML file without machine_readable sections and wants to make it executable.",
+  "content_fingerprint": "9d9b84cc72e71879441b5ee61543aa39ae58a7c0868ab3c24b8d9550ee195097"
 }

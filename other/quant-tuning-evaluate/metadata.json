@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6267\u884c\u6a21\u578b\u6d4b\u8bc4\uff08\u7edf\u4e00\u5165\u53e3\uff09\u3002LLM/VLM \u8d70\u4e3b\u6d41\u7a0b scripts/run_evaluation.py + Evaluation YAML\uff1bmodel_family=dit \u8d70 DiT \u6269\u5c55\u8282\uff08references/dit/evaluate_workflow.md\uff0cvbench.py \u6279\u91cf\u63a8\u7406\u4ea7\u51fa\u89c6\u9891\uff09\u3002"
+  "description": "执行模型测评（统一入口）。LLM/VLM 走主流程 scripts/run_evaluation.py + Evaluation YAML；model_family=dit 走 DiT 扩展节（references/dit/evaluate_workflow.md，vbench.py 批量推理产出视频）。",
+  "content_fingerprint": "869a59aaf571002e34a1c6e6a063ca1b52a00580c906f25a37d15ceeaf0e84cb"
 }

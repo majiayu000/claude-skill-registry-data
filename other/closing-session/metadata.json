@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when a session's job is to DRIVE OPEN PRs TO MERGE rather than to write new code \u2014 \"close out the open PRs\", \"review and fix the open PRs\", \"what's blocking our PRs\", \"which PRs are mergeable\". It owns the In Review column: it reads each PR's gate status, verifies and fixes review findings on PRs OTHER sessions built, replies in-thread, and stops at the merge gate for the user's per-PR approval. Do NOT load it for building a feature and opening its PR \u2014 that is a build session (`genesis-development`)."
+  "description": "This skill should be used when a session's job is to DRIVE OPEN PRs TO MERGE rather than to write new code — \"close out the open PRs\", \"review and fix the open PRs\", \"what's blocking our PRs\", \"which PRs are mergeable\". It owns the In Review column: it reads each PR's gate status, verifies and fixes review findings on PRs OTHER sessions built, replies in-thread, and stops at the merge gate for the user's per-PR approval. Do NOT load it for building a feature and opening its PR — that is a build session (`genesis-development`).",
+  "content_fingerprint": "fc565cf5bc2e8eb8bae383ce374225b4deb41d401cc16953376c242f6bd1b078"
 }

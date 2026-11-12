@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/grafana-stale-datasource-cleanup/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "9e24d6803c35be404f2b4a81a730977444076aba115417bbdd20eabadc29392e",
+  "description": "Fix Grafana datasource errors when a Helm chart creates a datasource that conflicts\nwith provisioned ones, or when stale datasources persist in the MySQL database.\nUse when: (1) Grafana shows \"dial tc"
 }

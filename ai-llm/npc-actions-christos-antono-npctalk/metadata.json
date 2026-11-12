@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Make NPCs physically react to a conversation and follow spoken orders. Pick an action (punch, slap, hug, kneel and beg, flee, flip off, square up, nothing...) from what the player said and what the NPC replied, with TypeSafe's Jev returning a typed choice and a probability in ~0.1 s, per-action thresholds, a repeat cooldown, orders (\"get on your knees\") that override mood and make the LLM rewrite the line, and mapping action names onto the game's animations with checks at load. Use when NPCs should act out what they say, obey commands, or when actions picked by an LLM are too random, too timid or too frequent."
+  "description": "Make NPCs physically react to a conversation and follow spoken orders. Pick an action (punch, slap, hug, kneel and beg, flee, flip off, square up, nothing...) from what the player said and what the NPC replied, with TypeSafe's Jev returning a typed choice and a probability in ~0.1 s, per-action thresholds, a repeat cooldown, orders (\"get on your knees\") that override mood and make the LLM rewrite the line, and mapping action names onto the game's animations with checks at load. Use when NPCs should act out what they say, obey commands, or when actions picked by an LLM are too random, too timid or too frequent.",
+  "content_fingerprint": "21b2bdfc25d2a63a6b170ff4c536d26a767782b53dd31343adc5e16f0fc67278"
 }

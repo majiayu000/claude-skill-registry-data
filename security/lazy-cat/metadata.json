@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Keeps code changes as small as the problem allows. Use before writing or changing code, including small fixes, single functions and quick scripts, and especially before generating data, fixtures or seed records, or hand-writing something a stdlib call, package, public API or open dataset already provides (validation, parsing, auth, dates, currency, geo). Checks for that cheaper path first, then writes only what was asked: no unrequested error handling, tests, docstrings, flags, abstractions or refactors. Not for infra/terraform/k8s or database queries."
+  "description": "Keeps code changes as small as the problem allows. Use before writing or changing code, including small fixes, single functions and quick scripts, and especially before generating data, fixtures or seed records, or hand-writing something a stdlib call, package, public API or open dataset already provides (validation, parsing, auth, dates, currency, geo). Checks for that cheaper path first, then writes only what was asked: no unrequested error handling, tests, docstrings, flags, abstractions or refactors. Not for infra/terraform/k8s or database queries.",
+  "content_fingerprint": "d7de886fa91ffc5277c6ff9c38f6002cbe1da6ff398aaa21a91d5bf861ca31aa"
 }

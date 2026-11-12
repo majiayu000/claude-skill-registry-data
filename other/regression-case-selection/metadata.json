@@ -1,5 +1,5 @@
 {
-  "name": "\u56de\u5f52\u7528\u4f8b\u7b5b\u9009Skill",
+  "name": "回归用例筛选Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/regression-case-selection/SKILL.md",
   "github_branch": "main",
@@ -30,5 +30,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u53d8\u66f4\u5f71\u54cd\u5206\u6790\u9a71\u52a8\u7684\u56de\u5f52\u7528\u4f8b\u7b5b\u9009\u65b9\u6cd5\u3002\u5f53\u529f\u80fd/\u4ee3\u7801\u53d8\u66f4\u540e\u9700\u8981\u786e\u5b9a\u56de\u5f52\u6d4b\u8bd5\u8303\u56f4\u4e0e\u7528\u4f8b\u6e05\u5355\u65f6\u4f7f\u7528\u3002"
+  "description": "变更影响分析驱动的回归用例筛选方法。当功能/代码变更后需要确定回归测试范围与用例清单时使用。",
+  "content_fingerprint": "a8df33492f2700ef5e8a19fe043c4237cd2a05159efc0b201db7d0fc92d9619c"
 }

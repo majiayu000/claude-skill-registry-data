@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate a CI/CD pipeline tailored to the project's actual stack \u2014 author `.github/workflows/ci.yml` (or equivalent) with lint + test + build stages, mirror Makefile targets so devs can run identical commands locally, and gate it green on the current codebase. Loads when no CI exists yet, or when the operator says \"set up CI\", \"add GitHub Actions\", \"wire up the pipeline\"."
+  "description": "Generate a CI/CD pipeline tailored to the project's actual stack — author `.github/workflows/ci.yml` (or equivalent) with lint + test + build stages, mirror Makefile targets so devs can run identical commands locally, and gate it green on the current codebase. Loads when no CI exists yet, or when the operator says \"set up CI\", \"add GitHub Actions\", \"wire up the pipeline\".",
+  "content_fingerprint": "2cc8d9c486904811acc52c00291d48ee4107cef33392d6ca0085bba73308174a"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reviews audio DSP and audio processing code for realtime safety violations. Use whenever the user asks to review, audit, or check audio processing code \u2014 including plugin process callbacks, audio engine render functions, DSP implementations, or any code that runs on the audio thread. Trigger on phrases like \"review my processBlock\", \"check this DSP code\", \"is this safe for the audio thread?\", \"review my JUCE plugin\", or when you see an audio callback and spot potential realtime violations. Flag issues proactively even when the user hasn't explicitly asked for a review."
+  "description": "Reviews audio DSP and audio processing code for realtime safety violations. Use whenever the user asks to review, audit, or check audio processing code — including plugin process callbacks, audio engine render functions, DSP implementations, or any code that runs on the audio thread. Trigger on phrases like \"review my processBlock\", \"check this DSP code\", \"is this safe for the audio thread?\", \"review my JUCE plugin\", or when you see an audio callback and spot potential realtime violations. Flag issues proactively even when the user hasn't explicitly asked for a review.",
+  "content_fingerprint": "408d462c9281e2377e8f295ad8421981c7a41db1b8329c3e12ce391cdcbe08c1"
 }

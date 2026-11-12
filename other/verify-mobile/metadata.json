@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prove a PR's simulator Done when lines and e2e: replay scripts on an iOS simulator \u2014 an Expo Simulators session running the PR's lane binary, started through .agents/scripts/device-lane.sh, checked with agent-device (open, snapshot, wait, is, replay) and shortcut with appduct \u2014 and hand back pass, fail, busy or unavailable. Always releases the session. Loaded by the mobile-verifier subagent. Use when the deliver orchestrator delegates simulator verification, or when someone says \"verify #N on the simulator\"."
+  "description": "Prove a PR's simulator Done when lines and e2e: replay scripts on an iOS simulator — an Expo Simulators session running the PR's lane binary, started through .agents/scripts/device-lane.sh, checked with agent-device (open, snapshot, wait, is, replay) and shortcut with appduct — and hand back pass, fail, busy or unavailable. Always releases the session. Loaded by the mobile-verifier subagent. Use when the deliver orchestrator delegates simulator verification, or when someone says \"verify #N on the simulator\".",
+  "content_fingerprint": "758eb322a8264c5f660872c6da6c4fdd8ff979affba2196ab6ba620300dc5ccb"
 }

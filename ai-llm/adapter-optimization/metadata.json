@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Act as the LLM variant proposer inside the Step-12 optimize-adapter loop: given the current adapter and the behaviour tests it is failing, propose edited adapter variants that should score higher, for the deterministic driver to score and gate. Use only within optimize_adapter.py's propose step \u2014 the driver owns all scoring, gating, and keep-winner selection."
+  "description": "Act as the LLM variant proposer inside the Step-12 optimize-adapter loop: given the current adapter and the behaviour tests it is failing, propose edited adapter variants that should score higher, for the deterministic driver to score and gate. Use only within optimize_adapter.py's propose step — the driver owns all scoring, gating, and keep-winner selection.",
+  "content_fingerprint": "56ffcf18e0c785390224e161b458f2500211e130c73b6ddb289f90dc4f864084"
 }

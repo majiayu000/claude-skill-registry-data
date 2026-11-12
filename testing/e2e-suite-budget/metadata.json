@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Caps E2E suite size by computing per-test ROI - (regressions caught \u00d7 value) \u00f7 (runtime \u00d7 flake rate \u00d7 maintenance) - then ranks every end-to-end test and recommends which bottom-decile ones to retire, move to a lower layer, or fix. Use when CI is slow or E2E-dominated, flaky failures are rising, or quarterly to keep suite size within maintenance capacity. For strategic unit:service:UI layer ratios use test-pyramid-balancer, for the minimal per-deploy critical-path gate use smoke-suite-gate, and for quarantining flaky tests use flaky-test-quarantine; this prunes low-signal tests by ROI."
+  "description": "Caps E2E suite size by computing per-test ROI - (regressions caught × value) ÷ (runtime × flake rate × maintenance) - then ranks every end-to-end test and recommends which bottom-decile ones to retire, move to a lower layer, or fix. Use when CI is slow or E2E-dominated, flaky failures are rising, or quarterly to keep suite size within maintenance capacity. For strategic unit:service:UI layer ratios use test-pyramid-balancer, for the minimal per-deploy critical-path gate use smoke-suite-gate, and for quarantining flaky tests use flaky-test-quarantine; this prunes low-signal tests by ROI.",
+  "content_fingerprint": "e94f5dd8831c66cb8138cb11217f0b263a3b02af0739480db58d12b07599abd0"
 }

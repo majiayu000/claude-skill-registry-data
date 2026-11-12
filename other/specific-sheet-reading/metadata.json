@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7528\u4e8e\u5206\u6790\u5305\u542b\u591a\u4e2aSheet\u7684Excel\u6587\u4ef6\uff0c\u52a8\u6001\u5224\u65ad\u6570\u636e\u91cf\u7ea7\u4ee5\u51b3\u5b9a\u662f\u5426\u8f6c\u6362\u4e3aParquet\u8fdb\u884c\u5927\u6587\u4ef6\u5904\u7406\uff0c\u5e76\u652f\u6301\u8de8Sheet\u7684\u7279\u5b9a\u5b57\u6bb5\u7edf\u8ba1\u3001\u6570\u636e\u6e05\u6d17\u3001\u4ea4\u53c9\u5206\u6790\u4e0e\u53ef\u89c6\u5316\uff0c\u6700\u7ec8\u751f\u6210\u5e26\u4e0b\u8f7d\u94fe\u63a5\u7684\u6c47\u603b\u62a5\u544a\u3002"
+  "description": "用于分析包含多个Sheet的Excel文件，动态判断数据量级以决定是否转换为Parquet进行大文件处理，并支持跨Sheet的特定字段统计、数据清洗、交叉分析与可视化，最终生成带下载链接的汇总报告。",
+  "content_fingerprint": "4010c7d716e659a50c898346ca5c4de2e3d76eff9a20ecb145b009fad0d03d0e"
 }

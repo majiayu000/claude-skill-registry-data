@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `feedback-optimization` stage (operation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage feedback-optimization --single`: the engine emits one run-stage directive for feedback-optimization and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `feedback-optimization` stage (operation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage feedback-optimization --single`: the engine emits one run-stage directive for feedback-optimization and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "2f470958cd8552a4cca29440c50293b89dcac78971c2d8d98c62b284292c332a"
 }

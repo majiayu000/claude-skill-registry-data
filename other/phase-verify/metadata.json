@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Per-wave CLI verification for phase-builder. Spawned as a sub-agent after implementation calls return \u2014 runs the project's build/typecheck/test commands and sprint acceptance grep patterns, then reviews the wave diff against a contract: a verdict per acceptance criterion, test-integrity checks, and scope against each sprint's Module column. Returns structured VERIFY RESULT. Orchestrator must never run CLI checks directly for verification."
+  "description": "Per-wave CLI verification for phase-builder. Spawned as a sub-agent after implementation calls return — runs the project's build/typecheck/test commands and sprint acceptance grep patterns, then reviews the wave diff against a contract: a verdict per acceptance criterion, test-integrity checks, and scope against each sprint's Module column. Returns structured VERIFY RESULT. Orchestrator must never run CLI checks directly for verification.",
+  "content_fingerprint": "1567de1710f073522f1a299b4d1c4d6bf1d4c287a9fcd35cee8f1ecd9bbbefd9"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Create or update a generated subagent package under subagents/<slug>/ from source files, PDFs, ePUBs, DOCX, Markdown, or public URLs \u2014 running the full pipeline (ingest, interrogate, claims/principles for Tier 1+, profile, faithfulness, export adapter, validate). Use when building a new advisor or reviewer subagent from a document or book, or updating an existing package with new sources. Invoked as /author-subagent <source...> [--topic <topic>]."
+  "description": "Create or update a generated subagent package under subagents/<slug>/ from source files, PDFs, ePUBs, DOCX, Markdown, or public URLs — running the full pipeline (ingest, interrogate, claims/principles for Tier 1+, profile, faithfulness, export adapter, validate). Use when building a new advisor or reviewer subagent from a document or book, or updating an existing package with new sources. Invoked as /author-subagent <source...> [--topic <topic>].",
+  "content_fingerprint": "2ed94c8132fb9924cfc52af5b6d50120949c5e9f8a81a2caec0a98bf7596b8a1"
 }

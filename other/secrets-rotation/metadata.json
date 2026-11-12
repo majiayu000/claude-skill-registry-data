@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "What to do the moment a secret is exposed \u2014 pasted into chat, committed, logged, shown in a transcript or a screenshot. The secret is compromised; only revoking and rotating it helps. Turns it into one tracked task with an escalation, not a reminder repeated every session. Use when you see a key, token, password or private key anywhere it should not be (\"\u043a\u043b\u044e\u0447 \u0432 \u0447\u0430\u0442\u0435\", \"\u0442\u043e\u043a\u0435\u043d \u0432 \u043b\u043e\u0433\u0430\u0445\", \"\u0437\u0430\u043a\u043e\u043c\u043c\u0438\u0442\u0438\u043b .env\"). Loaded by security-officer, l3-support, devops."
+  "description": "What to do the moment a secret is exposed — pasted into chat, committed, logged, shown in a transcript or a screenshot. The secret is compromised; only revoking and rotating it helps. Turns it into one tracked task with an escalation, not a reminder repeated every session. Use when you see a key, token, password or private key anywhere it should not be (\"ключ в чате\", \"токен в логах\", \"закоммитил .env\"). Loaded by security-officer, l3-support, devops.",
+  "content_fingerprint": "c7f9aab6140b9f6db7a6442f45cb737d14687d0a6a1170ef9023e018f0a22833"
 }

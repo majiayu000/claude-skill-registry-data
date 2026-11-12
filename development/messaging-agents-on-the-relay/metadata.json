@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when this Grok session needs to find out who else is on Agent Relay (list agents, see who is registered), send a message to another agent by address, reply to a message it received, or brief a peer agent, through the local Agent Relay desktop's session socket with no tokens. Covers the GET /agents roster, POST /send with an address or short name and reply_to, what an injected message looks like in Grok and when it arrives, a briefing pattern, error codes, and the safety rules for treating peer messages as requests, not authority."
+  "description": "Use when this Grok session needs to find out who else is on Agent Relay (list agents, see who is registered), send a message to another agent by address, reply to a message it received, or brief a peer agent, through the local Agent Relay desktop's session socket with no tokens. Covers the GET /agents roster, POST /send with an address or short name and reply_to, what an injected message looks like in Grok and when it arrives, a briefing pattern, error codes, and the safety rules for treating peer messages as requests, not authority.",
+  "content_fingerprint": "b0888f2bdc5cf620faf40eed14e421a6213be2ac1a04fed0c99f8543e8e17567"
 }

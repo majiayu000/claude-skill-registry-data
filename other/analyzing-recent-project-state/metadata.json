@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Produces a verified, read-only snapshot of a repository's recent state from local Git evidence: what changed, what is risky, and whether a branch is ready to continue, review, merge, or hand off. Use when asked what changed recently, what happened on this branch, where things stand, whether the branch is ready, or how to resume work from the current repo state. Does not review code line by line or draft PR feedback, and does not write a handoff file from conversation history. Runs no tests, merges, or repository mutation; writes no file and returns the snapshot as response text."
+  "description": "Produces a verified, read-only snapshot of a repository's recent state from local Git evidence: what changed, what is risky, and whether a branch is ready to continue, review, merge, or hand off. Use when asked what changed recently, what happened on this branch, where things stand, whether the branch is ready, or how to resume work from the current repo state. Does not review code line by line or draft PR feedback, and does not write a handoff file from conversation history. Runs no tests, merges, or repository mutation; writes no file and returns the snapshot as response text.",
+  "content_fingerprint": "bd48aff614524dc0f20c3c9ca180abbc434a9d84f5f89b222293f0a603bf134e"
 }

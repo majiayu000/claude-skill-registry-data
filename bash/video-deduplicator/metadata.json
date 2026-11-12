@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u89c6\u9891\u53bb\u91cd\u5de5\u5177\u3002\u4f7f\u7528\u7cbe\u786e\u5339\u914d\uff08MD5\u54c8\u5e0c\uff09\u5728\u6587\u6863\u7ea7\u522b\u5220\u9664\u91cd\u590d\u89c6\u9891\u6837\u672c\u3002\n\u5f53\u7528\u6237\u63d0\u5230\u89c6\u9891\u53bb\u91cd\u3001\u5220\u9664\u91cd\u590d\u89c6\u9891\u3001\u6e05\u7406\u91cd\u590d\u89c6\u9891\u7b49\u9700\u6c42\u65f6\u4f7f\u7528\u6b64skill\u3002\n\u5373\u4f7f\u7528\u6237\u6ca1\u6709\u660e\u786e\u8bf4\u51fa\"\u89c6\u9891\u53bb\u91cd\"\uff0c\u53ea\u8981\u4efb\u52a1\u6d89\u53ca\u4ece\u5305\u542b\u89c6\u9891\u7684\u6570\u636e\u4e2d\u5220\u9664\u91cd\u590d\u89c6\u9891\uff0c\n\u5c31\u5e94\u8be5\u4f7f\u7528\u6b64skill\u3002"
+  "description": "视频去重工具。使用精确匹配（MD5哈希）在文档级别删除重复视频样本。\n当用户提到视频去重、删除重复视频、清理重复视频等需求时使用此skill。\n即使用户没有明确说出\"视频去重\"，只要任务涉及从包含视频的数据中删除重复视频，\n就应该使用此skill。",
+  "content_fingerprint": "1dc8e0c3ae0d803f1af20909eb9065ebd9f0aee07dae4c6b2d4e17aab72ab797"
 }

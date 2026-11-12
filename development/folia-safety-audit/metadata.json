@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Systematic audit of Bukkit/Paper plugin code for Folia (regionized threading) safety \u2014 region ownership of entity access, scheduler selection, start/cancel races on scheduled tasks, safe publication of shared state, and off-thread Bukkit API calls. Use when adding folia-supported:true to a plugin, reviewing or debugging a plugin that already claims Folia support, investigating Folia-only crashes/IllegalStateExceptions, or whenever teleport/countdown/scheduler code is touched in a Folia-capable plugin."
+  "description": "Systematic audit of Bukkit/Paper plugin code for Folia (regionized threading) safety — region ownership of entity access, scheduler selection, start/cancel races on scheduled tasks, safe publication of shared state, and off-thread Bukkit API calls. Use when adding folia-supported:true to a plugin, reviewing or debugging a plugin that already claims Folia support, investigating Folia-only crashes/IllegalStateExceptions, or whenever teleport/countdown/scheduler code is touched in a Folia-capable plugin.",
+  "content_fingerprint": "e529a5403214b7a4f94cb4a2edf513570e08ff7152c19c12b7e7608790296bdb"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Write or fix a test in the Lyrion Dashboard's suite. Use this whenever a task adds a test, changes one, or asks why the suite fails \u2014 anything touching `tests/`. Covers the standalone-per-file scaffolding, the env-before-import rule, where to patch (the route/service the code under test imports), the cache-and-clock testing pattern, and how to run one test vs the whole suite. Reach for it any time you touch `tests/` so new tests match the existing shape instead of re-inventing setup."
+  "description": "Write or fix a test in the Lyrion Dashboard's suite. Use this whenever a task adds a test, changes one, or asks why the suite fails — anything touching `tests/`. Covers the standalone-per-file scaffolding, the env-before-import rule, where to patch (the route/service the code under test imports), the cache-and-clock testing pattern, and how to run one test vs the whole suite. Reach for it any time you touch `tests/` so new tests match the existing shape instead of re-inventing setup.",
+  "content_fingerprint": "6e42bc5b19964d4895ffed675557fd0b77f2f4efb54a8592bc33fee0cc1d4e5c"
 }

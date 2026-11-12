@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/authentik-oidc-kubernetes/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "9f0266c6a0ab212f8077667cc51465bbd62a46d58ce6e0c192b93856f07c255c",
+  "description": "Configure Authentik as OIDC provider for Kubernetes API server authentication.\nUse when: (1) setting up OIDC auth for kubectl with Authentik, (2) kube-apiserver\nrejects OIDC tokens with \"oidc: email n"
 }

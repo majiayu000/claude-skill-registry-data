@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/antialias/abaci-one/blob/main/.claude/skills/ensure-prod/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "03b2919319b84fa42eb14197d611804a59197b6ee5b7db4c6f6905e3c641f464",
+  "description": "Verifies that the latest main commit is deployed to production. Checks CI pipeline, fixbot activity, and k8s pod status. Use when you want to confirm a deploy completed or troubleshoot why prod is beh"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Take a reported problem all the way to a green, mergeable PR: triage the issue with parallel\nsub-agents \u2192 cut a branch \u2192 implement the fix at the root cause \u2192 hand off to `ship`, which\nreviews, commits, opens the PR, and babysits it to a green approval. Use when the user says\n\"fix it\", \"fix this bug\", \"debug and fix\", \"investigate and fix\", or wants the whole\ndiagnose-then-ship loop in one command. Read the issue from the argument. Pass `--yolo` to\nrun hands-off (no questions) to a green PR; merge still needs `--merge`."
+  "description": "Take a reported problem all the way to a green, mergeable PR: triage the issue with parallel\nsub-agents → cut a branch → implement the fix at the root cause → hand off to `ship`, which\nreviews, commits, opens the PR, and babysits it to a green approval. Use when the user says\n\"fix it\", \"fix this bug\", \"debug and fix\", \"investigate and fix\", or wants the whole\ndiagnose-then-ship loop in one command. Read the issue from the argument. Pass `--yolo` to\nrun hands-off (no questions) to a green PR; merge still needs `--merge`.",
+  "content_fingerprint": "13ef15f516b9290038e7d49384b1d9a46d52d77ce176332b808037be74b5c6be"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Applies sprint implementation results to docs/phases/ phase plan files. Used by phase-builder as a sub-agent after each implementation wave \u2014 updates task Status columns from structured SPRINT RESULT payloads in batched edits. Orchestrator must never edit phase files directly during a phase run; spawn this instead. Also use when the user asks to sync phase docs from sprint results without re-implementing code."
+  "description": "Applies sprint implementation results to docs/phases/ phase plan files. Used by phase-builder as a sub-agent after each implementation wave — updates task Status columns from structured SPRINT RESULT payloads in batched edits. Orchestrator must never edit phase files directly during a phase run; spawn this instead. Also use when the user asks to sync phase docs from sprint results without re-implementing code.",
+  "content_fingerprint": "c0c7dde586683b51b39425a295f7eb59db1a5a60c07347e0095560d0cdc9a01e"
 }

@@ -5,5 +5,7 @@
   "source": "github.com/zym9863/Vibe-LibreOJ",
   "downloaded_at": "2026-02-04T04:18:24.446180Z",
   "dir_name": "vloj",
-  "category": "data"
+  "category": "data",
+  "content_fingerprint": "6a73f80e88ed88fb50a0ad92642bf1d4d1a675fb94979dfef141e13b81000501",
+  "description": "LibreOJ题目抓取与解题工作流。用户输入形如loj1/loj001或https://loj.ac/p/1 等题号或URL时触发；创建以题号命名的空文件夹，使用Chrome DevTools MCP读取题面并保存为md文件，最后用C++、C、C#、Python、Java、Kotlin、Pascal、Rust、Go、Haskell生成解答文件。"
 }

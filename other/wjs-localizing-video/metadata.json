@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Thin orchestrator for the end-to-end video localization pipeline. Routes to the four focused sub-skills \u2014 /wjs-transcribing-audio, /wjs-translating-subtitles, /wjs-dubbing-video, /wjs-burning-subtitles. Use when the user asks for full localization in one go (\"\u5e2e\u6211\u628a\u8fd9\u4e2a\u897f\u73ed\u7259\u8bed\u89c6\u9891\u505a\u6210\u4e2d\u6587\u5b57\u5e55+\u914d\u97f3\", \"translate and dub this video\", \"\u505a\u5b8c\u6574\u7684\u672c\u5730\u5316\"). For any individual step (just transcribe, just translate, just dub, just burn), invoke the sub-skill directly \u2014 it's faster and the boundary is cleaner."
+  "description": "Thin orchestrator for the end-to-end video localization pipeline. Routes to the four focused sub-skills — /wjs-transcribing-audio, /wjs-translating-subtitles, /wjs-dubbing-video, /wjs-burning-subtitles. Use when the user asks for full localization in one go (\"帮我把这个西班牙语视频做成中文字幕+配音\", \"translate and dub this video\", \"做完整的本地化\"). For any individual step (just transcribe, just translate, just dub, just burn), invoke the sub-skill directly — it's faster and the boundary is cleaner.",
+  "content_fingerprint": "f70dd3fca4bd9429d0c50debef166eee28a99cbca7058dbabce201231277a273"
 }

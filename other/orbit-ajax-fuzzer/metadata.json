@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Discover every `wp_ajax_*` and `wp_ajax_nopriv_*` action in a WordPress plugin and fuzz-test admin-ajax.php endpoints with malformed payloads, missing nonces, anonymous access attempts, and injection vectors. Use when the user says \"AJAX fuzzer\", \"admin-ajax security\", \"test AJAX handlers\", or after adding any new `add_action('wp_ajax_*', ...)`."
+  "description": "Discover every `wp_ajax_*` and `wp_ajax_nopriv_*` action in a WordPress plugin and fuzz-test admin-ajax.php endpoints with malformed payloads, missing nonces, anonymous access attempts, and injection vectors. Use when the user says \"AJAX fuzzer\", \"admin-ajax security\", \"test AJAX handlers\", or after adding any new `add_action('wp_ajax_*', ...)`.",
+  "content_fingerprint": "5d89e64e76b707d8dbb33c9ee522e84728f109eae500d9bce1f4ad71cab74881"
 }

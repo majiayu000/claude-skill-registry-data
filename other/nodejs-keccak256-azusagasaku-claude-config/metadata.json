@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9632\u6b62 JavaScript \u548c TypeScript \u4e2d\u7684\u4ee5\u592a\u574a\u54c8\u5e0c\u9519\u8bef\u3002Node \u7684 sha3-256 \u662f NIST SHA3\uff0c\u800c\u975e\u4ee5\u592a\u574a Keccak-256\uff0c\u4f1a\u9759\u9ed8\u7834\u574f\u9009\u62e9\u5668\u3001\u7b7e\u540d\u3001\u5b58\u50a8\u69fd\u548c\u5730\u5740\u63a8\u5bfc\u3002"
+  "description": "防止 JavaScript 和 TypeScript 中的以太坊哈希错误。Node 的 sha3-256 是 NIST SHA3，而非以太坊 Keccak-256，会静默破坏选择器、签名、存储槽和地址推导。",
+  "content_fingerprint": "7e71ac6b77015b5fa653230f2bbfa99d276d58ca11107e25ebb280434aebeb4b"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Execute a swarm plan wave by wave with filesystem isolation via git worktrees. For each wave, main context decides the scenario recipe + implementation contract for every task, then spawns one swarm-worker per task in parallel. Each worker executes its recipe and reports JSON status. Worktree merge-audit verifies write-set discipline before changes land on main. Aborts remaining waves on any audit or task failure."
+  "description": "Execute a swarm plan wave by wave with filesystem isolation via git worktrees. For each wave, main context decides the scenario recipe + implementation contract for every task, then spawns one swarm-worker per task in parallel. Each worker executes its recipe and reports JSON status. Worktree merge-audit verifies write-set discipline before changes land on main. Aborts remaining waves on any audit or task failure.",
+  "content_fingerprint": "19f3c3d9ac87bf9c48f1cff5744fedc1c5a6089c1222d5a4a57f980a23d4f37f"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Internal \u2014 for Boundless team members only. Monitor Boundless deployment pipelines (AWS CodePipeline + CodeBuild) on the ops account. Use when the user wants to track a deployment after merging a PR, check whether a commit has rolled out to staging/prod, diagnose a failed deployment, watch the status of a specific pipeline, or get prompted to approve a production rollout once staging succeeds. Do NOT use for service runtime debugging (use ops-logs-query) or for deploying dev infrastructure (use ops-infra-deploy)."
+  "description": "Internal — for Boundless team members only. Monitor Boundless deployment pipelines (AWS CodePipeline + CodeBuild) on the ops account. Use when the user wants to track a deployment after merging a PR, check whether a commit has rolled out to staging/prod, diagnose a failed deployment, watch the status of a specific pipeline, or get prompted to approve a production rollout once staging succeeds. Do NOT use for service runtime debugging (use ops-logs-query) or for deploying dev infrastructure (use ops-infra-deploy).",
+  "content_fingerprint": "7ef626a5bd1bd79fe8075cf0882e3b9c343abe43aaf21157c7efcd2a6d5057d1"
 }

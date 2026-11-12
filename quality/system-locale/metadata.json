@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Maintains the ansible/roles/system_locale Ansible role that sets LANG in /etc/locale.conf on RHEL-family systems, restricted to C.UTF-8, en_US.UTF-8, or auto, as part of the Linux SOE. Rebuilds the initramfs and reboots by default when the locale changes. Use when checking or setting the system locale."
+  "description": "Maintains the ansible/roles/system_locale Ansible role that sets LANG in /etc/locale.conf on RHEL-family systems, restricted to C.UTF-8, en_US.UTF-8, or auto, as part of the Linux SOE. Rebuilds the initramfs and reboots by default when the locale changes. Use when checking or setting the system locale.",
+  "content_fingerprint": "cf222b91a10e347c9fbad9378c411b838e44e0290b234d983989e1474170f6f7"
 }

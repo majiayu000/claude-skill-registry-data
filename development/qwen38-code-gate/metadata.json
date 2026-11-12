@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Done-gate for any code change by a small model. Run it before saying a change is finished: the brief table for code (the test that goes red then green, the error path, the doc line, no new dependency), then six commands with pass conditions \u2014 scope of the diff, placeholders, secrets, the repo's tests with the last line pasted, lint/typecheck if configured, and the RED line before the GREEN one. Slice 1 of xeno-skills #355."
+  "description": "Done-gate for any code change by a small model. Run it before saying a change is finished: the brief table for code (the test that goes red then green, the error path, the doc line, no new dependency), then six commands with pass conditions — scope of the diff, placeholders, secrets, the repo's tests with the last line pasted, lint/typecheck if configured, and the RED line before the GREEN one. Slice 1 of xeno-skills #355.",
+  "content_fingerprint": "53a1aa1f2686520807fd0b4889c660afc599ed54dcc61f17eaa347b0bd3c6eea"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dadbodgeoff/drift/blob/main/skills/leader-election/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "863b82cc8517265118575931ae0b16b0c68ae595848b04a91349fe59fe14b6e8",
+  "description": "Elect a single leader among multiple instances. Only one instance runs cron jobs or processes queues. Automatic failover when leader dies."
 }

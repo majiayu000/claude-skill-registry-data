@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Solidity/EVM smart contract security analyzer for Buzz BD Agent at SolCex Exchange. Performs fast, pattern-based contract safety analysis on token prospects BEFORE scoring. Triggers automatically when: a token prospect has a verified contract address, any user submits a contract for listing review, `/score-token` is called with a verifiable contract, or Buzz's safety sub-agent is invoked. Inspects contract source (via Etherscan/Sourcify), flags critical vulnerabilities, and enriches the BD pipeline with an audit summary. NOT a substitute for a formal audit \u2014 the pre-check Buzz should never skip."
+  "description": "Solidity/EVM smart contract security analyzer for Buzz BD Agent at SolCex Exchange. Performs fast, pattern-based contract safety analysis on token prospects BEFORE scoring. Triggers automatically when: a token prospect has a verified contract address, any user submits a contract for listing review, `/score-token` is called with a verifiable contract, or Buzz's safety sub-agent is invoked. Inspects contract source (via Etherscan/Sourcify), flags critical vulnerabilities, and enriches the BD pipeline with an audit summary. NOT a substitute for a formal audit — the pre-check Buzz should never skip.",
+  "content_fingerprint": "a18c2da2158b49a1caa43e247408ba97cf5ad24651729347b732b8f1739a17b2"
 }

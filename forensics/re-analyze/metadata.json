@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9006\u5411\u5206\u6790\u552f\u4e00\u5165\u53e3\u3002\u6d41\u7a0b\uff1a\u73af\u5883\u63a2\u6d4b(probe.sh) \u2192 \u504f\u597d\u8be2\u95ee(\u5206\u6790\u76ee\u6807/\u53cd\u7f16\u8bd1\u5668/\u6df1\u5ea6/\u62a5\u544a/\u5e73\u53f0) \u2192 \u4efb\u52a1\u8bc6\u522b(triage.md) \u2192 \u7f16\u6392\u8c03\u7528\u5927\u7c7b\u7f51\u5173\u3002 \u89e6\u53d1\u8bcd\uff1a\u5206\u6790\u3001\u9006\u5411\u3001reverse\u3001RE\u3001\u5e2e\u6211\u770b\u770b\u8fd9\u4e2a\u6587\u4ef6\u3001\u8fd9\u4e2a\u6837\u672c\u662f\u5e72\u4ec0\u4e48\u7684\u3001 \u8131\u58f3\u3001\u627e\u5bc6\u94a5\u3001\u7834\u89e3\u3001\u56fa\u4ef6\u5206\u6790\u3001\u6076\u610f\u8f6f\u4ef6\u5206\u6790\u3001analyze this binary\u3002"
+  "description": "逆向分析唯一入口。流程：环境探测(probe.sh) → 偏好询问(分析目标/反编译器/深度/报告/平台) → 任务识别(triage.md) → 编排调用大类网关。 触发词：分析、逆向、reverse、RE、帮我看看这个文件、这个样本是干什么的、 脱壳、找密钥、破解、固件分析、恶意软件分析、analyze this binary。",
+  "content_fingerprint": "b62b74f3dcbea1aa7403c8a29f4b7eb51a3c08ed11dcd6ba1dd0b59fd08fffd4"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Converts manual open/close resource management to Java 7 try-with-resources where \u2014 and only where \u2014 the resource genuinely implements Closeable/AutoCloseable, is closed unconditionally on every path, and is never touched again after the try. Agent-mode recipe: scripts/scan.py narrows the manifest's broad TRY_WITH_RESOURCES flags (0.6% precision) to a shortlist (~70% precision); this document defines the judgment calls the shortlist cannot make on its own."
+  "description": "Converts manual open/close resource management to Java 7 try-with-resources where — and only where — the resource genuinely implements Closeable/AutoCloseable, is closed unconditionally on every path, and is never touched again after the try. Agent-mode recipe: scripts/scan.py narrows the manifest's broad TRY_WITH_RESOURCES flags (0.6% precision) to a shortlist (~70% precision); this document defines the judgment calls the shortlist cannot make on its own.",
+  "content_fingerprint": "be7106e35318e267bbddaad04d349327867e50a901df69f23af731b7ec512bb3"
 }

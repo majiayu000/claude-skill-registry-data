@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Receive and acknowledge Zift (Zift Payments / payment gateway) webhook notifications. Use when setting up a Zift webhook receiver, understanding why there is no signature/HMAC header to verify, returning the required {\"notificationId\": ...} acknowledgement, or handling billing and processing events like billing.subscription-created, processing.chargeback, and processing.return."
+  "description": "Receive and acknowledge Zift (Zift Payments / payment gateway) webhook notifications. Use when setting up a Zift webhook receiver, understanding why there is no signature/HMAC header to verify, returning the required {\"notificationId\": ...} acknowledgement, or handling billing and processing events like billing.subscription-created, processing.chargeback, and processing.return.",
+  "content_fingerprint": "e4c479271021f3ddf608d60b14743b720f955473a131ff9c5a7f5ebe49ad2345"
 }

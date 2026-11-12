@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate or execute a comprehensive remediation prompt for a YELLOW or RED book identified by `/book-audit`. Writes a `fix-<book-slug>.md` to `docs/build/prompts/` enumerating every defect with verbatim PDF source text inlined for verbatim restoration, then optionally executes the prompt to bring the book to GREEN. Mirrors the exemplar structure of `fix-on-the-verge.md` and `fix-reframation.md`. Use after `/book-audit` returns YELLOW or RED. Trigger phrases: \"fix this book\", \"remediate the conversion\", \"execute the fix prompt\", \"bring it to green\"."
+  "description": "Generate or execute a comprehensive remediation prompt for a YELLOW or RED book identified by `/book-audit`. Writes a `fix-<book-slug>.md` to `docs/build/prompts/` enumerating every defect with verbatim PDF source text inlined for verbatim restoration, then optionally executes the prompt to bring the book to GREEN. Mirrors the exemplar structure of `fix-on-the-verge.md` and `fix-reframation.md`. Use after `/book-audit` returns YELLOW or RED. Trigger phrases: \"fix this book\", \"remediate the conversion\", \"execute the fix prompt\", \"bring it to green\".",
+  "content_fingerprint": "71a4d11b1946f9e10d050a5ae7e9f0b84993fa604bc370e39c4abf68f8eb9159"
 }

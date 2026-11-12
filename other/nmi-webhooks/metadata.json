@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Receive and verify NMI (Network Merchants) webhooks. Use when setting up NMI webhook handlers, debugging Webhook-Signature verification, or handling transaction events like transaction.sale.success, transaction.auth.success, transaction.refund.success, and transaction.void.success. Note: NMI does NOT use Standard Webhooks \u2014 the Webhook-Signature header is \"t=<nonce>,s=<sig>\" (comma-separated) where t is a NONCE (not a Unix timestamp), and the signature is HMAC-SHA256 over \"<nonce>.<raw_body>\", lowercase hex."
+  "description": "Receive and verify NMI (Network Merchants) webhooks. Use when setting up NMI webhook handlers, debugging Webhook-Signature verification, or handling transaction events like transaction.sale.success, transaction.auth.success, transaction.refund.success, and transaction.void.success. Note: NMI does NOT use Standard Webhooks — the Webhook-Signature header is \"t=<nonce>,s=<sig>\" (comma-separated) where t is a NONCE (not a Unix timestamp), and the signature is HMAC-SHA256 over \"<nonce>.<raw_body>\", lowercase hex.",
+  "content_fingerprint": "516233bf89be3dff0326bb9ab42361153f55906dc1f163d7f6ffd3c8d2aff4ac"
 }

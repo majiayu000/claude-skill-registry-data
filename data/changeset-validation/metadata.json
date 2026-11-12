@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/NovaAI-innovation/Infinite-Agency/blob/main/.qwen/skills/changeset-validation/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "76fb3ef2c6acb1e67b79a982665ac2cffa9481edea4116dc0839ad60efa74226",
+  "description": "Validate changesets in openai-agents-js using LLM judgment against git diffs (including uncommitted local changes). Use when packages/ or .changeset/ are modified, or when verifying PR changeset compl"
 }

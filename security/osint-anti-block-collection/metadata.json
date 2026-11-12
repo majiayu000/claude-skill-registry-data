@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u53cd\u62e6\u622a\u60c5\u62a5\u641c\u96c6 \u2014 \u4e94\u5c42\u9632\u62e6\u622a\u91c7\u96c6\u4f53\u7cfb\uff08\u51fa\u53e3\u8f6e\u6362/\u6307\u7eb9\u4f2a\u88c5/\u884c\u4e3a\u8282\u6d41/\u591a\u6e90\u964d\u7ea7/OPSEC \u88ab\u52a8\u4f18\u5148\uff09\u3002\u4f7f\u7528\u5f53\u722c\u53d6\u6216\u60c5\u62a5\u91c7\u96c6\u88ab WAF/\u53cd\u722c/\u5e73\u53f0\u98ce\u63a7/GFW \u62e6\u622a\u65f6\uff0c\u6216\u9700\u8981\u9690\u853d\u88ab\u52a8\u4fa6\u5bdf\u3002\u542b curl_cffi \u4f2a\u88c5\u3001Tor/\u4ee3\u7406\u8f6e\u6362\u3001\u6307\u6570\u9000\u907f\u3001Wayback \u964d\u7ea7\u94fe\u811a\u672c\u3002\u8c03\u7528\u524d\u5fc5\u987b\u5148\u7ecf router \u9009\u62e9\u3002"
+  "description": "反拦截情报搜集 — 五层防拦截采集体系（出口轮换/指纹伪装/行为节流/多源降级/OPSEC 被动优先）。使用当爬取或情报采集被 WAF/反爬/平台风控/GFW 拦截时，或需要隐蔽被动侦察。含 curl_cffi 伪装、Tor/代理轮换、指数退避、Wayback 降级链脚本。调用前必须先经 router 选择。",
+  "content_fingerprint": "1eb1d0620a42239a1b6802fd5f44a002ec9b153aed631f4a9fa2ff213dd7fbe3"
 }

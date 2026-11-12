@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ingest inbound webhooks safely for Ottili flows: verify HMAC signatures over the raw body, dedupe by event id with a TTL, preserve per-stream order, respect provider replay windows, route persistent failures to a dead-letter queue, and validate outbound delivery targets against an allow-list to prevent SSRF. Use when an agent must receive, verify or process a webhook payload; when a webhook arrives out of order or twice; or when a webhook handler fails. Not for outbound retry engineering."
+  "description": "Ingest inbound webhooks safely for Ottili flows: verify HMAC signatures over the raw body, dedupe by event id with a TTL, preserve per-stream order, respect provider replay windows, route persistent failures to a dead-letter queue, and validate outbound delivery targets against an allow-list to prevent SSRF. Use when an agent must receive, verify or process a webhook payload; when a webhook arrives out of order or twice; or when a webhook handler fails. Not for outbound retry engineering.",
+  "content_fingerprint": "61c6e69a26c11858a52842090d50aa522dec990d4f5dab8019f15dc779d4dc39"
 }

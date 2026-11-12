@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific syntax and behavior for CREATE USER \u2014 multiple authentication methods chained with OR, IDENTIFIED BY / IDENTIFIED BY PASSWORD / IDENTIFIED VIA|WITH plugin USING|AS 'string'|PASSWORD(...), the default authentication plugin, REQUIRE TLS options, WITH resource-limit options, PASSWORD EXPIRE variants, ACCOUNT LOCK/UNLOCK, OR REPLACE, IF NOT EXISTS, and account-name/host defaulting. Covers CREATE USER only (not GRANT's implicit user-creation path). Use when writing, generating, or reviewing CREATE USER statements that target MariaDB."
+  "description": "MariaDB-specific syntax and behavior for CREATE USER — multiple authentication methods chained with OR, IDENTIFIED BY / IDENTIFIED BY PASSWORD / IDENTIFIED VIA|WITH plugin USING|AS 'string'|PASSWORD(...), the default authentication plugin, REQUIRE TLS options, WITH resource-limit options, PASSWORD EXPIRE variants, ACCOUNT LOCK/UNLOCK, OR REPLACE, IF NOT EXISTS, and account-name/host defaulting. Covers CREATE USER only (not GRANT's implicit user-creation path). Use when writing, generating, or reviewing CREATE USER statements that target MariaDB.",
+  "content_fingerprint": "ab6d210d233901dfb0975cc1699816935a636c80dbb168dd12a3bfd707febcc7"
 }

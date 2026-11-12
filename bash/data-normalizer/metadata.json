@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6570\u503c\u6807\u51c6\u5316\u5de5\u5177\u3002\u8bfb\u53d6JSONL\u6570\u636e\uff0c\u6309\u6307\u5b9a\u5b57\u6bb5\u6267\u884cZ-score\u6216Min-Max\u6807\u51c6\u5316\uff0c\u5e76\u4fdd\u7559\u539f\u59cb\u503c\u4e0e\u53d8\u66f4\u6807\u8bb0\u3002\n\u5f53\u7528\u6237\u63d0\u5230\u6570\u503c\u6807\u51c6\u5316\u3001\u5f52\u4e00\u5316\u3001\u5b57\u6bb5\u89c4\u6574\u3001\u8303\u56f4\u6620\u5c04\u7b49\u9700\u6c42\u65f6\u4f7f\u7528\u6b64skill\u3002\n\u5373\u4f7f\u7528\u6237\u6ca1\u6709\u660e\u786e\u8bf4\u51fa\"data_normalizer\"\uff0c\u53ea\u8981\u4efb\u52a1\u6d89\u53ca\u5bf9\u67d0\u4e2a\u6570\u503c\u5b57\u6bb5\u505a\u6807\u51c6\u5316\u5904\u7406\uff0c\u5c31\u5e94\u8be5\u4f7f\u7528\u6b64skill\u3002\n\u4e0d\u8d1f\u8d23\u56db\u820d\u4e94\u5165/\u5c0f\u6570\u4f4d\u7edf\u4e00\uff08\u89c1DC3_RoundOff\uff09\u3001\u6587\u672c\u6e05\u6d17\u3001\u7c7b\u522b\u7f16\u7801\u6216\u591a\u5b57\u6bb5\u8054\u5408\u7edf\u8ba1\u5206\u6790\u3002"
+  "description": "数值标准化工具。读取JSONL数据，按指定字段执行Z-score或Min-Max标准化，并保留原始值与变更标记。\n当用户提到数值标准化、归一化、字段规整、范围映射等需求时使用此skill。\n即使用户没有明确说出\"data_normalizer\"，只要任务涉及对某个数值字段做标准化处理，就应该使用此skill。\n不负责四舍五入/小数位统一（见DC3_RoundOff）、文本清洗、类别编码或多字段联合统计分析。",
+  "content_fingerprint": "83b90b7c8f780a88f8d9cbe73ac91e688259aa805d171eaa8886c0f3772143f7"
 }

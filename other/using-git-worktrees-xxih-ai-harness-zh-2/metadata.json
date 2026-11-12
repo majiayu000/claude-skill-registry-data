@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u4f60\u5f00\u59cb\u9700\u8981\u9694\u79bb\u5f53\u524d\u5de5\u4f5c\u533a\u7684\u529f\u80fd\u5f00\u53d1\uff0c\u6216\u51c6\u5907\u6267\u884c\u5b9e\u73b0\u8ba1\u5212\u65f6\u4f7f\u7528\uff1b\u5b83\u4f1a\u4f18\u5148\u501f\u52a9\u5e73\u53f0\u539f\u751f\u5de5\u5177\u786e\u4fdd\u5b58\u5728\u9694\u79bb\u5de5\u4f5c\u533a\uff0c\u5fc5\u8981\u65f6\u624d\u9000\u56de\u5230 git worktree"
+  "description": "当你开始需要隔离当前工作区的功能开发，或准备执行实现计划时使用；它会优先借助平台原生工具确保存在隔离工作区，必要时才退回到 git worktree",
+  "content_fingerprint": "8731e69d773c4aa506b09e7bc76790e7fb981257b00a39a8559ad031c20995da"
 }

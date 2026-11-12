@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Full Russian text quality check against the whole corpus. Triggers: \u0432\u044b\u0447\u0438\u0442\u0430\u0439, \u0432\u044b\u0447\u0438\u0442\u0430\u0439 \u0447\u0435\u0440\u0435\u0437 ru-text, \u043f\u0440\u043e\u0433\u043e\u043d\u0438 ru-text, \u043f\u0440\u043e\u0432\u0435\u0440\u044c \u0442\u0435\u043a\u0441\u0442 \u043f\u043e ru-text, ru-check, \u043f\u043e\u043b\u043d\u0430\u044f \u0432\u044b\u0447\u0438\u0442\u043a\u0430. Use when the user asks to proofread Russian text, or when a project gate names ru-text. Returns findings with the rule behind each and a proposed replacement; never edits a file. Self-initiated runs start with a fast triage and escalate on evidence; an explicit request always runs the full corpus."
+  "description": "Full Russian text quality check against the whole corpus. Triggers: вычитай, вычитай через ru-text, прогони ru-text, проверь текст по ru-text, ru-check, полная вычитка. Use when the user asks to proofread Russian text, or when a project gate names ru-text. Returns findings with the rule behind each and a proposed replacement; never edits a file. Self-initiated runs start with a fast triage and escalate on evidence; an explicit request always runs the full corpus.",
+  "content_fingerprint": "240ec340b563f6357545910f7973d5dc69104cffea012b5ee460cb209d72f23e"
 }

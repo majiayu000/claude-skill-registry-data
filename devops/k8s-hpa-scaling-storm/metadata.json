@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/k8s-hpa-scaling-storm/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "934dafe16418ffcc120009ae48428920ebe8e947c6dfa82d7425f7d65a8f93a2",
+  "description": "Fix and prevent HPA (HorizontalPodAutoscaler) scaling storms where pods scale to\nmaxReplicas uncontrollably. Use when: (1) HPA shows memory or CPU utilization at\n200%+ causing rapid scale-up, (2) doze"
 }

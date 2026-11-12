@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Check that V\u1ec9a H\u00e8 Online's server and Unity client agree on message names, payload keys and HTTP routes. Use this skill after changing server/src/rooms/StreetRoom.ts, server/src/index.ts, Network.cs or any _net.Send call, before calling a feature finished, and when the user says \"b\u1ea5m kh\u00f4ng c\u00f3 t\u00e1c d\u1ee5ng\", \"server kh\u00f4ng nh\u1eadn\", \"client kh\u00f4ng nh\u1eadn message\", \"l\u1ec7ch message\" or a button silently does nothing. A wrong name fails silently at runtime, so run the script instead of reading the code by eye."
+  "description": "Check that Vỉa Hè Online's server and Unity client agree on message names, payload keys and HTTP routes. Use this skill after changing server/src/rooms/StreetRoom.ts, server/src/index.ts, Network.cs or any _net.Send call, before calling a feature finished, and when the user says \"bấm không có tác dụng\", \"server không nhận\", \"client không nhận message\", \"lệch message\" or a button silently does nothing. A wrong name fails silently at runtime, so run the script instead of reading the code by eye.",
+  "content_fingerprint": "1dd13eda5c703c7d2fb9626aaf866b548be6a18e772d21192b199254773d5859"
 }

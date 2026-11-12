@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ea4\u4ed8\u95ed\u73af\uff1a\u5f53\u7528\u6237\u663e\u5f0f\u8c03\u7528 `$delivery-loop`\uff0c\u6216\u660e\u786e\u8981\u6c42\u8fdb\u5165\u201c\u4ea4\u4ed8\u95ed\u73af\u201d\u65f6\u4f7f\u7528\u3002 \u9762\u5411\u5df2\u6709 PRD\u3001UI/HTML\u3001\u622a\u56fe\u6216 Product Delivery Package \u4f46\u4ecd\u6709 Review \u7f3a\u53e3\u7684\u573a\u666f\uff0c\u5728\u72ec\u7acb\u8bc4\u5ba1\u4e0e\u5b9a\u70b9\u4fee\u8ba2\u4e4b\u95f4\u6700\u591a\u5faa\u73af\u4e09\u8f6e\uff0c\u76f4\u5230 package_ready \u6216\u8fdb\u5165 Human Gate\uff1b\u4e0d\u7528\u4e8e\u4ece\u6a21\u7cca\u95ee\u9898\u5f00\u59cb\u3002"
+  "description": "交付闭环：当用户显式调用 `$delivery-loop`，或明确要求进入“交付闭环”时使用。 面向已有 PRD、UI/HTML、截图或 Product Delivery Package 但仍有 Review 缺口的场景，在独立评审与定点修订之间最多循环三轮，直到 package_ready 或进入 Human Gate；不用于从模糊问题开始。",
+  "content_fingerprint": "847aaec5d592b08d2a05dae003e6cd4993ccd18a9d7b5dd42442b7f9c1df4bfd"
 }

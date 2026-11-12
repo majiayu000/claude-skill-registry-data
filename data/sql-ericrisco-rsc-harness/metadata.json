@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when writing or reviewing advanced SQL query logic independent of any one engine \u2014 multi-table joins, window functions, CTEs including recursive ones, GROUP BY and GROUPING SETS aggregation, and set operations \u2014 or when a query returns too many rows, too few, or wrong totals. NOT engine internals, indexes or EXPLAIN (that is `postgresdb`), NOT MySQL config (that is `mysql`), NOT OLAP columnar specifics (that is `duckdb`)."
+  "description": "Use when writing or reviewing advanced SQL query logic independent of any one engine — multi-table joins, window functions, CTEs including recursive ones, GROUP BY and GROUPING SETS aggregation, and set operations — or when a query returns too many rows, too few, or wrong totals. NOT engine internals, indexes or EXPLAIN (that is `postgresdb`), NOT MySQL config (that is `mysql`), NOT OLAP columnar specifics (that is `duckdb`).",
+  "content_fingerprint": "841b7938923e4862abd24bc6a00eac998a947ea103330363114786ab82ed32de"
 }

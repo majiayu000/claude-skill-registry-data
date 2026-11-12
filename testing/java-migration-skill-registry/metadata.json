@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Registry of version-scoped migration recipes (jade-recipe-*) and auto-generated migration skills produced by the Skill-Creator agent. Each subdirectory holds versioned skills/recipes for a specific version jump. Recipes here are transform scripts + docs, NOT first-class agent skills \u2014 they are nested below the skills/*/SKILL.md discovery depth and are invoked only by jade-core-rule-dispatcher via recipe-registry.json. Not a command \u2014 background knowledge only."
+  "description": "Registry of version-scoped migration recipes (jade-recipe-*) and auto-generated migration skills produced by the Skill-Creator agent. Each subdirectory holds versioned skills/recipes for a specific version jump. Recipes here are transform scripts + docs, NOT first-class agent skills — they are nested below the skills/*/SKILL.md discovery depth and are invoked only by jade-core-rule-dispatcher via recipe-registry.json. Not a command — background knowledge only.",
+  "content_fingerprint": "5e7800c97f96a1bbc83d64a09560baa72e0601b323c9f7ee74c4ee7f701e1f61"
 }

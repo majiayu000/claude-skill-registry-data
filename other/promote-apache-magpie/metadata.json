@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Emit the backend-shaped promotion command set for a release that has\npassed its vote. Reads the planning issue (must carry `vote-passed`),\nconstructs the staging \u2192 release move for the configured distribution\nbackend, checks PMC membership of the Release Manager, and proposes the\n`promoted` label. Never runs the promotion command itself and never\npublishes the release."
+  "description": "Emit the backend-shaped promotion command set for a release that has\npassed its vote. Reads the planning issue (must carry `vote-passed`),\nconstructs the staging → release move for the configured distribution\nbackend, checks PMC membership of the Release Manager, and proposes the\n`promoted` label. Never runs the promotion command itself and never\npublishes the release.",
+  "content_fingerprint": "ea2738e99484c236576e7856d2d83a959774cd4754cbbdcf31ed5b6c31ce2932"
 }

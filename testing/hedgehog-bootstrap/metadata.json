@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use once, at the start of a new Hedgehog project, to land the core workspace and scaffold whichever add-ons (Auth, Queue, Mobile) planning intake turned on (`.hedgehog/addons.yaml`). Runs when the `bootstrap` agent runs, which `planner` invokes automatically after Confirm & Lock. Scoped to project scaffolding; per-module work runs through the `hedgehog-loop` skill, one step at a time."
+  "description": "Use once, at the start of a new Hedgehog project, to land the core workspace and scaffold whichever add-ons (Auth, Queue, Mobile) planning intake turned on (`.hedgehog/addons.yaml`). Runs when the `bootstrap` agent runs, which `planner` invokes automatically after Confirm & Lock. Scoped to project scaffolding; per-module work runs through the `hedgehog-loop` skill, one step at a time.",
+  "content_fingerprint": "265a489d69703342d5ef900ab4abf459981b3d2fd2052d6930d42b7f4de15701"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc554\ubb35\uc801 \uac00\uc815(null \uc544\ub2d8\u00b7\ubc94\uc704\u00b7\uc0c1\ud0dc)\uc744 Assert/Validate\ub85c \uba85\uc2dc\ud558\uc5ec \uac00\uc815 \uc704\ubc18 \uc2dc \uc989\uc2dc \ubc1c\uacac. \"assertion \ucd94\uac00\", \"\uc804\uc81c \uc870\uac74 \uba85\uc2dc\", \"\uac00\uc815\uc744 \ucf54\ub4dc\ub85c\", \"/introduce-assertion\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \ubc18\ubcf5\ub418\ub294 null \uac80\uc0ac\ub97c \uac1d\uccb4\ub85c \ub300\uccb4\ud558\ub294 \uac83\uc740 /introduce-special-case\uac00 \uc801\ud569. /introduce-assertion [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "암묵적 가정(null 아님·범위·상태)을 Assert/Validate로 명시하여 가정 위반 시 즉시 발견. \"assertion 추가\", \"전제 조건 명시\", \"가정을 코드로\", \"/introduce-assertion\" 요청 시 사용. 단, 반복되는 null 검사를 객체로 대체하는 것은 /introduce-special-case가 적합. /introduce-assertion [commit-ref]로 호출.",
+  "content_fingerprint": "94043654ddf9ed47310620a24423bb72f2d789060db50bc3467bccf040864a59"
 }

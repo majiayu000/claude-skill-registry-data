@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Install Ubuntu Server onto a 2-disk ZFS mirror root (rpool\u2192/) plus a striped data pool (dpool\u2192/data) via debootstrap + ZFSBootMenu, or fall back to a plain single-disk ext4 install (GRUB-EFI) when there aren't two equal-size disks. Use when asked to install Ubuntu on ZFS, build a ZFS mirror root / rpool+dpool layout, set up root-on-ZFS with ZFSBootMenu, or do a scripted Ubuntu Server install on a UEFI x86 server with one or two SSDs/NVMes."
+  "description": "Install Ubuntu Server onto a 2-disk ZFS mirror root (rpool→/) plus a striped data pool (dpool→/data) via debootstrap + ZFSBootMenu, or fall back to a plain single-disk ext4 install (GRUB-EFI) when there aren't two equal-size disks. Use when asked to install Ubuntu on ZFS, build a ZFS mirror root / rpool+dpool layout, set up root-on-ZFS with ZFSBootMenu, or do a scripted Ubuntu Server install on a UEFI x86 server with one or two SSDs/NVMes.",
+  "content_fingerprint": "8838141a5ae24fdc0c42ea7a70ee96557d3a97c67583e230d98063e0f7f2899d"
 }

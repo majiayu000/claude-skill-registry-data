@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the full verification pass on a large change \u2014 clean-room install, complete test suite, lint, packaging check, CLI smoke test, and the project's safety invariants \u2014 then optionally collect any bugs or glitches the user hit. Use this skill whenever a hook reports a push exceeding the large-push line threshold, whenever the user types /verify, and whenever the user asks to verify, validate, sanity-check, or confirm that a big change actually works end to end. Prefer this over running tests ad hoc whenever a change is large enough that a passing test suite alone is not convincing."
+  "description": "Run the full verification pass on a large change — clean-room install, complete test suite, lint, packaging check, CLI smoke test, and the project's safety invariants — then optionally collect any bugs or glitches the user hit. Use this skill whenever a hook reports a push exceeding the large-push line threshold, whenever the user types /verify, and whenever the user asks to verify, validate, sanity-check, or confirm that a big change actually works end to end. Prefer this over running tests ad hoc whenever a change is large enough that a passing test suite alone is not convincing.",
+  "content_fingerprint": "ff65f49664f89a82f215115620d7f92cdeee08d7999ea47ee6f748b4a0e88c90"
 }

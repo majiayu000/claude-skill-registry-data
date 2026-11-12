@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Toolkit for parsing SEC Form 13F-HR quarterly TSV datasets. Loads COVERPAGE/INFOTABLE/SUMMARYPAGE with safe dtypes (CUSIPs as zero-padded strings, VALUE as numeric dollars), fuzzy-matches fund manager names with RapidFuzz, retrieves fund AUM, deduplicates equity holdings (filtering options), compares holdings across quarters, and ranks top holders of a given CUSIP. Use whenever working with /root/2025-qN 13F TSV files."
+  "description": "Toolkit for parsing SEC Form 13F-HR quarterly TSV datasets. Loads COVERPAGE/INFOTABLE/SUMMARYPAGE with safe dtypes (CUSIPs as zero-padded strings, VALUE as numeric dollars), fuzzy-matches fund manager names with RapidFuzz, retrieves fund AUM, deduplicates equity holdings (filtering options), compares holdings across quarters, and ranks top holders of a given CUSIP. Use whenever working with /root/2025-qN 13F TSV files.",
+  "content_fingerprint": "0fea2802a3f14c2d5e155f54c9dbc03f7d68afed788f13d0109d7ec47f40fbb6"
 }

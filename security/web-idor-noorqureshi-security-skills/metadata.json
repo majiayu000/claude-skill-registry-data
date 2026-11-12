@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Insecure Direct Object Reference / broken access control on web objects. Load when a request references an object by id you can change: /account/1234, ?invoice=987, UUIDs in URLs/bodies, \"download\", \"view\", \"edit\" endpoints, numeric or guessable identifiers, or multi-tenant apps. Signals: sequential IDs, object refs in JSON, role/owner not re-checked."
+  "description": "Insecure Direct Object Reference / broken access control on web objects. Load when a request references an object by id you can change: /account/1234, ?invoice=987, UUIDs in URLs/bodies, \"download\", \"view\", \"edit\" endpoints, numeric or guessable identifiers, or multi-tenant apps. Signals: sequential IDs, object refs in JSON, role/owner not re-checked.",
+  "content_fingerprint": "d26cb6090e9bc5e2f1e0d828304661ee1421a674d21cf088b6a3346f7b7d3c9b"
 }

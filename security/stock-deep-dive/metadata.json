@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user asks for an end-to-end orientation on a listed company they don't yet understand, especially when the request combines two or more dimensions in one ask. Triggers on \"X \u662f\u5e72\u4ec0\u4e48\u7684\", \"\u5e2e\u6211\u4e86\u89e3 X\", \"X \u4e3b\u8425 + \u540c\u884c\", \"\u76d8\u524d\u4e3a\u4ec0\u4e48\u6da8\", \"\u672c\u5468\u8d8b\u52bf + \u963b\u529b\u652f\u6491\", \"X \u548c\u5176\u4ed6\u516c\u53f8\u7684\u5173\u7cfb\", \"first time looking at X\", \"full brief on X\". Skip when the user wants only a single lens \u2014 use the targeted Longbridge sub-skill instead."
+  "description": "Use when the user asks for an end-to-end orientation on a listed company they don't yet understand, especially when the request combines two or more dimensions in one ask. Triggers on \"X 是干什么的\", \"帮我了解 X\", \"X 主营 + 同行\", \"盘前为什么涨\", \"本周趋势 + 阻力支撑\", \"X 和其他公司的关系\", \"first time looking at X\", \"full brief on X\". Skip when the user wants only a single lens — use the targeted Longbridge sub-skill instead.",
+  "content_fingerprint": "4a62f578b95eef73b7b56f7c3f48634cc54a8bb61997acd18fa640e08be4941b"
 }

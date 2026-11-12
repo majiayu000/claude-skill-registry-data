@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "AI Agent stack: Hermes Agent (self-improving AI assistant), HolmesGPT (SRE), and OpenClaw (personal AI gateway) routed through in-cluster LiteLLM proxy. Holmes uses GPU-local Ollama primary with OpenRouter cloud fallbacks. OpenRouter fallback chains for all services (free\u2192free2\u2192cheap\u2192paid). Built for ARM64 (Raspberry Pi CM4) using in-cluster kaniko build. Includes Docker registry:2 for storing custom ARM64 images."
+  "description": "AI Agent stack: Hermes Agent (self-improving AI assistant), HolmesGPT (SRE), and OpenClaw (personal AI gateway) routed through in-cluster LiteLLM proxy. Holmes uses GPU-local Ollama primary with OpenRouter cloud fallbacks. OpenRouter fallback chains for all services (free→free2→cheap→paid). Built for ARM64 (Raspberry Pi CM4) using in-cluster kaniko build. Includes Docker registry:2 for storing custom ARM64 images.",
+  "content_fingerprint": "10a20d8a346ecdc2c832675afbc293aa21bf48cc2c8c3948d3e2e1d5396a34ba"
 }

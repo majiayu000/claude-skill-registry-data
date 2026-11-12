@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit and prove fixes for Postgres/Supabase UPDATE-policy holes where a row's identity columns can be rewritten by a legitimate updater \u2014 covers the WITH CHECK cannot see OLD trap, the before-update trigger that actually enforces immutability, and proving the exploit dead by running it inside a rolled-back transaction as a real authenticated role. Use when auditing RLS on any table whose rows grant access to other rows (friendships, memberships, shares, invites)."
+  "description": "Audit and prove fixes for Postgres/Supabase UPDATE-policy holes where a row's identity columns can be rewritten by a legitimate updater — covers the WITH CHECK cannot see OLD trap, the before-update trigger that actually enforces immutability, and proving the exploit dead by running it inside a rolled-back transaction as a real authenticated role. Use when auditing RLS on any table whose rows grant access to other rows (friendships, memberships, shares, invites).",
+  "content_fingerprint": "4e645182f4fc8dfbe46b53097d00bb1a3d46415e9baa79397b54e8c708d36508"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use BEFORE committing and whenever tidying the repo \u2014 removes regenerable build/scan artifacts (dist/, coverage.out, sbom.cdx.json, junit.xml, binaries) and prevents them from being committed. Pairs with the deterministic clean gate in the pre-commit hook."
+  "description": "Use BEFORE committing and whenever tidying the repo — removes regenerable build/scan artifacts (dist/, coverage.out, sbom.cdx.json, junit.xml, binaries) and prevents them from being committed. Pairs with the deterministic clean gate in the pre-commit hook.",
+  "content_fingerprint": "80815c341c649f69a8b4c7ac7d8015abe44ffb2533cc4fddd5172550ce2f5a7a"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build and debug DOCA Flow applications on supported NVIDIA NICs/DPUs: define match/action pipes, initialize ports and representors, choose forwarding targets, validate pipes before hardware programming, read counters, match the Flow version to the installed DOCA release, and diagnose Flow API errors. Trigger on DOCA packet steering, classifier, representor, rule-matching, hairpin, or 5-tuple-to-queue questions even when \"DOCA Flow\" is not named. Route plain DPDK `rte_flow`, kernel TC, OVS, BFB bring-up, and DPU OS installation elsewhere. DPU OS installation is destructive and always requires explicit confirmation."
+  "description": "Build and debug DOCA Flow applications on supported NVIDIA NICs/DPUs: define match/action pipes, initialize ports and representors, choose forwarding targets, validate pipes before hardware programming, read counters, match the Flow version to the installed DOCA release, and diagnose Flow API errors. Trigger on DOCA packet steering, classifier, representor, rule-matching, hairpin, or 5-tuple-to-queue questions even when \"DOCA Flow\" is not named. Route plain DPDK `rte_flow`, kernel TC, OVS, BFB bring-up, and DPU OS installation elsewhere. DPU OS installation is destructive and always requires explicit confirmation.",
+  "content_fingerprint": "80ed6740a1a489751662202164618494ce565a9b7d9527a4fe1be97ae2231e12"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when designing or auditing a backup-and-restore program that must survive a real disaster: setting defensible RPO/RTO targets, laying out 3-2-1-1-0 copies that are offsite and immutable, wiring point-in-time recovery, and proving restores work on a schedule. NOT tuning Postgres internals or writing the archive_command (that is `postgresdb`)."
+  "description": "Use when designing or auditing a backup-and-restore program that must survive a real disaster: setting defensible RPO/RTO targets, laying out 3-2-1-1-0 copies that are offsite and immutable, wiring point-in-time recovery, and proving restores work on a schedule. NOT tuning Postgres internals or writing the archive_command (that is `postgresdb`).",
+  "content_fingerprint": "27a6256250abcff90e7190d00f34bee113e31efd90b20cc90ecb268fd9746f45"
 }

@@ -1,6 +1,6 @@
 {
   "name": "full-alert-triage",
-  "description": "",
+  "description": "Complete Tier 1 triage workflow. Orchestrates the full alert triage process: check-duplicates, triage-alert, enrich-ioc for each entity, and either close (FP/BTP) or escalate (TP/Suspicious). Use for ",
   "repo": "dandye/ai-runbooks",
   "category": "security",
   "tags": [],
@@ -16,5 +16,6 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dandye/ai-runbooks/blob/main/skills/_workflows/full-alert-triage/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "59c2e2ce9f9764b290a53a1d162c27b90f8794df346fd0cdf51ddc17696b0650"
 }

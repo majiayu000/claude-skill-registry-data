@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Builds a unified release-readiness gate that aggregates verdicts from any combination of k6 / JMeter / Gatling / Locust load runners and Lighthouse CI Web Vitals, applies severity-aware pass/fail thresholds, and emits a single go / no-go decision with per-metric deltas vs the main-branch baseline. Posts the delta as a PR comment when the team has the integration set up. Use when authoring a CI step that gates a deployment on cross-runner perf compatibility."
+  "description": "Builds a unified release-readiness gate that aggregates verdicts from any combination of k6 / JMeter / Gatling / Locust load runners and Lighthouse CI Web Vitals, applies severity-aware pass/fail thresholds, and emits a single go / no-go decision with per-metric deltas vs the main-branch baseline. Posts the delta as a PR comment when the team has the integration set up. Use when authoring a CI step that gates a deployment on cross-runner perf compatibility.",
+  "content_fingerprint": "fd8700106013f853834ea1e18a8ddb2bac3213bc87c11558ac2683f4ac5b47dc"
 }

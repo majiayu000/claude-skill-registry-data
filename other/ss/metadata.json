@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Load screenshots, shared files, or directories from the Dropbox screenshots directory \u2014 the shorthand for '/db screenshots/'. Use when the user invokes /ss, including inline forms like '/ss webdaw/ use its docs'. NEVER manually list/read files from the screenshots dir \u2014 this skill handles Dropbox sync delays, freshness checks and retry logic that manual reads miss. Supports: /ss (latest 1), /ss 2 or /ss latest3 (latest N), /ss filename.png (exact or substring), /ss dirname/, /ss full-path, /ss a.png b.png (multiple), and non-image files (/ss report.html)."
+  "description": "Load screenshots, shared files, or directories from the Dropbox screenshots directory — the shorthand for '/db screenshots/'. Use when the user invokes /ss, including inline forms like '/ss webdaw/ use its docs'. NEVER manually list/read files from the screenshots dir — this skill handles Dropbox sync delays, freshness checks and retry logic that manual reads miss. Supports: /ss (latest 1), /ss 2 or /ss latest3 (latest N), /ss filename.png (exact or substring), /ss dirname/, /ss full-path, /ss a.png b.png (multiple), and non-image files (/ss report.html).",
+  "content_fingerprint": "4670caa1f81a3d81696215d4316d5c389399e03f7762dc4be46f7ca610c5c3d7"
 }

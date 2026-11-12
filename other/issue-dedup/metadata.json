@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Before creating a GitHub issue or epic, search for an existing related one and force a reuse / replace / new decision \u2014 so the issue-first flow can't silently mint a duplicate. The create-time half of the dedup gate (the pickup-time half is /issue-sanity-check). Use whenever you're about to open an issue/epic, or run /issue-dedup. Backed by a hard PreToolUse hook on issue_write create."
+  "description": "Before creating a GitHub issue or epic, search for an existing related one and force a reuse / replace / new decision — so the issue-first flow can't silently mint a duplicate. The create-time half of the dedup gate (the pickup-time half is /issue-sanity-check). Use whenever you're about to open an issue/epic, or run /issue-dedup. Backed by a hard PreToolUse hook on issue_write create.",
+  "content_fingerprint": "ded6ef6a06ff76be19abe7ae88e83cf78f436d874290e9fb58ad7315e440fb28"
 }

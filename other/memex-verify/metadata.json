@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the local pre-commit gate for the memex repo before staging a commit: format check, clippy with warnings denied, and the workspace unit-test suite, mirroring memex's own CI. Use right before `commit-changes` on a memex working tree, after editing any Rust crate under `crates/`, or when reproducing a red CI run locally. Optionally runs the Postgres-gated integration suite when the `memex-pg` container is up and `.env` is sourced. This is a verification gate, NOT a replacement for memex CI \u2014 CI remains the authority; this catches failures earlier."
+  "description": "Run the local pre-commit gate for the memex repo before staging a commit: format check, clippy with warnings denied, and the workspace unit-test suite, mirroring memex's own CI. Use right before `commit-changes` on a memex working tree, after editing any Rust crate under `crates/`, or when reproducing a red CI run locally. Optionally runs the Postgres-gated integration suite when the `memex-pg` container is up and `.env` is sourced. This is a verification gate, NOT a replacement for memex CI — CI remains the authority; this catches failures earlier.",
+  "content_fingerprint": "71aa9f156700233a0d2e7810fe43f56c8b22ae1d5473eb82688058f09068f7ec"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Send an IFTTT mobile push \"codex rate limit detected\" when an OpenAI Codex CLI run hits a rate/usage limit. The companion codex skills (/codex-review, /codex-2nd) fire this automatically via codex-rate-limit.js. Invoke manually whenever a codex run that BYPASSES that path \u2014 /codex-imagegen, /codex:codex-rescue, or an ad-hoc `codex exec` \u2014 shows \"you've hit your limit\", \"rate limit\", \"usage limit\", \"too many requests\", \"quota exceeded\", \"429\", or a reset time, even if the flow otherwise stays silent. Also use to test the notification."
+  "description": "Send an IFTTT mobile push \"codex rate limit detected\" when an OpenAI Codex CLI run hits a rate/usage limit. The companion codex skills (/codex-review, /codex-2nd) fire this automatically via codex-rate-limit.js. Invoke manually whenever a codex run that BYPASSES that path — /codex-imagegen, /codex:codex-rescue, or an ad-hoc `codex exec` — shows \"you've hit your limit\", \"rate limit\", \"usage limit\", \"too many requests\", \"quota exceeded\", \"429\", or a reset time, even if the flow otherwise stays silent. Also use to test the notification.",
+  "content_fingerprint": "f85d02460a3743be9acc43663b2e287034327395090ba93bf9a7519d72f4d2ed"
 }

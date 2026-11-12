@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when an integration or unit test mutates module-level state that outlives it, such as `await import('@/\u2026')` for a side effect, a `bind*` or `set` call on an `export default new \u2026` singleton, or an assignment to `process.env`, and the file has an ordering dependency \u2014 adding a case breaks a previously green sibling, an assertion passes only in one run order, or a test comment claims a precedence that nothing in the file pins."
+  "description": "Use when an integration or unit test mutates module-level state that outlives it, such as `await import('@/…')` for a side effect, a `bind*` or `set` call on an `export default new …` singleton, or an assignment to `process.env`, and the file has an ordering dependency — adding a case breaks a previously green sibling, an assertion passes only in one run order, or a test comment claims a precedence that nothing in the file pins.",
+  "content_fingerprint": "ff97bc5c39097a3c3b2cef05d751464894bfc89133c816cb22c5714df2fc5945"
 }

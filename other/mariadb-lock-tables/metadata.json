@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB explicit table locking (LOCK TABLES / UNLOCK TABLES: READ, READ LOCAL, WRITE, LOW_PRIORITY WRITE, WRITE CONCURRENT, WAIT n/NOWAIT) and the named user-level lock functions GET_LOCK, RELEASE_LOCK, RELEASE_ALL_LOCKS, IS_FREE_LOCK, IS_USED_LOCK \u2014 including the alias-matching trap, the implicit-commit interaction with transactions, and multi-lock-per-connection semantics since 10.0.2. Use when writing or reviewing code that takes explicit table locks, implements application-level mutexes/advisory locks, or debugs 'was not locked with LOCK TABLES' / lock-wait-timeout errors."
+  "description": "MariaDB explicit table locking (LOCK TABLES / UNLOCK TABLES: READ, READ LOCAL, WRITE, LOW_PRIORITY WRITE, WRITE CONCURRENT, WAIT n/NOWAIT) and the named user-level lock functions GET_LOCK, RELEASE_LOCK, RELEASE_ALL_LOCKS, IS_FREE_LOCK, IS_USED_LOCK — including the alias-matching trap, the implicit-commit interaction with transactions, and multi-lock-per-connection semantics since 10.0.2. Use when writing or reviewing code that takes explicit table locks, implements application-level mutexes/advisory locks, or debugs 'was not locked with LOCK TABLES' / lock-wait-timeout errors.",
+  "content_fingerprint": "f7e13d0facb9404e03f81914559e78d66b41e65ab05a2b98a37ba3f2781910a9"
 }

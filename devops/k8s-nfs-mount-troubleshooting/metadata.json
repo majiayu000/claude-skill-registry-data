@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/k8s-nfs-mount-troubleshooting/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "b30db2686844ae944751f55136b3d30f716e8f3c81c754b8c72948b918110968",
+  "description": "Debug Kubernetes NFS volume mount failures. Use when: (1) Pod stuck in ContainerCreating\nfor extended time, (2) kubectl describe shows \"MountVolume.SetUp failed\" with NFS errors,\n(3) Error message sho"
 }

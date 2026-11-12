@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Render WordPress admin notices via the four core hooks (`admin_notices`, `network_admin_notices`, `user_admin_notices`, `all_admin_notices`) and the 6.4+ `wp_admin_notice()` / `wp_get_admin_notice()` helpers. Covers the four severity classes (`notice-error/-warning/-info/-success`), `is-dismissible`, per-user persisted dismissal via `user_meta` + REST endpoint, screen targeting via `get_current_screen()`, transient-backed flash notices after redirects, and the `wp_admin_notice_args` / `wp_admin_notice_markup` filters. Use for onboarding banners, post-save flashes, integration warnings, version-bump tours, or config nags."
+  "description": "Render WordPress admin notices via the four core hooks (`admin_notices`, `network_admin_notices`, `user_admin_notices`, `all_admin_notices`) and the 6.4+ `wp_admin_notice()` / `wp_get_admin_notice()` helpers. Covers the four severity classes (`notice-error/-warning/-info/-success`), `is-dismissible`, per-user persisted dismissal via `user_meta` + REST endpoint, screen targeting via `get_current_screen()`, transient-backed flash notices after redirects, and the `wp_admin_notice_args` / `wp_admin_notice_markup` filters. Use for onboarding banners, post-save flashes, integration warnings, version-bump tours, or config nags.",
+  "content_fingerprint": "4a2b2b9f22471e42826c5f12848d93ee218240aeddc2a34dfbd8555e539b49c1"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaegulgaegul/gaegulzip/blob/main/.claude/skills/plan-review/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d530b1cac250aabd3ddbbcabb1a8b8e286cee56b55fe434dcee0bceb10d65593",
+  "description": "설계/코드의 체계적 리뷰를 수행합니다.\nPDCA 두 시점에서 사용:\n- Design → Do 사이: brief.md 기반 설계 리뷰 (Architecture + Test 전략)\n- Analyze 단계: 실제 코드 기반 코드 리뷰 (Code Quality + Tests + Performance)\n\nBIG CHANGE (섹션당 최대 4이슈) / SMALL CH"
 }

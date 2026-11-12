@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Designs multiscale chunking for RAG by embedding small units for retrieval precision and returning larger context for synthesis. Use when fixed-size chunks either lose surrounding context or dilute relevance in long documents, manuals, filings, or codebases. Covers sentence-window and parent-child or auto-merging strategies, base chunk sizing, and evaluation. Do not use when a single chunk scale already meets retrieval and generation needs."
+  "description": "Designs multiscale chunking for RAG by embedding small units for retrieval precision and returning larger context for synthesis. Use when fixed-size chunks either lose surrounding context or dilute relevance in long documents, manuals, filings, or codebases. Covers sentence-window and parent-child or auto-merging strategies, base chunk sizing, and evaluation. Do not use when a single chunk scale already meets retrieval and generation needs.",
+  "content_fingerprint": "b6a79ea2dcf966d5ec652e265e275ad69785f4e4ce758d74b50c68f337317e6d"
 }

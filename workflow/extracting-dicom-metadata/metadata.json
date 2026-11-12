@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reads DICOM file headers and DICOM-SR (Structured Report) content to pull study/series metadata and embedded report text, and flags PHI carried in header tags. Use before OpenMed processing when ingesting imaging data (CT/MR/CR/US, radiology SR) and you need the report narrative de-identified and analyzed, plus a list of header tags that must be scrubbed. Hand SR/report text to openmed.deidentify and openmed.analyze_text; use pydicom to read tags. Trigger keywords: DICOM, pydicom, DICOM-SR, structured report, PatientName, study metadata, PACS, radiology report, PS3."
+  "description": "Reads DICOM file headers and DICOM-SR (Structured Report) content to pull study/series metadata and embedded report text, and flags PHI carried in header tags. Use before OpenMed processing when ingesting imaging data (CT/MR/CR/US, radiology SR) and you need the report narrative de-identified and analyzed, plus a list of header tags that must be scrubbed. Hand SR/report text to openmed.deidentify and openmed.analyze_text; use pydicom to read tags. Trigger keywords: DICOM, pydicom, DICOM-SR, structured report, PatientName, study metadata, PACS, radiology report, PS3.",
+  "content_fingerprint": "12d93017efe013ec6858478c77b19c0179d70cc9befbd6d463bf15086914d7ff"
 }

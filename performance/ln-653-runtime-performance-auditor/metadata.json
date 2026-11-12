@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/levnikolaevich/claude-code-skills/blob/master/ln-653-runtime-performance-auditor/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "b5780d7d5a54d9afe7368e433a9417c52dd284b3bd4033c10b193c34c069bc2f",
+  "description": "Checks blocking IO in async, unnecessary allocations, sync sleep, string concat in loops, redundant copies. Use when auditing runtime performance."
 }

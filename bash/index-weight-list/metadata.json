@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5206\u9875\u67e5\u8be2\u6307\u6570\u6210\u4efd\u6743\u91cd\u660e\u7ec6\uff08market.ft.tech\uff09\u3002\u5fc5\u586b index_code\uff1b\u53ef\u9009 date\u3001\u5206\u9875\u3002\u6bcf\u6761\u542b\u6210\u4efd\u4ee3\u7801\u3001\u540d\u79f0\u3001\u6743\u91cd\u53ca\u8be5\u671f url_hash\u3002\u7528\u6237\u95ee\u6307\u6570\u6210\u4efd\u6743\u91cd\u3001\u6caa\u6df1300 \u6743\u91cd\u5217\u8868\u3001\u67d0\u671f\u6307\u6570\u6743\u91cd\u660e\u7ec6\u3001\u6307\u6570\u6210\u4efd\u80a1\u5360\u6bd4\u65f6\u4f7f\u7528\u3002\u524d\u7f6e\uff1a\u53ef\u5148\u7528 index-weight-summary \u786e\u8ba4\u6709\u54ea\u4e9b\u671f\u6570/\u65e5\u671f\u3002\u4e0b\u6e38\uff1a\u53d6\u5230 url_hash \u540e\u53ef\u8c03 index-weight-download \u4e0b\u8f7d xlsx\u3002"
+  "description": "分页查询指数成份权重明细（market.ft.tech）。必填 index_code；可选 date、分页。每条含成份代码、名称、权重及该期 url_hash。用户问指数成份权重、沪深300 权重列表、某期指数权重明细、指数成份股占比时使用。前置：可先用 index-weight-summary 确认有哪些期数/日期。下游：取到 url_hash 后可调 index-weight-download 下载 xlsx。",
+  "content_fingerprint": "74d0422c8ba40c1ef5bbfb94f73ea10b4bc056c7c50ce782ae96176c1926b0d7"
 }

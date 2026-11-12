@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Discover every `register_rest_route()` call in a WordPress plugin and fuzz-test each endpoint with malformed payloads, missing auth, oversized requests, type-juggling attacks, and SQLi/XSS injection vectors. Catches REST endpoint vulns most plugins ship. Use when the user says \"REST API fuzzer\", \"fuzz endpoints\", \"REST security\", \"test REST permissions\", or after adding any new `register_rest_route` call."
+  "description": "Discover every `register_rest_route()` call in a WordPress plugin and fuzz-test each endpoint with malformed payloads, missing auth, oversized requests, type-juggling attacks, and SQLi/XSS injection vectors. Catches REST endpoint vulns most plugins ship. Use when the user says \"REST API fuzzer\", \"fuzz endpoints\", \"REST security\", \"test REST permissions\", or after adding any new `register_rest_route` call.",
+  "content_fingerprint": "f7cd30567bd5566c77219b4b391f86df6d75bf5321f1a266d605b1c4ec71e31d"
 }

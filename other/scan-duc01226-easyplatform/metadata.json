@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "[Documentation] Use when scanning the codebase to (re)generate ONE project-reference doc. Parameterized by `--target=<key>`: project-structure | backend-patterns | frontend-patterns | scss-styling | design-system | code-review-rules | domain-entities | feature-spec | docs-index | e2e-tests | integration-tests | seed-test-data | ui-system. Shared 4-phase scan engine; per-target detail lives in references/targets.md. `ui-system` is an orchestrator meta-target (`kind: orchestrator`) that runs the 3 UI child scans in parallel instead of the 4-phase engine."
+  "description": "[Documentation] Use when scanning the codebase to (re)generate ONE project-reference doc. Parameterized by `--target=<key>`: project-structure | backend-patterns | frontend-patterns | scss-styling | design-system | code-review-rules | domain-entities | feature-spec | docs-index | e2e-tests | integration-tests | seed-test-data | ui-system. Shared 4-phase scan engine; per-target detail lives in references/targets.md. `ui-system` is an orchestrator meta-target (`kind: orchestrator`) that runs the 3 UI child scans in parallel instead of the 4-phase engine.",
+  "content_fingerprint": "2eb6f912d5e45e76b7dc8780c352e5afb345097c646f5b22e18171a75f402ad6"
 }

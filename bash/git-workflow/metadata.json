@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "End-user Git and GitHub workflow orchestration for the user's own repositories.\nUse when the user wants feature branches, commits, pull requests, PR review, merge, tags, or GitHub releases\n(\"create a PR\", \"merge PR #42\", \"ship v1.2.0\", \"review this pull request\").\nUses workspace git + GitHub CLI (gh). Optional GitHub MCP can supplement but is not required.\nNot for LibrAgent product releases or internal repo maintenance.\nTriggers on: \"PR \ub9cc\ub4e4\uc5b4\uc918\", \"\ube0c\ub79c\uce58 \ud30c\uc11c\", \"PR \uba38\uc9c0\", \"\ub9b4\ub9ac\uc988 \ud0dc\uadf8\", \"create pull request\", \"merge PR\"."
+  "description": "End-user Git and GitHub workflow orchestration for the user's own repositories.\nUse when the user wants feature branches, commits, pull requests, PR review, merge, tags, or GitHub releases\n(\"create a PR\", \"merge PR #42\", \"ship v1.2.0\", \"review this pull request\").\nUses workspace git + GitHub CLI (gh). Optional GitHub MCP can supplement but is not required.\nNot for LibrAgent product releases or internal repo maintenance.\nTriggers on: \"PR 만들어줘\", \"브랜치 파서\", \"PR 머지\", \"릴리즈 태그\", \"create pull request\", \"merge PR\".",
+  "content_fingerprint": "5b9b83a2e2a26e31a1615e78562bd691256985696525ccce48a9c515910e1f91"
 }

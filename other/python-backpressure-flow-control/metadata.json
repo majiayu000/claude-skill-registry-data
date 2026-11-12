@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when designing fan-out methods that publish downstream, reviewing unbounded list/queue buffers, sizing producer/consumer pipelines for a throughput target, or debugging OOM under production load. Covers asyncio.BoundedSemaphore inflight caps, bounded asyncio.Queue(maxsize=N) with block-vs-drop submit shapes, drop-newest / drop-oldest / block strategy selection, worker pools with task_done pairing, BackpressureError surfacing, and queue-depth + drop-count OTel signals. Triggers: asyncio.Semaphore, asyncio.BoundedSemaphore, asyncio.Queue, maxsize, drop, block, put_nowait, QueueFull, inflight, backpressure."
+  "description": "Use this when designing fan-out methods that publish downstream, reviewing unbounded list/queue buffers, sizing producer/consumer pipelines for a throughput target, or debugging OOM under production load. Covers asyncio.BoundedSemaphore inflight caps, bounded asyncio.Queue(maxsize=N) with block-vs-drop submit shapes, drop-newest / drop-oldest / block strategy selection, worker pools with task_done pairing, BackpressureError surfacing, and queue-depth + drop-count OTel signals. Triggers: asyncio.Semaphore, asyncio.BoundedSemaphore, asyncio.Queue, maxsize, drop, block, put_nowait, QueueFull, inflight, backpressure.",
+  "content_fingerprint": "4adf94cf40ed9e593f7f8982cf8cfd4c668de9db1de8b49045544f28ea05ecc5"
 }

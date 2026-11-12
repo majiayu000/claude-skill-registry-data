@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Local File Inclusion / path traversal \u2192 read files, sometimes RCE. Load when a param names a file/path/template/page: ?file=, ?page=, ?template=, ?download=, ?lang=, or path segments. Signals: filenames in params, \"include\", download endpoints, `../` filtered, `.php?page=`."
+  "description": "Local File Inclusion / path traversal → read files, sometimes RCE. Load when a param names a file/path/template/page: ?file=, ?page=, ?template=, ?download=, ?lang=, or path segments. Signals: filenames in params, \"include\", download endpoints, `../` filtered, `.php?page=`.",
+  "content_fingerprint": "ac72e596f5456fe4b9057a1dbd63aad97834aaee1a977ea3535e06552fb56f62"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Integrate a draft PR to ready for review \u2014 use the checker-driven clean-run fast path or dispatch the integrator agent to drive CI settlement and one current-head Codex cloud-review cycle, poll incoming bot/human reviews, adjudicate findings as hypotheses (verify, fix only what's confirmed, explain rejections in per-thread replies), push, and re-dispatch, under the resolved integration and remediation caps (from .devflow.toml's review policy). Use when a draft PR exists and the dev loop calls for integrating it to ready-for-review. Invoke as /integrate [PR # or URL]."
+  "description": "Integrate a draft PR to ready for review — use the checker-driven clean-run fast path or dispatch the integrator agent to drive CI settlement and one current-head Codex cloud-review cycle, poll incoming bot/human reviews, adjudicate findings as hypotheses (verify, fix only what's confirmed, explain rejections in per-thread replies), push, and re-dispatch, under the resolved integration and remediation caps (from .devflow.toml's review policy). Use when a draft PR exists and the dev loop calls for integrating it to ready-for-review. Invoke as /integrate [PR # or URL].",
+  "content_fingerprint": "188a4d18ac0d3245a03df039c6d7c8da43784ebb34dfeef98aeef955bb78cc72"
 }

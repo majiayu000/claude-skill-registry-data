@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `contract-design` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage contract-design --single`: the engine emits one run-stage directive for contract-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `contract-design` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage contract-design --single`: the engine emits one run-stage directive for contract-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "73fe5f933f934d80c2ca57f6badee74c7c2e395ba6cfba50924bbf656211b7c8"
 }

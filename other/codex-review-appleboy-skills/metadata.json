@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs a single Codex (ChatGPT/OpenAI) review check-fix cycle on a PR using gh CLI. Use this skill whenever the user wants to: check and fix Codex review comments, request a Codex code review on a PR, or iterate on PR feedback from the chatgpt-codex-connector bot. Trigger on phrases like 'codex review', '@codex review', 'fix codex comments', 'iterate on PR', 're-review with codex', or when the user mentions 'gh pr' with 'codex'. Combine with /loop for automated repeated cycles, e.g. '/loop 2m /codex-review'."
+  "description": "Runs a single Codex (ChatGPT/OpenAI) review check-fix cycle on a PR using gh CLI. Use this skill whenever the user wants to: check and fix Codex review comments, request a Codex code review on a PR, or iterate on PR feedback from the chatgpt-codex-connector bot. Trigger on phrases like 'codex review', '@codex review', 'fix codex comments', 'iterate on PR', 're-review with codex', or when the user mentions 'gh pr' with 'codex'. Combine with /loop for automated repeated cycles, e.g. '/loop 2m /codex-review'.",
+  "content_fingerprint": "5fd5114f7a72aa5c06e42b617b4e170c2d0179d5fdf14d036dc0b44126da8c74"
 }

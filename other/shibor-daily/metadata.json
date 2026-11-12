@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2SHIBOR\u65e5\u5ea6\u5229\u7387\u3002\u63a5\u53e3\uff1aGET /api/v1/market/data/shibor-daily\u3002\u6240\u6709\u8bf7\u6c42\u5fc5\u987b\u8bbe\u7f6e FTSHARE_API_KEY\u3002"
+  "description": "查询SHIBOR日度利率。接口：GET /api/v1/market/data/shibor-daily。所有请求必须设置 FTSHARE_API_KEY。",
+  "content_fingerprint": "538cd5b558152b0b43fd9d9fa066127e458c25aa23999b4194b29f09b57cce8d"
 }

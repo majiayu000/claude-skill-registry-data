@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Open redirect \u2014 abuse a redirect param to send users to attacker sites, and chain it (OAuth token theft, SSRF filter bypass, phishing). Load on params like redirect=, next=, url=, return=, callback=, dest=, or a 30x Location built from input. Signals: `?returnUrl=`, login redirects, OAuth `redirect_uri`."
+  "description": "Open redirect — abuse a redirect param to send users to attacker sites, and chain it (OAuth token theft, SSRF filter bypass, phishing). Load on params like redirect=, next=, url=, return=, callback=, dest=, or a 30x Location built from input. Signals: `?returnUrl=`, login redirects, OAuth `redirect_uri`.",
+  "content_fingerprint": "d88787592dbf21f9628af63e1b052aab8adae33dad186b71fb8eda894347d0d7"
 }

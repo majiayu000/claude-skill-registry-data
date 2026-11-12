@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Java 11 removed the java.corba module (JEP 320): org.omg.* classes no longer exist in the JDK. This recipe retrofits a standalone GlassFish CORBA implementation (omgapi + orb + transitive jars) into lib/corba/ and wires it into the Ant compile classpath so FIPA/* and jade.mtp.iiop/* compile and run on JDK 11. Idempotent. Removes JADE-FLAG:CORBA_REMOVAL markers. Invoked by jade-core-rule-dispatcher."
+  "description": "Java 11 removed the java.corba module (JEP 320): org.omg.* classes no longer exist in the JDK. This recipe retrofits a standalone GlassFish CORBA implementation (omgapi + orb + transitive jars) into lib/corba/ and wires it into the Ant compile classpath so FIPA/* and jade.mtp.iiop/* compile and run on JDK 11. Idempotent. Removes JADE-FLAG:CORBA_REMOVAL markers. Invoked by jade-core-rule-dispatcher.",
+  "content_fingerprint": "e13945c39ace8a3674b6eebaa4172d54ef870db7c9af6bd920cd65a43b611328"
 }

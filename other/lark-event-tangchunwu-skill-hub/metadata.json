@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u98de\u4e66\u4e8b\u4ef6\u8ba2\u9605\uff1a\u901a\u8fc7 WebSocket \u957f\u8fde\u63a5\u5b9e\u65f6\u76d1\u542c\u98de\u4e66\u4e8b\u4ef6\uff08\u6d88\u606f\u3001\u901a\u8baf\u5f55\u53d8\u66f4\u3001\u65e5\u5386\u53d8\u66f4\u7b49\uff09\uff0c\u8f93\u51fa NDJSON \u5230 stdout\uff0c\u652f\u6301 compact Agent \u53cb\u597d\u683c\u5f0f\u3001\u6b63\u5219\u8def\u7531\u3001\u6587\u4ef6\u8f93\u51fa\u3002\u5f53\u7528\u6237\u9700\u8981\u5b9e\u65f6\u76d1\u542c\u98de\u4e66\u4e8b\u4ef6\u3001\u6784\u5efa\u4e8b\u4ef6\u9a71\u52a8\u7ba1\u9053\u65f6\u4f7f\u7528\u3002"
+  "description": "飞书事件订阅：通过 WebSocket 长连接实时监听飞书事件（消息、通讯录变更、日历变更等），输出 NDJSON 到 stdout，支持 compact Agent 友好格式、正则路由、文件输出。当用户需要实时监听飞书事件、构建事件驱动管道时使用。",
+  "content_fingerprint": "129e0bf6042182d44dd00851113c24005c82dbfed487831310eada321f3b451b"
 }

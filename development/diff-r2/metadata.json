@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u30ed\u30fc\u30ab\u30eb `content/site/` \u3068 Cloudflare R2 \u30d0\u30b1\u30c3\u30c8 `doboku-note`\uff08prefix `posts/`\uff09\u306e \u5dee\u5206\u3092\u53cc\u65b9\u5411\u3067\u30ec\u30dd\u30fc\u30c8\u3059\u308b\u3002Use when user asks to [r2\u306e\u5dee\u5206, r2\u3068\u30ed\u30fc\u30ab\u30eb\u306e\u6bd4\u8f03, diff r2, r2 \u540c\u671f\u78ba\u8a8d]."
+  "description": "ローカル `content/site/` と Cloudflare R2 バケット `doboku-note`（prefix `posts/`）の 差分を双方向でレポートする。Use when user asks to [r2の差分, r2とローカルの比較, diff r2, r2 同期確認].",
+  "content_fingerprint": "9df24f090bf08b73cf9e88b48933ed616a8c203f1719bd684638954bb80994b8"
 }

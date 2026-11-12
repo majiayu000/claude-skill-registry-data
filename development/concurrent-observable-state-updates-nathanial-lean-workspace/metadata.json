@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/nathanial/lean-workspace/blob/main/.claude/skills/concurrent-observable-state-updates/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "60da5d1fd2967039a0efec210093751176b796e4e070d8106b845fe162ea35e4",
+  "description": "Pattern for updating observable state from multiple concurrent threads while preserving\nevent delivery. Use when: (1) multiple threads update shared state and publish to\nobservables/dynamics, (2) even"
 }

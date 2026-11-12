@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Orchestrates the Linux Standard Operating Environment domain roles across ansible/configure_rhel.yml (general host baseline) and the purpose-built playbooks (connect_linux.yml, load_balancer_setup.yml, nfs_client_setup.yml, nfs_server_setup.yml, update_rhel.yml) to audit or remediate a RHEL-family host, and summarizes the results. Use when asked to check, audit, or bring a system into compliance with \"the SOE\" or \"the standard operating environment\" as a whole, rather than a single domain."
+  "description": "Orchestrates the Linux Standard Operating Environment domain roles across ansible/configure_rhel.yml (general host baseline) and the purpose-built playbooks (connect_linux.yml, load_balancer_setup.yml, nfs_client_setup.yml, nfs_server_setup.yml, update_rhel.yml) to audit or remediate a RHEL-family host, and summarizes the results. Use when asked to check, audit, or bring a system into compliance with \"the SOE\" or \"the standard operating environment\" as a whole, rather than a single domain.",
+  "content_fingerprint": "eaddcc0307920de9cf65296c3cfe44a3e4e3c7470bc1102f04623aea07142047"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4f7f\u7528 CodexBar CLI \u672c\u5730\u6210\u672c\u4f7f\u7528\u60c5\u51b5\u6765\u6c47\u603b Codex \u6216 Claude \u7684\u6309\u6a21\u578b\u4f7f\u7528\u60c5\u51b5\uff0c\u5305\u62ec\u5f53\u524d\uff08\u6700\u65b0\uff09\u6a21\u578b\u6216\u5b8c\u6574\u7684\u6a21\u578b\u7ec6\u5206\u3002\u5f53\u88ab\u8981\u6c42\u63d0\u4f9b codexbar \u7684\u6a21\u578b\u7ea7\u522b\u4f7f\u7528/\u6210\u672c\u6570\u636e\uff0c\u6216\u9700\u8981\u4ece codexbar cost JSON \u83b7\u53d6\u53ef\u811a\u672c\u5316\u7684\u6309\u6a21\u578b\u6458\u8981\u65f6\u89e6\u53d1\u3002"
+  "description": "使用 CodexBar CLI 本地成本使用情况来汇总 Codex 或 Claude 的按模型使用情况，包括当前（最新）模型或完整的模型细分。当被要求提供 codexbar 的模型级别使用/成本数据，或需要从 codexbar cost JSON 获取可脚本化的按模型摘要时触发。",
+  "content_fingerprint": "58d833e158db234526977a51cef460b626ee4a885930ce29d6f33c65519741ba"
 }

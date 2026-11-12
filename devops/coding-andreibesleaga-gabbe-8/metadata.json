@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/andreibesleaga/GABBE/blob/main/agents/skills/coding/ci-autofix.skill.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "e99d117bed6f42c497958520d904060b54ed08fa21fc1e64ce56ca5a9576a38f",
+  "description": "Autonomous CI/CD Remediation. Parses failure logs from GitHub Actions/GitLab CI, identifies the root cause (Lint, Type Error, Test Failure), and attempts to generate and commit a fix."
 }

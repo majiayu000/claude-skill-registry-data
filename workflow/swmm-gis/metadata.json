@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "GIS/DEM preprocessing for SWMM experiments using the user's own QGIS/GRASS layers. Use when the user asks to (1) delineate subcatchments through QGIS/GRASS (standard or entropy-guided), (2) preprocess QGIS-derived subcatchment polygons into builder-ready CSV, (3) identify high-entropy hotspot subcatchments, or (4) expose QGIS/GRASS-backed preprocessing as MCP tools for reproducible workflows. For bbox-only inputs WITHOUT real pipe data, use `swmm-anywhere` instead (it synthesises a plausible network from OSM streets + DEM)."
+  "description": "GIS/DEM preprocessing for SWMM experiments using the user's own QGIS/GRASS layers. Use when the user asks to (1) delineate subcatchments through QGIS/GRASS (standard or entropy-guided), (2) preprocess QGIS-derived subcatchment polygons into builder-ready CSV, (3) identify high-entropy hotspot subcatchments, or (4) expose QGIS/GRASS-backed preprocessing as MCP tools for reproducible workflows. For bbox-only inputs WITHOUT real pipe data, use `swmm-anywhere` instead (it synthesises a plausible network from OSM streets + DEM).",
+  "content_fingerprint": "c22d0ab95ce908dbfcd13acf09776ae570382b60e81d6dbf989729562de908d2"
 }

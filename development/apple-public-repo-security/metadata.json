@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a repo goes public or open-sources, when a CloudKit server-to-server PEM, ASC API `.p8`, APNs key, signing `.p12`, or provisioning profile first enters the pipeline, or when asked how to prevent or respond to a secret leak (gitleaks, lefthook, GitHub Secret Scanning, `git filter-repo`, rotate-first). Also for Apple upstream telemetry disclosure (MetricKit, Game Center, sysdiagnose). Repo-hygiene baseline only; ship-in-binary identifiers (AdMob IDs via xcconfig) and CLI keys in `secrets/.env` are build-time-secret-injection; ASC API usage is asc-api-automation."
+  "description": "Use when a repo goes public or open-sources, when a CloudKit server-to-server PEM, ASC API `.p8`, APNs key, signing `.p12`, or provisioning profile first enters the pipeline, or when asked how to prevent or respond to a secret leak (gitleaks, lefthook, GitHub Secret Scanning, `git filter-repo`, rotate-first). Also for Apple upstream telemetry disclosure (MetricKit, Game Center, sysdiagnose). Repo-hygiene baseline only; ship-in-binary identifiers (AdMob IDs via xcconfig) and CLI keys in `secrets/.env` are build-time-secret-injection; ASC API usage is asc-api-automation.",
+  "content_fingerprint": "3738a44e0820eb747b72e2e51baa8b4b14a9aecb7f940050f34b41c86654cb4a"
 }

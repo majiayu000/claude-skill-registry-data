@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Threads \u516c\u5f00\u793e\u4ea4\u5185\u5bb9\u67e5\u8be2\u4e0e\u7528\u6237\u5206\u6790 skill\uff0c\u901a\u8fc7 MaxHub API \u67e5\u8be2\u5e16\u5b50\u3001\u7528\u6237\u8d44\u6599\u3001\u8bc4\u8bba\u3001\u641c\u7d22\u3001\u65f6\u95f4\u7ebf\u548c\u76f8\u5173\u4e92\u52a8\u6570\u636e\u3002\u9002\u5408\u6d77\u5916\u793e\u5a92\u5185\u5bb9\u7814\u7a76\u3001\u8d26\u53f7\u753b\u50cf\u3001\u8bdd\u9898\u8ffd\u8e2a\u548c\u4e92\u52a8\u5206\u6790\u3002\u9ed8\u8ba4 read-only\uff1bagent \u5e94\u4ece recipes \u5339\u914d\u7528\u6237\u610f\u56fe\uff0c\u6309 post_id/user_id/keyword \u7b49\u5b57\u6bb5\u6d41\u94fe\u5f0f\u8c03\u7528\uff0c\u5e76\u907f\u514d\u8fc7\u5ea6\u91c7\u96c6\u4e2a\u4eba\u793e\u4ea4\u6570\u636e\u3002\u6240\u6709\u8bf7\u6c42\u53d1\u9001\u5230 https://www.aconfig.cn\u3002"
+  "description": "Threads 公开社交内容查询与用户分析 skill，通过 MaxHub API 查询帖子、用户资料、评论、搜索、时间线和相关互动数据。适合海外社媒内容研究、账号画像、话题追踪和互动分析。默认 read-only；agent 应从 recipes 匹配用户意图，按 post_id/user_id/keyword 等字段流链式调用，并避免过度采集个人社交数据。所有请求发送到 https://www.aconfig.cn。",
+  "content_fingerprint": "7350accf0b42d95da34077408e43919691d290ece822642577d93106b1f0e026"
 }

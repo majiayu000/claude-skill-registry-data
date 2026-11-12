@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a pull request has review comments or bot findings to check or address. Also use it for \"are these comments right?\", \"triage the review\", \"address the review comments\", \"check the PR comments\", or \"check what the bot found\". Checks each finding against the code at the head of the pull request, and confirms the file, the line, and the claim. Fixes each confirmed finding without waiting, replies by fixed rules, and reports each verdict. Asks the user before it declines a human comment. Not for writing a fix from a bug report (use `scope-confirmed-changes`)."
+  "description": "Use when a pull request has review comments or bot findings to check or address. Also use it for \"are these comments right?\", \"triage the review\", \"address the review comments\", \"check the PR comments\", or \"check what the bot found\". Checks each finding against the code at the head of the pull request, and confirms the file, the line, and the claim. Fixes each confirmed finding without waiting, replies by fixed rules, and reports each verdict. Asks the user before it declines a human comment. Not for writing a fix from a bug report (use `scope-confirmed-changes`).",
+  "content_fingerprint": "57295185ffe3d7c0afec14f63a4e3a554bdccb95c5f221668727eeb2f55e6a80"
 }

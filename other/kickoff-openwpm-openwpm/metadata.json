@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use to launch a background Claude agent in tmux (or docker/podman) to implement a feature end-to-end. Delegates worktree creation, prompt building, and session launch to `crosslink kickoff run`, then prints how to attach (`tmux attach -t <session>`) and check status (`/check`). Trigger when the user says \"kick off an agent for X\", \"/kickoff \u2026\", or asks for a background agent / sub-agent / worker to do a feature."
+  "description": "Use to launch a background Claude agent in tmux (or docker/podman) to implement a feature end-to-end. Delegates worktree creation, prompt building, and session launch to `crosslink kickoff run`, then prints how to attach (`tmux attach -t <session>`) and check status (`/check`). Trigger when the user says \"kick off an agent for X\", \"/kickoff …\", or asks for a background agent / sub-agent / worker to do a feature.",
+  "content_fingerprint": "fcdb08fda7fd1e088c0c0a70cfa34e8a9e8d388f558dd2a931c82c565e1bfad3"
 }

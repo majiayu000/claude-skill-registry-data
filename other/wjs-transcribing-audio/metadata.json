@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user has audio or video and wants a timestamped transcript (SRT) in the source language. Routes by source language \u2014 Chinese defaults to Volcano (\u8c46\u5305) ASR; other languages (Spanish, English, Portuguese, French, Italian, Japanese, Korean, etc.) use OpenAI Whisper API with word-level timestamps and self-assembled cues. Outputs SRT with punctuation-bounded cues capped for on-screen reading. Triggers \u2014 \"\u8f6c\u5199\", \"\u8f6c\u6210\u5b57\u5e55\", \"\u505a SRT\", \"transcribe\", \"make subtitles\", \"speech to text\", \"\u51fa\u5b57\u5e55\"."
+  "description": "Use when the user has audio or video and wants a timestamped transcript (SRT) in the source language. Routes by source language — Chinese defaults to Volcano (豆包) ASR; other languages (Spanish, English, Portuguese, French, Italian, Japanese, Korean, etc.) use OpenAI Whisper API with word-level timestamps and self-assembled cues. Outputs SRT with punctuation-bounded cues capped for on-screen reading. Triggers — \"转写\", \"转成字幕\", \"做 SRT\", \"transcribe\", \"make subtitles\", \"speech to text\", \"出字幕\".",
+  "content_fingerprint": "cbd5eb9fba8740bc84ff82dfe6088053284ff50279b7e821b277d601b5aecf71"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright (c) 2019 Marcelo Glasberg",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "7159d3ad5c4dbd6d040be7d19ef8c0728f878f14b30638667f98b459f8fce28c",
+  "description": "Creates AsyncRedux (Flutter) actions that return null from reduce() to not change the state. Such actions can still do side effects, dispatch other actions, or do nothing."
 }

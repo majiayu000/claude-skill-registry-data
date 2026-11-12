@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Periodic dependency update run. Reads what the package manager says is outdated, upgrades what is safe, applies the code changes the new versions need, verifies, and opens one reviewable PR. Supports a read-only dry run that reports what it would do. Use when the user says \"dependency update\", \"/dependency-update\", \"update deps\", \"dry run the dep update\", or when a scheduled cloud routine fires."
+  "description": "Periodic dependency update run. Reads what the package manager says is outdated, upgrades what is safe, applies the code changes the new versions need, verifies, and opens one reviewable PR. Supports a read-only dry run that reports what it would do. Use when the user says \"dependency update\", \"/dependency-update\", \"update deps\", \"dry run the dep update\", or when a scheduled cloud routine fires.",
+  "content_fingerprint": "0905afd3364633dbb6024028e8e467f758456074ed08869c6e664f13b124f69c"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants to adversarially stress-test a guardrail, classifier, prompt, or API they own or are authorized to test, to surface the distinct ways it fails. Generates adversarial inputs, runs them through the target and a ground-truth oracle, logs every target-vs-oracle disagreement as a failure de-duplicated by technique class, and loops until rounds stop surfacing new classes. Produces a catalogue of distinct, reproducible failures \u2014 the attacker half of a find\u2192fix setup. Not for patching the target, and not for attacking systems the user does not own or have permission to test."
+  "description": "Use when the user wants to adversarially stress-test a guardrail, classifier, prompt, or API they own or are authorized to test, to surface the distinct ways it fails. Generates adversarial inputs, runs them through the target and a ground-truth oracle, logs every target-vs-oracle disagreement as a failure de-duplicated by technique class, and loops until rounds stop surfacing new classes. Produces a catalogue of distinct, reproducible failures — the attacker half of a find→fix setup. Not for patching the target, and not for attacking systems the user does not own or have permission to test.",
+  "content_fingerprint": "622468f195faf3dd6d696518a403fed240bbe3e51abe11f3b88a8c59106ad655"
 }

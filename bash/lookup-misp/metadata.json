@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when you need to query a MISP instance for existing events/attributes/objects, or push new intel into MISP \u2014 adding attributes to an event, creating an event, or uploading a STIX 2 bundle as one or more events. Two-way integration. Commonly invoked by /ip-investigation and friends to check whether an indicator is already known to your CTI sharing community, and by analytical skills that want to publish their findings back to MISP. Reads $MISP_URL and $MISP_API_KEY."
+  "description": "Use when you need to query a MISP instance for existing events/attributes/objects, or push new intel into MISP — adding attributes to an event, creating an event, or uploading a STIX 2 bundle as one or more events. Two-way integration. Commonly invoked by /ip-investigation and friends to check whether an indicator is already known to your CTI sharing community, and by analytical skills that want to publish their findings back to MISP. Reads $MISP_URL and $MISP_API_KEY.",
+  "content_fingerprint": "f9935080e8e49a85388d8cd725c4ce52eaa04d7d724ade20f46a3503b289c60d"
 }

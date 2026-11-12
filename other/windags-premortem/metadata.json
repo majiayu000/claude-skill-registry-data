@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Failure pattern scanning and risk assessment for WinDAGs DAGs. Runs after decomposition but before execution. Performs a lightweight scan on EVERY DAG (BC-PLAN-004), escalating to deep analysis when recognition confidence is low or known failure patterns are found. Activate on \"premortem\", \"failure scan\", \"risk assessment\", \"DAG validation\", \"timing analysis\", \"failure patterns\", \"pre-execution check\". NOT for post-execution learning (use windags-curator), retrospective analysis (use windags-looking-back), or DAG construction (use windags-architect)."
+  "description": "Failure pattern scanning and risk assessment for WinDAGs DAGs. Runs after decomposition but before execution. Performs a lightweight scan on EVERY DAG (BC-PLAN-004), escalating to deep analysis when recognition confidence is low or known failure patterns are found. Activate on \"premortem\", \"failure scan\", \"risk assessment\", \"DAG validation\", \"timing analysis\", \"failure patterns\", \"pre-execution check\". NOT for post-execution learning (use windags-curator), retrospective analysis (use windags-looking-back), or DAG construction (use windags-architect).",
+  "content_fingerprint": "42ed72b20575fa2504d332dae848c186e6783609cfc30fd19080d77fbd107d7d"
 }

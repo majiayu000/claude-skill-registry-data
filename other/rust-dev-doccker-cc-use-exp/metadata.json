@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Rust \u5f00\u53d1\u89c4\u8303\uff08\u805a\u7126 Axum + Tokio \u540e\u7aef\u6808\uff09\u3002\u5f53\u7528\u6237\u64cd\u4f5c .rs\u3001Cargo.toml\u3001Cargo.lock \u6587\u4ef6\uff0c \u6216\u6d89\u53ca Rust \u540e\u7aef\u5f00\u53d1\uff08Axum\u3001Tokio\u3001sqlx\u3001reqwest\uff09\u65f6\u89e6\u53d1\u3002 \u5305\u542b\u5de5\u5177\u94fe\u3001\u547d\u540d\u7ea6\u5b9a\u3001\u9519\u8bef\u5904\u7406\u3001\u5f02\u6b65\u9677\u9631\u3001\u6a21\u5757\u7ec4\u7ec7\u3001\u4f9d\u8d56\u7ba1\u7406\u3001\u6d4b\u8bd5\u89c4\u8303\u3001unsafe \u7ea2\u7ebf\u7b49\u3002"
+  "description": "Rust 开发规范（聚焦 Axum + Tokio 后端栈）。当用户操作 .rs、Cargo.toml、Cargo.lock 文件， 或涉及 Rust 后端开发（Axum、Tokio、sqlx、reqwest）时触发。 包含工具链、命名约定、错误处理、异步陷阱、模块组织、依赖管理、测试规范、unsafe 红线等。",
+  "content_fingerprint": "ee6708e3dd2871516a70d251bf2546ed07653cf845b4aa333319d1449affde13"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "At the end of a session, capture what was learned into the repo's documentation so it isn't lost and future sessions start cheaper. Use when the user says \"capture docs\", \"save what we learned\", \"update docs\", \"sync docs\", or runs \"/capture-docs\", typically when wrapping up. Relies on the conversation already in context plus cheap git signals \u2014 it does NOT re-research the codebase. Updates human-facing docs (READMEs, docs/) and AI-facing docs (CLAUDE.md, AGENTS.md), keeping AI docs as pointers to human docs, and ensures what it writes is discoverable from the nearest CLAUDE.md/AGENTS.md."
+  "description": "At the end of a session, capture what was learned into the repo's documentation so it isn't lost and future sessions start cheaper. Use when the user says \"capture docs\", \"save what we learned\", \"update docs\", \"sync docs\", or runs \"/capture-docs\", typically when wrapping up. Relies on the conversation already in context plus cheap git signals — it does NOT re-research the codebase. Updates human-facing docs (READMEs, docs/) and AI-facing docs (CLAUDE.md, AGENTS.md), keeping AI docs as pointers to human docs, and ensures what it writes is discoverable from the nearest CLAUDE.md/AGENTS.md.",
+  "content_fingerprint": "eb242beac9b4a1e28556785d8e0458837a7f22357fb5ca3ae046b042784c742f"
 }

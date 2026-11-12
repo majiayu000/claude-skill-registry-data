@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Permission chain analyzer: extracts role definitions, role check sites, middleware mounts, and mutating routes. Identifies transitive chains (role A can reach endpoint E via routes R1,R2...), surfaces unprotected mutating routes (file-local check missing), detects divergent role-naming (same role defined differently in 3 files). Read-only. Audience: Senior. Trigger: /permission-chain"
+  "description": "Permission chain analyzer: extracts role definitions, role check sites, middleware mounts, and mutating routes. Identifies transitive chains (role A can reach endpoint E via routes R1,R2...), surfaces unprotected mutating routes (file-local check missing), detects divergent role-naming (same role defined differently in 3 files). Read-only. Audience: Senior. Trigger: /permission-chain",
+  "content_fingerprint": "22a301db1e6f388e7b2a304f95a9d80512453afa313469b0e630773453f3d439"
 }

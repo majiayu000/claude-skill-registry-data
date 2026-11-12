@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review local git changes before opening a PR or merging. First review all local tracked and untracked files; if none exist, review the current branch against a requested base branch or the Git Town parent branch. Use zero to three review subagents only when risk, diff size, language specificity, or uncertainty justifies the token cost, then report high-confidence bugs, regressions, risky assumptions, and missing tests. Use when the user asks for code review, local review, branch sanity check, pre-PR review, or review of work-in-progress changes."
+  "description": "Review local git changes before opening a PR or merging. First review all local tracked and untracked files; if none exist, review the current branch against a requested base branch or the Git Town parent branch. Use zero to three review subagents only when risk, diff size, language specificity, or uncertainty justifies the token cost, then report high-confidence bugs, regressions, risky assumptions, and missing tests. Use when the user asks for code review, local review, branch sanity check, pre-PR review, or review of work-in-progress changes.",
+  "content_fingerprint": "5135fd6aae39a57c06e018f3781de18dedff8e0a9b121a468ded7527da0d34bb"
 }

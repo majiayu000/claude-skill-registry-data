@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Idiomatic programming style, patterns, and conventions for Go (Golang) development.\nTrigger when:\n- Writing, refactoring, reviewing, or debugging Go code.\n- Files matching the pattern **/*.go (including go.mod, go.sum) are in the workspace or referenced.\n- Tasks involve: go fmt, go test, go build, go vet, golangci-lint.\n- Prompt contains keywords: go, golang, goroutine, channel, select, interface, err != nil, defer, panic, gofmt, struct."
+  "description": "Idiomatic programming style, patterns, and conventions for Go (Golang) development.\nTrigger when:\n- Writing, refactoring, reviewing, or debugging Go code.\n- Files matching the pattern **/*.go (including go.mod, go.sum) are in the workspace or referenced.\n- Tasks involve: go fmt, go test, go build, go vet, golangci-lint.\n- Prompt contains keywords: go, golang, goroutine, channel, select, interface, err != nil, defer, panic, gofmt, struct.",
+  "content_fingerprint": "062ac1ce5dca231678f9d6ec45bbde7bd563a091914c0b15e3ab12f27e00e268"
 }

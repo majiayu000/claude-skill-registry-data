@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Write commit messages following Conventional Commits + Nimbus footer conventions. Suggest scope from staged file paths. Detect breaking changes. Mandatory in horus-v2. Preferred everywhere in the Nimbus org.\nTrigger this skill when: - User says \"write a commit\", \"commit message\", \"generate commit\", or invokes\n  `/commit` / `/conventional-commit`.\n- You're about to run `git commit -m \u2026` and want a good message. - After preflight passes and the user asks to commit."
+  "description": "Write commit messages following Conventional Commits + Nimbus footer conventions. Suggest scope from staged file paths. Detect breaking changes. Mandatory in horus-v2. Preferred everywhere in the Nimbus org.\nTrigger this skill when: - User says \"write a commit\", \"commit message\", \"generate commit\", or invokes\n  `/commit` / `/conventional-commit`.\n- You're about to run `git commit -m …` and want a good message. - After preflight passes and the user asks to commit.",
+  "content_fingerprint": "1b23fe0e64aab9aa8737aff0ffe2ac2bada49dde327bad4ac8868b3a40b4609c"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review an already-open pull request's changes by id, on whichever platform hosts the repository (GitHub, Bitbucket, Azure DevOps, or TFS) and whatever language(s)/framework(s) are in play \u2014 both detected via the `iru-explore` skill and used throughout instead of assuming GitHub/`gh` or generic checklist advice. Optionally takes the linked GitHub issue id or Jira key as a second argument (skipping auto-detection); otherwise looks for a reference in the PR title/body (e.g. \"Closes"
+  "description": "Review an already-open pull request's changes by id, on whichever platform hosts the repository (GitHub, Bitbucket, Azure DevOps, or TFS) and whatever language(s)/framework(s) are in play — both detected via the `iru-explore` skill and used throughout instead of assuming GitHub/`gh` or generic checklist advice. Optionally takes the linked GitHub issue id or Jira key as a second argument (skipping auto-detection); otherwise looks for a reference in the PR title/body (e.g. \"Closes",
+  "content_fingerprint": "5a0622a4654e50661fddafbebd81d1aa80fdc9503f4b28fb4e1e0417ffc0c57e"
 }

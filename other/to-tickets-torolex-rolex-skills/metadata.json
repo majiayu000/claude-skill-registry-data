@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5c06\u8ba1\u5212\u3001spec \u6216\u5f53\u524d\u5bf9\u8bdd\u62c6\u89e3\u4e3a\u4e00\u7ec4 tracer bullet tickets\uff0c\u6bcf\u5f20 ticket \u58f0\u660e\u5176 blocking edges\uff0c\u5e76\u53d1\u5e03\u5230\u5df2\u914d\u7f6e\u7684 tracker\uff08\u672c\u5730\u4ee5\u6bcf\u5f20 ticket \u4e00\u4e2a\u6587\u4ef6\u7528\u6587\u672c\u8bb0\u5f55 edges\uff0c\u6216\u5728\u771f\u5b9e tracker \u4e0a\u4f7f\u7528\u539f\u751f blocking \u94fe\u63a5\uff09\u3002"
+  "description": "将计划、spec 或当前对话拆解为一组 tracer bullet tickets，每张 ticket 声明其 blocking edges，并发布到已配置的 tracker（本地以每张 ticket 一个文件用文本记录 edges，或在真实 tracker 上使用原生 blocking 链接）。",
+  "content_fingerprint": "82821d4dc8fc59a4664a599e1d69168ceb835a3348c81fc567f1f645d24c18f1"
 }

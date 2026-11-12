@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configures autonomous heartbeat and cron-based proactive routines (e.g., morning briefing setup,\nunanswered-message scan cadence). Invoke when user is SETTING UP or MODIFYING a proactive routine,\nnot when the routine itself fires. Cron crons execute their own logic \u2014 they do NOT load this skill.\nTriggers: \"set up proactive check\", \"configure heartbeat\", \"add morning briefing\", \"tune cron cadence\"."
+  "description": "Configures autonomous heartbeat and cron-based proactive routines (e.g., morning briefing setup,\nunanswered-message scan cadence). Invoke when user is SETTING UP or MODIFYING a proactive routine,\nnot when the routine itself fires. Cron crons execute their own logic — they do NOT load this skill.\nTriggers: \"set up proactive check\", \"configure heartbeat\", \"add morning briefing\", \"tune cron cadence\".",
+  "content_fingerprint": "46c53d69db063717a731487f42ebf92716a6dad538eef2cb49fa3d3ed84f8259"
 }

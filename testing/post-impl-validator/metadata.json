@@ -1,5 +1,7 @@
 {
   "name": "post-impl-validator",
   "category": "testing",
-  "dir_name": "post-impl-validator"
+  "dir_name": "post-impl-validator",
+  "content_fingerprint": "d682e420504830434756bffc980910bc186187d397dec3ca4872725e54510ea5",
+  "description": "実装完了後のテスト、lint、ベストプラクティスレビューを自動実行するスキル。\n以下の状況で使用:\n(1) ユーザーが「実装完了」「完了」「できた」「終わった」「実装した」などと発言した時\n(2) ユーザーが明示的に「/post-impl-validator」を実行した時\n(3) ファイル編集後に「コミットして」「PRを作成」などと依頼された時\n"
 }

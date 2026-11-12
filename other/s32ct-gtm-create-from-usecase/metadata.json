@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Bootstraps a brand-new S32 Configuration Tools configuration for a given MCU and Platform SDK version, applies a predefined GTM use-case shipped with the MCU data package, and generates / exports the resulting GTM source code in one headless invocation. Use when the user says \"apply the ATOM inverted PWM use-case for S32E288\", \"generate code for the TIM edge counter\", \"bootstrap a GTM project from a use-case template\". Fronts nxp_s32ct_execute_action(action_name=\"s32ct.gtm_create_from_usecase\", params={...})"
+  "description": "Bootstraps a brand-new S32 Configuration Tools configuration for a given MCU and Platform SDK version, applies a predefined GTM use-case shipped with the MCU data package, and generates / exports the resulting GTM source code in one headless invocation. Use when the user says \"apply the ATOM inverted PWM use-case for S32E288\", \"generate code for the TIM edge counter\", \"bootstrap a GTM project from a use-case template\". Fronts nxp_s32ct_execute_action(action_name=\"s32ct.gtm_create_from_usecase\", params={...})",
+  "content_fingerprint": "3b26e4c27fe4a80c4da0017702b76b486c224be571211e90aa511f39e8701e9e"
 }

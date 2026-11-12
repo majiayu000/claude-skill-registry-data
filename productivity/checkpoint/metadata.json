@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Save a structured state snapshot before stopping or handing off. Captures the active plan, recent decisions, file pointers (with line numbers), open questions, and the next 1\u20133 actions into a checkpoint file under `quality_reports/checkpoints/`. Optionally proposes `[LEARN]` entries to add to MEMORY.md. Use when user says \"checkpoint\", \"save state\", \"snapshot before I stop\", \"where am I\", \"wrap up the session for handoff\", or before a long break / model switch / collaborator handoff. Companion to (NOT replacement for) the narrative session-log workflow."
+  "description": "Save a structured state snapshot before stopping or handing off. Captures the active plan, recent decisions, file pointers (with line numbers), open questions, and the next 1–3 actions into a checkpoint file under `quality_reports/checkpoints/`. Optionally proposes `[LEARN]` entries to add to MEMORY.md. Use when user says \"checkpoint\", \"save state\", \"snapshot before I stop\", \"where am I\", \"wrap up the session for handoff\", or before a long break / model switch / collaborator handoff. Companion to (NOT replacement for) the narrative session-log workflow.",
+  "content_fingerprint": "451685f6be76c970055eacaf0c122b3661f4d74180fef7b70f98563ad83669d5"
 }

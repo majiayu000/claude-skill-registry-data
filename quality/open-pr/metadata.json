@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user says \"open a PR\", \"/open-pr\", \"make the PR\", \"ship this\", \"draft a PR\", \"create the PR\", or wants Claude to turn the current branch's work into an open pull request. Runs final sanity checks (lint, format, type-check, tslsp diagnostics if installed), drafts a title and body that actually describe what's in the diff and commits + any linked ADR / spec / ticket, confirms with the user, then pushes and opens via `gh pr create`. Closes by asking whether to drive the PR now (`/drive-pr`) or wait for review. Bookend to `/drive-pr` - open-pr opens, drive-pr iterates."
+  "description": "Use when the user says \"open a PR\", \"/open-pr\", \"make the PR\", \"ship this\", \"draft a PR\", \"create the PR\", or wants Claude to turn the current branch's work into an open pull request. Runs final sanity checks (lint, format, type-check, tslsp diagnostics if installed), drafts a title and body that actually describe what's in the diff and commits + any linked ADR / spec / ticket, confirms with the user, then pushes and opens via `gh pr create`. Closes by asking whether to drive the PR now (`/drive-pr`) or wait for review. Bookend to `/drive-pr` - open-pr opens, drive-pr iterates.",
+  "content_fingerprint": "61435ea8785515c59c82288b7d7bb61dd3f0a1b7a114c9d73a068db44019c5a1"
 }

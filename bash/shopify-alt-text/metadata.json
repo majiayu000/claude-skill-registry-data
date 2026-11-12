@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when backfilling missing image alt text on a Shopify store: images with no alt attribute, accessibility alt text for product images, alt text for Files library images, image SEO, or a WCAG/accessibility pass that flags images missing text alternatives. Triggers: \"backfill alt text\", \"fill in missing alt text\", \"images have no alt\", \"add alt attributes for accessibility\", \"image SEO sweep\". One mutation, fileUpdate, covers both product media and the Files library. Not for meta titles/descriptions (use shopify-seo-metadata)."
+  "description": "Use when backfilling missing image alt text on a Shopify store: images with no alt attribute, accessibility alt text for product images, alt text for Files library images, image SEO, or a WCAG/accessibility pass that flags images missing text alternatives. Triggers: \"backfill alt text\", \"fill in missing alt text\", \"images have no alt\", \"add alt attributes for accessibility\", \"image SEO sweep\". One mutation, fileUpdate, covers both product media and the Files library. Not for meta titles/descriptions (use shopify-seo-metadata).",
+  "content_fingerprint": "a5150ee23d2260305d82bbe4f806e5e1eb5230a8fc53a25b27213c450dbade52"
 }

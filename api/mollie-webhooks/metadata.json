@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Receive and handle Mollie webhooks. Use when setting up Mollie webhook handlers, understanding why Mollie webhooks are not signed, or handling payment status changes like paid, expired, failed, canceled, or authorized. Teaches the fetch-to-confirm pattern: the webhook only sends a payment id, so you fetch the payment from the Mollie API to read its authoritative status."
+  "description": "Receive and handle Mollie webhooks. Use when setting up Mollie webhook handlers, understanding why Mollie webhooks are not signed, or handling payment status changes like paid, expired, failed, canceled, or authorized. Teaches the fetch-to-confirm pattern: the webhook only sends a payment id, so you fetch the payment from the Mollie API to read its authoritative status.",
+  "content_fingerprint": "1562f1fb4f0e81b79c6d098fc276c3d8e8f3337d6b227d84165fb02dd8e86d70"
 }

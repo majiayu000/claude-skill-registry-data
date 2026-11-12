@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ubc18\ubcf5\ub418\ub294 null \uac80\uc0ac\ub97c Special Case(Null Object) \ud074\ub798\uc2a4\ub85c \ub300\uccb4\ud558\uc5ec \ub2e4\ud615\uc131\uc73c\ub85c \ucc98\ub9ac. \"null \uac1d\uccb4 \ud328\ud134\", \"null \uccb4\ud06c \ubc18\ubcf5 \uc81c\uac70\", \"\ud2b9\uc218 \ucf00\uc774\uc2a4 \ud074\ub798\uc2a4\", \"/introduce-special-case\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \ub2e8\uc21c \uc804\uc81c \uc870\uac74 \uba85\uc2dc\ub294 /introduce-assertion, \ud0c0\uc785\ubcc4 \ubd84\uae30 \uc804\ubc18\uc740 /replace-conditional-with-poly\uac00 \uc801\ud569. /introduce-special-case [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "반복되는 null 검사를 Special Case(Null Object) 클래스로 대체하여 다형성으로 처리. \"null 객체 패턴\", \"null 체크 반복 제거\", \"특수 케이스 클래스\", \"/introduce-special-case\" 요청 시 사용. 단, 단순 전제 조건 명시는 /introduce-assertion, 타입별 분기 전반은 /replace-conditional-with-poly가 적합. /introduce-special-case [commit-ref]로 호출.",
+  "content_fingerprint": "8c17c950d3fa6f5fe23c38951fa2b7b715ad3f48b6cd175302b2022cb7f93353"
 }

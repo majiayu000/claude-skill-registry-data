@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4f7f\u7528 AISS-TilingSolver \u5de5\u5177\u81ea\u52a8\u6c42\u89e3 Ascend C \u7b97\u5b50\uff08MatMul / Vector\uff09\u7684\u6700\u4f18 Tiling \u53c2\u6570\uff0c\u5305\u62ec\u4e0b\u8f7d\u5b89\u88c5\u3001\u6784\u9020 JSON \u8f93\u5165\u3001\u8fd0\u884c\u6c42\u89e3\u3001\u7ed3\u679c\u89e3\u8bfb\u4e0e\u6545\u969c\u6392\u67e5\u3002\u89e6\u53d1\uff1a\u5f53\u7528\u6237\u4f7f\u7528 TilingSolver \u5de5\u5177\u6c42\u89e3\u65f6\u3002"
+  "description": "使用 AISS-TilingSolver 工具自动求解 Ascend C 算子（MatMul / Vector）的最优 Tiling 参数，包括下载安装、构造 JSON 输入、运行求解、结果解读与故障排查。触发：当用户使用 TilingSolver 工具求解时。",
+  "content_fingerprint": "9c01eaee64fc29ce9504a22a0feaea1241af22b0ec4117f01410139553211f80"
 }

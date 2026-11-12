@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when the user asks to \"test what I just changed\", \"/devtest\", \"smoke test my change\", \"verify my latest commit\", \"\u6d4b\u4e00\u4e0b\u6211\u521a\u6539\u7684\", \"\u770b\u770b\u521a\u6539\u7684\u529f\u80fd\u80fd\u4e0d\u80fd\u8dd1\", \"\u8dd1\u4e00\u4e0b\u767b\u5f55\u770b\u770b\", or similar requests to verify a recent code change against a running Android or iOS device. The skill reads the git diff, infers the affected UI surface, generates a focused test plan, drives the app via ui-mcp + mobile-mcp, captures logs via log-mcp, and produces a Markdown report via report-mcp."
+  "description": "This skill should be used when the user asks to \"test what I just changed\", \"/devtest\", \"smoke test my change\", \"verify my latest commit\", \"测一下我刚改的\", \"看看刚改的功能能不能跑\", \"跑一下登录看看\", or similar requests to verify a recent code change against a running Android or iOS device. The skill reads the git diff, infers the affected UI surface, generates a focused test plan, drives the app via ui-mcp + mobile-mcp, captures logs via log-mcp, and produces a Markdown report via report-mcp.",
+  "content_fingerprint": "46798f947f85a5fe69658a67621c314b700638a0df2ef8aa8f95196e39f87c85"
 }

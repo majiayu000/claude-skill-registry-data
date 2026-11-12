@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4f7f\u7528 torch_npu.profiler\uff08warmup/active=5\uff09\u7ef4\u62a4 JSONL \u7528\u4f8b\u5e76\u8f93\u51fa\u81ea\u5b9a\u4e49\u7b97\u5b50 vs \u6807\u6746\u7684\u6027\u80fd\u62a5\u544a\u3002\u89e6\u53d1\u573a\u666f\uff1a\u9700\u8981 profiler \u5bf9\u6bd4\u7b97\u5b50\u6027\u80fd\u65f6\u3002\u7ec6\u8282\u89c1\u6b63\u6587\u4e0e examples/\u3002"
+  "description": "使用 torch_npu.profiler（warmup/active=5）维护 JSONL 用例并输出自定义算子 vs 标杆的性能报告。触发场景：需要 profiler 对比算子性能时。细节见正文与 examples/。",
+  "content_fingerprint": "bf0b978182b4d4c9fe716d5707bb6f94880c32b35dd12397040ca67729c0d8d5"
 }

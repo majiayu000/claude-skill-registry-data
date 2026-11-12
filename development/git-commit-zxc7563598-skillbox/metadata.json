@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u89c4\u8303\u5316 Git \u63d0\u4ea4\u4fe1\u606f\u3002\u8bfb\u53d6 git diff \u7406\u89e3\u4ee3\u7801\u6539\u52a8\u610f\u56fe\uff0c\u751f\u6210\u7b26\u5408 Conventional Commits \u89c4\u8303\u7684\u63d0\u4ea4\u4fe1\u606f\uff08\u82f1\u6587 type + \u4e2d\u6587\u63cf\u8ff0\uff09\uff0c\u5c55\u793a\u7ed9\u7528\u6237\u786e\u8ba4\u540e\u6267\u884c git commit\u3002\u5728\u7528\u6237\u60f3\u8981\u63d0\u4ea4\u4ee3\u7801\u3001\u751f\u6210\u63d0\u4ea4\u4fe1\u606f\u3001\u89c4\u8303 commit message \u65f6\u4f7f\u7528\u3002\u4e2d\u6587\u89e6\u53d1\u8bcd\uff1a\u63d0\u4ea4\u3001\u63d0\u4ea4\u4ee3\u7801\u3001commit\u3001\u63d0\u4ea4\u4fe1\u606f\u3001git commit\u3001\u751f\u6210 commit\u3002"
+  "description": "规范化 Git 提交信息。读取 git diff 理解代码改动意图，生成符合 Conventional Commits 规范的提交信息（英文 type + 中文描述），展示给用户确认后执行 git commit。在用户想要提交代码、生成提交信息、规范 commit message 时使用。中文触发词：提交、提交代码、commit、提交信息、git commit、生成 commit。",
+  "content_fingerprint": "f24c63b22ec978fc0e5b8d0a3a2ee0abdbcbcef5c5adbae23a60bb9a645e2007"
 }

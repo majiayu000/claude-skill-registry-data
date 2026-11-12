@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Repair the Cursor editor when it crashes, fails to launch, or new Agent chats break. Use with a Request ID, fresh logs, CursorRule.parse_error or invalid UTF8 in skill frontmatter, or a better-sqlite3 NODE_MODULE_VERSION mismatch. Finds a reproducible cause, applies a narrow reversible fix and proves it with two new chats. Triggers: /cursor-repair, Cursor won't start, Cursor agent broken."
+  "description": "Repair the Cursor editor when it crashes, fails to launch, or new Agent chats break. Use with a Request ID, fresh logs, CursorRule.parse_error or invalid UTF8 in skill frontmatter, or a better-sqlite3 NODE_MODULE_VERSION mismatch. Finds a reproducible cause, applies a narrow reversible fix and proves it with two new chats. Triggers: /cursor-repair, Cursor won't start, Cursor agent broken.",
+  "content_fingerprint": "44379db1e19967dfbaa7aaf965c65138d721513e5d992fab45c02abdec84ec77"
 }

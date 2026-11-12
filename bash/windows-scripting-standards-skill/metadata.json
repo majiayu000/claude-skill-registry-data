@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Windows \u73af\u5883\u4e0b PowerShell 7 (pwsh) \u4e0e Batch (.bat/.cmd) \u811a\u672c\u7f16\u5199\u3001\u8c03\u8bd5\u6392\u9519\u4e0e\u8fd0\u884c\u73af\u5883\u9632\u5751\u89c4\u8303\u3002\u9002\u7528\u4e8e\u7f16\u5199\u3001\u7ef4\u62a4\u3001\u91cd\u6784\u4e0e\u5ba1\u67e5 .ps1 \u548c .bat \u81ea\u52a8\u5316\u811a\u672c\u3001\u8bca\u65ad Windows \u7ec8\u7aef\u6216\u811a\u672c\u6267\u884c\u62a5\u9519\uff08\u5982\u975e\u5185\u90e8\u547d\u4ee4\u3001UTF-8/BOM\u4e71\u7801\u3001\u53c2\u6570\u89e3\u6790\u5f02\u5e38\u3001\u9000\u51fa\u7801\u6355\u83b7\uff09\u3001\u4ee5\u53ca Linux/Bash \u811a\u672c\u5411 Windows \u8de8\u5e73\u53f0\u79fb\u690d\uff1b\u6db5\u76d6 PowerShell \u73b0\u4ee3\u7ba1\u9053\u4e0e\u53cd\u5f15\u53f7\u8f6c\u4e49\u3001\u5916\u90e8\u8fdb\u7a0b\u8c03\u7528\u6821\u9a8c ($LASTEXITCODE)\u3001CMD \u5ef6\u8fdf\u53d8\u91cf\u6269\u5c55 (!VAR!) \u7b49\u4efb\u52a1\u3002"
+  "description": "Windows 环境下 PowerShell 7 (pwsh) 与 Batch (.bat/.cmd) 脚本编写、调试排错与运行环境防坑规范。适用于编写、维护、重构与审查 .ps1 和 .bat 自动化脚本、诊断 Windows 终端或脚本执行报错（如非内部命令、UTF-8/BOM乱码、参数解析异常、退出码捕获）、以及 Linux/Bash 脚本向 Windows 跨平台移植；涵盖 PowerShell 现代管道与反引号转义、外部进程调用校验 ($LASTEXITCODE)、CMD 延迟变量扩展 (!VAR!) 等任务。",
+  "content_fingerprint": "cf77fbfc04d42b723ad3028d4728ec93507a965632633c16fdbb137b0487846c"
 }

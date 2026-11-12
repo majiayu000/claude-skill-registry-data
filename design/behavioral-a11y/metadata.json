@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Load this skill when writing, reviewing, or interpreting behavioral accessibility automation \u2014 tests that manipulate a rendered page (resizing the viewport, pressing real keys, capturing and comparing screenshots) rather than only inspecting static markup or a single computed accessibility tree. Covers Reflow risk (SC 1.4.10) and Focus Visible risk (SC 2.4.7) checks. Absolutely always report indicator results separately from confirmed failures. Under no circumstances treat a clean behavioral scan as WCAG conformance, or collapse `cantTell`/test-error/indicator outcomes into a single pass/fail signal."
+  "description": "Load this skill when writing, reviewing, or interpreting behavioral accessibility automation — tests that manipulate a rendered page (resizing the viewport, pressing real keys, capturing and comparing screenshots) rather than only inspecting static markup or a single computed accessibility tree. Covers Reflow risk (SC 1.4.10) and Focus Visible risk (SC 2.4.7) checks. Absolutely always report indicator results separately from confirmed failures. Under no circumstances treat a clean behavioral scan as WCAG conformance, or collapse `cantTell`/test-error/indicator outcomes into a single pass/fail signal.",
+  "content_fingerprint": "9a35743b210257099e9362c03c7e4859804323dc2c1b2bda6f0e145f45fd757c"
 }

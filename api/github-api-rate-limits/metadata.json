@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "gh / GitHub API\uff1a\u53d1 API \u8bf7\u6c42\u524d\u4f7f\u7528\uff0c\u5c24\u5176\u5206\u9875\u3001\u5faa\u73af\u6216\u6279\u91cf\u8c03\u7528\uff08\u542b\u811a\u672c\u4e0e workflow\uff09\uff1b\u9047\u5230 403/429\u3001RATE_LIMITED \u6216 Retry-After \u65f6\u4e5f\u7528\u3002"
+  "description": "gh / GitHub API：发 API 请求前使用，尤其分页、循环或批量调用（含脚本与 workflow）；遇到 403/429、RATE_LIMITED 或 Retry-After 时也用。",
+  "content_fingerprint": "44526f3fc18ee4cc3755e21fc3afeafbe70ccc013ae6591230160b2e0d9efcc1"
 }

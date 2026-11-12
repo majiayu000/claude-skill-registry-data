@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Apply consistent per-patient date shifting in OpenMed that preserves intervals between events while satisfying HIPAA Safe Harbor's date rule. Use when the user needs to de-identify dates but keep temporal structure for research, shift all dates by the same offset per patient, preserve days-between-events for survival or longitudinal analysis, cap ages over 89, or strip everything but the year. Covers deidentify(method=\"shift_dates\", date_shift_days=..., keep_year=...) and per-patient reproducible offsets via consistent=True, seed=.... Pairs with OpenMed deidentifying-clinical-text and auditing-safe-harbor-checklist."
+  "description": "Apply consistent per-patient date shifting in OpenMed that preserves intervals between events while satisfying HIPAA Safe Harbor's date rule. Use when the user needs to de-identify dates but keep temporal structure for research, shift all dates by the same offset per patient, preserve days-between-events for survival or longitudinal analysis, cap ages over 89, or strip everything but the year. Covers deidentify(method=\"shift_dates\", date_shift_days=..., keep_year=...) and per-patient reproducible offsets via consistent=True, seed=.... Pairs with OpenMed deidentifying-clinical-text and auditing-safe-harbor-checklist.",
+  "content_fingerprint": "78303aeea31edd1989f15b19df25c0bbdeb6e1e507f24dc76703cb57c72e415f"
 }

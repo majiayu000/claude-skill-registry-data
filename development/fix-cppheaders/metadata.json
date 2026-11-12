@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when hl2sdk_cs2 C++ headers must be repaired to match the latest vtable or record-layout YAML references.\nRuns run_cpp_tests.py to obtain layout diffs, maps failing cpp_tests entries to their configured headers, edits only\nthose headers, and repeats validation until the differences are resolved. Triggers: fix cpp headers, fix-cppheaders,\nrepair vtable layout, repair record layout, header layout differences."
+  "description": "Use when hl2sdk_cs2 C++ headers must be repaired to match the latest vtable or record-layout YAML references.\nRuns run_cpp_tests.py to obtain layout diffs, maps failing cpp_tests entries to their configured headers, edits only\nthose headers, and repeats validation until the differences are resolved. Triggers: fix cpp headers, fix-cppheaders,\nrepair vtable layout, repair record layout, header layout differences.",
+  "content_fingerprint": "55a512df24bc243496571424973e79bdce89b55d252588ce18c3c18450825a6c"
 }

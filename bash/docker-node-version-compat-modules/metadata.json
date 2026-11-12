@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix Node.js CLI tools crashing inside Docker containers when host-installed node_modules\nrequire a newer Node version than the container provides. Use when: (1) \"SyntaxError: Invalid\nregular expression flags\" with /v flag in string-width or similar packages, (2) node_modules\ninstalled on host with Node 20+ but container has Node 18, (3) `npm install` with file:\nprotocol creates symlinks that break inside Docker, (4) pnpm workspace packages become\nbroken symlinks in containers. Covers version detection, Node binary mounting, and\nnpm install strategies for cross-version compatibility."
+  "description": "Fix Node.js CLI tools crashing inside Docker containers when host-installed node_modules\nrequire a newer Node version than the container provides. Use when: (1) \"SyntaxError: Invalid\nregular expression flags\" with /v flag in string-width or similar packages, (2) node_modules\ninstalled on host with Node 20+ but container has Node 18, (3) `npm install` with file:\nprotocol creates symlinks that break inside Docker, (4) pnpm workspace packages become\nbroken symlinks in containers. Covers version detection, Node binary mounting, and\nnpm install strategies for cross-version compatibility.",
+  "content_fingerprint": "cbb004f166dc0ca2eb192e8392891faaaf152b10237c978efc7a8efbe471805b"
 }

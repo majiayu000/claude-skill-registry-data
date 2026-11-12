@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Download the actual PDF binary from bot-gated sites (taxpolicycenter.org, urban.org,\nSSRN-hosted mirrors, think-tank/publisher sites) via the Wayback Machine id_ URL form.\nUse when: (1) curl/WebFetch of a .pdf URL returns HTML instead of a PDF even with a\nbrowser User-Agent, (2) pypdf fails with \"invalid pdf header: b'<!DOC'\" or\n\"EOF marker not found\" on a freshly downloaded file, (3) Firecrawl can parse the PDF\nto markdown but you need the original file on disk (e.g., filing a reference copy)."
+  "description": "Download the actual PDF binary from bot-gated sites (taxpolicycenter.org, urban.org,\nSSRN-hosted mirrors, think-tank/publisher sites) via the Wayback Machine id_ URL form.\nUse when: (1) curl/WebFetch of a .pdf URL returns HTML instead of a PDF even with a\nbrowser User-Agent, (2) pypdf fails with \"invalid pdf header: b'<!DOC'\" or\n\"EOF marker not found\" on a freshly downloaded file, (3) Firecrawl can parse the PDF\nto markdown but you need the original file on disk (e.g., filing a reference copy).",
+  "content_fingerprint": "712a652c4034cbc1fb23192b971870ace430d6884fa86c710bbb43f61f5ddaea"
 }

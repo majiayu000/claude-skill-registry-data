@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wraps grpcurl, the curl-equivalent CLI for gRPC. Covers descriptor sources (server reflection default, --import-path + --proto for proto files, --protoset for compiled descriptor sets), service discovery (`list`, `describe`), invoking unary RPCs (`-d '{...}'`, `-d @file.json`, `-d @` for stdin), streaming RPCs (newline-delimited JSON via stdin), TLS configuration (--cacert, --cert, --key, --insecure, --plaintext), header injection (-H 'Authorization: Bearer ...'), and exit codes. Use for ad-hoc gRPC debugging, smoke testing, scriptable PR-time gates, and CLI-based interaction with reflective gRPC services."
+  "description": "Wraps grpcurl, the curl-equivalent CLI for gRPC. Covers descriptor sources (server reflection default, --import-path + --proto for proto files, --protoset for compiled descriptor sets), service discovery (`list`, `describe`), invoking unary RPCs (`-d '{...}'`, `-d @file.json`, `-d @` for stdin), streaming RPCs (newline-delimited JSON via stdin), TLS configuration (--cacert, --cert, --key, --insecure, --plaintext), header injection (-H 'Authorization: Bearer ...'), and exit codes. Use for ad-hoc gRPC debugging, smoke testing, scriptable PR-time gates, and CLI-based interaction with reflective gRPC services.",
+  "content_fingerprint": "2594a3457993c0bb9ecb4c2f590ef847449946706f018c70cd973e8970ef58a2"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Convergence loop that iteratively improves work until quality thresholds are\nmet. Use when: (1) \"refine this\", \"make this better\", \"iterate on this\",\n(2) After /analyst gives a REVISE verdict, (3) Output quality is below 8/10,\n(4) \"run the refinery loop on this\". Reads analyst reviews from\nsystem/reviews/. Generates, scores, diagnoses, rewrites, re-scores.\nStops when all dimensions >= 8/10 or diminishing returns detected.\nOutputs to system/refinery-log.md."
+  "description": "Convergence loop that iteratively improves work until quality thresholds are\nmet. Use when: (1) \"refine this\", \"make this better\", \"iterate on this\",\n(2) After /analyst gives a REVISE verdict, (3) Output quality is below 8/10,\n(4) \"run the refinery loop on this\". Reads analyst reviews from\nsystem/reviews/. Generates, scores, diagnoses, rewrites, re-scores.\nStops when all dimensions >= 8/10 or diminishing returns detected.\nOutputs to system/refinery-log.md.",
+  "content_fingerprint": "75f4e2aa3bb8ac1acc5fe17b2a0ceb107c96aa90b742417d8a07055f740102c7"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when user wants to break a PRD into Azure DevOps work items via vertical-slice plan. Workflow: read PRD \u2192 quiz user to lock durable decisions \u2192 draft slices with HITL/AFK + blocked_by \u2192 call az CLI directly via Bash to create items + Predecessor relations. Idempotent re-runs via fingerprint markers embedded in description. Pure prompt-driven \u2014 Claude is the runtime, no Python helper, no install ceremony. Trigger phrases: prd-breakdown / \u62c6 PRD / \u5207 vertical slice / \u63a8 slice \u5230 ADO."
+  "description": "Use when user wants to break a PRD into Azure DevOps work items via vertical-slice plan. Workflow: read PRD → quiz user to lock durable decisions → draft slices with HITL/AFK + blocked_by → call az CLI directly via Bash to create items + Predecessor relations. Idempotent re-runs via fingerprint markers embedded in description. Pure prompt-driven — Claude is the runtime, no Python helper, no install ceremony. Trigger phrases: prd-breakdown / 拆 PRD / 切 vertical slice / 推 slice 到 ADO.",
+  "content_fingerprint": "1b7fc82c5676a5d60d993896ce6466cbab1e08f7914f50a48bbac5543ed0cb55"
 }

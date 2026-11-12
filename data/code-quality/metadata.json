@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/tikazyq/agentic-spec-forge/blob/main/AGENTIC_SPEC_FORGE/spec_stage_skill/execspec_fulfill/code-quality/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "9a7fe44258d0d0153eea19137091d8fbd253ce2fd8f3c5e1041bfa2267278b36",
+  "description": "执行代码质量门禁检查（测试通过→覆盖率→Lint→GOAL追溯→可提交），验证单元测试覆盖率≥80%、集成测试通过率≥95%、代码规范零错误。当完成代码实现、准备提交代码、需要质量验证、进行提交前自检时使用。确保代码可合并。"
 }

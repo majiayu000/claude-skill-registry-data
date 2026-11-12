@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Replaces System.arraycopy() calls with Java 6 Arrays.copyOf()/copyOfRange(). Handles three cases: same-source copy, destPos=0 copy, and non-zero destPos (leaves a NOTE comment). Invoked by jade-core-rule-dispatcher."
+  "description": "Replaces System.arraycopy() calls with Java 6 Arrays.copyOf()/copyOfRange(). Handles three cases: same-source copy, destPos=0 copy, and non-zero destPos (leaves a NOTE comment). Invoked by jade-core-rule-dispatcher.",
+  "content_fingerprint": "519bfdca9d0ee9847a07284bb29a5cdb0ded7393e41da2495d70fe07c62dd3be"
 }

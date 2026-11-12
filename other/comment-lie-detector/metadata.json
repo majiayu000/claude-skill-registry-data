@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Comment lie detector: extracts every behavioral-claim comment (returns / throws / always / never / must / thread-safe / side-effect) with 30 lines of surrounding code context, then has the LLM judge whether the code does what the comment promises. Categorizes each comment as consistent / contradicts / outdated / unverifiable with confidence proven/likely/suspected. Read-only. Audience: Both. Trigger: /comment-lies"
+  "description": "Comment lie detector: extracts every behavioral-claim comment (returns / throws / always / never / must / thread-safe / side-effect) with 30 lines of surrounding code context, then has the LLM judge whether the code does what the comment promises. Categorizes each comment as consistent / contradicts / outdated / unverifiable with confidence proven/likely/suspected. Read-only. Audience: Both. Trigger: /comment-lies",
+  "content_fingerprint": "368e4142e5fff690796db4df9a6dc40826cb2f5139515993c2bcbd5ba1db46ef"
 }

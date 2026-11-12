@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a msModelSlim \u521b\u5efa\u57fa\u7840 Transformers \u6a21\u578b\u9002\u914d\u5668\uff08Model Adapter\uff09\u3002 \u5305\u542b\u521b\u5efa\u9002\u914d\u5668\u3001\u5b9e\u73b0\u5fc5\u9700\u63a5\u53e3\u4e0e\u6ce8\u518c\u5b89\u88c5\u6d41\u7a0b\u3002 \u9002\u7528\uff1aDecoder-only LLM\u3001\u7406\u89e3\u7c7b VLM\uff08\u4ec5 LLM/text \u90e8\u5206\uff09\u3002 \u591a\u6a21\u6001\u751f\u6210\uff08DiT/\u6269\u6563\uff0c\u542b\u53cc/\u591a\u4e13\u5bb6\uff09\u89c1\u4e0b\u65b9\u300c\u591a\u6a21\u6001\u751f\u6210\u6269\u5c55\u300d\u8282\uff0c\u6309\u9700\u52a0\u8f7d\u3002 \u4e0d\u9002\u7528\uff1aEncoder-only\u3001\u975e Transformers \u67b6\u6784\u3002"
+  "description": "为 msModelSlim 创建基础 Transformers 模型适配器（Model Adapter）。 包含创建适配器、实现必需接口与注册安装流程。 适用：Decoder-only LLM、理解类 VLM（仅 LLM/text 部分）。 多模态生成（DiT/扩散，含双/多专家）见下方「多模态生成扩展」节，按需加载。 不适用：Encoder-only、非 Transformers 架构。",
+  "content_fingerprint": "f92df88f7131dd8af0d4a315510fee9fde532260b2bc4771800156a904d67584"
 }

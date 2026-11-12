@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Claude \u00d7 Codex \u00d7 GPT-5.5 Pro \u00d7 Gemini 3 Pro \u591a\u6a21\u578b\u534f\u4f5c\u6d41\u6c34\u7ebf(Anthropic/OpenAI/Google \u4e09\u65cf\u4ea4\u53c9\u4e92\u5ba1)\u3002\u5f53 Tony \u8bf4\u300ccc\u300d\u300c\u8d70 cc\u300d\u300c\u7528 cc \u505a\u300d\u300ccc \u8fd9\u4e2a\u4efb\u52a1\u300d\u300ccc \u6d41\u7a0b\u300d\u300c\u591a\u6a21\u578b\u534f\u4f5c\u505a X\u300d\u65f6\u89e6\u53d1\u3002\u98ce\u9669\u9a71\u52a8:\u5148\u7ed9\u4efb\u52a1\u5206\u7ea7(L1/L2/L3),\u6309\u7ea7\u8def\u7531\u6a21\u578b\u7ec4\u5408,maker/checker \u8de8\u6a21\u578b\u65cf\u771f\u9694\u79bb + \u8bc1\u636e\u951a\u5b9a + \u673a\u5668\u53ef\u6062\u590d\u3002\u6240\u6709\u6a21\u578b\u8c03\u7528\u7edf\u4e00\u8d70 cc-run.sh(stdin \u4f20\u53c2/\u5168\u91cf\u843d\u76d8/VERDICT \u89e3\u6790/secret \u9632\u7ebf/state \u843d\u76d8)\u3002\u7528\u4e8e\u9700\u8981\u9ad8\u628a\u63e1\u3001\u8de8\u6a21\u578b\u65cf\u4e92\u5ba1\u7684\u7f16\u7801\u4efb\u52a1\u3002"
+  "description": "Claude × Codex × GPT-5.5 Pro × Gemini 3 Pro 多模型协作流水线(Anthropic/OpenAI/Google 三族交叉互审)。当 Tony 说「cc」「走 cc」「用 cc 做」「cc 这个任务」「cc 流程」「多模型协作做 X」时触发。风险驱动:先给任务分级(L1/L2/L3),按级路由模型组合,maker/checker 跨模型族真隔离 + 证据锚定 + 机器可恢复。所有模型调用统一走 cc-run.sh(stdin 传参/全量落盘/VERDICT 解析/secret 防线/state 落盘)。用于需要高把握、跨模型族互审的编码任务。",
+  "content_fingerprint": "9e54a02f2ec1870be3b19d31f32d2bed6ee049dd72713c358c5488dbb44818f0"
 }

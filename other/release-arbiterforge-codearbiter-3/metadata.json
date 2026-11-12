@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The single permitted path to a version tag. Routed to when the user invokes /release on a non-default branch with a green suite. Derives the SemVer bump from Conventional-Commits history since the last tag, rolls the commits into CHANGELOG.md, writes an annotated tag, and on authorization publishes it as a GitHub Release with the changelog section as its notes. A release commit, if needed, routes through commit-gate; the tag and Release are never published without explicit authorization."
+  "description": "The single permitted path to a version tag. Routed to when the user invokes /release on a non-default branch with a green suite. Derives the SemVer bump from Conventional-Commits history since the last tag, rolls the commits into CHANGELOG.md, writes an annotated tag, and on authorization publishes it as a GitHub Release with the changelog section as its notes. A release commit, if needed, routes through commit-gate; the tag and Release are never published without explicit authorization.",
+  "content_fingerprint": "a2f80136ea96979008c0e4aac0e3a0b2c270f7f09978e4fb30a1fb9f5d4c937d"
 }

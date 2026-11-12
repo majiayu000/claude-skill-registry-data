@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "NL2SQL/Text2SQL \u77e5\u8bc6\u57fa\u5ea7\uff08\u4f9b extends \u7ee7\u627f\uff09\u3002\u805a\u5408\u4e24\u9636\u6bb5\u67b6\u6784\u3001\u67e5\u8be2\u7c7b\u578b\u5206\u7c7b\u3001\u5b57\u6bb5/\u672f\u8bed\u6620\u5c04\u3001\u6761\u4ef6\u4e0e metric \u62bd\u53d6\u3001\u591a\u8868 JOIN \u63a8\u7406\u3001SQL \u6b63\u786e\u6027\u4e0e\u8bc4\u6d4b\u7684\u6df1\u5ea6\u77e5\u8bc6\u4e0e\u8e29\u5751\u3002\u901a\u5e38\u88ab devlab-nl2sql-engineering \u7ee7\u627f\uff0c\u4e0d\u76f4\u63a5\u9762\u5411\u7528\u6237\u89e6\u53d1\u3002"
+  "description": "NL2SQL/Text2SQL 知识基座（供 extends 继承）。聚合两阶段架构、查询类型分类、字段/术语映射、条件与 metric 抽取、多表 JOIN 推理、SQL 正确性与评测的深度知识与踩坑。通常被 devlab-nl2sql-engineering 继承，不直接面向用户触发。",
+  "content_fingerprint": "0fbfd4a9b1fe35604db0f17c4996df8c60b15099549eebee839708a7ed6c6556"
 }

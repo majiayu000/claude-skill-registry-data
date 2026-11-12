@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Apply a trim-filler keeps.json to a clip's video. Reads the kept time ranges and re-encodes the clip with ffmpeg select/aselect so kept ranges are concatenated and removed spans (filler, trail-offs, digressions) disappear. Output aligns with the trimmed transcript trim-filler wrote, so downstream subtitle / caption / title skills stay in sync."
+  "description": "Apply a trim-filler keeps.json to a clip's video. Reads the kept time ranges and re-encodes the clip with ffmpeg select/aselect so kept ranges are concatenated and removed spans (filler, trail-offs, digressions) disappear. Output aligns with the trimmed transcript trim-filler wrote, so downstream subtitle / caption / title skills stay in sync.",
+  "content_fingerprint": "1758e082151458919f053cbad60574d8e9e4d393e379481969473729dda9d613"
 }

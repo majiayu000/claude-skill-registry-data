@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Atomic rename of Python symbols or modules via the structural index \u2014 static callers, import sites, __all__ re-exports, Sphinx cross-refs; optional deprecated alias (--deprecate) or hard-delete (--remove-if-no-callers).\nTRIGGER: \"rename X to Y\" (function/class/method/module), \"move module X to Y\", \"update all references to X\".\nSKIP: non-Python; index not built (/codemap-py:scan-codebase first); local-variable rename; grep-only rename wanted; 1:N symbol splits; package directory rename (git mv)."
+  "description": "Atomic rename of Python symbols or modules via the structural index — static callers, import sites, __all__ re-exports, Sphinx cross-refs; optional deprecated alias (--deprecate) or hard-delete (--remove-if-no-callers).\nTRIGGER: \"rename X to Y\" (function/class/method/module), \"move module X to Y\", \"update all references to X\".\nSKIP: non-Python; index not built (/codemap-py:scan-codebase first); local-variable rename; grep-only rename wanted; 1:N symbol splits; package directory rename (git mv).",
+  "content_fingerprint": "cef532db4992e391c219946ea17bb84daaaa1a9e841c3da5e5b2bfd4fa306a45"
 }

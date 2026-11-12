@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `ci-pipeline` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage ci-pipeline --single`: the engine emits one run-stage directive for ci-pipeline and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `ci-pipeline` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage ci-pipeline --single`: the engine emits one run-stage directive for ci-pipeline and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "aeaa61eefd8ae6c858ee173e1e590bebe6313cd22ac7a10183d2848b13fda9a1"
 }

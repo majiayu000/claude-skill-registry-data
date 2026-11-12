@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate navigable semantic maps from PDF documents. Extracts section structure via font analysis, then runs LLM extraction per section for claims, symbols, and dependencies \u2014 all page-anchored. Produces _MAP.md (progressive disclosure), .symbols.json (definition index), .anchors.json (claim references), and a _USAGE.md snippet for CLAUDE.md. Use when analyzing papers, specs, or legal docs; when asked to \"map this document\", \"index this PDF\", \"what does this paper say\"; or when a coding agent needs grounded reference material from a PDF source. Analogous to tree-sitting but for prose documents."
+  "description": "Generate navigable semantic maps from PDF documents. Extracts section structure via font analysis, then runs LLM extraction per section for claims, symbols, and dependencies — all page-anchored. Produces _MAP.md (progressive disclosure), .symbols.json (definition index), .anchors.json (claim references), and a _USAGE.md snippet for CLAUDE.md. Use when analyzing papers, specs, or legal docs; when asked to \"map this document\", \"index this PDF\", \"what does this paper say\"; or when a coding agent needs grounded reference material from a PDF source. Analogous to tree-sitting but for prose documents.",
+  "content_fingerprint": "00e58712d02f93e233b0da774514de2a43acdefcd8ea3fc6c413f9a512563382"
 }

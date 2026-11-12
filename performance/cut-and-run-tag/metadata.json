@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Analyzes CUT&RUN (Skene Henikoff 2017) and CUT&Tag (Kaya-Okur 2019) chromatin profiling data. Handles SEACR vs MACS2 peak calling (with the btaf375 2025 benchmark guidance), pA-MNase vs pA-Tn5 vs pAG-Tn5 chimera differences, E. coli spike-in carryover normalization, IgG-only control logic (no input), characteristic fragment-size signatures (25-75 bp for CUT&Tag), and lower depth requirements (5M reads typical vs 25M for ChIP). Use when calling peaks from CUT&RUN/CUT&Tag, scaling by E. coli spike-in carryover, choosing SEACR norm mode, or comparing CUT&RUN/Tag results to traditional ChIP."
+  "description": "Analyzes CUT&RUN (Skene Henikoff 2017) and CUT&Tag (Kaya-Okur 2019) chromatin profiling data. Handles SEACR vs MACS2 peak calling (with the btaf375 2025 benchmark guidance), pA-MNase vs pA-Tn5 vs pAG-Tn5 chimera differences, E. coli spike-in carryover normalization, IgG-only control logic (no input), characteristic fragment-size signatures (25-75 bp for CUT&Tag), and lower depth requirements (5M reads typical vs 25M for ChIP). Use when calling peaks from CUT&RUN/CUT&Tag, scaling by E. coli spike-in carryover, choosing SEACR norm mode, or comparing CUT&RUN/Tag results to traditional ChIP.",
+  "content_fingerprint": "b79b55ae16862de1e4fca5d4cef6baf849dd3cd0e64448bae34708a35db4fbff"
 }

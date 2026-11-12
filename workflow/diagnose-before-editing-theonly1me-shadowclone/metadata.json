@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when behavior fails, flakes, or slows down, and nobody knows the cause yet. Also use it when the user says \"why does this fail?\", \"it worked yesterday\", or \"this got slow\". Reproduces the failure, makes it smaller, and tests one cause at a time until one cause predicts the symptom. Then fixes the cause at its origin, not the symptom. Not for scoping a fix whose cause you already know (use `scope-confirmed-changes`)."
+  "description": "Use when behavior fails, flakes, or slows down, and nobody knows the cause yet. Also use it when the user says \"why does this fail?\", \"it worked yesterday\", or \"this got slow\". Reproduces the failure, makes it smaller, and tests one cause at a time until one cause predicts the symptom. Then fixes the cause at its origin, not the symptom. Not for scoping a fix whose cause you already know (use `scope-confirmed-changes`).",
+  "content_fingerprint": "33a3353bd917ef3fe45c7f90857b81dcefbe49b5568c455184cd7ca69e7c4ecc"
 }

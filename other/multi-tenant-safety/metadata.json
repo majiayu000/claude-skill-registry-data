@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u4ee3\u7801\u6d89\u53ca\u591a\u79df\u6237\u9694\u79bb\uff08TenantContext\u3001tenantId\u3001\u79df\u6237\u62e6\u622a\u5668/\u8fc7\u6ee4\u5668\u3001X-Tenant-Code\uff09\u65f6\u89e6\u53d1\u3002 \u9632\u6b62\u79df\u6237\u8d8a\u6743\u8bbf\u95ee\u3001\u6570\u636e\u4e32\u79df\u6237\u7b49\u5b89\u5168\u95ee\u9898\u3002"
+  "description": "当代码涉及多租户隔离（TenantContext、tenantId、租户拦截器/过滤器、X-Tenant-Code）时触发。 防止租户越权访问、数据串租户等安全问题。",
+  "content_fingerprint": "70f353ffdb4e00451a589b8d556e98c566a2029774f1617cd355233394fa5f08"
 }

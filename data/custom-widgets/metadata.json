@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MDL syntax for pluggable widgets in CREATE PAGE / ALTER PAGE \u2014 any installed widget is named by its own name (`htmlelement frame (\u2026) { \u2026 }`), with object lists and child slots read from its definition. Covers GALLERY, COMBOBOX, DataGrid2, charts and third-party widgets: datasource and column forms, child slots (TEMPLATE/FILTER), the `pluggablewidget '<id>'` fallback, and adding a widget via .def.json. Use when placing a pluggable widget on a page, or when `mxcli widget describe` output needs interpreting. For the widgets THIS project has, read the generated `widgets` skill."
+  "description": "MDL syntax for pluggable widgets in CREATE PAGE / ALTER PAGE — any installed widget is named by its own name (`htmlelement frame (…) { … }`), with object lists and child slots read from its definition. Covers GALLERY, COMBOBOX, DataGrid2, charts and third-party widgets: datasource and column forms, child slots (TEMPLATE/FILTER), the `pluggablewidget '<id>'` fallback, and adding a widget via .def.json. Use when placing a pluggable widget on a page, or when `mxcli widget describe` output needs interpreting. For the widgets THIS project has, read the generated `widgets` skill.",
+  "content_fingerprint": "252b2113453f928e136e20780873df49e8c8d17a741ad0ff52758951e8ca4a35"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a user asks to scan, investigate, or characterize a URL. Submits to URLScan (unlisted by default), cross-references with VirusTotal and OTX, extracts the parent domain and resolved IP for follow-up investigation. Returns verdict, redirect chain, contacted infrastructure, and screenshot. Invoked by /cti-orchestrator when the target is a URL."
+  "description": "Use when a user asks to scan, investigate, or characterize a URL. Submits to URLScan (unlisted by default), cross-references with VirusTotal and OTX, extracts the parent domain and resolved IP for follow-up investigation. Returns verdict, redirect chain, contacted infrastructure, and screenshot. Invoked by /cti-orchestrator when the target is a URL.",
+  "content_fingerprint": "95b5a125c3d0cb4f554dfdae49e56da7de986ef29923cb67bce4498ec51176e2"
 }

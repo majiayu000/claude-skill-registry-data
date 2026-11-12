@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Open a pull request for the current change branch (push with explicit yes). GitHub uses gh; Azure DevOps uses az when the CLI is available. Use after commits exist on feat/<slug> or spec/<slug>, or when the user asks for a PR. Cross-cutting. Does not merge; that is /crav1-merge-pr on a later explicit ask. Do not commit. When that slug has work-item.md, add a Work item section to the body."
+  "description": "Open a pull request for the current change branch (push with explicit yes). GitHub uses gh; Azure DevOps uses az when the CLI is available. Use after commits exist on feat/<slug> or spec/<slug>, or when the user asks for a PR. Cross-cutting. Does not merge; that is /crav1-merge-pr on a later explicit ask. Do not commit. When that slug has work-item.md, add a Work item section to the body.",
+  "content_fingerprint": "5defe0b1b68658e110f1f188afa94376a8a70d92d0dcf468f322454d383ea7e6"
 }

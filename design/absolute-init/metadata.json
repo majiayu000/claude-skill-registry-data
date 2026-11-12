@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "One-time setup for absolute: interview how you want it to behave (output style, autonomy, TDD strictness, spec dir, families) + detect the stack once, then write `.absolute.config.json` (project, committed) and `~/.absolute/config.json` (user defaults + per-project overrides). Every other absolute-* command reads it instead of re-detecting; non-blocking \u2014 commands proceed without it and soft-recommend it. Triggers on \"absolute init\", \"set up absolute\", \"initialize absolute\", \"configure absolute\", \"first-time setup\", \"remember my conventions for this repo\"."
+  "description": "One-time setup for absolute: interview how you want it to behave (output style, autonomy, TDD strictness, spec dir, families) + detect the stack once, then write `.absolute.config.json` (project, committed) and `~/.absolute/config.json` (user defaults + per-project overrides). Every other absolute-* command reads it instead of re-detecting; non-blocking — commands proceed without it and soft-recommend it. Triggers on \"absolute init\", \"set up absolute\", \"initialize absolute\", \"configure absolute\", \"first-time setup\", \"remember my conventions for this repo\".",
+  "content_fingerprint": "62c90f450cfe872793b14a21daabccc51bfaed1e983eb3c469e2da4e5718b22f"
 }

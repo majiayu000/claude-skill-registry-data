@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Load-bearing Nimbus rule \u2014 never `git push` without explicit user authorization in the current turn. Commits are local. Pushes fire preprod deploys, prod releases (on tags), and are visible to the team.\nTrigger this skill when: - You're about to run any `git push` variant. - User asks about pushing state. - Session start (silently enforce)."
+  "description": "Load-bearing Nimbus rule — never `git push` without explicit user authorization in the current turn. Commits are local. Pushes fire preprod deploys, prod releases (on tags), and are visible to the team.\nTrigger this skill when: - You're about to run any `git push` variant. - User asks about pushing state. - Session start (silently enforce).",
+  "content_fingerprint": "936ac57732a3ca1098257c227968ac37e2415bc44cad395767bcf0b3068b4a8e"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Context compression layer for AI agents. Reduces tokens sent to and received from LLMs by 60\u201395% with zero accuracy loss. Use when token costs are high, context windows are filling up, or tool outputs / logs / RAG chunks are bloating prompts. Triggers include \"compress context\", \"reduce tokens\", \"save on API costs\", \"context window full\", \"token limit\", \"optimize prompts\", or any task involving large tool outputs, log files, RAG results, or conversation history. Also provides `headroom learn` which mines failed sessions and writes corrections to CLAUDE.md automatically."
+  "description": "Context compression layer for AI agents. Reduces tokens sent to and received from LLMs by 60–95% with zero accuracy loss. Use when token costs are high, context windows are filling up, or tool outputs / logs / RAG chunks are bloating prompts. Triggers include \"compress context\", \"reduce tokens\", \"save on API costs\", \"context window full\", \"token limit\", \"optimize prompts\", or any task involving large tool outputs, log files, RAG results, or conversation history. Also provides `headroom learn` which mines failed sessions and writes corrections to CLAUDE.md automatically.",
+  "content_fingerprint": "324a9683f16c52dc9823ae677bbb0973d1b426bdda7f95d0da7e61539c03938c"
 }

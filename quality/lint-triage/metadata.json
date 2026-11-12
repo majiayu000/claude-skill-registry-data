@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run RTL lint / methodology checks and triage each violation into a real fix vs a justified, documented waiver. Use when the user says \"lint my RTL\", \"code quality\", \"review my RTL\", \"check my Verilog/VHDL\", \"any latches / unintended latches\", \"clean up warnings before synthesis\", \"is my design lint-clean\", or asks for a code-quality / methodology report on an FPGA design. Requires the SynthPilot MCP server (Xilinx Vivado running with the Tcl server connected on TCP:9999). Methodology-stage checks additionally require an open synthesized design (open_synthesized_design / open_implemented_design)."
+  "description": "Run RTL lint / methodology checks and triage each violation into a real fix vs a justified, documented waiver. Use when the user says \"lint my RTL\", \"code quality\", \"review my RTL\", \"check my Verilog/VHDL\", \"any latches / unintended latches\", \"clean up warnings before synthesis\", \"is my design lint-clean\", or asks for a code-quality / methodology report on an FPGA design. Requires the SynthPilot MCP server (Xilinx Vivado running with the Tcl server connected on TCP:9999). Methodology-stage checks additionally require an open synthesized design (open_synthesized_design / open_implemented_design).",
+  "content_fingerprint": "fb5bc84dead8e298d55fa65baa5440dcddfe4228782461173de5fea6fd21e3ca"
 }

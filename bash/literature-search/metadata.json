@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a loop needs scholarly literature \u2014 paper discovery, novelty checks, full-text snippet search, citation-graph traversal, single-paper reads, or experimental-result extraction. A shared, stdlib-only CLI (`tools/lit_search.py`) over Semantic Scholar + arXiv (plus optional OpenAlex, Perplexity Sonar, bgpt.pro), all JSON. Not a loop itself: install it alongside the loops and let any of them call it instead of vendoring their own copy. Degrades to the caller's WebSearch/WebFetch."
+  "description": "Use when a loop needs scholarly literature — paper discovery, novelty checks, full-text snippet search, citation-graph traversal, single-paper reads, or experimental-result extraction. A shared, stdlib-only CLI (`tools/lit_search.py`) over Semantic Scholar + arXiv (plus optional OpenAlex, Perplexity Sonar, bgpt.pro), all JSON. Not a loop itself: install it alongside the loops and let any of them call it instead of vendoring their own copy. Degrades to the caller's WebSearch/WebFetch.",
+  "content_fingerprint": "5973115b1337a411870e3f9b2396b1e2ef814040ebc0c7ac56db44a7099b1088"
 }

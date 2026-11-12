@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Open a GitHub pull request with a thorough auto-generated summary. Use when the user asks to open, create, or draft a PR. Fetches origin/main, mandatorily runs all pre-commit checks and pytest (off the login node on HPC), mandatorily runs /thermo-nuclear-code-quality-review against the diff, spawns 1\u20132 additional review subagents that deeply review the diff, and posts their findings into the PR body."
+  "description": "Open a GitHub pull request with a thorough auto-generated summary. Use when the user asks to open, create, or draft a PR. Fetches origin/main, mandatorily runs all pre-commit checks and pytest (off the login node on HPC), mandatorily runs /thermo-nuclear-code-quality-review against the diff, spawns 1–2 additional review subagents that deeply review the diff, and posts their findings into the PR body.",
+  "content_fingerprint": "a5cb4969d4f3d92ddcf8491c1fa0d6577fc5dab73a873e00794df024ec40bf36"
 }

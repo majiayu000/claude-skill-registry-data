@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Full-strength research protocol (multi-candidate comparison, registry/freshness/slopsquatting verification, deprecation cross-check, cited evidence, mini-ADR) for HIGH-STAKES or explicit-ask implementation decisions \u2014 a core dependency (auth, database, crypto), a load-bearing algorithm, or an architecture pattern. Triggers when the user explicitly asks for a \"best\", \"modern\", \"SOTA\", or \"recommended\" choice, or when about to introduce a hard-to-reverse dependency/algorithm. For low-stakes, easily-reversible picks, use the lighter check in the dependencies rule instead \u2014 don't invoke this skill for those."
+  "description": "Full-strength research protocol (multi-candidate comparison, registry/freshness/slopsquatting verification, deprecation cross-check, cited evidence, mini-ADR) for HIGH-STAKES or explicit-ask implementation decisions — a core dependency (auth, database, crypto), a load-bearing algorithm, or an architecture pattern. Triggers when the user explicitly asks for a \"best\", \"modern\", \"SOTA\", or \"recommended\" choice, or when about to introduce a hard-to-reverse dependency/algorithm. For low-stakes, easily-reversible picks, use the lighter check in the dependencies rule instead — don't invoke this skill for those.",
+  "content_fingerprint": "53912bb5546d4411bcbbbdca5a868e17ba78f5ab8fe311264e77855c81e306dd"
 }

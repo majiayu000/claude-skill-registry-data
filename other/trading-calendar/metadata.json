@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2\u4e2d\u56fd\u5185\u5730\uff08cn\uff09\u6216\u9999\u6e2f\uff08hk\uff09\u5e02\u573a\u5728\u6307\u5b9a\u95ed\u533a\u95f4\u5185\u7684\u4ea4\u6613\u65e5\u5217\u8868\u3002\u7528\u6237\u63d0\u5230\u300c\u4ea4\u6613\u65e5\u5386\u300d\u300cA \u80a1\u4ea4\u6613\u65e5\u300d\u300c\u6e2f\u80a1\u4ea4\u6613\u65e5\u300d\u300c\u67d0\u533a\u95f4\u5185\u7684\u4ea4\u6613\u65e5\u300d\u300ctrading calendar\u300d\u65f6\u4f7f\u7528\u3002\u8fd4\u56de\u88f8 JSON \u5bf9\u8c61\uff08market/start_date/end_date/trade_dates\uff09\uff0c\u4e0d\u4f7f\u7528\u901a\u7528 code/message/data \u4fe1\u5c01\u3002"
+  "description": "查询中国内地（cn）或香港（hk）市场在指定闭区间内的交易日列表。用户提到「交易日历」「A 股交易日」「港股交易日」「某区间内的交易日」「trading calendar」时使用。返回裸 JSON 对象（market/start_date/end_date/trade_dates），不使用通用 code/message/data 信封。",
+  "content_fingerprint": "de7e3abbddcc1f6957201d661931338cf1dd6db0f95eff41590e6366093d4993"
 }

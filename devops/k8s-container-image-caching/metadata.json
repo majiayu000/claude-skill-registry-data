@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/k8s-container-image-caching/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c2d5d8befbdb84eca47f3e0cf5a7539ab44bda0f7e89a9e1b1be77010659f7de",
+  "description": "Set up and troubleshoot container image pull-through caches in Kubernetes. Use when:\n(1) ImagePullBackOff for non-Docker-Hub images routed through a wildcard mirror,\n(2) containerd has deprecated `reg"
 }

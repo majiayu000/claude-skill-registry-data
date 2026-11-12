@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a\u65b0\u589e\u6216\u5df2\u5b8c\u6210\u7684CANN C/C++\u7b97\u5b50\u8bbe\u8ba1\u3001\u63a5\u5165\u3001\u5ba1\u8ba1\u548c\u6574\u6539\u9519\u8bef\u7801\u4e0a\u62a5\u8def\u5f84\uff0c\u8986\u76d6\u5b9e\u9645log.h\u89e3\u6790\u3001\u5931\u8d25\u51fa\u53e3\u6cbb\u7406\u3001\u6700\u5c0f\u7f16\u8bd1\u3001\u8d1f\u5411\u6d4b\u8bd5\u4e0eMarkdown\u62a5\u544a\u3002\u89e6\u53d1\uff1a\u7528\u6237\u8981\u6c42\u65b0\u589e\u7b97\u5b50\u9519\u8bef\u7801\u5f00\u53d1\uff0c\u6216\u626b\u63cf\u3001\u91cd\u6784\u3001\u9a8c\u8bc1\u65e2\u6709\u7b97\u5b50\u7684\u9519\u8bef\u7801\u4e0e\u5931\u8d25\u8fd4\u56de\uff1b"
+  "description": "为新增或已完成的CANN C/C++算子设计、接入、审计和整改错误码上报路径，覆盖实际log.h解析、失败出口治理、最小编译、负向测试与Markdown报告。触发：用户要求新增算子错误码开发，或扫描、重构、验证既有算子的错误码与失败返回；",
+  "content_fingerprint": "99dbf3eb85f5e60bd69bba36f808e884ccba9807488452dd6d5a84ddeac1abc1"
 }

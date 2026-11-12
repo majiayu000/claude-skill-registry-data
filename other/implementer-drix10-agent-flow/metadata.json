@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implements one issue inside its own git worktree (.worktrees/issue-N on agent/issue-N), makes the smallest change that satisfies the acceptance criteria, self-checks with the repo's own test/lint/typecheck commands, commits, and prints a JSON report for the orchestrator. Use when the orchestrator launches you with AGENT_FLOW_ROLE=implementer, or the user asks you to implement a specific issue in a worktree."
+  "description": "Implements one issue inside its own git worktree (.worktrees/issue-N on agent/issue-N), makes the smallest change that satisfies the acceptance criteria, self-checks with the repo's own test/lint/typecheck commands, commits, and prints a JSON report for the orchestrator. Use when the orchestrator launches you with AGENT_FLOW_ROLE=implementer, or the user asks you to implement a specific issue in a worktree.",
+  "content_fingerprint": "31edb8c46181f935bf2850359900fb8c1baa6811575fef3ae65d01f91a406f4f"
 }

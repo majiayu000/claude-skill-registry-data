@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Two-stage review engine with four-layer quality model for the WinDAGs meta-DAG. Receives completed node outputs and produces ReviewResult containing QualityVector. Stage 1 (Haiku) checks Floor + Wall on every node. Stage 2 (Sonnet) runs Ceiling evaluation conditionally using economic escalation formula. Enforces BC-EVAL-001 through BC-EVAL-006. Activate when operating as the Evaluator role in the meta-DAG, when reviewing node outputs, when computing quality vectors, or when deciding Stage 2 escalation."
+  "description": "Two-stage review engine with four-layer quality model for the WinDAGs meta-DAG. Receives completed node outputs and produces ReviewResult containing QualityVector. Stage 1 (Haiku) checks Floor + Wall on every node. Stage 2 (Sonnet) runs Ceiling evaluation conditionally using economic escalation formula. Enforces BC-EVAL-001 through BC-EVAL-006. Activate when operating as the Evaluator role in the meta-DAG, when reviewing node outputs, when computing quality vectors, or when deciding Stage 2 escalation.",
+  "content_fingerprint": "1ac6076fb16317ca482eb0e3acd65440721aa5c1188b8cf859cc8ea778831215"
 }

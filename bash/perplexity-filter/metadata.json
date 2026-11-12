@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u56f0\u60d1\u5ea6\u8fc7\u6ee4\u5668\u3002\u8fc7\u6ee4\u4ee5\u4fdd\u7559\u56f0\u60d1\u5ea6\u5206\u6570\u5c0f\u4e8e\u7279\u5b9a\u6700\u5927\u503c\u7684\u6837\u672c\u3002\n\u672cSKILL\u4f7f\u7528\u4f9d\u8d56data_juicer\uff0c\u8bf7\u5728\u8c03\u7528\u524d\u5b89\u88c5\u597dpython\u73af\u5883\u5e76\u5b89\u88c5data_juicer\uff0c\u4f60\u53ef\u7528\u4ee5\u4e0b\u6307\u4ee4\u8fdb\u884c\u5b89\u88c5\uff1a\npip install py-data-juicer\n\n\u5f53\u7528\u6237\u63d0\u5230\u56f0\u60d1\u5ea6\u8fc7\u6ee4\u3001\u6587\u672c\u56f0\u60d1\u5ea6\u68c0\u6d4b\u3001\u8bed\u8a00\u6a21\u578b\u5206\u6570\u8fc7\u6ee4\u3001\u6587\u672c\u8d28\u91cf\u8fc7\u6ee4\u7b49\u9700\u6c42\u65f6\u4f7f\u7528\u6b64skill\u3002"
+  "description": "困惑度过滤器。过滤以保留困惑度分数小于特定最大值的样本。\n本SKILL使用依赖data_juicer，请在调用前安装好python环境并安装data_juicer，你可用以下指令进行安装：\npip install py-data-juicer\n\n当用户提到困惑度过滤、文本困惑度检测、语言模型分数过滤、文本质量过滤等需求时使用此skill。",
+  "content_fingerprint": "579df2a15eafcd6379bd6ad35519f99eb6eed2b9bf821b1977e7e788124be50a"
 }

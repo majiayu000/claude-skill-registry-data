@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Internal skill. Called by setup-evaluation after a PASS. Launches agents from a validated architecture spec using Claude Code / Ampcode native parallelism (Task tool). Does NOT generate scripts or SDK code \u2014 it outputs structured spawn instructions that the platform executes natively. Never invoked directly by the user. Never launches without a setup-evaluation PASS."
+  "description": "Internal skill. Called by setup-evaluation after a PASS. Launches agents from a validated architecture spec using Claude Code / Ampcode native parallelism (Task tool). Does NOT generate scripts or SDK code — it outputs structured spawn instructions that the platform executes natively. Never invoked directly by the user. Never launches without a setup-evaluation PASS.",
+  "content_fingerprint": "18cc3010708aa9dc604db739a09e8a2779677538f014bc9e4de861306fba5bc6"
 }

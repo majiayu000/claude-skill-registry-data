@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generating the initial set of dif.sh surfaces by reading the app's structure and product context. Use when the user wants to set up, scaffold, populate, auto-create, or propose surfaces for a dif project \u2014 especially right after `dif init`, when `dif/surfaces/` is empty or sparse, or when `dif new` fails with \"surface does not exist\". Reads the codebase (routes, pages, README, package.json) plus `dif/context.json`, proposes a candidate set of surfaces with one-line rationales, confirms with the user, then writes the matching `dif/surfaces/<name>.md` files."
+  "description": "Generating the initial set of dif.sh surfaces by reading the app's structure and product context. Use when the user wants to set up, scaffold, populate, auto-create, or propose surfaces for a dif project — especially right after `dif init`, when `dif/surfaces/` is empty or sparse, or when `dif new` fails with \"surface does not exist\". Reads the codebase (routes, pages, README, package.json) plus `dif/context.json`, proposes a candidate set of surfaces with one-line rationales, confirms with the user, then writes the matching `dif/surfaces/<name>.md` files.",
+  "content_fingerprint": "06fd99c4c37204cd361203e822d5070eb566cdb767e45164f517d9ceeaf2fdbc"
 }

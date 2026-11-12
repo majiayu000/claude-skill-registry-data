@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Operate and debug the DNS C2 system non-interactively. This skill should be used when Claude needs to launch an exploit, send commands to a compromised session and collect output, diagnose why a payload is not calling home, or inspect C2 server state. Triggers on requests like \"run the exploit\", \"send whoami to the session\", \"why isn't the payload calling back\", \"check what sessions are active\", or \"debug the C2\"."
+  "description": "Operate and debug the DNS C2 system non-interactively. This skill should be used when Claude needs to launch an exploit, send commands to a compromised session and collect output, diagnose why a payload is not calling home, or inspect C2 server state. Triggers on requests like \"run the exploit\", \"send whoami to the session\", \"why isn't the payload calling back\", \"check what sessions are active\", or \"debug the C2\".",
+  "content_fingerprint": "62e4a842115649225bf6dafb3d77bb52c9c3a296cab861ea8b340a3bac927764"
 }

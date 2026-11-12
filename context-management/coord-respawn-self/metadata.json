@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Coord context-aware self-respawn. Invoked by a Coord agent when context window reaches 80% threshold mid-L3. Saves mid-L3 state, writes a continuation manifest, notifies the spawner (PD or Dept Head depending on caller role), and stops. The spawner then resumes the L3 with a fresh Coord. Enforces max 3 respawns per Coord per 24h. Use at clean task boundaries only \u2014 never mid-Executor-spawn or mid-ACK/NACK cycle."
+  "description": "Coord context-aware self-respawn. Invoked by a Coord agent when context window reaches 80% threshold mid-L3. Saves mid-L3 state, writes a continuation manifest, notifies the spawner (PD or Dept Head depending on caller role), and stops. The spawner then resumes the L3 with a fresh Coord. Enforces max 3 respawns per Coord per 24h. Use at clean task boundaries only — never mid-Executor-spawn or mid-ACK/NACK cycle.",
+  "content_fingerprint": "60e51936105c5e02e8592a195af38eba7768a27dbe8e18f8b9cd09de327fd1fb"
 }

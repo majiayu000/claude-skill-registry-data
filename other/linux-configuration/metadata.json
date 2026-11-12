@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "v1.0.0 \u2014 Mandatory rules for any task on this machine that touches Linux desktop configuration: GNOME Shell extensions, gsettings, themes, hotkeys, systemd user services, or a repository install.sh. Requires console-only, silent deployment; activates edited extension code via the sanctioned in-place X11 run-dialog reload (`xdotool` `Alt+F2 r`) and forbids destructive session restarts, logout, `gnome-shell --replace`, and shell-kill commands. Covers clean-install compatibility and the root-optional (sudo-free) installer pattern."
+  "description": "v1.0.0 — Mandatory rules for any task on this machine that touches Linux desktop configuration: GNOME Shell extensions, gsettings, themes, hotkeys, systemd user services, or a repository install.sh. Requires console-only, silent deployment; activates edited extension code via the sanctioned in-place X11 run-dialog reload (`xdotool` `Alt+F2 r`) and forbids destructive session restarts, logout, `gnome-shell --replace`, and shell-kill commands. Covers clean-install compatibility and the root-optional (sudo-free) installer pattern.",
+  "content_fingerprint": "33647eebfb6dc06aa2ee5d106fdd8e71ab1c1d230e5a8bd0af2ea9b710397d33"
 }
