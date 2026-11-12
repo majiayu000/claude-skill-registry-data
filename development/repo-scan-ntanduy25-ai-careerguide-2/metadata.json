@@ -1,0 +1,38 @@
+{
+  "name": "repo-scan",
+  "repo": "ntanduy25/ai-careerguide_2",
+  "path": ".agents/skills/repo-scan/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ntanduy25/ai-careerguide_2",
+  "dir_name": "repo-scan-ntanduy25-ai-careerguide-2",
+  "downloaded_at": "2026-11-12T06:21:38.082527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, refactor",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ntanduy25",
+  "source_url": "https://github.com/ntanduy25/ai-careerguide_2/blob/main/.agents/skills/repo-scan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ntanduy25/ai-careerguide_2/blob/main/.agents/skills/repo-scan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bootstrap pointer that installs the external repo-scan skill from a pinned, reviewable commit. Use when repo-scan must be installed before running its cross-stack source-code asset audit; this ECC pointer does not perform the audit itself."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "warp-deploy-validate-owners",
+  "repo": "recoil-labs/recoil-link",
+  "path": ".agents/skills/warp-deploy-validate-owners/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/recoil-labs/recoil-link",
+  "dir_name": "warp-deploy-validate-owners-recoil-labs-recoil-link",
+  "downloaded_at": "2026-11-12T06:52:16.340578Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "recoil-labs",
+  "source_url": "https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-deploy-validate-owners/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-deploy-validate-owners/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ownership-validation preflight for a warp route. For each chain in the route, determine the owner type (ICA / Safe / Squads / other multisig), confirm it exists on chain (or deploy if missing for ICAs), and reject EOAs. Run before /warp-deploy-init-route generates the deploy.yaml so the deployment never proceeds against an invalid owner set."
+}

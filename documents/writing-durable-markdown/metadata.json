@@ -1,0 +1,39 @@
+{
+  "name": "writing-durable-markdown",
+  "repo": "thrum-team/thrum-pro",
+  "path": "claude-plugin/skills/writing-durable-markdown/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "writing-durable-markdown",
+  "downloaded_at": "2026-11-12T07:40:58.013974Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, markdown",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/writing-durable-markdown/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/writing-durable-markdown/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when creating or editing ANY markdown file - CLAUDE.md, a role preamble, a SKILL.md, a runbook, project state, State.md, a spec, a plan, a README, or docs. Fires on adding a rule, writing a note, correcting a wrong claim, recording a lesson, or documenting an incident. Enforces state-the-rule-and-stop, because narrative in a loaded file costs tokens at every wake and leaves contradictions nobody can untangle."
+}

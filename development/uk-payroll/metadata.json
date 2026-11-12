@@ -1,0 +1,37 @@
+{
+  "name": "uk-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/uk-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "uk-payroll",
+  "downloaded_at": "2026-11-12T06:28:05.851435Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, software",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/uk-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/uk-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "UK employer payroll for the 2026/27 tax year (6 April 2026 to 5 April 2027), with dated 2025/26 notes. Covers registering a PAYE scheme, tax codes and starter checklists, PAYE bands for England, Northern Ireland, Wales and Scotland, Class 1 NIC as payroll applies it, the Employment Allowance, student and postgraduate loan deductions, National Minimum Wage and National Living Wage from 1 April 2026, Statutory Sick Pay after the April 2026 reform, SMP and SPP and their recovery, automatic enrolment thresholds, the Apprenticeship Levy, benefits in kind and mandatory payrolling from April 2027, RTI (FPS and EPS), paying HMRC by the 22nd, year-end and penalties. Trigger on 'PAYE', 'RTI', 'FPS', 'EPS', 'tax code', 'P45', 'P60', 'P11D', 'SSP', 'SMP', 'minimum wage', 'auto-enrolment', 'payroll UK'. Out of scope: NIC detail (uk-national-insurance), the employee's own return (uk-income-tax-sa100), Scottish status (uk-scottish-income-tax), bookkeeping (uk-bookkeeping)."
+}

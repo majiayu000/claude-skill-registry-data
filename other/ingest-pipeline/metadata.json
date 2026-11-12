@@ -1,0 +1,37 @@
+{
+  "name": "ingest-pipeline",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/ingest-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "ingest-pipeline",
+  "downloaded_at": "2026-11-12T06:23:04.394555Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/ingest-pipeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/ingest-pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The ingest pipeline's topic-tree plan format and confirmation gate, the opt-in destructive optimize (restructure) procedure, and the final-report template for claude-wiki-pages. Documents the plan/approval and restructure steps so the ingest agent can drive them without inlining the detail. Trigger when an agent or user asks \"how does ingest plan the topic tree\", \"how does the optimize restructure work\", or invokes /claude-wiki-pages:ingest-pipeline. Reference, not action."
+}

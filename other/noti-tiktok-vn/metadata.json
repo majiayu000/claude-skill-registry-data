@@ -1,0 +1,38 @@
+{
+  "name": "noti-tiktok-vn",
+  "repo": "notivn/AIEVv2",
+  "path": ".claude/skills/noti-tiktok-vn/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/notivn/AIEVv2",
+  "dir_name": "noti-tiktok-vn",
+  "downloaded_at": "2026-11-12T06:20:22.447127Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notivn",
+  "source_url": "https://github.com/notivn/AIEVv2/blob/main/.claude/skills/noti-tiktok-vn/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notivn/AIEVv2/blob/main/.claude/skills/noti-tiktok-vn/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Edit a Vietnamese vertical TikTok video (9:16) with HyperFrames following the Noti.vn/G\u0110T standard - talking-head + kinetic typography + karaoke captions + zoom/punch-in camera + timestamp-synced sound effects, rendered to MP4. Ships with the verified fixes (gradient text dropping diacritics, Vietnamese transcription, ffmpeg PATH). Use when the user hands over a Vietnamese clip and wants it built into a TikTok video with animated text + subtitles + beat-synced zoom in the dark fintech blue style."
+}

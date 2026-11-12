@@ -1,0 +1,39 @@
+{
+  "name": "docx",
+  "repo": "ntanduy25/ai-careerguide_2",
+  "path": ".agents/skills/docx/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ntanduy25/ai-careerguide_2",
+  "dir_name": "docx-ntanduy25-ai-careerguide-2",
+  "downloaded_at": "2026-11-12T06:21:28.324383Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, word, docx",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ntanduy25",
+  "source_url": "https://github.com/ntanduy25/ai-careerguide_2/blob/main/.agents/skills/docx/SKILL.md",
+  "license": "Proprietary. LICENSE.txt has complete terms",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ntanduy25/ai-careerguide_2/blob/main/.agents/skills/docx/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create, read, edit, or manipulate Word documents (.docx, Word doc, file Word). Triggers on: 'word', 'file word', 't\u1ea1o file word', 'so\u1ea1n th\u1ea3o word', 't\u00e0i li\u1ec7u word', 'docx', 'xu\u1ea5t word'."
+}

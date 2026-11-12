@@ -1,0 +1,37 @@
+{
+  "name": "ks-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/ks-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "ks-payroll",
+  "downloaded_at": "2026-11-12T06:28:07.586722Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, social",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ks-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ks-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked about Kansas payroll withholding for tax year 2026 \u2014 Form K-4 employee withholding allowance certificate, KW-3 annual withholding reconciliation (due January 31), KW-5 deposit reports with the five statutory filing frequencies ($200/$1,200/$8,000/$100,000 thresholds), the KDOR rule that any payor who must withhold federal tax from payments to Kansas residents must also withhold Kansas tax, and default withholding when no K-4 is on file. Trigger on \"Kansas withholding\", \"K-4\", \"KW-3\", \"KW-5\", \"KDOR withholding\", \"Kansas W-2\". Corrected 2026-10-28 against archived KDOR FAQ, Pub. KW-100 (full text incl. percentage tables), and KW-3 e-file specs."
+}

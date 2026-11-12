@@ -1,0 +1,37 @@
+{
+  "name": "ingest",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/ingest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "ingest-odere-pro-claude-wiki-pages-pl",
+  "downloaded_at": "2026-11-12T06:23:04.573048Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/ingest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/ingest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ingest one or more sources from vault/raw/ into typed wiki pages under vault/wiki/. Trigger when the user says \"ingest this source\", \"process the file I just dropped in raw/\", \"add this to the wiki\", or invokes /claude-wiki-pages:ingest directly. Prefer the pipeline (/claude-wiki-pages:claude-wiki-pages-ingest-agent) unless the user has asked to skip lint-fix and synthesis."
+}

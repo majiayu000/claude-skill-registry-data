@@ -1,0 +1,37 @@
+{
+  "name": "troubleshoot",
+  "repo": "posit-dev/positron",
+  "path": "src/vs/sessions/skills/troubleshoot/SKILL.md",
+  "github_branch": "main",
+  "category": "agent",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "troubleshoot",
+  "downloaded_at": "2026-11-12T06:40:43.385417Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "agent",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for agent: agent, sub-agent",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/src/vs/sessions/skills/troubleshoot/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/src/vs/sessions/skills/troubleshoot/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Investigate unexpected behavior in the current Copilot agent session by analyzing its event log. Use when the user asks why something happened, why a request was slow, why a tool was or was not used, or why instructions/skills/agents did not load."
+}

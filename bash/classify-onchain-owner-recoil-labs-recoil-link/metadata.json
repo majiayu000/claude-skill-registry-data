@@ -1,0 +1,38 @@
+{
+  "name": "classify-onchain-owner",
+  "repo": "recoil-labs/recoil-link",
+  "path": ".agents/skills/classify-onchain-owner/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/recoil-labs/recoil-link",
+  "dir_name": "classify-onchain-owner-recoil-labs-recoil-link",
+  "downloaded_at": "2026-11-12T06:52:14.166726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "recoil-labs",
+  "source_url": "https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/classify-onchain-owner/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/classify-onchain-owner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The low-level on-chain probes for identifying what an owner address is \u2014 cast code \u2192 EOA / EIP-7702-delegated EOA / contract, VERSION() \u2192 Gnosis Safe, read-only get-owner-ica.ts derive \u2192 ICA derivation, getAccountInfo \u2192 Sealevel account existence \u2014 with how to interpret each result. The primitive layer beneath validate-owners / resolve-artifacts / update-owners, which each apply their own per-chain or per-artifact policy on top."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "agent-dx-cli",
+  "repo": "ontology-of-everything/concept-skills",
+  "path": "skills/en/agent-dx-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ontology-of-everything/concept-skills",
+  "dir_name": "agent-dx-cli",
+  "downloaded_at": "2026-11-12T06:27:28.597274Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ontology-of-everything",
+  "source_url": "https://github.com/ontology-of-everything/concept-skills/blob/main/skills/en/agent-dx-cli/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ontology-of-everything/concept-skills/blob/main/skills/en/agent-dx-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs, reviews, and refactors CLIs for AI agents. Use when building Agent DX CLIs or checking existing CLI contracts. Checks predictability, defense in depth, and context efficiency with evidence scores."
+}

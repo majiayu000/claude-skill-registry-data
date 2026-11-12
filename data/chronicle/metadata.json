@@ -1,0 +1,38 @@
+{
+  "name": "chronicle",
+  "repo": "posit-dev/positron",
+  "path": "extensions/copilot/assets/prompts/skills/chronicle/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "chronicle",
+  "downloaded_at": "2026-11-12T06:40:45.522165Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/extensions/copilot/assets/prompts/skills/chronicle/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/extensions/copilot/assets/prompts/skills/chronicle/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze Copilot session history for standup reports, usage tips, session search, and session reindexing. Use when the user asks for a standup, daily summary, usage tips, workflow recommendations, wants to search or find past sessions by keyword/file/PR, wants to reindex their session store, or asks about deleting session data."
+}

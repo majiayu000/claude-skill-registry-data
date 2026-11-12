@@ -1,0 +1,37 @@
+{
+  "name": "grid-help",
+  "repo": "oneafrikan/the-grid",
+  "path": "plugins/grid-core/skills/grid-help/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/oneafrikan/the-grid",
+  "dir_name": "grid-help",
+  "downloaded_at": "2026-11-12T06:27:07.299825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "automation",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oneafrikan",
+  "source_url": "https://github.com/oneafrikan/the-grid/blob/main/plugins/grid-core/skills/grid-help/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oneafrikan/the-grid/blob/main/plugins/grid-core/skills/grid-help/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explain how to use the-grid (which slash command or subagent to reach for, orchestrators vs specialists, the four factories). Use when the user asks \"how do I use the-grid\", \"what can I do here\" or \"how do I add a skill/agent/automation\"."
+}

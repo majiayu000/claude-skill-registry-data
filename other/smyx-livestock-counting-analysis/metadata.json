@@ -1,0 +1,37 @@
+{
+  "name": "smyx-livestock-counting-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/smyx-livestock-counting-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "smyx-livestock-counting-analysis",
+  "downloaded_at": "2026-11-12T07:21:27.797137Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-livestock-counting-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-livestock-counting-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Automatically detects and counts livestock or poultry individuals from barn or passage camera images/videos, outputting total headcount with confidence for fast inventory. | \u81ea\u52a8\u8bc6\u522b\u5e76\u7edf\u8ba1\u755c\u79bd\u6570\u91cf\uff0c\u5b9e\u73b0\u5feb\u901f\u5b58\u680f\u76d8\u70b9\u3002"
+}

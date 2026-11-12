@@ -1,0 +1,37 @@
+{
+  "name": "skill-usage",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/skill-usage/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "skill-usage-msolecki-developer-os",
+  "downloaded_at": "2026-11-12T06:09:04.959551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/skill-usage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/skill-usage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Report how often each developer-os skill has fired in local Claude Code session history (calls in the last 30 days, last use) with a keep/merge/rewrite-description/remove verdict per skill. Read-only; changes nothing. Use when the user asks which skills are used, which never trigger, or before adding or pruning skills (\"how often have I used the skills\", \"which skills work\", \"skill stats\")."
+}

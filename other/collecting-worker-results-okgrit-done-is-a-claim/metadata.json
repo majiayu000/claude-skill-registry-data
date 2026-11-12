@@ -1,0 +1,37 @@
+{
+  "name": "collecting-worker-results",
+  "repo": "okgrit/done-is-a-claim",
+  "path": "skills/collecting-worker-results/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/okgrit/done-is-a-claim",
+  "dir_name": "collecting-worker-results-okgrit-done-is-a-claim",
+  "downloaded_at": "2026-11-12T06:24:54.257056Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "okgrit",
+  "source_url": "https://github.com/okgrit/done-is-a-claim/blob/main/skills/collecting-worker-results/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/okgrit/done-is-a-claim/blob/main/skills/collecting-worker-results/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Inspect a stopped worker's returned work and evidence before accepting it, retrying it or handing it to an integration owner. Use when a worker finishes, records disagree, or a green result has no visible change. Collection does not authorize merging."
+}

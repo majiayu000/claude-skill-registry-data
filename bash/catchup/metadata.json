@@ -1,0 +1,38 @@
+{
+  "name": "catchup",
+  "repo": "saksham10arora-dotcom/everything-claude-codex",
+  "path": "skills/catchup/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/saksham10arora-dotcom/everything-claude-codex",
+  "dir_name": "catchup",
+  "downloaded_at": "2026-11-12T07:02:37.654020Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saksham10arora-dotcom",
+  "source_url": "https://github.com/saksham10arora-dotcom/everything-claude-codex/blob/main/skills/catchup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saksham10arora-dotcom/everything-claude-codex/blob/main/skills/catchup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user says \"/catchup\", \"catch up\", \"what did I do in the other session\", \"read my last session\", \"continue from the app\", \"continue from terminal\", or wants this Claude to read the full conversation history from another Claude Code surface (terminal <-> desktop Code tab)"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ak-journal",
+  "repo": "quanganh208/chatofy",
+  "path": ".claude/skills/ak-journal/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/quanganh208/chatofy",
+  "dir_name": "ak-journal",
+  "downloaded_at": "2026-11-12T06:47:29.505551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "quanganh208",
+  "source_url": "https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-journal/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-journal/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write chronological technical journals that preserve work history without replacing current docs or ADRs."
+}

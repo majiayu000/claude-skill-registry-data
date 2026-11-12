@@ -1,0 +1,37 @@
+{
+  "name": "smyx-crop-pest-identification-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/smyx-crop-pest-identification-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "smyx-crop-pest-identification-analysis",
+  "downloaded_at": "2026-11-12T07:21:34.114710Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-crop-pest-identification-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-crop-pest-identification-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triggers when a user provides images or videos of crop leaves, buds or fruits (local file or URL) for pest identification; calls server-side APIs to detect common agricultural pests such as aphids, red spider mites, cotton bollworms and corn borers, outputting pest types with confidence scores. | \u5f53\u7528\u6237\u63d0\u4f9b\u4f5c\u7269\u53f6\u7247\u3001\u5ae9\u82bd\u6216\u679c\u5b9e\u7684\u56fe\u50cf/\u89c6\u9891\uff08\u672c\u5730\u6587\u4ef6\u6216\u7f51\u7edcURL\uff09\u65f6\uff0c\u89e6\u53d1\u672c\u6280\u80fd\u8fdb\u884c\u866b\u5bb3\u8bc6\u522b\uff1b\u8c03\u7528\u670d\u52a1\u7aefAPI\u68c0\u6d4b\u869c\u866b\u3001\u7ea2\u8718\u86db\u3001\u68c9\u94c3\u866b\u3001\u7389\u7c73\u879f\u7b49\u5e38\u89c1\u519c\u4e1a\u5bb3\u866b\uff0c\u8f93\u51fa\u866b\u5bb3\u7c7b\u578b\u4e0e\u7f6e\u4fe1\u5ea6\u3002\u5e94\u7528\u573a\u666f\uff1a\u756a\u8304/\u7389\u7c73/\u82b1\u751f\u7684\u866b\u5bb3\u65e9\u671f\u53d1\u73b0\u4e0e\u7cbe\u51c6\u65bd\u836f\uff0c\u51cf\u5c11\u519c\u836f\u6ee5\u7528\u3002"
+}

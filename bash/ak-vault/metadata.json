@@ -1,0 +1,39 @@
+{
+  "name": "ak-vault",
+  "repo": "quanganh208/chatofy",
+  "path": ".claude/skills/ak-vault/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/quanganh208/chatofy",
+  "dir_name": "ak-vault",
+  "downloaded_at": "2026-11-12T06:47:26.490136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "quanganh208",
+  "source_url": "https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-vault/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-vault/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Store, find, sync, rotate, and use secrets (API keys, tokens, .env values) through AgentKit's `ak secrets` vault without ever printing a value, while honoring a user's recorded choice of .env files or another secret manager. Use when a task touches a credential, a .env.* file, or a deploy or API call that needs a key."
+}

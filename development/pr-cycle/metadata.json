@@ -1,0 +1,37 @@
+{
+  "name": "pr-cycle",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/pr-cycle/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "pr-cycle",
+  "downloaded_at": "2026-11-12T06:09:04.438021Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/pr-cycle/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/pr-cycle/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take a pull request to a merge verdict by merging its base in, resolving conflicts, getting an independent review, fixing the approved findings, running the project's gates, and updating the PR body, asking before fixing and before pushing. Use when the user asks to bring a PR up to date and ready to merge, for example \"merge fresh dev in\", \"pull development into the PR\", \"get the PR ready to merge\"."
+}

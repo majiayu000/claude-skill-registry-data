@@ -1,0 +1,37 @@
+{
+  "name": "onboarding",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/onboarding/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "onboarding-odere-pro-claude-wiki-pages-pl",
+  "downloaded_at": "2026-11-12T06:23:06.177122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/onboarding/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/onboarding/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "First-run guided tour for a brand-new user. Walks from a fresh project to a working wiki: health check \u2192 scaffold the vault \u2192 drop a first source \u2192 ingest (with automatic git-checkpointed self-heal) \u2192 ask a first question. Trigger when the user says \"get started\", \"onboard me\", \"set this up\", \"what now\", \"how do I use this\", \"first time\", or invokes /claude-wiki-pages:onboarding directly. Idempotent \u2014 safe to re-run; it resumes from wherever the vault already is."
+}

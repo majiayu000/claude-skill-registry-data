@@ -1,0 +1,37 @@
+{
+  "name": "code-review",
+  "repo": "recoil-labs/recoil-link",
+  "path": ".agents/skills/code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/recoil-labs/recoil-link",
+  "dir_name": "code-review-recoil-labs-recoil-link",
+  "downloaded_at": "2026-11-12T06:52:09.444094Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "recoil-labs",
+  "source_url": "https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/code-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review code changes using Hyperlane monorepo coding standards. Use when reviewing PRs, checking your own changes, or doing self-review before committing."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "expand",
+  "repo": "qbeka/jev-job-search",
+  "path": ".claude/skills/expand/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/qbeka/jev-job-search",
+  "dir_name": "expand",
+  "downloaded_at": "2026-11-12T06:45:36.403143Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qbeka",
+  "source_url": "https://github.com/qbeka/jev-job-search/blob/main/.claude/skills/expand/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qbeka/jev-job-search/blob/main/.claude/skills/expand/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Enrich the user's profile from the public sources they already link to (GitHub repositories, a portfolio site, published projects). Use when the user says /expand, \"add my GitHub projects to my profile\", or after /setup when the profile is thin. Proposes each discovered fact with its source; nothing is added without the user's yes."
+}

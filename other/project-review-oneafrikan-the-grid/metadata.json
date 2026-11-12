@@ -1,0 +1,37 @@
+{
+  "name": "project-review",
+  "repo": "oneafrikan/the-grid",
+  "path": "project-factory/templates/_common/.claude/skills/project-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/oneafrikan/the-grid",
+  "dir_name": "project-review-oneafrikan-the-grid",
+  "downloaded_at": "2026-11-12T06:27:08.619883Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oneafrikan",
+  "source_url": "https://github.com/oneafrikan/the-grid/blob/main/project-factory/templates/_common/.claude/skills/project-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oneafrikan/the-grid/blob/main/project-factory/templates/_common/.claude/skills/project-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review pending changes (working tree diff, a branch, or a PR) for correctness and for THIS repository's own invariants, listed in the Invariants section below. Use when asked to review changes, a diff, a branch or a PR in this repo, and before committing anything non-trivial."
+}

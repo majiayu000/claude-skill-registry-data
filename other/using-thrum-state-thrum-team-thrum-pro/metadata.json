@@ -1,0 +1,36 @@
+{
+  "name": "using-thrum-state",
+  "repo": "thrum-team/thrum-pro",
+  "path": "claude-plugin/skills/using-thrum-state/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "using-thrum-state-thrum-team-thrum-pro",
+  "downloaded_at": "2026-11-12T07:40:49.246657Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/using-thrum-state/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/using-thrum-state/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when reading or writing thrum state - your session-start state, next actions, a fleet fact like deploy state or topology, or a stale-row freshness ping. Confirm each row is measured, not guessed, before you write it."
+}

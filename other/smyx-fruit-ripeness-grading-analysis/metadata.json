@@ -1,0 +1,37 @@
+{
+  "name": "smyx-fruit-ripeness-grading-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/smyx-fruit-ripeness-grading-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "smyx-fruit-ripeness-grading-analysis",
+  "downloaded_at": "2026-11-12T07:21:33.173631Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-fruit-ripeness-grading-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-fruit-ripeness-grading-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "AI-powered fruit ripeness grading for tomatoes / strawberries. From smart grow-boxes or mobile phone images, uses AI vision to detect fruit color (green / light green / orange / red / dark red), colored-area ratio, gloss, and relative fruit size (against a reference object), and outputs a ripeness grade (Mature-Green / Turning / Ripe / Over-Ripe) based on preset standards. Helps growers identify the optimal harvest window and ensures flavor and shelf quality. Scenarios: smart grow-boxes, greenhouses, home vegetable gardens, fruit & vegetable cooperatives. | \u901a\u8fc7\u667a\u80fd\u79cd\u690d\u7bb1\u6216\u624b\u673a\u62cd\u6444\u7684\u679c\u5b9e\u56fe\u50cf\uff0c\u5229\u7528AI\u89c6\u89c9\u5206\u6790\u6280\u672f\u68c0\u6d4b\u679c\u5b9e\u7684\u989c\u8272\uff08\u7eff/\u6d45\u7eff/\u6a59/\u7ea2/\u6697\u7ea2\uff09\u3001\u7740\u8272\u9762\u79ef\u6bd4\u4f8b\u3001\u5149\u6cfd\u5ea6\u4ee5\u53ca\u679c\u5b9e\u5927\u5c0f\uff08\u76f8\u5bf9\u4e8e\u53c2\u7167\u7269\uff09\uff0c\u6839\u636e\u9884\u8bbe\u7684\u6210\u719f\u5ea6\u5206\u7ea7\u6807\u51c6\u8f93\u51fa\u7b49\u7ea7\uff08\u9752\u719f\u671f/\u8f6c\u8272\u671f/\u6210\u719f\u671f/\u8fc7\u719f\u671f\uff09\u3002\u8be5\u6280\u80fd\u5e2e\u52a9\u79cd\u690d\u8005\u786e\u5b9a\u6700\u4f73\u91c7\u6536\u65f6\u673a\uff0c\u4fdd\u8bc1\u679c\u5b9e\u53e3\u611f\u548c\u5546\u54c1\u6027\u3002\u5e94\u7528\u573a\u666f\uff1a\u667a\u80fd\u79cd\u690d\u7bb1\u3001\u6e29\u5ba4\u5927\u68da\u3001\u5bb6\u5ead\u83dc\u56ed\u3001\u679c\u852c\u5408\u4f5c\u793e\u3002"
+}

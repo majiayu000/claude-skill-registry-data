@@ -1,0 +1,38 @@
+{
+  "name": "designing-distributed-system-tests",
+  "repo": "shenli/distributed-system-testing",
+  "path": "skills/designing-distributed-system-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/shenli/distributed-system-testing",
+  "dir_name": "designing-distributed-system-tests",
+  "downloaded_at": "2026-11-12T07:13:07.432440Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shenli",
+  "source_url": "https://github.com/shenli/distributed-system-testing/blob/main/skills/designing-distributed-system-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shenli/distributed-system-testing/blob/main/skills/designing-distributed-system-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design claim-driven test plans for distributed or stateful systems with persistence, replication, consensus, retries, idempotency, async messaging, multi-tenancy, or partial failure. Supports change-scoped and project-wide plans, including existing-test inventories and gap analysis. Use for stability, release-validation, durability, partition, crash-recovery, upgrade, linearizability, deterministic-simulation, SQL semantics or compatibility, tenant isolation, authz, namespace boundaries, fairness, and noisy-neighbor testing. Investigate claimed guarantees and design scenarios to falsify them during normal operation and under relevant faults. Also use for \"what should we test for this change\", \"are my tenants isolated\", or \"make a holistic test plan\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "improve",
+  "repo": "notque/vexjoy-agent",
+  "path": "skills/process/improve/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/notque/vexjoy-agent",
+  "dir_name": "improve-notque-vexjoy-agent",
+  "downloaded_at": "2026-11-12T06:20:29.112901Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "product",
+      "roadmap",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notque",
+  "source_url": "https://github.com/notque/vexjoy-agent/blob/main/skills/process/improve/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notque/vexjoy-agent/blob/main/skills/process/improve/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Advisor mode: audit a codebase, rank what is worth doing, and write self-contained handoff plans that a fresh agent executes. Never edits source itself. Use for \"what should we improve\", \"find improvement opportunities\", \"what to build next\", \"write a plan another agent can run\", \"execute plan 003\", or \"reconcile the plans\"."
+}

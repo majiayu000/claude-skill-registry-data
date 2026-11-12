@@ -1,0 +1,38 @@
+{
+  "name": "pr-test-checker",
+  "repo": "posit-dev/positron",
+  "path": ".claude/skills/pr-test-checker/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "pr-test-checker",
+  "downloaded_at": "2026-11-12T06:40:48.454380Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/.claude/skills/pr-test-checker/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/.claude/skills/pr-test-checker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Grade whether a Positron PR has adequate test coverage. Evaluates new tests in the PR, checks existing coverage for changed source, and suggests concrete additions when coverage is insufficient. Used by the pr-test-checker GitHub Action."
+}

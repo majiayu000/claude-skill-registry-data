@@ -1,0 +1,37 @@
+{
+  "name": "smyx-pet-litter-box-waste-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/smyx-pet-litter-box-waste-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "smyx-pet-litter-box-waste-analysis",
+  "downloaded_at": "2026-11-12T07:21:29.911063Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-pet-litter-box-waste-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-pet-litter-box-waste-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triggers when a user provides a cat litter box area video URL or file for analysis; supports local video uploads or network URLs to call server-side APIs for waste characteristic recognition, analyzing feces morphology (loose stool, bloody stool, dry hard stool) and urine clump size to identify urinary and digestive system abnormalities, outputting health risk alerts (without diagnosing diseases). Application scenarios: smart litter boxes, multi-cat household health monitoring. Development reason: early signs of urinary diseases, a pain point for multi-cat households. | \u5f53\u7528\u6237\u63d0\u4f9b\u732b\u7802\u76c6\u533a\u57df\u7684\u89c6\u9891URL\u6216\u6587\u4ef6\u65f6\uff0c\u89e6\u53d1\u672c\u6280\u80fd\u8fdb\u884c\u6392\u6cc4\u7269\u6027\u72b6\u5206\u6790\uff1b\u652f\u6301\u901a\u8fc7\u4e0a\u4f20\u672c\u5730\u89c6\u9891\u6216\u7f51\u7edc\u89c6\u9891URL\uff0c\u8c03\u7528\u670d\u52a1\u7aefAPI\u8fdb\u884c\u6392\u6cc4\u7269\u8bc6\u522b\uff0c\u5206\u6790\u7caa\u4fbf\u5f62\u6001\uff08\u7a00\u4fbf\u3001\u8840\u4fbf\u3001\u5e72\u786c\u4fbf\uff09\u548c\u5c3f\u56e2\u5927\u5c0f\uff0c\u8bc6\u522b\u6ccc\u5c3f\u7cfb\u7edf\u4e0e\u6d88\u5316\u7cfb\u7edf\u5f02\u5e38\uff0c\u8f93\u51fa\u5065\u5eb7\u98ce\u9669\u63d0\u793a\uff08\u4e0d\u8bca\u65ad\u75be\u75c5\uff09\u3002\u5e94\u7528\u573a\u666f\uff1a\u667a\u80fd\u732b\u7802\u76c6\u3001\u591a\u732b\u5bb6\u5ead\u5065\u5eb7\u76d1\u6d4b\u3002"
+}

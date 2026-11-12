@@ -1,0 +1,37 @@
+{
+  "name": "pet-detection-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/pet-detection-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "pet-detection-analysis",
+  "downloaded_at": "2026-11-12T07:21:23.644219Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/pet-detection-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/pet-detection-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects cats, dogs, and birds appearing in the target area; supports video stream and image detection, suitable for home pet monitoring scenarios. | \u5ba0\u7269\u68c0\u6d4b\u6280\u80fd\uff0c\u68c0\u6d4b\u51fa\u76ee\u6807\u533a\u57df\u5185\u51fa\u73b0\u7684\u732b\u3001\u72d7\u3001\u9e1f\uff0c\u652f\u6301\u89c6\u9891\u6d41\u548c\u56fe\u7247\u68c0\u6d4b\uff0c\u9002\u7528\u4e8e\u5bb6\u5ead\u5ba0\u7269\u76d1\u63a7\u573a\u666f"
+}

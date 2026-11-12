@@ -1,0 +1,37 @@
+{
+  "name": "brain-project-refresh",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/brain-project-refresh/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "brain-project-refresh",
+  "downloaded_at": "2026-11-12T06:09:10.142393Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/brain-project-refresh/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/brain-project-refresh/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bring the current repository's project hub note in the user's Obsidian vault up to date \u2014 drifted claims, moved paths, missing links \u2014 shown as a diff and applied only after approval. Use when the user asks to refresh or update the project note, for example \"refresh the project note\", \"update the brain for this repo\", \"is the project hub up to date\"."
+}

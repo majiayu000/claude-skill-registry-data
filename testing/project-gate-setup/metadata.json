@@ -1,0 +1,37 @@
+{
+  "name": "project-gate-setup",
+  "repo": "thrum-team/thrum-pro",
+  "path": "cursor-plugin/skills/project-gate-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "project-gate-setup",
+  "downloaded_at": "2026-11-12T07:40:50.016122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/cursor-plugin/skills/project-gate-setup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/cursor-plugin/skills/project-gate-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a project needs its landing-gate configuration established or updated - the canonical config at .thrum/gate-config.json naming the per-landing test, race and lint commands, the focused-versus-full rule, how to build the merged tree, the structural checks, the verdict log and the evidence retention the gate role follows. Detects Go, Node/TypeScript, Python and Rust from the repo, asks when unsure, and writes the file the gate role reads at gate time. Triggers - set up the gate, configure the gate role, gate config, what does the gate run, gate-config.json is missing, GATE CONFIG ABSENT."
+}

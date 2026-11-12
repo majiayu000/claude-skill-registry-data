@@ -1,0 +1,37 @@
+{
+  "name": "warp-deploy-register-route",
+  "repo": "recoil-labs/recoil-link",
+  "path": ".agents/skills/warp-deploy-register-route/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/recoil-labs/recoil-link",
+  "dir_name": "warp-deploy-register-route-recoil-labs-recoil-link",
+  "downloaded_at": "2026-11-12T06:52:15.952783Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "recoil-labs",
+  "source_url": "https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-deploy-register-route/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-deploy-register-route/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Post-registry-merge steps for a new warp route deployment. Adds the warp route ID to warpIds.ts, updates .registryrc to latest registry commit, runs update-agent-config, then guides the user through warp monitor deployment and PR creation."
+}

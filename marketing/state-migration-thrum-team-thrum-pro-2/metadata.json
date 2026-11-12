@@ -1,0 +1,37 @@
+{
+  "name": "state-migration",
+  "repo": "thrum-team/thrum-pro",
+  "path": "opencode-plugin/assets/skills/state-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "state-migration-thrum-team-thrum-pro-2",
+  "downloaded_at": "2026-11-12T07:40:59.689242Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, brand",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/opencode-plugin/assets/skills/state-migration/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/opencode-plugin/assets/skills/state-migration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when your agent-local thrum state is empty AND you have an existing State.md file in your agent directory - this is a ONE-TIME conditional onboarding that fires only on that exact combination. Do NOT use if thrum state already has entries (nothing to migrate) or if you have no State.md (brand-new agent, nothing to migrate). Triggers on - first session after the thrum state redesign lands, `thrum state list` returning empty while State.md exists on disk, being asked to migrate your personal state."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "wails-architect",
+  "repo": "ralvarez-ai/ralvaskills",
+  "path": "skills/frameworks/wails-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ralvarez-ai/ralvaskills",
+  "dir_name": "wails-architect",
+  "downloaded_at": "2026-11-12T06:49:03.029118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "ux",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ralvarez-ai",
+  "source_url": "https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/frameworks/wails-architect/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/frameworks/wails-architect/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Wails v3.1 shell around an existing web app \u2014 embedded SPA build, same-origin API proxy with server-held session cookies (WebKit drops Set-Cookie on custom schemes), per-OS window chrome, Android fetch shim and insets, packaging and Play signing. Use when scaffolding or reviewing a Wails desktop/mobile shell, or when sign-in fails inside the webview."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "replica-backend",
+  "repo": "nifontovoleg/replica-codex",
+  "path": "replica-backend/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/nifontovoleg/replica-codex",
+  "dir_name": "replica-backend",
+  "downloaded_at": "2026-11-12T06:16:40.712262Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for integration: integration, connector, webhook, oauth",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "connector",
+      "webhook",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nifontovoleg",
+  "source_url": "https://github.com/nifontovoleg/replica-codex/blob/main/replica-backend/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nifontovoleg/replica-codex/blob/main/replica-backend/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build auth, database, test payments and official integrations for a replica. Use when a replica needs a real backend or its data layer still uses fixtures."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ca-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/ca-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "ca-payroll",
+  "downloaded_at": "2026-11-12T06:28:07.097038Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ca-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ca-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Tier 2 California content skill for employer payroll compliance covering tax year 2025. Includes the 13.3% top PIT bracket with 1% mental health surtax over $1M, SDI 1.2% with no wage cap (SB 951), Form DE 9/DE 9C quarterly returns, the CalSavers retirement mandate for 1+ employees, AB5 / ABC test contractor classification, DE 542 reporting for $600+ contractors, supplemental wage withholding at 10.23%, ETT 0.1% on first $7,000, and SUI with $7,000 base and 1.5-6.2% experience-rated range. Covers federal payroll interactions and CA labor-code wage statement requirements."
+}

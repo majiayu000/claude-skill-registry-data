@@ -1,0 +1,37 @@
+{
+  "name": "smyx-fish-egg-incubation-stage-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/smyx-fish-egg-incubation-stage-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "smyx-fish-egg-incubation-stage-analysis",
+  "downloaded_at": "2026-11-12T07:21:35.289506Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-fish-egg-incubation-stage-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-fish-egg-incubation-stage-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Through breeding-tank fixed cameras (macro lens), the system periodically captures high-definition images of fish eggs and uses AI vision analysis to detect egg color changes (transparent \u2192 white / black) and embryonic eye-spots (small black dots), identifying incubation stages (unfertilized / early / mid / late-eyespot / hatching). | \u901a\u8fc7\u7e41\u6b96\u7f38\u56fa\u5b9a\u6444\u50cf\u5934\uff08\u5fae\u8ddd\u955c\u5934\uff09\uff0c\u5b9a\u671f\u62cd\u6444\u9c7c\u5375\u7684\u9ad8\u6e05\u56fe\u50cf\uff0c\u5229\u7528 AI \u89c6\u89c9\u5206\u6790\u6280\u672f\u68c0\u6d4b\u9c7c\u5375\u989c\u8272\u53d8\u5316\uff08\u900f\u660e \u2192 \u53d1\u767d/\u53d1\u9ed1\uff09\u4ee5\u53ca\u80da\u80ce\u773c\u775b\u70b9\uff08\u9ed1\u8272\u5c0f\u70b9\uff09\u7684\u51fa\u73b0\uff0c\u8bc6\u522b\u9c7c\u5375\u7684\u5b75\u5316\u9636\u6bb5\uff08\u672a\u53d7\u7cbe/\u65e9\u671f/\u4e2d\u671f/\u665a\u671f/\u7834\u58f3\uff09\u3002\u7cfb\u7edf\u5b9a\u65f6\uff08\u5982\u6bcf 6 \u5c0f\u65f6\uff09\u81ea\u52a8\u5206\u6790\uff0c\u8f93\u51fa\u5b75\u5316\u9636\u6bb5\u53ca\u5efa\u8bae\uff08\u5982'\u5df2\u51fa\u73b0\u773c\u775b\u70b9\uff0c\u9884\u8ba1 24 \u5c0f\u65f6\u5185\u5b75\u5316\uff0c\u51c6\u5907\u4e30\u5e74\u867e'\uff09\u3002"
+}

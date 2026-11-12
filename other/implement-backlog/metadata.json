@@ -1,0 +1,38 @@
+{
+  "name": "implement-backlog",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/implement-backlog/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "implement-backlog",
+  "downloaded_at": "2026-11-12T06:09:07.938072Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/implement-backlog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/implement-backlog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implement evidence-backed backlog items in small batches, validate every item and the full batch, get an independent review, update the backlog and plan, and commit only green work; for free-form tasks, parallel-lanes. Use when the user asks to execute an audit backlog, for example \"fix everything with multiple agents\", \"implement the backlog\", \"apply the audit fixes\"."
+}

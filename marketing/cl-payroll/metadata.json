@@ -1,0 +1,37 @@
+{
+  "name": "cl-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/cl-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "cl-payroll",
+  "downloaded_at": "2026-11-12T06:28:09.081710Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, social",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/cl-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/cl-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Chile employer payroll for tax year 2026: the monthly contributions an employer withholds from a dependent employee and pays itself, and the Impuesto \u00danico de Segunda Categor\u00eda (IUSC) withheld from wages. Covers the AFP pension contribution of 10% plus the AFP commission (DL 3.500 arts. 16 to 19), the 7% health contribution to Fonasa or an Isapre (art. 84), the taxable ceiling of 90 UF for 2026 and 135.2 UF for unemployment insurance (Superintendencia de Pensiones), seguro de cesant\u00eda under Ley 19.728 (0.6% employee, 2.4% or 3% employer, the 11-year rule), the new employer pension contribution of Ley 21.735 (1% from August 2025, 3.5% from August 2026, SIS included from August 2026), the SIS rate of 1.78%, work-accident insurance under Ley 16.744 (0.90% plus the risk rate) and the 0.03% SANNA contribution, the IUSC base and monthly table, Previred and F29 deadlines, DJ 1887 and penalties. Trigger on: liquidaci\u00f3n de sueldo, cotizaciones previsionales empleador, Previred, tope imponible 2"
+}

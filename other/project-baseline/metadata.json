@@ -1,0 +1,38 @@
+{
+  "name": "project-baseline",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/project-baseline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "project-baseline",
+  "downloaded_at": "2026-11-12T06:09:07.355363Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/project-baseline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/project-baseline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check a repository against a baseline of engineering practices (validated env module, secret scanning, coverage ratchet and more) and propose each missing one as a backlog item, after approval; not a code audit (audit-to-backlog). Use when starting work in a repository or when the user asks what the project is missing; for example \"what is the repo missing\", \"project baseline\"."
+}

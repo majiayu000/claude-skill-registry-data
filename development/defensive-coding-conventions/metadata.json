@@ -1,0 +1,38 @@
+{
+  "name": "defensive-coding-conventions",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/defensive-coding-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "defensive-coding-conventions",
+  "downloaded_at": "2026-11-12T06:09:10.775263Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/defensive-coding-conventions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/defensive-coding-conventions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check a change for defect classes that commonly ship past review, such as mismatched persistence and validation conditions, unisolated webhook side effects, missed writers or readers of shared state, collapsed multi-valued statuses, unvalidated external JSON, and silent build artifacts. Use when writing or reviewing code that handles external input, authentication, money, concurrency, persistence, or error paths."
+}

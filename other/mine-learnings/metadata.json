@@ -1,0 +1,36 @@
+{
+  "name": "mine-learnings",
+  "repo": "oneafrikan/the-grid",
+  "path": "plugins/grid-core/skills/mine-learnings/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/oneafrikan/the-grid",
+  "dir_name": "mine-learnings",
+  "downloaded_at": "2026-11-12T06:27:07.572883Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oneafrikan",
+  "source_url": "https://github.com/oneafrikan/the-grid/blob/main/plugins/grid-core/skills/mine-learnings/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oneafrikan/the-grid/blob/main/plugins/grid-core/skills/mine-learnings/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Mine project history (commits, docs, logs) for durable learnings and write them to LEARNINGS.md and CLAUDE.md, idempotently. Use when the user asks to \"extract learnings\", \"mine learnings from history\" or \"update CLAUDE.md from project history\"."
+}

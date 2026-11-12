@@ -1,0 +1,38 @@
+{
+  "name": "k8s-helm",
+  "repo": "ressKim-io/ress-claude-agents",
+  "path": "assets/skills/kubernetes/k8s-helm/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ressKim-io/ress-claude-agents",
+  "dir_name": "k8s-helm",
+  "downloaded_at": "2026-11-12T06:54:32.604875Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ressKim-io",
+  "source_url": "https://github.com/ressKim-io/ress-claude-agents/blob/main/assets/skills/kubernetes/k8s-helm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ressKim-io/ress-claude-agents/blob/main/assets/skills/kubernetes/k8s-helm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when modifying Helm charts (Chart.yaml, templates/*.tpl, values*.yaml) to enforce chart structure, values override hierarchy, helper template patterns. Skip when kustomize is the deployment tool."
+}

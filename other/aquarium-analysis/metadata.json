@@ -1,0 +1,37 @@
+{
+  "name": "aquarium-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/aquarium-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "aquarium-analysis",
+  "downloaded_at": "2026-11-12T07:21:22.798204Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/aquarium-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/aquarium-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When a user provides a video URL or file of aquatic pets such as goldfish, koi, betta, shrimp, crab, etc. for analysis, this skill is triggered to perform aquatic pet health diagnosis analysis. Supports uploading local videos or online video URLs, calls server-side API for aquatic pet health examination, analyzes features such as scales, fins, body color, activity level, identifies potential diseases and outputs a pet health report. | \u9c7c\u7c7b\u6c34\u65cf\u5ba0\u7269\u5065\u5eb7\u8bca\u65ad\u5206\u6790\u5de5\u5177\uff0c\u5f53\u7528\u6237\u63d0\u4f9b\u91d1\u9c7c\u3001\u9526\u9ca4\u3001\u6597\u9c7c\u3001\u867e\u3001\u87f9\u7b49\u6c34\u65cf\u5ba0\u7269\u7684\u89c6\u9891 URL \u6216\u6587\u4ef6\u9700\u8981\u5206\u6790\u65f6\uff0c\u89e6\u53d1\u672c\u6280\u80fd\u8fdb\u884c\u6c34\u65cf\u5ba0\u7269\u5065\u5eb7\u8bca\u65ad\u5206\u6790\uff1b\u652f\u6301\u901a\u8fc7\u4e0a\u4f20\u672c\u5730\u89c6\u9891\u6216\u7f51\u7edc\u89c6\u9891 URL\uff0c\u8c03\u7528\u670d\u52a1\u7aef API \u8fdb\u884c\u6c34\u65cf\u5ba0\u7269\u5065\u5eb7\u68c0\u67e5\uff0c\u5206\u6790\u9cde\u7247\u3001\u9c7c\u9ccd\u3001\u4f53\u8272\u3001\u6d3b\u8dc3\u5ea6\u7b49\u7279\u5f81\uff0c\u8bc6\u522b\u6f5c\u5728\u75be\u75c5\u5e76\u8f93\u51fa\u5ba0\u5b89\u536b\u58eb\u5065\u5eb7\u62a5\u544a"
+}

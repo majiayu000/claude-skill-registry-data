@@ -1,0 +1,37 @@
+{
+  "name": "hu-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/hu-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "hu-payroll",
+  "downloaded_at": "2026-11-12T06:28:06.739430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, social",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/hu-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/hu-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hungarian payroll for tax year 2026: what an employer withholds and pays on an employee's wage. Covers the 15% personal income tax advance (szja-el\u0151leg), the 18.5% employee social security contribution (t\u00e1rsadalombiztos\u00edt\u00e1si j\u00e1rul\u00e9k, TB), the 13% employer social contribution tax (szoci\u00e1lis hozz\u00e1j\u00e1rul\u00e1si ad\u00f3, szocho), the 2026 minimum wage (HUF 322,800) and guaranteed minimum wage (HUF 373,200), the family tax allowance (csal\u00e1di kedvezm\u00e9ny) at HUF 133,340, 266,660 and 440,000 per child a month, the family contribution allowance, the under-25 exemption (cap HUF 715,765 a month), the mothers' exemptions (under 30, two, three, four or more children), the monthly 08 return (form 2608) by the 12th, and penalties. Trigger phrases: Hungarian payroll, b\u00e9rsz\u00e1mfejt\u00e9s, nett\u00f3 b\u00e9r, csal\u00e1di kedvezm\u00e9ny, szocho munk\u00e1ltat\u00f3, TB j\u00e1rul\u00e9k munkav\u00e1llal\u00f3, 08-as bevall\u00e1s, employer cost Hungary. Out of scope: hu-income-tax and hu-social-contributions (self-employed), hu-corporate-tax, hu-transfer-pricing."
+}

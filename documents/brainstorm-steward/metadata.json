@@ -1,0 +1,37 @@
+{
+  "name": "brainstorm-steward",
+  "repo": "thrum-team/thrum-pro",
+  "path": "cursor-plugin/skills/brainstorm-steward/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "brainstorm-steward",
+  "downloaded_at": "2026-11-12T07:40:50.170075Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/cursor-plugin/skills/brainstorm-steward/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/cursor-plugin/skills/brainstorm-steward/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when running as the Brainstorm Steward - a persistent watcher that manages a roster of brainstormers (often on other machines), multiplexes their NEED questions into one pane queue for the owner, routes ANSWERs back, and delegates launch and dual-review approval to coordinators (the brainstormer runs its own project-setup after approval). Never decides content."
+}

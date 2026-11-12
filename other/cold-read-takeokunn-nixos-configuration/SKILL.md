@@ -1,0 +1,73 @@
+---
+name: cold-read
+description: A context-free reviewer reads prose as its real audience; the writer applies surviving cuts. Use once at task completion when prose that others read (README, docs, PR/issue bodies) was written or revised.
+metadata:
+  version: "1.1.0"
+---
+
+# Cold read
+
+Run this once per task, after the prose is otherwise final, for prose that other people read: README, docs,
+PR and issue bodies. Prompt and skill files and commit messages are exempt. Apply cuts only to prose written or
+changed by the task. Preserve pre-existing rationale comments outside the task's diff. One pass: apply the
+surviving cuts and do not re-run the review on the result.
+
+The writer cannot measure its own prose: the context that produced it makes every sentence feel necessary.
+A fresh reader with none of that context measures it instead. Its report is evidence to weigh, not an edit
+script to apply verbatim.
+
+## Procedure
+
+1. Collect the task's reader-facing prose. A non-file artifact (a PR body) goes into a scratch
+   file first, one per artifact.
+2. Give the reviewer only what the artifact's real reader will have. For docs and code comments: the working
+   tree, never the diff or the conversation that produced it: a comment that only reads clearly next to the
+   diff is the defect this test catches. For a PR body: the body plus its diff. Nothing from this
+   session.
+3. Dispatch one fresh agent without inherited conversation context using the available runtime's tools.
+   If that is unavailable, perform a separate reader pass and report the lack of an independent reviewer.
+   Give the reviewer the prompt below
+   verbatim, filling only `{paths}` and the audience line (the artifact's real reader: "a developer new to
+   this repo", "the human reviewing this PR"). Anything more is context that reader will not have, and it
+   blinds the test.
+4. Apply the report: a cut lands unless it drops a reader decision, precondition, or warning; keeping a span
+   requires naming that loss, and "adds nuance" is the writer's bias, not a loss. Re-anchor each reported
+   confusion to a fact the reader can see; add prose only for a confusion the reviewer actually raised or a
+   fact the reader can reach nowhere else. If most of a passage is cut, rewrite it from the survivors rather
+   than patching around the cuts. For style-level repairs, apply technical-writing's rules, not the
+   reviewer's prose.
+5. For a procedure, tutorial, or setup guide the user wrote or trusts, also run a reproduction pass. A fresh
+   agent with the reader context from step 2 follows the steps in a scratch directory and reports each step that
+   failed or needed knowledge the document omits: an unstated prerequisite, an incomplete code block, a
+   version-dependent command, or missing expected output. It reads each command before running it, and reports
+   as not run any step that fetches or executes remote content, needs credentials or elevated privileges,
+   changes version control, or writes outside the scratch directory. The runtime's sandbox, not this prompt,
+   bounds what the agent can reach.
+6. For load-bearing docs, the same single pass may dispatch a second reviewer at once, when it tests a
+   different audience or evidence base; do not add a later round.
+   Resolve suggested cuts by the reader information lost, not reviewer count; investigate even a single
+   evidence-backed confusion.
+
+## Reviewer prompt template
+
+    You are reading this material for the first time. You know nothing about the
+    conversation, task, or commits that produced it. Audience to embody: {audience line}.
+
+    Read: {paths}. You may read other repository files to verify claims, but read no
+    version-control history and, unless a diff is listed above, no diffs.
+
+    Report three lists with file:line spans:
+    1. Probe: what is each artifact for, and what would you do differently because
+       you read it? Cite only what you read.
+    2. Confusions: every place you stopped, reread, guessed, or hit a referent you
+       cannot resolve ("the above fix", "now", "this approach").
+    3. Cuts: every span whose deletion loses nothing your audience would miss; a span
+       earns its place by changing what the reader does or believes. Propose no
+       additions; name gaps under Confusions instead.
+
+    Report to an editor, not a person: no praise, no hedging, no summary.
+
+## Related
+
+- [technical-writing](../technical-writing/SKILL.md): the style rules to apply when acting on a reviewer's
+  Confusions or Cuts

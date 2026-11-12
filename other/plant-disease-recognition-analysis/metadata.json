@@ -1,0 +1,37 @@
+{
+  "name": "plant-disease-recognition-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/plant-disease-recognition-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "plant-disease-recognition-analysis",
+  "downloaded_at": "2026-11-12T07:21:30.476684Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/plant-disease-recognition-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/plant-disease-recognition-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Accurately identifies plant diseases based on computer vision and deep learning, supports both image and video input, outputs structured diagnostic reports including disease type, cause and prevention suggestions. | \u690d\u7269\u75c5\u5bb3\u8bc6\u522b\u6280\u80fd\uff0c\u57fa\u4e8e\u8ba1\u7b97\u673a\u89c6\u89c9\u4e0e\u6df1\u5ea6\u5b66\u4e60\uff0c\u652f\u6301\u89c6\u9891/\u56fe\u7247\u8f93\u5165\uff0c\u7cbe\u51c6\u8bc6\u522b\u690d\u7269\u75c5\u5bb3\u7c7b\u578b\uff0c\u8f93\u51fa\u5305\u542b\u75c5\u5bb3\u540d\u79f0\u3001\u81f4\u75c5\u539f\u56e0\u3001\u9632\u6cbb\u5efa\u8bae\u7684\u7ed3\u6784\u5316\u8bca\u65ad\u62a5\u544a\uff0c\u4e3a\u519c\u4e1a\u751f\u4ea7\u548c\u56ed\u827a\u517b\u62a4\u63d0\u4f9b\u75c5\u5bb3\u9884\u8b66"
+}

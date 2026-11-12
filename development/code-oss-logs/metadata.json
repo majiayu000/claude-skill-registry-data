@@ -1,0 +1,39 @@
+{
+  "name": "code-oss-logs",
+  "repo": "posit-dev/positron",
+  "path": ".github/skills/code-oss-logs/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "code-oss-logs",
+  "downloaded_at": "2026-11-12T06:40:51.162726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/.github/skills/code-oss-logs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/.github/skills/code-oss-logs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find and read timestamped process logs from Code OSS dev builds, including main.log, renderer.log, extension host logs, and agenthost.log. For bundles produced by Export Agent Host Debug Logs, use agent-host-logs."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "client-reply",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/client-reply/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "client-reply",
+  "downloaded_at": "2026-11-12T06:09:06.349341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/client-reply/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/client-reply/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft a reply to a client's feedback round or business question in plain, non-technical business language, in the user's language and voice. Drafts only and never sends. Use when the user asks to answer a client or turn technical notes into a message for one, for example \"reply to the client\", \"write to the client\", \"put this in plain language\", \"answer the feedback\"."
+}

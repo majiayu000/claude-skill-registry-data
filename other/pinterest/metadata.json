@@ -1,0 +1,37 @@
+{
+  "name": "pinterest",
+  "repo": "remorses/opencode-config",
+  "path": "skills/pinterest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "pinterest",
+  "downloaded_at": "2026-11-12T06:53:17.783569Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/pinterest/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/pinterest/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "`pinterest` CLI and TypeScript SDK to search Pinterest by text or by image (visual search from an\nexisting pin URL or id, with optional crop) and download original pin images and videos, using the\nuser's logged-in Chrome session via playwriter (cookies copied once, then the site's resource API\nfrom Node, no clicks). Returns original i.pinimg.com URLs, mp4 or HLS videos, carousel slides,\ntitle, description, alt text, outbound link, pinner, board and save counts. Also related pins,\nboard search and board listing. ALWAYS load this skill when the user mentions Pinterest, shares a\npinterest.com pin or board URL, or wants to find, find similar, or download reference images,\ntextures, moodboard or design assets from Pinterest."
+}

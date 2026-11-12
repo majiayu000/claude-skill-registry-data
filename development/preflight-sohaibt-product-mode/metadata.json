@@ -1,0 +1,37 @@
+{
+  "name": "preflight",
+  "repo": "sohaibt/product-mode",
+  "path": "skills/preflight/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sohaibt/product-mode",
+  "dir_name": "preflight-sohaibt-product-mode",
+  "downloaded_at": "2026-11-12T07:22:38.467661Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sohaibt",
+  "source_url": "https://github.com/sohaibt/product-mode/blob/main/skills/preflight/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sohaibt/product-mode/blob/main/skills/preflight/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fill in the product-mode pre-flight checklist for the current work and save it to .product-mode/checklist/. Use when the user types /preflight."
+}

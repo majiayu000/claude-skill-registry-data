@@ -1,0 +1,38 @@
+{
+  "name": "go-tcp-server-reliability",
+  "repo": "sayeed1999/agent-skills",
+  "path": "skills/go-tcp-server-reliability/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sayeed1999/agent-skills",
+  "dir_name": "go-tcp-server-reliability",
+  "downloaded_at": "2026-11-12T07:04:54.035522Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sayeed1999",
+  "source_url": "https://github.com/sayeed1999/agent-skills/blob/main/skills/go-tcp-server-reliability/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sayeed1999/agent-skills/blob/main/skills/go-tcp-server-reliability/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checklist for validating Go TCP server infrastructure for reliability - goroutine safety, panic recovery, connection lifecycle, framing, resource limits, graceful shutdown, and reliability tests. Use when building, modifying, or reviewing TCP server code."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "gh-issues-by-severity",
+  "repo": "oneafrikan/the-grid",
+  "path": "skills/gh-issues-by-severity/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/oneafrikan/the-grid",
+  "dir_name": "gh-issues-by-severity-oneafrikan-the-grid",
+  "downloaded_at": "2026-11-12T06:27:08.844235Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category data scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "data"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oneafrikan",
+  "source_url": "https://github.com/oneafrikan/the-grid/blob/main/skills/gh-issues-by-severity/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oneafrikan/the-grid/blob/main/skills/gh-issues-by-severity/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "List open GitHub issues for the current repo grouped by severity, highest first, using the repo's own severity:* labels. Use when the user asks to see open issues by severity or wants a standup-style issue scan."
+}

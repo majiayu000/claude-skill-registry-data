@@ -1,0 +1,37 @@
+{
+  "name": "denylist-stuck-messages",
+  "repo": "recoil-labs/recoil-link",
+  "path": ".agents/skills/denylist-stuck-messages/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/recoil-labs/recoil-link",
+  "dir_name": "denylist-stuck-messages-recoil-labs-recoil-link",
+  "downloaded_at": "2026-11-12T06:52:14.469884Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "recoil-labs",
+  "source_url": "https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/denylist-stuck-messages/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/denylist-stuck-messages/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add message IDs to the relayer denylist. Use after investigating stuck messages with /investigate-stuck-messages, or when you have specific message IDs to denylist."
+}

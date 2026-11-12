@@ -1,0 +1,38 @@
+{
+  "name": "performance-benchmarking",
+  "repo": "takeokunn/nixos-configuration",
+  "path": "home-manager/ai-tools/agent-skills/skills/performance-benchmarking/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/takeokunn/nixos-configuration",
+  "dir_name": "performance-benchmarking",
+  "downloaded_at": "2026-11-12T07:32:20.817919Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, speed, benchmark",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "takeokunn",
+  "source_url": "https://github.com/takeokunn/nixos-configuration/blob/main/home-manager/ai-tools/agent-skills/skills/performance-benchmarking/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/takeokunn/nixos-configuration/blob/main/home-manager/ai-tools/agent-skills/skills/performance-benchmarking/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when producing, gating, or reviewing performance numbers - before/after benchmarks, speedup/regression claims, CI benchmark gates, noise floor and confidence interval, wall-clock vs allocation-count metrics, and wording a performance claim."
+}

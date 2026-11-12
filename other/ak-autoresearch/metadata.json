@@ -1,0 +1,37 @@
+{
+  "name": "ak-autoresearch",
+  "repo": "quanganh208/chatofy",
+  "path": ".claude/skills/ak-autoresearch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/quanganh208/chatofy",
+  "dir_name": "ak-autoresearch",
+  "downloaded_at": "2026-11-12T06:47:36.869382Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "quanganh208",
+  "source_url": "https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-autoresearch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-autoresearch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Route bounded, goal-directed iteration to the AgentKit skill that owns the desired outcome."
+}

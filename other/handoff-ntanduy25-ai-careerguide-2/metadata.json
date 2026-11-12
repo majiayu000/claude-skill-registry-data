@@ -1,0 +1,37 @@
+{
+  "name": "handoff",
+  "repo": "ntanduy25/ai-careerguide_2",
+  "path": ".agents/skills/handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ntanduy25/ai-careerguide_2",
+  "dir_name": "handoff-ntanduy25-ai-careerguide-2",
+  "downloaded_at": "2026-11-12T06:21:32.927794Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ntanduy25",
+  "source_url": "https://github.com/ntanduy25/ai-careerguide_2/blob/main/.agents/skills/handoff/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ntanduy25/ai-careerguide_2/blob/main/.agents/skills/handoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a HANDOFF.md that captures goal, current state, files touched, failed attempts, and next steps \u2014 so a fresh Claude session can continue exactly where this one left off. Use when sessions are getting long, Claude keeps retrying the same broken solution, or the user wants to step away and resume later."
+}

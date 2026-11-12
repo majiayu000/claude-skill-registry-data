@@ -1,0 +1,38 @@
+{
+  "name": "rstudio-update-panmirror-branch",
+  "repo": "rstudio/rstudio",
+  "path": ".claude/skills/rstudio-update-panmirror-branch/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rstudio/rstudio",
+  "dir_name": "rstudio-update-panmirror-branch",
+  "downloaded_at": "2026-11-12T07:00:35.259129Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rstudio",
+  "source_url": "https://github.com/rstudio/rstudio/blob/main/.claude/skills/rstudio-update-panmirror-branch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rstudio/rstudio/blob/main/.claude/skills/rstudio-update-panmirror-branch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when starting work on a new RStudio release cycle (after the previous release has branched) and panmirror, the visual editor, must be pinned to a new release/rstudio-<release> branch of the quarto-dev/quarto repository, or when PANMIRROR_BRANCH in the install-panmirror scripts needs to point at a new cycle's branch."
+}

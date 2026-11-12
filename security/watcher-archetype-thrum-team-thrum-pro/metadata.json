@@ -1,0 +1,37 @@
+{
+  "name": "watcher-archetype",
+  "repo": "thrum-team/thrum-pro",
+  "path": "cursor-plugin/skills/watcher-archetype/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "watcher-archetype-thrum-team-thrum-pro",
+  "downloaded_at": "2026-11-12T07:40:49.566987Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/cursor-plugin/skills/watcher-archetype/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/cursor-plugin/skills/watcher-archetype/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when running as a watcher agent on a scheduled wake - the read-only, wake-run-exit detection loop (scan, then triage plus fix-sketch, then emit, then report, then job done). Loads the deterministic run-cycle discipline and the domain skill-pack plug-in contract for security/lint/deps/etc. watchers built on the v0.11 watcher substrate."
+}

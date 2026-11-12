@@ -1,0 +1,38 @@
+{
+  "name": "music-production",
+  "repo": "owoevan-dev/music-skill",
+  "path": "skills/music-production/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/owoevan-dev/music-skill",
+  "dir_name": "music-production",
+  "downloaded_at": "2026-11-12T06:30:56.982565Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "owoevan-dev",
+  "source_url": "https://github.com/owoevan-dev/music-skill/blob/main/skills/music-production/SKILL.md",
+  "license": "MIT; scripts/surge_host.py is GPL-3.0-or-later (LICENSES/GPL-3.0-or-later.txt)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/owoevan-dev/music-skill/blob/main/skills/music-production/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Composes, arranges, performs and mixes original instrumental music as editable notes. The agent writes every note into a project file; scripts check the score, play it on sampled instruments (pianos, guitars, basses, drums, orchestra, saxophones, erhu, steel drum, mallets, organ) or built-in synthesizers, Surge XT presets and drum machines with player-like timing, dynamics, swing and legato, mix it with buses, sidechain, delays and reverbs, and master it to MIDI, stems, an MP3 and seamless game loops. No audio-generation model: every note can be changed and re-rendered. Use it whenever the user wants an original instrumental track, game, film, video or visual novel music, an RPG scene, horror or anime-opening-style cue, orchestral, baroque, piano, jazz, blues, bossa nova or organ music, pop ballads, rock, metal, EDM, techno, synthwave, chiptune, lo-fi, boom bap or trap beats, an arrangement, a revision of one phrase, editable MIDI, stems or a mix, even if they only ask for 'a song' or 'some music'."
+}

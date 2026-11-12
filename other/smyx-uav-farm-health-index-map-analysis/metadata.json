@@ -1,0 +1,37 @@
+{
+  "name": "smyx-uav-farm-health-index-map-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/smyx-uav-farm-health-index-map-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "smyx-uav-farm-health-index-map-analysis",
+  "downloaded_at": "2026-11-12T07:21:35.117387Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-uav-farm-health-index-map-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-uav-farm-health-index-map-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Using multispectral or high-resolution RGB cameras mounted on agricultural UAVs to capture orthophotos or mosaics of farmland, AI models compute vegetation indices (e.g., NDVI, NDRE) and generate a farm health-index heatmap, where colors distinguish crop vigor (red = poor, yellow = medium, green = healthy). | \u901a\u8fc7\u519c\u4e1a\u65e0\u4eba\u673a\u5e73\u53f0\u642d\u8f7d\u7684\u591a\u5149\u8c31\u6216\u9ad8\u5206\u8fa8\u7387RGB\u76f8\u673a\uff0c\u91c7\u96c6\u519c\u7530\u7684\u6b63\u5c04\u5f71\u50cf\u6216\u62fc\u63a5\u56fe\uff0c\u5229\u7528AI\u6a21\u578b\u8ba1\u7b97\u690d\u88ab\u6307\u6570\uff08\u5982\u5f52\u4e00\u5316\u690d\u88ab\u6307\u6570NDVI\u3001\u5f52\u4e00\u5316\u7ea2\u8fb9\u6307\u6570NDRE\u7b49\uff09\uff0c\u751f\u6210\u519c\u7530\u5065\u5eb7\u6307\u6570\u70ed\u529b\u56fe\uff0c\u7528\u989c\u8272\u533a\u5206\u4f5c\u7269\u957f\u52bf\uff08\u7ea2\u8272\u4ee3\u8868\u5065\u5eb7\u5dee\u3001\u9ec4\u8272\u4ee3\u8868\u4e2d\u7b49\u3001\u7eff\u8272\u4ee3\u8868\u5065\u5eb7\uff09\u3002\u8be5\u6280\u80fd\u53ef\u5feb\u901f\u8bc6\u522b\u95ee\u9898\u533a\u57df\uff08\u5982\u7f3a\u80a5\u3001\u7f3a\u6c34\u3001\u75c5\u866b\u5bb3\u3001\u6742\u8349\uff09\uff0c\u6307\u5bfc\u7cbe\u51c6\u53d8\u91cf\u65bd\u80a5\u6216\u690d\u4fdd\u4f5c\u4e1a\u3002"
+}

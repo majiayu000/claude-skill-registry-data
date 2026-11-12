@@ -1,0 +1,37 @@
+{
+  "name": "reading-measurements",
+  "repo": "okgrit/done-is-a-claim",
+  "path": "skills/reading-measurements/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/okgrit/done-is-a-claim",
+  "dir_name": "reading-measurements-okgrit-done-is-a-claim",
+  "downloaded_at": "2026-11-12T06:24:53.667309Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: testing=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "okgrit",
+  "source_url": "https://github.com/okgrit/done-is-a-claim/blob/main/skills/reading-measurements/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/okgrit/done-is-a-claim/blob/main/skills/reading-measurements/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read a number without being fooled by it: an exit code, a passing result file, a test count, a list size, a control run, a red or a green. Use before reporting any figure, before turning a test run into a verdict, before acting on 'N items are broken', and whenever two outputs or two counts of the same thing disagree."
+}

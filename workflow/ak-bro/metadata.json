@@ -1,0 +1,37 @@
+{
+  "name": "ak-bro",
+  "repo": "quanganh208/chatofy",
+  "path": ".claude/skills/ak-bro/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/quanganh208/chatofy",
+  "dir_name": "ak-bro",
+  "downloaded_at": "2026-11-12T06:47:23.748235Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "quanganh208",
+  "source_url": "https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-bro/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-bro/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Restate the assistant's last message in simpler, shorter, jargon-free language."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "redis-docs-mcp",
+  "repo": "redis/agent-skills",
+  "path": "skills/redis-docs-mcp/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/redis/agent-skills",
+  "dir_name": "redis-docs-mcp",
+  "downloaded_at": "2026-11-12T06:52:25.015585Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "redis",
+  "source_url": "https://github.com/redis/agent-skills/blob/main/skills/redis-docs-mcp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/redis/agent-skills/blob/main/skills/redis-docs-mcp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Working with the redis-docs MCP server (search / fetch / ask at redis.io/mcp) \u2014 how its index is shaped and how to read what it returns. Use when those tools are available and you are about to look something up in the Redis documentation, or when a result is confusing \u2014 fetch returned one short section instead of a page, several hits share one url, ids look like #sec:w1, metadata.version reads 1.0.0, a search came back empty, or ask was rate-limited or said the docs do not cover it. Also covers what redis.io does and does not index."
+}

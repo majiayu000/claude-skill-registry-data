@@ -1,0 +1,38 @@
+{
+  "name": "plan-status",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/plan-status/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "plan-status",
+  "downloaded_at": "2026-11-12T06:09:05.224646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, planning, memory",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/plan-status/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/plan-status/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Report measured open, done, and blocked counts from the project's active plan and backlog, then list the open decisions as numbered A/B/C questions with a recommended option, answerable in one line. Read-only. Use when the user asks where the work stands or what is left, for example \"what is the status\", \"what is left\", \"show the plan status\", \"where do we stand\"."
+}

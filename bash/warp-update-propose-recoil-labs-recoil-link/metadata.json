@@ -1,0 +1,38 @@
+{
+  "name": "warp-update-propose",
+  "repo": "recoil-labs/recoil-link",
+  "path": ".agents/skills/warp-update-propose/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/recoil-labs/recoil-link",
+  "dir_name": "warp-update-propose-recoil-labs-recoil-link",
+  "downloaded_at": "2026-11-12T06:52:12.919897Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "recoil-labs",
+  "source_url": "https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-update-propose/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-update-propose/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orchestrator skill that takes a warp-apply receipts directory and proposes each batch to its corresponding multisig signer \u2014 Safe Transaction Service via `safes/propose-warp-batch.ts` for EVM batches (auto-detects governance context: AW / Foundation / Regular / etc. per filename), Squads via `squads/propose-warp-batch.ts` for SVM batches. Persists a per-ticket proposal summary at `~/.hyperlane/proposals/ticket-id.yaml` so the human can track signing progress in Heimdall or Squads."
+}

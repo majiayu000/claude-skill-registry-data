@@ -1,0 +1,38 @@
+{
+  "name": "ask-claude",
+  "repo": "thoughtbot/rails-consultant",
+  "path": "skills/ask-claude/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/thoughtbot/rails-consultant",
+  "dir_name": "ask-claude-thoughtbot-rails-consultant",
+  "downloaded_at": "2026-11-12T07:40:34.886336Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thoughtbot",
+  "source_url": "https://github.com/thoughtbot/rails-consultant/blob/main/skills/ask-claude/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thoughtbot/rails-consultant/blob/main/skills/ask-claude/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recommend the best way to have Claude do something, checked against Anthropic's current docs, then write the prompt and run it once approved. Use when someone asks how they should prompt you, what the best way to ask for something is, or which Claude feature fits a job (CLAUDE.md, skill, hook, subagent, workflow, plan mode, /goal, MCP, headless, the API), even if they don't name a feature."
+}

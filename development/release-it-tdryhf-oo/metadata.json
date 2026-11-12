@@ -1,0 +1,39 @@
+{
+  "name": "release-it",
+  "repo": "tdryhf/oo",
+  "path": "skills/wondelai_skills/release-it/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tdryhf/oo",
+  "dir_name": "release-it-tdryhf-oo",
+  "downloaded_at": "2026-11-12T07:35:08.889512Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, software",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tdryhf",
+  "source_url": "https://github.com/tdryhf/oo/blob/main/skills/wondelai_skills/release-it/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tdryhf/oo/blob/main/skills/wondelai_skills/release-it/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build production-ready systems with stability patterns: circuit breakers, bulkheads, timeouts, and retry logic. Use when the user mentions \"production outage\", \"circuit breaker\", \"deployment pipeline\", \"chaos engineering\", \"retry storm\", \"health checks\", \"my service keeps crashing\", \"prevent cascading failures\", or \"make it resilient\". Also trigger when designing resilient microservices, planning zero-downtime deployments, or capacity-planning for peak load. Covers stability patterns, capacity planning, deploy/release decoupling, and observability. For data systems, see ddia-systems. For system architecture, see system-design."
+}

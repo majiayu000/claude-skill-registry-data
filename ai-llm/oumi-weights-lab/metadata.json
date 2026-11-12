@@ -1,0 +1,38 @@
+{
+  "name": "oumi-weights-lab",
+  "repo": "oumi-ai/weights-lab",
+  "path": "skills/oumi-weights-lab/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/oumi-ai/weights-lab",
+  "dir_name": "oumi-weights-lab",
+  "downloaded_at": "2026-11-12T06:30:50.890290Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, language-model, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "language-model",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oumi-ai",
+  "source_url": "https://github.com/oumi-ai/weights-lab/blob/main/skills/oumi-weights-lab/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oumi-ai/weights-lab/blob/main/skills/oumi-weights-lab/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked to find out how an open-weights language model does something (which heads, MLPs, neurons, features, or directions carry a behavior) or to test such a claim; when asked to ablate, zero, edit, swap, or compare a model's parameters, including LoRA adapters; when measuring how a weight change affects a model's answers; or when recording, patching, or probing a Hugging Face causal model's activations or gradients."
+}

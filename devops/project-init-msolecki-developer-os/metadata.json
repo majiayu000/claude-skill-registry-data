@@ -1,0 +1,39 @@
+{
+  "name": "project-init",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/project-init/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "project-init-msolecki-developer-os",
+  "downloaded_at": "2026-11-12T06:09:06.642428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/project-init/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/project-init/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Adopt developer-os in a repository in one pass \u2014 detect the stack, pick the skills that apply, run project-baseline, docs-sync and instruction-review, audit the code against each applicable conventions skill, then give one report and one approval; for a code audit alone, audit-to-backlog. Use when starting with developer-os in a repository, for example \"init developer-os here\", \"check the whole project\", \"set the repo up for developer-os\"."
+}

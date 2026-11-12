@@ -1,0 +1,37 @@
+{
+  "name": "maintain-contract",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/maintain-contract/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "maintain-contract",
+  "downloaded_at": "2026-11-12T06:23:05.077649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/maintain-contract/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/maintain-contract/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The workflow contract for any agent that ingests, retrieves from, or maintains a claude-wiki-pages vault. Documents the safe ordering \u2014 ground \u2192 judge \u2192 verify \u2014 checkpoint discipline, retrieval grounding, and the immutability rules, so an external agent can drive the wiki correctly without re-reading the whole spec. Trigger when an agent or user asks \"how should I maintain the wiki\", \"what is the safe ingest/retrieve order\", \"how do other agents use this\", or invokes /claude-wiki-pages:maintain-contract. Reference, not action."
+}

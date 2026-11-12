@@ -1,0 +1,37 @@
+{
+  "name": "rails-node-integration",
+  "repo": "shubhamtaywade82/ruby-agent-skills",
+  "path": "skills/rails-node-integration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/shubhamtaywade82/ruby-agent-skills",
+  "dir_name": "rails-node-integration",
+  "downloaded_at": "2026-11-12T07:15:12.971445Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shubhamtaywade82",
+  "source_url": "https://github.com/shubhamtaywade82/ruby-agent-skills/blob/main/skills/rails-node-integration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shubhamtaywade82/ruby-agent-skills/blob/main/skills/rails-node-integration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a Rails backend talks to a Node.js service (Express, Fastify, NestJS, Hono, BFF, or a Node Sidekiq replacement) \u2014 choosing the integration mode (HTTP, JSON-RPC, shared Postgres, queue), typing and validating the contract on both sides, sending CSRF and session credentials cross-origin, mapping Rails validation errors into the Node service's problem-details envelope, and routing observability across the language boundary."
+}

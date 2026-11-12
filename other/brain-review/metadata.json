@@ -1,0 +1,37 @@
+{
+  "name": "brain-review",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/brain-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "brain-review",
+  "downloaded_at": "2026-11-12T06:09:06.191513Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/brain-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/brain-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review the inbox of the user's Obsidian knowledge vault \u2014 summarize captured notes, then promote, merge, reject or supersede only the notes the user names. Use when the user asks to review or triage the brain/vault inbox or captured notes, for example \"review the brain inbox\", \"what is in the inbox\", \"sort the inbox notes\"."
+}

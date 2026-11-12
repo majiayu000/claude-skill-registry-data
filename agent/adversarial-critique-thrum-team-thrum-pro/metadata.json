@@ -1,0 +1,37 @@
+{
+  "name": "adversarial-critique",
+  "repo": "thrum-team/thrum-pro",
+  "path": "claude-plugin/skills/adversarial-critique/SKILL.md",
+  "github_branch": "main",
+  "category": "agent",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "adversarial-critique-thrum-team-thrum-pro",
+  "downloaded_at": "2026-11-12T07:40:53.695707Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "agent",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for agent: agent, sub-agent",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/adversarial-critique/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/adversarial-critique/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an implementer is blocked mid-work by a design flaw, contradiction, or unforeseen fork with 2-3 ways to resolve it - produces a defended pick that unblocks the work and leaves an audit trail so the decision can be revisited if it later proves wrong"
+}

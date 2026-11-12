@@ -1,0 +1,39 @@
+{
+  "name": "playwright-agents",
+  "repo": "testland/qa",
+  "path": "plugins/qa-web-e2e/skills/playwright-agents/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "playwright-agents",
+  "downloaded_at": "2026-11-12T07:37:15.891508Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, testing=4",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-web-e2e/skills/playwright-agents/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-web-e2e/skills/playwright-agents/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a coding agent works with Playwright through playwright-cli, Playwright MCP or the planner, generator and healer Test Agents: setting them up, reviewing healer diffs before merging, debugging a failing test from its trace in a terminal with no display, and leaving a video receipt."
+}

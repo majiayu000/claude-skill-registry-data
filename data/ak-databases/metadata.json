@@ -1,0 +1,40 @@
+{
+  "name": "ak-databases",
+  "repo": "quanganh208/chatofy",
+  "path": ".claude/skills/ak-databases/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/quanganh208/chatofy",
+  "dir_name": "ak-databases",
+  "downloaded_at": "2026-11-12T06:47:32.130634Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database, pipeline",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "quanganh208",
+  "source_url": "https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-databases/SKILL.md",
+  "license": "Proprietary",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-databases/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design schemas and SQL/NoSQL queries for MongoDB and PostgreSQL: aggregation, indexes, migrations, replication, performance, psql CLI."
+}

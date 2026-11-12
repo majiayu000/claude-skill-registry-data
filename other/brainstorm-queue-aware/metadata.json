@@ -1,0 +1,36 @@
+{
+  "name": "brainstorm-queue-aware",
+  "repo": "thrum-team/thrum-pro",
+  "path": "cursor-plugin/skills/brainstorm-queue-aware/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "brainstorm-queue-aware",
+  "downloaded_at": "2026-11-12T07:40:54.831714Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/cursor-plugin/skills/brainstorm-queue-aware/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/cursor-plugin/skills/brainstorm-queue-aware/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when running as a brainstormer that a Brainstorm Steward is managing \u2014 redirect every Q-by-Q question to the Steward as a NEED message and block for the ANSWER instead of asking the human directly. Fires when your briefing names a steward."
+}

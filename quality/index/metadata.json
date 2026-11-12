@@ -1,0 +1,37 @@
+{
+  "name": "index",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/index/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "index",
+  "downloaded_at": "2026-11-12T06:23:04.234323Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, validate",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/index/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/index/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate or refresh the vault MOC at vault/wiki/index.md \u2014 the top-level catalog of every topic folder and synthesis note in the vault. Trigger when the user says \"refresh the index\", \"rebuild the vault MOC\", \"update the catalog\", or after adding a new top-level topic or synthesis. Per-folder folder notes are owned by the ingest workflow, not by this skill."
+}

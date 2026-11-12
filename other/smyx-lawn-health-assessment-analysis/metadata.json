@@ -1,0 +1,37 @@
+{
+  "name": "smyx-lawn-health-assessment-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/smyx-lawn-health-assessment-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "smyx-lawn-health-assessment-analysis",
+  "downloaded_at": "2026-11-12T07:21:33.035514Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-lawn-health-assessment-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-lawn-health-assessment-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "AI-powered lawn health assessment from drone or fixed-camera top-down images. Uses semantic segmentation to distinguish healthy turf (green), wilting/yellow turf (yellow-brown), bare soil and weeds (off-species color/texture), then computes wilting area ratio and weed coverage ratio, and outputs a composite lawn health score (0-100). Helps managers of golf courses, courtyards or municipal greenways quantify turf quality and guide irrigation, fertilization and weeding operations. Scenarios: home courtyards, golf courses, municipal park lawns, sports fields. | \u901a\u8fc7\u65e0\u4eba\u673a\u6216\u56fa\u5b9a\u6444\u50cf\u5934\u62cd\u6444\u8349\u576a\u7684\u4fef\u89c6\u56fe\u50cf\uff0c\u5229\u7528AI\u8bed\u4e49\u5206\u5272\u6280\u672f\u533a\u5206\u5065\u5eb7\u8349\u576a\uff08\u7eff\u8272\uff09\u3001\u67af\u9ec4\u8349\u576a\uff08\u9ec4/\u8910\u8272\uff09\u3001\u88f8\u571f\u4ee5\u53ca\u6742\u8349\uff08\u975e\u76ee\u6807\u8349\u79cd\uff0c\u989c\u8272\u548c\u7eb9\u7406\u4e0d\u540c\uff09\uff0c\u8ba1\u7b97\u67af\u9ec4\u9762\u79ef\u5360\u6bd4\u548c\u6742\u8349\u8986\u76d6\u9762\u79ef\u5360\u6bd4\uff0c\u7efc\u5408\u8bc4\u4f30\u8349\u576a\u5065\u5eb7\u8bc4\u5206\uff080-100\u5206\uff09\u3002\u8be5\u6280\u80fd\u6709\u52a9\u4e8e\u9ad8\u5c14\u592b\u7403\u573a\u3001\u5ead\u9662\u6216\u5e02\u653f\u7eff\u5730\u7ba1\u7406\u8005\u91cf\u5316\u8349\u576a\u8d28\u91cf\uff0c\u6307\u5bfc\u704c\u6e89\u3001\u65bd\u80a5\u53ca\u9664\u8349\u4f5c\u4e1a\u3002\u5e94\u7528\u573a\u666f\uff1a\u5bb6\u5ead\u5ead\u9662\u3001\u9ad8\u5c14\u592b\u7403\u573a\u3001\u5e02\u653f\u516c\u56ed\u8349\u576a\u3001\u8fd0\u52a8\u573a\u3002"
+}

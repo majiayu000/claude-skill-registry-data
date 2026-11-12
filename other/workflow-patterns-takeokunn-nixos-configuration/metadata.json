@@ -1,0 +1,38 @@
+{
+  "name": "workflow-patterns",
+  "repo": "takeokunn/nixos-configuration",
+  "path": "home-manager/ai-tools/agent-skills/skills/workflow-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/takeokunn/nixos-configuration",
+  "dir_name": "workflow-patterns-takeokunn-nixos-configuration",
+  "downloaded_at": "2026-11-12T07:32:19.653471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "takeokunn",
+  "source_url": "https://github.com/takeokunn/nixos-configuration/blob/main/home-manager/ai-tools/agent-skills/skills/workflow-patterns/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/takeokunn/nixos-configuration/blob/main/home-manager/ai-tools/agent-skills/skills/workflow-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when authoring an agent, a command, or a skill description (output, checkpoints, decision criteria, escalations, skill loading, self-evaluation), when escalating a consequential finding into an independent refutation pass, or when two instructions appear to contradict and must be reconciled."
+}

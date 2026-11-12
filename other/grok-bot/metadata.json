@@ -1,0 +1,37 @@
+{
+  "name": "grok-bot",
+  "repo": "remorses/opencode-config",
+  "path": "skills/grok-bot/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "grok-bot",
+  "downloaded_at": "2026-11-12T06:53:17.646983Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/grok-bot/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/grok-bot/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Delegate X (Twitter) work to the `grok-bot` subagent: search posts, read threads, look up users, export followers, following, likes or bookmarks as CSV, analyze an account. Grok Bot is a remote agent on its own cloud computer with Tommy's X account (@__morse) connected, plus a browser, shell, files, web search and image generation. Files it sends are saved on this Mac. Use when the user wants anything from X, or a long task that fits a cloud computer."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "docs-sync",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/docs-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "docs-sync-msolecki-developer-os",
+  "downloaded_at": "2026-11-12T06:09:04.606762Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/docs-sync/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/docs-sync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check a repository's docs against its code and the project docs standard \u2014 scaffold missing pieces, refresh docs/CURRENT-STATE.md, report docs-vs-code drift, and propose the \"Likely agent mistakes here\" section from git history \u2014 writing nothing until the user approves. Use when docs may be stale, after a large change, or when setting up docs in a project; for example \"refresh the docs\", \"are the docs up to date\", \"sync the docs with the code\"."
+}

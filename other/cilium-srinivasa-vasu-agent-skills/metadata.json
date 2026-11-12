@@ -1,0 +1,37 @@
+{
+  "name": "yugabytedb-k8s-cilium",
+  "repo": "srinivasa-vasu/agent-skills",
+  "path": "yugabytedb-k8s/cilium/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/srinivasa-vasu/agent-skills",
+  "dir_name": "cilium-srinivasa-vasu-agent-skills",
+  "downloaded_at": "2026-11-12T07:25:35.431053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "srinivasa-vasu",
+  "source_url": "https://github.com/srinivasa-vasu/agent-skills/blob/main/yugabytedb-k8s/cilium/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/srinivasa-vasu/agent-skills/blob/main/yugabytedb-k8s/cilium/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set up a Cilium Cluster Mesh with Multi-Cluster Services (MCS-API) between two Kubernetes clusters and deploy one independent YugabyteDB universe per cluster with the yugabyte Helm chart, so the universes can be joined with xCluster replication (source -> target / DR). Covers kind cluster configs with non-overlapping CIDRs, cilium install with clustermesh.mcsapi, clustermesh enable/connect, Helm values (multicluster.createServiceExports, kubernetesClusterId, masterAddresses, totalMasters), svc.clusterset.local DNS checks, and yb-admin xCluster setup. Use when the user mentions Cilium Cluster Mesh with YugabyteDB, xCluster on Kubernetes across clusters, cross-cluster YugabyteDB on kind, ServiceExport/ServiceImport for yb-masters or yb-tservers, or clusterset.local addresses for YugabyteDB. Does NOT cover the YugabyteDB Kubernetes Operator or YBA-managed DR (use yb-k8s-operator), or a single universe stretched across clusters."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "pm-gtm-v1",
+  "repo": "naderelewa/Product-to-Prod",
+  "path": "skills/pm-gtm-v1/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/naderelewa/Product-to-Prod",
+  "dir_name": "pm-gtm-v1",
+  "downloaded_at": "2026-11-12T06:10:51.426147Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, campaign",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "naderelewa",
+  "source_url": "https://github.com/naderelewa/Product-to-Prod/blob/main/skills/pm-gtm-v1/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/naderelewa/Product-to-Prod/blob/main/skills/pm-gtm-v1/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Go-to-market and growth planning, GTM here means go-to-market, never a tag-manager container. Use\nwhen a growth plan needs building or refreshing: \"build the go-to-market plan\", \"growth plan for\n<period or launch>\", \"campaign architecture\", \"channel plan\", \"media plan\", \"tracking planning\nrows\", \"update the growth plan after <release>\". It resolves which plan document is actually\ncurrent, takes a FRESH gate-state snapshot before planning a single sentence, builds the plan phase\nby phase, narrates the campaign architecture per channel and per persona, and emits channel and\ntracking rows CONFIG-ONLY, no credentials, no platform writes, no spend. NOT for executing\ncampaigns or buying media; NOT for implementing tracking (that is engineering work, routed through\npm-requirements-v1); NOT for writing a handoff package or scoring a backlog."
+}

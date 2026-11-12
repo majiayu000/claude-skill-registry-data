@@ -1,0 +1,37 @@
+{
+  "name": "init",
+  "repo": "naderelewa/Product-to-Prod",
+  "path": "skills/init/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/naderelewa/Product-to-Prod",
+  "dir_name": "init",
+  "downloaded_at": "2026-11-12T06:10:51.058776Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, backlog",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "naderelewa",
+  "source_url": "https://github.com/naderelewa/Product-to-Prod/blob/main/skills/init/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/naderelewa/Product-to-Prod/blob/main/skills/init/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up this plugin on this machine, the one-time, gated setup for the only thing here that\nwrites anything outside your project (an optional local event log), plus the one optional\nintegration this plugin can be connected to (read-only issue-tracker reads). Use when the user\nsays \"set up the plugin\", \"run the setup\", \"turn on the usage log\", \"is telemetry on?\", \"what\ndoes this record about me?\", \"stop logging\", \"delete the log\", \"remove the config\", \"connect my\nissue tracker\", \"connect Jira\", \"hook this up to our backlog\", or has just installed the plugin.\nAlso handles --verify (re-prove everything, ask nothing) and --uninstall (remove the log and the\nconfig, dry-run first). It asks in plain words, walks 5 numbered telemetry gates plus 1 numbered\nintegration offer, verifies each one by running a real command and quoting its real output,\ndefaults every answer to NO, and ends with a proof report that says what is on, what is off, and\nwhat it could not verify."
+}

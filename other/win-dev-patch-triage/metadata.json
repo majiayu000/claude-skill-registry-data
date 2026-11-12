@@ -1,0 +1,37 @@
+{
+  "name": "win-dev-patch-triage",
+  "repo": "ssahmed532/win-dev-patch-triage",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ssahmed532/win-dev-patch-triage",
+  "dir_name": "win-dev-patch-triage",
+  "downloaded_at": "2026-11-12T07:25:38.258580Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ssahmed532",
+  "source_url": "https://github.com/ssahmed532/win-dev-patch-triage/blob/main/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ssahmed532/win-dev-patch-triage/blob/main/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only security patch triage of a Windows developer workstation. It inventories installed apps, browsers, AI agent apps and CLIs (Claude, ChatGPT, Codex, OpenCode), runtimes including every Node.js, PHP and Bun copy, every pip copy, global npm/bun/uv tools, Go programs, WSL and listening ports; audits every lockfile under the projects folders (Python, npm, pnpm, yarn, bun, Composer, NuGet, Go, Cargo) for vulnerable and malicious versions; checks advisories from the last N hours (default 24); and publishes a ranked remediation page: Today / This week / Backlog, with a delta against the previous run. Use this skill when the user asks what needs patching or updating on their machine, asks to scan installed packages, runtimes or dev dependencies for vulnerabilities, asks to run, re-run or refresh the workstation scan or patch triage, or wants a security update checklist for their laptop, even if they don't say \"triage\". Not for deciding on a single Windows KB update, and not for Azure VMs or servers."
+}

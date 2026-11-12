@@ -1,0 +1,37 @@
+{
+  "name": "brunei-tax",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/brunei-tax/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "brunei-tax",
+  "downloaded_at": "2026-11-12T06:28:07.876995Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/brunei-tax/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/brunei-tax/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked about Brunei Darussalam tax obligations. Trigger on phrases like \"Brunei tax\", \"Brunei VAT\", \"Brunei GST\", \"corporate tax Brunei\", \"MOFE filing\". Brunei has NO VAT/GST and NO personal income tax. This skill covers corporate income tax at 18.5% and clarifies the absence of consumption tax. MUST be loaded alongside vat-workflow-base v0.1 or later. ALWAYS read this skill before touching any Brunei tax work."
+}

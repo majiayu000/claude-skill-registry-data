@@ -1,0 +1,38 @@
+{
+  "name": "speckit-analyze-deep",
+  "repo": "risingfish/myjobbot",
+  "path": ".claude/skills/speckit-analyze-deep/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/risingfish/myjobbot",
+  "dir_name": "speckit-analyze-deep",
+  "downloaded_at": "2026-11-12T06:56:33.656466Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css, component",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "risingfish",
+  "source_url": "https://github.com/risingfish/myjobbot/blob/main/.claude/skills/speckit-analyze-deep/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/risingfish/myjobbot/blob/main/.claude/skills/speckit-analyze-deep/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Thorough, read-only cross-artifact analysis of spec.md, plan.md, tasks.md and the design docs, checked against the current code, aiming to find every CRITICAL and HIGH issue in one pass. Use instead of /speckit-analyze when you want the analysis to converge in one or two runs."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "qa-vat-gst",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/qa-vat-gst/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "qa-vat-gst",
+  "downloaded_at": "2026-11-12T06:28:09.370253Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/qa-vat-gst/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/qa-vat-gst/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Qatar VAT implementation status and indirect-tax routing for 2026. Use when a Qatar business asks about charging VAT, VAT registration, returns, reverse charge, input-tax recovery, invoices, purchases from overseas suppliers or foreign VAT on an expense. Applies to Qatar businesses and customers checking the current mainland VAT position. Records the General Tax Authority's express statement that Qatar has not applied VAT and distinguishes absence of a domestic regime from zero-rating. Routes excise and customs to separate product-specific analysis, business-payment withholding to the cross-border income-tax Guide, and foreign VAT recovery to the relevant foreign jurisdiction. Includes two checked illustrations without assuming a future Qatar rate or commencement."
+}

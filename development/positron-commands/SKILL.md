@@ -1,0 +1,149 @@
+---
+name: positron-commands
+description: >
+  Running Positron IDE commands: changing the window layout, focusing panes,
+  clearing the console, opening a file or data file in the right editor,
+  showing or reading an HTML file, URL or app in the Viewer, finding or adding
+  interpreters, listing, switching, starting, restarting or interrupting
+  sessions, setting up Python, reading, installing or updating a session's
+  packages, running, stopping, debugging or troubleshooting a web app
+  (Shiny, Flask, Dash, Streamlit, FastAPI, Gradio, marimo), reading Data
+  Connections and their tables and columns, creating, editing or running
+  notebook cells, and reading help. Use when the user wants Positron itself
+  to act or to know what is installed, not to run code. Triggers: "show the
+  variables pane", "open data.csv", "show this HTML in the Viewer", "switch to
+  my R session", "my session is stuck", "is pandas installed?", "set up a
+  Python environment", "why won't my shiny app start", "what tables are in my
+  warehouse", "add a cell to this notebook".
+---
+
+# Positron IDE commands
+
+These commands act on the Positron workbench itself -- layout, panes, editors,
+interpreter sessions, and packages. They do not run interpreter code; use the
+tool that runs code in a session for that.
+
+## Calling these commands
+
+Invoke commands with the tool that runs Positron commands, passing the command's
+literal `id` exactly as written in the reference files -- copy it, do not retype
+it from memory. Where a command takes arguments, fill `args` positionally in the
+order given under that command's "Arguments" entry. Omit `args` entirely for commands
+that take none -- do not pass an empty object or array. Never invent an argument
+value the user hasn't given you or that isn't documented; if a required value is
+unknown, ask the user first.
+
+**Find the id here before you run it.** Positron is built on VS Code, so a
+plausible-sounding VS Code command id usually does exist and will usually run --
+which makes recalling one from memory the most expensive mistake available. Some
+ids that read like they do the thing directly instead open a dialog or a
+quick-pick and wait for the user to choose, so the command "succeeds" while
+handing the task straight back to them. Read the relevant reference file first
+and use the id and arguments it gives you. If what the user wants is not covered
+by any file below, say so rather than reaching for an id from general VS Code
+knowledge.
+
+Some commands take or return an internal id -- a runtime id or a session id.
+These are opaque handles you pass back into another command; they are not shown
+anywhere in the Positron UI, so a user won't recognize one and it would only
+confuse them. Use ids to make the call, but never repeat one to the user. Refer
+to a session or interpreter by its name instead.
+
+## When a command doesn't work
+
+- **`disabled`**: the command's precondition doesn't currently hold. Common
+  causes are no running interpreter session, or no Data Explorer editor open.
+  Report this plainly (e.g. "there's no Data Explorer editor open right now")
+  rather than retrying or guessing at a workaround. Each reference file notes
+  which of its commands have preconditions.
+- **`not-found`**: the command id isn't present in this Positron build, meaning
+  the build is older or newer than this skill expects. Report this plainly; do
+  not substitute a similarly named id you're unsure about.
+
+## Reference Files
+
+Load the file covering the area in question -- the command ids, arguments, and
+return values live there, not in this file.
+
+**UI, layout and panes** -- [references/ui.md]({{skill_dir}}/references/ui.md)
+Read when the user asks about: switching the workbench layout (four-pane,
+notebook, two-pane), bringing a pane into focus (Console, Variables, Help,
+Plots, Packages), clearing console output, or expanding/collapsing the Data
+Explorer's column summary panel.
+
+**Opening files** -- [references/files.md]({{skill_dir}}/references/files.md)
+Read when the user wants a file open in Positron: "open data.csv", "show me
+that file", "let's look at this CSV/Parquet/Excel file", "browse this JSON
+file", or anything that should land in the Data Explorer or Object Explorer.
+Read it **before** opening anything -- it documents the commands that open a
+known path, and names the similar-looking ids that open a file picker instead
+and hand the task back to the user.
+
+**Viewer** -- [references/viewer.md]({{skill_dir}}/references/viewer.md)
+Read when the user wants to see HTML you have written -- a page, chart, report,
+or prototype -- or asks to show a local HTML file or a URL in the Viewer, and
+when you need to see or use what's in the Viewer: to check that an app you
+started is up and what it shows, or to click, fill in or pick options in an app
+the user wants tested. Read it **before** telling the user you can't display
+HTML or can't see the Viewer: it documents the commands that show a file or URL
+in the Viewer pane, and those that read and use the page there.
+
+**Registered interpreters** -- [references/interpreters.md]({{skill_dir}}/references/interpreters.md)
+Read when the user asks what interpreters are available or which one the
+project uses, wants to install one, says an installed interpreter isn't showing
+up, or wants a specific interpreter made available. Also the place to find a
+base interpreter before creating an environment.
+
+**Sessions** -- [references/sessions.md]({{skill_dir}}/references/sessions.md)
+Read when the user asks about: which sessions are running, switching to a
+different session, or starting a new one. Also explains the difference between
+console sessions and notebook sessions, which decides whether a session can be
+selected.
+
+**Stuck sessions and help** -- [references/troubleshooting.md]({{skill_dir}}/references/troubleshooting.md)
+Read when the user asks about a session that is stuck, needs interrupting, or
+needs restarting. Also covers showing a help topic to the user, and reading
+installed help and vignettes yourself -- read them before explaining how to use
+a function or package, its arguments, or an error it raises.
+
+**Packages** -- [references/packages.md]({{skill_dir}}/references/packages.md)
+Read when the user asks about: what is installed in a session and at which
+version, whether a package is available, out of date or affected by a known
+security advisory, or installing and updating packages. Read it **before**
+answering any question about what the session has -- it documents the command
+that reports the installed packages, which is always the right way to find out,
+rather than running code to check.
+
+**Python environment setup** -- [references/python-setup.md]({{skill_dir}}/references/python-setup.md)
+Read when the user is getting Python set up: installing a Python interpreter when
+they have none, creating a project environment (venv, Conda, or uv), or finding
+out which interpreter is currently active.
+
+**Interactive web apps** -- [references/interactive-apps.md]({{skill_dir}}/references/interactive-apps.md)
+Read when the user wants a web app running, stopped or debugged, or asks about
+one that is running or broken: "run my app", "start the
+shiny/flask/dash/streamlit/marimo app", "preview my dashboard", "is my app
+up?", "what's my app's URL?", "stop the app", "my app is broken", "my app
+crashed", "why isn't my app working?". Read it
+**before** starting any app server yourself -- app servers must not be started by
+running code in a session or a raw terminal command for supported app frameworks. The
+commands it documents manage the terminal, detect the app URL, set up any
+proxying the environment requires, and preview the app -- in the Viewer by
+default, or wherever the user's preview mode setting points.
+
+**Data connections and schemas** -- [references/data-connections.md]({{skill_dir}}/references/data-connections.md)
+Read when the user asks about: the database or warehouse connections they have
+configured, which of them are connected, the tables and columns a live
+connection exposes, where a table's or column's data comes from or what is
+built from it (lineage), or writing a query against one of their connections.
+
+**Notebooks** -- [references/notebooks.md]({{skill_dir}}/references/notebooks.md)
+Read when the user wants to create a Jupyter notebook, or read, insert, edit,
+delete, or run cells in one that's open in the Positron notebook editor.
+
+**Deploying to Connect** -- [references/publishing.md]({{skill_dir}}/references/publishing.md)
+Read when the user wants to deploy or publish a project to Posit Connect or
+Connect Cloud, asks what they can deploy, needs a Connect credential, or is
+asking why a deployment failed. Read it **before** deploying anything --
+deployment must go through the commands it documents, never through
+`rsconnect`, `quarto publish` or another CLI run in a terminal.

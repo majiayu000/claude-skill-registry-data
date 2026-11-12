@@ -1,0 +1,37 @@
+{
+  "name": "update-skills",
+  "repo": "posit-dev/positron",
+  "path": "src/vs/sessions/skills/update-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "update-skills",
+  "downloaded_at": "2026-11-12T06:40:43.827822Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, debug",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/src/vs/sessions/skills/update-skills/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/src/vs/sessions/skills/update-skills/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create or update repository skills and instructions when major learnings are discovered during a session. Use when the user says \"learn!\", when a significant pattern or pitfall is identified, or when reusable domain knowledge should be captured for future sessions."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "project-setup-info-local",
+  "repo": "posit-dev/positron",
+  "path": "extensions/copilot/assets/prompts/skills/project-setup-info-local/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "project-setup-info-local",
+  "downloaded_at": "2026-11-12T06:40:47.977902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=4, development=4",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "design",
+      "css",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/extensions/copilot/assets/prompts/skills/project-setup-info-local/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/extensions/copilot/assets/prompts/skills/project-setup-info-local/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Comprehensive setup steps to help the user create complete project structures in a VS Code workspace; this tool is designed for full project initialization and scaffolding, not for creating individual files. When to use this tool: user wants to create a new complete project from scratch; setting up entire project frameworks (TypeScript projects, React apps, Node.js servers, etc.); initializing Model Context Protocol (MCP) servers with full structure; creating VS Code extensions with proper scaffolding; setting up Next.js, Vite, or other framework-based projects; user asks for \"new project\", \"create a workspace\", \"set up a [framework] project\"; need to establish a complete development environment with dependencies, config files, and folder structure. When NOT to use this tool: creating single files or small code snippets; adding individual files to existing projects; making modifications to existing codebases; user asks to \"create a file\" or \"add a component\"; simple code examples or demonstrations; debugging or fixing existing code. This tool provides complete project setup including: folder structure creation; package.json and dependency management; configuration files (tsconfig, eslint, etc.); initial boilerplate code; development environment setup; build and run instructions. Use other file creation tools for individual files within existing projects."
+}

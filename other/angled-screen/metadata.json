@@ -1,0 +1,37 @@
+{
+  "name": "angled-screen",
+  "repo": "remorses/opencode-config",
+  "path": "synced-skills/angled-screen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "angled-screen",
+  "downloaded_at": "2026-11-12T06:53:19.251375Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/synced-skills/angled-screen/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/synced-skills/angled-screen/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "angled-screen turns website or app screenshots into a tilted 3D screen hero image with real\ndepth of field, chromatic aberration, fog and film grain. The `@egaki/angled-screen` CLI renders\none or more images on the same angled plane through the user's Chrome (playwriter) and writes\npng, jpg or webp. Ships Tommy's taste for these images: frame filled, moderate side angle,\nblur on the left or right, OpenSession effect strength, trimmed screenshots, and a hero\nscreen with a second page as filler.\nALWAYS load this skill when the user asks for an angled screen, tilted screenshot, 3D\nscreenshot, perspective mockup, hero image or social image from a screenshot, or runs\n`angled-screen`. Also load it before tuning egaki `<AngledScreen>` props."
+}

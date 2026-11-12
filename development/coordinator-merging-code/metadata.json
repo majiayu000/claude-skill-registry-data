@@ -1,0 +1,37 @@
+{
+  "name": "coordinator-merging-code",
+  "repo": "thrum-team/thrum-pro",
+  "path": "claude-plugin/skills/coordinator-merging-code/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "coordinator-merging-code",
+  "downloaded_at": "2026-11-12T07:41:00.543282Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/coordinator-merging-code/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/coordinator-merging-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the moment code is presented for merge - a merge report arrives, an agent says MERGE-READY or RECOMMEND MERGE or the branch is ready, you are asked to approve or land or ship a branch, you are about to run git merge, or you are consolidating review findings before a merge. Loads the full merge sequence - dual review as a PRECONDITION not the gate, the mechanical merge-worthiness pre-gate, DISPATCHING both merge gates to the Gate Runner rather than walking the lenses yourself, tripwire checks, gating the MERGED tree, the committed verdict artifact, and branch disposal."
+}

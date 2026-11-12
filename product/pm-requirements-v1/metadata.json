@@ -1,0 +1,39 @@
+{
+  "name": "pm-requirements-v1",
+  "repo": "naderelewa/Product-to-Prod",
+  "path": "skills/pm-requirements-v1/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/naderelewa/Product-to-Prod",
+  "dir_name": "pm-requirements-v1",
+  "downloaded_at": "2026-11-12T06:10:52.001548Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for product: product, prd, feature, backlog",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "naderelewa",
+  "source_url": "https://github.com/naderelewa/Product-to-Prod/blob/main/skills/pm-requirements-v1/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/naderelewa/Product-to-Prod/blob/main/skills/pm-requirements-v1/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The requirements cycle, turn a strategy statement, a release target and a set of affected\nsurfaces into an evidence-tagged, gated HANDOFF PACKAGE: spec.md, plan.md, data-model.md,\ncontracts/, slices.json, a design gate and a case contract, plus the record that makes all of it\nauditable. Five phases: P0 context lock (the north-star metric elicited fresh every cycle) \u2192 P1\nresearch \u2192 P2 strategy \u2192 P3 product spec \u2192 P4 handoff. Use when someone says \"run the\nrequirements cycle\", \"write the PRD / handoff package for <feature>\", \"prep the design gate\",\n\"requirements for the next release\", or hands a strategy statement that needs to become buildable\nwork. NOT for writing code, running CI, deploying or merging, an engineering toolchain owns\nthose; NOT for release verification (pm-verify-release-v1); NOT for scoring a backlog batch\n(pm-portfolio-v1)."
+}

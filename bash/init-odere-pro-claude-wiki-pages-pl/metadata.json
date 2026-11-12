@@ -1,0 +1,38 @@
+{
+  "name": "init",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/init/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "init-odere-pro-claude-wiki-pages-pl",
+  "downloaded_at": "2026-11-12T06:23:04.751237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/init/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/init/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Onboarding entry point. Scaffold a new LLM Wiki vault in the user's project by copying from the skill's own template/, stamp the schema version, and orient the user. Trigger when the user says \"set up a wiki\", \"initialize the vault\", \"start a new LLM Wiki\", \"bootstrap the vault\", or invokes /claude-wiki-pages:init directly."
+}

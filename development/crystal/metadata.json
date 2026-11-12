@@ -1,0 +1,38 @@
+{
+  "name": "crystal",
+  "repo": "robacarp/dotfiles",
+  "path": ".claude/skills/crystal/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/robacarp/dotfiles",
+  "dir_name": "crystal",
+  "downloaded_at": "2026-11-12T06:57:28.331444Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, build, compile",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "robacarp",
+  "source_url": "https://github.com/robacarp/dotfiles/blob/master/.claude/skills/crystal/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/robacarp/dotfiles/blob/master/.claude/skills/crystal/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when working on Crystal projects. Detected by the presence of a shard.yml file."
+}

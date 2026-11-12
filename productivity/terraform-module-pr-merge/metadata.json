@@ -1,0 +1,37 @@
+{
+  "name": "terraform-module-pr-merge",
+  "repo": "modulestf/modulestf",
+  "path": ".agents/skills/terraform-module-pr-merge/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/modulestf/modulestf",
+  "dir_name": "terraform-module-pr-merge",
+  "downloaded_at": "2026-11-12T06:04:55.724825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "modulestf",
+  "source_url": "https://github.com/modulestf/modulestf/blob/master/.agents/skills/terraform-module-pr-merge/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/modulestf/modulestf/blob/master/.agents/skills/terraform-module-pr-merge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews a GitHub pull request against a Terraform module repository afresh and squash merges it after the user confirms the pull request and its full head SHA. Use when the request carries a pull request URL or owner/repo#123 and asks to \"merge PR N\", \"review and merge owner/repo#N\" or \"merge this pull request if it is ready\". Not for a review only (use terraform-module-pr-review). Not for fixing a pull request (use terraform-module-pr-fix)."
+}

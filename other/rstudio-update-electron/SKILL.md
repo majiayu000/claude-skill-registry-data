@@ -1,0 +1,95 @@
+---
+name: rstudio-update-electron
+description: Use when updating the Electron version in the RStudio repository, e.g. bumping to a new release
+---
+
+# Update Electron
+
+Updates the pinned Electron version across the RStudio codebase and verifies the result.
+
+## Arguments
+
+The user provides the **target Electron version** (e.g. `39.8.4`).
+
+## Steps
+
+### 1. Verify starting branch
+
+Before doing anything else, confirm the current branch is `main`. Starting off anything other than `main` would base the work on the wrong commit.
+
+```bash
+git branch --show-current
+```
+
+If the output is not `main`, **stop immediately** and warn the user that they must switch to `main` (and pull the latest) before re-running this skill. Do not proceed with any further steps.
+
+### 2. Update `NEWS.md`
+
+Find the `### Dependencies` section and set the Electron version line. The section lists only dependencies changed this release cycle, so if no such line is present, add one, keeping the list alphabetical:
+
+```
+- Electron <NEW_VERSION>
+```
+
+### 3. Update `src/node/desktop/package.json` and lockfile
+
+Run from `src/node/desktop`:
+
+```bash
+cd src/node/desktop && npm install --save-dev --save-exact electron@<NEW_VERSION>
+```
+
+The `--save-exact` flag is **required** — Electron must be pinned to an exact version (e.g. `"electron": "39.8.5"`, not `"^39.8.5"`). This prevents uncontrolled upgrades across major/minor versions.
+
+This updates both `package.json` and `package-lock.json` in one step. Confirm the command exits successfully (exit code 0). If it fails, report the error and stop.
+
+After the install, verify that:
+1. `package.json` has the exact version with **no `^` or `~` prefix**.
+2. `package-lock.json` contains the new Electron version.
+
+The lockfile must be included in the commit — if it drifts from the manifest, `npm ci` in CI will fail.
+
+### 4. Update the `allowScripts` allowlist entry
+
+`src/node/desktop/package.json` has an `allowScripts` object whose keys are exact `package@version` strings. The Electron entry pins the old version and is **not** touched by `npm install`, so it must be updated by hand:
+
+```json
+"allowScripts": {
+  "electron@<NEW_VERSION>": true,
+  ...
+}
+```
+
+Change the `electron@<OLD_VERSION>` key to `electron@<NEW_VERSION>` so the key tracks the Electron dependency version.
+
+This key gates nothing today. Electron no longer publishes an install script — its published `package.json` has no `scripts` field, and its `package-lock.json` entry carries no `hasInstallScript` — so npm's install-script gating has nothing to block for it. (Verified on 42.10.1 and 42.11.0; re-check with `npm view electron@<NEW_VERSION> scripts`, which prints nothing when the field is absent.) Keep the key in sync anyway: it costs nothing and matters if Electron reintroduces an install script. The binary is fetched separately — see step 5.
+
+### 5. Verify the Electron binary
+
+Because Electron has no install script, `npm install` does **not** download the binary; it is fetched lazily the first time something runs Electron. A successful `npm install` therefore says nothing about which binary is on disk. Check it directly, from `src/node/desktop`:
+
+```bash
+cat node_modules/electron/dist/version
+```
+
+If that file is missing or reports the old version, fetch the binary explicitly:
+
+```bash
+npx --no-install install-electron
+```
+
+Confirm `node_modules/electron/dist/version` reports `<NEW_VERSION>` before continuing. Skipping this check risks running the next step's tests against a stale Electron.
+
+### 6. Run tests
+
+Run from `src/node/desktop`:
+
+```bash
+cd src/node/desktop && npm test
+```
+
+Confirm the command exits successfully. If tests fail, report the failures and stop.
+
+### 7. Done
+
+Report that the Electron version has been updated, that the binary on disk reports the new version, and that both `npm i` and `npm test` passed.

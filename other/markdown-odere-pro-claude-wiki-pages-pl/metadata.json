@@ -1,0 +1,37 @@
+{
+  "name": "markdown",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/markdown/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "markdown-odere-pro-claude-wiki-pages-pl",
+  "downloaded_at": "2026-11-12T06:23:05.237589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/markdown/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/markdown/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Query the wiki and render the answer as portable, GitHub-flavored markdown saved under vault/output/. Trigger when the user asks to \"export X as markdown\", \"produce a markdown brief\", \"save the answer to the output folder\", \"give me a plain markdown version of \u2026\", or invokes /claude-wiki-pages:markdown directly. Reuses the query reading contract, then strips Obsidian-only syntax so the file is usable outside the vault."
+}

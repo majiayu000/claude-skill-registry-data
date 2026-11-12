@@ -1,0 +1,38 @@
+{
+  "name": "hyperframes",
+  "repo": "notivn/AIEVv2",
+  "path": ".claude/skills/hyperframes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/notivn/AIEVv2",
+  "dir_name": "hyperframes-notivn-aievv2",
+  "downloaded_at": "2026-11-12T06:20:21.567848Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notivn",
+  "source_url": "https://github.com/notivn/AIEVv2/blob/main/.claude/skills/hyperframes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notivn/AIEVv2/blob/main/.claude/skills/hyperframes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker sweeps, hand-drawn circles, burst lines, scribble, sketchout), or add transitions between scenes (crossfades, wipes, reveals, shader transitions). Covers composition authoring, timing, media, and the full video production workflow. For CLI commands (init, lint, preview, render, transcribe, tts) see the hyperframes-cli skill."
+}

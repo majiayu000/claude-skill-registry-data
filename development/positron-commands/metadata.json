@@ -1,0 +1,38 @@
+{
+  "name": "positron-commands",
+  "repo": "posit-dev/positron",
+  "path": "extensions/positron-skills/templates/positron-commands/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "positron-commands",
+  "downloaded_at": "2026-11-12T06:40:46.978861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/extensions/positron-skills/templates/positron-commands/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/extensions/positron-skills/templates/positron-commands/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Running Positron IDE commands: changing the window layout, focusing panes, clearing the console, opening a file or data file in the right editor, showing or reading an HTML file, URL or app in the Viewer, finding or adding interpreters, listing, switching, starting, restarting or interrupting sessions, setting up Python, reading, installing or updating a session's packages, running, stopping, debugging or troubleshooting a web app (Shiny, Flask, Dash, Streamlit, FastAPI, Gradio, marimo), reading Data Connections and their tables and columns, creating, editing or running notebook cells, and reading help. Use when the user wants Positron itself to act or to know what is installed, not to run code. Triggers: \"show the variables pane\", \"open data.csv\", \"show this HTML in the Viewer\", \"switch to my R session\", \"my session is stuck\", \"is pandas installed?\", \"set up a Python environment\", \"why won't my shiny app start\", \"what tables are in my warehouse\", \"add a cell to this notebook\"."
+}

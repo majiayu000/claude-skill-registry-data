@@ -1,0 +1,40 @@
+{
+  "name": "red-green-refactor",
+  "repo": "testland/qa",
+  "path": "plugins/qa-tdd/skills/red-green-refactor/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/testland/qa",
+  "dir_name": "red-green-refactor-testland-qa",
+  "downloaded_at": "2026-11-12T07:37:15.705931Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, tdd, jest, pytest",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "test",
+      "qa",
+      "tdd",
+      "jest",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-tdd/skills/red-green-refactor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-tdd/skills/red-green-refactor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before changing code to fix a bug or add behavior, in any language, even when the user just says \"fix it\" or pastes a one-line function: reproduce the problem with a failing test first, watch it fail for the right reason, make the smallest change that passes, refactor, and show the test output before saying it is fixed or works."
+}

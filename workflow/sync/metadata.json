@@ -1,0 +1,38 @@
+{
+  "name": "sync",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/sync/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "sync",
+  "downloaded_at": "2026-11-12T06:23:06.923015Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/sync/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/sync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pull docs changes from a wired source (a project repository registered via wire-source.sh) into vault/raw/ as immutable snapshots, mark superseded source notes, and queue the new snapshots for re-ingest. Trigger when the user says \"sync the wiki\", \"pull project changes\", \"update from the wired repo\", when the heartbeat prints a SYNC: notice, or invokes /claude-wiki-pages:sync directly."
+}

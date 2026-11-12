@@ -1,0 +1,38 @@
+{
+  "name": "build-cge",
+  "repo": "tatashbar/Economic-Modeling-Studio",
+  "path": ".claude/skills/build-cge/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/tatashbar/Economic-Modeling-Studio",
+  "dir_name": "build-cge",
+  "downloaded_at": "2026-11-12T07:34:25.588387Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: productivity, workflow, task",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "productivity",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tatashbar",
+  "source_url": "https://github.com/tatashbar/Economic-Modeling-Studio/blob/main/.claude/skills/build-cge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tatashbar/Economic-Modeling-Studio/blob/main/.claude/skills/build-cge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a CGE model (static or recursive-dynamic, single- or multi-region) with benchmark replication, closures, elasticity sensitivity and welfare decomposition."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "lsp-verify",
+  "repo": "rhinos0608/Pi-SmartRead",
+  "path": "skills/lsp-verify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rhinos0608/Pi-SmartRead",
+  "dir_name": "lsp-verify",
+  "downloaded_at": "2026-11-12T06:55:33.631264Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category development scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "forensics",
+    "runner_up_score": 1,
+    "signals": [
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rhinos0608",
+  "source_url": "https://github.com/rhinos0608/Pi-SmartRead/blob/main/skills/lsp-verify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rhinos0608/Pi-SmartRead/blob/main/skills/lsp-verify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify an applied change with fresh strict LSP diagnostics, definition, and references."
+}

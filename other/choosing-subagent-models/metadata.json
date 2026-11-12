@@ -1,0 +1,37 @@
+{
+  "name": "choosing-subagent-models",
+  "repo": "thrum-team/thrum-pro",
+  "path": "claude-plugin/skills/choosing-subagent-models/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thrum-team/thrum-pro",
+  "dir_name": "choosing-subagent-models",
+  "downloaded_at": "2026-11-12T07:40:57.837480Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, orchestration=2",
+    "score": 2,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thrum-team",
+  "source_url": "https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/choosing-subagent-models/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thrum-team/thrum-pro/blob/main/claude-plugin/skills/choosing-subagent-models/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before launching a subagent, an Agent or Task call, or an Explore agent, and on every review dispatch - code review, dual review, merge-gate reviewer. Picks the model and effort tier for the runtime you are running under."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "migrate-customizations",
+  "repo": "posit-dev/positron",
+  "path": "extensions/copilot/assets/prompts/skills/migrate-customizations/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "migrate-customizations",
+  "downloaded_at": "2026-11-12T06:40:47.551527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/extensions/copilot/assets/prompts/skills/migrate-customizations/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/extensions/copilot/assets/prompts/skills/migrate-customizations/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guide a safe, reversible migration of VS Code local agent customizations when launched from the Agent Customizations Migrations page with VS Code-generated migration context."
+}

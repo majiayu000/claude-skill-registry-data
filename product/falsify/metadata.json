@@ -1,0 +1,38 @@
+{
+  "name": "falsify",
+  "repo": "risingfish/myjobbot",
+  "path": ".claude/skills/falsify/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/risingfish/myjobbot",
+  "dir_name": "falsify",
+  "downloaded_at": "2026-11-12T06:56:31.969573Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "risingfish",
+  "source_url": "https://github.com/risingfish/myjobbot/blob/main/.claude/skills/falsify/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/risingfish/myjobbot/blob/main/.claude/skills/falsify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Required loop whenever a change has to be right \u2014 study the affected code first, write down the claim with measurable finish criteria, shrink a failing test down to the cause if nobody knows it yet, make the edit, demonstrate the intended behavior, then work hard to BREAK the edit by executing every exit from the modified code. Keeps a single audit doc per claim, logging problem, investigation, hypothesis, test plan, results and verdict each cycle so cycles can be compared side by side. Finishes with a five-part report, or with a fresh hypothesis (up to 3 cycles, after which the user chooses how many more). Reach for it when repairing a bug, chasing down a failure, answering a reviewer's comment, or handling a bug report. Feature work qualifies too, but only when pointed at a single refutable statement about the code (\"turning on X never changes Y\") rather than the feature as a whole \u2014 if no outcome could show that statement false, this skill does not apply."
+}

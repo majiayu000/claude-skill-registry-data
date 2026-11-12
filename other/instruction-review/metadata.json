@@ -1,0 +1,37 @@
+{
+  "name": "instruction-review",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/instruction-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "instruction-review",
+  "downloaded_at": "2026-11-12T06:09:09.156625Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/instruction-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/instruction-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a project's instruction file (CLAUDE.md or AGENTS.md) against recent work and propose a minimal evidence-backed diff without applying it. Use when the user asks to improve or review project instructions or invokes instruction-review, for example \"improve CLAUDE.md\", \"review the project instructions\", \"what should go in CLAUDE.md\"."
+}

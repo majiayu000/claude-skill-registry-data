@@ -1,0 +1,37 @@
+{
+  "name": "stop-http-registry",
+  "repo": "recoil-labs/recoil-link",
+  "path": ".agents/skills/stop-http-registry/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/recoil-labs/recoil-link",
+  "dir_name": "stop-http-registry-recoil-labs-recoil-link",
+  "downloaded_at": "2026-11-12T06:52:11.843569Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "recoil-labs",
+  "source_url": "https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/stop-http-registry/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/stop-http-registry/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stop the background HTTP registry server started by /start-http-registry \u2014 TaskStop / KillShell by the recorded task ID, plus a /proc cmdline-scan fallback for minimal-tool sandboxes with no ps/lsof/pkill/fuser. Referenced by every warp deploy/update skill that starts the registry."
+}

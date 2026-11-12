@@ -1,0 +1,37 @@
+{
+  "name": "smyx-ear-health-snapshot-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/smyx-ear-health-snapshot-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "smyx-ear-health-snapshot-analysis",
+  "downloaded_at": "2026-11-12T07:21:28.213642Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-ear-health-snapshot-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-ear-health-snapshot-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triggers when a user provides a pet ear/scratching/head-shaking video URL or file for analysis; uses smart camera to monitor head-shaking and ear-scratching actions, automatically captures HD ear-canal images, and applies AI vision analysis to identify ear-canal color (pink/red/dark red), presence of black granular discharge (ear mites), and degree of earwax accumulation. When redness, large discharge or suspected ear mites are detected, outputs abnormality alerts and recommends owner check-up or veterinary visit. Application: pet families, boarding centers, pet hospital pre-screening. Helps early detection of ear-canal diseases and prevents deterioration. | \u5f53\u7528\u6237\u63d0\u4f9b\u5ba0\u7269\u7529\u8033\u3001\u6320\u8033\u6216\u8033\u9053\u6293\u62cd\u89c6\u9891URL\u6216\u6587\u4ef6\u65f6\uff0c\u89e6\u53d1\u672c\u6280\u80fd\u8fdb\u884c\u8033\u9053\u5065\u5eb7\u76d1\u6d4b\u5206\u6790\uff1b\u901a\u8fc7\u667a\u80fd\u6444\u50cf\u5934\u5b9e\u65f6\u76d1\u6d4b\u7529\u8033/\u6320\u8033\u52a8\u4f5c\uff0c\u81ea\u52a8\u89e6\u53d1\u9ad8\u6e05\u6293\u62cd\u8033\u9053\u5185\u90e8\u56fe\u50cf\uff0c\u5229\u7528AI\u89c6\u89c9\u5206\u6790\u8bc6\u522b\u8033\u9053\u989c\u8272\uff08\u7c89\u7ea2/\u7ea2/\u6697\u7ea2\uff09\u3001\u6709\u65e0\u9ed1\u8272\u9897\u7c92\u72b6\u5206\u6ccc\u7269\uff08\u8033\u87a8\uff09\u3001\u8033\u57a2\u5806\u79ef\u7a0b\u5ea6\u7b49\u5f02\u5e38\u6307\u6807\uff1b\u5f53\u68c0\u6d4b\u5230\u7ea2\u80bf\u3001\u5927\u91cf\u5206\u6ccc\u7269\u6216\u7591\u4f3c\u8033\u87a8\u65f6\uff0c\u8f93\u51fa\u5f02\u5e38\u63d0\u793a\uff0c\u5efa\u8bae\u4e3b\u4eba\u8fdb\u4e00\u6b65\u68c0\u67e5\u6216\u5c31\u533b\uff0c\u4ec5\u8f93\u51fa\u57fa\u4e8e\u89c6\u89c9\u7684\u5ba2\u89c2\u63cf\u8ff0\u4e0e\u5efa\u8bae\uff0c\u4e0d\u63d0\u4f9b\u533b\u7597\u8bca\u65ad\u3002\u5e94\u7528\u573a\u666f\uff1a\u5ba0\u7269\u5bb6\u5ead\u65e5\u5e38\u5065\u5eb7\u76d1\u6d4b\u3001\u5bc4\u517b\u4e2d\u5fc3\u6279\u91cf\u76d1\u63a7\u3001\u5ba0\u7269\u533b\u9662\u9884\u68c0\u3002"
+}

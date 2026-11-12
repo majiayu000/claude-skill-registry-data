@@ -1,0 +1,39 @@
+{
+  "name": "narration-writer",
+  "repo": "ralvarez-ai/ralvaskills",
+  "path": "skills/frontend/narration-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/ralvarez-ai/ralvaskills",
+  "dir_name": "narration-writer",
+  "downloaded_at": "2026-11-12T06:49:02.041435Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy, article",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "writer",
+      "copy",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ralvarez-ai",
+  "source_url": "https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/frontend/narration-writer/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/frontend/narration-writer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Narration and on-screen text for explainer videos in a controlled, STE-style English (about 80% of ASD-STE100) \u2014 short active sentences, one word per meaning, a glossary, spoken-form rules, per-scene word budgets, audio-length gates and a stdlib lint script. Use when writing voiceover or captions for Remotion or Manim videos, simplifying dense technical prose, or fitting narration to scene timing."
+}

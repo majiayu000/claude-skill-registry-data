@@ -1,0 +1,37 @@
+{
+  "name": "lsp-cross-root",
+  "repo": "rhinos0608/Pi-SmartRead",
+  "path": "skills/lsp-cross-root/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/rhinos0608/Pi-SmartRead",
+  "dir_name": "lsp-cross-root",
+  "downloaded_at": "2026-11-12T06:55:33.923714Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rhinos0608",
+  "source_url": "https://github.com/rhinos0608/Pi-SmartRead/blob/main/skills/lsp-cross-root/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rhinos0608/Pi-SmartRead/blob/main/skills/lsp-cross-root/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Route strict LSP requests across multiple workspaces with explicit workspace and exact server selection."
+}

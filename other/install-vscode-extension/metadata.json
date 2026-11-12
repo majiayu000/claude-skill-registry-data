@@ -1,0 +1,36 @@
+{
+  "name": "install-vscode-extension",
+  "repo": "posit-dev/positron",
+  "path": "extensions/copilot/assets/prompts/skills/install-vscode-extension/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "install-vscode-extension",
+  "downloaded_at": "2026-11-12T06:40:47.836540Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/extensions/copilot/assets/prompts/skills/install-vscode-extension/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/extensions/copilot/assets/prompts/skills/install-vscode-extension/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "How to install a VS Code extension from an extension ID. Useful when the user wants to add new capabilities to their VS Code environment by installing extensions."
+}

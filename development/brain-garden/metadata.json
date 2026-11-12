@@ -1,0 +1,38 @@
+{
+  "name": "brain-garden",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/brain-garden/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "brain-garden",
+  "downloaded_at": "2026-11-12T06:09:06.030669Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/brain-garden/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/brain-garden/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Produce a stale, broken-link, frontmatter, duplicate and orphan report for the user's Obsidian knowledge vault, with proposed fixes, changing nothing without approval. Use when the user asks to garden, lint, audit, or check the health of the brain/vault, for example \"check the health of the brain\", \"clean up the vault\", \"find broken links in the brain\"."
+}

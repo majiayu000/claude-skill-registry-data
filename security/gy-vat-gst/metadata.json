@@ -1,0 +1,37 @@
+{
+  "name": "gy-vat-gst",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/gy-vat-gst/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "gy-vat-gst",
+  "downloaded_at": "2026-11-12T06:28:06.007126Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/gy-vat-gst/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/gy-vat-gst/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guyana value-added tax (VAT) for 2026 under the Value-Added Tax Act, Cap. 81:05 (Act No. 10 of 2005) and the Value-Added Tax Regulations 2005, as amended to 2026 including the Fiscal Enactments (Amendment) Act 2026 (Act No. 3 of 2026). Covers the 14% rate, the G$15,000,000 registration threshold and the 15-day deadline to apply, voluntary registration, zero-rated and exempt supplies and the February 2026 changes (locally produced furniture and jewellery, ATVs, fire and security equipment zero-rated; small double cabs, new small cars, hybrids and outboard engines exempt), VAT on imported goods and the self-charge on imported services, input tax credit and the blocked items, partial exemption and the 90% rule, monthly returns (G0002, G0001) due on the 21st, refunds, interest and penalties. Trigger on: Guyana VAT 2026, GRA VAT return, VAT registration Guyana, 14% VAT, zero-rated Guyana, imported services VAT, VATIS, G0002. Out of scope: excise tax, customs duty, income and corporation tax"
+}

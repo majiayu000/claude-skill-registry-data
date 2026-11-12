@@ -1,0 +1,37 @@
+{
+  "name": "prune-ci-images",
+  "repo": "posit-dev/positron",
+  "path": ".claude/skills/prune-ci-images/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "prune-ci-images",
+  "downloaded_at": "2026-11-12T06:40:41.569247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/.claude/skills/prune-ci-images/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/.claude/skills/prune-ci-images/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit old container images in the posit-dev GHCR registry and delete them in a reviewed batch. Produces a review list of every positron-<os>* / positron-postgres-* image version older than a cutoff (default 90 days), excluding anything a live tag or multi-arch manifest still points at; the human deletes rows they want to keep, then this drives the batch delete. Use when asked to clean up, prune, or garbage-collect old GHCR packages/images."
+}

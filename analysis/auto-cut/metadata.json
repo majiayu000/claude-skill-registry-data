@@ -1,0 +1,37 @@
+{
+  "name": "auto-cut",
+  "repo": "notivn/AIEVv2",
+  "path": ".claude/skills/auto-cut/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/notivn/AIEVv2",
+  "dir_name": "auto-cut",
+  "downloaded_at": "2026-11-12T06:20:21.128203Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notivn",
+  "source_url": "https://github.com/notivn/AIEVv2/blob/main/.claude/skills/auto-cut/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notivn/AIEVv2/blob/main/.claude/skills/auto-cut/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cut silences and dead weight (fillers, repeated takes, false starts) out of a talking-head video BEFORE building the edit - call the measured /auto-trim API instead of hand-rolling ffmpeg, review the dead-weight candidates it returns, and do the one job only a human/AI can do (spotting repeated POINTS). Read this when the brief enables \"T\u1ef1 \u0111\u1ed9ng c\u1eaft ng\u1eafn video\" (autoCut) or the user complains that the video still has dead weight/silences."
+}

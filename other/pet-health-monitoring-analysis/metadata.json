@@ -1,0 +1,37 @@
+{
+  "name": "pet-health-monitoring-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/pet-health-monitoring-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "pet-health-monitoring-analysis",
+  "downloaded_at": "2026-11-12T07:21:26.500495Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/pet-health-monitoring-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/pet-health-monitoring-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Based on computer vision, analyzes pet health indicators such as feeding frequency, drinking frequency, excretion status, mental state, vomiting behavior, and limping abnormalities through camera/feeder monitoring videos, promptly detects abnormal pet health conditions, and outputs health monitoring reports. | \u5ba0\u7269\u65e5\u5e38\u5065\u5eb7\u76d1\u6d4b\u5206\u6790\u6280\u80fd\uff0c\u57fa\u4e8e\u8ba1\u7b97\u673a\u89c6\u89c9\u901a\u8fc7\u6444\u50cf\u5934/\u5582\u98df\u5668\u76d1\u63a7\u89c6\u9891\u5206\u6790\u5ba0\u7269\u7684\u8fdb\u98df\u9891\u6b21\u3001\u996e\u6c34\u9891\u6b21\u3001\u6392\u6cc4\u72b6\u6001\u3001\u7cbe\u795e\u72b6\u6001\u3001\u5455\u5410\u884c\u4e3a\u3001\u8ddb\u884c\u5f02\u5e38\u7b49\u5065\u5eb7\u6307\u6807\uff0c\u53ca\u65f6\u53d1\u73b0\u5ba0\u7269\u5f02\u5e38\u5065\u5eb7\u72b6\u51b5\uff0c\u8f93\u51fa\u5065\u5eb7\u76d1\u6d4b\u62a5\u544a"
+}

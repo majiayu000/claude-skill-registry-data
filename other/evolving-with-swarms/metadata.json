@@ -1,0 +1,37 @@
+{
+  "name": "evolving-with-swarms",
+  "repo": "oaustegard/claude-skills",
+  "path": "evolving-with-swarms/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/oaustegard/claude-skills",
+  "dir_name": "evolving-with-swarms",
+  "downloaded_at": "2026-11-12T06:22:38.938008Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oaustegard",
+  "source_url": "https://github.com/oaustegard/claude-skills/blob/main/evolving-with-swarms/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oaustegard/claude-skills/blob/main/evolving-with-swarms/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Improves a program against an automatic scorer by running rounds of cheap Haiku 5.5 swarms, where each proposer suggests one short idea and one writer per swarm turns the ideas into a new program that is scored and kept in an archive, all metered to a dollar cap through headless claude -p. Use for \"evolve this program against my evaluator\", \"optimize this function's score cheaply\", \"OpenEvolve-style search on a budget\", \"AlphaEvolve-style construction search with Haiku\", \"run a swarm to maximize this score\", \"search for a better heuristic or construction\", or any program whose quality a script can score, when the budget is small. Ships the driver, a gateway with a dollar cap and a usage-window pause, a sandbox hook for model-written code, an example problem and an offline selftest; runs from Claude Code on the web or the desktop."
+}

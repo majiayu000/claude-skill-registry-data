@@ -1,0 +1,37 @@
+{
+  "name": "execution-workflow",
+  "repo": "takeokunn/nixos-configuration",
+  "path": "home-manager/ai-tools/agent-skills/skills/execution-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/takeokunn/nixos-configuration",
+  "dir_name": "execution-workflow",
+  "downloaded_at": "2026-11-12T07:32:20.005924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, orchestration=2",
+    "score": 2,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "takeokunn",
+  "source_url": "https://github.com/takeokunn/nixos-configuration/blob/main/home-manager/ai-tools/agent-skills/skills/execution-workflow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/takeokunn/nixos-configuration/blob/main/home-manager/ai-tools/agent-skills/skills/execution-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load when isolating work in a jj workspace, dispatching several agents, reconciling conflicting agent reports, triaging a CI failure, or judging whether non-trivial work is done. Covers orchestration phases, delegation partitioning and retries, verification gates, choosing the proof for a change, and code review standards. Not for authoring agents or commands, see workflow-patterns for that."
+}

@@ -1,0 +1,236 @@
+---
+name: positron-pr-helper
+description: Generates well-structured PR bodies with dynamically fetched e2e test tags
+---
+
+# Positron PR Helper
+
+This skill helps you create comprehensive PR bodies for the posit-dev/positron repository with up-to-date e2e test tags fetched directly from the source of truth.
+
+## When to Use This Skill
+
+Use this skill when:
+- Creating a new PR and need a well-structured body
+- Updating an existing PR body with the correct format
+- You need the current list of e2e test tags for validation steps
+- You want to ensure your PR body follows Positron conventions
+- You want a test-coverage check (PETE) before opening the PR
+
+## Prerequisites
+
+- GitHub CLI (`gh`) installed and authenticated
+- Working in the Positron repository
+- Access to the repository's test-tags.ts file
+
+## Workflow
+
+I'll guide you through creating a comprehensive PR body:
+
+### Step 1: Gather Context
+
+First, I'll ask you:
+1. **Issue number** (if this PR addresses a specific issue)
+2. **PR type** (bug fix, feature, UI change, maintenance, etc.)
+3. **Summary** of what the PR does
+4. **Screenshots needed?** (for UI changes)
+5. **Related PRs** (e.g., in ark repository)
+
+If you provide an issue number, I'll use `gh issue view` to fetch details and understand the context better.
+
+### Step 2: Fetch Current Test Tags
+
+I'll dynamically fetch the current e2e test tags from `test/e2e/infra/test-runner/test-tags.ts` using our extraction script. This ensures we always have the complete, up-to-date list of tags including:
+- Feature tags (functionality-specific)
+- Platform tags (OS/environment control)
+- Performance tags
+- Special tags (critical)
+
+### Step 3: Evaluate Test Coverage (PETE)
+
+Before drafting Validation Steps, I'll run the local PETE preview (the `pete` skill, sharing its rubric with `.claude/skills/pr-test-checker/SKILL.md` -- the same one CI's PR Test Checker uses) against your working tree. This checks test coverage for the change the same way I already check test tags:
+- Flags substantive source changes with no unit/e2e coverage (verdict: Insufficient)
+- Surfaces existing e2e tests that already cover the change but whose `@:` tag is missing from the PR body -- these fold into the tag list from Step 2
+- Notes Windows/web deployment gaps worth calling out in Validation Steps
+
+If PETE reports **Insufficient**, I'll say so and suggest concrete additions (file path, runner, what to test) before we finalize the PR body -- I won't silently paper over a coverage gap with a generic "Validation Steps" section. This is a local preview only; it doesn't replace the official check, which now runs on demand in CI -- comment `/pete` (or `/recheck-tests`, `/rePETE`, `/re-pete`) on the PR once it's open to get the authoritative verdict.
+
+### Tag Safety: only write `@:tag` where you mean to trigger it
+
+`scripts/pr-tags-parse.sh` (CI) extracts tags with a raw `grep -o "@:[a-zA-Z0-9_-]*"` over the **entire PR body text**. It has no awareness of markdown structure -- a literal `@:tag` substring runs that suite's CI job regardless of which section it's in, whether it's inside backticks, or whether you meant it as a real directive or just prose mentioning a tag name. Backtick-quoting does **not** protect against this (confirmed on PR #14734).
+
+So: the literal string `@:` followed by tag characters must appear **only** in the Validation Steps section, and only for tags you actually want CI to run. Everywhere else in the PR body (Summary, QA Notes, bullets explaining blast radius or affected areas, etc.), refer to the area by name **without the `@:` prefix** -- e.g. "the sessions, apps, and viewer suites" or "affects the `sessions` helper broadly," never "`@:sessions @:apps @:viewer`" as a parenthetical aside. If you need to discuss the tagging system itself (like a PR that fixes tag auto-detection), the same rule applies -- describe the tag by name, don't spell out the `@:` form.
+
+Before finalizing any PR body, scan your own draft for `@:` outside the Validation Steps section and reword those away.
+
+### Step 4: Generate PR Body
+
+Based on the PR type and context, I'll create a structured PR body with:
+
+1. **Opening Line**
+   - "Fixes #[issue]" if applicable, using a GitHub closing keyword (`Fixes`, `Closes`, `Resolves`) so the issue auto-closes when the PR is merged
+   - Brief statement of what the PR does otherwise
+
+2. **Description/Summary**
+   - Concise explanation of changes
+   - Technical context if needed
+   - Related PRs referenced
+
+3. **Screenshots** (for UI changes only)
+   - Placeholder text or actual URLs if provided
+
+4. **Release Notes**
+   - New Features (if applicable)
+   - Bug Fixes (if applicable)
+   - User-facing descriptions
+
+5. **Validation Steps**
+   - Relevant e2e test tags based on affected areas
+   - Testing instructions
+   - Code examples if helpful
+   - A note on PETE's verdict from Step 3 if it was Insufficient
+
+### Step 5: Output Options
+
+Once the PR body is ready, you can choose:
+1. **Copy to clipboard** (Mac only) - I'll use `pbcopy`
+2. **Update existing PR** - I'll use `gh pr edit`
+3. **Save to file** - I'll write to a file of your choice
+4. **Display only** - I'll show it for manual copying
+
+## Helper Scripts
+
+### fetch-test-tags.sh
+
+This script extracts and categorizes all test tags from the TypeScript enum:
+```bash
+# Usage:
+./scripts/fetch-test-tags.sh [format]
+# format: markdown (default), json, or list
+```
+
+The script:
+- Parses `test-tags.ts` without needing TypeScript compilation
+- Categorizes tags automatically (feature, platform, performance, special)
+- Outputs in multiple formats for different use cases
+- Runs quickly (<1 second)
+
+## PR Body Templates
+
+I use different templates based on PR type:
+
+### Bug Fix Template
+```markdown
+Fixes #[issue]
+
+[2-3 sentences explaining the fix]
+
+### Release Notes
+
+#### New Features
+- N/A
+
+#### Bug Fixes
+- [User-facing description] (#[issue])
+
+### Validation Steps
+
+[relevant tags]
+
+[Simple test instructions]
+```
+
+### New Feature Template
+```markdown
+Fixes #[issue]
+
+### Summary
+[1-2 paragraphs explaining the feature]
+[Technical implementation notes if relevant]
+[Related PRs if applicable]
+
+### Release Notes
+
+#### New Features
+- [User-facing description] (#[issue])
+
+#### Bug Fixes
+- N/A
+
+### Validation Steps
+
+[relevant tags]
+
+[Detailed test steps with code examples]
+```
+
+## Examples
+
+### Example 1: Bug Fix PR
+```markdown
+Fixes #8930
+
+This PR fixes the Data Explorer scrollbars snapping back to 0 on Safari. The issue was caused by incorrect event handling in the virtual scrolling implementation.
+
+### Release Notes
+
+#### New Features
+- N/A
+
+#### Bug Fixes
+- Fix Data Explorer scrollbars snapping back to 0 on Safari (#8930)
+
+### Validation Steps
+
+@:data-explorer
+
+Open a large data frame in Data Explorer on Safari and verify scrollbars can be dragged without snapping back.
+```
+
+### Example 2: New Feature PR
+```markdown
+Fixes #8484
+
+### Summary
+Adds support for native DuckDB connections in the Connections Pane. Users can now inspect DuckDB databases directly without needing external tools. This implementation uses the native DuckDB Python API for better performance.
+
+Related PR: posit-dev/ark#456 (adds DuckDB kernel support)
+
+### Release Notes
+
+#### New Features
+- Added support for inspecting native DuckDB connections in the Connections Pane (#8484)
+
+#### Bug Fixes
+- N/A
+
+### Validation Steps
+
+@:connections @:duck-db
+
+1. Install DuckDB: `pip install duckdb`
+2. Create a new DuckDB connection using the modal
+3. Run the following to create test data:
+
+```python
+conn.execute("""
+    CREATE TABLE employees (
+        id INTEGER,
+        name VARCHAR,
+        salary INTEGER
+    )
+""")
+conn.execute("INSERT INTO employees VALUES (1, 'Alice', 75000)")
+```
+
+4. Verify tables appear in the Connections pane
+```
+
+## Tips
+
+- Be concise but complete - no flowery language
+- Use present tense ("fixes", "adds", "enables")
+- Include issue references in parentheses in release notes
+- Always include at least one e2e test tag in validation steps
+- Never write a literal `@:tag` outside the Validation Steps section -- CI's tag parser matches the substring anywhere in the body, in prose or backticks alike, and will trigger that suite unintentionally
+- For complex changes, numbered test steps are better
+- Keep release notes user-facing (avoid implementation details)

@@ -1,0 +1,270 @@
+---
+name: feedback-form
+description: Generates an in-app feedback collection form with category selection, text input, optional screenshot attachment, device diagnostics, and support follow-up for low ratings. Never gates the App Store review prompt on in-app sentiment (Guideline 5.6.1). Use when user wants feedback, bug reports, feature requests, or contact support forms.
+allowed-tools: [Read, Write, Edit, Glob, Grep, Bash, AskUserQuestion]
+last_verified: 2026-11-08
+review_by: 2027-06-22
+os_version: iOS 27 / macOS 27
+---
+
+# Feedback Form Generator
+
+Generate a production in-app feedback form with category selection, sentiment-based rating, optional screenshot attachment, device diagnostics collection, and support follow-up for unhappy users. The feedback form is a support channel open to every user. It never decides who sees the App Store review prompt.
+
+## When This Skill Activates
+
+Use this skill when the user:
+- Asks to "add a feedback form" or "feedback form"
+- Wants "in-app feedback" or "user feedback" collection
+- Mentions "bug report form" or "feature request" form
+- Asks about "contact support" from within the app
+- Wants "feedback collection" with categories or screenshots
+- Asks to "route users to App Store review" based on sentiment (generate the form, but explain why the routing is not allowed: see Gotchas)
+
+## Pre-Generation Checks
+
+### 1. Project Context Detection
+- [ ] Check Swift version (requires Swift 5.9+)
+- [ ] Check deployment target (iOS 16+ / macOS 13+)
+- [ ] Check for @Observable support (iOS 17+ / macOS 14+)
+- [ ] Identify source file locations
+
+### 2. Conflict Detection
+Search for existing feedback or support code:
+```
+Glob: **/*Feedback*.swift, **/*Support*.swift, **/*BugReport*.swift, **/*ContactForm*.swift
+Grep: "MFMailComposeViewController" or "FeedbackForm" or "SKStoreReviewController"
+```
+
+If third-party feedback SDK found (Instabug, UserVoice, Zendesk):
+- Ask if user wants to replace or keep it
+- If keeping, don't generate — advise on best practices instead
+
+### 3. Framework Detection
+Check for MessageUI availability:
+```
+Grep: "import MessageUI" or "MFMailCompose"
+```
+Note: MessageUI is iOS-only. macOS uses `NSSharingService` or direct webhook delivery.
+
+## Configuration Questions
+
+Ask user via AskUserQuestion:
+
+1. **Feedback categories?** (multi-select)
+   - Bug Report
+   - Feature Request
+   - General Feedback
+   - Praise
+   - Other
+   - All of the above — recommended
+
+2. **Delivery method?**
+   - Email (via MFMailComposeViewController / NSSharingService)
+   - Webhook (POST to a URL endpoint)
+   - Both — recommended
+
+3. **Include screenshot capture?**
+   - Yes — recommended (capture current screen + annotation overlay)
+   - No
+
+4. **Include device diagnostics?**
+   - Yes — recommended (device model, OS, app version, disk, memory)
+   - No
+
+5. **Support follow-up for low ratings?**
+   - Yes — recommended (rating <= 2 shows a "we'll follow up" confirmation and flags the entry for support)
+   - No (all feedback gets the same confirmation)
+
+   Do **not** offer "rating >= 4 → App Store review" routing, even if asked. Showing the review prompt only to users who rated you highly in-app is review gating. See Gotchas.
+
+## Generation Process
+
+### Step 1: Read Templates
+Read `templates.md` for production Swift code.
+
+### Step 2: Create Core Files
+Generate these files:
+1. `FeedbackCategory.swift` — Enum with SF Symbol icons and display names
+2. `FeedbackEntry.swift` — Data model for a feedback submission
+3. `DeviceDiagnostics.swift` — Collects device and app info
+
+### Step 3: Create UI Files
+4. `FeedbackFormView.swift` — SwiftUI form with sentiment, category, message, screenshots
+
+### Step 4: Create Delivery Files
+5. `FeedbackSubmitter.swift` — Protocol + EmailFeedbackSubmitter + WebhookFeedbackSubmitter
+
+### Step 5: Create Optional Files
+Based on configuration:
+- `ScreenshotCapture.swift` — If screenshot capture selected
+
+### Step 6: Determine File Location
+Check project structure:
+- If `Sources/` exists -> `Sources/Feedback/`
+- If `App/` exists -> `App/Feedback/`
+- Otherwise -> `Feedback/`
+
+## Output Format
+
+After generation, provide:
+
+### Files Created
+```
+Feedback/
+├── FeedbackCategory.swift       # Category enum with icons
+├── FeedbackEntry.swift          # Feedback data model
+├── DeviceDiagnostics.swift      # Device info collector
+├── FeedbackFormView.swift       # SwiftUI form view
+├── FeedbackSubmitter.swift      # Email + webhook delivery
+└── ScreenshotCapture.swift      # Screen capture (optional)
+```
+
+### Integration Steps
+
+**Present the feedback form from any view:**
+```swift
+@State private var showFeedback = false
+
+Button("Send Feedback") {
+    showFeedback = true
+}
+.sheet(isPresented: $showFeedback) {
+    FeedbackFormView()
+}
+```
+
+**In a settings screen:**
+```swift
+Form {
+    Section("Support") {
+        Button {
+            showFeedback = true
+        } label: {
+            Label("Send Feedback", systemImage: "bubble.left.and.text.bubble.right")
+        }
+    }
+}
+.sheet(isPresented: $showFeedback) {
+    FeedbackFormView()
+}
+```
+
+**With a pre-selected category (e.g., from a help menu):**
+```swift
+FeedbackFormView(initialCategory: .bugReport)
+```
+
+### Testing
+
+```swift
+@Test
+func feedbackEntryEncodesCorrectly() throws {
+    let entry = FeedbackEntry(
+        category: .bugReport,
+        message: "App crashes when tapping save",
+        rating: 2,
+        screenshots: [],
+        deviceInfo: DeviceDiagnostics.collect(),
+        appVersion: "1.2.3",
+        timestamp: Date()
+    )
+
+    let data = try JSONEncoder().encode(entry)
+    let decoded = try JSONDecoder().decode(FeedbackEntry.self, from: data)
+    #expect(decoded.category == .bugReport)
+    #expect(decoded.rating == 2)
+}
+
+@Test
+func webhookSubmitterSendsCorrectPayload() async throws {
+    let mockSession = MockURLSession()
+    let submitter = WebhookFeedbackSubmitter(
+        url: URL(string: "https://example.com/feedback")!,
+        session: mockSession
+    )
+
+    let entry = FeedbackEntry(
+        category: .featureRequest,
+        message: "Dark mode support please",
+        rating: 4,
+        screenshots: [],
+        deviceInfo: DeviceDiagnostics.collect(),
+        appVersion: "1.0.0",
+        timestamp: Date()
+    )
+
+    try await submitter.submit(entry)
+    #expect(mockSession.lastRequest?.httpMethod == "POST")
+    #expect(mockSession.lastRequest?.value(forHTTPHeaderField: "Content-Type") == "application/json")
+}
+
+@Test
+func lowRatingFlagsSupportFollowUp() {
+    let entry = FeedbackEntry(
+        category: .bugReport,
+        message: "Sync keeps failing",
+        rating: 1,
+        screenshots: [],
+        deviceInfo: DeviceDiagnostics.collect(),
+        appVersion: "1.0.0",
+        timestamp: Date()
+    )
+
+    #expect(entry.suggestsSupportFollowUp) // rating <= 2
+}
+```
+
+## Common Patterns
+
+### Open feedback form from a menu bar app
+```swift
+Button {
+    showFeedback = true
+    NSApp.activate(ignoringOtherApps: true)
+} label: {
+    Label("Send Feedback", systemImage: "envelope")
+}
+.sheet(isPresented: $showFeedback) {
+    FeedbackFormView()
+}
+```
+
+### Submit feedback with a screenshot attachment
+```swift
+let screenshot = try await ScreenshotCapture.captureCurrentWindow()
+let entry = FeedbackEntry(
+    category: .bugReport,
+    message: "Layout is broken on this screen",
+    rating: 1,
+    screenshots: [screenshot],
+    deviceInfo: DeviceDiagnostics.collect(),
+    appVersion: Bundle.main.appVersion,
+    timestamp: Date()
+)
+try await submitter.submit(entry)
+```
+
+### Follow up on low ratings after submission
+```swift
+if entry.suggestsSupportFollowUp {
+    // Unhappy user: confirm that support will follow up.
+    showSupportConfirmation = true
+}
+// Never call requestReview() here based on the rating. Review prompts are
+// triggered independently, at neutral moments (see generators/review-prompt).
+```
+
+## Gotchas
+
+- **No review gating (App Review Guidelines 5.6.1 and Section 3)**: Never use the in-app rating to decide who sees the App Store review prompt (for example "4–5 stars → ask for a review, 1–2 stars → support"). Section 3 bans inflating ratings with "filtered" feedback, and Apple may respond by expelling you from the Developer Program. 5.6.1 also disallows custom review prompts. Request reviews with the system API at neutral moments, regardless of sentiment, and keep this form open to every user as a support channel.
+- **MFMailComposeViewController requires a mail account**: Check `MFMailComposeViewController.canSendMail()` before presenting. Fall back to webhook or `mailto:` URL if unavailable.
+- **Screenshot privacy**: Consider blurring or redacting sensitive data (passwords, financial info) before attaching. Use `UITextField.isSecureTextEntry` areas as a guide.
+- **Attachment size limits for email**: Email attachments are typically limited to 10-25 MB. Compress screenshots to JPEG and resize if needed. Webhook delivery is more reliable for large attachments.
+- **Offline submission queuing**: If the device is offline when feedback is submitted, queue the entry to disk and retry when connectivity is restored. Use `NWPathMonitor` to detect network changes.
+- **macOS has no MFMailComposeViewController**: Use `NSSharingService(named: .composeEmail)` or prefer webhook delivery on macOS.
+
+## References
+
+- **templates.md** — All production Swift templates
+- Related: `generators/review-prompt` — App Store review prompt timing and strategy

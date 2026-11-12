@@ -1,0 +1,37 @@
+{
+  "name": "analyst-modes",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/analyst-modes/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "analyst-modes",
+  "downloaded_at": "2026-11-12T06:23:03.145396Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, compile",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/analyst-modes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/analyst-modes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The five operating modes (Query, Dashboard, Document Compile, Extract, Challenge) and the two write-gates for the claude-wiki-pages analyst. Documents each mode's procedure, output shape, and metric catalog, plus the dashboard/synthesis approval gates, so the analyst agent can run a mode without inlining the detail. Trigger when an agent or user asks \"how does the analyst query/build a dashboard/compile/extract/challenge\", \"what are the analyst modes\", or invokes /claude-wiki-pages:analyst-modes. Reference, not action."
+}

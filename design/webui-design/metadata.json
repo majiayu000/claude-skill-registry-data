@@ -1,0 +1,40 @@
+{
+  "name": "webui-design",
+  "repo": "notivn/AIEVv2",
+  "path": ".claude/skills/webui-design/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/notivn/AIEVv2",
+  "dir_name": "webui-design",
+  "downloaded_at": "2026-11-12T06:20:21.891335Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, component, tailwind",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notivn",
+  "source_url": "https://github.com/notivn/AIEVv2/blob/main/.claude/skills/webui-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notivn/AIEVv2/blob/main/.claude/skills/webui-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design system for the AI Edit Video web dashboard (noti.vn) - the three-step type scale, light/dark color tokens, the component primitives every page must use, Inter font, SVG icons, Shopify Admin style layout. MUST read before writing or modifying any UI in apps/web."
+}

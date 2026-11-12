@@ -1,0 +1,36 @@
+{
+  "name": "curator-fixes",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/curator-fixes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "curator-fixes",
+  "downloaded_at": "2026-11-12T06:23:03.358240Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/curator-fixes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/curator-fixes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The curator's supplemental diagnostic checks, the nine safe auto-fixes, the automatic judgment-fix procedure, and the lint-report template for claude-wiki-pages. Documents what the curator checks and how it repairs wiki structure under a git checkpoint, so the curator agent can apply fixes without inlining the catalog. Trigger when an agent or user asks \"what does the curator check/fix\", \"how are wiki lint issues repaired\", or invokes /claude-wiki-pages:curator-fixes. Reference, not action."
+}

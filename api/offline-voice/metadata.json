@@ -1,0 +1,37 @@
+{
+  "name": "offline-voice",
+  "repo": "notivn/AIEVv2",
+  "path": ".claude/skills/offline-voice/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/notivn/AIEVv2",
+  "dir_name": "offline-voice",
+  "downloaded_at": "2026-11-12T06:20:22.224776Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notivn",
+  "source_url": "https://github.com/notivn/AIEVv2/blob/main/.claude/skills/offline-voice/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notivn/AIEVv2/blob/main/.claude/skills/offline-voice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How the on-device narration engine (VieNeu-TTS) and voice cloning work in this system - install tiers, the worker protocol, and the verified traps around torchaudio, voice metadata parsing and duration. Read when working on Text to video narration, the Voices page, the /api/voices or /api/tts endpoints, or when a user reports that offline voices or voice cloning fail to install or sound wrong."
+}

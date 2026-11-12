@@ -1,0 +1,38 @@
+{
+  "name": "deploy-checklist",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/deploy-checklist/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "deploy-checklist",
+  "downloaded_at": "2026-11-12T06:09:07.522130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/deploy-checklist/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/deploy-checklist/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Produce a repository-specific deployment checklist with a pre-deploy GO/NO-GO verdict and post-deploy checks covering validation, migrations, feature flags, monitoring, communication, and rollback. Use when the user plans a deployment, release to production, or shipping event, for example \"we are deploying to production\", \"deploy checklist\", \"can we deploy\"."
+}

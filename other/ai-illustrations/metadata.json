@@ -1,0 +1,37 @@
+{
+  "name": "ai-illustrations",
+  "repo": "notivn/AIEVv2",
+  "path": ".claude/skills/ai-illustrations/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/notivn/AIEVv2",
+  "dir_name": "ai-illustrations",
+  "downloaded_at": "2026-11-12T06:20:23.328661Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notivn",
+  "source_url": "https://github.com/notivn/AIEVv2/blob/main/.claude/skills/ai-illustrations/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notivn/AIEVv2/blob/main/.claude/skills/ai-illustrations/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate illustrations through the configured image provider (Gemini API, ChatGPT web account or Gemini web cookie - the server routes it) and composite them into the video being edited - how to pick the moments that need an image, write the prompt, call the /api/illustrations endpoint (images MUST match the selected Style Design), and composite into the composition. Read when the brief enables \"\u1ea2nh minh h\u1ecda AI\" (AI illustrations) or the user asks for generated illustrations for a video."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "noti-youtube-edit",
+  "repo": "notivn/AIEVv2",
+  "path": ".claude/skills/noti-youtube-edit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/notivn/AIEVv2",
+  "dir_name": "noti-youtube-edit",
+  "downloaded_at": "2026-11-12T06:20:23.805294Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notivn",
+  "source_url": "https://github.com/notivn/AIEVv2/blob/main/.claude/skills/noti-youtube-edit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notivn/AIEVv2/blob/main/.claude/skills/noti-youtube-edit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a Vietnamese landscape 16:9 YouTube video (1920\u00d71080) with HyperFrames (HTML/CSS/GSAP \u2192 MP4), keeping the Noti.vn/G\u0110T branding inherited from noti-tiktok-vn. Supports 2 modes - A) talking-head + motion graphics (full-frame face, camera move to PiP, karaoke captions) and B) full-text explainer (text scenes + slides/charts, no face on screen). Includes the \"camera move\" technique (animate the wrapper, never the video), the fix for Vietnamese text losing diacritics, and picking sound effects itself by content + timestamp from the `assets/sound-effects/` library (tag `hay-dung`) and wiring them into the video (mandatory on every video). Use when the user brings a Vietnamese clip/transcript and wants a landscape YouTube video that keeps the dark fintech blue branding."
+}

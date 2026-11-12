@@ -1,0 +1,38 @@
+{
+  "name": "video-pipeline",
+  "repo": "notivn/AIEVv2",
+  "path": ".claude/skills/video-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/notivn/AIEVv2",
+  "dir_name": "video-pipeline",
+  "downloaded_at": "2026-11-12T06:20:22.619746Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notivn",
+  "source_url": "https://github.com/notivn/AIEVv2/blob/main/.claude/skills/video-pipeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notivn/AIEVv2/blob/main/.claude/skills/video-pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end video production workflow for the AI Edit Video system - from the user request to the MP4 in outputs/, coordinating HyperFrames (scenes) and Remotion (assembly). Read this when starting any video or when building the backend render queue."
+}

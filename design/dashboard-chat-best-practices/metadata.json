@@ -1,0 +1,39 @@
+{
+  "name": "dashboard-chat-best-practices",
+  "repo": "thedotmack/claude-mem",
+  "path": "integrations/eve/template/.agents/skills/dashboard-chat-best-practices/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/thedotmack/claude-mem",
+  "dir_name": "dashboard-chat-best-practices",
+  "downloaded_at": "2026-11-12T07:38:33.812623Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: ux, css, component, tailwind",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ux",
+      "css",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thedotmack",
+  "source_url": "https://github.com/thedotmack/claude-mem/blob/main/integrations/eve/template/.agents/skills/dashboard-chat-best-practices/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thedotmack/claude-mem/blob/main/integrations/eve/template/.agents/skills/dashboard-chat-best-practices/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply dashboard-grade chat UX patterns in the Eve chat template. Use when changing Next.js Cache Components/PPR behavior, static shell layout, Suspense bootstrap boundaries, theme hydration, auth display hydration, signed-in/signed-out static shell behavior, optimistic messages, streaming row identity, composer/sidebar interactions, thinking/tool rendering, responsive styling, visual polish, or Vercel dashboard chat comparisons."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "pm-portfolio-v1",
+  "repo": "naderelewa/Product-to-Prod",
+  "path": "skills/pm-portfolio-v1/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/naderelewa/Product-to-Prod",
+  "dir_name": "pm-portfolio-v1",
+  "downloaded_at": "2026-11-12T06:10:51.793817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for product: product, roadmap, feature, backlog",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "roadmap",
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "naderelewa",
+  "source_url": "https://github.com/naderelewa/Product-to-Prod/blob/main/skills/pm-portfolio-v1/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/naderelewa/Product-to-Prod/blob/main/skills/pm-portfolio-v1/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Portfolio and roadmap batch intake, turn a pile of asks into a prioritised verdict. Use when\nsomeone hands a BATCH and wants a decision: \"prioritise this backlog\", \"score these requests\",\n\"batch verdict\", \"what goes in the next sprint or quarter\", \"turn this backlog document into a\nroadmap\", \"sprint recommendation\", or drops a request list. It normalises the asks into a\nrequest-form table, scores each one through both lenses (product and strategy) with\nevidence-labelled RICE, and returns a batch verdict plus a sprint or quarter recommendation. NOT\nfor engineering work; NOT for writing one feature's handoff package (pm-requirements-v1); NOT for\nverifying a shipped release (pm-verify-release-v1)."
+}

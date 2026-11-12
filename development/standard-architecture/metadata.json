@@ -1,0 +1,38 @@
+{
+  "name": "standard-architecture",
+  "repo": "projectious-work/aibox",
+  "path": ".agents/skills/standard-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/projectious-work/aibox",
+  "dir_name": "standard-architecture",
+  "downloaded_at": "2026-11-12T06:42:55.245614Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, software, refactor",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "projectious-work",
+  "source_url": "https://github.com/projectious-work/aibox/blob/main/.agents/skills/standard-architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/projectious-work/aibox/blob/main/.agents/skills/standard-architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Company software architecture, code design, and refactoring standards. Use when designing module boundaries, ports and adapters, use cases, writing architecture docs (arc42, C4, ADR), splitting large files, extracting libraries, or doing any refactoring larger than a rename."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "backlog-triage",
+  "repo": "rampstackco/claude-skills",
+  "path": "skills/backlog-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/rampstackco/claude-skills",
+  "dir_name": "backlog-triage",
+  "downloaded_at": "2026-11-12T06:49:26.874470Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, roadmap, feature, backlog",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "product",
+      "roadmap",
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rampstackco",
+  "source_url": "https://github.com/rampstackco/claude-skills/blob/main/skills/backlog-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rampstackco/claude-skills/blob/main/skills/backlog-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn an inbox of raw requests (bug reports, feature asks, support escalations, feedback, incident follow-ups) into a ranked, deduplicated backlog where every item at the top meets the definition of ready, with recorded scores, merge links, and a written reason for every park and decline. Use this skill whenever the user wants to triage incoming work, groom or prune a backlog, merge duplicate tickets, score or rank requests, decide what the team works on next, or run a weekly triage session. Triggers on triage, groom the backlog, backlog grooming, prioritize the backlog, dedupe tickets, duplicate tickets, what should we work on next, inbox of bugs, feature requests pile, rank these, is this ready, backlog is too big, stale tickets, severity vs frequency. Also triggers when the user pastes a list of raw requests or bug reports and asks what to do with them, even if they never say the word triage."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "setup",
+  "repo": "qbeka/jev-job-search",
+  "path": ".claude/skills/setup/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/qbeka/jev-job-search",
+  "dir_name": "setup-qbeka-jev-job-search",
+  "downloaded_at": "2026-11-12T06:45:35.837731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qbeka",
+  "source_url": "https://github.com/qbeka/jev-job-search/blob/main/.claude/skills/setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qbeka/jev-job-search/blob/main/.claude/skills/setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "First-run setup, start to finish. Use when the user says /setup, \"set this up\", \"get me started\", \"help me use this\", hands you this repository for the first time, or when data/profile.json does not exist. Installs what is missing, builds the profile from the resume and a short interview, has the user add their own JEV key (TypeSafe or OpenRouter), finds jobs, rehearses, and stops for a \"go\" before anything is sent."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "porting-neuro-tools-to-browser-wasm",
+  "repo": "thomshaw92/MRI2Vid",
+  "path": ".claude/skills/porting-neuro-tools-to-browser-wasm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thomshaw92/MRI2Vid",
+  "dir_name": "porting-neuro-tools-to-browser-wasm",
+  "downloaded_at": "2026-11-12T07:40:28.585138Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thomshaw92",
+  "source_url": "https://github.com/thomshaw92/MRI2Vid/blob/main/.claude/skills/porting-neuro-tools-to-browser-wasm/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thomshaw92/MRI2Vid/blob/main/.claude/skills/porting-neuro-tools-to-browser-wasm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Playbook for building a 100%-client-side, in-browser neuroimaging tool (QSMbly / NeuroDesk style) by porting a reference Python/MATLAB pipeline to Rust + WebAssembly. Use when the goal is a drag-and-drop web app that reads DICOM/NIfTI, processes entirely in the browser (no upload, PHI-safe), and downloads NIfTI/DICOM, with the numeric core validated bit-for-bit against the reference. Covers workspace layout, the bit-exact parity gotchas, DICOM/NIfTI I/O, single-vs-BIDS input modes, a BIDS batch mode with a permanent docked viewer, the review-first download flow, privacy, GitHub Pages + NeuroDesk deploy, and the adversarial multi-agent review discipline."
+}

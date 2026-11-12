@@ -1,0 +1,37 @@
+{
+  "name": "update-ci-images",
+  "repo": "posit-dev/positron",
+  "path": ".claude/skills/update-ci-images/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/posit-dev/positron",
+  "dir_name": "update-ci-images",
+  "downloaded_at": "2026-11-12T06:40:41.903898Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "posit-dev",
+  "source_url": "https://github.com/posit-dev/positron/blob/main/.claude/skills/update-ci-images/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/posit-dev/positron/blob/main/.claude/skills/update-ci-images/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Long-running orchestration to rebuild every Positron CI image (ubuntu24_04, rocky_8, rocky_9, debian, openSUSE15_6, SLES15_6, and postgres \u2014 each as a multi-arch amd64+arm64 manifest) at one new tag. The tag names the Node, primary Python and primary R versions baked into the images (`<node>-py<python>-r<r>`). Bumps whichever of the three changed, repoints every consumer at the new tag, dispatches the build workflows on the PR branch with bounded concurrency, monitors the runs, auto-fixes failures and retries, and leaves the PR open for human review once all 7 builds are green."
+}

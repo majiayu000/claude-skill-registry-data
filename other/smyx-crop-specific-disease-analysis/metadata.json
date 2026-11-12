@@ -1,0 +1,37 @@
+{
+  "name": "smyx-crop-specific-disease-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/smyx-crop-specific-disease-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "smyx-crop-specific-disease-analysis",
+  "downloaded_at": "2026-11-12T07:21:31.794007Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-crop-specific-disease-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/smyx-crop-specific-disease-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Expands the disease identification library to cover economic-crop-specific diseases (corn northern/southern leaf blight, potato late blight, peanut leaf spot, tomato viral disease, etc.) for precise leaf-disease recognition. | \u6269\u5145\u75c5\u5bb3\u8bc6\u522b\u5e93\u81f3\u7ecf\u6d4e\u4f5c\u7269\u4e13\u5c5e\u75c5\u5bb3\uff08\u7389\u7c73\u5927\u6591\u75c5/\u5c0f\u6591\u75c5\u3001\u571f\u8c46\u665a\u75ab\u75c5\u3001\u82b1\u751f\u53f6\u6591\u75c5\u3001\u756a\u8304\u75c5\u6bd2\u75c5\u7b49\uff09\uff0c\u5b9e\u73b0\u53f6\u7247\u75c5\u5bb3\u7684\u7cbe\u51c6\u8bc6\u522b\u3002"
+}

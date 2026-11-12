@@ -1,0 +1,38 @@
+{
+  "name": "voice",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/voice/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "voice-odere-pro-claude-wiki-pages-pl",
+  "downloaded_at": "2026-11-12T06:23:07.208791Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/voice/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/voice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The house writing voice for claude-wiki-pages \u2014 how to write prose that a newcomer actually wants to read and an engineer can trust. Defines two registers (explanatory and engineer), the rule for choosing between them, the LLM-artifact blocklist, the vocabulary and register-separation rules the doc gate enforces, and how to write a wiki page. Trigger when writing or editing any doc, README, guide, or wiki page, or when an agent asks \"what voice should I write in\", \"how should this note read\", or invokes /claude-wiki-pages:voice. Reference, not action \u2014 it teaches how to write, it does not write for you."
+}

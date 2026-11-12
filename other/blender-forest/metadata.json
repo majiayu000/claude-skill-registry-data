@@ -1,0 +1,37 @@
+{
+  "name": "blender-forest",
+  "repo": "mromidev/claude-blender-skills",
+  "path": "skills/blender-forest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mromidev/claude-blender-skills",
+  "dir_name": "blender-forest",
+  "downloaded_at": "2026-11-12T06:08:07.124678Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mromidev",
+  "source_url": "https://github.com/mromidev/claude-blender-skills/blob/main/skills/blender-forest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mromidev/claude-blender-skills/blob/main/skills/blender-forest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make an ultra-realistic 3D environment in Blender with Claude (a forest, a nature scene, a car driving through it) by following a long YouTube tutorial instead of writing a prompt - Claude watches the tutorial, writes the shot plan, checks the downloaded assets for anything unsafe, builds the world in stages with its own scatter system, rigs the car itself, measures the camera moves from the reference frames, benchmarks the render settings and renders overnight. Use when someone wants a realistic environment / forest / landscape / car-in-nature shot in Blender with Claude, wants to \"recreate a tutorial scene\", or asks for any single step (scatter, gravel path, car rig, render benchmark, clay preview)."
+}

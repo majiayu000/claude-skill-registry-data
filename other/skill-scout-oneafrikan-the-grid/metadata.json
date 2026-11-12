@@ -1,0 +1,37 @@
+{
+  "name": "skill-scout",
+  "repo": "oneafrikan/the-grid",
+  "path": "skills/skill-scout/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/oneafrikan/the-grid",
+  "dir_name": "skill-scout-oneafrikan-the-grid",
+  "downloaded_at": "2026-11-12T06:27:10.001761Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oneafrikan",
+  "source_url": "https://github.com/oneafrikan/the-grid/blob/main/skills/skill-scout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oneafrikan/the-grid/blob/main/skills/skill-scout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scout public agent-skill directories (ranked by installs) and propose new skills for the-grid, deduped against what is wired. Use when the user says \"skill-scout\", \"find new skills\" or \"what skills should I add\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "security-audit-logging",
+  "repo": "rrezartprebreza/spring-boot-skills",
+  "path": "skills/spring-boot-3/security-audit-logging/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/rrezartprebreza/spring-boot-skills",
+  "dir_name": "security-audit-logging-rrezartprebreza-spring-boot-skills-2",
+  "downloaded_at": "2026-11-12T07:00:19.292538Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rrezartprebreza",
+  "source_url": "https://github.com/rrezartprebreza/spring-boot-skills/blob/main/skills/spring-boot-3/security-audit-logging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rrezartprebreza/spring-boot-skills/blob/main/skills/spring-boot-3/security-audit-logging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when designing or reviewing security audit events, their redaction, durable storage, integrity, or failure policies in Spring Boot. General metrics and debugging logs belong to production observability rather than this security-event workflow."
+}

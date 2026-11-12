@@ -1,0 +1,37 @@
+{
+  "name": "color-grading",
+  "repo": "notivn/AIEVv2",
+  "path": ".claude/skills/color-grading/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/notivn/AIEVv2",
+  "dir_name": "color-grading",
+  "downloaded_at": "2026-11-12T06:20:22.063667Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "notivn",
+  "source_url": "https://github.com/notivn/AIEVv2/blob/main/.claude/skills/color-grading/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/notivn/AIEVv2/blob/main/.claude/skills/color-grading/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Color grading video in the AI Edit Video system - delog/tonemap HDR-HLG-log footage, apply the color preset the user approved in the UI, and the visual verification workflow. Read when the edit prompt has a \"Ch\u1ec9nh m\u00e0u\" (color grading) section, when the source footage is HDR/log, or when the user asks for grading/delog."
+}

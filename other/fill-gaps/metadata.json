@@ -1,0 +1,37 @@
+{
+  "name": "fill-gaps",
+  "repo": "odere-pro/claude-wiki-pages-plugin",
+  "path": "skills/fill-gaps/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odere-pro/claude-wiki-pages-plugin",
+  "dir_name": "fill-gaps",
+  "downloaded_at": "2026-11-12T06:23:03.888945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odere-pro",
+  "source_url": "https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/fill-gaps/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odere-pro/claude-wiki-pages-plugin/blob/main/skills/fill-gaps/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Complete the wiki: no empty pages, no dangling [[wikilinks]], with the graph clustered around the project's core topics. Stages curated repo sources, ingests them, authors topic hub pages, resolves every dangling link, enriches thin pages, then heals + verifies. Trigger when the user says \"fill the knowledge gaps\", \"complete the wiki\", \"no empty wiki pages/links\", \"make the graph cluster around <topics>\", or invokes /claude-wiki-pages:fill-gaps directly."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ak-docs-seeker",
+  "repo": "quanganh208/chatofy",
+  "path": ".claude/skills/ak-docs-seeker/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/quanganh208/chatofy",
+  "dir_name": "ak-docs-seeker",
+  "downloaded_at": "2026-11-12T06:47:36.019953Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "quanganh208",
+  "source_url": "https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-docs-seeker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/quanganh208/chatofy/blob/main/.claude/skills/ak-docs-seeker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search library and framework documentation through llms.txt (context7.com), including GitHub repository analysis."
+}

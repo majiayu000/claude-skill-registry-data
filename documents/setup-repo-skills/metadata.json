@@ -1,0 +1,38 @@
+{
+  "name": "setup-repo-skills",
+  "repo": "oneafrikan/the-grid",
+  "path": "skills/setup-repo-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/oneafrikan/the-grid",
+  "dir_name": "setup-repo-skills",
+  "downloaded_at": "2026-11-12T06:27:09.881321Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oneafrikan",
+  "source_url": "https://github.com/oneafrikan/the-grid/blob/main/skills/setup-repo-skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oneafrikan/the-grid/blob/main/skills/setup-repo-skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHub or local markdown), triage label vocabulary, and domain doc layout. Run before first use of `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out` \u2014 or if those skills appear to be missing context about the issue tracker, triage labels, or domain docs."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "rosetta-stone-mapping-rules",
+  "repo": "narrative-io/narrative-skills-marketplace",
+  "path": "plugins/narrative-common/skills/rosetta-stone-mapping-rules/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/narrative-io/narrative-skills-marketplace",
+  "dir_name": "rosetta-stone-mapping-rules",
+  "downloaded_at": "2026-11-12T06:12:01.424735Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "narrative-io",
+  "source_url": "https://github.com/narrative-io/narrative-skills-marketplace/blob/main/plugins/narrative-common/skills/rosetta-stone-mapping-rules/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/narrative-io/narrative-skills-marketplace/blob/main/plugins/narrative-common/skills/rosetta-stone-mapping-rules/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The rules for mapping a Narrative dataset's columns to Rosetta Stone\nattributes: choosing the attribute, mapping the source of a derivation,\nvalue_mapping vs object_mapping, discriminators, validating each\nexpression with NQL, and scoring confidence. No flow of its own; the\nskills that generate or infer mappings read it.\nUse when: another skill tells you to apply the mapping rules, \"which\nRosetta Stone attribute should this column map to\", \"is this mapping\nexpression right\".\n(narrative-common)"
+}

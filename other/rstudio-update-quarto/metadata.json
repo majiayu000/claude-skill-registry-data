@@ -1,0 +1,38 @@
+{
+  "name": "rstudio-update-quarto",
+  "repo": "rstudio/rstudio",
+  "path": ".claude/skills/rstudio-update-quarto/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rstudio/rstudio",
+  "dir_name": "rstudio-update-quarto",
+  "downloaded_at": "2026-11-12T07:00:34.837545Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rstudio",
+  "source_url": "https://github.com/rstudio/rstudio/blob/main/.claude/skills/rstudio-update-quarto/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rstudio/rstudio/blob/main/.claude/skills/rstudio-update-quarto/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when updating the Quarto version in the RStudio repository, e.g. bumping to a new release. This skill is for macOS and Linux only."
+}

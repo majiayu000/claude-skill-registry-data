@@ -1,0 +1,36 @@
+{
+  "name": "subito-cli",
+  "repo": "remorses/opencode-config",
+  "path": "synced-skills/subito-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "subito-cli",
+  "downloaded_at": "2026-11-12T06:53:18.951711Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/synced-skills/subito-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/synced-skills/subito-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "subito-cli searches subito.it listings (cars, and other categories) with\nevery filter subito supports and prints NDJSON to stdout for piping into\njq. It fetches through Playwriter (the user's real Chrome session), not a\nbare HTTP client, and parses subito's embedded __NEXT_DATA__ payload\ndirectly instead of scraping the DOM. ALWAYS load this skill when the user\nasks to search subito.it, find listings/cars/items on subito, or runs the\n`subito` command. Requires Chrome with the Playwriter extension enabled\nand the relay running (`playwriter serve`)."
+}

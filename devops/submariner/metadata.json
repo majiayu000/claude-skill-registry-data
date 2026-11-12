@@ -1,0 +1,37 @@
+{
+  "name": "yugabytedb-k8s-submariner",
+  "repo": "srinivasa-vasu/agent-skills",
+  "path": "yugabytedb-k8s/submariner/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/srinivasa-vasu/agent-skills",
+  "dir_name": "submariner",
+  "downloaded_at": "2026-11-12T07:25:35.590289Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "srinivasa-vasu",
+  "source_url": "https://github.com/srinivasa-vasu/agent-skills/blob/main/yugabytedb-k8s/submariner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/srinivasa-vasu/agent-skills/blob/main/yugabytedb-k8s/submariner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Connect two Kubernetes clusters with Submariner (broker, gateway, Lighthouse service discovery) and deploy one independent YugabyteDB universe per cluster with the yugabyte Helm chart, so the universes can be joined with xCluster replication (source -> target / DR). Covers kind cluster configs with non-overlapping CIDRs, subctl deploy-broker / join (clusterid, cable driver, NAT-T, gateway labelling), Helm values (multicluster.createServiceExports, kubernetesClusterId, masterAddresses, totalMasters), svc.clusterset.local DNS checks, subctl verify/diagnose, and yb-admin xCluster setup. Use when the user mentions Submariner or Lighthouse with YugabyteDB, subctl with yb-masters / yb-tservers, xCluster between Kubernetes clusters without a shared CNI mesh, or clusterset.local addresses with Submariner. For Cilium Cluster Mesh use yugabytedb-k8s-cilium. Does NOT cover the YugabyteDB Kubernetes Operator or YBA-managed DR (use yb-k8s-operator), or a single universe stretched across clusters."
+}

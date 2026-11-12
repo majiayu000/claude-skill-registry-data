@@ -1,0 +1,37 @@
+{
+  "name": "face-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/face-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "face-analysis",
+  "downloaded_at": "2026-11-12T07:21:21.325143Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/face-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/face-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Supports uploading local MP4 videos or network video URLs to call the server-side API for facial diagnosis. It returns structured TCM facial diagnosis results. | \u652f\u6301\u901a\u8fc7\u4e0a\u4f20\u672c\u5730 MP4 \u89c6\u9891\u6216\u7f51\u7edc\u89c6\u9891 URL\uff0c\u8c03\u7528\u670d\u52a1\u7aef API \u8fdb\u884c\u9762\u90e8\u8bca\u65ad\uff0c\u8fd4\u56de\u7ed3\u6784\u5316\u7684\u4e2d\u533b\u9762\u8bca\u7ed3\u679c"
+}

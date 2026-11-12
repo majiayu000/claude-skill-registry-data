@@ -1,0 +1,37 @@
+{
+  "name": "plant-species-recognition-analysis",
+  "repo": "smyx-sunjinhui/smyx-open-claw-skills",
+  "path": "skills/plant-species-recognition-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/smyx-sunjinhui/smyx-open-claw-skills",
+  "dir_name": "plant-species-recognition-analysis",
+  "downloaded_at": "2026-11-12T07:21:29.456649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "smyx-sunjinhui",
+  "source_url": "https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/plant-species-recognition-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/smyx-sunjinhui/smyx-open-claw-skills/blob/main/skills/plant-species-recognition-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Accurately identifies plant species from images based on deep learning and computer vision, outputs structured information including species name, family, growth habits and maintenance tips. | \u690d\u7269\u7269\u79cd\u8bc6\u522b\u6280\u80fd\uff0c\u57fa\u4e8e\u6df1\u5ea6\u5b66\u4e60\u4e0e\u8ba1\u7b97\u673a\u89c6\u89c9\u6280\u672f\uff0c\u901a\u8fc7\u56fe\u50cf\u5feb\u901f\u8bc6\u522b\u690d\u7269\u7269\u79cd\uff0c\u8f93\u51fa\u7269\u79cd\u540d\u79f0\u3001\u79d1\u5c5e\u5206\u7c7b\u3001\u751f\u957f\u4e60\u6027\u53ca\u517b\u62a4\u8981\u70b9\u7b49\u7ed3\u6784\u5316\u4fe1\u606f\uff0c\u4e3a\u56ed\u827a\u3001\u751f\u6001\u8c03\u7814\u3001\u81ea\u7136\u6559\u80b2\u63d0\u4f9b\u4e13\u4e1a\u8bc6\u522b\u670d\u52a1"
+}

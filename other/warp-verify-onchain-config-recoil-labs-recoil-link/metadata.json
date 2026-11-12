@@ -1,0 +1,37 @@
+{
+  "name": "warp-verify-onchain-config",
+  "repo": "recoil-labs/recoil-link",
+  "path": ".agents/skills/warp-verify-onchain-config/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/recoil-labs/recoil-link",
+  "dir_name": "warp-verify-onchain-config-recoil-labs-recoil-link",
+  "downloaded_at": "2026-11-12T06:52:15.778365Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "recoil-labs",
+  "source_url": "https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-verify-onchain-config/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-verify-onchain-config/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The post-change validation contract for warp routes \u2014 after any step that changes (or proposes) on-chain state, prove the route's config matches the target via hyperlane warp check. Run a live check when the change already executed (deployer-signed); run a fork-simulate-from-owner check via /warp-route-check when the change is pending multisig/file execution. Referenced by every deploy/update skill that mutates a route."
+}

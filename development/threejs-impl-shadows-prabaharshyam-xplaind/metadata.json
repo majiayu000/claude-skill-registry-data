@@ -1,0 +1,37 @@
+{
+  "name": "threejs-impl-shadows",
+  "repo": "prabaharshyam/xplaind",
+  "path": ".claude/skills/threejs-impl-shadows/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/prabaharshyam/xplaind",
+  "dir_name": "threejs-impl-shadows-prabaharshyam-xplaind",
+  "downloaded_at": "2026-11-12T06:41:41.687499Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "prabaharshyam",
+  "source_url": "https://github.com/prabaharshyam/xplaind/blob/main/.claude/skills/threejs-impl-shadows/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/prabaharshyam/xplaind/blob/main/.claude/skills/threejs-impl-shadows/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when enabling shadows in a Three.js scene or debugging shadow artifacts like acne, peter panning, or low resolution. Prevents the common mistake of wrong shadow camera frustum, too many PointLight shadows, or missing castShadow/receiveShadow flags. Covers shadow map types, per-light config, bias tuning, CameraHelper debugging. Keywords: shadows, shadowMap, shadow acne, peter panning, bias, normalBias, castShadow, receiveShadow, PCFSoftShadowMap, shadow camera, shadows not showing, shadow artifacts, enable shadows."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "whose-red",
+  "repo": "okgrit/done-is-a-claim",
+  "path": "skills/whose-red/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/okgrit/done-is-a-claim",
+  "dir_name": "whose-red-okgrit-done-is-a-claim",
+  "downloaded_at": "2026-11-12T06:24:52.082353Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "okgrit",
+  "source_url": "https://github.com/okgrit/done-is-a-claim/blob/main/skills/whose-red/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/okgrit/done-is-a-claim/blob/main/skills/whose-red/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Investigate whether a failing test run is caused by a change, was already broken on main, or is inconclusive, using matched branch and clean-main runs. Use when tests fail on a branch or PR, when an agent says 'this failure is pre-existing', or before retrying or reverting a fix."
+}

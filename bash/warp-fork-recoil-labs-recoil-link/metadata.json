@@ -1,0 +1,38 @@
+{
+  "name": "warp-fork",
+  "repo": "recoil-labs/recoil-link",
+  "path": ".agents/skills/warp-fork/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/recoil-labs/recoil-link",
+  "dir_name": "warp-fork-recoil-labs-recoil-link",
+  "downloaded_at": "2026-11-12T06:52:09.115635Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "recoil-labs",
+  "source_url": "https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-fork/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/recoil-labs/recoil-link/blob/main/.agents/skills/warp-fork/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fork a warp route from the local HTTP registry for development and testing. Forks each chain with the right local node per protocol \u2014 anvil for EVM chains, surfpool (Solana mainnet fork) for Sealevel chains. Use when the goal is to simulate transactions on a set of local forks before submitting them on-chain."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "bi-vat-gst",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/bi-vat-gst/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "bi-vat-gst",
+  "downloaded_at": "2026-11-12T06:28:06.906621Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bi-vat-gst/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bi-vat-gst/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Determine whether an ordinary Burundi business must register for VAT, distinguish the two registration periods in calendar 2026, classify supplies and compute a monthly return using the published OBR fields. This Guide covers output VAT, documentary input-credit conditions, imported services, the excess-credit refund sequence and the separate purchase, import and stock registration triggers. It distinguishes exempt healthcare and medicines from the limited intermediate-rate categories rather than treating every essential good alike. Real-estate transactions, sector-specific exemptions, partial deduction adjustments and current authenticated filing screens require additional work before a filing in those areas. Accountant review is pending, and the pack remains partial."
+}

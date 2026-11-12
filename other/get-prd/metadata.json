@@ -1,0 +1,38 @@
+{
+  "name": "get-prd",
+  "repo": "rizqinrr/viserys-agent",
+  "path": "skills/get-prd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rizqinrr/viserys-agent",
+  "dir_name": "get-prd",
+  "downloaded_at": "2026-11-12T06:56:41.093643Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rizqinrr",
+  "source_url": "https://github.com/rizqinrr/viserys-agent/blob/main/skills/get-prd/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rizqinrr/viserys-agent/blob/main/skills/get-prd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs a deep structured interview and produces a PRD in a single pass. Use when starting a new application, system, or feature and no requirements document exists yet. Use when the user says \"get prd\", \"bikin PRD\", \"mau bikin sistem baru\", \"grill me\", or asks to be interviewed toward a spec. Combines design-tree interviewing, intent extraction, capability mapping, and PRD authoring."
+}

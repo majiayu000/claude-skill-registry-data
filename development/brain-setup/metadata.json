@@ -1,0 +1,38 @@
+{
+  "name": "brain-setup",
+  "repo": "msolecki/developer-os",
+  "path": "plugin/skills/brain-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/msolecki/developer-os",
+  "dir_name": "brain-setup",
+  "downloaded_at": "2026-11-12T06:09:05.842977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msolecki",
+  "source_url": "https://github.com/msolecki/developer-os/blob/main/plugin/skills/brain-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msolecki/developer-os/blob/main/plugin/skills/brain-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create the user's Obsidian knowledge vault from the developer-os template, or connect an existing one by adding only what is missing, then point Claude Code at it after the user approves the diff. Use when the user sets up developer-os, has no `Brain vault:` line yet, or says \"set up the vault\", \"create a vault\", \"connect my vault\", \"setup brain\"."
+}

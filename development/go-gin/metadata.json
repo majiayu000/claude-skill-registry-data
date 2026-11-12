@@ -1,0 +1,38 @@
+{
+  "name": "go-gin",
+  "repo": "ressKim-io/ress-claude-agents",
+  "path": "assets/skills/go/go-gin/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ressKim-io/ress-claude-agents",
+  "dir_name": "go-gin",
+  "downloaded_at": "2026-11-12T06:54:20.727938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ressKim-io",
+  "source_url": "https://github.com/ressKim-io/ress-claude-agents/blob/main/assets/skills/go/go-gin/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ressKim-io/ress-claude-agents/blob/main/assets/skills/go/go-gin/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building or extending Gin HTTP servers: route groups, middleware (logger/recover/auth), bind validators, structured error responses, graceful shutdown. Apply when go.mod imports gin-gonic/gin."
+}
