@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8c03\u7528 Magic 8.3.641 \u6267\u884c PD \u64cd\u4f5c\uff1afloorplan / place / DRC / layout extraction\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bba-guru-pd \u505a floorplan \u4e0e placement\uff1b(2) routing \u540e\u505a DRC\uff1b(3) LVS \u524d extract SPICE\uff1b(4) \u663e\u5f0f /bb-invoke-magic\u3002"
+  "description": "调用 Magic 8.3.641 执行 PD 操作：floorplan / place / DRC / layout extraction。触发场景：(1) bba-guru-pd 做 floorplan 与 placement；(2) routing 后做 DRC；(3) LVS 前 extract SPICE；(4) 显式 /bb-invoke-magic。",
+  "content_fingerprint": "270e5fa317b789ac9a809707988f83a68ec7d06b2d2a514580c8db3462112e35"
 }

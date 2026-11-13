@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9879\u76ee\u5f00\u53d1\u5de5\u4f5c\u6d41\u6280\u80fd\u3002\u5728\u4ee5\u4e0b\u573a\u666f\u81ea\u52a8\u8c03\u7528\uff1a\n(1) \u7f16\u5199\u6216\u4fee\u6539\u4efb\u4f55 crates/*/src/ \u6216 examples/ \u4e0b\u7684\u4ee3\u7801\n(2) \u6dfb\u52a0\u65b0\u4f9d\u8d56\u3001\u6539 feature flag \u6216\u4fee\u6539\u914d\u7f6e\u6587\u4ef6\n(3) \u5b8c\u6210\u4e00\u4e2a feature \u6216\u4fee\u590d\u4e00\u4e2a bug\n\u89e6\u53d1\u5173\u952e\u8bcd\uff1a\u7ec4\u4ef6\u5f00\u53d1\u3001bug \u4fee\u590d\u3001\u91cd\u6784\u3001\u65b0\u529f\u80fd\u3001\u4f9d\u8d56\u5347\u7ea7\u3001feature \u95e8\u63a7\u3001\u5b8f\u6539\u52a8\u3001\u914d\u7f6e\u53d8\u66f4"
+  "description": "项目开发工作流技能。在以下场景自动调用：\n(1) 编写或修改任何 crates/*/src/ 或 examples/ 下的代码\n(2) 添加新依赖、改 feature flag 或修改配置文件\n(3) 完成一个 feature 或修复一个 bug\n触发关键词：组件开发、bug 修复、重构、新功能、依赖升级、feature 门控、宏改动、配置变更",
+  "content_fingerprint": "96edc6f4c37cdcf5ef3739240162a7dfd9a73b5c8416f66b3bb38fa266a914de"
 }

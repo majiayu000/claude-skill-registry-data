@@ -1,5 +1,5 @@
 {
-  "name": "\u955c\u50cf\u6784\u5efa\u6253\u5305Skill",
+  "name": "镜像构建打包Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/image-build/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5bb9\u5668\u955c\u50cf\u7684\u6784\u5efa\u89c4\u8303(\u591a\u9636\u6bb5\u6784\u5efa\u3001\u5206\u5c42\u4f18\u5316\u3001\u5b89\u5168\u57fa\u7ebf)\u3002\u5f53\u9700\u8981\u7f16\u5199 Dockerfile\u3001\u6784\u5efa\u5e76\u63a8\u9001\u5bb9\u5668\u955c\u50cf\u65f6\u4f7f\u7528\u3002"
+  "description": "容器镜像的构建规范(多阶段构建、分层优化、安全基线)。当需要编写 Dockerfile、构建并推送容器镜像时使用。",
+  "content_fingerprint": "1c4fa00458bdff9e34d295ffc9258383af30783c776fbcbb0de1eaa84967c5f6"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a\u6a21\u578b\u6dfb\u52a0 torch_npu.npu_prefetch \u6743\u91cd\u9884\u53d6\u4f18\u5316\u7279\u6027\u3002\u89e6\u53d1\uff1aprofiling \u663e\u793a MatMul/QBMM/GMM \u7b97\u5b50\u5b58\u5728 memory-bound \u70ed\u70b9\u3001\u9700\u8981\u4e3a\u6a21\u578b\u6dfb\u52a0\u6743\u91cd\u9884\u53d6\u3001\u5c06 prefetch \u6a21\u5f0f\u8fc1\u79fb\u5230\u65b0\u6a21\u578b\u65f6\u4f7f\u7528\u3002"
+  "description": "为模型添加 torch_npu.npu_prefetch 权重预取优化特性。触发：profiling 显示 MatMul/QBMM/GMM 算子存在 memory-bound 热点、需要为模型添加权重预取、将 prefetch 模式迁移到新模型时使用。",
+  "content_fingerprint": "eb3fe949052a7563e4d132165bb951a06f8e8a22a62cf2f2e42aaa4c45fa1b40"
 }

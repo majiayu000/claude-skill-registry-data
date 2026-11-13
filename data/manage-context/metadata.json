@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/shiiman/claude-code-plugins/blob/main/plugins/shiiman-claude/skills/manage-context/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "bf727e1228dcbc79852418d4d919b0550c976cb8bab94f7d5eb3f349f2a015f9",
+  "description": "コンテキストサイズを監視し、作業中に自動 compact が走らないよう事前にコンテキストを圧縮する。「コンテキストを圧縮して」「compact して」「メモリを整理」「会話を整理」「履歴を圧縮」「コンテキストが大きい」「動作が重い」などで起動。操作がない時やタスクの区切りでコンテキストが一定ラインを超えていたら自動的に /compact を実行。"
 }

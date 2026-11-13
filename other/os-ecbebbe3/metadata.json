@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5de5\u4f5c\u7a83\u53d6 / \u8c03\u5ea6-\u5de5\u4f5c\u7a83\u53d6 / \u7a7a\u95f2\u6838\u4ece\u6700\u5fd9\u961f\u5217\u7a83\u53d6\u4e00\u4e2a\u3002\u7528\u6237\u63d0\u5230\u8fd9\u4e9b\u8bcd\u65f6\u4f7f\u7528\u672c\u6280\u80fd\u3002 \u573a\u666f\uff1a\u5bf9\u7167\uff1a\u5de5\u4f5c\u7a83\u53d6\uff08work stealing\uff09\u2014\u2014\u7a7a\u95f2\u6838\u4ece\u6700\u5fd9\u961f\u5217\u7a83\u53d6\u4efb\u52a1\uff0c\u65e0\u5176\u4ed6\u975e\u7a7a\u961f\u5217\u5219\u4e0d\u52a8\u3002 \u3010\u4e0d\u9002\u7528\u3011Not for \u4ee5\u4e0b\u573a\u666f\uff1acandidates \u4e3a\u7a7a/\u975e\u6cd5\u65f6"
+  "description": "工作窃取 / 调度-工作窃取 / 空闲核从最忙队列窃取一个。用户提到这些词时使用本技能。 场景：对照：工作窃取（work stealing）——空闲核从最忙队列窃取任务，无其他非空队列则不动。 【不适用】Not for 以下场景：candidates 为空/非法时",
+  "content_fingerprint": "a59e34a8555015d919dd6cf647dd046d534e443dc2c1514cf26aba899b2d9873"
 }

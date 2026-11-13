@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Exploit validation and exploitation using Metasploit Framework. Runs in a dedicated Docker container (separate from Kali). Validates CVEs discovered by nuclei, nikto, or other scanners with actual exploit modules. Covers exploit selection, payload configuration, exploitation, and post-exploitation pivoting.\n\nUses msfconsole, msfvenom, and the Metasploit module database. Chains from /pentester, /analyze-cve, or /post-exploit when exploitable CVEs are confirmed."
+  "description": "Exploit validation and exploitation using Metasploit Framework. Runs in a dedicated Docker container (separate from Kali). Validates CVEs discovered by nuclei, nikto, or other scanners with actual exploit modules. Covers exploit selection, payload configuration, exploitation, and post-exploitation pivoting.\n\nUses msfconsole, msfvenom, and the Metasploit module database. Chains from /pentester, /analyze-cve, or /post-exploit when exploitable CVEs are confirmed.",
+  "content_fingerprint": "aa9e71d6434b3c115399e73c7ed8bdef8ebdb525f38b8f23167bd1811f822502"
 }

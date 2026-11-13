@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Migrate Dynatrace classic and Gen2 entity-based DQL to Smartscape equivalents. Covers three scenarios. (1) mass data queries filtered by classic entity conditions \u2014 migrate to direct dimension filters first, Smartscape only as fallback; (2) mass data queries using entity subqueries for filtering \u2014 same dimension-first strategy; (3) pure entity list queries \u2014 migrate fetch dt.entity.* to smartscapeNodes. Also handles entityName, entityAttr, classicEntitySelector, and classic relationship patterns."
+  "description": "Migrate Dynatrace classic and Gen2 entity-based DQL to Smartscape equivalents. Covers three scenarios. (1) mass data queries filtered by classic entity conditions — migrate to direct dimension filters first, Smartscape only as fallback; (2) mass data queries using entity subqueries for filtering — same dimension-first strategy; (3) pure entity list queries — migrate fetch dt.entity.* to smartscapeNodes. Also handles entityName, entityAttr, classicEntitySelector, and classic relationship patterns.",
+  "content_fingerprint": "8aa8a7eedd8450ec8d712bbfb18984085d6368033a733074b42f8a25af7b02cd"
 }

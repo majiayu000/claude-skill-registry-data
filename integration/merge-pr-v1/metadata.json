@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/CharlesHoskinson/dancesWithClaws/blob/main/.agents/archive/merge-pr-v1/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f8df5fae5b9082d1ca1160ddfad62661e8b9f8d907d89ce1ab4f591fb27ade58",
+  "description": "Merge a GitHub PR via squash after /prepare-pr. Use when asked to merge a ready PR. Do not push to main or modify code. Ensure the PR ends in MERGED state and clean up worktrees after success."
 }

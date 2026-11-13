@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Parallel batch executor for the che. Given a TASK GRAPH, builds topological batches, enforces blast-radius file-lock partitions, fans-out independent che-developer instances in parallel, runs per-batch MERGE AUDIT + scope/QA/compliance gates, and produces a BATCH_REPORT. Invoked BY che-act only when task_graph.md has >=2 tasks with no dependencies sharing zero files. Or explicitly by /che-parallel."
+  "description": "Parallel batch executor for the che. Given a TASK GRAPH, builds topological batches, enforces blast-radius file-lock partitions, fans-out independent che-developer instances in parallel, runs per-batch MERGE AUDIT + scope/QA/compliance gates, and produces a BATCH_REPORT. Invoked BY che-act only when task_graph.md has >=2 tasks with no dependencies sharing zero files. Or explicitly by /che-parallel.",
+  "content_fingerprint": "81f18164be0cb7ec5a8cb36f12f585b6a7202c5d5aba24d55bc0ba529833ad02"
 }

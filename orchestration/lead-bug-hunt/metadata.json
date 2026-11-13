@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/chrisallenlane/claude-swe-workflows/blob/master/skills/lead-bug-hunt/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "4ac919b488b41ebb50da68576365bf52240fbe41cae174d5b27fac5e5b5b4160",
+  "description": "Autonomous bug-elimination loop. Iteratively invokes /bug-hunt and /implement-batch until findings converge below an operator-specified severity floor. At termination, runs /review-test scoped to the "
 }

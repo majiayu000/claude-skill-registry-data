@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Surface CSPT-to-CSRF candidates \u2014 path traversal landing in fetch/XHR/axios URLs. Scans dom_reachable.jsonl for cspt_* sinks, ranks by verb severity, writes cspt_csrf.jsonl. Run after dom-xss-hunt, before browser-confirm."
+  "description": "Surface CSPT-to-CSRF candidates — path traversal landing in fetch/XHR/axios URLs. Scans dom_reachable.jsonl for cspt_* sinks, ranks by verb severity, writes cspt_csrf.jsonl. Run after dom-xss-hunt, before browser-confirm.",
+  "content_fingerprint": "858841e9be67817acc94f5c83e4c67ea8a264f8ed71dd0d66a049f8947ef2892"
 }

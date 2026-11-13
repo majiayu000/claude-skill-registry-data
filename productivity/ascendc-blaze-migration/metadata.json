@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8bc4\u4f30\u5e76\u5c06 ops-nn\u3001ops-transformer \u7b49\u4ed3\u4e2d Ascend 950 / DAV_3510 \u7684 AscendC Kernel \u5206\u652f\u7b49\u4ef7\u8fc1\u79fb\u5230 ops-tensor Blaze/Tensor API\u3002\u9002\u7528\u4e8e CMCT\u3001CGMCT\u3001\u5355\u4f53\u6216\u81ea\u5b9a\u4e49\u5206\u5c42 Kernel\uff0c\u4ee5\u53ca Cube\u3001Vector\u3001MIX\u3001\u9ad8\u9636 Matmul\u3001\u624b\u5de5 Buffer\u3001\u6570\u636e\u642c\u8fd0\u3001\u81ea\u5b9a\u4e49\u8c03\u5ea6\u3001VF \u548c\u540c\u6b65\u8def\u5f84\uff1b\u5728\u9694\u79bb\u8fc1\u79fb\u5de5\u7a0b\u4e2d\u4e32\u884c\u5b8c\u6210\u8fc1\u79fb\u5408\u540c\u51bb\u7ed3\u3001Blaze \u5f00\u53d1\u3001\u9a8c\u8bc1\u8d44\u4ea7\u751f\u6210\u3001\u539f\u59cb\u57fa\u7ebf\u3001Blaze \u9a8c\u6536\u548c\u53cc\u4ed3\u672c\u5730\u63d0\u4ea4\u4ea4\u4ed8\u3002"
+  "description": "评估并将 ops-nn、ops-transformer 等仓中 Ascend 950 / DAV_3510 的 AscendC Kernel 分支等价迁移到 ops-tensor Blaze/Tensor API。适用于 CMCT、CGMCT、单体或自定义分层 Kernel，以及 Cube、Vector、MIX、高阶 Matmul、手工 Buffer、数据搬运、自定义调度、VF 和同步路径；在隔离迁移工程中串行完成迁移合同冻结、Blaze 开发、验证资产生成、原始基线、Blaze 验收和双仓本地提交交付。",
+  "content_fingerprint": "452d3fc5bc7633c4afab52c8f8a0f11914b4b2a186b0a8f2b06bb620b9a00172"
 }

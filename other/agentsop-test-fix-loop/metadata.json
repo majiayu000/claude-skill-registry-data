@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decision protocol for wiring a verify-then-fix loop around a code-editing LLM\nagent. The agent edits \u2192 runs lint/test \u2192 reads the output \u2192 fixes \u2192 re-runs,\nbounded by an iteration cap and an escalation rule. Activates whenever a coder\nagent has a verifiable success criterion (exit code, type-checker output,\nfailing assertion) and the user wants the agent to converge to \"green\" on its\nown. Framework-agnostic \u2014 wraps Aider's `--auto-lint`/`--auto-test`, an\nOpenHands SWE-Bench loop, a manual LangGraph cycle, or Claude Code's bash\ntool just the same."
+  "description": "Decision protocol for wiring a verify-then-fix loop around a code-editing LLM\nagent. The agent edits → runs lint/test → reads the output → fixes → re-runs,\nbounded by an iteration cap and an escalation rule. Activates whenever a coder\nagent has a verifiable success criterion (exit code, type-checker output,\nfailing assertion) and the user wants the agent to converge to \"green\" on its\nown. Framework-agnostic — wraps Aider's `--auto-lint`/`--auto-test`, an\nOpenHands SWE-Bench loop, a manual LangGraph cycle, or Claude Code's bash\ntool just the same.",
+  "content_fingerprint": "e255afd3ddc99b670861acf52e051e48f51879cad47e4f39e873b1d7fc3b6f9d"
 }

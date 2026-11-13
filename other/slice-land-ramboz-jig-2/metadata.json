@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verify a finished slice is actually ready to land (tests green, DoD ticked, deviation log present, STATUS=DONE) and emit a deterministic landing checklist for either direct merge-to-main or PR-shaped integration. Use when the user says \"land this slice\", \"merge back to main\", \"ready to ship\", \"create a PR for this slice\", \"close out the slice\", or \"slice is done \u2014 what now\". Use `prepare` to emit a readiness report; use `execute --mode direct` to also run the merge sequence; use `execute --mode pr` to push the branch and open the PR."
+  "description": "Verify a finished slice is actually ready to land (tests green, DoD ticked, deviation log present, STATUS=DONE) and emit a deterministic landing checklist for either direct merge-to-main or PR-shaped integration. Use when the user says \"land this slice\", \"merge back to main\", \"ready to ship\", \"create a PR for this slice\", \"close out the slice\", or \"slice is done — what now\". Use `prepare` to emit a readiness report; use `execute --mode direct` to also run the merge sequence; use `execute --mode pr` to push the branch and open the PR.",
+  "content_fingerprint": "c9626db76732adf93e1aaf57533fd7ebda897b732ea558a842a06dd9793edd1f"
 }

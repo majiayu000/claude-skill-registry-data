@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a verl-omni \u63a5\u5165\u6216\u4fee\u590d MSProbe \u8bad\u63a8\u4e00\u81f4\u6027\u91c7\u96c6\uff0c\u751f\u6210\u6253\u70b9\u4ee3\u7801\u3001\u6837\u672c\u5173\u8054\u65e5\u5fd7\u548c\u8bca\u65ad\u542f\u52a8\u811a\u672c\u3002 \u7528\u4e8e diffusion/omni \u7684 rollout \u4e0e actor \u6570\u636e\u91c7\u96c6\u3001dump \u7f3a\u5931\u6216\u914d\u5bf9\u5931\u8d25\uff1b\u4e0d\u8d1f\u8d23\u7cbe\u5ea6\u6839\u56e0\u5206\u6790\u3002"
+  "description": "为 verl-omni 接入或修复 MSProbe 训推一致性采集，生成打点代码、样本关联日志和诊断启动脚本。 用于 diffusion/omni 的 rollout 与 actor 数据采集、dump 缺失或配对失败；不负责精度根因分析。",
+  "content_fingerprint": "c2d8a662f1caae3b5a15e5e226c6d2dd5d911dd374c2ffc641f11a0599abbd3b"
 }

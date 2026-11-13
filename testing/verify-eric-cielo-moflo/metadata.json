@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verify-before-done \u2014 exercise the current change end-to-end against its acceptance criteria (the SDD plan's, or the ticket's) and report a per-criterion PASS/FAIL verdict, then record the outcome to memory. This is the concrete action that satisfies moflo's verify-before-done gate (`gates.verify_before_done` / `/flo -v` / `/flo -sd`). Use before `gh pr create` when the change must be proven to work, not just tested in passing. Verifies only \u2014 it does not fix; on FAIL it reports the gaps and stops."
+  "description": "Verify-before-done — exercise the current change end-to-end against its acceptance criteria (the SDD plan's, or the ticket's) and report a per-criterion PASS/FAIL verdict, then record the outcome to memory. This is the concrete action that satisfies moflo's verify-before-done gate (`gates.verify_before_done` / `/flo -v` / `/flo -sd`). Use before `gh pr create` when the change must be proven to work, not just tested in passing. Verifies only — it does not fix; on FAIL it reports the gaps and stops.",
+  "content_fingerprint": "02ec69cee31bc7482d74dae74525272a19213fedd9a0bcf5a80ac6bc5ecf810c"
 }

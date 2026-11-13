@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "pyfixest demeaner_backend=\"cupy64\" (including its CPU fallback when cupy is\nabsent) is NOT numerically identical to the default numba backend and does\nNOT drop fully-absorbed/collinear regressors the same way. Use when: (1)\nadding demeaner_backend=\"cupy64\" to existing pf.feols/fepois calls changes\nthe printed coefficient table, (2) a regression report suddenly gains rows\nwith absurd estimates (e.g. coef 435.8, SE 7106) for controls absorbed by\nthe fixed effects, (3) diffing outputs before/after a backend change, or\n(4) anything parses a pyfixest text report by line position."
+  "description": "pyfixest demeaner_backend=\"cupy64\" (including its CPU fallback when cupy is\nabsent) is NOT numerically identical to the default numba backend and does\nNOT drop fully-absorbed/collinear regressors the same way. Use when: (1)\nadding demeaner_backend=\"cupy64\" to existing pf.feols/fepois calls changes\nthe printed coefficient table, (2) a regression report suddenly gains rows\nwith absurd estimates (e.g. coef 435.8, SE 7106) for controls absorbed by\nthe fixed effects, (3) diffing outputs before/after a backend change, or\n(4) anything parses a pyfixest text report by line position.",
+  "content_fingerprint": "7a8dc936bc675164a30d6ee412e50707fe09327f71d77f76c9a4d7e08fb86903"
 }

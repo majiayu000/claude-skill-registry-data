@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Execute S32Debugger flash-programmer operations that end after the flash action completes. Use this whenever the user wants to flash, program, write, erase, verify, dump, read, or inspect flash contents without continuing into debug-from-flash in the same GDB session, and when the flash session must be closed correctly with `fl_close`."
+  "description": "Execute S32Debugger flash-programmer operations that end after the flash action completes. Use this whenever the user wants to flash, program, write, erase, verify, dump, read, or inspect flash contents without continuing into debug-from-flash in the same GDB session, and when the flash session must be closed correctly with `fl_close`.",
+  "content_fingerprint": "695563a26f937cd7ddd7f5e16d294ac023a2dbd93e210531580ac6fc8b2ec161"
 }

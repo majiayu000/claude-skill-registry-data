@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "OpenClaw API gateway proxy for authenticated SaaS calls (100+ services in references/SERVICES.md).\nUse ONLY when making an HTTP request to a third-party service that requires the gateway's stored\ncredentials. NOT for direct API calls with bearer tokens already in scope, NOT for monday.com\n(use monday-for-agents), NOT for WhatsApp (use heleni-whatsapp).\nTriggers: \"call the X API\", \"fetch from <service>\", \"send to Slack via gateway\", \"use the gateway for\"."
+  "description": "OpenClaw API gateway proxy for authenticated SaaS calls (100+ services in references/SERVICES.md).\nUse ONLY when making an HTTP request to a third-party service that requires the gateway's stored\ncredentials. NOT for direct API calls with bearer tokens already in scope, NOT for monday.com\n(use monday-for-agents), NOT for WhatsApp (use heleni-whatsapp).\nTriggers: \"call the X API\", \"fetch from <service>\", \"send to Slack via gateway\", \"use the gateway for\".",
+  "content_fingerprint": "d3dcecebe56a6192d5b8680c570017c4c2d3df5baa42458af049926293b4bf64"
 }

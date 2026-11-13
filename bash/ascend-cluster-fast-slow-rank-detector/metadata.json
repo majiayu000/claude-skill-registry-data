@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e13\u95e8\u7528\u4e8e Ascend \u96c6\u7fa4 Profiling \u6027\u80fd\u6570\u636e\u7684\u201c\u5feb\u6162\u5361\u201d\u8bca\u65ad\u4e13\u5bb6\u6280\u80fd\u3002\u5f53\u7528\u6237\u63d0\u4f9b\u3010\u96c6\u7fa4\u6027\u80fd\u6570\u636e\u76ee\u5f55/\u8def\u5f84\u3011\u5e76\u8981\u6c42\u5206\u6790\u3010\u5feb\u6162\u5361\u3011\u3001\u3010\u6162\u8282\u70b9\u3011\u3001\u3010\u8d1f\u8f7d\u4e0d\u5747\u8861\u3011\u6216\u3010\u96c6\u7fa4\u74f6\u9888\u3011\u65f6\uff0c\u5fc5\u987b\u89e6\u53d1\u6b64\u6280\u80fd\u3002\u8be5\u6280\u80fd\u4f1a\u81ea\u52a8\u63a5\u6536\u96c6\u7fa4\u8def\u5f84\uff0c\u8c03\u5ea6\u76f8\u5173\u5de5\u5177\u8f93\u51fa\u5feb\u6162\u5361\u7684\u5b8f\u89c2\u5b9a\u6027\u4e0e\u5fae\u89c2\u6839\u56e0\uff08\u5982 Host \u4e0b\u53d1\u74f6\u9888\u3001\u7b97\u5b50\u8ba1\u7b97\u52a3\u5316\uff09\u3002"
+  "description": "专门用于 Ascend 集群 Profiling 性能数据的“快慢卡”诊断专家技能。当用户提供【集群性能数据目录/路径】并要求分析【快慢卡】、【慢节点】、【负载不均衡】或【集群瓶颈】时，必须触发此技能。该技能会自动接收集群路径，调度相关工具输出快慢卡的宏观定性与微观根因（如 Host 下发瓶颈、算子计算劣化）。",
+  "content_fingerprint": "0e60fcb01192a27e9084ac84d0c27fb4a387d6fec1ad6cfa66eb071338015686"
 }

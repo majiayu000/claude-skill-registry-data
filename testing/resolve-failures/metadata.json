@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/TalonT-Org/AutoSkillit/blob/main/src/autoskillit/skills_extended/resolve-failures/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "06e023232319e148ee90e5ea77e0d444e8ef0d8b509720ff3e7a73b19ee1fa14",
+  "description": "Fix test failures in a worktree without merging. Leaves worktree green and unmerged for the orchestrator's merge gate. Use when tests fail after implementation. Takes worktree path, plan path, and bas"
 }

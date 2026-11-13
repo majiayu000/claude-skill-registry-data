@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when building APIs on Hono (Cloudflare Workers, Bun, Deno, Node), debugging route ordering, wiring middleware, validating with @hono/zod-validator, returning streaming responses, configuring CORS with credentials, handling errors via app.onError, or composing typed RPC clients. Triggers: c.env binding types, c.header + c.redirect interaction, missing await next() bugs, Set-Cookie not attaching to redirect, route-precedence surprises, JWT middleware setup, hono/client typed RPC end-to-end. NOT for Express/Fastify/Koa idioms, tRPC/GraphQL paradigms, or Next.js Route Handlers."
+  "description": "Use when building APIs on Hono (Cloudflare Workers, Bun, Deno, Node), debugging route ordering, wiring middleware, validating with @hono/zod-validator, returning streaming responses, configuring CORS with credentials, handling errors via app.onError, or composing typed RPC clients. Triggers: c.env binding types, c.header + c.redirect interaction, missing await next() bugs, Set-Cookie not attaching to redirect, route-precedence surprises, JWT middleware setup, hono/client typed RPC end-to-end. NOT for Express/Fastify/Koa idioms, tRPC/GraphQL paradigms, or Next.js Route Handlers.",
+  "content_fingerprint": "7647c37511dec25cd7f4dad49205af2071ed64e43201cfa674afa07b2e7dbc23"
 }

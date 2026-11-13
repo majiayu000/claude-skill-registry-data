@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Page fingerprint probe \u2014 runs ONE browser_evaluate per cell before skill dispatch. Returns 100 boolean flags (hasForms, hasImages, hasTables, etc.) that qa-cell-worker uses to filter out skills whose requires: [] conditions aren't met on this page. Saves ~77% tokens by skipping irrelevant skills. Runs on every cell, every viewport."
+  "description": "Page fingerprint probe — runs ONE browser_evaluate per cell before skill dispatch. Returns 100 boolean flags (hasForms, hasImages, hasTables, etc.) that qa-cell-worker uses to filter out skills whose requires: [] conditions aren't met on this page. Saves ~77% tokens by skipping irrelevant skills. Runs on every cell, every viewport.",
+  "content_fingerprint": "e1d87154d2e7de17eb5286da0d9cf149268c3c89c09ac624f5a5d202be827b8d"
 }

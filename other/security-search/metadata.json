@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6309\u540d\u79f0\u3001\u4ee3\u7801\u6216\u62fc\u97f3\u641c\u7d22\u6807\u7684\u3002\u5fc5\u586b --query\uff0c\u53ef\u9009 --limit\u3002\u63a5\u53e3\uff1aGET /api/v1/market/security/search/\u3002"
+  "description": "按名称、代码或拼音搜索标的。必填 --query，可选 --limit。接口：GET /api/v1/market/security/search/。",
+  "content_fingerprint": "936c236d39a075be340d43540fa5c263fcdbccacae70721f0fc7c2e458b0c8ee"
 }

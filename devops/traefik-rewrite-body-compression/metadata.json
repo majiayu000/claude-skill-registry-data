@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/main/.claude/skills/traefik-rewrite-body-compression/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "29a51e9077bbf97fdb52e13efa1ba00141536c0d1e3c084ee31bf9abbfae9b26",
+  "description": "Fix for Traefik rewrite-body plugin (packruler/rewrite-body) failing with\n\"flate: corrupt input before offset 5\" errors when backends send gzip-compressed\nresponses. Use when: (1) rewrite-body plugin "
 }

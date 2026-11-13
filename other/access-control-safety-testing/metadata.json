@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when writing or reviewing the must-fail fixture for a gate that bans direct role or permission membership checks \u2014 an ESLint `no-restricted-syntax` selector, a dependency-cruiser rule, or a hand-rolled permission validator. Symptoms include a fixture that seeds only `.includes()`, a role check that slipped past a gate with a passing test, and a membership ban resolved at `warn`, which never fails a lint run."
+  "description": "Use when writing or reviewing the must-fail fixture for a gate that bans direct role or permission membership checks — an ESLint `no-restricted-syntax` selector, a dependency-cruiser rule, or a hand-rolled permission validator. Symptoms include a fixture that seeds only `.includes()`, a role check that slipped past a gate with a passing test, and a membership ban resolved at `warn`, which never fails a lint run.",
+  "content_fingerprint": "4cad39e9237885a4e711095f8be24818a1036e2df5b4bcba88400f0489ddddad"
 }

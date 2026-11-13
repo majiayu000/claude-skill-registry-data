@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MySQL \u6162\u67e5\u8be2\u5168\u94fe\u8bca\u65ad\u3002\u5f00\u542f/\u5206\u6790 slow query log\uff0c\u5b9a\u4f4d Top-N \u6162 SQL\uff0c \u7528 EXPLAIN \u68c0\u67e5\u6267\u884c\u8ba1\u5212\uff0c\u8bc6\u522b\u7f3a\u5931\u7d22\u5f15\u3001\u5168\u8868\u626b\u63cf\u3001\u5927\u7ed3\u679c\u96c6\u3001\u9501\u7b49\u5f85\uff0c \u8f93\u51fa\u7ed3\u6784\u5316\u62a5\u544a\u4e0e\u4f18\u5316\u5efa\u8bae\u3002\u652f\u6301 MySQL 5.7+ \u4e0e 8.0 performance_schema\u3002"
+  "description": "MySQL 慢查询全链诊断。开启/分析 slow query log，定位 Top-N 慢 SQL， 用 EXPLAIN 检查执行计划，识别缺失索引、全表扫描、大结果集、锁等待， 输出结构化报告与优化建议。支持 MySQL 5.7+ 与 8.0 performance_schema。",
+  "content_fingerprint": "a502f1d49993199c650f5f9ea085110ef03c291074e457d1dd7363bde5327750"
 }

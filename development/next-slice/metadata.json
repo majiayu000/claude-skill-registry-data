@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Closes out a just-finished implementation slice and emits a self-contained handoff prompt for a fresh session \u2014 gates that the slice landed (else stops), re-anchors the plan's stale refs against current code, and harvests what building revealed. Use when the user says \"next-slice\", \"hand off the next slice\", \"close out this slice\", or asks to prepare a fresh-session prompt to continue a sliced implementation plan. Explicit-only; it hands off or halts, never re-plans, and never writes the always-loaded guidance file."
+  "description": "Closes out a just-finished implementation slice and emits a self-contained handoff prompt for a fresh session — gates that the slice landed (else stops), re-anchors the plan's stale refs against current code, and harvests what building revealed. Use when the user says \"next-slice\", \"hand off the next slice\", \"close out this slice\", or asks to prepare a fresh-session prompt to continue a sliced implementation plan. Explicit-only; it hands off or halts, never re-plans, and never writes the always-loaded guidance file.",
+  "content_fingerprint": "618e560c29dcaad891a485e9b7f7d18c9caaf0eff24e5335777665018f131150"
 }

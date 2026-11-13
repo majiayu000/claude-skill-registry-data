@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Stop dependency install scripts from executing - a committed `ignore-scripts` for `npm`, `--no-build` for `uv` - then allowlist by name the few packages that genuinely build something. Use when the user wants to block `postinstall` scripts, harden a project against a compromised release, or mentions `ignore-scripts`, lifecycle scripts, or `npm rebuild`. Covers `npm` and `uv`."
+  "description": "Stop dependency install scripts from executing - a committed `ignore-scripts` for `npm`, `--no-build` for `uv` - then allowlist by name the few packages that genuinely build something. Use when the user wants to block `postinstall` scripts, harden a project against a compromised release, or mentions `ignore-scripts`, lifecycle scripts, or `npm rebuild`. Covers `npm` and `uv`.",
+  "content_fingerprint": "7dd8e8e23bb3aef6d543a7840d1e51422de578cb5ccf98f0ada57db38a9d7229"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Synthesize new waveforms from scratch for Simulink inports using createInputDataset. Use ONLY when the user asks to generate, create, or synthesize signals (step, ramp, sine, chirp, pulse, noise) to populate a Dataset for External Inputs or Signal Editor. Covers timeseries and timetable formats with correct data type, interpolation, units, and dimensions. Also covers function-call and trigger inport timing setup. Do NOT use when the user wants to load, import, or read existing data from files (MAT, CSV, spreadsheet) \u2014 even if that data will be used as model input. Do NOT use for running simulations or plotting outputs."
+  "description": "Synthesize new waveforms from scratch for Simulink inports using createInputDataset. Use ONLY when the user asks to generate, create, or synthesize signals (step, ramp, sine, chirp, pulse, noise) to populate a Dataset for External Inputs or Signal Editor. Covers timeseries and timetable formats with correct data type, interpolation, units, and dimensions. Also covers function-call and trigger inport timing setup. Do NOT use when the user wants to load, import, or read existing data from files (MAT, CSV, spreadsheet) — even if that data will be used as model input. Do NOT use for running simulations or plotting outputs.",
+  "content_fingerprint": "10ca7817d671f7e7c7f3c063e97e4cb0c84e23373b09db4dd1100dda2ecda85d"
 }

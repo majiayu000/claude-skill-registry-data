@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The behavior-preserving restructure gate. Routed to by /refactor for a rename, extract, inline, move, dedup, or internal-implementation swap. Six gated phases prove behavioral parity through unmodified pre-existing tests; any diff that classifies as `feat` is not a refactor and is routed to tdd. A modified pre-existing test is rejected as evidence \u2014 it is a behavior change in disguise."
+  "description": "The behavior-preserving restructure gate. Routed to by /refactor for a rename, extract, inline, move, dedup, or internal-implementation swap. Six gated phases prove behavioral parity through unmodified pre-existing tests; any diff that classifies as `feat` is not a refactor and is routed to tdd. A modified pre-existing test is rejected as evidence — it is a behavior change in disguise.",
+  "content_fingerprint": "94b144af4f29a7203fabcfdabf59373acb287f3838d5cbe734245149d8eb1e27"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Find and judge main-thread disk/network work in an Android app using debug-only StrictMode, then decide by measurement instead of refactoring on reflex \u2014 covers reading the violation stack for your own frames, the startup work that legitimately cannot move off the main thread (a pre-Room database snapshot), and setting a regression budget from the measured number rather than a round one. Use when checking ANR risk, after adding work to Application.onCreate, or before claiming a cold start is clean."
+  "description": "Find and judge main-thread disk/network work in an Android app using debug-only StrictMode, then decide by measurement instead of refactoring on reflex — covers reading the violation stack for your own frames, the startup work that legitimately cannot move off the main thread (a pre-Room database snapshot), and setting a regression budget from the measured number rather than a round one. Use when checking ANR risk, after adding work to Application.onCreate, or before claiming a cold start is clean.",
+  "content_fingerprint": "ab267eaf9f711e60893a41c5bb907f9a63aefa9436479fa91c4961fe39596640"
 }

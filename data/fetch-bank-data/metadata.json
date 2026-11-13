@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user says \"fetch bank data\", \"pull from bank\", \"fetch hapoalim\", \"fetch cal\", \"fetch credit card\", \"pull from cal\", or any morning-equivalent. Pulls fresh transactions + balances from Bank Hapoalim and Cal via `israeli-bank-scrapers`, records private reconciliation observations in a sidecar notes file, and stages paired files in local `inbox/staging/fetched/` for the next `sync-finance-data` run to ingest."
+  "description": "Use when the user says \"fetch bank data\", \"pull from bank\", \"fetch hapoalim\", \"fetch cal\", \"fetch credit card\", \"pull from cal\", or any morning-equivalent. Pulls fresh transactions + balances from Bank Hapoalim and Cal via `israeli-bank-scrapers`, records private reconciliation observations in a sidecar notes file, and stages paired files in local `inbox/staging/fetched/` for the next `sync-finance-data` run to ingest.",
+  "content_fingerprint": "1da61e2d214eb1280590d2ce9650cce1cd4c379db64f726947b76305aa18a501"
 }

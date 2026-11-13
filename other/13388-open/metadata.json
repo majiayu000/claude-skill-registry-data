@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Activate at session start when .bon/ exists AND before any bon CLI command. Handles session orientation (process contributions, present hierarchy, pick direction), structures draw-down workflow (bon show \u2192 bon work \u2192 bon step), and covers roaming \u2014 orienting against a named repo from a session launched elsewhere. Triggers on: session start with .bon/, /open, '/open REPO' (a path or repo name), /bon, 'bon init', 'bon new', 'bon list', 'bon done', 'what can I work on', 'next action', 'desired outcome', 'file this for later', 'track this work', 'work on that repo from here', or when .bon/ directory exists."
+  "description": "Activate at session start when .bon/ exists AND before any bon CLI command. Handles session orientation (process contributions, present hierarchy, pick direction), structures draw-down workflow (bon show → bon work → bon step), and covers roaming — orienting against a named repo from a session launched elsewhere. Triggers on: session start with .bon/, /open, '/open REPO' (a path or repo name), /bon, 'bon init', 'bon new', 'bon list', 'bon done', 'what can I work on', 'next action', 'desired outcome', 'file this for later', 'track this work', 'work on that repo from here', or when .bon/ directory exists.",
+  "content_fingerprint": "3722480f484ec1115205112a04aadbc272bb4be22ab048be5cf52ee7e3a2602f"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "sops / age \u306b\u3088\u308b secret \u306e\u6697\u53f7\u5316\u30fb\u5fa9\u53f7\u30fb\u8ffd\u52a0\u30fb\u518d\u6697\u53f7\u5316\u306e\u904b\u7528\u624b\u9806\u3002secret \u3092\u6697\u53f7\u5316\u3059\u308b\u30fbinject \u3059\u308b\u30fb`secrets/` \u914d\u4e0b\u3092\u89e6\u308b\u30fb`.sops.yaml` \u3084 `devices/secrets.nix` \u3092\u5909\u66f4\u3059\u308b\u30fb\u65b0\u30c7\u30d0\u30a4\u30b9\u306e\u9375\u3092\u767b\u9332\u3059\u308b\u3068\u304d\u3001\u304a\u3088\u3073 sops \u95a2\u9023\u30a8\u30e9\u30fc\uff08cannot parse dotenv / unexpected end of JSON input \u7b49\uff09\u306e\u5bfe\u51e6\u6642\u306b\u5fc5\u305a\u4f7f\u7528\u3059\u308b\u3002"
+  "description": "sops / age による secret の暗号化・復号・追加・再暗号化の運用手順。secret を暗号化する・inject する・`secrets/` 配下を触る・`.sops.yaml` や `devices/secrets.nix` を変更する・新デバイスの鍵を登録するとき、および sops 関連エラー（cannot parse dotenv / unexpected end of JSON input 等）の対処時に必ず使用する。",
+  "content_fingerprint": "39bf79dec456ac4a0cb8dc0f47a804554f45665e432d1e68d6a154ae9f7b2db4"
 }

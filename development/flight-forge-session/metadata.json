@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ece\u5f53\u524d\u4efb\u52a1\u3001\u7528\u6237\u6307\u5b9a\u7684 Codex \u4efb\u52a1\u6216\u7528\u6237\u5bfc\u51fa\u7684\u7ed3\u6784\u5316\u6750\u6599\u4e2d\u63d0\u53d6\u53ef\u89c2\u5bdf\u4e8b\u5b9e\uff0c\u5e76\u663e\u5f0f\u7194\u70bc\u4e00\u4e2a\u9879\u76ee\u7ea7 Codex Flight Control Private Skill\u3002\u4ec5\u5f53\u7528\u6237\u76f4\u63a5\u8c03\u7528 $flight-forge-session \u65f6\u4f7f\u7528\uff1b\u7981\u6b62\u81ea\u52a8\u628a\u4f1a\u8bdd\u603b\u7ed3\u6210 Skill\u3002"
+  "description": "从当前任务、用户指定的 Codex 任务或用户导出的结构化材料中提取可观察事实，并显式熔炼一个项目级 Codex Flight Control Private Skill。仅当用户直接调用 $flight-forge-session 时使用；禁止自动把会话总结成 Skill。",
+  "content_fingerprint": "a8476b58be4a75a3a08847af0599723ad3387c95c74dcf3e7e95fdc58744faca"
 }

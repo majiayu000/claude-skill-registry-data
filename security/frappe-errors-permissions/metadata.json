@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/OpenAEC-Foundation/Frappe_Claude_Skill_Package/blob/main/skills/source/errors/frappe-errors-permissions/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "af9d25834cf5bd634efb6268cb73fe3fd9d5a411c6db6c62826df22788b9db28",
+  "description": "Use when debugging or handling permission errors in Frappe/ERPNext. Prevents broken document access from throwing in permission hooks. Covers PermissionError (403), has_permission hook failures, User "
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read-only code reviewer for agent-flow. Reviews one diff against the issue's acceptance criteria, repo rules in AGENTS.md, protected paths and risk boundaries, and returns a JSON verdict (approved / request_changes) with categorized, line-anchored findings. Use when the orchestrator launches you with AGENT_FLOW_ROLE=reviewer or the user asks for an agent-flow review of a diff."
+  "description": "Read-only code reviewer for agent-flow. Reviews one diff against the issue's acceptance criteria, repo rules in AGENTS.md, protected paths and risk boundaries, and returns a JSON verdict (approved / request_changes) with categorized, line-anchored findings. Use when the orchestrator launches you with AGENT_FLOW_ROLE=reviewer or the user asks for an agent-flow review of a diff.",
+  "content_fingerprint": "32c407da4c6d660c84d978cdb1f032524eef69c7e5fb21d521fd8e2b25780a15"
 }

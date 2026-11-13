@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adversarial Quarto-vs-Beamer parity QA. A critic agent compares the Quarto HTML render to the Beamer PDF benchmark for content/visual parity; a fixer agent applies fixes; loops until APPROVED (max 5 rounds). Use when user says \"qa the quarto\", \"check parity\", \"does the html match the pdf?\", \"quarto matches beamer?\", or after a translate-to-quarto run. Requires both the `.qmd` rendered and a `.pdf` benchmark."
+  "description": "Adversarial Quarto-vs-Beamer parity QA. A critic agent compares the Quarto HTML render to the Beamer PDF benchmark for content/visual parity; a fixer agent applies fixes; loops until APPROVED (max 5 rounds). Use when user says \"qa the quarto\", \"check parity\", \"does the html match the pdf?\", \"quarto matches beamer?\", or after a translate-to-quarto run. Requires both the `.qmd` rendered and a `.pdf` benchmark.",
+  "content_fingerprint": "4d9ec0fcadc1e852840ed43f6f74afe78c9619e00a7e12461bde3436805bbda7"
 }

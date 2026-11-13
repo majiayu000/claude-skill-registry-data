@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "User-Mode Driver Framework v2 (UMDF). User-mode driver model that uses the same WDF\nobject model as KMDF but runs in a host process (WUDFHost.exe) protected by the\nreflector. Required for some categories (Indirect Display Drivers, many sensor and\ncamera drivers) and recommended for any driver that doesn't strictly need kernel mode.\n\nUSE WHEN: user mentions \"UMDF\", \"WUDFHost\", \"user-mode driver\", \"reflector\",\n\"IDD\", \"ISensor\", \"WDFHOST\", \"UMDF v2\", \"FX2\"\n\nDO NOT USE FOR: KMDF (use `wdf-kmdf`), classic UMDF v1 (deprecated, COM-based)"
+  "description": "User-Mode Driver Framework v2 (UMDF). User-mode driver model that uses the same WDF\nobject model as KMDF but runs in a host process (WUDFHost.exe) protected by the\nreflector. Required for some categories (Indirect Display Drivers, many sensor and\ncamera drivers) and recommended for any driver that doesn't strictly need kernel mode.\n\nUSE WHEN: user mentions \"UMDF\", \"WUDFHost\", \"user-mode driver\", \"reflector\",\n\"IDD\", \"ISensor\", \"WDFHOST\", \"UMDF v2\", \"FX2\"\n\nDO NOT USE FOR: KMDF (use `wdf-kmdf`), classic UMDF v1 (deprecated, COM-based)",
+  "content_fingerprint": "c83a3a527f6a4196478b80048f9f3ac8f9947c0d3fafa0d952afc4a819a3f81f"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e71\u7801\u4fee\u590d\u5de5\u5177\u3002\u81ea\u52a8\u68c0\u6d4b\u5e76\u4fee\u590d\u56e0\u7f16\u7801\u9519\u8bef\u89e3\u91ca\u5bfc\u81f4\u7684\u4e71\u7801\u6587\u672c\uff08Mojibake\uff09\uff0c\u652f\u6301 GBK/UTF-8\u3001Latin-1/UTF-8\u3001\nBig5\u3001Shift_JIS \u7b49 11 \u79cd\u7f16\u7801\u94fe\u81ea\u52a8\u5c1d\u8bd5\uff0c\u901a\u8fc7\u5b57\u7b26\u5408\u7406\u5ea6\u8bc4\u5206\u81ea\u52a8\u9009\u62e9\u6700\u4f73\u4fee\u590d\u7ed3\u679c\u3002\n\u5f53\u7528\u6237\u63d0\u5230\u4e71\u7801\u4fee\u590d\u3001\u7f16\u7801\u4fee\u590d\u3001mojibake\u3001\u6587\u5b57\u4e71\u7801\u3001\u7f16\u7801\u9519\u8bef\u7b49\u9700\u6c42\u65f6\u4f7f\u7528\u6b64skill\u3002"
+  "description": "乱码修复工具。自动检测并修复因编码错误解释导致的乱码文本（Mojibake），支持 GBK/UTF-8、Latin-1/UTF-8、\nBig5、Shift_JIS 等 11 种编码链自动尝试，通过字符合理度评分自动选择最佳修复结果。\n当用户提到乱码修复、编码修复、mojibake、文字乱码、编码错误等需求时使用此skill。",
+  "content_fingerprint": "dbb4404cdab1ae0114390b822830f14f333183901fd98920adb818d5d1701b32"
 }

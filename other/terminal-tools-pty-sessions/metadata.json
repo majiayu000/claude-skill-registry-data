@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when you need state across calls \u2014 building env vars, navigating with cd, driving REPLs (python -i, mysql, psql, node), or responding to interactive prompts (sudo password, ssh host-key confirmation, mysql connection). Teaches the prompt-sentinel exec pattern (default mode), raw I/O for REPLs (raw_send=True then read_only=True), the one-in-flight-per-session rule, and the close-or-leak-against-the-cap discipline. Bash on macOS \u2014 never zsh; explicit shell=/bin/zsh is rejected. Read before calling terminal_pty_open."
+  "description": "Use when you need state across calls — building env vars, navigating with cd, driving REPLs (python -i, mysql, psql, node), or responding to interactive prompts (sudo password, ssh host-key confirmation, mysql connection). Teaches the prompt-sentinel exec pattern (default mode), raw I/O for REPLs (raw_send=True then read_only=True), the one-in-flight-per-session rule, and the close-or-leak-against-the-cap discipline. Bash on macOS — never zsh; explicit shell=/bin/zsh is rejected. Read before calling terminal_pty_open.",
+  "content_fingerprint": "6c53ab6096594ee4325caa8ed2b984a66156797591ead0c1b365739c555db876"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Maintain the append-only evidence ledger: `.flow/runs/<run-id>/evidence/*.evidence.yaml` sidecars plus matching `.txt` raw captures, written only via `bin/flow-record-evidence.sh`. Use when goal-evaluator runs a verification command, when /flow:start or /flow:address captures verification evidence on a FlowRun, or when /flow:goal evaluate produces a judge report. Evidence that lives only in the transcript dies with the session; only file-backed, schema-validated sidecars prove ACs durably and satisfy the judge's Independence Protocol."
+  "description": "Maintain the append-only evidence ledger: `.flow/runs/<run-id>/evidence/*.evidence.yaml` sidecars plus matching `.txt` raw captures, written only via `bin/flow-record-evidence.sh`. Use when goal-evaluator runs a verification command, when /flow:start or /flow:address captures verification evidence on a FlowRun, or when /flow:goal evaluate produces a judge report. Evidence that lives only in the transcript dies with the session; only file-backed, schema-validated sidecars prove ACs durably and satisfy the judge's Independence Protocol.",
+  "content_fingerprint": "1ca7cea33f8932642b712a7539e2157a2c1a608ee8e201832d0c5227a2bf9532"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Create or update product-update / release-notes content for a given OpenMetadata/Collate patch version across getcollate, openmetadata-site, and docs-om. Sources getcollate's changelog from openmetadata-collate + OpenMetadata + ai-platform; openmetadata-site's from OpenMetadata only; docs-om reuses openmetadata-site's already-written content, reformatted into its Mintlify snippet structure. Filters to customer-facing changes only, runs each target's own doc-review checklist, verifies every link live, and requires explicit approval before any commit."
+  "description": "Create or update product-update / release-notes content for a given OpenMetadata/Collate patch version across getcollate, openmetadata-site, and docs-om. Sources getcollate's changelog from openmetadata-collate + OpenMetadata + ai-platform; openmetadata-site's from OpenMetadata only; docs-om reuses openmetadata-site's already-written content, reformatted into its Mintlify snippet structure. Filters to customer-facing changes only, runs each target's own doc-review checklist, verifies every link live, and requires explicit approval before any commit.",
+  "content_fingerprint": "1363dda9d8247a03a9145be176b50b7e7b050e02b31ca69201771f283b302f5c"
 }

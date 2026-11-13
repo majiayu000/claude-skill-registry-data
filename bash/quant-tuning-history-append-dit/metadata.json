@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Append a DiT-tuning round to history.yaml. DiT-side counterpart of the LLM-path accuracy_append.py; records practice.md5, inference_outputs, fp_baseline_outputs, and the scoring fields (scores / overall_score / loss_vs_baseline / is_satisfied) populated by quant-tuning-score-dit. Idempotent on practice_id."
+  "description": "Append a DiT-tuning round to history.yaml. DiT-side counterpart of the LLM-path accuracy_append.py; records practice.md5, inference_outputs, fp_baseline_outputs, and the scoring fields (scores / overall_score / loss_vs_baseline / is_satisfied) populated by quant-tuning-score-dit. Idempotent on practice_id.",
+  "content_fingerprint": "e451a23a89bff7e0374773c81e9b804fd28c888cab76fd358224b96f2cf6d0b8"
 }

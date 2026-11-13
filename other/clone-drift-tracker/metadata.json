@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Clone drift tracker: detects code blocks that USED to be clones (identical at past git ref) and have since drifted apart. Mines git history to compare function-body hashes between HEAD and HEAD~N (default 100), and reports pairs whose semantics diverged on one side but not the other. Read-only. Audience: Senior. Trigger: /clone-drift"
+  "description": "Clone drift tracker: detects code blocks that USED to be clones (identical at past git ref) and have since drifted apart. Mines git history to compare function-body hashes between HEAD and HEAD~N (default 100), and reports pairs whose semantics diverged on one side but not the other. Read-only. Audience: Senior. Trigger: /clone-drift",
+  "content_fingerprint": "e63c821491fa632147b5cbf9a126e88c685e00b4ec3a2169b9f78f0e52ece43b"
 }

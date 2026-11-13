@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "How to write a Grafema batch-mode plugin that reads the graph and filesystem,\nthen writes new edges/nodes directly to RFDB. Use when: (1) need to add\nproject-specific edges that generic analyzers can't produce, (2) need to\nread config files (JSON/YAML) and trace values into code, (3) implementing\nframework-specific resolvers (Django settings, Express routes, pipeline configs).\nCovers: grafema.config.yaml plugin config, RFDB field naming (src/dst NOT\nsource/target), addEdges/addNodes API, RFDBServerBackend connection pattern."
+  "description": "How to write a Grafema batch-mode plugin that reads the graph and filesystem,\nthen writes new edges/nodes directly to RFDB. Use when: (1) need to add\nproject-specific edges that generic analyzers can't produce, (2) need to\nread config files (JSON/YAML) and trace values into code, (3) implementing\nframework-specific resolvers (Django settings, Express routes, pipeline configs).\nCovers: grafema.config.yaml plugin config, RFDB field naming (src/dst NOT\nsource/target), addEdges/addNodes API, RFDBServerBackend connection pattern.",
+  "content_fingerprint": "b2734c03d80fb5d40d92d92f2a211446a4d650187cf8741fec47f55769d90a5f"
 }

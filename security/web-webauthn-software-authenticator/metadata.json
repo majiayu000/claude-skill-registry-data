@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Register and authenticate against a WebAuthn/FIDO2 relying party using a self-built SOFTWARE authenticator (no hardware key) when the RP requests attestation \"none\" (or otherwise doesn't verify attestation trust). Load when: a login is \"WebAuthn/passkey/ FIDO2\", endpoints like /webauthn/register|auth/begin|finish, `navigator.credentials`, and you hold (or can leak) a registration invite/enrollment token. Authorized targets only."
+  "description": "Register and authenticate against a WebAuthn/FIDO2 relying party using a self-built SOFTWARE authenticator (no hardware key) when the RP requests attestation \"none\" (or otherwise doesn't verify attestation trust). Load when: a login is \"WebAuthn/passkey/ FIDO2\", endpoints like /webauthn/register|auth/begin|finish, `navigator.credentials`, and you hold (or can leak) a registration invite/enrollment token. Authorized targets only.",
+  "content_fingerprint": "7d54b7e0757b86ecfeeeab782a34596e44f5113a8df8ffe486cb2af3a2a68621"
 }

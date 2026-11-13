@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Locate BuyState::OnUpdate in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"BuyState::OnUpdate\" (symbol BuyState_OnUpdate). This is a non-virtual function - emit a byte signature (func_sig), not an offset.\nLocate it via cross-references, distinctive constants/strings in its body, or callers\nof related symbols; verify by decompilation before committing to a candidate.\nTrigger: BuyState_OnUpdate, BuyState::OnUpdate"
+  "description": "Locate BuyState::OnUpdate in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"BuyState::OnUpdate\" (symbol BuyState_OnUpdate). This is a non-virtual function - emit a byte signature (func_sig), not an offset.\nLocate it via cross-references, distinctive constants/strings in its body, or callers\nof related symbols; verify by decompilation before committing to a candidate.\nTrigger: BuyState_OnUpdate, BuyState::OnUpdate",
+  "content_fingerprint": "3c2b0ccbe7ba076384c3539861db6e8cb4a7fd1148721790a911e1f0ebf692b1"
 }

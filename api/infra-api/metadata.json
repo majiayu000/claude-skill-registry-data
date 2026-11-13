@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage AICP's API surfaces \u2014 LocalAI's OpenAI-compatible REST API (proxied at `localhost:8090/v1/*`), AICP's MCP tool surface (~64 tools, 21 deprecated per audit), AICP CLI commands (~100 flags), agent server REST API (when activated via `--agent <port>`), planned fleet RPC. Includes contract design, versioning, deprecation, OpenAPI schema generation. Loads when the operator says \"design a new API endpoint\" / \"version the API\" / \"deprecate API X\" / \"OpenAPI schema\" / \"contract change for fleet integration\"."
+  "description": "Manage AICP's API surfaces — LocalAI's OpenAI-compatible REST API (proxied at `localhost:8090/v1/*`), AICP's MCP tool surface (~64 tools, 21 deprecated per audit), AICP CLI commands (~100 flags), agent server REST API (when activated via `--agent <port>`), planned fleet RPC. Includes contract design, versioning, deprecation, OpenAPI schema generation. Loads when the operator says \"design a new API endpoint\" / \"version the API\" / \"deprecate API X\" / \"OpenAPI schema\" / \"contract change for fleet integration\".",
+  "content_fingerprint": "46c047f275e053f76b8f41b69f6e9b37487111b9f2f653af59fc49291e8ca407"
 }

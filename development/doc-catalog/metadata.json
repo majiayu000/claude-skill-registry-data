@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate a service catalog for the current microservice (Java Spring Boot or frontend) and store it in the central service-catalog registry (default ~/.claude/service-catalog/, override with $CLAUDE_DOC_HOME). Scans the codebase to extract endpoints, integrations, dependencies, and key configuration. Use when starting a new service, after adding a new endpoint or integration, or when the catalog is out of date. `/sdd:doc-catalog list` shows what is already registered."
+  "description": "Generate a service catalog for the current microservice (Java Spring Boot or frontend) and store it in the central service-catalog registry (default ~/.claude/service-catalog/, override with $CLAUDE_DOC_HOME). Scans the codebase to extract endpoints, integrations, dependencies, and key configuration. Use when starting a new service, after adding a new endpoint or integration, or when the catalog is out of date. `/sdd:doc-catalog list` shows what is already registered.",
+  "content_fingerprint": "65db675a7475a11b7956c8e9c9ec7e1a797123f9e4949c0daacd2358cbb478f2"
 }

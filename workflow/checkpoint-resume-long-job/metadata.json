@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Tibsfox/gsd-skill-creator/blob/main/examples/skills/gsd-meta/checkpoint-resume-long-job/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d0d8edc4b61092aea02db0936998fcfe4baca5fce7df0985bac45165c1d94f3e",
+  "description": "Persist progress for long-running jobs (batched LLM calls, large ingestions, multi-hour syncs) so that a context reset, crash, or interrupt doesn't lose work. Use whenever a job iterates over N items "
 }

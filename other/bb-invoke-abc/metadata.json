@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "**[DEPRECATED in v1.3 \u2014 common path uses bb-invoke-yosys' embedded ABC]** \u72ec\u7acb\u8c03\u7528 ABC\uff08Berkeley Logic Synthesis\uff09\u505a\u903b\u8f91\u4f18\u5316\uff0c\u4ec5 `mapping_effort=high` \u7b49\u9ad8\u7ea7\u8c03\u4f18\u573a\u666f\u4f7f\u7528\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bb-invoke-yosys `chain_to_abc=true` \u65f6\uff1b(2) \u663e\u5f0f /bb-invoke-abc \u8c03\u8bd5\u3002"
+  "description": "**[DEPRECATED in v1.3 — common path uses bb-invoke-yosys' embedded ABC]** 独立调用 ABC（Berkeley Logic Synthesis）做逻辑优化，仅 `mapping_effort=high` 等高级调优场景使用。触发场景：(1) bb-invoke-yosys `chain_to_abc=true` 时；(2) 显式 /bb-invoke-abc 调试。",
+  "content_fingerprint": "c097d493b138a986d9cbd08a53f50c7741be656da595ecafeede5e2061f73dd2"
 }

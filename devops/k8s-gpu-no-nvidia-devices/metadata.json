@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/k8s-gpu-no-nvidia-devices/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "2b56267b0e80d99925c221ad8cf0a4ad542224eae4eba8f46b77635668a83ccb",
+  "description": "Fix for Kubernetes GPU pods showing \"CUDA not supported\" or no /dev/nvidia* devices\ndespite nvidia.com/gpu resource allocation. Use when: (1) container runs but torch.cuda.is_available()\nreturns False"
 }

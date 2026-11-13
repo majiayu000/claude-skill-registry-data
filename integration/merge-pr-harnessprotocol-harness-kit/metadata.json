@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/harnessprotocol/harness-kit/blob/main/plugins/merge-pr/skills/merge-pr/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "94dc576150164fbe8372ac68a80f80ebbda9e8317308902b7f2dd64e5ac74264",
+  "description": "Use when a pull request is ready to merge — verifies CI and review status, syncs with the base branch, confirms with the user, then squash merges and cleans up. Trigger when the user says \"merge this\""
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when an agent needs to write back to a provider through a relayfile mount (Linear comments, GitHub issues, Slack messages, Notion pages, etc.). Covers the file-creation writeback contract (drop JSON at the canonical path \u2192 provider mutation), discovering paths and schemas via .schema.json siblings, idempotency keys, writeback status with relayfile writeback list and relayfile status, and recovering from dead-lettered writes under .relay/dead-letter/. NOT for read operations or for direct API calls \u2014 relayfile mediates the writeback so you can ignore provider auth, retries, and rate limits."
+  "description": "Use when an agent needs to write back to a provider through a relayfile mount (Linear comments, GitHub issues, Slack messages, Notion pages, etc.). Covers the file-creation writeback contract (drop JSON at the canonical path → provider mutation), discovering paths and schemas via .schema.json siblings, idempotency keys, writeback status with relayfile writeback list and relayfile status, and recovering from dead-lettered writes under .relay/dead-letter/. NOT for read operations or for direct API calls — relayfile mediates the writeback so you can ignore provider auth, retries, and rate limits.",
+  "content_fingerprint": "2842e987c6a7f76ec6e2a6d284163c2421d60d147f8bdb0ff99211a71f1d5951"
 }

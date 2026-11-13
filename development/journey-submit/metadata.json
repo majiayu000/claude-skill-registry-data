@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use as the final stage of the Butterbase journey when hackathon_mode is true and journey-deploy has passed. Resolves which hackathon to submit to (asking the user when multiple are open), walks every field in the hackathon's returned field_schema with the user one at a time, then calls prep_and_submit_hackathon_entry. Writes the receipt to docs/butterbase/05-submission.md."
+  "description": "Use as the final stage of the Butterbase journey when hackathon_mode is true and journey-deploy has passed. Resolves which hackathon to submit to (asking the user when multiple are open), walks every field in the hackathon's returned field_schema with the user one at a time, then calls prep_and_submit_hackathon_entry. Writes the receipt to docs/butterbase/05-submission.md.",
+  "content_fingerprint": "fa180ef58b7af5b91f7a1e6e32a1252b55a313a71aba0c75a24a72f449cc2a63"
 }

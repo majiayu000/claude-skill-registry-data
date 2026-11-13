@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix Elixir/Erlang AST processing bugs in Grafema beam-analyzer. Use when:\n(1) Elixir parser returns MODULE node but 0 functions/calls \u2014 body nesting issue,\n(2) Erlang parser crashes with \"cannot convert list to string\" on OTP 26+ \u2014 location\nformat changed from integer to keyword list, (3) pipe operator |> creates spurious\nCALL nodes instead of desugared function calls \u2014 clause ordering bug,\n(4) multi-module .ex files return only the first module \u2014 missing __block__ handler,\n(5) installing Erlang/Elixir on macOS with outdated Xcode/Clang."
+  "description": "Fix Elixir/Erlang AST processing bugs in Grafema beam-analyzer. Use when:\n(1) Elixir parser returns MODULE node but 0 functions/calls — body nesting issue,\n(2) Erlang parser crashes with \"cannot convert list to string\" on OTP 26+ — location\nformat changed from integer to keyword list, (3) pipe operator |> creates spurious\nCALL nodes instead of desugared function calls — clause ordering bug,\n(4) multi-module .ex files return only the first module — missing __block__ handler,\n(5) installing Erlang/Elixir on macOS with outdated Xcode/Clang.",
+  "content_fingerprint": "d128e8c67bc3735e12fd84b39b8085eabdbb608f69f5222925c786b0d734fc81"
 }

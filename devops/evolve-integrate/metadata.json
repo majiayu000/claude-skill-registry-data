@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Integrate AICP with new external systems \u2014 fleet projects (openfleet via cluster peering), cloud backends (new OpenRouter model, new Anthropic feature), monitoring stack (new Prometheus exporter, new Grafana dashboard), CI/CD (GitHub Actions, GitLab CI). Adds capability rather than evolves existing \u2014 use this when bringing in a NEW integration; use `evolve-api-version` for evolving an existing API. Loads when the operator says \"integrate AICP with X\" / \"add a new backend\" / \"connect to Y system\" / \"add Z to monitoring\"."
+  "description": "Integrate AICP with new external systems — fleet projects (openfleet via cluster peering), cloud backends (new OpenRouter model, new Anthropic feature), monitoring stack (new Prometheus exporter, new Grafana dashboard), CI/CD (GitHub Actions, GitLab CI). Adds capability rather than evolves existing — use this when bringing in a NEW integration; use `evolve-api-version` for evolving an existing API. Loads when the operator says \"integrate AICP with X\" / \"add a new backend\" / \"connect to Y system\" / \"add Z to monitoring\".",
+  "content_fingerprint": "2e9266d2ab45cff3f27f80471204d50337ff22a1ab8ce21a1b1c3f717c720a24"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Profile llama.cpp decode on the gfx1151 ROCm GPU with rocprofv3 kernel traces, then attribute a performance regression to individual kernel categories. Use when the user asks which kernels regressed, wants a kernel/dispatch breakdown of decode, asks to profile a KV-cache or quantization change, wants ms-per-token per kernel category, or asks to compare two llama-server variants at the kernel level rather than by TPS alone."
+  "description": "Profile llama.cpp decode on the gfx1151 ROCm GPU with rocprofv3 kernel traces, then attribute a performance regression to individual kernel categories. Use when the user asks which kernels regressed, wants a kernel/dispatch breakdown of decode, asks to profile a KV-cache or quantization change, wants ms-per-token per kernel category, or asks to compare two llama-server variants at the kernel level rather than by TPS alone.",
+  "content_fingerprint": "1e49f3282f63aa8091f6ecf1db750fa3bf7dc393dc42e6742cb174afe9c65a42"
 }

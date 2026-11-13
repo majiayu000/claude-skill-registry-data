@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/chrisallenlane/claude-swe-workflows/blob/master/skills/release/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f495b3dc6bb466c327262077e831cb4a751879bc52d50ab8b18d2c3fbd823a7e",
+  "description": "Cuts a project release. Discovers the project's release procedure (Makefile target, RELEASING.md, CI workflow, etc.) and offers to capture it durably if missing. Always invokes /review-release as pref"
 }

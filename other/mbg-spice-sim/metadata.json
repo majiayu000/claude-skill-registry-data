@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs ngspice simulations for analog blocks in this repository and turns the raw output into readable data, using mbg.simulation (run_spice, raw_to_csv, parse_dat). Use when the user asks to simulate a netlist, measure gain, bandwidth, delay or offset, sweep corners, or compare pre-layout against post-layout behaviour. Do not use it to generate layout (use mbg-spice-to-gds) or to run DRC, LVS or PEX (use mbg-ic-verify)."
+  "description": "Runs ngspice simulations for analog blocks in this repository and turns the raw output into readable data, using mbg.simulation (run_spice, raw_to_csv, parse_dat). Use when the user asks to simulate a netlist, measure gain, bandwidth, delay or offset, sweep corners, or compare pre-layout against post-layout behaviour. Do not use it to generate layout (use mbg-spice-to-gds) or to run DRC, LVS or PEX (use mbg-ic-verify).",
+  "content_fingerprint": "a5427aebace8aee21c9bb99391e6e541b4784ddce48c0a5792ec568ff1d4d4e4"
 }

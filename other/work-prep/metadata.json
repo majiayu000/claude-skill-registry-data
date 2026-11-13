@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Orchestrates the full preparation workflow for a ticket. Calls /flagrare:intake (which gathers context from Jira/Notion/Figma, grounds the brief in the codebase via /flagrare:codebase-explore, then asks codebase-informed clarifying questions), then hands the codebase-grounded brief to /flagrare:atdd-plan for a TDD-first implementation plan. Use when the user shares a ticket key (e.g. SKU-123), says 'start work on', 'pick up ticket', 'plan this feature', 'work prep', or provides a Jira URL."
+  "description": "Orchestrates the full preparation workflow for a ticket. Calls /flagrare:intake (which gathers context from Jira/Notion/Figma, grounds the brief in the codebase via /flagrare:codebase-explore, then asks codebase-informed clarifying questions), then hands the codebase-grounded brief to /flagrare:atdd-plan for a TDD-first implementation plan. Use when the user shares a ticket key (e.g. SKU-123), says 'start work on', 'pick up ticket', 'plan this feature', 'work prep', or provides a Jira URL.",
+  "content_fingerprint": "fe89b98c670820a0972dce9514bd4b0ae4150837f2143be623085a7ccda5410b"
 }

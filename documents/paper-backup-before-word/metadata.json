@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728\u7f16\u8f91\u4efb\u4f55 .docx / Word \u6587\u4ef6\u4e4b\u524d\uff0c\u5fc5\u987b\u5148\u7528 cp \u521b\u5efa\u5e26\u65f6\u95f4\u6233\u7684\u5907\u4efd\u526f\u672c\uff0c\n\u5e76\u4f18\u5148\u8bc4\u4f30\"\u7528 markitdown \u8f6c LaTeX \u540e\u518d\u6539\"\u662f\u5426\u66f4\u5b89\u5168\uff1b\n\u53ea\u6709\u5728\u786e\u8ba4\u5fc5\u987b\u76f4\u63a5\u7f16\u8f91 .docx \u65f6\u624d\u52a8\u624b\uff0c\u4e14\u6539\u5b8c\u540e\u5fc5\u987b\u63d0\u9192\u7528\u6237\u5148\u6253\u5f00 Word \u9a8c\u8bc1\u5b8c\u6574\u6027\u3002\nUse when \u7528\u6237\u8bf7\u6c42\u4fee\u6539\u3001\u6da6\u8272\u3001\u6539\u5199\u3001\u91cd\u6392\u4efb\u4f55 .docx \u6587\u4ef6\u3001\n\u6216\u8c03\u7528 /docx skill\u3001\u6216 Edit/Write \u64cd\u4f5c\u76ee\u6807\u662f .docx \u6587\u4ef6\u65f6\u3002"
+  "description": "在编辑任何 .docx / Word 文件之前，必须先用 cp 创建带时间戳的备份副本，\n并优先评估\"用 markitdown 转 LaTeX 后再改\"是否更安全；\n只有在确认必须直接编辑 .docx 时才动手，且改完后必须提醒用户先打开 Word 验证完整性。\nUse when 用户请求修改、润色、改写、重排任何 .docx 文件、\n或调用 /docx skill、或 Edit/Write 操作目标是 .docx 文件时。",
+  "content_fingerprint": "ef33e849674d6810d5582dcd2bf61fa45f4a115fd3f16dc7b85bedc86ec2a0d7"
 }

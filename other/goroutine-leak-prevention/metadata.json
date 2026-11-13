@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when designing any io.Closer / Close(ctx) / Stop() type, adding background workers/tickers/pubsub listeners, writing integration tests that exercise shutdown, or responding to an sdk-leak-hunter G63 failure. Covers cleanup contracts, goleak.VerifyTestMain wiring, leaky fan-out patterns (errgroup / sync.WaitGroup / context.WithCancel without Wait/cancel), and the shipping rules that prevent regressions. Triggers: goleak, goroutine leak, VerifyTestMain, Close() leak, context cancellation leak, fan-out leak, errgroup leak."
+  "description": "Use this when designing any io.Closer / Close(ctx) / Stop() type, adding background workers/tickers/pubsub listeners, writing integration tests that exercise shutdown, or responding to an sdk-leak-hunter G63 failure. Covers cleanup contracts, goleak.VerifyTestMain wiring, leaky fan-out patterns (errgroup / sync.WaitGroup / context.WithCancel without Wait/cancel), and the shipping rules that prevent regressions. Triggers: goleak, goroutine leak, VerifyTestMain, Close() leak, context cancellation leak, fan-out leak, errgroup leak.",
+  "content_fingerprint": "bd26e5d7c4525a677d458a677894b43152f2e471c7e526db633c339ece90c8dd"
 }

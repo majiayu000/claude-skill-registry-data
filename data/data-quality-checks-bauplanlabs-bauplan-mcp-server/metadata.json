@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/BauplanLabs/bauplan-mcp-server/blob/main/skills/data-quality-checks/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "aad15ae65fc7167f5d99ed985688ea672eb16f52d747a43e200545baa24de170",
+  "description": "Generates data quality check code for bauplan pipelines and ingestion workflows. Invoked by the data-pipeline and safe-ingestion skills, or directly by the user. Produces expectations.py for pipelines"
 }

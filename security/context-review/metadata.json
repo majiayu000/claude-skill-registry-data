@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "security-scan\u7d50\u679c\u306e\u66d6\u6627\u306a\u9805\u76ee\u3092\u30e6\u30fc\u30b6\u30fc\u306b\u8cea\u554f\u3057\u3066\u78ba\u8a8d\u3059\u308b\u5bfe\u8a71\u578b\u30ec\u30d3\u30e5\u30fc\u3002\u8a8d\u8a3c\u8981\u5426\u30fb\u30a8\u30e9\u30fc\u51e6\u7406\u30fb\u30c7\u30fc\u30bf\u9732\u51fa\u30fb\u30d3\u30b8\u30cd\u30b9\u30ed\u30b8\u30c3\u30af\u3092\u9078\u629e\u80a2\u5f62\u5f0f\u30671\u554f\u305a\u3064\u78ba\u8a8d\u3057\u3001excluded/confirmed/needs_review\u306b\u5206\u985e\u3002\u300c\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u30ec\u30d3\u30e5\u30fc\u300d\u300ccontext review\u300d\u300c\u8aa4\u691c\u77e5\u3092\u78ba\u8a8d\u300d\u300c\u30b9\u30ad\u30e3\u30f3\u7d50\u679c\u3092\u78ba\u8a8d\u3057\u305f\u3044\u300d\u3067\u8d77\u52d5\u3002Do NOT use for \u660e\u78ba\u306a\u8aa4\u691c\u77e5\u306e\u81ea\u52d5\u9664\u5916\uff08false-positive-filter agent \u304c\u62c5\u5f53\u3001\u30e6\u30fc\u30b6\u30fc\u8d77\u52d5\u4e0d\u53ef\uff09\u3002"
+  "description": "security-scan結果の曖昧な項目をユーザーに質問して確認する対話型レビュー。認証要否・エラー処理・データ露出・ビジネスロジックを選択肢形式で1問ずつ確認し、excluded/confirmed/needs_reviewに分類。「コンテキストレビュー」「context review」「誤検知を確認」「スキャン結果を確認したい」で起動。Do NOT use for 明確な誤検知の自動除外（false-positive-filter agent が担当、ユーザー起動不可）。",
+  "content_fingerprint": "7ddb7b9def65c1f5f108e20a592f8e6cf26f28f158ca9b74368a4a8b0358638b"
 }

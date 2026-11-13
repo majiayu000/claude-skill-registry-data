@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reranking retrieved documents with cross-encoders and LLM rerankers. Cohere Rerank\nv3, Voyage rerank-2, BGE reranker, ColBERT late interaction, Jina reranker. Cost\nand latency tradeoffs, top-K in / top-N out strategy.\n\nUSE WHEN: user mentions \"rerank\", \"reranker\", \"cross-encoder\", \"Cohere Rerank\",\n\"Voyage rerank\", \"BGE reranker\", \"ColBERT\", \"Jina reranker\", \"bi-encoder\"\n\nDO NOT USE FOR: initial retrieval - use `advanced-retrieval` or `hybrid-search`;\nquery rewriting - use `query-transformations`; agent decisions - use `agentic-rag`"
+  "description": "Reranking retrieved documents with cross-encoders and LLM rerankers. Cohere Rerank\nv3, Voyage rerank-2, BGE reranker, ColBERT late interaction, Jina reranker. Cost\nand latency tradeoffs, top-K in / top-N out strategy.\n\nUSE WHEN: user mentions \"rerank\", \"reranker\", \"cross-encoder\", \"Cohere Rerank\",\n\"Voyage rerank\", \"BGE reranker\", \"ColBERT\", \"Jina reranker\", \"bi-encoder\"\n\nDO NOT USE FOR: initial retrieval - use `advanced-retrieval` or `hybrid-search`;\nquery rewriting - use `query-transformations`; agent decisions - use `agentic-rag`",
+  "content_fingerprint": "54a090263a0f78d77a8674d9c0109865c4499cfff2ce63cdd5c1c56d83d1bb41"
 }

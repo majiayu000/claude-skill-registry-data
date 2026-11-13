@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/OpenAEC-Foundation/n8n-Claude-Skill-Package/blob/main/skills/source/n8n-errors/n8n-errors-expressions/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c93df84c9cff0b9ae50e14de42abcd2cdb9224e6e2ed295059411c530bc539cb",
+  "description": "Use when debugging expression evaluation failures or undefined references in n8n workflows. Prevents data access errors by mapping every expression variable to its valid context. Covers undefined $jso"
 }

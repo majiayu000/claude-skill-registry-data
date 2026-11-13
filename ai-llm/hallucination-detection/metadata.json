@@ -1,5 +1,5 @@
 {
-  "name": "\u5e7b\u89c9\u68c0\u6d4bSkill",
+  "name": "幻觉检测Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/hallucination-detection/SKILL.md",
   "github_branch": "main",
@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "AI \u56de\u7b54\u4e2d\u5e7b\u89c9\u95ee\u9898\u7684\u68c0\u6d4b\u65b9\u6cd5(\u65e0\u4f9d\u636e\u9648\u8ff0\u3001\u7f16\u9020\u5f15\u7528\u3001\u4e8b\u5b9e\u9519\u8bef)\u3002\u5f53\u9700\u8981\u68c0\u6d4b\u5927\u6a21\u578b\u5e94\u7528\u8f93\u51fa\u662f\u5426\u5b58\u5728\u5e7b\u89c9\u65f6\u4f7f\u7528\u3002"
+  "description": "AI 回答中幻觉问题的检测方法(无依据陈述、编造引用、事实错误)。当需要检测大模型应用输出是否存在幻觉时使用。",
+  "content_fingerprint": "18324e22f67cdc76c463987c7ee8d4cfb074e08a13fd8897e386bed2e3e2af33"
 }

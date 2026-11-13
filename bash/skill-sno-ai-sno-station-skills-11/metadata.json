@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read remaining Claude Code and Codex subscription quota without spending it. Use when the user asks or after a vendor rejects work for quota; a caller such as rotate-agent may also arm a scheduled read on purpose. Never poll on your own; after a `wait` verdict, pass the reset wait to `sno heartbeat` and re-read once when it ends."
+  "description": "Read remaining Claude Code and Codex subscription quota without spending it. Use when the user asks or after a vendor rejects work for quota; a caller such as rotate-agent may also arm a scheduled read on purpose. Never poll on your own; after a `wait` verdict, pass the reset wait to `sno heartbeat` and re-read once when it ends.",
+  "content_fingerprint": "6e7b0d25605db38bbd8015285b61f750325b7c270d6065dc2d07374a1879d5e4"
 }

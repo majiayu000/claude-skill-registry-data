@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dadbodgeoff/drift/blob/main/skills/distributed-lock/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "30db72cc14c9dbeb1676cac1ab067bc1267c13350250b94fd9ea48d3322a13e8",
+  "description": "Prevent race conditions across multiple instances. Only one instance can hold a lock at a time. Automatic expiration prevents deadlocks."
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diagnose and fix failures in a built third-party `.ppmplugin` control: crashes, silent no-ops, PCF error outputs, or incorrect behavior. Uses the reported symptom, `shared/error-codes.md`, and file-level evidence to trace the manifest, Android/iOS modules, PCF dispatch, and build configuration. Produces a ranked diagnosis, asks for approval, then applies a surgical fix while keeping the committed manifest and affected contracts synchronized. Re-validates manifest changes through /generate-ppmplugin-manifest."
+  "description": "Diagnose and fix failures in a built third-party `.ppmplugin` control: crashes, silent no-ops, PCF error outputs, or incorrect behavior. Uses the reported symptom, `shared/error-codes.md`, and file-level evidence to trace the manifest, Android/iOS modules, PCF dispatch, and build configuration. Produces a ranked diagnosis, asks for approval, then applies a surgical fix while keeping the committed manifest and affected contracts synchronized. Re-validates manifest changes through /generate-ppmplugin-manifest.",
+  "content_fingerprint": "b94ad6145c52539ef74c7bdc0ab1eb29e0d41dd9be149b4e2537707e553904c3"
 }

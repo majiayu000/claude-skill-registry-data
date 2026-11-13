@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants the LLM to do its own ML research: a fully-autonomous loop that hacks the training code, runs it, and keeps changes that lower a single scalar metric (e.g. val_bpb). One agent proposes one change at a time, runs training in the user's env, keeps it only if the metric improves (advancing a git branch) else reverts, and loops forever until the human interrupts. A faithful adaptation of Karpathy's autoresearch. Not for the analysis-first variant that profiles before editing (that is ml-autoresearch), and not for a budgeted, plateau-stopping refactor."
+  "description": "Use when the user wants the LLM to do its own ML research: a fully-autonomous loop that hacks the training code, runs it, and keeps changes that lower a single scalar metric (e.g. val_bpb). One agent proposes one change at a time, runs training in the user's env, keeps it only if the metric improves (advancing a git branch) else reverts, and loops forever until the human interrupts. A faithful adaptation of Karpathy's autoresearch. Not for the analysis-first variant that profiles before editing (that is ml-autoresearch), and not for a budgeted, plateau-stopping refactor.",
+  "content_fingerprint": "b474932a243161de19d16dc20abea1b1f02e82789fed9686ccbb14f29bdf2540"
 }

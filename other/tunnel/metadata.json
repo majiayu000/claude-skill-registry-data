@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Network reachability and pivoting after an operator already has a foothold. Use to make previously unreachable hosts, subnets, services or listener directions reachable via Ligolo-ng, Chisel, GOST v3, SSH/native forwarding, socat/netsh, Microsoft Dev Tunnels, DNS/HTTP/QUIC fallback transports, and multi-hop routing. This module does not exploit services, obtain credentials, or own C2/persistence. Its success condition is changed reachability: the operator can route/connect to the intended internal network/service through the selected foothold."
+  "description": "Network reachability and pivoting after an operator already has a foothold. Use to make previously unreachable hosts, subnets, services or listener directions reachable via Ligolo-ng, Chisel, GOST v3, SSH/native forwarding, socat/netsh, Microsoft Dev Tunnels, DNS/HTTP/QUIC fallback transports, and multi-hop routing. This module does not exploit services, obtain credentials, or own C2/persistence. Its success condition is changed reachability: the operator can route/connect to the intended internal network/service through the selected foothold.",
+  "content_fingerprint": "3c73c21b5733cb430f7e2397f631ae19f470acdef2ed7b3a25aea704aeaad5fb"
 }

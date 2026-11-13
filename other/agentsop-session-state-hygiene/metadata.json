@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decision protocol for managing the context/session state of an AI coding tool:\nwhen to /clear, when to keep context, and how to detect \"context bleed\" \u2014 the\nfailure mode where stale conversation history biases the model against the\ncurrent task. Surfaces a discipline that Aider (/clear), Claude Code (/clear),\nCrewAI (memory=False, re-instantiate), and LangGraph (new thread_id, subgraph\nisolation) all encode separately but none name as a skill."
+  "description": "Decision protocol for managing the context/session state of an AI coding tool:\nwhen to /clear, when to keep context, and how to detect \"context bleed\" — the\nfailure mode where stale conversation history biases the model against the\ncurrent task. Surfaces a discipline that Aider (/clear), Claude Code (/clear),\nCrewAI (memory=False, re-instantiate), and LangGraph (new thread_id, subgraph\nisolation) all encode separately but none name as a skill.",
+  "content_fingerprint": "de11f89f1d3bf1eda605645d8489fbbaee1c0dcbe1b9653786883391d2bbe6ab"
 }

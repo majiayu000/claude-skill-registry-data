@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Plan-driven implementation in Sage/Acorn \u2014 reads docs/plans/ directory, implements components from approved sub-plans, runs scaffold generators (lando acorn acf:block), commits incrementally, auto-invokes block-scaffolding per ACF block, runs lando flush and lando theme-build after changes; full PR workflow with sage-reviewer gate. Invoke for: \"/building\", \"implement from the plan\", \"implement from the plan\", \"build from the plan\", \"execute the plan\", \"start building\", \"code this feature\". Skip when: there is no approved plan yet \u2014 run /architecture-discovery then /plan-generator first."
+  "description": "Plan-driven implementation in Sage/Acorn — reads docs/plans/ directory, implements components from approved sub-plans, runs scaffold generators (lando acorn acf:block), commits incrementally, auto-invokes block-scaffolding per ACF block, runs lando flush and lando theme-build after changes; full PR workflow with sage-reviewer gate. Invoke for: \"/building\", \"implement from the plan\", \"implement from the plan\", \"build from the plan\", \"execute the plan\", \"start building\", \"code this feature\". Skip when: there is no approved plan yet — run /architecture-discovery then /plan-generator first.",
+  "content_fingerprint": "99a330bb3a1c785a06c1008a6f8f17dc22d8d22947c7a6364698daec5c877c51"
 }

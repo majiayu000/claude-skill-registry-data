@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when designing or reviewing Apex actions exposed to Flow or similar orchestration layers via `@InvocableMethod`, especially around wrapper DTOs, bulk-safe list contracts, and error behavior. Triggers: 'InvocableMethod', 'InvocableVariable', 'Flow Apex action', 'bulk-safe invocable', 'Apex action input/output', 'callout=true', 'flowTransactionModel', 'Invocable.Action', 'action returns wrong record', 'output list size'. NOT for wiring the action into Flow Builder \u2014 use flow/flow-action-framework. NOT for an Agentforce agent action \u2014 use agentforce/custom-agent-actions-apex."
+  "description": "Use when designing or reviewing Apex actions exposed to Flow or similar orchestration layers via `@InvocableMethod`, especially around wrapper DTOs, bulk-safe list contracts, and error behavior. Triggers: 'InvocableMethod', 'InvocableVariable', 'Flow Apex action', 'bulk-safe invocable', 'Apex action input/output', 'callout=true', 'flowTransactionModel', 'Invocable.Action', 'action returns wrong record', 'output list size'. NOT for wiring the action into Flow Builder — use flow/flow-action-framework. NOT for an Agentforce agent action — use agentforce/custom-agent-actions-apex.",
+  "content_fingerprint": "a81b56018355d08721e10b621371540e7570ed32d2cdb25bf9707a9ddb027605"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "A standardized CLI wrapper for RDKit 3D/2D conformer generation that samples multiple conformers per molecule (ETKDGv3, default 10), optimizes each with a force field (MMFF94s/UFF), keeps the lowest-energy conformer, automatically falls back to 2D layout on total embedding failure with a printed warning, and writes results to SDF or XYZ format. USE WHEN you need to generate 3D (or 2D fallback) molecular geometries from SMILES datasets (.csv/.smi) for downstream tasks such as docking, visualization, or 3D-descriptor computation."
+  "description": "A standardized CLI wrapper for RDKit 3D/2D conformer generation that samples multiple conformers per molecule (ETKDGv3, default 10), optimizes each with a force field (MMFF94s/UFF), keeps the lowest-energy conformer, automatically falls back to 2D layout on total embedding failure with a printed warning, and writes results to SDF or XYZ format. USE WHEN you need to generate 3D (or 2D fallback) molecular geometries from SMILES datasets (.csv/.smi) for downstream tasks such as docking, visualization, or 3D-descriptor computation.",
+  "content_fingerprint": "1d6ae5c9806f9e333a2d9c1091b3ffa171cf0b6d6eb9d689b14cbeaa3e3f43ee"
 }

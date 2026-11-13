@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5bf9\u6574\u4f53\u529f\u80fd\u6216\u5b8c\u6574\u6a21\u5757\u505a\u4ea4\u4ed8\u524d\u9a8c\u6536\uff1a\u4ee5\u7528\u6237\u786e\u8ba4\u8fc7\u7684\u9a8c\u6536\u6307\u6807\u6e05\u5355\u9010\u6761\u6838\u9a8c\uff08\u5df2\u6709\u6d4b\u8bd5\u5957\u4ef6 + \u4e34\u65f6\u573a\u666f\u6d4b\u8bd5 + e2e \u771f\u5b9e\u94fe\u8def\u4e09\u5c42\u8bc1\u636e\uff09\uff0c\u53ea\u5224\u5b9a\u4e0d\u6539\u4ea7\u54c1\u4ee3\u7801\uff0c\u4ea7\u51fa\u951a\u5b9a\u5206\u652f\u4e0e commit \u7684\u9a8c\u6536\u62a5\u544a\uff0c\u652f\u6301\u590d\u9a8c\u3002\u4ec5\u7528\u6237\u660e\u786e\u6307\u5b9a\u65f6\u89e6\u53d1\uff08\"\u9a8c\u6536\u8fd9\u4e2a\u529f\u80fd/\u6a21\u5757\"\u3001\"\u505a\u9a8c\u6536\"\u3001\"\u9a8c\u6536\u6d4b\u8bd5 / acceptance test\"\u3001\"\u590d\u9a8c\"\uff09\uff1b\u53ea\u95ee\"\u6d41\u7a0b\u8dd1\u901a\u6ca1\u6709\"\u7528 e2e-testing\u3002"
+  "description": "对整体功能或完整模块做交付前验收：以用户确认过的验收指标清单逐条核验（已有测试套件 + 临时场景测试 + e2e 真实链路三层证据），只判定不改产品代码，产出锚定分支与 commit 的验收报告，支持复验。仅用户明确指定时触发（\"验收这个功能/模块\"、\"做验收\"、\"验收测试 / acceptance test\"、\"复验\"）；只问\"流程跑通没有\"用 e2e-testing。",
+  "content_fingerprint": "b1fd405ab1711c5fc51c87d7551255a7aacf6c631b8f4284346be20853146063"
 }

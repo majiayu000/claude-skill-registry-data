@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Active Directory security audit using the MITRE ATT&CK framework. Full domain enumeration, trust mapping, GPO analysis, ACL abuse paths, ADCS attacks (ESC1-ESC8), delegation abuse (constrained/unconstrained/RBCD), fine-grained password policies, LAPS deployment, service account security, and Kerberos configuration.\n\nUses enum4linux-ng, netexec, impacket, ldapsearch, certipy-ad, bloodhound-python, and rpcclient. Produces attack path diagrams, prioritized risk register, and PoCs. Chains into /gh-export for issue filing."
+  "description": "Active Directory security audit using the MITRE ATT&CK framework. Full domain enumeration, trust mapping, GPO analysis, ACL abuse paths, ADCS attacks (ESC1-ESC8), delegation abuse (constrained/unconstrained/RBCD), fine-grained password policies, LAPS deployment, service account security, and Kerberos configuration.\n\nUses enum4linux-ng, netexec, impacket, ldapsearch, certipy-ad, bloodhound-python, and rpcclient. Produces attack path diagrams, prioritized risk register, and PoCs. Chains into /gh-export for issue filing.",
+  "content_fingerprint": "797b81645b9575e318e729ebf404094ee226a12d345dc4cd1a2af5d01cccddfe"
 }

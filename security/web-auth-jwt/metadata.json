@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Attack JWT/session authentication. Load when auth uses a JWT (three base64url parts, header.payload.signature), Authorization: Bearer, or you see alg/kid/jku fields. Signals: eyJ... tokens, \"alg\":\"none\"/\"HS256\"/\"RS256\", kid header, JWKS endpoints, role/admin claims."
+  "description": "Attack JWT/session authentication. Load when auth uses a JWT (three base64url parts, header.payload.signature), Authorization: Bearer, or you see alg/kid/jku fields. Signals: eyJ... tokens, \"alg\":\"none\"/\"HS256\"/\"RS256\", kid header, JWKS endpoints, role/admin claims.",
+  "content_fingerprint": "7fffe5a247675d37d1c1282b1c560fd1afcfaaac716bbabeeecf3329688fe24e"
 }

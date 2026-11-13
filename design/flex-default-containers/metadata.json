@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix wrapper elements whose default block layout puts inline children in an inline formatting context and leaks line-height leading into the box. Use when a card header, label strip, status row, or other wrapper around spans, badges, icons, or SVGs renders taller than padding plus font size; when an icon or label looks vertically off-center; or when someone changes a child to display block to compensate. Make the wrapper's flex or grid layout explicit even when the user does not mention baselines, leading, or inline formatting contexts."
+  "description": "Fix wrapper elements whose default block layout puts inline children in an inline formatting context and leaks line-height leading into the box. Use when a card header, label strip, status row, or other wrapper around spans, badges, icons, or SVGs renders taller than padding plus font size; when an icon or label looks vertically off-center; or when someone changes a child to display block to compensate. Make the wrapper's flex or grid layout explicit even when the user does not mention baselines, leading, or inline formatting contexts.",
+  "content_fingerprint": "f46c4da3952888ec8c7734f9f8a2a730ffb509da60a0c5f3fe9a3ee534f28ba8"
 }

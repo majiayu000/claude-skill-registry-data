@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `team-formation` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage team-formation --single`: the engine emits one run-stage directive for team-formation and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `team-formation` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage team-formation --single`: the engine emits one run-stage directive for team-formation and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "c83a1d5916825b268656a38af9b333e6afcf6d98282428d313dc393809bbda3b"
 }

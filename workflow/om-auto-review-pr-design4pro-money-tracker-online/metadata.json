@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review or re-review a PR by number in an isolated worktree. Runs the `om-code-review` skill \u2014 or, for spec-only design PRs, a specification review \u2014 submits approve/request-changes, manages pipeline labels. On changes-requested, the autofix loop (fix/test/validate/re-review until merge-ready) runs on the automation's own PRs or with --autofix; other authors' PRs get review + handoff only. Usage - /om-auto-review-pr <PR-number> [--autofix]"
+  "description": "Review or re-review a PR by number in an isolated worktree. Runs the `om-code-review` skill — or, for spec-only design PRs, a specification review — submits approve/request-changes, manages pipeline labels. On changes-requested, the autofix loop (fix/test/validate/re-review until merge-ready) runs on the automation's own PRs or with --autofix; other authors' PRs get review + handoff only. Usage - /om-auto-review-pr <PR-number> [--autofix]",
+  "content_fingerprint": "6a0448339e793716a63bd1450b3212c378bfaebe7f22a396c7009c69b2f97399"
 }

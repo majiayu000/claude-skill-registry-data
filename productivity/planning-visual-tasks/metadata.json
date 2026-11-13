@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "v1.2 LLM-driven planner. Turns a natural-language instruction into a structured Plan envelope (`contracts/agent/plan.schema.json`) of typed sub-goals (workflow_search \u2192 model_resolve \u2192 comfyui_execute \u2192 llm_transform \u2192 evaluate \u2192 mcp_tool \u2192 checkpoint \u2192 wait_user). Use whenever a user instruction needs routing through the host orchestrator. The legacy v1 keyword router is preserved as a deterministic fallback when no LLM provider is configured."
+  "description": "v1.2 LLM-driven planner. Turns a natural-language instruction into a structured Plan envelope (`contracts/agent/plan.schema.json`) of typed sub-goals (workflow_search → model_resolve → comfyui_execute → llm_transform → evaluate → mcp_tool → checkpoint → wait_user). Use whenever a user instruction needs routing through the host orchestrator. The legacy v1 keyword router is preserved as a deterministic fallback when no LLM provider is configured.",
+  "content_fingerprint": "129326f1d19d5bc7a0a812e7a40b246c274083843ceadf4f664c8fd61d027601"
 }

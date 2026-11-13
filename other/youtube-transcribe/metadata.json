@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "YouTube video transcription and memory workflow. Triggers when user shares a YouTube URL and asks to transcribe, get transcript, extract content, \"\u8f6c\u5f55\", \"transcribe this video\". Downloads audio via yt-dlp (android client to avoid 403, with web fallback), converts with ffmpeg, transcribes with whisper CLI, then saves full transcript + summary to today's memory file."
+  "description": "YouTube video transcription and memory workflow. Triggers when user shares a YouTube URL and asks to transcribe, get transcript, extract content, \"转录\", \"transcribe this video\". Downloads audio via yt-dlp (android client to avoid 403, with web fallback), converts with ffmpeg, transcribes with whisper CLI, then saves full transcript + summary to today's memory file.",
+  "content_fingerprint": "12f1cbfb14ddf349625ac1eb340c0c7566822d4b465dcf96a2838eeb78cf6633"
 }

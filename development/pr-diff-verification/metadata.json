@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Check that a branch's actual diff matches what its commit messages and any subagent report claim, before the commits leave the machine. Use before `git push` of a feature branch, before `gh pr create` or `gh pr merge`, after a subagent reports \"committed N files\", after an amend / rebase / force-push, or when a verification report's headline count looks off. Catches \"commit log wrote but code didn't make it\" accidents. Does NOT read the diff for correctness (that is a Code Reviewer's job) nor own gh / PR mechanics (github-contribution-workflow)."
+  "description": "Check that a branch's actual diff matches what its commit messages and any subagent report claim, before the commits leave the machine. Use before `git push` of a feature branch, before `gh pr create` or `gh pr merge`, after a subagent reports \"committed N files\", after an amend / rebase / force-push, or when a verification report's headline count looks off. Catches \"commit log wrote but code didn't make it\" accidents. Does NOT read the diff for correctness (that is a Code Reviewer's job) nor own gh / PR mechanics (github-contribution-workflow).",
+  "content_fingerprint": "561be1e938f1b97dcc37547f6b6f0b0a0492dd2289019237ff8f469102b2c3a2"
 }

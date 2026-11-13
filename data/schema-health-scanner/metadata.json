@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Database schema health scanner: parses DDL files (.sql, .prisma, ORM models), extracts per-table structural metrics (columns, PKs, FKs, indexes, naming conventions, type consistency), detects anti-patterns (missing PKs, unbounded strings, mixed naming, god tables, missing timestamps, FK without index), then the LLM judges each finding in domain context. Read-only. Audience: Both. Trigger: /schema-health"
+  "description": "Database schema health scanner: parses DDL files (.sql, .prisma, ORM models), extracts per-table structural metrics (columns, PKs, FKs, indexes, naming conventions, type consistency), detects anti-patterns (missing PKs, unbounded strings, mixed naming, god tables, missing timestamps, FK without index), then the LLM judges each finding in domain context. Read-only. Audience: Both. Trigger: /schema-health",
+  "content_fingerprint": "e87b51abf990244ef8088e092b57900a7d0ff6ead6b6c887bffcac35dcbd30c4"
 }

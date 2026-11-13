@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Execute a deployment with pre-flight gates, the deploy itself, post-deploy smoke tests, and a recorded rollback contract. For AICP this means `docker compose up` of LocalAI + activating the right profile (`make profile-use PROFILE=<name>`) + verifying health (`aicp --check`); for sister fleet projects, it's their compose stack + their post-deploy probe. Distinct from `config-deploy` (prepares the config a deployment will USE) and `ops-rollback` (executes a recorded rollback). Loads when the operator says \"deploy\", \"ship it\", \"push to prod/staging\", \"roll out X\", \"release the change\"."
+  "description": "Execute a deployment with pre-flight gates, the deploy itself, post-deploy smoke tests, and a recorded rollback contract. For AICP this means `docker compose up` of LocalAI + activating the right profile (`make profile-use PROFILE=<name>`) + verifying health (`aicp --check`); for sister fleet projects, it's their compose stack + their post-deploy probe. Distinct from `config-deploy` (prepares the config a deployment will USE) and `ops-rollback` (executes a recorded rollback). Loads when the operator says \"deploy\", \"ship it\", \"push to prod/staging\", \"roll out X\", \"release the change\".",
+  "content_fingerprint": "d7a1b13859ea5583792f498614bbae24e25f3a486b61d55f583ccf9cc2d12afa"
 }

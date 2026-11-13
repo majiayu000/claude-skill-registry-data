@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u68c0\u67e5\u5e76\u66f4\u65b0\u82b1\u53d4\u7cfb skills\u3002\u5f53\u7528\u6237\u8bf4\u300c\u68c0\u67e5skill\u66f4\u65b0\u300d\u300c\u66f4\u65b0\u82b1\u53d4\u7684skill\u300d\u300cskill\u662f\u4e0d\u662f\u6700\u65b0\u7684\u300d\u65f6\u89e6\u53d1\uff1b\u5f53\u4f1a\u8bdd\u4e2d\u7528\u5230\u4efb\u4f55\u82b1\u53d4\u7cfb skill\uff08huashu-* / nuwa / darwin / freud / seedance / tramstop / dukou \u7b49\uff09\uff0c\u4e14\u5176\u5b89\u88c5\u76ee\u5f55\u91cc\u7684 .huashu-skill-meta.json \u7684 last_checked \u8ddd\u4eca\u8d85\u8fc7 30 \u5929\uff08\u6216 git \u5b89\u88c5\u7684\u8d85\u8fc7 30 \u5929\u672a fetch\uff09\u65f6\uff0c\u4e5f\u5e94\u4e3b\u52a8\u89e6\u53d1\u4e00\u6b21\u68c0\u67e5\u3002"
+  "description": "检查并更新花叔系 skills。当用户说「检查skill更新」「更新花叔的skill」「skill是不是最新的」时触发；当会话中用到任何花叔系 skill（huashu-* / nuwa / darwin / freud / seedance / tramstop / dukou 等），且其安装目录里的 .huashu-skill-meta.json 的 last_checked 距今超过 30 天（或 git 安装的超过 30 天未 fetch）时，也应主动触发一次检查。",
+  "content_fingerprint": "dbc1fcaffb84e4940454a8f6392755ff0bd6907c2da40e1f97cb2c9e3c7ada9f"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix GraphSnapshot tests blocking CI on every feature PR. Use when:\n(1) every PR fails CI with \"Snapshot mismatch\" despite correct behavior,\n(2) fixing snapshots requires build \u2192 regen \u2192 commit \u2192 wait CI cycle per PR,\n(3) snapshot test in test/unit/*.test.js glob breaks on any intentional change,\n(4) pre-push hook runs pnpm build + snapshots:update on every push (2-3min overhead).\nSolution: move GraphSnapshot.test.js to test/unit/snapshots/ so it's excluded from\nthe *.test.js glob. Run manually via pnpm snapshots:update when needed."
+  "description": "Fix GraphSnapshot tests blocking CI on every feature PR. Use when:\n(1) every PR fails CI with \"Snapshot mismatch\" despite correct behavior,\n(2) fixing snapshots requires build → regen → commit → wait CI cycle per PR,\n(3) snapshot test in test/unit/*.test.js glob breaks on any intentional change,\n(4) pre-push hook runs pnpm build + snapshots:update on every push (2-3min overhead).\nSolution: move GraphSnapshot.test.js to test/unit/snapshots/ so it's excluded from\nthe *.test.js glob. Run manually via pnpm snapshots:update when needed.",
+  "content_fingerprint": "1720eff7beeb5a99a387074187d3f8ce634e6d6edc820ce53780a7ab6b86a61f"
 }

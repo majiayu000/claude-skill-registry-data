@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4f7f\u7528 scrapling \u8fdb\u884c\u7f51\u9875\u6293\u53d6\u548c\u6570\u636e\u63d0\u53d6\u3002\u6839\u636e\u76ee\u6807\u7f51\u7ad9\u7279\u5f81\u81ea\u52a8\u9009\u62e9\u6700\u4f73 Fetcher\uff0c \u751f\u6210\u5e76\u6267\u884c Python \u811a\u672c\u5b8c\u6210\u4efb\u52a1\u3002Use when: (1) \u6293\u53d6/\u722c\u53d6\u7f51\u9875\u5185\u5bb9\u6216\u6570\u636e\uff08scrape, crawl, fetch page, extract data\uff09 (2) \u9700\u8981\u7ed5\u8fc7 Cloudflare/WAF \u7b49\u53cd\u722c\u4fdd\u62a4 (3) \u767b\u5f55\u540e\u6293\u53d6\u53d7\u4fdd\u62a4\u9875\u9762 (4) \u89e3\u6790\u5df2\u6709 HTML \u63d0\u53d6\u7ed3\u6784\u5316\u6570\u636e (5) \u7528\u6237\u63d0\u4f9b URL \u5e76\u8981\u6c42\u83b7\u53d6\u9875\u9762\u5185\u5bb9\u6216\u7279\u5b9a\u5143\u7d20 (6) \u6279\u91cf\u91c7\u96c6\u591a\u4e2a\u9875\u9762"
+  "description": "使用 scrapling 进行网页抓取和数据提取。根据目标网站特征自动选择最佳 Fetcher， 生成并执行 Python 脚本完成任务。Use when: (1) 抓取/爬取网页内容或数据（scrape, crawl, fetch page, extract data） (2) 需要绕过 Cloudflare/WAF 等反爬保护 (3) 登录后抓取受保护页面 (4) 解析已有 HTML 提取结构化数据 (5) 用户提供 URL 并要求获取页面内容或特定元素 (6) 批量采集多个页面",
+  "content_fingerprint": "23985102823fbd956b044aa5bc56e9d2b7d95acfe7dc5da273a0623cf818e275"
 }

@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Tests LLM applications for prompt injection vulnerabilities per OWASP LLM01:2025. Covers direct injection (user input manipulating model behavior) and indirect injection (external content containing hidden instructions). Auto-invoked when reviewing LLM applications that process external content, build RAG pipelines, or accept user input that reaches a language model. Produces a test report with categorized findings and defense recommendations."
+  "description": "Tests LLM applications for prompt injection vulnerabilities per OWASP LLM01:2025. Covers direct injection (user input manipulating model behavior) and indirect injection (external content containing hidden instructions). Auto-invoked when reviewing LLM applications that process external content, build RAG pipelines, or accept user input that reaches a language model. Produces a test report with categorized findings and defense recommendations.",
+  "content_fingerprint": "4c6f64eea2b169d0e7246a688de55a29fd6eb75e114ec6007906c0676c8105b7"
 }

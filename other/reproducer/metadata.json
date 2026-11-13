@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "For a single `<issue-tracker>` issue identifying a code-level\nbug, extract the reporter's example code from the issue body,\nadapt it to run on the current `<default-branch>`, execute via\n`<runtime>`, and compose a `verdict.json` describing the\nobserved behaviour vs the expected failure. Read-only on the\ntracker \u2014 produces evidence, never posts. Invoked by\n`issue-triage` and `issue-reassess`; can also be run standalone."
+  "description": "For a single `<issue-tracker>` issue identifying a code-level\nbug, extract the reporter's example code from the issue body,\nadapt it to run on the current `<default-branch>`, execute via\n`<runtime>`, and compose a `verdict.json` describing the\nobserved behaviour vs the expected failure. Read-only on the\ntracker — produces evidence, never posts. Invoked by\n`issue-triage` and `issue-reassess`; can also be run standalone.",
+  "content_fingerprint": "9703e46f7304581ebcd1d32ed81245641291a53dee64ec3f68780cabda41b9c0"
 }

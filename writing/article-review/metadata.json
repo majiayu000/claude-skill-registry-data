@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f15\u6570\u3067\u6307\u5b9a\u3057\u305f\u8a18\u4e8b\u306e\u30ec\u30d3\u30e5\u30fc\u3092\u884c\u3044\u307e\u3059\u3002\u8a18\u4e8b\u30b9\u30e9\u30c3\u30b0\u3092\u5f15\u6570\u306b\u6e21\u3059\u3068\u3001textlint \u306b\u3088\u308b\u81ea\u52d5\u6821\u6b63\u3068\u8aa4\u5b57\u8131\u5b57\u30fb\u6587\u6cd5\u7684\u306a\u8aa4\u308a\u306e\u6307\u6458\u3092\u884c\u3044\u307e\u3059\u3002/article-review [\u30b9\u30e9\u30c3\u30b0] \u306e\u5f62\u5f0f\u3067\u547c\u3073\u51fa\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u8a18\u4e8b\u3092\u66f8\u3044\u305f\u5f8c\u306e\u30c1\u30a7\u30c3\u30af\u3001\u516c\u958b\u524d\u306e\u6821\u6b63\u3001\u6587\u7ae0\u306e\u54c1\u8cea\u78ba\u8a8d\u306b\u3082\u4f7f\u7528\u3057\u3066\u304f\u3060\u3055\u3044\u3002"
+  "description": "引数で指定した記事のレビューを行います。記事スラッグを引数に渡すと、textlint による自動校正と誤字脱字・文法的な誤りの指摘を行います。/article-review [スラッグ] の形式で呼び出してください。記事を書いた後のチェック、公開前の校正、文章の品質確認にも使用してください。",
+  "content_fingerprint": "79d6f492b94b56e4b9a222f01f031d0f8ef818e902f1834448b568adb2eb3d8a"
 }

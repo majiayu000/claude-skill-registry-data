@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when writing a new React UI component or growing an existing one and the rust-code-analysis complexity gate must pass first time \u2014 symptoms include the metrics target mapped by `make.lint_metrics` reporting lloc_function, nargs_function, cyclomatic, nom_functions_file, lloc_file or halstead_volume over its limit, a component file that has grown past roughly 120 logical lines, a render body doing hook wiring plus styling plus SVG, or a plan to split a component into files before the gate is run."
+  "description": "Use when writing a new React UI component or growing an existing one and the rust-code-analysis complexity gate must pass first time — symptoms include the metrics target mapped by `make.lint_metrics` reporting lloc_function, nargs_function, cyclomatic, nom_functions_file, lloc_file or halstead_volume over its limit, a component file that has grown past roughly 120 logical lines, a render body doing hook wiring plus styling plus SVG, or a plan to split a component into files before the gate is run.",
+  "content_fingerprint": "04138d55060c5062fd14f631fb6332e68308e25b91688b3951dd661c4e688f00"
 }

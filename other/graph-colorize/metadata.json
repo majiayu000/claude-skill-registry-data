@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Color-code the Obsidian graph view by rewriting `.obsidian/graph.json` colorGroups. Use this skill when the user says \"color my graph\", \"color code obsidian\", \"colorize the graph\", \"color the graph by tag\", \"color by category\", \"highlight visibility in graph\", \"make the graph colorful\", \"distinguish tags in graph\", or wants nodes in Obsidian's graph view tinted by tag, folder, or visibility. Generates a `colorGroups` array from the vault's actual tags/categories and merges it into the existing graph.json without clobbering other graph settings. Always backs up first."
+  "description": "Color-code the Obsidian graph view by rewriting `.obsidian/graph.json` colorGroups. Use this skill when the user says \"color my graph\", \"color code obsidian\", \"colorize the graph\", \"color the graph by tag\", \"color by category\", \"highlight visibility in graph\", \"make the graph colorful\", \"distinguish tags in graph\", or wants nodes in Obsidian's graph view tinted by tag, folder, or visibility. Generates a `colorGroups` array from the vault's actual tags/categories and merges it into the existing graph.json without clobbering other graph settings. Always backs up first.",
+  "content_fingerprint": "8e016e2f948b36dcd330240a05a24bab15f9a59ccb45167c2d843f2dbb03e4f4"
 }

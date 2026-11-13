@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ryu-qqq/AuthHub/blob/main/.claude/skills/repository-expert/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "310a97a02169dd370bfb7bf25d1ed64a3bbdfb2761397da9106171c010e62d4e",
+  "description": "Repository 전문가. JpaRepository(Command: save/delete), QueryDslRepository(Query: 4개 메서드),\nAdminQueryDslRepository(Join 허용, DTO Projection), LockRepository(Pessimistic Lock).\nEntity 직접 반환 금지, N+1은 Applic"
 }

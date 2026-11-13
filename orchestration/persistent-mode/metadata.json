@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/buddypia/kaiju-voice/blob/master/.claude/skills/persistent-mode/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c5d8ec5ab91c7062d3fbc428555af5e18bedded1c46f35be0cbf20f26186805d",
+  "description": "プロジェクト プロジェクトの **強制持続モード**.\nralph パターンを Web プロジェクトに合わせて適用.\n\n**核心メカニズム**: Stop Hook + State ファイル基盤の強制反復\n- AIが停止しようとした時にStop Hookがstop-handler.mjsを実行\n- State ファイルがactive=trueならAIが強制的に継続\n- /cancelでState "
 }

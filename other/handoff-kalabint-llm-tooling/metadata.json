@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read OR write the project's session-handoff doc. WRITE mode updates it so a fresh agent can pick up the work (what was built, in-flight files, open questions). LOAD mode reads the doc AND the files it references so YOU get up to speed at the start of a session. Use when the user says \"update handoff\", \"write a handoff\", \"hand off\", or signals a session is wrapping up (\u2192 write); or \"read the handoff\", \"load the handoff\", \"get up to speed\", \"catch me up\", or pastes the doc path at the start of a session (\u2192 load)."
+  "description": "Read OR write the project's session-handoff doc. WRITE mode updates it so a fresh agent can pick up the work (what was built, in-flight files, open questions). LOAD mode reads the doc AND the files it references so YOU get up to speed at the start of a session. Use when the user says \"update handoff\", \"write a handoff\", \"hand off\", or signals a session is wrapping up (→ write); or \"read the handoff\", \"load the handoff\", \"get up to speed\", \"catch me up\", or pastes the doc path at the start of a session (→ load).",
+  "content_fingerprint": "cdf85a70a60a61122df1ffbaf22aea72d343dccc6b082928d5e39b02f46bd4e0"
 }

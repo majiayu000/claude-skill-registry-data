@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reviews CLAP plugin implementations for spec compliance, thread safety, and correctness. Use when the user asks to review a CLAP plugin, audit a CLAP extension, or check whether their process() callback follows the CLAP threading model. Trigger on phrases like \"review my CLAP plugin\", \"check CLAP extension\", \"is my CLAP process() safe\", \"audit my clap_plugin_t\", or when you see clap_plugin_t, clap_process_t, or CLAP extension structs in the code."
+  "description": "Reviews CLAP plugin implementations for spec compliance, thread safety, and correctness. Use when the user asks to review a CLAP plugin, audit a CLAP extension, or check whether their process() callback follows the CLAP threading model. Trigger on phrases like \"review my CLAP plugin\", \"check CLAP extension\", \"is my CLAP process() safe\", \"audit my clap_plugin_t\", or when you see clap_plugin_t, clap_process_t, or CLAP extension structs in the code.",
+  "content_fingerprint": "686a42523c219932fb8db30032cede934d3e41854c9db0932e42eb5571515ada"
 }

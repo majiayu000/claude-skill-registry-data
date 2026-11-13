@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Quantifies urban heat island (UHI) intensity from thermal-infrared remote sensing, identifies high-temperature risk zones and cooling-potential spaces. Invoke when the user mentions \"urban heat island\", \"LST\", \"land surface temperature\", \"\u70ed\u7ea2\u5916\", \"\u57ce\u5e02\u70ed\u5c9b\", \"\u9ad8\u6e29\u98ce\u9669\", \"\u964d\u6e29\u89c4\u5212\", \"\u6781\u7aef\u9ad8\u6e29\", \"\u70ed\u73af\u5883\" or similar. The skill retrieves LST, combines NDVI and building density to grade heat risk, and outputs a UHI intensity map, risk-level map, cooling recommendations and multi-year trend analysis."
+  "description": "Quantifies urban heat island (UHI) intensity from thermal-infrared remote sensing, identifies high-temperature risk zones and cooling-potential spaces. Invoke when the user mentions \"urban heat island\", \"LST\", \"land surface temperature\", \"热红外\", \"城市热岛\", \"高温风险\", \"降温规划\", \"极端高温\", \"热环境\" or similar. The skill retrieves LST, combines NDVI and building density to grade heat risk, and outputs a UHI intensity map, risk-level map, cooling recommendations and multi-year trend analysis.",
+  "content_fingerprint": "f9eb5ec856b15fde1579022618044d8a46791f63c31faeda4860e45d1ddfa779"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Invariant miner: scans for code signals that imply hidden invariants (array[0] without guards, division by computed values, JSON.parse assumptions, Async state-readiness patterns) and presents them to the LLM with context for each. The LLM extracts invariant sentences and judges guaranteed-by-construction vs fragile. Read-only. Audience: Senior. Trigger: /invariants"
+  "description": "Invariant miner: scans for code signals that imply hidden invariants (array[0] without guards, division by computed values, JSON.parse assumptions, Async state-readiness patterns) and presents them to the LLM with context for each. The LLM extracts invariant sentences and judges guaranteed-by-construction vs fragile. Read-only. Audience: Senior. Trigger: /invariants",
+  "content_fingerprint": "caa435d7d826a7ad53f545d4f0c6f9253b2b10a80610143d6a1fc3845d6463f0"
 }

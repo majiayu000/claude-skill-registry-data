@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/blakeox/llm-skills/blob/main/skills/ship/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "2225b7cae2f70ada6731c3a197bd6e8505fd346a88b4efd3310156157960760c",
+  "description": "Pre-flight gate that refuses to ship if things aren't ready. Zero-assumption checklist — treats every branch as guilty until proven shippable. Checks for debug code, secrets, test coverage, PR hygiene"
 }

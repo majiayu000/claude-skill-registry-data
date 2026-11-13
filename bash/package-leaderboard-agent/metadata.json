@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Packages an agent for CARLA Leaderboard submission \u2014 builds the docker image with make_docker.sh (plain or ROS variant), checks the four required roots and the egg layout it assumes, sets the agent/track/routes environment inside the image, and verifies the image can import the stack and load the agent before submission. Use when the user asks to \"build the leaderboard docker image\", \"submit to the leaderboard\", \"package my agent\", or make_docker.sh fails."
+  "description": "Packages an agent for CARLA Leaderboard submission — builds the docker image with make_docker.sh (plain or ROS variant), checks the four required roots and the egg layout it assumes, sets the agent/track/routes environment inside the image, and verifies the image can import the stack and load the agent before submission. Use when the user asks to \"build the leaderboard docker image\", \"submit to the leaderboard\", \"package my agent\", or make_docker.sh fails.",
+  "content_fingerprint": "c158da01c661c0448a18b2d64f7baf2e9990aa346b957748fd75c83a8aa0ea2e"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Drive Codeman, the session manager this agent is running inside, over its HTTP API: list sessions, start worker sessions, send them prompts, block until they finish (wait / wait-output / send-and-wait), read their output, and clean up; where available, message claude workers directly (Claude Code cross-session messaging). Use when asked to orchestrate or parallelize work across Codeman sessions, watch another session, or start and manage workers. Only usable inside a Codeman-managed session (CODEMAN_MUX=1); refuse to act otherwise."
+  "description": "Drive Codeman, the session manager this agent is running inside, over its HTTP API: list sessions, start worker sessions, send them prompts, block until they finish (wait / wait-output / send-and-wait), read their output, and clean up; where available, message claude workers directly (Claude Code cross-session messaging). Use when asked to orchestrate or parallelize work across Codeman sessions, watch another session, or start and manage workers. Only usable inside a Codeman-managed session (CODEMAN_MUX=1); refuse to act otherwise.",
+  "content_fingerprint": "d76c92ac05a4dfe3cd9639dbcbdd75a895cfe0f9ae80720e4b74b10f7893b43b"
 }

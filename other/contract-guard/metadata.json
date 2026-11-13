@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Guard external contracts before changing them. Use BEFORE modifying anything consumed outside the current codebase or by clients you do not control: public/exported APIs, REST/GraphQL endpoints and their request/response shapes, published package entry points, database schemas read by other services, event/message payloads, webhooks, or generated client types. Also use when reviewing a diff that touches such surfaces. Prevents silently shipping breaking changes to external consumers."
+  "description": "Guard external contracts before changing them. Use BEFORE modifying anything consumed outside the current codebase or by clients you do not control: public/exported APIs, REST/GraphQL endpoints and their request/response shapes, published package entry points, database schemas read by other services, event/message payloads, webhooks, or generated client types. Also use when reviewing a diff that touches such surfaces. Prevents silently shipping breaking changes to external consumers.",
+  "content_fingerprint": "21bef46faa1bd436260165c4bdb76cb4663357d5de6a51851bfcaa439d1b769a"
 }

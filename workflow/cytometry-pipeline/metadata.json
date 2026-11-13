@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "End-to-end flow, spectral, and mass cytometry (CyTOF) pipeline from raw FCS files to differentially abundant/expressed cell populations. Orchestrates the read -> compensate/unmix -> transform -> QC -> doublet-removal -> cluster-or-gate -> annotate -> diffcyt DA/DS chain with flowCore/CATALYST/diffcyt, branching on instrument type and on clustering-vs-gating. Use when processing a cytometry experiment end-to-end, deciding the pipeline path for an instrument, or wiring the flow-cytometry component skills into one analysis with valid sample-level statistics."
+  "description": "End-to-end flow, spectral, and mass cytometry (CyTOF) pipeline from raw FCS files to differentially abundant/expressed cell populations. Orchestrates the read -> compensate/unmix -> transform -> QC -> doublet-removal -> cluster-or-gate -> annotate -> diffcyt DA/DS chain with flowCore/CATALYST/diffcyt, branching on instrument type and on clustering-vs-gating. Use when processing a cytometry experiment end-to-end, deciding the pipeline path for an instrument, or wiring the flow-cytometry component skills into one analysis with valid sample-level statistics.",
+  "content_fingerprint": "7135aeafe56464e84be45bccdbfc190bb1819d99e8e82fb2aac2aed700887b90"
 }

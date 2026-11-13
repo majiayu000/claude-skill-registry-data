@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Perform S32SDAF / Volkano challenge-response authentication for a registered device UID. Validates UID and challenge input, confirms registration state when needed, and retrieves the authentication response for generic UID+challenge flows. If the request mentions HSE2, BootROM, HSE-FW, scheme_id, ADK1, or OID-sensitive behavior - or KUID combined with an HSE2 scheme/OID context - route to the HSE2-specific skill before invoking the generic get-response wrapper. A KUID selector by itself does not require HSE2 routing."
+  "description": "Perform S32SDAF / Volkano challenge-response authentication for a registered device UID. Validates UID and challenge input, confirms registration state when needed, and retrieves the authentication response for generic UID+challenge flows. If the request mentions HSE2, BootROM, HSE-FW, scheme_id, ADK1, or OID-sensitive behavior - or KUID combined with an HSE2 scheme/OID context - route to the HSE2-specific skill before invoking the generic get-response wrapper. A KUID selector by itself does not require HSE2 routing.",
+  "content_fingerprint": "57d03741c0d742222d1f17fbde8bcff7c9af1d951e2ebb2fd26e34992d792d5c"
 }

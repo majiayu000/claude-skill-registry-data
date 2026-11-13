@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when scraping JavaScript-heavy pages or SPAs, crawling multiple URLs concurrently, extracting structured data with reusable CSS/JSON schemas, or building automated web data pipelines. Wraps the Crawl4AI library (`crwl` CLI and Python SDK) with schema-generation patterns for LLM-free extraction. Triggers on crawl4ai, crwl, scrape JS-heavy site, scrape SPA, headless browser scrape, schema-based extraction, batch crawl, sitemap crawl, web data pipeline. SKIP when a static HTML page can be read with `defuddle` / `fetch-web` \u2014 those are faster cold-start and don't need a browser."
+  "description": "Use when scraping JavaScript-heavy pages or SPAs, crawling multiple URLs concurrently, extracting structured data with reusable CSS/JSON schemas, or building automated web data pipelines. Wraps the Crawl4AI library (`crwl` CLI and Python SDK) with schema-generation patterns for LLM-free extraction. Triggers on crawl4ai, crwl, scrape JS-heavy site, scrape SPA, headless browser scrape, schema-based extraction, batch crawl, sitemap crawl, web data pipeline. SKIP when a static HTML page can be read with `defuddle` / `fetch-web` — those are faster cold-start and don't need a browser.",
+  "content_fingerprint": "39be6e035e4400634f982d609374120e1508dff9a41fadc9f6d27070b582d356"
 }

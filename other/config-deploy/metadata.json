@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configure deployment-specific settings \u2014 pick the right AICP profile (`make profile-use PROFILE=<name>`), tune Docker compose envs (`CONTEXT_SIZE`, `LLAMACPP_PARALLEL`), set per-environment overrides (dev / staging / prod). Distinct from ops-deploy (executes the deployment with checks) \u2014 this skill prepares the configuration deployment will use. Loads when the operator says \"configure for production\" / \"set deploy profile\" / \"tune docker for fleet\" / \"what config does X env need\"."
+  "description": "Configure deployment-specific settings — pick the right AICP profile (`make profile-use PROFILE=<name>`), tune Docker compose envs (`CONTEXT_SIZE`, `LLAMACPP_PARALLEL`), set per-environment overrides (dev / staging / prod). Distinct from ops-deploy (executes the deployment with checks) — this skill prepares the configuration deployment will use. Loads when the operator says \"configure for production\" / \"set deploy profile\" / \"tune docker for fleet\" / \"what config does X env need\".",
+  "content_fingerprint": "95a4744603d3d46fc1c76c56bd9ca1a55d992ce78ed3e40ea1569a225a923620"
 }

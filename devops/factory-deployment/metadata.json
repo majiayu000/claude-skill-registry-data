@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deployment and infrastructure conventions across builds. Vercel + Neon for web (with PR branch DBs), Cloud Run for Python services (one service per entry-point variant), GitHub Actions matrix-deploy on merge, Terraform with environments/modules layout for AWS / compliance customers, RDS IAM authentication for AWS DBs, Docker per Python entry point, env vars via t3-oss/env-nextjs, and the single-tenant customer-cloud deployment model (per the factory thesis). Migrations in CI, never at runtime."
+  "description": "Deployment and infrastructure conventions across builds. Vercel + Neon for web (with PR branch DBs), Cloud Run for Python services (one service per entry-point variant), GitHub Actions matrix-deploy on merge, Terraform with environments/modules layout for AWS / compliance customers, RDS IAM authentication for AWS DBs, Docker per Python entry point, env vars via t3-oss/env-nextjs, and the single-tenant customer-cloud deployment model (per the factory thesis). Migrations in CI, never at runtime.",
+  "content_fingerprint": "ae25ebe9865ffa09dd0463c6194df02d9a97b8de665c901227e968168bf66311"
 }

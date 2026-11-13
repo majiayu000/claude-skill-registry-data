@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/codingSamss/all-my-ai-needs/blob/master/platforms/hermes/skills/software-development/codex-hermes-playwright-ext-timeout-triage/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "626d26a6eab3075f4af56da97bc2df31cbf80b7c45b27e2072ec8557db3c4ff2",
+  "description": "排查 Codex/Hermes 的 playwright-ext 从“可用”变为不可用（Extension connection timeout）时的最小闭环流程。先判定 bridge 层，再判定 token/同步链路，避免误把问题归因于“未安装 Playwright”。"
 }

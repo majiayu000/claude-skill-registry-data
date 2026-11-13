@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u57fa\u4e8e PyTorch \u6846\u67b6\u7684\u6607\u817e NPU \u6a21\u578b\u63a8\u7406\u56fe\u6a21\u5f0f\u9002\u914d\u6280\u80fd\u3002\u5c06\u6a21\u578b\u9002\u914d\u5230 torch.compile \u56fe\u6a21\u5f0f\u4ee5\u52a0\u901f\u63a8\u7406\u6027\u80fd\u3002\u89e6\u53d1\u573a\u666f\uff1anpugraph_ex \u6216 GE \u56fe\u6a21\u5f0f\u9002\u914d\u3001torch.compile \u5728\u6607\u817e NPU \u4e0a\u7684\u4f7f\u7528\u3001\u56fe\u4e2d\u65ad\uff08Graph Break\uff09\u4fee\u590d\u3001aclgraph \u56fe\u7f16\u8bd1\u95ee\u9898\u3002LLM \u6a21\u578b\u7684\u56fe\u6a21\u5f0f\u9002\u914d\u4f18\u5148\u9605\u8bfb LLM \u6a21\u578b\u6539\u9020\u6307\u5357\u3002"
+  "description": "基于 PyTorch 框架的昇腾 NPU 模型推理图模式适配技能。将模型适配到 torch.compile 图模式以加速推理性能。触发场景：npugraph_ex 或 GE 图模式适配、torch.compile 在昇腾 NPU 上的使用、图中断（Graph Break）修复、aclgraph 图编译问题。LLM 模型的图模式适配优先阅读 LLM 模型改造指南。",
+  "content_fingerprint": "71afe6afe855de23882df42ad5fe4acaf85ebf913ee24eede3353d7652652461"
 }

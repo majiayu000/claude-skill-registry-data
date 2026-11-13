@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728\u73fe\u6709 domain stack \u4e2d\u65b0\u589e\u55ae\u4e00 skill\u3002\u4e0d\u662f\u91cd\u5efa\u6574\u500b repo\uff0c\u662f\u52a0\u4e00\u500b\u65b0\u7684\u3002\nTrigger: \u7528\u6236\u8aaa\u300c\u52a0\u4e00\u500b skill\u300d\u3001\u300c\u6211\u9700\u8981\u4e00\u500b\u505a X \u7684 skill\u300d\u3001\u300c\u65b0\u589e\u300d\u3002\nDo NOT use when: \u8981\u5efa\u6574\u500b domain stack\uff08\u7528 /domain-build\uff09\u3002\nDo NOT use when: \u8981\u6539\u73fe\u6709 skill\uff08\u7528 /skill-edit\uff09\u3002\nDo NOT use when: \u8981\u5efa\u5de5\u5177\u578b skill\uff08\u7528 /tool-builder\uff09\u3002\n\u4e0a\u6e38\uff1a\u7528\u6236\u9700\u6c42 + \u73fe\u6709 skill map\u3002\n\u4e0b\u6e38\uff1a/skill-check design\u3002\n\u7522\u51fa\uff1a\u65b0\u7684 SKILL.md + references/\uff08\u5982\u9700\u8981\uff09\u3002"
+  "description": "在現有 domain stack 中新增單一 skill。不是重建整個 repo，是加一個新的。\nTrigger: 用戶說「加一個 skill」、「我需要一個做 X 的 skill」、「新增」。\nDo NOT use when: 要建整個 domain stack（用 /domain-build）。\nDo NOT use when: 要改現有 skill（用 /skill-edit）。\nDo NOT use when: 要建工具型 skill（用 /tool-builder）。\n上游：用戶需求 + 現有 skill map。\n下游：/skill-check design。\n產出：新的 SKILL.md + references/（如需要）。",
+  "content_fingerprint": "94343c61c4be7555606c90060dc51d5a957a144250108017b28f2ba8903ee10b"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Puts oaustegard/muninn-utilities on the container Python path \u2014 runs scripts/boot.sh, which shallow-clones the repo (codeload tarball as fallback) and writes the .pth. The boot payload itself comes from the Muninn MCP connector: call its `boot` tool after this script. Trigger on the first message of any new Muninn conversation, or when the user says \"boot up\" / \"boot\" \u2014 unless the message contains \"skip boot\". Idempotent: a warm container exits in ~0s via a sentinel."
+  "description": "Puts oaustegard/muninn-utilities on the container Python path — runs scripts/boot.sh, which shallow-clones the repo (codeload tarball as fallback) and writes the .pth. The boot payload itself comes from the Muninn MCP connector: call its `boot` tool after this script. Trigger on the first message of any new Muninn conversation, or when the user says \"boot up\" / \"boot\" — unless the message contains \"skip boot\". Idempotent: a warm container exits in ~0s via a sentinel.",
+  "content_fingerprint": "50b4c42f3ade3cd6951105b7501dbe9fd38e7c90b1dbcc3b1016f2bb3f4d74db"
 }

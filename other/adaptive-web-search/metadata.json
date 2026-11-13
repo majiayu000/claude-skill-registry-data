@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9488\u5bf9\u4e0d\u540c Provider \u7684\u53c2\u6570\u5dee\u5f02\u8fdb\u884c\u9002\u914d\uff0c\u7279\u522b\u5904\u7406 Gemini \u548c Grok \u4e0d\u652f\u6301 freshness \u7684\u9650\u5236\uff0c\u5e76\u89e3\u51b3 API Key \u7f3a\u5931\u53ca\u6293\u53d6\u65f6\u7684 Cookie \u5f02\u5e38\u3002"
+  "description": "针对不同 Provider 的参数差异进行适配，特别处理 Gemini 和 Grok 不支持 freshness 的限制，并解决 API Key 缺失及抓取时的 Cookie 异常。",
+  "content_fingerprint": "040de1612de9ef6ba6814c6fbe68bd22551217d1a448d7754d4d17aa98e6d712"
 }

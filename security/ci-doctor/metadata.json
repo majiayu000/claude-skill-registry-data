@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diagnose CI health and, when needed, benchmark a config change side by side \u2014 without re-deriving either from scratch each time. Use when the operator asks \"why is CI slow\", \"diagnose our CI\", \"is our CI healthy\", \"what's the bottleneck\", or wants to compare wall-clock across two or more `runs-on` (or other config) variants \u2014 e.g. GitHub-hosted vs. a paid runner vendor, or a small vs. large runner tier. Not for writing new workflows from scratch, not for non-GitHub-Actions CI systems, not for security/posture audits (a separate free skill, `ci-secure`, from the same catalog, covers that)."
+  "description": "Diagnose CI health and, when needed, benchmark a config change side by side — without re-deriving either from scratch each time. Use when the operator asks \"why is CI slow\", \"diagnose our CI\", \"is our CI healthy\", \"what's the bottleneck\", or wants to compare wall-clock across two or more `runs-on` (or other config) variants — e.g. GitHub-hosted vs. a paid runner vendor, or a small vs. large runner tier. Not for writing new workflows from scratch, not for non-GitHub-Actions CI systems, not for security/posture audits (a separate free skill, `ci-secure`, from the same catalog, covers that).",
+  "content_fingerprint": "73af91f81e850d3a6e18e214c573080ce114b7e8a7ea7905b0e3b19570a280e1"
 }

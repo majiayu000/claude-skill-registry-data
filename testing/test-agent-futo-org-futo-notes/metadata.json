@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adversarial testing agent. Takes natural language test targets (\"test sync conflict resolution, semantic search, markdown tables\"), generates adversarial scenarios, executes them, and reports structured verdicts comparing actual vs expected behavior. Use when the user says \"test X\", \"can you test\", \"X needs testing\", \"break this\", \"QA this\", or describes features/fixes that need adversarial validation. Unlike /verify (which runs existing test suites), /test-agent generates NEW ephemeral test scenarios designed to break things."
+  "description": "Adversarial testing agent. Takes natural language test targets (\"test sync conflict resolution, semantic search, markdown tables\"), generates adversarial scenarios, executes them, and reports structured verdicts comparing actual vs expected behavior. Use when the user says \"test X\", \"can you test\", \"X needs testing\", \"break this\", \"QA this\", or describes features/fixes that need adversarial validation. Unlike /verify (which runs existing test suites), /test-agent generates NEW ephemeral test scenarios designed to break things.",
+  "content_fingerprint": "da7affcf15320f79a4488f3513912a9e158eee324450eb82605f73e8d2bdab26"
 }

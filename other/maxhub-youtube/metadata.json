@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "YouTube \u516c\u5f00\u89c6\u9891\u4e0e\u9891\u9053\u6570\u636e\u5206\u6790 skill\uff0c\u901a\u8fc7 MaxHub API \u67e5\u8be2\u89c6\u9891\u8be6\u60c5\u3001\u8bc4\u8bba\u3001\u5b57\u5e55\u3001\u64ad\u653e/\u6d41\u4fe1\u606f\u3001\u9891\u9053\u8d44\u6599\u3001\u9891\u9053\u89c6\u9891/Shorts/\u5e16\u5b50\u3001\u641c\u7d22\u3001\u8d8b\u52bf\u548c\u76f8\u5173\u89c6\u9891\u3002\u9002\u5408\u6d77\u5916\u89c6\u9891\u7814\u7a76\u3001\u9891\u9053\u753b\u50cf\u3001\u5b57\u5e55\u8bed\u6599\u3001\u8bc4\u8bba\u5206\u6790\u3001\u5185\u5bb9\u9009\u9898\u548c\u7ade\u54c1\u76d1\u63a7\u3002\u9ed8\u8ba4 read-only\uff1b\u64ad\u653e/\u4e0b\u8f7d\u76f8\u5173\u4fe1\u606f\u9700\u9075\u5b88\u7248\u6743\u4e0e\u5e73\u53f0\u89c4\u5219\uff0cagent \u5e94\u4f18\u5148\u8d70 recipes \u5e76\u6309 video_id/channel_id/keyword \u5b57\u6bb5\u6d41\u94fe\u5f0f\u8c03\u7528\u3002\u6240\u6709\u8bf7\u6c42\u53d1\u9001\u5230 https://www.aconfig.cn\u3002"
+  "description": "YouTube 公开视频与频道数据分析 skill，通过 MaxHub API 查询视频详情、评论、字幕、播放/流信息、频道资料、频道视频/Shorts/帖子、搜索、趋势和相关视频。适合海外视频研究、频道画像、字幕语料、评论分析、内容选题和竞品监控。默认 read-only；播放/下载相关信息需遵守版权与平台规则，agent 应优先走 recipes 并按 video_id/channel_id/keyword 字段流链式调用。所有请求发送到 https://www.aconfig.cn。",
+  "content_fingerprint": "0f052d795a02a6754c2986d170f8d310722cb96e142513de63eafaa214e63cb8"
 }

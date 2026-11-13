@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Feed and whole-publication ingestion: turn an entire blog, newsletter, or\nRSS/Atom archive into brain source pages. Covers feed discovery, pagination\nwalking, normalization to a common article shape, canonical-URL dedup,\nidempotent re-runs, 429 pacing, and empty-husk repair. This is the\nPUBLICATION-scope skill \u2014 a single article URL routes to idea-ingest\ninstead. Per-article enrichment hands off to the brain-ingest-gate skill;\npublic posts only (gated content is skipped, never worked around)."
+  "description": "Feed and whole-publication ingestion: turn an entire blog, newsletter, or\nRSS/Atom archive into brain source pages. Covers feed discovery, pagination\nwalking, normalization to a common article shape, canonical-URL dedup,\nidempotent re-runs, 429 pacing, and empty-husk repair. This is the\nPUBLICATION-scope skill — a single article URL routes to idea-ingest\ninstead. Per-article enrichment hands off to the brain-ingest-gate skill;\npublic posts only (gated content is skipped, never worked around).",
+  "content_fingerprint": "5d68cd5a552e18903eb241b13b86e0b03a91b592e7f951fdb16f9dd640fbeef6"
 }

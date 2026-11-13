@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Drives the MBG two-loop design methodology \u2014 pre-layout optimization, then PEX-aware post-layout optimization. Use whenever a design has performance targets (gain, bandwidth, phase margin, offset, delay, power) and must be taken from specification to a sign-off candidate. Use it to decide what to do when post-layout simulation misses spec. Do not use it for layout-only tasks with no performance target (use mbg-spice-to-gds), or for pure verification of an existing GDS (use mbg-ic-verify)."
+  "description": "Drives the MBG two-loop design methodology — pre-layout optimization, then PEX-aware post-layout optimization. Use whenever a design has performance targets (gain, bandwidth, phase margin, offset, delay, power) and must be taken from specification to a sign-off candidate. Use it to decide what to do when post-layout simulation misses spec. Do not use it for layout-only tasks with no performance target (use mbg-spice-to-gds), or for pure verification of an existing GDS (use mbg-ic-verify).",
+  "content_fingerprint": "f3175a4d0e05c1c15c169245907de552008acd16a1f3fd101b67abbb241db745"
 }

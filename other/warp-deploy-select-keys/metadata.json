@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Preflight that resolves which private key(s) to use for the warp-deploy chain across every protocol in the route (EVM / Sealevel / Cosmos / Starknet / Tron). For each protocol the user supplies either a specific key spec (GCP secret name, env var, or keystore path) or a candidate list of GCP secret names for the agent to surface and the user to pick. The agent never enumerates GCP secrets on its own and never reads secret values without an explicit user-approved pick. Persists the resolution to `~/.hyperlane/key-contexts/<ticket-id>.yaml` for downstream warp-deploy skills to auto-load."
+  "description": "Preflight that resolves which private key(s) to use for the warp-deploy chain across every protocol in the route (EVM / Sealevel / Cosmos / Starknet / Tron). For each protocol the user supplies either a specific key spec (GCP secret name, env var, or keystore path) or a candidate list of GCP secret names for the agent to surface and the user to pick. The agent never enumerates GCP secrets on its own and never reads secret values without an explicit user-approved pick. Persists the resolution to `~/.hyperlane/key-contexts/<ticket-id>.yaml` for downstream warp-deploy skills to auto-load.",
+  "content_fingerprint": "13201d19074bab31b3511acb9bf24e101d7d2177bcc0ccc397510f27555ee21e"
 }

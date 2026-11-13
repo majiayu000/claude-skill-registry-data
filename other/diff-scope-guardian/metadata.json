@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5de5\u7a0b\u73b0\u573a\u73af\u8def P0\u3002\u7528\u4e8e\u4ee3\u7801\u6539\u5b8c\u540e\u7684\u53ea\u8bfb diff \u6269\u6563\u5ba1\u8ba1,\u7ed1\u5b9a Builder \u51fa\u53e3\u3001 \u8fdb\u5165 Review/Verify \u524d\u3002\u68c0\u67e5\u5b9e\u9645 diff \u662f\u5426\u8d8a\u8fc7\u76ee\u6807\u5951\u7ea6\u3001\u8bbe\u8ba1\u6587\u6863\u6216\u9884\u671f\u6539\u52a8\u9762, \u9632\u6b62\u987a\u624b\u91cd\u6784\u3001\u683c\u5f0f\u5316\u6269\u6563\u3001\u65e0\u5173\u6587\u4ef6\u53d8\u66f4\u548c\u672a\u58f0\u660e\u504f\u79bb\u3002"
+  "description": "工程现场环路 P0。用于代码改完后的只读 diff 扩散审计,绑定 Builder 出口、 进入 Review/Verify 前。检查实际 diff 是否越过目标契约、设计文档或预期改动面, 防止顺手重构、格式化扩散、无关文件变更和未声明偏离。",
+  "content_fingerprint": "25cefa6214c968d45cd285288ef9454f8e1318047c1ad92c08f2585f839572e9"
 }

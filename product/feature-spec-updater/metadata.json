@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/buddypia/kaiju-voice/blob/master/.claude/skills/feature-spec-updater/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "695dcc75f7b5e0deab33ce86cf80032413eb918d894399ccc856599a3ba5016a",
+  "description": "既存SPECを修正するスキル。新規SPEC生成(feature-spec-generator)と異なり、既存SPECをロードして変更された部分のみ更新する。\n変更履歴管理、diff表示、影響範囲分析を提供する。\n\n\"SPEC修正\", \"SPEC更新\", \"機能変更\", \"FR追加\", \"FR修正\" 等のリクエストでトリガーされる。\n\n<example>\nuser: \"006-srs-review-"
 }

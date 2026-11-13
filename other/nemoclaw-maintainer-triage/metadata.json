@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "AI-assisted label triage for NVIDIA/NemoClaw issues and PRs. Reads triage-instructions.md at runtime for consistent label guidance. Supports single-item mode (give it a number) and batch mode (fetches up to 50 unlabeled open items). On approval, applies labels and an optional triage comment via gh CLI, then logs the session to the daily-rhythm activity folder. Trigger keywords - triage, label issues, suggest labels, batch triage, triage issue, triage PR, label this, what labels."
+  "description": "AI-assisted label triage for NVIDIA/NemoClaw issues and PRs. Reads triage-instructions.md at runtime for consistent label guidance. Supports single-item mode (give it a number) and batch mode (fetches up to 50 unlabeled open items). On approval, applies labels and an optional triage comment via gh CLI, then logs the session to the daily-rhythm activity folder. Trigger keywords - triage, label issues, suggest labels, batch triage, triage issue, triage PR, label this, what labels.",
+  "content_fingerprint": "c608aca2beb8ef17c2dfbceb98e3be0eef44a59a8db057a4f31f67e02c65a27e"
 }

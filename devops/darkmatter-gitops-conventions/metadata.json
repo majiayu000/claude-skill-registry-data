@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Safe-change playbook for the darkmatter/gitops repo \u2014 validation before commit (kubeconform with CI-identical flags, yq for YAML manifests, jq for SOPS JSON, git diff --check), sha-pinned images, KSOPS/SOPS secret editing rules, rollback via revert, and how ArgoCD reconciles. Use for ANY change to darkmatter/gitops (manifests, Helm values, apps/*.yaml, secrets), when asked to bump an image tag, wire a secret, or roll back a deploy. Also use when tempted to kubectl apply/edit/patch anything \u2014 the answer is no."
+  "description": "Safe-change playbook for the darkmatter/gitops repo — validation before commit (kubeconform with CI-identical flags, yq for YAML manifests, jq for SOPS JSON, git diff --check), sha-pinned images, KSOPS/SOPS secret editing rules, rollback via revert, and how ArgoCD reconciles. Use for ANY change to darkmatter/gitops (manifests, Helm values, apps/*.yaml, secrets), when asked to bump an image tag, wire a secret, or roll back a deploy. Also use when tempted to kubectl apply/edit/patch anything — the answer is no.",
+  "content_fingerprint": "f3384e7e7a9b02cabc7e3ed90546df8c108f013f85aba5a824ae99259441aa88"
 }

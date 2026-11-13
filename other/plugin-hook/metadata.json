@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adds a new event hook to src/Plugin.php \u2014 registers in getHooks() and creates the static GenericEvent handler. Use when user says 'add hook', 'handle event', 'new plugin event', or adds a lifecycle action (activate/deactivate/change IP/reactivate). Do NOT use for modifying existing handlers or adding inc functions."
+  "description": "Adds a new event hook to src/Plugin.php — registers in getHooks() and creates the static GenericEvent handler. Use when user says 'add hook', 'handle event', 'new plugin event', or adds a lifecycle action (activate/deactivate/change IP/reactivate). Do NOT use for modifying existing handlers or adding inc functions.",
+  "content_fingerprint": "4647e300f63c257197a3905f8b3993fa185d824700a7e1220e2db9eb0e97a706"
 }

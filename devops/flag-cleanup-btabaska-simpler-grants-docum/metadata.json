@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Workflow for safely removing a fully-rolled-out feature flag from the codebase. Identifies all flag check points across all surfaces (Terraform, API, frontend), removes them while preserving the enabled behavior, updates tests, and verifies nothing broke. Use when a release gate has been fully rolled out and it's time to remove the flag."
+  "description": "Workflow for safely removing a fully-rolled-out feature flag from the codebase. Identifies all flag check points across all surfaces (Terraform, API, frontend), removes them while preserving the enabled behavior, updates tests, and verifies nothing broke. Use when a release gate has been fully rolled out and it's time to remove the flag.",
+  "content_fingerprint": "3a30936de89d0e43b21fd79743f04465af52ad1594f9d3873814f597896dcf46"
 }

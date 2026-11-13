@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Parallel cell-execution subagent. Receives a chunk of audit cells, opens its own browser tab, runs them sequentially within the tab, writes findings to JSONL, returns. Spawned in parallel by qa-argus Step 5.1 when resolvedConfig.workers > 1. Honors the workers setting dynamically: workers=4 spawns 4 of these in parallel, workers=8 spawns 8."
+  "description": "Parallel cell-execution subagent. Receives a chunk of audit cells, opens its own browser tab, runs them sequentially within the tab, writes findings to JSONL, returns. Spawned in parallel by qa-argus Step 5.1 when resolvedConfig.workers > 1. Honors the workers setting dynamically: workers=4 spawns 4 of these in parallel, workers=8 spawns 8.",
+  "content_fingerprint": "21f50c2e12de85d7da13d4b1b52ae5a34a1186f33a5c477ea83f8dd6580b0a58"
 }

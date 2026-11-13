@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Measure CI churn cost for a pull request: how many commits and how many CI-compute seconds were burned on avoidable \"fix the CI\" push rounds. Use when you want to understand the efficiency cost of a PR's iteration cycle, get actionable pre-push check suggestions, or include a churn summary in a pipeline report. Triggers: \"ci churn\", \"how much CI did we burn\", \"avoidable commits\", \"ci efficiency\", \"wasted CI time\", \"churn report\", \"/ci-churn\". Called automatically by /fp-drift at pipeline close."
+  "description": "Measure CI churn cost for a pull request: how many commits and how many CI-compute seconds were burned on avoidable \"fix the CI\" push rounds. Use when you want to understand the efficiency cost of a PR's iteration cycle, get actionable pre-push check suggestions, or include a churn summary in a pipeline report. Triggers: \"ci churn\", \"how much CI did we burn\", \"avoidable commits\", \"ci efficiency\", \"wasted CI time\", \"churn report\", \"/ci-churn\". Called automatically by /fp-drift at pipeline close.",
+  "content_fingerprint": "151b45d77a378ebbf6fc607a9ddc75b04196f08eba040d9dd1dfe6d8b9ef0f02"
 }

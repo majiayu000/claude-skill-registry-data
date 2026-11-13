@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decide whether a finished build is a clone of one already shipped, the way the final_verdict reviewer decides it. Carries the discrimination the check turns on (reusing a proven component is legitimate, reusing the thing that drives the stump is not, and the prompt shape is a component), the two tracks a finding can land in and why they carry different severity, the tier ladder, and the ways the check itself gives a wrong answer. Use when asked for a clone check, a template check or a duplicate check, when a batch is about to be submitted, and as a pre-flight on a build whose draw is fixed but whose data is not yet cut."
+  "description": "Decide whether a finished build is a clone of one already shipped, the way the final_verdict reviewer decides it. Carries the discrimination the check turns on (reusing a proven component is legitimate, reusing the thing that drives the stump is not, and the prompt shape is a component), the two tracks a finding can land in and why they carry different severity, the tier ladder, and the ways the check itself gives a wrong answer. Use when asked for a clone check, a template check or a duplicate check, when a batch is about to be submitted, and as a pre-flight on a build whose draw is fixed but whose data is not yet cut.",
+  "content_fingerprint": "33f3fe2125a3350aa36d04f26af3ee657ff13f71edf7628a5c85fc1d2715a6fc"
 }

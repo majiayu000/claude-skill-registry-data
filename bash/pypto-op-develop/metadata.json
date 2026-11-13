@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PyPTO \u7b97\u5b50 impl \u7f16\u7801\u624b\u518c\u3002coder agent \u6536\u5230\u8c03\u5ea6\u65f6\u4f7f\u7528\uff0c\u5148 per-Phase \u7d2f\u8ba1\u6784\u5efa `{op}_module{k}_impl.py`\uff0c\u6700\u540e\u4e00\u4e2a Phase \u901a\u8fc7\u9a8c\u8bc1\u540e cleanup \u6574\u7406\u51fa `{op}_impl.py` + `README.md`\u3002\u57fa\u4e8e Layer A\u2013L \u8bbe\u8ba1\u89c4\u8303\uff0c\u914d\u5408 `impl_template.py` \u6a21\u677f\u751f\u6210\u7b26\u5408\u89c4\u8303\u7684 PyPTO \u5b9e\u73b0\u4ee3\u7801\u3002\u89e6\u53d1\u5173\u952e\u8bcd\uff1a\u5b9e\u73b0\u7b97\u5b50\u3001\u5199 kernel\u3001\u7f16\u5199\u5b9e\u73b0\u3001\u5199 impl\u3001\u7b97\u5b50\u7f16\u7801\u3001code the op\u3001op develop\u3001kernel \u5b9e\u73b0\u3002"
+  "description": "PyPTO 算子 impl 编码手册。coder agent 收到调度时使用，先 per-Phase 累计构建 `{op}_module{k}_impl.py`，最后一个 Phase 通过验证后 cleanup 整理出 `{op}_impl.py` + `README.md`。基于 Layer A–L 设计规范，配合 `impl_template.py` 模板生成符合规范的 PyPTO 实现代码。触发关键词：实现算子、写 kernel、编写实现、写 impl、算子编码、code the op、op develop、kernel 实现。",
+  "content_fingerprint": "8657379412e0770a23b3829dede65967a06df0735c021305a1120c7686915cdd"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "BM25-based skill retrieval plugin for Hermes Agent. Replaces the full skill list in the system prompt with a names-only compact view (~2K tokens) and injects top-K relevant skill descriptions per turn via BM25 retrieval (~300 tokens). Saves ~9K tokens/turn. Use when system prompt token overhead from skills is a concern, or when skill discovery quality matters."
+  "description": "BM25-based skill retrieval plugin for Hermes Agent. Replaces the full skill list in the system prompt with a names-only compact view (~2K tokens) and injects top-K relevant skill descriptions per turn via BM25 retrieval (~300 tokens). Saves ~9K tokens/turn. Use when system prompt token overhead from skills is a concern, or when skill discovery quality matters.",
+  "content_fingerprint": "87cdcf7ae9abd9d3b14232ff05e7822a3dbf37d32f1b9b4aace7bb8daf3d0f54"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/maxritter/pilot-shell/blob/main/pilot/skills/spec/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a96007a15f82fd86d81cb38b6d586b2fe548607b79b1b3dd79765b3d2b3060d7",
+  "description": "Dispatcher — routes to the appropriate phase skill. This command is a thin router. Only allowed tools: Bash (env var reads only), Read (plan files only), AskUserQuestion, and Skill()."
 }

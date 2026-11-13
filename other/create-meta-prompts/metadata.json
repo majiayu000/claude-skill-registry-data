@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Creates optimized prompts for Claude-to-Claude pipelines with research, planning, and execution stages. Activates when building prompts that produce outputs for other prompts to consume, or running multi-stage workflows (research \u2192 plan \u2192 implement). Triggers on: meta-prompt, prompt chain, Claude pipeline, multi-stage workflow, Do/Plan/Research/Refine prompt, prompt orchestration, chained prompts, prompt dependency, sequential prompts. Does NOT activate for single one-shot prompts \u2014 use the relevant task skill directly instead."
+  "description": "Creates optimized prompts for Claude-to-Claude pipelines with research, planning, and execution stages. Activates when building prompts that produce outputs for other prompts to consume, or running multi-stage workflows (research → plan → implement). Triggers on: meta-prompt, prompt chain, Claude pipeline, multi-stage workflow, Do/Plan/Research/Refine prompt, prompt orchestration, chained prompts, prompt dependency, sequential prompts. Does NOT activate for single one-shot prompts — use the relevant task skill directly instead.",
+  "content_fingerprint": "8497fe6e3a0e36f178d480e4f73f923dae65503f6adaeb386acaaee9472bbaf6"
 }

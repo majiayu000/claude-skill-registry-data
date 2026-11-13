@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Draft CHANGELOG entries from git log via the pm-changelog-curator sub-agent, applying the repo hygiene rules (describe what changed, public paths only, no attribution trailers). Returns a layered draft with a status summary for maintainer review; refuses a dirty working tree unless --committed-only is passed. Use when banking unreleased changes or preparing a release."
+  "description": "Draft CHANGELOG entries from git log via the pm-changelog-curator sub-agent, applying the repo hygiene rules (describe what changed, public paths only, no attribution trailers). Returns a layered draft with a status summary for maintainer review; refuses a dirty working tree unless --committed-only is passed. Use when banking unreleased changes or preparing a release.",
+  "content_fingerprint": "3036127605e7ae0f6526b29b35fdfd57c40d0d07c20085d37a23224adfc7f060"
 }

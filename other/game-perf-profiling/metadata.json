@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Profiles game builds against frame-time, memory, GPU draw-call, and GC-spike budgets using Unity Profiler + Profile Analyzer + Performance Testing package and Unreal Insights + stat commands. Establishes pass/fail thresholds (16.6 ms at 60 fps, 33.3 ms at 30 fps), writes automated performance regression tests that run in CI, and emits a structured budget report per SKU. Use when a title must hit a declared frame-time or memory budget before a milestone gate or platform-cert submission, or when a recent change needs a performance regression check."
+  "description": "Profiles game builds against frame-time, memory, GPU draw-call, and GC-spike budgets using Unity Profiler + Profile Analyzer + Performance Testing package and Unreal Insights + stat commands. Establishes pass/fail thresholds (16.6 ms at 60 fps, 33.3 ms at 30 fps), writes automated performance regression tests that run in CI, and emits a structured budget report per SKU. Use when a title must hit a declared frame-time or memory budget before a milestone gate or platform-cert submission, or when a recent change needs a performance regression check.",
+  "content_fingerprint": "064744f45405ad17c14729e3606fe406531e9da0942dbb796476593420c6ff20"
 }

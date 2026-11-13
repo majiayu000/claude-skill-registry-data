@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Import the results of a Claude app voice speaking session back into Fluent \u2014 fetch the results JSON from a Slack channel, Google Drive, pasted text, or a raw transcript, validate and re-score it, convert it to an update-db.py payload, write the standard session results markdown, and update all 6 databases. Fires on /fluent-speaking-import, or on natural-language cues that the learner just finished a voice session (e.g. \"I finished my voice practice\", \"pull in my speaking results\", \"import my Fluent Speaking session\"), after a voice session created by /fluent-speaking-export."
+  "description": "Import the results of a Claude app voice speaking session back into Fluent — fetch the results JSON from a Slack channel, Google Drive, pasted text, or a raw transcript, validate and re-score it, convert it to an update-db.py payload, write the standard session results markdown, and update all 6 databases. Fires on /fluent-speaking-import, or on natural-language cues that the learner just finished a voice session (e.g. \"I finished my voice practice\", \"pull in my speaking results\", \"import my Fluent Speaking session\"), after a voice session created by /fluent-speaking-export.",
+  "content_fingerprint": "8f7264c5f7ada023cb6689b3c6f4b6ec12750c9060a31bd8703d42a2dadb0604"
 }

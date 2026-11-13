@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when designing error types for a Go service, mapping domain errors to HTTP/NATS responses, building an error catalog, or reviewing error code for PII safety and consistency. Covers AppError hierarchy, fmt.Errorf %w wrapping, sentinel errors, errors.Is/As precedence, and PII-safe messages. Triggers: mapErr, sentinel switch, precedence order, errors.Is, fmt.Errorf %w chain."
+  "description": "Use this when designing error types for a Go service, mapping domain errors to HTTP/NATS responses, building an error catalog, or reviewing error code for PII safety and consistency. Covers AppError hierarchy, fmt.Errorf %w wrapping, sentinel errors, errors.Is/As precedence, and PII-safe messages. Triggers: mapErr, sentinel switch, precedence order, errors.Is, fmt.Errorf %w chain.",
+  "content_fingerprint": "f79f62edbeceed42405b5d75ed0d02962781fd2a04fa3d73fb311780dd072791"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Make an LLM app disclose sensitive data it should never reveal: training-data memorization, secrets/PII in RAG context, cross-tenant leakage, conversation logs. Load when the target LLM has RAG/document access, is multi-tenant (per-user/per-org assistants), was fine-tuned on private data, or logs conversations. Signals: \"ask your documents\", per-org chatbots, upload a file and query it, admin/debug endpoints, conversation history in analytics."
+  "description": "Make an LLM app disclose sensitive data it should never reveal: training-data memorization, secrets/PII in RAG context, cross-tenant leakage, conversation logs. Load when the target LLM has RAG/document access, is multi-tenant (per-user/per-org assistants), was fine-tuned on private data, or logs conversations. Signals: \"ask your documents\", per-org chatbots, upload a file and query it, admin/debug endpoints, conversation history in analytics.",
+  "content_fingerprint": "a6a615e062a5817b8aa4d4f836fc92aae7138d3dd31c5d2a52da527fa4bde409"
 }

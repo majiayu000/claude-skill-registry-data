@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Per-frame performance and GC-pressure optimization for JS/TS game code. Use when editing game loops, update functions, render passes, physics steps, particle systems, or any code that runs every frame; when diagnosing jank, frame drops, or stuttering; when allocations show up in flame graphs; or when the user mentions frame budget, hot paths, or 'feels janky'. Identifies common allocation anti-patterns (spread in loops, .map/.filter chains in update, closures captured per frame) and provides pooled / pre-allocated alternatives."
+  "description": "Per-frame performance and GC-pressure optimization for JS/TS game code. Use when editing game loops, update functions, render passes, physics steps, particle systems, or any code that runs every frame; when diagnosing jank, frame drops, or stuttering; when allocations show up in flame graphs; or when the user mentions frame budget, hot paths, or 'feels janky'. Identifies common allocation anti-patterns (spread in loops, .map/.filter chains in update, closures captured per frame) and provides pooled / pre-allocated alternatives.",
+  "content_fingerprint": "f07d84d087d0b0bac22a8d7617cb450e07f0907a14297aa116fa328a479f3bbf"
 }

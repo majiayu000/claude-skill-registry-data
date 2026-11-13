@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when adding, moving or debugging WordPress actions and filters in an Acorn project - add_action/add_filter priority and accepted_args, where a hook belongs (setup or filters files vs a provider boot()), load order (mu-plugins, plugins_loaded, after_setup_theme, init), when Acorn boots per profile, hooks that never fire on Acorn routes, REST or Livewire requests (template_redirect, wp_head), save_post firing twice in the block editor, the_content priorities. For ACF hooks use acf-native; for provider structure use acorn-stack."
+  "description": "Use when adding, moving or debugging WordPress actions and filters in an Acorn project - add_action/add_filter priority and accepted_args, where a hook belongs (setup or filters files vs a provider boot()), load order (mu-plugins, plugins_loaded, after_setup_theme, init), when Acorn boots per profile, hooks that never fire on Acorn routes, REST or Livewire requests (template_redirect, wp_head), save_post firing twice in the block editor, the_content priorities. For ACF hooks use acf-native; for provider structure use acorn-stack.",
+  "content_fingerprint": "d984a9d8d446ba6d507bf572026d0d1fc99856490c57061395451547ef7eee19"
 }

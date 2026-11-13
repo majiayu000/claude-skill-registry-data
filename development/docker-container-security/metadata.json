@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run containers with a defensive baseline that survives production. Covers non-root users, read-only filesystems, dropped Linux capabilities, secret mounts instead of build-time bake-in, image scanning with trivy, distroless and minimal base images, and the Docker-bypasses-UFW firewall pitfall. Invoke when adding Docker to a VPS with UFW, writing a new Dockerfile, or pushing an image to a public registry."
+  "description": "Run containers with a defensive baseline that survives production. Covers non-root users, read-only filesystems, dropped Linux capabilities, secret mounts instead of build-time bake-in, image scanning with trivy, distroless and minimal base images, and the Docker-bypasses-UFW firewall pitfall. Invoke when adding Docker to a VPS with UFW, writing a new Dockerfile, or pushing an image to a public registry.",
+  "content_fingerprint": "396b6fd5e046263ab9718f0b890a1fde1a67fee27858515cb5e27f9544ad8d3c"
 }

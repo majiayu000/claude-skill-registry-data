@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill during Phase 5 to execute functional tests, record results, log defects, and validate UX conformance. Logs defects to Git Issues when available, otherwise to markdown (or JSON, per config) under .claude/sdlc/defects/. Reports code coverage against the configured threshold. Triggered after build is signed off and before deploy. Also trigger when the user says \"run tests\", \"report coverage\", \"log defects\", or \"validate UX\"."
+  "description": "Use this skill during Phase 5 to execute functional tests, record results, log defects, and validate UX conformance. Logs defects to Git Issues when available, otherwise to markdown (or JSON, per config) under .claude/sdlc/defects/. Reports code coverage against the configured threshold. Triggered after build is signed off and before deploy. Also trigger when the user says \"run tests\", \"report coverage\", \"log defects\", or \"validate UX\".",
+  "content_fingerprint": "3f04407cdcbc990883d5ad944b2988574f9aaceea9162b486597b518da3fd91f"
 }

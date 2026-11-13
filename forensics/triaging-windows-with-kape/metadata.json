@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs KAPE (Kroll Artifact Parser and Extractor) to collect targeted forensic artifacts (registry hives, $MFT, event logs, prefetch, browser data) via Targets and parse them with Modules wrapping Eric Zimmerman's EZ Tools (PECmd, MFTECmd, RECmd). Use during early incident containment/triage when full disk imaging is impractical but a defensible, parseable Windows artifact set is needed quickly, including at-scale remote collection."
+  "description": "Runs KAPE (Kroll Artifact Parser and Extractor) to collect targeted forensic artifacts (registry hives, $MFT, event logs, prefetch, browser data) via Targets and parse them with Modules wrapping Eric Zimmerman's EZ Tools (PECmd, MFTECmd, RECmd). Use during early incident containment/triage when full disk imaging is impractical but a defensible, parseable Windows artifact set is needed quickly, including at-scale remote collection.",
+  "content_fingerprint": "15c105a873bbfd2d36f403e8efbd7c906bcbcfff874c8b3d3124cf7e21e6fa75"
 }

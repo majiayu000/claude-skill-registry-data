@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Autonomous staging-pump loop for the configured project. Selects work, drives it through /project to staging with ultracode multi-agent orchestration, and gate-verifies via role-based Playwright subagents. Self-paced via ScheduleWakeup (one epic per wake, state-file handoff across context resets). Launch ONCE with `/lead-dev [--project <name>] [target]` \u2014 `--project` picks the fleet on the slash command itself and is forwarded on every self-wake; do NOT wrap in /loop."
+  "description": "Autonomous staging-pump loop for the configured project. Selects work, drives it through /project to staging with ultracode multi-agent orchestration, and gate-verifies via role-based Playwright subagents. Self-paced via ScheduleWakeup (one epic per wake, state-file handoff across context resets). Launch ONCE with `/lead-dev [--project <name>] [target]` — `--project` picks the fleet on the slash command itself and is forwarded on every self-wake; do NOT wrap in /loop.",
+  "content_fingerprint": "922a481007554ddf9c4a701bfecae01a128c86c1598054a5171e4a8d417537a1"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Resolve bot-walled EXTERNAL visual placeholders (Google SERP, Reddit, competitor UIs) that the headless /generate-visuals pass left `failed`/`manual`. Provider-agnostic by design \u2014 a model-neutral headed-browser engine does the work; Claude-in-Chrome is only an optional fallback. Run after /generate-visuals when the manifest has unresolved externals; re-gates visuals when done."
+  "description": "Resolve bot-walled EXTERNAL visual placeholders (Google SERP, Reddit, competitor UIs) that the headless /generate-visuals pass left `failed`/`manual`. Provider-agnostic by design — a model-neutral headed-browser engine does the work; Claude-in-Chrome is only an optional fallback. Run after /generate-visuals when the manifest has unresolved externals; re-gates visuals when done.",
+  "content_fingerprint": "b0fb6f5d4e076123e03f2228b1b4c18d6385aea6a34daeabd5890b18bc14c64f"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Initialize a bug-bounty target from its http.md seed. Use when a new targets/<name>/http.md exists, or when the user says \"start target <name>\", or when targets/<name>/status.json is missing. Parses scope, auth, notes into normalized status.json so all downstream skills can read scope without re-parsing."
+  "description": "Initialize a bug-bounty target from its http.md seed. Use when a new targets/<name>/http.md exists, or when the user says \"start target <name>\", or when targets/<name>/status.json is missing. Parses scope, auth, notes into normalized status.json so all downstream skills can read scope without re-parsing.",
+  "content_fingerprint": "e542a7b62951fcd232197c34003432023eb70ff7f92d3eb41975fd29235e8b7c"
 }

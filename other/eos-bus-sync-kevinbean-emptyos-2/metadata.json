@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Sync edited rules and skills into the .agent-bus canonical store and commit them without capturing another session's uncommitted work. Use when you have edited a file under .claude/rules or .claude/skills and are about to commit, or when check_skills.py reports a mirror out of sync. NOT for the reverse direction \u2014 regenerating native files from the bus is `eos bus ripple` / `transpile` \u2014 and NOT a general commit helper."
+  "description": "Sync edited rules and skills into the .agent-bus canonical store and commit them without capturing another session's uncommitted work. Use when you have edited a file under .claude/rules or .claude/skills and are about to commit, or when check_skills.py reports a mirror out of sync. NOT for the reverse direction — regenerating native files from the bus is `eos bus ripple` / `transpile` — and NOT a general commit helper.",
+  "content_fingerprint": "7e362ec2ad0379eb1ef92940ff806ddec717b9d3443ac319713b6dc0eede0336"
 }

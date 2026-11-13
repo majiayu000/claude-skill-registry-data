@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e0a\u4e0b\u6587\u4f18\u5316\u5668 - \u667a\u80fd\u5bf9\u8bdd\u538b\u7f29\u4e0e\u8bb0\u5fc6\u5206\u5c42\u7ba1\u7406\n\n\u6838\u5fc3\u529f\u80fd:\n1. \u667a\u80fd\u6458\u8981 - \u81ea\u52a8\u8bc6\u522b\u5173\u952e\u51b3\u7b56\uff0c\u538b\u7f29\u5197\u4f59\u5185\u5bb9\n2. \u5206\u5c42\u8bb0\u5fc6 - \u77ed\u671f/\u4e2d\u671f/\u957f\u671f\u81ea\u52a8\u5f52\u6863\n3. Token\u9884\u8b66 - 80%\u65f6\u4e3b\u52a8\u5efa\u8bae\u538b\u7f29\n4. \u4e0a\u4e0b\u6587\u91cd\u5efa - \u4ece\u538b\u7f29\u72b6\u6001\u6062\u590d\u5173\u952e\u4fe1\u606f\n\n\u89e6\u53d1\u6761\u4ef6:\n- Token\u6d88\u8017\u8fbe80%\n- \u7528\u6237\u53d1\u9001\"/compact\"\n- \u5bf9\u8bdd\u8d85\u8fc750\u8f6e\n- \u7528\u6237\u660e\u786e\u8bf4\"\u4f18\u5316\u4e0a\u4e0b\u6587\""
+  "description": "上下文优化器 - 智能对话压缩与记忆分层管理\n\n核心功能:\n1. 智能摘要 - 自动识别关键决策，压缩冗余内容\n2. 分层记忆 - 短期/中期/长期自动归档\n3. Token预警 - 80%时主动建议压缩\n4. 上下文重建 - 从压缩状态恢复关键信息\n\n触发条件:\n- Token消耗达80%\n- 用户发送\"/compact\"\n- 对话超过50轮\n- 用户明确说\"优化上下文\"",
+  "content_fingerprint": "c20ed2f0b2bfb22f1e67599476d090127ebad663f6e63486917e0d467ed45f61"
 }

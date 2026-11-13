@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Claude Code Stop \uc774\ubca4\ud2b8\ub9c8\ub2e4 \ub9c8\uc9c0\ub9c9 user/assistant \uad50\ud658\uc744 \uc138\uc158\ub2f9 1\uac1c markdown \ud30c\uc77c\uc5d0 \uae30\uacc4\uc801\uc73c\ub85c append\ud558\ub294 \ud6c5\uc744 \uc124\uce58\ud558\uac70\ub098 \uc81c\uac70\ud558\ub294 \uc2a4\ud0ac. LLM \ud638\ucd9c \uc5c6\uc774 jq \ucd94\ucd9c\ub9cc \ud558\ubbc0\ub85c \ud1a0\ud070 \ube44\uc6a9\uc774 \uc5c6\uace0, transcript \ub9cc\ub8cc \ud6c4\uc5d0\ub3c4 \uc77d\uc744 \uc218 \uc788\ub294 \uc138\uc158 \uc6d0\ub8cc \ub85c\uadf8\ub97c \ub0a8\uae34\ub2e4. \"\uc138\uc158 \ub85c\uadf8 \ud6c5 \uc124\uce58\", \"stop \ub85c\uadf8 \uc124\uce58\", \"\uc138\uc158 \uc790\ub3d9 \uae30\ub85d\", \"\ub300\ud654 \uc790\ub3d9 \uae30\ub85d\ud574\uc918\", \"\uc138\uc158 \ub85c\uadf8 \uc81c\uac70\", \"session log \uc124\uce58\", \"install session log hook\", \"uninstall session log\" \ub4f1\uc5d0\uc11c \ud2b8\ub9ac\uac70."
+  "description": "Claude Code Stop 이벤트마다 마지막 user/assistant 교환을 세션당 1개 markdown 파일에 기계적으로 append하는 훅을 설치하거나 제거하는 스킬. LLM 호출 없이 jq 추출만 하므로 토큰 비용이 없고, transcript 만료 후에도 읽을 수 있는 세션 원료 로그를 남긴다. \"세션 로그 훅 설치\", \"stop 로그 설치\", \"세션 자동 기록\", \"대화 자동 기록해줘\", \"세션 로그 제거\", \"session log 설치\", \"install session log hook\", \"uninstall session log\" 등에서 트리거.",
+  "content_fingerprint": "82cd7d04a1e53e1d3b498abce89242a542e7c7a0de1dd897d0a8cac4989b6c3f"
 }

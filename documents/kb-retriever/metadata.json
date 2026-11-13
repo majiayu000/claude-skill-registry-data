@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9762\u5411\u672c\u5730\u77e5\u8bc6\u5e93\u76ee\u5f55\u7684\u68c0\u7d22\u548c\u95ee\u7b54\u52a9\u624b\u3002\u6838\u5fc3\u6d41\u7a0b\uff1a(1)\u5206\u5c42\u7d22\u5f15\u5bfc\u822a (2)\u9047\u5230PDF/Excel\u65f6\u5fc5\u987b\u5148\u8bfb\u53d6references\u5b66\u4e60\u5904\u7406\u65b9\u6cd5 (3)\u5904\u7406\u6587\u4ef6\u540e\u518d\u68c0\u7d22\u3002\u6309\u6587\u4ef6\u7c7b\u578b\u7ec4\u5408\u4f7f\u7528 grep\u3001Read\u3001pdfplumber\u3001pandas \u8fdb\u884c\u6e10\u8fdb\u5f0f\u68c0\u7d22\uff0c\u907f\u514d\u6574\u6587\u4ef6\u52a0\u8f7d\u3002\u7528\u6237\u95ee\u9898\u6d89\u53ca\"\u4ece\u77e5\u8bc6\u5e93\u76ee\u5f55\u56de\u7b54\u95ee\u9898/\u68c0\u7d22\u4fe1\u606f/\u67e5\u8d44\u6599\"\u65f6\u4f7f\u7528\u3002"
+  "description": "面向本地知识库目录的检索和问答助手。核心流程：(1)分层索引导航 (2)遇到PDF/Excel时必须先读取references学习处理方法 (3)处理文件后再检索。按文件类型组合使用 grep、Read、pdfplumber、pandas 进行渐进式检索，避免整文件加载。用户问题涉及\"从知识库目录回答问题/检索信息/查资料\"时使用。",
+  "content_fingerprint": "6d717b273395148fcb3c926e346e19e0ecd6fd8c3126cabf8432a79a7b64beaf"
 }

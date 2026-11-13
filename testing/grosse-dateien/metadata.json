@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Gro\u00dfe und merkw\u00fcrdige Dateien in zid (Bin\u00e4rdateien, Riesenzeilen, 5-MB-Dateien, Glyph-Batching, Spalten als Codepoints), E2E-Betrieb/Windows-Eigenheiten, plus die Use-after-free-Regel f\u00fcr Render-Commands (Segfault in hashText/renderText). Use when touching glyph_layout.zig, file_types.detectFileKind/looksBinary, ShapedRunCache/visibleSliceOf, renderText/renderExample/text_probe.zig, file_watcher_win.zig, conpty.zig, or scripts/e2e_odd_files.py, e2e_repro_text_uaf.py."
+  "description": "Große und merkwürdige Dateien in zid (Binärdateien, Riesenzeilen, 5-MB-Dateien, Glyph-Batching, Spalten als Codepoints), E2E-Betrieb/Windows-Eigenheiten, plus die Use-after-free-Regel für Render-Commands (Segfault in hashText/renderText). Use when touching glyph_layout.zig, file_types.detectFileKind/looksBinary, ShapedRunCache/visibleSliceOf, renderText/renderExample/text_probe.zig, file_watcher_win.zig, conpty.zig, or scripts/e2e_odd_files.py, e2e_repro_text_uaf.py.",
+  "content_fingerprint": "0c20c673d199a4ccd80e5e12c043b69d614214f8a3cb575f683216226ea96569"
 }

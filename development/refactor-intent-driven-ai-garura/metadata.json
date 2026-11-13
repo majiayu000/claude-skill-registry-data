@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Improve the internal quality of a named code target \u2014 structure, duplication, naming, complexity \u2014 without changing its external behavior or the product model, proving behavior is preserved before it lands. Pins current behavior first (characterization tests where coverage is thin), presents a refactor plan at a single human checkpoint, then refactors and verifies independently that the model is untouched, tests are green before and after, and no test was weakened. The /refactor command in the ProductOS command model. Use when code needs to get better on the inside without changing what it does."
+  "description": "Improve the internal quality of a named code target — structure, duplication, naming, complexity — without changing its external behavior or the product model, proving behavior is preserved before it lands. Pins current behavior first (characterization tests where coverage is thin), presents a refactor plan at a single human checkpoint, then refactors and verifies independently that the model is untouched, tests are green before and after, and no test was weakened. The /refactor command in the ProductOS command model. Use when code needs to get better on the inside without changing what it does.",
+  "content_fingerprint": "fb0aa1fef22a212330560ecaed12513e0b1fa142d0fec9a584ce4d1d01cdfaeb"
 }

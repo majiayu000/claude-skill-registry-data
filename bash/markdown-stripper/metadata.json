@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Markdown\u6807\u8bb0\u6e05\u9664\u5de5\u5177\u3002\u8bfb\u53d6Markdown\u6587\u4ef6\uff0c\u53bb\u9664Markdown\u8bed\u6cd5\u6807\u8bb0\uff08\u6807\u9898#\u3001\u52a0\u7c97**\u3001\u659c\u4f53*\u3001\u94fe\u63a5[]()\u3001\u4ee3\u7801\u5757```\u3001\u5f15\u7528>\u3001\u5217\u8868\u6807\u8bb0\u7b49\uff09\uff0c\u8f93\u51fa\u7eaf\u6587\u672c\u6587\u4ef6\u3002\n\u5f53\u7528\u6237\u63d0\u5230Markdown\u6e05\u6d17\u3001\u53bb\u9664MD\u6807\u8bb0\u3001MD\u8f6c\u7eaf\u6587\u672c\u7b49\u9700\u6c42\u65f6\u4f7f\u7528\u6b64skill\u3002\n\u9002\u7528\u4e8eMarkdown\u6587\u4ef6\u7684\u8bed\u6cd5\u51c0\u5316\uff0c\u4e0d\u8d1f\u8d23CSV/\u8868\u683c\u6570\u636e\u7684\u7ed3\u6784\u6e05\u6d17\u3002"
+  "description": "Markdown标记清除工具。读取Markdown文件，去除Markdown语法标记（标题#、加粗**、斜体*、链接[]()、代码块```、引用>、列表标记等），输出纯文本文件。\n当用户提到Markdown清洗、去除MD标记、MD转纯文本等需求时使用此skill。\n适用于Markdown文件的语法净化，不负责CSV/表格数据的结构清洗。",
+  "content_fingerprint": "f4f314dcc1b5ec60f683293b2a2880d2347a378ae989e14041524a28331ba108"
 }

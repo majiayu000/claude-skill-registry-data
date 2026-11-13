@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Comprehensive dependency update workflow for resolving Dependabot alerts and PRs. Use when: (1) User wants to update dependencies, (2) User mentions 'dependabot', 'security vulnerabilities', or 'dependency updates', (3) User asks to run security audit, (4) User wants to create a deps-update PR. Analyzes Dependabot issues, runs pnpm audit, applies updates, runs quality checks (typecheck, lint, test, build), handles Playwright Docker image sync, creates PR with changelog."
+  "description": "Comprehensive dependency update workflow for resolving Dependabot alerts and PRs. Use when: (1) User wants to update dependencies, (2) User mentions 'dependabot', 'security vulnerabilities', or 'dependency updates', (3) User asks to run security audit, (4) User wants to create a deps-update PR. Analyzes Dependabot issues, runs pnpm audit, applies updates, runs quality checks (typecheck, lint, test, build), handles Playwright Docker image sync, creates PR with changelog.",
+  "content_fingerprint": "4ae1dc5f714e13a494f56046eed833cff1a127fd06319db624aaaa915fc4f41a"
 }

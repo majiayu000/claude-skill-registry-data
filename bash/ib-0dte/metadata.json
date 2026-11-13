@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Find and place the best 0DTE (zero-days-to-expiration) credit spreads from Interactive Brokers. Default execution route is the EMA9/EMA21 + VIX/VXN regime strategy (ema_vix_0dte.py), which auto-selects bull_put or bear_call from a bare EMA cross and skips the trade when the vol index is elevated (VXN \u2265 35 for NDX/QQQ, VIX \u2265 20 otherwise). Optional --rr-gate and --time-gate add red\u2192red and bar-timing confirmation. Supports cash-settled indices (SPX, NDX, RUT, VIX) and any optionable stock/ETF. Manual spread type override is available via zero_dte.py. Requires TWS or IB Gateway running locally."
+  "description": "Find and place the best 0DTE (zero-days-to-expiration) credit spreads from Interactive Brokers. Default execution route is the EMA9/EMA21 + VIX/VXN regime strategy (ema_vix_0dte.py), which auto-selects bull_put or bear_call from a bare EMA cross and skips the trade when the vol index is elevated (VXN ≥ 35 for NDX/QQQ, VIX ≥ 20 otherwise). Optional --rr-gate and --time-gate add red→red and bar-timing confirmation. Supports cash-settled indices (SPX, NDX, RUT, VIX) and any optionable stock/ETF. Manual spread type override is available via zero_dte.py. Requires TWS or IB Gateway running locally.",
+  "content_fingerprint": "0018e8606ed1b009c811c66f6205cb7dc57eba732aa3f144268614b7be48986b"
 }

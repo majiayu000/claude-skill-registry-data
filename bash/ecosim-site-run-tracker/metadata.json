@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Track and report progress of a request to create and run an EcoSIM case for a site (\"create an ecosim run for site US-UMB\", \"set up and run EcoSIM at <site>\"). Records four stages \u2014 data preparation, namelist creation, model simulation, and output evaluation \u2014 in result/<SITE_ID>/progress.json and PROGRESS.md, derives step status from files and quality reports on disk, and records manual results such as the executable, test run, and evaluation verdicts. Use at the start of such a request, after each stage, and whenever the user asks where a site run stands."
+  "description": "Track and report progress of a request to create and run an EcoSIM case for a site (\"create an ecosim run for site US-UMB\", \"set up and run EcoSIM at <site>\"). Records four stages — data preparation, namelist creation, model simulation, and output evaluation — in result/<SITE_ID>/progress.json and PROGRESS.md, derives step status from files and quality reports on disk, and records manual results such as the executable, test run, and evaluation verdicts. Use at the start of such a request, after each stage, and whenever the user asks where a site run stands.",
+  "content_fingerprint": "f3864ea99b2ddaf2d8c50bc62965df19d01e5af249d869a3e04d03ecb337f823"
 }

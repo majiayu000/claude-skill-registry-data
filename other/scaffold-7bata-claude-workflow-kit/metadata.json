@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Lay down the methodology scaffolding in place inside the current project directory (CLAUDE.md + the eight-doc set + .gitignore + README). The backend stack is fixed to Go (version baseline in the table inside the skill); Claude decides the database based on project intent. Triggered when the user says \"set up scaffolding / initialize project / start new project / scaffold\"; also triggered when the user describes wanting to build a new product/tool/website while not currently inside a project directory (Auto mode, paired with the auto-scaffold standing rule)."
+  "description": "Lay down the methodology scaffolding in place inside the current project directory (CLAUDE.md + the eight-doc set + .gitignore + README). The backend stack is fixed to Go (version baseline in the table inside the skill); Claude decides the database based on project intent. Triggered when the user says \"set up scaffolding / initialize project / start new project / scaffold\"; also triggered when the user describes wanting to build a new product/tool/website while not currently inside a project directory (Auto mode, paired with the auto-scaffold standing rule).",
+  "content_fingerprint": "b3501c114da1f515d786ab3e4c33e34670e6b238a7f2052dba468ea13af3b2f6"
 }

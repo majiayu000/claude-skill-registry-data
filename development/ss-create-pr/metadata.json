@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use once coding and code review are complete and it's time to open a pull/merge request. Runs pre-flight checks (tests, cleanup scan), rebases onto the target branch, verifies again if the rebase changed anything, then opens a PR on GitHub (via gh) or an MR on GitLab (via glab) depending on the repository's remote. Falls back to a local conventional-commit summary if there's no remote or forge CLI available, or if the user declines \u2014 that fallback is a normal outcome, not a failure."
+  "description": "Use once coding and code review are complete and it's time to open a pull/merge request. Runs pre-flight checks (tests, cleanup scan), rebases onto the target branch, verifies again if the rebase changed anything, then opens a PR on GitHub (via gh) or an MR on GitLab (via glab) depending on the repository's remote. Falls back to a local conventional-commit summary if there's no remote or forge CLI available, or if the user declines — that fallback is a normal outcome, not a failure.",
+  "content_fingerprint": "bcb4b8c21b17b6cd47e5b0320c018c6b166cce0c416c1baaa64deab5b86b353f"
 }

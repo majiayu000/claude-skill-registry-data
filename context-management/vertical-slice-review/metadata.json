@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5ba1\u67e5 ticket \u62c6\u89e3\u65b9\u6848\u662f\u5426\u7b26\u5408 vertical slice \u65b9\u6cd5\u8bba\uff1a\u9010\u6761\u5224\u5b9a\u662f\u5426\u8d2f\u7a7f schema/API/UI/tests\u3001\u80fd\u5426\u72ec\u7acb demo\u3001\u5927\u5c0f\u80fd\u5426\u653e\u8fdb\u4e00\u4e2a context window\uff0c\u8bfb\u4ee3\u7801\u5e93\u9a8c\u8bc1\u3001\u5fc5\u8981\u65f6\u91cd\u62c6\uff0c\u5e76\u8c03\u7528 strong-model-consultant \u590d\u6838\u3002"
+  "description": "审查 ticket 拆解方案是否符合 vertical slice 方法论：逐条判定是否贯穿 schema/API/UI/tests、能否独立 demo、大小能否放进一个 context window，读代码库验证、必要时重拆，并调用 strong-model-consultant 复核。",
+  "content_fingerprint": "9a6e6602c673461ff887196e346a6048f2764a975ee1a715882aad20717ddeb7"
 }

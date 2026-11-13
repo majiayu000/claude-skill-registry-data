@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific behavior of the `mariadb` command-line client \u2014 batch mode auto-enables silent/tab output, `\\G`/`\\g` and client-side `DELIMITER` for stored-routine bodies, `--safe-updates` sets `max_join_size` (no `sql_` prefix) not `sql_max_join_size`, default charset auto-detects from locale rather than defaulting to latin1, and `mysql` is a kept symlink for the same binary. Use when writing, generating, or reviewing shell commands, scripts, or docs that invoke the mariadb CLI."
+  "description": "MariaDB-specific behavior of the `mariadb` command-line client — batch mode auto-enables silent/tab output, `\\G`/`\\g` and client-side `DELIMITER` for stored-routine bodies, `--safe-updates` sets `max_join_size` (no `sql_` prefix) not `sql_max_join_size`, default charset auto-detects from locale rather than defaulting to latin1, and `mysql` is a kept symlink for the same binary. Use when writing, generating, or reviewing shell commands, scripts, or docs that invoke the mariadb CLI.",
+  "content_fingerprint": "71aec03e75f33f9482ddaa97f353fee48be529cf3db52bb15cfd1242bf6ab441"
 }

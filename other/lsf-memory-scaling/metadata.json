@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "LSF \u4f5c\u4e1a\u5185\u5b58\u4e0d\u8db3\u65f6\u7684\u8c03\u6574\u6280\u80fd\u3002\u5f53\u4f5c\u4e1a\u56e0\u5185\u5b58\u4e0d\u591f\u88ab\u6302\u8d77(SSUSP)\u6216\u7ec8\u6b62(EXIT/MEMLIMIT)\u65f6\uff0c\u901a\u8fc7\u8c03\u6574 bsub -n \u7684\u8282\u70b9\uff08\u6838\u6570/slot\uff09\u6570\u91cf\u6765\u6269\u5927\u53ef\u7528\u5185\u5b58\u2014\u2014\u53ef\u7528\u8fd0\u884c\u5185\u5b58 \u2248 5GB \u00d7 \u7533\u8bf7\u8282\u70b9\u6570\u3002\u5f53\u7528\u6237\u8bf4\u5185\u5b58\u4e0d\u8db3\u3001\u4f5c\u4e1a\u88ab\u6740\u3001OOM\u3001\u9700\u8981\u66f4\u5927\u5185\u5b58\uff0c\u6216\u6392\u67e5 EXIT/SSUSP \u4f5c\u4e1a\u65f6\uff0c\u914d\u5408 lsf-ncpgr skill \u4e00\u8d77\u4f7f\u7528\u3002"
+  "description": "LSF 作业内存不足时的调整技能。当作业因内存不够被挂起(SSUSP)或终止(EXIT/MEMLIMIT)时，通过调整 bsub -n 的节点（核数/slot）数量来扩大可用内存——可用运行内存 ≈ 5GB × 申请节点数。当用户说内存不足、作业被杀、OOM、需要更大内存，或排查 EXIT/SSUSP 作业时，配合 lsf-ncpgr skill 一起使用。",
+  "content_fingerprint": "89fb168306f6525c36fe700777a3e741f9a923b4e6e6bedbceef6316b6f6acda"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "AI\u4ee3\u7801\u4e13\u9879\u5ba1\u67e5Skill",
+  "name": "AI代码专项审查Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/ai-code-review/SKILL.md",
   "github_branch": "main",
@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "AI \u76f8\u5173\u4ee3\u7801\u7684\u4e13\u9879\u5ba1\u67e5\u8981\u70b9(Prompt\u6ce8\u5165\u9762\u3001\u6a21\u578b\u8c03\u7528\u51ed\u8bc1\u3001\u8f93\u51fa\u5904\u7406\u3001\u6210\u672c\u5931\u63a7)\u3002\u5f53\u4ee3\u7801\u5305\u542b LLM \u8c03\u7528\u3001Prompt \u7ec4\u88c5\u3001RAG/Agent \u7f16\u6392,\u9700\u8981\u4e13\u9879\u5ba1\u67e5\u5b89\u5168\u4e0e\u6210\u672c\u98ce\u9669\u65f6\u4f7f\u7528\u3002"
+  "description": "AI 相关代码的专项审查要点(Prompt注入面、模型调用凭证、输出处理、成本失控)。当代码包含 LLM 调用、Prompt 组装、RAG/Agent 编排,需要专项审查安全与成本风险时使用。",
+  "content_fingerprint": "2acef7bf57fcc9e0e28af9f5375fff35658b6b0d79a6806c2438db9b210764ef"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7edf\u4e00\u8d28\u91cf\u95e8\u7981\uff1aRTL / \u7efc\u5408 / \u6d4b\u8bd5 / PD \u56db\u9636\u6bb5\u9a8c\u6536\u3002\u8c03\u7528\u5171\u4eab gate_runner.py \u53c2\u6570\u5316\u3002\u89e6\u53d1\uff1a(1) bba-guru-* \u5728\u9636\u6bb5\u7ed3\u675f\u65f6\u8c03\u7528\uff1b(2) \u663e\u5f0f /bb-gate <domain>\u3002"
+  "description": "统一质量门禁：RTL / 综合 / 测试 / PD 四阶段验收。调用共享 gate_runner.py 参数化。触发：(1) bba-guru-* 在阶段结束时调用；(2) 显式 /bb-gate <domain>。",
+  "content_fingerprint": "79aa47863b7280d1448f4be745ae534b38b3dc2c1063226a82d1689246d53c32"
 }

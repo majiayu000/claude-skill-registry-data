@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Triages a PR comment \u2014 from a bot (Copilot, CI) or a human reviewer. Routes to the `triage_helper.py` helper for identity checks, thread snapshotting, isolated-worktree fixes, and publish/reply/resolve mechanics; you classify the finding and apply a justified fix. `--dry-run` is fully read-only (investigation and a printed plan, zero mutations). `--no-resolve` runs the full fix/reply workflow but never resolves a thread. Run from inside the repo."
+  "description": "Triages a PR comment — from a bot (Copilot, CI) or a human reviewer. Routes to the `triage_helper.py` helper for identity checks, thread snapshotting, isolated-worktree fixes, and publish/reply/resolve mechanics; you classify the finding and apply a justified fix. `--dry-run` is fully read-only (investigation and a printed plan, zero mutations). `--no-resolve` runs the full fix/reply workflow but never resolves a thread. Run from inside the repo.",
+  "content_fingerprint": "6c97f92847cf85427c23850b8541d9b74905dfe10b6288b70f2c0934849b4ad4"
 }

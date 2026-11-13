@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pack an EXTERNAL repository into a single AI-friendly file (markdown/xml/json). Use for third-party library analysis, security audits, or handoff to external LLMs. Do NOT use to pack the current project for inbound context \u2014 the host runtime already reads files lazily. Triggers: 'pack this repo', 'snapshot of X', 'export codebase', 'repomix'."
+  "description": "Pack an EXTERNAL repository into a single AI-friendly file (markdown/xml/json). Use for third-party library analysis, security audits, or handoff to external LLMs. Do NOT use to pack the current project for inbound context — the host runtime already reads files lazily. Triggers: 'pack this repo', 'snapshot of X', 'export codebase', 'repomix'.",
+  "content_fingerprint": "5cbce6db0d42b450bf318a4398fda537359988c9c911f3e2c3970374acc6ce03"
 }

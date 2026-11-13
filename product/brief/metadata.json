@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Session-start briefing from Origin. Reads the project status file (the /handoff-maintained ledger of Active/Backlog work), then loads identity, preferences, and topic-relevant memories so the agent walks in with context. Surfaces any memories the daemon has flagged for human revision before the session uses them. Invoked as `/brief [topic]`. Call FIRST at session start, before any other Origin verb."
+  "description": "Session-start briefing from Origin. Reads the project status file (the /handoff-maintained ledger of Active/Backlog work), then loads identity, preferences, and topic-relevant memories so the agent walks in with context. Surfaces any memories the daemon has flagged for human revision before the session uses them. Invoked as `/brief [topic]`. Call FIRST at session start, before any other Origin verb.",
+  "content_fingerprint": "f1b110acad8812d019bd20d4e01ede370d7e0b43f97244e535e7e3af45bb18d6"
 }

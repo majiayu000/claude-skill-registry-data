@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use before starting real work in a git checkout this repo's Session Authority can't reach automatically (a cloud session, which never runs worktree-setup.ps1) \u2014 acquire a lease so a concurrent session can't silently collide with your uncommitted work, and release it cleanly when you finish. On a Windows bridge session, worktree-setup.ps1/worktree-teardown.ps1 already do this for you; this skill is the manual fallback for the one path nothing mechanically wires."
+  "description": "Use before starting real work in a git checkout this repo's Session Authority can't reach automatically (a cloud session, which never runs worktree-setup.ps1) — acquire a lease so a concurrent session can't silently collide with your uncommitted work, and release it cleanly when you finish. On a Windows bridge session, worktree-setup.ps1/worktree-teardown.ps1 already do this for you; this skill is the manual fallback for the one path nothing mechanically wires.",
+  "content_fingerprint": "06ecb6d4b29e92eaf3740e9ff7e2896f590578c92c72de969ed45c8e64d62124"
 }

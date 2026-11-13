@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decide where to enforce structured LM output (constrain at decode time with Outlines vs validate-and-retry with Instructor vs grammar with Guidance) and which failure stance to take (Assert/hard-fail vs Suggest/soft-retry). Use when an LM's output is parsed or typed by downstream code and you must pick one enforcement library plus its failure handling, when malformed output is burning tokens on retries, or when choosing between decode-time vs validation-time constraints for local vs API models."
+  "description": "Decide where to enforce structured LM output (constrain at decode time with Outlines vs validate-and-retry with Instructor vs grammar with Guidance) and which failure stance to take (Assert/hard-fail vs Suggest/soft-retry). Use when an LM's output is parsed or typed by downstream code and you must pick one enforcement library plus its failure handling, when malformed output is burning tokens on retries, or when choosing between decode-time vs validation-time constraints for local vs API models.",
+  "content_fingerprint": "0a3efaf4047e69304820740b7e378b048e97e77f3bbd3562c9202785d02a65e2"
 }

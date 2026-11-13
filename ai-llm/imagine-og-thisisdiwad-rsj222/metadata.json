@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ube14\ub85c\uadf8\u00b7\ub79c\ub529 \uae00\uc758 **OG \uc774\ubbf8\uc9c0 / \uc18c\uc15c \uce74\ub4dc**(Twitter / Instagram / LinkedIn)\ub97c \ud50c\ub7ab\ud3fc \ud504\ub9ac\uc14b\uc5d0 \ub9de\ucdb0 \uc790\ub3d9 \uc0dd\uc131\ud55c\ub2e4. \ubc30\uacbd \uc77c\ub7ec\uc2a4\ud2b8\ub9cc Codex \uc774\ubbf8\uc9c0 \ubaa8\ub378\ub85c \ubf51\uace0, \uc81c\ubaa9\u00b7\ud0dc\uadf8 \uac19\uc740 \uae00\uc790\ub294 AI\uc5d0 \ub9e1\uae30\uc9c0 \uc54a\uace0 \uacf5\uc6a9 \ud6c4\ucc98\ub9ac \ubaa8\ub4c8(`scripts/lib/compose-text.js`)\ub85c \ud569\uc131\ud55c\ub2e4. \uc0ac\uc6a9\uc790\uac00 \"OG \uc774\ubbf8\uc9c0\", \"\uc18c\uc15c \uce74\ub4dc\", \"imagine-og\", \"Twitter \uce74\ub4dc\" \ub4f1\uc744 \ub9d0\ud558\uba74 \uc774 \uc2a4\ud0ac\uc774 \ub2f4\ub2f9\ud55c\ub2e4. \ube14\ub85c\uadf8 \uc218\ubc31 \ud3b8\uc744 \uc77c\uad04 \ub80c\ub354\ud558\ub294 `--bulk` \ubaa8\ub4dc\ub3c4 \uc9c0\uc6d0\ud55c\ub2e4."
+  "description": "블로그·랜딩 글의 **OG 이미지 / 소셜 카드**(Twitter / Instagram / LinkedIn)를 플랫폼 프리셋에 맞춰 자동 생성한다. 배경 일러스트만 Codex 이미지 모델로 뽑고, 제목·태그 같은 글자는 AI에 맡기지 않고 공용 후처리 모듈(`scripts/lib/compose-text.js`)로 합성한다. 사용자가 \"OG 이미지\", \"소셜 카드\", \"imagine-og\", \"Twitter 카드\" 등을 말하면 이 스킬이 담당한다. 블로그 수백 편을 일괄 렌더하는 `--bulk` 모드도 지원한다.",
+  "content_fingerprint": "302d5149df24a0b95c61cc570177eeade8d58b0e1ec29a6fc0d619a3ca882faf"
 }

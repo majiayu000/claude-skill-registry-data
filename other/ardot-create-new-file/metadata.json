@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "**\u5f3a\u5236\u6027\u524d\u7f6e\u6761\u4ef6** \u2014 \u6bcf\u6b21\u8c03\u7528 `create_new_page` \u5de5\u5177\u4e4b\u524d\uff0c\u5fc5\u987b\u5148\u8c03\u7528\u6b64\u6280\u80fd\u3002\n\u672a\u7ecf\u52a0\u8f7d\u6b64\u6280\u80fd\uff0c\u7edd\u4e0d\u80fd\u76f4\u63a5\u8c03\u7528 `create_new_page`\u3002\n\n\u5f53\u7528\u6237\u60f3\u8981\u5728 Ardot \u8bbe\u8ba1\u6587\u4ef6\u4e2d\u521b\u5efa\u65b0\u9875\u9762\u65f6\u89e6\u53d1\u3002\n\u5173\u952e\u8bcd\uff1a\u5728 Ardot \u4e0a\u4e0b\u6587\u4e2d\u7684\"\u521b\u5efa\u65b0\u9875\u9762\"\u3001\"\u6dfb\u52a0\u9875\u9762\"\u3001\"\u65b0\u753b\u5e03\"\u3002"
+  "description": "**强制性前置条件** — 每次调用 `create_new_page` 工具之前，必须先调用此技能。\n未经加载此技能，绝不能直接调用 `create_new_page`。\n\n当用户想要在 Ardot 设计文件中创建新页面时触发。\n关键词：在 Ardot 上下文中的\"创建新页面\"、\"添加页面\"、\"新画布\"。",
+  "content_fingerprint": "897012bf9561602c3013c0f6d170b520fcdcfd4ab063870dd5abb0fe9d7d1a5d"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "RFDB server becomes unresponsive (60s+ timeouts) during enricher addEdges write storms.\nUse when: (1) RFDB CPU spikes to 60-90% after addEdges calls; (2) subsequent reads time out\nat 60s; (3) server stays catatonic for 5-15 min after a write storm; (4) Tokio main thread\nparked (write-lock contention). Root cause: add_edges() calls maybe_auto_flush() which has a\nmemory-pressure path that fires on NODE count \u2014 not edge count \u2014 and holds the exclusive write\nlock during disk I/O. Fix: separate maybe_auto_flush_edges() uses byte-limit only."
+  "description": "RFDB server becomes unresponsive (60s+ timeouts) during enricher addEdges write storms.\nUse when: (1) RFDB CPU spikes to 60-90% after addEdges calls; (2) subsequent reads time out\nat 60s; (3) server stays catatonic for 5-15 min after a write storm; (4) Tokio main thread\nparked (write-lock contention). Root cause: add_edges() calls maybe_auto_flush() which has a\nmemory-pressure path that fires on NODE count — not edge count — and holds the exclusive write\nlock during disk I/O. Fix: separate maybe_auto_flush_edges() uses byte-limit only.",
+  "content_fingerprint": "a1a78a86883eddca8ca2093053fde39f2695e1fc4df790c5014eae31b70b9813"
 }

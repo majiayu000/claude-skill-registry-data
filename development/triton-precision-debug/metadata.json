@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Triton-Ascend \u7b97\u5b50\u7cbe\u5ea6\u5bf9\u9f50\u8c03\u8bd5\u4e13\u5bb6\u3002\u5f53\u7b97\u5b50\u7cbe\u5ea6\u6821\u9a8c\uff08MERE/MARE\uff09\u4e0d\u901a\u8fc7\u65f6\uff0c \u6309\u7167\u7cfb\u7edf\u5316\u7684\u4e94\u9636\u9694\u79bb\u6cd5\u5b9a\u4f4d ULP \u7ea7\u5dee\u5f02\u6839\u56e0\uff0c\u5e76\u63d0\u4f9b\u4fee\u590d\u65b9\u6848\u3002 \u5c24\u5176\u64c5\u957f\u5904\u7406\u7f16\u8bd1\u5668 scalar/vector \u6d6e\u70b9\u884c\u4e3a\u5dee\u5f02\u3001\u5e38\u91cf\u9664\u6cd5\u7cbe\u5ea6\u504f\u5dee\u7b49\u9690\u853d\u95ee\u9898\u3002"
+  "description": "Triton-Ascend 算子精度对齐调试专家。当算子精度校验（MERE/MARE）不通过时， 按照系统化的五阶隔离法定位 ULP 级差异根因，并提供修复方案。 尤其擅长处理编译器 scalar/vector 浮点行为差异、常量除法精度偏差等隐蔽问题。",
+  "content_fingerprint": "253768991d48df146819b4f19155bad1453bf5a24848df110a9b49eb055f7578"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u65b0\u898f\u30ea\u30dd\u306e\u7d44\u6210\u3001\u307e\u305f\u306f\u65e2\u5b58\u30ea\u30dd\u306e\u516c\u958b\u524d\u70b9\u691c\u3092\u884c\u3046\u3002\u30ea\u30dd\u985e\u578b\u306e\u5224\u5b9a\u30fb\u30d5\u30a1\u30a4\u30eb\u885b\u751f\u30fb.gitignore\u30fbLICENSE\u30fb.claude/settings.json\uff08deny/allow/attribution\uff09\u30fbCLAUDE.md \u3068 context/\u30fbCI \u306e\u8981\u5426\u3092\u57fa\u6e96\u306b\u7167\u3089\u3057\u3066\u6574\u3048\u308b\u3002\u30ea\u30dd\u3092\u521d\u671f\u5316\u30fb\u6a19\u6e96\u5316\u30fb\u70b9\u691c\u3057\u305f\u3044\u3068\u304d\u3001\u65b0\u898f\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u3092\u4f5c\u3063\u3066\u8db3\u5834\u3092\u6574\u3048\u305f\u3044\u3068\u304d\u306b\u4f7f\u3046\u3002"
+  "description": "新規リポの組成、または既存リポの公開前点検を行う。リポ類型の判定・ファイル衛生・.gitignore・LICENSE・.claude/settings.json（deny/allow/attribution）・CLAUDE.md と context/・CI の要否を基準に照らして整える。リポを初期化・標準化・点検したいとき、新規ディレクトリを作って足場を整えたいときに使う。",
+  "content_fingerprint": "3c730f492774e2b44aedbc7571183d8349e66ab004659b3804eeac73c1d410a9"
 }

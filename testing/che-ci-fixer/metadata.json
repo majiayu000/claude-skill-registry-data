@@ -38,5 +38,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diagnoses and fixes failing CI runs on GitHub Actions (or a PR). Takes a PR URL or Actions run URL, identifies failing jobs/steps with logs, classifies root cause (build/lint/typecheck/infra/flaky/dependency), implements fixes, re-runs locally to confirm. Invoke when user reports CI failure or pastes a PR/Run URL and asks to fix it, or when /che-ci-fix is called."
+  "description": "Diagnoses and fixes failing CI runs on GitHub Actions (or a PR). Takes a PR URL or Actions run URL, identifies failing jobs/steps with logs, classifies root cause (build/lint/typecheck/infra/flaky/dependency), implements fixes, re-runs locally to confirm. Invoke when user reports CI failure or pastes a PR/Run URL and asks to fix it, or when /che-ci-fix is called.",
+  "content_fingerprint": "1ba3659c3478f3328620d5ce865c969b9908a1dc0ea1dd88a3a4775fbc058d19"
 }

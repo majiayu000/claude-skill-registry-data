@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Hunt file-upload vulnerabilities on the SERVE side \u2014 stored XSS via Content-Type override on public object storage (MinIO/S3 response-content-type), polyglot type confusion against magic-byte sniffers (file-type ISO-BMFF dead bytes), filename command injection, extension and Content-Type-only upload checks, and serve-time policy bypasses. Use whenever the user mentions file upload bugs, avatar/attachment/upload endpoints, public buckets, cdn subdomains serving uploads, polyglot files, or uploaded content executing or rendering as HTML."
+  "description": "Hunt file-upload vulnerabilities on the SERVE side — stored XSS via Content-Type override on public object storage (MinIO/S3 response-content-type), polyglot type confusion against magic-byte sniffers (file-type ISO-BMFF dead bytes), filename command injection, extension and Content-Type-only upload checks, and serve-time policy bypasses. Use whenever the user mentions file upload bugs, avatar/attachment/upload endpoints, public buckets, cdn subdomains serving uploads, polyglot files, or uploaded content executing or rendering as HTML.",
+  "content_fingerprint": "3a794cdfc988d44d7fd421a138dd06b55cbff6f6cf91e59ef6441c67266f7925"
 }

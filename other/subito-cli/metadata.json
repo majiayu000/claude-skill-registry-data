@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "subito-cli searches subito.it listings (cars, and other categories) with\nevery filter subito supports and prints NDJSON to stdout for piping into\njq. It fetches through Playwriter (the user's real Chrome session), not a\nbare HTTP client, and parses subito's embedded __NEXT_DATA__ payload\ndirectly instead of scraping the DOM. ALWAYS load this skill when the user\nasks to search subito.it, find listings/cars/items on subito, or runs the\n`subito` command. Requires Chrome with the Playwriter extension enabled\nand the relay running (`playwriter serve`)."
+  "description": "subito-cli searches subito.it listings (cars, and other categories) with\nevery filter subito supports and prints NDJSON to stdout for piping into\njq. It fetches through Playwriter (the user's real Chrome session), not a\nbare HTTP client, and parses subito's embedded __NEXT_DATA__ payload\ndirectly instead of scraping the DOM. ALWAYS load this skill when the user\nasks to search subito.it, find listings/cars/items on subito, or runs the\n`subito` command. Requires Chrome with the Playwriter extension enabled\nand the relay running (`playwriter serve`).",
+  "content_fingerprint": "3a7834642fea6887d781bad2bae0e502d0c47be2c84f706fb42cf29a0efafe66"
 }

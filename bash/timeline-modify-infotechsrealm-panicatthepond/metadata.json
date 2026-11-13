@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generic write: apply a `SerializedMember` diff to a Timeline object (the `TimelineAsset`, a `TrackAsset`, or a clip's `PlayableAsset`) via ReflectorNet `TryModify`. Use 'timeline-get' first to inspect the structure. Remember: object *fields* must be supplied through the `fields` channel and *properties* through `props` \u2014 there is no cross-fallback."
+  "description": "Generic write: apply a `SerializedMember` diff to a Timeline object (the `TimelineAsset`, a `TrackAsset`, or a clip's `PlayableAsset`) via ReflectorNet `TryModify`. Use 'timeline-get' first to inspect the structure. Remember: object *fields* must be supplied through the `fields` channel and *properties* through `props` — there is no cross-fallback.",
+  "content_fingerprint": "7a674d3dce39d8866c93c57f5965b468b22a042b69fe7069c4ffdb9a0a891aa2"
 }

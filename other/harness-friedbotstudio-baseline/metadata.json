@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "End-to-end workflow orchestrator. Walks the 11-phase pipeline, invoking each phase skill in order inside an internal loop, yielding at consent gates (/approve-direction, /approve-swarm, /grant-commit), and exiting cleanly on yield/failure/done. Decides swarm-vs-solo at Phase 6. Auto-loops /tdd on integrate failures that don't require a spec change. The harness_continuation Stop hook is a safety net that re-fires harness only when the loop exited mid-flow."
+  "description": "End-to-end workflow orchestrator. Walks the 11-phase pipeline, invoking each phase skill in order inside an internal loop, yielding at consent gates (/approve-direction, /approve-swarm, /grant-commit), and exiting cleanly on yield/failure/done. Decides swarm-vs-solo at Phase 6. Auto-loops /tdd on integrate failures that don't require a spec change. The harness_continuation Stop hook is a safety net that re-fires harness only when the loop exited mid-flow.",
+  "content_fingerprint": "418bcd2b069c8ef96358b8f1a8f13458b71020be4ce04881aa0aeff95e5f2c3d"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "End-to-end test driver for REgent skills (regent-reverse, regent-build, regent-refactor). Use when asked to \"test regent-refactor\", \"verify the reverse+build roundtrip\", \"audit a REgent skill\", or \"run the regent spec \u2192 code pipeline as a black box\". Produces a PASS/FAIL verdict against all three grading keys (pytest, functional-checklist.md, test-oracle.md) plus a discipline check (no upstream leakage, no training-data smuggling). Triggers on phrases like \"regent-refactor \u6d4b\u8bd5\", \"test the refactor skill\", \"run regent end-to-end\"."
+  "description": "End-to-end test driver for REgent skills (regent-reverse, regent-build, regent-refactor). Use when asked to \"test regent-refactor\", \"verify the reverse+build roundtrip\", \"audit a REgent skill\", or \"run the regent spec → code pipeline as a black box\". Produces a PASS/FAIL verdict against all three grading keys (pytest, functional-checklist.md, test-oracle.md) plus a discipline check (no upstream leakage, no training-data smuggling). Triggers on phrases like \"regent-refactor 测试\", \"test the refactor skill\", \"run regent end-to-end\".",
+  "content_fingerprint": "399ad59f9fc1a9e414af61b3df9aa1e9743170e0fc897398c9ebc7ae7147be41"
 }

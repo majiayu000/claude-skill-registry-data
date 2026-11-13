@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5e94\u7528 Hyper-Waterfall task \u7684 final report \u548c PR publication \u6d41\u7a0b\u3002\n\u7f16\u5199 final report\uff08`_report.md`\uff09\uff0c\u5c06 daily task board \u6807\u8bb0\u4e3a\u5b8c\u6210\uff0c\n\u521b\u5efa final commit\uff0cpush \u8fdc\u7a0b publish/task{N} branch\uff0c\u5e76\u521b\u5efa\u9762\u5411 {BASE_BRANCH} \u7684 Open PR\u3002\n\u53ea\u5728\u6240\u6709 Stage \u5b8c\u6210\u540e\u3001PR publication \u4e4b\u524d\u7acb\u5373\u8c03\u7528\u3002"
+  "description": "应用 Hyper-Waterfall task 的 final report 和 PR publication 流程。\n编写 final report（`_report.md`），将 daily task board 标记为完成，\n创建 final commit，push 远程 publish/task{N} branch，并创建面向 {BASE_BRANCH} 的 Open PR。\n只在所有 Stage 完成后、PR publication 之前立即调用。",
+  "content_fingerprint": "f8f5f75206056136caebd91d115f9e8f4e08d676db1d2b5c5a6a907124546b3f"
 }

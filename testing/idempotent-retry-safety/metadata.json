@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when designing retry behaviour for an SDK method that causes a side effect \u2014 picking the IsRetryable predicate, requiring an idempotency envelope (Idempotency-Key header, MessageID, upsert key) before any retry is legal, and capping attempts with jittered exponential backoff. Triggers: retry, backoff, jitter, idempotent, at-least-once, exactly-once, IsRetryable, MaxAttempts, MessageID, dedup."
+  "description": "Use this when designing retry behaviour for an SDK method that causes a side effect — picking the IsRetryable predicate, requiring an idempotency envelope (Idempotency-Key header, MessageID, upsert key) before any retry is legal, and capping attempts with jittered exponential backoff. Triggers: retry, backoff, jitter, idempotent, at-least-once, exactly-once, IsRetryable, MaxAttempts, MessageID, dedup.",
+  "content_fingerprint": "49a24444bc1dca18350da7b4555ab4c961e76c73e8f6adc6a07c0ebbc72b456a"
 }

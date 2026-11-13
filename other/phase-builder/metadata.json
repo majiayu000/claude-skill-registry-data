@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Orchestrates automated sprint implementation from phase plans \u2014 e.g. 'run phase 1', 'implement sprint 1.3', 'run phase 4 in a worktree'. Optional worktree mode isolates a phase run on its own branch so two phases can run at once. Spawns phase-ui-implement (UI sprints + docs/design/design-system.md), general implementation (data/mixed), phase-verify, phase-wave-test (design asserts), phase-doc-sync. Skill-router per sprint. Clean orchestrator thread. Max 3 retries per gate then escalate. Pauses at blockers and phase boundaries."
+  "description": "Orchestrates automated sprint implementation from phase plans — e.g. 'run phase 1', 'implement sprint 1.3', 'run phase 4 in a worktree'. Optional worktree mode isolates a phase run on its own branch so two phases can run at once. Spawns phase-ui-implement (UI sprints + docs/design/design-system.md), general implementation (data/mixed), phase-verify, phase-wave-test (design asserts), phase-doc-sync. Skill-router per sprint. Clean orchestrator thread. Max 3 retries per gate then escalate. Pauses at blockers and phase boundaries.",
+  "content_fingerprint": "631f089b9e1a4725227def412ac7ab79a4fdcd3d824415551e6ee7eadb14efd0"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the full R package release gate \u2014 regenerate docs, run the test suite, run R CMD check --as-cran, and triage every ERROR / WARNING / NOTE against CRAN policy before a release or submission. Use when the user says \"check my R package\", \"R CMD check\", \"is this package CRAN-ready\", \"run devtools::check\", \"prepare for CRAN submission\", or points at a directory containing a DESCRIPTION file. Produces a check report + CRAN-submission checklist in `quality_reports/`."
+  "description": "Run the full R package release gate — regenerate docs, run the test suite, run R CMD check --as-cran, and triage every ERROR / WARNING / NOTE against CRAN policy before a release or submission. Use when the user says \"check my R package\", \"R CMD check\", \"is this package CRAN-ready\", \"run devtools::check\", \"prepare for CRAN submission\", or points at a directory containing a DESCRIPTION file. Produces a check report + CRAN-submission checklist in `quality_reports/`.",
+  "content_fingerprint": "dc2269d51b90c0809df3c35c250564ce306d929fade998af207a9b3e76f4b515"
 }

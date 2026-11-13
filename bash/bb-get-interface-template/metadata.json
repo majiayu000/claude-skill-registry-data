@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8bfb\u53d6\u6307\u5b9a CBB / protocol wiki \u6587\u4ef6\uff0c\u89e3\u6790\u5176 ## Interface / ## Ports section\uff0c\u8fd4\u56de\u7ed3\u6784\u5316\u7aef\u53e3\u8868 + \u53c2\u6570\u8868\u3002bba-architect \u7528\u4e8e\u586b\u5165 MAS \u6a21\u5757\u63a5\u53e3\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bb-search-cbb \u547d\u4e2d\u540e\u53d6\u8be6\u7ec6\u63a5\u53e3\uff1b(2) \u663e\u5f0f /bb-get-interface-template\u3002"
+  "description": "读取指定 CBB / protocol wiki 文件，解析其 ## Interface / ## Ports section，返回结构化端口表 + 参数表。bba-architect 用于填入 MAS 模块接口。触发场景：(1) bb-search-cbb 命中后取详细接口；(2) 显式 /bb-get-interface-template。",
+  "content_fingerprint": "0825e7e9f965d31ae1ce659cb65e52ce71270abd79482f0341ae6d66dcc90b21"
 }

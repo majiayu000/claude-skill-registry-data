@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5c06\u7528\u6237\u5408\u6cd5\u62e5\u6709\u6216\u5df2\u83b7\u6388\u6743\u7684 CUDA \u5e94\u7528\u4e2d\u7684 Runtime \u5c42\u8fc1\u79fb\u5230 CANN Runtime\uff0c\u5305\u62ec API\u3001\u7c7b\u578b\u3001\u9519\u8bef\u7801\u3001\u521d\u59cb\u5316\u3001\u5185\u5b58\u3001stream\u3001event\u3001IPC\u3001\u6784\u5efa\u914d\u7f6e\u548c\u517c\u5bb9\u5c42\u9002\u914d\u3002\u4ec5\u5728\u5904\u7406 Runtime \u5c42\u8fc1\u79fb\u6216\u53ef\u884c\u6027\u5206\u6790\u65f6\u4f7f\u7528\uff1b\u4e0d\u8fc1\u79fb CUDA kernel\u3001device helper \u6216\u4efb\u4f55\u7b97\u5b50\u5b9e\u73b0\u3002"
+  "description": "将用户合法拥有或已获授权的 CUDA 应用中的 Runtime 层迁移到 CANN Runtime，包括 API、类型、错误码、初始化、内存、stream、event、IPC、构建配置和兼容层适配。仅在处理 Runtime 层迁移或可行性分析时使用；不迁移 CUDA kernel、device helper 或任何算子实现。",
+  "content_fingerprint": "5d39c36802d51016dc615795ffbda52a3520a8005d4b5f3364444fb26715aba1"
 }

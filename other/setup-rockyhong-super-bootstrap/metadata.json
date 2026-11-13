@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Public entry for the super-bootstrap pipeline \u2014 thin orchestrator. Git-inits if absent, then dispatches /super-bootstrap:harness-bootstrap to install or sync the generic runway (always; the runway self-detects fresh-vs-sync). Code present \u2192 also seeds and works two GAP cards (spec-seeding, marker-sweep). Then checks whether seed docs are substantive: greenfield seeds three GAP cards (overview, techstack, tech-curation) from a pinned asset, commits them, and stops at the resolve gate; substantive seed docs run gated tier-2 tech curation (resolve-plugins + release-init). Zero product prework. Solo dev workflow."
+  "description": "Public entry for the super-bootstrap pipeline — thin orchestrator. Git-inits if absent, then dispatches /super-bootstrap:harness-bootstrap to install or sync the generic runway (always; the runway self-detects fresh-vs-sync). Code present → also seeds and works two GAP cards (spec-seeding, marker-sweep). Then checks whether seed docs are substantive: greenfield seeds three GAP cards (overview, techstack, tech-curation) from a pinned asset, commits them, and stops at the resolve gate; substantive seed docs run gated tier-2 tech curation (resolve-plugins + release-init). Zero product prework. Solo dev workflow.",
+  "content_fingerprint": "e5f9869c8427b81a2fc59e85cf85638872047b362d3a157dac926aa3dbdc3d34"
 }

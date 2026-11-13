@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Evaluates the correlation between a zero-cost NAS metric (epsilon) and actual training accuracy across different neural architecture search spaces, testing the metric's ability to rank architectures without training. It probes whether output dispersion from constant weight initializations can serve as a reliable, hyperparameter-free proxy for architecture selection. Use when the user has predictions and gold and needs to compute Spearman \u03c1 (global)."
+  "description": "Evaluates the correlation between a zero-cost NAS metric (epsilon) and actual training accuracy across different neural architecture search spaces, testing the metric's ability to rank architectures without training. It probes whether output dispersion from constant weight initializations can serve as a reliable, hyperparameter-free proxy for architecture selection. Use when the user has predictions and gold and needs to compute Spearman ρ (global).",
+  "content_fingerprint": "8343297f765bb424a04c478ae6312dc306b1b499cfde68eac9469fa3b86a80c0"
 }

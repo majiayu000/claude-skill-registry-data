@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reduce an oversized SKILL.md by checking whether an existing skill already covers the excess sub-workflow before creating a new child skill only when none fits. Load when a skill exceeds 200 lines and compress-skill determines excess content is genuinely CORE, when the same sub-workflow appears in multiple skills, or when universal-skill-creator or improve-skills identifies a coherent sub-capability. Also triggers on \"split this skill\", \"extract a sub-skill\", \"this skill is doing too much\", or \"make this skill reusable\". Always checks for an existing home before creating a new skill."
+  "description": "Reduce an oversized SKILL.md by checking whether an existing skill already covers the excess sub-workflow before creating a new child skill only when none fits. Load when a skill exceeds 200 lines and compress-skill determines excess content is genuinely CORE, when the same sub-workflow appears in multiple skills, or when universal-skill-creator or improve-skills identifies a coherent sub-capability. Also triggers on \"split this skill\", \"extract a sub-skill\", \"this skill is doing too much\", or \"make this skill reusable\". Always checks for an existing home before creating a new skill.",
+  "content_fingerprint": "afd31dca2c0943277df9f099173eca92f28aaddd35db9881eae5ea9c0f53375b"
 }

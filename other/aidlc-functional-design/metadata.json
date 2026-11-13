@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `functional-design` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage functional-design --single`: the engine emits one run-stage directive for functional-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `functional-design` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage functional-design --single`: the engine emits one run-stage directive for functional-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "fa49ed45b28d656a438a61daf020c547732d885ad4b95f0236f3c60746a03e0b"
 }

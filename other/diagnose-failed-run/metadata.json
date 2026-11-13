@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Determine the TRUE cause of a failed retort run before attributing it. Ground-truth every failure (run its tests, read its agent logs, inspect its workspace) and classify it as an infrastructure false-fail, a genuine model miss, or an environment issue \u2014 never trust the gate verdict or a log signature alone. Use whenever a run is recorded failed (test_coverage=0 / gate fail), a pass rate looks low, or you're deciding whether a \"failure\" is real before reporting or proceeding."
+  "description": "Determine the TRUE cause of a failed retort run before attributing it. Ground-truth every failure (run its tests, read its agent logs, inspect its workspace) and classify it as an infrastructure false-fail, a genuine model miss, or an environment issue — never trust the gate verdict or a log signature alone. Use whenever a run is recorded failed (test_coverage=0 / gate fail), a pass rate looks low, or you're deciding whether a \"failure\" is real before reporting or proceeding.",
+  "content_fingerprint": "2b8b2004f6398ef04dec4c6b1fcd91cb238b6e9efb7d8f8d73ff8b910b468ba6"
 }

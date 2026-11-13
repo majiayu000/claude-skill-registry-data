@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u56fa\u5316\u201c\u68c0\u7d22\u6587\u732e\u5e76\u5b9a\u65f6\u63a8\u9001\u201d\u7684\u5de5\u4f5c\u6d41\u6280\u80fd\u3002\u7528\u4e8e\u628a MDRGNB/HCC \u7b49\u4e3b\u9898\u505a\u6210\u6bcf\u5929/\u6bcf\u5468/\u6bcf\u6708\u81ea\u52a8\u68c0\u7d22 + \u7ed3\u6784\u5316\u603b\u7ed3 + \u591a\u6e20\u9053\u63a8\u9001\uff08\u98de\u4e66/\u4f01\u4e1a\u5fae\u4fe1/QQ/Telegram\uff09\u7684 cron \u4efb\u52a1\uff1b\u652f\u6301\u5b57\u6bb5\u6807\u51c6\u5316\uff08\u671f\u520a\u540d\u3001\u4e2d\u79d1\u9662\u5206\u533a\u3001SCI \u5206\u533a\uff09\u3001\u591a\u7aef\u5185\u5bb9\u4e00\u81f4\u3001\u957f\u6587\u5206\u6bb5\u9632\u4e22\u3002\u89e6\u53d1\u793a\u4f8b\uff1a\"\u5e2e\u6211\u51e0\u70b9\u51e0\u5206\u5f80xx\u91cc\u63a8\u9001xx\u6587\u732e\"\u3001\"\u6bcf\u5929/\u6bcf\u5468/\u6bcf\u6708xx:xx\u63a8\u9001xx\u4e3b\u9898\u6587\u732e\u5230xx\u6e20\u9053\"\u3002"
+  "description": "固化“检索文献并定时推送”的工作流技能。用于把 MDRGNB/HCC 等主题做成每天/每周/每月自动检索 + 结构化总结 + 多渠道推送（飞书/企业微信/QQ/Telegram）的 cron 任务；支持字段标准化（期刊名、中科院分区、SCI 分区）、多端内容一致、长文分段防丢。触发示例：\"帮我几点几分往xx里推送xx文献\"、\"每天/每周/每月xx:xx推送xx主题文献到xx渠道\"。",
+  "content_fingerprint": "379e9eeda1dda3407e68c04097a6310016579ebbf8b3c74a33f84207c9b18aac"
 }

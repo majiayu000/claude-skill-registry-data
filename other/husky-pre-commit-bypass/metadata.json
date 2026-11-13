@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a Husky hook drags files the change never touched into a commit or rejects it for unrelated code \u2014 a `.husky/pre-commit` running the repository formatter followed by `git add -A`, `git status` showing modified spec, source, or config files outside the intended scope after a failed commit, a diff far larger than the change, or a lint / unit-test failure at commit or push time in code the branch does not own."
+  "description": "Use when a Husky hook drags files the change never touched into a commit or rejects it for unrelated code — a `.husky/pre-commit` running the repository formatter followed by `git add -A`, `git status` showing modified spec, source, or config files outside the intended scope after a failed commit, a diff far larger than the change, or a lint / unit-test failure at commit or push time in code the branch does not own.",
+  "content_fingerprint": "02b1daf367712fe284dc6b2023a79c4e65ecdf7776284b107381a2544e26c96b"
 }

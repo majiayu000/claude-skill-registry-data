@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit dead code in frontend/src for Svelte frontend code. Triggers on: requests like 'find dead code', 'remove unused code', 'cleanup unused', 'what can be refactored', deeper inspection after a large refactor (bind:event, helper extraction, feature removal), before a big feature update, or after a long merge. Checklist: unused imports, props with no call sites, $state values never read, $derived values never read, functions never called, exports never imported, types/interfaces never used, the $derived(() => expr) anti-pattern, and inline handlers that could be refactored. Produce a report first, then execute."
+  "description": "Audit dead code in frontend/src for Svelte frontend code. Triggers on: requests like 'find dead code', 'remove unused code', 'cleanup unused', 'what can be refactored', deeper inspection after a large refactor (bind:event, helper extraction, feature removal), before a big feature update, or after a long merge. Checklist: unused imports, props with no call sites, $state values never read, $derived values never read, functions never called, exports never imported, types/interfaces never used, the $derived(() => expr) anti-pattern, and inline handlers that could be refactored. Produce a report first, then execute.",
+  "content_fingerprint": "ed1258f60bddf2ed17ba480867efd4c56a86e1f49d751cf05a8af6d23fb40ac2"
 }

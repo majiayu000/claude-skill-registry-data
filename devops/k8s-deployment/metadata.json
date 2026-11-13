@@ -1,5 +1,5 @@
 {
-  "name": "\u5bb9\u5668\u7f16\u6392\u90e8\u7f72Skill",
+  "name": "容器编排部署Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/k8s-deployment/SKILL.md",
   "github_branch": "main",
@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Kubernetes \u90e8\u7f72\u6e05\u5355\u89c4\u8303:Deployment/Service/Ingress\u3001\u63a2\u9488\u3001\u8d44\u6e90\u9650\u989d\u3001\u6eda\u52a8\u7b56\u7565\u4e0e\u5b89\u5168\u7ea6\u675f\u3002\u5f53\u9700\u8981\u7f16\u5199\u6216\u8bc4\u5ba1 K8s \u90e8\u7f72\u6e05\u5355\u65f6\u4f7f\u7528\u3002"
+  "description": "Kubernetes 部署清单规范:Deployment/Service/Ingress、探针、资源限额、滚动策略与安全约束。当需要编写或评审 K8s 部署清单时使用。",
+  "content_fingerprint": "a9a288f30f8eed397c4e3f979d8438cf9c120885edb8e7366286399fa1831e78"
 }

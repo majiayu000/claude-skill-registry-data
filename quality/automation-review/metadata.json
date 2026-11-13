@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reviews another loop's proposed change before it reaches a human, trying to refute it rather than confirm it - checking sample size, input freshness, whether the gate could actually have failed, and whether this exact change was already tried and reverted. Use as the second half of every loop that proposes an action. Boundary: `automation-design` specifies a loop before it runs. This skill reviews one specific proposal a loop already produced, and its default verdict is reject."
+  "description": "Reviews another loop's proposed change before it reaches a human, trying to refute it rather than confirm it - checking sample size, input freshness, whether the gate could actually have failed, and whether this exact change was already tried and reverted. Use as the second half of every loop that proposes an action. Boundary: `automation-design` specifies a loop before it runs. This skill reviews one specific proposal a loop already produced, and its default verdict is reject.",
+  "content_fingerprint": "e7871ea31f7abc83c64f838c2f6754d9bc66f91fd106358efcfc858dba805324"
 }

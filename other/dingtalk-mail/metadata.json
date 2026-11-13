@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9489\u9489\u90ae\u7bb1\u8bfb\u5199\u3001\u641c\u7d22\u3001\u56de\u590d\u4e0e\u8f6c\u53d1\u3002Use when \u7528\u6237\u8bf4\u53d1\u90ae\u4ef6/\u67e5\u90ae\u4ef6/\u56de\u90ae\u4ef6/\u8f6c\u53d1\u90ae\u4ef6/\u672a\u8bfb\u90ae\u4ef6/\u90ae\u4ef6\u641c\u7d22/\u90ae\u7bb1\u9644\u4ef6\u3002\u4e00\u53e5\u8bdd\u53d1\u90ae\u4ef6\u65f6\u5148\u7528 dingtalk-contact \u89e3\u6790\u5e76\u786e\u8ba4\u6536\u4ef6\u4eba\uff0c\u518d\u7531\u672c skill \u53d1\u9001\uff1b\u4e0d\u505a\u9489\u9489\u6d88\u606f\uff08\u8d70 dingtalk-chat\uff09\u3001\u7d27\u6025\u901a\u77e5\uff08\u8d70 dingtalk-misc\uff09\u3002\u547d\u4ee4\u524d\u7f00\uff1adws mail\u3002"
+  "description": "钉钉邮箱读写、搜索、回复与转发。Use when 用户说发邮件/查邮件/回邮件/转发邮件/未读邮件/邮件搜索/邮箱附件。一句话发邮件时先用 dingtalk-contact 解析并确认收件人，再由本 skill 发送；不做钉钉消息（走 dingtalk-chat）、紧急通知（走 dingtalk-misc）。命令前缀：dws mail。",
+  "content_fingerprint": "e024bae6cbef0cc9e415f9698eeb04512234dbcdff8e7ae83b7f33d1ca9c44c0"
 }

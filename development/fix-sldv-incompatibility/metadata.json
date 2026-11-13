@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a Simulink model is incompatible with Simulink Design Verifier (sldvcompat returns false, or an SLDV analysis errors out on an unsupported construct) and needs to be made analyzable. Diagnoses the incompatibility, applies the matching fix to a copy, and confirms the copy is compatible; optionally raises confidence the fix preserved behavior via a back-to-back consistency replay (agreement on the generated tests, not a proof of equivalence). Do NOT use for running test generation, design error detection, or requirement verification themselves \u2014 only for making a model compatible so those can proceed."
+  "description": "Use when a Simulink model is incompatible with Simulink Design Verifier (sldvcompat returns false, or an SLDV analysis errors out on an unsupported construct) and needs to be made analyzable. Diagnoses the incompatibility, applies the matching fix to a copy, and confirms the copy is compatible; optionally raises confidence the fix preserved behavior via a back-to-back consistency replay (agreement on the generated tests, not a proof of equivalence). Do NOT use for running test generation, design error detection, or requirement verification themselves — only for making a model compatible so those can proceed.",
+  "content_fingerprint": "0bd694545eeb4463dca0ca0d06979626064884029ae13356438385b0a39b8a74"
 }

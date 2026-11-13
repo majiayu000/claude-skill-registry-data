@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when designing networked events or RPC dispatch in coherence \u2014 picking MessageTarget, ordered vs unordered, request/response, paired on/off commands stuck in the wrong state, transferring large payloads, or passing nullable args (string/byte[]/entity refs) that must use the (typeof(T), value) tuple form. Covers SendOrderedCommand for toggle pairs, Channel.Fragmented for big data, request \u2192 validate \u2192 broadcast \u2192 ack patterns, and null-argument serialization."
+  "description": "Use when designing networked events or RPC dispatch in coherence — picking MessageTarget, ordered vs unordered, request/response, paired on/off commands stuck in the wrong state, transferring large payloads, or passing nullable args (string/byte[]/entity refs) that must use the (typeof(T), value) tuple form. Covers SendOrderedCommand for toggle pairs, Channel.Fragmented for big data, request → validate → broadcast → ack patterns, and null-argument serialization.",
+  "content_fingerprint": "3cd667817232ac17025c238da4a3ee99828f4fd2484f147e507cf0bd5115a579"
 }

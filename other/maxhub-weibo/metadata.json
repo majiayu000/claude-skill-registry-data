@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5fae\u535a\uff08Weibo\uff09\u516c\u5f00\u793e\u4ea4\u6570\u636e\u67e5\u8be2\u4e0e\u70ed\u70b9\u5206\u6790 skill\uff0c\u901a\u8fc7 MaxHub API \u67e5\u8be2\u5fae\u535a\u5185\u5bb9\u3001\u8bc4\u8bba\u3001\u8f6c\u53d1\u3001\u7528\u6237\u8d44\u6599\u3001\u7c89\u4e1d/\u5173\u6ce8\u3001\u641c\u7d22\u3001\u70ed\u641c\u3001\u8bdd\u9898\u548c\u699c\u5355\u3002\u9002\u5408\u8206\u60c5\u76d1\u6d4b\u3001\u70ed\u70b9\u8ffd\u8e2a\u3001KOL \u753b\u50cf\u3001\u5185\u5bb9\u4f20\u64ad\u5206\u6790\u548c\u7ade\u54c1\u7814\u7a76\u3002\u9ed8\u8ba4 read-only\uff1bagent \u5e94\u4f18\u5148\u4f7f\u7528 recipes \u4e32\u8054\u641c\u7d22\u2192\u5fae\u535a\u8be6\u60c5\u2192\u8bc4\u8bba/\u7528\u6237\u753b\u50cf\u7b49\u6d41\u7a0b\uff0c\u907f\u514d\u81ea\u884c\u731c\u6d4b mid/uid/container_id \u53c2\u6570\u3002\u6240\u6709\u8bf7\u6c42\u53d1\u9001\u5230 https://www.aconfig.cn\u3002"
+  "description": "微博（Weibo）公开社交数据查询与热点分析 skill，通过 MaxHub API 查询微博内容、评论、转发、用户资料、粉丝/关注、搜索、热搜、话题和榜单。适合舆情监测、热点追踪、KOL 画像、内容传播分析和竞品研究。默认 read-only；agent 应优先使用 recipes 串联搜索→微博详情→评论/用户画像等流程，避免自行猜测 mid/uid/container_id 参数。所有请求发送到 https://www.aconfig.cn。",
+  "content_fingerprint": "96e154c54fc3999f7e6cdda6eb772362420c04e2b3b4b9314d738dda14668486"
 }

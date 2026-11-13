@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/AhmedHabiba/architor/blob/main/.claude/skills/architecture-methodology/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "cf0b1dfd6a9e842e4ff39f61c0deaa4dfd3099423ad3f84fc8f43559cfe4146c",
+  "description": "Enforces a 4-phase architecture design workflow by reading `.arch/state.json` on every request to gate responses by phase. Phase 1 extracts and validates requirements from PRDs; Phase 2 selects archit"
 }

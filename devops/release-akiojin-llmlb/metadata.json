@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/akiojin/llmlb/blob/main/.codex/skills/release/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "fe51695f2af316aa55b42b78e3865adec049faeedc3d3b4c0be5744b57a6619e",
+  "description": "Execute the release workflow when the user asks `release` or `/release`: sync develop, update version/changelog, create `chore(release)` commit, collect closing issues, create develop->main release PR"
 }

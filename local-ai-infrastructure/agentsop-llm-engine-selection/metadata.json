@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cross-engine decision rubric for self-hosting or recommending an LLM serving stack. Picks among vLLM, SGLang, TensorRT-LLM, TGI, llama.cpp, Ollama, and MLX as a function of (hardware \u00d7 workload \u00d7 constraint), not \"which is fastest\". Activates whenever a coder-agent must choose, defend, or migrate a serving runtime."
+  "description": "Cross-engine decision rubric for self-hosting or recommending an LLM serving stack. Picks among vLLM, SGLang, TensorRT-LLM, TGI, llama.cpp, Ollama, and MLX as a function of (hardware × workload × constraint), not \"which is fastest\". Activates whenever a coder-agent must choose, defend, or migrate a serving runtime.",
+  "content_fingerprint": "34afd9d4ee2de434ff59885e1c3e2aed8f2e6499ab5076997a42c9f0d55bbbbb"
 }

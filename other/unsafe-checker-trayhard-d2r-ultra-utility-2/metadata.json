@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CRITICAL: Use for unsafe Rust code review and FFI. Triggers on: unsafe, raw pointer, FFI, extern, transmute, *mut, *const, union, #[repr(C)], libc, std::ffi, MaybeUninit, NonNull, SAFETY comment, soundness, undefined behavior, UB, safe wrapper, memory layout, bindgen, cbindgen, CString, CStr, \u5b89\u5168\u62bd\u8c61, \u88f8\u6307\u9488, \u5916\u90e8\u51fd\u6570\u63a5\u53e3, \u5185\u5b58\u5e03\u5c40, \u4e0d\u5b89\u5168\u4ee3\u7801, FFI \u7ed1\u5b9a, \u672a\u5b9a\u4e49\u884c\u4e3a"
+  "description": "CRITICAL: Use for unsafe Rust code review and FFI. Triggers on: unsafe, raw pointer, FFI, extern, transmute, *mut, *const, union, #[repr(C)], libc, std::ffi, MaybeUninit, NonNull, SAFETY comment, soundness, undefined behavior, UB, safe wrapper, memory layout, bindgen, cbindgen, CString, CStr, 安全抽象, 裸指针, 外部函数接口, 内存布局, 不安全代码, FFI 绑定, 未定义行为",
+  "content_fingerprint": "220407983149bf6449be6317429534830093728d1c81fbcb73f7a644ea5f15ed"
 }

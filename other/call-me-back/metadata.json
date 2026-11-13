@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Resume this agent session on a completion signal instead of clock polling. Use when wiring external hooks/--exec/webhooks that must POST into this session (wake URL is already in Agent Runtime Identity), or waiting for process exit, ticket/job status, file watchers \u2014 \"call me back when done\", \"\ub05d\ub098\uba74 \uae68\uc6cc\uc918\", \"subscribe --exec\", \"register hook\", \"\uc644\ub8cc\ub418\uba74 \ucf5c\ubc31\", \"webhook\uc73c\ub85c \uae68\uc6cc\uc918\", \"run in background with hook\". NEVER for pure time reminders or cron (\"5\ubd84 \ub4a4\", \"\ub9e4\uc77c 9\uc2dc\") \u2014 use loop (session) or schedule (global). \"me\" means this agent session, not a phone call."
+  "description": "Resume this agent session on a completion signal instead of clock polling. Use when wiring external hooks/--exec/webhooks that must POST into this session (wake URL is already in Agent Runtime Identity), or waiting for process exit, ticket/job status, file watchers — \"call me back when done\", \"끝나면 깨워줘\", \"subscribe --exec\", \"register hook\", \"완료되면 콜백\", \"webhook으로 깨워줘\", \"run in background with hook\". NEVER for pure time reminders or cron (\"5분 뒤\", \"매일 9시\") — use loop (session) or schedule (global). \"me\" means this agent session, not a phone call.",
+  "content_fingerprint": "a58b8e06e514693c188cf242103d568c18de4d64736a536eeb73a49fa361c9b5"
 }

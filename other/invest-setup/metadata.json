@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "First-time openInvest installation and onboarding. **ONLY use when** user explicitly says \"set up invest\" / \"init invest\" / \"\u5e2e\u6211\u521d\u59cb\u5316 invest\", OR when `invest` skill's `doctor` returns `status=\"needs_setup\"`. **NOT for daily usage** \u2014 once onboarding is done, the `invest` skill takes over (portfolio viewing, committee analysis, buy/sell tracking). Wraps `run.sh init --from-stdin` with the canonical 5-question flow."
+  "description": "First-time openInvest installation and onboarding. **ONLY use when** user explicitly says \"set up invest\" / \"init invest\" / \"帮我初始化 invest\", OR when `invest` skill's `doctor` returns `status=\"needs_setup\"`. **NOT for daily usage** — once onboarding is done, the `invest` skill takes over (portfolio viewing, committee analysis, buy/sell tracking). Wraps `run.sh init --from-stdin` with the canonical 5-question flow.",
+  "content_fingerprint": "5e737657ff73cfb71ecebbb0afd52284e167fa4fa7c14add62f728df5122538d"
 }

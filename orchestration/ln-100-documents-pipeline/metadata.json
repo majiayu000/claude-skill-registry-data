@@ -7,5 +7,7 @@
   "dir_name": "ln-100-documents-pipeline",
   "category": "orchestration",
   "github_path": "ln-100-documents-pipeline",
-  "github_branch": "main"
+  "github_branch": "main",
+  "content_fingerprint": "ad62becc80cfade783a415621b83ca1f2109db94618dcf2eae6880639e251292",
+  "description": "This skill orchestrates the creation of a complete documentation system by invoking L2 coordinator + 4 L2 workers. The coordinator (ln-110) delegates to 5 L3 workers for project docs; other L2 workers"
 }

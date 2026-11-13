@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "OCR scanned or image-only corpora with vision-language models, in three phases. Use `evaluate` to compare candidate OCR systems against stratified human ground truth and pick one on measured CER/WER, `run` to build the production pipeline (model selection, image handling, prompts, architecture, batching, accuracy evaluation, reproducibility), and `clean` to correct raw OCR text with LLM and rule-based passes, quality diagnostics, multilingual handling, and span-level provenance. Not for born-digital documents with a text layer \u2014 those go to $doc-to-markdown."
+  "description": "OCR scanned or image-only corpora with vision-language models, in three phases. Use `evaluate` to compare candidate OCR systems against stratified human ground truth and pick one on measured CER/WER, `run` to build the production pipeline (model selection, image handling, prompts, architecture, batching, accuracy evaluation, reproducibility), and `clean` to correct raw OCR text with LLM and rule-based passes, quality diagnostics, multilingual handling, and span-level provenance. Not for born-digital documents with a text layer — those go to $doc-to-markdown.",
+  "content_fingerprint": "ae5235fd3cd9f36301b859a67d6749eec24ff7eeddc1a5d0e48d9aa225ed5eac"
 }

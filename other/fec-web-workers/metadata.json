@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7528\u4e8e\u5c06\u6602\u8d35\u7684\u6d4f\u89c8\u5668\u5de5\u4f5c\u79fb\u51fa\u4e3b\u7ebf\u7a0b\uff0c\u6d89\u53ca Web Workers\u3001SharedWorker\u3001worker \u6c60\u3001Comlink\u3001transferable objects\u3001Vite/Webpack worker \u96c6\u6210\u6216 UI \u54cd\u5e94\u6027\u4fee\u590d\u3002\u4e0d\u8981\u7528\u4e8e\u8f7b\u91cf\u540c\u6b65\u5de5\u4f5c\u6216 DOM \u64cd\u4f5c\uff1b\u4e2d\u6587\u89e6\u53d1\u8bcd\u5305\u62ec Web Worker\u3001\u540e\u53f0\u7ebf\u7a0b\u3001\u4e3b\u7ebf\u7a0b\u963b\u585e\u3002"
+  "description": "用于将昂贵的浏览器工作移出主线程，涉及 Web Workers、SharedWorker、worker 池、Comlink、transferable objects、Vite/Webpack worker 集成或 UI 响应性修复。不要用于轻量同步工作或 DOM 操作；中文触发词包括 Web Worker、后台线程、主线程阻塞。",
+  "content_fingerprint": "20d243bdcdef894488cae39963c4d1967eb8fc5d0eedf3b1022bcdc5914960a4"
 }

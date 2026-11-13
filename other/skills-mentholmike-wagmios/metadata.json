@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Give your OpenClaw agent a homelab. Use when managing Docker containers, installing marketplace apps, or any Docker-related tasks on behalf of the user. Scope-based API key permissions \u2014 agent can only do what the key allows. On Linux, Docker requires sudo \u2014 without root access, WAGMIOS is the only safe interface for agent homelab control. Supports multi-machine management \u2014 one agent can manage multiple WAGMIOS instances across different hosts, each with its own scoped key. Requires X-API-Key header on every request (user provides at runtime). Includes Docker installation check and startup validation."
+  "description": "Give your OpenClaw agent a homelab. Use when managing Docker containers, installing marketplace apps, or any Docker-related tasks on behalf of the user. Scope-based API key permissions — agent can only do what the key allows. On Linux, Docker requires sudo — without root access, WAGMIOS is the only safe interface for agent homelab control. Supports multi-machine management — one agent can manage multiple WAGMIOS instances across different hosts, each with its own scoped key. Requires X-API-Key header on every request (user provides at runtime). Includes Docker installation check and startup validation.",
+  "content_fingerprint": "62ba519a08983ef531476859b192d3da5bf020ade79c6190c4006f4dcb35fafd"
 }

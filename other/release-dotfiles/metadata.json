@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deploy and release a new version of the dotfiles Emacs profile. Use when the user says `/release-dotfiles X.Y.Z`, asks to deploy profile X.Y.Z, cut/publish/prepare a dotfiles release, or bump the dotfiles version. The agent builds and tests the development profile first, hands it to the user, and releases the pinned version only after the user confirms. Do not use for standalone Emacs package releases; use release-package instead."
+  "description": "Deploy and release a new version of the dotfiles Emacs profile. Use when the user says `/release-dotfiles X.Y.Z`, asks to deploy profile X.Y.Z, cut/publish/prepare a dotfiles release, or bump the dotfiles version. The agent builds and tests the development profile first, hands it to the user, and releases the pinned version only after the user confirms. Do not use for standalone Emacs package releases; use release-package instead.",
+  "content_fingerprint": "a40d8e58379c9e96d99ce0739da2954b91a2b301c49a1ec3d3efa7a41ceb737a"
 }

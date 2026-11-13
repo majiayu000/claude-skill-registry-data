@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runtime correctness scan for the Luke codebase. Finds race conditions, async bugs, N+1 queries, memory leaks, null crashes, error propagation failures, stale closures, React logic bugs and check-then-act races across a permission boundary. Escalates security-impacting defects to /luke-security rather than running its own exploit hunt. Use when asked to find bugs, do a bug assessment, or check for runtime issues. Scoping: default = diff vs merge-base. /luke-bugs apps/api | --since <ref> | --full"
+  "description": "Runtime correctness scan for the Luke codebase. Finds race conditions, async bugs, N+1 queries, memory leaks, null crashes, error propagation failures, stale closures, React logic bugs and check-then-act races across a permission boundary. Escalates security-impacting defects to /luke-security rather than running its own exploit hunt. Use when asked to find bugs, do a bug assessment, or check for runtime issues. Scoping: default = diff vs merge-base. /luke-bugs apps/api | --since <ref> | --full",
+  "content_fingerprint": "c7af19714d404261747aa6d658d3bf63cc47e8623dbc9fe52729c9993e40c5d2"
 }

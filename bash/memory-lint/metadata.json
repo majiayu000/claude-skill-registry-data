@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants to lint a Claude Code memory directory (~/.claude/memory or custom path) for index inconsistency, broken cross-links, stale project state, duplicate / conflicting feedback rules, naming violations, frontmatter gaps, and oversized files. Phase 1 is a read-only scan and report. Phase 2 applies fixes only for findings the user explicitly picks. Phase 3 verifies with an independent process and rolls back if it fails."
+  "description": "Use when the user wants to lint a Claude Code memory directory (~/.claude/memory or custom path) for index inconsistency, broken cross-links, stale project state, duplicate / conflicting feedback rules, naming violations, frontmatter gaps, and oversized files. Phase 1 is a read-only scan and report. Phase 2 applies fixes only for findings the user explicitly picks. Phase 3 verifies with an independent process and rolls back if it fails.",
+  "content_fingerprint": "b178ad6a5e0e350a4dd74f0d2cf6c6eeb41d7c05da1244eacbeff14021766ac6"
 }

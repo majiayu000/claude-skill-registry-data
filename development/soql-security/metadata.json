@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when writing, reviewing, or troubleshooting Apex queries that may expose SOQL injection or CRUD/FLS issues. Triggers: 'Database.query', 'WITH USER_MODE', 'WITH SECURITY_ENFORCED', 'stripInaccessible', 'security review finding'. NOT for enforcing FLS on records before DML \u2014 use apex/apex-stripinaccessible-and-fls-enforcement. NOT for the with sharing / without sharing choice \u2014 use apex/apex-with-without-sharing-decision."
+  "description": "Use when writing, reviewing, or troubleshooting Apex queries that may expose SOQL injection or CRUD/FLS issues. Triggers: 'Database.query', 'WITH USER_MODE', 'WITH SECURITY_ENFORCED', 'stripInaccessible', 'security review finding'. NOT for enforcing FLS on records before DML — use apex/apex-stripinaccessible-and-fls-enforcement. NOT for the with sharing / without sharing choice — use apex/apex-with-without-sharing-decision.",
+  "content_fingerprint": "b6f8e742197851c093c29520a1197c2619b9c728394d620252fc5a1b8af17356"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Stored XSS (persistent XSS) occurs when attacker-supplied input is saved server-side and later rendered unencoded to other users. Common injection points include profile fields, comments, forum posts, file upload filenames, and application logs. Detect via PHP `$_GET/$_POST/$_REQUEST/$_FILES`, ASP `Request.Form`, JSP `request.getParameter`, and BeEF hook injection. Tools: Burp Suite, OWASP ZAP, BeEF, PHP Charset Encoder, Hackvertor."
+  "description": "Stored XSS (persistent XSS) occurs when attacker-supplied input is saved server-side and later rendered unencoded to other users. Common injection points include profile fields, comments, forum posts, file upload filenames, and application logs. Detect via PHP `$_GET/$_POST/$_REQUEST/$_FILES`, ASP `Request.Form`, JSP `request.getParameter`, and BeEF hook injection. Tools: Burp Suite, OWASP ZAP, BeEF, PHP Charset Encoder, Hackvertor.",
+  "content_fingerprint": "a5499c2a4e0513ab3bf8fbdc146465147bf6e4541c65b112949e8a3ffe50049b"
 }

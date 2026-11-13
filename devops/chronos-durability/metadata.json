@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/all-source-os/all-source/blob/main/.claude/skills/chronos-durability/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "1bf00e984aefabc5d11f24925b0e373df6aa8a0205284db909618d251717735d",
+  "description": "Test AllSource Core event durability by writing events, restarting the container, and verifying all events survive. Proves WAL + Parquet persistence guarantees. Triggers on \"test durability\", \"durabil"
 }

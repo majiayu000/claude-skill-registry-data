@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Validate SKILL.md frontmatter and .feature-radar/ files against format rules. Runs\nvalidate.sh, reports errors/warnings, and auto-fixes issues. MUST use this skill after\nediting any SKILL.md or .feature-radar/ file, even if the user doesn't ask \u2014 catches format\nbugs like the Agent Skills spec's 1024-char description limit before they break the skill.\nUse when the user asks to validate, lint, or verify skills or .feature-radar/ files, after\nediting either, or before committing changes that touch skills/ or .feature-radar/."
+  "description": "Validate SKILL.md frontmatter and .feature-radar/ files against format rules. Runs\nvalidate.sh, reports errors/warnings, and auto-fixes issues. MUST use this skill after\nediting any SKILL.md or .feature-radar/ file, even if the user doesn't ask — catches format\nbugs like the Agent Skills spec's 1024-char description limit before they break the skill.\nUse when the user asks to validate, lint, or verify skills or .feature-radar/ files, after\nediting either, or before committing changes that touch skills/ or .feature-radar/.",
+  "content_fingerprint": "2e24c9ab19f9c43a79be9e6ae3c5cf28f72aeb58170787a9aaf723856a81f331"
 }

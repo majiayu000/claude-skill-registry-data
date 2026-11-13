@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn one service module (lambda_functions.py, s3.py, ...) into a package of small modules - core (models, analysis, analyzer) that every front-end shares, and front-ends (report blocks, View, explorer window) on top - without changing anything a user sees. Holds the plan, the target layout per service, the rules the split must keep, the step-by-step recipe and the progress table. Use for \"/modularize lambda_functions\", for the tooling step (\"/modularize tooling\"), or before touching code in a service that is half-way through the split."
+  "description": "Turn one service module (lambda_functions.py, s3.py, ...) into a package of small modules - core (models, analysis, analyzer) that every front-end shares, and front-ends (report blocks, View, explorer window) on top - without changing anything a user sees. Holds the plan, the target layout per service, the rules the split must keep, the step-by-step recipe and the progress table. Use for \"/modularize lambda_functions\", for the tooling step (\"/modularize tooling\"), or before touching code in a service that is half-way through the split.",
+  "content_fingerprint": "3fc093f59ee0d449dd8d95d571d1bafc58ad62a0360044dd4f4a625696236cd3"
 }

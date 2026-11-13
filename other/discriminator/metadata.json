@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Guard against attribute substitution on any output that will be acted on as a verdict, ranking, routing, or go/no-go decision \u2014 regardless of how the request is phrased. Casual-looking prompts (\"where does this stand?\", \"predict the path\") are the highest-risk, so do NOT gate on apparent analytical register; gate on decision stakes. Also invoke when an earlier answer keeps getting corrected and re-pivoting one level too shallow."
+  "description": "Guard against attribute substitution on any output that will be acted on as a verdict, ranking, routing, or go/no-go decision — regardless of how the request is phrased. Casual-looking prompts (\"where does this stand?\", \"predict the path\") are the highest-risk, so do NOT gate on apparent analytical register; gate on decision stakes. Also invoke when an earlier answer keeps getting corrected and re-pivoting one level too shallow.",
+  "content_fingerprint": "3fa802d57683bce157de610158464dfbc05234b81ad299eba6aa7d44b58a08d2"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Automation skill for Lovable deployments. Activates when:\n- yolo_mode: on in CLAUDE.md\n- Running /deploy-edge or /apply-migration commands\n- After git push when auto_deploy: on (automatic detection)\n- Any mention of \"yolo mode\", \"automate Lovable\", \"browser automation\", \"Lovable MCP\"\n\nUses Lovable MCP (preferred) or browser automation to submit deployment prompts.\nRuns verification tests based on configuration.\nAuto-deploys after git push when enabled."
+  "description": "Automation skill for Lovable deployments. Activates when:\n- yolo_mode: on in CLAUDE.md\n- Running /deploy-edge or /apply-migration commands\n- After git push when auto_deploy: on (automatic detection)\n- Any mention of \"yolo mode\", \"automate Lovable\", \"browser automation\", \"Lovable MCP\"\n\nUses Lovable MCP (preferred) or browser automation to submit deployment prompts.\nRuns verification tests based on configuration.\nAuto-deploys after git push when enabled.",
+  "content_fingerprint": "a34ea891674ba50b314486c2ad2a2749a9cdc4cf48dcebce6ff8f2de714172aa"
 }

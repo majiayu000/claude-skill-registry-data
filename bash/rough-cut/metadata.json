@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Step 2 of the content pipeline, and the default entry point for \"rough cut this\" / \"cut this clip\" / \"give me a rough cut\". Transcribes the raw footage once with WhisperX, kills filler words and dead air, measures real cut boundaries against the audio (never trusts transcript timestamps), snaps everything to the video frame grid, and produces BOTH the cut list and the canonical transcript. Default finish hands off to an editing app (Premiere/CapCut) as trimmable edit points in seconds \u2014 it does NOT render a flattened video unless the job is headed for a full HyperFrames graphics build."
+  "description": "Step 2 of the content pipeline, and the default entry point for \"rough cut this\" / \"cut this clip\" / \"give me a rough cut\". Transcribes the raw footage once with WhisperX, kills filler words and dead air, measures real cut boundaries against the audio (never trusts transcript timestamps), snaps everything to the video frame grid, and produces BOTH the cut list and the canonical transcript. Default finish hands off to an editing app (Premiere/CapCut) as trimmable edit points in seconds — it does NOT render a flattened video unless the job is headed for a full HyperFrames graphics build.",
+  "content_fingerprint": "b4fd8ed73b19d79ab16e7f1557c463ca95c410ca94ef4a8cea684016106e42b2"
 }

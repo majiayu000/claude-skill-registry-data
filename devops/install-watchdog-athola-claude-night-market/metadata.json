@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/athola/claude-night-market/blob/master/plugins/egregore/skills/install-watchdog/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "e44dba8e36b4d5012e1813b289e0e1e8cf82d72deebce97fb9c5cc6aadc9435d",
+  "description": "Installs egregore watchdog daemon via launchd or systemd for autonomous relaunching. Use when setting up egregore on a new machine. Do not use on CI/CD runners."
 }

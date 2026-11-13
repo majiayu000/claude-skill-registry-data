@@ -1,5 +1,5 @@
 {
-  "name": "\u9759\u6001\u5b89\u5168\u6d4b\u8bd5SAST Skill",
+  "name": "静态安全测试SAST Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/sast-scan/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9759\u6001\u4ee3\u7801\u5b89\u5168\u6f0f\u6d1e\u7684\u626b\u63cf\u6a21\u5f0f\u4e0e\u5224\u5b9a\u65b9\u6cd5(SQL\u6ce8\u5165\u3001XSS\u3001SSRF\u3001\u8d8a\u6743\u7b49)\u3002\u5f53\u7814\u53d1\u9636\u6bb5\u9700\u8981\u9759\u6001\u626b\u63cf\u4ee3\u7801\u5b89\u5168\u6f0f\u6d1e\u65f6\u4f7f\u7528\u3002"
+  "description": "静态代码安全漏洞的扫描模式与判定方法(SQL注入、XSS、SSRF、越权等)。当研发阶段需要静态扫描代码安全漏洞时使用。",
+  "content_fingerprint": "7e9fae3e188f2a87f31cc493e81ca55aec84e925a76d3f797d9f12389a2be5ed"
 }

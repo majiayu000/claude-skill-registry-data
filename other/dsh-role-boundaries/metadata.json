@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "DSH \u89d2\u8272\u4e0e\u80fd\u529b\u8fb9\u754c\u3002\u89c4\u5b9a\u54ea\u4e9b\u5de5\u4f5c\u53ef\u4ee5\u4ea4\u7ed9 DSH\uff08\u975e\u89c6\u89c9\u4ee3\u7801\u5b9e\u73b0/\u4fee\u590d\u3001\u53ea\u8bfb\u63a2\u7d22\u3001\u4ee3\u7801\u5ba1\u67e5\u3001\u6587\u672c\u6574\u7406\uff09\u3001\u54ea\u4e9b\u7edd\u5bf9\u4e0d\u53ef\u4ee5\uff08\u7ed8\u56fe\u3001\u56fe\u50cf\u751f\u6210/\u7f16\u8f91\u3001\u8bc6\u56fe\u3001OCR\u3001\u622a\u56fe\u5206\u6790\u3001GUI \u89c6\u89c9\u5224\u65ad\u4e0e\u9a8c\u6536\u3001\u957f\u7b49\u5f85\uff09\uff0c\u4ee5\u53ca\u5206\u6d3e\u65f6\u5fc5\u987b\u9644\u5e26\u7684\u4e0a\u4e0b\u6587\u3001\u5ba1\u67e5\u3001\u6743\u9650\u3001\u6062\u590d\u4e0e\u5b89\u5168\u9650\u5236\u3002\u5355\u4e2a DSH \u5de5\u4f5c\u5305\u5373\u53ef\u4f7f\u7528\u3002"
+  "description": "DSH 角色与能力边界。规定哪些工作可以交给 DSH（非视觉代码实现/修复、只读探索、代码审查、文本整理）、哪些绝对不可以（绘图、图像生成/编辑、识图、OCR、截图分析、GUI 视觉判断与验收、长等待），以及分派时必须附带的上下文、审查、权限、恢复与安全限制。单个 DSH 工作包即可使用。",
+  "content_fingerprint": "c25dda55fec7ff03b2cab2780a139769db35905ad0476b6862456851cfe4fe9e"
 }

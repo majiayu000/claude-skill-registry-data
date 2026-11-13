@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Export pcbComponent designs to Gerber files with RF connectors and fab service formatting for PCB manufacturing. TRIGGER: user asks to export a PCB design to Gerber, generate manufacturing files, or write out a pcbComponent for fabrication. Invoke BEFORE writing export code \u2014 gerberWrite signature (pcbComponent, connectors, filename) is non-obvious. SKIP: importing/reading PCB files (use matlab-read-pcb-layout), building PCB geometry (use matlab-assemble-pcb-layout), EM analysis (use matlab-analyze-em), material/stackup setup (use matlab-manage-pcb-material)."
+  "description": "Export pcbComponent designs to Gerber files with RF connectors and fab service formatting for PCB manufacturing. TRIGGER: user asks to export a PCB design to Gerber, generate manufacturing files, or write out a pcbComponent for fabrication. Invoke BEFORE writing export code — gerberWrite signature (pcbComponent, connectors, filename) is non-obvious. SKIP: importing/reading PCB files (use matlab-read-pcb-layout), building PCB geometry (use matlab-assemble-pcb-layout), EM analysis (use matlab-analyze-em), material/stackup setup (use matlab-manage-pcb-material).",
+  "content_fingerprint": "6a2452127a2fa0196e492a74f72c0b8917eb3f5311f04889504fb6eab500b2d0"
 }

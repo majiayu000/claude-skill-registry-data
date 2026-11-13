@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit a feature or module against the Vertical Slice Architecture (VSA) checklist. Scores 10 rows (own folder, local models/schemas/routes/service, local errors, colocated tests, explicit public API, low coupling), classifies the slice (AI-friendly / partially migrated / horizontally organized), and outputs a migration playbook if it scores below 9/10. Handles Python flat-sys.path codebases (rows 8-9 get a documented caveat instead of a blind FAIL)."
+  "description": "Audit a feature or module against the Vertical Slice Architecture (VSA) checklist. Scores 10 rows (own folder, local models/schemas/routes/service, local errors, colocated tests, explicit public API, low coupling), classifies the slice (AI-friendly / partially migrated / horizontally organized), and outputs a migration playbook if it scores below 9/10. Handles Python flat-sys.path codebases (rows 8-9 get a documented caveat instead of a blind FAIL).",
+  "content_fingerprint": "c3fa5e1f4f45fb1850f7fe39fd519ea77c9f3c3e6fa95171e4fcc1a727dcdf77"
 }

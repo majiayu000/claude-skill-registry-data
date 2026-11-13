@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MDX \u30d5\u30a1\u30a4\u30eb\u306e\u69cb\u6587\u30fbfrontmatter\u30fb\u30ea\u30f3\u30af\u30fbSVG\u30fb\u6cd5\u4ee4\u5f15\u7528\u30fb\u95a2\u9023\u30ad\u30fc\u30ef\u30fc\u30c9\u30fbnote \u30ea\u30f3\u30af\u30fb\u904e\u53bb\u554f\u89e3\u8aac\u7b49\u3092 rule \u30d9\u30fc\u30b9\u3067\u691c\u67fb\u3059\u308b\u7d71\u5408 Evaluator \u30b9\u30ad\u30eb\u300210 rule \u3092 `--rules` \u30d5\u30e9\u30b0\u3067\u9078\u629e\u53ef\u80fd\u3002 pre-commit hook \u304b\u3089\u3082\u5229\u7528\u3055\u308c\u308b\u3002 Use when user asks to [MDX\u691c\u67fb, lint MDX, \u69cb\u6587\u30c1\u30a7\u30c3\u30af, \u30ea\u30f3\u30af\u30c1\u30a7\u30c3\u30af, SVG\u76e3\u67fb, frontmatter \u30c1\u30a7\u30c3\u30af, \u6cd5\u4ee4\u30ea\u30f3\u30af, note \u30ea\u30f3\u30af, /check-mdx]."
+  "description": "MDX ファイルの構文・frontmatter・リンク・SVG・法令引用・関連キーワード・note リンク・過去問解説等を rule ベースで検査する統合 Evaluator スキル。10 rule を `--rules` フラグで選択可能。 pre-commit hook からも利用される。 Use when user asks to [MDX検査, lint MDX, 構文チェック, リンクチェック, SVG監査, frontmatter チェック, 法令リンク, note リンク, /check-mdx].",
+  "content_fingerprint": "41f2a50a5b827650d095a1eb1a502f61cba5aa5525240bdb8d046e8fa674f80c"
 }

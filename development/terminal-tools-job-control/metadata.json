@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when launching anything that runs longer than a minute, anything that streams logs, anything you want to keep running while doing other work \u2014 or when terminal_exec auto-backgrounded on you and returned a job_id. Teaches the start\u2192poll\u2192wait pattern with terminal_job_logs offset bookkeeping, bounded blocking polls, platform-specific process control via terminal_job_manage capabilities, and the hard rule that jobs die when the terminal-tools server restarts. Read before calling terminal_job_start, or right after terminal_exec auto-backgrounded."
+  "description": "Use when launching anything that runs longer than a minute, anything that streams logs, anything you want to keep running while doing other work — or when terminal_exec auto-backgrounded on you and returned a job_id. Teaches the start→poll→wait pattern with terminal_job_logs offset bookkeeping, bounded blocking polls, platform-specific process control via terminal_job_manage capabilities, and the hard rule that jobs die when the terminal-tools server restarts. Read before calling terminal_job_start, or right after terminal_exec auto-backgrounded.",
+  "content_fingerprint": "5798195b18c3ce72f144ca5d970db1cbe97b4edd25191b5b56e67f4e2349086e"
 }

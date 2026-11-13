@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Workflow Phase 6 \u2014 TDD coordinator. Decides the scenario recipe and the implementation contract in main context, writes them to a state file, seeds per-worker tasks (scenario, implement, verify-tick, design-ui-tick) into the TaskList, and yields with harness_state continue so the harness invokes each worker as its own tick. No subagent delegation; no nested Skill calls."
+  "description": "Workflow Phase 6 — TDD coordinator. Decides the scenario recipe and the implementation contract in main context, writes them to a state file, seeds per-worker tasks (scenario, implement, verify-tick, design-ui-tick) into the TaskList, and yields with harness_state continue so the harness invokes each worker as its own tick. No subagent delegation; no nested Skill calls.",
+  "content_fingerprint": "076d639e3630ab9651c001e8ceb41f30dd85d9e3d9fa300df68a05c4e4dc5f35"
 }

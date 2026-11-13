@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "GORM v2 \u6700\u4f73\u5b9e\u8df5\u4e0e\u6027\u80fd\u4f18\u5316\u3002\u9002\u7528\u4e8e\uff1a\u4ee3\u7801\u5ba1\u67e5\u3001\u6162\u67e5\u8be2\u4f18\u5316\u3001N+1\u3001\u8fde\u63a5\u6c60\u3001 \u4e8b\u52a1\u7ba1\u7406\u3001\u5206\u5e93\u5206\u8868\u3001Prometheus/OTel\u76d1\u63a7\u3001Session\u5b89\u5168\u3001Clause/Upsert\u3001 \u7f13\u5b58\u96c6\u6210\u3001BaseModel\u811a\u624b\u67b6\u3001SQL\u2192struct\u751f\u6210\u3001\u591a\u79df\u6237\u9694\u79bb\u3002 \u89e6\u53d1\u8bcd\uff1aGORM\u3001\u6570\u636e\u5e93\u6162\u3001\u52a0\u7d22\u5f15\u3001\u5199struct\u3001\u5206\u5e93\u5206\u8868\u3001Preload\u3001FOR UPDATE\u3001 Session\u7d2f\u79ef\u3001goroutine db\u3001\u7f13\u5b58\u3001\u591a\u79df\u6237\u3001\u8fc1\u79fb\u3002"
+  "description": "GORM v2 最佳实践与性能优化。适用于：代码审查、慢查询优化、N+1、连接池、 事务管理、分库分表、Prometheus/OTel监控、Session安全、Clause/Upsert、 缓存集成、BaseModel脚手架、SQL→struct生成、多租户隔离。 触发词：GORM、数据库慢、加索引、写struct、分库分表、Preload、FOR UPDATE、 Session累积、goroutine db、缓存、多租户、迁移。",
+  "content_fingerprint": "dfe305e3e5d2d55f147a145f80468277a78f56446245ee98acb5d4100b749c07"
 }

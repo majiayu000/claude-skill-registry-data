@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verify WordPress plugin compatibility with object cache (Redis / Memcached) and page cache (W3 Total Cache, WP Rocket, LiteSpeed, Varnish). Catches plugins that store mutable data in transients without invalidation, set cookies that bust page cache for everyone, or read from `wp_options` without honouring `wp_cache_get`. Use when the user says \"object cache\", \"Redis\", \"page cache\", \"WP Rocket\", \"LiteSpeed\", \"cache compat\"."
+  "description": "Verify WordPress plugin compatibility with object cache (Redis / Memcached) and page cache (W3 Total Cache, WP Rocket, LiteSpeed, Varnish). Catches plugins that store mutable data in transients without invalidation, set cookies that bust page cache for everyone, or read from `wp_options` without honouring `wp_cache_get`. Use when the user says \"object cache\", \"Redis\", \"page cache\", \"WP Rocket\", \"LiteSpeed\", \"cache compat\".",
+  "content_fingerprint": "500a279a4ef1fb94100bfeca50986372c8800b26dc009ef9cc7023224e4b7e30"
 }

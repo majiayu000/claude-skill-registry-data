@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user asks to \"audit an email program\", \"is this campaign safe to send\", or run a pre-send go/no-go on their own exported email data; runs SEND EQS scoring with S1/S2/N1/D1 veto checks and a SHIP/FIX/BLOCK gate, and emits a gated audit artifact. Not for building deliverability setup \u2014 use deliverability-qa; not for designing lifecycle flows \u2014 use email-sequence-designer. \u90ae\u4ef6\u8d28\u91cf\u5ba1\u8ba1/EQS\u8bc4\u5206/\u53d1\u9001\u524d\u653e\u884c"
+  "description": "Use when the user asks to \"audit an email program\", \"is this campaign safe to send\", or run a pre-send go/no-go on their own exported email data; runs SEND EQS scoring with S1/S2/N1/D1 veto checks and a SHIP/FIX/BLOCK gate, and emits a gated audit artifact. Not for building deliverability setup — use deliverability-qa; not for designing lifecycle flows — use email-sequence-designer. 邮件质量审计/EQS评分/发送前放行",
+  "content_fingerprint": "56983ba9387999ea9fdca1adac45f7b4275ab2cfefd49146621506e822f50075"
 }

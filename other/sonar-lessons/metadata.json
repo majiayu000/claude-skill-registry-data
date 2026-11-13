@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs this project's SonarQube analysis, extracts the quality gate, bugs, vulnerabilities, code smells, duplication and coverage through the SonarQube Web API, traces every group of findings to the norm, template or Checkstyle setting in `.claude/` that produced it, and writes `docs/lessons-learned/sonar-NNN.md` focused on fixing the cause so the next analysis has fewer issues or none. Ends with the `/report-issue` command that files it on the claude-spring-architect repository, where the fix belongs. Explicit invocation only."
+  "description": "Runs this project's SonarQube analysis, extracts the quality gate, bugs, vulnerabilities, code smells, duplication and coverage through the SonarQube Web API, traces every group of findings to the norm, template or Checkstyle setting in `.claude/` that produced it, and writes `docs/lessons-learned/sonar-NNN.md` focused on fixing the cause so the next analysis has fewer issues or none. Ends with the `/report-issue` command that files it on the claude-spring-architect repository, where the fix belongs. Explicit invocation only.",
+  "content_fingerprint": "12fa3bbe0c0661e5f555434e77fed69edbea0dc837c1fac2f0f48cf88dc5a375"
 }

@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "QA control plane for the Luke monorepo. Decides what deterministic evidence is sufficient to consider a change correct, across lint, typecheck, Node unit, real-browser component, Postgres integration and Playwright E2E \u2014 then assesses, writes or executes that evidence. Reports PASS / FAIL / SKIPPED / QA GAP with residual risk rather than a bare green tick. Use after implementing a feature or fixing a bug, before committing. Modes: /luke-test (assess, read-only) | write | verify. Scoping: default = diff vs merge-base. /luke-test write apps/api | --since <ref>"
+  "description": "QA control plane for the Luke monorepo. Decides what deterministic evidence is sufficient to consider a change correct, across lint, typecheck, Node unit, real-browser component, Postgres integration and Playwright E2E — then assesses, writes or executes that evidence. Reports PASS / FAIL / SKIPPED / QA GAP with residual risk rather than a bare green tick. Use after implementing a feature or fixing a bug, before committing. Modes: /luke-test (assess, read-only) | write | verify. Scoping: default = diff vs merge-base. /luke-test write apps/api | --since <ref>",
+  "content_fingerprint": "de7bc35812bd112c599de44e2634b39a105e2016df56066188b7d8a92dc16401"
 }

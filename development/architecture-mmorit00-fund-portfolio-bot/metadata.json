@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/MMorit00/fund-portfolio-bot/blob/main/.claude/skills/architecture/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8608ce98572d931b77d4b684845211fece21d65df9c4fef4fa95e05c9d4d2b39",
+  "description": "分层架构规范 / Architecture and layering rules (v0.3.1)。在设计新组件、修改导入、检查分层时使用。核心约束：cli → flows → data，core 向内不向外。Use when designing components, changing imports, or reviewing layering decisions. Enforces cli/"
 }

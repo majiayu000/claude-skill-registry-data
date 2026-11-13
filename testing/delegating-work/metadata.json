@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when you have a task and must decide WHO does it \u2014 yourself, a spawned subagent, or another agent in the topology that already holds the context. The rule: how much would a blank slate have to read in to do this correctly? A lot \u2192 route to a context-holding agent; a little \u2192 subagent; unsure \u2192 a real agent or yourself. NOT the mechanics of fanning out (that's dispatching-parallel-agents / subagent-driven-development) \u2014 this is the who/whether decision, and the failure mode that makes teams abandon subagents."
+  "description": "Use when you have a task and must decide WHO does it — yourself, a spawned subagent, or another agent in the topology that already holds the context. The rule: how much would a blank slate have to read in to do this correctly? A lot → route to a context-holding agent; a little → subagent; unsure → a real agent or yourself. NOT the mechanics of fanning out (that's dispatching-parallel-agents / subagent-driven-development) — this is the who/whether decision, and the failure mode that makes teams abandon subagents.",
+  "content_fingerprint": "f7d2bc0590ead0699340613c2639f9deb40acd80c4b4f58de4d966930a12a092"
 }

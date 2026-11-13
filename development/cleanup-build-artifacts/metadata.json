@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Removes transient build artifacts this task produced in the ironlint repo before declaring work done. Use at the end of any task that ran `cargo build --release`, `cargo mutants`, `cargo llvm-cov`, generated a one-off binary, wrote a scratch file like `pr.diff` or an ad-hoc tarball, or any other throwaway output. Do NOT use to wipe the actively-iterating `target/` directory."
+  "description": "Removes transient build artifacts this task produced in the ironlint repo before declaring work done. Use at the end of any task that ran `cargo build --release`, `cargo mutants`, `cargo llvm-cov`, generated a one-off binary, wrote a scratch file like `pr.diff` or an ad-hoc tarball, or any other throwaway output. Do NOT use to wipe the actively-iterating `target/` directory.",
+  "content_fingerprint": "90aacc09322442bf6cbf5d4f77a1bacc78e081478c72bea449ea362e3e2c57c8"
 }

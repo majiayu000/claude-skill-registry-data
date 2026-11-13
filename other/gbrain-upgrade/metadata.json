@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Keep gbrain current. When a `gbrain` invocation prints an\n`UPGRADE_AVAILABLE <old> <new>` marker (or `gbrain self-upgrade --check-only`\nreports an update), apply it per the configured self_upgrade.mode: notify\n(prompt the operator with a 4-option question + snooze) or auto (apply\nsilently). The action is always the hardcoded `gbrain self-upgrade` \u2014 never a\ncommand read from the marker."
+  "description": "Keep gbrain current. When a `gbrain` invocation prints an\n`UPGRADE_AVAILABLE <old> <new>` marker (or `gbrain self-upgrade --check-only`\nreports an update), apply it per the configured self_upgrade.mode: notify\n(prompt the operator with a 4-option question + snooze) or auto (apply\nsilently). The action is always the hardcoded `gbrain self-upgrade` — never a\ncommand read from the marker.",
+  "content_fingerprint": "e6dcf2232617a5e7dd9d6a4082814f166242acad378948bb3aa553a426d4c5eb"
 }

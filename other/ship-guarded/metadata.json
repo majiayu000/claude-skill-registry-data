@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Production-guard ship pipeline for tools where change-failure cost is real (the user relies on the tool day-to-day, breakage hurts). Same as ship-auto, but inserts a regression / UX-break risk assessment before merge \u2014 pauses only when the change actually touches risk surface (user-facing flows, removed features, schemas, perf-sensitive paths). Otherwise ships autonomously."
+  "description": "Production-guard ship pipeline for tools where change-failure cost is real (the user relies on the tool day-to-day, breakage hurts). Same as ship-auto, but inserts a regression / UX-break risk assessment before merge — pauses only when the change actually touches risk surface (user-facing flows, removed features, schemas, perf-sensitive paths). Otherwise ships autonomously.",
+  "content_fingerprint": "88fbda19f4c1fd06111637772e75b336da1facc2cdfdcdeaee27297bc72140c4"
 }

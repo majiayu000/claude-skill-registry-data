@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Removes the single ThreadGroup.destroy() call in jade.core.Runtime's shutdown path. JDK 16 terminally deprecated it and calls the destruction mechanism inherently flawed. Agent-mode recipe: the shard contract names the file; this document defines the transform and the diagnostic it must not silently drop."
+  "description": "Removes the single ThreadGroup.destroy() call in jade.core.Runtime's shutdown path. JDK 16 terminally deprecated it and calls the destruction mechanism inherently flawed. Agent-mode recipe: the shard contract names the file; this document defines the transform and the diagnostic it must not silently drop.",
+  "content_fingerprint": "96d6c2e3b4f2e550b0cba276c4f626cbb5c6647376df83cf5a4077d307cdaaa9"
 }

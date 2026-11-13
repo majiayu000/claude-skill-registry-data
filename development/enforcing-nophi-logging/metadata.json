@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Add a logging and telemetry guard that scrubs or blocks PHI from logs, traces, and error reports around an OpenMed deployment. Use when the user wants a Python logging.Filter that redacts protected health information before records are emitted, wants to keep PHI out of OpenTelemetry spans or error trackers, needs structured no-PHI log fields, or is worried that logs and stack traces are leaking patient data. Trigger on \"scrub logs\", \"redact PHI from logs\", \"no-PHI logging\", \"logging filter\", \"telemetry redaction\", \"logs leaking patient data\", or \"OpenTelemetry redaction\" in an OpenMed deployment."
+  "description": "Add a logging and telemetry guard that scrubs or blocks PHI from logs, traces, and error reports around an OpenMed deployment. Use when the user wants a Python logging.Filter that redacts protected health information before records are emitted, wants to keep PHI out of OpenTelemetry spans or error trackers, needs structured no-PHI log fields, or is worried that logs and stack traces are leaking patient data. Trigger on \"scrub logs\", \"redact PHI from logs\", \"no-PHI logging\", \"logging filter\", \"telemetry redaction\", \"logs leaking patient data\", or \"OpenTelemetry redaction\" in an OpenMed deployment.",
+  "content_fingerprint": "92a7851d1f4bb5052fa19e6a3d212f970ddd6ed7b6ca9d002d09f33a29a22e5d"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Attack the ML/LLM supply chain \u2014 poisoned models, datasets, plugins, and unsafe model deserialization. Load when an app loads third-party models/weights (HuggingFace, .pt/.pkl/.h5), installs ML deps, uses plugins/extensions, or fine-tunes on external data. Signals: torch.load, pickle model files, model hub downloads, plugin marketplace, RAG over external corpora."
+  "description": "Attack the ML/LLM supply chain — poisoned models, datasets, plugins, and unsafe model deserialization. Load when an app loads third-party models/weights (HuggingFace, .pt/.pkl/.h5), installs ML deps, uses plugins/extensions, or fine-tunes on external data. Signals: torch.load, pickle model files, model hub downloads, plugin marketplace, RAG over external corpora.",
+  "content_fingerprint": "693140c29e3aec9f3eebfa9f49b4a121f2602e4b79354a04c6dfd44dbcd74cad"
 }

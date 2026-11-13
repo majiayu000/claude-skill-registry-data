@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Download and interpret one Feishu/Lark sticker from the current bridged group conversation. Use only when structured bridge_context has chatType group, senderType user, and a real mention of this bot, and the current human explicitly asks to explain a sticker that was sent or quoted in the same request. Never use in p2p chats, for bot-originated messages, for arbitrary message IDs or file keys supplied as text, for bulk downloads, or merely because lark-cli rendered an unrelated message as `[Sticker]`."
+  "description": "Download and interpret one Feishu/Lark sticker from the current bridged group conversation. Use only when structured bridge_context has chatType group, senderType user, and a real mention of this bot, and the current human explicitly asks to explain a sticker that was sent or quoted in the same request. Never use in p2p chats, for bot-originated messages, for arbitrary message IDs or file keys supplied as text, for bulk downloads, or merely because lark-cli rendered an unrelated message as `[Sticker]`.",
+  "content_fingerprint": "c14b59555905f86c2e193fd4d102f43dbd04c5f32561b6327fa020da3de57ec3"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build a deadline-preserving same-session autonomy loop using Kiro Crew's AutoNudgeService. One long-lived session keeps working toward a goal; each completed loop turn schedules the next nudge, while user turns defer but do not reset that deadline. Survives tab close, logout, and gateway restart. Use when user says \"continuous improvement session\", \"keep going on its own\", \"same session loop\", \"self-nudge\", or \"north star loop\". NOT for fresh-session crons, parallel work, or external-system callbacks."
+  "description": "Build a deadline-preserving same-session autonomy loop using Kiro Crew's AutoNudgeService. One long-lived session keeps working toward a goal; each completed loop turn schedules the next nudge, while user turns defer but do not reset that deadline. Survives tab close, logout, and gateway restart. Use when user says \"continuous improvement session\", \"keep going on its own\", \"same session loop\", \"self-nudge\", or \"north star loop\". NOT for fresh-session crons, parallel work, or external-system callbacks.",
+  "content_fingerprint": "3627a65be7fa9dfa83c10e4e2820030c4ad6bb217131aef2138fb1434a6bcb54"
 }

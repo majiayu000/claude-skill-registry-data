@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5bb9\u5668 OOM \u5168\u94fe\u6392\u67e5\u3002\u4ece dmesg OOM killer \u2192 cgroup memory limits \u2192 Docker/Compose memory \u914d\u7f6e \u2192 swap \u2192 \u5e94\u7528\u5185\u5b58\u5206\u6790\uff0c\u5b9a\u4f4d\u6839\u56e0\u5e76\u8f93\u51fa\u4fee\u590d\u5efa\u8bae\u3002"
+  "description": "容器 OOM 全链排查。从 dmesg OOM killer → cgroup memory limits → Docker/Compose memory 配置 → swap → 应用内存分析，定位根因并输出修复建议。",
+  "content_fingerprint": "a2c9c849803f64529decf48dcd00500808a5b49eb760baa57db799bf349f32ff"
 }

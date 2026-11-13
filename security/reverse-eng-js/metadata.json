@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reverse front-end JavaScript end to end: trace which script fires a given request, capture a signing/encryption function's real inputs at runtime, then rebuild the algorithm locally in Node.js with evidence-driven environment shims until it reproduces the target parameter. Load when you need the *mechanism* behind client-computed params (sign, signature, _signature, X-Sign, token, encrypted bodies, anti-bot / risk-control fields), when webpack-minified or obfuscated JS hides the logic, or when you must trace an XHR/fetch/WebSocket trigger point."
+  "description": "Reverse front-end JavaScript end to end: trace which script fires a given request, capture a signing/encryption function's real inputs at runtime, then rebuild the algorithm locally in Node.js with evidence-driven environment shims until it reproduces the target parameter. Load when you need the *mechanism* behind client-computed params (sign, signature, _signature, X-Sign, token, encrypted bodies, anti-bot / risk-control fields), when webpack-minified or obfuscated JS hides the logic, or when you must trace an XHR/fetch/WebSocket trigger point.",
+  "content_fingerprint": "0e15c78fd056494083639102266c52bff1213ff32c4e325dd9a37a6e8874bbdc"
 }

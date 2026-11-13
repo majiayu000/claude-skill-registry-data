@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Dependency confusion / substitution \u2014 publish a malicious public package matching an internal name so build systems pull yours. Load on leaked internal package names (npm/PyPI/RubyGems/Maven), package.json/requirements with unknown deps, or private-registry setups. Signals: @scope/internal packages, non-public dep names in manifests, .npmrc/registry config leaks."
+  "description": "Dependency confusion / substitution — publish a malicious public package matching an internal name so build systems pull yours. Load on leaked internal package names (npm/PyPI/RubyGems/Maven), package.json/requirements with unknown deps, or private-registry setups. Signals: @scope/internal packages, non-public dep names in manifests, .npmrc/registry config leaks.",
+  "content_fingerprint": "aae0f0e70babd9bab8ad0bfc93db1c1efb7644f852a1d92e60c300cab958fc16"
 }

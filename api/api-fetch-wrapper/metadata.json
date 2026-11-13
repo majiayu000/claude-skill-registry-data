@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wrap a public HTTP API (Open-Meteo weather as the demo) with credential handling, error normalisation, and a single retry on transient network failures. Demonstrates the production-shaped baseline for any \"skill that calls an external service\" \u2014 env-based secrets, structured error output, no leaked API keys in logs, and a deliberate retry policy. The Open-Meteo endpoint used here is keyless on purpose so the example runs without setup; replace `OPEN_METEO_URL` with your own host and add `process.env.MY_API_KEY` for an auth'd version."
+  "description": "Wrap a public HTTP API (Open-Meteo weather as the demo) with credential handling, error normalisation, and a single retry on transient network failures. Demonstrates the production-shaped baseline for any \"skill that calls an external service\" — env-based secrets, structured error output, no leaked API keys in logs, and a deliberate retry policy. The Open-Meteo endpoint used here is keyless on purpose so the example runs without setup; replace `OPEN_METEO_URL` with your own host and add `process.env.MY_API_KEY` for an auth'd version.",
+  "content_fingerprint": "3d6fd7ca46deee56d5e12ae8f30f0c6161c02b299f5fd8981c86577893a09d2f"
 }

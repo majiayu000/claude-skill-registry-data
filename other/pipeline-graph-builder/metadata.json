@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4f7f\u7528 DeerFlow \u5df2\u5b9e\u73b0\u7684 Python PipelineGraphBuilder \u548c DeerFlowOrchestrator\uff0c\u5c06 code-to-ast-new\u3001code-splitter-adapter\u3001dataflow-extractor\u3001code-semantic-labeler \u7b49\u524d\u7f6e\u6280\u80fd\u8f93\u51fa\u7684 calls\u3001dataflow\u3001labeled_nodes \u878d\u5408\u4e3a\u4e1a\u52a1\u7ea7\u6709\u5411\u65e0\u73af\u56fe DAG\u3002\u7528\u4e8e\u9700\u8981\u751f\u6210\u3001\u8c03\u8bd5\u3001\u6f14\u793a\u6216\u63a5\u5165\u4e1a\u52a1 pipeline JSON \u7684\u573a\u666f\uff0c\u5c24\u5176\u662f\u4ece\u539f\u59cb\u4ee3\u7801\u5206\u6790\u7ed3\u679c\u6784\u5efa pipeline nodes/edges \u8f93\u51fa\u65f6\u3002"
+  "description": "使用 DeerFlow 已实现的 Python PipelineGraphBuilder 和 DeerFlowOrchestrator，将 code-to-ast-new、code-splitter-adapter、dataflow-extractor、code-semantic-labeler 等前置技能输出的 calls、dataflow、labeled_nodes 融合为业务级有向无环图 DAG。用于需要生成、调试、演示或接入业务 pipeline JSON 的场景，尤其是从原始代码分析结果构建 pipeline nodes/edges 输出时。",
+  "content_fingerprint": "ed1475dd3030abd38f22d853df79e84f887f49659ae0712dc93d89f43a3cc0c3"
 }

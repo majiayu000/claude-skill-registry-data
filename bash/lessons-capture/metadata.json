@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Internal helper invoked only by other skills in this plugin (e.g. feature-storm, feature-design, feature-plan, feature-implement, bug-fix) as their final step. Captures one skill-improvement recommendation (or \"none this run\") and appends a dated entry to a per-skill log under ~/.claude/dev-skills/lessons/<skill-name>.md. Takes the calling skill's slug as its only argument. Never edits any SKILL.md \u2014 the log is reviewed and applied later, either by the user or by a dedicated improver skill. Not user-facing \u2014 users should not invoke this directly."
+  "description": "Internal helper invoked only by other skills in this plugin (e.g. feature-storm, feature-design, feature-plan, feature-implement, bug-fix) as their final step. Captures one skill-improvement recommendation (or \"none this run\") and appends a dated entry to a per-skill log under ~/.claude/dev-skills/lessons/<skill-name>.md. Takes the calling skill's slug as its only argument. Never edits any SKILL.md — the log is reviewed and applied later, either by the user or by a dedicated improver skill. Not user-facing — users should not invoke this directly.",
+  "content_fingerprint": "6f29e1092dfd67e43d253386f35a21280f9bc3c78116e39a129d3168614e9cd9"
 }

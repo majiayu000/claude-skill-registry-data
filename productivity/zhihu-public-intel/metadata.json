@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Route Zhihu research through safe zhihu-mcp authentication, public fallback discovery, normalization, and synthesis. Use when Codex needs Zhihu-related search or capture for public topics, people, questions, answers, articles, comments, user profiles, or JSONL/CSV/Markdown reports. For keyword/topic/person search, automatically run the local zhihu-mcp auth loop first; use AnySearch only if login is declined, two assisted login attempts fail, the MCP runtime remains unavailable, or public-index cross-checking is requested."
+  "description": "Route Zhihu research through safe zhihu-mcp authentication, public fallback discovery, normalization, and synthesis. Use when Codex needs Zhihu-related search or capture for public topics, people, questions, answers, articles, comments, user profiles, or JSONL/CSV/Markdown reports. For keyword/topic/person search, automatically run the local zhihu-mcp auth loop first; use AnySearch only if login is declined, two assisted login attempts fail, the MCP runtime remains unavailable, or public-index cross-checking is requested.",
+  "content_fingerprint": "771de503e5d103f1b8cd5980928a6f880af0266f4d8d9c3e4c35245a337ae3cc"
 }

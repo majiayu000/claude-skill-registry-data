@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u62ec\u53f7\u7c7b\u578b\u7edf\u4e00\u5de5\u5177\u3002\u8bfb\u53d6\u7ed3\u6784\u5316\u6570\u636e\u6587\u4ef6\uff0c\u6267\u884c\u4e2d\u6587/\u5168\u89d2\u62ec\u53f7\u5230 ASCII \u534a\u89d2\u62ec\u53f7\u7684\u6620\u5c04\uff0c\u8f93\u51fa\u62ec\u53f7\u5df2\u7edf\u4e00\u7684\u7ed3\u6784\u5316\u6570\u636e\u6587\u4ef6\u3002\n\u5f53\u7528\u6237\u63d0\u5230\u62ec\u53f7\u7edf\u4e00\u3001\u5168\u89d2\u62ec\u53f7\u8f6c\u534a\u89d2\u3001\u4e2d\u6587\u62ec\u53f7\u8f6c\u6362\u3001\u62ec\u53f7\u89c4\u8303\u5316\u7b49\u9700\u6c42\u65f6\u4f7f\u7528\u6b64skill\u3002\n\u5373\u4f7f\u7528\u6237\u6ca1\u6709\u660e\u786e\u8bf4\u51fa\"bracket_normalizer\"\uff0c\u53ea\u8981\u4efb\u52a1\u6d89\u53ca\u62ec\u53f7\u7c7b\u7b26\u53f7\u7edf\u4e00\uff0c\u5c31\u5e94\u8be5\u4f7f\u7528\u6b64skill\u3002\n\u4e0d\u8d1f\u8d23\u5168\u89d2\u5b57\u6bcd\u6570\u5b57\u8f6c\u6362\u3001Unicode\u6b63\u89c4\u5316\u6216\u5176\u4ed6\u901a\u7528\u5168\u534a\u89d2\u5904\u7406\u3002"
+  "description": "括号类型统一工具。读取结构化数据文件，执行中文/全角括号到 ASCII 半角括号的映射，输出括号已统一的结构化数据文件。\n当用户提到括号统一、全角括号转半角、中文括号转换、括号规范化等需求时使用此skill。\n即使用户没有明确说出\"bracket_normalizer\"，只要任务涉及括号类符号统一，就应该使用此skill。\n不负责全角字母数字转换、Unicode正规化或其他通用全半角处理。",
+  "content_fingerprint": "3a534bb184c3576c85eee992af2e99d487509e8024772c63b47add459fbb108f"
 }

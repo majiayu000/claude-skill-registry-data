@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Migrate a whole ArcGIS Hub site into a PortalJS Arc portal end-to-end. Harvests the Hub /data.json (DCAT-US) inventory, exports every FeatureService layer through the ArcGIS REST query API with resultOffset paging, converts each to the serverless dual tier (PMTiles render + GeoParquet query) with tabular items to Parquet, pushes everything to Cloudflare R2 via Git LFS, appends dual-tier datasets.json entries, and writes a source-vs-derived parity report. Use to move a City or sector ArcGIS Hub open-data portal onto PortalJS with no server-side compute."
+  "description": "Migrate a whole ArcGIS Hub site into a PortalJS Arc portal end-to-end. Harvests the Hub /data.json (DCAT-US) inventory, exports every FeatureService layer through the ArcGIS REST query API with resultOffset paging, converts each to the serverless dual tier (PMTiles render + GeoParquet query) with tabular items to Parquet, pushes everything to Cloudflare R2 via Git LFS, appends dual-tier datasets.json entries, and writes a source-vs-derived parity report. Use to move a City or sector ArcGIS Hub open-data portal onto PortalJS with no server-side compute.",
+  "content_fingerprint": "206bd2be5738c4fd63033cf0b27e66cd9a0744b457d33cfb40b854e7f1a7d01f"
 }

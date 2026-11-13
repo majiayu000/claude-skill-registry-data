@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when a flake's `nix develop` / `direnv allow` / `nix flake archive` is slow on a fresh checkout (the \"first time takes 10 minutes\" complaint). Diagnoses where the time actually lives and how to shrink the flake.lock input graph without changing build outputs."
+  "description": "Use this when a flake's `nix develop` / `direnv allow` / `nix flake archive` is slow on a fresh checkout (the \"first time takes 10 minutes\" complaint). Diagnoses where the time actually lives and how to shrink the flake.lock input graph without changing build outputs.",
+  "content_fingerprint": "3db66c38e3fcdabb8f86041d83c2f6a80e0cf7061fc1ff4961f3f9ce8a28eff6"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/BerryKuipers/claude-code-toolkit/blob/main/.claude/api-skills-source/validate-build/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "46630e94d0276a574745bfa56363673034550e751c6c8d81bf52222a3b07c945",
+  "description": "Run production build validation (npm run build, vite build, tsc) to ensure code compiles and builds successfully. Returns structured output with build status, duration, size metrics, and error details"
 }

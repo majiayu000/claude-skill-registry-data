@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build a routed pivot with ligolo-ng: a TLS agent on the foothold connects out to ligolo-proxy, which creates a TUN interface and kernel routes so any tool reaches the internal network without proxychains. Use when a pivot must carry SYN scans, UDP, ICMP or tools with no SOCKS support. Not for a quick single-port tunnel (use chisel) and not for proxying existing tool traffic (use proxychains)."
+  "description": "Build a routed pivot with ligolo-ng: a TLS agent on the foothold connects out to ligolo-proxy, which creates a TUN interface and kernel routes so any tool reaches the internal network without proxychains. Use when a pivot must carry SYN scans, UDP, ICMP or tools with no SOCKS support. Not for a quick single-port tunnel (use chisel) and not for proxying existing tool traffic (use proxychains).",
+  "content_fingerprint": "db8c45af61186ffa4bb5774c4788558f9c77512c5caa19f0cfc45859c3f25f02"
 }

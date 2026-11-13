@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decision protocol for the map-reduce / dynamic fan-out pattern in LM\npipelines \u2014 \"given list L, run f(item) for each item in parallel, then\ncombine\". Activates when the coder agent is about to process N items with N\nLM calls (per-doc summarize, per-query retrieve, per-candidate rank,\nparallel tool fan-out). Encodes the *when*, *how many at once*, *what to\ndo when one fails*, and *how to reduce* \u2014 not the API of any single\nframework. Cross-framework: LangGraph `Send`, CrewAI parallel tasks /\nFlow, `asyncio.gather`, `ThreadPoolExecutor`, LlamaIndex batch retrieval."
+  "description": "Decision protocol for the map-reduce / dynamic fan-out pattern in LM\npipelines — \"given list L, run f(item) for each item in parallel, then\ncombine\". Activates when the coder agent is about to process N items with N\nLM calls (per-doc summarize, per-query retrieve, per-candidate rank,\nparallel tool fan-out). Encodes the *when*, *how many at once*, *what to\ndo when one fails*, and *how to reduce* — not the API of any single\nframework. Cross-framework: LangGraph `Send`, CrewAI parallel tasks /\nFlow, `asyncio.gather`, `ThreadPoolExecutor`, LlamaIndex batch retrieval.",
+  "content_fingerprint": "775f9b8d223ccec24e3369c41b5e6a8f7ea122b7f6801c6e9a8f682ac498e7a4"
 }

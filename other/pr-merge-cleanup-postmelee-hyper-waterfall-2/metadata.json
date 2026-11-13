@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PR merge \ud655\uc778 \ud6c4 \ubd80\uc0b0\ubb3c\uc744 \uc815\ub9ac\ud558\ub294 \uc808\ucc28\ub97c \uc801\uc6a9\ud55c\ub2e4.\nGitHub \uc774\uc288 close, publish/task{N} \uc6d0\uaca9 \ube0c\ub79c\uce58 \uc0ad\uc81c,\n\ub85c\uceec local/task{N} \ube0c\ub79c\uce58\uc640 \ubd84\ub9ac worktree \uc815\ub9ac, {BASE_BRANCH} \ubcf5\uadc0\ub97c \uc218\ud589\ud55c\ub2e4.\nPR\uc774 \uc2e4\uc81c\ub85c merge\ub41c \uc9c1\ud6c4\uc5d0\ub9cc \ud638\ucd9c."
+  "description": "PR merge 확인 후 부산물을 정리하는 절차를 적용한다.\nGitHub 이슈 close, publish/task{N} 원격 브랜치 삭제,\n로컬 local/task{N} 브랜치와 분리 worktree 정리, {BASE_BRANCH} 복귀를 수행한다.\nPR이 실제로 merge된 직후에만 호출.",
+  "content_fingerprint": "beee0addd12ee56994823dff27588686bcf33accf0c83f22f83f2054709d1dfb"
 }

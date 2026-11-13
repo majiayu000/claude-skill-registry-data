@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Inline SQL smell detector: harvests SQL strings from application code, runs 15+ static analysis rules (SELECT *, missing WHERE, implicit casts, non-sargable filters, cartesian products, SELECT DISTINCT masking bad joins), then LLM classifies business impact and proposes rewritten SQL. Read-only. Trigger: /sql-smells"
+  "description": "Inline SQL smell detector: harvests SQL strings from application code, runs 15+ static analysis rules (SELECT *, missing WHERE, implicit casts, non-sargable filters, cartesian products, SELECT DISTINCT masking bad joins), then LLM classifies business impact and proposes rewritten SQL. Read-only. Trigger: /sql-smells",
+  "content_fingerprint": "b32c8cb4262ac9bf11d8c62548bfb554b110b4cbd18ac38fe688a1d448c6607f"
 }

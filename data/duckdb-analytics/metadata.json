@@ -38,5 +38,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when running analytical SQL over Parquet/CSV/JSON without a warehouse, replacing pandas for data wrangling, joining S3 data in-place, building local data marts, or embedding OLAP into an app. Triggers: read_parquet/read_csv setup, partitioned dataset queries, hive partitioning, glob patterns for S3, COPY TO export, attach Postgres/MySQL, UDFs in Python/R, MotherDuck cloud sync, columnar performance vs row stores. NOT for OLTP workloads (concurrent writes), distributed analytics at petabyte scale (use Spark/Trino), or vector search (use pgvector/Lance)."
+  "description": "Use when running analytical SQL over Parquet/CSV/JSON without a warehouse, replacing pandas for data wrangling, joining S3 data in-place, building local data marts, or embedding OLAP into an app. Triggers: read_parquet/read_csv setup, partitioned dataset queries, hive partitioning, glob patterns for S3, COPY TO export, attach Postgres/MySQL, UDFs in Python/R, MotherDuck cloud sync, columnar performance vs row stores. NOT for OLTP workloads (concurrent writes), distributed analytics at petabyte scale (use Spark/Trino), or vector search (use pgvector/Lance).",
+  "content_fingerprint": "6a87455ed2639731c297f4b25ec825a1ae63a22808bfa7f38b7d52ba22dcc898"
 }

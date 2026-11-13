@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Post-hoc token-waste audit of a Claude Code session transcript. Scans a .jsonl session log for bloated tool outputs, redundant Reads, Read-after-Edit, cat/head/tail via Bash, repeated Grep/Glob, raw WebFetch, verbose Agent dispatches, and long Bash output. Emits a ranked markdown report with estimated tokens wasted per pattern; optionally emits hookify-style rule seeds to prevent recurrence. Use when the user asks \"what could've been smaller\", \"audit this chat for token waste\", \"where did context go\", \"analyze a transcript for context savings\", or runs /context-audit."
+  "description": "Post-hoc token-waste audit of a Claude Code session transcript. Scans a .jsonl session log for bloated tool outputs, redundant Reads, Read-after-Edit, cat/head/tail via Bash, repeated Grep/Glob, raw WebFetch, verbose Agent dispatches, and long Bash output. Emits a ranked markdown report with estimated tokens wasted per pattern; optionally emits hookify-style rule seeds to prevent recurrence. Use when the user asks \"what could've been smaller\", \"audit this chat for token waste\", \"where did context go\", \"analyze a transcript for context savings\", or runs /context-audit.",
+  "content_fingerprint": "9928904717e161791160a6230c9f105d9c1c1236822bf06fe0fee06d86519064"
 }

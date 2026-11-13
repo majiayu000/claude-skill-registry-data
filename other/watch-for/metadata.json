@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants to monitor a file, log, endpoint, or stateful artifact for drift, errors, or unexpected changes and receive a per-tick anomaly verdict. Samples at a fixed cadence, compares each sample against a baseline, and emits normal, anomalous, or error judgments until a stop condition is met. Not for tasks that require source or remote-system changes, and not for polling a completion predicate: use watch-until."
+  "description": "Use when the user wants to monitor a file, log, endpoint, or stateful artifact for drift, errors, or unexpected changes and receive a per-tick anomaly verdict. Samples at a fixed cadence, compares each sample against a baseline, and emits normal, anomalous, or error judgments until a stop condition is met. Not for tasks that require source or remote-system changes, and not for polling a completion predicate: use watch-until.",
+  "content_fingerprint": "75e7a0dd6f6ecba63dd73d930b599506a3400c57fde3ce961e6db0ca4f25e21e"
 }

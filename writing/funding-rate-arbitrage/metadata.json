@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when writing a funding-rate-driven perp strategy on Superior Trade \u2014 anything described as funding harvest, funding arbitrage, funding rate carry, negative funding, paid to long, paid to short, basis trade. The strategy reads Hyperliquid hourly funding via `dp.get_pair_dataframe(candle_type=\"funding_rate\")`, which is automatically downloaded for backtests."
+  "description": "Use when writing a funding-rate-driven perp strategy on Superior Trade — anything described as funding harvest, funding arbitrage, funding rate carry, negative funding, paid to long, paid to short, basis trade. The strategy reads Hyperliquid hourly funding via `dp.get_pair_dataframe(candle_type=\"funding_rate\")`, which is automatically downloaded for backtests.",
+  "content_fingerprint": "d90ee44b355b064d28290ae3a0f34e1af82b0db8bd80932b1cd334483e272f75"
 }

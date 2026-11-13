@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific behavior of the mariadb-dump client for dev workflows (seeding, fixtures, schema snapshots, consistent backups) \u2014 why --single-transaction is the live-InnoDB flag and its limits, that --routines/--events are off by default while --triggers is on, --extended-insert vs diffable dumps, schema-only/data-only, --replace/--insert-ignore for idempotent seeding, that plain dbname omits CREATE DATABASE, restoring by piping into the mariadb client, and that the replication-coordinate flags are --master-data/--dump-slave (not --source-data/--dump-replica). Use when invoking or reviewing mariadb-dump commands."
+  "description": "MariaDB-specific behavior of the mariadb-dump client for dev workflows (seeding, fixtures, schema snapshots, consistent backups) — why --single-transaction is the live-InnoDB flag and its limits, that --routines/--events are off by default while --triggers is on, --extended-insert vs diffable dumps, schema-only/data-only, --replace/--insert-ignore for idempotent seeding, that plain dbname omits CREATE DATABASE, restoring by piping into the mariadb client, and that the replication-coordinate flags are --master-data/--dump-slave (not --source-data/--dump-replica). Use when invoking or reviewing mariadb-dump commands.",
+  "content_fingerprint": "336bb441944eb042f0d4befe01dd16a4873ef4bc9e6de57ceada9c020e3f76f0"
 }

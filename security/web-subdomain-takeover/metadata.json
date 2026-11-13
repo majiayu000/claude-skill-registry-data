@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Claim a dangling DNS record pointing to a deprovisioned service (subdomain takeover). Load after subdomain enum, on CNAMEs to cloud services, \"NoSuchBucket\"/\"404 there isn't a GitHub Pages site here\", or dangling A/CNAME. Signals: CNAME \u2192 S3/GitHub/Heroku/Azure/Fastly with a fingerprint error page."
+  "description": "Claim a dangling DNS record pointing to a deprovisioned service (subdomain takeover). Load after subdomain enum, on CNAMEs to cloud services, \"NoSuchBucket\"/\"404 there isn't a GitHub Pages site here\", or dangling A/CNAME. Signals: CNAME → S3/GitHub/Heroku/Azure/Fastly with a fingerprint error page.",
+  "content_fingerprint": "802518d562eaac24d61ff0b56a91a23527856cc423855c82898d3c81aed6b36a"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when Git reports conflicts during a merge, a rebase, or a cherry-pick. Also use it when the user says \"fix the merge conflicts\", \"rebase onto main\", or \"the merge broke the build\". Traces each side of a conflict to the change that it came from. Keeps both intents when they fit together, and asks when they do not. Then runs the checks on the combined result. Not for choosing what a new behavior should be (use `choose-by-consequence`)."
+  "description": "Use when Git reports conflicts during a merge, a rebase, or a cherry-pick. Also use it when the user says \"fix the merge conflicts\", \"rebase onto main\", or \"the merge broke the build\". Traces each side of a conflict to the change that it came from. Keeps both intents when they fit together, and asks when they do not. Then runs the checks on the combined result. Not for choosing what a new behavior should be (use `choose-by-consequence`).",
+  "content_fingerprint": "bbacb75c8710f10509b11ab7e5c379ac21aa87faeed3d0cc1ad6079d6a4ca524"
 }

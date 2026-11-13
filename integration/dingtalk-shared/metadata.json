@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9489\u9489(DingTalk) MultiSkill \u7684\u8f7b\u91cf\u5171\u4eab\u5165\u53e3\u3002Use when \u7528\u6237\u6cdb\u79f0 DWS/\u9489\u9489\u64cd\u4f5c\u4f46\u672a\u660e\u786e\u4ea7\u54c1\u3001\u8bf7\u6c42\u8de8\u4ea7\u54c1\u7f16\u6392\u3001\u9700\u8981 URL \u7c7b\u578b\u9884\u68c0\u6216\u4ea7\u54c1\u8fb9\u754c\u6d88\u6b67\u3002\u6e05\u6670\u7684\u5355\u4ea7\u54c1\u64cd\u4f5c\u4f18\u5148\u4f7f\u7528\u5bf9\u5e94 dingtalk-* \u5b50 skill\uff1b\u672c skill \u53ea\u63d0\u4f9b\u5168\u5c40\u6267\u884c\u5951\u7ea6\u548c\u6309\u9700 reference \u5bfc\u822a\uff0c\u4e0d\u627f\u8f7d\u4ea7\u54c1\u547d\u4ee4\u5168\u96c6\u3002"
+  "description": "钉钉(DingTalk) MultiSkill 的轻量共享入口。Use when 用户泛称 DWS/钉钉操作但未明确产品、请求跨产品编排、需要 URL 类型预检或产品边界消歧。清晰的单产品操作优先使用对应 dingtalk-* 子 skill；本 skill 只提供全局执行契约和按需 reference 导航，不承载产品命令全集。",
+  "content_fingerprint": "3820d0a4f65626f3893e5934b35246027449cd62a5a13d6bd805f89e69badff6"
 }

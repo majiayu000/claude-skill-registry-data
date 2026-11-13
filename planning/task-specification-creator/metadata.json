@@ -14,5 +14,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/daishiman/AIWorkflowOrchestrator/blob/main/.claude/skills/task-specification-creator/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "345e58e1f02ee361d129794db3242ff7db094706a27348cc4d05d74e2b26b4c5",
+  "description": "ユーザーから与えられたタスクを単一責務の原則に基づいて分解し、\nPhase 1からPhase 13までの実行可能なタスク仕様書ドキュメントを生成する。\n\nスキル選定は仕様書作成時に動的に行う。使用するスキルはタスクの性質に応じて\n現在利用可能なスキル（.claude/skills/）から選定する。\n\nAnchors:\n• Clean Code (Robert C. Martin) / 適用: 単一"
 }

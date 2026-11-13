@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when building the receiving end of a webhook \u2014 a provider-agnostic endpoint that proves pushed events are authentic and never processes one twice: raw-body HMAC, ~5-min replay window, idempotency on the event id, fast-ack-then-queue. NOT the Stripe-Signature scheme (that is stripe), NOT outbound clients you call (that is api-connector-builder)."
+  "description": "Use when building the receiving end of a webhook — a provider-agnostic endpoint that proves pushed events are authentic and never processes one twice: raw-body HMAC, ~5-min replay window, idempotency on the event id, fast-ack-then-queue. NOT the Stripe-Signature scheme (that is stripe), NOT outbound clients you call (that is api-connector-builder).",
+  "content_fingerprint": "36ab30aac796447efa9136c72aaa5e7524d5340f541cabd4ed7010edb95cf535"
 }

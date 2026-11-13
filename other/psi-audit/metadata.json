@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PageSpeed Insights API \u3067\u4ee3\u8868\u30da\u30fc\u30b8\u3092\u8a08\u6e2c\u3057\u3001Core Web Vitals\u30fbLighthouse \u30b9\u30b3\u30a2\u306e \u3057\u304d\u3044\u5024\u9055\u53cd\u3068\u6539\u5584\u5019\u88dc\u3092\u51fa\u529b\u3059\u308b\u3002`config/psi-urls.txt` \u306e URL \u306b\u5bfe\u3057 mobile+desktop \u3067\u8a08\u6e2c\u3001 performance-auditor \u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u304c\u9055\u53cd\u3092 surface \u3059\u308b\u3002 Use when user asks to [PSI \u8a08\u6e2c, PageSpeed \u8a08\u6e2c, Core Web Vitals \u78ba\u8a8d, \u901f\u5ea6\u76e3\u67fb, /psi-audit]."
+  "description": "PageSpeed Insights API で代表ページを計測し、Core Web Vitals・Lighthouse スコアの しきい値違反と改善候補を出力する。`config/psi-urls.txt` の URL に対し mobile+desktop で計測、 performance-auditor エージェントが違反を surface する。 Use when user asks to [PSI 計測, PageSpeed 計測, Core Web Vitals 確認, 速度監査, /psi-audit].",
+  "content_fingerprint": "9051a47cf65d681811886d665b018a894590b3a5db5aefa651f89ba74aea14c8"
 }

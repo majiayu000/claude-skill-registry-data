@@ -1,5 +1,5 @@
 {
-  "name": "\u56de\u7b54\u51c6\u786e\u6027\u8bc4\u6d4bSkill",
+  "name": "回答准确性评测Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/answer-accuracy-eval/SKILL.md",
   "github_branch": "main",
@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "AI \u56de\u7b54\u51c6\u786e\u6027\u7684\u8bc4\u6d4b\u65b9\u6cd5(\u8bc4\u6d4b\u96c6\u6784\u5efa\u3001\u6253\u5206\u53e3\u5f84)\u3002\u5f53\u9700\u8981\u8bc4\u6d4b\u5927\u6a21\u578b\u5e94\u7528\u56de\u7b54\u8d28\u91cf\u3001\u6784\u5efa\u8bc4\u6d4b\u96c6\u5e76\u91cf\u5316\u51c6\u786e\u7387\u65f6\u4f7f\u7528\u3002"
+  "description": "AI 回答准确性的评测方法(评测集构建、打分口径)。当需要评测大模型应用回答质量、构建评测集并量化准确率时使用。",
+  "content_fingerprint": "fe2a671d8e0d8a4717636736af65cdb9078071987e475250e0add7fe1b92cef5"
 }

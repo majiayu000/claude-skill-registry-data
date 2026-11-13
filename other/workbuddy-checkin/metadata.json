@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u60f3\u8981\u5728 WorkBuddy \u4e0a\u5b8c\u6210\u6bcf\u65e5\u7b7e\u5230\uff08\u83b7\u53d6\u7b7e\u5230\u79ef\u5206\uff09\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002\u82e5 WorkBuddy \u672a\u8fd0\u884c\u5219\u81ea\u52a8\u542f\u52a8\uff0c\u4f7f\u7528 Playwright \u901a\u8fc7 CSS Selector \u5b9a\u4f4d DOM \u5143\u7d20\u5e76\u70b9\u51fb\uff1a\u5148\u70b9\u51fb\u5de6\u4e0b\u89d2\u7528\u6237\u83dc\u5355\uff08class=\"user-menu\"\uff09\uff0c\u7b49\u5f85 2 \u79d2\u540e\uff0c\u518d\u70b9\u51fb\u300c\u7acb\u5373\u9886\u53d6 \u2192\u300d\u6309\u94ae\uff08class=\"daily-checkin-banner-action\"\uff09\u5b8c\u6210\u7b7e\u5230\u3002\u89e6\u53d1\u5173\u952e\u8bcd\u5305\u62ec\"\u7b7e\u5230\"\u3001\"WorkBuddy\u7b7e\u5230\"\u3001\"\u6bcf\u65e5\u7b7e\u5230\"\u3001\"\u6253\u5361\u79ef\u5206\"\u7b49\u3002"
+  "description": "当用户想要在 WorkBuddy 上完成每日签到（获取签到积分）时使用此技能。若 WorkBuddy 未运行则自动启动，使用 Playwright 通过 CSS Selector 定位 DOM 元素并点击：先点击左下角用户菜单（class=\"user-menu\"），等待 2 秒后，再点击「立即领取 →」按钮（class=\"daily-checkin-banner-action\"）完成签到。触发关键词包括\"签到\"、\"WorkBuddy签到\"、\"每日签到\"、\"打卡积分\"等。",
+  "content_fingerprint": "54bc96ed2b97b9c77060264c09b0235893a9ffe71e44ba6e58bdfe311df45847"
 }

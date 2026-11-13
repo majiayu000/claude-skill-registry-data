@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Unified Minions skill for both deterministic shell jobs and LLM subagent\norchestration. Replaces the older `gbrain-jobs` routing intent. Use when:\nsubmitting gbrain jobs, shell/background tasks, spawning subagents,\nchecking progress, steering running work, pausing/resuming, parallel\nfan-out. One durable, observable, steerable queue interface. Also carries\nthe durable-execution doctrine for any operation expected to exceed ~2\nminutes: capability ladder, deadman checks that verify the result was\nreported, and content-addressed stage checkpoints for expensive pipelines."
+  "description": "Unified Minions skill for both deterministic shell jobs and LLM subagent\norchestration. Replaces the older `gbrain-jobs` routing intent. Use when:\nsubmitting gbrain jobs, shell/background tasks, spawning subagents,\nchecking progress, steering running work, pausing/resuming, parallel\nfan-out. One durable, observable, steerable queue interface. Also carries\nthe durable-execution doctrine for any operation expected to exceed ~2\nminutes: capability ladder, deadman checks that verify the result was\nreported, and content-addressed stage checkpoints for expensive pipelines.",
+  "content_fingerprint": "6c7d6dd8faa7dc150072eb83f3bd7b5911d9bd91bb6c2972aee8ff8747c04c2f"
 }

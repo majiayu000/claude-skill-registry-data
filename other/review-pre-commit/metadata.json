@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use as a pre-commit quality gate \u2014 review the working diff for stub patterns (TODO/FIXME/`unimplemented!()`/`todo!()`), debug leftovers (`dbg!`, stray `console.log`/`println!`, commented-out code), then run the project's lint, format, and test suites and verify the active task has a handoff annotation. Prints a PASS/FAIL checklist. Trigger when the user says \"review my changes\", \"/review\", \"ready to commit?\", or asks for a final pass before committing."
+  "description": "Use as a pre-commit quality gate — review the working diff for stub patterns (TODO/FIXME/`unimplemented!()`/`todo!()`), debug leftovers (`dbg!`, stray `console.log`/`println!`, commented-out code), then run the project's lint, format, and test suites and verify the active task has a handoff annotation. Prints a PASS/FAIL checklist. Trigger when the user says \"review my changes\", \"/review\", \"ready to commit?\", or asks for a final pass before committing.",
+  "content_fingerprint": "4ba529933b90fea70a68ad7b13ace99db9aa899e7c0c59c94084cddec23ca9b5"
 }

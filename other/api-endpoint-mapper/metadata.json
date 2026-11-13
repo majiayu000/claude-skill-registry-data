@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scan entire codebase to map all API endpoints (backend definitions and frontend calls), find mismatches where calls have no matching endpoint or endpoints are never called, and detect likely typos where names are similar but don't quite match. Use when debugging broken API connections, before refactoring API routes, when data isn't flowing correctly, or when Claude has broken API connections by renaming things incorrectly. Triggers on \"map my API endpoints\", \"find broken API calls\", \"why isn't my data flowing\", \"find API mismatches\", \"audit my endpoints\"."
+  "description": "Scan entire codebase to map all API endpoints (backend definitions and frontend calls), find mismatches where calls have no matching endpoint or endpoints are never called, and detect likely typos where names are similar but don't quite match. Use when debugging broken API connections, before refactoring API routes, when data isn't flowing correctly, or when Claude has broken API connections by renaming things incorrectly. Triggers on \"map my API endpoints\", \"find broken API calls\", \"why isn't my data flowing\", \"find API mismatches\", \"audit my endpoints\".",
+  "content_fingerprint": "47f90be9a3ea5775108a1288913c77945868a417a89d37d888725037d9aab441"
 }

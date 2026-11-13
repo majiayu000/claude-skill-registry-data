@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Default minimum deployment target for Apple-platform Swift Apps \u2014 iOS 26 / macOS 26 on the Xcode 26 toolchain (Swift 6 language mode) \u2014 and how to deviate down (iOS 18 / 17) or up. Use when starting a new Apple-platform project, writing the Package.swift `platforms:` list, deciding whether an API newer than the floor is worth bumping for or a client requirement forces dropping below it, or when asked \"what should the minimum iOS / macOS version be\". Entry point of the bootstrap chain; does NOT own language mode \u2192 swift6-concurrency, or module layout \u2192 swiftpm-modularization."
+  "description": "Default minimum deployment target for Apple-platform Swift Apps — iOS 26 / macOS 26 on the Xcode 26 toolchain (Swift 6 language mode) — and how to deviate down (iOS 18 / 17) or up. Use when starting a new Apple-platform project, writing the Package.swift `platforms:` list, deciding whether an API newer than the floor is worth bumping for or a client requirement forces dropping below it, or when asked \"what should the minimum iOS / macOS version be\". Entry point of the bootstrap chain; does NOT own language mode → swift6-concurrency, or module layout → swiftpm-modularization.",
+  "content_fingerprint": "afa2ef1e3775f358b406f03ad78c650d79271b128dd091167da8cb8c588771e1"
 }

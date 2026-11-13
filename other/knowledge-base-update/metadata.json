@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Knowledge base sync and health check for the knowledge-base skill. Scans all topic folders, regenerates index.md from every summary's frontmatter so new documents appear and rows for deleted files drop out, refreshes topic descriptions, cleans up stale split directories, and reports health issues (missing summaries, naming inconsistencies, orphaned files, duplicate content). Triggers on \"kb update\", \"kb up\", \"update kb\", and \"kb sync\"."
+  "description": "Knowledge base sync and health check for the knowledge-base skill. Scans all topic folders, regenerates index.md from every summary's frontmatter so new documents appear and rows for deleted files drop out, refreshes topic descriptions, cleans up stale split directories, and reports health issues (missing summaries, naming inconsistencies, orphaned files, duplicate content). Triggers on \"kb update\", \"kb up\", \"update kb\", and \"kb sync\".",
+  "content_fingerprint": "d41a8674ee5449067d5d2da5b917683448196e19ceeb19749fc01e9b6bf6bf0c"
 }

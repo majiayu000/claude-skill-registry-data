@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u68c0\u6d4b\u4e00\u4e2a IP \u6216\u4f4f\u5b85/\u673a\u623f\u4ee3\u7406\u8282\u70b9\u7684\u8d28\u91cf\u2014\u2014\u6ce8\u518c\u5e93\u3001\u5730\u7406\u5e93\u4e00\u81f4\u6027\u3001ASN/org\u3001\u98ce\u63a7\u4fe1\u8a89\u3001\u9ed1\u540d\u5355\u3001\u4f4f\u5b85\u771f\u5b9e\u6027\u3001BGP \u5ba3\u544a\u3001\u76ee\u6807\u670d\u52a1(Grok/Claude/ChatGPT)\u89e3\u9501\u4e0e\u5ef6\u8fdf\u4e09\u89d2\u6d4b\u91cf\u3002\u5224\u5b9a\u8be5 IP \u80fd\u5426\u5b89\u5168\u7528\u4e8e AI \u670d\u52a1(\u907f\u514d\u88ab\u5730\u7406\u5e93\u8bef\u5224\u5230\u522b\u56fd\u5bfc\u81f4\u533a\u57df\u9501)\u3002\u5f53\u7528\u6237\u8bf4\"\u67e5\u8fd9\u4e2a IP\"\u3001\"\u8fd9\u4e2a\u8282\u70b9\u5728\u54ea\"\u3001\"\u8fd9\u4e2a\u4ee3\u7406\u80fd\u7528\u5417\"\u3001\"IP \u8d28\u91cf\u68c0\u6d4b\"\u3001\"\u9a8c\u6536\u4f4f\u5b85 IP\"\u3001\"\u4e3a\u4ec0\u4e48\u88ab\u5224\u5b9a\u5728 X \u56fd\"\u3001\"check ip\"\u3001\u7ed9\u51fa socks5 \u4ee3\u7406\u51ed\u8bc1\u95ee\u5f52\u5c5e\u6216\u89e3\u9501\u65f6\u4f7f\u7528\u3002"
+  "description": "检测一个 IP 或住宅/机房代理节点的质量——注册库、地理库一致性、ASN/org、风控信誉、黑名单、住宅真实性、BGP 宣告、目标服务(Grok/Claude/ChatGPT)解锁与延迟三角测量。判定该 IP 能否安全用于 AI 服务(避免被地理库误判到别国导致区域锁)。当用户说\"查这个 IP\"、\"这个节点在哪\"、\"这个代理能用吗\"、\"IP 质量检测\"、\"验收住宅 IP\"、\"为什么被判定在 X 国\"、\"check ip\"、给出 socks5 代理凭证问归属或解锁时使用。",
+  "content_fingerprint": "66da4d7af32d4037de9075975a341c245b5217b3bfda196d09d4aef6f10de2ac"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Layer 1d of the keyword research pipeline. Mines question-shaped keywords from Semrush phrase_questions (per surviving seed) plus People-Also-Ask strings from the SERP. Appends rows to keyword-ideas.csv with source=question_mining (or merges to source=both when the keyword already exists) and a question_subtype column. Cap of 100 rows per run."
+  "description": "Layer 1d of the keyword research pipeline. Mines question-shaped keywords from Semrush phrase_questions (per surviving seed) plus People-Also-Ask strings from the SERP. Appends rows to keyword-ideas.csv with source=question_mining (or merges to source=both when the keyword already exists) and a question_subtype column. Cap of 100 rows per run.",
+  "content_fingerprint": "9cc1eacec6fb16da19990a4bcc43434c97f96079953bc5b21683af731d81b26b"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Repo rule. Name every AWS resource in Insolvia as [project]-[env]-[component]-[identifier] \u2014 lowercase kebab, environment always second, component named for what it serves. Covers the per-resource-type patterns, the global-uniqueness suffix S3 needs, the required tags, and which resources cannot be renamed without destroying data. Use before creating or renaming any AWS resource, writing a new Terraform module, adding a service, or widening the deploy role's ARN patterns in infra/envs/ci-trust."
+  "description": "Repo rule. Name every AWS resource in Insolvia as [project]-[env]-[component]-[identifier] — lowercase kebab, environment always second, component named for what it serves. Covers the per-resource-type patterns, the global-uniqueness suffix S3 needs, the required tags, and which resources cannot be renamed without destroying data. Use before creating or renaming any AWS resource, writing a new Terraform module, adding a service, or widening the deploy role's ARN patterns in infra/envs/ci-trust.",
+  "content_fingerprint": "36531196195619920982b863301ff8045ee9f94e401259233b09a31c9e2c6ecb"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "JIRA project / user / group / scheme / automation administration via the jira-as wrapper (11 sub-domains, ~65 verbs). Triggers: 'create JIRA project', 'list users', 'delete user USERNAME', 'list permission schemes', 'create group NAME'. Requires admin role. Destructive ops (project/user/group delete) require 2-step token confirmation. NOT for per-issue ops (mk:jira-issue / mk:jira-lifecycle); NOT for JSM admin (mk:jira-jsm)."
+  "description": "JIRA project / user / group / scheme / automation administration via the jira-as wrapper (11 sub-domains, ~65 verbs). Triggers: 'create JIRA project', 'list users', 'delete user USERNAME', 'list permission schemes', 'create group NAME'. Requires admin role. Destructive ops (project/user/group delete) require 2-step token confirmation. NOT for per-issue ops (mk:jira-issue / mk:jira-lifecycle); NOT for JSM admin (mk:jira-jsm).",
+  "content_fingerprint": "9a203602c9256156f29d5cdd1dd440ab6dbaccfc2bf4385facfbeaeb0153ddc0"
 }

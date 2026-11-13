@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "End-to-end automated model quantization and accuracy tuning workflow. Use when user asks for automated model quantization and accuracy tuning, e.g. \"\u81ea\u52a8\u91cf\u5316\", \"\u91cf\u5316\u8c03\u4f18\", \"\u4e00\u952e\u91cf\u5316\", \"\u7cbe\u5ea6\u8c03\u4f18\", etc. \u5f53\u7528\u6237\u7ed9\u51fa\u591a\u5361\uff08\u22652 \u5361\uff09\u5361\u53f7\u65f6\uff0c\u91cf\u5316\u9636\u6bb5\u901a\u8fc7 EP \u5e76\u884c\u9002\u914d\uff08msmodelslim-ep-parallel-adaptation\uff09\u4fdd\u8bc1\u591a\u5361 EP \u5e76\u884c\uff0c\u8c03\u4f18\u4e3b\u6d41\u7a0b\u4ecd\u5728\u672c Skill\u3002"
+  "description": "End-to-end automated model quantization and accuracy tuning workflow. Use when user asks for automated model quantization and accuracy tuning, e.g. \"自动量化\", \"量化调优\", \"一键量化\", \"精度调优\", etc. 当用户给出多卡（≥2 卡）卡号时，量化阶段通过 EP 并行适配（msmodelslim-ep-parallel-adaptation）保证多卡 EP 并行，调优主流程仍在本 Skill。",
+  "content_fingerprint": "79372ceae6655ddf983c953d0fafa8c3da3debcf3daf2fe40e1c0cc15385a07d"
 }

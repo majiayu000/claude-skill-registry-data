@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Shared human registry (Level 1.5 registry) of PRODUCT + MANUAL ARCHITECTURE + ROADMAP + PEOPLE context. Complementary to che-xray (automatic): this skill is the HUMAN side. Che ALWAYS reads product_context.md + architecture.md BEFORE generating ANY SPEC via che-spec. Mandatory gate BEFORE /che-spec in projects that have never passed through here. Registry stays OUTSIDE user worktree in $CHE_SESSIONS_ROOT/.registry/projects/<slug>/. DOES NOT create anything in the worktree unless the user explicitly asks VERBATIM."
+  "description": "Shared human registry (Level 1.5 registry) of PRODUCT + MANUAL ARCHITECTURE + ROADMAP + PEOPLE context. Complementary to che-xray (automatic): this skill is the HUMAN side. Che ALWAYS reads product_context.md + architecture.md BEFORE generating ANY SPEC via che-spec. Mandatory gate BEFORE /che-spec in projects that have never passed through here. Registry stays OUTSIDE user worktree in $CHE_SESSIONS_ROOT/.registry/projects/<slug>/. DOES NOT create anything in the worktree unless the user explicitly asks VERBATIM.",
+  "content_fingerprint": "b900437a7994f10743c977e87f8a58ceedd5854db582d10490ef681eca255c7a"
 }

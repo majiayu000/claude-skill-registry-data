@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u91cd\u555f Strix Halo Power Monitor \u96fb\u6e90\u76e3\u63a7\u670d\u52d9\u8207 Tailscale \u65c1\u8def\u5bb9\u5668\uff08sidecar\uff09\u3002\u7576\u4f7f\u7528\u8005\u8981\u6c42\u91cd\u555f\u670d\u52d9\u3001Tailscale \u7db2\u5740\u7121\u6cd5\u8f09\u5165\u3001\u5ea6\u6578\u8207\u96fb\u8cbb\u8a08\u7b97\u7570\u5e38\u3001\u7db2\u9801 WebSockets \u9023\u7dda\u5931\u6557\u6216\u65b7\u7dda\uff0c\u6216\u662f\u4f7f\u7528 /restart-power-monitor \u6642\u3002\u6b64\u6280\u80fd\u6703\u4f9d\u5e8f\u91cd\u69cb\u4e26\u91cd\u65b0\u90e8\u7f72\u5f8c\u7aef\u670d\u52d9\u3001\u91cd\u65b0\u5efa\u7acb Tailscale \u4ee3\u7406\u5bb9\u5668\u3001\u81ea\u52d5\u5075\u6e2c\u4e26\u4fee\u5fa9 Tailscale \u7684\u96e2\u7dda\u8207\u7db2\u8def\u6545\u969c\uff0c\u6700\u5f8c\u9032\u884c\u7aef\u5c0d\u7aef API \u53ca\u5916\u7db2 HTTPS \u9a57\u8b49\u3002"
+  "description": "重啟 Strix Halo Power Monitor 電源監控服務與 Tailscale 旁路容器（sidecar）。當使用者要求重啟服務、Tailscale 網址無法載入、度數與電費計算異常、網頁 WebSockets 連線失敗或斷線，或是使用 /restart-power-monitor 時。此技能會依序重構並重新部署後端服務、重新建立 Tailscale 代理容器、自動偵測並修復 Tailscale 的離線與網路故障，最後進行端對端 API 及外網 HTTPS 驗證。",
+  "content_fingerprint": "40eeab4b4330a60ab7f4341222e616556036bc14ff018625cd83182b4be90b58"
 }

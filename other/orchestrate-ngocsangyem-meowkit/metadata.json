@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Coordinates staged or parallel jobs across live-verified coding-agent runtimes (Claude Code, Codex, Cursor, and other installed CLIs) and in-session toolkit subagents. Routes each job by capability and risk tier, isolates parallel writers in git worktrees, captures redacted output, resumes interrupted runs, and blocks completion until an independent arbiter verifies the results. Use when work should be split across multiple runtimes or subagents, run as staged or parallel jobs, and reviewed before handoff. NOT for a single-agent task or the in-session 7-phase flow (use mk:cook / mk:workflow-orchestrator)."
+  "description": "Coordinates staged or parallel jobs across live-verified coding-agent runtimes (Claude Code, Codex, Cursor, and other installed CLIs) and in-session toolkit subagents. Routes each job by capability and risk tier, isolates parallel writers in git worktrees, captures redacted output, resumes interrupted runs, and blocks completion until an independent arbiter verifies the results. Use when work should be split across multiple runtimes or subagents, run as staged or parallel jobs, and reviewed before handoff. NOT for a single-agent task or the in-session 7-phase flow (use mk:cook / mk:workflow-orchestrator).",
+  "content_fingerprint": "14491833a75643b29f5c858d1662b1e55e86f84bd6be789b2b0800780cc680ef"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `incident-response` stage (operation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage incident-response --single`: the engine emits one run-stage directive for incident-response and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `incident-response` stage (operation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage incident-response --single`: the engine emits one run-stage directive for incident-response and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "597ead65309562dc7ed4ac0baf29e45dee58124139bccf5eec3f33433bf71989"
 }

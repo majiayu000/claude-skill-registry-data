@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Convert AmeriFlux ERA5 half-hourly meteorological CSV files into EcoSIM hourly climate forcing NetCDF files, compare generated forcing against overlapping measured tower meteorology when a FULLSET file is available, and report large biases or errors. Use when preparing or validating EcoSIM climate inputs for AmeriFlux sites, checking ERA5 against in situ records, diagnosing forcing discrepancies, or writing climate-quality reports. For non-AmeriFlux paper sites that need a fresh Copernicus CDS ERA5 point download by longitude/latitude, use era5-cds-point-download first."
+  "description": "Convert AmeriFlux ERA5 half-hourly meteorological CSV files into EcoSIM hourly climate forcing NetCDF files, compare generated forcing against overlapping measured tower meteorology when a FULLSET file is available, and report large biases or errors. Use when preparing or validating EcoSIM climate inputs for AmeriFlux sites, checking ERA5 against in situ records, diagnosing forcing discrepancies, or writing climate-quality reports. For non-AmeriFlux paper sites that need a fresh Copernicus CDS ERA5 point download by longitude/latitude, use era5-cds-point-download first.",
+  "content_fingerprint": "a96153da945667110e6369d40036af9c8741b28fddba7abd1c2b01b2f148e4d5"
 }

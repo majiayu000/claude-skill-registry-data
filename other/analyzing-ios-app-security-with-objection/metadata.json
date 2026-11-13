@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Local wrapper around the upstream Anthropic skill. Use for iOS runtime security assessment via Objection \u2014 SSL pinning bypass, keychain dump, jailbreak detection bypass, NSUserDefaults inspection, filesystem walk, cookie dump, IPA repackaging for non-jailbroken devices, OWASP Mobile Top 10 checklist. The upstream skill lives at skills/_upstream/anthropic-cybersecurity-skills/skills/analyzing-ios-app-security-with-objection/. In this repo, scripted Objection sequences live in objection_layer/scripts/ and are invoked via ObjectionRunner so their output lands in the engagement store."
+  "description": "Local wrapper around the upstream Anthropic skill. Use for iOS runtime security assessment via Objection — SSL pinning bypass, keychain dump, jailbreak detection bypass, NSUserDefaults inspection, filesystem walk, cookie dump, IPA repackaging for non-jailbroken devices, OWASP Mobile Top 10 checklist. The upstream skill lives at skills/_upstream/anthropic-cybersecurity-skills/skills/analyzing-ios-app-security-with-objection/. In this repo, scripted Objection sequences live in objection_layer/scripts/ and are invoked via ObjectionRunner so their output lands in the engagement store.",
+  "content_fingerprint": "e8416f25f4e00bd8107798fb9462bd55279c47e6028621cea7815f7e57018632"
 }

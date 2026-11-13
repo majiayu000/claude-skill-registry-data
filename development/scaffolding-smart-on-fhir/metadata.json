@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scaffold a SMART-on-FHIR app (SMART App Launch v2 \u2014 EHR launch and standalone launch, OAuth2 PKCE, scopes, token handling, fhirContext) so an OpenMed-powered tool can run inside Epic or Cerner/Oracle Health. Covers the .well-known/smart-configuration discovery, authorize/token sequence, scopes like patient/DocumentReference.rs and launch/patient, and fetching clinical notes the app then de-identifies and runs NER on locally with OpenMed. Use when the user wants to embed OpenMed inside an EHR, mentions SMART on FHIR, OAuth2 launch, scopes, Epic/Cerner app, or clinician-facing FHIR app. Pairs adjacent."
+  "description": "Scaffold a SMART-on-FHIR app (SMART App Launch v2 — EHR launch and standalone launch, OAuth2 PKCE, scopes, token handling, fhirContext) so an OpenMed-powered tool can run inside Epic or Cerner/Oracle Health. Covers the .well-known/smart-configuration discovery, authorize/token sequence, scopes like patient/DocumentReference.rs and launch/patient, and fetching clinical notes the app then de-identifies and runs NER on locally with OpenMed. Use when the user wants to embed OpenMed inside an EHR, mentions SMART on FHIR, OAuth2 launch, scopes, Epic/Cerner app, or clinician-facing FHIR app. Pairs adjacent.",
+  "content_fingerprint": "f6117ac02f7a663a477a12059e1c189b3596fc6e30dab443375a45cb73d13a6f"
 }

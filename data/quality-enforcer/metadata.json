@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/stharrold/media-intelligence/blob/main/ARCHIVED/workflow_v5_backup/.agents/quality-enforcer/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "ee7d8cdc1991b7f5a7e08cd24945aea8d75fe0516d55c2bafc929b01c8382d7d",
+  "description": "Enforces quality gates: 80% test coverage, passing tests, successful builds,\nsemantic versioning. Runs before PR creation.\n\nUse when: Running tests, checking coverage, validating quality, versioning\n\n"
 }

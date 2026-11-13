@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/OpenAEC-Foundation/Frappe_Claude_Skill_Package/blob/main/skills/source/impl/frappe-impl-scheduler/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "255d1e8a089af5db5be7f246f3cbf6b11077479c9531ed90e184ff2ac4c23594",
+  "description": "Use when implementing scheduled tasks and background jobs in Frappe v14/v15/v16. Covers hooks.py scheduler_events, frappe.enqueue, queue selection, job deduplication, testing with bench execute/schedu"
 }

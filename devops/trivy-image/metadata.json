@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configures and runs Trivy for container image scanning: Aqua Security's all-in-one scanner combining vuln + secret + misconfiguration + license detection in one pass; `trivy image {image}` with --severity HIGH,CRITICAL filter; --format sarif/json (incl. scan-embedded CycloneDX; for standalone SBOM generation see syft-generation + sbom-formats); .trivyignore CVE suppression file; --ignore-unfixed for actionable filter; --scanners vuln/misconfig/license/secret toggle. Use when the team wants a single tool covering container image security across multiple dimensions, not for producing a standalone CycloneDX SBOM."
+  "description": "Configures and runs Trivy for container image scanning: Aqua Security's all-in-one scanner combining vuln + secret + misconfiguration + license detection in one pass; `trivy image {image}` with --severity HIGH,CRITICAL filter; --format sarif/json (incl. scan-embedded CycloneDX; for standalone SBOM generation see syft-generation + sbom-formats); .trivyignore CVE suppression file; --ignore-unfixed for actionable filter; --scanners vuln/misconfig/license/secret toggle. Use when the team wants a single tool covering container image security across multiple dimensions, not for producing a standalone CycloneDX SBOM.",
+  "content_fingerprint": "2ba2e301c1d14c3eb2228f9fc3baabbfd4c2ee4ec2dc160482b59bd7ea0b11a7"
 }

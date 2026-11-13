@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "After a code change (diff/fix/requirement change), decide what to regression-test: changed files \u2192 functions \u2192 features \u2192 cases traceability; outputs a ranked list. Not for: editing case files (test-case-writing), long-term strategy (test-strategy). \u4ee3\u7801\u53d8\u66f4\u540e\u5224\u65ad\u56de\u5f52\u54ea\u4e9b\u6d4b\u8bd5\uff1a\u6cbf\u6539\u52a8\u5206\u6790\u94fe\u4ea7\u51fa\u5206\u7ea7\u56de\u5f52\u6e05\u5355\u3002\u4e0d\u7528\u4e8e\uff1a\u7528\u4f8b\u589e\u91cf\u4fee\u6539\u3001\u957f\u671f\u7b56\u7565\u3002"
+  "description": "After a code change (diff/fix/requirement change), decide what to regression-test: changed files → functions → features → cases traceability; outputs a ranked list. Not for: editing case files (test-case-writing), long-term strategy (test-strategy). 代码变更后判断回归哪些测试：沿改动分析链产出分级回归清单。不用于：用例增量修改、长期策略。",
+  "content_fingerprint": "f60e6496d69dcf89e5827e03d8f2b4b0f43c9b813a05d85ee72db574646e5884"
 }

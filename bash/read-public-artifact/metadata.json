@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a claude.ai/code/artifact link (or another iframe-rendered web page) must be read from an agent session and the in-process route fails or is unavailable \u2014 Artifact read / WebFetch return 'served to you as a public (non-member) reader', 'reading public artifacts that way is not enabled yet', a sign-in shell, an SPA shell, or a Cloudflare 403, and the user asks to read, summarize, or extract a shared or public artifact without claude-in-chrome. Triggers include \uc544\ud2f0\ud329\ud2b8 \uc77d\uc5b4\uc918, \uacf5\uc720 \uc544\ud2f0\ud329\ud2b8, public artifact, artifact read failed, \uc774 \ub9c1\ud06c \ub0b4\uc6a9 \ud655\uc778, iframe page text."
+  "description": "Use when a claude.ai/code/artifact link (or another iframe-rendered web page) must be read from an agent session and the in-process route fails or is unavailable — Artifact read / WebFetch return 'served to you as a public (non-member) reader', 'reading public artifacts that way is not enabled yet', a sign-in shell, an SPA shell, or a Cloudflare 403, and the user asks to read, summarize, or extract a shared or public artifact without claude-in-chrome. Triggers include 아티팩트 읽어줘, 공유 아티팩트, public artifact, artifact read failed, 이 링크 내용 확인, iframe page text.",
+  "content_fingerprint": "79083f0709c1d1c96b1001b80380ea4e58bc79ae8eafd621a47c7d8f8ac02c39"
 }

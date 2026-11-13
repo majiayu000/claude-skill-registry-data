@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manufacture \"multi-cam\" hard cuts on static talking-head stretches by alternating a base framing with tighter punch-in reframings of the SAME speaker, each cut snapped to a word start so it lands on speech. Deterministic, no Claude. Timeline-preserving \u2014 audio is copied untouched and total duration is identical, so every downstream timestamp (captions, b-roll windows) stays valid. Runs on the 1080x1920 vertical clip AFTER fill-vertical and BEFORE zoom-punch/broll/burn-subtitles, so cutaways override their own windows and captions burn on top. The visual-change-density lever for sources where b-roll stays sparse."
+  "description": "Manufacture \"multi-cam\" hard cuts on static talking-head stretches by alternating a base framing with tighter punch-in reframings of the SAME speaker, each cut snapped to a word start so it lands on speech. Deterministic, no Claude. Timeline-preserving — audio is copied untouched and total duration is identical, so every downstream timestamp (captions, b-roll windows) stays valid. Runs on the 1080x1920 vertical clip AFTER fill-vertical and BEFORE zoom-punch/broll/burn-subtitles, so cutaways override their own windows and captions burn on top. The visual-change-density lever for sources where b-roll stays sparse.",
+  "content_fingerprint": "ac6a1be87d124ba044e4dbe0e2407e3b694ded8e4566e1d0139e98d7007af436"
 }

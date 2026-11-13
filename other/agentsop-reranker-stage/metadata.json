@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adds and tunes a reranker stage for RAG using the retrieve-wide, rerank-narrow pattern. Use when relevant documents appear in the initial top-N but are buried by noise, top-1 precision or MRR is low despite adequate recall, or too many marginal chunks consume context. Covers cross-encoder, API, and local rerankers; N-to-k selection; and latency/cost tradeoffs. Do not use when retrieval recall itself is failing."
+  "description": "Adds and tunes a reranker stage for RAG using the retrieve-wide, rerank-narrow pattern. Use when relevant documents appear in the initial top-N but are buried by noise, top-1 precision or MRR is low despite adequate recall, or too many marginal chunks consume context. Covers cross-encoder, API, and local rerankers; N-to-k selection; and latency/cost tradeoffs. Do not use when retrieval recall itself is failing.",
+  "content_fingerprint": "101017b42eb5d18d48633d805e84d972c12aaab5b728a1604ea3e95610633da5"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Review an Alembic migration for safety, backward compatibility, FedRAMP audit constraints, and zero-downtime risk. Triggers on phrases like 'migration safety', 'review this migration', or when files under `api/src/db/migrations/versions/` are added or modified. Flags risky operations (DROP, NOT NULL without default, table locks) and suggests safer patterns."
+  "description": "Review an Alembic migration for safety, backward compatibility, FedRAMP audit constraints, and zero-downtime risk. Triggers on phrases like 'migration safety', 'review this migration', or when files under `api/src/db/migrations/versions/` are added or modified. Flags risky operations (DROP, NOT NULL without default, table locks) and suggests safer patterns.",
+  "content_fingerprint": "e9eb715039f51c905d8eac562dbcdc647eeb95ee23983bf65e9d24c0f01c5059"
 }

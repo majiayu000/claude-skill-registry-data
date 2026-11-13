@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Evaluate a Claude Code skill or plugin you just wrote or changed, to find out whether it is any good before you ship it. Reads the target, derives per-target success criteria, runs an evidence-based battery (structural integrity, triggering accuracy, content quality, behavioral lift vs a no-skill baseline), then loops fix \u2192 re-run until a 6-point readiness gate passes and you confirm. Self-contained: uses skill-creator and plugin-dev only as optional cross-checks, never required. Not for writing a skill from scratch (use authoring) or general app code review (use ceh-git-workflow:code-review)."
+  "description": "Evaluate a Claude Code skill or plugin you just wrote or changed, to find out whether it is any good before you ship it. Reads the target, derives per-target success criteria, runs an evidence-based battery (structural integrity, triggering accuracy, content quality, behavioral lift vs a no-skill baseline), then loops fix → re-run until a 6-point readiness gate passes and you confirm. Self-contained: uses skill-creator and plugin-dev only as optional cross-checks, never required. Not for writing a skill from scratch (use authoring) or general app code review (use ceh-git-workflow:code-review).",
+  "content_fingerprint": "34372fb6fa919f724f765a35404f364eeb4a4fbfba5c911c91ed24c0e9d24edb"
 }

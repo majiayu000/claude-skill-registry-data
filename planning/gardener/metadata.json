@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Monthly catalog hygiene audit for Claude Code plugin marketplaces. Inventories every skill and agent, scores each against a 7-dimension rubric via parallel Opus Agents, detects description collisions via Bedrock Cohere v4 embeddings with pairwise cosine, and writes a delta report vs. the prior audit. Proposes resolutions; does not auto-apply. Use when the user asks to audit the catalog, run the gardener, find skill collisions, check plugin hygiene, generate a monthly audit report, or mentions catalog drift."
+  "description": "Monthly catalog hygiene audit for Claude Code plugin marketplaces. Inventories every skill and agent, scores each against a 7-dimension rubric via parallel Opus Agents, detects description collisions via Bedrock Cohere v4 embeddings with pairwise cosine, and writes a delta report vs. the prior audit. Proposes resolutions; does not auto-apply. Use when the user asks to audit the catalog, run the gardener, find skill collisions, check plugin hygiene, generate a monthly audit report, or mentions catalog drift.",
+  "content_fingerprint": "5c10be189fefbbf59f5fabb9393d2d9e745985c78ae9b80bf90e3cfa3ae50c57"
 }

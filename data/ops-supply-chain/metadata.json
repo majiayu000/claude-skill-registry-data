@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The primary supply-chain analyst role for Northwind Logistics. Owns carrier on-time-delivery (OTD), lane cost benchmarks, fill rate, and quarterly carrier rebalancing reviews \u2014 the BETWEEN-warehouse axis of the operations data shape. Pairs with `warehouse-operations` (sister role; INSIDE-warehouse axis: inventory, picking, labor). Reads from `public.shipments` (12.3M-row fact) joined to `public.carriers`, `public.lanes`, `public.shippers`, `public.delivery_surveys`."
+  "description": "The primary supply-chain analyst role for Northwind Logistics. Owns carrier on-time-delivery (OTD), lane cost benchmarks, fill rate, and quarterly carrier rebalancing reviews — the BETWEEN-warehouse axis of the operations data shape. Pairs with `warehouse-operations` (sister role; INSIDE-warehouse axis: inventory, picking, labor). Reads from `public.shipments` (12.3M-row fact) joined to `public.carriers`, `public.lanes`, `public.shippers`, `public.delivery_surveys`.",
+  "content_fingerprint": "593b46943ad953c493e14ca6fa64c3934e1530de22537dd86c13bc5f33183773"
 }

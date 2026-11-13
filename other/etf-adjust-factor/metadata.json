@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2 ETF \u590d\u6743\u56e0\u5b50\u3002\u652f\u6301 --symbol\u3001--trade-date \u6216\u5e26 symbol \u7684 --start-date/--end-date \u533a\u95f4\u67e5\u8be2\uff0c\u4ee5\u53ca --page/--page-size\u3002\u63a5\u53e3\uff1aGET /api/v1/market/data/etf-adjust-factor\u3002"
+  "description": "查询 ETF 复权因子。支持 --symbol、--trade-date 或带 symbol 的 --start-date/--end-date 区间查询，以及 --page/--page-size。接口：GET /api/v1/market/data/etf-adjust-factor。",
+  "content_fingerprint": "65480645a36b43541fe8368baffcb14d3a4c514c0a3520c2a38b2e66d3284928"
 }

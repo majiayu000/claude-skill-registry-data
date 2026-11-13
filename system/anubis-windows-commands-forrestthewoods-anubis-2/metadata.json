@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/forrestthewoods/anubis/blob/master/.claude/skills/anubis-windows-commands/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "95bf509345a6846f5c005779f3669ac70b14d7653795d2584ebea97d0bd229df",
+  "description": "Prevents Git Bash path conversion issues when running Anubis commands on Windows. Use when building targets with `cargo run` or `anubis.exe` that use `//` target paths."
 }

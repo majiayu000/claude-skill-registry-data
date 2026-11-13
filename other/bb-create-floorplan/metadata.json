@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ece MAS\uff08io_ring/pad_list/clock_plan\uff09+ \u7efc\u5408\u7f51\u8868\u751f\u6210 Magic floorplan TCL\uff0c\u4ea4\u7ed9 bb-invoke-magic \u6267\u884c\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bba-guru-pd \u7efc\u5408\u540e\u505a floorplan\uff1b(2) DRC \u5931\u8d25\u540e\u8c03\u6574 utilization \u91cd\u751f\u6210\uff1b(3) \u663e\u5f0f /bb-create-floorplan\u3002"
+  "description": "从 MAS（io_ring/pad_list/clock_plan）+ 综合网表生成 Magic floorplan TCL，交给 bb-invoke-magic 执行。触发场景：(1) bba-guru-pd 综合后做 floorplan；(2) DRC 失败后调整 utilization 重生成；(3) 显式 /bb-create-floorplan。",
+  "content_fingerprint": "7d20c338a8530f9699c945618fadb1799157c4634ab2a1218848db963a735969"
 }

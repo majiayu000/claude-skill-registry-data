@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Meta-skill that walks every `/orbit-*` skill, fetches the canonical sources listed in its `Sources & Evergreen References` section, diffs against the rules currently in the skill, flags drift (rule says X, source says Y now). Optionally proposes patches. Use whenever the user says \"audit skills for staleness\", \"are my skills current\", \"evergreen update\", \"drift check\", or quarterly as a maintenance routine."
+  "description": "Meta-skill that walks every `/orbit-*` skill, fetches the canonical sources listed in its `Sources & Evergreen References` section, diffs against the rules currently in the skill, flags drift (rule says X, source says Y now). Optionally proposes patches. Use whenever the user says \"audit skills for staleness\", \"are my skills current\", \"evergreen update\", \"drift check\", or quarterly as a maintenance routine.",
+  "content_fingerprint": "f7204561f7100b4f06f8bd83e48567625ee6e164d7e72be03801b711ee9ba76f"
 }

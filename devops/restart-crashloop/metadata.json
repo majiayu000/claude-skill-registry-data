@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/X-McKay/kubani/blob/main/kubani/skills/k8s/remediation/restart-crashloop/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "800966c8f2d11aa85655220f7e423d8a96d75ca17c58acf8b8e5bdbcd8ffcae4",
+  "description": "Restart a pod stuck in CrashLoopBackOff. Use when pod has crashed 3+ times and a restart might resolve transient issues. Keywords: crashloop, restart, pod failure, container crash, pod stuck, pod cras"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7b97\u5b50\u4ee3\u7801\u9a8c\u8bc1 Skill \u2014 \u6309\u7167\u6807\u51c6\u9a8c\u8bc1\u6d41\u7a0b\u9a8c\u8bc1\u751f\u6210\u7684\u5185\u6838\u4ee3\u7801\u3002 \u521b\u5efa\u9a8c\u8bc1\u9879\u76ee\u6587\u4ef6\uff0c\u8c03\u7528 scripts/verify.py \u8fd0\u884c\u9a8c\u8bc1\uff0c\u9a8c\u8bc1\u901a\u8fc7\u540e \u8c03\u7528 scripts/benchmark.py \u8fdb\u884c\u6027\u80fd\u6d4b\u8bd5\u5e76\u6536\u96c6\u7ed3\u679c\u3002 \u89e6\u53d1\uff1a\u5f53\u7528\u6237\u9700\u8981\u9a8c\u8bc1 Triton \u7b97\u5b50\u4ee3\u7801\u529f\u80fd\u6b63\u786e\u6027\u6216\u91c7\u96c6\u5176\u6027\u80fd\u6570\u636e\u65f6\u4f7f\u7528\u3002"
+  "description": "算子代码验证 Skill — 按照标准验证流程验证生成的内核代码。 创建验证项目文件，调用 scripts/verify.py 运行验证，验证通过后 调用 scripts/benchmark.py 进行性能测试并收集结果。 触发：当用户需要验证 Triton 算子代码功能正确性或采集其性能数据时使用。",
+  "content_fingerprint": "dea67a2c0d9dd9e442dc15e24cc0fe04eeed812aceadc825d0c270b114dd9ea0"
 }

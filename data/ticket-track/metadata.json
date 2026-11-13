@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/tarrragon/claude/blob/main/skills/ticket-track/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "b1ea75475b4d4e9aae93bd2ddc09e2cdeac4c49090dbe555ed97853eda9a610c",
+  "description": "Ticket 追蹤系統 v2.1 - 欄位化操作與批量處理。提供兩種核心能力：(1) READ 操作 - 查詢 ticket 資訊包含 5W1H 欄位、版本進度、樹狀關係、代理人進度、完整內容、執行日誌；(2) UPDATE 操作 - 更新狀態、5W1H 欄位、父子關係、Phase 記錄、批量操作、日誌追加。支援版本驅動的任務管理，強制使用指令操作而非直接讀寫 ticket 檔案。"
 }

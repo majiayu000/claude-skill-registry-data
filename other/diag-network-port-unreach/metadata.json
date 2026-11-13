@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7aef\u53e3\u4e0d\u53ef\u8fbe\u5168\u94fe\u8bca\u65ad\u3002\u4ece DNS \u89e3\u6790 \u2192 TCP connect \u2192 iptables/firewalld \u89c4\u5219 \u2192 \u670d\u52a1\u76d1\u542c\u72b6\u6001 \u2192 \u8def\u7531\u8868 \u2192 SELinux/AppArmor\uff0c\u9010\u5c42\u6392\u67e5\u5e76\u8f93\u51fa\u7ed3\u6784\u5316\u62a5\u544a\u3002"
+  "description": "端口不可达全链诊断。从 DNS 解析 → TCP connect → iptables/firewalld 规则 → 服务监听状态 → 路由表 → SELinux/AppArmor，逐层排查并输出结构化报告。",
+  "content_fingerprint": "dad0338de60f41e3dfd3c6dc54a9acb717a9ef8d87433a98b1d541685bca0870"
 }

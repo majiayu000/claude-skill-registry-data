@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u660e\u786e\u8981\u6c42\u201c\u5199/\u751f\u6210 NSFC \u9884\u7b97\u8bf4\u660e\u4e66\u201d\u201c\u5199\u9884\u7b97\u8bf4\u660e\u201d\u201c\u751f\u6210 budget.tex / budget.pdf\u201d\u201c\u5199\u56fd\u81ea\u7136\u9884\u7b97 justification\u201d\u65f6\u4f7f\u7528\u3002\u57fa\u4e8e\u7528\u6237\u6807\u4e66\u6b63\u6587\u6216\u8865\u5145\u6750\u6599\uff0c\u8f93\u51fa\u4e00\u4efd\u53ef\u63d0\u4ea4\u7684\u9884\u7b97\u8bf4\u660e\u4e66 LaTeX \u9879\u76ee\u5e76\u6e32\u67d3 `budget.pdf`\u3002\u82e5\u7528\u6237\u672a\u6307\u5b9a\u5de5\u4f5c\u76ee\u5f55\uff0c\u5fc5\u987b\u6682\u505c\u5e76\u5148\u8981\u6c42\u5176\u6307\u5b9a\u3002\u26a0\ufe0f \u4e0d\u9002\u7528\uff1a\u7528\u6237\u53ea\u662f\u60f3\u4e86\u89e3\u9884\u7b97\u539f\u5219\uff1b\u7528\u6237\u4ec5\u8981\u9884\u7b97\u8868\u6570\u5b57\u800c\u4e0d\u5199\u8bf4\u660e\u4e66\uff1b\u6216\u7528\u6237\u662f 2026 \u9752\u5e74 A/B/C \u9ed8\u8ba4\u5305\u5e72\u5236\u4e14\u65e0\u9700\u9884\u7b97\u8bf4\u660e\u4e66\u7684\u573a\u666f\u3002"
+  "description": "当用户明确要求“写/生成 NSFC 预算说明书”“写预算说明”“生成 budget.tex / budget.pdf”“写国自然预算 justification”时使用。基于用户标书正文或补充材料，输出一份可提交的预算说明书 LaTeX 项目并渲染 `budget.pdf`。若用户未指定工作目录，必须暂停并先要求其指定。⚠️ 不适用：用户只是想了解预算原则；用户仅要预算表数字而不写说明书；或用户是 2026 青年 A/B/C 默认包干制且无需预算说明书的场景。",
+  "content_fingerprint": "dcd4d7aaaf0c522fcf5fd2bded6f0bd24ec3867e66fc12339715b71f5f4d5640"
 }

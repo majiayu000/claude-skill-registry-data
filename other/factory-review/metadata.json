@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run dark-factory's review-only entry point (/factory-review, /fr) against a diff you already wrote \u2014 in dark-factory or any other repo. Single fresh, static-prompt Codex reviewer, NO coding node, reuses the typed-target-locator + Base64-intent-envelope contract (factory.review-target.v1, prompts/slim/fresh_review.md). Never writes/commits/pushes to the reviewed workspace. Use when you (the calling LLM) already implemented something and want one adversarial review pass without the factory writing any code."
+  "description": "Run dark-factory's review-only entry point (/factory-review, /fr) against a diff you already wrote — in dark-factory or any other repo. Single fresh, static-prompt Codex reviewer, NO coding node, reuses the typed-target-locator + Base64-intent-envelope contract (factory.review-target.v1, prompts/slim/fresh_review.md). Never writes/commits/pushes to the reviewed workspace. Use when you (the calling LLM) already implemented something and want one adversarial review pass without the factory writing any code.",
+  "content_fingerprint": "b60b146f981811fef49fea8e8862ab151385a2b874f530cc45d28be7c3d1b437"
 }

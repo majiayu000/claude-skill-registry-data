@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Token\u9884\u7b97\u5f3a\u5236\u6267\u884c\u5668 - 5\u6807\u51c6\u5b8c\u6574\u5b9e\u73b0\uff1a\n1. \u5168\u5c40\u8003\u8651\uff1a\u8986\u76d6\u4eba/\u4e8b/\u7269/\u73af\u5883/\u5916\u90e8\u96c6\u6210/\u8fb9\u754c\u60c5\u51b5\n2. \u7cfb\u7edf\u8003\u8651\uff1a\u9884\u7b97\u2192\u6d88\u8017\u2192\u9884\u8b66\u2192\u7194\u65ad\u2192\u62a5\u544a\u5b8c\u6574\u95ed\u73af\n3. \u8fed\u4ee3\u673a\u5236\uff1aPDCA\u5faa\u73af\uff0c\u7248\u672c\u5386\u53f2\uff0c\u53cd\u9988\u6536\u96c6\n4. Skill\u5316\uff1a\u6807\u51c6SKILL.md\u683c\u5f0f\uff0c\u53ef\u5b89\u88c5\u53ef\u8c03\u7528\n5. \u81ea\u52a8\u5316\uff1a\u5b9e\u65f6\u76d1\u63a7+cron\u62a5\u544a+\u81ea\u52a8\u7194\u65ad\n6. \u8ba4\u77e5\u8c26\u900a\uff1a\u9884\u7b97\u9884\u4f30\u7f6e\u4fe1\u5ea6/\u5c40\u9650\u6807\u6ce8(S6\u589e\u5f3a)\n7. \u5bf9\u6297\u9a8c\u8bc1\uff1a\u9884\u7b97\u8017\u5c3d\u7b49\u5931\u6548\u573a\u666f\u6d4b\u8bd5(S7\u589e\u5f3a)"
+  "description": "Token预算强制执行器 - 5标准完整实现：\n1. 全局考虑：覆盖人/事/物/环境/外部集成/边界情况\n2. 系统考虑：预算→消耗→预警→熔断→报告完整闭环\n3. 迭代机制：PDCA循环，版本历史，反馈收集\n4. Skill化：标准SKILL.md格式，可安装可调用\n5. 自动化：实时监控+cron报告+自动熔断\n6. 认知谦逊：预算预估置信度/局限标注(S6增强)\n7. 对抗验证：预算耗尽等失效场景测试(S7增强)",
+  "content_fingerprint": "2fa38e5f07067834b874f8271891ba4b9456540d2df3ce7c3769d0db7e992ed9"
 }

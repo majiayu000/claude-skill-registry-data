@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Crainax/War3Lib/blob/master/.codex/skills/xlimon-objeditor-map/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "3f1f7ed4bfe9376c3d51084270262478b872f00d13998ed775d03db4f78ac370",
+  "description": "War3Lib 物编生成与改造规范。用于在 `UnitTestMap/table`、`Jass/**/*.w3a|w3u|w3i` 及项目内 `db` 中安全新增/修改对象，重点处理 4 位 ID 去重（含大小写冲突）、主动技能通魔模板与唯一 OrderID、隐藏按钮位点写法，以及紧凑行尾注释风格。"
 }

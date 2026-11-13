@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Commit the current session's changes only, gateway-inline. Session-isolated (never -A, staged set verified against the session list), doc-sync-gated. The gateway runs the commit inline \u2014 it already holds the diff, session file list, and change intent; on a mechanical gate hit it judges doc-sync warm in its own context (the cold doc-sync-scan agent dispatches only past the scope ceiling), and the premise-closure judge dispatches on a product-anchor hit. Conventional message, commits directly, offers push on explicit confirmation. Bundled with super-bootstrap \u2014 encodes the harness commit rules."
+  "description": "Commit the current session's changes only, gateway-inline. Session-isolated (never -A, staged set verified against the session list), doc-sync-gated. The gateway runs the commit inline — it already holds the diff, session file list, and change intent; on a mechanical gate hit it judges doc-sync warm in its own context (the cold doc-sync-scan agent dispatches only past the scope ceiling), and the premise-closure judge dispatches on a product-anchor hit. Conventional message, commits directly, offers push on explicit confirmation. Bundled with super-bootstrap — encodes the harness commit rules.",
+  "content_fingerprint": "46610eb37485dbcd1009c92902221c79705fa646fef75db5f44c7031f33fa665"
 }

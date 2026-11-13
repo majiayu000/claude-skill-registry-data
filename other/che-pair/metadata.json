@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Increment pair-review skeptic during che-act. Invoked by che-act at the END of each vertical slice (SPEC \u00a74.5 F0..FN), it reviews the slice diff against the TASK ENVELOPE + SPEC \u00a71 deferred list + the Simplicity Bias, with a narrow frozen lens set. Blocks only CRITICAL/HIGH and only with a cited rule; bounded to max 2 rounds per slice with a no-progress stop and an A/B/C escalation menu. Shifts quality left WITHOUT replacing che-ship. Invoke ONLY from che-act \u00a72, never standalone."
+  "description": "Increment pair-review skeptic during che-act. Invoked by che-act at the END of each vertical slice (SPEC §4.5 F0..FN), it reviews the slice diff against the TASK ENVELOPE + SPEC §1 deferred list + the Simplicity Bias, with a narrow frozen lens set. Blocks only CRITICAL/HIGH and only with a cited rule; bounded to max 2 rounds per slice with a no-progress stop and an A/B/C escalation menu. Shifts quality left WITHOUT replacing che-ship. Invoke ONLY from che-act §2, never standalone.",
+  "content_fingerprint": "62d4d8e83976113533fae057cd6cb08950f54f55ccb029d46d779afa98825bf3"
 }

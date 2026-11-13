@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ElliotJLT/Claude-Skill-Potions/blob/main/skills/trace-it/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "aa60dc4b21a9e9ec90c500d94fd6b68e6fc49c2f8bd2b8600bfda8bd80931370",
+  "description": "Before modifying shared code (utilities, types, configs, base classes), traces\nall callers and dependents first. Activates when editing files in shared/,\nutils/, lib/, or anything imported by 3+ files"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Log a bias-log / vipassana observation to the memex store the moment a reasoning pattern surfaces, mid-session or at close. Use when you catch a bias in your own reasoning (anchoring, confirmation, trust-the-summary), when a pace tell or verification gap appears, or when meditate/observe produces a reflection worth persisting across sessions. Primary path pipes the body to `memex add` over stdin (`--title` required) then runs the `meditate-vipassana` extractor to make it queryable; secondary path appends a numbered bullet to `docs/OBSERVATIONS.md`."
+  "description": "Log a bias-log / vipassana observation to the memex store the moment a reasoning pattern surfaces, mid-session or at close. Use when you catch a bias in your own reasoning (anchoring, confirmation, trust-the-summary), when a pace tell or verification gap appears, or when meditate/observe produces a reflection worth persisting across sessions. Primary path pipes the body to `memex add` over stdin (`--title` required) then runs the `meditate-vipassana` extractor to make it queryable; secondary path appends a numbered bullet to `docs/OBSERVATIONS.md`.",
+  "content_fingerprint": "f91102f2b0d05bf545287899b0fdab0c88486a8cad1d7fd1a1068a52626af952"
 }

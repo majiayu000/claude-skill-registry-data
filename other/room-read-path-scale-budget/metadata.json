@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Measure Room/SQLite read paths at realistic data volume (years of user data) and set a regression budget from the measurements rather than a round number \u2014 covers bulk-seeding an isolated database, timing only the queries that load on a UI thread, and proving the budget can actually fail. Use when a data layer has only ever been tested with a handful of rows, or before claiming a screen stays responsive as data grows."
+  "description": "Measure Room/SQLite read paths at realistic data volume (years of user data) and set a regression budget from the measurements rather than a round number — covers bulk-seeding an isolated database, timing only the queries that load on a UI thread, and proving the budget can actually fail. Use when a data layer has only ever been tested with a handful of rows, or before claiming a screen stays responsive as data grows.",
+  "content_fingerprint": "88b38dc03de983a28ed7590e99de597d6cc0c4995b5508f52cb6a2444a7c9122"
 }

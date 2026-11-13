@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the deterministic codebase scanner (core/components/plays/codify/lib/scan.py) over one or more repository roots and produce a bounded scan-index.json under STM. This skill is the sole structured-input producer for every infer-*-from-code skill. No LLM is involved \u2014 it shells out to scan.py and records status. Used exclusively by the /codify play."
+  "description": "Run the deterministic codebase scanner (core/components/plays/codify/lib/scan.py) over one or more repository roots and produce a bounded scan-index.json under STM. This skill is the sole structured-input producer for every infer-*-from-code skill. No LLM is involved — it shells out to scan.py and records status. Used exclusively by the /codify play.",
+  "content_fingerprint": "29760349f8bba8f5572e512121bfdbc96a0e08b6dc22d1d20777d880d1ec4513"
 }

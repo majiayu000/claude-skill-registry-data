@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Initialize WikiCommit directory structure, schema, and configuration in a repository. Use this only when someone explicitly asks to set up WikiCommit in a repository. It writes .wikicommit/, root configuration files and workflows, so do not use it to refresh or inspect a repository that already has .wikicommit/ \u2014 wikicommit-update refreshes one and wikicommit-status inspects it without writing."
+  "description": "Initialize WikiCommit directory structure, schema, and configuration in a repository. Use this only when someone explicitly asks to set up WikiCommit in a repository. It writes .wikicommit/, root configuration files and workflows, so do not use it to refresh or inspect a repository that already has .wikicommit/ — wikicommit-update refreshes one and wikicommit-status inspects it without writing.",
+  "content_fingerprint": "07b842e87322d6a7a048122a00e4396322651079ab54c41fc70be03394599b8b"
 }

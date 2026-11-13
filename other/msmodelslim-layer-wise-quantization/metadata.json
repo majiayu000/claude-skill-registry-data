@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a msModelSlim \u9002\u914d\u5668\u5b9e\u73b0\u9010\u5c42\u91cf\u5316\uff08\u6309\u5c42\u52a0\u8f7d/\u61d2\u52a0\u8f7d\uff09\u80fd\u529b\u3002\u4ec5\u5728\u7528\u6237\u660e\u786e\u8981\u6c42\u9010\u5c42\u91cf\u5316\u6216\u57fa\u7840\u9002\u914d\u56e0 CPU \u5185\u5b58\u4e0d\u8db3\u65e0\u6cd5\u5168\u91cf\u52a0\u8f7d\u6743\u91cd\u65f6\u4f7f\u7528\u3002\u8be5\u7279\u6027\u4e3a\u9ad8\u9636\u53ef\u9009\u9879\uff0c\u4e0d\u662f\u57fa\u7840\u9002\u914d\u5fc5\u9700\u9879\u3002"
+  "description": "为 msModelSlim 适配器实现逐层量化（按层加载/懒加载）能力。仅在用户明确要求逐层量化或基础适配因 CPU 内存不足无法全量加载权重时使用。该特性为高阶可选项，不是基础适配必需项。",
+  "content_fingerprint": "b3d865ec0bfddcf57af88d48cbd5f653d9ae5afbaded0083ff3b9b9bfd0a6145"
 }

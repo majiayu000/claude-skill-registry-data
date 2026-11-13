@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cross-model code review via the OpenAI Codex CLI. This is the codex half of /deep-review, not a general reviewer \u2014 for ordinary code review use the built-in /code-review instead. Use when: (1) /deep-review invokes it, (2) User explicitly asks for 'codex review' or a non-Claude opinion on a diff. Reports findings; the caller owns the fixes. When codex is rate-limited or unavailable it degrades silently \u2014 reporting 'codex unavailable' to /deep-review so it doesn't claim cross-model consensus it didn't get, or falling back to /code-review when invoked standalone."
+  "description": "Cross-model code review via the OpenAI Codex CLI. This is the codex half of /deep-review, not a general reviewer — for ordinary code review use the built-in /code-review instead. Use when: (1) /deep-review invokes it, (2) User explicitly asks for 'codex review' or a non-Claude opinion on a diff. Reports findings; the caller owns the fixes. When codex is rate-limited or unavailable it degrades silently — reporting 'codex unavailable' to /deep-review so it doesn't claim cross-model consensus it didn't get, or falling back to /code-review when invoked standalone.",
+  "content_fingerprint": "b171d5b4b62ce45a476b5819fecced39e33039e8b183f15f3b52875d45b73afd"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "SuperKernel \u9002\u914d\u6280\u80fd\u3002\u5f53\u7528\u6237\u9700\u8981\u542f\u7528 SuperKernel \u7b97\u5b50\u4e8c\u8fdb\u5236\u878d\u5408\u6280\u672f\u4f18\u5316 NPU \u63a8\u7406\u6027\u80fd\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002\u89e6\u53d1\u573a\u666f\u5305\u62ec\uff1a\u7528\u6237\u8be2\u95ee SuperKernel\u3001\u7b97\u5b50\u878d\u5408\u3001\u4e8c\u8fdb\u5236\u878d\u5408\u3001\u542f\u7528 superkernel\u3001superkernel_scope\u3001\u51cf\u5c11\u4efb\u52a1\u8c03\u5ea6\u5f00\u9500\u3001\u4f18\u5316 decode \u6027\u80fd\u7b49\u3002SuperKernel \u4ec5\u652f\u6301 ge_graph \u6a21\u5f0f\u3001Atlas A3 \u786c\u4ef6\u3001PyTorch \u6846\u67b6\uff0c\u4e14\u4ec5\u5728 decode \u9636\u6bb5\u751f\u6548\u3002"
+  "description": "SuperKernel 适配技能。当用户需要启用 SuperKernel 算子二进制融合技术优化 NPU 推理性能时使用此技能。触发场景包括：用户询问 SuperKernel、算子融合、二进制融合、启用 superkernel、superkernel_scope、减少任务调度开销、优化 decode 性能等。SuperKernel 仅支持 ge_graph 模式、Atlas A3 硬件、PyTorch 框架，且仅在 decode 阶段生效。",
+  "content_fingerprint": "bb514a0a447af67c5ad2c8fff16df82150f939899173fcb69ba72f003c5632f9"
 }

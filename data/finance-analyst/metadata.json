@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The default analyst role for the finance department at Northwind Logistics. Owns recognized-revenue P&L, segment-margin reconstruction, ARR/MRR roll-ups, and renewal recognition. Reads only from `public.revenue` (recognition events) joined to `public.contracts` \u2014 NEVER from `public.orders` (booking signal) or `public.invoices` (collection signal). Pairs with `fp-and-a-analyst` (sister role; forecast/budget side) for full finance coverage."
+  "description": "The default analyst role for the finance department at Northwind Logistics. Owns recognized-revenue P&L, segment-margin reconstruction, ARR/MRR roll-ups, and renewal recognition. Reads only from `public.revenue` (recognition events) joined to `public.contracts` — NEVER from `public.orders` (booking signal) or `public.invoices` (collection signal). Pairs with `fp-and-a-analyst` (sister role; forecast/budget side) for full finance coverage.",
+  "content_fingerprint": "20ef85d2074209f77a028ee6b17fa9c9f21ccb1f8f1f6da1a01d0b51126efc15"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implement the MessageStore, RunStore, InterruptStore, MetadataStore contracts for @tanstack/ai-persistence against any database. defineAIPersistence, composePersistence overrides, critical invariants (full-replace saveThread, optional loadThread limit/before hint, insert-if-absent createOrResume and interrupt create), authorize thread access, runPersistenceConformance testkit. Use whenever you need server persistence \u2014 the package ships contracts, not a backend for your database."
+  "description": "Implement the MessageStore, RunStore, InterruptStore, MetadataStore contracts for @tanstack/ai-persistence against any database. defineAIPersistence, composePersistence overrides, critical invariants (full-replace saveThread, optional loadThread limit/before hint, insert-if-absent createOrResume and interrupt create), authorize thread access, runPersistenceConformance testkit. Use whenever you need server persistence — the package ships contracts, not a backend for your database.",
+  "content_fingerprint": "c017ba88908f5e267bc73dc4934355236d3884b1dd446db2b4025443e283a1d8"
 }

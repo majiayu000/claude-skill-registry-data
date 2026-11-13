@@ -1,6 +1,6 @@
 {
   "name": "unknown",
-  "description": "",
+  "description": "Migrate from OpenClaw to NanoClaw. Detects existing OpenClaw installation, extracts identity, channel credentials, scheduled tasks, and other config, then guides interactive migration. Triggers on \"mi",
   "repo": "nanocoai/nanoclaw",
   "path": ".claude/skills/migrate-from-openclaw/SKILL.md",
   "github_branch": "main",
@@ -9,16 +9,14 @@
   "stars": 0,
   "source": "discovered",
   "dir_name": "unknown-nanocoai-nanoclaw-40",
-  "archive_mode": "directory",
-  "bundled_files": [
-    "scripts/discover-openclaw.ts",
-    "scripts/extract-channel-credentials.ts"
-  ],
+  "archive_mode": "skill-md",
+  "bundled_files": [],
   "author": "nanocoai",
   "source_url": "https://github.com/nanocoai/nanoclaw/blob/main/.claude/skills/migrate-from-openclaw/SKILL.md",
   "license": "NOASSERTION",
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/nanocoai/nanoclaw/blob/main/.claude/skills/migrate-from-openclaw/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "0e5f14e782595dd6c86717192ed8c0409921fa600de9956b892c2b1056f16b66"
 }

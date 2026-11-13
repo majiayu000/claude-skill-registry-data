@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc694\uad6c\uc0ac\ud56d \ud558\ub098\ub97c Orca orchestration + git worktree\ub85c \ubd84\uc11d\u00b7\uc124\uacc4\u00b7\uacc4\ud68d\u00b7TDD \uad6c\ud604\u00b7\ub9ac\ubdf0\uae4c\uc9c0 \ub2e4\uc218 \uc5d0\uc774\uc804\ud2b8\uc5d0 \ub098\ub220 \uc218\ud589\ud558\ub294 \ud30c\uc774\ud504\ub77c\uc778 \uc9c4\uc785\uc810. \uc0ac\uc6a9\uc790\uac00 \"/start-orchestration-session\", \"\uc624\ucf00\uc2a4\ud2b8\ub808\uc774\uc158 \uc2dc\uc791\", \"\uc774 \uc694\uad6c\uc0ac\ud56d \ud30c\uc774\ud504\ub77c\uc778\uc73c\ub85c \ub3cc\ub824\uc918\", \"\uc5d0\uc774\uc804\ud2b8 \ub098\ub220\uc11c \uad6c\ud604\ud574\uc918\"\ub77c\uace0 \ud560 \ub54c \uc0ac\uc6a9. \ucf54\ub514\ub124\uc774\ud130\ub294 feature/xxxxx-master worktree\uc5d0\uc11c \uc0ac\ub78c\uacfc \uc18c\ud1b5\ud558\uace0 \ub098\uba38\uc9c0 \ub2e8\uacc4\ub294 \uc6cc\ucee4\uc5d0\uac8c \uc704\uc784\ud55c\ub2e4."
+  "description": "요구사항 하나를 Orca orchestration + git worktree로 분석·설계·계획·TDD 구현·리뷰까지 다수 에이전트에 나눠 수행하는 파이프라인 진입점. 사용자가 \"/start-orchestration-session\", \"오케스트레이션 시작\", \"이 요구사항 파이프라인으로 돌려줘\", \"에이전트 나눠서 구현해줘\"라고 할 때 사용. 코디네이터는 feature/xxxxx-master worktree에서 사람과 소통하고 나머지 단계는 워커에게 위임한다.",
+  "content_fingerprint": "74cad9f65cda8f1d114e75f4e0d8d07fa5bb4ba9714edeb76886f69370a4a20c"
 }

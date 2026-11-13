@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when classifying a public-API diff into patch / minor / major \u2014 reading the current API manifest against the proposed API stub, applying language-adapter-specific compatibility rules (added symbols, struct/class field changes, interface/Protocol expansion, sentinel add/remove, exception hierarchy changes), and verifying TPRD \u00a712 declares the matching bump. Triggers: semver, major, minor, patch, breaking, api-surface, stable-since, gorelease, griffe, TPRD-\u00a712."
+  "description": "Use this when classifying a public-API diff into patch / minor / major — reading the current API manifest against the proposed API stub, applying language-adapter-specific compatibility rules (added symbols, struct/class field changes, interface/Protocol expansion, sentinel add/remove, exception hierarchy changes), and verifying TPRD §12 declares the matching bump. Triggers: semver, major, minor, patch, breaking, api-surface, stable-since, gorelease, griffe, TPRD-§12.",
+  "content_fingerprint": "599c5d62480b5c9d88a89971ddb35e7424eaf9a710675fa453742bbfcf2167e9"
 }

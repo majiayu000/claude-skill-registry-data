@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Multiple AI agent sessions working on the same repository cause chaos. Session A is on branch feature/auth. Session B switches to main to check something. Session A's next tool call fails because the branch disappeared. Or worse: Session B force-pushes over Session A's work."
+  "description": "Multiple AI agent sessions working on the same repository cause chaos. Session A is on branch feature/auth. Session B switches to main to check something. Session A's next tool call fails because the branch disappeared. Or worse: Session B force-pushes over Session A's work.",
+  "content_fingerprint": "b46fa52bf6bae8f48fa109630fd3e7e9c0ec1db641eae2b9aacf73a4f39542ef"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/coturn-k8s-without-hostnetwork/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8a633473967aa996a816caee65134b2cdc6b2feabc303f4297bf4933fd9128af",
+  "description": "Deploy coturn (TURN/STUN server) on Kubernetes without hostNetwork by using a\nnarrow relay port range and MetalLB LoadBalancer service. Use when: (1) deploying\na WebRTC relay server on k8s, (2) want c"
 }

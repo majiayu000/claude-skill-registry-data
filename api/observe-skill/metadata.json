@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Logs the outcome of a skill execution to observations/<skill-name>/runs.md. Trigger on: \"log this run\", \"skill worked\", \"skill failed\", \"this didn't work\", \"log the outcome\", \"record this\", \"note that\", or after any skill completes with a clear success, partial, or failure outcome. Creates the observations file if it does not exist, then appends an entry with date, task description, skill used, outcome, what worked, what failed, and any error messages observed."
+  "description": "Logs the outcome of a skill execution to observations/<skill-name>/runs.md. Trigger on: \"log this run\", \"skill worked\", \"skill failed\", \"this didn't work\", \"log the outcome\", \"record this\", \"note that\", or after any skill completes with a clear success, partial, or failure outcome. Creates the observations file if it does not exist, then appends an entry with date, task description, skill used, outcome, what worked, what failed, and any error messages observed.",
+  "content_fingerprint": "8cb8796b4181c5807f6616aea636597a6cdc5144905e5c35d683dd4679e19298"
 }

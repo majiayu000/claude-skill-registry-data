@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Check whether a website's robots.txt allows the AI crawlers that decide visibility in ChatGPT Search, Perplexity, Claude, Gemini, and Microsoft Copilot. Use when someone asks whether AI bots are blocked, whether to allow or block GPTBot, why a site never appears in AI answers, or wants a robots.txt review for AI crawlers. Reads only robots.txt, then returns a per-agent allow/block table, the exact rule responsible for each verdict, and the precise lines to change. Distinguishes training crawlers from the search crawlers that actually control citations."
+  "description": "Check whether a website's robots.txt allows the AI crawlers that decide visibility in ChatGPT Search, Perplexity, Claude, Gemini, and Microsoft Copilot. Use when someone asks whether AI bots are blocked, whether to allow or block GPTBot, why a site never appears in AI answers, or wants a robots.txt review for AI crawlers. Reads only robots.txt, then returns a per-agent allow/block table, the exact rule responsible for each verdict, and the precise lines to change. Distinguishes training crawlers from the search crawlers that actually control citations.",
+  "content_fingerprint": "4ca599e08864bc377e0e518214183e094f25de34a0f621e834969d1f7d470669"
 }

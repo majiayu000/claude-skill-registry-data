@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Internal \u2014 for Boundless team members only. Audit native ETH, market deposit, prover collateral, and distributor ZKC reserve balances for every operator-managed address (provers, distributor, order generators, signal). Use when the user wants to know which addresses need topping up, asks about the balance of provers/OGs/distributor/signal signers, says something is \"running low\" or \"out of gas\", or wants a periodic operational health check on operator wallets. Defaults to prod env (mainnets + prod testnets) \u2014 pass `--all` to also include staging."
+  "description": "Internal — for Boundless team members only. Audit native ETH, market deposit, prover collateral, and distributor ZKC reserve balances for every operator-managed address (provers, distributor, order generators, signal). Use when the user wants to know which addresses need topping up, asks about the balance of provers/OGs/distributor/signal signers, says something is \"running low\" or \"out of gas\", or wants a periodic operational health check on operator wallets. Defaults to prod env (mainnets + prod testnets) — pass `--all` to also include staging.",
+  "content_fingerprint": "5984c00f54f8c0a353a98d564e7676bdf08b15efab16c61e5a9f4ed32cdebdec"
 }

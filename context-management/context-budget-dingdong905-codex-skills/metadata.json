@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5ba1\u8ba1\u5e76\u51cf\u5c11 Codex \u5728 instructions\u3001skills\u3001tools\u3001MCP\u3001retrieval \u548c memory \u4e0a\u7684\u4e0a\u4e0b\u6587\u4e0e Token \u5f00\u9500\u3002\u9002\u7528\u4e8e\u4f1a\u8bdd\u81c3\u80bf\u3001\u52a0\u8f7d\u6750\u6599\u8fc7\u591a\u3001\u96c6\u6210\u91cd\u53e0\uff0c\u6216\u7528\u6237\u8981\u6c42\u5728\u4e0d\u964d\u4f4e\u8d28\u91cf\u7684\u524d\u63d0\u4e0b\u7701 Token \u7684\u573a\u666f\u3002\u4e0d\u7528\u4e8e\u6a21\u578b\u5b9a\u4ef7\u6216\u751f\u4ea7\u7ea7 LLM API \u6210\u672c\u67b6\u6784\u3002"
+  "description": "审计并减少 Codex 在 instructions、skills、tools、MCP、retrieval 和 memory 上的上下文与 Token 开销。适用于会话臃肿、加载材料过多、集成重叠，或用户要求在不降低质量的前提下省 Token 的场景。不用于模型定价或生产级 LLM API 成本架构。",
+  "content_fingerprint": "f6079dd238e863facaecf7a104b10e32502f882678a06fbdcf72d0cb78adcb1b"
 }

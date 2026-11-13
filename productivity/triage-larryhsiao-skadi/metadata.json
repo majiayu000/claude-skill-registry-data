@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user runs /triage [hours] [account]. Pulls unread Outlook inbox mail from the last N hours (default 24) through the read-only Microsoft 365 claude.ai connector, separates the few items worth attention from routine noise, and renders a tight two-tier summary. Mark-read and move-to-folder run on the Graph write hooks (the connector cannot mutate mail). Multi-account aware via the `outlook_accounts.md` memory map."
+  "description": "Use when the user runs /triage [hours] [account]. Pulls unread Outlook inbox mail from the last N hours (default 24) through the read-only Microsoft 365 claude.ai connector, separates the few items worth attention from routine noise, and renders a tight two-tier summary. Mark-read and move-to-folder run on the Graph write hooks (the connector cannot mutate mail). Multi-account aware via the `outlook_accounts.md` memory map.",
+  "content_fingerprint": "015283dd2b2dc8b3bf8b33276091b2c2c1b8035016b0b70f732de9339a6c5732"
 }

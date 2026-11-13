@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/k8s-ndots-search-domain-nxdomain-flood/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "6d57c9f377cb15db01df6bcc0a6e1e8a5a1ec156736b7ee9d4fa0e46e4e48291",
+  "description": "Fix for massive NxDomain query floods to external DNS servers caused by Kubernetes\nndots:5 search domain expansion. Use when: (1) DNS server shows low cache hit rate\nwith 60%+ NxDomain responses, (2) "
 }

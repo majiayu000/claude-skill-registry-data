@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Merge the PR or MR of a completed IssueOps cycle from the main session after the developer reviewed it, then hand off to issueops-cleanup. Resolves the cycle from an issue or PR number, previews draft, checks, head and mergeability through `issueops remote merge-pr`, squash-merges by default pinned to the completed head, deletes the merged remote branch through the typed cleanup flow, and routes failed checks, new commits, or conflicts back to the worktree session through reseed. Use when the user says \"\uba38\uc9c0\ud574\uc918\", \"PR \uba38\uc9c0\ud558\uace0 \uc815\ub9ac\", \"#123 \uba38\uc9c0\", \"merge the PR\", \"land this cycle\"."
+  "description": "Merge the PR or MR of a completed IssueOps cycle from the main session after the developer reviewed it, then hand off to issueops-cleanup. Resolves the cycle from an issue or PR number, previews draft, checks, head and mergeability through `issueops remote merge-pr`, squash-merges by default pinned to the completed head, deletes the merged remote branch through the typed cleanup flow, and routes failed checks, new commits, or conflicts back to the worktree session through reseed. Use when the user says \"머지해줘\", \"PR 머지하고 정리\", \"#123 머지\", \"merge the PR\", \"land this cycle\".",
+  "content_fingerprint": "b0f1f4e1a1ccce469e6c2144813b659d0edd80c7abe46dfc239e6574ae7fe6e7"
 }

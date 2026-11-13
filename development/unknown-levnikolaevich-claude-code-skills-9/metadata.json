@@ -1,6 +1,6 @@
 {
   "name": "unknown",
-  "description": "",
+  "description": "Checks dependency health and generic custom utility/integration replacement opportunities. Use when auditing dependency and reuse risk.",
   "repo": "levnikolaevich/claude-code-skills",
   "path": "plugins/codebase-audit-suite/skills/ln-625-dependency-reuse-auditor/SKILL.md",
   "github_branch": "master",
@@ -9,25 +9,14 @@
   "stars": 0,
   "source": "discovered",
   "dir_name": "unknown-levnikolaevich-claude-code-skills-9",
-  "archive_mode": "directory",
-  "bundled_files": [
-    "references/audit_output_schema.md",
-    "references/audit_scoring.md",
-    "references/audit_summary_contract.md",
-    "references/audit_worker_core_contract.md",
-    "references/ci_integration_guide.md",
-    "references/cvss_severity_mapping.md",
-    "references/mcp_integration_patterns.md",
-    "references/mcp_tool_preferences.md",
-    "references/templates/audit_worker_report_template.md",
-    "references/two_layer_detection.md",
-    "references/vulnerability_commands.md"
-  ],
+  "archive_mode": "skill-md",
+  "bundled_files": [],
   "author": "levnikolaevich",
   "source_url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-625-dependency-reuse-auditor/SKILL.md",
   "license": "NOASSERTION",
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-625-dependency-reuse-auditor/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "0f6d4de54fd07bcaaec1b871d2d42ae65a980550f25d9f2d80954a0379328a22"
 }

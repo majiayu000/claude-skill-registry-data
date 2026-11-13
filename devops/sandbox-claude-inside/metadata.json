@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run Claude Code INSIDE a ca-sandbox box (`--with-claude`). Routed to when the user wants an agent loop running against an isolated, ephemeral sandbox rather than the host. Authenticates via an env-injected CLAUDE_CODE_OAUTH_TOKEN with no host bind of ~/.claude; the image pins the CLI and disables the autoupdater; HOME is backed by a named volume so the .claude state persists across restart. Five gated phases \u2014 posture, image, token, run, teardown. The hard default is offline or Anthropic-domains-only egress, and the token volume is NEVER co-mounted with an untrusted-code run; both are enforced, not advised."
+  "description": "Run Claude Code INSIDE a ca-sandbox box (`--with-claude`). Routed to when the user wants an agent loop running against an isolated, ephemeral sandbox rather than the host. Authenticates via an env-injected CLAUDE_CODE_OAUTH_TOKEN with no host bind of ~/.claude; the image pins the CLI and disables the autoupdater; HOME is backed by a named volume so the .claude state persists across restart. Five gated phases — posture, image, token, run, teardown. The hard default is offline or Anthropic-domains-only egress, and the token volume is NEVER co-mounted with an untrusted-code run; both are enforced, not advised.",
+  "content_fingerprint": "a72b40ab614d6253aa7ebcdf9070e3b0142f9b6bde9ad823b6f7fef1cb85b8b6"
 }

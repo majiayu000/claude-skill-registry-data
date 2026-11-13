@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect GraphQL injection vulnerabilities in a codebase using a three-phase approach: recon (confirm GraphQL usage and find unsafe operation document assembly sites), batched verify (trace user input to those sites in parallel subagents, up to 3 candidate sites each), and merge (consolidate batch results). Requires sast/architecture.md (run sast-analysis first). Outputs findings to sast/graphql-results.md. If no GraphQL technology is found in Phase 1, later phases are skipped. Use when asked to find GraphQL injection, unsafe GraphQL document construction, or operation string injection bugs."
+  "description": "Detect GraphQL injection vulnerabilities in a codebase using a three-phase approach: recon (confirm GraphQL usage and find unsafe operation document assembly sites), batched verify (trace user input to those sites in parallel subagents, up to 3 candidate sites each), and merge (consolidate batch results). Requires sast/architecture.md (run sast-analysis first). Outputs findings to sast/graphql-results.md. If no GraphQL technology is found in Phase 1, later phases are skipped. Use when asked to find GraphQL injection, unsafe GraphQL document construction, or operation string injection bugs.",
+  "content_fingerprint": "5e0625337c13a46b3ca6408e01bbaf57d6cc3154664cbc4adc2c55bcf1c27d0a"
 }

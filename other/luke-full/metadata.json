@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Full health assessment of the Luke codebase. Orchestrates five read-only phases in sequence: platform integrity (/luke-deps platform), architectural compliance (/luke-audit), runtime correctness (/luke-bugs), application security (/luke-security) and QA adequacy (/luke-test assess), then synthesizes them into a categorical health state with an owner per finding. Use before a release, after a long vibe coding period, or for a periodic full health check. Scoping: /luke-full apps/api | --since <ref> | --full"
+  "description": "Full health assessment of the Luke codebase. Orchestrates five read-only phases in sequence: platform integrity (/luke-deps platform), architectural compliance (/luke-audit), runtime correctness (/luke-bugs), application security (/luke-security) and QA adequacy (/luke-test assess), then synthesizes them into a categorical health state with an owner per finding. Use before a release, after a long vibe coding period, or for a periodic full health check. Scoping: /luke-full apps/api | --since <ref> | --full",
+  "content_fingerprint": "3328b3f9f99f1d2ef5874c3fabd7ccd5684e18984768b8f2558b4cb5e639ca2b"
 }

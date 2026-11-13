@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u663e\u5f0f\u6388\u6743\u4e00\u4e2a\u5df2\u7ecf\u7531 Codex Flight Control \u5c01\u5b58\u3001\u7528\u6237\u53ef\u89c1\u4e14 hash \u7cbe\u786e\u5339\u914d\u7684\u672c\u5730\u7ef4\u62a4\u8ba1\u5212\u3002\u4ec5\u5f53\u7528\u6237\u539f\u6837\u8f93\u5165 `$flight-maintain` \u5e76\u4f9d\u6b21\u63d0\u4f9b plan_id \u4e0e plan_hash \u65f6\u4f7f\u7528\uff1b\u4e0d\u80fd\u7528\u81ea\u7136\u8bed\u8a00\u540c\u610f\u3001\u6a21\u578b\u5224\u65ad\u6216 UI \u70b9\u51fb\u66ff\u4ee3\u3002"
+  "description": "显式授权一个已经由 Codex Flight Control 封存、用户可见且 hash 精确匹配的本地维护计划。仅当用户原样输入 `$flight-maintain` 并依次提供 plan_id 与 plan_hash 时使用；不能用自然语言同意、模型判断或 UI 点击替代。",
+  "content_fingerprint": "d36b366d4ec87f3005ae92fbaf15055ad8c33ddcd9e6b65726209f3e775b039e"
 }

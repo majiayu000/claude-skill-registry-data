@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verify an Android app survives process death and restores its work \u2014 backgrounding before killing (am kill spares foreground apps), proving the kill actually happened, distinguishing persisted state from in-memory state, and the two harness traps that make the check pass vacuously (an uninstalled app after an instrumented run, and stale uiautomator tap coordinates). Use when checking state restoration, \"does my app lose data when Android kills it\", or before claiming a screen survives backgrounding."
+  "description": "Verify an Android app survives process death and restores its work — backgrounding before killing (am kill spares foreground apps), proving the kill actually happened, distinguishing persisted state from in-memory state, and the two harness traps that make the check pass vacuously (an uninstalled app after an instrumented run, and stale uiautomator tap coordinates). Use when checking state restoration, \"does my app lose data when Android kills it\", or before claiming a screen survives backgrounding.",
+  "content_fingerprint": "c80ca24863804dab055f9543638ae07834acf3f0b920a5ce4b9f8d9448f0301b"
 }

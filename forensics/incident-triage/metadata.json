@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "On-call alert triage runbook for {{sentry_project}}. Pulls the Sentry stack trace, correlates Datadog logs around the spike, checks {{target_repo}} for the deploy that shipped just before, classifies severity against known-noisy patterns, posts a first-pass diagnosis to {{incident_channel}}, and pages a human only when severity is at or above {{page_severity_threshold}} or the alert can't be resolved."
+  "description": "On-call alert triage runbook for {{sentry_project}}. Pulls the Sentry stack trace, correlates Datadog logs around the spike, checks {{target_repo}} for the deploy that shipped just before, classifies severity against known-noisy patterns, posts a first-pass diagnosis to {{incident_channel}}, and pages a human only when severity is at or above {{page_severity_threshold}} or the alert can't be resolved.",
+  "content_fingerprint": "2387f9ef885678e6796f5d56a47f4a53cf072c4a4d6f4a7bdb4d31da8f97a649"
 }

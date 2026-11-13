@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Compares what a store charges for shipping against what shipping actually costs, banded by order value and zone, and tests the free-shipping threshold against the store's real order distribution. Use when fulfillment cost is rising, the free-shipping threshold has never been recalculated, or margin looks worse on small orders than large ones. Boundary: differs from `contribution-margin`, which builds full order-level contribution margin across every cost line. This skill isolates shipping recovery and threshold placement only, and doesn't touch COGS, fees, or ad spend."
+  "description": "Compares what a store charges for shipping against what shipping actually costs, banded by order value and zone, and tests the free-shipping threshold against the store's real order distribution. Use when fulfillment cost is rising, the free-shipping threshold has never been recalculated, or margin looks worse on small orders than large ones. Boundary: differs from `contribution-margin`, which builds full order-level contribution margin across every cost line. This skill isolates shipping recovery and threshold placement only, and doesn't touch COGS, fees, or ad spend.",
+  "content_fingerprint": "124f861242117d7a418ba0d81cb18faf432931bb380c736636b6b5bc4674eda8"
 }

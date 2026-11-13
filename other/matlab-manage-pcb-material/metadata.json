@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Dielectric substrates, metal conductors, multi-layer stackups, and loss models (FR4, Rogers, Teflon) for RF PCB simulation. TRIGGER: user asks to set up a substrate, define dielectric properties, create a stackup, select a PCB material (FR4, Rogers, Teflon, etc.), or configure metal conductors. Invoke BEFORE writing dielectric() or metal() code \u2014 the API for named vs custom materials differs significantly. SKIP: PCB layout assembly (use matlab-assemble-pcb-layout), transmission line design (use matlab-design-pcb-transmission-line), EM analysis (use matlab-analyze-em), importing a PCB file (use matlab-read-pcb-layout)."
+  "description": "Dielectric substrates, metal conductors, multi-layer stackups, and loss models (FR4, Rogers, Teflon) for RF PCB simulation. TRIGGER: user asks to set up a substrate, define dielectric properties, create a stackup, select a PCB material (FR4, Rogers, Teflon, etc.), or configure metal conductors. Invoke BEFORE writing dielectric() or metal() code — the API for named vs custom materials differs significantly. SKIP: PCB layout assembly (use matlab-assemble-pcb-layout), transmission line design (use matlab-design-pcb-transmission-line), EM analysis (use matlab-analyze-em), importing a PCB file (use matlab-read-pcb-layout).",
+  "content_fingerprint": "4266d288721e28f1765b81b55a9cb1b52bc46ca89c3c156df01d370fc0f12d68"
 }

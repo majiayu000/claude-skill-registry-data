@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "End-of-task ship command. EXECUTES 4 EXECUTABLE GATES in non-negotiable order BEFORE any git ops (fail-fast): \u00a70.9.1 che-scope-checker (delivery+LEAN 6-checks, APPROVED\u22657.0) \u2192 \u00a70.9.2 che-code-review Mode B (0C + \u22642H auto-fix-and-commit WITHOUT asking user; else block) \u2192 \u00a70.9.3 che-compliance HEAVY full scan (0C 0H) \u2192 \u00a70.9.4 QA gate optional flag --run-qa. After: atomic conventional commits on worktree, git push, opens DRAFT PR against default branch with structured description, assigns PR to user. Invoke ONLY after all che tasks DONE, or when user explicitly runs /che-ship."
+  "description": "End-of-task ship command. EXECUTES 4 EXECUTABLE GATES in non-negotiable order BEFORE any git ops (fail-fast): §0.9.1 che-scope-checker (delivery+LEAN 6-checks, APPROVED≥7.0) → §0.9.2 che-code-review Mode B (0C + ≤2H auto-fix-and-commit WITHOUT asking user; else block) → §0.9.3 che-compliance HEAVY full scan (0C 0H) → §0.9.4 QA gate optional flag --run-qa. After: atomic conventional commits on worktree, git push, opens DRAFT PR against default branch with structured description, assigns PR to user. Invoke ONLY after all che tasks DONE, or when user explicitly runs /che-ship.",
+  "content_fingerprint": "c888b239911a108f6b26c2dcad69fdcaf6f70339f3bf76e1ce92a1ed14545227"
 }

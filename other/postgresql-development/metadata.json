@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Design, optimize, migrate, and secure PostgreSQL databases (supported majors 14-18, 18 current). Use when indexing JSONB with GIN or expression indexes, reading query plans with EXPLAIN (ANALYZE, BUFFERS), writing low-lock schema migrations (CREATE INDEX CONCURRENTLY, NOT VALID constraints), diagnosing lock waits and invalid indexes, configuring Row-Level Security for multi-tenant apps, or choosing transaction isolation and retry behavior. Do not use for MySQL/SQLite dialects, ORM-only questions with no SQL decision, or managed-service operations such as backup and failover runbooks."
+  "description": "Design, optimize, migrate, and secure PostgreSQL databases (supported majors 14-18, 18 current). Use when indexing JSONB with GIN or expression indexes, reading query plans with EXPLAIN (ANALYZE, BUFFERS), writing low-lock schema migrations (CREATE INDEX CONCURRENTLY, NOT VALID constraints), diagnosing lock waits and invalid indexes, configuring Row-Level Security for multi-tenant apps, or choosing transaction isolation and retry behavior. Do not use for MySQL/SQLite dialects, ORM-only questions with no SQL decision, or managed-service operations such as backup and failover runbooks.",
+  "content_fingerprint": "1506ab45d7091c73049b1496a45948d3489f23f0f4a93b6a025ebb3f8e9130fc"
 }

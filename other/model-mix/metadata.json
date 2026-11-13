@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Break down Claude Code usage by model family (Opus / Sonnet / Haiku) from the Agent Monitor dashboard \u2014 each family's share of tokens, share of cost, and the spots where an expensive model is doing cheap work. Pulls per-model token and cost splits from /api/pricing/cost, current rates from /api/pricing, fleet token totals from /api/analytics, and per-session model assignment from /api/sessions. Use when deciding model routing or whether to downshift work to a cheaper tier."
+  "description": "Break down Claude Code usage by model family (Opus / Sonnet / Haiku) from the Agent Monitor dashboard — each family's share of tokens, share of cost, and the spots where an expensive model is doing cheap work. Pulls per-model token and cost splits from /api/pricing/cost, current rates from /api/pricing, fleet token totals from /api/analytics, and per-session model assignment from /api/sessions. Use when deciding model routing or whether to downshift work to a cheaper tier.",
+  "content_fingerprint": "0a134c430e6a1836b620965db833a2d47ced98122f34ef116cece1f6e5c9c32b"
 }

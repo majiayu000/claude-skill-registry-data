@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ube4c\ub4dc/\ubc30\ud3ec \ud30c\uc774\ud504\ub77c\uc778 \uc6cc\ud06c\ud50c\ub85c\uc6b0. \"\ubc30\ud3ec\", \"deploy\", release \uc804 \uc790\ub3d9 \ud638\ucd9c.\ndeploy.check \ub294 fail-fast \uac8c\uc774\ud2b8. deploy.preview \ub85c \ud504\ub85c\ub355\uc158 \ub9ac\ud5c8\uc124.\nmanual build + guard + seo \ub098\uc5f4 \ub300\uc2e0 aggregate \ub3c4\uad6c \uc0ac\uc6a9."
+  "description": "빌드/배포 파이프라인 워크플로우. \"배포\", \"deploy\", release 전 자동 호출.\ndeploy.check 는 fail-fast 게이트. deploy.preview 로 프로덕션 리허설.\nmanual build + guard + seo 나열 대신 aggregate 도구 사용.",
+  "content_fingerprint": "e7bb3783b0ad48878f6582ba16393afdd7b4585f5ad6f426610d3140a1123869"
 }

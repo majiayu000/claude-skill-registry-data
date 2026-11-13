@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/caibingcheng/my-skills-collection/blob/master/skills/secrets-detection/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "bb76d6b20954dd8a3e1badeab532047a404506ec0ac668ee0248b600edfed3a6",
+  "description": "用于检测代码库中的敏感信息泄露风险。当用户需要检查敏感信息、安全扫描、代码安全审计、检测密钥泄露时触发此skill。\n\n触发场景：\n- \"检查敏感信息\"、\"安全检查\"、\"检测密钥泄露\"\n- \"扫描代码中的敏感数据\"、\"查找密码泄露\"\n- 提交代码前的安全检查\n- 代码审查前的安全扫描\n- 检查.gitignore是否正确配置\n\n检测范围：API密钥、密码、私钥、证书文件、数据库连接串、云服务凭证等"
 }

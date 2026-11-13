@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use Exasol `IMPORT` and `IMPORT INTO` SQL plus `exapump upload` local file workflows for moving data into Exasol. Covers CSV, FBV, and Parquet, `CREATE CONNECTION` connection objects for import, cloud credential patterns for S3, Azure Blob Storage, and Google Cloud Storage (GCS), reject handling, and staging-based import workflows. Native IMPORT does not read Avro, ORC, or Delta \u2014 those object-storage formats need the Cloud Storage Extension instead."
+  "description": "Use Exasol `IMPORT` and `IMPORT INTO` SQL plus `exapump upload` local file workflows for moving data into Exasol. Covers CSV, FBV, and Parquet, `CREATE CONNECTION` connection objects for import, cloud credential patterns for S3, Azure Blob Storage, and Google Cloud Storage (GCS), reject handling, and staging-based import workflows. Native IMPORT does not read Avro, ORC, or Delta — those object-storage formats need the Cloud Storage Extension instead.",
+  "content_fingerprint": "0e760ec6aa5369fa4d4bffb1889c0b56a4ba6030df499f28eeb96ebd873b08aa"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cross-checks active ad spend against on-hand inventory on a daily cadence and proposes pausing spend on products that cannot be shipped or cannot cover their own acquisition cost. Use daily on any store running paid traffic to a catalog that moves. Boundary: `inventory-planning` scores stockout and overstock risk across the catalog for planning. This loop only looks at the intersection of low stock and live spend, and its output is a pause list."
+  "description": "Cross-checks active ad spend against on-hand inventory on a daily cadence and proposes pausing spend on products that cannot be shipped or cannot cover their own acquisition cost. Use daily on any store running paid traffic to a catalog that moves. Boundary: `inventory-planning` scores stockout and overstock risk across the catalog for planning. This loop only looks at the intersection of low stock and live spend, and its output is a pause list.",
+  "content_fingerprint": "9c365d3903c87be6fe4f80dc582872bc95dfe37eacb2999a4fb8ab55a226ca70"
 }

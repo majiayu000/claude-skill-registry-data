@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Classify the GitHub issue backlog against the repo's label taxonomy: apply area/layer/domain, work-type (personal repos) or native Issue Type (org repos), Impact/Risk/Complexity and Priority (AI) (issue fields on org repos, labels on personal repos) with the Tier derived from them, and needs-triage derived from the required set, and upsert everything else into one rolling report issue. Use when asked to \"triage the backlog\", \"classify issues\", \"label the backlog\", or \"update the triage report\". Dry-run by default; writes go only through the skill's own scripts. Invoke as /triage."
+  "description": "Classify the GitHub issue backlog against the repo's label taxonomy: apply area/layer/domain, work-type (personal repos) or native Issue Type (org repos), Impact/Risk/Complexity and Priority (AI) (issue fields on org repos, labels on personal repos) with the Tier derived from them, and needs-triage derived from the required set, and upsert everything else into one rolling report issue. Use when asked to \"triage the backlog\", \"classify issues\", \"label the backlog\", or \"update the triage report\". Dry-run by default; writes go only through the skill's own scripts. Invoke as /triage.",
+  "content_fingerprint": "21bf6997d19505a225e30b83d12ec7e133ecd6a8fa6e839f5c571821a971813a"
 }

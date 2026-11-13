@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5c06\u5b9e\u9a8c\u5ba4\u4eea\u5668\u8f93\u51fa\u6587\u4ef6\uff08PDF\u3001CSV\u3001Excel\u3001TXT\uff09\u8f6c\u6362\u4e3a Allotrope Simple Model (ASM) JSON \u683c\u5f0f\u6216\u6241\u5e73\u5316 2D CSV\u3002\u9002\u7528\u4e8e\u79d1\u5b66\u5bb6\u5c06\u4eea\u5668\u6570\u636e\u6807\u51c6\u5316\u4ee5\u5bfc\u5165 LIMS \u7cfb\u7edf\u3001\u6570\u636e\u6e56\u6216\u4e0b\u6e38\u5206\u6790\u3002\u652f\u6301\u81ea\u52a8\u68c0\u6d4b\u4eea\u5668\u7c7b\u578b\uff0c\u8f93\u51fa\u5305\u62ec\u5b8c\u6574 ASM JSON\u3001\u6241\u5e73\u5316 CSV \u548c\u53ef\u5bfc\u51fa\u7684 Python \u4ee3\u7801\u3002"
+  "description": "将实验室仪器输出文件（PDF、CSV、Excel、TXT）转换为 Allotrope Simple Model (ASM) JSON 格式或扁平化 2D CSV。适用于科学家将仪器数据标准化以导入 LIMS 系统、数据湖或下游分析。支持自动检测仪器类型，输出包括完整 ASM JSON、扁平化 CSV 和可导出的 Python 代码。",
+  "content_fingerprint": "36fd1b3923020118aa8e9c7ed916907711cdcfc076b9ff07a19956748073455a"
 }

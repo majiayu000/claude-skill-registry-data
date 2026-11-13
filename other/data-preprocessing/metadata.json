@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Load and preprocess imaging mass cytometry (IMC) and MIBI data from raw MCD/TXT through hot-pixel removal, spillover compensation, and variance-stabilizing transformation, covering readimc/steinbock ingestion, NNLS spillover compensation (CATALYST), IMC-Denoise, and the IMC arcsinh-cofactor question. Use when starting analysis from raw MCD files, building per-channel TIFF stacks, compensating channel spillover, choosing an arcsinh cofactor, or preparing single-cell intensities for phenotyping."
+  "description": "Load and preprocess imaging mass cytometry (IMC) and MIBI data from raw MCD/TXT through hot-pixel removal, spillover compensation, and variance-stabilizing transformation, covering readimc/steinbock ingestion, NNLS spillover compensation (CATALYST), IMC-Denoise, and the IMC arcsinh-cofactor question. Use when starting analysis from raw MCD files, building per-channel TIFF stacks, compensating channel spillover, choosing an arcsinh cofactor, or preparing single-cell intensities for phenotyping.",
+  "content_fingerprint": "def9df87418cf2fefcc57f16759c76ffbc5762e61e7396d86bbf3bc746bb533c"
 }

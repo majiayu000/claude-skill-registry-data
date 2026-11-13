@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MoneyForward \u306e\u4ed5\u8a33\u3068\u53d7\u9818\u8acb\u6c42\u66f8PDF (references/invoices/) \u3092\u7a81\u5408\u3059\u308b\u30b9\u30ad\u30eb\u3002\u8ab2\u7a0e\u4ed5\u5165\u306e\u4ed5\u8a33\u306b\u8acb\u6c42\u66f8PDF\u304c\u767b\u9332\u3055\u308c\u3066\u3044\u308b\u304b\u3001matches.json \u306e\u53c2\u7167\u5148\u30d5\u30a1\u30a4\u30eb\u304c\u5b9f\u5728\u3059\u308b\u304b\u3001\u65e2\u77e5\u306e\u6d77\u5916\u30b5\u30fc\u30d3\u30b9\uff08Cloudflare/SQLBAK/Anthropic/Google Cloud\u7b49\uff09\u306e\u7a0e\u533a\u5206\u304c\u6b63\u3057\u3044\u304b\u3092\u30c1\u30a7\u30c3\u30af\u3059\u308b\u3002\u300c\u8acb\u6c42\u66f8\u30c1\u30a7\u30c3\u30af\u300d\u300c\u8acb\u6c42\u66f8\u7a81\u5408\u300d\u300c\u4ed5\u8a33\u3068\u8acb\u6c42\u66f8\u306e\u7a81\u5408\u300d\u300c\u8acb\u6c42\u66f8PDF\u672a\u767b\u9332\u300d\u300c\u7a0e\u533a\u5206\u30c1\u30a7\u30c3\u30af\u300d\u306a\u3069\u306e\u30d5\u30ec\u30fc\u30ba\u3067\u8d77\u52d5\u3002"
+  "description": "MoneyForward の仕訳と受領請求書PDF (references/invoices/) を突合するスキル。課税仕入の仕訳に請求書PDFが登録されているか、matches.json の参照先ファイルが実在するか、既知の海外サービス（Cloudflare/SQLBAK/Anthropic/Google Cloud等）の税区分が正しいかをチェックする。「請求書チェック」「請求書突合」「仕訳と請求書の突合」「請求書PDF未登録」「税区分チェック」などのフレーズで起動。",
+  "content_fingerprint": "0fdf9288ce5194c7b2fb28cfed4ca404993df0de7cce0e3a936655758aa6bc23"
 }

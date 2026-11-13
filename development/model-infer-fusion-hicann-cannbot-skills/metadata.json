@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u57fa\u4e8e PyTorch \u6846\u67b6\u7684\u6607\u817e NPU \u6a21\u578b\u63a8\u7406\u878d\u5408\u7b97\u5b50\u4f18\u5316\u6280\u80fd\u3002\u5206\u6790\u6a21\u578b\u4ee3\u7801\uff0c\u8bc6\u522b\u53ef\u66ff\u6362\u4e3a torch_npu \u878d\u5408\u7b97\u5b50\u7684\u8ba1\u7b97\u6a21\u5f0f\uff0c\u751f\u6210\u66ff\u6362\u65b9\u6848\u3002\u89e6\u53d1\u573a\u666f\uff1atorch_npu \u878d\u5408\u7b97\u5b50\u66ff\u6362\u3001MoE/Attention/FFN/Norm \u7b49\u6a21\u5757\u7684\u63a8\u7406\u7b97\u5b50\u9002\u914d\u3001torch_npu API \u4f7f\u7528\u54a8\u8be2\u3002\u57fa\u4e8e\u4ed3\u5e93\u5df2\u6709\u6a21\u578b\u7684\u878d\u5408\u7b97\u5b50\u7ecf\u9a8c\uff0c\u6309\u8ba1\u7b97\u8bed\u4e49\u63a8\u8350\u6700\u4f73\u65b9\u6848\u3002"
+  "description": "基于 PyTorch 框架的昇腾 NPU 模型推理融合算子优化技能。分析模型代码，识别可替换为 torch_npu 融合算子的计算模式，生成替换方案。触发场景：torch_npu 融合算子替换、MoE/Attention/FFN/Norm 等模块的推理算子适配、torch_npu API 使用咨询。基于仓库已有模型的融合算子经验，按计算语义推荐最佳方案。",
+  "content_fingerprint": "b150fde9f53ef1500973ee29c9f3a9b7d4876f4acbce0623e9464268d35e9a0c"
 }

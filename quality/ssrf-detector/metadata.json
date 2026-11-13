@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "SSRF detector: finds every outbound HTTP call (fetch, axios, got, http, requests, HttpClient, Invoke-RestMethod) where the URL is user-controlled (req.body/req.query/req.params) and grades URL-pre-fetch validation (URL-parse, hostname allowlist, metadata-IP blocking). LLM per-URL-flow classifies user-control, pre-validation quality, and metadata-service exploitation risk (169.254.169.254). Read-only. Audience: Senior. Trigger: /ssrf-detector"
+  "description": "SSRF detector: finds every outbound HTTP call (fetch, axios, got, http, requests, HttpClient, Invoke-RestMethod) where the URL is user-controlled (req.body/req.query/req.params) and grades URL-pre-fetch validation (URL-parse, hostname allowlist, metadata-IP blocking). LLM per-URL-flow classifies user-control, pre-validation quality, and metadata-service exploitation risk (169.254.169.254). Read-only. Audience: Senior. Trigger: /ssrf-detector",
+  "content_fingerprint": "3b989261c6a3e11c3eefb78b94ee8e1a6a8267701dd6c47e5568fcb73491189b"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deferred end-of-run B-roll cache eviction. For ONLY the B-roll source video_ids this run ingested (from each broll_plan.json's ingested_video_ids), runs `mcptube remove <id>` AND deletes the local work/<id>/broll/*.mp4 cache. Never touches the podcast source, unrelated library videos, or broll_plan.json (placement metadata persists for editors). Runs once at the very end of a whole pipeline run."
+  "description": "Deferred end-of-run B-roll cache eviction. For ONLY the B-roll source video_ids this run ingested (from each broll_plan.json's ingested_video_ids), runs `mcptube remove <id>` AND deletes the local work/<id>/broll/*.mp4 cache. Never touches the podcast source, unrelated library videos, or broll_plan.json (placement metadata persists for editors). Runs once at the very end of a whole pipeline run.",
+  "content_fingerprint": "ffd6f0e3b306668ebc501583c77799ff620fc55e7b36324c633a450fea757da3"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Resolve an open same-repository GitHub PR conflict by merging its base into the writable dev head, resolving source\nand config intent semantically, rebuilding conflicted source-owned `bin_artifacts` plus downstream closure, running\nthe repository review/format/test gates, creating one merge commit, and pushing without force. Stop after reporting\nPR checks; never merge or auto-merge the PR."
+  "description": "Resolve an open same-repository GitHub PR conflict by merging its base into the writable dev head, resolving source\nand config intent semantically, rebuilding conflicted source-owned `bin_artifacts` plus downstream closure, running\nthe repository review/format/test gates, creating one merge commit, and pushing without force. Stop after reporting\nPR checks; never merge or auto-merge the PR.",
+  "content_fingerprint": "a79886f4d1d70555660886536d6ab65c49e6623634d85dd30f42ef2c90a50eb0"
 }

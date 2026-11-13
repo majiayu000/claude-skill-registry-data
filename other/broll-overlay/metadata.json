@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Overlays silent b-roll cutaway clips onto a finished base video \u2014 the base audio keeps running underneath while the picture cuts away and returns, and the final duration always equals the base duration. Use when the user asks to add b-roll, add cutaways, or overlay clips on a video: \"add b-roll to this\", \"cut away to a product shot here\", \"overlay these clips on my UGC ad\". Entered from an approved base video plus its transcript, which comes from POST /v1/transcripts and needs no local install; it never generates the base itself and it never extends a video."
+  "description": "Overlays silent b-roll cutaway clips onto a finished base video — the base audio keeps running underneath while the picture cuts away and returns, and the final duration always equals the base duration. Use when the user asks to add b-roll, add cutaways, or overlay clips on a video: \"add b-roll to this\", \"cut away to a product shot here\", \"overlay these clips on my UGC ad\". Entered from an approved base video plus its transcript, which comes from POST /v1/transcripts and needs no local install; it never generates the base itself and it never extends a video.",
+  "content_fingerprint": "6889c50379d0db247d6866a2b955b8fb74c79881b54886985acb6066985b84fe"
 }

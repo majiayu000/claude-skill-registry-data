@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "After a PR has merged, tear down its worktree and feature branch. Verifies the PR is actually merged on GitHub, deletes the local + remote feature branch if they still exist, removes the git worktree, and switches the session back to the main worktree. Use when the user says they're done with a feature and want to clean up."
+  "description": "After a PR has merged, tear down its worktree and feature branch. Verifies the PR is actually merged on GitHub, deletes the local + remote feature branch if they still exist, removes the git worktree, and switches the session back to the main worktree. Use when the user says they're done with a feature and want to clean up.",
+  "content_fingerprint": "d4d3cfa32b48b4a751fc56a301898584b97a553b093ca6f68a52b948ce475554"
 }

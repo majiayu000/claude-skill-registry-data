@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when reasoning about what survives compaction/context-loss/restart/seat-refresh, designing a high-fidelity restore packet, or distinguishing native runtime resume vs fork vs artifact-backed mental-model rebuild. Covers the 4 failure modes that prevent honest restore (compacted seat drops hot potato; restore packet preserves details but loses product intent; runtime resume mistaken for handover or fork; rebuilt seat starts with stale instructions)."
+  "description": "Use when reasoning about what survives compaction/context-loss/restart/seat-refresh, designing a high-fidelity restore packet, or distinguishing native runtime resume vs fork vs artifact-backed mental-model rebuild. Covers the 4 failure modes that prevent honest restore (compacted seat drops hot potato; restore packet preserves details but loses product intent; runtime resume mistaken for handover or fork; rebuilt seat starts with stale instructions).",
+  "content_fingerprint": "1b6ad5e7577e7c0d83589361dab41d3df6adf270fdac4408235cf73b6b7da2dc"
 }

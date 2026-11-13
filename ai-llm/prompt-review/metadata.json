@@ -14,5 +14,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuch4/dx-selecta/blob/main/.github/skills/prompt-review/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d4eeb979df41ded0c013a6bb85556c614fdcd3fe7521d23a71e94379067af894",
+  "description": ".github/prompts/*.prompt.md をレビューして改善提案を出す。frontmatterの妥当性、入力変数(${input:...})の設計、出力フォーマット固定、instructions/skillsへの参照（重複排除）、tools最小化、例の有無、命名規則、壊れやすい指示の検出を行い、レポートをdocs/prompt-review-report.mdに出力する。"
 }

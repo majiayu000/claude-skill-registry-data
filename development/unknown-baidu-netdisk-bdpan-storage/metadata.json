@@ -1,6 +1,6 @@
 {
   "name": "unknown",
-  "description": "",
+  "description": "百度网盘(Baidu Drive)文件管理 — 上传、下载、转存、分享、搜索、移动、复制、重命名、创建文件夹。 同时支持 Agent 记忆备份/恢复（kimiclaw/maxclaw/qclaw/openclaw）。 TRIGGER: 用户提及\"百度网盘/bdpan/网盘/云盘/baidu drive/Baidu Drive\"并涉及文件操作；\n         或用户提及\"备份记忆\"、\"恢复记忆\"",
   "repo": "baidu-netdisk/bdpan-storage",
   "path": "skills/baidu-drive/SKILL.md",
   "github_branch": "main",
@@ -9,19 +9,14 @@
   "stars": 0,
   "source": "discovered",
   "dir_name": "unknown-baidu-netdisk-bdpan-storage",
-  "archive_mode": "directory",
-  "bundled_files": [
-    "scripts/install.sh",
-    "scripts/login.sh",
-    "scripts/memory-backup.sh",
-    "scripts/uninstall.sh",
-    "scripts/update.sh"
-  ],
+  "archive_mode": "skill-md",
+  "bundled_files": [],
   "author": "baidu-netdisk",
   "source_url": "https://github.com/baidu-netdisk/bdpan-storage/blob/main/skills/baidu-drive/SKILL.md",
   "license": "NOASSERTION",
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/baidu-netdisk/bdpan-storage/blob/main/skills/baidu-drive/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "9dd4e8883722f8b5cf4159b3d3d46e79e5abcb537e459b2722bde8c782b107b0"
 }

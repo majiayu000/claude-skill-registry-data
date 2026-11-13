@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Statically re-verify CG-agent-harness's telemetry-kill contract \u2014 the per-spawn-site child environments (gh, git, sandboxed checks, MCP servers, desktop sidecar), the telemetry-free Cargo lock graphs, and a category-1-5 egress classification of every crate, binary and launcher \u2014 then sweep vendor docs. Use when asked to audit telemetry or phone-home leaks, after bumping a network crate, or when adding a dependency, spawn site or launcher. Not for the sandbox, write gates or dependency pins (invariant-guard, write-policy-redteam, verify-deps)."
+  "description": "Statically re-verify CG-agent-harness's telemetry-kill contract — the per-spawn-site child environments (gh, git, sandboxed checks, MCP servers, desktop sidecar), the telemetry-free Cargo lock graphs, and a category-1-5 egress classification of every crate, binary and launcher — then sweep vendor docs. Use when asked to audit telemetry or phone-home leaks, after bumping a network crate, or when adding a dependency, spawn site or launcher. Not for the sandbox, write gates or dependency pins (invariant-guard, write-policy-redteam, verify-deps).",
+  "content_fingerprint": "3b266160b913c242a07535cb8e5b81d96ee8a3439d65c2e26472a159abf07d3a"
 }

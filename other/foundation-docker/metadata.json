@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate Dockerfile, docker-compose.yaml, and container config \u2014 multi-stage build (builder + slim runtime), non-root user, health check, dev/prod compose split, .dockerignore, Makefile docker targets, end-to-end `docker compose up` smoke test. Loads at containerization bootstrap when no Dockerfile exists, or when the operator says \"containerize this\", \"add Docker\", \"set up docker-compose\"."
+  "description": "Generate Dockerfile, docker-compose.yaml, and container config — multi-stage build (builder + slim runtime), non-root user, health check, dev/prod compose split, .dockerignore, Makefile docker targets, end-to-end `docker compose up` smoke test. Loads at containerization bootstrap when no Dockerfile exists, or when the operator says \"containerize this\", \"add Docker\", \"set up docker-compose\".",
+  "content_fingerprint": "c515c830943082db2aadd21488ece7fc9a1c199c0cb5496abd88cb340c2c3cc9"
 }

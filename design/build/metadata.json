@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill during Phase 4 implementation whenever Claude is about to write or modify code. Validates the work item (requirement ID for new builds, issue ticket for fixes, signed CR for change requests), enforces surgical-edit discipline against the plan's in-scope list, validates code against the tech spec and architecture, validates frontend output against UX specs, and generates unit tests ONLY for functions actually modified in the diff. Coordinates with the surgical-edit, minimal-code, and security-review skills. Triggered by any Edit/Write tool call when a plan file exists."
+  "description": "Use this skill during Phase 4 implementation whenever Claude is about to write or modify code. Validates the work item (requirement ID for new builds, issue ticket for fixes, signed CR for change requests), enforces surgical-edit discipline against the plan's in-scope list, validates code against the tech spec and architecture, validates frontend output against UX specs, and generates unit tests ONLY for functions actually modified in the diff. Coordinates with the surgical-edit, minimal-code, and security-review skills. Triggered by any Edit/Write tool call when a plan file exists.",
+  "content_fingerprint": "f2cc2aa6d5cda3f42c95716c7bdeee19ecccd8ea0a3c8a97719f1f5b7f278ede"
 }

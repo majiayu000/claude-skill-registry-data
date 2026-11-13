@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Localize a CometChat integration \u2014 set the UI Kit language, register custom/overridden translations, handle RTL, and never leak a raw localization key into the UI. Cross-family: the mechanism is CometChatLocalize on React, Angular, iOS and Android, while React Native uses CometChatI18nProvider (there is no CometChatLocalize in the RN kit); the exact signature is fetched from each family's localize doc. Triggers: 'translate cometchat', 'change chat language', 'localization', 'i18n', 'RTL / Arabic / Hebrew chat', 'my UI shows group_info instead of a label', 'add a language to cometchat', 'custom translations'."
+  "description": "Localize a CometChat integration — set the UI Kit language, register custom/overridden translations, handle RTL, and never leak a raw localization key into the UI. Cross-family: the mechanism is CometChatLocalize on React, Angular, iOS and Android, while React Native uses CometChatI18nProvider (there is no CometChatLocalize in the RN kit); the exact signature is fetched from each family's localize doc. Triggers: 'translate cometchat', 'change chat language', 'localization', 'i18n', 'RTL / Arabic / Hebrew chat', 'my UI shows group_info instead of a label', 'add a language to cometchat', 'custom translations'.",
+  "content_fingerprint": "0fa22b0050776c6255eb2784e75a5ca7c4facfd4e8b8945210ddaa7ed0617894"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Monthly loop that checks every external link the built site renders still resolves. Build the site, probe the external hrefs with scripts/check-external-links.mjs, verify every failure by hand, and fix genuinely dead links on a local branch for approval. Use when asked to run the link rot loop or check the external links. Never pushes, merges, or deploys."
+  "description": "Monthly loop that checks every external link the built site renders still resolves. Build the site, probe the external hrefs with scripts/check-external-links.mjs, verify every failure by hand, and fix genuinely dead links on a local branch for approval. Use when asked to run the link rot loop or check the external links. Never pushes, merges, or deploys.",
+  "content_fingerprint": "2e3c66e4a6b6cb48c7c1bb3d8291e702ed1a5b152c09a0a31da8ebc8246841c7"
 }

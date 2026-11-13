@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Daily reusable-session runbook for cloud-spend anomaly detection on AWS. Maintains a per-service/per-account spend baseline from Cost Explorer, flags spend that breaks out of that baseline, attributes the likely driver (a new resource, a traffic surge, a region), and alerts {{alert_channel}} with the delta. Read-only and alert-only \u2014 never modifies or deletes a resource or changes a budget."
+  "description": "Daily reusable-session runbook for cloud-spend anomaly detection on AWS. Maintains a per-service/per-account spend baseline from Cost Explorer, flags spend that breaks out of that baseline, attributes the likely driver (a new resource, a traffic surge, a region), and alerts {{alert_channel}} with the delta. Read-only and alert-only — never modifies or deletes a resource or changes a budget.",
+  "content_fingerprint": "a9ce956ca76a63d8525243140c4de2020e4bd5e36431a30df112d52e1b8ffdaf"
 }

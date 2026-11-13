@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configure or audit AICP's monitoring stack \u2014 Prometheus (`:9090`) + Grafana (`:3000`) + 7 alert rules in `config/alerts.yaml` + AICP's own `:9101/metrics` exporter + LocalAI's built-in `:8090/metrics`. Loads when the operator says \"set up monitoring\" / \"add an alert\" / \"what dashboards exist\" / \"audit observability\" / \"monitoring isn't telling me X\"."
+  "description": "Configure or audit AICP's monitoring stack — Prometheus (`:9090`) + Grafana (`:3000`) + 7 alert rules in `config/alerts.yaml` + AICP's own `:9101/metrics` exporter + LocalAI's built-in `:8090/metrics`. Loads when the operator says \"set up monitoring\" / \"add an alert\" / \"what dashboards exist\" / \"audit observability\" / \"monitoring isn't telling me X\".",
+  "content_fingerprint": "bf706c1bc3eb881d4e365c7bc64024122c58e750395b0c10fe60bb46e3e1c479"
 }

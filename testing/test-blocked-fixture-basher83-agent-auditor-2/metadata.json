@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/basher83/agent-auditor/blob/main/skills/test-blocked-fixture/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8286ed24b62aacfd38e007547a1438d9bd62d2910e37c3d86ad16e2cb7e9196b",
+  "description": "This is a test fixture with intentional violations for regression testing. It contains <angle brackets> which trigger B5, and has an unexpected frontmatter property which triggers W2.\n"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728\u6267\u884c\u4efb\u4f55 \u2265 30 \u6761\u76ee\u7684\u6279\u91cf\u4efb\u52a1\uff08\u6279\u91cf\u6539\u6587\u4ef6\u3001\u6279\u91cf\u6838\u67e5\u5f15\u7528\u3001\u6279\u91cf\u91cd\u547d\u540d\u3001\u6279\u91cf\u683c\u5f0f\u7edf\u4e00\uff09\u4e4b\u524d\uff0c\n\u5fc5\u987b\u5148\u5728 3\u20135 \u4e2a\u6837\u672c\u4e0a\u8dd1\u4e00\u904d\uff0c\u628a\u6837\u672c\u7ed3\u679c\u7ed9\u7528\u6237\u770b\uff0c\u786e\u8ba4\u903b\u8f91\u6b63\u786e\u540e\u518d\u63a8\u5168\u91cf\u3002\nUse when \u7528\u6237\u8bf7\u6c42\u5904\u7406\"\u5168\u90e8\"\u3001\"\u6240\u6709\"\u3001\"\u6279\u91cf\"\u3001\"\u9010\u4e2a\"\u67d0\u7c7b\u5bf9\u8c61\uff0c\n\u4e14\u5bf9\u8c61\u6570\u91cf \u2265 30\uff0c\u6216\u6570\u91cf\u672a\u77e5\uff08\"\u628a\u6574\u4e2a\u76ee\u5f55\u7684...\"\uff09\u3002"
+  "description": "在执行任何 ≥ 30 条目的批量任务（批量改文件、批量核查引用、批量重命名、批量格式统一）之前，\n必须先在 3–5 个样本上跑一遍，把样本结果给用户看，确认逻辑正确后再推全量。\nUse when 用户请求处理\"全部\"、\"所有\"、\"批量\"、\"逐个\"某类对象，\n且对象数量 ≥ 30，或数量未知（\"把整个目录的...\"）。",
+  "content_fingerprint": "68c868e3910a271127382d5192022325bca593f279060e14960b0b79cd8695bb"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728\u672c\u673a\u90e8\u7f72\u3001\u9009\u578b\u5e76\u9a8c\u8bc1 System One \u51b3\u7b56\u6a21\u578b\u6808\uff08Laya 421M \u975e\u81ea\u56de\u5f52\u51b3\u7b56\u6a21\u578b + \u4e66\u751f\u00b7\u660e\u51b3 Intern-Decision 2B/0.8B/4B\uff09\u7684\u5b8c\u6574\u6267\u884c\u624b\u518c\u3002\u5f53\u9700\u8981\u8dd1\"\u72b6\u6001+\u7ed3\u6784\u5316\u95ee\u9898 \u2192 \u5e26\u6821\u51c6\u6982\u7387\u7684\u51b3\u7b56\"\uff08\u5de5\u5355\u5206\u8bca\u3001\u90e8\u95e8\u8def\u7531\u3001\u98ce\u9669\u8bc4\u4f30\u3001\u8f6c\u4eba\u5de5\u5224\u65ad\u3001guardrail \u6253\u5206\uff09\u3001\u6216\u90e8\u7f72/\u6392\u67e5 Laya \u4e0e Intern-Decision \u65f6\u4f7f\u7528\u3002\u542b\u5b9e\u6d4b\u5ef6\u8fdf\u3001\u9009\u578b\u6863\u4f4d\u3001\u884c\u4e3a\u5dee\u5f02\u4e0e\u5168\u90e8\u8e29\u5751\u70b9\u3002"
+  "description": "在本机部署、选型并验证 System One 决策模型栈（Laya 421M 非自回归决策模型 + 书生·明决 Intern-Decision 2B/0.8B/4B）的完整执行手册。当需要跑\"状态+结构化问题 → 带校准概率的决策\"（工单分诊、部门路由、风险评估、转人工判断、guardrail 打分）、或部署/排查 Laya 与 Intern-Decision 时使用。含实测延迟、选型档位、行为差异与全部踩坑点。",
+  "content_fingerprint": "5a999f4264dd0b17cb8988cd1333f6d9ee8eb72de3ebfdd491aec5fbe706cb7d"
 }

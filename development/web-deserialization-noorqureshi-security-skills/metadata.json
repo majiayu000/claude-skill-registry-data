@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Insecure deserialization \u2192 RCE via gadget chains. Load when the app deserializes attacker data: Java (rO0/AC ED base64), PHP `unserialize` (O:), Python pickle, .NET BinaryFormatter/ViewState, Ruby Marshal/YAML. Signals: serialized blobs in cookies/params, `__VIEWSTATE`, `rO0AB`, `O:8:`."
+  "description": "Insecure deserialization → RCE via gadget chains. Load when the app deserializes attacker data: Java (rO0/AC ED base64), PHP `unserialize` (O:), Python pickle, .NET BinaryFormatter/ViewState, Ruby Marshal/YAML. Signals: serialized blobs in cookies/params, `__VIEWSTATE`, `rO0AB`, `O:8:`.",
+  "content_fingerprint": "9a23e25748b83e8e5ddf655ac4a8cb62fa930c4b808a939a48b8a7a2ed7f89fe"
 }

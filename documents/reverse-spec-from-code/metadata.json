@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reverse-generate OpenSpec capability specs (openspec/specs/<cap>/spec.md) from code that lacks them, or reconcile an existing stale spec with `--refresh`, using parallel subagents. Fans out one blind generator per capability, audits each spec against the code for hallucinations, and promotes only on user confirm. Use on \"generate specs from code\", \"backfill openspec specs\", \"refresh a stale spec\"."
+  "description": "Reverse-generate OpenSpec capability specs (openspec/specs/<cap>/spec.md) from code that lacks them, or reconcile an existing stale spec with `--refresh`, using parallel subagents. Fans out one blind generator per capability, audits each spec against the code for hallucinations, and promotes only on user confirm. Use on \"generate specs from code\", \"backfill openspec specs\", \"refresh a stale spec\".",
+  "content_fingerprint": "20934332c5310629ec9ebf98389cceff09dfeb424e393ec50c9b201e340e834d"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `scope-definition` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage scope-definition --single`: the engine emits one run-stage directive for scope-definition and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `scope-definition` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage scope-definition --single`: the engine emits one run-stage directive for scope-definition and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "6aa24ca2a692cbc3372fe3dc28c4afcaaab40ab74cc5660d7ff0705c3240584f"
 }

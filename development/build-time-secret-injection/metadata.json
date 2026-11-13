@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when wiring a value that ships in the binary but must stay out of public-repo diffs until launch (AdMob `GADApplicationIdentifier` / banner unit ID, a third-party SDK app key) into an Apple build via xcconfig, Info.plist `$()` substitution and a guarded `Bundle.main` read, including `ci_post_clone.sh` generation on Xcode Cloud; or when CLI tooling reads an ASC `.p8` / key ID from `secrets/.env`. Not for signing certs, CloudKit or APNs keys, nor leak prevention (gitleaks, lefthook, Secret Scanning) \u2014 see apple-public-repo-security. SDK isolation is monetization-sdk-integration."
+  "description": "Use when wiring a value that ships in the binary but must stay out of public-repo diffs until launch (AdMob `GADApplicationIdentifier` / banner unit ID, a third-party SDK app key) into an Apple build via xcconfig, Info.plist `$()` substitution and a guarded `Bundle.main` read, including `ci_post_clone.sh` generation on Xcode Cloud; or when CLI tooling reads an ASC `.p8` / key ID from `secrets/.env`. Not for signing certs, CloudKit or APNs keys, nor leak prevention (gitleaks, lefthook, Secret Scanning) — see apple-public-repo-security. SDK isolation is monetization-sdk-integration.",
+  "content_fingerprint": "227d23391fd85fc6a1656039606448fb13785296e3463e57163705d387a5bfe1"
 }

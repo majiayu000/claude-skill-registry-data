@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Composite skill \u2014 promote the long-lived `release` branch to `main`, cut a single version that batches every PR accumulated since the last tag, then clean up. Chains pr-merge-readiness (on release\u2192main PR) \u2192 version-bump (semver from commits) \u2192 changelog-update (promote [Unreleased] \u2192 versioned) \u2192 ship (tag + GitHub release) \u2192 stale-branch cleanup \u2192 optional ship-it for deploy. Use this INSTEAD of releasing every small fix individually. Many small commits become one well-scoped release."
+  "description": "Composite skill — promote the long-lived `release` branch to `main`, cut a single version that batches every PR accumulated since the last tag, then clean up. Chains pr-merge-readiness (on release→main PR) → version-bump (semver from commits) → changelog-update (promote [Unreleased] → versioned) → ship (tag + GitHub release) → stale-branch cleanup → optional ship-it for deploy. Use this INSTEAD of releasing every small fix individually. Many small commits become one well-scoped release.",
+  "content_fingerprint": "f3028062e603afb164d1e0f5149f356e34e81fb2145288d807538d654fd28a35"
 }

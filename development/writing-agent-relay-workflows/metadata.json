@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "DEPRECATED - documents the superseded v1 `@relayflows/core` WorkflowBuilder engine (`workflow().pattern().agent().step().run()`, `failOnError`, `captureOutput`, `{{steps.X.output}}`, `.onError()`). Use `writing-relayflows` for the current v2 engine (`@relayflows/surface`/`@relayflows/sdk`, CLI `flows`) on all new work. Keep this open only to read or maintain an existing v1 workflow: conversation vs pipeline coordination, DAG steps, idle detection, Relayfile-backed human assistance, waitFor gates, review-depth review/fix loops, channels, chat-native recipes, and parallel waves."
+  "description": "DEPRECATED - documents the superseded v1 `@relayflows/core` WorkflowBuilder engine (`workflow().pattern().agent().step().run()`, `failOnError`, `captureOutput`, `{{steps.X.output}}`, `.onError()`). Use `writing-relayflows` for the current v2 engine (`@relayflows/surface`/`@relayflows/sdk`, CLI `flows`) on all new work. Keep this open only to read or maintain an existing v1 workflow: conversation vs pipeline coordination, DAG steps, idle detection, Relayfile-backed human assistance, waitFor gates, review-depth review/fix loops, channels, chat-native recipes, and parallel waves.",
+  "content_fingerprint": "05777d13024af1ad2b245d0d0b30cf2da67f965bb4ef004fc4a11921362cc960"
 }

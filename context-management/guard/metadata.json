@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ruya-AI/cozempic/blob/main/plugin/skills/guard/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "182f0263ac1896633a6b7b2a9327a27dc3f8fae40b0a248c20bf95996705e3fb",
+  "description": "Protect Claude Code sessions from context overflow by running a background daemon that monitors session size and auto-prunes before compaction hits. Use when the user says \"guard\", \"protect session\", "
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use to review a generated HTML deck or single-page artifact for visual\nquality and structural correctness. Especially good at catching CSS\nspecificity bugs where slide-modifier classes (.divider, .center, .q,\n.flow etc.) accidentally override the base .slide{display:none} and\ncause one slide to stack on top of every other. Also catches missing\nkeyboard navigation, bullet-dump / wall-of-text failure modes, broken\nself-containment (external link/script/img). Patches the file in\nplace; never changes the original content (slide text, numbers, named\nentities are the author's work, not yours)."
+  "description": "Use to review a generated HTML deck or single-page artifact for visual\nquality and structural correctness. Especially good at catching CSS\nspecificity bugs where slide-modifier classes (.divider, .center, .q,\n.flow etc.) accidentally override the base .slide{display:none} and\ncause one slide to stack on top of every other. Also catches missing\nkeyboard navigation, bullet-dump / wall-of-text failure modes, broken\nself-containment (external link/script/img). Patches the file in\nplace; never changes the original content (slide text, numbers, named\nentities are the author's work, not yours).",
+  "content_fingerprint": "e7348f2b2150566f7886004b11fc581e20b323d0de7ef4a24d685989d8ee25d4"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Authentication coercion (PetitPotam MS-EFSR, PrinterBug MS-RPRN, DFSCoerce MS-DFSNM) chained into NTLM relay (impacket ntlmrelayx) toward LDAP, AD CS web enrollment (ESC8), or SMB. Use when SMB signing is not enforced or LDAP channel binding is missing, and you want to force a privileged machine account to authenticate to your relay and turn that into RBCD, a DCSync-capable ACL grant, or a certificate. Includes the exact Coercer/ntlmrelayx commands, requirements, detection, and remediation."
+  "description": "Authentication coercion (PetitPotam MS-EFSR, PrinterBug MS-RPRN, DFSCoerce MS-DFSNM) chained into NTLM relay (impacket ntlmrelayx) toward LDAP, AD CS web enrollment (ESC8), or SMB. Use when SMB signing is not enforced or LDAP channel binding is missing, and you want to force a privileged machine account to authenticate to your relay and turn that into RBCD, a DCSync-capable ACL grant, or a certificate. Includes the exact Coercer/ntlmrelayx commands, requirements, detection, and remediation.",
+  "content_fingerprint": "f0134d521021e02d7a68992a2ef387d6420580ef26fa1385f856a9f42f24941b"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Oracle-bound spec-review check that every structured Rollout prerequisite binds to an enforcement-type acceptance criterion. A prerequisite whose `enforced-by` is missing, dangling, or points at a non-enforcement AC is a BLOCKER (hard-blocks implementation entry via the checker fan-out verdict); a prerequisite left in free prose is ADVISORY. Read-only. Runs in the spec-review fan-out before implementation."
+  "description": "Oracle-bound spec-review check that every structured Rollout prerequisite binds to an enforcement-type acceptance criterion. A prerequisite whose `enforced-by` is missing, dangling, or points at a non-enforcement AC is a BLOCKER (hard-blocks implementation entry via the checker fan-out verdict); a prerequisite left in free prose is ADVISORY. Read-only. Runs in the spec-review fan-out before implementation.",
+  "content_fingerprint": "fd4572fb13e1de5fac62e06b0bce64681b840fe84b23b8759a8119e24436ce98"
 }

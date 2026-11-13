@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/benmarte/codemunch/blob/main/skills/staleness-gate/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8e6b7515fce0696e929ccfc4def66f6459260eb7cc69b1e3c6e760636e190913",
+  "description": "Automatic index freshness gate. Called before any query command (search, fetch, refs, explore) to ensure the index exists and is up-to-date. Handles first-run setup, incremental re-indexing, and stale"
 }

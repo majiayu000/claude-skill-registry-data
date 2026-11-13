@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/deepklarity/harness-kit/blob/main/.claude/skills/dk-merge-resolve/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "e761e588cb1b77214db9141e51f3b5d9095745c55cc0d573950a4d10b1b47781",
+  "description": "Resolve merge conflicts in the current branch. Only invoke when the user explicitly runs /dk-merge-resolve. Do NOT auto-trigger on mentions of merge conflicts, conflict markers, or similar keywords.\n"
 }

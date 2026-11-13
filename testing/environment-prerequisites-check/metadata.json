@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this at the start of any phase before launching agent waves, or when guardrails report SKIP / FAIL due to missing tools. Covers the language- adapter toolchain, SDK-pipeline-specific tools (security/supply-chain scanners, perf benchmarking, container runtime for integration tests), shared infrastructure (jq, git, Docker), and per-MCP availability. Triggers: prerequisites, phase-start, govulncheck, osv-scanner, staticcheck, benchstat, pip-audit, mypy, pytest, ruff, testcontainers, Docker, toolchain, missing tool."
+  "description": "Use this at the start of any phase before launching agent waves, or when guardrails report SKIP / FAIL due to missing tools. Covers the language- adapter toolchain, SDK-pipeline-specific tools (security/supply-chain scanners, perf benchmarking, container runtime for integration tests), shared infrastructure (jq, git, Docker), and per-MCP availability. Triggers: prerequisites, phase-start, govulncheck, osv-scanner, staticcheck, benchstat, pip-audit, mypy, pytest, ruff, testcontainers, Docker, toolchain, missing tool.",
+  "content_fingerprint": "ff2c612f5dfa3b25a2d3cfff6edab1aff98fc4068c1acfeffcc0d049160f2ae3"
 }

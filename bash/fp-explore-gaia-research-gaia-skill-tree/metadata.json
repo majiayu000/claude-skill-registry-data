@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Phase 1 of the feature-pipeline suite \u2014 stress-test a CLI command, feature, flag, or module as a developer seeing it for the first time, then file GitHub issues for every distinct finding. Use when someone says \"explore X\", \"test X\", \"find issues with X\", \"what's wrong with X\", or after /feature-pipeline init. Also triggers standalone as /fp-explore <feature> when you want just the exploration phase without the full pipeline. Reads the target feature from .fp-state.json (or the argument if provided). Completes in one bounded turn and prints the M1 stop hook so the user decides whether to continue to /fp-plan."
+  "description": "Phase 1 of the feature-pipeline suite — stress-test a CLI command, feature, flag, or module as a developer seeing it for the first time, then file GitHub issues for every distinct finding. Use when someone says \"explore X\", \"test X\", \"find issues with X\", \"what's wrong with X\", or after /feature-pipeline init. Also triggers standalone as /fp-explore <feature> when you want just the exploration phase without the full pipeline. Reads the target feature from .fp-state.json (or the argument if provided). Completes in one bounded turn and prints the M1 stop hook so the user decides whether to continue to /fp-plan.",
+  "content_fingerprint": "d235f9f32d12ccf3e37dcfb8acdb35e6b81d95b9e7db3c4e7b5327c31511c7f2"
 }

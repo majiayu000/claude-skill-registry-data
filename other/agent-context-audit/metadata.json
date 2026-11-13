@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit a repo's agent context \u2014 CLAUDE.md files, codebase docs, skills, and tool/MCP designs \u2014 against Anthropic's Claude 5 context-engineering guidance (\"unhobbling\": Anthropic cut ~80% of Claude Code's system prompt with no eval loss). Finds overconstraint, conflicting instructions, redundancy, stale facts, and missing \"unknown knowns\"; produces a scored findings report with concrete rewrites, then applies approved fixes. Use when someone says \"audit my CLAUDE.md\", \"context audit\", \"unhobble this repo\", \"review our agent docs/skills/tools\", or after upgrading to Claude 5-generation models."
+  "description": "Audit a repo's agent context — CLAUDE.md files, codebase docs, skills, and tool/MCP designs — against Anthropic's Claude 5 context-engineering guidance (\"unhobbling\": Anthropic cut ~80% of Claude Code's system prompt with no eval loss). Finds overconstraint, conflicting instructions, redundancy, stale facts, and missing \"unknown knowns\"; produces a scored findings report with concrete rewrites, then applies approved fixes. Use when someone says \"audit my CLAUDE.md\", \"context audit\", \"unhobble this repo\", \"review our agent docs/skills/tools\", or after upgrading to Claude 5-generation models.",
+  "content_fingerprint": "e577806d9e8b57a0a4c701be782e4b02331cada75b458938ddedb6ccc97e3dad"
 }

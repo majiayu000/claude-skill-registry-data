@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs the golden evaluation harness for a profile. Picks one golden dataset, regenerates SQL for every question in it, executes each statement against the org's own warehouse, scores the result against the confirmed answer key, and reports the verdicts \u2014 failures first, with the errored, the unscored and the unconfirmed each kept separate. Scoring is deterministic and happens in agami-core; the skill reports it and never re-judges it. Neither the answer key nor the generated statement is printed: both stay in a local JSON artifact the report points at."
+  "description": "Runs the golden evaluation harness for a profile. Picks one golden dataset, regenerates SQL for every question in it, executes each statement against the org's own warehouse, scores the result against the confirmed answer key, and reports the verdicts — failures first, with the errored, the unscored and the unconfirmed each kept separate. Scoring is deterministic and happens in agami-core; the skill reports it and never re-judges it. Neither the answer key nor the generated statement is printed: both stay in a local JSON artifact the report points at.",
+  "content_fingerprint": "1b51c1fdc75729acc66906af1c50f89edb40ac4135407ad0ae17b84fa8ec5bfd"
 }

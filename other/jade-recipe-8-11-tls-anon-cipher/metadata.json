@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Resolves hard-coded anonymous TLS cipher suites (DH_anon / ECDH_anon), which JDK 11 disables by default through jdk.tls.disabledAlgorithms. Agent-mode recipe: the shard contract names the files; this document defines the transform, its limit, and when the fix stops being the agent's call."
+  "description": "Resolves hard-coded anonymous TLS cipher suites (DH_anon / ECDH_anon), which JDK 11 disables by default through jdk.tls.disabledAlgorithms. Agent-mode recipe: the shard contract names the files; this document defines the transform, its limit, and when the fix stops being the agent's call.",
+  "content_fingerprint": "09f766600224442753e3801a0a1220e019dccde3491d0d3ad79740052f4b21b2"
 }

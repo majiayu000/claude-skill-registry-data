@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8ba1\u7b97\u673a\u8bba\u6587\u8349\u7a3f\u7ec8\u5ba1\u4e0e\u5206\u5c42\u91cd\u5199\u5de5\u4f5c\u6d41\u3002\u5148\u903b\u8f91\u540e\u8bed\u8a00\uff1a\u68c0\u67e5\u5168\u6587\u7ae0\u8282\u7ed3\u6784 \u2192 \u7ae0\u8282\u5185\u90e8\u903b\u8f91 \u2192 \u8de8\u7ae0\u8282\u4e00\u81f4\u6027 \u2192 \u5199\u4f5c\u98ce\u683c \u2192 \u6458\u8981\u9010\u53e5\u529f\u80fd \u2192 \u56fe\u8868 \u2192 \u6295\u7a3f\u524d sanity check\u3002\u95ee\u9898\u6309 P0/P1/P2 \u5206\u7ea7\u3002\u9002\u7528\u4e8e NeurIPS/ICML/ICLR/KDD/CCS/USENIX/SIGMOD/VLDB/IEEE Transactions \u7b49\u9876\u4f1a\u9876\u520a\u3002Use when \u7528\u6237\u8bf7\u6c42\u8bba\u6587\u7ec8\u5ba1\u3001\u903b\u8f91\u8bca\u65ad\u3001\u5206\u5c42\u91cd\u5199\u3001\u6295\u7a3f\u524d\u68c0\u67e5\uff0c\u6216\u5728\u8349\u7a3f\u5df2\u6210\u5f62\u9636\u6bb5\u8fdb\u884c\u7cfb\u7edf\u6027\u4fee\u6539\u3002"
+  "description": "计算机论文草稿终审与分层重写工作流。先逻辑后语言：检查全文章节结构 → 章节内部逻辑 → 跨章节一致性 → 写作风格 → 摘要逐句功能 → 图表 → 投稿前 sanity check。问题按 P0/P1/P2 分级。适用于 NeurIPS/ICML/ICLR/KDD/CCS/USENIX/SIGMOD/VLDB/IEEE Transactions 等顶会顶刊。Use when 用户请求论文终审、逻辑诊断、分层重写、投稿前检查，或在草稿已成形阶段进行系统性修改。",
+  "content_fingerprint": "83d7c52ff990b97987a07b9e06a3589169e746233c5f8a1219f72b503dc03d61"
 }

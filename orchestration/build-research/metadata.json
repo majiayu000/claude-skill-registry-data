@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/park-kyungchan/palantir/blob/main/.claude/skills/build-research/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "5d943db5c9e0161d6d8f2e45dead4a8f3368d9bf5f536261d22ca0596122b01f",
+  "description": "Research dispatcher for enhanced /build command Phase 1.\nParses user concept input and delegates to claude-code-guide for capability inventory.\nSaves results to .agent/builds/{build_id}/ for resume su"
 }

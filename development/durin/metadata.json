@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user runs /durin [--repo <path>] [--scope mine|all] [--dry-run] [--auto] [--confirm]. Sweeps every open PR/MR in a repo's forge that bears unaddressed comments, dispatches /narvi per URL with --no-confirm, and aggregates one report. --auto skips the outer confirm gate and forges the manifest unattended. The forge is auto-detected from the repo's origin remote (github | gitlab). One repo per invocation \u2014 cd into the project tree first, or name it with --repo <path>."
+  "description": "Use when the user runs /durin [--repo <path>] [--scope mine|all] [--dry-run] [--auto] [--confirm]. Sweeps every open PR/MR in a repo's forge that bears unaddressed comments, dispatches /narvi per URL with --no-confirm, and aggregates one report. --auto skips the outer confirm gate and forges the manifest unattended. The forge is auto-detected from the repo's origin remote (github | gitlab). One repo per invocation — cd into the project tree first, or name it with --repo <path>.",
+  "content_fingerprint": "14b6e1ce40937f0f980f7188ccc2b459fa509a8d135d8f0de6e94cdde63180f2"
 }

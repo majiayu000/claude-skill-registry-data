@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adapter over `codemap-py integrate` \u2014 audit, plan, source-wire, locally sync, and demonstrate the\ncodemap-py integration with its supported consumers. Trigger with `/codemap-py:integration\naudit|plan|apply|sync|demo [--runtime {claude,codex,both}] ...`. Default (no args) is `audit`.\nSkip for: running a structural query (use `/codemap-py:query-code`); explicit standalone index\nrebuild (use `/codemap-py:scan-codebase`)."
+  "description": "Adapter over `codemap-py integrate` — audit, plan, source-wire, locally sync, and demonstrate the\ncodemap-py integration with its supported consumers. Trigger with `/codemap-py:integration\naudit|plan|apply|sync|demo [--runtime {claude,codex,both}] ...`. Default (no args) is `audit`.\nSkip for: running a structural query (use `/codemap-py:query-code`); explicit standalone index\nrebuild (use `/codemap-py:scan-codebase`).",
+  "content_fingerprint": "e88001677bd1e74c356f3871b832bf2aa5d7c8be704fa59de4bc38ab4963714e"
 }

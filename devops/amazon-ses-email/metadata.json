@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Full skill for setting up Amazon SES email for the ndestates-io domain (sending + receiving). Non-Microsoft (AWS only). Integrated with Laravel mail config, DO hosting (droplet/App Platform), drift avoidance (project-drift-guardian + schema checks), security (least-privilege IAM, secrets), and billing flows. Use for initial domain setup, DNS records (DKIM/SPF/DMARC/MX), IAM user/keys or role, Laravel .env updates, testing send/receive, inbound processing (e.g. support emails or incoming signed docs), and troubleshooting. Enforces no-drift via cache + guardian. Always run from host for AWS CLI/doctl if needed."
+  "description": "Full skill for setting up Amazon SES email for the ndestates-io domain (sending + receiving). Non-Microsoft (AWS only). Integrated with Laravel mail config, DO hosting (droplet/App Platform), drift avoidance (project-drift-guardian + schema checks), security (least-privilege IAM, secrets), and billing flows. Use for initial domain setup, DNS records (DKIM/SPF/DMARC/MX), IAM user/keys or role, Laravel .env updates, testing send/receive, inbound processing (e.g. support emails or incoming signed docs), and troubleshooting. Enforces no-drift via cache + guardian. Always run from host for AWS CLI/doctl if needed.",
+  "content_fingerprint": "2f487053a47df643787524283b02b088073cafc8c4cf4aa33323402887838f7e"
 }

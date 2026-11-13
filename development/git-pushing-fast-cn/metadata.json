@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u9700\u8981\u5728\u5f53\u524d\u5355\u5206\u652f\u63d0\u4ea4\u5e76\u63a8\u9001\u6539\u52a8\uff0c\u5e76\u751f\u6210 Conventional Commit \u4fe1\u606f\u65f6\u4f7f\u7528\u3002\u652f\u6301\u57fa\u4e8e diff \u81ea\u52a8\u5224\u65ad type/scope/summary\u3001\u5904\u7406\u5df2\u6682\u5b58\u6216\u7528\u6237\u8981\u6c42\u7684\u6539\u52a8\u8303\u56f4\u3001\u4e3a\u975e\u7b80\u5355\u6539\u52a8\u751f\u6210\u5206\u6bb5\u63d0\u4ea4\u6b63\u6587\uff0c\u5e76\u5b89\u5168\u5904\u7406\u5355\u5206\u652f\u63a8\u9001\u3002"
+  "description": "当用户需要在当前单分支提交并推送改动，并生成 Conventional Commit 信息时使用。支持基于 diff 自动判断 type/scope/summary、处理已暂存或用户要求的改动范围、为非简单改动生成分段提交正文，并安全处理单分支推送。",
+  "content_fingerprint": "ed4e8a24a5b4a3b5602d6529674393affde05acb44faad9972f5fde7ba4df8ab"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Projektordner wechseln in zid (File \u2192 Open Folder\u2026, Ctrl+O): In-App-Ordner-Dialog, openProjectFolder, veraltete git-status-Ergebnisse, Ordner ohne Repo, File-Watcher-Thread, Aufwecken des Frame-Loops; dazu die Fenster-Backends Wayland/X11 und die WGPU-Surface. Use when touching src/ui/folder_picker.zig, folder_ops.zig, openProjectFolder/takePendingOpenFolder, UI.updateGitStatus, git_worker.isInsideRepo/repoTopLevel, Scheduler.on_result, the file watcher, src/platform/native_window.zig, Renderer.setWindow, libs/wio, or scripts/e2e_open_folder.py."
+  "description": "Projektordner wechseln in zid (File → Open Folder…, Ctrl+O): In-App-Ordner-Dialog, openProjectFolder, veraltete git-status-Ergebnisse, Ordner ohne Repo, File-Watcher-Thread, Aufwecken des Frame-Loops; dazu die Fenster-Backends Wayland/X11 und die WGPU-Surface. Use when touching src/ui/folder_picker.zig, folder_ops.zig, openProjectFolder/takePendingOpenFolder, UI.updateGitStatus, git_worker.isInsideRepo/repoTopLevel, Scheduler.on_result, the file watcher, src/platform/native_window.zig, Renderer.setWindow, libs/wio, or scripts/e2e_open_folder.py.",
+  "content_fingerprint": "96fa14c61f18845e04fe0b9b225afff751a527696ca97f648e083a160f7e2434"
 }

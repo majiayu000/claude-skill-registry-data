@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/cbbkrd-tech/jl-finishes/blob/main/.claude/skills/ln-512-tech-debt-cleaner/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c79f4fa802d725a962bbc68fc6b3c9b29b6a4d8ac410e963fc09da1b0661427a",
+  "description": "Automated tech debt cleanup worker (L3). Reads codebase audit findings, applies safe auto-fixes for low-risk issues (unused imports, dead code, commented-out code, deprecated aliases). Confidence >=90"
 }

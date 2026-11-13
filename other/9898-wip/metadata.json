@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run on /wip or for a whole-repository cleanup spanning multiple worktrees and branches. Trigger when the request combines operations such as removing stale worktrees, rebasing all branches, retesting, and pushing, including \"clean up my worktrees and branches\", \"rebase all my branches and get them tested and pushed\", or \"settle my WIP\". The workflow gates destructive and outward-facing actions, never uses --force, and handles worktree, rebase, and test edge cases. Defer to single-operation git skills when the user targets one specific branch or worktree. Wraps git:clean-worktrees and build:test-all."
+  "description": "Run on /wip or for a whole-repository cleanup spanning multiple worktrees and branches. Trigger when the request combines operations such as removing stale worktrees, rebasing all branches, retesting, and pushing, including \"clean up my worktrees and branches\", \"rebase all my branches and get them tested and pushed\", or \"settle my WIP\". The workflow gates destructive and outward-facing actions, never uses --force, and handles worktree, rebase, and test edge cases. Defer to single-operation git skills when the user targets one specific branch or worktree. Wraps git:clean-worktrees and build:test-all.",
+  "content_fingerprint": "d7af30bfd7d08ec71892d99b0f834beafce6286504b214d128a4050050b5f193"
 }

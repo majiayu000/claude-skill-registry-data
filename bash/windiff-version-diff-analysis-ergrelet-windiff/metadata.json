@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate and interpret security-research diffs between Windows versions or patch levels using this repo's WinDiff CLI and databases. Use when comparing Windows builds or binaries such as ntoskrnl.exe, ntdll.dll, win32k*.sys, ci.dll, or cng.sys to find changed syscalls, symbols, types, mitigation flags, callbacks, ETW/EtwTi telemetry, code-integrity behavior, drivers, or attack surface. Explain likely intent and security relevance with Windows-internals knowledge, and frame findings for anti-malware/EDR, anti-cheat, and vulnerability-research audiences rather than returning an uninterpreted symbol list."
+  "description": "Generate and interpret security-research diffs between Windows versions or patch levels using this repo's WinDiff CLI and databases. Use when comparing Windows builds or binaries such as ntoskrnl.exe, ntdll.dll, win32k*.sys, ci.dll, or cng.sys to find changed syscalls, symbols, types, mitigation flags, callbacks, ETW/EtwTi telemetry, code-integrity behavior, drivers, or attack surface. Explain likely intent and security relevance with Windows-internals knowledge, and frame findings for anti-malware/EDR, anti-cheat, and vulnerability-research audiences rather than returning an uninterpreted symbol list.",
+  "content_fingerprint": "97567722c506876b11754639728c68c6e94382556435b70cf7ae8a666ad9b5b5"
 }

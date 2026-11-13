@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Auth and authorization conventions distilled across builds with three different auth stacks (Better Auth + orgs, Supabase Auth + RLS, Clerk). Covers the provider decision matrix, the unified wrapper interface (`requireAuth` / `requireRole` / `withOrgContext`), procedure tier stacking, session handling, OAuth callback safety, plugin composition with Better Auth, and the anti-patterns (hardcoded allowlists, admin client at module scope, triple-fallback auth surfaces)."
+  "description": "Auth and authorization conventions distilled across builds with three different auth stacks (Better Auth + orgs, Supabase Auth + RLS, Clerk). Covers the provider decision matrix, the unified wrapper interface (`requireAuth` / `requireRole` / `withOrgContext`), procedure tier stacking, session handling, OAuth callback safety, plugin composition with Better Auth, and the anti-patterns (hardcoded allowlists, admin client at module scope, triple-fallback auth surfaces).",
+  "content_fingerprint": "d3c68e915f1e2ee31cab22ed7334b9065f96fa188af94fae981f8003b8b27cf8"
 }

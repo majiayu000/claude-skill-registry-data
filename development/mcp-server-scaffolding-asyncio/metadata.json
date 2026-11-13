@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Agentient/vibekit/blob/main/plugins/mcp-tools/skills/mcp-server-scaffolding-asyncio/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d57f1060eb7e0305b934a5213def8e1c404d2f68494316471e8d726a97417f5d",
+  "description": "Use asyncio.TaskGroup() instead of asyncio.gather() for Python 3.13 MCP servers. PROACTIVELY activate for: (1) creating new MCP servers, (2) async server patterns, (3) Python 3.13 asyncio. Triggers: \""
 }

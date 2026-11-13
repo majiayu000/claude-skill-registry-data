@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific syntax and behavior for DROP TABLE \u2014 RESTRICT/CASCADE being no-ops, the DROP TEMPORARY TABLE guard against dropping a same-named base table, partial drops in a multi-table statement, IF EXISTS warning behavior, failure when a table is referenced by a foreign key, DROP TABLE on a view, automatic trigger removal, implicit-commit (and the DROP TEMPORARY exception), WAIT/NOWAIT, and CREATE OR REPLACE TABLE as the atomic replace. Use when writing, generating, or reviewing DROP TABLE statements that target MariaDB."
+  "description": "MariaDB-specific syntax and behavior for DROP TABLE — RESTRICT/CASCADE being no-ops, the DROP TEMPORARY TABLE guard against dropping a same-named base table, partial drops in a multi-table statement, IF EXISTS warning behavior, failure when a table is referenced by a foreign key, DROP TABLE on a view, automatic trigger removal, implicit-commit (and the DROP TEMPORARY exception), WAIT/NOWAIT, and CREATE OR REPLACE TABLE as the atomic replace. Use when writing, generating, or reviewing DROP TABLE statements that target MariaDB.",
+  "content_fingerprint": "7288736ff71ef751158c8c411e019a1c9fb03aa220ff87b1a75fc6869bc4cdb7"
 }

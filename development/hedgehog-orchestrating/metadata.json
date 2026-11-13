@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use at the start of any session on a project with a build graph (`.hedgehog/hedgehog.db`), and again at every claim/dispatch/verify cycle within it. Owns consuming the build graph \u2014 claiming task packets, delegating each to the layer's agent, running `hedgehog verify` to gate the commit, recording debt and decisions, the intent check at an intent's last layer, and when to clear context. Not for a build agent handed an already-claimed packet \u2014 that agent never claims, dispatches, or verifies; this skill is the orchestrating session's own."
+  "description": "Use at the start of any session on a project with a build graph (`.hedgehog/hedgehog.db`), and again at every claim/dispatch/verify cycle within it. Owns consuming the build graph — claiming task packets, delegating each to the layer's agent, running `hedgehog verify` to gate the commit, recording debt and decisions, the intent check at an intent's last layer, and when to clear context. Not for a build agent handed an already-claimed packet — that agent never claims, dispatches, or verifies; this skill is the orchestrating session's own.",
+  "content_fingerprint": "710dcbf873071fe7104407d09960c9601e1d4b2fcb61cc820f49cd73ef4a2503"
 }

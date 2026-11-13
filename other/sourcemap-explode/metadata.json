@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decode every .js.map under targets/<name>/raw/ and write the original source tree under targets/<name>/sources/. Run after js-harvest when raw/ contains .js.map files and sources/ is missing. Preserves the sourcesContent[i] root layout so js_analyzer's path-relative tagging works."
+  "description": "Decode every .js.map under targets/<name>/raw/ and write the original source tree under targets/<name>/sources/. Run after js-harvest when raw/ contains .js.map files and sources/ is missing. Preserves the sourcesContent[i] root layout so js_analyzer's path-relative tagging works.",
+  "content_fingerprint": "573f299874fa8ac729eca98f2b5c4403c7ddacd7b5191304ac1caadb4e558bb3"
 }

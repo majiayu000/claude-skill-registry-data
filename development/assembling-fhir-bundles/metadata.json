@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Package multiple FHIR R4 resources produced from OpenMed output into a single valid transaction Bundle ready to POST to an EHR, using OpenMed's verified bundle assembler openmed.clinical.exporters.fhir.to_bundle. Covers deterministic urn:uuid fullUrls, automatic in-Bundle reference rewriting, request blocks (method/url) for transaction vs batch, and conditional create. Use after exporting-to-fhir when the user has several Condition/Observation/MedicationStatement resources and wants one transaction Bundle, mentions Bundle, transaction, references, or posting to a FHIR server. Builds on exporting-to-fhir; pairs after."
+  "description": "Package multiple FHIR R4 resources produced from OpenMed output into a single valid transaction Bundle ready to POST to an EHR, using OpenMed's verified bundle assembler openmed.clinical.exporters.fhir.to_bundle. Covers deterministic urn:uuid fullUrls, automatic in-Bundle reference rewriting, request blocks (method/url) for transaction vs batch, and conditional create. Use after exporting-to-fhir when the user has several Condition/Observation/MedicationStatement resources and wants one transaction Bundle, mentions Bundle, transaction, references, or posting to a FHIR server. Builds on exporting-to-fhir; pairs after.",
+  "content_fingerprint": "875948675a24e9901d09fcb23b368fed7e30992f2ea292ab882c955f378835dd"
 }

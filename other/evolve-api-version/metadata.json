@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Evolve AICP's API surfaces across versions \u2014 bump LocalAI proxy paths (`/v1` \u2192 `/v2`), version MCP tools (`aicp_chat` \u2192 `aicp_chat_v2`), version CLI flag schemas (e.g., new `--task-cmd` action breaking old call shape), version agent server REST. Coordinated with `infra-api` (design) and `config-migrations` (config schema). Loads when the operator says \"version the API\" / \"ship a v2\" / \"breaking API change\" / \"evolve the MCP surface\" / \"deprecate v1 endpoint\"."
+  "description": "Evolve AICP's API surfaces across versions — bump LocalAI proxy paths (`/v1` → `/v2`), version MCP tools (`aicp_chat` → `aicp_chat_v2`), version CLI flag schemas (e.g., new `--task-cmd` action breaking old call shape), version agent server REST. Coordinated with `infra-api` (design) and `config-migrations` (config schema). Loads when the operator says \"version the API\" / \"ship a v2\" / \"breaking API change\" / \"evolve the MCP surface\" / \"deprecate v1 endpoint\".",
+  "content_fingerprint": "14f8d6c03cea47b67df72f0ecbff06c42c36f0559fa3266fcec5c03d6136b7f5"
 }

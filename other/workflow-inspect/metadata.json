@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Appends the cost half to a workflow-retro record: parses the feature session's Claude Code transcripts with a bundled read-only script (tokens per agent, wall-clock, handoff tax) and writes the result into the record's Cost section. Companion of /workflow-retro; run it while the transcripts still exist (they are pruned after Claude Code's retention window, ~30 days by default). Requires python3."
+  "description": "Appends the cost half to a workflow-retro record: parses the feature session's Claude Code transcripts with a bundled read-only script (tokens per agent, wall-clock, handoff tax) and writes the result into the record's Cost section. Companion of /workflow-retro; run it while the transcripts still exist (they are pruned after Claude Code's retention window, ~30 days by default). Requires python3.",
+  "content_fingerprint": "f577537c8c0f26a51c1d03316a31351df5ec5fab034c70d65aea310a1e3c5dde"
 }

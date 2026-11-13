@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/qwibitai/nanoclaw/blob/main/.claude/skills/use-native-credential-proxy/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "04bed1d3f8b3c2d7c84ca95e6607d84b1bfd6728147e26ac619e41659c788a8f",
+  "description": "Replace OneCLI gateway with the built-in credential proxy. For users who want simple .env-based credential management without installing OneCLI. Reads API key or OAuth token from .env and injects into"
 }

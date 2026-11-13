@@ -1,5 +1,5 @@
 {
-  "name": "\u6d41\u6c34\u7ebf\u6545\u969c\u6392\u67e5Skill",
+  "name": "流水线故障排查Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/pipeline-troubleshooting/SKILL.md",
   "github_branch": "main",
@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CI/CD \u6d41\u6c34\u7ebf\u5e38\u89c1\u6545\u969c(\u6784\u5efa\u5931\u8d25/\u955c\u50cf\u63a8\u9001\u5931\u8d25/\u90e8\u7f72\u5361\u4f4f)\u7684\u5206\u5c42\u6392\u67e5\u8def\u5f84\u4e0e\u5b9a\u4f4d\u65b9\u6cd5\u3002\u5f53\u6d41\u6c34\u7ebf\u5931\u8d25\u6216\u90e8\u7f72\u4e2d\u65ad\u9700\u8981\u5feb\u901f\u5b9a\u4f4d\u65f6\u4f7f\u7528\u3002"
+  "description": "CI/CD 流水线常见故障(构建失败/镜像推送失败/部署卡住)的分层排查路径与定位方法。当流水线失败或部署中断需要快速定位时使用。",
+  "content_fingerprint": "b1b6246cd3559c682a33727c65756206ba81d4a7265b05ec236a06458f5af387"
 }

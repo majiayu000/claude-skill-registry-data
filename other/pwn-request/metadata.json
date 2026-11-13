@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when hunting Pwn Request vulnerabilities where pull_request_target workflows checkout attacker-controlled PR code and execute it in a privileged context with access to repository secrets. Trigger on: \"pwn request\", \"pull_request_target\", \"checkout PR head\", \"npm install in CI\", \"lifecycle scripts in CI\", \"preinstall script\", \"postinstall script\", \"package.json scripts CI\", \"npm ci ignore-scripts false\", \"actions/checkout ref pull request head sha\", privileged workflow running PR code, \"Gato-X\", supply chain via PR lifecycle scripts."
+  "description": "Use when hunting Pwn Request vulnerabilities where pull_request_target workflows checkout attacker-controlled PR code and execute it in a privileged context with access to repository secrets. Trigger on: \"pwn request\", \"pull_request_target\", \"checkout PR head\", \"npm install in CI\", \"lifecycle scripts in CI\", \"preinstall script\", \"postinstall script\", \"package.json scripts CI\", \"npm ci ignore-scripts false\", \"actions/checkout ref pull request head sha\", privileged workflow running PR code, \"Gato-X\", supply chain via PR lifecycle scripts.",
+  "content_fingerprint": "54bd1235c91e64face4971e02ff7ddfdac2db78ed7cbede5d7b303ee19ff8d6f"
 }

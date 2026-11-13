@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build and diagnose visionOS projects with Seiro MCP. Use inspect_xcode_schemes (if needed) -> validate_sandbox_policy -> build_visionos_app -> inspect_build_diagnostics (on failure) -> fetch_build_output (on success), and avoid direct xcodebuild or swiftc unless the user explicitly asks for shell-level execution or MCP cannot handle the task."
+  "description": "Build and diagnose visionOS projects with Seiro MCP. Use inspect_xcode_schemes (if needed) -> validate_sandbox_policy -> build_visionos_app -> inspect_build_diagnostics (on failure) -> fetch_build_output (on success), and avoid direct xcodebuild or swiftc unless the user explicitly asks for shell-level execution or MCP cannot handle the task.",
+  "content_fingerprint": "5247762637d7d0d6d31505f0234f8bcea3bfba53a86fbbcdff0d2802ae68b0fd"
 }

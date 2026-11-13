@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Hunts for process injection using Sysmon telemetry: correlating CreateRemoteThread (EID 8), suspicious cross-process access (EID 10), and RWX image-less memory to surface hollowing, shellcode injection, and APC abuse. Activates for requests to hunt process injection, analyze Sysmon EID 8/10, or detect code injection on Windows."
+  "description": "Hunts for process injection using Sysmon telemetry: correlating CreateRemoteThread (EID 8), suspicious cross-process access (EID 10), and RWX image-less memory to surface hollowing, shellcode injection, and APC abuse. Activates for requests to hunt process injection, analyze Sysmon EID 8/10, or detect code injection on Windows.",
+  "content_fingerprint": "b79722afef9162473dbc67bd2c42d6e3430e4b91d06f93d83730e4db4d8ee1ec"
 }

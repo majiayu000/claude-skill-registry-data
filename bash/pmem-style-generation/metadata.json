@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u57fa\u4e8e powermem \u4e2d\u7684 Style Profile \u751f\u6210\u5e26\u6709\u4e2a\u4eba\u70d9\u5370\u7684\u6587\u7a3f\u3002\u5148\u4e2d\u7acb\u63d0\u53d6\u7d20\u6750\u6838\u5fc3\u4fe1\u606f\uff0c\u518d\u62c9\u53d6\u98ce\u683c Profile \u7ec4\u88c5 Compiler Prompt \u9a71\u52a8\u5927\u6a21\u578b\u8f93\u51fa\u3002\u5f53\u7528\u6237\u63d0\u5230\"\u5e2e\u6211\u5199\u4e00\u7bc7\"\u3001\"\u6309\u6211\u7684\u98ce\u683c\u5199\"\u3001\"\u751f\u6210\u6587\u7ae0\"\u3001\"\u5199\u6761\u63a8\u7279\"\u3001\"\u5199\u4e2a\u5c0f\u7ea2\u4e66\"\u3001\"\u5199\u516c\u4f17\u53f7\u6587\u7ae0\"\uff0c\u6216\u63d0\u4f9b\u7d20\u6750\u8981\u6c42\u521b\u4f5c\u65f6\u4f7f\u7528\u6b64 skill\u3002"
+  "description": "基于 powermem 中的 Style Profile 生成带有个人烙印的文稿。先中立提取素材核心信息，再拉取风格 Profile 组装 Compiler Prompt 驱动大模型输出。当用户提到\"帮我写一篇\"、\"按我的风格写\"、\"生成文章\"、\"写条推特\"、\"写个小红书\"、\"写公众号文章\"，或提供素材要求创作时使用此 skill。",
+  "content_fingerprint": "cf48287cbe0ffdb928325234c78271d5e504d9d359fef76f73ed8bca735147c9"
 }

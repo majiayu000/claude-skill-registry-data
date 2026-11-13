@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2\u5168\u90e8\u6216\u5355\u53ea ETF \u6210\u4efd\u5217\u8868\u3002\u53ef\u9009 --symbol\uff1b\u4e0d\u4f20\u8fd4\u56de\u5168\u90e8 ETF\u3002\u63a5\u53e3\uff1aGET /api/v2/market/data/etf-components-all\u3002"
+  "description": "查询全部或单只 ETF 成份列表。可选 --symbol；不传返回全部 ETF。接口：GET /api/v2/market/data/etf-components-all。",
+  "content_fingerprint": "642bf578fe2c6afb1b453167563cd6e842146d8446a2dbe809a8bd92fc89c5d9"
 }

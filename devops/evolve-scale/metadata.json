@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scale AICP from single-host single-operator to multi-host fleet \u2014 multi-machine LocalAI cluster (per CLAUDE.md `## Infrastructure target`), per-host agent server, replicated DLQ/state, multi-operator concurrency. Distinct from `ops-scale` (runtime scaling \u2014 replicas/resources within current architecture); this skill is the architecture-evolving scale lifecycle. Loads when the operator says \"scale to fleet\" / \"multi-host AICP\" / \"second machine\" / \"concurrent operators\" / \"scale beyond single-GPU\"."
+  "description": "Scale AICP from single-host single-operator to multi-host fleet — multi-machine LocalAI cluster (per CLAUDE.md `## Infrastructure target`), per-host agent server, replicated DLQ/state, multi-operator concurrency. Distinct from `ops-scale` (runtime scaling — replicas/resources within current architecture); this skill is the architecture-evolving scale lifecycle. Loads when the operator says \"scale to fleet\" / \"multi-host AICP\" / \"second machine\" / \"concurrent operators\" / \"scale beyond single-GPU\".",
+  "content_fingerprint": "82e9d6acade7558d9f0c5da4259d7dc6f17f11c3b520a423cd470dd1b546c5de"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Multi-agent code review with parallel specialized reviewers, architecture validation, challenge validation, and durable handling of previously decided findings. Use `rq` to request a review of diffs (defaults to main branch), `rs` to respond to findings and record intentional non-fix decisions beside the relevant code. Triggers on \"review this\", \"review my code\", \"code review\", \"check for bugs\", \"audit this\", when examining PRs, pull requests, branches, or diffs. Always asks user before applying fixes or adding decision comments."
+  "description": "Multi-agent code review with parallel specialized reviewers, architecture validation, challenge validation, and durable handling of previously decided findings. Use `rq` to request a review of diffs (defaults to main branch), `rs` to respond to findings and record intentional non-fix decisions beside the relevant code. Triggers on \"review this\", \"review my code\", \"code review\", \"check for bugs\", \"audit this\", when examining PRs, pull requests, branches, or diffs. Always asks user before applying fixes or adding decision comments.",
+  "content_fingerprint": "3037a5e4cc813062b5ca7f8201686e7938fe76f00a5e60399f32bc66af21cf54"
 }

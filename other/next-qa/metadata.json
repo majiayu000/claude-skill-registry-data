@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run one unattended iteration of the QUALITY-ASSURANCE loop \u2014 steward any in-flight QA PR, then build ONE queued `qa` issue (test infrastructure, unit tests, regression tests for known bugs) on a branch off auto-qa and open a PR that squash-merges on green CI. Adds tests and tooling only; never edits product source. Use when the user says \"QA\u30bf\u30b9\u30af\", \"next qa\", \"\u30c6\u30b9\u30c8\u3092\u9032\u3081\u3066\", or wants autonomous progress on the quality track."
+  "description": "Run one unattended iteration of the QUALITY-ASSURANCE loop — steward any in-flight QA PR, then build ONE queued `qa` issue (test infrastructure, unit tests, regression tests for known bugs) on a branch off auto-qa and open a PR that squash-merges on green CI. Adds tests and tooling only; never edits product source. Use when the user says \"QAタスク\", \"next qa\", \"テストを進めて\", or wants autonomous progress on the quality track.",
+  "content_fingerprint": "20423c1f463c32fcbb626e38412eeaa7448305c9a0a129190fa0475a42179033"
 }

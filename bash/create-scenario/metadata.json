@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Writes a new ScenarioRunner scenario \u2014 a Python class deriving from BasicScenario with its behaviour tree assembled from srunner atomic behaviours and criteria, plus the XML config that gives it a town, ego spawn and parameters \u2014 and registers it so `--scenario MyScenario_1` works. Also covers adding a scenario to a route via --additionalScenario. Generates a working skeleton and validates it without a simulator. Use when the user asks to \"create/write a new scenario\", \"add a custom scenario\", \"make my own traffic situation\", or wants to extend the scenario library."
+  "description": "Writes a new ScenarioRunner scenario — a Python class deriving from BasicScenario with its behaviour tree assembled from srunner atomic behaviours and criteria, plus the XML config that gives it a town, ego spawn and parameters — and registers it so `--scenario MyScenario_1` works. Also covers adding a scenario to a route via --additionalScenario. Generates a working skeleton and validates it without a simulator. Use when the user asks to \"create/write a new scenario\", \"add a custom scenario\", \"make my own traffic situation\", or wants to extend the scenario library.",
+  "content_fingerprint": "d545c045ae46704a28fc29cdf66d9423e345359ccf201420627658b0390c60a3"
 }

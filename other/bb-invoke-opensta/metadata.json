@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8c03\u7528 OpenSTA 2.5.0 \u505a\u9759\u6001\u65f6\u5e8f\u5206\u6790\uff08STA\uff09\u3002\u7efc\u5408\u9636\u6bb5\u9a8c\u8bc1 WNS/TNS\uff1bPD \u9636\u6bb5\u505a post-route signoff\uff08\u591a PVT corner + SPEF\uff09\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bba-guru-synthesis \u7efc\u5408\u540e\u67e5 timing\uff1b(2) bba-guru-pd \u5e03\u7ebf\u540e\u8dd1 multi-corner signoff\uff1b(3) \u663e\u5f0f /bb-invoke-opensta\u3002"
+  "description": "调用 OpenSTA 2.5.0 做静态时序分析（STA）。综合阶段验证 WNS/TNS；PD 阶段做 post-route signoff（多 PVT corner + SPEF）。触发场景：(1) bba-guru-synthesis 综合后查 timing；(2) bba-guru-pd 布线后跑 multi-corner signoff；(3) 显式 /bb-invoke-opensta。",
+  "content_fingerprint": "f6741134c48455dd758633479baee47864f422d1a1b53cf0c4f8488c6ed3833d"
 }

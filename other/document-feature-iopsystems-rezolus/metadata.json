@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Write or update the CLI `--help` text and README section for a new or changed rezolus feature (a subcommand, flag, mode, or behavior change), then prove the help is usable by dispatching a fresh subagent that has never seen the code. Use this whenever you add or change how rezolus is invoked \u2014 new `rezolus <subcommand>`, new flags/args on an existing mode, renamed options, or changed defaults \u2014 and any time the user says the help/README is thin, stale, confusing, or \"an agent couldn't figure this out.\" Treats help text as an interface under test, not prose."
+  "description": "Write or update the CLI `--help` text and README section for a new or changed rezolus feature (a subcommand, flag, mode, or behavior change), then prove the help is usable by dispatching a fresh subagent that has never seen the code. Use this whenever you add or change how rezolus is invoked — new `rezolus <subcommand>`, new flags/args on an existing mode, renamed options, or changed defaults — and any time the user says the help/README is thin, stale, confusing, or \"an agent couldn't figure this out.\" Treats help text as an interface under test, not prose.",
+  "content_fingerprint": "71fd7614519c15f3a60a30447ce6a318e86265c9b904d850e2b5c42f65b63be2"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5ba1\u67e5\u81ea\u67d0\u4e2a fixed point\uff08commit\u3001branch\u3001tag \u6216 merge-base\uff09\u4ee5\u6765\u7684\u53d8\u66f4\uff0c\u6cbf\u4e24\u4e2a\u8f74\u8fdb\u884c\uff1aStandards\uff08\u4ee3\u7801\u662f\u5426\u9075\u5faa\u672c\u4ed3\u5e93\u6587\u6863\u5316\u7684\u7f16\u7801\u89c4\u8303\uff1f\uff09\u548c Spec\uff08\u4ee3\u7801\u662f\u5426\u5339\u914d\u539f\u59cb issue/spec \u7684\u8981\u6c42\uff1f\uff09\u3002\u4e24\u4e2a\u5e76\u884c sub-agent \u5206\u522b\u8fd0\u884c\u5ba1\u67e5\u5e76\u5e76\u6392\u62a5\u544a\u7ed3\u679c\u3002\u5f53\u7528\u6237\u60f3\u8981 review branch\u3001PR\u3001\u8fdb\u884c\u4e2d\u7684\u53d8\u66f4\uff0c\u6216\u8981\u6c42 \"review since X\" \u65f6\u4f7f\u7528\u3002"
+  "description": "审查自某个 fixed point（commit、branch、tag 或 merge-base）以来的变更，沿两个轴进行：Standards（代码是否遵循本仓库文档化的编码规范？）和 Spec（代码是否匹配原始 issue/spec 的要求？）。两个并行 sub-agent 分别运行审查并并排报告结果。当用户想要 review branch、PR、进行中的变更，或要求 \"review since X\" 时使用。",
+  "content_fingerprint": "aea9b9adb387f9e25dc17690ca17ec63bf4bdba990cc7a139b5f897aaa68190d"
 }

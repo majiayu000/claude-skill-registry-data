@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Quick mode for the rest of the session. Instead of CI's full checks, a change runs only the checks it can affect (format, lint, types and build, its own tests, and every unit, integration, flow and browser test that reaches the code it touched), and the rest of the suite is left for a full run such as a pull request's CI. Runs only when the user types it, and `/first-pass:quick off` turns it off."
+  "description": "Quick mode for the rest of the session. Instead of CI's full checks, a change runs only the checks it can affect (format, lint, types and build, its own tests, and every unit, integration, flow and browser test that reaches the code it touched), and the rest of the suite is left for a full run such as a pull request's CI. Runs only when the user types it, and `/first-pass:quick off` turns it off.",
+  "content_fingerprint": "abd4093dbe1939554dd8045ffddc1cabc97e4e6aea446d0e4d7e50afbb71faf1"
 }

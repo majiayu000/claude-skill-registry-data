@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Harden a PostgreSQL deployment whether managed or self-hosted. Covers pg_hba network and authentication rules, role separation (read-only, read-write, migration), row-level security for multi-tenant data, TLS configuration, backup encryption, and pg_audit logging. Invoke when provisioning a new Postgres, before opening it to a new app, or when reviewing a multi-tenant schema for isolation gaps."
+  "description": "Harden a PostgreSQL deployment whether managed or self-hosted. Covers pg_hba network and authentication rules, role separation (read-only, read-write, migration), row-level security for multi-tenant data, TLS configuration, backup encryption, and pg_audit logging. Invoke when provisioning a new Postgres, before opening it to a new app, or when reviewing a multi-tenant schema for isolation gaps.",
+  "content_fingerprint": "b7696e5a952670aa874377be9889f995669786bc44e15f1f2862d94666c8ca44"
 }

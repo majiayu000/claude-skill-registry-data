@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Operates a shared git working tree where many agents commit concurrently: commits by path with the task-id prefix, never switches/resets/stashes, handles index.lock recovery, and diagnoses and repairs divergence without touching other agents' files. Use when committing in a multi-agent tree, hitting index.lock, or verifying commit isolation."
+  "description": "Operates a shared git working tree where many agents commit concurrently: commits by path with the task-id prefix, never switches/resets/stashes, handles index.lock recovery, and diagnoses and repairs divergence without touching other agents' files. Use when committing in a multi-agent tree, hitting index.lock, or verifying commit isolation.",
+  "content_fingerprint": "bf3b87fd18523818cda361a0ab6c300044bf2bf067670b3fa369b4cac77cf722"
 }

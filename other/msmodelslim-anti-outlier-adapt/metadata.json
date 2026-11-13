@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728\u57fa\u7840\u6a21\u578b\u9002\u914d\u5b8c\u6210\u540e\uff0c\u6309\u7b97\u6cd5\u9002\u914d\u5e76\u5b89\u88c5 Adapter \u63a5\u53e3\uff0c\u4f9d\u636e\u76ee\u6807\u6a21\u578b\u771f\u5b9e forward \u751f\u6210\u5e76\u9a8c\u8bc1 final-logits patch\uff0c\u6267\u884c\u5355\u7b97\u6cd5 msModelSlim \u79bb\u7fa4\u503c\u6291\u5236\u53d8\u6362\u3001\u5b98\u65b9\u8ba1\u7b97\u56fe\u63d0\u53d6\u548c\u6d6e\u70b9 logits \u95e8\u7981\u3002"
+  "description": "在基础模型适配完成后，按算法适配并安装 Adapter 接口，依据目标模型真实 forward 生成并验证 final-logits patch，执行单算法 msModelSlim 离群值抑制变换、官方计算图提取和浮点 logits 门禁。",
+  "content_fingerprint": "cdd177c09be013edaffbfd4dc25ba6d90a22fce29afa6319b3853d20d3f79e44"
 }

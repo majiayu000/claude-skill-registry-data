@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Copy paseo agent profiles (Architect, Engineer, Reviewer, Writer\u2026) from one machine to another by merging them into the target's ~/.paseo/config.json, over ssh, idempotently. Use when the user wants to export/import/sync/clone paseo agent profiles between hosts, set up paseo agent profiles on a new or freshly installed machine, or roll the same profile set across a fleet. paseo itself has no profile export/import command \u2014 `paseo agent` manages running agents, not profile templates."
+  "description": "Copy paseo agent profiles (Architect, Engineer, Reviewer, Writer…) from one machine to another by merging them into the target's ~/.paseo/config.json, over ssh, idempotently. Use when the user wants to export/import/sync/clone paseo agent profiles between hosts, set up paseo agent profiles on a new or freshly installed machine, or roll the same profile set across a fleet. paseo itself has no profile export/import command — `paseo agent` manages running agents, not profile templates.",
+  "content_fingerprint": "9d068ec3d5a47fad0cdcb02c4eff358a2456eb86441ed8303fbb23a304b830e9"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rafael-2109/frete-sistema/blob/main/.claude/skills/resolvendo-entidades/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "52cb3a5d07176bdf0ea66b16815da3e4fb140203764a6de1c7e79fa4ab1578d4",
+  "description": "Resolve entidades do usuario para identificadores do sistema.\n\nUSAR SEMPRE ANTES de skills que aceitam:\n- cliente, cnpj, grupo → resolver_grupo.py ou resolver_cliente.py\n- produto, cod_produto → resol"
 }

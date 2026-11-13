@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit which entries in your project's MEMORY.md Claude actually reads. Use when the user wants to find dead memory entries, broken pointers in MEMORY.md, orphan memory files, or surface entries that fall below the system-prompt truncation cutoff. Triggers on \"audit MEMORY.md\", \"dead memory entries\", \"broken memory pointers\", \"memory hygiene\", \"unused memory\", \"memory truncation\". Runs locally; reads ~/.claude/projects session JSONL logs and memory directories. No network calls."
+  "description": "Audit which entries in your project's MEMORY.md Claude actually reads. Use when the user wants to find dead memory entries, broken pointers in MEMORY.md, orphan memory files, or surface entries that fall below the system-prompt truncation cutoff. Triggers on \"audit MEMORY.md\", \"dead memory entries\", \"broken memory pointers\", \"memory hygiene\", \"unused memory\", \"memory truncation\". Runs locally; reads ~/.claude/projects session JSONL logs and memory directories. No network calls.",
+  "content_fingerprint": "f39866af093faea08f7be0a484607b476750c08c5959b476ed6f9eb9642e8d26"
 }

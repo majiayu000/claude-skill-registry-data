@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6607\u817eAscendC\u7b97\u5b50\u8c03\u8bd5\u5de5\u5177\uff08msDebug\uff09\u6280\u80fd\uff0c\u542b\u4e24\u5927\u6d41\u7a0b\uff1a\u2460\u4e0a\u677f\u8c03\u8bd5\u2014\u2014\u7b97\u5b50\u52a0 -g -O0 \u7f16\u8bd1\u540e\u7531 msdebug \u62c9\u8d77\uff0c\u652f\u6301\u65ad\u70b9\u3001\u5355\u6b65\u3001\u53d8\u91cf/\u5185\u5b58\u6253\u5370\u3001\u6838\u5207\u6362\u3001\u5bc4\u5b58\u5668\u8bfb\u53d6\uff1b\u2461coredump\u89e3\u6790\u2014\u2014\u7528\u6237\u6307\u5b9a core \u6587\u4ef6\u8def\u5f84\u540e\uff0cmsdebug \u52a0\u8f7d\u89e3\u6790\u6302\u6389\u4ee3\u7801\u884c/\u5f02\u5e38\u8c03\u7528\u6808/\u73b0\u573a\u53d8\u91cf\u3002\u89e6\u53d1\u5173\u952e\u8bcd\uff1amsdebug\u3001\u7b97\u5b50\u8c03\u8bd5\u3001\u4e0a\u677f\u8c03\u8bd5\u3001\u65ad\u70b9\u3001\u5355\u6b65\u8c03\u8bd5\u3001\u6253\u5370\u53d8\u91cf\u3001\u8bfb\u5185\u5b58\u3001\u6838\u5207\u6362\u3001\u5bc4\u5b58\u5668\u3001coredump\u3001core\u6587\u4ef6\u3001\u8c03\u7528\u6808\u3001\u5d29\u6e83\u89e3\u6790"
+  "description": "昇腾AscendC算子调试工具（msDebug）技能，含两大流程：①上板调试——算子加 -g -O0 编译后由 msdebug 拉起，支持断点、单步、变量/内存打印、核切换、寄存器读取；②coredump解析——用户指定 core 文件路径后，msdebug 加载解析挂掉代码行/异常调用栈/现场变量。触发关键词：msdebug、算子调试、上板调试、断点、单步调试、打印变量、读内存、核切换、寄存器、coredump、core文件、调用栈、崩溃解析",
+  "content_fingerprint": "95b1bc00d63afe3438da15664f86cf43978d2e6d47af0a257d92fa35f32ff1da"
 }

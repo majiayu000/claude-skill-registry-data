@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scan the C# simulation and controller code for non-deterministic patterns that break reproducibility: wall-clock reads, unordered collection iteration, unseeded RNG, order-dependent float accumulation, and Job/thread races. Produces a prioritised report with file:line locations and remediation. Run before any sim/controller merge and before a release gate."
+  "description": "Scan the C# simulation and controller code for non-deterministic patterns that break reproducibility: wall-clock reads, unordered collection iteration, unseeded RNG, order-dependent float accumulation, and Job/thread races. Produces a prioritised report with file:line locations and remediation. Run before any sim/controller merge and before a release gate.",
+  "content_fingerprint": "667682e7090b83779a8da3db8df56886908fccb1a0b23064717c6234043a5625"
 }

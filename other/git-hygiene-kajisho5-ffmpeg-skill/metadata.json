@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prevents, detects, and remediates files that should never be committed \u2014 secrets (.env, API tokens, hardcoded credentials) and dev artifacts (build output, scratch databases, editor/OS files). Covers .gitignore (and why it does not untrack), git rm --cached, auditing tracked files, history scrubbing, and credential rotation. Use when a repo has committed secrets or junk, when setting up a new repo's ignore rules, or when reviewing what a repo actually tracks."
+  "description": "Prevents, detects, and remediates files that should never be committed — secrets (.env, API tokens, hardcoded credentials) and dev artifacts (build output, scratch databases, editor/OS files). Covers .gitignore (and why it does not untrack), git rm --cached, auditing tracked files, history scrubbing, and credential rotation. Use when a repo has committed secrets or junk, when setting up a new repo's ignore rules, or when reviewing what a repo actually tracks.",
+  "content_fingerprint": "7a77b4b4e55ca3f7b55b59b82b88a96a63dcae227536453d68f89050b47ad9d5"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/TalonT-Org/AutoSkillit/blob/main/src/autoskillit/skills_extended/merge-pr/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c798f8ac9f77cbe9c1863ddfc571037ebb917d447b5c3b926d24326680e445aa",
+  "description": "Merge a single PR into the integration branch. For simple PRs, uses gh pr merge --squash --auto to enforce GitHub's required status checks. For needs_check PRs, re-assesses complexity and returns need"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reads and summarizes a Jira ticket in the IDF project. Use this skill whenever a user mentions a Jira ticket key (IDF-XXXX) and wants to read or understand it. Does NOT implement code \u2014 use the `implement-ticket` skill for that. Does NOT create tickets \u2014 use the `create-ticket` skill for that. Trigger on: \"lis le ticket IDF-XXXX\", \"r\u00e9sume le ticket IDF-XXXX\", \"qu'est-ce que dit le ticket IDF-XXXX\", \"montre-moi le ticket IDF-XXXX\", or any mention of an IDF-XXXX key without an implementation intent. Requires Jira MCP (sooperset/mcp-atlassian) to be configured."
+  "description": "Reads and summarizes a Jira ticket in the IDF project. Use this skill whenever a user mentions a Jira ticket key (IDF-XXXX) and wants to read or understand it. Does NOT implement code — use the `implement-ticket` skill for that. Does NOT create tickets — use the `create-ticket` skill for that. Trigger on: \"lis le ticket IDF-XXXX\", \"résume le ticket IDF-XXXX\", \"qu'est-ce que dit le ticket IDF-XXXX\", \"montre-moi le ticket IDF-XXXX\", or any mention of an IDF-XXXX key without an implementation intent. Requires Jira MCP (sooperset/mcp-atlassian) to be configured.",
+  "content_fingerprint": "d04a33e8973bfbc68b245ce087bd7ca449c279547f7bde356811791059c2b8c8"
 }

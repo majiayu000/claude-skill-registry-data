@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when running the post-review fix loop after a review/devil/critic agent emits findings, when authoring a .findings.json file, when routing fixes to the responsible agent, or when deciding whether the loop has converged or is stuck. Covers the structured findings schema, per-issue retry cap (5), stuck detection (2 non-improving iterations), reviewer dedup, the deterministic-first gate (v1.1.0), guardrail re-run rules, and convergence criteria. Triggers: review, findings, fix loop, retry cap, stuck detection, dedup, deterministic-first gate, convergence, devil, critic, .findings.json."
+  "description": "Use this when running the post-review fix loop after a review/devil/critic agent emits findings, when authoring a .findings.json file, when routing fixes to the responsible agent, or when deciding whether the loop has converged or is stuck. Covers the structured findings schema, per-issue retry cap (5), stuck detection (2 non-improving iterations), reviewer dedup, the deterministic-first gate (v1.1.0), guardrail re-run rules, and convergence criteria. Triggers: review, findings, fix loop, retry cap, stuck detection, dedup, deterministic-first gate, convergence, devil, critic, .findings.json.",
+  "content_fingerprint": "63a2654395461a546435870cd8a7ea4f871adbcafd0bf76b766f752ddd6763fc"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when designing an SDK component that admits work (publish, submit, send, fan-out) faster than its downstream can drain \u2014 picking between bounded-channel block, ErrQueueFull fail-fast, or counted-drop policy. Covers semaphores, bounded worker queues, JetStream MaxAckPending, and size heuristics. Triggers: backpressure, bounded channel, semaphore, ErrQueueFull, MaxQueueSize, drop, block, flow control, ants, x/sync/semaphore."
+  "description": "Use this when designing an SDK component that admits work (publish, submit, send, fan-out) faster than its downstream can drain — picking between bounded-channel block, ErrQueueFull fail-fast, or counted-drop policy. Covers semaphores, bounded worker queues, JetStream MaxAckPending, and size heuristics. Triggers: backpressure, bounded channel, semaphore, ErrQueueFull, MaxQueueSize, drop, block, flow control, ants, x/sync/semaphore.",
+  "content_fingerprint": "ee52867698199781cda5894a32e17c14acebdb2bf8985120b0b709ca8e2df5ec"
 }

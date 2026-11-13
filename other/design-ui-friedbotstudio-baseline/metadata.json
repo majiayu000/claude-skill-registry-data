@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Orchestrates `impeccable` for every design task inside a workflow phase. Captures intent in natural language, classifies it (design / development / copy), translates design intents into a sequence of impeccable subcommand invocations, runs them in main context with state persistence at `.claude/state/design/<slug>.json`, and returns a structured report. ALWAYS invokes `impeccable` under the hood for the underlying design move; never picks aesthetic direction itself; never writes product code directly. Per CLAUDE.md Article X.2, all design tasks in workflow phases route through this skill."
+  "description": "Orchestrates `impeccable` for every design task inside a workflow phase. Captures intent in natural language, classifies it (design / development / copy), translates design intents into a sequence of impeccable subcommand invocations, runs them in main context with state persistence at `.claude/state/design/<slug>.json`, and returns a structured report. ALWAYS invokes `impeccable` under the hood for the underlying design move; never picks aesthetic direction itself; never writes product code directly. Per CLAUDE.md Article X.2, all design tasks in workflow phases route through this skill.",
+  "content_fingerprint": "e4e3e9ce1799fb2c8544c667b037d874ba2b068ebc5f7c2b7a78befac557bdbf"
 }

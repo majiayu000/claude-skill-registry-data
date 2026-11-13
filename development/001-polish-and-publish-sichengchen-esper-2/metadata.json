@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/sichengchen/esper/blob/main/.esper/plans/archived/001-polish-and-publish/009-esper-continue-skill.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "dbb4b7de4f1f8d5c830c5c1b3af7301bd80fc44eeaf4459569b6453611da1dec",
+  "description": "/esper:build is the primary implementation skill but has no recovery path when a session is interrupted mid-implementation. A esper:continue skill dovetails into the same flow starting after branch cr"
 }

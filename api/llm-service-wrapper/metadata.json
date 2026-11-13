@@ -1,5 +1,5 @@
 {
-  "name": "\u5927\u6a21\u578b\u670d\u52a1\u5c01\u88c5Skill",
+  "name": "大模型服务封装Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/llm-service-wrapper/SKILL.md",
   "github_branch": "main",
@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "LLM \u8c03\u7528\u5c01\u88c5\u6a21\u5f0f:\u6d41\u5f0f\u8f93\u51fa\u3001\u91cd\u8bd5\u9650\u6d41\u3001\u591a\u6a21\u578b\u8def\u7531\u3001\u964d\u7ea7\u3002\u5f53\u9700\u8981\u5c01\u88c5\u5927\u6a21\u578b\u8c03\u7528\u670d\u52a1(\u7edf\u4e00\u63a5\u5165\u3001\u5bb9\u9519\u4e0e\u591a\u6a21\u578b\u8def\u7531)\u65f6\u4f7f\u7528\u3002"
+  "description": "LLM 调用封装模式:流式输出、重试限流、多模型路由、降级。当需要封装大模型调用服务(统一接入、容错与多模型路由)时使用。",
+  "content_fingerprint": "9053d1d449239e3feb99a5289434564cd978078db644353776effb86a4ad5337"
 }

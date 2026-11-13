@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Broken Object/Function Level Authorization in REST/JSON APIs (the #1 API risk). Load on any REST API with object ids in paths/bodies (/api/v1/users/123, /orders/{id}), Bearer auth, mobile-app backends, or admin vs user function separation. Signals: predictable ids, verbs that skip re-authorization, \"role\" enforced only in the UI."
+  "description": "Broken Object/Function Level Authorization in REST/JSON APIs (the #1 API risk). Load on any REST API with object ids in paths/bodies (/api/v1/users/123, /orders/{id}), Bearer auth, mobile-app backends, or admin vs user function separation. Signals: predictable ids, verbs that skip re-authorization, \"role\" enforced only in the UI.",
+  "content_fingerprint": "8d26c832a32b6abc81865e30fc9715a660575790f7d4b787f898ca3eae9a6c24"
 }

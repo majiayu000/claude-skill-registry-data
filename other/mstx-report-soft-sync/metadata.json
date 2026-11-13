@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5206\u6790 AscendC \u7b97\u5b50\u4e2d\u81ea\u5b9e\u73b0\u7684\u8f6f\u540c\u6b65\u4ee3\u7801\uff0c\u5224\u65ad\u5176\u6240\u5c5e\u540c\u6b65\u8bed\u4e49\uff08\u6838\u95f4 barrier/set-wait\u3001\u5361\u95f4 barrier/signal\uff09\uff0c\u5e76\u63a5\u5165 mssanitizer \u7684 Sanitizer \u63a5\u53e3\uff08sanitizer_report.h\uff09\u4e0a\u62a5\u8f6f\u540c\u6b65\u8bed\u4e49\uff0c\u907f\u514d racecheck \u5bf9\u8f6f\u540c\u6b65\u8bef\u62a5\u3002\u89e6\u53d1\uff1a\u7b97\u5b50\u5b58\u5728\u81ea\u5b9e\u73b0\u8f6f\u540c\u6b65\uff08GM \u5730\u5740\u8f6e\u8be2\u3001flag \u8ba1\u6570\u3001\u8de8\u6838/\u8de8\u5361\u4fe1\u53f7\u7b49\uff09\u9700\u8981\u914d\u5408 mssanitizer \u68c0\u6d4b\u3001\u9700\u8981\u4e0a\u62a5\u8f6f\u540c\u6b65\u8bed\u4e49\u3001\u9700\u8981\u5224\u65ad\u67d0\u6bb5\u540c\u6b65\u4ee3\u7801\u5c5e\u4e8e\u54ea\u79cd\u540c\u6b65\u8bed\u4e49\u65f6\u3002"
+  "description": "分析 AscendC 算子中自实现的软同步代码，判断其所属同步语义（核间 barrier/set-wait、卡间 barrier/signal），并接入 mssanitizer 的 Sanitizer 接口（sanitizer_report.h）上报软同步语义，避免 racecheck 对软同步误报。触发：算子存在自实现软同步（GM 地址轮询、flag 计数、跨核/跨卡信号等）需要配合 mssanitizer 检测、需要上报软同步语义、需要判断某段同步代码属于哪种同步语义时。",
+  "content_fingerprint": "e598bf3fd52f848818fa6009af463bb2efa5043a84d6b461fbdab2acc97c18cb"
 }

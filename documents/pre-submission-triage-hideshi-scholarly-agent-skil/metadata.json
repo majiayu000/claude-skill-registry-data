@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6295\u7a3f\u524d\u30b2\u30fc\u30c8 (check_pre_submission.py) \u306e\u5b9f\u884c\u6642\u30fbWARN/FAIL \u51fa\u529b\u306e\u89e3\u91c8\u304c\u5fc5\u8981\u306a\u6642\u306b\u3001\u5404\u691c\u51fa\u9805\u76ee\u3092\u65e2\u77e5\u30d1\u30bf\u30fc\u30f3\u306b\u7167\u5408\u3057\u3066\u300c\u8981\u4fee\u6b63 / \u8981\u78ba\u8a8d / \u5bfe\u5fdc\u4e0d\u8981\u300d\u306e3\u5206\u985e\u3067\u5224\u65ad\u3057\u3001\u6839\u62e0\u4ed8\u304d\u306e\u5224\u65ad\u30b5\u30de\u30ea\u3092\u63d0\u793a\u30fb\u8a18\u9332\u3059\u308b\u30b9\u30ad\u30eb"
+  "description": "投稿前ゲート (check_pre_submission.py) の実行時・WARN/FAIL 出力の解釈が必要な時に、各検出項目を既知パターンに照合して「要修正 / 要確認 / 対応不要」の3分類で判断し、根拠付きの判断サマリを提示・記録するスキル",
+  "content_fingerprint": "45c56026f7d75d1b80e1bc53dd1900c47b64f2b9b4d89dfc05f0a536fb24c37f"
 }

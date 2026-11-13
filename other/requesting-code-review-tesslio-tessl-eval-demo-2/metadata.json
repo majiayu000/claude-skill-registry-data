@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Dispatch a code-reviewer subagent with precisely scoped context (git SHAs, task description, requirements) to review a diff and return Critical, Important, and Minor findings. Use after delivery-flow finishes implementing and verifying a task, before merging to main. This is the internal code-review stage of the delivery-flow workflow. It is not a standalone entry point, so do not activate it directly for a one-off \"review this PR\" or \"review my code\" request; use delivery-flow for those instead."
+  "description": "Dispatch a code-reviewer subagent with precisely scoped context (git SHAs, task description, requirements) to review a diff and return Critical, Important, and Minor findings. Use after delivery-flow finishes implementing and verifying a task, before merging to main. This is the internal code-review stage of the delivery-flow workflow. It is not a standalone entry point, so do not activate it directly for a one-off \"review this PR\" or \"review my code\" request; use delivery-flow for those instead.",
+  "content_fingerprint": "71c4285bd0f5c5f65e3057bd6df3849a623313bd5374984085f3efc585ab5252"
 }

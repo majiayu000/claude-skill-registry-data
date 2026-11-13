@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Clean up the local workspace after a dev branch has been merged into main.\nVerifies the current dev branch is fully merged into origin/main, then switches to main,\npulls the latest, deletes the local dev branch, and deletes the remote dev branch if it still exists.\nSTOPS and warns the user if the current branch is not yet merged.\nTriggers: cleanup workspace, cleanup branch, delete merged branch, finish dev branch, post-merge cleanup"
+  "description": "Clean up the local workspace after a dev branch has been merged into main.\nVerifies the current dev branch is fully merged into origin/main, then switches to main,\npulls the latest, deletes the local dev branch, and deletes the remote dev branch if it still exists.\nSTOPS and warns the user if the current branch is not yet merged.\nTriggers: cleanup workspace, cleanup branch, delete merged branch, finish dev branch, post-merge cleanup",
+  "content_fingerprint": "a1940e71a6f74e394e4cec38ff997d70ed910402488085a9d85e339e609d4d7f"
 }

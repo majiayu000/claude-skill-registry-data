@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Tmux skill for running background tasks.\nUse this skill when:\n1. Before any tasks that can potentially run for more than 2 minutes (e.g.: package install, many tests, model training)\n2. Before any tasks that are expected to run indefinitely in background (e.g.: web servers, port forwarding)\n3. Bash tool reports `timeout after 120000ms`\n4. User request to run tasks in background"
+  "description": "Tmux skill for running background tasks.\nUse this skill when:\n1. Before any tasks that can potentially run for more than 2 minutes (e.g.: package install, many tests, model training)\n2. Before any tasks that are expected to run indefinitely in background (e.g.: web servers, port forwarding)\n3. Bash tool reports `timeout after 120000ms`\n4. User request to run tasks in background",
+  "content_fingerprint": "d5a471e6c0d1b4f1b0c5a915c854c571c03cab98f39b0eb9114d98df14579e83"
 }

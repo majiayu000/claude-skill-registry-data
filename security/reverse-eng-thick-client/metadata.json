@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Security-test a desktop thick client end to end: map its trust boundaries, then work the local attack surface (config files, credential storage, IPC, update channel) and the network surface (proxying, certificate pinning, hidden APIs). Load for a C/S desktop app in scope \u2014 Electron, Qt, .NET WinForms/WPF, or native \u2014 an installer to audit, local config/credential storage to assess, named pipes or loopback IPC, an auto-update channel, or a client that hides admin-only API calls."
+  "description": "Security-test a desktop thick client end to end: map its trust boundaries, then work the local attack surface (config files, credential storage, IPC, update channel) and the network surface (proxying, certificate pinning, hidden APIs). Load for a C/S desktop app in scope — Electron, Qt, .NET WinForms/WPF, or native — an installer to audit, local config/credential storage to assess, named pipes or loopback IPC, an auto-update channel, or a client that hides admin-only API calls.",
+  "content_fingerprint": "70f0d8ee5a00202e8e42991be64a83f7a142e3270cc8535788e42f928106c119"
 }

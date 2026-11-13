@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ash1794/vibe-engineering/blob/master/skills/parallel-task-decomposition/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "de82f0f159914ff1bd7617037e33c0a51035df047271f8c7a426f66952fdb862",
+  "description": "Analyzes large tasks for independent subtasks that can be safely parallelized. Produces a DAG-based dispatch plan with dependency ordering and maximum parallelism."
 }

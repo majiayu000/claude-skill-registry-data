@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Maintains the ansible/roles/system_keyboard Ansible role that sets the console keymap and console font (via /etc/vconsole.conf, localectl, setfont, and an initramfs rebuild) on RHEL-family systems as part of the Linux SOE. Use when checking or setting the virtual console keymap/font. Does not manage X11 keyboard layout \u2014 there is no X11 handling in this role."
+  "description": "Maintains the ansible/roles/system_keyboard Ansible role that sets the console keymap and console font (via /etc/vconsole.conf, localectl, setfont, and an initramfs rebuild) on RHEL-family systems as part of the Linux SOE. Use when checking or setting the virtual console keymap/font. Does not manage X11 keyboard layout — there is no X11 handling in this role.",
+  "content_fingerprint": "d5411c64b43e468e90d02ddd9c78ad60fb63a060bd7c6ed6dca71d98987186af"
 }

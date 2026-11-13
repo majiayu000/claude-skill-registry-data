@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Validate AntHill's k8s/ manifests, the Gitea deploy workflow, and tools/publish-server.ps1 locally without a cluster \u2014 kubeconform schema checks, docker runtime smoke of the SDK container image, PowerShell script/help checks \u2014 including the environment traps (kubectl 1.36 offline dry-run fails, PEP 668, PS comma-list concat). Use when editing k8s/*.yaml, .gitea/workflows/deploy-server.yml, or the publish script, or when asked to prove the server deployment works."
+  "description": "Validate AntHill's k8s/ manifests, the Gitea deploy workflow, and tools/publish-server.ps1 locally without a cluster — kubeconform schema checks, docker runtime smoke of the SDK container image, PowerShell script/help checks — including the environment traps (kubectl 1.36 offline dry-run fails, PEP 668, PS comma-list concat). Use when editing k8s/*.yaml, .gitea/workflows/deploy-server.yml, or the publish script, or when asked to prove the server deployment works.",
+  "content_fingerprint": "dab01b98751f83070083870bbd737d71ca1782b6fb98f1e583f9e340584af4bb"
 }

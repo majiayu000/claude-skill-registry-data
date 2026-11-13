@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "How internal/ packages are organized in a Go project and how errors travel across their boundaries. Use when creating a package under internal/, deciding between domain and layered organization, choosing where to wrap an error, designing a persistence layer, or shaping a config struct that a command fills from flags. Triggers on internal/ package creation, fmt.Errorf wrapping, Store interfaces, JSONStore, handlers/services/models directories, and http.Client construction."
+  "description": "How internal/ packages are organized in a Go project and how errors travel across their boundaries. Use when creating a package under internal/, deciding between domain and layered organization, choosing where to wrap an error, designing a persistence layer, or shaping a config struct that a command fills from flags. Triggers on internal/ package creation, fmt.Errorf wrapping, Store interfaces, JSONStore, handlers/services/models directories, and http.Client construction.",
+  "content_fingerprint": "99b3a871e3091433668e30e297a4afa798f505eca8a4a981d3793c9399f9f909"
 }

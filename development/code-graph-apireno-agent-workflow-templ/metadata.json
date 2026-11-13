@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cross-repo symbol / dependency query over the project's code-graph engine (ADR-001 NAVIGATION) \u2014 navigate object\u2194object across repos by symbol, not grep, and supply the import edges the RACI-validator + derived-UML consume. INTERFACE skill \u2014 it requires the project's code-graph engine to be registered as an MCP server and to expose the fleet-wide cross-repo query contract; until then, it reports the engine is not yet wired."
+  "description": "Cross-repo symbol / dependency query over the project's code-graph engine (ADR-001 NAVIGATION) — navigate object↔object across repos by symbol, not grep, and supply the import edges the RACI-validator + derived-UML consume. INTERFACE skill — it requires the project's code-graph engine to be registered as an MCP server and to expose the fleet-wide cross-repo query contract; until then, it reports the engine is not yet wired.",
+  "content_fingerprint": "4a8d9e008b29d2b1a07aefa365aca071817fc090c15992a651480ffd6ac309f9"
 }

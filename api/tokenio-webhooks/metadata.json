@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Receive and verify Token.io webhooks. Use when setting up Token.io webhook handlers, debugging Ed25519 signature verification, subscribing to webhook config via PUT /webhook/config, or handling open banking / A2A payment events like PAYMENT_STATUS_CHANGED, REFUND_STATUS_CHANGED, VRP_STATUS_CHANGED, and VIRTUAL_ACCOUNT_CREDIT_RECEIVED. Note: Token.io does NOT use HMAC or Standard Webhooks \u2014 it signs the raw body with an ASYMMETRIC Ed25519 signature in the token-signature header, verified with your member's Ed25519 public key."
+  "description": "Receive and verify Token.io webhooks. Use when setting up Token.io webhook handlers, debugging Ed25519 signature verification, subscribing to webhook config via PUT /webhook/config, or handling open banking / A2A payment events like PAYMENT_STATUS_CHANGED, REFUND_STATUS_CHANGED, VRP_STATUS_CHANGED, and VIRTUAL_ACCOUNT_CREDIT_RECEIVED. Note: Token.io does NOT use HMAC or Standard Webhooks — it signs the raw body with an ASYMMETRIC Ed25519 signature in the token-signature header, verified with your member's Ed25519 public key.",
+  "content_fingerprint": "acf8c3791ec07e81abb6b6524e8867545a25d016eef43834024d6249a487a7ef"
 }

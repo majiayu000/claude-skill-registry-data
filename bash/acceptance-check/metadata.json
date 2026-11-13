@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "GitHub issue \u672c\u6587\u306e `## \u53d7\u3051\u5165\u308c\u6761\u4ef6` \u30bb\u30af\u30b7\u30e7\u30f3\u3092\u62bd\u51fa\u3057\u3001repo \u72b6\u614b\u3084 issue \u30b3\u30e1\u30f3\u30c8\u3092\u6839\u62e0\u306b\u5404\u9805\u76ee\u3092 \u2713 / \u2717 / ? \u3067\u5831\u544a\u3059\u308b read-only skill\u3002`issue-implement` \u3068 `issue-investigate` \u306e\u53d7\u3051\u5165\u308c\u6761\u4ef6\u78ba\u8a8d\u3092\u6a19\u6e96\u5316\u3059\u308b\u3002"
+  "description": "GitHub issue 本文の `## 受け入れ条件` セクションを抽出し、repo 状態や issue コメントを根拠に各項目を ✓ / ✗ / ? で報告する read-only skill。`issue-implement` と `issue-investigate` の受け入れ条件確認を標準化する。",
+  "content_fingerprint": "7d12978ebe421824c8fda69f60938d02fc6b5e9323b22f829e22d7b6a6e94c6f"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The post-change validation contract for warp routes \u2014 after any step that changes (or proposes) on-chain state, prove the route's config matches the target via hyperlane warp check. Run a live check when the change already executed (deployer-signed); run a fork-simulate-from-owner check via /warp-route-check when the change is pending multisig/file execution. Referenced by every deploy/update skill that mutates a route."
+  "description": "The post-change validation contract for warp routes — after any step that changes (or proposes) on-chain state, prove the route's config matches the target via hyperlane warp check. Run a live check when the change already executed (deployer-signed); run a fork-simulate-from-owner check via /warp-route-check when the change is pending multisig/file execution. Referenced by every deploy/update skill that mutates a route.",
+  "content_fingerprint": "e25ffc3ce2b8f2b2be0000ae8f3c2de386b1fc5c7542f2324cee33a72f11ad9c"
 }

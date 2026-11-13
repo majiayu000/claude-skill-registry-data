@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Keep the Anthropic prompt cache warm by firing a tiny heartbeat only after N minutes of true session inactivity (any exchange resets the clock), so the next real turn reads the conversation at cached price / cached quota instead of a full uncached re-read. The heartbeat is a background Stop hook this skill registers (asyncRewake) - it re-arms itself after every turn, with no tool calls and no permission prompts. Use when the session may sit idle (training runs, CI, downloads, the user stepping away) longer than the cache TTL. Args - idle threshold in minutes (default 50), optional max hours (default 8), or \"stop\"."
+  "description": "Keep the Anthropic prompt cache warm by firing a tiny heartbeat only after N minutes of true session inactivity (any exchange resets the clock), so the next real turn reads the conversation at cached price / cached quota instead of a full uncached re-read. The heartbeat is a background Stop hook this skill registers (asyncRewake) - it re-arms itself after every turn, with no tool calls and no permission prompts. Use when the session may sit idle (training runs, CI, downloads, the user stepping away) longer than the cache TTL. Args - idle threshold in minutes (default 50), optional max hours (default 8), or \"stop\".",
+  "content_fingerprint": "1ea66c74702a22bd57591c964d12330bbd6947a3a8252ee8000ccd8c60f4c54c"
 }

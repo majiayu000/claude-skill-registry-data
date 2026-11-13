@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5148\u306b\u30de\u30fc\u30b8\u3055\u308c\u305f\u5225\u306e PR \u3068\u885d\u7a81\u3057\u3066\u6b62\u307e\u3063\u305f PR \u306b\u3001\u30c7\u30d5\u30a9\u30eb\u30c8\u30d6\u30e9\u30f3\u30c1\u3092\u53d6\u308a\u8fbc\u3093\u3067\u885d\u7a81\u3092\u89e3\u304d\u3001push \u3057\u76f4\u3059\u3068\u3053\u308d\u307e\u3067\u3092\u4eba\u9593\u3078\u306e\u78ba\u8a8d\u306a\u3057\u306b\u884c\u3046\u3002`npm run auto-programmer` \u304c AI \u5c02\u7528 clone \u306e\u4e2d\u3067\u8d77\u52d5\u3059\u308b\u3002"
+  "description": "先にマージされた別の PR と衝突して止まった PR に、デフォルトブランチを取り込んで衝突を解き、push し直すところまでを人間への確認なしに行う。`npm run auto-programmer` が AI 専用 clone の中で起動する。",
+  "content_fingerprint": "1ce6751cc41dd5cc739fe826193b32bf92db77c3bec2f252f2f611c266569b39"
 }

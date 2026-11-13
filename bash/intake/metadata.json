@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Step 1 of the content pipeline. Use when a raw filmed clip needs to enter the system \u2014 the user drops a camera file and wants a job started, says \"start a new project with this clip\", or \"rough cut this\" names a raw file that has no projects/<job>/ folder yet. Copies (never moves) the raw file into projects/<job>/raw/ and scaffolds the rest of the job folder. Job names are kebab-case titles about the CONTENT, never the camera filename."
+  "description": "Step 1 of the content pipeline. Use when a raw filmed clip needs to enter the system — the user drops a camera file and wants a job started, says \"start a new project with this clip\", or \"rough cut this\" names a raw file that has no projects/<job>/ folder yet. Copies (never moves) the raw file into projects/<job>/raw/ and scaffolds the rest of the job folder. Job names are kebab-case titles about the CONTENT, never the camera filename.",
+  "content_fingerprint": "1cc30ab8c883ea7836c7227e96b58fa33aec2cd401fd4cf2f691a79e534f60af"
 }

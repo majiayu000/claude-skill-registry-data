@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Keeps an agent alive in Mission Control by calling the api.agents.heartbeat mutation every 30-60 seconds. Use this skill when running any agent session: agents that miss heartbeats for 2 minutes get quarantined, and the heartbeat response is how you discover pending tasks, approvals, and budget state."
+  "description": "Keeps an agent alive in Mission Control by calling the api.agents.heartbeat mutation every 30-60 seconds. Use this skill when running any agent session: agents that miss heartbeats for 2 minutes get quarantined, and the heartbeat response is how you discover pending tasks, approvals, and budget state.",
+  "content_fingerprint": "0eb4032b012f54140e2d5ad77c26cc4d7ddbde429a61022b0c3e77b742798a13"
 }

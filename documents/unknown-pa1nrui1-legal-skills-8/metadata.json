@@ -1,7 +1,7 @@
 {
-  "name": "\u6cd5\u5f8b\u6587\u4e66\u51fa\u7a3f\u524d\u5ba1\u67e5",
+  "name": "法律文书出稿前审查",
   "repo": "pa1nrui1/legal-skills",
-  "path": "skills/legal/\u6cd5\u5f8b\u6587\u4e66\u51fa\u7a3f\u524d\u5ba1\u67e5/SKILL.md",
+  "path": "skills/legal/法律文书出稿前审查/SKILL.md",
   "github_branch": "main",
   "category": "documents",
   "source": "github.com/pa1nrui1/legal-skills",
@@ -29,11 +29,12 @@
     }
   },
   "author": "pa1nrui1",
-  "source_url": "https://github.com/pa1nrui1/legal-skills/blob/main/skills/legal/\u6cd5\u5f8b\u6587\u4e66\u51fa\u7a3f\u524d\u5ba1\u67e5/SKILL.md",
+  "source_url": "https://github.com/pa1nrui1/legal-skills/blob/main/skills/legal/法律文书出稿前审查/SKILL.md",
   "license": "NOASSERTION",
-  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pa1nrui1/legal-skills/blob/main/skills/legal/\u6cd5\u5f8b\u6587\u4e66\u51fa\u7a3f\u524d\u5ba1\u67e5/SKILL.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pa1nrui1/legal-skills/blob/main/skills/legal/法律文书出稿前审查/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728\u6cd5\u5f8b\u4e1a\u52a1 Skill \u751f\u6210\u6b63\u6587\u6216\u8981\u7d20\u5f0f\u5b57\u6bb5\u540e\u3001\u6cd5\u5f8b\u6587\u4e66\u6a21\u677f\u4e0e\u5bfc\u51fa\u751f\u6210\u672c\u5730 Word \u524d\u89e6\u53d1\u3002\u7528\u4e8e\u5ba1\u67e5 draft.html/preflight-meta.json \u6216 complaint-data.json/fill-plan.json\u3001\u8bfb\u53d6\u590d\u67e5\u6458\u8981\u3001\u6cd5\u89c4\u6821\u9a8c\u6458\u8981\u3001\u6765\u6e90\u8fb9\u754c\u548c\u7528\u6237\u786e\u8ba4\u8bb0\u5f55\uff0c\u51b3\u5b9a\u662f\u5426\u53ef\u4ee5\u8fdb\u5165\u6b63\u5f0f DOCX \u5bfc\u51fa\uff1b\u53d1\u73b0\u95ee\u9898\u540e\u5fc5\u987b\u95ed\u73af\u63a8\u8fdb\u5230\u4e1a\u52a1 Skill \u6574\u6539\u3001\u7528\u6237\u786e\u8ba4\u6216\u6750\u6599\u8bfb\u53d6\u6d41\u7a0b\u3002"
+  "description": "在法律业务 Skill 生成正文或要素式字段后、法律文书模板与导出生成本地 Word 前触发。用于审查 draft.html/preflight-meta.json 或 complaint-data.json/fill-plan.json、读取复查摘要、法规校验摘要、来源边界和用户确认记录，决定是否可以进入正式 DOCX 导出；发现问题后必须闭环推进到业务 Skill 整改、用户确认或材料读取流程。",
+  "content_fingerprint": "937a4072a28baecdeda264b02a866f130d423b7a64fd6e27413ea83d647c7e69"
 }

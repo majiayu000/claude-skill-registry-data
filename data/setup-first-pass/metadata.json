@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Set up first-pass for a main folder that holds many repos, or for one repo. In a main folder it writes one set of working rules at the root that every session loads, a workspace map, and a section in each repo with that repo's real commands, test limits and invariants, and it lists each repo's own hooks so first-pass can run them from the main folder. In one repo it writes the rules and the section into that repo. Use when asked to set up, install, add, update or re-run first-pass, to \"add the shipping rules\", or when the start-of-session check says something drifted. Re-run to update."
+  "description": "Set up first-pass for a main folder that holds many repos, or for one repo. In a main folder it writes one set of working rules at the root that every session loads, a workspace map, and a section in each repo with that repo's real commands, test limits and invariants, and it lists each repo's own hooks so first-pass can run them from the main folder. In one repo it writes the rules and the section into that repo. Use when asked to set up, install, add, update or re-run first-pass, to \"add the shipping rules\", or when the start-of-session check says something drifted. Re-run to update.",
+  "content_fingerprint": "5622cfa3b6fbad89690523072ace392dd6ba4b1b36dfe818632376031aa24d8a"
 }

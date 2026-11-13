@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Composite skill \u2014 diagnose, repair, and validate a test suite end-to-end. Chains test-health (diagnose) \u2192 config-drift-detect (gate compatibility) \u2192 test-cleanup (prune + add integration tests) \u2192 mutation-test (validate survivors) \u2192 adr-write (capture decisions) \u2192 docs-sync. Use when \"the test suite is bad\" or you've hit the test-cleanup-bails-at-the-gate failure mode."
+  "description": "Composite skill — diagnose, repair, and validate a test suite end-to-end. Chains test-health (diagnose) → config-drift-detect (gate compatibility) → test-cleanup (prune + add integration tests) → mutation-test (validate survivors) → adr-write (capture decisions) → docs-sync. Use when \"the test suite is bad\" or you've hit the test-cleanup-bails-at-the-gate failure mode.",
+  "content_fingerprint": "d5a7b174c98695527e69632a3925a487d3e148201ce833f8167adfe0b74c8f5c"
 }

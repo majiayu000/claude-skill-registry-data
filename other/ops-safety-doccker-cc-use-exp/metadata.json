@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8fd0\u7ef4\u5b89\u5168\u89c4\u8303\u3002\u5f53\u7528\u6237\u6267\u884c\u7cfb\u7edf\u7ea7\u547d\u4ee4\uff08sysctl\u3001iptables\u3001systemctl\u3001Docker \u914d\u7f6e\u3001\u6570\u636e\u5e93 DDL\uff09 \u6216\u8fdb\u884c\u670d\u52a1\u5668\u8fd0\u7ef4\u64cd\u4f5c\u65f6\u89e6\u53d1\u3002 \u5305\u542b\u547d\u4ee4\u98ce\u9669\u8bf4\u660e\u6a21\u677f\u3001\u56de\u6eda\u65b9\u6848\u8981\u6c42\u3001\u95ee\u9898\u6392\u67e5\u539f\u5219\u3001Docker/Cloudflare/\u6570\u636e\u5e93\u573a\u666f\u89c4\u5219\u7b49\u3002"
+  "description": "运维安全规范。当用户执行系统级命令（sysctl、iptables、systemctl、Docker 配置、数据库 DDL） 或进行服务器运维操作时触发。 包含命令风险说明模板、回滚方案要求、问题排查原则、Docker/Cloudflare/数据库场景规则等。",
+  "content_fingerprint": "a4d33afd097eb0f888563799f60d69a2bf7d2235e2a9fbe4e94fa38b1bbeac55"
 }

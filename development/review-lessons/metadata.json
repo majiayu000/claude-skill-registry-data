@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Own .agents/review-lessons.md: record a LOCAL lesson, collect review feedback from the user's own past PRs, and re-evaluate every existing entry so the file stays current without anyone curating it. TRIGGER: from /retro \u2014 always for LOCAL harvest, and for a full collection when the file is missing or its Collected date is over 30 days old. SKIP: a consumer that only needs to read the file, a session with no code and no critique, gh unauthenticated."
+  "description": "Own .agents/review-lessons.md: record a LOCAL lesson, collect review feedback from the user's own past PRs, and re-evaluate every existing entry so the file stays current without anyone curating it. TRIGGER: from /retro — always for LOCAL harvest, and for a full collection when the file is missing or its Collected date is over 30 days old. SKIP: a consumer that only needs to read the file, a session with no code and no critique, gh unauthenticated.",
+  "content_fingerprint": "6eba205cbebef7e0d9e80fa8a8498a4f3518d8ef387589f8f04f2db2ae5bb589"
 }

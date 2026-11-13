@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Windows local privilege escalation from a low-privilege shell to Administrator or SYSTEM. Covers quiet vs loud enumeration, SeImpersonate/Potato family including LocalPotato, token privileges (SeBackup/SeRestore/SeManageVolume/SeLoadDriver/SeDebug), service/DLL/COM/scheduled-task abuse, AlwaysInstallElevated and UAC boundary, KrbRelayUp-style domain-joined local admin, and version-gated kernel LPE. Use when the operator already has a Windows foothold and needs local SYSTEM. Endpoint blocks hand off to /edr-bypass then return here."
+  "description": "Windows local privilege escalation from a low-privilege shell to Administrator or SYSTEM. Covers quiet vs loud enumeration, SeImpersonate/Potato family including LocalPotato, token privileges (SeBackup/SeRestore/SeManageVolume/SeLoadDriver/SeDebug), service/DLL/COM/scheduled-task abuse, AlwaysInstallElevated and UAC boundary, KrbRelayUp-style domain-joined local admin, and version-gated kernel LPE. Use when the operator already has a Windows foothold and needs local SYSTEM. Endpoint blocks hand off to /edr-bypass then return here.",
+  "content_fingerprint": "5450e9cc4e99c6810364f9cd700a06f11de472b73e1411adc86be2a743111d82"
 }

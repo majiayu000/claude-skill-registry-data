@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MUST be loaded before producing any answer about Vulcan, Phoenix DEX, Phoenix perpetuals, Solana perps, the `vulcan` CLI/MCP, or agent-based trading workflows. Single entry-point: contains the runtime contract pointer, the non-negotiable safety rules, the focused-skill router, and the live-launch preflight gate. Answers given without loading this skill have produced wrong commands, wrong wallet selection, and unsafe live trades. Load on the FIRST turn the topic appears in a conversation and re-load on any session restart."
+  "description": "MUST be loaded before producing any answer about Vulcan, Phoenix DEX, Phoenix perpetuals, Solana perps, the `vulcan` CLI/MCP, or agent-based trading workflows. Single entry-point: contains the runtime contract pointer, the non-negotiable safety rules, the focused-skill router, and the live-launch preflight gate. Answers given without loading this skill have produced wrong commands, wrong wallet selection, and unsafe live trades. Load on the FIRST turn the topic appears in a conversation and re-load on any session restart.",
+  "content_fingerprint": "0f0c6c4d7c4425c1de3926c6837d1200a39408a728ececdc359314fe4098b5f2"
 }

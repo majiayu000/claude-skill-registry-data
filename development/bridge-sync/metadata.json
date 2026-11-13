@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when updating, editing, deploying, or reconciling an app that exists in BOTH your local workspace and a VPS (e.g. MyApp) and a peer Claude Code runs on the VPS. HYBRID model \u2014 the two instances coordinate over Claude's built-in Remote Control (SendMessage), and code moves over git (preferred) or rsync. Before changing either side they exchange current state, discuss the diff, converge on the single best version, apply on both, and verify. Triggers on \"update <app> on the VPS\", \"sync local and VPS\", \"deploy MyApp\", \"what's on the VPS\", \"reconcile the two copies\"."
+  "description": "Use when updating, editing, deploying, or reconciling an app that exists in BOTH your local workspace and a VPS (e.g. MyApp) and a peer Claude Code runs on the VPS. HYBRID model — the two instances coordinate over Claude's built-in Remote Control (SendMessage), and code moves over git (preferred) or rsync. Before changing either side they exchange current state, discuss the diff, converge on the single best version, apply on both, and verify. Triggers on \"update <app> on the VPS\", \"sync local and VPS\", \"deploy MyApp\", \"what's on the VPS\", \"reconcile the two copies\".",
+  "content_fingerprint": "2bc940c0ed081dffd06a7cb3b7c64661f12c0e2aa437acf6fbdb7e9a10cf2a38"
 }

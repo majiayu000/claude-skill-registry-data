@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Nh\u1eadn v\u00e0 x\u1eed l\u00fd 1 task inbox c\u1ee5 th\u1ec3 theo ID: \u0111\u1ecdc m\u00f4 t\u1ea3 (FE y\u00eau c\u1ea7u) + ph\u1ea3n h\u1ed3i (BE result) \u2192 so s\u00e1nh BE fix \u0111\u1ee7 ch\u01b0a \u2192 test API (test-api) \u2192 implement code FE \u2192 test UI (Playwright) \u2192 b\u00e1o c\u00e1o ho\u00e0n th\u00e0nh. D\u00f9ng khi: user \u0111\u01b0a ID task inbox, \"l\u00e0m task inbox #xxx\". KH\u00d4NG d\u00f9ng \u0111\u1ec3 check inbox h\u00e0ng lo\u1ea1t \u2014 d\u00f9ng inbox-check cho vi\u1ec7c \u0111\u00f3."
+  "description": "Nhận và xử lý 1 task inbox cụ thể theo ID: đọc mô tả (FE yêu cầu) + phản hồi (BE result) → so sánh BE fix đủ chưa → test API (test-api) → implement code FE → test UI (Playwright) → báo cáo hoàn thành. Dùng khi: user đưa ID task inbox, \"làm task inbox #xxx\". KHÔNG dùng để check inbox hàng loạt — dùng inbox-check cho việc đó.",
+  "content_fingerprint": "0f774f1ed203b421d104f4253c94552afdc566aa4ed3b82ab831ab04b6b241ac"
 }

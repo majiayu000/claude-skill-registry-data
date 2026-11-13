@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "HTTP/Web exploitation until a server shell or equivalent OS execution. Use after /web-recon has mapped the application. Covers injection, upload, LFI, SSRF/XXE, SSTI, deserialization, JWT/SAML, API logic, desync/cache/parser, and Web-controlled backend abuse. WAF stays here. Endpoint blocks after OS execution hand off to /edr-bypass then return. Direct non-HTTP service ports belong to /recon or /service-attack."
+  "description": "HTTP/Web exploitation until a server shell or equivalent OS execution. Use after /web-recon has mapped the application. Covers injection, upload, LFI, SSRF/XXE, SSTI, deserialization, JWT/SAML, API logic, desync/cache/parser, and Web-controlled backend abuse. WAF stays here. Endpoint blocks after OS execution hand off to /edr-bypass then return. Direct non-HTTP service ports belong to /recon or /service-attack.",
+  "content_fingerprint": "60262bfc041c096f4448f6af50122d6c1db5b55a6cfb3d2ca67d168ae7f177aa"
 }

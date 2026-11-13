@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Import raw data (CSV, XLSX, TXT, or MATLAB tables) into formats used by Sensor Fusion and Tracking Toolbox. Handles both ground truth trajectories and sensor detection data. For truth: builds trackingScenarioRecording, tuning timetable, truthlog, or converted table. For sensor data: builds task-oriented dataFormat structs (preferred) or objectDetection arrays (legacy). Use when importing flight logs, GPS logs, radar detections, IR measurements, lidar/camera bounding boxes, ADS-B data, AIS ship tracks, or any recorded data for use with trackers, filter tuning, or tracker evaluation."
+  "description": "Import raw data (CSV, XLSX, TXT, or MATLAB tables) into formats used by Sensor Fusion and Tracking Toolbox. Handles both ground truth trajectories and sensor detection data. For truth: builds trackingScenarioRecording, tuning timetable, truthlog, or converted table. For sensor data: builds task-oriented dataFormat structs (preferred) or objectDetection arrays (legacy). Use when importing flight logs, GPS logs, radar detections, IR measurements, lidar/camera bounding boxes, ADS-B data, AIS ship tracks, or any recorded data for use with trackers, filter tuning, or tracker evaluation.",
+  "content_fingerprint": "84b9b63737d7e07a82fee863b7004623e38c39594af1dbcbd852b2fab5cec673"
 }

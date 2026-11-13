@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Git-Fg/meta-plugin-manager/blob/main/.claude/commands/factory/skill.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "2dc8459ad660ea207c05418161d8ebe0981eca0af33dd0124f2533956cce5208",
+  "description": "Create a skill with automatic quality validation. Uses Manager Pattern: Task creates → Forked Skill audits → Retry if needed. Arguments: skill_name, description, skills_to_load (optional)."
 }

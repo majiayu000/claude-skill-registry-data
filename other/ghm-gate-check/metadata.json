@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Validates gate criteria before PRD lifecycle advancement by delegating to the readiness scoring pipeline (scripts/readiness.py). Returns a graduated PASS / WARN / BLOCK verdict with top blockers and their causal chain. Triggers before advancing from v0.X to v0.Y or explicit `/ghm-gate-check`."
+  "description": "Validates gate criteria before PRD lifecycle advancement by delegating to the readiness scoring pipeline (scripts/readiness.py). Returns a graduated PASS / WARN / BLOCK verdict with top blockers and their causal chain. Triggers before advancing from v0.X to v0.Y or explicit `/ghm-gate-check`.",
+  "content_fingerprint": "eafd51b0001f65cc8e623b1c01b82b6bda18659a1a996ec060bd3b9994df19ce"
 }

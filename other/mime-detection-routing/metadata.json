@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MIME type detection and extractor routing in core/mime.rs \u2014 the FORMATS registry that EXT_TO_MIME and SUPPORTED_MIME_TYPES are derived from, the path-based and bytes-based detection functions, priority-based registry selection, wildcard MIME families, and the real procedure for adding a format. Load when adding a format, wiring an extractor to a MIME type, or debugging why a file routes to the wrong (or no) extractor."
+  "description": "MIME type detection and extractor routing in core/mime.rs — the FORMATS registry that EXT_TO_MIME and SUPPORTED_MIME_TYPES are derived from, the path-based and bytes-based detection functions, priority-based registry selection, wildcard MIME families, and the real procedure for adding a format. Load when adding a format, wiring an extractor to a MIME type, or debugging why a file routes to the wrong (or no) extractor.",
+  "content_fingerprint": "00eb65f71c56e39794ec6775ea969cf87602a3b46a5ed11bd3161f3eb9f3e7ea"
 }

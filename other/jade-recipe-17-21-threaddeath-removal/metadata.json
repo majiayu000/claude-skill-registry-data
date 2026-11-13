@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Removes the catch of java.lang.ThreadDeath, which JDK 20 deprecated for removal after making Thread.stop() throw UnsupportedOperationException. Agent-mode recipe: the shard contract names the file; this document defines the transform and what must be preserved."
+  "description": "Removes the catch of java.lang.ThreadDeath, which JDK 20 deprecated for removal after making Thread.stop() throw UnsupportedOperationException. Agent-mode recipe: the shard contract names the file; this document defines the transform and what must be preserved.",
+  "content_fingerprint": "54141ddff32264ef054adc2ab2140593c00ae5dc1b74aebc353419e1fa5dfd73"
 }

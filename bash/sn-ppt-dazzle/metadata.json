@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u9700\u8981\u628a\u6f14\u793a / \u5e7b\u706f\u7247 / PPT / slides \u505a\u6210\u5355\u6587\u4ef6 HTML \u52a8\u6001 deck\uff08\u52a8\u6548\u3001\u8de8\u9875\u8fc7\u6e21\u3001\u952e\u76d8\u7ffb\u9875\u30011280\u00d7720\uff09\u65f6\u4f7f\u7528\u3002\u672c skill \u975e\u5165\u53e3\uff1a\u4f7f\u7528\u524d\u5fc5\u987b\u5148\u786e\u8ba4 sn-ppt-entry \u4e0e sn-ppt-story \u4e24\u4e2a\u524d\u7f6e skill \u53ef\u7528\uff0c\u4f9d\u6b21\u6267\u884c entry\uff08\u5efa DECK_DIR / task_pack.json\uff09\u2192 story\uff08\u751f\u6210 outline.md\uff09\u5b8c\u6210\u540e\u624d\u53ef\u5f00\u59cb\uff1b\u524d\u7f6e\u7f3a\u5931\u6216\u672a\u5b8c\u6210\u65f6\u505c\u6b62\u5e76\u56de\u62a5\uff0c\u4e25\u7981\u7ed5\u8fc7\uff08\u5982\u6539\u7528\u751f\u56fe+\u624b\u5199 HTML \u7b49\u65b9\u5f0f\uff09\u3002"
+  "description": "需要把演示 / 幻灯片 / PPT / slides 做成单文件 HTML 动态 deck（动效、跨页过渡、键盘翻页、1280×720）时使用。本 skill 非入口：使用前必须先确认 sn-ppt-entry 与 sn-ppt-story 两个前置 skill 可用，依次执行 entry（建 DECK_DIR / task_pack.json）→ story（生成 outline.md）完成后才可开始；前置缺失或未完成时停止并回报，严禁绕过（如改用生图+手写 HTML 等方式）。",
+  "content_fingerprint": "8d566c78f8ffddf83191b1dd1d9ea50a42922e9fa2354204c8df5b612cd0b8c1"
 }

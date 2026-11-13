@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Drive CI with `odu` \u2014 one shared service, reached from a terminal (`odu surface`), from an agent (`odu mcp`), or from a browser. Trigger when the user asks to \"run CI\", \"run the pipeline\", \"re-run a check\", to run named lanes or recipes (e.g. \"run fmt and nix\", \"just the e2e lane\", bare selectors like `fmt`/`nix`/`e2e`), or names a recipe by `<recipe>@<platform>`. This skill \u2014 not a repo's local `just ci` / `just <recipe>` \u2014 is how an odu-run request is served, whichever face you are on."
+  "description": "Drive CI with `odu` — one shared service, reached from a terminal (`odu surface`), from an agent (`odu mcp`), or from a browser. Trigger when the user asks to \"run CI\", \"run the pipeline\", \"re-run a check\", to run named lanes or recipes (e.g. \"run fmt and nix\", \"just the e2e lane\", bare selectors like `fmt`/`nix`/`e2e`), or names a recipe by `<recipe>@<platform>`. This skill — not a repo's local `just ci` / `just <recipe>` — is how an odu-run request is served, whichever face you are on.",
+  "content_fingerprint": "996f85394cb440ad150a16875bf8828f920d086f1b481a33b256ca70826d1e28"
 }

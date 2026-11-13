@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prevents private infrastructure details (node hostnames, internal project names, local usernames and personal emails, absolute home paths, private and VPN IP ranges) from leaking into public repositories through commits, PRs, docs or release artifacts. Use when working in a public or soon-to-be-public repo, before commits or releases, when writing deployment docs for an OSS project, or when the user asks to \"set up the privacy guard\", \"install privacy-guard\", \"check for leaks\", \"protect this public repo\". Bootstraps a pre-commit hook backed by a gitignored local denylist plus gitleaks."
+  "description": "Prevents private infrastructure details (node hostnames, internal project names, local usernames and personal emails, absolute home paths, private and VPN IP ranges) from leaking into public repositories through commits, PRs, docs or release artifacts. Use when working in a public or soon-to-be-public repo, before commits or releases, when writing deployment docs for an OSS project, or when the user asks to \"set up the privacy guard\", \"install privacy-guard\", \"check for leaks\", \"protect this public repo\". Bootstraps a pre-commit hook backed by a gitignored local denylist plus gitleaks.",
+  "content_fingerprint": "d6877309e450abf20737ae67ad5dbce5507f391b05cfa49fe14b35458bf0fa75"
 }

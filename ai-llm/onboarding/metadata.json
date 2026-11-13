@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "First-run onboarding \u2014 guides new users through Genesis setup on their first CC session. Configures user profile, essential API keys, Telegram, GitHub backup, and service verification. Triggered automatically while the install is not yet FUNCTIONAL (the setup floor \u2014 Claude Code login + an LLM key + an embedding key \u2014 is unmet), not merely while ~/.genesis/setup-complete is absent. Re-runnable by asking Genesis to \"run setup\" or \"reconfigure [section]\"."
+  "description": "First-run onboarding — guides new users through Genesis setup on their first CC session. Configures user profile, essential API keys, Telegram, GitHub backup, and service verification. Triggered automatically while the install is not yet FUNCTIONAL (the setup floor — Claude Code login + an LLM key + an embedding key — is unmet), not merely while ~/.genesis/setup-complete is absent. Re-runnable by asking Genesis to \"run setup\" or \"reconfigure [section]\".",
+  "content_fingerprint": "1c30ffaa21f66e09bd810236edfaf1e66850933d5603999c18130e8dfcffc750"
 }

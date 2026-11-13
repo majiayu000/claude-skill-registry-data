@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run a GEPA learning cycle via `metaharness learn` (upstream ADR-235, metaharness@0.3.0) \u2014 optimizes a harness genome against a SWE-bench-style slice manifest. $0 dry-run by default; `--run` is the explicit spend opt-in. Requires a metaharness repo checkout (`--repo` or $METAHARNESS_REPO) \u2014 without one it reports `checkout-required` with clone instructions. Degrades gracefully when metaharness is absent."
+  "description": "Run a GEPA learning cycle via `metaharness learn` (upstream ADR-235, metaharness@0.3.0) — optimizes a harness genome against a SWE-bench-style slice manifest. $0 dry-run by default; `--run` is the explicit spend opt-in. Requires a metaharness repo checkout (`--repo` or $METAHARNESS_REPO) — without one it reports `checkout-required` with clone instructions. Degrades gracefully when metaharness is absent.",
+  "content_fingerprint": "91649104bed3f89734ef6d2f1963a08eea1360ca61c8d73e5b8d3c100a21c761"
 }

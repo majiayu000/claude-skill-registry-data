@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "api/\uff08FastAPI / Python 3.13\uff09\u5b9f\u88c5\u6642\u306b\u5b88\u308b\u898f\u7d04\u3068\u691c\u8a3c\u624b\u9806\u3002\u30b9\u30af\u30ea\u30fc\u30ca\u30fc\u30fb\u30c1\u30e3\u30c3\u30c8\u30fbJobs\u30fbLLM\u30d7\u30ed\u30d0\u30a4\u30c0\u7b49\u306e\u30b5\u30fc\u30d3\u30b9\u5c64\u5b9f\u88c5\u6642\u306b\u5fc5\u305a\u4f7f\u3046\u3002LangGraph\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\uff08api/app/services/agents/\uff09\u306e\u30b0\u30e9\u30d5\u30fb\u30ce\u30fc\u30c9\u8a2d\u8a08\u306f langgraph-agent-design \u30b9\u30ad\u30eb\u3092\u4f7f\u3046\u3002"
+  "description": "api/（FastAPI / Python 3.13）実装時に守る規約と検証手順。スクリーナー・チャット・Jobs・LLMプロバイダ等のサービス層実装時に必ず使う。LangGraphエージェント（api/app/services/agents/）のグラフ・ノード設計は langgraph-agent-design スキルを使う。",
+  "content_fingerprint": "f3aa439d4c42b4b692c84374bfd8602fda40ff675511642b40eae13623402489"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u901a\u8fc7 ClinicalTrials.gov API v2 \u5b9e\u65f6\u68c0\u7d22\u5b98\u65b9\u4e34\u5e8a\u8bd5\u9a8c\u6ce8\u518c\u6570\u636e\u3002\u89e6\u53d1\u8bcd\u5305\u62ec ClinicalTrials.gov\u3001\u4e34\u5e8a\u8bd5\u9a8c\u3001NCT\u3001\u8bd5\u9a8c\u6ce8\u518c\u3001\u62db\u52df\u72b6\u6001\u3001phase 1/2/3\u3001RCT lookup\u3001interventional trial\u3001observational study\u3002\u4e13\u6ce8\u5b9e\u65f6\u5355\u6b21\u67e5\u8be2(\u22641000 \u6761/\u8bf7\u6c42),\u9002\u5408\"\u67d0\u8bd5\u9a8c\u6700\u65b0\u72b6\u6001/\u62db\u52df\u4fe1\u606f/\u4e3b\u6b21\u8981\u7ec8\u70b9\"\u573a\u666f\u3002\u6279\u91cf\u5386\u53f2\u5206\u6790\u8bf7\u7528 aact-bulk-trials,\u6587\u732e\u68c0\u7d22\u7528 pubmed-search/europepmc\u3002"
+  "description": "通过 ClinicalTrials.gov API v2 实时检索官方临床试验注册数据。触发词包括 ClinicalTrials.gov、临床试验、NCT、试验注册、招募状态、phase 1/2/3、RCT lookup、interventional trial、observational study。专注实时单次查询(≤1000 条/请求),适合\"某试验最新状态/招募信息/主次要终点\"场景。批量历史分析请用 aact-bulk-trials,文献检索用 pubmed-search/europepmc。",
+  "content_fingerprint": "194d06ad1be7fc0eb8661af363d613c15f04d6c17c19c8052d080905d2160d94"
 }

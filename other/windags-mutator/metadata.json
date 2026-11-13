@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Failure diagnosis, DAG mutation, and escalation engine for the WinDAGs meta-DAG. Receives failure information and quality vectors from the Evaluator. Classifies failures on four dimensions. Follows a five-level escalation ladder. Applies seven mutation types with saga compensation. Enforces BC-EXEC-002, BC-EXEC-003, BC-FAIL-002, BC-FAIL-005. Activate when operating as the Mutator role in the meta-DAG, when diagnosing node failures, when restructuring a DAG at runtime, or when deciding escalation level."
+  "description": "Failure diagnosis, DAG mutation, and escalation engine for the WinDAGs meta-DAG. Receives failure information and quality vectors from the Evaluator. Classifies failures on four dimensions. Follows a five-level escalation ladder. Applies seven mutation types with saga compensation. Enforces BC-EXEC-002, BC-EXEC-003, BC-FAIL-002, BC-FAIL-005. Activate when operating as the Mutator role in the meta-DAG, when diagnosing node failures, when restructuring a DAG at runtime, or when deciding escalation level.",
+  "content_fingerprint": "915b6fa62c6ed6b5b717f2ed623b2dc583cf273bbf8024ecdd2a3b0baa463143"
 }

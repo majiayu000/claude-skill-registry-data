@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/aaronjoeldev/cashlytics-ai/blob/main/.claude/skills/sync-demo-seeder/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c79e08cadfce293dffaa774e7a18a9f4b219196d660a17e6503dc90085d45dac",
+  "description": "Synchronizes scripts/seed-demo.sql with the current Drizzle schema and migrations. Use this skill whenever a new migration is added or src/lib/db/schema.ts changes, to keep the demo dataset consistent"
 }

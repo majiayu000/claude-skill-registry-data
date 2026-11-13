@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Test horizontal and vertical authorization bypass via session ID swapping between accounts, IDOR through parameter manipulation (invoice=, user=, menuitem=, EventID=), and special header injection (X-Original-URL, X-Rewrite-URL, X-Forwarded-For, X-Remote-IP, X-Client-IP with 127.0.0.1/localhost/RFC1918 values). Tools: Burp Suite with Autorize/AuthMatrix extensions, OWASP ZAP Access Control Testing add-on."
+  "description": "Test horizontal and vertical authorization bypass via session ID swapping between accounts, IDOR through parameter manipulation (invoice=, user=, menuitem=, EventID=), and special header injection (X-Original-URL, X-Rewrite-URL, X-Forwarded-For, X-Remote-IP, X-Client-IP with 127.0.0.1/localhost/RFC1918 values). Tools: Burp Suite with Autorize/AuthMatrix extensions, OWASP ZAP Access Control Testing add-on.",
+  "content_fingerprint": "e10a56195a6c0afd582db8d9f3cc0214b4cfedd3d08e173d3f40aeb1aeea6773"
 }

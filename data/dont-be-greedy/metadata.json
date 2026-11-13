@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ElliotJLT/Claude-Skill-Potions/blob/main/skills/dont-be-greedy/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a877359e923d9685ce3194b278894d9acd606c95f753f19e78bb56647d5c3a98",
+  "description": "When a user uploads or references a data file (CSV, JSON, XLSX, TXT, LOG) or any\nfile larger than 100KB, immediately estimate token cost using scripts/estimate_size.py.\nIf >30k tokens, chunk the file "
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u56fa\u4ef6\u63a5\u53e3 / \u7cfb\u7edf-\u56fa\u4ef6\u63a5\u53e3 / UEFI/BIOS \u8c03\u3002\u7528\u6237\u63d0\u5230\u8fd9\u4e9b\u8bcd\u65f6\u4f7f\u7528\u672c\u6280\u80fd\u3002 \u573a\u666f\uff1a\u5bf9\u7167\uff1a\u56fa\u4ef6\u63a5\u53e3\u2014\u2014UEFI \u670d\u52a1\uff08\u65f6\u95f4/\u91cd\u542f/\u542f\u52a8\u8bbe\u5907\uff09\u3002 \u3010\u4e0d\u9002\u7528\u3011Not for \u4ee5\u4e0b\u573a\u666f\uff1acall \u975e {get_time, reboot, set_boot} \u65f6"
+  "description": "固件接口 / 系统-固件接口 / UEFI/BIOS 调。用户提到这些词时使用本技能。 场景：对照：固件接口——UEFI 服务（时间/重启/启动设备）。 【不适用】Not for 以下场景：call 非 {get_time, reboot, set_boot} 时",
+  "content_fingerprint": "e5cd9c81270a6634fe7c98e7f6dcd9def45963162a70e2fe3d12e3561bbf05a3"
 }

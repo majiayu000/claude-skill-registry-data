@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Amazon SQS managed message queue service. Covers standard and FIFO queues,\ndead-letter queues, and integration patterns. Use for AWS-native\nserverless and microservices architectures.\n\nUSE WHEN: user mentions \"sqs\", \"aws queues\", \"fifo queue\", \"lambda trigger\", \"sns to sqs\", asks about \"aws messaging\", \"serverless queues\", \"standard queue\", \"visibility timeout\"\n\nDO NOT USE FOR: event streaming - use `kafka` or AWS Kinesis; Azure-native - use `azure-service-bus`; GCP-native - use `google-pubsub`; on-premise - use `rabbitmq` or `activemq`; complex routing - use `rabbitmq`"
+  "description": "Amazon SQS managed message queue service. Covers standard and FIFO queues,\ndead-letter queues, and integration patterns. Use for AWS-native\nserverless and microservices architectures.\n\nUSE WHEN: user mentions \"sqs\", \"aws queues\", \"fifo queue\", \"lambda trigger\", \"sns to sqs\", asks about \"aws messaging\", \"serverless queues\", \"standard queue\", \"visibility timeout\"\n\nDO NOT USE FOR: event streaming - use `kafka` or AWS Kinesis; Azure-native - use `azure-service-bus`; GCP-native - use `google-pubsub`; on-premise - use `rabbitmq` or `activemq`; complex routing - use `rabbitmq`",
+  "content_fingerprint": "5f0b0a1784248f8b210288a21f460ae28758e57f3f32a7f66fad239c98209b00"
 }

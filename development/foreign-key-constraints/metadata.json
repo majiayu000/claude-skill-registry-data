@@ -14,5 +14,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/daishiman/AIWorkflowOrchestrator/blob/main/docs/99-claude/skills/foreign-key-constraints/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "af9bbbb20e97027a51a9f6a581c84eb336463f6e78a1f7f18a69e89dd1a8fad0",
+  "description": "外部キー制約と参照整合性をC.J. Dateの理論に基づいて設計するスキル。CASCADE動作の戦略的選択、循環参照の検出・解消、ソフトデリート整合性を提供。SQLite/Turso + Drizzle ORM環境に最適化。\n\nAnchors:\n• An Introduction to Database Systems（C.J. Date） / 適用: FK設計 / 目的: 理論的に正しい制約設計"
 }

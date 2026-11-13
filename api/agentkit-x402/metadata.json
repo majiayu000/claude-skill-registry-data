@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill when you receive a 402 Payment Required response that contains an `agentkit` extension. Covers checking 402 responses for the AgentKit extension before paying, constructing and signing a CAIP-122 challenge (SIWE for EVM, SIWS for Solana), sending the signed `agentkit` HTTP header, and interpreting access modes (free, free-trial, discount). Supports both EOA wallets (EIP-191) and Smart Contract Wallets (ERC-1271, e.g. Coinbase Smart Wallet, Safe)."
+  "description": "Use this skill when you receive a 402 Payment Required response that contains an `agentkit` extension. Covers checking 402 responses for the AgentKit extension before paying, constructing and signing a CAIP-122 challenge (SIWE for EVM, SIWS for Solana), sending the signed `agentkit` HTTP header, and interpreting access modes (free, free-trial, discount). Supports both EOA wallets (EIP-191) and Smart Contract Wallets (ERC-1271, e.g. Coinbase Smart Wallet, Safe).",
+  "content_fingerprint": "d738d72edd59adfeed1402acc685e94b7576f2247043ab3ac088f436e08bed05"
 }

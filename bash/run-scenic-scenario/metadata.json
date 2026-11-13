@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs Scenic probabilistic scenarios against a running CARLA server with the `scenic FILE --simulate --2d` CLI \u2014 the carlaChallenge1-10 traffic scenarios shipped by ScenarioRunner (`model srunner.scenic.models.model`) and by Scenic itself (`model scenic.simulators.carla.model`) \u2014 bounding the run, sampling scenes headlessly first to tell a map problem from a syntax problem, and restoring the world afterwards. Use when the user asks to \"run a Scenic scenario\", \"run carlaChallenge\", \"test a .scenic file\", \"scenic --simulate\", or reports a Scenic scenario that rejects every sample or cannot find blueprints."
+  "description": "Runs Scenic probabilistic scenarios against a running CARLA server with the `scenic FILE --simulate --2d` CLI — the carlaChallenge1-10 traffic scenarios shipped by ScenarioRunner (`model srunner.scenic.models.model`) and by Scenic itself (`model scenic.simulators.carla.model`) — bounding the run, sampling scenes headlessly first to tell a map problem from a syntax problem, and restoring the world afterwards. Use when the user asks to \"run a Scenic scenario\", \"run carlaChallenge\", \"test a .scenic file\", \"scenic --simulate\", or reports a Scenic scenario that rejects every sample or cannot find blueprints.",
+  "content_fingerprint": "813b75bfd00d955bbde0bfb44aacfa45d4faa9bacd88e0448ebea878208f0325"
 }

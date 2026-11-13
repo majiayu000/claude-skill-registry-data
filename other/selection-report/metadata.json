@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Write output/<slug>/_selection.json for a source \u2014 the shipped shorts (scores + rationale from segments.raw.json, linked to their delivered filename) ALONGSIDE the considered-not-shipped RLM candidate menu (candidates.hint.json, each marked picked/unused) and the topic list (topics.json). Deterministic, no Claude, idempotent, non-fatal. Runs once at end of run AND standalone over the whole output/ backlog. Answers \"show me the other arguments alongside the shorts\"."
+  "description": "Write output/<slug>/_selection.json for a source — the shipped shorts (scores + rationale from segments.raw.json, linked to their delivered filename) ALONGSIDE the considered-not-shipped RLM candidate menu (candidates.hint.json, each marked picked/unused) and the topic list (topics.json). Deterministic, no Claude, idempotent, non-fatal. Runs once at end of run AND standalone over the whole output/ backlog. Answers \"show me the other arguments alongside the shorts\".",
+  "content_fingerprint": "81f13e62a542a0b8b0ac3a63672907ba5bfbcd68b734c286925b1f3d388fc83e"
 }

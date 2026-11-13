@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "K8s \u8282\u70b9\u8d44\u6e90\u538b\u529b\u6392\u67e5\u3002CPU/Memory/Disk/PID Pressure \u5168\u94fe\u8bca\u65ad\uff1a kubectl top \u2192 describe node \u2192 conditions \u2192 eviction events \u2192 \u8c03\u5ea6\u5206\u6790\uff0c \u8f93\u51fa\u7ed3\u6784\u5316\u62a5\u544a\u4e0e\u7f13\u89e3\u5efa\u8bae\u3002"
+  "description": "K8s 节点资源压力排查。CPU/Memory/Disk/PID Pressure 全链诊断： kubectl top → describe node → conditions → eviction events → 调度分析， 输出结构化报告与缓解建议。",
+  "content_fingerprint": "adf5412c4f760d419ea871c063e8490e820e1d206127e4bda63bfa3ec8202250"
 }

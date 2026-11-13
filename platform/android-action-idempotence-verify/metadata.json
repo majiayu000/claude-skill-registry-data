@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prove an Android/Compose action that mints or spends (complete session, claim reward, collect currency, roll gacha, submit payment) cannot double-pay or crash when tapped twice \u2014 covers the invariant-by-throw trap where the repository refuses correctly but the ViewModel launches it uncaught, the concurrent-callers test that a sequential test misses, and why one lucky device tap proves nothing. Use when auditing economy/mutating actions, or before claiming a button is safe to press twice."
+  "description": "Prove an Android/Compose action that mints or spends (complete session, claim reward, collect currency, roll gacha, submit payment) cannot double-pay or crash when tapped twice — covers the invariant-by-throw trap where the repository refuses correctly but the ViewModel launches it uncaught, the concurrent-callers test that a sequential test misses, and why one lucky device tap proves nothing. Use when auditing economy/mutating actions, or before claiming a button is safe to press twice.",
+  "content_fingerprint": "78721e446d25228e6b93c8f253ca4b210e3ccce3c7c49a8864197f69c53488a5"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Coder-agent working-file budget discipline: keep the editable working set (files you /add into writable context) under ~25k tokens, separate \"read\" from \"edit\", delegate breadth to a read-only repo-map, and drop files once edited. Use when an LLM coder-agent edits multiple files, when the working set must stay focused, or when the model starts editing the wrong file / missing targets because too much context dilutes attention. Search keywords: context window full, agent edits wrong file, too much context, /add /drop files, working file budget, context dilution, lost in the middle."
+  "description": "Coder-agent working-file budget discipline: keep the editable working set (files you /add into writable context) under ~25k tokens, separate \"read\" from \"edit\", delegate breadth to a read-only repo-map, and drop files once edited. Use when an LLM coder-agent edits multiple files, when the working set must stay focused, or when the model starts editing the wrong file / missing targets because too much context dilutes attention. Search keywords: context window full, agent edits wrong file, too much context, /add /drop files, working file budget, context dilution, lost in the middle.",
+  "content_fingerprint": "2ee13bf9ee2b639173d171a512c0b7bcc918141cb08eca4417be2e71ade67dd8"
 }

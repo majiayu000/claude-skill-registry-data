@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jimmy-Jung/claude_symbiote/blob/main/.claude/skills/doctor/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a14bf96aaaad5174705e2b3818b6b4bc02b3250d3e1ff58698db476413948f6e",
+  "description": ".claude 설정의 자기 진단 도구. 에이전트/스킬 파일 존재, Hook 실행 권한, 깨진 경로 참조, 사용 추적 상태, 교차 참조 정합성을 자동으로 검사하고 수정을 제안합니다. Use when diagnosing configuration issues, after setup, or when something isn't working correctly."
 }

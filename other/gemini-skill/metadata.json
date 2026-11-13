@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u901a\u8fc7 Gemini \u5b98\u7f51\uff08gemini.google.com\uff09\u6267\u884c\u751f\u56fe\u3001\u5bf9\u8bdd\u7b49\u64cd\u4f5c\u3002\u7528\u6237\u63d0\u5230\"\u751f\u56fe/\u753b\u56fe/\u7ed8\u56fe/nano banana/nanobanana/\u751f\u6210\u56fe\u7247\"\u7b49\u5173\u952e\u8bcd\u65f6\u89e6\u53d1\u3002\u64cd\u4f5c\u65b9\u5f0f\u5206\u4e09\u7ea7\u4f18\u5148\u7ea7\uff1a\u9996\u9009 MCP \u5de5\u5177 \u2192 \u6b21\u9009 Skill \u811a\u672c \u2192 \u6700\u6b21\u8fde\u63a5 Skill \u6d4f\u89c8\u5668\u624b\u52a8\u64cd\u4f5c\uff08\u9700\u7528\u6237\u6388\u6743\uff09\u3002\u7981\u6b62\u81ea\u884c\u542f\u52a8\u5916\u90e8\u6d4f\u89c8\u5668\u8bbf\u95ee Gemini\u3002"
+  "description": "通过 Gemini 官网（gemini.google.com）执行生图、对话等操作。用户提到\"生图/画图/绘图/nano banana/nanobanana/生成图片\"等关键词时触发。操作方式分三级优先级：首选 MCP 工具 → 次选 Skill 脚本 → 最次连接 Skill 浏览器手动操作（需用户授权）。禁止自行启动外部浏览器访问 Gemini。",
+  "content_fingerprint": "ebaf30579735660cfc9d3779d9a6e9b5f5c39e8761e5d493be997a1cf935aa39"
 }

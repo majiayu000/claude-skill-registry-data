@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Traces nets, inspects vias and metal-layer usage, and detects shorts, opens, and route conflicts using the DesignContext grid router and internal connectivity checker. Use when a route failed, a net looks shorted or open, or you need to verify physical connectivity against the SPICE netlist before external DRC/LVS signoff. Do not use it to change the router implementation or to run external Magic/netgen signoff \u2014 that is mbg-ic-verify."
+  "description": "Traces nets, inspects vias and metal-layer usage, and detects shorts, opens, and route conflicts using the DesignContext grid router and internal connectivity checker. Use when a route failed, a net looks shorted or open, or you need to verify physical connectivity against the SPICE netlist before external DRC/LVS signoff. Do not use it to change the router implementation or to run external Magic/netgen signoff — that is mbg-ic-verify.",
+  "content_fingerprint": "cdea2055de0d1d8c64946e0428b79300cda9322ecbb245b0be0b727eaaa6ab5c"
 }

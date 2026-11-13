@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Grok Build ONLY. Turn a 2D character still into smooth animation sprites via image_gen/image_edit base \u2192 image_to_video (6s/10s run-in-place) \u2192 ffmpeg frames \u2192 magenta chroma-key \u2192 dense sampled sprites (strip/grid/GIF). Use when the user wants video-to-sprite, motion capture from generated video, smoother run/walk cycles from dense frames, or runs /video2dsprite. Do NOT use on Codex/Claude \u2014 only Grok Build has image_to_video. Prefer generate2dsprite for crisp pixel sheets without video."
+  "description": "Grok Build ONLY. Turn a 2D character still into smooth animation sprites via image_gen/image_edit base → image_to_video (6s/10s run-in-place) → ffmpeg frames → magenta chroma-key → dense sampled sprites (strip/grid/GIF). Use when the user wants video-to-sprite, motion capture from generated video, smoother run/walk cycles from dense frames, or runs /video2dsprite. Do NOT use on Codex/Claude — only Grok Build has image_to_video. Prefer generate2dsprite for crisp pixel sheets without video.",
+  "content_fingerprint": "f04baa7d129a7ab71a362a68c05f36f6536779afde7c95dca0ebb06e130d7a30"
 }

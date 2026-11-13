@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audits Claude Code context window consumption across agents, skills, MCP servers, rules, and CLAUDE.md files \u2014 identifies bloat and redundant components and produces prioritized token-savings recommendations. Use when a session feels sluggish or degraded, after adding skills/agents/MCP servers, before adding more components, or when the user runs /context-budget or asks how much context headroom remains. Do NOT use for API billing/spend questions or for shortening a single response \u2014 this audits loaded-component overhead, not output length or account cost."
+  "description": "Audits Claude Code context window consumption across agents, skills, MCP servers, rules, and CLAUDE.md files — identifies bloat and redundant components and produces prioritized token-savings recommendations. Use when a session feels sluggish or degraded, after adding skills/agents/MCP servers, before adding more components, or when the user runs /context-budget or asks how much context headroom remains. Do NOT use for API billing/spend questions or for shortening a single response — this audits loaded-component overhead, not output length or account cost.",
+  "content_fingerprint": "a91dc92be02cbdbc7bb05e5f5af0b4278b5cc1202fb2eee79fb27589c57200df"
 }

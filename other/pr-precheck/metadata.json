@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user invokes `/pr-precheck <repo> <topic>` or \u2014 implicitly, before any other skill opens a pull request \u2014 to check the target repo's merged and closed PR history for prior attempts at the same fix, so the agent doesn't open the Nth duplicate of an already-rejected approach. Wraps the `vouch pr-cache` CLI (build / check / show) and turns its verdict into a clear stop / ask / proceed signal."
+  "description": "Use when the user invokes `/pr-precheck <repo> <topic>` or — implicitly, before any other skill opens a pull request — to check the target repo's merged and closed PR history for prior attempts at the same fix, so the agent doesn't open the Nth duplicate of an already-rejected approach. Wraps the `vouch pr-cache` CLI (build / check / show) and turns its verdict into a clear stop / ask / proceed signal.",
+  "content_fingerprint": "215107b593ee496bbe743df656c3ac3f098fdfe58694208d26af39cbacd796a7"
 }

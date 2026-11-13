@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user has written (or wants to write) a `ModularPipelineBlocks` subclass in a local Python file and needs to package it into a Hub-uploadable directory. Covers the workflow from a single `block.py` file to a published custom-block repo that consumers can load via `ModularPipeline.from_pretrained(<repo>, trust_remote_code=True)`."
+  "description": "Use when the user has written (or wants to write) a `ModularPipelineBlocks` subclass in a local Python file and needs to package it into a Hub-uploadable directory. Covers the workflow from a single `block.py` file to a published custom-block repo that consumers can load via `ModularPipeline.from_pretrained(<repo>, trust_remote_code=True)`.",
+  "content_fingerprint": "3fae423a07ecd2379d0dafbe029ef891ee534a242d162590b3391707191c7a39"
 }

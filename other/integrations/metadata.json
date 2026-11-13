@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage account integrations (Studio connected accounts/toolkits \u2014 Gmail, Slack, Salesforce, etc.) and resolve trigger resource IDs using the `frontline integrations` CLI. Use this to list connected integrations and read the numeric `id` that becomes the `connectedAccountId` in workflow/flow triggers and tool nodes, to discover connectable toolkits and their tool slugs, to configure which tools an integration exposes (`integrations tools set`), and to turn human labels like \"my Q3 budget sheet\" into the IDs an event-trigger config needs. Requires a USER API key."
+  "description": "Manage account integrations (Studio connected accounts/toolkits — Gmail, Slack, Salesforce, etc.) and resolve trigger resource IDs using the `frontline integrations` CLI. Use this to list connected integrations and read the numeric `id` that becomes the `connectedAccountId` in workflow/flow triggers and tool nodes, to discover connectable toolkits and their tool slugs, to configure which tools an integration exposes (`integrations tools set`), and to turn human labels like \"my Q3 budget sheet\" into the IDs an event-trigger config needs. Requires a USER API key.",
+  "content_fingerprint": "59781c459783a78b2b28396b89b5f5d7b079f74151f25987eafbd69dcd8daef4"
 }

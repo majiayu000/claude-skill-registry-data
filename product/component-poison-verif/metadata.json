@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deliberately introduce a controlled number of concrete-code/abstract-code misalignments (\"verif poisons\") into a single Certus component on a throwaway branch, in order to test formal-verification drift tooling (Creusot mirror/equality checks, Kani assume-audits, and `tools-spin-sync`). Each poison intentionally desynchronizes the component's verification artifacts (a `verif/` Creusot mirror, a `#[cfg(kani)] mod verification`, or a Spin `.pml` model) from the shipped implementation while keeping the code compiling. Use only for red-team / evaluation of the verification skills, never on a branch intended to merge."
+  "description": "Deliberately introduce a controlled number of concrete-code/abstract-code misalignments (\"verif poisons\") into a single Certus component on a throwaway branch, in order to test formal-verification drift tooling (Creusot mirror/equality checks, Kani assume-audits, and `tools-spin-sync`). Each poison intentionally desynchronizes the component's verification artifacts (a `verif/` Creusot mirror, a `#[cfg(kani)] mod verification`, or a Spin `.pml` model) from the shipped implementation while keeping the code compiling. Use only for red-team / evaluation of the verification skills, never on a branch intended to merge.",
+  "content_fingerprint": "c45d270f297ed7f23057d2883e93e66ebc7be36b1450bab332f560fd567e89c4"
 }

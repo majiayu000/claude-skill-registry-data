@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Build the ONE tool-independent, source-traced verifiable-property inventory for a component and bundle every property onto the I<component> public methods that implement it. Reconciles two independent, BLIND per-artifact extractions (spec and code, isolated from each other) into a single ID-keyed set with owning-method bundles and counts. Does NOT name a prover and does NOT record proof status \u2014 that is added downstream. This is Role 1 (the single source of truth) that `tools-verify-*-with-properties` and `tools-aggregate-coverage-by-interface` consume."
+  "description": "Build the ONE tool-independent, source-traced verifiable-property inventory for a component and bundle every property onto the I<component> public methods that implement it. Reconciles two independent, BLIND per-artifact extractions (spec and code, isolated from each other) into a single ID-keyed set with owning-method bundles and counts. Does NOT name a prover and does NOT record proof status — that is added downstream. This is Role 1 (the single source of truth) that `tools-verify-*-with-properties` and `tools-aggregate-coverage-by-interface` consume.",
+  "content_fingerprint": "db10b654476356aac1a98e6559a413fc151159aba2fd54a40a2d5eebacb27235"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Daily PR review SLA sweep for {{target_repos}}. Flags PRs awaiting review past {{review_sla_hours}}h, stale PRs with no activity in {{stale_days}}d, and PRs sitting on unaddressed requested changes, then nudges the author or reviewer in {{alert_channel}} with what's blocking. Read-only against GitHub \u2014 never merges, closes, or approves."
+  "description": "Daily PR review SLA sweep for {{target_repos}}. Flags PRs awaiting review past {{review_sla_hours}}h, stale PRs with no activity in {{stale_days}}d, and PRs sitting on unaddressed requested changes, then nudges the author or reviewer in {{alert_channel}} with what's blocking. Read-only against GitHub — never merges, closes, or approves.",
+  "content_fingerprint": "018fb80ea96721b43016024b68ba7091428fbf948bfde0ac9990dbbbc83eb4b1"
 }

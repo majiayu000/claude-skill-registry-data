@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deploy a delivered increment (a validated, merged epic) to a named CLOUD environment the run lens already defined \u2014 defaulting to the lowest cloud tier (dev), running exactly what that environment's run.yaml declares, then proving it came up healthy with an independent reachability check and recording the deploy as evidence. Lightweight and on-demand: changes nothing in the product model and stops below production (prod stays with CD from main). The /deploy command in the ProductOS command model. Use when a delivered increment needs to run on a cloud environment /run already defined."
+  "description": "Deploy a delivered increment (a validated, merged epic) to a named CLOUD environment the run lens already defined — defaulting to the lowest cloud tier (dev), running exactly what that environment's run.yaml declares, then proving it came up healthy with an independent reachability check and recording the deploy as evidence. Lightweight and on-demand: changes nothing in the product model and stops below production (prod stays with CD from main). The /deploy command in the ProductOS command model. Use when a delivered increment needs to run on a cloud environment /run already defined.",
+  "content_fingerprint": "e83f059e8d12977f9687df15520936001783bc85e9ac84edcb883d410b29681c"
 }

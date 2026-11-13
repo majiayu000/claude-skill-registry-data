@@ -14,5 +14,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/stoicstudio/ClaudeConductor/blob/main/.claude/skills/publish-release/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a3bf4f29032a7333ff0db173db0812c6db49894973628d64b93a5e87232fbe9d",
+  "description": "Publish a new release to GitHub Packages. Use when ready to release, after tests pass and version is updated. Creates git tag and pushes to trigger GitHub Actions."
 }

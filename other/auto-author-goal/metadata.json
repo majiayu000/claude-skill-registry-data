@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn a plan into a model-judgeable goal doc the user binds with `/goal <doc-path.md>`. Use when the user says \"generate a goal for this plan\", \"make a goal doc\", \"write a /goal for <plan>\", \"write a goal doc for this run\", or wants auto to phrase an exit predicate from a plan. This skill AUTHORS the goal doc and writes it to disk; it does NOT run `/goal` \u2014 binding is the user's action (auto can neither arm nor clear a native goal). The doc is written to TRACK auto's own exit predicate so the model-judged goal and auto's deterministic Stop hook are as aligned as possible."
+  "description": "Turn a plan into a model-judgeable goal doc the user binds with `/goal <doc-path.md>`. Use when the user says \"generate a goal for this plan\", \"make a goal doc\", \"write a /goal for <plan>\", \"write a goal doc for this run\", or wants auto to phrase an exit predicate from a plan. This skill AUTHORS the goal doc and writes it to disk; it does NOT run `/goal` — binding is the user's action (auto can neither arm nor clear a native goal). The doc is written to TRACK auto's own exit predicate so the model-judged goal and auto's deterministic Stop hook are as aligned as possible.",
+  "content_fingerprint": "4d2b9f502afcacc1c2354088e3c02360652818d482d7e39bb6a8eeeda7a6bcf4"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Orchestrates an end-to-end de novo genome assembly project, routing each step to the right genome-assembly skill rather than restating it. Profiles the genome first (k-mer spectrum -> size, heterozygosity, ploidy), QCs reads, chooses an assembly path by data type (SPAdes for Illumina, Flye for noisy long reads, hifiasm for HiFi, metaFlye for communities), polishes only when needed, decontaminates, scaffolds with Hi-C, and finishes with three-axis QC (contiguity + completeness + correctness). Use when assembling a genome from raw reads and deciding which assembler, whether to polish, and how to prove the result is good."
+  "description": "Orchestrates an end-to-end de novo genome assembly project, routing each step to the right genome-assembly skill rather than restating it. Profiles the genome first (k-mer spectrum -> size, heterozygosity, ploidy), QCs reads, chooses an assembly path by data type (SPAdes for Illumina, Flye for noisy long reads, hifiasm for HiFi, metaFlye for communities), polishes only when needed, decontaminates, scaffolds with Hi-C, and finishes with three-axis QC (contiguity + completeness + correctness). Use when assembling a genome from raw reads and deciding which assembler, whether to polish, and how to prove the result is good.",
+  "content_fingerprint": "e6a1a550069f11acc2d1b2e661321cd7b6b05fa7a2473d30add0beacf3226210"
 }

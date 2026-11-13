@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Validate the climate forcing selected by an EcoSIM run namelist before simulation or when diagnosing weather-input failures. Checks the remaining run's forcing years, days and hours, NetCDF reader schema, missing values, units and broad physical ranges, and writes read-only readiness reports. Use for existing hourly or mixed daily/hourly EcoSIM forcing, including NLDAS and ERA5-derived files; conversion and gap filling belong to their source-data workflows."
+  "description": "Validate the climate forcing selected by an EcoSIM run namelist before simulation or when diagnosing weather-input failures. Checks the remaining run's forcing years, days and hours, NetCDF reader schema, missing values, units and broad physical ranges, and writes read-only readiness reports. Use for existing hourly or mixed daily/hourly EcoSIM forcing, including NLDAS and ERA5-derived files; conversion and gap filling belong to their source-data workflows.",
+  "content_fingerprint": "230188e77e6cebf63a3772ef04a781c19fad88ac91cd1dc2fcafa67805a2816d"
 }

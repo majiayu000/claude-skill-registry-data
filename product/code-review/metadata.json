@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ece\u56fa\u5b9a\u70b9\uff08commit\u3001branch\u3001tag \u6216 merge-base\uff09\u5f00\u59cb\uff0c\u6cbf\u4e24\u6761\u8f74\u7ebf\u5ba1\u67e5\u53d8\u66f4\u2014\u2014\u89c4\u8303\uff08\u4ee3\u7801\u662f\u5426\u9075\u5faa\u4ed3\u5e93\u6587\u6863\u5316\u7684\u7f16\u7801\u89c4\u8303\uff1f\uff09\u548c\u89c4\u683c\uff08\u4ee3\u7801\u662f\u5426\u4e0e\u539f\u59cb issue/PRD \u7684\u8981\u6c42\u4e00\u81f4\uff1f\uff09\u3002\u4e24\u6761\u5ba1\u67e5\u7ebf\u5728\u5e76\u884c\u5b50 agent \u4e2d\u8fd0\u884c\uff0c\u5e76\u4ee5\u5e76\u6392\u65b9\u5f0f\u62a5\u544a\u7ed3\u679c\u3002\u5f53\u7528\u6237\u60f3\u5ba1\u67e5\u4e00\u4e2a\u5206\u652f\u3001PR\u3001\u8fdb\u884c\u4e2d\u7684\u53d8\u66f4\uff0c\u6216\u8981\u6c42\"\u4ece X \u5f00\u59cb\u5ba1\u67e5\"\u65f6\u4f7f\u7528\u3002"
+  "description": "从固定点（commit、branch、tag 或 merge-base）开始，沿两条轴线审查变更——规范（代码是否遵循仓库文档化的编码规范？）和规格（代码是否与原始 issue/PRD 的要求一致？）。两条审查线在并行子 agent 中运行，并以并排方式报告结果。当用户想审查一个分支、PR、进行中的变更，或要求\"从 X 开始审查\"时使用。",
+  "content_fingerprint": "b88b3a9174a218511bc4d5a44ac41ab963c61177980c9dbc2757212a274b9ac8"
 }

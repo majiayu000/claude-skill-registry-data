@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Call the Obsidian Local REST API directly (over HTTP) for vault operations the mcp__obsidian__* tools do NOT expose \u2014 move/rename a note, overwrite a whole file atomically (PUT), act on the currently-open active file, run an Obsidian command, open a note in the UI, list all tags, or do date-specific periodic-note CRUD. Prefer the mcp__obsidian__* tools for plain read/append/patch/delete/search; fall back to this skill only when the required method is missing from MCP."
+  "description": "Call the Obsidian Local REST API directly (over HTTP) for vault operations the mcp__obsidian__* tools do NOT expose — move/rename a note, overwrite a whole file atomically (PUT), act on the currently-open active file, run an Obsidian command, open a note in the UI, list all tags, or do date-specific periodic-note CRUD. Prefer the mcp__obsidian__* tools for plain read/append/patch/delete/search; fall back to this skill only when the required method is missing from MCP.",
+  "content_fingerprint": "66097010f27ef16f97ab0a0fd83fe4131ad39253f242b61caade0a47abb3a910"
 }

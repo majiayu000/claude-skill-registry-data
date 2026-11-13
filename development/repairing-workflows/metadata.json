@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Classifies ComfyUI prompt/execution errors and plans a minimal partial rerun. Use whenever a submit_prompt result contains node_errors, or a WebSocket execution_error frame is observed, to decide between parameter patch, link repair, default substitution, or missing-resource resolution before re-running only the affected subgraph via partial_execution_targets."
+  "description": "Classifies ComfyUI prompt/execution errors and plans a minimal partial rerun. Use whenever a submit_prompt result contains node_errors, or a WebSocket execution_error frame is observed, to decide between parameter patch, link repair, default substitution, or missing-resource resolution before re-running only the affected subgraph via partial_execution_targets.",
+  "content_fingerprint": "3ab6c36378e0675a08d93bdd30a2e08934df975cf164234aafa5e865ec0367f7"
 }

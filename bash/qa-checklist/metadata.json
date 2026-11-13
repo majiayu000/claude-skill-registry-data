@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate a QA checklist from the current branch's change and write it into the current PR's body as a `## QA Checklist` section, followed by a table classifying each step's automatability and test coverage. Single source of truth for the PR verification checklist \u2014 `/pr` delegates to it by reference. Invoke as `/qa-checklist [optional focus guidance]`. Use when the user says \"manual qa\", \"qa checklist\", \"/qa-checklist\", or when those skills need to produce the checklist."
+  "description": "Generate a QA checklist from the current branch's change and write it into the current PR's body as a `## QA Checklist` section, followed by a table classifying each step's automatability and test coverage. Single source of truth for the PR verification checklist — `/pr` delegates to it by reference. Invoke as `/qa-checklist [optional focus guidance]`. Use when the user says \"manual qa\", \"qa checklist\", \"/qa-checklist\", or when those skills need to produce the checklist.",
+  "content_fingerprint": "c87eab6d5234d7197d08079c40158631114866287511c3facf5aacda3a24a30b"
 }

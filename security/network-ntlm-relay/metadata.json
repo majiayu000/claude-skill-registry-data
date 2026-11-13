@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Coerce and relay NTLM authentication for lateral movement and privilege escalation (relay to SMB, LDAP, ADCS). Load in an AD network with a foothold, on \"NTLM relay\", \"responder\", \"coerce\", no/absent SMB signing, or PetitPotam/PrinterBug. Signals: LLMNR/NBT-NS traffic, SMB signing off, MS-RPRN/EFSRPC."
+  "description": "Coerce and relay NTLM authentication for lateral movement and privilege escalation (relay to SMB, LDAP, ADCS). Load in an AD network with a foothold, on \"NTLM relay\", \"responder\", \"coerce\", no/absent SMB signing, or PetitPotam/PrinterBug. Signals: LLMNR/NBT-NS traffic, SMB signing off, MS-RPRN/EFSRPC.",
+  "content_fingerprint": "460e8a9690cf6cfd3716f154937f0149452d57a8ad15ea14f3a477cefb83084e"
 }

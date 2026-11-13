@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pre-change blast-radius report for a symbol or file. Walks tree-sitting references, augments with a plain-text scan over non-parsed files (configs, plain docs), and clusters affected sites by feature (`_FEATURES.md`) or top-level package. Use when about to refactor, rename, or delete something in a repo you don't own \u2014 \"what breaks if I change `validateUser`\", \"who calls this\", \"is this safe to remove\", \"where is this used\", \"blast radius\", \"impact analysis\". This is the CONVERGENT pre-change risk skill \u2014 for \"what is this repo?\" use exploring-codebases; for \"where is X?\" use searching-codebases."
+  "description": "Pre-change blast-radius report for a symbol or file. Walks tree-sitting references, augments with a plain-text scan over non-parsed files (configs, plain docs), and clusters affected sites by feature (`_FEATURES.md`) or top-level package. Use when about to refactor, rename, or delete something in a repo you don't own — \"what breaks if I change `validateUser`\", \"who calls this\", \"is this safe to remove\", \"where is this used\", \"blast radius\", \"impact analysis\". This is the CONVERGENT pre-change risk skill — for \"what is this repo?\" use exploring-codebases; for \"where is X?\" use searching-codebases.",
+  "content_fingerprint": "0f88d12cb92e7ea4098acc21fda11380ab644d67ce880fe9efdbb31f54d819f7"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/decentpaste/decentpaste/blob/main/.claude/skills/android-release/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c62c3a9380eb7bd2d1d279d9bb5f47b7fc733d70785016f14baa00081addc9c4",
+  "description": "Build, sign, and prepare Android APK and AAB for release. Handles version bumping, building, zipalign (APK), and signing with JKS keystore. Outputs DecentPaste_x.x.x.apk for GitHub releases and signed"
 }

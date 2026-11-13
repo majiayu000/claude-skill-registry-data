@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Spark Declarative Pipeline (SDP, formerly DLT) expectations patterns for data quality with Unity Catalog Delta table storage. Use when implementing Silver layer SDP/DLT pipelines, creating portable data quality rules, or needing runtime-updateable expectations without code deployment. Supports severity-based filtering (critical vs warning) and quarantine patterns. Standardizes on `import dlt` for the DQ-rules framework; the modern `dp` API (`from pyspark import pipelines as dp`) also supports expectations (`dp.expect_all_or_drop`) and is Databricks' recommended forward path."
+  "description": "Spark Declarative Pipeline (SDP, formerly DLT) expectations patterns for data quality with Unity Catalog Delta table storage. Use when implementing Silver layer SDP/DLT pipelines, creating portable data quality rules, or needing runtime-updateable expectations without code deployment. Supports severity-based filtering (critical vs warning) and quarantine patterns. Standardizes on `import dlt` for the DQ-rules framework; the modern `dp` API (`from pyspark import pipelines as dp`) also supports expectations (`dp.expect_all_or_drop`) and is Databricks' recommended forward path.",
+  "content_fingerprint": "863d423acae7f2ce6f1a96eae42ae34871b01ab0dc5e2836c7a2521663e94ffa"
 }

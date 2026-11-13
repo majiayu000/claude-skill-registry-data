@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dadbodgeoff/drift/blob/main/skills/resilient-storage/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "099a9b41622a7d8d74eead03c368334eda759a279e50e8613e4df198bfac8cc0",
+  "description": "Multi-backend storage layer with automatic failover between Redis, database, and memory backends. Includes circuit breakers per backend and health-aware routing for high availability."
 }

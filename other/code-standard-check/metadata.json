@@ -1,5 +1,5 @@
 {
-  "name": "\u7f16\u7801\u89c4\u8303\u68c0\u67e5Skill",
+  "name": "编码规范检查Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/code-standard-check/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ee3\u7801\u7f16\u7801\u89c4\u8303\u7684\u9010\u9879\u6838\u5bf9\u6e05\u5355(\u547d\u540d\u3001\u683c\u5f0f\u3001\u6ce8\u91ca\u3001\u5206\u5c42)\u3002\u5f53\u9700\u8981\u5ba1\u67e5\u4ee3\u7801\u662f\u5426\u7b26\u5408\u65e2\u5b9a\u7f16\u7801\u89c4\u8303,\u8f93\u51fa\u9010\u9879\u5408\u89c4\u5224\u5b9a\u65f6\u4f7f\u7528\u3002"
+  "description": "代码编码规范的逐项核对清单(命名、格式、注释、分层)。当需要审查代码是否符合既定编码规范,输出逐项合规判定时使用。",
+  "content_fingerprint": "f8c87922b7fc5660b3db7dceb775cc45117204687e1c0aac871678a63144aee8"
 }

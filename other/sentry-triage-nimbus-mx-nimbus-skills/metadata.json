@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Given a Sentry issue URL, fetch it via the Sentry MCP, extract stacktrace + tags + relevant frames, grep the repo for referenced file:line, and propose a concrete fix + PR title. Nimbus incident-response accelerator.\nTrigger this skill when: - User pastes a `*.sentry.io/issues/\u2026` URL. - User says \"triage this Sentry issue\", \"check this Sentry\", or invokes\n  `/sentry-triage`.\n- User says \"look at ECG-DJANGO-BACKEND-9HX\" (issue short ID)."
+  "description": "Given a Sentry issue URL, fetch it via the Sentry MCP, extract stacktrace + tags + relevant frames, grep the repo for referenced file:line, and propose a concrete fix + PR title. Nimbus incident-response accelerator.\nTrigger this skill when: - User pastes a `*.sentry.io/issues/…` URL. - User says \"triage this Sentry issue\", \"check this Sentry\", or invokes\n  `/sentry-triage`.\n- User says \"look at ECG-DJANGO-BACKEND-9HX\" (issue short ID).",
+  "content_fingerprint": "8e54ea8f1fce925f844a0f76a4394d5bfe8e0c1b878a26ecfd6c2ceeee64146d"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Handle UTF-8 and text encoding safely in WordPress plugins, especially on WP 6.9+ where wp_is_valid_utf8(), wp_scrub_utf8(), and noncharacter helpers replace older seems_utf8-style checks. Covers when to validate, scrub, reject, or preserve invalid bytes; wp_check_invalid_utf8 behavior; WP 7.1 mb_chr()/mb_ord() compatibility and antispambot() changes; XML/JSON/feed/export boundaries; and avoiding data loss from premature replacement. Use when processing imported text, CSV, XML, feeds, email, REST payloads, AI prompts, logs, filenames, or external API data."
+  "description": "Handle UTF-8 and text encoding safely in WordPress plugins, especially on WP 6.9+ where wp_is_valid_utf8(), wp_scrub_utf8(), and noncharacter helpers replace older seems_utf8-style checks. Covers when to validate, scrub, reject, or preserve invalid bytes; wp_check_invalid_utf8 behavior; WP 7.1 mb_chr()/mb_ord() compatibility and antispambot() changes; XML/JSON/feed/export boundaries; and avoiding data loss from premature replacement. Use when processing imported text, CSV, XML, feeds, email, REST payloads, AI prompts, logs, filenames, or external API data.",
+  "content_fingerprint": "508a08f1cae99ad1f6100b042d101098ce505c38a86720be5cf9b4d20076ab54"
 }

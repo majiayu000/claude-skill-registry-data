@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implement background export jobs \u2014 POST /api/export returns job_id immediately, BackgroundTasks run Polars joins, serialize CSV/XLSX, upload to GCS with 24h signed URLs, track state in the export_job table. Use when touching export endpoints, the export worker, GCS lifecycle, or the non-blocking concurrency test."
+  "description": "Implement background export jobs — POST /api/export returns job_id immediately, BackgroundTasks run Polars joins, serialize CSV/XLSX, upload to GCS with 24h signed URLs, track state in the export_job table. Use when touching export endpoints, the export worker, GCS lifecycle, or the non-blocking concurrency test.",
+  "content_fingerprint": "d8af7d65b0916cf2f8b1650d53e1a68755942ab4f17755b415a358c1a34ed3c9"
 }

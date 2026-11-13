@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Sync the forks package group in prateek/dotfiles packages.toml with the live state of the prateek/forks fleet: adopt a fork once it ships a release, or retire one whose upstream PRs have all landed. Reads fleet state via gh api (no clone), edits packages.toml through scripts/packages/fork-lifecycle-entry, validates the reconciler, and opens an ordinary PR. Use when a fork ships its first release, when a fork files a retire self-issue, or when asked to reconcile fork packages. Trigger on 'adopt the X fork', 'retire the X fork in dotfiles', 'sync fork packages', 'a fork filed a retire issue'."
+  "description": "Sync the forks package group in prateek/dotfiles packages.toml with the live state of the prateek/forks fleet: adopt a fork once it ships a release, or retire one whose upstream PRs have all landed. Reads fleet state via gh api (no clone), edits packages.toml through scripts/packages/fork-lifecycle-entry, validates the reconciler, and opens an ordinary PR. Use when a fork ships its first release, when a fork files a retire self-issue, or when asked to reconcile fork packages. Trigger on 'adopt the X fork', 'retire the X fork in dotfiles', 'sync fork packages', 'a fork filed a retire issue'.",
+  "content_fingerprint": "8d17e37462e754b41d0b037fc06dcaea07d8ca71fc40c3307530c719a065b311"
 }

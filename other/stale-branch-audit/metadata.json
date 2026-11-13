@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit local + remote branches for staleness. Lists branches >30 days old, merged branches with no worktree, orphaned worktrees, and branches whose remote is gone. Prioritized cleanup output.\nTrigger this skill when: - User says \"cleanup branches\", \"stale branch audit\", \"prune old branches\", or\n  invokes `/stale-branch-audit`.\n- Session lands in a repo with >20 local branches. - Before switching machines / migration."
+  "description": "Audit local + remote branches for staleness. Lists branches >30 days old, merged branches with no worktree, orphaned worktrees, and branches whose remote is gone. Prioritized cleanup output.\nTrigger this skill when: - User says \"cleanup branches\", \"stale branch audit\", \"prune old branches\", or\n  invokes `/stale-branch-audit`.\n- Session lands in a repo with >20 local branches. - Before switching machines / migration.",
+  "content_fingerprint": "255697dd3846408f9d69182354cd9539d6e9d0aeb4dd126f41e773fac89e7917"
 }

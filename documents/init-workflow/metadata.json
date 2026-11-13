@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Bootstraps and validates the AI workflow in a project that has this plugin installed: scaffolds whichever project-owned files are missing, detects the project's commands, fills AGENTS.md, points it at review/planning guidance (seeding docs/agent-rules/ or reusing an existing doc), and verifies the review gate. Re-run any time as a doctor \u2014 it reports what is missing or drifted. (Named init-workflow so it does not collide with Claude Code's built-in /init command, which generates a CLAUDE.md.)"
+  "description": "Bootstraps and validates the AI workflow in a project that has this plugin installed: scaffolds whichever project-owned files are missing, detects the project's commands, fills AGENTS.md, points it at review/planning guidance (seeding docs/agent-rules/ or reusing an existing doc), and verifies the review gate. Re-run any time as a doctor — it reports what is missing or drifted. (Named init-workflow so it does not collide with Claude Code's built-in /init command, which generates a CLAUDE.md.)",
+  "content_fingerprint": "ee6b4faa2312aa25e8d4625410ed3f3a3c92006760c01de835a23f2dd381b9c1"
 }

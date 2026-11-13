@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when adding a test to an existing codebase for behavior that is already implemented. Ensures the test is meaningful by mutation-verifying it \u2014 breaking the production code to confirm the test fails for the expected reason. Triggers when the user says \"add a test for existing behavior\", \"backfill test coverage\", \"the test passes on first run\", or any scenario where a test is written without a corresponding new production change."
+  "description": "Use when adding a test to an existing codebase for behavior that is already implemented. Ensures the test is meaningful by mutation-verifying it — breaking the production code to confirm the test fails for the expected reason. Triggers when the user says \"add a test for existing behavior\", \"backfill test coverage\", \"the test passes on first run\", or any scenario where a test is written without a corresponding new production change.",
+  "content_fingerprint": "ffcd21e6194da43a28de32e6053103c259308fb8a7f974d0257b2a6e9c71c0fa"
 }

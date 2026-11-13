@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "TileLang NPU \u5b50\u6a21\u5757\u51c6\u5907\u5165\u53e3\u3002\u9002\u7528\u4e8e\u7528\u6237\u9700\u8981\u5b50\u6a21\u5757\u51c6\u5907\u65f6\uff0c\u6839\u636e\u5df2\u9009 Ascend910 \u6216 Ascend950 \u5e73\u53f0\u8bfb\u53d6\u72ec\u7acb\u6280\u80fd\uff1b\u4e24\u5957\u89c4\u5219\u4e0d\u6df7\u7528\u3002"
+  "description": "TileLang NPU 子模块准备入口。适用于用户需要子模块准备时，根据已选 Ascend910 或 Ascend950 平台读取独立技能；两套规则不混用。",
+  "content_fingerprint": "b361406b7cc5e25cc3a7eb0c63a2c08cfbae813bf15d397bf213f610588f8f28"
 }

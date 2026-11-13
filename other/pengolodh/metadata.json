@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user runs /pengolodh, /pengolodh verify, /pengolodh status, or /pengolodh gc against the current repo. Prints, verifies, or prunes this repo's mechanism cache \u2014 file:line-anchored facts (entry points, live-vs-dead modules, seams, invariants, conventions in force) that grep cannot answer on its own. The cache is normally built opportunistically and delivered automatically at SessionStart (pengolodh-inject.sh); this skill is the hand tool for checking it, forcing a repair, or cleaning out confirmed-dead entries \u2014 never for a deliberate scan of the repo, which this skill does not do."
+  "description": "Use when the user runs /pengolodh, /pengolodh verify, /pengolodh status, or /pengolodh gc against the current repo. Prints, verifies, or prunes this repo's mechanism cache — file:line-anchored facts (entry points, live-vs-dead modules, seams, invariants, conventions in force) that grep cannot answer on its own. The cache is normally built opportunistically and delivered automatically at SessionStart (pengolodh-inject.sh); this skill is the hand tool for checking it, forcing a repair, or cleaning out confirmed-dead entries — never for a deliberate scan of the repo, which this skill does not do.",
+  "content_fingerprint": "5e83eec013833ca1d3c530ff780699b39cb843c4f7b938984dd9610ce560aed6"
 }

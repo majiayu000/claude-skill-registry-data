@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/CodySwannGT/lisa/blob/main/plugins/lisa-rails/skills/action-controller-best-practices/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "0b9014c36fccc1103ce29b332b6f56c7af0471f6686f8b0efde5d44bc734cfa5",
+  "description": "Controllers should be thin traffic cops — they receive input via params, delegate to the appropriate object, and decide what to render or redirect. Each action should be roughly 5-10 lines. If an acti"
 }

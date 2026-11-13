@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Call the `svelte_svelte-autofixer` MCP tool before sending any Svelte code to the user. Triggers on: writing a new component, editing an existing component, refactoring bind/event syntax, $state/$derived/$props/$bindable, extracting inline handlers, snippets that will be sent to the user, or questions like 'why this doesn't work' when the likely answer is Svelte code. Mandatory before replying to the user with a Svelte code block. Cheaper than sending the code to the browser."
+  "description": "Call the `svelte_svelte-autofixer` MCP tool before sending any Svelte code to the user. Triggers on: writing a new component, editing an existing component, refactoring bind/event syntax, $state/$derived/$props/$bindable, extracting inline handlers, snippets that will be sent to the user, or questions like 'why this doesn't work' when the likely answer is Svelte code. Mandatory before replying to the user with a Svelte code block. Cheaper than sending the code to the browser.",
+  "content_fingerprint": "6fa5c63fea815860d7a8ac47f52a7dfba934efa6d3632a88c82e680bea2e0ab8"
 }

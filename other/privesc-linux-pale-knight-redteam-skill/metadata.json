@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Linux local privilege escalation from a low-privilege shell to root. Covers quiet vs loud enumeration, sudo/GTFOBins, CVE-2025-32463 chwoot and CVE-2025-32462 host bypass, polkit/udisks CVE-2025-6018/6019, SUID/capabilities, systemd timers/units, cron/PATH/LD_PRELOAD, dangerous groups and docker.sock, host-local container escape, and version-gated kernel LPE including Copy Fail CVE-2026-31431. Use when the operator has a Linux foothold and needs root. Kubernetes RBAC stays in /k8s. Endpoint blocks hand off to /edr-bypass then return here."
+  "description": "Linux local privilege escalation from a low-privilege shell to root. Covers quiet vs loud enumeration, sudo/GTFOBins, CVE-2025-32463 chwoot and CVE-2025-32462 host bypass, polkit/udisks CVE-2025-6018/6019, SUID/capabilities, systemd timers/units, cron/PATH/LD_PRELOAD, dangerous groups and docker.sock, host-local container escape, and version-gated kernel LPE including Copy Fail CVE-2026-31431. Use when the operator has a Linux foothold and needs root. Kubernetes RBAC stays in /k8s. Endpoint blocks hand off to /edr-bypass then return here.",
+  "content_fingerprint": "5324365f78e4cde574603c344d2510a27322fcb20f3a3f64e9df008e8aa248a4"
 }

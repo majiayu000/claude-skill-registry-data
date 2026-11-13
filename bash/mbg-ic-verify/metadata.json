@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs DRC, LVS, and PEX physical verification for GDSII layouts using Magic and netgen, with automatic port-order fixing for LVS. Use when the user asks to \"run DRC\", \"check LVS\", \"extract parasitics\", \"verify layout\", \"run pex\", or otherwise wants post-layout verification of an existing GDS under GF180MCU. Do not use it to generate layout (use mbg-spice-to-gds) or to run SPICE simulation."
+  "description": "Runs DRC, LVS, and PEX physical verification for GDSII layouts using Magic and netgen, with automatic port-order fixing for LVS. Use when the user asks to \"run DRC\", \"check LVS\", \"extract parasitics\", \"verify layout\", \"run pex\", or otherwise wants post-layout verification of an existing GDS under GF180MCU. Do not use it to generate layout (use mbg-spice-to-gds) or to run SPICE simulation.",
+  "content_fingerprint": "a2b9279c2e72df429a3f8d490901f3de8bfc3ea62b8e96683b6acef64c65d566"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Remove dead air from a clip by collapsing any inter-word gap > gap_max (default 0.18s). Gaps collapse to collapse_to (default 0.08s), or sentence_beat (default 0.15s) when the preceding word ends with . ? or !. Re-emits the clip and a re-timed transcript so downstream subtitle / chunk / title skills align. Use right after cut-clip + rebase to keep pacing punchy."
+  "description": "Remove dead air from a clip by collapsing any inter-word gap > gap_max (default 0.18s). Gaps collapse to collapse_to (default 0.08s), or sentence_beat (default 0.15s) when the preceding word ends with . ? or !. Re-emits the clip and a re-timed transcript so downstream subtitle / chunk / title skills align. Use right after cut-clip + rebase to keep pacing punchy.",
+  "content_fingerprint": "0c444415fa39785b597f7395295cdaad297b597a086143cbd467ebc74a24426f"
 }

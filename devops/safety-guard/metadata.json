@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Safety guardrails for destructive operations. Wraps workflows and agent actions\nin configurable safety modes: CAREFUL (warns before destructive commands),\nFREEZE (restricts file edits to one directory), GUARD (both modes combined).\nUse when working in production, running destructive scripts, or debugging\nin sensitive areas. Voice triggers: \"be careful\", \"safety on\", \"guard mode\",\n\"freeze scope\". Also used automatically by the workflow engine when a workflow\npreset has safety: \"guard\" enabled."
+  "description": "Safety guardrails for destructive operations. Wraps workflows and agent actions\nin configurable safety modes: CAREFUL (warns before destructive commands),\nFREEZE (restricts file edits to one directory), GUARD (both modes combined).\nUse when working in production, running destructive scripts, or debugging\nin sensitive areas. Voice triggers: \"be careful\", \"safety on\", \"guard mode\",\n\"freeze scope\". Also used automatically by the workflow engine when a workflow\npreset has safety: \"guard\" enabled.",
+  "content_fingerprint": "80e74e43bc7c370e373e4c658cb7bd1c8c1e08def67d2855e100ca4591e3c5eb"
 }

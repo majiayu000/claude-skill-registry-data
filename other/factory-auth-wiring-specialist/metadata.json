@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when wiring auth into a new project, switching auth providers, or adding role/org features. Carries the factory's auth conventions \u2014 the provider decision matrix (Better Auth + orgs primary, Supabase + RLS for RLS-heavy cases, Clerk for consumer/SSO), the unified `requireAuth` / `requireRole` / `withOrgContext` wrapper interface, procedure tier stacking, OAuth callback safety (`safeNext`), JWT signature verification with fallback user-linking, admin-client bypass guardrails, role-conditional post-login redirects. Produces auth code that fits the house seam \u2014 provider is a swap point, not a leak."
+  "description": "Use when wiring auth into a new project, switching auth providers, or adding role/org features. Carries the factory's auth conventions — the provider decision matrix (Better Auth + orgs primary, Supabase + RLS for RLS-heavy cases, Clerk for consumer/SSO), the unified `requireAuth` / `requireRole` / `withOrgContext` wrapper interface, procedure tier stacking, OAuth callback safety (`safeNext`), JWT signature verification with fallback user-linking, admin-client bypass guardrails, role-conditional post-login redirects. Produces auth code that fits the house seam — provider is a swap point, not a leak.",
+  "content_fingerprint": "7f41cc6a9b810efedbe0f64a3fc66a2fee97a774dd8f0c9f556f56ada3c5bf00"
 }

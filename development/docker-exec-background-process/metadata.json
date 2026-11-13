@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix docker exec hanging when starting background processes (servers, daemons) inside containers.\nUse when: (1) docker exec never returns despite using & or nohup, (2) background server started\nin container causes docker exec to hang indefinitely, (3) env_startup_command in SWE-bench or\nsimilar frameworks times out, (4) setsid/disown needed for proper process detachment in Docker.\nRoot cause: docker exec tracks ALL processes in the exec session, not just the top-level PID."
+  "description": "Fix docker exec hanging when starting background processes (servers, daemons) inside containers.\nUse when: (1) docker exec never returns despite using & or nohup, (2) background server started\nin container causes docker exec to hang indefinitely, (3) env_startup_command in SWE-bench or\nsimilar frameworks times out, (4) setsid/disown needed for proper process detachment in Docker.\nRoot cause: docker exec tracks ALL processes in the exec session, not just the top-level PID.",
+  "content_fingerprint": "e978a06415c6ad59bfd0cea0534e497819e053784081c32a6dcb50632c43976c"
 }

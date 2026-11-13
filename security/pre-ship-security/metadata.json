@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used right before deploying or shipping to production \u2014 a fast security review of the finished code, not a deep audit. Trigger phrases include \"ready to ship\", \"before I deploy\", \"security check before launch\", \"is this safe to ship\", \"pre-launch checklist\", \"review security\", \"did I miss anything\", \"production-ready\", \"harden before launch\", \"antes de subir a producci\u00f3n\". It runs npm audit + a secret scan, re-checks the code against the OWASP prevention checklist, and escalates to specialized audit tools only when the app is high-risk."
+  "description": "This skill should be used right before deploying or shipping to production — a fast security review of the finished code, not a deep audit. Trigger phrases include \"ready to ship\", \"before I deploy\", \"security check before launch\", \"is this safe to ship\", \"pre-launch checklist\", \"review security\", \"did I miss anything\", \"production-ready\", \"harden before launch\", \"antes de subir a producción\". It runs npm audit + a secret scan, re-checks the code against the OWASP prevention checklist, and escalates to specialized audit tools only when the app is high-risk.",
+  "content_fingerprint": "705d6ddf69cb5f80b669fdf0f7d1bf9ab22cee900391dc4db5a7cbc30e84376a"
 }

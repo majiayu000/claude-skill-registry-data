@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Executes a single user story from PRD.json with TDD Red-Green cycle. Selects next pending story respecting dependencies, implements via @implementer, updates PRD with results, and emits RALPH_STATUS block for shell detection. Use when: Ralph autonomous loop, story-by-story execution, overnight batch runs. Triggers: ralph-exec, execute story, run next story, ralph execute. Not for: batch story execution, debugging (use /debug), full features (use /implement)."
+  "description": "Executes a single user story from PRD.json with TDD Red-Green cycle. Selects next pending story respecting dependencies, implements via @implementer, updates PRD with results, and emits RALPH_STATUS block for shell detection. Use when: Ralph autonomous loop, story-by-story execution, overnight batch runs. Triggers: ralph-exec, execute story, run next story, ralph execute. Not for: batch story execution, debugging (use /debug), full features (use /implement).",
+  "content_fingerprint": "3f80093fb477e7277dfb1f5325b1bc9ed91c024ae4a76732f23a1d3a322b49f2"
 }

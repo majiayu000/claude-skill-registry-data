@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Plan \u30d5\u30a1\u30a4\u30eb\u3092 Issue \u5316\u524d\u306b\u76e3\u67fb\u3057\u3001\u5fc5\u9808\u30bb\u30af\u30b7\u30e7\u30f3\u306e\u5145\u8db3\u3068\u5f71\u97ff\u7bc4\u56f2\u306e\u7db2\u7f85\u3092\u30c1\u30a7\u30c3\u30af\u3059\u308b\u3002\u76e3\u67fb\u306f\u4f1a\u8a71\u3092\u6301\u305f\u306a\u3044 plan-reviewer-agent \u306b\u4efb\u305b\u3001\u4f1a\u8a71\u3068\u306e\u7a81\u304d\u5408\u308f\u305b\u3068 Plan \u306e\u4fee\u6b63\u3092\u3053\u3053\u3067\u884c\u3046\u3002\u300ccheck-plan\u300d\u300cplan \u3092\u30c1\u30a7\u30c3\u30af\u300d\u3068\u6307\u793a\u3055\u308c\u305f\u3068\u304d\u3002"
+  "description": "Plan ファイルを Issue 化前に監査し、必須セクションの充足と影響範囲の網羅をチェックする。監査は会話を持たない plan-reviewer-agent に任せ、会話との突き合わせと Plan の修正をここで行う。「check-plan」「plan をチェック」と指示されたとき。",
+  "content_fingerprint": "6edfcd5a3d6a5da09bdf443eb7ba9fa8d86a06de5d6545318b466f04846d83b6"
 }

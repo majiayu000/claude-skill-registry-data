@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/oliver-kriska/claude-elixir-phoenix/blob/main/plugins/elixir-phoenix/skills/n1-check/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a66a1f13a5a3a853b5860161a430ef2a488f4c38b97f980151327bf4522f9000",
+  "description": "Detect N+1 query anti-patterns specifically — Repo calls inside Enum/for loops, missing preloads on associations. Use when N+1 is explicitly suspected, NOT for unrelated Ecto questions or wider databa"
 }

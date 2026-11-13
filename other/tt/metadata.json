@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Quality gate immediately after building: prove that what was just built actually works, while the context is still hot. Six steps: scope what changed, run live on real data, break it on purpose, show a counter or log proving it ran, root-cause any failure and re-run, then a verdict with evidence. Only a green verdict earns the word done. Supports an external multi-vendor review panel as a mid-step. Triggers: \"/tt\", \"/test\", \"prove it works\", \"test what we built\"."
+  "description": "Quality gate immediately after building: prove that what was just built actually works, while the context is still hot. Six steps: scope what changed, run live on real data, break it on purpose, show a counter or log proving it ran, root-cause any failure and re-run, then a verdict with evidence. Only a green verdict earns the word done. Supports an external multi-vendor review panel as a mid-step. Triggers: \"/tt\", \"/test\", \"prove it works\", \"test what we built\".",
+  "content_fingerprint": "c304842e06c3a80642a586bb60ac3f0091928cf09676df1a72191c3190e1bc7e"
 }

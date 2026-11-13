@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Parallel map-reduce bulk ingest for large source sets. Map phase dispatches read-only knowledge-extractor agents (\u2264N-wide, default Haiku) emitting per-source JSON extracts; Python routes extracts by target library file (fuzzy-merging new topics, pre-allocating new files, flagging oversized topics); reduce phase dispatches one agent-knowledge-updater per file (parallel, one writer per file); single shelf-index rebuild + one log.md entry. Resumable. Supersedes kb-ingest-batch."
+  "description": "Parallel map-reduce bulk ingest for large source sets. Map phase dispatches read-only knowledge-extractor agents (≤N-wide, default Haiku) emitting per-source JSON extracts; Python routes extracts by target library file (fuzzy-merging new topics, pre-allocating new files, flagging oversized topics); reduce phase dispatches one agent-knowledge-updater per file (parallel, one writer per file); single shelf-index rebuild + one log.md entry. Resumable. Supersedes kb-ingest-batch.",
+  "content_fingerprint": "a82c8378b186b7582adca657eacedb86ba36aff42ebcf2cc70d4a414124617bc"
 }

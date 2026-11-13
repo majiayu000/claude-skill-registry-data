@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Locate UTIL_Remove in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"UTIL_Remove\" (symbol UTIL_Remove). This is a non-virtual function - emit a byte signature (func_sig), not an offset.\nLocate it via cross-references, distinctive constants/strings in its body, or callers\nof related symbols; verify by decompilation before committing to a candidate.\nTrigger: UTIL_Remove, UTIL_Remove"
+  "description": "Locate UTIL_Remove in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"UTIL_Remove\" (symbol UTIL_Remove). This is a non-virtual function - emit a byte signature (func_sig), not an offset.\nLocate it via cross-references, distinctive constants/strings in its body, or callers\nof related symbols; verify by decompilation before committing to a candidate.\nTrigger: UTIL_Remove, UTIL_Remove",
+  "content_fingerprint": "0b4c1b024e85d43a709b7aa6f6f12de8b59d90a82c7351568a0aae0d088b25e5"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "cheat-on-skill \u7684\u966a\u8dd1\u8fdb\u5ea6 skill\u3002\u7528\u6237\u95ee\u201c\u4eca\u5929\u8be5\u5e72\u561b\u201d\u201c\u6211\u73b0\u5728\u505a\u5230\u54ea\u4e86\u201d\u201c\u7ee7\u7eed\u5b66\u201d\u201c\u6253\u5361\u201d\u201c\u6211\u5361\u4f4f\u4e86\u201d\u201c\u4e0b\u4e00\u6b65\u662f\u4ec0\u4e48\u201d\u65f6\u89e6\u53d1\u3002\u8bfb\u53d6 .skill-state.json \u7684 active.progress \u548c learning_plan\uff0c\u7ed9\u5f53\u5929\u4efb\u52a1\u3001\u68c0\u67e5\u5b8c\u6210\u60c5\u51b5\u3001\u8bb0\u5f55\u8fdb\u5ea6\u3001\u6839\u636e\u5feb\u6162\u8c03\u6574\u8ba1\u5212\u3002\u524d\u7f6e\uff1a\u5df2\u6709 .skill-state.json \u4e14 active.learning_plan \u5b58\u5728\u3002"
+  "description": "cheat-on-skill 的陪跑进度 skill。用户问“今天该干嘛”“我现在做到哪了”“继续学”“打卡”“我卡住了”“下一步是什么”时触发。读取 .skill-state.json 的 active.progress 和 learning_plan，给当天任务、检查完成情况、记录进度、根据快慢调整计划。前置：已有 .skill-state.json 且 active.learning_plan 存在。",
+  "content_fingerprint": "015ae5d9d4ea0882097aafe2020268b3a253e9bed37d330325c21e37f7e35e98"
 }

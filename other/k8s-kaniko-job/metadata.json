@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Sandbox build executor for Sealos deploys: build a container image from source with an in-cluster Kaniko Job and push it to GHCR, for environments without a Docker daemon (Brain managed Devbox sandboxes). Use only when a managed deploy (SEALAI_DEPLOY_MODE=managed) needs an image built from project source; local interactive deploys build with docker buildx instead (see the use-sealos skill)."
+  "description": "Sandbox build executor for Sealos deploys: build a container image from source with an in-cluster Kaniko Job and push it to GHCR, for environments without a Docker daemon (Brain managed Devbox sandboxes). Use only when a managed deploy (SEALAI_DEPLOY_MODE=managed) needs an image built from project source; local interactive deploys build with docker buildx instead (see the use-sealos skill).",
+  "content_fingerprint": "1c99eaf2ac65628ecee98c85173c4f803d71ef799df383a9f1c1769f8a5f777c"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The pull request loop for this repo: branch \u2192 commit \u2192 verify in your own box (local tests + local stack) \u2192 PR into dev \u2192 demo video recorded with agent-browser on the local stack \u2192 `gh --attach` \u2192 self-merge \u2192 verify on dev. A PR into dev runs no CI unless a person adds the `test` or `preview` label (one run each). Load when opening, updating, or finishing a pull request; when asking what CI runs where; when adding or explaining PR labels or the per-PR preview environment; or when attaching an image or video to a PR, issue, or comment. The PR title and body are the create-pr skill."
+  "description": "The pull request loop for this repo: branch → commit → verify in your own box (local tests + local stack) → PR into dev → demo video recorded with agent-browser on the local stack → `gh --attach` → self-merge → verify on dev. A PR into dev runs no CI unless a person adds the `test` or `preview` label (one run each). Load when opening, updating, or finishing a pull request; when asking what CI runs where; when adding or explaining PR labels or the per-PR preview environment; or when attaching an image or video to a PR, issue, or comment. The PR title and body are the create-pr skill.",
+  "content_fingerprint": "66bbd26c6e6bb2b05464862abea5e826d575d39713394084ac35dc552932ed3a"
 }

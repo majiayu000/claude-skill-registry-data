@@ -30,5 +30,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "DAG \u8f93\u51fa\u7ec8\u6b62\u7b97\u5b50\u3002\u7528\u4e8e\u63a5\u6536\u4e0a\u6e38\u7b97\u5b50\u7684\u8f93\u51fa\uff0c\u5e76\u5c06\u7ed3\u679c\u4fdd\u5b58\u5230\u6307\u5b9a\u8def\u5f84\u3002\u8be5\u7b97\u5b50\u6ca1\u6709\u4e0b\u6e38\u8f93\u51fa\uff0c\u5fc5\u987b\u4f5c\u4e3a DAG \u7684\u7ec8\u6b62\u8282\u70b9\u4f7f\u7528\u3002"
+  "description": "DAG 输出终止算子。用于接收上游算子的输出，并将结果保存到指定路径。该算子没有下游输出，必须作为 DAG 的终止节点使用。",
+  "content_fingerprint": "74182d824cb9416e829932d12abcc51fdd3a406321e452d0ea954ac3bd21738f"
 }

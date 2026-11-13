@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5c06\u8ba1\u5212\u3001\u89c4\u8303\u6216\u5f53\u524d\u5bf9\u8bdd\u62c6\u5206\u4e3a\u4e00\u7ec4 tracer-bullet ticket\uff0c\u6bcf\u4e2a ticket \u58f0\u660e\u5176\u963b\u585e\u8fb9\uff08blocking edges\uff09\uff0c\u53d1\u5e03\u5230\u5df2\u914d\u7f6e\u7684\u8ddf\u8e2a\u5668\u2014\u2014\u672c\u5730\u6587\u4ef6\u4e2d\u6bcf\u4e2a ticket \u4e00\u4e2a\u6587\u4ef6\u4ee5\u6587\u672c\u8868\u793a\u8fb9\uff0c\u771f\u5b9e\u8ddf\u8e2a\u5668\u4e0a\u4ee5\u539f\u751f\u963b\u585e\u94fe\u63a5\u8868\u793a\u3002"
+  "description": "将计划、规范或当前对话拆分为一组 tracer-bullet ticket，每个 ticket 声明其阻塞边（blocking edges），发布到已配置的跟踪器——本地文件中每个 ticket 一个文件以文本表示边，真实跟踪器上以原生阻塞链接表示。",
+  "content_fingerprint": "58d6e9738f863cc46d91a0bfcffd2072685e7d1a45a48ffd2bb07ebeb124c1e9"
 }

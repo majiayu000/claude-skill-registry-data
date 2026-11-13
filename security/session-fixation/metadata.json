@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect and exploit session fixation (WSTG-SESS-01, WSTG-SESS-03) and session exposure (WSTG-SESS-04) by testing whether the server issues a new session token post-authentication, whether pre-login tokens remain valid after login, and whether session IDs are transmitted over HTTP or included in GET parameters. Analyze token randomness via Burp Sequencer. Test JSESSIONID, ASP.NET Forms Auth cookies. Tools: OWASP ZAP, Burp Suite Repeater/Sequencer, JHijack."
+  "description": "Detect and exploit session fixation (WSTG-SESS-01, WSTG-SESS-03) and session exposure (WSTG-SESS-04) by testing whether the server issues a new session token post-authentication, whether pre-login tokens remain valid after login, and whether session IDs are transmitted over HTTP or included in GET parameters. Analyze token randomness via Burp Sequencer. Test JSESSIONID, ASP.NET Forms Auth cookies. Tools: OWASP ZAP, Burp Suite Repeater/Sequencer, JHijack.",
+  "content_fingerprint": "b3e9b026fbced45bbe4ee19e6ff77121da8cae2a6025662e1ed4aa6961c121ee"
 }

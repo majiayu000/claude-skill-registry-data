@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "In-session iterative loop \u2014 keeps Claude running in the current session until a task is done. Unlike /loop (which spawns background workers), /iloop stays in the current session and re-prompts each iteration via Stop hook. Use for: 'keep fixing until tests pass', 'iterate until this feature works', autonomous debugging. Triggers on: '/iloop', 'in-session loop', 'keep iterating', 'loop until done'."
+  "description": "In-session iterative loop — keeps Claude running in the current session until a task is done. Unlike /loop (which spawns background workers), /iloop stays in the current session and re-prompts each iteration via Stop hook. Use for: 'keep fixing until tests pass', 'iterate until this feature works', autonomous debugging. Triggers on: '/iloop', 'in-session loop', 'keep iterating', 'loop until done'.",
+  "content_fingerprint": "fe2f36e0fed7a9203ff0a626b8d96a43748d9bd6744da1640c5d321538078cb1"
 }

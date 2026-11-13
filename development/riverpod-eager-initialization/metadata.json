@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dangdungvn/review_system_app/blob/main/.github/skills/riverpod-eager-initialization/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c42553b1c77af281ca8141d8295e92be9809cd42c887b73346655149b9118e05",
+  "description": "Eagerly initialize Riverpod providers at app startup by watching them in a root Consumer; handle loading/error in the initializer, AsyncValue.requireValue. Use when a provider must be ready before the"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Hourly warehouse health sweep for {{warehouse_schema}}. Checks every monitored table's freshness against its SLA, compares row counts to the table's own trailing baseline, diffs the schema for drift, and checks for failed or stalled loads. Posts anomalies to {{alert_channel}} and drafts a GitHub issue in {{incident_repo}} with the likely cause. Read-only across the warehouse \u2014 never modifies data, tables, or pipelines."
+  "description": "Hourly warehouse health sweep for {{warehouse_schema}}. Checks every monitored table's freshness against its SLA, compares row counts to the table's own trailing baseline, diffs the schema for drift, and checks for failed or stalled loads. Posts anomalies to {{alert_channel}} and drafts a GitHub issue in {{incident_repo}} with the likely cause. Read-only across the warehouse — never modifies data, tables, or pipelines.",
+  "content_fingerprint": "05eb84afa0b29e0344297ce764339fc82f1fada9365ffb2c1fd979abdc315dcf"
 }

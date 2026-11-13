@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Temporarily bootstrap a newly renamed or newly added `workflow_dispatch` workflow so GitHub can dispatch it before the workflow exists on the default branch. Use when `gh workflow run <file>.yml` returns `workflow ... not found on the default branch` for a feature branch, especially right after renaming or introducing a dispatch-only workflow."
+  "description": "Temporarily bootstrap a newly renamed or newly added `workflow_dispatch` workflow so GitHub can dispatch it before the workflow exists on the default branch. Use when `gh workflow run <file>.yml` returns `workflow ... not found on the default branch` for a feature branch, especially right after renaming or introducing a dispatch-only workflow.",
+  "content_fingerprint": "c1cdc251b0bb85c50ef0226dd202fad7581f38a34d71f73141f682435c87b1e2"
 }

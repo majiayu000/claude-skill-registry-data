@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2\u80a1\u7968\u590d\u6743\u56e0\u5b50\u3002\u652f\u6301 --symbol\u3001--trade-date\u3001--start-date\u3001--end-date\u3001--page\u3001--page-size\u3002\u63a5\u53e3\uff1aGET /api/v1/market/data/stock-adjust-factor\u3002"
+  "description": "查询股票复权因子。支持 --symbol、--trade-date、--start-date、--end-date、--page、--page-size。接口：GET /api/v1/market/data/stock-adjust-factor。",
+  "content_fingerprint": "4adf6fb3c24afeeb1ee33699d590245c4000b742aa0b7b01bdc35796b400ba9c"
 }

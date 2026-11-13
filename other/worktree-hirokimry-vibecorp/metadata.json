@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u30ef\u30fc\u30af\u30c4\u30ea\u30fc\u306e\u30e9\u30a4\u30d5\u30b5\u30a4\u30af\u30eb\u7ba1\u7406\u30b9\u30ad\u30eb\u3002\u4e00\u89a7\u8868\u793a\u3001\u30de\u30fc\u30b8\u6e08\u307f\u30ef\u30fc\u30af\u30c4\u30ea\u30fc\u306e\u81ea\u52d5\u524a\u9664\u3001\u624b\u52d5\u524a\u9664\u3001\u30be\u30f3\u30d3\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u30d7\u30ed\u30bb\u30b9\u306e kill \u3092\u884c\u3046\u3002\u300c/worktree list\u300d\u300c/worktree clean\u300d\u300c/worktree remove\u300d\u300c/worktree kill-zombies\u300d\u3068\u8a00\u3063\u305f\u6642\u306b\u4f7f\u7528\u3002"
+  "description": "ワークツリーのライフサイクル管理スキル。一覧表示、マージ済みワークツリーの自動削除、手動削除、ゾンビエージェントプロセスの kill を行う。「/worktree list」「/worktree clean」「/worktree remove」「/worktree kill-zombies」と言った時に使用。",
+  "content_fingerprint": "3671ae86db617bbdcf6c00858773d6c0b2f433de70ffb0af593fe519e0e75424"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Refer another project while protecting sensitive information. Use when: (1) User says 'refer project', 'copy from project', or 'look at another repo', (2) User wants to reference patterns or setup from another codebase, (3) User needs to learn from another project's structure without leaking private data. Pass -p/--pull to verify the referenced repo is fresh before reading it \u2014 checks it's on its default branch, checks for uncommitted work, then pulls and reports the commit it landed on."
+  "description": "Refer another project while protecting sensitive information. Use when: (1) User says 'refer project', 'copy from project', or 'look at another repo', (2) User wants to reference patterns or setup from another codebase, (3) User needs to learn from another project's structure without leaking private data. Pass -p/--pull to verify the referenced repo is fresh before reading it — checks it's on its default branch, checks for uncommitted work, then pulls and reports the commit it landed on.",
+  "content_fingerprint": "43f3be0ca8f09629e3c77eb654a8a7919cfbe9139ab00802ae1d49197fb1c1c3"
 }

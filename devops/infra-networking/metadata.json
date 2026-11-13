@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage AICP's network surfaces \u2014 LocalAI on `localhost:8090` (host) \u2192 `:8080` (container), AICP own metrics on `:9101/metrics`, optional Grafana on `:3000` + Prometheus on `:9090`, MCP server stdio (no port), agent server `--agent <port>` (default no agent), planned LocalAI P2P cluster peering (Stage 4 reliability). Loads when the operator says \"what ports does AICP use\" / \"expose LocalAI to fleet\" / \"firewall rules\" / \"set up cluster peering\" / \"AICP behind a reverse proxy\" / \"MCP not connecting\"."
+  "description": "Manage AICP's network surfaces — LocalAI on `localhost:8090` (host) → `:8080` (container), AICP own metrics on `:9101/metrics`, optional Grafana on `:3000` + Prometheus on `:9090`, MCP server stdio (no port), agent server `--agent <port>` (default no agent), planned LocalAI P2P cluster peering (Stage 4 reliability). Loads when the operator says \"what ports does AICP use\" / \"expose LocalAI to fleet\" / \"firewall rules\" / \"set up cluster peering\" / \"AICP behind a reverse proxy\" / \"MCP not connecting\".",
+  "content_fingerprint": "876a09489e08bdd9f6d117749356e959999bad641c97646281c0524996b041ca"
 }

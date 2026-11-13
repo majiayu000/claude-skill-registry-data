@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run EPA SWMM (swmm5) simulations reproducibly and extract key metrics from the report file. Use when an agent needs to (1) run a .inp via swmm5 CLI, (2) generate a run directory with rpt/out + manifest, (3) extract peak flow/time for a node/outfall, (4) parse SWMM continuity (Runoff Quantity / Flow Routing) errors from .rpt, or (5) compare two .rpt files (e.g. GUI vs CLI) for equivalence."
+  "description": "Run EPA SWMM (swmm5) simulations reproducibly and extract key metrics from the report file. Use when an agent needs to (1) run a .inp via swmm5 CLI, (2) generate a run directory with rpt/out + manifest, (3) extract peak flow/time for a node/outfall, (4) parse SWMM continuity (Runoff Quantity / Flow Routing) errors from .rpt, or (5) compare two .rpt files (e.g. GUI vs CLI) for equivalence.",
+  "content_fingerprint": "7d69ce4b3392660975aa78a6ef6e2209049fae3e395ff9c5843cfc47d1c3501e"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "End-to-end reviewer for a completed multi-phase feature at the end of a phase-orchestrator run. Use after all requested phases are finalized: inspects the whole feature against the plan and PRD/spec, hunting integration bugs across phase boundaries, missing acceptance criteria, stale plan state, and validation gaps. Patches only safe concrete issues; never commits unless commit authority is explicitly delegated. Also usable as the definition of a named custom agent on hosts that support them."
+  "description": "End-to-end reviewer for a completed multi-phase feature at the end of a phase-orchestrator run. Use after all requested phases are finalized: inspects the whole feature against the plan and PRD/spec, hunting integration bugs across phase boundaries, missing acceptance criteria, stale plan state, and validation gaps. Patches only safe concrete issues; never commits unless commit authority is explicitly delegated. Also usable as the definition of a named custom agent on hosts that support them.",
+  "content_fingerprint": "e381cf54773f5e608597f7d60a57ab1b35c01433c3a2ec8856ad3a52748e8946"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `deployment-pipeline` stage (operation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage deployment-pipeline --single`: the engine emits one run-stage directive for deployment-pipeline and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `deployment-pipeline` stage (operation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage deployment-pipeline --single`: the engine emits one run-stage directive for deployment-pipeline and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "7e86a20898ff1226482affa3db42528519d511f7480befb7170b7f09145c14ba"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8a2d\u5b9a\u3001\u91cd\u555f\u4e26\u9a57\u8b49 Webtop AMD \u7684 host backend\u3001Docker frontend \u8207 Tailscale Serve sidecar\u3002\u7576\u4f7f\u7528\u8005\u8aaa\u300c\u91cd\u555f webtop\u300d\u3001\u300crestart webtop\u300d\u3001Webtop \u7db2\u9801\u6216 API \u7121\u6cd5\u958b\u555f\u3001GPU/\u7a0b\u5e8f\u8cc7\u6599\u505c\u6b62\u66f4\u65b0\u3001Docker/Tailscale \u5931\u6548\uff0c\u6216\u8f38\u5165 /restart-webtop \u6642\u4f7f\u7528\u3002\u5305\u542b\u9996\u6b21\u74b0\u5883\u8a2d\u5b9a\u3001Tailscale \u6388\u6b0a\u3001\u6b63\u78ba\u91cd\u5efa\u9806\u5e8f\u8207\u5b8c\u6574\u5065\u5eb7\u6aa2\u67e5\u3002"
+  "description": "設定、重啟並驗證 Webtop AMD 的 host backend、Docker frontend 與 Tailscale Serve sidecar。當使用者說「重啟 webtop」、「restart webtop」、Webtop 網頁或 API 無法開啟、GPU/程序資料停止更新、Docker/Tailscale 失效，或輸入 /restart-webtop 時使用。包含首次環境設定、Tailscale 授權、正確重建順序與完整健康檢查。",
+  "content_fingerprint": "7efc45fc2f2305e27ee7ce3fde418b99d23fde5de32b9d000a69ad4cba0377a8"
 }

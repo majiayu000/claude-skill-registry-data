@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a deploy.yml run fails on Kiwi's prod CI/CD pipeline, bootstrap-cicd.sh fails against real GCP, or you're modifying deploy.yml/bootstrap-cicd.sh and want to avoid gotchas already hit. Covers gcloud beta run jobs, Cloud Run canary/ingress 404s, IAM instance-scope restrictions, OS Login setup, and a required-status-check merge blocker."
+  "description": "Use when a deploy.yml run fails on Kiwi's prod CI/CD pipeline, bootstrap-cicd.sh fails against real GCP, or you're modifying deploy.yml/bootstrap-cicd.sh and want to avoid gotchas already hit. Covers gcloud beta run jobs, Cloud Run canary/ingress 404s, IAM instance-scope restrictions, OS Login setup, and a required-status-check merge blocker.",
+  "content_fingerprint": "476f96de06df07cb9723491df25a267fb6642b0c9b6635a1831f94d9b0133d7a"
 }

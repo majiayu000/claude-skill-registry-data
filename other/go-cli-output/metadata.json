@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The utils printer for Go CLI tools - the two output tiers behind --debug, the Print* API, table rendering, terminal colors, and error discipline. Use when writing anything a CLI prints, when building or changing utils/printer.go, utils/table.go, or utils/globals.go, or when a command reaches for fmt.Println. Triggers on PrintInfo, PrintSuccess, PrintError, PrintFatal, PrintWarn, PrintGeneric, PrintTable, GlobalDebugFlag, StdoutIsTerminal, lipgloss.Println, and lipgloss.ANSIColor."
+  "description": "The utils printer for Go CLI tools - the two output tiers behind --debug, the Print* API, table rendering, terminal colors, and error discipline. Use when writing anything a CLI prints, when building or changing utils/printer.go, utils/table.go, or utils/globals.go, or when a command reaches for fmt.Println. Triggers on PrintInfo, PrintSuccess, PrintError, PrintFatal, PrintWarn, PrintGeneric, PrintTable, GlobalDebugFlag, StdoutIsTerminal, lipgloss.Println, and lipgloss.ANSIColor.",
+  "content_fingerprint": "132e093506d5b763d62cb095e4044291df6274cb0d6dcb20f2a27632a9590dbf"
 }

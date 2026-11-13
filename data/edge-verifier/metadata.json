@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/grahama1970/agent-skills/blob/main/skills/edge-verifier/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "35961d45b2a09921bf16282f64c2af8edbe0c44e773e95baf468cd55dfb9d938",
+  "description": "Verifies relationships between a source text (e.g. Episode, Task) and existing Knowledge Graph lessons. Runs KNN/Hybrid search to find candidates, then uses LLM (scillm) to verify \"verifies\", \"contrad"
 }

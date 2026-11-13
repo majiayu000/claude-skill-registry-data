@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Recall knowledge base entries by meaning, not just keywords \u2014 hybrid search (lexical ripgrep + local vector embeddings + see-link graph) over `.claude/knowledge/entries/`. Use when looking for prior knowledge, decisions, pitfalls, or context that may be worded differently from the query (e.g. a Japanese query vs English identifiers, or synonyms the entry does not literally contain). Falls back to ripgrep-only when the vector index or its dependencies are absent. On-demand only \u2014 it is NOT wired into the per-prompt hook (that stays ripgrep for instant, model-free injection)."
+  "description": "Recall knowledge base entries by meaning, not just keywords — hybrid search (lexical ripgrep + local vector embeddings + see-link graph) over `.claude/knowledge/entries/`. Use when looking for prior knowledge, decisions, pitfalls, or context that may be worded differently from the query (e.g. a Japanese query vs English identifiers, or synonyms the entry does not literally contain). Falls back to ripgrep-only when the vector index or its dependencies are absent. On-demand only — it is NOT wired into the per-prompt hook (that stays ripgrep for instant, model-free injection).",
+  "content_fingerprint": "79b55947d3bb61a39a04adfcd2d991added5f8a151091be6278d5565fa8a63e4"
 }

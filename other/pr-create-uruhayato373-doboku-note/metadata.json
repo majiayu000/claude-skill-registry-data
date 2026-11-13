@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u73fe\u5728\u306e\u30d6\u30e9\u30f3\u30c1\u304b\u3089 GitHub PR \u3092\u4f5c\u6210\u3059\u308b\u3002git status / diff / log \u3092\u89e3\u6790\u3057\u3001PR \u30bf\u30a4\u30c8\u30eb\u3068 body \u3092\u81ea\u52d5\u751f\u6210\u3001gh CLI \u3067 PR \u3092 open \u3059\u308b\u3002body \u306f HEREDOC \u3067\u6574\u5f62\u3057 Co-Authored-By \u3092\u4ed8\u4e0e\u3001git add \u306f\u660e\u793a\u6307\u5b9a\u306e\u307f\u3002 Use when user asks to [PR\u4f5c\u3063\u3066, PR\u4f5c\u6210, \u30d7\u30eb\u30ea\u30af, /pr-create, create pull request]."
+  "description": "現在のブランチから GitHub PR を作成する。git status / diff / log を解析し、PR タイトルと body を自動生成、gh CLI で PR を open する。body は HEREDOC で整形し Co-Authored-By を付与、git add は明示指定のみ。 Use when user asks to [PR作って, PR作成, プルリク, /pr-create, create pull request].",
+  "content_fingerprint": "efde3cb7a22be3113fcb6134322058fe83e6fd64d2c0e2ff43d7fc0d9de32720"
 }

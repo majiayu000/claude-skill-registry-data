@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Analyze prompt-cache effectiveness for Claude Code usage from the Agent Monitor dashboard \u2014 cache hit rate (total_cache_read / (total_cache_read + total_input)), cache_write vs cache_read reuse, cache-read vs cache-write spend, and the sessions with the poorest reuse. Pulls token totals from /api/analytics, per-session detail from /api/sessions, and dollar splits from /api/pricing/cost. Use when diagnosing cache spend or deciding whether prompt caching is paying off."
+  "description": "Analyze prompt-cache effectiveness for Claude Code usage from the Agent Monitor dashboard — cache hit rate (total_cache_read / (total_cache_read + total_input)), cache_write vs cache_read reuse, cache-read vs cache-write spend, and the sessions with the poorest reuse. Pulls token totals from /api/analytics, per-session detail from /api/sessions, and dollar splits from /api/pricing/cost. Use when diagnosing cache spend or deciding whether prompt caching is paying off.",
+  "content_fingerprint": "aef1dc0dda752e771f481c810fa79bafd6a52c1dc26d9315b7e7ab8b7aa38eb5"
 }

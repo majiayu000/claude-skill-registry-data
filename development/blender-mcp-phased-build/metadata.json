@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when supervising a multi-phase Blender build (a character, prop, or rig) that is actually executed by a separate Claude Code + blender-mcp terminal session, while this session only has file-level access to the project folder (e.g. via a device bridge). Enforces one-phase-per-message hand-offs, direct image verification of every render instead of trusting text self-reports, file-based delivery of fix instructions to avoid terminal paste corruption, and a time-boxing rule so cosmetic issues don't consume the whole build."
+  "description": "Use when supervising a multi-phase Blender build (a character, prop, or rig) that is actually executed by a separate Claude Code + blender-mcp terminal session, while this session only has file-level access to the project folder (e.g. via a device bridge). Enforces one-phase-per-message hand-offs, direct image verification of every render instead of trusting text self-reports, file-based delivery of fix instructions to avoid terminal paste corruption, and a time-boxing rule so cosmetic issues don't consume the whole build.",
+  "content_fingerprint": "5ff84ede3aeb57550f75dc5718bb7e8211f9fab90fe19a4818b918bbb2f930fd"
 }

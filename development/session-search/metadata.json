@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Find a past agent session by topic and load its context into the current conversation. Searches the session-brain topic graph, ranking by relevance, topic membership, and time decay, then loads the winning transcript. Use when the user says \"/wiki-sessions <topic>\", \"which session did I do X in\", \"find the session where I fixed X\", \"when did I last work on Y\", \"what was that session about Z\", \"load the session where I set up X\", \"have I done this before\". Read-only \u2014 never writes to the vault. Requires a graph built by the session-brain skill."
+  "description": "Find a past agent session by topic and load its context into the current conversation. Searches the session-brain topic graph, ranking by relevance, topic membership, and time decay, then loads the winning transcript. Use when the user says \"/wiki-sessions <topic>\", \"which session did I do X in\", \"find the session where I fixed X\", \"when did I last work on Y\", \"what was that session about Z\", \"load the session where I set up X\", \"have I done this before\". Read-only — never writes to the vault. Requires a graph built by the session-brain skill.",
+  "content_fingerprint": "960cb77a84791957eb8ed65e51cb8dadca7910c5a925ee3bffa7ba7884bb4619"
 }

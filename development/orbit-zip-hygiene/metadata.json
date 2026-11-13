@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Validate the contents of a WordPress plugin release zip \u2014 no dev artefacts (`.git/`, `.cursor/`, `.github/`, `.DS_Store`), no source maps, no `composer.json` / `package.json` (or strip dev deps), no forbidden functions in shipped code (`var_dump`, `phpinfo`, `error_reporting`), supply-chain audit on bundled vendor/. Use when the user says \"validate zip\", \"zip hygiene\", \"dev files in zip\", \"before SVN submit\", \"check release zip\"."
+  "description": "Validate the contents of a WordPress plugin release zip — no dev artefacts (`.git/`, `.cursor/`, `.github/`, `.DS_Store`), no source maps, no `composer.json` / `package.json` (or strip dev deps), no forbidden functions in shipped code (`var_dump`, `phpinfo`, `error_reporting`), supply-chain audit on bundled vendor/. Use when the user says \"validate zip\", \"zip hygiene\", \"dev files in zip\", \"before SVN submit\", \"check release zip\".",
+  "content_fingerprint": "a37fb91833b0a94a4f8107faa844d165cf318e5fe54430acab66e92718a61326"
 }

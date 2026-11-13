@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Migrate anysite MCP skills, prompts, and agent instructions from v1 (individual tools like search_linkedin_users, get_linkedin_profile) to v2 (universal meta-tools execute, discover, get_page, query_cache, export_data). Automatically rewrites tool references, adds pagination/filtering/export capabilities, and validates migrated output. Use when users need to update existing skills or prompts for the new anysite MCP v2 API, convert old tool calls to execute() format, or adapt workflows to use new v2 features like server-side filtering and data export."
+  "description": "Migrate anysite MCP skills, prompts, and agent instructions from v1 (individual tools like search_linkedin_users, get_linkedin_profile) to v2 (universal meta-tools execute, discover, get_page, query_cache, export_data). Automatically rewrites tool references, adds pagination/filtering/export capabilities, and validates migrated output. Use when users need to update existing skills or prompts for the new anysite MCP v2 API, convert old tool calls to execute() format, or adapt workflows to use new v2 features like server-side filtering and data export.",
+  "content_fingerprint": "1c9229688a12be116ae6a7c00c8a07b521f6ef1c0f5d962dca664687cd808176"
 }

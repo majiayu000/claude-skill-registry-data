@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "mLLMCelltype \u2014 reference-free cell-type annotation of scRNA-seq clusters by multi-LLM consensus over marker gene lists, with iterative cross-model discussion and per-cluster uncertainty (consensus proportion + Shannon entropy). Use when you have per-cluster marker genes (from scanpy rank_genes_groups or Seurat FindAllMarkers) and want automated, no-reference cell-type labels plus a confidence score to flag clusters for manual review. For label transfer from an annotated atlas use cellxgene-census-annotation; for semi-supervised label propagation from partial labels use scvi-scanvi."
+  "description": "mLLMCelltype — reference-free cell-type annotation of scRNA-seq clusters by multi-LLM consensus over marker gene lists, with iterative cross-model discussion and per-cluster uncertainty (consensus proportion + Shannon entropy). Use when you have per-cluster marker genes (from scanpy rank_genes_groups or Seurat FindAllMarkers) and want automated, no-reference cell-type labels plus a confidence score to flag clusters for manual review. For label transfer from an annotated atlas use cellxgene-census-annotation; for semi-supervised label propagation from partial labels use scvi-scanvi.",
+  "content_fingerprint": "a70bfa9cd98387fec44a4ad85eb8e06124ee5434dcfeffeb8db69ab0518e8b04"
 }

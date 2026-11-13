@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Execute the next TaskMaster task using the implementation plan with CDD verification. Picks the next ready task, matches it to the plan step, implements via a dispatched subagent, verifies subtasks with evidence, marks the task done, and loops until every task is complete.\nWraps the TaskMaster next -> in-progress -> done lifecycle with CDD GREEN / RED / BLUE verification and the plugin's triple-verification rule. Autonomous by design \u2014 no user prompts inside the loop."
+  "description": "Execute the next TaskMaster task using the implementation plan with CDD verification. Picks the next ready task, matches it to the plan step, implements via a dispatched subagent, verifies subtasks with evidence, marks the task done, and loops until every task is complete.\nWraps the TaskMaster next -> in-progress -> done lifecycle with CDD GREEN / RED / BLUE verification and the plugin's triple-verification rule. Autonomous by design — no user prompts inside the loop.",
+  "content_fingerprint": "10e6b94f539627a8a519075e246e6f65411d594b043d622b87a296cf98d05ba9"
 }

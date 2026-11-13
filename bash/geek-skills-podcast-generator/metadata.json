@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7528\u706b\u5c71\u5f15\u64ce Podcast AI \u6a21\u578b\u751f\u6210\u4e2d\u6587\u53cc\u4eba\u5bf9\u8bdd\u64ad\u5ba2\u3002\u5f53\u7528\u6237\u8981\u628a\u6587\u7ae0\u3001\u62a5\u544a\u3001\u8bdd\u9898\u6587\u672c\u8f6c\u6210\u64ad\u5ba2\u97f3\u9891\u3001\u751f\u6210\u5bf9\u8bdd\u5f0f\u97f3\u9891\u5185\u5bb9\u65f6\u4f7f\u7528\uff0c\u9700\u8981\u73af\u5883\u5177\u5907\u706b\u5c71\u5f15\u64ce APP_ID \u548c ACCESS_KEY\u3002\u652f\u6301 mp3/ogg_opus/pcm/aac\u3001\u8bed\u901f\u8c03\u8282\u3001\u81ea\u5b9a\u4e49\u97f3\u8272\u3001\u65ad\u70b9\u7eed\u4f20\u3002\u4e0d\u7528\u4e8e\uff1a\u5355\u4eba\u6717\u8bfb\u5f0f TTS\uff08\u7528\u666e\u901a\u8bed\u97f3\u5408\u6210\uff09\u3001\u82f1\u6587\u64ad\u5ba2\uff08\u6a21\u578b\u4e3b\u8981\u4f18\u5316\u4e2d\u6587\uff09\u3001\u64ad\u5ba2\u6587\u7a3f\u672c\u8eab\u7684\u64b0\u5199\uff08\u5148\u7528\u5199\u4f5c\u7c7b skill \u4ea7\u51fa\u6587\u672c\u518d\u6765\uff09\u3002"
+  "description": "用火山引擎 Podcast AI 模型生成中文双人对话播客。当用户要把文章、报告、话题文本转成播客音频、生成对话式音频内容时使用，需要环境具备火山引擎 APP_ID 和 ACCESS_KEY。支持 mp3/ogg_opus/pcm/aac、语速调节、自定义音色、断点续传。不用于：单人朗读式 TTS（用普通语音合成）、英文播客（模型主要优化中文）、播客文稿本身的撰写（先用写作类 skill 产出文本再来）。",
+  "content_fingerprint": "d44251a3438158555fe42040738d8880ee1696e115a88eb56826c4641c40d5b0"
 }

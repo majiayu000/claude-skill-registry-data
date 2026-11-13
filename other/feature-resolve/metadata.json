@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Internal helper invoked only by other skills in this plugin (feature-storm, feature-design, feature-plan, feature-implement) as their resolution step. Determines the correct features/feature-vN-<description>/ folder, version, and stage file path the caller must use. Creates the features/ folder and the feature subfolder if they don't exist, seeds feature-vN-tracker.html from the plugin's template on folder creation, and returns the resolution as a parseable block. Never edits or creates stage .md files \u2014 that is the caller's job. Not user-invocable."
+  "description": "Internal helper invoked only by other skills in this plugin (feature-storm, feature-design, feature-plan, feature-implement) as their resolution step. Determines the correct features/feature-vN-<description>/ folder, version, and stage file path the caller must use. Creates the features/ folder and the feature subfolder if they don't exist, seeds feature-vN-tracker.html from the plugin's template on folder creation, and returns the resolution as a parseable block. Never edits or creates stage .md files — that is the caller's job. Not user-invocable.",
+  "content_fingerprint": "ee8be0fa2a0d2a35149372d49057b606a0478fc53de9133660a9492c7f70e612"
 }

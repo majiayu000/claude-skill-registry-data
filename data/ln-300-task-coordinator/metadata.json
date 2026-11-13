@@ -5,5 +5,7 @@
   "source": "github.com/levnikolaevich/claude-code-skills",
   "downloaded_at": "2026-02-04T03:24:55.962864Z",
   "dir_name": "ln-300-task-coordinator",
-  "category": "data"
+  "category": "data",
+  "content_fingerprint": "8effe2e9d42b3230efda86149004cd0a6355d3cb97cd994d9f06cfdfbfd72c08",
+  "description": "Orchestrates task operations. Analyzes Story, builds optimal plan (1-6 implementation tasks), delegates to ln-301-task-creator (CREATE/ADD) or ln-302-task-replanner (REPLAN). Auto-discovers team ID."
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ece OpenAPI \u751f\u6210\u7684 Testany case \u6e90\u4ee3\u7801\u4e2d\u81ea\u52a8\u8bc6\u522b\u5165\u53c2\u548c\u51fa\u53c2\uff0c\u5e76\u540c\u6b65\u5230 case \u7684\u73af\u5883\u53d8\u91cf\u5217\u8868\u4e2d\u3002\u9002\u7528\u4e8e\u6e90\u4ee3\u7801\u5b58\u50a8\u5728\u9700\u8981\u8ba4\u8bc1\u7684 Git \u4ed3\u5e93\uff08\u5982 Bitbucket\uff09\u7684\u573a\u666f\u3002"
+  "description": "从 OpenAPI 生成的 Testany case 源代码中自动识别入参和出参，并同步到 case 的环境变量列表中。适用于源代码存储在需要认证的 Git 仓库（如 Bitbucket）的场景。",
+  "content_fingerprint": "674c9305c6c72f8ff3c536bff25ddaa986093d9d4bebb5c4853673647200476e"
 }

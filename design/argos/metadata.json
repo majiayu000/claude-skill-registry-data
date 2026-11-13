@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc900\uacf5\uac80\uc0ac \uac10\ub9ac \uc2a4\ud0ac. \uc124\uacc4 \uc0b0\ucd9c\ubb3c(spec, api-spec, qa-scenarios, flow-diagrams) \ub300\ube44 \uad6c\ud604\uc744 \uc815\uc801\u00b7\ub7f0\ud0c0\uc784\u00b7API\u00b7QA\u00b7\ub3c4\uba74\u00b7\ubcf4\uc548 \uad00\uc810\uc73c\ub85c \uac80\uc99d\ud55c\ub2e4. \uc77c\ubc18 diff \ud488\uc9c8\uc740 \uac00\uc6a9\ud55c CLI \ub124\uc774\ud2f0\ube0c \ub9ac\ubdf0\uc5d0 \uc704\uc784\ud558\uace0 spec \ub300\ube44 \uac10\ub9ac\ub294 \uc9c1\uc811 \uc18c\uc720\ud55c\ub2e4. /argos\ub85c \uc2e4\ud589\ud55c\ub2e4."
+  "description": "준공검사 감리 스킬. 설계 산출물(spec, api-spec, qa-scenarios, flow-diagrams) 대비 구현을 정적·런타임·API·QA·도면·보안 관점으로 검증한다. 일반 diff 품질은 가용한 CLI 네이티브 리뷰에 위임하고 spec 대비 감리는 직접 소유한다. /argos로 실행한다.",
+  "content_fingerprint": "6da7c6aebf606354161cc641bfec4e6626c9069b1fa6bbf1f7ba299a1132fa05"
 }

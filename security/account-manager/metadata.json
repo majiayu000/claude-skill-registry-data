@@ -1,6 +1,6 @@
 {
   "name": "account-manager",
-  "description": "",
+  "description": "安全地管理用户账号信息（CRUD）。支持存储密码、API Key、Cookies 等敏感信息，并支持 TOTP (MFA) 代码生成。**所有涉及凭证存储的操作必须优先使用此技能**，不可用于账号注册。",
   "repo": "glwlg/X-bot",
   "category": "security",
   "tags": [],
@@ -16,5 +16,6 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/glwlg/X-bot/blob/master/skills/builtin/account_manager/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "0e6fdd423b5dd2a9cec69d6a2c1e77c5f2b1fcef971880724b404b6d3d8c3bd9"
 }

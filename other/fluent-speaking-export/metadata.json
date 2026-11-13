@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generate a voice speaking session card (default 10 questions, configurable via preferences.speaking_export_question_count) and hand it off to the Claude app's voice mode \u2014 via a Slack channel when the claude.ai Slack connector is available, Google Drive as fallback, otherwise as a local file to paste. Triggered only when the learner types /fluent-speaking-export. Questions mix level topics, the learner's top mistake patterns, due review vocabulary, and one role-play. After the voice session, /fluent-speaking-import brings the results back."
+  "description": "Generate a voice speaking session card (default 10 questions, configurable via preferences.speaking_export_question_count) and hand it off to the Claude app's voice mode — via a Slack channel when the claude.ai Slack connector is available, Google Drive as fallback, otherwise as a local file to paste. Triggered only when the learner types /fluent-speaking-export. Questions mix level topics, the learner's top mistake patterns, due review vocabulary, and one role-play. After the voice session, /fluent-speaking-import brings the results back.",
+  "content_fingerprint": "12d22dbc4c620a801d58be0371c91d8b43178d4dc576e52fe392069485c69eac"
 }

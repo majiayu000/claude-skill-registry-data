@@ -1,6 +1,6 @@
 {
   "name": "book-writer",
-  "description": "",
+  "description": "books リポジトリ用の技術文書作成ワークフロー。\n論文・技術文書などを .qmd 形式の構造化ドキュメントに変換する。\nサブエージェントで補足文書を並列生成し、Quarto callout で補足情報を追加。\n使用タイミング: (1) 論文まとめの作成、(2) 技術文書のドキュメント化、\n(3) 複雑な概念を含む文書の解説作成、(4) 「〜についてまとめて」という依頼\n",
   "repo": "naoto-iwase/books",
   "category": "documents",
   "tags": [],
@@ -16,5 +16,6 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/naoto-iwase/books/blob/main/.claude/skills/book-writer/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "73561ade22d5124a936c4c5f233fac9573df64fddf5b8bf4f447d9724757f06a"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage AICP's queue surfaces \u2014 primary is the per-day JSONL Dead-Letter Queue (`~/.aicp/dlq/`); secondary is the in-process task_manager queue (`aicp/core/tasks.py`); future fleet integration may add a real message queue. Distinct from `aicp-ops-dlq` (DLQ runtime ops via CLI) \u2014 this skill is the design/scale lifecycle for queue infrastructure. Loads when the operator says \"scale the queue\" / \"replace DLQ with Redis\" / \"add a queue for fleet\" / \"queue throughput limit\" / \"is JSONL DLQ enough\"."
+  "description": "Manage AICP's queue surfaces — primary is the per-day JSONL Dead-Letter Queue (`~/.aicp/dlq/`); secondary is the in-process task_manager queue (`aicp/core/tasks.py`); future fleet integration may add a real message queue. Distinct from `aicp-ops-dlq` (DLQ runtime ops via CLI) — this skill is the design/scale lifecycle for queue infrastructure. Loads when the operator says \"scale the queue\" / \"replace DLQ with Redis\" / \"add a queue for fleet\" / \"queue throughput limit\" / \"is JSONL DLQ enough\".",
+  "content_fingerprint": "843f1c1f3e31f0e72700b771afbcbee665e2ce0082274d721a1964954fb21a38"
 }

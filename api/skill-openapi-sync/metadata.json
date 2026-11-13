@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect drift between the API OpenAPI spec and frontend TypeScript clients, then guide regeneration. Triggers on phrases like 'openapi sync', 'regenerate types', 'api types out of date', or when `api/openapi.generated.yml` or `frontend/src/types/` changes. Reports added/removed/changed endpoints and schemas with file:line citations and an exact regeneration command."
+  "description": "Detect drift between the API OpenAPI spec and frontend TypeScript clients, then guide regeneration. Triggers on phrases like 'openapi sync', 'regenerate types', 'api types out of date', or when `api/openapi.generated.yml` or `frontend/src/types/` changes. Reports added/removed/changed endpoints and schemas with file:line citations and an exact regeneration command.",
+  "content_fingerprint": "ea473d209cdb56efe4db94751af5ad8e0b3758b491f1b4e244fe30c26acb85c2"
 }

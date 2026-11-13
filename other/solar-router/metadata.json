@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Shared router that runs AI providers (Codex, Claude, Agy/Antigravity, Agent, Ollama) with Solar repo context. Single source of truth for provider selection, fallback, and async routing policy. Use when solar-gateway, solar-app (channel=app), async-tasks, or other runtimes need to invoke an AI with cwd = SOLAR_WORKSPACE and paths resolved against the active workspace."
+  "description": "Shared router that runs AI providers (Codex, Claude, Agy/Antigravity, Agent, Ollama) with Solar repo context. Single source of truth for provider selection, fallback, and async routing policy. Use when solar-gateway, solar-app (channel=app), async-tasks, or other runtimes need to invoke an AI with cwd = SOLAR_WORKSPACE and paths resolved against the active workspace.",
+  "content_fingerprint": "87657c95af94a8492815f17b38ef701c1ae2fa65a69f96123ac9bc24a9d41fcc"
 }

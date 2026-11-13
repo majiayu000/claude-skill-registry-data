@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Close FPGA timing on a Vivado design driven by the SynthPilot MCP \u2014 iterate synthesis/implementation, diagnose critical paths, and apply the safest constraint/strategy fix until worst negative slack (WNS) and total negative slack (TNS) reach \u2265 0. Use when the user wants to close timing, fix negative WNS/TNS, resolve setup/hold violations, or asks why a design \"doesn't meet timing\". Requires the SynthPilot MCP (Vivado + Tcl server on :9999)."
+  "description": "Close FPGA timing on a Vivado design driven by the SynthPilot MCP — iterate synthesis/implementation, diagnose critical paths, and apply the safest constraint/strategy fix until worst negative slack (WNS) and total negative slack (TNS) reach ≥ 0. Use when the user wants to close timing, fix negative WNS/TNS, resolve setup/hold violations, or asks why a design \"doesn't meet timing\". Requires the SynthPilot MCP (Vivado + Tcl server on :9999).",
+  "content_fingerprint": "4687228d116783679d19de86d435210c19f38d6402e8c8dbbe4f78141f42cebf"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Publish the user's own gbrain over MCP so other devices, desktop apps and\ncloud agents can reach it. `gbrain mcp expose` installs and signs in\nTailscale, publishes the running `gbrain serve --http` on the tailnet\n(HTTPS, tailnet-only by default; Funnel only when a client lives in a\nvendor cloud), keeps the server alive as a user service, and hands back the\nMCP URL. Then register one least-privilege client per consumer, choose\nnative OAuth/PKCE or a private machine handoff for that client, and verify\nthe connection inside the intended harness."
+  "description": "Publish the user's own gbrain over MCP so other devices, desktop apps and\ncloud agents can reach it. `gbrain mcp expose` installs and signs in\nTailscale, publishes the running `gbrain serve --http` on the tailnet\n(HTTPS, tailnet-only by default; Funnel only when a client lives in a\nvendor cloud), keeps the server alive as a user service, and hands back the\nMCP URL. Then register one least-privilege client per consumer, choose\nnative OAuth/PKCE or a private machine handoff for that client, and verify\nthe connection inside the intended harness.",
+  "content_fingerprint": "aa7cd0a4214993445c6ac1661762b2ba210f24ffc62e74f870e7e889578ee5d9"
 }

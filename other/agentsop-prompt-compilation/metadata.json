@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The compile-readiness gate for prompt auto-optimization. Decide whether you have earned the right to run an optimizer (DSPy MIPROv2 / GEPA / BootstrapFewShot) before spending compute. Two preconditions only \u2014 a real metric, and enough examples for the optimizer you picked. Garbage metric in, garbage prompt out. Pick the optimizer by data scale; GEPA inverts the scale assumption (~10 examples + textual feedback)."
+  "description": "The compile-readiness gate for prompt auto-optimization. Decide whether you have earned the right to run an optimizer (DSPy MIPROv2 / GEPA / BootstrapFewShot) before spending compute. Two preconditions only — a real metric, and enough examples for the optimizer you picked. Garbage metric in, garbage prompt out. Pick the optimizer by data scale; GEPA inverts the scale assumption (~10 examples + textual feedback).",
+  "content_fingerprint": "7dc2ecab92e4fb5013bd1d0aa62dfe108ea7ea792643207361ec7d836f99c403"
 }

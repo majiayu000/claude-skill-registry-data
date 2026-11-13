@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ec5\u5f53\u7528\u6237\u663e\u5f0f\u8c03\u7528 `$handoff`\uff0c\u6216\u660e\u786e\u8981\u6c42\u751f\u6210\u4f1a\u8bdd\u4ea4\u63a5\u6587\u6863\u65f6\u4f7f\u7528\u3002\u5c06\u5f53\u524d\u5bf9\u8bdd\u538b\u7f29\u4e3a\u8131\u654f\u3001\u53ef\u6267\u884c\u7684\u4ea4\u63a5\u6587\u6863\uff0c\u4f9b\u4e0b\u4e00\u4e2a agent \u63a5\u7eed\u5de5\u4f5c\uff1b\u4e0d\u8981\u81ea\u52a8\u89e6\u53d1\u3002"
+  "description": "仅当用户显式调用 `$handoff`，或明确要求生成会话交接文档时使用。将当前对话压缩为脱敏、可执行的交接文档，供下一个 agent 接续工作；不要自动触发。",
+  "content_fingerprint": "9bdbd148b94021018d729ffc71e0dd8b07ba61ea5e6ada2e61c9324905ac0c15"
 }

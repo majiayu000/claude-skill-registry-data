@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Internal helper invoked only by other skills in this plugin (bug-submit, bug-fix) to (re)generate the repo-wide bugs/bugs-tracker.html from the plugin's tracker template plus the current filesystem state. Runs scripts/render_bug_tracker.py, which scans bugs/ (open) and bugs/archive/ (closed), renders each bug as an expandable Issues card with relative-path screenshots, and writes the tracker wholesale. Holds no state of its own. Never touches bug folders or report .md files. Not user-invocable."
+  "description": "Internal helper invoked only by other skills in this plugin (bug-submit, bug-fix) to (re)generate the repo-wide bugs/bugs-tracker.html from the plugin's tracker template plus the current filesystem state. Runs scripts/render_bug_tracker.py, which scans bugs/ (open) and bugs/archive/ (closed), renders each bug as an expandable Issues card with relative-path screenshots, and writes the tracker wholesale. Holds no state of its own. Never touches bug folders or report .md files. Not user-invocable.",
+  "content_fingerprint": "18b8a386eb5f52c8d1b607ee283871c303a56f17450fe2b59bfb9ba9c621f621"
 }

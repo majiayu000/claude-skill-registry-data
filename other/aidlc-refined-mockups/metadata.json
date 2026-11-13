@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `refined-mockups` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage refined-mockups --single`: the engine emits one run-stage directive for refined-mockups and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `refined-mockups` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage refined-mockups --single`: the engine emits one run-stage directive for refined-mockups and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "12275b33b61394af6bdf76999f968e224972b6062ea8a2476623969a1c356388"
 }

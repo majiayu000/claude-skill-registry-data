@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill at the START of every coding task \u2014 new builds, bug fixes, and change requests. Classifies the work item, validates it against project scope, produces a high-level estimate, proposes a technology stack, and checks stack compatibility. Writes a plan artifact to .claude/sdlc/plans/ that every downstream phase and hook depends on. Must run before any Edit, Write, or code-generation tool call. Trigger this skill whenever the user says \"implement\", \"fix\", \"add\", \"change\", \"build\", \"refactor\", or references a ticket/requirement ID \u2014 even if the request seems small."
+  "description": "Use this skill at the START of every coding task — new builds, bug fixes, and change requests. Classifies the work item, validates it against project scope, produces a high-level estimate, proposes a technology stack, and checks stack compatibility. Writes a plan artifact to .claude/sdlc/plans/ that every downstream phase and hook depends on. Must run before any Edit, Write, or code-generation tool call. Trigger this skill whenever the user says \"implement\", \"fix\", \"add\", \"change\", \"build\", \"refactor\", or references a ticket/requirement ID — even if the request seems small.",
+  "content_fingerprint": "d1fde4b44e663ec59b972396f1c870f83275e3a5e7dbc0d42ae9a43462a86783"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Atomically update all 6 Fluent learner databases (learner-profile, progress, mistakes, mastery, spaced-repetition, session-log) at session end by calling .claude/hooks/update-db.py with a single JSON payload. Use at the end of every practice session \u2014 fluent-writing, fluent-vocab, fluent-speaking, fluent-reading, fluent-review, fluent-learn \u2014 to persist the session's errors, review results, new vocabulary, and session metadata."
+  "description": "Atomically update all 6 Fluent learner databases (learner-profile, progress, mistakes, mastery, spaced-repetition, session-log) at session end by calling .claude/hooks/update-db.py with a single JSON payload. Use at the end of every practice session — fluent-writing, fluent-vocab, fluent-speaking, fluent-reading, fluent-review, fluent-learn — to persist the session's errors, review results, new vocabulary, and session metadata.",
+  "content_fingerprint": "8cc1b549f7f2f72afbaa76a130dd58ad8cd8d5e3231fd2e2620b08cc85cdfb1a"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ingpoc/SKILLS/blob/main/project-hook-setup/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "e398f090c7e55990bc032fec2332cea622817303e8596a0f0d2e7798c501c199",
+  "description": "Use when setting up project-specific hooks for Claude Code enforcement. Load during INIT state when .claude/hooks/ is missing, or when creating new project. Installs 5 hooks that read from .claude/con"
 }

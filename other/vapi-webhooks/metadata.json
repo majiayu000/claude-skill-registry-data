@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Receive and verify Vapi webhooks (the \"Server URL\"). Use when setting up a Vapi Server URL receiver, authenticating deliveries with a shared secret (Authorization: Bearer or the legacy X-Vapi-Secret header), or handling voice-agent server messages \u2014 including the four request/response types that REQUIRE a JSON body back (assistant-request, tool-calls, transfer-destination-request, knowledge-base-request) plus informational ones like status-update and end-of-call-report."
+  "description": "Receive and verify Vapi webhooks (the \"Server URL\"). Use when setting up a Vapi Server URL receiver, authenticating deliveries with a shared secret (Authorization: Bearer or the legacy X-Vapi-Secret header), or handling voice-agent server messages — including the four request/response types that REQUIRE a JSON body back (assistant-request, tool-calls, transfer-destination-request, knowledge-base-request) plus informational ones like status-update and end-of-call-report.",
+  "content_fingerprint": "dc7f34fa8c3a8fcbd032e3d3736a1757e3a241d5db32ebd8313f9beb8f9f39d7"
 }

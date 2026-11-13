@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/buddypia/kaiju-voice/blob/master/.claude/skills/feature-wiring/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f8cfe57b41811158d03d068588d33b5bac463f3351cb38090f53f6300ee76a72",
+  "description": "プロジェクト プロジェクトの機能統合検証スキル。\n実装された機能の Export、ルート、データフロー、Lint を検証し、\n全コンポーネントが正しく接続されていることを確認する。\n\n\"統合検証して\", \"接続確認\", \"wiring 実行\" 等の要求でトリガーされる。\n\n<example>\nuser: \"code-analysis 機能の統合検証をして\"\nassistant: \"feature-"
 }

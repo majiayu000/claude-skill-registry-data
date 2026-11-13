@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "unknown",
-  "description": "GitCode \u534f\u4f5c\u901a\u7528\u57fa\u7840\u53c2\u8003\uff08\u5185\u90e8\u53c2\u8003\uff0c\u4e0d\u76f4\u63a5\u89e6\u53d1\uff09\u3002\u63d0\u4f9b GitCode API\u3001Token \u914d\u7f6e\u3001URL \u89e3\u6790\u3001\u65e5\u5fd7\u89c4\u8303\u3001\u53d8\u66f4\u5c55\u793a\uff0cGit \u514b\u9686/\u5206\u652f/diff/log/remote \u901a\u7528\u64cd\u4f5c\uff0c\u4ee5\u53ca PR \u521b\u5efa\u3001Issue \u521b\u5efa\u548c Issue \u8bc4\u8bba\u5de5\u4f5c\u6d41\u7b49\u5171\u4eab\u6587\u6863\u4e0e\u786e\u5b9a\u6027\u811a\u672c\u3002\u4f9b gitcode-pr-handler\u3001gitcode-issue-gen\u3001gitcode-issue-handler \u7b49 GitCode \u534f\u4f5c\u7c7b skill \u5f15\u7528\u4f7f\u7528\uff0c\u672c skill \u81ea\u8eab\u4e0d\u54cd\u5e94\u7528\u6237\u89e6\u53d1\u3002"
+  "description": "GitCode 协作通用基础参考（内部参考，不直接触发）。提供 GitCode API、Token 配置、URL 解析、日志规范、变更展示，Git 克隆/分支/diff/log/remote 通用操作，以及 PR 创建、Issue 创建和 Issue 评论工作流等共享文档与确定性脚本。供 gitcode-pr-handler、gitcode-issue-gen、gitcode-issue-handler 等 GitCode 协作类 skill 引用使用，本 skill 自身不响应用户触发。",
+  "content_fingerprint": "bce2d0b095739e3b195a2e525755c43deeff47e0c15fe93d8a541a52c68ce91a"
 }

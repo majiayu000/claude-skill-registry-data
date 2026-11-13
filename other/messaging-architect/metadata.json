@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Designs the Kafka producer/consumer adapter for an already-modeled domain event \u2014 topic, partition key, serialization, consumer group, delivery semantics, retries and DLQ \u2014 into the `25-mensageria.md` partial. Use when the request involves publishing a domain event to Kafka, consuming a Kafka topic, designing a producer or consumer adapter, deciding topic/partition/serialization, or wiring retry/DLQ for a message listener. Piece of the `/new-feature` pipeline: requires `10-dominio.md` in the given folder with an Events block that names external delivery, and stops without it."
+  "description": "Designs the Kafka producer/consumer adapter for an already-modeled domain event — topic, partition key, serialization, consumer group, delivery semantics, retries and DLQ — into the `25-mensageria.md` partial. Use when the request involves publishing a domain event to Kafka, consuming a Kafka topic, designing a producer or consumer adapter, deciding topic/partition/serialization, or wiring retry/DLQ for a message listener. Piece of the `/new-feature` pipeline: requires `10-dominio.md` in the given folder with an Events block that names external delivery, and stops without it.",
+  "content_fingerprint": "e0fb9adabcf8e1c2e117c0b9cf722fefb01afd84a61a4a215e7d8a913a46d208"
 }

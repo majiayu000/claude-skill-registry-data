@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reviews JUCE audio plugin code for JUCE-specific correctness issues: thread safety, APVTS parameter patterns, MessageManager usage, ValueTree, and MIDI handling. Use when the user asks to review a JUCE plugin, check a processBlock, audit parameter handling, or asks \"is this JUCE code safe?\". Trigger on phrases like \"review my JUCE plugin\", \"check my AudioProcessor\", \"is this APVTS usage correct?\", or when you see AudioProcessor, AudioProcessorEditor, or AudioProcessorValueTreeState in the code."
+  "description": "Reviews JUCE audio plugin code for JUCE-specific correctness issues: thread safety, APVTS parameter patterns, MessageManager usage, ValueTree, and MIDI handling. Use when the user asks to review a JUCE plugin, check a processBlock, audit parameter handling, or asks \"is this JUCE code safe?\". Trigger on phrases like \"review my JUCE plugin\", \"check my AudioProcessor\", \"is this APVTS usage correct?\", or when you see AudioProcessor, AudioProcessorEditor, or AudioProcessorValueTreeState in the code.",
+  "content_fingerprint": "825e4a702cc7b15a57a562c89ff7ee757b106cbf7d2f93621732b8bdad84eee0"
 }

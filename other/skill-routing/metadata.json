@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Match a user request to the right skill using trigger matching, project context, and conversation history. Score ambiguity 1\u201310 and resolve it using context signals or a single clarifying question. Load when project-orchestrator needs to route a request, or when multiple skills could match and the right one is unclear. Also triggers on \"which skill should handle this\", \"route this request\", \"I'm not sure which skill to use\", \"disambiguate this\", \"skill routing\". Called by project-orchestrator for request routing. For finding whether a skill exists for a capability, use skill-finder instead."
+  "description": "Match a user request to the right skill using trigger matching, project context, and conversation history. Score ambiguity 1–10 and resolve it using context signals or a single clarifying question. Load when project-orchestrator needs to route a request, or when multiple skills could match and the right one is unclear. Also triggers on \"which skill should handle this\", \"route this request\", \"I'm not sure which skill to use\", \"disambiguate this\", \"skill routing\". Called by project-orchestrator for request routing. For finding whether a skill exists for a capability, use skill-finder instead.",
+  "content_fingerprint": "32638166a8768e057be99f7f54550a9100a38539918f5c8b3ed2175f070787de"
 }

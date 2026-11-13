@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Checks whether a branch owes the changelog an entry, and drafts the entry when it does. Reads the diff against the merge base, decides whether the change alters behavior that a user can observe, and compares that against the changelog lines the branch adds. Use when the user asks whether a branch or a merge request needs a changelog entry, asks why the changelog check failed, or asks to write the entry for a branch. Do not use it to assemble the release notes for a whole version, because that reads the range between two tags rather than one branch."
+  "description": "Checks whether a branch owes the changelog an entry, and drafts the entry when it does. Reads the diff against the merge base, decides whether the change alters behavior that a user can observe, and compares that against the changelog lines the branch adds. Use when the user asks whether a branch or a merge request needs a changelog entry, asks why the changelog check failed, or asks to write the entry for a branch. Do not use it to assemble the release notes for a whole version, because that reads the range between two tags rather than one branch.",
+  "content_fingerprint": "dcb207f74047c30398fbb390ff66763e4f7e7965b0cc308fdbec9b8a08b4c97c"
 }

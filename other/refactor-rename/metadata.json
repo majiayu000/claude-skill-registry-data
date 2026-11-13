@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Rename a symbol (function, class, variable, constant, file, directory) consistently across the AICP codebase \u2014 call sites, imports, tests, docs, configs. Behavior-preserving, fully traced. Smaller-scope sibling to refactor-extract (extract a definition) and refactor-split (split a module). Loads when the operator says \"rename X to Y\" / \"this name is wrong\" / \"consistent rename across codebase\" / \"I changed X's name in module A but missed call sites\"."
+  "description": "Rename a symbol (function, class, variable, constant, file, directory) consistently across the AICP codebase — call sites, imports, tests, docs, configs. Behavior-preserving, fully traced. Smaller-scope sibling to refactor-extract (extract a definition) and refactor-split (split a module). Loads when the operator says \"rename X to Y\" / \"this name is wrong\" / \"consistent rename across codebase\" / \"I changed X's name in module A but missed call sites\".",
+  "content_fingerprint": "4870b02074352a4e815db895e3593e69bc5f032fcf6a3804a35c1efe3f4c6739"
 }

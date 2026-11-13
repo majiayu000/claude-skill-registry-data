@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/main/.claude/skills/k8s-docker-registry-cache-bypass/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d18e23605a3dfefc5b8311c024e8da7fd7fb3a6b2fe8eac69a385a1977a8c411",
+  "description": "Fix for Kubernetes pods running old Docker images despite pushing new versions.\nUse when: (1) kubectl shows correct image tag but container runs old code,\n(2) Local registry mirror caches stale images"
 }

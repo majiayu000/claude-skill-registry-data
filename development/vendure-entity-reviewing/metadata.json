@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/meriley/claude-code-skills/blob/main/skills/vendure-entity-reviewing/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8f4480eb641a5f2692800bb89d8fc99341181762843ef352daa99bfe8ebb68f4",
+  "description": "Review Vendure entities for missing VendureEntity inheritance, improper decorators, missing migrations, index violations, and TypeORM anti-patterns. Use when reviewing entity PRs or auditing data mode"
 }

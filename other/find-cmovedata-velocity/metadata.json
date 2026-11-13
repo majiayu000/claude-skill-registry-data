@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Locate CMoveData::Velocity in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"CMoveData::Velocity\" (symbol CMoveData_Velocity). This is a VIRTUAL function - resolve the CMoveData::Velocity vtable via RTTI and identify the\nslot, then emit the slot. Verify by xrefs from expected call sites. vtable slots\ncommonly differ between platforms - never assume identical indices.\nTrigger: CMoveData_Velocity, CMoveData::Velocity"
+  "description": "Locate CMoveData::Velocity in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"CMoveData::Velocity\" (symbol CMoveData_Velocity). This is a VIRTUAL function - resolve the CMoveData::Velocity vtable via RTTI and identify the\nslot, then emit the slot. Verify by xrefs from expected call sites. vtable slots\ncommonly differ between platforms - never assume identical indices.\nTrigger: CMoveData_Velocity, CMoveData::Velocity",
+  "content_fingerprint": "56b19d78345b32caf2b525f9540bc79dae36255c21cbfe6ec6d1b4c95ca6a3c8"
 }

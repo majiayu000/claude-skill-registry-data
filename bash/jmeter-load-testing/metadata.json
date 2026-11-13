@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Authors Apache JMeter `.jmx` test plans (Thread Groups + HTTP samplers + assertions + listeners) in the JMeter GUI, runs them headlessly via `jmeter -n -t plan.jmx -l results.jtl`, generates an HTML dashboard with `-e -o`, and gates CI on JTL parsing. Use when the project has an existing JMeter investment, needs JVM-native load tooling, or works in domains with strong JMeter community support (banking, telecom, enterprise)."
+  "description": "Authors Apache JMeter `.jmx` test plans (Thread Groups + HTTP samplers + assertions + listeners) in the JMeter GUI, runs them headlessly via `jmeter -n -t plan.jmx -l results.jtl`, generates an HTML dashboard with `-e -o`, and gates CI on JTL parsing. Use when the project has an existing JMeter investment, needs JVM-native load tooling, or works in domains with strong JMeter community support (banking, telecom, enterprise).",
+  "content_fingerprint": "a724ef67e89ddd418e46894d59d13a3e91eb0a089249643a50dc9e387407d52d"
 }

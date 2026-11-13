@@ -1,5 +1,5 @@
 {
-  "name": "\u786c\u7f16\u7801\u4fe1\u606f\u68c0\u6d4bSkill",
+  "name": "硬编码信息检测Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/hardcoded-secret-detection/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u786c\u7f16\u7801\u5bc6\u94a5/\u5bc6\u7801/Token\u7684\u68c0\u6d4b\u89c4\u5219\u4e0e\u5904\u7f6e\u6d41\u7a0b\u3002\u5f53\u9700\u8981\u6392\u67e5\u4ee3\u7801\u3001\u914d\u7f6e\u3001\u955c\u50cf\u3001\u6587\u6863\u4e2d\u7684\u654f\u611f\u4fe1\u606f\u786c\u7f16\u7801\u65f6\u4f7f\u7528\u3002"
+  "description": "硬编码密钥/密码/Token的检测规则与处置流程。当需要排查代码、配置、镜像、文档中的敏感信息硬编码时使用。",
+  "content_fingerprint": "ab3aa5585771a5cfb23fade994ad30f91d89ec1e42084a5a251845b68a4aa778"
 }

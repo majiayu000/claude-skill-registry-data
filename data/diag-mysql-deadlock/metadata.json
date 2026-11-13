@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MySQL \u6b7b\u9501\u5168\u94fe\u8bca\u65ad\u3002\u6355\u83b7 InnoDB \u6b7b\u9501\u72b6\u6001\uff0c\u89e3\u6790\u9501\u94fe\uff08\u8c01\u6301\u6709\u4ec0\u4e48\u3001\u8c01\u7b49\u5f85\u4ec0\u4e48\uff09\uff0c \u5206\u7c7b\u6b7b\u9501\u6a21\u5f0f\uff08AB-BA / Gap Lock / FK cascade / Auto-Inc\uff09\uff0c\u67e5\u627e\u5f53\u524d\u9501\u7b49\u5f85\u548c\u957f\u4e8b\u52a1\uff0c \u8f93\u51fa\u7ed3\u6784\u5316\u62a5\u544a\u5e76\u7ed9\u51fa\u4fee\u590d\u5efa\u8bae\u3002\u652f\u6301 MySQL 5.7+ performance_schema \u4e0e 5.6 \u517c\u5bb9\u56de\u9000\u3002"
+  "description": "MySQL 死锁全链诊断。捕获 InnoDB 死锁状态，解析锁链（谁持有什么、谁等待什么）， 分类死锁模式（AB-BA / Gap Lock / FK cascade / Auto-Inc），查找当前锁等待和长事务， 输出结构化报告并给出修复建议。支持 MySQL 5.7+ performance_schema 与 5.6 兼容回退。",
+  "content_fingerprint": "197d8b2e4f1f0037427d95d4a51bb7a1f42b404f05cf1ff795a449fb06646140"
 }

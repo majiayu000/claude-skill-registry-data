@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run this repo's tests scoped to the current changes \u2014 the unit lane (`just test-unit` / a `--filter`ed vitest run) and the e2e lane (`.feature` files selected from `git diff`, run via `just test-quick`), plus which lane a diff needs and where it is safe to run. Triggers on \"run tests\", \"test this\", \"check if it works\", \"unit tests\", \"vitest\", \"e2e\", \"test the changes\"."
+  "description": "Run this repo's tests scoped to the current changes — the unit lane (`just test-unit` / a `--filter`ed vitest run) and the e2e lane (`.feature` files selected from `git diff`, run via `just test-quick`), plus which lane a diff needs and where it is safe to run. Triggers on \"run tests\", \"test this\", \"check if it works\", \"unit tests\", \"vitest\", \"e2e\", \"test the changes\".",
+  "content_fingerprint": "5871afec7a1f04fc4ebd1dad87809ebeb5c7cbc548ec9597cb32bf723007279d"
 }

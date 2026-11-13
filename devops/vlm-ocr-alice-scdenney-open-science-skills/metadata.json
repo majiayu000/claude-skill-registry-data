@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs the GPU part of a vlm-ocr pipeline on Leiden University's ALICE cluster. Decides whether a corpus needs ALICE, picks a GPU partition for the model, sets up storage, a pinned vLLM environment and offline weights, ships code and scans, runs a gate job and chained bulk jobs with the bundled SLURM template, and brings the page records home for post-processing. Use with vlm-ocr when OCRing scans on ALICE or deciding whether to."
+  "description": "Runs the GPU part of a vlm-ocr pipeline on Leiden University's ALICE cluster. Decides whether a corpus needs ALICE, picks a GPU partition for the model, sets up storage, a pinned vLLM environment and offline weights, ships code and scans, runs a gate job and chained bulk jobs with the bundled SLURM template, and brings the page records home for post-processing. Use with vlm-ocr when OCRing scans on ALICE or deciding whether to.",
+  "content_fingerprint": "7ecb2a3a44569440b9af7410ea21fffca420cf36570c8922bc132837cd3a1062"
 }

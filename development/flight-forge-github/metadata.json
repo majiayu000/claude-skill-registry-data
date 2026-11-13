@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ece\u7528\u6237\u6307\u5b9a\u7684 GitHub \u4ed3\u5e93\u663e\u5f0f\u7194\u70bc\u4e00\u4e2a\u9879\u76ee\u7ea7 Codex Flight Control Private Skill\u3002\u4ec5\u5f53\u7528\u6237\u76f4\u63a5\u8c03\u7528 $flight-forge-github \u5e76\u63d0\u4f9b\u6216\u660e\u786e\u6307\u5b9a\u4ed3\u5e93\u65f6\u4f7f\u7528\uff1b\u7981\u6b62\u6839\u636e\u5efa\u8bae\u9690\u5f0f\u8c03\u7528\uff0c\u4e5f\u7981\u6b62\u5728\u666e\u901a\u98de\u63a7\u5f00\u53d1\u6d41\u7a0b\u4e2d\u81ea\u52a8\u7194\u70bc\u3002"
+  "description": "从用户指定的 GitHub 仓库显式熔炼一个项目级 Codex Flight Control Private Skill。仅当用户直接调用 $flight-forge-github 并提供或明确指定仓库时使用；禁止根据建议隐式调用，也禁止在普通飞控开发流程中自动熔炼。",
+  "content_fingerprint": "749f1253531446ceffb60526bee75f2d9b0a2dd631cf479c34e509afd84b12ec"
 }

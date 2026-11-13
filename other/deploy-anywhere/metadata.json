@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deploy with unified build/test/deploy intent across providers using .agent-loom/deploy.yml and per-provider adapters. Load when the user asks to deploy, ship to preview, release to production, or run a provider-agnostic deploy flow. Also triggers on \"deploy anywhere\", \"deploy to Vercel\", \"deploy with GitHub Actions\", \"preview deploy\", or \"ship this\". Runs preflight before any deploy \u2014 stops on missing secrets. Pairs with ci-cd-and-automation for pipeline design. Ships vercel and github-actions adapters; extensible adapter interface."
+  "description": "Deploy with unified build/test/deploy intent across providers using .agent-loom/deploy.yml and per-provider adapters. Load when the user asks to deploy, ship to preview, release to production, or run a provider-agnostic deploy flow. Also triggers on \"deploy anywhere\", \"deploy to Vercel\", \"deploy with GitHub Actions\", \"preview deploy\", or \"ship this\". Runs preflight before any deploy — stops on missing secrets. Pairs with ci-cd-and-automation for pipeline design. Ships vercel and github-actions adapters; extensible adapter interface.",
+  "content_fingerprint": "62a06c8f4c6f271396df8ff4a9139b91e6aef74ba68d0437a872da7364d42e29"
 }

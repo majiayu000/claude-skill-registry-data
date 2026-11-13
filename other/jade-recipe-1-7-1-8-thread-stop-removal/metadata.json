@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Inspects .stop() calls flagged by THREAD_STOP_DISABLED for actual Thread.stop() usage. Most calls are custom .stop() methods in JADE's own classes (Timer.stop(), client.stop(), HTTPServer.stop()), not java.lang.Thread.stop(Throwable). Marks false positives as SKIPPED. If actual Thread.stop() is found, defers for manual review via JADE-MODERNIZATION-DEFERRED marker. Invoked by jade-core-rule-dispatcher."
+  "description": "Inspects .stop() calls flagged by THREAD_STOP_DISABLED for actual Thread.stop() usage. Most calls are custom .stop() methods in JADE's own classes (Timer.stop(), client.stop(), HTTPServer.stop()), not java.lang.Thread.stop(Throwable). Marks false positives as SKIPPED. If actual Thread.stop() is found, defers for manual review via JADE-MODERNIZATION-DEFERRED marker. Invoked by jade-core-rule-dispatcher.",
+  "content_fingerprint": "dd9b17b59ec7dae6cb039db993f712161eb17956d3a1267aed5e32aa9be0491b"
 }

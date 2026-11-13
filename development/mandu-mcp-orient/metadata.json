@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc138\uc158 \uc2dc\uc791 / \uc0c1\ud0dc \ud30c\uc545 \uc6cc\ud06c\ud50c\ub85c\uc6b0. \"\ud604 \uc0c1\ud0dc\", \"\ubb34\uc2a8 \uc77c \uc788\uc5c8\uc5b4?\",\n\"\uc5b4\ub514\uc11c\ubd80\ud130 \uc2dc\uc791?\", \uc138\uc158 \uc7ac\uc9c4\uc785, \uae34 \ub300\ud654 \ubcf5\uadc0 \uc2dc \uc790\ub3d9 \ud638\ucd9c.\n\uac1c\ubcc4 \uc9c4\ub2e8 \ub3c4\uad6c\ub97c \uc21c\ucc28 \ud638\ucd9c\ud558\uc9c0 \uc54a\uace0 ai_brief \ub85c \uc9d1\uacc4\ud55c\ub2e4."
+  "description": "세션 시작 / 상태 파악 워크플로우. \"현 상태\", \"무슨 일 있었어?\",\n\"어디서부터 시작?\", 세션 재진입, 긴 대화 복귀 시 자동 호출.\n개별 진단 도구를 순차 호출하지 않고 ai_brief 로 집계한다.",
+  "content_fingerprint": "c23879092cb8f5519ae3ed9f072b711ce5d1e7976478a6dfcead1577953cf234"
 }

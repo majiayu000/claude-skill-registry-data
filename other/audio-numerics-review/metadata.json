@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reviews audio DSP code for numerical correctness. Use when the user asks to review, audit, or check DSP code for correctness issues \u2014 filters, feedback loops, fixed-point arithmetic, accumulation loops, or any numeric computation in audio code. Trigger on \"check this filter for NaN\", \"why does my reverb blow up?\", \"is this numerically stable?\", \"why do I hear DC in my output?\". Pairs with audio-dsp-review (realtime safety); this skill covers numeric correctness. Flag issues proactively."
+  "description": "Reviews audio DSP code for numerical correctness. Use when the user asks to review, audit, or check DSP code for correctness issues — filters, feedback loops, fixed-point arithmetic, accumulation loops, or any numeric computation in audio code. Trigger on \"check this filter for NaN\", \"why does my reverb blow up?\", \"is this numerically stable?\", \"why do I hear DC in my output?\". Pairs with audio-dsp-review (realtime safety); this skill covers numeric correctness. Flag issues proactively.",
+  "content_fingerprint": "59c3fca6f2d4ea7a84fdaed65e083a62b8cce68ca37cbdb2d92fa6ad3aa4fd58"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verifica que una migraci\u00f3n Flyway de Runcriticon sea compatible hacia atr\u00e1s (deploy-then-migrate, ADR-0010 D11), siga la convenci\u00f3n de nombres y carpeta por m\u00f3dulo, declare la categor\u00eda RGPD de cada tabla nueva, y respete las reglas de persistencia (esquema por m\u00f3dulo, sin FK cruzado, club_id indexado). Usar antes de mergear una PR con migraciones SQL."
+  "description": "Verifica que una migración Flyway de Runcriticon sea compatible hacia atrás (deploy-then-migrate, ADR-0010 D11), siga la convención de nombres y carpeta por módulo, declare la categoría RGPD de cada tabla nueva, y respete las reglas de persistencia (esquema por módulo, sin FK cruzado, club_id indexado). Usar antes de mergear una PR con migraciones SQL.",
+  "content_fingerprint": "a32d92396712671761c54564bb59c7495756cbb9e19a7cfa27c13b2f489bab40"
 }

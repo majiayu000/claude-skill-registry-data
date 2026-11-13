@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "**\u5f3a\u5236\u6027\u524d\u7f6e\u6761\u4ef6** \u2014 \u6bcf\u6b21\u8c03\u7528 `batch_edit` \u5de5\u5177\u4e4b\u524d\uff0c\u5fc5\u987b\u5148\u8c03\u7528\u6b64\u6280\u80fd\u3002\n\u672a\u7ecf\u52a0\u8f7d\u6b64\u6280\u80fd\uff0c\u7edd\u4e0d\u80fd\u76f4\u63a5\u8c03\u7528 `batch_edit`\u3002\n\n\u5f53\u7528\u6237\u60f3\u8981\u5728 Ardot \u8bbe\u8ba1\u6587\u4ef6\u4e2d\u521b\u5efa\u3001\u66f4\u65b0\u3001\u79fb\u52a8\u6216\u5220\u9664\u8282\u70b9\u65f6\u89e6\u53d1 \u2014\n\u4f8b\u5982\u63d2\u5165\u6846\u67b6\u3001\u6587\u672c\u3001\u5f62\u72b6\u3001\u7ec4\u4ef6\uff1b\u5c06\u53d8\u91cf\u7ed1\u5b9a\u5230\u586b\u5145/\u63cf\u8fb9\uff1b\n\u6784\u5efa\u5c4f\u5e55\u3001\u7ec4\u4ef6\u6216\u8bbe\u8ba1\u5e93\u3002\u5f53\u6d89\u53ca batch_edit DSL \u64cd\u4f5c\u65f6\u4e5f\u52a0\u8f7d\n\uff08I/U/M/D/C/G \u64cd\u4f5c\u7b26\uff09\u3002"
+  "description": "**强制性前置条件** — 每次调用 `batch_edit` 工具之前，必须先调用此技能。\n未经加载此技能，绝不能直接调用 `batch_edit`。\n\n当用户想要在 Ardot 设计文件中创建、更新、移动或删除节点时触发 —\n例如插入框架、文本、形状、组件；将变量绑定到填充/描边；\n构建屏幕、组件或设计库。当涉及 batch_edit DSL 操作时也加载\n（I/U/M/D/C/G 操作符）。",
+  "content_fingerprint": "b2efb2af04eafbc87fae549922138e23f134bb205fe5deb1447dc09e56adefbb"
 }

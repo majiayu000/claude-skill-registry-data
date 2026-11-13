@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Canonicalise antigen.gene and antigen.species in a VDJdb chunk against the epitope dictionary and the gene and species alias tables, detect spurious values (UniProt descriptions, \"[species]\" annotations, \"Probable\"/\"Chain A,\" prefixes, multi-word organism names), resolve blanks from the publication, flag one epitope that is a substring of another, and extend the alias tables where they have no entry. Use when antigen.gene or antigen.species carry free text rather than symbols, or when vdjdb-proofread reports antigen fields that disagree across a chunk."
+  "description": "Canonicalise antigen.gene and antigen.species in a VDJdb chunk against the epitope dictionary and the gene and species alias tables, detect spurious values (UniProt descriptions, \"[species]\" annotations, \"Probable\"/\"Chain A,\" prefixes, multi-word organism names), resolve blanks from the publication, flag one epitope that is a substring of another, and extend the alias tables where they have no entry. Use when antigen.gene or antigen.species carry free text rather than symbols, or when vdjdb-proofread reports antigen fields that disagree across a chunk.",
+  "content_fingerprint": "777c3601715f4e7aaa8616ee412b5c8db66c52980f782c6aac1a40ee7de8f0c2"
 }

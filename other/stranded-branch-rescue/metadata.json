@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a pushed branch looks finished but has no merged PR (authoring session died before gh pr create), or when auditing origin branches for unlanded work. Encodes the rescue protocol - PR-record check FIRST (cherry lies across squash merges), worktree-attachment and SHA-stability gates, provenance in the PR body, and the zombie rule (never re-merge)."
+  "description": "Use when a pushed branch looks finished but has no merged PR (authoring session died before gh pr create), or when auditing origin branches for unlanded work. Encodes the rescue protocol - PR-record check FIRST (cherry lies across squash merges), worktree-attachment and SHA-stability gates, provenance in the PR body, and the zombie rule (never re-merge).",
+  "content_fingerprint": "ea49c23e01bd009827644863f8b01e01a45afecda56b8fe867f54bb13a85e7b1"
 }

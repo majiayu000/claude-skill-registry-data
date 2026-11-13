@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7ae0\u306e\u57f7\u7b46\u30fb\u6539\u8a02\u5b8c\u4e86\u6642\u30fb\u539f\u7a3f\u30d3\u30eb\u30c9\u524d\u306b\u3001\u7528\u8a9e\u306e\u8868\u8a18\u63fa\u308c\uff08\u767b\u9332\u6e08\u307f\u30d0\u30ea\u30a2\u30f3\u30c8\u306e\u518d\u51fa\u73fe\uff09\u3068\u7528\u8a9e\u96c6\u82f1\u8a9e\u8a9e\u306e\u672a gloss \u51fa\u73fe\u3092 check_terminology_consistency.py \u3067\u6a5f\u68b0\u691c\u67fb\u3057\u3001\u3042\u308f\u305b\u3066 LLM \u306e\u610f\u5473\u7406\u89e3\u306b\u3088\u308b\u540c\u7fa9\u7684\u3086\u3089\u304e\u30ec\u30d3\u30e5\u30fc\u3092\u884c\u3044\u3001\u767a\u898b\u3092 variants.yml \u306b\u84c4\u7a4d\u3059\u308b\u30b9\u30ad\u30eb"
+  "description": "章の執筆・改訂完了時・原稿ビルド前に、用語の表記揺れ（登録済みバリアントの再出現）と用語集英語語の未 gloss 出現を check_terminology_consistency.py で機械検査し、あわせて LLM の意味理解による同義的ゆらぎレビューを行い、発見を variants.yml に蓄積するスキル",
+  "content_fingerprint": "fd35979fbed84a2af68367c6f59201454baa8415f107e8d971ab1d84fb006f29"
 }

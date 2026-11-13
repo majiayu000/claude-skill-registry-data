@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Converts a double-precision Simulink system or subsystem to single precision using DataTypeWorkflow.Single (Fixed-Point Designer). The single conversion replaces all user-specified double-precision data types, as well as output data types that compile to double precision, with single-precision data types. Use this skill when converting Simulink systems to single precision, reducing memory usage of a Simulink system, optimizing for embedded targets. Do NOT use for standalone MATLAB .m code single conversion."
+  "description": "Converts a double-precision Simulink system or subsystem to single precision using DataTypeWorkflow.Single (Fixed-Point Designer). The single conversion replaces all user-specified double-precision data types, as well as output data types that compile to double precision, with single-precision data types. Use this skill when converting Simulink systems to single precision, reducing memory usage of a Simulink system, optimizing for embedded targets. Do NOT use for standalone MATLAB .m code single conversion.",
+  "content_fingerprint": "c4910fc9eb0cc04b55f177419c92662ed7dcba0f3b4430c4b5339d06d2eee391"
 }

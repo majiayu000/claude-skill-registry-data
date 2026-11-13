@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Schema drift is the silent erosion of database integrity: a column added to production but not to staging, a NOT NULL that became nullable via a hotfix, a dev-only index that made it to production. This skill compares two schema snapshots (DDL) and the LLM assesses the criticality of each drift."
+  "description": "Schema drift is the silent erosion of database integrity: a column added to production but not to staging, a NOT NULL that became nullable via a hotfix, a dev-only index that made it to production. This skill compares two schema snapshots (DDL) and the LLM assesses the criticality of each drift.",
+  "content_fingerprint": "6c7c761e934324321e2b3783e10fdb3ed0b1752cf21f94f9158a231d36863b44"
 }

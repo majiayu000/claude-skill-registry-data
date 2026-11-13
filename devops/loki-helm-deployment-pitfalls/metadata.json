@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/loki-helm-deployment-pitfalls/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "6c8b96437803ca1e3f33342a5bcad2b55af2fba7d3abd31ae85e343d521d03f0",
+  "description": "Fix common Loki Helm chart deployment failures on Kubernetes with Terraform.\nUse when: (1) Loki pod fails with \"mkdir: read-only file system\" for compactor\nor ruler paths, (2) Helm chart fails with \"H"
 }

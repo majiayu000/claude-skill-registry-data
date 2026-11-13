@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Dev-only review of user-facing CLI interface copy in `src/cli/tui/*.js`, `src/cli/*.js` error paths, and `bin/cli.js` help/usage text. Surfaces three failure modes \u2014 copy/behavior mismatch, jargon, missing next-action \u2014 as a punch list the maintainer addresses before `/grant-commit`. Read-only; no writes to source. Conditionally seeded by `/triage` between `/memory-sync` and `/grant-commit` when the request will touch CLI surfaces."
+  "description": "Dev-only review of user-facing CLI interface copy in `src/cli/tui/*.js`, `src/cli/*.js` error paths, and `bin/cli.js` help/usage text. Surfaces three failure modes — copy/behavior mismatch, jargon, missing next-action — as a punch list the maintainer addresses before `/grant-commit`. Read-only; no writes to source. Conditionally seeded by `/triage` between `/memory-sync` and `/grant-commit` when the request will touch CLI surfaces.",
+  "content_fingerprint": "a366a02174d7a2bb920a8ec87dc8e31a7863ee39b06cf869a309164a88315167"
 }

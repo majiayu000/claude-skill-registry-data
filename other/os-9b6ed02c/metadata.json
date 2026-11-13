@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5b57\u7b26\u8bbe\u5907 / \u8bbe\u5907-\u5b57\u7b26\u8bbe\u5907 / OS \u8bbe / \u5b57\u7b26\u8bbe\u5907\u62bd\u8c61\u3002\u7528\u6237\u63d0\u5230\u8fd9\u4e9b\u8bcd\u65f6\u4f7f\u7528\u672c\u6280\u80fd\u3002 \u573a\u666f\uff1a\u5bf9\u7167\uff1aOS \u8bbe\u5907\u9a71\u52a8\u2014\u2014\u5b57\u7b26\u8bbe\u5907\u63a5\u53e3\uff08open/read/write/close\uff0c\u8bbe\u5907\u5373\u6587\u4ef6\uff09\u3002 \u3010\u4e0d\u9002\u7528\u3011Not for \u4ee5\u4e0b\u573a\u666f\uff1aop \u975e {close, open, read, write} \u65f6"
+  "description": "字符设备 / 设备-字符设备 / OS 设 / 字符设备抽象。用户提到这些词时使用本技能。 场景：对照：OS 设备驱动——字符设备接口（open/read/write/close，设备即文件）。 【不适用】Not for 以下场景：op 非 {close, open, read, write} 时",
+  "content_fingerprint": "5065a273ce18a8e0ff32106497c5868f08ea1b2487d2a1d37e349f0662fc9eaf"
 }

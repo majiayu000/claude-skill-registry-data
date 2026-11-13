@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5355\u53ea\u6307\u6570\u5386\u53f2\u65e5/\u5468/\u6708/\u5e74 K \u7ebf GET \u63a5\u53e3\uff08market.ft.tech\uff0cindex-candlesticks\uff09\u3002\u7528\u6237\u95ee\u67d0\u53ea\u6307\u6570\u7684\u65e5/\u5468/\u6708/\u5e74 K \u7ebf\u3001\u5f00\u9ad8\u4f4e\u6536\u70b9\u4f4d\u3001\u524d/\u540e\u590d\u6743\u3001\u6caa\u6df1300/\u4e0a\u8bc1\u6307\u6570\u65e5 K \u65f6\u4f7f\u7528\u3002\u5fc5\u586b --symbol\u3001--interval-unit\u3001--since-ts-millis\u3001--until-ts-millis\uff1b\u53ef\u9009 --adjust-kind\u3001--limit\u3002\u5206\u949f\u7ea7 K \u7ebf\u8bf7\u7528 index-minutes\u3002"
+  "description": "单只指数历史日/周/月/年 K 线 GET 接口（market.ft.tech，index-candlesticks）。用户问某只指数的日/周/月/年 K 线、开高低收点位、前/后复权、沪深300/上证指数日 K 时使用。必填 --symbol、--interval-unit、--since-ts-millis、--until-ts-millis；可选 --adjust-kind、--limit。分钟级 K 线请用 index-minutes。",
+  "content_fingerprint": "b57629345545b3fe48bf9e282a47ef09f8ebbd896a73fd8f1e213b9655813768"
 }

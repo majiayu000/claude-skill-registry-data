@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Start a clean Claude session with only the context the next task needs, instead of /compact.\nCaptures the goal of your next session, points to the right files (never copies them),\nand outputs a self-contained prompt to paste into a fresh chat.\nUse when: \"refresh\", \"refresh context\", \"fresh start\", \"my chat got sloppy\",\n\"start a new chat with context\", \"hand off this session\", outputs degrading, drifting off task.\nThree levels: lite (quick reset), full (default handoff), ultra (full briefing).\nNOT for: summarizing in place (that's /compact), or saving permanent notes."
+  "description": "Start a clean Claude session with only the context the next task needs, instead of /compact.\nCaptures the goal of your next session, points to the right files (never copies them),\nand outputs a self-contained prompt to paste into a fresh chat.\nUse when: \"refresh\", \"refresh context\", \"fresh start\", \"my chat got sloppy\",\n\"start a new chat with context\", \"hand off this session\", outputs degrading, drifting off task.\nThree levels: lite (quick reset), full (default handoff), ultra (full briefing).\nNOT for: summarizing in place (that's /compact), or saving permanent notes.",
+  "content_fingerprint": "a95a781f7903a4144931782b51776e9a63afe9a3ca347e094e4bdf7bd77b3c66"
 }

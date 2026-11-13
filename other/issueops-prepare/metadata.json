@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Give an IssueOps cycle its branch identity. Resolve and pin the exact base SHA, record it with \"issueops branch prepare\", create and verify the provider-side branch link, and move the cycle to the plan phase. Creating the worktree is not this skill's job \u2014 \"issueops execution prepare\" owns it. Use when the user says \"\uc900\ube44\", \"\ube0c\ub79c\uce58 \ub9cc\ub4e4\uc5b4\uc918\", \"prepare the issue branch\", or when \"issueops next\" reports stage prepare."
+  "description": "Give an IssueOps cycle its branch identity. Resolve and pin the exact base SHA, record it with \"issueops branch prepare\", create and verify the provider-side branch link, and move the cycle to the plan phase. Creating the worktree is not this skill's job — \"issueops execution prepare\" owns it. Use when the user says \"준비\", \"브랜치 만들어줘\", \"prepare the issue branch\", or when \"issueops next\" reports stage prepare.",
+  "content_fingerprint": "5d323f84a01c15a962331da417f40c9e627379cfc81cd620b8d5ed77a7cf9830"
 }

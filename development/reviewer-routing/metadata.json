@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Given an open issue or PR, scores the project's configured reviewer roster\nacross three signals \u2014 touched-area eligibility, git-history familiarity\nwith the changed paths, and current open-review load \u2014 and proposes a\nprimary reviewer (plus an optional backup). Read-only,\npropose-then-confirm: nothing is assigned, labelled, or requested without\nconfirmation. An unresolved roster yields an explicit NO ELIGIBLE\nREVIEWER signal, never a fabricated handle."
+  "description": "Given an open issue or PR, scores the project's configured reviewer roster\nacross three signals — touched-area eligibility, git-history familiarity\nwith the changed paths, and current open-review load — and proposes a\nprimary reviewer (plus an optional backup). Read-only,\npropose-then-confirm: nothing is assigned, labelled, or requested without\nconfirmation. An unresolved roster yields an explicit NO ELIGIBLE\nREVIEWER signal, never a fabricated handle.",
+  "content_fingerprint": "2173eca7965a626bf8fbaec01d04fd1cb99e3dd4037ea0663c9467e056e87f5a"
 }

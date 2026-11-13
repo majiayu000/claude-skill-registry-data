@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "prod\u4f5c\u696d\u6642\u306b\u7834\u58ca\u30b3\u30de\u30f3\u30c9\u3092\u30d6\u30ed\u30c3\u30af\u3002rm -rf /, DROP TABLE, force-push, git reset --hard, kubectl delete\u3092\u691c\u51fa\u3057exit 2\u3067BLOCK\u3002"
+  "description": "prod作業時に破壊コマンドをブロック。rm -rf /, DROP TABLE, force-push, git reset --hard, kubectl deleteを検出しexit 2でBLOCK。",
+  "content_fingerprint": "cb93f3b750bbf1f41026c77c4daf72faf51487d40bcb66f9d7e2fdef5a191254"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ownership-validation preflight for a warp route. For each chain in the route, determine the owner type (ICA / Safe / Squads / other multisig), confirm it exists on chain (or deploy if missing for ICAs), and reject EOAs. Run before /warp-deploy-init-route generates the deploy.yaml so the deployment never proceeds against an invalid owner set."
+  "description": "Ownership-validation preflight for a warp route. For each chain in the route, determine the owner type (ICA / Safe / Squads / other multisig), confirm it exists on chain (or deploy if missing for ICAs), and reject EOAs. Run before /warp-deploy-init-route generates the deploy.yaml so the deployment never proceeds against an invalid owner set.",
+  "content_fingerprint": "6d40c19e857d8743d9db41781ea5e93da0769b2d5d79701531b3e63f44e801d5"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Receive and verify Cronofy push notifications (webhooks). Use when setting up Cronofy notification channels, debugging Cronofy-HMAC-SHA256 verification, or handling Cronofy calendar events like verification, change, profile_disconnected, conferencing_profile_disconnected, profile_initial_sync_completed, and gdpr_requested. Cronofy signs the raw body with your application's client secret and sends a COMMA-SEPARATED list of base64 HMACs in the Cronofy-HMAC-SHA256 header."
+  "description": "Receive and verify Cronofy push notifications (webhooks). Use when setting up Cronofy notification channels, debugging Cronofy-HMAC-SHA256 verification, or handling Cronofy calendar events like verification, change, profile_disconnected, conferencing_profile_disconnected, profile_initial_sync_completed, and gdpr_requested. Cronofy signs the raw body with your application's client secret and sends a COMMA-SEPARATED list of base64 HMACs in the Cronofy-HMAC-SHA256 header.",
+  "content_fingerprint": "3208748ae39ba19033db1c0056e86b81de0112331633f40678b1bab71224096b"
 }

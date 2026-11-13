@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/forrestthewoods/anubis/blob/master/.claude/skills/rust-cargo-check/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "dd83daa8ec7705bbbe7740207a5daf4ba5900d8bcc0d29bb688fc6db65e24d41",
+  "description": "Prefer `cargo check` over `cargo build` when making Rust code changes. Use `cargo check` to quickly verify code compiles; only use `cargo build` when you need to run the executable."
 }

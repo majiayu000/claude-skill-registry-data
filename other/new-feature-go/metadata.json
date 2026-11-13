@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pre-flight checklist for adding a new feature to a Go 1.22+ service. Load when creating a new endpoint, internal package, external integration, or background worker. Forces \"accept interfaces, return structs\", `context.Context` propagation, error wrapping, and bulkhead-per-provider from line one \u2014 prevents the most common AI failures (God interfaces, raw goroutines without errgroup, http.DefaultClient everywhere, panic on errors)."
+  "description": "Pre-flight checklist for adding a new feature to a Go 1.22+ service. Load when creating a new endpoint, internal package, external integration, or background worker. Forces \"accept interfaces, return structs\", `context.Context` propagation, error wrapping, and bulkhead-per-provider from line one — prevents the most common AI failures (God interfaces, raw goroutines without errgroup, http.DefaultClient everywhere, panic on errors).",
+  "content_fingerprint": "d25a45c814ba503ff0c3ea525600dc19415425821e0c37e70f4d10defefc234f"
 }

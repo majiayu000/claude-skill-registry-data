@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4fdd\u5b58\u4e0e\u6062\u590d\u5de5\u4f5c\u72b6\u6001\u68c0\u67e5\u70b9\u3002\u4f1a\u8bb0\u5f55 git \u72b6\u6001\u3001\u5df2\u505a\u51b3\u5b9a\u548c\u5269\u4f59\u5de5\u4f5c\uff0c\n\u8ba9\u4f60\u5728\u4e2d\u65ad\u540e\u80fd\u51c6\u786e\u7eed\u8dd1\uff0c\u5305\u542b\u8de8\u5206\u652f\u3001\u8de8 Conductor workspace handoff \u7684\u573a\u666f\u3002\n\u5f53\u7528\u6237\u8bf4\u201ccheckpoint\u201d\u201c\u4fdd\u5b58\u8fdb\u5ea6\u201d\u201c\u6211\u521a\u505a\u5230\u54ea\u4e86\u201d\u201cresume\u201d\u201c\u6211\u5728\u505a\u4ec0\u4e48\u201d\n\u6216\u201c\u63a5\u7740\u4e0a\u6b21\u505a\u201d\u65f6\u4f7f\u7528\uff1b\u4e5f\u9002\u5408\u5728 session \u5373\u5c06\u7ed3\u675f\u3001\u7528\u6237\u8981\u5207\u6362\u4e0a\u4e0b\u6587\u3001\n\u6216\u957f\u65f6\u95f4\u6682\u505c\u524d\u4e3b\u52a8\u5efa\u8bae\u3002 (gstack)"
+  "description": "保存与恢复工作状态检查点。会记录 git 状态、已做决定和剩余工作，\n让你在中断后能准确续跑，包含跨分支、跨 Conductor workspace handoff 的场景。\n当用户说“checkpoint”“保存进度”“我刚做到哪了”“resume”“我在做什么”\n或“接着上次做”时使用；也适合在 session 即将结束、用户要切换上下文、\n或长时间暂停前主动建议。 (gstack)",
+  "content_fingerprint": "edc8a9255fe7c61683d321f4d5ced86b6ee83c41d8a89ee01c6630350cf2a043"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use ANTES de qualquer deploy em produ\u00e7\u00e3o. Roda checklist de 23 valida\u00e7\u00f5es baseadas em falhas reais detectadas em projetos anteriores (CRM_OS, Valesa, etc). Detecta env vars hardcoded errado, CSP/CORS misconfig, JWT claims mismatch, migrations slot conflict, rotas Hono n\u00e3o montadas, RBAC lazy, mocks em prod, e mais. Invoc\u00e1vel com `/pre-deploy-check` ou automaticamente quando o usu\u00e1rio menciona deploy/release."
+  "description": "Use ANTES de qualquer deploy em produção. Roda checklist de 23 validações baseadas em falhas reais detectadas em projetos anteriores (CRM_OS, Valesa, etc). Detecta env vars hardcoded errado, CSP/CORS misconfig, JWT claims mismatch, migrations slot conflict, rotas Hono não montadas, RBAC lazy, mocks em prod, e mais. Invocável com `/pre-deploy-check` ou automaticamente quando o usuário menciona deploy/release.",
+  "content_fingerprint": "9fd27a4062cadf40f22f57f36268022e680845a048d71c35db83ee3bf9981568"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "DesignDoc \u306e\u300cIssue \u69cb\u6210\u300d\u3092\u3082\u3068\u306b\u3001Linear \u306e\u5b9f\u88c5 issue \u3092\u30ea\u30dd\u30b8\u30c8\u30ea\u5358\u4f4d\u3067\u8d77\u7968\u3059\u308b\u3002\u300cissue \u3092\u5207\u3063\u3066\u300d\u300c\u5b9f\u88c5\u30c1\u30b1\u30c3\u30c8\u3092\u8d77\u7968\u3057\u3066\u300d\u300c/issue-split <DesignDoc URL or \u30c1\u30b1\u30c3\u30c8>\u300d\u3067\u547c\u3073\u51fa\u3059\u3002\u30d5\u30a7\u30fc\u30ba\u3092\u30de\u30a4\u30eb\u30b9\u30c8\u30fc\u30f3\u3067\u8868\u3057\u3001blockedBy \u306f\u672c\u5f53\u306b\u7740\u624b\u3092\u6b62\u3081\u308b\u4f9d\u5b58\u3060\u3051\u306b\u5f35\u308a\u3001\u8d77\u7968\u5f8c\u306b DesignDoc \u306e\u8868\u3078 ID \u3092\u66f8\u304d\u623b\u3059"
+  "description": "DesignDoc の「Issue 構成」をもとに、Linear の実装 issue をリポジトリ単位で起票する。「issue を切って」「実装チケットを起票して」「/issue-split <DesignDoc URL or チケット>」で呼び出す。フェーズをマイルストーンで表し、blockedBy は本当に着手を止める依存だけに張り、起票後に DesignDoc の表へ ID を書き戻す",
+  "content_fingerprint": "b6587b7ba99e65e5b1ea05bc5c42396910abcbc86e003dc0301dcaf1b2ee6e1f"
 }

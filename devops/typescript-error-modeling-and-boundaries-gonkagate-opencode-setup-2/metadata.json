@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Own internal error architecture and boundary design in strict-mode TypeScript backends. Use whenever the task is about choosing between exceptions, explicit error values, or nullable returns; stabilizing error identity with `code` or `kind`; preserving context with `cause`; or deciding where infrastructure failures should be enriched, translated, and shaped for callers, even if the user frames it as \"clean up error handling\", \"should this throw?\", \"why are we matching messages?\", or \"where should this become AppError?\""
+  "description": "Own internal error architecture and boundary design in strict-mode TypeScript backends. Use whenever the task is about choosing between exceptions, explicit error values, or nullable returns; stabilizing error identity with `code` or `kind`; preserving context with `cause`; or deciding where infrastructure failures should be enriched, translated, and shaped for callers, even if the user frames it as \"clean up error handling\", \"should this throw?\", \"why are we matching messages?\", or \"where should this become AppError?\"",
+  "content_fingerprint": "15758d5ccb167b76efc055139f7f015349551c1e05ae95260b7282945b63f9cd"
 }

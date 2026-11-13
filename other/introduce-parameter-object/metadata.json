@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ubc18\ubcf5\ub418\ub294 \ud30c\ub77c\ubbf8\ud130 \uadf8\ub8f9\uc744 \uac1d\uccb4\ub85c \uce58\ud658(IPO)\ud558\uac70\ub098, \uac1d\uccb4\uc5d0\uc11c \uaebc\ub0b8 \uac12 \ub300\uc2e0 \uac1d\uccb4 \uc790\uccb4\ub97c \uc804\ub2ec(Preserve Whole Object). \"\ud30c\ub77c\ubbf8\ud130 \uac1d\uccb4\", \"\uc778\uc790\uac00 \ub108\ubb34 \ub9ce\uc544\", \"start\u00b7end \ub300\uc2e0 Range\ub85c\", \"/introduce-parameter-object\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \uacb0\uacfc \uac1d\uccb4\uac00 \uac80\uc99d\u00b7\uc5f0\uc0b0\uc744 \uac00\uc9c4 \ub3c4\uba54\uc778 \uac12\uc774\uba74 /discover-value-object\uac00 \uc801\ud569. /introduce-parameter-object [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "반복되는 파라미터 그룹을 객체로 치환(IPO)하거나, 객체에서 꺼낸 값 대신 객체 자체를 전달(Preserve Whole Object). \"파라미터 객체\", \"인자가 너무 많아\", \"start·end 대신 Range로\", \"/introduce-parameter-object\" 요청 시 사용. 단, 결과 객체가 검증·연산을 가진 도메인 값이면 /discover-value-object가 적합. /introduce-parameter-object [commit-ref]로 호출.",
+  "content_fingerprint": "ac3fa4253663a10fa9cdf46d6910e03a181db8388c2c67ec5c43be4d0f44ea66"
 }

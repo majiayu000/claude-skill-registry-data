@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PD context-aware self-respawn. Invoked by a PD agent when context window reaches 80% threshold. Saves current state, writes a continuation manifest with all in-flight work and next actions, then stops. The parent session (or user) spawns a fresh PD with the manifest. Enforces max 3 respawns per project per 24h. Invoke when context \u2265 80% during a PD session. Also used proactively at phase transitions when context > 70% and a major task boundary is clean."
+  "description": "PD context-aware self-respawn. Invoked by a PD agent when context window reaches 80% threshold. Saves current state, writes a continuation manifest with all in-flight work and next actions, then stops. The parent session (or user) spawns a fresh PD with the manifest. Enforces max 3 respawns per project per 24h. Invoke when context ≥ 80% during a PD session. Also used proactively at phase transitions when context > 70% and a major task boundary is clean.",
+  "content_fingerprint": "124c03fc6668ea2b668148d91c18a6d2338b224337e05856fb476e513be862b8"
 }

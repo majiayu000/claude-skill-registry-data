@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Migrate AICP from one foundation to another \u2014 switch model backend (Hermes \u2192 Qwen3 \u2014 already done; Qwen3 \u2192 next-gen), swap inference runtime (LocalAI \u2192 vLLM, hypothetical), move storage (filesystem DLQ \u2192 real queue per `infra-queue`), upgrade Python (3.11 \u2192 3.12). Distinct from `config-migrations` (config schema only) and `evolve-integrate` (NEW capability vs REPLACEMENT). Loads when the operator says \"migrate from X to Y\" / \"swap LocalAI for X\" / \"move DLQ to Redis\" / \"upgrade Python\"."
+  "description": "Migrate AICP from one foundation to another — switch model backend (Hermes → Qwen3 — already done; Qwen3 → next-gen), swap inference runtime (LocalAI → vLLM, hypothetical), move storage (filesystem DLQ → real queue per `infra-queue`), upgrade Python (3.11 → 3.12). Distinct from `config-migrations` (config schema only) and `evolve-integrate` (NEW capability vs REPLACEMENT). Loads when the operator says \"migrate from X to Y\" / \"swap LocalAI for X\" / \"move DLQ to Redis\" / \"upgrade Python\".",
+  "content_fingerprint": "180b5bd335e60e1517fef0fb76a569a3581cad0ea18f9e0e43afc1c7e4dea764"
 }

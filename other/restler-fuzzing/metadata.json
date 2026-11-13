@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs stateful REST API fuzzing using Microsoft's RESTler - infers producer-consumer dependencies from an OpenAPI spec, drives sequences of requests (POST \u2192 GET \u2192 DELETE chains), and reports 5xx errors, resource leaks, and hierarchy violations. Wraps the canonical 4-stage workflow (compile \u2192 test \u2192 fuzz-lean \u2192 fuzz). Use when the API is stateful (resources are created, queried, modified, deleted) and Schemathesis's stateless fuzzing is missing the multi-step bugs."
+  "description": "Runs stateful REST API fuzzing using Microsoft's RESTler - infers producer-consumer dependencies from an OpenAPI spec, drives sequences of requests (POST → GET → DELETE chains), and reports 5xx errors, resource leaks, and hierarchy violations. Wraps the canonical 4-stage workflow (compile → test → fuzz-lean → fuzz). Use when the API is stateful (resources are created, queried, modified, deleted) and Schemathesis's stateless fuzzing is missing the multi-step bugs.",
+  "content_fingerprint": "f9435c28fa0e29286a22ef110ffd0ba85c1841d1f07faab58a723eccde67fe6d"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "An effect wakes on its sources changing, not on its answer changing. A component whose effects do stateful work \u2014 loading a sheet, starting a playhead, opening a subscription \u2014 reads those props through memos, so a caller that rebuilds its list does not restart everything in it. Applies whenever writing or reviewing a component with a `createEffect` fed by props."
+  "description": "An effect wakes on its sources changing, not on its answer changing. A component whose effects do stateful work — loading a sheet, starting a playhead, opening a subscription — reads those props through memos, so a caller that rebuilds its list does not restart everything in it. Applies whenever writing or reviewing a component with a `createEffect` fed by props.",
+  "content_fingerprint": "e628958a6690aecf06de60d411115b6f84121ea7647d4912c71534586e285d34"
 }

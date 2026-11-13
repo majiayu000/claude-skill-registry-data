@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Maintain work/sources.json \u2014 the registry of which source videos have been processed into shorts. Scans every work/<id>/ingest.json + the output/<slug>/ folder it produced, recording title, url, duration, the produced shorts (with grades/tiers), current disk footprint, and active|reaped status. Also mirrors a keyed per-source bd memory so future sessions recall what's already been clipped (and can re-ingest from the saved URL). Pure deterministic scan, idempotent, no Claude. The \"memory\" half of the disk-hygiene pair (reap-source is the \"cleanup\" half)."
+  "description": "Maintain work/sources.json — the registry of which source videos have been processed into shorts. Scans every work/<id>/ingest.json + the output/<slug>/ folder it produced, recording title, url, duration, the produced shorts (with grades/tiers), current disk footprint, and active|reaped status. Also mirrors a keyed per-source bd memory so future sessions recall what's already been clipped (and can re-ingest from the saved URL). Pure deterministic scan, idempotent, no Claude. The \"memory\" half of the disk-hygiene pair (reap-source is the \"cleanup\" half).",
+  "content_fingerprint": "0b337b9a125ffdd4c8018586376549d8c509e58cbb88da76c93621fb18277b62"
 }

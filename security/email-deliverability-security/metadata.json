@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configure email authentication so legitimate mail lands and spoofed mail is blocked. Covers SPF, DKIM, DMARC (with the p=none \u2192 p=quarantine \u2192 p=reject migration path), MTA-STS, TLS-RPT, ARC, and BIMI. Invoke when launching a new sending domain, when domains are being spoofed, or when transactional email is landing in spam."
+  "description": "Configure email authentication so legitimate mail lands and spoofed mail is blocked. Covers SPF, DKIM, DMARC (with the p=none → p=quarantine → p=reject migration path), MTA-STS, TLS-RPT, ARC, and BIMI. Invoke when launching a new sending domain, when domains are being spoofed, or when transactional email is landing in spam.",
+  "content_fingerprint": "1402a5dc8ea5a94448be7826f9c0dd184dff942f685f9ddea60f6edd766147e6"
 }

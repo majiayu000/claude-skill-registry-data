@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when a PR diff adds a require line in go.mod, when justifying a new external dep, or when responding to an sdk-dep-vet-devil verdict. Covers the license/CVE/maintenance/size gate: govulncheck, osv-scanner, license allowlist, transitive count, last-commit-age, and the dependencies.md provenance contract that backs guardrails G31\u2013G34. Triggers: go get, dependency, govulncheck, osv-scanner, license, supply chain, new dep, go.mod, DD-, CVE."
+  "description": "Use this when a PR diff adds a require line in go.mod, when justifying a new external dep, or when responding to an sdk-dep-vet-devil verdict. Covers the license/CVE/maintenance/size gate: govulncheck, osv-scanner, license allowlist, transitive count, last-commit-age, and the dependencies.md provenance contract that backs guardrails G31–G34. Triggers: go get, dependency, govulncheck, osv-scanner, license, supply chain, new dep, go.mod, DD-, CVE.",
+  "content_fingerprint": "97fd8f7c5c46bc37b960c9dbd0e0c4f909c69643c8fab3233df67fdcc12e5e58"
 }

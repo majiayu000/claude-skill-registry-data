@@ -10,7 +10,8 @@ This repo contains the **archived skill contents** (the heavy, browsable skill f
 
 **Canonical layout**
 - Category folders at repo root (e.g. `development/`, `documents/`, `data/`, ...)
-- Each skill lives under a category: `<category>/<skill>/SKILL.md` + `<category>/<skill>/metadata.json`
+- Each skill lives under a category: `<category>/<skill>/metadata.json`, plus `SKILL.md` when its license is an open-source license
+- Skills with no license, `NOASSERTION`, proprietary, non-commercial or no-derivatives terms keep `metadata.json` with the source link only. See [NOTICE](NOTICE).
 - Case conflicts are resolved with `{name}-{owner}-{repo}` suffixes (fallback: `-{short-hash}`).
 
 **Archive status**
@@ -26,7 +27,7 @@ Browse the [public skill search and installation guides](https://majiayu000.gith
 
 ## Trace an archived skill
 
-Open `<category>/<skill>/metadata.json` next to its `SKILL.md`. Use `repo` and
+Open `<category>/<skill>/metadata.json`. Use `repo` and
 `path` to locate the original file, then follow `source_url` to check the current
 upstream version. `downloaded_at` describes the archived copy's timestamp, not a
 promise that it matches today's upstream content.
@@ -36,12 +37,11 @@ The registry maintainer is not necessarily the skill author. `NOASSERTION` means
 no license assertion was established; `restricted` is not permission to reuse
 or redistribute. The pipeline's MIT license does not relicense archived skills.
 
-For example, the metadata beside
-[`development/0-claude/SKILL.md`](development/0-claude/SKILL.md) points to
-`brixtonpham/claude-config`, records `NOASSERTION`, and marks distribution as
-`restricted`. Inspect that entry's [metadata](development/0-claude/metadata.json)
-and its upstream permission terms rather than treating it as a first-party
-majiayu000 skill.
+For example, [`development/0-claude/metadata.json`](development/0-claude/metadata.json)
+points to `brixtonpham/claude-config`, records `NOASSERTION`, and marks
+distribution as `restricted`, so the archive keeps no copy of its `SKILL.md`.
+Follow its `source_url` and the upstream permission terms rather than treating
+it as a first-party majiayu000 skill.
 
 Use the [public catalog](https://majiayu000.github.io/claude-skill-registry/) to
 find installation guidance instead of installing this archive as one skill.

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Compresses stale AI agent session logs (Claude Code, Cursor, Gemini, Codex, Ollama, Windsurf, LM Studio, Aider) to save disk space. Reclaims space from .log/.out/.trace files while protecting transcripts, configs, and live databases. Never touches conversation history, SQLite stores, or files being written. Use when the user asks to clean, compress, preview, restore, or scan for AI logs at session wrap-up."
+  "description": "Compresses stale AI agent session logs (Claude Code, Cursor, Gemini, Codex, Ollama, Windsurf, LM Studio, Aider) to save disk space. Reclaims space from .log/.out/.trace files while protecting transcripts, configs, and live databases. Never touches conversation history, SQLite stores, or files being written. Use when the user asks to clean, compress, preview, restore, or scan for AI logs at session wrap-up.",
+  "content_fingerprint": "4a629a0e911992f76ceaf0a9052870d3cb2f79830d2d27b755dc72c105524705"
 }

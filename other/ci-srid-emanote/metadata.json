@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reference for the `odu` runner \u2014 how to invoke a full pipeline, a single recipe, or a platform-pinned node, and how to attach to a live run, from a project whose CI odu runs. Trigger when the user asks to \"run CI\", \"run the pipeline\", \"re-run a check\", to run named lanes or recipes (e.g. \"run fmt and nix\", \"just the e2e lane\", bare selectors like `fmt`/`nix`/`e2e`), or names a recipe by `<recipe>@<platform>`. This skill \u2014 not a repo's local `just ci` / `just <recipe>` \u2014 is how an odu-run request is served."
+  "description": "Reference for the `odu` runner — how to invoke a full pipeline, a single recipe, or a platform-pinned node, and how to attach to a live run, from a project whose CI odu runs. Trigger when the user asks to \"run CI\", \"run the pipeline\", \"re-run a check\", to run named lanes or recipes (e.g. \"run fmt and nix\", \"just the e2e lane\", bare selectors like `fmt`/`nix`/`e2e`), or names a recipe by `<recipe>@<platform>`. This skill — not a repo's local `just ci` / `just <recipe>` — is how an odu-run request is served.",
+  "content_fingerprint": "4e5fecc7d2ca2c404ffdadb1ea787c32342dd17c4a83e52bdad9955da83aa233"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Draft the diff that adds the Release Manager's public key to the\nproject's KEYS file (`<keys-file-url>`), emit a paste-ready `svn`\n(or backend-equivalent) command sequence, remind the RM to upload to\nthe configured keyserver, and validate the key meets the ASF strength\nfloor. Never commits, never holds or reads the private key. Runs during\nrelease preparation, before RC signing begins."
+  "description": "Draft the diff that adds the Release Manager's public key to the\nproject's KEYS file (`<keys-file-url>`), emit a paste-ready `svn`\n(or backend-equivalent) command sequence, remind the RM to upload to\nthe configured keyserver, and validate the key meets the ASF strength\nfloor. Never commits, never holds or reads the private key. Runs during\nrelease preparation, before RC signing begins.",
+  "content_fingerprint": "f8166f646c304ee49990acd1d0c2d5e25f47cb32c106741e8ab25662fce04115"
 }

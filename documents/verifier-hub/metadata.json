@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deterministic artifact verifier CLI (file/xlsx/docx/pdf/pptx/text/archive/rubric) for pre-delivery artifact checks and agentic judges. 58 subcommands callable as `verifier {family} {subcmd} [args]`. Use before delivering or uploading a file, or whenever you need to check file format, sheet/section presence, cell values, formulas, keywords, character counts, page counts, placeholders, signatures or zip contents, instead of guessing from an LLM reading. Every call prints one JSON object with a quotable `evidence` field."
+  "description": "Deterministic artifact verifier CLI (file/xlsx/docx/pdf/pptx/text/archive/rubric) for pre-delivery artifact checks and agentic judges. 58 subcommands callable as `verifier {family} {subcmd} [args]`. Use before delivering or uploading a file, or whenever you need to check file format, sheet/section presence, cell values, formulas, keywords, character counts, page counts, placeholders, signatures or zip contents, instead of guessing from an LLM reading. Every call prints one JSON object with a quotable `evidence` field.",
+  "content_fingerprint": "c1629f93faeaeaae0311e7b2b5af61f834b8654a65bc43cc4d1444cc89826ada"
 }

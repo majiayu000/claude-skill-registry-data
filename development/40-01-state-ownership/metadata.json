@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Cygnusfear/agent-skills/blob/main/skills/obsidian-plan-wiki/playbook/40-architecture/40-01-state-ownership/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "aa10641dca5bc27f929816f2e7f9347e3f1c61e562918a947598fdff734ab0d3",
+  "description": "Every piece of mutable state has exactly one owner that writes it. Others read. Prevents \"who set this?\" and invisible coupling."
 }

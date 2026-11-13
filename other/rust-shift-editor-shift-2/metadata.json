@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Canonical rules for writing and reviewing Rust code in Shift's crates. Use whenever you add or change `.rs` code, especially error handling (`ok_or`, `ok_or_else`, `map_err`, `?`, `CoreError`, `StoreError`, `SlugError`, `BridgeError`), entity lookups by id, checked arithmetic and integer conversions, or helpers that several call sites repeat. Load `rustdoc` as well when the change adds or edits doc comments."
+  "description": "Canonical rules for writing and reviewing Rust code in Shift's crates. Use whenever you add or change `.rs` code, especially error handling (`ok_or`, `ok_or_else`, `map_err`, `?`, `CoreError`, `StoreError`, `SlugError`, `BridgeError`), entity lookups by id, checked arithmetic and integer conversions, or helpers that several call sites repeat. Load `rustdoc` as well when the change adds or edits doc comments.",
+  "content_fingerprint": "c1a2fdd8e3a59bc93e5792cd7ee365363a909e3c915813363de69748328d2c85"
 }

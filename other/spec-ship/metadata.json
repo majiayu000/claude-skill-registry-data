@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Push the current branch to GitHub and create a pull request. Use this skill when the user says \"ship it\", \"ship this\", \"push to github\", \"create a pr\", \"open a pull request\", \"send for review\", \"get this reviewed\", or wants to push their work and open a PR. Also use when the user says \"/spec-ship\" (or their host's equivalent invocation syntax). This skill handles prerequisites, branching, pushing, and PR creation \u2014 it does not commit or run quality checks (use spec-checkpoint for that first)."
+  "description": "Push the current branch to GitHub and create a pull request. Use this skill when the user says \"ship it\", \"ship this\", \"push to github\", \"create a pr\", \"open a pull request\", \"send for review\", \"get this reviewed\", or wants to push their work and open a PR. Also use when the user says \"/spec-ship\" (or their host's equivalent invocation syntax). This skill handles prerequisites, branching, pushing, and PR creation — it does not commit or run quality checks (use spec-checkpoint for that first).",
+  "content_fingerprint": "4b1911b23345905adbae515011ddcbd55da1f9332f07c8a0df175d5eb59f5f57"
 }

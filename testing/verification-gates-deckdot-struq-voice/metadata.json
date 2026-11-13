@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The verification tiers and gate commands for Struq Voice. Use whenever finishing a slice, before a commit, or when asked to 'verify', 'run the gates', 'typecheck', 'lint', 'run tests', 'which tier is this', or 'check it works'. Knows the T1/T2/T3 tier table and which tier a change takes, runs pnpm typecheck, pnpm lint, pnpm test and the boot smoke, knows that pnpm test:e2e must NOT be run unprompted (slow, flaky hook spec), and how to clean up stray Electron processes. NOT for understanding the codebase (use project-context), for branching and PRs (use github-workflow), or for cutting a release (use shipping-a-release)."
+  "description": "The verification tiers and gate commands for Struq Voice. Use whenever finishing a slice, before a commit, or when asked to 'verify', 'run the gates', 'typecheck', 'lint', 'run tests', 'which tier is this', or 'check it works'. Knows the T1/T2/T3 tier table and which tier a change takes, runs pnpm typecheck, pnpm lint, pnpm test and the boot smoke, knows that pnpm test:e2e must NOT be run unprompted (slow, flaky hook spec), and how to clean up stray Electron processes. NOT for understanding the codebase (use project-context), for branching and PRs (use github-workflow), or for cutting a release (use shipping-a-release).",
+  "content_fingerprint": "efaa64624ecc791abbbb0abfefec2db663c697b7da09c92ffb2031aa6acdff3c"
 }

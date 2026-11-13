@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Synthesize raw recon/test output into engagement state. Reads everything dropped in targets/<active>/ingest/, extracts hosts/assets/creds/paths, merges into state.md/loot.md/Killchain.md, logs it, archives the raw files. Works for pentest, bugbounty, and ctf. Use when asked to \"ingest\", \"synthesize findings\", \"process recon\", or after dropping tool output in the ingest folder."
+  "description": "Synthesize raw recon/test output into engagement state. Reads everything dropped in targets/<active>/ingest/, extracts hosts/assets/creds/paths, merges into state.md/loot.md/Killchain.md, logs it, archives the raw files. Works for pentest, bugbounty, and ctf. Use when asked to \"ingest\", \"synthesize findings\", \"process recon\", or after dropping tool output in the ingest folder.",
+  "content_fingerprint": "86d27a98b0f8418c91bf03511001923055f0694b9527c24b5382afad96e074c0"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "After a delivery PR merges, check on an Expo Simulators iOS session that its OTA update actually landed \u2014 wait for the OTA publish run of the merge commit, start a session on the production build with the merge's native fingerprint, make the app check now with appduct's ota_check_now, apply the staged bundle by tapping the update banner with agent-device, and confirm the bundle id and the feature on screen. Always releases the session. Loaded by the ota-verifier subagent. Use when the deliver orchestrator hands over a merged PR, or when someone asks \"did the update for"
+  "description": "After a delivery PR merges, check on an Expo Simulators iOS session that its OTA update actually landed — wait for the OTA publish run of the merge commit, start a session on the production build with the merge's native fingerprint, make the app check now with appduct's ota_check_now, apply the staged bundle by tapping the update banner with agent-device, and confirm the bundle id and the feature on screen. Always releases the session. Loaded by the ota-verifier subagent. Use when the deliver orchestrator hands over a merged PR, or when someone asks \"did the update for",
+  "content_fingerprint": "61515613e31186233b0e26fde408256d78600b83fbd52fe33fd878b823223092"
 }

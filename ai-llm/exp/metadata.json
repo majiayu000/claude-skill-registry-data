@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8dd1\u5b9e\u9a8c\u5e76\u8bb0\u5f55 provenance\uff1a\u5148\u5199\u5047\u8bbe\u548c\u6210\u529f\u5224\u636e\uff0c\u8dd1\u65f6\u8bb0\u5f55 git hash\u3001\u5b8c\u6574 resolved config \u548c seed\uff0c\u8dd1\u5b8c\u628a\u7ed3\u8bba\u5199\u56de research-log.md \u5e76\u6807 [AI-DRAFT] \u4e0e [source: run_id]\u3002\u4efb\u4f55\u8981\u8dd1\u8bad\u7ec3/\u8bc4\u6d4b/\u5bf9\u6bd4\u7684\u573a\u666f\u90fd\u8d70\u8fd9\u91cc\u3002"
+  "description": "跑实验并记录 provenance：先写假设和成功判据，跑时记录 git hash、完整 resolved config 和 seed，跑完把结论写回 research-log.md 并标 [AI-DRAFT] 与 [source: run_id]。任何要跑训练/评测/对比的场景都走这里。",
+  "content_fingerprint": "fc6651060b9c9c361a23a470e1d514876dea00b0213599e8b3b45415c9b6491f"
 }

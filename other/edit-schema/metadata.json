@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Change V\u1ec9a H\u00e8 Online's synced Colyseus state (server/src/schema.ts) and regenerate the C# classes for Unity with npm run schema-cs. Use this skill whenever a field has to be added, removed or retyped on StreetState, Player, Stall or Customer, or when the user wants the client to \"see\" something new about the street (\"cho hi\u1ec7n s\u1ed1 kh\u00e1ch \u0111ang x\u1ebfp h\u00e0ng\", \"th\u00eam tr\u1ea1ng th\u00e1i nh\u00e2n vi\u00ean\"). Forgetting the codegen step leaves client and server silently out of sync, which is miserable to track down."
+  "description": "Change Vỉa Hè Online's synced Colyseus state (server/src/schema.ts) and regenerate the C# classes for Unity with npm run schema-cs. Use this skill whenever a field has to be added, removed or retyped on StreetState, Player, Stall or Customer, or when the user wants the client to \"see\" something new about the street (\"cho hiện số khách đang xếp hàng\", \"thêm trạng thái nhân viên\"). Forgetting the codegen step leaves client and server silently out of sync, which is miserable to track down.",
+  "content_fingerprint": "52145420107fd05c3935fb473baf9192c5a2234b4f733d0d7a7570cbdd9222e1"
 }

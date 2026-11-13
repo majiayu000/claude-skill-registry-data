@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Copy one Cloudflare D1 database into another of the same app's environments \u2014 refresh STAGING from prod, seed a PREVIEW from staging, or (guarded) push staging up to prod. Full mirror via scripts/db-clone.mjs. Use when asked to \"clone a db\", \"refresh staging from prod\", \"copy prod data to staging\", \"seed a preview db\", or to reconstitute a wiped staging DB. NOT for per-collection seeding (use the app's seedData/seed endpoints) or for schema migrations (use db-migrations)."
+  "description": "Copy one Cloudflare D1 database into another of the same app's environments — refresh STAGING from prod, seed a PREVIEW from staging, or (guarded) push staging up to prod. Full mirror via scripts/db-clone.mjs. Use when asked to \"clone a db\", \"refresh staging from prod\", \"copy prod data to staging\", \"seed a preview db\", or to reconstitute a wiped staging DB. NOT for per-collection seeding (use the app's seedData/seed endpoints) or for schema migrations (use db-migrations).",
+  "content_fingerprint": "24869ccd42533ff18dcecdb27e700505c63f4224e586e1d41bb290787520fb8b"
 }

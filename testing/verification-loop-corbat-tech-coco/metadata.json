@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/corbat-tech/coco/blob/main/.claude/skills/verification-loop/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "b47c5a0952700fdf1edcdc1aae6367be8b89944e62bfb75216285159958e8277",
+  "description": "Run verify → identify failures → fix → verify again until all checks pass. Iterative quality enforcement loop for reaching a clean state before committing or releasing."
 }

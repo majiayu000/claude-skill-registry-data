@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2\u8d35\u91d1\u5c5e\u4ef7\u683c\u3002\u63a5\u53e3\uff1aGET /api/v1/market/data/bullion/price\u3002\u6240\u6709\u8bf7\u6c42\u5fc5\u987b\u8bbe\u7f6e FTSHARE_API_KEY\u3002"
+  "description": "查询贵金属价格。接口：GET /api/v1/market/data/bullion/price。所有请求必须设置 FTSHARE_API_KEY。",
+  "content_fingerprint": "de3551fb7a16fd62fa7798f2433a23d364d7b140df4499e2ab386898d1aa2e44"
 }

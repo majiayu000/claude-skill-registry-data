@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deterministic source-video discovery \u2014 the clip-channel \"outlier\" method, keyless. Searches seed niche queries via yt-dlp ytsearch, prefilters to long-form candidates, fetches full metadata, and ranks by outlier score (views/day velocity, views-per-subscriber ratio, comment engagement, replay-heatmap peakiness). Emits a ranked candidates.json to pick the next pipeline source from. No Claude call, no API key."
+  "description": "Deterministic source-video discovery — the clip-channel \"outlier\" method, keyless. Searches seed niche queries via yt-dlp ytsearch, prefilters to long-form candidates, fetches full metadata, and ranks by outlier score (views/day velocity, views-per-subscriber ratio, comment engagement, replay-heatmap peakiness). Emits a ranked candidates.json to pick the next pipeline source from. No Claude call, no API key.",
+  "content_fingerprint": "784ba4672c0094f043b5f63d6a91a4941dc1181b7532bd86c35b7ce28d2f0720"
 }

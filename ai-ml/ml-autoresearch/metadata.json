@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants an autonomous ML research loop that does more than blindly try changes. After every training run the agent analyses what actually happened inside the model \u2014 gradients, activations, embeddings, errors, data \u2014 and grounds the next change in that evidence. A `<literature>` on/off dial adds scientific-literature grounding: off behaves as a pure analysis-first loop; on searches papers, grades the evidence, and implements only what prior work supports. One change per run; loops forever until interrupted. Not for one-off training runs or hyperparameter sweeps."
+  "description": "Use when the user wants an autonomous ML research loop that does more than blindly try changes. After every training run the agent analyses what actually happened inside the model — gradients, activations, embeddings, errors, data — and grounds the next change in that evidence. A `<literature>` on/off dial adds scientific-literature grounding: off behaves as a pure analysis-first loop; on searches papers, grades the evidence, and implements only what prior work supports. One change per run; loops forever until interrupted. Not for one-off training runs or hyperparameter sweeps.",
+  "content_fingerprint": "d2280cd741ed9265388ae09b10ac28e2d2ee23f077fdd580dcc51f63473c5689"
 }

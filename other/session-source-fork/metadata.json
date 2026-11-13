@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when authoring a rig spec member or `rig expand` payload that needs to start a new managed seat from a prior runtime conversation source \u2014 `session_source: { mode: fork, ref: { kind, value } }`. v1 supports `mode: fork` with `ref.kind: native_id` for Claude and Codex. The new seat persists a NEW post-fork token; the parent token is NEVER written onto the new seat. NOT for restoring an existing seat or for artifact-backed mental-model rebuild."
+  "description": "Use when authoring a rig spec member or `rig expand` payload that needs to start a new managed seat from a prior runtime conversation source — `session_source: { mode: fork, ref: { kind, value } }`. v1 supports `mode: fork` with `ref.kind: native_id` for Claude and Codex. The new seat persists a NEW post-fork token; the parent token is NEVER written onto the new seat. NOT for restoring an existing seat or for artifact-backed mental-model rebuild.",
+  "content_fingerprint": "07ba56e9182c0753e71cef963ec2b6faf0eda808a81cd1a264beec121254c294"
 }

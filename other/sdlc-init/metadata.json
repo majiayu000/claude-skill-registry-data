@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Invoked explicitly by /init-project. Bootstraps or upgrades the SDLC framework in a repository \u2014 detects the stack, fills .agent/project-context.yaml, creates the docs/ and .agent/state/ trees, writes the managed project-facts block into CLAUDE.md, and seeds the domain knowledge files. Idempotent and safe to re-run as an upgrade path."
+  "description": "Invoked explicitly by /init-project. Bootstraps or upgrades the SDLC framework in a repository — detects the stack, fills .agent/project-context.yaml, creates the docs/ and .agent/state/ trees, writes the managed project-facts block into CLAUDE.md, and seeds the domain knowledge files. Idempotent and safe to re-run as an upgrade path.",
+  "content_fingerprint": "58ae2acf0027cadff512539b34c21d30b6ab7b389364c5573da2bc592478c345"
 }

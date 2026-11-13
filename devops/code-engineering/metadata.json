@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7cfb\u7edf\u63d0\u793a\u9762\u5411\u7f16\u7a0b\u4ee3\u7406\uff08Coding Agent\uff09\u573a\u666f\u65f6\u8c03\u7528\u3002\u9002\u7528\u4e8e\u6784\u5efa\u4ee3\u7801\u7f16\u8f91\u3001\u6587\u4ef6\u64cd\u4f5c\u3001Git \u5de5\u4f5c\u6d41\u3001\u81ea\u52a8\u5316\u7f16\u7a0b\u52a9\u624b\u7684\u7cfb\u7edf\u63d0\u793a\u3002\u4e0d\u9002\u7528\u4e8e\u4ee3\u7801\u89e3\u91ca\u6216\u6559\u5b66\u573a\u666f\uff08\u65e0\u6587\u4ef6\u4fee\u6539\uff09\uff0c\u4e0d\u9002\u7528\u4e8e DevOps \u57fa\u7840\u8bbe\u65bd\u914d\u7f6e\uff08\u975e\u4ee3\u7801\u5c42\uff09\uff0c\u4e0d\u9002\u7528\u4e8e\u7eaf\u5bf9\u8bdd\u5f0f\u4ee3\u7801\u95ee\u7b54\uff08\u65e0\u5de5\u5177\u8c03\u7528\uff09\u3002"
+  "description": "当系统提示面向编程代理（Coding Agent）场景时调用。适用于构建代码编辑、文件操作、Git 工作流、自动化编程助手的系统提示。不适用于代码解释或教学场景（无文件修改），不适用于 DevOps 基础设施配置（非代码层），不适用于纯对话式代码问答（无工具调用）。",
+  "content_fingerprint": "190f55751ce249c43f9f5a7bf40363ee4fc00b571cd3ae0087951626f6708d85"
 }

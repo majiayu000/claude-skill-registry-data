@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/troykelly/claude-skills/blob/main/skills/github-api-cache/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f59287a9236fc3881d99187c3d61c9cb6e47234269ae387f0c482fa60dc91c4b",
+  "description": "MANDATORY before any GitHub project operations - caches project metadata to prevent rate limit exhaustion. Called by session-start. Other skills MUST use cached data."
 }

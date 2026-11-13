@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u80a1\u7968\u8de8\u65e5\u5206\u65f6\u884c\u60c5\uff0c\u542b\u5747\u4ef7\u4e0e\u65e5\u7d2f\u8ba1\u91cf\u989d\uff08stock_intraday\uff0cGET /api/v4/market/data/stock-intraday\uff09\u3002\u7528\u6237\u95ee\u67d0\u53ea\u80a1\u7968\u7684\u5206\u65f6\u6570\u636e\u3001\u5f53\u65e5/\u8fd1\u4e94\u65e5\u9010\u5206\u949f\u4ef7\u683c\u4e0e\u5747\u4ef7\u3001\u65e5\u7d2f\u8ba1\u6210\u4ea4\u91cf\u989d\u65f6\u4f7f\u7528\u3002\u5fc5\u586b --symbol\uff1b\u53ef\u9009 --range\u3001--days\u3001--ts-ms\uff0c\u4e09\u8005\u6309 ts_ms > days > range \u4f18\u5148\u7ea7\u751f\u6548\u3002"
+  "description": "股票跨日分时行情，含均价与日累计量额（stock_intraday，GET /api/v4/market/data/stock-intraday）。用户问某只股票的分时数据、当日/近五日逐分钟价格与均价、日累计成交量额时使用。必填 --symbol；可选 --range、--days、--ts-ms，三者按 ts_ms > days > range 优先级生效。",
+  "content_fingerprint": "af7ca9867936f9569d2f3e0860c77cca189947fdd6e1bbc72e01b56cbf4f1d48"
 }

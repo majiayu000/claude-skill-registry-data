@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when an agent begins work (startup), finishes successfully (completion), hits an unrecoverable error (failure), or is retried after a prior failure \u2014 and when calculating duration_seconds for any lifecycle entry. Covers the canonical lifecycle JSON schema, startup / completion / failure protocols, retry semantics, and duration computation per CLAUDE.md rule 1. Triggers: lifecycle, started, completed, failed, retried, duration_seconds, startup, completion, agent-failure."
+  "description": "Use this when an agent begins work (startup), finishes successfully (completion), hits an unrecoverable error (failure), or is retried after a prior failure — and when calculating duration_seconds for any lifecycle entry. Covers the canonical lifecycle JSON schema, startup / completion / failure protocols, retry semantics, and duration computation per CLAUDE.md rule 1. Triggers: lifecycle, started, completed, failed, retried, duration_seconds, startup, completion, agent-failure.",
+  "content_fingerprint": "3e2b35b93e81cd4ab7877ee4551b779cd16d35830018c15b4df48e31a343d1c4"
 }

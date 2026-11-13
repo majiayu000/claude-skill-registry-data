@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run a large batch of independent work items (a fleet-wide harvest, a multi-repo sync-down, an overnight backlog) as a persistent coordinator loop instead of one item at a time. Use when there are enough independent units of work that dispatch-review-merge would otherwise repeat many times in a row, or when the batch should keep making progress across a heartbeat interval instead of stalling until the next message."
+  "description": "Run a large batch of independent work items (a fleet-wide harvest, a multi-repo sync-down, an overnight backlog) as a persistent coordinator loop instead of one item at a time. Use when there are enough independent units of work that dispatch-review-merge would otherwise repeat many times in a row, or when the batch should keep making progress across a heartbeat interval instead of stalling until the next message.",
+  "content_fingerprint": "aa47a1262c1b470a8e404fe1b86c9f5c90413b28bfda6e6d6747c942b32ff9ae"
 }

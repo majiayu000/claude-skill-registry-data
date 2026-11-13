@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs the full DevSkyy gate battery (pytest, ruff, phpcs/phpstan, verify:theme, .min rebuild, live curl, eyes-on) and reports each result with an evidence-scope tag. Use when a feature, fix, or refactor is finished and you are about to claim \"done\", open a PR, or deploy. Do NOT use for choosing which gate to add or for reviewing code quality by reading it \u2014 that is code-review; this skill only executes gates that already exist and reports what they returned."
+  "description": "Runs the full DevSkyy gate battery (pytest, ruff, phpcs/phpstan, verify:theme, .min rebuild, live curl, eyes-on) and reports each result with an evidence-scope tag. Use when a feature, fix, or refactor is finished and you are about to claim \"done\", open a PR, or deploy. Do NOT use for choosing which gate to add or for reviewing code quality by reading it — that is code-review; this skill only executes gates that already exist and reports what they returned.",
+  "content_fingerprint": "99e334dc53636623757c87f13272e677b82a0cc7c393cfd9d26529676cfe2135"
 }

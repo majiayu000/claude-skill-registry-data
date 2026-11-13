@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CRITICAL: ONLY activate this skill when the user explicitly triggers the `/auto-review-pr` slash command. DO NOT auto-trigger or invoke this skill for general coding, reviewing, debugging, or triage tasks. When invoked via `/auto-review-pr`, fetches and triages UNRESOLVED PR review comments for the current branch under code-review-commons standards, asks the user via multi-select which comments to accept, triggers auto-fix for accepted issues, and automatically replies and resolves review threads on GitHub as \"Addressed\", \"Won't fix\", or \"Incorrect\"."
+  "description": "CRITICAL: ONLY activate this skill when the user explicitly triggers the `/auto-review-pr` slash command. DO NOT auto-trigger or invoke this skill for general coding, reviewing, debugging, or triage tasks. When invoked via `/auto-review-pr`, fetches and triages UNRESOLVED PR review comments for the current branch under code-review-commons standards, asks the user via multi-select which comments to accept, triggers auto-fix for accepted issues, and automatically replies and resolves review threads on GitHub as \"Addressed\", \"Won't fix\", or \"Incorrect\".",
+  "content_fingerprint": "294782a9593be2ea6fe079997a56840d92fce8cfd12b8855db459ccd4531e374"
 }

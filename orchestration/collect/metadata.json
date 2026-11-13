@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/park-kyungchan/palantir/blob/main/.claude/skills/collect/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "46aa5634841e10172158169980e842c5be77bc7eb7d95bd3192ca3d78a02cf08",
+  "description": "Result Aggregation Agent - Aggregates worker results, verifies completion,\ndetects blockers, and generates collection report.\n\nPipeline Position: After /worker, Before /synthesis\nHandoff: /synthesis f"
 }

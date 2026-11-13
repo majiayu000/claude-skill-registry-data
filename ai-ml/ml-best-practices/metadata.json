@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CRITICAL RULE: You MUST use this skill whenever the task involves any machine learning tasks or data analysis.\nUse this skill if the user's prompt or requirements mention any of the following:\n  * Clustering\n  * Classification\n  * Regression\n  * Time series forecasting\n  * Statistical testing\n  * Model comparison\n  * ML\n  * Data analysis\n\nSQL/BigQuery ML HANDOFF: If the user requires a SQL solution, use this skill to dictate the ANALYSIS STEPS (e.g., markdown analysis cells, visualization logic), but defer to `bigquery` for all SQL syntax."
+  "description": "CRITICAL RULE: You MUST use this skill whenever the task involves any machine learning tasks or data analysis.\nUse this skill if the user's prompt or requirements mention any of the following:\n  * Clustering\n  * Classification\n  * Regression\n  * Time series forecasting\n  * Statistical testing\n  * Model comparison\n  * ML\n  * Data analysis\n\nSQL/BigQuery ML HANDOFF: If the user requires a SQL solution, use this skill to dictate the ANALYSIS STEPS (e.g., markdown analysis cells, visualization logic), but defer to `bigquery` for all SQL syntax.",
+  "content_fingerprint": "33561a3831c90083f591e6523584a68332eef493dcc663e51ef00d77036ab8c6"
 }

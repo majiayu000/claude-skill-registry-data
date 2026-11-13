@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CSS cascade, specificity, and selector-weight discipline for large legacy stylesheets (50+ plain-CSS files, no build-time scoping). Use when adding, changing, or reviewing CSS in wordpress-theme/skyyrose-flagship \u2014 a color/typography override, a new component rule, a scoped reset, or a \"the style isn't applying\" investigation. Do NOT use for React/CSS-Modules/Tailwind work where the compiler already scopes selectors (use frontend-patterns), and do NOT use it as the .min build checklist (that is theme-min-build) \u2014 this skill is about which selector wins, not which bytes ship."
+  "description": "CSS cascade, specificity, and selector-weight discipline for large legacy stylesheets (50+ plain-CSS files, no build-time scoping). Use when adding, changing, or reviewing CSS in wordpress-theme/skyyrose-flagship — a color/typography override, a new component rule, a scoped reset, or a \"the style isn't applying\" investigation. Do NOT use for React/CSS-Modules/Tailwind work where the compiler already scopes selectors (use frontend-patterns), and do NOT use it as the .min build checklist (that is theme-min-build) — this skill is about which selector wins, not which bytes ship.",
+  "content_fingerprint": "a74d28ea412fd4f304923b9c6d2b7dd9399cf3d040487652aa709c99478314e5"
 }

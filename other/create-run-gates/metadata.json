@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run all the CI code-analysis gates locally against a change, before opening a PR, so failures are caught in seconds instead of after a full pipeline cycle. Use when the user says \"run the gates\", \"check before I push\", \"will CI pass\", \"run the CI checks locally\", \"did I break a gate\", or \"pre-PR check\", or as the verification step at the end of a change. Do NOT use to evaluate a skill's quality (that is governance-validate-skills) or to validate only the artifact graph and docs wiki (that is governance-check-graph); this runs the whole gate set the pipeline runs."
+  "description": "Run all the CI code-analysis gates locally against a change, before opening a PR, so failures are caught in seconds instead of after a full pipeline cycle. Use when the user says \"run the gates\", \"check before I push\", \"will CI pass\", \"run the CI checks locally\", \"did I break a gate\", or \"pre-PR check\", or as the verification step at the end of a change. Do NOT use to evaluate a skill's quality (that is governance-validate-skills) or to validate only the artifact graph and docs wiki (that is governance-check-graph); this runs the whole gate set the pipeline runs.",
+  "content_fingerprint": "42d707a69505ce8370383d226c09653b10e57c4d33ecd89ec12a6ce7d13ba7b1"
 }

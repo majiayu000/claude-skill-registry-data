@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/master/.claude/skills/crowdsec-agent-registration-failure/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f5ab1e3eed2f77ec242b06af42068c7a48a49408f367b2b986a9d2efbcdb5816",
+  "description": "Fix CrowdSec agent pods stuck in CrashLoopBackOff after LAPI restart due to stale\nmachine registrations. Use when: (1) CrowdSec agent init container fails with\n\"user already exist\" error during cscli "
 }

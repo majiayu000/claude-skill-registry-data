@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage AICP's search surfaces \u2014 KB semantic search (LocalAI Collections + nomic-embed embeddings + bge-reranker reranking via `aicp --kb search` and `aicp_kb_search_collection` MCP), source code search (Grep/Glob via Claude Code), wiki page search (`python3 -m tools.view search` from second brain). AICP has no Elasticsearch/Solr \u2014 semantic search is LocalAI-Collections-backed; lexical search is Grep-backed. Loads when the operator says \"set up search\" / \"tune embedding search\" / \"rerank results\" / \"why are search results wrong\" / \"add a new search surface\"."
+  "description": "Manage AICP's search surfaces — KB semantic search (LocalAI Collections + nomic-embed embeddings + bge-reranker reranking via `aicp --kb search` and `aicp_kb_search_collection` MCP), source code search (Grep/Glob via Claude Code), wiki page search (`python3 -m tools.view search` from second brain). AICP has no Elasticsearch/Solr — semantic search is LocalAI-Collections-backed; lexical search is Grep-backed. Loads when the operator says \"set up search\" / \"tune embedding search\" / \"rerank results\" / \"why are search results wrong\" / \"add a new search surface\".",
+  "content_fingerprint": "857c6bc983c14f5590cc62fb39eaebac6a0da5135409d8b6f770368e2b50c75c"
 }

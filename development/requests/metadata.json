@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/codebar-ag/coding-guidelines/blob/main/resources/boost/skills/requests/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "6fef85c665a63b1de09a55dd9c3b1bcac0b2f2307569ab35bd00383370fb665a",
+  "description": "Dedicated Form Request validation classes for all controller input. Every endpoint that accepts user input must use a `FormRequest` class — validation never happens directly inside a controller."
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wiring your application to a third-party SaaS platform: verifying an inbound webhook against the vendor's own scheme rather than a generalized one, why a valid signature identifies the sender and not the user in the payload, replay windows, one credential per integration and per environment, least-privilege scopes, and treating a bulk export as a data boundary. Use when writing a webhook receiver, an OAuth integration, a SCIM endpoint, or any code that authenticates to or from a SaaS vendor."
+  "description": "Wiring your application to a third-party SaaS platform: verifying an inbound webhook against the vendor's own scheme rather than a generalized one, why a valid signature identifies the sender and not the user in the payload, replay windows, one credential per integration and per environment, least-privilege scopes, and treating a bulk export as a data boundary. Use when writing a webhook receiver, an OAuth integration, a SCIM endpoint, or any code that authenticates to or from a SaaS vendor.",
+  "content_fingerprint": "6e930b39e1ff52dd661a7c4bf36ae5f5ff78c42ba3a32cbdb9adef5817daccac"
 }

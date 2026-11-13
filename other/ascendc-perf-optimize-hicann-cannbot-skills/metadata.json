@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ascend C \u7b97\u5b50\u6027\u80fd\u4f18\u5316\u7b56\u7565\u5236\u5b9a\u3002\u7ed3\u5408 Tiling \u5efa\u6a21\u4e0e\u6d41\u6c34\u5206\u6790\uff08\u4eff\u771f\u56fe + profiling \u6570\u636e\uff09\uff0c\u6309\u5361\u95f4/\u6838\u95f4/\u6838\u5185\u4e09\u5c42\u6d41\u6c34\u5236\u5b9a\u6027\u80fd\u4f18\u5316\u7b56\u7565\uff0c\u5e76\u56de\u4fee Tiling \u53c2\u6570\u3002\u89e6\u53d1\uff1a\u7b97\u5b50\u6027\u80fd\u8c03\u4f18\u3001\u6d41\u6c34\u5206\u6790\u3001Tiling \u4fee\u6b63\u3001bound \u8bca\u65ad\u3001MC\u00b2 \u901a\u7b97\u878d\u5408\u7b97\u5b50\u4f18\u5316\u3001\u5361\u95f4\u6d41\u6c34\u914d\u5e73\u65f6\u3002"
+  "description": "Ascend C 算子性能优化策略制定。结合 Tiling 建模与流水分析（仿真图 + profiling 数据），按卡间/核间/核内三层流水制定性能优化策略，并回修 Tiling 参数。触发：算子性能调优、流水分析、Tiling 修正、bound 诊断、MC² 通算融合算子优化、卡间流水配平时。",
+  "content_fingerprint": "2a11d944e404126d530798b0f39537e0569b697ec6948175ff613abff02c8810"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when designing the constructor for a new motadatagosdk client \u2014 picking between Config struct + New(cfg) (otel/, events/jetstream/) or functional options + exported Config (core/l2cache/dragonfly/) based on sibling-package shape and field count, with applyDefaults + validate split. Triggers: Config, func New, WithX, Option, constructor, applyDefaults, validate, functional-options."
+  "description": "Use this when designing the constructor for a new motadatagosdk client — picking between Config struct + New(cfg) (otel/, events/jetstream/) or functional options + exported Config (core/l2cache/dragonfly/) based on sibling-package shape and field count, with applyDefaults + validate split. Triggers: Config, func New, WithX, Option, constructor, applyDefaults, validate, functional-options.",
+  "content_fingerprint": "09e961010fd231df06f876cf7b237aa30d0c6516f8ae8f7c057c754e68088ee8"
 }

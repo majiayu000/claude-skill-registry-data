@@ -1,5 +1,5 @@
 {
-  "name": "\u6574\u6539\u5efa\u8bae\u8f93\u51faSkill",
+  "name": "整改建议输出Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/remediation-plan/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u95ed\u73af\u6574\u6539\u5efa\u8bae\u6a21\u677f:\u63aa\u65bd/\u8d23\u4efb\u73af\u8282/\u671f\u9650/\u9a8c\u6536\u6807\u51c6\u3002\u5f53\u5ba1\u8ba1\u53d1\u73b0\u95ee\u9898\u540e,\u9700\u8981\u8f93\u51fa\u53ef\u6267\u884c\u3001\u53ef\u9a8c\u6536\u3001\u53ef\u8ddf\u8e2a\u7684\u95ed\u73af\u6574\u6539\u5efa\u8bae\u65f6\u4f7f\u7528\u3002"
+  "description": "闭环整改建议模板:措施/责任环节/期限/验收标准。当审计发现问题后,需要输出可执行、可验收、可跟踪的闭环整改建议时使用。",
+  "content_fingerprint": "73ce4168b6b0c58721f57abced96f174a0a7339b0c3e62a21e60acc570d78fe0"
 }

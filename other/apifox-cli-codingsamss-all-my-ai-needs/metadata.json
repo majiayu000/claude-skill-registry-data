@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u901a\u8fc7 Apifox CLI \u7ba1\u7406 Apifox \u9879\u76ee\u8d44\u6e90\u3002\u89e6\u53d1\u573a\u666f\uff1a\u8fd0\u884c\u63a5\u53e3\u81ea\u52a8\u5316\u6d4b\u8bd5/\u6d4b\u8bd5\u5957\u4ef6\uff0c\u67e5\u8be2/\u521b\u5efa/\u66f4\u65b0/\u5220\u9664\u63a5\u53e3\u3001\u73af\u5883\u3001Schema\u3001Mock\u3001\u5206\u652f\u7b49\u9879\u76ee\u8d44\u6e90\uff0c\u5bfc\u5165\u5bfc\u51fa API \u6587\u6863\uff0c\u67e5\u770b\u6d4b\u8bd5\u62a5\u544a\uff0c\u7ba1\u7406 Runner\u3001\u5b9a\u65f6\u4efb\u52a1\u3001\u901a\u77e5\u7b49 CI/CD \u914d\u7f6e\u3002CLI \u8f93\u51fa\u4e3a\u7ed3\u6784\u5316 JSON\uff0c\u5e38\u542b agentHints.nextSteps\uff1b\u6240\u6709\u547d\u4ee4\u652f\u6301 --help\u3002"
+  "description": "通过 Apifox CLI 管理 Apifox 项目资源。触发场景：运行接口自动化测试/测试套件，查询/创建/更新/删除接口、环境、Schema、Mock、分支等项目资源，导入导出 API 文档，查看测试报告，管理 Runner、定时任务、通知等 CI/CD 配置。CLI 输出为结构化 JSON，常含 agentHints.nextSteps；所有命令支持 --help。",
+  "content_fingerprint": "b32ac1eb98a7a9738945c20a1f66e12f8b2063794fc673b6df774757aef3b18c"
 }

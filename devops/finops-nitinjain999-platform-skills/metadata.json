@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cost visibility and tag governance for platform changes. Estimates the monthly cost of a Terraform pull request with Infracost, sets up in-cluster cost allocation by namespace and label with OpenCost, and enforces required cost tags in four layers (Terraform default_tags and variable validation, a Conftest gate on the plan, AWS Config REQUIRED_TAGS, and a Kyverno namespace-label policy). Use when asked \"what will this cost\", \"add cost estimates to PRs\", \"who owns this spend\", \"enforce cost-center tags\", or \"set up OpenCost\". Cost as one dimension of a full PR review \u2192 /platform-skills:pr-review."
+  "description": "Cost visibility and tag governance for platform changes. Estimates the monthly cost of a Terraform pull request with Infracost, sets up in-cluster cost allocation by namespace and label with OpenCost, and enforces required cost tags in four layers (Terraform default_tags and variable validation, a Conftest gate on the plan, AWS Config REQUIRED_TAGS, and a Kyverno namespace-label policy). Use when asked \"what will this cost\", \"add cost estimates to PRs\", \"who owns this spend\", \"enforce cost-center tags\", or \"set up OpenCost\". Cost as one dimension of a full PR review → /platform-skills:pr-review.",
+  "content_fingerprint": "4b99dcf09b38d3474b036281ca356a52194d3cea5de11e59cd26e1c2154412bc"
 }

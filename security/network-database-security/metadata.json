@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Assess reachable database services \u2014 PostgreSQL/MySQL/MSSQL/MongoDB/Redis \u2014 for unauthenticated access, weak/default accounts, over-broad grants, and dangerous features (xp_cmdshell, COPY FROM PROGRAM, UDF, Redis file write) that turn a DB login into OS code execution. Load when recon shows 3306/5432/1433/6379/27017, leaked app config yields DB creds, or a database review is in scope. Signals: 0.0.0.0 bind, unauth Redis PONG, mysql.user host '%', FILE priv, secure_file_priv empty, xp_cmdshell."
+  "description": "Assess reachable database services — PostgreSQL/MySQL/MSSQL/MongoDB/Redis — for unauthenticated access, weak/default accounts, over-broad grants, and dangerous features (xp_cmdshell, COPY FROM PROGRAM, UDF, Redis file write) that turn a DB login into OS code execution. Load when recon shows 3306/5432/1433/6379/27017, leaked app config yields DB creds, or a database review is in scope. Signals: 0.0.0.0 bind, unauth Redis PONG, mysql.user host '%', FILE priv, secure_file_priv empty, xp_cmdshell.",
+  "content_fingerprint": "6c3df7c6d58528db0daf1e75724a19358338d491485cfc7567b039f9b259bbbf"
 }

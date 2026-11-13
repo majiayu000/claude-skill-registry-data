@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7b97\u5b50\u7cbe\u5ea6\u6807\u51c6\u3002\u63cf\u8ff0 Ascend C \u7b97\u5b50\u5404\u79cd dtype \u8f93\u51fa\u5bf9\u5e94\u7684\u7cbe\u5ea6\u6bd4\u5bf9\u6807\u51c6(\u6df7\u5408\u5bb9\u5dee atol/rtol)\u3002\u5f53\u9700\u8981(1)\u8bc4\u4f30\u7b97\u5b50\u7cbe\u5ea6\u662f\u5426\u8fbe\u6807,(2)\u7f16\u5199 ST \u6d4b\u8bd5\u9a8c\u8bc1\u7cbe\u5ea6,(3)\u5904\u7406 FP16/FP32/BF16 \u7b49\u4e0d\u540c\u6570\u636e\u7c7b\u578b\u7cbe\u5ea6\u95ee\u9898,(4)\u786e\u8ba4\u7b97\u5b50\u7cbe\u5ea6\u9a8c\u6536\u6807\u51c6\u65f6\u89e6\u53d1\u3002"
+  "description": "算子精度标准。描述 Ascend C 算子各种 dtype 输出对应的精度比对标准(混合容差 atol/rtol)。当需要(1)评估算子精度是否达标,(2)编写 ST 测试验证精度,(3)处理 FP16/FP32/BF16 等不同数据类型精度问题,(4)确认算子精度验收标准时触发。",
+  "content_fingerprint": "e0690dac43831402b2983d5583b34059e2040fe7b09c3aeaf60a59cd2c866321"
 }

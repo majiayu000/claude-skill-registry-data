@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code. Also load it for live strangler migrations (moving logic off a legacy service into its replacement) and for shared-table expand/contract schema changes (add nullable \u2192 dual-write \u2192 backfill \u2192 switch reads \u2192 drop) where old and new code run against the DB at once."
+  "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code. Also load it for live strangler migrations (moving logic off a legacy service into its replacement) and for shared-table expand/contract schema changes (add nullable → dual-write → backfill → switch reads → drop) where old and new code run against the DB at once.",
+  "content_fingerprint": "619c6542f5b90a58eba4cd30e3dbdcd6a7d4f44ef53aec69b17af3a42c05a990"
 }

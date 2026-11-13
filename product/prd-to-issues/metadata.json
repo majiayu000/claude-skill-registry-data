@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PRD \u5230\u7814\u53d1 Issue \u62c6\u89e3 / implementation issues\uff1a\u5f53\u7528\u6237\u5df2\u6709 PRD\u3001\u9700\u6c42\u6587\u6863\u3001handoff\u3001\u4ea7\u54c1\u65b9\u6848\u6216 GitHub PRD issue\uff0c \u9700\u8981\u62c6\u6210\u53ef\u72ec\u7acb\u9886\u53d6\u3001\u53ef\u9a8c\u6536\u3001\u9002\u5408 GitHub Issues \u627f\u63a5\u7684\u5f00\u53d1\u4efb\u52a1\u65f6\u4f7f\u7528\u3002\u53ef\u7528\u4e2d\u6587\u5524\u8d77\uff1a \u201c\u628a PRD \u62c6\u6210 issue\u201d\u201c\u9700\u6c42\u6587\u6863\u62c6\u4efb\u52a1\u201d\u201c\u751f\u6210 GitHub issues\u201d\u201cPRD \u62c6\u5de5\u5355\u201d\u201c\u62c6 implementation issues\u201d \u201c\u6309 vertical slice \u62c6\u5f00\u53d1\u7968\u201d\u3002\u4e0d\u7528\u4e8e\u4ece\u96f6\u5199 PRD\uff1b\u90a3\u7c7b\u8bf7\u6c42\u7528 prd-architect\u3002\u4e0d\u7528\u4e8e\u8bc4\u5ba1 PRD \u662f\u5426\u5b8c\u6574\uff1b \u90a3\u7c7b\u8bf7\u6c42\u5148\u7528 prd-review\u3002"
+  "description": "PRD 到研发 Issue 拆解 / implementation issues：当用户已有 PRD、需求文档、handoff、产品方案或 GitHub PRD issue， 需要拆成可独立领取、可验收、适合 GitHub Issues 承接的开发任务时使用。可用中文唤起： “把 PRD 拆成 issue”“需求文档拆任务”“生成 GitHub issues”“PRD 拆工单”“拆 implementation issues” “按 vertical slice 拆开发票”。不用于从零写 PRD；那类请求用 prd-architect。不用于评审 PRD 是否完整； 那类请求先用 prd-review。",
+  "content_fingerprint": "415ef30874bf442a87cab402469897e7e67c12eda251ff6ac3d4dba40054d9a4"
 }

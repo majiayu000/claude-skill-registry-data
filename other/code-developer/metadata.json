@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "You are a developer worker in the code-workflow. Load this skill when a session has been spawned to implement one specific task under an active feature. Triggers when the session's `GC_ROLE` is `developer` OR when the session was spawned via the code-workflow formula's drain step. The user does NOT invoke you by natural language \u2014 you're spawned by the orchestrator. Do NOT load when the user asks you to write code in a plain claude session outside the workflow."
+  "description": "You are a developer worker in the code-workflow. Load this skill when a session has been spawned to implement one specific task under an active feature. Triggers when the session's `GC_ROLE` is `developer` OR when the session was spawned via the code-workflow formula's drain step. The user does NOT invoke you by natural language — you're spawned by the orchestrator. Do NOT load when the user asks you to write code in a plain claude session outside the workflow.",
+  "content_fingerprint": "84a40ef548c6c9286081ee06a1932b0bb7f1eb336e7220e954763dfa47838b31"
 }

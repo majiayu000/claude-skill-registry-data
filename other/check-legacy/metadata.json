@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Legacy Java code analysis for Spring Boot projects where the code cannot be trusted at face value \u2014 method names lie, variables contain unexpected values, transactions have wrong boundaries, and behavior has never been documented. Use this BEFORE modifying any legacy class, before fixing bugs in old code, before refactoring, or when a fix worked locally but broke in production. If the code predates Spring Boot 3.x, has no tests, or has methods longer than 50 lines, always use check-legacy first. Do not skip this in favor of a faster review \u2014 legacy code that looks simple is where the worst production bugs hide."
+  "description": "Legacy Java code analysis for Spring Boot projects where the code cannot be trusted at face value — method names lie, variables contain unexpected values, transactions have wrong boundaries, and behavior has never been documented. Use this BEFORE modifying any legacy class, before fixing bugs in old code, before refactoring, or when a fix worked locally but broke in production. If the code predates Spring Boot 3.x, has no tests, or has methods longer than 50 lines, always use check-legacy first. Do not skip this in favor of a faster review — legacy code that looks simple is where the worst production bugs hide.",
+  "content_fingerprint": "6a3c5e770c238fd70d77fea822e24014a53ebc192157e47952ad04d67641b543"
 }

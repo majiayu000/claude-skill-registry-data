@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Systematic 5-step debugging flow for Go 1.22+ services. Load when a test fails, a goroutine leaks, a downstream provider hangs, errors lose context, or production logs are unhelpful. Forces layer isolation (handler vs service vs repo vs provider) and runs the 5 most common Go antipattern greps before any code change \u2014 prevents the \"add a goroutine to fix a slow handler\" cascade."
+  "description": "Systematic 5-step debugging flow for Go 1.22+ services. Load when a test fails, a goroutine leaks, a downstream provider hangs, errors lose context, or production logs are unhelpful. Forces layer isolation (handler vs service vs repo vs provider) and runs the 5 most common Go antipattern greps before any code change — prevents the \"add a goroutine to fix a slow handler\" cascade.",
+  "content_fingerprint": "cd7b4dd95ece04fcc4b6a875bcc08b7af22953b64c31c9abee81460a39e7879f"
 }

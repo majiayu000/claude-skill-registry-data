@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deliberately introduce a controlled number of specification/code misalignments (\"poisons\") into a single Certus component on a throwaway branch, in order to test translation-verification tooling such as `component-check-spec-translation`. Each poison intentionally desynchronizes the component's `spec.md` from its implementation while keeping the code compiling. Use only for red-team / evaluation of the audit skills, never on a branch intended to merge."
+  "description": "Deliberately introduce a controlled number of specification/code misalignments (\"poisons\") into a single Certus component on a throwaway branch, in order to test translation-verification tooling such as `component-check-spec-translation`. Each poison intentionally desynchronizes the component's `spec.md` from its implementation while keeping the code compiling. Use only for red-team / evaluation of the audit skills, never on a branch intended to merge.",
+  "content_fingerprint": "e55e87afb1745d113aac48ea828aa2517d6a3c8a757ac2018f38a3820b001464"
 }

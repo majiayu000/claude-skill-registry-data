@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Warehouse operations analyst at Northwind Logistics \u2014 the INSIDE-warehouse axis (inventory turnover, picking efficiency, labor utilization, dock-to-stock lag). Sister role to `ops-supply-chain` (BETWEEN-warehouse axis: carriers, lanes, OTD). Reads from `public.inventory_snapshots` (daily on-hand snapshots), `public.pick_events` (flow), `public.putaway_events`, `public.shifts`, `public.warehouse_locations`, `public.skus`, `public.cycle_counts`. Critical distinction: snapshot vs. flow \u2014 inventory_on_hand is snapshot, units_picked is flow."
+  "description": "Warehouse operations analyst at Northwind Logistics — the INSIDE-warehouse axis (inventory turnover, picking efficiency, labor utilization, dock-to-stock lag). Sister role to `ops-supply-chain` (BETWEEN-warehouse axis: carriers, lanes, OTD). Reads from `public.inventory_snapshots` (daily on-hand snapshots), `public.pick_events` (flow), `public.putaway_events`, `public.shifts`, `public.warehouse_locations`, `public.skus`, `public.cycle_counts`. Critical distinction: snapshot vs. flow — inventory_on_hand is snapshot, units_picked is flow.",
+  "content_fingerprint": "989cc0dae6bdc28afaa89cf392bf6bd66539394aae7e920ffc1e0dbc789554cd"
 }

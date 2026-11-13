@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs ansible/connect_linux.yml, a read-only pre-flight check that confirms SSH reachability and that `become` actually reaches root on a RHEL-family host, as part of the Linux SOE. Use before running any other SOE playbook against a host that's new, unfamiliar, or suspected of being unreachable/misconfigured, or when asked to \"test connectivity\" / \"check access\" to a host."
+  "description": "Runs ansible/connect_linux.yml, a read-only pre-flight check that confirms SSH reachability and that `become` actually reaches root on a RHEL-family host, as part of the Linux SOE. Use before running any other SOE playbook against a host that's new, unfamiliar, or suspected of being unreachable/misconfigured, or when asked to \"test connectivity\" / \"check access\" to a host.",
+  "content_fingerprint": "d2533eac340d8cd71392f6079feca05d5767804890f82ef93a5e14072d0b0ab8"
 }

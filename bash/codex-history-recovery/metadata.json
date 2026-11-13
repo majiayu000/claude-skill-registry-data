@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53 Codex Desktop \u5728\u5207\u6362 ChatGPT \u8d26\u53f7\u3001API Key\u3001\u81ea\u5b9a\u4e49 provider\u3001model_provider \u6216 model \u540e\uff0c\u672c\u5730\u5386\u53f2\u8bb0\u5f55\u6d88\u5931\u3001\u65e7\u5bf9\u8bdd\u7f3a\u5931\u3001\u9879\u76ee\u5386\u53f2\u770b\u8d77\u6765\u79fb\u52a8\u3001\u9700\u8981\u68c0\u67e5/\u540c\u6b65/\u5907\u4efd/\u6062\u590d/\u5220\u9664\u5f52\u6863\u5386\u53f2\u5143\u6570\u636e\u65f6\u4f7f\u7528\u3002\u8be5 skill \u53ea\u5904\u7406 ~/.codex \u4e0b\u7684\u5386\u53f2\u7d22\u5f15\u548c rollout \u5143\u6570\u636e\uff0c\u4e0d\u66b4\u9732\u5bc6\u94a5\uff0c\u4e0d\u91cd\u5199\u5bf9\u8bdd\u6b63\u6587\u3002"
+  "description": "当 Codex Desktop 在切换 ChatGPT 账号、API Key、自定义 provider、model_provider 或 model 后，本地历史记录消失、旧对话缺失、项目历史看起来移动、需要检查/同步/备份/恢复/删除归档历史元数据时使用。该 skill 只处理 ~/.codex 下的历史索引和 rollout 元数据，不暴露密钥，不重写对话正文。",
+  "content_fingerprint": "5a37c5b228c95021b0abb73f65cb8dade67455b7c6a087042c4d436dd2797b00"
 }

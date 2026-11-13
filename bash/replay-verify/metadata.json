@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prove the simulation is deterministic by re-running a seeded scenario and diffing its order log and world-state hash against itself and against a stored golden baseline. Produces a PASS/FAIL reproducibility gate. Run before merging sim/controller changes and before a release gate. A FAIL means a replay diverged \u2014 the build is not reproducible."
+  "description": "Prove the simulation is deterministic by re-running a seeded scenario and diffing its order log and world-state hash against itself and against a stored golden baseline. Produces a PASS/FAIL reproducibility gate. Run before merging sim/controller changes and before a release gate. A FAIL means a replay diverged — the build is not reproducible.",
+  "content_fingerprint": "85c05e7770679b61675fcee26980b21b16e54cab1b02ab0518cc59af8d08e70a"
 }

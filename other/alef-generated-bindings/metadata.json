@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Alef-managed generated bindings in packages/* and binding crates \u2014 the regeneration workflow (task alef:generate / alef:verify), the alef.toml section layout, the core-side edits that break a regen, and the FFI bridge's JSON marshalling requirement. Load before editing anything under packages/* or a binding crate, before adding a trait method or extractor, or when regenerating or verifying Alef output."
+  "description": "Alef-managed generated bindings in packages/* and binding crates — the regeneration workflow (task alef:generate / alef:verify), the alef.toml section layout, the core-side edits that break a regen, and the FFI bridge's JSON marshalling requirement. Load before editing anything under packages/* or a binding crate, before adding a trait method or extractor, or when regenerating or verifying Alef output.",
+  "content_fingerprint": "881ae8bbadd25dafe5bed6548b1db55148c5404be7fc560c4b387bb23d62667c"
 }

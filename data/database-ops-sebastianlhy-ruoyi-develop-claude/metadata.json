@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLHY/ruoyi-develop-claude/blob/main/.claude/skills/database-ops/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f89b1c209a66abe6f8622c810214b63d203b710cd4ecd72ac8c2dd3baecc86c3",
+  "description": "定义了RuoYi-Vue-Plus框架下的数据库结构设计标准，规范了数据库初始化、版本升级DDL变更及Schema准备流程。核心要求包括强制包含标准审计字段、遵循小写下划线命名与InnoDB存储规范、禁止使用物理外键以提升性能，以及根据配置文件动态适配MySQL或Oracle数据库的SQL生成策略。"
 }

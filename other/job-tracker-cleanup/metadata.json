@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cloud-only, cron-friendly (weekly): moves stale rows from the Job Search Tracker's Job Log to its Archive tab: rows found more than the profile's archive age (30 days by default) ago that are still 'Need to review' and that the user hasn't touched. Never touches a row the user has acted on, and never deletes anything for good. Also on demand: 'clean up the tracker now', or 'restore JS-123' to move an archived row back."
+  "description": "Cloud-only, cron-friendly (weekly): moves stale rows from the Job Search Tracker's Job Log to its Archive tab: rows found more than the profile's archive age (30 days by default) ago that are still 'Need to review' and that the user hasn't touched. Never touches a row the user has acted on, and never deletes anything for good. Also on demand: 'clean up the tracker now', or 'restore JS-123' to move an archived row back.",
+  "content_fingerprint": "da48e115196ab9da2e91d484f2d8b7504336dd00d6985dd5a9200395ffffd97c"
 }

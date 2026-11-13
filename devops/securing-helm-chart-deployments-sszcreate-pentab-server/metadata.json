@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Secures Helm chart deployments by verifying chart signatures and provenance, rendering and linting templates for misconfiguration, enforcing pod security contexts through values.yaml, moving secrets into an external store instead of Helm values, and scoping RBAC for Helm operations in CI/CD. Use when deploying charts to Kubernetes or reviewing chart provenance, templates, or release RBAC. Keywords: Helm, provenance file, helm verify, helm lint, values.yaml, Tiller-less, release RBAC, external secrets. Do not use for scanning the rendered manifests themselves - use scanning-kubernetes-manifests-with-kubesec."
+  "description": "Secures Helm chart deployments by verifying chart signatures and provenance, rendering and linting templates for misconfiguration, enforcing pod security contexts through values.yaml, moving secrets into an external store instead of Helm values, and scoping RBAC for Helm operations in CI/CD. Use when deploying charts to Kubernetes or reviewing chart provenance, templates, or release RBAC. Keywords: Helm, provenance file, helm verify, helm lint, values.yaml, Tiller-less, release RBAC, external secrets. Do not use for scanning the rendered manifests themselves - use scanning-kubernetes-manifests-with-kubesec.",
+  "content_fingerprint": "37dae24a6449e72900e6508288345bcc8a42ca280c86aaf27015859aebfa9f03"
 }

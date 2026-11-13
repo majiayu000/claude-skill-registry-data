@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generates CVE request packages from pentest findings. Reads cve-candidates.json (auto-generated at pentest completion) or findings.json directly, then produces for each qualifying vulnerability: MITRE CVE form data, GitHub Security Advisory draft, full disclosure report, and vendor notification email.\n\nInvoke manually after a pentest engagement when you have true-positive findings that warrant CVE IDs."
+  "description": "Generates CVE request packages from pentest findings. Reads cve-candidates.json (auto-generated at pentest completion) or findings.json directly, then produces for each qualifying vulnerability: MITRE CVE form data, GitHub Security Advisory draft, full disclosure report, and vendor notification email.\n\nInvoke manually after a pentest engagement when you have true-positive findings that warrant CVE IDs.",
+  "content_fingerprint": "91d6e5ba60418f68525f93209eaf580c6a5436130d01c6ea0a7a36a74936d544"
 }

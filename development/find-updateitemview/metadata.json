@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Find and identify the UpdateItemView function in CS2 server binary using IDA Pro MCP. Use this skill\nwhen reverse engineering CS2 server.dll or libserver.so to locate the CEconItemView cache-rebuild\nroutine that must run after an econ item's definition or attributes change for the change to take\nvisual effect (e.g. after weaponpaints mutates an item's attributes). Resolved by shortlisting the\nhandful of functions that reference the internal \"kill eater\" econ-attribute literal and matching the\none with the item-view attribute-rebuild body shape.\nTrigger: UpdateItemView, CEconItemView_UpdateItemView"
+  "description": "Find and identify the UpdateItemView function in CS2 server binary using IDA Pro MCP. Use this skill\nwhen reverse engineering CS2 server.dll or libserver.so to locate the CEconItemView cache-rebuild\nroutine that must run after an econ item's definition or attributes change for the change to take\nvisual effect (e.g. after weaponpaints mutates an item's attributes). Resolved by shortlisting the\nhandful of functions that reference the internal \"kill eater\" econ-attribute literal and matching the\none with the item-view attribute-rebuild body shape.\nTrigger: UpdateItemView, CEconItemView_UpdateItemView",
+  "content_fingerprint": "7ea9e73b16ce9658b757a6ab434d2a7cc3e0370c0809595f98945d10d0b4a3c9"
 }

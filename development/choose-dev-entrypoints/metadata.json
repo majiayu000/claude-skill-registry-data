@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Choose the right dev-environment entrypoint and responsibility boundary across Nix, Just, Bun, Turborepo, package scripts, shellHook, and ./scripts. Triggers when the user asks which command should run dev/build/test/install/codegen, whether to put work in nix develop or shellHook, how to split responsibilities between just, bun, turbo, and scripts, or how to make dev environments lazy, cacheable, and understandable. Do NOT trigger for ordinary implementation work or Nix flake layout refactors. In a TypeScript-only repo, ops scripts are TypeScript (ADR-0012), not bash."
+  "description": "Choose the right dev-environment entrypoint and responsibility boundary across Nix, Just, Bun, Turborepo, package scripts, shellHook, and ./scripts. Triggers when the user asks which command should run dev/build/test/install/codegen, whether to put work in nix develop or shellHook, how to split responsibilities between just, bun, turbo, and scripts, or how to make dev environments lazy, cacheable, and understandable. Do NOT trigger for ordinary implementation work or Nix flake layout refactors. In a TypeScript-only repo, ops scripts are TypeScript (ADR-0012), not bash.",
+  "content_fingerprint": "f5979cb9c1e1d5341852e1d3b30610d4d9943bf2bc5d2579137d81244f0b3f1d"
 }

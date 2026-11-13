@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u60f3\u6cd5\u7fa4\u804a\u5ba4 \u2014 \u8c03\u7814\u5458\u89d2\u8272\u3002\u88ab idea-team \u4e3b\u7f16\u6392\u5668\u8c03\u7528\uff0c\u6216\u7528\u6237\u5355\u72ec\u8bf4\"\u8c03\u7814\u4e00\u4e0b X\"\u3001\"X \u7684\u73b0\u72b6/\u7ade\u54c1/\u6570\u636e\"\u3001\"\u627e 2026 \u6570\u636e\"\u3001\"\u4e8b\u5b9e\u5e95\"\u65f6\u89e6\u53d1\u3002**\u7528 WebSearch \u62c9\u771f\u5b9e 2026 \u6570\u636e\u3001\u5217\u7ade\u54c1\u3001\u5f15\u6765\u6e90\u2014\u2014\u53ea\u7ed9\u4e8b\u5b9e\uff0c\u4e0d\u8bc4\u5224\uff0c\u4e0d\u5efa\u8bae**\u3002Do NOT use when \u7528\u6237\u8981\u8bc4\u4ef7\u60f3\u6cd5\u597d\u574f\uff08\u90a3\u662f\u53cd\u65b9\uff09\u3001\u6216\u8981\u8de8\u754c\u542f\u793a\uff08\u90a3\u662f\u7c7b\u6bd4\u8005\uff09\u3001\u6216\u5df2\u6709 PRD \u5728\u8dd1\uff08\u4e0d\u9700\u8981\u8fd9\u79cd\u8c03\u7814\uff09\u3002\u63d2\u4ef6\u5185 skill \u4f1a\u7531 `idea-coach` namespace \u8def\u7531\uff1bcatalog \u7528\u6237\u76f4\u63a5\u6309 skill \u540d\u8c03\u7528\u3002"
+  "description": "想法群聊室 — 调研员角色。被 idea-team 主编排器调用，或用户单独说\"调研一下 X\"、\"X 的现状/竞品/数据\"、\"找 2026 数据\"、\"事实底\"时触发。**用 WebSearch 拉真实 2026 数据、列竞品、引来源——只给事实，不评判，不建议**。Do NOT use when 用户要评价想法好坏（那是反方）、或要跨界启示（那是类比者）、或已有 PRD 在跑（不需要这种调研）。插件内 skill 会由 `idea-coach` namespace 路由；catalog 用户直接按 skill 名调用。",
+  "content_fingerprint": "c66e7b3eb50eb171b9afa4cefe22c0272000fd25d187fa3e2ef2e2b986a5fccf"
 }

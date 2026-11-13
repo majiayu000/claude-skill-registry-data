@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs the project's existing API tests under injected network chaos - latency, timeouts, dropped connections, bandwidth caps, packet loss - via Toxiproxy (notes on Pumba / Gremlin / LitmusChaos). Builds a per-scenario chaos matrix and reports which assertions break under which conditions, verifying resilience patterns (retry, circuit-breaker, timeout, fallback). Unlike schemathesis-fuzzing and restler-fuzzing, which generate new tests from a schema, this drives your EXISTING example-based suite."
+  "description": "Runs the project's existing API tests under injected network chaos - latency, timeouts, dropped connections, bandwidth caps, packet loss - via Toxiproxy (notes on Pumba / Gremlin / LitmusChaos). Builds a per-scenario chaos matrix and reports which assertions break under which conditions, verifying resilience patterns (retry, circuit-breaker, timeout, fallback). Unlike schemathesis-fuzzing and restler-fuzzing, which generate new tests from a schema, this drives your EXISTING example-based suite.",
+  "content_fingerprint": "5bda8d0a59cb0dba9a23bda6ee9ef58d5739006aadf5c32227179d30ad9eaed6"
 }

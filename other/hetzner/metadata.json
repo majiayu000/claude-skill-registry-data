@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when provisioning or hardening a Hetzner Cloud VPS: picking the plan/location (CX/CPX/CAX/CCX), bringing it up reproducibly with hcloud + cloud-init, locking down SSH, and wiring the Cloud Firewall to hand off a Docker-ready host. NOT app deploys on Coolify (that is `coolify`), NOT Dockerfiles (that is `docker`), NOT another provider (that is `digitalocean`)."
+  "description": "Use when provisioning or hardening a Hetzner Cloud VPS: picking the plan/location (CX/CPX/CAX/CCX), bringing it up reproducibly with hcloud + cloud-init, locking down SSH, and wiring the Cloud Firewall to hand off a Docker-ready host. NOT app deploys on Coolify (that is `coolify`), NOT Dockerfiles (that is `docker`), NOT another provider (that is `digitalocean`).",
+  "content_fingerprint": "661d4aabab29a6db30deba398d1bb1e0d13ba67cbb483c8b17d568a213ebf0df"
 }

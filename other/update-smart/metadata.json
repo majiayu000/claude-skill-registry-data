@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when Kosta invokes /update_smart or asks for a smart Hermes update. Performs the Mac Studio branch-first Hermes update workflow: audit local repos, create rollback branches, preserve and replay local git customizations, update Hermes/WebUI/non-Hermes sidecars carefully, run verification, and avoid restarting the live gateway from inside Telegram unless explicitly safe."
+  "description": "Use when Kosta invokes /update_smart or asks for a smart Hermes update. Performs the Mac Studio branch-first Hermes update workflow: audit local repos, create rollback branches, preserve and replay local git customizations, update Hermes/WebUI/non-Hermes sidecars carefully, run verification, and avoid restarting the live gateway from inside Telegram unless explicitly safe.",
+  "content_fingerprint": "140f8e3b05c93b18be80fa5d86a1bd748a8cb0060b12d376489ea987aabb0f43"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Upgrade a Rails 7 app to Rails 8 safely, and catch the subtle test-suite flake it introduces. Use when bumping Rails 7.x to 8.x (or auditing readiness), when planning a Ruby/Rails version bump, or when Rails 8 tests fail intermittently with \"undefined method 'login_path'/'root_path'\" / pass on serial but flake on parallel runs. Provides a pre-flight audit, a detector + fix for the LazyRouteSet route-test flake, and a 7\u21928 checklist grounded in a real upgrade."
+  "description": "Upgrade a Rails 7 app to Rails 8 safely, and catch the subtle test-suite flake it introduces. Use when bumping Rails 7.x to 8.x (or auditing readiness), when planning a Ruby/Rails version bump, or when Rails 8 tests fail intermittently with \"undefined method 'login_path'/'root_path'\" / pass on serial but flake on parallel runs. Provides a pre-flight audit, a detector + fix for the LazyRouteSet route-test flake, and a 7→8 checklist grounded in a real upgrade.",
+  "content_fingerprint": "2281688d1c1097437eed0c2ff6b9e8e53878f7da296afe4211793eea95d6f38a"
 }

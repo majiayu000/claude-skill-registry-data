@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit a Rust change in OpenAlgo Desktop for resource leaks, both descriptors and unbounded memory. Run after building or fixing anything that touches HTTP clients, the SQLite pool, DuckDB, broker or feed WebSockets, the loopback relay, spawned tokio tasks or threads, listeners, channels, caches, registries, subscriptions or session teardown; before calling a wave done; and when a user reports \"too many open files\", refused connections, dropped sockets, rising memory or a slow app after hours open."
+  "description": "Audit a Rust change in OpenAlgo Desktop for resource leaks, both descriptors and unbounded memory. Run after building or fixing anything that touches HTTP clients, the SQLite pool, DuckDB, broker or feed WebSockets, the loopback relay, spawned tokio tasks or threads, listeners, channels, caches, registries, subscriptions or session teardown; before calling a wave done; and when a user reports \"too many open files\", refused connections, dropped sockets, rising memory or a slow app after hours open.",
+  "content_fingerprint": "5eda49aa6211a2784abec8f3e98d9e197c4c3edd6bfebecf47e7fcd9f6a066e2"
 }

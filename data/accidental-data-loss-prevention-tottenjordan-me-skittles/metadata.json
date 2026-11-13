@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "**STOP AND VERIFY**: Before running any command or tool that results in irreversible data loss, you MUST obtain explicit user consent.\nWhen in doubt, ask. It is better to wait for confirmation than to accidentally delete production data or critical project assets.\nUse this for:\n- SQL: DROP TABLE/VIEW/SCHEMA/DATABASE, TRUNCATE, or broad DELETE (missing WHERE or using 1=1).\n- Cloud Storage: gsutil rm or gcloud storage rm targeting production data or critical buckets.\n- Infrastructure: gcloud projects delete, deleting Spanner/BigQuery/Dataproc resources, deleting secrets, or KMS key destruction."
+  "description": "**STOP AND VERIFY**: Before running any command or tool that results in irreversible data loss, you MUST obtain explicit user consent.\nWhen in doubt, ask. It is better to wait for confirmation than to accidentally delete production data or critical project assets.\nUse this for:\n- SQL: DROP TABLE/VIEW/SCHEMA/DATABASE, TRUNCATE, or broad DELETE (missing WHERE or using 1=1).\n- Cloud Storage: gsutil rm or gcloud storage rm targeting production data or critical buckets.\n- Infrastructure: gcloud projects delete, deleting Spanner/BigQuery/Dataproc resources, deleting secrets, or KMS key destruction.",
+  "content_fingerprint": "816c889b4feef5cfc19e88c9544f961c5341d3d4130dc57c60962c7be73423f4"
 }

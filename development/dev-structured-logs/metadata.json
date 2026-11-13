@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Migrate legacy string-based logging in .NET/C# code to structured logging templates, insert CommandHandler logging scopes, and validate or update Serilog File sink settings in appsettings JSON files. Use when users ask to modernize ILogger or Serilog usage through safe rewrites, run dry-run logging migration previews, apply structured logging rewrites, or enforce JSON file sink formatter and path conventions. For general backend design and observability guidance use $software-csharp-backend, for NUnit test design use $qa-testing-nunit, and for pipeline changes use $ops-nuke-cicd."
+  "description": "Migrate legacy string-based logging in .NET/C# code to structured logging templates, insert CommandHandler logging scopes, and validate or update Serilog File sink settings in appsettings JSON files. Use when users ask to modernize ILogger or Serilog usage through safe rewrites, run dry-run logging migration previews, apply structured logging rewrites, or enforce JSON file sink formatter and path conventions. For general backend design and observability guidance use $software-csharp-backend, for NUnit test design use $qa-testing-nunit, and for pipeline changes use $ops-nuke-cicd.",
+  "content_fingerprint": "a90db199183fe6acfc700309cf2213a936302ebba39d0998285002ee2fd1b300"
 }

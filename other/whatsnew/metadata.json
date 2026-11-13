@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "On-demand \"what's new\" generator. Main context (which knows the impending change) writes keepachangelog-style entries to a fragment file at `.claude/state/whatsnew/<slug>.json` (gitignored, transient). An optional per-project `project.json \u2192 whatsnew.route_workflow` names a routing workflow that consumes the fragment and renders it wherever the project wants (a site page, a release body, a docs page). Not a workflow phase \u2014 it never blocks a commit, and it never writes `CHANGELOG.md` (that file is owned solely by semantic-release in CI)."
+  "description": "On-demand \"what's new\" generator. Main context (which knows the impending change) writes keepachangelog-style entries to a fragment file at `.claude/state/whatsnew/<slug>.json` (gitignored, transient). An optional per-project `project.json → whatsnew.route_workflow` names a routing workflow that consumes the fragment and renders it wherever the project wants (a site page, a release body, a docs page). Not a workflow phase — it never blocks a commit, and it never writes `CHANGELOG.md` (that file is owned solely by semantic-release in CI).",
+  "content_fingerprint": "d612c5da80e18fa37497d16d92ec1b27fef39fd64362b0cf57d26ffd7aad6996"
 }

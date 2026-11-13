@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Designs the inbound REST adapter for an already-modeled use case \u2014 endpoints, DTOs, status codes, error map, pagination, idempotency, and OpenAPI \u2014 into the `30-rest.md` partial. Use when the request involves exposing a use case via HTTP, designing an endpoint or controller, deciding status and error body, paginating a collection, applying `Idempotency-Key`, or fixing the OpenAPI contract. Piece of the `/new-feature` pipeline: requires `10-dominio.md` in the given folder and stops without it."
+  "description": "Designs the inbound REST adapter for an already-modeled use case — endpoints, DTOs, status codes, error map, pagination, idempotency, and OpenAPI — into the `30-rest.md` partial. Use when the request involves exposing a use case via HTTP, designing an endpoint or controller, deciding status and error body, paginating a collection, applying `Idempotency-Key`, or fixing the OpenAPI contract. Piece of the `/new-feature` pipeline: requires `10-dominio.md` in the given folder and stops without it.",
+  "content_fingerprint": "7dc4acb6e000fc1ba54e9d2c291bd481028af1323cae8446489915bb6b26c5d1"
 }

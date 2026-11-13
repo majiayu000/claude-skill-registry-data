@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/phrazzld/claude-config/blob/main/skills/fix-onboarding/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "27942361176b2d5a0ccee6168fa79fc4dbfec53dad69cd4826e28aa89d32deaf",
+  "description": "Run /check-onboarding, then fix the highest priority onboarding issue.\nCreates one fix per invocation. Invoke again for next issue.\nUse /log-onboarding-issues to create issues without fixing.\n"
 }

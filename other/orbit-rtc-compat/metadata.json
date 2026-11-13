@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit a WordPress plugin for Real-Time Collaboration (RTC) compatibility \u2014 WP 7.0 ships RTC for the block editor; classic meta-boxes break it. Verifies plugin uses `register_post_meta()` + `PluginSidebar` instead of classic meta-boxes, declares sync-provider compatibility, doesn't write to post directly mid-edit. Use when the user says \"RTC\", \"real-time collaboration\", \"WP 7.0 collab\", \"meta box collab\", or has classic meta boxes that need to migrate."
+  "description": "Audit a WordPress plugin for Real-Time Collaboration (RTC) compatibility — WP 7.0 ships RTC for the block editor; classic meta-boxes break it. Verifies plugin uses `register_post_meta()` + `PluginSidebar` instead of classic meta-boxes, declares sync-provider compatibility, doesn't write to post directly mid-edit. Use when the user says \"RTC\", \"real-time collaboration\", \"WP 7.0 collab\", \"meta box collab\", or has classic meta boxes that need to migrate.",
+  "content_fingerprint": "8954ecb3278c19b3ca67af645e3b38065d4783fdf415dfac5bf3aa1d757b3226"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Accept user file uploads without introducing remote code execution, stored XSS, or polyglot attacks. Covers magic-byte validation, strict type allowlists, image re-encoding to defang embedded payloads, EXIF stripping, virus scanning, path-safe storage keys, and serving via a separate origin with Content-Disposition. Invoke when adding upload to a new endpoint or migrating from local-disk storage to object storage."
+  "description": "Accept user file uploads without introducing remote code execution, stored XSS, or polyglot attacks. Covers magic-byte validation, strict type allowlists, image re-encoding to defang embedded payloads, EXIF stripping, virus scanning, path-safe storage keys, and serving via a separate origin with Content-Disposition. Invoke when adding upload to a new endpoint or migrating from local-disk storage to object storage.",
+  "content_fingerprint": "f8862c44663d08dcfa69f9f04699dea1192251058c7cd32847c24bab15a9962a"
 }

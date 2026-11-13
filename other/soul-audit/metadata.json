@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Re-run or deepen the agent's identity interview. Drives the SHARED bootstrap\nanswer bank (state/interview.json) via `gbrain bootstrap interview\n--set/--show/--confirm`, then re-renders the identity files with\n`gbrain bootstrap render --only <FILE> --force`. One answer store, two\nsurfaces: first-boot bootstrap and this re-run skill write the same bank, so\nan updated answer flows into SOUL.md, USER.md, ACCESS_POLICY.md, and\nHEARTBEAT.md without hand-editing rendered files. Every answer is the user's\nown words \u2014 never invented."
+  "description": "Re-run or deepen the agent's identity interview. Drives the SHARED bootstrap\nanswer bank (state/interview.json) via `gbrain bootstrap interview\n--set/--show/--confirm`, then re-renders the identity files with\n`gbrain bootstrap render --only <FILE> --force`. One answer store, two\nsurfaces: first-boot bootstrap and this re-run skill write the same bank, so\nan updated answer flows into SOUL.md, USER.md, ACCESS_POLICY.md, and\nHEARTBEAT.md without hand-editing rendered files. Every answer is the user's\nown words — never invented.",
+  "content_fingerprint": "119f33b45a78c83cd462cdb02503c7e8929364f4670ce06dadb69a4d4363760e"
 }

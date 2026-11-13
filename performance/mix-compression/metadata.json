@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/oliver-kriska/claude-elixir-phoenix/blob/main/plugins/elixir-phoenix/skills/mix-compression/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8f2ee5b8494eaaf1a5697e49b495517adf0049fa4c784c4d32fcf3c842d421d4",
+  "description": "Reduce mix output noise (5-15% token savings) by installing rtk filters that compress mix test/credo/dialyzer/compile output before it reaches Claude. Use when long mix output floods context."
 }

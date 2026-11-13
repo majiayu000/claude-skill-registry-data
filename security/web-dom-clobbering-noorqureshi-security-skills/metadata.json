@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Overwrite a page's JavaScript variables using only injected HTML \u2014 no script needed. Load when a sanitizer allows tags/attributes but strips script, and the app reads config/state from the DOM or globals. Signals: HTML injection behind DOMPurify/an allowlist, client code using `window.X`, `document.getElementById(...)`, or `config.*` that could come from named elements."
+  "description": "Overwrite a page's JavaScript variables using only injected HTML — no script needed. Load when a sanitizer allows tags/attributes but strips script, and the app reads config/state from the DOM or globals. Signals: HTML injection behind DOMPurify/an allowlist, client code using `window.X`, `document.getElementById(...)`, or `config.*` that could come from named elements.",
+  "content_fingerprint": "7bf4370e1e25f30cb256a519a973213479a5bf4d725f3b628c82152c7185b2e9"
 }

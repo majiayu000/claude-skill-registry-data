@@ -14,5 +14,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/MMorit00/fund-portfolio-bot/blob/main/.claude/skills/geb-protocol/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f22d01ec82b3cf23f8db107064f131d53365ce017db52a64cabbfcd47c14498a",
+  "description": "项目架构约定：通过 Root/Folder/File 三层极简元数据（_dir.md + I/O/Pos 注释）\n让 AI 在任意位置自定位。\n\n**AI 创建文件夹时自动触发**：hook 会生成 _dir.md 模板，AI 填写 Input/Output/Pos。\n"
 }

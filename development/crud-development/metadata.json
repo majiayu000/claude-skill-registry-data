@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLHY/ruoyi-develop-claude/blob/main/.claude/skills/crud-development/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c43603d20ccea3521614bca58aa567c1b5500bc0e042ae25e8b922b757d9ac2b",
+  "description": "定义若依（RuoYi / RuoYi-Vue-Plus 生态）在数据持久层（Mapper）与业务层（Service）的 CRUD 开发规范。要求 Mapper 统一继承 `BaseMapperPlus<Entity,Vo>`、Service 统一实现 `IService<Entity>` 并采用标准实现基类；查询/更新条件强制使用 `LambdaQueryWrapper` / `LambdaUpd"
 }

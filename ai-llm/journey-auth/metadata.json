@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use as the auth build stage of the Butterbase journey, after journey-schema (and rls if separate). Implements the Auth section of 02-plan.md by delegating to auth-setup. Calls manage_oauth (configure) for providers and optionally manage_auth_config (configure_auth_hook, update_jwt). Skipped if the plan has no end-user auth."
+  "description": "Use as the auth build stage of the Butterbase journey, after journey-schema (and rls if separate). Implements the Auth section of 02-plan.md by delegating to auth-setup. Calls manage_oauth (configure) for providers and optionally manage_auth_config (configure_auth_hook, update_jwt). Skipped if the plan has no end-user auth.",
+  "content_fingerprint": "db156883e876f5a30620c66eb104baba14774cf79254998af2798713b5f40f87"
 }

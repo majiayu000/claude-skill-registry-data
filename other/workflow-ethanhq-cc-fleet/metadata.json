@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Orchestrate a MULTI-PHASE, dependent, or resumable run over many provider subagents from a JS script, off the main context (`cc-fleet workflow`). Use for fan-out\u2192barrier\u2192synthesis, per-item pipelines, loop-until-dry, or a run that must survive a kill and `--resume` from its journal. NOT a flat fan-out of independent tasks (that is /cc-fleet:subagent \u2014 cheaper, no script); NOT interactive collaboration (that is /cc-fleet:team); NOT trivial single-shot work for the main session."
+  "description": "Orchestrate a MULTI-PHASE, dependent, or resumable run over many provider subagents from a JS script, off the main context (`cc-fleet workflow`). Use for fan-out→barrier→synthesis, per-item pipelines, loop-until-dry, or a run that must survive a kill and `--resume` from its journal. NOT a flat fan-out of independent tasks (that is /cc-fleet:subagent — cheaper, no script); NOT interactive collaboration (that is /cc-fleet:team); NOT trivial single-shot work for the main session.",
+  "content_fingerprint": "5434b0d03a1b0e5e258d863ebf91b5f84784ea7e6a8c05f341dd212834e187dc"
 }

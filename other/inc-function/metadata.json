@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adds a new procedural function to `src/parallels.inc.php` wrapping a `\\Detain\\Parallels\\Parallels` KA API method with the standard `myadmin_log` + `request_log` + try/catch pattern. Use when user says 'add function', 'new API call', 'call parallels method', or needs to expose a KA API method. Do NOT use for Plugin.php static event handlers or bin/ scripts. For a plugin's contract or behavioral tests (tests/ContractTest.php, the shared harness, composer myadmin:scaffold-tests) use the plugin-contract-tests skill instead \u2014 this skill's reflection-only guidance predates that harness."
+  "description": "Adds a new procedural function to `src/parallels.inc.php` wrapping a `\\Detain\\Parallels\\Parallels` KA API method with the standard `myadmin_log` + `request_log` + try/catch pattern. Use when user says 'add function', 'new API call', 'call parallels method', or needs to expose a KA API method. Do NOT use for Plugin.php static event handlers or bin/ scripts. For a plugin's contract or behavioral tests (tests/ContractTest.php, the shared harness, composer myadmin:scaffold-tests) use the plugin-contract-tests skill instead — this skill's reflection-only guidance predates that harness.",
+  "content_fingerprint": "80037f4dd210e7efdc9c9ef23baa29f268fae68ba04231faf00cafc7e07395ce"
 }

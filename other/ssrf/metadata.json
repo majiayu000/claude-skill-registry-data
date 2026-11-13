@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Server-Side Request Forgery (SSRF) occurs when user-controlled input is used to construct URLs that the server fetches, enabling access to internal services, cloud metadata endpoints (169.254.169.254), and local files via `file://` scheme. Detect via parameters accepting URLs or hostnames, PDF/report generators rendering `<iframe>/<img>/<script>`, and blind SSRF via out-of-band DNS callbacks. Bypass filters using IP decimal/octal/hex encoding, URL-userinfo tricks, and URL fragments. Tools: Burp Collaborator, curl."
+  "description": "Server-Side Request Forgery (SSRF) occurs when user-controlled input is used to construct URLs that the server fetches, enabling access to internal services, cloud metadata endpoints (169.254.169.254), and local files via `file://` scheme. Detect via parameters accepting URLs or hostnames, PDF/report generators rendering `<iframe>/<img>/<script>`, and blind SSRF via out-of-band DNS callbacks. Bypass filters using IP decimal/octal/hex encoding, URL-userinfo tricks, and URL fragments. Tools: Burp Collaborator, curl.",
+  "content_fingerprint": "305e7fa1f32fcf83725fdf42bc8894530ef852f98f7e9db078979600646f3a1f"
 }

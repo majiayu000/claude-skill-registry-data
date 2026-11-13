@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Auditoria aislada (contexto fresco, solo lectura) de un batch autonomo de tickets ya cerrado o parado, que re-deriva el PREDICATE de 8 condiciones comando a comando, audita las paradas y la recuperacion del ejecutor y propone, sin ejecutarlo, el cierre de sesion. Usar cuando un batch de orchestrate-autonomous-ticket-batch ha terminado o se ha detenido, ya no le quedan grupos ejecutables y existe su batch_run. No usar para auditar una cadena ticket a ticket (ver audit-pipeline, audit-pipeline-codeonly) ni desde el mismo agente que ejecuto el batch."
+  "description": "Auditoria aislada (contexto fresco, solo lectura) de un batch autonomo de tickets ya cerrado o parado, que re-deriva el PREDICATE de 8 condiciones comando a comando, audita las paradas y la recuperacion del ejecutor y propone, sin ejecutarlo, el cierre de sesion. Usar cuando un batch de orchestrate-autonomous-ticket-batch ha terminado o se ha detenido, ya no le quedan grupos ejecutables y existe su batch_run. No usar para auditar una cadena ticket a ticket (ver audit-pipeline, audit-pipeline-codeonly) ni desde el mismo agente que ejecuto el batch.",
+  "content_fingerprint": "f7ac7e4dcc04e66d0010fc70b3fa0716fba5bfda1f8232a5b786728e581bfcd2"
 }

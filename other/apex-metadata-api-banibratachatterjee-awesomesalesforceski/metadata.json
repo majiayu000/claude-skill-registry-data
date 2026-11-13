@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when Apex code must create or update metadata programmatically at runtime \u2014 custom fields, objects, picklist values, labels, or other supported types \u2014 using the Metadata namespace (Metadata.Operations, Metadata.DeployCallback). Triggers: 'Metadata.Operations', 'Metadata.CustomField from Apex', 'deploy metadata from Apex', 'enqueueDeployment', 'create a custom field programmatically', 'post-install script metadata setup'. NOT for Metadata API REST/SOAP (use metadata-api-and-package-xml) and NOT for reading Custom Metadata Type configuration rows in Apex (use custom-metadata-in-apex)."
+  "description": "Use when Apex code must create or update metadata programmatically at runtime — custom fields, objects, picklist values, labels, or other supported types — using the Metadata namespace (Metadata.Operations, Metadata.DeployCallback). Triggers: 'Metadata.Operations', 'Metadata.CustomField from Apex', 'deploy metadata from Apex', 'enqueueDeployment', 'create a custom field programmatically', 'post-install script metadata setup'. NOT for Metadata API REST/SOAP (use metadata-api-and-package-xml) and NOT for reading Custom Metadata Type configuration rows in Apex (use custom-metadata-in-apex).",
+  "content_fingerprint": "33af9a51fd2bd05f9b5b8cec05271add0c9dcf52fee0d3295ee7ee085a1206eb"
 }

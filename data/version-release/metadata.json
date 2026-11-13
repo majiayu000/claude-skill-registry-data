@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/tarrragon/claude/blob/main/skills/version-release/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8e717e422cdfde36400f15f097b3f5afdc686bfd01f4901f2117331ff0fc0f8f",
+  "description": "版本發布整合工具，處理 worklog 檢查、文件更新、合併推送等完整流程。三步驟流程：Pre-flight 檢查 → Document Updates → Git Operations。支援 check / update-docs / release 子命令，包含 --dry-run 預覽模式。"
 }

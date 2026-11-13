@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Routes heterogeneous queries to the appropriate index, tool, or answering engine before retrieval. Use when one endpoint serves multiple handlers, such as summary, vector retrieval, text-to-SQL, or tools, and query types require different paths. Covers LLM, semantic, and rule-based routers, confidence thresholds, fallbacks, and framework mappings. Do not use when one handler serves all queries or branching is fixed."
+  "description": "Routes heterogeneous queries to the appropriate index, tool, or answering engine before retrieval. Use when one endpoint serves multiple handlers, such as summary, vector retrieval, text-to-SQL, or tools, and query types require different paths. Covers LLM, semantic, and rule-based routers, confidence thresholds, fallbacks, and framework mappings. Do not use when one handler serves all queries or branching is fixed.",
+  "content_fingerprint": "342c356a47357e472ba8e31192d21fa2c210d890d1aa633a0e526a6848174d9b"
 }

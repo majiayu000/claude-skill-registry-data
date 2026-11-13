@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs ansible/configure_rhel.yml, the general RHEL host baseline, letting the user choose which of its 43 domains actually apply for a given run via the configure_rhel_domains variable \u2014 without editing the playbook. Use whenever someone wants to audit/remediate \"the baseline\" with a non-default set of domains, wants to know what's on/off by default, or asks to enable something like usbguard, accounts_local, cron, etc. that isn't active out of the box."
+  "description": "Runs ansible/configure_rhel.yml, the general RHEL host baseline, letting the user choose which of its 43 domains actually apply for a given run via the configure_rhel_domains variable — without editing the playbook. Use whenever someone wants to audit/remediate \"the baseline\" with a non-default set of domains, wants to know what's on/off by default, or asks to enable something like usbguard, accounts_local, cron, etc. that isn't active out of the box.",
+  "content_fingerprint": "98ba1a46e621e4b079f0506d5b74356134a070e8721c6d3e32442ea1c272fd93"
 }

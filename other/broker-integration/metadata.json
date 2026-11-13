@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Add a broker to OpenAlgo Desktop or change an existing Rust broker adapter under src-tauri/src/brokers/. Use when porting a broker from the web's broker/<name>/ Python, wiring its sign-in (OAuth redirect, direct login with TOTP, Noren or XTS family member, bespoke), master contract, books, quotes, depth, history, margin, GTT or streaming feeds, when a broker is missing from Select Broker or Broker Configuration, or when debugging broker symbol, exchange, status or order-field mapping, a forged-callback refusal, or a token that reaches a log."
+  "description": "Add a broker to OpenAlgo Desktop or change an existing Rust broker adapter under src-tauri/src/brokers/. Use when porting a broker from the web's broker/<name>/ Python, wiring its sign-in (OAuth redirect, direct login with TOTP, Noren or XTS family member, bespoke), master contract, books, quotes, depth, history, margin, GTT or streaming feeds, when a broker is missing from Select Broker or Broker Configuration, or when debugging broker symbol, exchange, status or order-field mapping, a forged-callback refusal, or a token that reaches a log.",
+  "content_fingerprint": "d708aa60cd3b6063049fa63eef4d2cc36c46345ed793cb2d2d65aa0986e2d8db"
 }

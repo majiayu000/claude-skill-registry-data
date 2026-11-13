@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2\u901a\u8fbe\u4fe1\u677f\u5757\u6210\u5206\u80a1\u6700\u65b0\u5feb\u7167\u3002\u63a5\u53e3\uff1aGET /api/v1/market/data/tdx-board-members\u3002\u6240\u6709\u8bf7\u6c42\u5fc5\u987b\u8bbe\u7f6e FTSHARE_API_KEY\u3002"
+  "description": "查询通达信板块成分股最新快照。接口：GET /api/v1/market/data/tdx-board-members。所有请求必须设置 FTSHARE_API_KEY。",
+  "content_fingerprint": "f3bbc2a0a80fdef803e6cbd273684d526fcbd35cd3aea126e7e1d4c9a55e62e1"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/main/.claude/skills/traefik-plugin-download-failure-404/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "039fe8142cc21cc3592150321927df72c56d5c263a30ef784588fe1aed66b600",
+  "description": "Fix for Traefik returning 404 on ALL routes after a restart or pod recreation.\nUse when: (1) all Traefik-managed Ingresses suddenly return 404,\n(2) Traefik logs show \"Plugins are disabled because an e"
 }

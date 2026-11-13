@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when writing, reviewing, or troubleshooting Apex that risks hitting Salesforce governor limits. Triggers: 'too many SOQL queries', 'too many DML statements', 'CPU time limit', 'bulkification', 'Queueable vs Batch', 'fix a governor limit exception', 'check limits for a platform event trigger'. NOT for the 100-callout-per-transaction ceiling \u2014 use integration/callout-limits-and-async-patterns. NOT for org-level capacity planning \u2014 use architect/limits-and-scalability-planning. NOT for runtime Limits class guard clauses \u2014 use apex/apex-limits-monitoring."
+  "description": "Use when writing, reviewing, or troubleshooting Apex that risks hitting Salesforce governor limits. Triggers: 'too many SOQL queries', 'too many DML statements', 'CPU time limit', 'bulkification', 'Queueable vs Batch', 'fix a governor limit exception', 'check limits for a platform event trigger'. NOT for the 100-callout-per-transaction ceiling — use integration/callout-limits-and-async-patterns. NOT for org-level capacity planning — use architect/limits-and-scalability-planning. NOT for runtime Limits class guard clauses — use apex/apex-limits-monitoring.",
+  "content_fingerprint": "87846d25f3ff279559b7d085055ba83e66b0c978995f64e705bc42962fa686f0"
 }

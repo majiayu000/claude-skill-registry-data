@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "A family id in `src/data/ids/families.ts` is append-only: a new family takes the next number at the end, never a number between two existing ids, and no id is left unused. Players' candy stacks are keyed by it and the species day gives each id a day of the year. Applies whenever a new evolution family is registered."
+  "description": "A family id in `src/data/ids/families.ts` is append-only: a new family takes the next number at the end, never a number between two existing ids, and no id is left unused. Players' candy stacks are keyed by it and the species day gives each id a day of the year. Applies whenever a new evolution family is registered.",
+  "content_fingerprint": "4b2fe4f0a0df47485b789e056f5553005dbfdcf17288604857a2e9ae68216f48"
 }

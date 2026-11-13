@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix silent failures when parsing Grafema semantic IDs that are in URI format\ninstead of legacy arrow format. Use when: (1) code splits semantic IDs by \"->\"\nbut gets the whole string back because IDs are grafema:// URIs, (2) file path\nextraction from semantic IDs returns empty or wrong values, (3) derived edges\n(DEPENDS_ON, etc.) produce 0 results despite source edges existing, (4) any\ncode that processes semantic IDs after the analysis pipeline's to_uri_format()\nhas run. The grafema:// URI format uses # fragments with percent-encoded\ncharacters instead of -> separators."
+  "description": "Fix silent failures when parsing Grafema semantic IDs that are in URI format\ninstead of legacy arrow format. Use when: (1) code splits semantic IDs by \"->\"\nbut gets the whole string back because IDs are grafema:// URIs, (2) file path\nextraction from semantic IDs returns empty or wrong values, (3) derived edges\n(DEPENDS_ON, etc.) produce 0 results despite source edges existing, (4) any\ncode that processes semantic IDs after the analysis pipeline's to_uri_format()\nhas run. The grafema:// URI format uses # fragments with percent-encoded\ncharacters instead of -> separators.",
+  "content_fingerprint": "a567ff01555c63968a45cf7fb3565ff81d74938d3230cc3de817918b6424b784"
 }

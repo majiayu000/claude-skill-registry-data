@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs the Autoware autonomous-driving stack against CARLA on UE 5.8 over CARLA's native ROS 2 interface \u2014 no bridge process. Reports the DDS contract (rt/vehicle/status/* out, rt/control/command/* in), the Autoware-only sensor blueprints, generates the lanelet2 + point-cloud map artifacts Autoware needs instead of an .xodr, and drives the two shipped modes (classical NDT stack, or the camera-only VAD end-to-end model). Use when the user asks to \"run Autoware on CARLA\", \"connect an AV stack\", \"drive the ego from Autoware\", \"generate a lanelet2 map\", or asks which topics CARLA exchanges with Autoware."
+  "description": "Runs the Autoware autonomous-driving stack against CARLA on UE 5.8 over CARLA's native ROS 2 interface — no bridge process. Reports the DDS contract (rt/vehicle/status/* out, rt/control/command/* in), the Autoware-only sensor blueprints, generates the lanelet2 + point-cloud map artifacts Autoware needs instead of an .xodr, and drives the two shipped modes (classical NDT stack, or the camera-only VAD end-to-end model). Use when the user asks to \"run Autoware on CARLA\", \"connect an AV stack\", \"drive the ego from Autoware\", \"generate a lanelet2 map\", or asks which topics CARLA exchanges with Autoware.",
+  "content_fingerprint": "ff1dfcf53579fe6829fdfa976974dd549cdfe8a09a7055482d401fac9f586633"
 }

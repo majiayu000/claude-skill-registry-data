@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runnable driver for the deterministic campaign-execution protocol \u2014 the\nautomaton that takes a validated campaign DAG to a correctly merged branch.\nTrigger when:\n- A campaign has a validated DAG + worker IBCs and the composer (or a\n  cheap-tier runner) must DRIVE dispatch \u21c4 reconcile as a loop rather than\n  by hand.\n- Resuming a partially-executed campaign from its git history + sketch\n  checkpoint after a halt or crash.\n- Prompt contains: /orchestrate, orchestration, drive the DAG, run the\n  campaign, layer schedule, reconcile-and-merge, resume campaign."
+  "description": "Runnable driver for the deterministic campaign-execution protocol — the\nautomaton that takes a validated campaign DAG to a correctly merged branch.\nTrigger when:\n- A campaign has a validated DAG + worker IBCs and the composer (or a\n  cheap-tier runner) must DRIVE dispatch ⇄ reconcile as a loop rather than\n  by hand.\n- Resuming a partially-executed campaign from its git history + sketch\n  checkpoint after a halt or crash.\n- Prompt contains: /orchestrate, orchestration, drive the DAG, run the\n  campaign, layer schedule, reconcile-and-merge, resume campaign.",
+  "content_fingerprint": "de909188e58b047d7968e87110ca771dde630be9f476a2795925bae4c530beaf"
 }

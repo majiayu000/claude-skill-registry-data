@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/phrazzld/claude-config/blob/main/skills/stripe-local-dev/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "ebc15efe7206a1af7cd85c20631e52664d96584c3312dd8c5eb0aa5b621654c3",
+  "description": "Fix Stripe webhook 400 errors in local development. The problem: `stripe listen`\ngenerates a new secret each time it starts, but your app uses a stale secret from\n.env.local. This skill auto-syncs the"
 }

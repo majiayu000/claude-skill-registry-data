@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/oliver-kriska/claude-elixir-phoenix/blob/main/lab/autoresearch/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "1c264a60d9f5c9ed21b30bcc3083044a50bd4e279e48808f345a9ff076587854",
+  "description": "Self-improving loop for plugin skills. Reads program.md, proposes one mutation per iteration, evaluates against deterministic scorer, keeps improvements via git, reverts failures. Targets weakest skil"
 }

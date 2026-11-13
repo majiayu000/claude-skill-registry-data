@@ -12,5 +12,6 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/JordanGunn/skills/blob/main/skills/task/review/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "description": "Review a task by updating last_reviewed_at timestamp. Recomputes derived status and flags any hash mismatches without changing epistemic state.\n"
 }

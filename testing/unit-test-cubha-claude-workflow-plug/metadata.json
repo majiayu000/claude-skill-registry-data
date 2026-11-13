@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uae30\ub2a5 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \uc624\ucf00\uc2a4\ud2b8\ub808\uc774\ud130. Git Diff/\uc0ac\uc6a9\uc790 \uc9c0\uc815 \ubc94\uc704\uc5d0\uc11c \ud14c\uc2a4\ud2b8 \ub300\uc0c1\uc744 \uacb0\uc815\ud558\uace0, \uc0ac\uc6a9\uc790 \uc2dc\ub098\ub9ac\uc624 \uc2a4\ud1a0\ub9ac\ubcf4\ub4dc \u2192 \ud14c\uc2a4\ud2b8\ucf00\uc774\uc2a4 \uc0dd\uc131 \u2192 Playwright MCP \uc2e4\ud589 \u2192 \uacb0\uacfc \ubcf4\uace0. '/unit-test', '\ub2e8\uc704\ud14c\uc2a4\ud2b8', '\ud14c\uc2a4\ud2b8\ud574\uc918', '\uae30\ub2a5 \ud14c\uc2a4\ud2b8' \ub4f1 \uc5b8\uae09 \uc2dc \ud638\ucd9c. \uc2dc\ub098\ub9ac\uc624 \ub2e8\uc704 \ud68c\uadc0 \uac80\uc99d(PASS/FAIL/WARN)\uc5d0 \uc0ac\uc6a9\ud558\uba70, \ubc84\uadf8 \uc6d0\uc778 \ud2b9\uc815\u00b7\ub85c\uadf8 \uc0bd\uc785 \ub514\ubc84\uae45\uc774 \ud544\uc694\ud558\uba74 debugger \uacc4\uc5f4 \uc2a4\ud0ac\uc744 \uc4f4\ub2e4."
+  "description": "기능 단위 테스트 오케스트레이터. Git Diff/사용자 지정 범위에서 테스트 대상을 결정하고, 사용자 시나리오 스토리보드 → 테스트케이스 생성 → Playwright MCP 실행 → 결과 보고. '/unit-test', '단위테스트', '테스트해줘', '기능 테스트' 등 언급 시 호출. 시나리오 단위 회귀 검증(PASS/FAIL/WARN)에 사용하며, 버그 원인 특정·로그 삽입 디버깅이 필요하면 debugger 계열 스킬을 쓴다.",
+  "content_fingerprint": "72359a7985af6c5cc6445c6c503a37b2ae2bff534caed8ce7526ae03050b9299"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect insecure JWT (JSON Web Token) implementations in a codebase using a two-phase approach: first map all JWT issuance and verification sites to understand the token lifecycle and signing configuration, then check each verification site for exploitable weaknesses such as algorithm confusion, missing signature verification, weak secrets, header injection, and missing claim validation. Requires sast/architecture.md (run sast-analysis first). Outputs findings to sast/jwt-results.md. If no JWT usage is found in Phase 1, Phase 2 is skipped. Use when asked to find JWT, token forgery, or authentication bypass bugs."
+  "description": "Detect insecure JWT (JSON Web Token) implementations in a codebase using a two-phase approach: first map all JWT issuance and verification sites to understand the token lifecycle and signing configuration, then check each verification site for exploitable weaknesses such as algorithm confusion, missing signature verification, weak secrets, header injection, and missing claim validation. Requires sast/architecture.md (run sast-analysis first). Outputs findings to sast/jwt-results.md. If no JWT usage is found in Phase 1, Phase 2 is skipped. Use when asked to find JWT, token forgery, or authentication bypass bugs.",
+  "content_fingerprint": "9ccd25df301edd99749385c34ea2cdfbecf94cf3d2accb663e41d7fd887cf9be"
 }

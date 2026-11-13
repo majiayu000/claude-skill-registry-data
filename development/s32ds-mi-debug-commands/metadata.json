@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Guide for using execute_action(action_name=\"runMiDebugCommand\", ...) to execute raw GDB Machine Interface (MI) and CLI commands on active debug sessions. Covers when to use MI commands vs the dedicated Debugger MCP server, available MI command categories (breakpoints, execution, memory, registers, stack, variables), S32Debugger-specific commands, and error handling. The Debugger MCP server should be the primary tool - MI commands are the fallback for S32Debugger launches or when the debugger REST server is unavailable."
+  "description": "Guide for using execute_action(action_name=\"runMiDebugCommand\", ...) to execute raw GDB Machine Interface (MI) and CLI commands on active debug sessions. Covers when to use MI commands vs the dedicated Debugger MCP server, available MI command categories (breakpoints, execution, memory, registers, stack, variables), S32Debugger-specific commands, and error handling. The Debugger MCP server should be the primary tool - MI commands are the fallback for S32Debugger launches or when the debugger REST server is unavailable.",
+  "content_fingerprint": "5219155f5363647e1fa3233d8252c58e6c9e88ba865b291faf5a92ede08f4b21"
 }

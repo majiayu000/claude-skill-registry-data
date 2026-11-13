@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7528\u4e8e\u8bca\u65ad PyTorch on NPU \u5927\u6a21\u578b\u8bad\u7ec3\u4e2d\u7684 NPU OOM\uff08Out of Memory\uff09\u95ee\u9898\u3002\u5f53\u7528\u6237\u62a5\u544a\u8bad\u7ec3\u56e0\u5185\u5b58\u4e0d\u8db3\u5d29\u6e83\u3001\u51fa\u73b0 OOM \u76f8\u5173\u9519\u8bef\uff08OutOfMemoryError / NPU out of memory / workspace allocator / HCCL memory\uff09\u3001\u6216\u9700\u8981\u8fdb\u884c\u8bad\u7ec3\u5185\u5b58\u4f18\u5316\u65f6\uff0c\u89e6\u53d1\u672c\u6280\u80fd\u3002\u6309\u7167\u65e5\u5fd7\u5206\u7c7b \u2192 \u9759\u6001\u4f30\u7b97 \u2192 snapshot \u6df1\u5ea6\u5206\u6790 \u2192 \u4f18\u5316\u5efa\u8bae\u7684\u6d41\u7a0b\u5b9a\u4f4d\u548c\u89e3\u51b3\u95ee\u9898\u3002"
+  "description": "用于诊断 PyTorch on NPU 大模型训练中的 NPU OOM（Out of Memory）问题。当用户报告训练因内存不足崩溃、出现 OOM 相关错误（OutOfMemoryError / NPU out of memory / workspace allocator / HCCL memory）、或需要进行训练内存优化时，触发本技能。按照日志分类 → 静态估算 → snapshot 深度分析 → 优化建议的流程定位和解决问题。",
+  "content_fingerprint": "d4b48be5327516f6c93bc3bf38cd82620a051289504e434e70c37f20415cae13"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Design injectable seams so Swift services can be swapped for fakes in tests. Use when a type reaches for `URLSession.shared`, `Date()`, `UUID()`, `random(in:)` or a singleton; when asked \"how do I inject CloudKit / network / clock\" or \"should this be a singleton\"; when choosing constructor vs `@Environment` / `EnvironmentKey` vs `@TaskLocal` injection; when writing the `makeApp()` composition root; when evaluating swift-dependencies or Factory. Does NOT choose the test framework or snapshot tooling (swift-testing-baseline) or the target layout that hosts the root (swiftpm-modularization)."
+  "description": "Design injectable seams so Swift services can be swapped for fakes in tests. Use when a type reaches for `URLSession.shared`, `Date()`, `UUID()`, `random(in:)` or a singleton; when asked \"how do I inject CloudKit / network / clock\" or \"should this be a singleton\"; when choosing constructor vs `@Environment` / `EnvironmentKey` vs `@TaskLocal` injection; when writing the `makeApp()` composition root; when evaluating swift-dependencies or Factory. Does NOT choose the test framework or snapshot tooling (swift-testing-baseline) or the target layout that hosts the root (swiftpm-modularization).",
+  "content_fingerprint": "517d1fe53735b94cdd832d71f0849d085136e83b0fb17e779a29d5a62e9e6a11"
 }

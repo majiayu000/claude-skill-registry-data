@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Safety check before executing destructive or irreversible commands. Catches dangerous shell commands, risky git operations, secret exposure, and high-blast-radius actions before they run. Activates automatically when Claude is about to execute shell commands that match known risk patterns. Trigger phrases: \"check before running\", \"is this command safe\", \"safety check\", \"pre-execution review\"."
+  "description": "Safety check before executing destructive or irreversible commands. Catches dangerous shell commands, risky git operations, secret exposure, and high-blast-radius actions before they run. Activates automatically when Claude is about to execute shell commands that match known risk patterns. Trigger phrases: \"check before running\", \"is this command safe\", \"safety check\", \"pre-execution review\".",
+  "content_fingerprint": "9c2f5a3fe733fb3c8b697a68e53207152e7ade352786d10456f86df63ed4258b"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verify a claim before stating it, and verify a test before trusting it, in OpenAlgo Desktop. Use before asserting that a security control holds (redaction, CSRF, broker state check, API key, webhook secret), that a pattern is safe, that a bug is fixed, that a leak is gone, or that a test guards a fix; when reporting audit or scanner findings (cargo deny, cargo audit, npm audit, gitleaks, trivy, CodeQL, leak_grep); when a grep \"found nothing\"; when a clippy, test or scanner count looks clean; and before telling anyone something is or is not a vulnerability."
+  "description": "Verify a claim before stating it, and verify a test before trusting it, in OpenAlgo Desktop. Use before asserting that a security control holds (redaction, CSRF, broker state check, API key, webhook secret), that a pattern is safe, that a bug is fixed, that a leak is gone, or that a test guards a fix; when reporting audit or scanner findings (cargo deny, cargo audit, npm audit, gitleaks, trivy, CodeQL, leak_grep); when a grep \"found nothing\"; when a clippy, test or scanner count looks clean; and before telling anyone something is or is not a vulnerability.",
+  "content_fingerprint": "7ef17043b16fd43daea9316d151b599d306e3da304ab1a101aa5ccef823517b7"
 }

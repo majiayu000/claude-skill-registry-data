@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when storing or querying data through Acorn's database layer - Eloquent models (app/Models, models over wp_posts, postmeta, users), custom tables, migrations (make:migration, migrate --force on deploy), seeders and factories, the DB facade, table prefix errors (\"Table wp_wp_x doesn't exist\"), and choosing post meta vs options vs a post type vs a custom table. For queues use acorn-background; for endpoints use acorn-routes-api; for post type registration use acorn-scaffolding."
+  "description": "Use when storing or querying data through Acorn's database layer - Eloquent models (app/Models, models over wp_posts, postmeta, users), custom tables, migrations (make:migration, migrate --force on deploy), seeders and factories, the DB facade, table prefix errors (\"Table wp_wp_x doesn't exist\"), and choosing post meta vs options vs a post type vs a custom table. For queues use acorn-background; for endpoints use acorn-routes-api; for post type registration use acorn-scaffolding.",
+  "content_fingerprint": "0f2b9dbd729539d5cc3f035d0f1df1600623144fcd0614822e83596984dab641"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Parse all `# implements:` annotations in source code and emit `library/_code-index.md` as a shelf-index. Also extracts cross-module import edges and writes `library/_dependency-edges.md`. Idempotent \u2014 re-running produces byte-identical output if no annotations or imports changed."
+  "description": "Parse all `# implements:` annotations in source code and emit `library/_code-index.md` as a shelf-index. Also extracts cross-module import edges and writes `library/_dependency-edges.md`. Idempotent — re-running produces byte-identical output if no annotations or imports changed.",
+  "content_fingerprint": "059b39d21da70216a8d5728de235d60b38e64e16e05f24cf1110db017d7e6f83"
 }

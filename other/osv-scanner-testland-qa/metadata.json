@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configures and runs Google OSV-Scanner - open-source SCA against the OSV.dev vulnerability database; supports `osv-scanner scan -r ./` recursive scan + per-lockfile scan via `-L package-lock.json`; SBOM input (CycloneDX / SPDX) for non-standard package managers; `--format json|sarif|markdown|vertical|html` output; suppressions via `osv-scanner.toml` config. Use when the team needs OSS-native SCA without commercial-license overhead, or wants a second-opinion DB pair with Snyk's commercial DB."
+  "description": "Configures and runs Google OSV-Scanner - open-source SCA against the OSV.dev vulnerability database; supports `osv-scanner scan -r ./` recursive scan + per-lockfile scan via `-L package-lock.json`; SBOM input (CycloneDX / SPDX) for non-standard package managers; `--format json|sarif|markdown|vertical|html` output; suppressions via `osv-scanner.toml` config. Use when the team needs OSS-native SCA without commercial-license overhead, or wants a second-opinion DB pair with Snyk's commercial DB.",
+  "content_fingerprint": "f17ee5bc9a2b5ba146bb2c33d278acb13dd6592b7c8a4338568e3f33f1ad0729"
 }

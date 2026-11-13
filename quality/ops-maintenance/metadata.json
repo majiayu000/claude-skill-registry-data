@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Routine non-incident upkeep \u2014 security audit Python deps (`pip-audit`), refresh model GGUF inventory, prune Docker dangling images + volumes, rotate logs (`~/.aicp/dlq/<old-date>`, `~/.aicp/history/`), trim WSL VDisk, check `.env` token expiry / rotation cadence, refresh KB Collections, run `make profile-validate`. Distinct from `ops-incident` (reactive \u2014 something is broken) and `ops-deploy` (forward action \u2014 shipping change). Loads when the operator says \"maintenance window\", \"weekly upkeep\", \"clean up\", \"rotate logs\", \"patch deps\", \"do the housekeeping\"."
+  "description": "Routine non-incident upkeep — security audit Python deps (`pip-audit`), refresh model GGUF inventory, prune Docker dangling images + volumes, rotate logs (`~/.aicp/dlq/<old-date>`, `~/.aicp/history/`), trim WSL VDisk, check `.env` token expiry / rotation cadence, refresh KB Collections, run `make profile-validate`. Distinct from `ops-incident` (reactive — something is broken) and `ops-deploy` (forward action — shipping change). Loads when the operator says \"maintenance window\", \"weekly upkeep\", \"clean up\", \"rotate logs\", \"patch deps\", \"do the housekeeping\".",
+  "content_fingerprint": "82fa66a1c0ff30690102cef8274d2fc4a3c8fa2efaa2f47495a01a2f70b4a43c"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use as the storage build stage of the Butterbase journey. Implements the Storage section of 02-plan.md by delegating to the storage skill. Calls manage_storage (update_config) for bucket setup; uploads are exercised at frontend integration time, not here. Skipped if the plan has no file uploads."
+  "description": "Use as the storage build stage of the Butterbase journey. Implements the Storage section of 02-plan.md by delegating to the storage skill. Calls manage_storage (update_config) for bucket setup; uploads are exercised at frontend integration time, not here. Skipped if the plan has no file uploads.",
+  "content_fingerprint": "2ed1a7c1ea60496b7ea72eea15cc1ea7f6f131a95270bea40206ced20764def7"
 }

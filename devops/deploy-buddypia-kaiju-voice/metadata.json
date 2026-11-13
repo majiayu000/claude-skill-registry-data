@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/buddypia/kaiju-voice/blob/master/.claude/skills/deploy/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d9c8def1b6f7aaa892d52a852fac5d7404a53e4721fff0ea463fd71f4f79daec",
+  "description": "Cloud Run へのデプロイを実行するスキル。\n品質ゲート検証 → gcloud run deploy --source . → デプロイ検証 → リビジョン記録 の4フェーズで安全にデプロイする。\n\n**核心機能**:\n- 品質ゲート通過後のみデプロイ実行（--skip-checks で省略可）\n- Secret Manager 連携による安全な環境変数管理\n- デプロイ後のヘルスチェック自"
 }

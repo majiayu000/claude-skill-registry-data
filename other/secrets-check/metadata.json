@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scan staged changes for secrets before commit. Blocks the commit if any known pattern matches (AWS keys, Stripe live keys, JWTs, PEM blocks, GitHub tokens, Google API keys, generic high-entropy strings).\nTrigger this skill when: - Before running `git commit` (auto). - User says \"check for secrets\", \"scan for keys\", or invokes `/secrets-check`. - Before staging any `.env*` or `credentials*` file."
+  "description": "Scan staged changes for secrets before commit. Blocks the commit if any known pattern matches (AWS keys, Stripe live keys, JWTs, PEM blocks, GitHub tokens, Google API keys, generic high-entropy strings).\nTrigger this skill when: - Before running `git commit` (auto). - User says \"check for secrets\", \"scan for keys\", or invokes `/secrets-check`. - Before staging any `.env*` or `credentials*` file.",
+  "content_fingerprint": "549ae772b6009cc9c793fca03dfd52ee3947f5e0db1248f327abe7afc0923558"
 }

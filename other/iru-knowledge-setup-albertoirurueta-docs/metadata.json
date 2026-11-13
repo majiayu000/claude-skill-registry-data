@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Create the `knowledge/` directory at the repository root with its five subdirectories \u2014 `inbox`, `meetings`, `people`, `agreements`, and `pending` \u2014 each containing a `.gitkeep` file so git tracks the empty directory. Invoke as `/iru-knowledge-setup`. Idempotent \u2014 safe to re-run; only creates whichever directories/`.gitkeep` files don't already exist, and never overwrites or deletes existing content. Use once, before `iru-knowledge-process-inbox` or `iru-knowledge-complete` are run for the first time in a repository, to bootstrap the knowledge base's folder structure."
+  "description": "Create the `knowledge/` directory at the repository root with its five subdirectories — `inbox`, `meetings`, `people`, `agreements`, and `pending` — each containing a `.gitkeep` file so git tracks the empty directory. Invoke as `/iru-knowledge-setup`. Idempotent — safe to re-run; only creates whichever directories/`.gitkeep` files don't already exist, and never overwrites or deletes existing content. Use once, before `iru-knowledge-process-inbox` or `iru-knowledge-complete` are run for the first time in a repository, to bootstrap the knowledge base's folder structure.",
+  "content_fingerprint": "645a8112c9cad99fa603e1932580e7518cedafca70a5dc643e27e0b925c4c771"
 }

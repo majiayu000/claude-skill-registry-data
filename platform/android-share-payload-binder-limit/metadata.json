@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Find and fix Android share/export actions that pass large payloads through Intent extras and will throw TransactionTooLargeException once real user data accumulates \u2014 measuring the payload at realistic scale, staging a file via FileProvider, and driving the chooser on device. Use when an app exports/shares user data as text, or when a feature works on a fresh install but is suspected at years of data."
+  "description": "Find and fix Android share/export actions that pass large payloads through Intent extras and will throw TransactionTooLargeException once real user data accumulates — measuring the payload at realistic scale, staging a file via FileProvider, and driving the chooser on device. Use when an app exports/shares user data as text, or when a feature works on a fresh install but is suspected at years of data.",
+  "content_fingerprint": "83b4de48f819e4b26452b284530714a98cb10b511e07c00b3ae578065a13b772"
 }

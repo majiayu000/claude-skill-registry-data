@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific behavior of the SHOW statement family \u2014 replication SHOW forms are spelled BINLOG STATUS/REPLICA STATUS/REPLICA HOSTS (REPLICA is a lexer-level synonym for SLAVE) while the underlying status counters still say slave/master; bare SHOW <name> is generic sugar for any plugin-registered INFORMATION_SCHEMA table (userstat, Galera, query-response-time); SHOW EXPLAIN/SHOW ANALYZE inspect another connection's live plan; only a fixed subset of SHOW forms accept LIKE/WHERE. Use when writing, generating, or reviewing SHOW statements that target MariaDB."
+  "description": "MariaDB-specific behavior of the SHOW statement family — replication SHOW forms are spelled BINLOG STATUS/REPLICA STATUS/REPLICA HOSTS (REPLICA is a lexer-level synonym for SLAVE) while the underlying status counters still say slave/master; bare SHOW <name> is generic sugar for any plugin-registered INFORMATION_SCHEMA table (userstat, Galera, query-response-time); SHOW EXPLAIN/SHOW ANALYZE inspect another connection's live plan; only a fixed subset of SHOW forms accept LIKE/WHERE. Use when writing, generating, or reviewing SHOW statements that target MariaDB.",
+  "content_fingerprint": "6b8ce704c150df3675dffb73ea4487fe0a2001110a32378a6c2756e263e5129c"
 }

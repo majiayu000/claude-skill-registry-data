@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Maintains the ansible/roles/boot_parameters Ansible role that enables/disables GRUB kernel command-line parameters via grubby, sets the boot timeout and optional bootloader password, and can reboot the host to apply changes, on RHEL-family systems as part of the Linux SOE. Use when checking or changing kernel boot parameters. NOT audit-only \u2014 remediation is automatic and can trigger a reboot."
+  "description": "Maintains the ansible/roles/boot_parameters Ansible role that enables/disables GRUB kernel command-line parameters via grubby, sets the boot timeout and optional bootloader password, and can reboot the host to apply changes, on RHEL-family systems as part of the Linux SOE. Use when checking or changing kernel boot parameters. NOT audit-only — remediation is automatic and can trigger a reboot.",
+  "content_fingerprint": "3ef71895f1713e4641f6c8dcaf4f0d0de54d3c2c7d36271ba691d8ad6b598c0e"
 }

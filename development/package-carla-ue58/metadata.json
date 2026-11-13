@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cooks and packages a shippable CARLA server from a UE 5.8 ue58-dev checkout via the CMake `package` targets (shipping/development/debug/test), scoping the cook with CARLA_MAPS_TO_COOK, and inspects an existing package for the failures a green build hides \u2014 stale pak/ucas mismatch, missing staged OpenDrive/TM road data, missing post-process profiles, and Town15's uncookable content. Use when the user asks to \"package CARLA UE5\", \"cook a map\", \"build a shipping server\", \"make a distributable CARLA\", or a package builds but renders black / has no maps."
+  "description": "Cooks and packages a shippable CARLA server from a UE 5.8 ue58-dev checkout via the CMake `package` targets (shipping/development/debug/test), scoping the cook with CARLA_MAPS_TO_COOK, and inspects an existing package for the failures a green build hides — stale pak/ucas mismatch, missing staged OpenDrive/TM road data, missing post-process profiles, and Town15's uncookable content. Use when the user asks to \"package CARLA UE5\", \"cook a map\", \"build a shipping server\", \"make a distributable CARLA\", or a package builds but renders black / has no maps.",
+  "content_fingerprint": "269f78b528433f6d35620d57120e2ec16c3a2723c3c8ea1c07ccec4287781152"
 }

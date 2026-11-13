@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "unknown",
-  "description": "\u6839\u636e GitCode PR \u7684\u4ee3\u7801\u53d8\u66f4\uff0c\u91cd\u65b0\u751f\u6210\u7b26\u5408\u7ea6\u5b9a\u5f0f\u63d0\u4ea4\u89c4\u8303\u7684 PR \u6807\u9898\u4e0e\u7b26\u5408\u4ed3\u5e93 PR \u6a21\u677f\u7684 PR \u63cf\u8ff0\uff08body\uff09\uff0c\u7136\u540e\u901a\u8fc7 GitCode API \u5199\u56de PR\u3002\u5f53\u7528\u6237\u63d0\u4f9b PR \u94fe\u63a5\u3001\u8981\u6c42\"\u66f4\u65b0 PR / \u751f\u6210\u6807\u9898 / \u751f\u6210\u63cf\u8ff0 / \u6539 PR \u6587\u6848 / \u91cd\u5199 PR \u6807\u9898\u63cf\u8ff0\"\u65f6\u89e6\u53d1\u6b64 skill\u3002"
+  "description": "根据 GitCode PR 的代码变更，重新生成符合约定式提交规范的 PR 标题与符合仓库 PR 模板的 PR 描述（body），然后通过 GitCode API 写回 PR。当用户提供 PR 链接、要求\"更新 PR / 生成标题 / 生成描述 / 改 PR 文案 / 重写 PR 标题描述\"时触发此 skill。",
+  "content_fingerprint": "86702673596c08bf11b9e39cf5b8284d81e09b3f032cf298e9c26b91d9403440"
 }

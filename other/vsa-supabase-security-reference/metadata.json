@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Load when writing or reviewing anything under supabase/migrations/ or supabase/functions/, creating a new table/view/RPC/bucket, touching RLS policies or grants, handling check-in codes or points writes, or debugging Supabase permission errors (\"permission denied\", \"infinite recursion detected in policy\", data visible to anon that shouldn't be). Provides this project's RLS domain theory \u2014 roles, policies, SECURITY DEFINER, the default-privileges/auto-updatable-view gotcha and its revoke-then-grant fix, the server-authoritative check-in design, public-exposure rules, and the migration-authoring checklist."
+  "description": "Load when writing or reviewing anything under supabase/migrations/ or supabase/functions/, creating a new table/view/RPC/bucket, touching RLS policies or grants, handling check-in codes or points writes, or debugging Supabase permission errors (\"permission denied\", \"infinite recursion detected in policy\", data visible to anon that shouldn't be). Provides this project's RLS domain theory — roles, policies, SECURITY DEFINER, the default-privileges/auto-updatable-view gotcha and its revoke-then-grant fix, the server-authoritative check-in design, public-exposure rules, and the migration-authoring checklist.",
+  "content_fingerprint": "2295a83c87a0ea8f826e8625c59e298ea5b9c465a8f835e4b382cd69af420a8a"
 }

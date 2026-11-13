@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8fde\u63a5 100+ API\uff08Google Workspace\u3001Microsoft 365\u3001GitHub\u3001Notion\u3001Slack\u3001Airtable\u3001HubSpot \u7b49\uff09\uff0c\u652f\u6301\u6258\u7ba1 OAuth \u8ba4\u8bc1\u3002\n\u5f53\u7528\u6237\u9700\u8981\u4e0e\u5916\u90e8\u670d\u52a1\u4ea4\u4e92\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002\n\u5b89\u5168\u8bf4\u660e\uff1aMATON_API_KEY \u4ec5\u7528\u4e8e Maton.ai \u8eab\u4efd\u9a8c\u8bc1\uff0c\u672c\u8eab\u4e0d\u6388\u4e88\u5bf9\u7b2c\u4e09\u65b9\u670d\u52a1\u7684\u8bbf\u95ee\u6743\u9650\u3002\u6bcf\u4e2a\u670d\u52a1\u90fd\u9700\u8981\u7528\u6237\u901a\u8fc7 Maton \u7684\u8fde\u63a5\u6d41\u7a0b\u8fdb\u884c\u660e\u786e\u7684 OAuth \u6388\u6743\u3002\u8bbf\u95ee\u6743\u9650\u4e25\u683c\u9650\u5236\u5728\u7528\u6237\u5df2\u6388\u6743\u7684\u8fde\u63a5\u8303\u56f4\u5185\u3002\u7531 Maton \u63d0\u4f9b (https://maton.ai)\u3002"
+  "description": "连接 100+ API（Google Workspace、Microsoft 365、GitHub、Notion、Slack、Airtable、HubSpot 等），支持托管 OAuth 认证。\n当用户需要与外部服务交互时使用此技能。\n安全说明：MATON_API_KEY 仅用于 Maton.ai 身份验证，本身不授予对第三方服务的访问权限。每个服务都需要用户通过 Maton 的连接流程进行明确的 OAuth 授权。访问权限严格限制在用户已授权的连接范围内。由 Maton 提供 (https://maton.ai)。",
+  "content_fingerprint": "63847a1999667bb931f02572e136333de90cc6b9b55fcb087411dd111a9e796c"
 }

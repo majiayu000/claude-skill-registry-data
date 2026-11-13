@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Measure the longest stretch of a rendered clip with NO visual change (the union of jump-cut/zoom/b-roll cuts) via ffmpeg scene detection. Emits a JSON verdict + a non-fatal WARN when the max static gap exceeds MAX_STATIC_GAP. Diagnostic only \u2014 never alters or rejects the clip. VISUAL_CADENCE=0 skips."
+  "description": "Measure the longest stretch of a rendered clip with NO visual change (the union of jump-cut/zoom/b-roll cuts) via ffmpeg scene detection. Emits a JSON verdict + a non-fatal WARN when the max static gap exceeds MAX_STATIC_GAP. Diagnostic only — never alters or rejects the clip. VISUAL_CADENCE=0 skips.",
+  "content_fingerprint": "27ab7daea78f6ac34ebc9e9fe3969fef3b4a65bcabe5cb9a5c38c94848af0078"
 }

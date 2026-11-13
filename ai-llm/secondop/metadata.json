@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Get a second opinion from an external LLM at three checkpoints: T1 is the plan valid, T2 which path at a fork, T3 finish plus a QA breaker that tries to break the result. One structured move per exchange (PROPOSE, COUNTER, VERIFY, ACCEPT, BLOCK) with memory across turns, and every exchange mirrored into a human-visible channel. Supports a multi-vendor panel instead of a single reviewer. Triggers: \"/secondop\", \"get a second opinion\", \"run the review panel\"."
+  "description": "Get a second opinion from an external LLM at three checkpoints: T1 is the plan valid, T2 which path at a fork, T3 finish plus a QA breaker that tries to break the result. One structured move per exchange (PROPOSE, COUNTER, VERIFY, ACCEPT, BLOCK) with memory across turns, and every exchange mirrored into a human-visible channel. Supports a multi-vendor panel instead of a single reviewer. Triggers: \"/secondop\", \"get a second opinion\", \"run the review panel\".",
+  "content_fingerprint": "bfbf0bdc67bc26ee2d0820ea137a02dbeed336f8ab4d63edb3d4db1f659a3830"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Convert VDM-SL proof obligations (POs) to SMT-LIB and verify them with the Z3 solver. Triggered by \"prove POs\", \"verify with SMT\", \"check with Z3\", \"auto-verify proof obligations\", \"prove the spec is correct\", or \"find counterexamples\". Also responds to Japanese: \u300cPO\u3092\u8a3c\u660e\u3057\u3066\u300d\u300cSMT\u3067\u691c\u8a3c\u3057\u3066\u300d\u300cZ3\u3067\u78ba\u8a8d\u3057\u3066\u300d\u7b49\u3002 Used as the next step after PO generation with verify-spec, or for end-to-end PO generation + SMT verification."
+  "description": "Convert VDM-SL proof obligations (POs) to SMT-LIB and verify them with the Z3 solver. Triggered by \"prove POs\", \"verify with SMT\", \"check with Z3\", \"auto-verify proof obligations\", \"prove the spec is correct\", or \"find counterexamples\". Also responds to Japanese: 「POを証明して」「SMTで検証して」「Z3で確認して」等。 Used as the next step after PO generation with verify-spec, or for end-to-end PO generation + SMT verification.",
+  "content_fingerprint": "8026980c765c26c82f1a45a7a5df120239dd2f301b41fe016b29fb3fe62f9b32"
 }

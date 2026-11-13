@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill to review code changes for security concerns before they merge. Covers input validation, authentication and authorization, secrets handling, injection surfaces (SQL, command, template, prompt), unsafe APIs and dependencies, sensitive data handling, and output encoding. Runs against the current diff (NOT the whole codebase) so findings stay relevant to the change at hand. Trigger proactively whenever the diff touches auth, routing, data access, user input, template rendering, external calls, or dependency files. Also runs as part of the /review and /ship commands."
+  "description": "Use this skill to review code changes for security concerns before they merge. Covers input validation, authentication and authorization, secrets handling, injection surfaces (SQL, command, template, prompt), unsafe APIs and dependencies, sensitive data handling, and output encoding. Runs against the current diff (NOT the whole codebase) so findings stay relevant to the change at hand. Trigger proactively whenever the diff touches auth, routing, data access, user input, template rendering, external calls, or dependency files. Also runs as part of the /review and /ship commands.",
+  "content_fingerprint": "fbb498d74b770277e6c3bdc432c3245481a08b04252040424b9f1f445dad746e"
 }

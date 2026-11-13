@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Produce a single consolidated hardening report for the DSH node. Runs audit.sh, dome-check.sh, and machine-probe.py, parses their outputs, and writes one markdown file listing every passing check, every failure with a specific remediation command, and a top-line verdict (ALL GREEN / N ISSUES). Non-destructive \u2014 reads only, no auto-fix."
+  "description": "Produce a single consolidated hardening report for the DSH node. Runs audit.sh, dome-check.sh, and machine-probe.py, parses their outputs, and writes one markdown file listing every passing check, every failure with a specific remediation command, and a top-line verdict (ALL GREEN / N ISSUES). Non-destructive — reads only, no auto-fix.",
+  "content_fingerprint": "1e906b52c7148097dbc41c9db1d5fdf16a10fe4018092995a9e69f35f10c80dd"
 }

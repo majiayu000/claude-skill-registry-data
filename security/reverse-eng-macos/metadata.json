@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reverse macOS Mach-O binaries and .app bundles \u2014 codesign/notarization state, entitlements, Objective-C/Swift symbol recovery, and lldb/Frida dynamic analysis. Load when the target is a Mach-O executable/dylib/framework, an .app bundle, a LaunchAgent/Daemon plist, or Apple-platform malware. Signals: \"Mach-O 64-bit executable\", codesign/spctl output, hardened runtime, objc_msgSend, mangled _ZN/_$s symbols, XPC service names, TCC prompts."
+  "description": "Reverse macOS Mach-O binaries and .app bundles — codesign/notarization state, entitlements, Objective-C/Swift symbol recovery, and lldb/Frida dynamic analysis. Load when the target is a Mach-O executable/dylib/framework, an .app bundle, a LaunchAgent/Daemon plist, or Apple-platform malware. Signals: \"Mach-O 64-bit executable\", codesign/spctl output, hardened runtime, objc_msgSend, mangled _ZN/_$s symbols, XPC service names, TCC prompts.",
+  "content_fingerprint": "08d8f439ee0ba187a96676ed34b8d00c8947768eced5b39db721c1a52ce4c402"
 }

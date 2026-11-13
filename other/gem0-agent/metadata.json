@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Work in Gem0 (gem0.dev headless CMS) as the signed-in user through an agent token (gem_pat_...) - list and create projects, tables (schemes), rows, project API keys. Use whenever GEM0_TOKEN is set, the user hands you a gem_pat_ token, or asks Claude to manage their Gem0 content or setup. The live API reference is served by Gem0 itself; always fetch it first. Prefer this over gem0-api, which needs session headers."
+  "description": "Work in Gem0 (gem0.dev headless CMS) as the signed-in user through an agent token (gem_pat_...) - list and create projects, tables (schemes), rows, project API keys. Use whenever GEM0_TOKEN is set, the user hands you a gem_pat_ token, or asks Claude to manage their Gem0 content or setup. The live API reference is served by Gem0 itself; always fetch it first. Prefer this over gem0-api, which needs session headers.",
+  "content_fingerprint": "6f6ce69337fd1084a488249918720211e356637b1d2fbd19ad68ce478067cdb4"
 }

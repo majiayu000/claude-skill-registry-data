@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ground-truth GitHub pull request review that first confirms the PR's claims and the request behind it are valid (the bug is real, the issue asks for this, it has not already landed), then maps blast radius with /recon and tests every fix and feature with /debug-mantra. Report-only: posts graded findings to the PR and renders them on-screen; never pushes, approves or merges. Trigger on /review-pr-xyz <PR#>, \"review PR #N\", or \"review this pull request\". Local diff or branch? Use review-code-xyz. Multi-model panel review? Use review-xyz."
+  "description": "Ground-truth GitHub pull request review that first confirms the PR's claims and the request behind it are valid (the bug is real, the issue asks for this, it has not already landed), then maps blast radius with /recon and tests every fix and feature with /debug-mantra. Report-only: posts graded findings to the PR and renders them on-screen; never pushes, approves or merges. Trigger on /review-pr-xyz <PR#>, \"review PR #N\", or \"review this pull request\". Local diff or branch? Use review-code-xyz. Multi-model panel review? Use review-xyz.",
+  "content_fingerprint": "84b2398c0a4bbcc990c2c41834827f8c8f602258fddca00b0ebd5eb03aa2acb2"
 }

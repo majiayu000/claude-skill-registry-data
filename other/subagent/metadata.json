@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run a one-shot or flat parallel batch of provider LLM subagents (headless `cc-fleet subagent`) that return a result. Use when fanning out N independent tasks, doing bulk per-file work, or calling a specialized provider model (DeepSeek / GLM / Kimi / Qwen / MiniMax). NOT a long-lived collaborator you message back and forth (that is /cc-fleet:team); NOT a multi-phase pipeline with dependencies or resume (that is /cc-fleet:workflow); NOT trivial work the main session should just do."
+  "description": "Run a one-shot or flat parallel batch of provider LLM subagents (headless `cc-fleet subagent`) that return a result. Use when fanning out N independent tasks, doing bulk per-file work, or calling a specialized provider model (DeepSeek / GLM / Kimi / Qwen / MiniMax). NOT a long-lived collaborator you message back and forth (that is /cc-fleet:team); NOT a multi-phase pipeline with dependencies or resume (that is /cc-fleet:workflow); NOT trivial work the main session should just do.",
+  "content_fingerprint": "52141e61725c3520c3384770a4f1de5829fff9f105abf5b01b0ce70bee5e6666"
 }

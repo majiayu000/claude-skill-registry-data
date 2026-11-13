@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cleanly tear down a crouton poc/app \u2014 the inverse of /deploy. Removes the code, the Cloudflare Worker + D1 + KV (both env scopes), the app's stray branches, and closes its epic/sub-issues \u2014 with a --dry-run first and a typed confirm for anything destructive. Use when asked to \"remove an app\", \"tear down a poc\", \"delete app X and its resources\", or to clean up after an abandoned proof-of-concept. Counterpart to /deploy, /poc-deploy, crouton init."
+  "description": "Cleanly tear down a crouton poc/app — the inverse of /deploy. Removes the code, the Cloudflare Worker + D1 + KV (both env scopes), the app's stray branches, and closes its epic/sub-issues — with a --dry-run first and a typed confirm for anything destructive. Use when asked to \"remove an app\", \"tear down a poc\", \"delete app X and its resources\", or to clean up after an abandoned proof-of-concept. Counterpart to /deploy, /poc-deploy, crouton init.",
+  "content_fingerprint": "52e28bed4ed14b3a6e3ed08292c7bcc311ee39e1fcb18c0af224d8c44331a796"
 }

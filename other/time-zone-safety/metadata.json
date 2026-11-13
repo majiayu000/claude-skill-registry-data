@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u4ee3\u7801\u51fa\u73b0 LocalDate.now() / LocalDateTime.now() / Instant.now() / new Date() / Date.now() / time.Now() \u7b49\"\u5f53\u524d\u65f6\u95f4\"\u8c03\u7528\uff0c\u6216\u6d89\u53ca\u5468/\u6708/\u65e5\u8d77\u70b9\u3001\u8de8\u65f6\u533a\u6bd4\u8f83\u3001\u6570\u636e\u5e93\u65f6\u95f4\u5b57\u6bb5\u65f6\u89e6\u53d1\u3002 \u9632\u6b62\u751f\u4ea7\u73af\u5883\u65f6\u533a\u6f02\u79fb\u5bfc\u81f4\u7684\u7edf\u8ba1\u9519\u4e71\u3002"
+  "description": "当代码出现 LocalDate.now() / LocalDateTime.now() / Instant.now() / new Date() / Date.now() / time.Now() 等\"当前时间\"调用，或涉及周/月/日起点、跨时区比较、数据库时间字段时触发。 防止生产环境时区漂移导致的统计错乱。",
+  "content_fingerprint": "b205def7662898e86401d384a7b49d724c4ae59eb57044e121082fb419bfe21f"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Installs the CARLA Python client (the `carla` package) into a chosen interpreter so the other python-api skills work \u2014 from a wheel bundled with your release or checkout, from PyPI (`pip install carla==X.Y.Z`), or by putting an older release's .egg on PYTHONPATH. Detects what is already present, picks the source that matches your simulator's version, pins numpy<2, and verifies `import carla` plus the client/server version match. Use when the user asks to \"install the CARLA Python API\", \"pip install carla\", \"set up the carla python package\", or when a skill reports \"cannot import carla\"."
+  "description": "Installs the CARLA Python client (the `carla` package) into a chosen interpreter so the other python-api skills work — from a wheel bundled with your release or checkout, from PyPI (`pip install carla==X.Y.Z`), or by putting an older release's .egg on PYTHONPATH. Detects what is already present, picks the source that matches your simulator's version, pins numpy<2, and verifies `import carla` plus the client/server version match. Use when the user asks to \"install the CARLA Python API\", \"pip install carla\", \"set up the carla python package\", or when a skill reports \"cannot import carla\".",
+  "content_fingerprint": "6213cce7c5faa43b05a47fe99e7abdf6d4f9028a4a4a3b77c21fc2608158c64d"
 }

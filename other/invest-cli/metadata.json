@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6295\u8d44\u5206\u6790 CLI \u2014 \u6570\u636e\u83b7\u53d6 + \u5206\u6790\u6846\u67b6\u4e00\u4f53\u5316\uff0cdual-mode \u8fd0\u884c\u3002\n\n\u89e6\u53d1\uff1a\u300c/cli\u300d\u300c/\u6295\u8d44cli\u300d\u300cinvest cli\u300d\u300c\u7ec8\u7aef\u5206\u6790\u300d\u300c\u547d\u4ee4\u884c\u5206\u6790\u300d\n\u6216\uff1a\u300c\u7528cli\u5206\u6790\u300d\u300c\u7ec8\u7aef\u67e5\u4e00\u4e0b\u300d\u300c\u547d\u4ee4\u884c\u770b\u770b\u300d\n\n\u547d\u4ee4\u5165\u53e3\uff1a`invest-cli stock 600519`\uff08PATH \u65e0 invest-cli \u65f6\u515c\u5e95\uff1a`\"$HOME/.local/bin/invest-cli\" stock 600519`\u2014\u2014wrapper \u4f18\u5148\u7528 skill \u81ea\u5e26 venv\uff0c\u542b yfinance\uff09"
+  "description": "投资分析 CLI — 数据获取 + 分析框架一体化，dual-mode 运行。\n\n触发：「/cli」「/投资cli」「invest cli」「终端分析」「命令行分析」\n或：「用cli分析」「终端查一下」「命令行看看」\n\n命令入口：`invest-cli stock 600519`（PATH 无 invest-cli 时兜底：`\"$HOME/.local/bin/invest-cli\" stock 600519`——wrapper 优先用 skill 自带 venv，含 yfinance）",
+  "content_fingerprint": "f10850a1ffea5a96a16e1849ee85bdc4312526aac1ea7822bbabb762e2fcc6be"
 }

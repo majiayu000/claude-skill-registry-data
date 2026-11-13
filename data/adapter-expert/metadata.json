@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ryu-qqq/AuthHub/blob/main/.claude/skills/adapter-expert/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f6aefacf61b80df679ed83a895eb07dd5202b2708c8d492a66f20e1128235f63",
+  "description": "Adapter Layer 전문가. CommandAdapter(persist만, JpaRepository 1:1), QueryAdapter(4개 메서드, QueryDslRepository 1:1),\nAdminQueryAdapter(Join 허용, DTO Projection), LockQueryAdapter(6개 Lock 메서드).\n필드 2개만(Reposito"
 }

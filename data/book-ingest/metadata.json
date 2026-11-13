@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Phase 03 of the books pipeline \u2014 upsert validated MDX corpus into Supabase via Drizzle. Hydrates `books`, `book_chapters`, `book_sections`, and `book_chunks` tables. Maintains separation between display sections (stable bookmark anchors) and RAG chunks (regenerable retrieval units) so re-embedding never invalidates user bookmarks. Idempotent \u2014 only re-sections / re-embeds chapters whose `content_sha256` changed. Use after `/book-frontmatter` passes Zod validation. Trigger phrases: \"ingest into supabase\", \"upsert the book\", \"phase 03\", \"load the corpus into the database\"."
+  "description": "Phase 03 of the books pipeline — upsert validated MDX corpus into Supabase via Drizzle. Hydrates `books`, `book_chapters`, `book_sections`, and `book_chunks` tables. Maintains separation between display sections (stable bookmark anchors) and RAG chunks (regenerable retrieval units) so re-embedding never invalidates user bookmarks. Idempotent — only re-sections / re-embeds chapters whose `content_sha256` changed. Use after `/book-frontmatter` passes Zod validation. Trigger phrases: \"ingest into supabase\", \"upsert the book\", \"phase 03\", \"load the corpus into the database\".",
+  "content_fingerprint": "ec8ef849354cf0df76000d89f9e35ba849292e257727b698d77728b9f19f5df3"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reverse engineer browser extensions (Chrome/Edge MV2/MV3, Firefox) for an authorized review: unpack .crx/.xpi, assess the permission surface, trace background/service-worker and content-script logic, and recover credential, signing, or traffic-handling behavior. Load on \"analyze this extension\", extension supply-chain or malicious-extension investigation, or keys hidden in chrome.storage. Signals: .crx, .xpi, manifest.json, chrome-extension://, <all_urls>, webRequestBlocking, declarativeNetRequest, externally_connectable, nativeMessaging."
+  "description": "Reverse engineer browser extensions (Chrome/Edge MV2/MV3, Firefox) for an authorized review: unpack .crx/.xpi, assess the permission surface, trace background/service-worker and content-script logic, and recover credential, signing, or traffic-handling behavior. Load on \"analyze this extension\", extension supply-chain or malicious-extension investigation, or keys hidden in chrome.storage. Signals: .crx, .xpi, manifest.json, chrome-extension://, <all_urls>, webRequestBlocking, declarativeNetRequest, externally_connectable, nativeMessaging.",
+  "content_fingerprint": "d1179df19a9fff6c2a46aa09f124224d8e2aa8661bb457df315eadebfd45c32d"
 }

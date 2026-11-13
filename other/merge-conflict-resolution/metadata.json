@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53 rebase\u3001merge\u3001update branch \u6216 cherry-pick \u4ea7\u751f\u5b9e\u9645\u51b2\u7a81\u65f6\u4f7f\u7528\uff1b\u5b83\u8d1f\u8d23\u8bc6\u522b\u51b2\u7a81\u7c7b\u578b\u3001\u9010\u6587\u4ef6\u89e3\u51b3\u5e76\u9a8c\u8bc1\u7ed3\u679c\u3002"
+  "description": "当 rebase、merge、update branch 或 cherry-pick 产生实际冲突时使用；它负责识别冲突类型、逐文件解决并验证结果。",
+  "content_fingerprint": "bd7a3c40a02ba96ffd49adac08008275ee3943b5976daa506d879dbe70ec6100"
 }

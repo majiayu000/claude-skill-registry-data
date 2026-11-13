@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scans all comments on a GitHub PR, classifies them (human vs bot / valid vs invalid / actionable vs nitpick), produces a structured triage report, and prepares: (a) a numbered implementation plan for valid actionable comments, (b) pre-written English responses for comments we should reject/ignore. Invoke when user passes a PR URL and asks to process review comments, or when /che-pr-comments is called."
+  "description": "Scans all comments on a GitHub PR, classifies them (human vs bot / valid vs invalid / actionable vs nitpick), produces a structured triage report, and prepares: (a) a numbered implementation plan for valid actionable comments, (b) pre-written English responses for comments we should reject/ignore. Invoke when user passes a PR URL and asks to process review comments, or when /che-pr-comments is called.",
+  "content_fingerprint": "634ff2f621dd54ff5e3dc040b2c52ca373b07ae4751d5e6073c5dedea844e3cd"
 }

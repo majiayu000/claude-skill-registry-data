@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Confirm an Opus-flagged true-positive chain in a real browser (live via Caido proxy or mock_backend). Run when opus-deep-audit marked verdict=true_positive or chain queued by cc-taint-route. Writes findings/<id>/confirmed.json. Default live; falls back to mock if rate-limited."
+  "description": "Confirm an Opus-flagged true-positive chain in a real browser (live via Caido proxy or mock_backend). Run when opus-deep-audit marked verdict=true_positive or chain queued by cc-taint-route. Writes findings/<id>/confirmed.json. Default live; falls back to mock if rate-limited.",
+  "content_fingerprint": "c167d3f8594e3ab34aed87e8bcb28274e72e88d627eb3f085cf0e61a1549e583"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/DeL-TaiseiOzaki/claude-code-orchestra/blob/main/.gemini/skills/context-loader/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "cc23bd828f88076682ed383bcf8b5d0750b1f2478af2af284390b9fd7bc1a7a4",
+  "description": "Load project context from .claude/ directory at the start of every task. This ensures Gemini CLI has the same coding rules, design decisions, and library constraints as Claude Code."
 }

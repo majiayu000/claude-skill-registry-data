@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when querying, mapping, or building against Salesforce CPQ managed-package objects (SBQQ__ namespace): Quote, QuoteLine, QuoteLineGroup, DiscountSchedule, PriceRule, Subscription. Trigger keywords: SBQQ__Quote__c, QuoteLineModel, CPQ object graph, CPQ subscription, CPQ price rule. NOT for driving quote calculation, amend or renew from code \u2014 use apex/cpq-api-and-automation. NOT for bulk-loading the CPQ product catalog \u2014 use data/product-catalog-migration-cpq."
+  "description": "Use when querying, mapping, or building against Salesforce CPQ managed-package objects (SBQQ__ namespace): Quote, QuoteLine, QuoteLineGroup, DiscountSchedule, PriceRule, Subscription. Trigger keywords: SBQQ__Quote__c, QuoteLineModel, CPQ object graph, CPQ subscription, CPQ price rule. NOT for driving quote calculation, amend or renew from code — use apex/cpq-api-and-automation. NOT for bulk-loading the CPQ product catalog — use data/product-catalog-migration-cpq.",
+  "content_fingerprint": "bc7f0f6a47e8a83bcf9a3ed062a1ea0f0918219cf95708499e53032be6ec1f1a"
 }

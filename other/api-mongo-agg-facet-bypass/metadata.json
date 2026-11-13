@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Bypass a MongoDB aggregation-pipeline stage allowlist by nesting disallowed read stages inside $facet, then $unionWith/$lookup sibling collections to exfiltrate secrets (invite tokens, creds, hashes). Load when: an endpoint accepts a user-supplied `pipeline` (or errors like \"operator-form queries not accepted, use the pipeline parameter\"), a Node/Express + MongoDB backend, 24-hex `_id`s, or an \"advanced query\" API. Authorized targets only."
+  "description": "Bypass a MongoDB aggregation-pipeline stage allowlist by nesting disallowed read stages inside $facet, then $unionWith/$lookup sibling collections to exfiltrate secrets (invite tokens, creds, hashes). Load when: an endpoint accepts a user-supplied `pipeline` (or errors like \"operator-form queries not accepted, use the pipeline parameter\"), a Node/Express + MongoDB backend, 24-hex `_id`s, or an \"advanced query\" API. Authorized targets only.",
+  "content_fingerprint": "d91fac8b7c653e2ce836376e4b2d4a9d029b06dbe9f94803719094bbc9e1fed2"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Prefer Set (and Map) lookups over Array + .some/.indexOf/.includes for membership checks. Applies whenever writing or reviewing code that tests \"is X one of these values\". O(1) hash lookup instead of O(n) scan, and intent reads clearer."
+  "description": "Prefer Set (and Map) lookups over Array + .some/.indexOf/.includes for membership checks. Applies whenever writing or reviewing code that tests \"is X one of these values\". O(1) hash lookup instead of O(n) scan, and intent reads clearer.",
+  "content_fingerprint": "f197c19d3551efbbd32f4666702862801ba6a5bccdb651138146bd4c216737e7"
 }

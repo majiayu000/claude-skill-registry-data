@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8bbe\u8ba1\u548c\u5b9e\u73b0 Minecraft \u5c40\u90e8\u5f02\u7a7a\u95f4\u4e0e\u4e8c\u6b21\u573a\u666f\u6e32\u67d3\uff0c\u533a\u5206\u89c2\u770b\u7a97\u53e3\u3001\u53ef\u8fdb\u5165\u89c6\u89c9\u9886\u57df\u4e0e\u771f\u5b9e\u7b2c\u4e8c\u4e16\u754c\uff0c\u9009\u62e9 FBO\u3001Stencil\u3001\u76f8\u673a\u548c\u6df1\u5ea6\u7b56\u7565\uff0c\u590d\u7528\u5df2\u5b9e\u6d4b\u7684 Forge 1.20.1 \u793a\u4f8b\u5de5\u7a0b\u3002\u7528\u4e8e\u95e8\u3001\u88c2\u9699\u3001\u7403\u5f62\u9886\u57df\u5185\u7684\u72ec\u7acb\u573a\u666f\uff0c\u4e0d\u7528\u4e8e\u7ed9\u539f\u4e16\u754c\u5730\u5f62\u6362\u6750\u8d28\u3002"
+  "description": "设计和实现 Minecraft 局部异空间与二次场景渲染，区分观看窗口、可进入视觉领域与真实第二世界，选择 FBO、Stencil、相机和深度策略，复用已实测的 Forge 1.20.1 示例工程。用于门、裂隙、球形领域内的独立场景，不用于给原世界地形换材质。",
+  "content_fingerprint": "acbf6185b669282e179ff658a54c597a577991aaf5ea347db16ab3ccae31572e"
 }

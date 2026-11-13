@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "LLM \u4e2d\u67a2\u670d\u52a1\u5c42\u8bbe\u8ba1\u89c4\u8303\u3002\u4fee\u6539 services/llm/ \u76ee\u5f55\u4e0b\u4efb\u4f55\u6587\u4ef6\u65f6\u5fc5\u987b\u52a0\u8f7d\u3002\u6d89\u53ca LLM Provider \u9002\u914d\u3001\u5de5\u5382\u6a21\u5f0f\u3001API \u8c03\u7528\u65b9\u5f0f\u53d8\u66f4\u65f6\u89e6\u53d1\u3002"
+  "description": "LLM 中枢服务层设计规范。修改 services/llm/ 目录下任何文件时必须加载。涉及 LLM Provider 适配、工厂模式、API 调用方式变更时触发。",
+  "content_fingerprint": "f9cc4839b5c4bc02103f7fdb977c99eb0b15bb23a4fd8598ff01382cea5df446"
 }

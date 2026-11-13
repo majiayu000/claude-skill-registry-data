@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/corbat-tech/coco/blob/main/.claude/skills/build-fix/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "9e080ce78e3affb56ed96cad622907a4ed3ae99adbac3ddca66492788c3b85d8",
+  "description": "Incrementally fix build, TypeScript, and lint errors one at a time with minimal, safe changes. Detects the error type, fixes the root cause, re-runs the build to verify, and repeats until clean."
 }

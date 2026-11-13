@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when authoring or extending the digest set in a relayfile workspace - covers the contract for files under `<mount>/digests/` (`yesterday.md`, `today.md`, `this-week.md`, date-stamped daily files), the per-provider section format, link conventions back into the canonical mount tree, when digests are regenerated, and how adapter authors expose new provider data to the digest pipeline. NOT for agents answering activity questions \u2014 those should use the `activity-summary` skill to consume digests, not produce them."
+  "description": "Use when authoring or extending the digest set in a relayfile workspace - covers the contract for files under `<mount>/digests/` (`yesterday.md`, `today.md`, `this-week.md`, date-stamped daily files), the per-provider section format, link conventions back into the canonical mount tree, when digests are regenerated, and how adapter authors expose new provider data to the digest pipeline. NOT for agents answering activity questions — those should use the `activity-summary` skill to consume digests, not produce them.",
+  "content_fingerprint": "0dc53ea5a97718a442e2f464c2ad21e2841b1daedc7559d079c980173756f664"
 }

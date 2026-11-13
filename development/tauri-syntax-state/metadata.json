@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when managing application state, sharing data between commands, or debugging state-related panics. Prevents unmanaged state panics, Mutex deadlocks, and unnecessary Arc wrapping around managed state. Covers app.manage(), State<T> injection, AppHandle.state(), thread-safe state with Mutex/RwLock, and initialization patterns. Keywords: tauri state, manage, State<T>, Mutex, RwLock, AppHandle, thread safety, state injection."
+  "description": "Use when managing application state, sharing data between commands, or debugging state-related panics. Prevents unmanaged state panics, Mutex deadlocks, and unnecessary Arc wrapping around managed state. Covers app.manage(), State<T> injection, AppHandle.state(), thread-safe state with Mutex/RwLock, and initialization patterns. Keywords: tauri state, manage, State<T>, Mutex, RwLock, AppHandle, thread safety, state injection.",
+  "content_fingerprint": "963249bca45e37949da926da77e88017c74aa2a4dafa325bcd1e8a17c5dfb28a"
 }

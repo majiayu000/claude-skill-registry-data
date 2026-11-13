@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Strip PII from a customer support ticket or eval trace and convert it into eval dataset rows. Produces two outputs: a regression dataset row (close to the original input, tagged with failure_mode) and a generalized dataset row (abstracted for broader coverage). Works with local CSV files or any eval platform. Use this skill whenever someone shares a support ticket, user complaint, or raw trace and wants to turn it into eval data. Trigger on: \"add this ticket to the dataset\", \"convert this trace to an eval\", \"strip PII from this complaint\", \"turn this into a test case\"."
+  "description": "Strip PII from a customer support ticket or eval trace and convert it into eval dataset rows. Produces two outputs: a regression dataset row (close to the original input, tagged with failure_mode) and a generalized dataset row (abstracted for broader coverage). Works with local CSV files or any eval platform. Use this skill whenever someone shares a support ticket, user complaint, or raw trace and wants to turn it into eval data. Trigger on: \"add this ticket to the dataset\", \"convert this trace to an eval\", \"strip PII from this complaint\", \"turn this into a test case\".",
+  "content_fingerprint": "250284ca10fe5ea7a6233de928bad1f2ab8076d84b958c864212f6c021578ef9"
 }

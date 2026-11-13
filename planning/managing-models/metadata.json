@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Sanctioned model download path. Reads policies/model_sources.yaml, downloads via huggingface_hub or direct URL with sha256 verification, places the file under the correct ComfyUI models folder. DEFERRED-ACTIVATION \u2014 gated behind user setting `allow_model_download` (default false). Never auto-invoked by the planner."
+  "description": "Sanctioned model download path. Reads policies/model_sources.yaml, downloads via huggingface_hub or direct URL with sha256 verification, places the file under the correct ComfyUI models folder. DEFERRED-ACTIVATION — gated behind user setting `allow_model_download` (default false). Never auto-invoked by the planner.",
+  "content_fingerprint": "2ccb5b3c2b0e119d70ba10045359d90f5a32781b51352435dd6c61d159b60886"
 }

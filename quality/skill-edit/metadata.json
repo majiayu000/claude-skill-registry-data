@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7de8\u8f2f\u73fe\u6709 skill \u7684\u5167\u90e8\u7d50\u69cb\u3002\u7cbe\u78ba\u4fee\u6539 gotchas\u3001scoring\u3001forcing questions \u7b49\u7279\u5b9a\u90e8\u5206\u3002\nTrigger: \u7528\u6236\u8aaa\u300c\u6539\u9019\u500b skill\u300d\u3001\u300c\u8abf scoring\u300d\u3001\u300c\u52a0 gotcha\u300d\u3001\u300c\u6539 forcing question\u300d\u3002\nDo NOT use when: \u8981\u65b0\u589e skill\uff08\u7528 /skill-gen\uff09\u3002\nDo NOT use when: \u8981\u6574\u9ad4\u5347\u7d1a\uff08\u7528 /domain-upgrade\uff09\u3002\nDo NOT use when: \u8981\u6539 skill \u4e32\u63a5\uff08\u7528 /workflow-edit\uff09\u3002\n\u4e0a\u6e38\uff1a\u7528\u6236\u6307\u5b9a\u7684 skill + \u4fee\u6539\u610f\u5716\u3002\n\u4e0b\u6e38\uff1a/skill-check review\u3002\n\u7522\u51fa\uff1a\u4fee\u6539\u5f8c\u7684 skill \u6a94\u6848\u3002"
+  "description": "編輯現有 skill 的內部結構。精確修改 gotchas、scoring、forcing questions 等特定部分。\nTrigger: 用戶說「改這個 skill」、「調 scoring」、「加 gotcha」、「改 forcing question」。\nDo NOT use when: 要新增 skill（用 /skill-gen）。\nDo NOT use when: 要整體升級（用 /domain-upgrade）。\nDo NOT use when: 要改 skill 串接（用 /workflow-edit）。\n上游：用戶指定的 skill + 修改意圖。\n下游：/skill-check review。\n產出：修改後的 skill 檔案。",
+  "content_fingerprint": "30bd00fd1e2f10473ea03cec3670310963d6258c53b514f6df1caff9fe24fb9b"
 }

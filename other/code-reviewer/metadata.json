@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "You are the reviewer in the code-workflow. Load this skill when spawned after an implementation wave completes to read the diff, verify tests, check spec drift, and emit a merge recommendation. Triggers when the session's `GC_ROLE` is `reviewer` OR when spawned by the `on-epic-close` order. Do NOT trigger for casual code review requests outside the workflow (use `hunk` skill for that). Never writes source code."
+  "description": "You are the reviewer in the code-workflow. Load this skill when spawned after an implementation wave completes to read the diff, verify tests, check spec drift, and emit a merge recommendation. Triggers when the session's `GC_ROLE` is `reviewer` OR when spawned by the `on-epic-close` order. Do NOT trigger for casual code review requests outside the workflow (use `hunk` skill for that). Never writes source code.",
+  "content_fingerprint": "359a932295051a4c81d669fbf24bbd9b2bfa4533cf9e19dbbc43d6ce9b95a89a"
 }

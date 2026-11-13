@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "A Claude Code PreToolUse hook that hard-caps emails sent through the Zoho Mail MCP (default 10 per hour, 25 per day, 90 seconds apart, scheduled sends counted at their scheduled time) and refuses the tool call when a send would break the cap \u2014 so an agent can't get your mailbox blocked by Zoho for bursty sending. Use when you send email from agents via Zoho, say \"don't let it spam\", \"rate-limit my outbound\", or after Zoho has blocked your outgoing mail once."
+  "description": "A Claude Code PreToolUse hook that hard-caps emails sent through the Zoho Mail MCP (default 10 per hour, 25 per day, 90 seconds apart, scheduled sends counted at their scheduled time) and refuses the tool call when a send would break the cap — so an agent can't get your mailbox blocked by Zoho for bursty sending. Use when you send email from agents via Zoho, say \"don't let it spam\", \"rate-limit my outbound\", or after Zoho has blocked your outgoing mail once.",
+  "content_fingerprint": "d4c6d1ef272bf186c9d3b79d6074f022be8ebb9e0878bf73b23ffd673b10733b"
 }

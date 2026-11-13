@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Adds a new ROS 2 message type to CARLA's native ROS 2 interface \u2014 the hand-written POD struct under LibCarla/source/carla/ros2/types/msg, its Fast-CDR serialize/deserialize pair, the RIHS01 type hash computed in Docker, the CdrTopicInfo registration and the type-hash test. Use when the user asks to \"add a ROS message type\", \"support sensor_msgs/X in CARLA\", \"add a carla_msgs type\", \"why is my type hash warning appearing\", or needs a message CARLA does not publish yet. There is no IDL codegen \u2014 every step is manual."
+  "description": "Adds a new ROS 2 message type to CARLA's native ROS 2 interface — the hand-written POD struct under LibCarla/source/carla/ros2/types/msg, its Fast-CDR serialize/deserialize pair, the RIHS01 type hash computed in Docker, the CdrTopicInfo registration and the type-hash test. Use when the user asks to \"add a ROS message type\", \"support sensor_msgs/X in CARLA\", \"add a carla_msgs type\", \"why is my type hash warning appearing\", or needs a message CARLA does not publish yet. There is no IDL codegen — every step is manual.",
+  "content_fingerprint": "28c6d440f5a05f8ed5780eb910a47dd1bc3ed48f4e673a61242b602943081ce0"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Compile the TMDb package AND all test targets (without running the tests) to catch test-code compile errors. Use after changing tests or shared code to check everything still builds \u2014 delegates to the tooling-runner agent (Haiku) and returns a concise pass/fail + errors-as-file:line summary. Differs from /build, which compiles only the library; to run the tests, use /test."
+  "description": "Compile the TMDb package AND all test targets (without running the tests) to catch test-code compile errors. Use after changing tests or shared code to check everything still builds — delegates to the tooling-runner agent (Haiku) and returns a concise pass/fail + errors-as-file:line summary. Differs from /build, which compiles only the library; to run the tests, use /test.",
+  "content_fingerprint": "d6df25202afda05969ce5486520a84256b8c8afc3571b4d10617339578c964e0"
 }

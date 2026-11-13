@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when an LWC needs to read related records across multiple sObjects in one request, paginate a related list with cursors, or replace several overlapping `@wire(getRecord)` calls with a single shared-cache query. Covers both. NOT for single-record reads where `getRecord` from `lightning/uiRecordApi` already fits \u2014 use lwc/wire-service-patterns."
+  "description": "Use when an LWC needs to read related records across multiple sObjects in one request, paginate a related list with cursors, or replace several overlapping `@wire(getRecord)` calls with a single shared-cache query. Covers both. NOT for single-record reads where `getRecord` from `lightning/uiRecordApi` already fits — use lwc/wire-service-patterns.",
+  "content_fingerprint": "870e2317b51ed1d9c630c5a70028ff8cee78306ed3fa30f5e0ee58da50e4ba9b"
 }

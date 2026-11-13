@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Triages the TODO and FIXME comments of the code in a local panel - each comment becomes a card, oldest first (age from git blame), the user marks Resolver (\"Resolve\"), Descartar (\"Discard\") or Manter (\"Keep\"), and the result is a read-only report; no source file is edited. Use when the user asks to sweep, list or triage TODOs and FIXMEs, for example \"quais TODOs est\u00e3o velhos?\", \"faz uma triagem dos FIXMEs\", \"limpa os TODOs do projeto\", \"todo-sweep\", \"triage the TODOs\", \"sweep FIXME comments\", \"which TODOs are oldest\". Triggers - /todo-sweep or /housekeeping:todo-sweep."
+  "description": "Triages the TODO and FIXME comments of the code in a local panel - each comment becomes a card, oldest first (age from git blame), the user marks Resolver (\"Resolve\"), Descartar (\"Discard\") or Manter (\"Keep\"), and the result is a read-only report; no source file is edited. Use when the user asks to sweep, list or triage TODOs and FIXMEs, for example \"quais TODOs estão velhos?\", \"faz uma triagem dos FIXMEs\", \"limpa os TODOs do projeto\", \"todo-sweep\", \"triage the TODOs\", \"sweep FIXME comments\", \"which TODOs are oldest\". Triggers - /todo-sweep or /housekeeping:todo-sweep.",
+  "content_fingerprint": "a1ee46b0b98e13a382cf035e1eaa008e0581d6cd70b946baa3cea452c44e172d"
 }

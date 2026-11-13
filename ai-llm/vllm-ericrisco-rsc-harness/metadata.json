@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when self-hosting an open-weight LLM for high-throughput concurrent serving with vLLM \u2014 running an OpenAI-compatible endpoint, splitting a model across GPUs with tensor or pipeline parallelism, loading quantized weights, serving one or many LoRA adapters, and debugging KV-cache OOM from memory-utilisation and context-length flags. NOT renting or provisioning the GPU box (that is `runpod` or `modal`), NOT single-user laptop inference (that is `ollama`), NOT a hosted inference API you do not operate (that is `together-fireworks` or `huggingface`)."
+  "description": "Use when self-hosting an open-weight LLM for high-throughput concurrent serving with vLLM — running an OpenAI-compatible endpoint, splitting a model across GPUs with tensor or pipeline parallelism, loading quantized weights, serving one or many LoRA adapters, and debugging KV-cache OOM from memory-utilisation and context-length flags. NOT renting or provisioning the GPU box (that is `runpod` or `modal`), NOT single-user laptop inference (that is `ollama`), NOT a hosted inference API you do not operate (that is `together-fireworks` or `huggingface`).",
+  "content_fingerprint": "238600823f4fc45e7822fe324538675a018c18d54cb560eed9585d5a80b1ebc3"
 }

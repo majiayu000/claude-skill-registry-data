@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Security review of one PR's diff against its base branch \u2014 high-confidence, exploitable vulnerabilities only (injection, auth bypass, crypto and secrets, code execution, data exposure), each false-positive-filtered by a parallel sub-task. The super-qa Tester lane runs it on every PR; each finding fails QA and goes back to Build. Use when the user says \"pr security review\", \"/pr-security-review\", or wants a security pass on a branch or PR diff. Not Claude Code's built-in /security-review; for a deep whole-repo audit use security-audit."
+  "description": "Security review of one PR's diff against its base branch — high-confidence, exploitable vulnerabilities only (injection, auth bypass, crypto and secrets, code execution, data exposure), each false-positive-filtered by a parallel sub-task. The super-qa Tester lane runs it on every PR; each finding fails QA and goes back to Build. Use when the user says \"pr security review\", \"/pr-security-review\", or wants a security pass on a branch or PR diff. Not Claude Code's built-in /security-review; for a deep whole-repo audit use security-audit.",
+  "content_fingerprint": "be5da11f8ed18114b680ab4ce47ba5ca53ec6e13fc854aa01093042a3cb3ec10"
 }

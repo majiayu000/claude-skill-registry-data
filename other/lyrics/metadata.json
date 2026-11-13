@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Work on lyrics \u2014 the web fallback (LRCLIB, Musixmatch, NetEase, Genius), the in-memory cache, verification, and embedding lyrics into audio file tags. Use this whenever a task touches `services/lyrics.py`, `services/tags.py`, the `/lyrics.json` route, or `scripts/embed_lyrics.py` / `embed_lyrics_cron.sh` \u2014 adding or fixing a provider, changing caching/verification, or the batch tagger. Covers the provider contract, the synced-vs-plain rule, the read-only cache, and why writes only ever store plain text."
+  "description": "Work on lyrics — the web fallback (LRCLIB, Musixmatch, NetEase, Genius), the in-memory cache, verification, and embedding lyrics into audio file tags. Use this whenever a task touches `services/lyrics.py`, `services/tags.py`, the `/lyrics.json` route, or `scripts/embed_lyrics.py` / `embed_lyrics_cron.sh` — adding or fixing a provider, changing caching/verification, or the batch tagger. Covers the provider contract, the synced-vs-plain rule, the read-only cache, and why writes only ever store plain text.",
+  "content_fingerprint": "7f367615b6f55e294dbf42b88c7c4f5901d36cf581ebf4f8a9a57f255d214167"
 }

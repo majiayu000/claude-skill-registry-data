@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants to iteratively improve an artifact under a hard correctness bound while minimizing a measured cost \u2014 refactoring a code module to cut complexity while its test suite stays green, OR speeding up a SQL query while it returns the same rows. Each iteration applies one focused change, checks a correctness gate that must pass, measures a metric that must drop, and keeps the change only if both hold, else reverts; loops to a plateau or budget. Not for adding features, fixing bugs, or any change that is allowed to alter behaviour or results."
+  "description": "Use when the user wants to iteratively improve an artifact under a hard correctness bound while minimizing a measured cost — refactoring a code module to cut complexity while its test suite stays green, OR speeding up a SQL query while it returns the same rows. Each iteration applies one focused change, checks a correctness gate that must pass, measures a metric that must drop, and keeps the change only if both hold, else reverts; loops to a plateau or budget. Not for adding features, fixing bugs, or any change that is allowed to alter behaviour or results.",
+  "content_fingerprint": "80b983df5be67693a7e001695a9a9aee1265b94829ea68679a5c2246eb90d1e4"
 }

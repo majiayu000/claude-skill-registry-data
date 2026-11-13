@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user wants a review of currently staged git changes before committing. Triggers on phrases like \"review staged\", \"\u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0438 \u0447\u0442\u043e \u044f \u0437\u0430\u0441\u0442\u0435\u0439\u0434\u0436\u0438\u043b\", \"review before commit\", \"\u043f\u0440\u043e\u0432\u0435\u0440\u044c \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u043f\u0435\u0440\u0435\u0434 \u043a\u043e\u043c\u043c\u0438\u0442\u043e\u043c\". Returns a structured findings list focused on correctness, security, and conventions \u2014 not style nitpicks."
+  "description": "Use when the user wants a review of currently staged git changes before committing. Triggers on phrases like \"review staged\", \"посмотри что я застейджил\", \"review before commit\", \"проверь изменения перед коммитом\". Returns a structured findings list focused on correctness, security, and conventions — not style nitpicks.",
+  "content_fingerprint": "818bb36281a8e7eaff2fc26a9453bfc080baaeb68563a92fe7ad50226d16dca0"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/all-source-os/all-source/blob/main/.claude/skills/chronos-release/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "8e75ab032ce91bf62154f6fe3ec0e87559aa39ff62061409f175325d6000a978",
+  "description": "Release a new version of the AllSource Chronos monorepo. Bumps versions across all services (Rust, Go, Elixir), runs full CI to green, creates a single squashed commit with an annotated immutable tag."
 }

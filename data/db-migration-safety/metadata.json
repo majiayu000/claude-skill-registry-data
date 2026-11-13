@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit database migration files (Alembic, Django, Drizzle) for prod-safe patterns. Blocks + warns on locking DDL, silent data loss, and Nimbus-specific cross-repo breakage.\nTrigger this skill when: - Edit or read any file matching `**/migrations/*.py`, `**/drizzle/**/*.sql`,\n  `**/alembic/versions/*.py`.\n- User says \"check this migration\", \"is this migration safe\", or invokes\n  `/db-migration-safety`.\n- Before merging a PR that includes migration files."
+  "description": "Audit database migration files (Alembic, Django, Drizzle) for prod-safe patterns. Blocks + warns on locking DDL, silent data loss, and Nimbus-specific cross-repo breakage.\nTrigger this skill when: - Edit or read any file matching `**/migrations/*.py`, `**/drizzle/**/*.sql`,\n  `**/alembic/versions/*.py`.\n- User says \"check this migration\", \"is this migration safe\", or invokes\n  `/db-migration-safety`.\n- Before merging a PR that includes migration files.",
+  "content_fingerprint": "079e744be12d31283c50ab7651ff6ab8064926b0c311efcecf028c871a118f00"
 }

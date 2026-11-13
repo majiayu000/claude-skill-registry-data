@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Post or send a message to Slack \u2014 a channel, DM, or thread reply. Triggers on \"post / send / message / DM / reply / drop this in Slack\", \"tell #channel\", \"ping @someone on Slack\", or any request to write into Slack (as opposed to reading/searching it). Governs posting IDENTITY: posts as YOU (user token) by default, and as the BOT only when the prompt says so (\"as the bot\", \"use the bot\", \"post as the app\"). Every Claude-sent message gets a \"Sent using Claude\" footer. Read-only Slack work (search, history, who's-in-a-channel) does NOT use this skill."
+  "description": "Post or send a message to Slack — a channel, DM, or thread reply. Triggers on \"post / send / message / DM / reply / drop this in Slack\", \"tell #channel\", \"ping @someone on Slack\", or any request to write into Slack (as opposed to reading/searching it). Governs posting IDENTITY: posts as YOU (user token) by default, and as the BOT only when the prompt says so (\"as the bot\", \"use the bot\", \"post as the app\"). Every Claude-sent message gets a \"Sent using Claude\" footer. Read-only Slack work (search, history, who's-in-a-channel) does NOT use this skill.",
+  "content_fingerprint": "d158b74060981850e68afa374c51727c5e2159e663cef095ae70075ae398c9f3"
 }

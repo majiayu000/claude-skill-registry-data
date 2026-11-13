@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wire SwiftUI navigation as data on the iOS 26 / macOS 26, Swift 6 baseline: one `@Observable @MainActor` Router in `.environment`, `NavigationStack(path:)` over a typed `Route` enum, `navigationDestination(for:)` at the stack root, `item:`-driven sheets and covers, `.onOpenURL` deep links, `NavigationSplitView`, per-tab paths, `Codable` restoration. Use when wiring an App's navigation, choosing push vs sheet vs `fullScreenCover`, adding deep links or restoration, migrating off `NavigationView`, or asked for a router / coordinator in SwiftUI. Runtime bugs \u2192 swiftui-interaction-footguns."
+  "description": "Wire SwiftUI navigation as data on the iOS 26 / macOS 26, Swift 6 baseline: one `@Observable @MainActor` Router in `.environment`, `NavigationStack(path:)` over a typed `Route` enum, `navigationDestination(for:)` at the stack root, `item:`-driven sheets and covers, `.onOpenURL` deep links, `NavigationSplitView`, per-tab paths, `Codable` restoration. Use when wiring an App's navigation, choosing push vs sheet vs `fullScreenCover`, adding deep links or restoration, migrating off `NavigationView`, or asked for a router / coordinator in SwiftUI. Runtime bugs → swiftui-interaction-footguns.",
+  "content_fingerprint": "4814f26d58f2e3aa6b085c3bda3ccfecf3db16b05ef8262398735287cbf7242e"
 }

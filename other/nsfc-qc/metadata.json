@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u660e\u786e\u8981\u6c42\"\u6807\u4e66QC/\u8d28\u91cf\u63a7\u5236/\u6da6\u8272\u524d\u8d28\u68c0/\u5f15\u7528\u771f\u4f2a\u6838\u67e5/\u7bc7\u5e45\u4e0e\u7ed3\u6784\u68c0\u67e5\"\u65f6\u4f7f\u7528\u3002\u5bf9 NSFC \u6807\u4e66\u8fdb\u884c\u53ea\u8bfb\u8d28\u91cf\u63a7\u5236\uff1a\u5e76\u884c\u591a\u7ebf\u7a0b\u72ec\u7acb\u68c0\u67e5\u6587\u98ce\u751f\u786c\u3001\u5f15\u7528\u5047\u5f15/\u9519\u5f15\u98ce\u9669\u3001\u7bc7\u5e45\u4e0e\u7ae0\u8282\u5206\u5e03\u3001\u903b\u8f91\u6e05\u6670\u5ea6\u7b49\uff0c\u6700\u7ec8\u8f93\u51fa\u6807\u51c6\u5316 QC \u62a5\u544a\uff1b\u4e2d\u95f4\u6587\u4ef6\u9ed8\u8ba4\u5f52\u6863\u5230\u201c\u4ea4\u4ed8\u76ee\u5f55\u5185\u7684\u9690\u85cf\u5de5\u4f5c\u533a\uff08.nsfc-qc/\uff09\u201d\uff0c\u5e76\u517c\u5bb9 legacy `.nsfc-qc/`\u3002"
+  "description": "当用户明确要求\"标书QC/质量控制/润色前质检/引用真伪核查/篇幅与结构检查\"时使用。对 NSFC 标书进行只读质量控制：并行多线程独立检查文风生硬、引用假引/错引风险、篇幅与章节分布、逻辑清晰度等，最终输出标准化 QC 报告；中间文件默认归档到“交付目录内的隐藏工作区（.nsfc-qc/）”，并兼容 legacy `.nsfc-qc/`。",
+  "content_fingerprint": "7ac1a301d26955e2e19e38e4a566ca9c1e488111f0113d4a38e54bea6ad1079b"
 }

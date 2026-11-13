@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Super-Admin-only lock-down pattern. Use before touching admin.admins, admin.admin_audit_log, is_super_admin() / requireSuperAdmin() / selectIsSuperAdmin, app/api/admin/admins/**, app/(admin)/administration/users/admins/**, the admin RPCs (admin_promote, admin_update, admin_revoke, admin_list, admin_list_audit, admin_find_user_by_email), createAdminClient(), a new RLS policy, SECURITY DEFINER RPC, or admin-gated route, or when locking a sensitive table to Super Admin."
+  "description": "Super-Admin-only lock-down pattern. Use before touching admin.admins, admin.admin_audit_log, is_super_admin() / requireSuperAdmin() / selectIsSuperAdmin, app/api/admin/admins/**, app/(admin)/administration/users/admins/**, the admin RPCs (admin_promote, admin_update, admin_revoke, admin_list, admin_list_audit, admin_find_user_by_email), createAdminClient(), a new RLS policy, SECURITY DEFINER RPC, or admin-gated route, or when locking a sensitive table to Super Admin.",
+  "content_fingerprint": "4fda8f43cd85e33d04853a8adb43b0aeb8cb245dbe9798022537640af366897a"
 }

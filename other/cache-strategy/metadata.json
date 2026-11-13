@@ -1,5 +1,5 @@
 {
-  "name": "\u7f13\u5b58\u7b56\u7565\u8bbe\u8ba1\u5b9e\u73b0Skill",
+  "name": "缓存策略设计实现Skill",
   "repo": "Sky-Cube/fullflow-dev-agent",
   "path": ".claude/skills/cache-strategy/SKILL.md",
   "github_branch": "main",
@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Redis \u7f13\u5b58\u6a21\u5f0f\u3001key \u8bbe\u8ba1\u3001\u5931\u6548\u7b56\u7565\u3001\u7a7f\u900f/\u51fb\u7a7f/\u96ea\u5d29\u9632\u62a4\u3002\u5f53\u9700\u8981\u8bbe\u8ba1\u5b9e\u73b0\u7f13\u5b58\u65b9\u6848(\u6a21\u5f0f\u9009\u62e9\u3001key \u89c4\u8303\u3001\u5931\u6548\u4e0e\u5bb9\u707e\u9632\u62a4)\u65f6\u4f7f\u7528\u3002"
+  "description": "Redis 缓存模式、key 设计、失效策略、穿透/击穿/雪崩防护。当需要设计实现缓存方案(模式选择、key 规范、失效与容灾防护)时使用。",
+  "content_fingerprint": "e3615c6aff002c69142bdaf824aaf406e2fc1c55497ff67c76b042610d5fb5bd"
 }

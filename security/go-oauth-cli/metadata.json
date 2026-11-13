@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "OAuth2 login for a Go CLI client, with three explicit modes and cached token refresh. Use when a CLI tool authenticates against Google, GitHub, Microsoft, or another OAuth2 provider, when building internal/auth/, or when adding a login command. Triggers on golang.org/x/oauth2, AuthCodeURL, config.Exchange, DeviceAuth, DeviceAccessToken, TokenSource, token.json, credentials.json, --device-login, and --manual. Not for server-side web OAuth where the browser stays on your own site."
+  "description": "OAuth2 login for a Go CLI client, with three explicit modes and cached token refresh. Use when a CLI tool authenticates against Google, GitHub, Microsoft, or another OAuth2 provider, when building internal/auth/, or when adding a login command. Triggers on golang.org/x/oauth2, AuthCodeURL, config.Exchange, DeviceAuth, DeviceAccessToken, TokenSource, token.json, credentials.json, --device-login, and --manual. Not for server-side web OAuth where the browser stays on your own site.",
+  "content_fingerprint": "0267b84813cc7946586e51e5f0c00d8a60ed18e0761cc70c47fe392488a10946"
 }

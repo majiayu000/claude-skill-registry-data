@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5206\u5b50\u683c\u5f0f\u8f6c\u6362\u5de5\u5177\u3002\u652f\u6301\u5728 .smi\u3001.mol\u3001.xyz\u3001.gjf\u3001.sdf \u7b49\u683c\u5f0f\u4e4b\u95f4\u8f6c\u6362\uff0c\u5e76\u53ef\u4ece SMILES \u6216 2D \u7ed3\u6784\u751f\u6210\u5e26\u5750\u6807\u7684 3D \u7ed3\u6784\u3002\n\u5f53\u7528\u6237\u63d0\u5230\u5206\u5b50\u683c\u5f0f\u8f6c\u6362\u30013D\u6784\u8c61\u751f\u6210\u3001openbabel\u7b49\u9700\u6c42\u65f6\u4f7f\u7528\u6b64skill\u3002"
+  "description": "分子格式转换工具。支持在 .smi、.mol、.xyz、.gjf、.sdf 等格式之间转换，并可从 SMILES 或 2D 结构生成带坐标的 3D 结构。\n当用户提到分子格式转换、3D构象生成、openbabel等需求时使用此skill。",
+  "content_fingerprint": "52c5b0c527434703e8cf2466f1d69591e52bbf3db7ee571898e372312dae209e"
 }

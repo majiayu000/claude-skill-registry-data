@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect-only pre-release validation sweep over the processkit content tree.\nWalks entity files, SKILL.md definitions, MCP server tools, and\ncross-references, then emits a single human-readable report with\nERROR / WARN / INFO counts. Use when the user invokes `/pk-release-audit`,\nbefore tagging a release, or any time you need a comprehensive structural\nhealth check beyond what pk-doctor covers. Detect-only; never modifies any\nfile under `context/`."
+  "description": "Detect-only pre-release validation sweep over the processkit content tree.\nWalks entity files, SKILL.md definitions, MCP server tools, and\ncross-references, then emits a single human-readable report with\nERROR / WARN / INFO counts. Use when the user invokes `/pk-release-audit`,\nbefore tagging a release, or any time you need a comprehensive structural\nhealth check beyond what pk-doctor covers. Detect-only; never modifies any\nfile under `context/`.",
+  "content_fingerprint": "d31f20ca08b23a4492a698950adea85012daf32b1263630ca6dfcd5f8d33f895"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Install pre-built external AI agent skills from GitHub (agentskills.io / Claude Code / OpenClaw ecosystem) directly into Hermes Agent's skills directory.\nTwo methods: (1) `npx skills add` (agentskills.io CLI) \u2014 fast but may fail on format, (2) `git clone` fallback \u2014 always works, preserves subdirectory skills and assets.\nUse when the user says \"\u88c5\u4e00\u4e0b\u8fd9\u4e2askill\", \"\u5b89\u88c5\u8fd9\u4e2a\u6280\u80fd\", \"\u88c5\u4e2aXX\", \"install this skill\", or points to a GitHub repo that contains a SKILL.md."
+  "description": "Install pre-built external AI agent skills from GitHub (agentskills.io / Claude Code / OpenClaw ecosystem) directly into Hermes Agent's skills directory.\nTwo methods: (1) `npx skills add` (agentskills.io CLI) — fast but may fail on format, (2) `git clone` fallback — always works, preserves subdirectory skills and assets.\nUse when the user says \"装一下这个skill\", \"安装这个技能\", \"装个XX\", \"install this skill\", or points to a GitHub repo that contains a SKILL.md.",
+  "content_fingerprint": "24eddf9ee3a00081c5791aac282279ea988335f132aa67deb0e5ca6d9fdcd327"
 }

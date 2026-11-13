@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Arlo Belshee\uc758 6\ub2e8\uacc4 \ub124\uc774\ubc0d \ud504\ub85c\uc138\uc2a4\uc640 Clean Code \ub124\uc774\ubc0d \uaddc\uce59\uc744 \uc801\uc6a9\ud574, \uc5ec\ub7ec \ud30c\uc77c\uc5d0 \ud769\uc5b4\uc9c4 \uac1c\ubcc4 \uc774\ub984 \uc2a4\uba5c(\ud0c0\uc785 \ubc18\ubcf5\u00b7-er/-Utils\u00b7\ubd88\uc6a9\uc5b4\u00b7\ucd95\uc57d\uc5b4 \ub4f1)\uc744 \ud0d0\uc9c0\ud558\uace0 \ubc30\uce58 \uad50\uccb4\ud558\uc5ec \ucf54\ub4dc \uac00\ub3c5\uc131 \ud5a5\uc0c1. \ub2e8, \ud558\ub098\uc758 \uae34 \uba54\uc11c\ub4dc\ub97c \ud1b5\uc9f8\ub85c \uad00\ud1b5(grouping\u2192extract\u2192rename)\ud558\ub294 \uac83\uc740 /intent-revealing-names\uac00 \uc801\ud569. /naming-process\ub85c \ud638\ucd9c."
+  "description": "Arlo Belshee의 6단계 네이밍 프로세스와 Clean Code 네이밍 규칙을 적용해, 여러 파일에 흩어진 개별 이름 스멜(타입 반복·-er/-Utils·불용어·축약어 등)을 탐지하고 배치 교체하여 코드 가독성 향상. 단, 하나의 긴 메서드를 통째로 관통(grouping→extract→rename)하는 것은 /intent-revealing-names가 적합. /naming-process로 호출.",
+  "content_fingerprint": "4efeac4b0c8b3b9aefd2d2dd70a5554fa5ae6e9092f6083a2bd7e03c5b98cf05"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Config layering and durable state for a Node Web Only server - defaults deep-merged with config.json, the ephemeral session secret, and atomic state.json writes. Use when loading config, adding a config key, deciding what may be persisted, or writing a state file. Triggers on config.json, config.example.json, deepMerge, loadConfig, state.json, randomBytes session secrets, mode 0600, and write-then-rename."
+  "description": "Config layering and durable state for a Node Web Only server - defaults deep-merged with config.json, the ephemeral session secret, and atomic state.json writes. Use when loading config, adding a config key, deciding what may be persisted, or writing a state file. Triggers on config.json, config.example.json, deepMerge, loadConfig, state.json, randomBytes session secrets, mode 0600, and write-then-rename.",
+  "content_fingerprint": "a802cf59a6f58c0f16559f8e3fc80ff72eb63ceac9594a8464ff13d2d8b68806"
 }

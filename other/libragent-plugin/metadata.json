@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implement, verify, and deploy a host MediaAssist plugin that converts audio/image/video into text when the LLM rejects multimodal input (HTTP 400). Use when media-assist placeholders appear, assistPluginStatus reports missing, listenContent/seeContent succeed but the next completion fails, or the user asks to install an ASR/OCR assist plugin. Triggers: media-assist, MediaAssist, multimodal 400, deployAssistPlugin, harness-plugins, libragent-plugin."
+  "description": "Implement, verify, and deploy a host MediaAssist plugin that converts audio/image/video into text when the LLM rejects multimodal input (HTTP 400). Use when media-assist placeholders appear, assistPluginStatus reports missing, listenContent/seeContent succeed but the next completion fails, or the user asks to install an ASR/OCR assist plugin. Triggers: media-assist, MediaAssist, multimodal 400, deployAssistPlugin, harness-plugins, libragent-plugin.",
+  "content_fingerprint": "460877526e1a68c0a2250208a6112f9564ad3230a0d52c78ee7b00f45d3cfdb3"
 }

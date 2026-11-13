@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pre-PR changed-code review for architect-style reads of a diff, commit range, or checkpoint after implementation. Do NOT invoke for PR-prose review, b-agentic repository or design-conformance audits, UI/design review, plan review, or research synthesis review. Routing signals: code review, review diff, review my diff, review changes, review these changes, working tree diff, pre-PR, \"what would an architect\". Delegated: runs only in the `b-reviewer` subagent; the main session never executes it itself."
+  "description": "Pre-PR changed-code review for architect-style reads of a diff, commit range, or checkpoint after implementation. Do NOT invoke for PR-prose review, b-agentic repository or design-conformance audits, UI/design review, plan review, or research synthesis review. Routing signals: code review, review diff, review my diff, review changes, review these changes, working tree diff, pre-PR, \"what would an architect\". Delegated: runs only in the `b-reviewer` subagent; the main session never executes it itself.",
+  "content_fingerprint": "83f14a2fdf2e58b050244c778810b72ccda00061de74f37493ac61e114938173"
 }

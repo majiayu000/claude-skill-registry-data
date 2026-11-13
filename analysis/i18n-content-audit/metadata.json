@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/1203992808/ChatGPTCaricature/blob/main/.claude/skills/i18n-content-audit/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f734b07279589017ad902b60f3fadda97a263789898f29b0f042aee1418cc5eb",
+  "description": "审计和优化**已有国际化内容**的 SEO/GEO 合规性。两种模式：(1) 仅报告（默认，无 --fix 标志）：生成审计报告但不修改文件，适合想先审查建议的场景；(2) 报告 + 修复（--fix 标志）：生成报告并自动应用优化，适合自动修复质量问题的场景。输入：语言区域和页面路径。输出：包含关键词分析、质量评分和建议的综合报告。使用场景：(1) 审查现有国际化内容质量，(2) 用户说'aud"
 }

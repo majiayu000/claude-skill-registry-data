@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc554\ubb35\uc801 \uc758\uc874\uc131(\uc804\uc5ed \ubcc0\uc218\u00b7\ud074\ub798\uc2a4 \ud544\ub4dc\u00b7\uc2f1\uae00\ud134 \uc811\uadfc)\uc744 \uba85\uc2dc\uc801 \ud30c\ub77c\ubbf8\ud130\ub85c \uc804\ud658\ud558\uc5ec \uba54\uc11c\ub4dc \ud22c\uba85\uc131 \ud5a5\uc0c1. \"\uc228\uc740 \uc758\uc874\uc131 \ub4dc\ub7ec\ub0b4\", \"\ud544\ub4dc \ub300\uc2e0 \ud30c\ub77c\ubbf8\ud130\ub85c\", \"\uc804\uc5ed \ucc38\uc870 \uc81c\uac70\", \"/explicit-parameters\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \ud30c\ub77c\ubbf8\ud130\uac00 \ub9ce\uc544\uc838 \ubb36\uc5b4\uc57c \ud558\uba74 /introduce-parameter-object, I/O\uc640 \uacc4\uc0b0 \ubd84\ub9ac\ub294 /segregate-functional-core\uac00 \uc801\ud569. /explicit-parameters [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "암묵적 의존성(전역 변수·클래스 필드·싱글턴 접근)을 명시적 파라미터로 전환하여 메서드 투명성 향상. \"숨은 의존성 드러내\", \"필드 대신 파라미터로\", \"전역 참조 제거\", \"/explicit-parameters\" 요청 시 사용. 단, 파라미터가 많아져 묶어야 하면 /introduce-parameter-object, I/O와 계산 분리는 /segregate-functional-core가 적합. /explicit-parameters [commit-ref]로 호출.",
+  "content_fingerprint": "d63570f57b54b05e48001c7e6bd1f47feef555586cc926fc6ea14bba1f48d1ed"
 }

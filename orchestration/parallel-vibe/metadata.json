@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/huangwb8/skills/blob/main/parallel-vibe/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "92d88007981048513445db1f07050ae5ba001898f240236955dd3f02c6662c88",
+  "description": "当用户明确要求\"并行执行同一条 Vibe Coding 指令 / 多线程并行尝试多种方案 / 在多个独立工作区里同时推进\"时使用。在用户当前工作目录创建 `.parallel_vibe/`，复制出多个独立工作区并按计划运行每个 thread 的 runner（默认串行、可选并行），最后在 `@main/summary.md` 汇总结果。⚠️ 不适用：用户只是想并行跑 shell 命令/单元测试/下"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "cheat-on-content \u7684\u9996\u6b21 onboarding \u4e0e\u811a\u624b\u67b6\u521b\u5efa\u5668\u3002\u7edf\u4e00\u6d41\u7a0b\u2014\u2014\u6240\u6709\u7528\u6237\u90fd\u8d70\u76f8\u540c 5 \u9636\u6bb5\u95ed\u73af\uff0c\u552f\u4e00\u533a\u522b\u662f\"\u53d1\u8fc7\u89c6\u9891\u7684\u4eba\"\u4f1a\u5728 init \u65f6\u591a\u4e00\u6b65\uff1a\u6293\u53d6\u5df2\u6709\u89c6\u9891\u5efa\u7acb\u5386\u53f2 context\uff08\u7528\u4e8e\u540e\u7eed cheat-seed \u7ed9\u66f4\u8d34\u5408\u7684\u9009\u9898\u3001\u66f4\u51c6\u7684 baseline\uff09\u3002\u89e6\u53d1\u8bcd\uff1a\"\u521d\u59cb\u5316\"/\"init\"/\"\u9996\u6b21\u4f7f\u7528\"/\"\u6211\u662f\u65b0\u7528\u6237\"/\"setup cheat-on-content\"\u3002**\u5fc5\u987b\u5728\u7528\u6237\u7b2c\u4e00\u6b21\u4f1a\u8bdd\u6267\u884c\uff1b\u5176\u4ed6\u5b50 skill \u5728 .cheat-state.json \u4e0d\u5b58\u5728\u65f6\u81ea\u52a8\u8def\u7531\u5230\u6b64\u3002**"
+  "description": "cheat-on-content 的首次 onboarding 与脚手架创建器。统一流程——所有用户都走相同 5 阶段闭环，唯一区别是\"发过视频的人\"会在 init 时多一步：抓取已有视频建立历史 context（用于后续 cheat-seed 给更贴合的选题、更准的 baseline）。触发词：\"初始化\"/\"init\"/\"首次使用\"/\"我是新用户\"/\"setup cheat-on-content\"。**必须在用户第一次会话执行；其他子 skill 在 .cheat-state.json 不存在时自动路由到此。**",
+  "content_fingerprint": "e4573119377488a3e0ba25d8718977ea93775df674c237182d67467bda3af575"
 }

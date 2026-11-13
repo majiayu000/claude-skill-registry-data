@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Persist progress for long-running jobs (batched LLM calls, large ingestions, multi-hour syncs) so that a context reset, crash, or interrupt doesn't lose work. Use whenever a job iterates over N items and completing item K matters independently. Provides a resumable.mjs library pattern plus the skill's invocation heuristics."
+  "description": "Persist progress for long-running jobs (batched LLM calls, large ingestions, multi-hour syncs) so that a context reset, crash, or interrupt doesn't lose work. Use whenever a job iterates over N items and completing item K matters independently. Provides a resumable.mjs library pattern plus the skill's invocation heuristics.",
+  "content_fingerprint": "d0d8edc4b61092aea02db0936998fcfe4baca5fce7df0985bac45165c1d94f3e"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Delegate work to the local `agy` CLI (print mode) \u2014 typically Gemini or other models listed by `agy models`. Use from Cursor when you need a one-shot or follow-up agy turn with a self-contained handoff, optional `--add-dir` workspace, and parseable stdout. Triggers: agy, agy -p, --model gemini, Gemini via agy, delegate to agy, agy print mode, agy-delegate. NEVER for LibrAgent HTTP Session API (that is `libr-delegate`). NEVER invent MCP tool names for agy. NEVER swap `--model` away from this skill\u2019s default unless the user explicitly names a model."
+  "description": "Delegate work to the local `agy` CLI (print mode) — typically Gemini or other models listed by `agy models`. Use from Cursor when you need a one-shot or follow-up agy turn with a self-contained handoff, optional `--add-dir` workspace, and parseable stdout. Triggers: agy, agy -p, --model gemini, Gemini via agy, delegate to agy, agy print mode, agy-delegate. NEVER for LibrAgent HTTP Session API (that is `libr-delegate`). NEVER invent MCP tool names for agy. NEVER swap `--model` away from this skill’s default unless the user explicitly names a model.",
+  "content_fingerprint": "49d3d427598913bb60875d1823334a661e22f40314badb266b5ab5c568a3c325"
 }

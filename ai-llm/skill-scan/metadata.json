@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "cheat-on-skill \u7684\u6838\u5fc3\u3002\u8fde BOSS \u76f4\u8058\u771f\u5b9e\u62db\u8058\u6570\u636e + \u7f51\u9875\u4fe1\u53f7\uff0c\u6309\u7528\u6237\u80fd\u529b\u753b\u50cf\u627e\u300c\u9ad8\u85aa \u00d7 \u4f60\u5b66\u5f97\u52a8 \u00d7 AI \u589e\u5f3a\u300d\u4ea4\u96c6\u91cc\u7684\u5019\u9009\u5c97\u4f4d\u3002\u6bcf\u4e2a\u5c97\u4f4d\u7ed9\uff1a\u85aa\u8d44\u91cf\u7ea7 / \u9700\u6c42\u70ed\u5ea6 / \u4f60\u7684\u5dee\u8ddd / \u53ef\u5b66\u6027\u5206 / \u8bda\u5b9e\u5b66\u4e60\u5468\u671f\uff0c\u5e76\u8fc7 AI \u5f71\u54cd\u5206\u7c7b\u4e0e\u53cd\u8bc8\u7ea2\u7ebf\u3002\u89e6\u53d1\u8bcd\uff1a\"\u5e2e\u6211\u627e\u5c97\u4f4d\"/\"\u627eAI\u65f6\u4ee3\u9ad8\u85aa\u5de5\u4f5c\"/\"\u6709\u4ec0\u4e48\u6211\u80fd\u5b66\u7684\u9ad8\u85aa\u5c97\"/\"skill scan\"/\"\u626b\u4e00\u904d\u62db\u8058\"\u3002\u524d\u7f6e\uff1a\u9700\u8981 .skill-state.json\uff08\u65e0\u5219\u5148\u8def\u7531\u5230 skill-init\uff09\u3002"
+  "description": "cheat-on-skill 的核心。连 BOSS 直聘真实招聘数据 + 网页信号，按用户能力画像找「高薪 × 你学得动 × AI 增强」交集里的候选岗位。每个岗位给：薪资量级 / 需求热度 / 你的差距 / 可学性分 / 诚实学习周期，并过 AI 影响分类与反诈红线。触发词：\"帮我找岗位\"/\"找AI时代高薪工作\"/\"有什么我能学的高薪岗\"/\"skill scan\"/\"扫一遍招聘\"。前置：需要 .skill-state.json（无则先路由到 skill-init）。",
+  "content_fingerprint": "32fa60aad767b4380feb4fd4999f325c85a778bca8508fcc9bd93792cf01a250"
 }

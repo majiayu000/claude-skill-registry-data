@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Drift check between the baseline implementation on disk and the claims in `docs/init/seed.md` + cross-references in CLAUDE.md, README.md, and the rendered docs site. Verifies hook/agent/skill/command names + counts, settings.json wiring, project.json key presence, .mcp.json servers, vendored license files, and helper script presence. Exit 0 PASS / 1 FAIL \u2014 suitable for CI. Read-only; safe to invoke any time."
+  "description": "Drift check between the baseline implementation on disk and the claims in `docs/init/seed.md` + cross-references in CLAUDE.md, README.md, and the rendered docs site. Verifies hook/agent/skill/command names + counts, settings.json wiring, project.json key presence, .mcp.json servers, vendored license files, and helper script presence. Exit 0 PASS / 1 FAIL — suitable for CI. Read-only; safe to invoke any time.",
+  "content_fingerprint": "81cb91661608bec27a5d0c104ba6356dd6b04b7e9eda7ad22a5862411fa3cd45"
 }

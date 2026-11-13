@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLHY/ruoyi-develop-claude/blob/main/.claude/skills/bug-detective/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "6429f1a109fa59f9275054b6482eaaa9e035985a9a8e9abff8384f7ce7fe11db",
+  "description": "基于若依-vue-plus框架的Bug排查与调试标准流程。提供系统化的问题诊断方法论，涵盖：\n1. 日志链路追踪与TraceId全链路分析\n2. 全局异常处理器的堆栈解析方法\n3. 框架级常见陷阱（Long精度丢失、逻辑删除、缓存不一致、权限拦截）\n4. MyBatis-Plus与Redis的排查技巧\n5. 分布式环境下的事务与并发问题定位\n\n触发场景：\n- 系统报错（500/403/404等HT"
 }

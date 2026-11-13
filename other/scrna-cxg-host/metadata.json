@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Two-phase skill for hosting AnnData on CellxGene over an internal network: Phase A preps the schema (float32 obsm, unique ids, X_umap); Phase B deploys N cellxgene containers behind nginx basic-auth via Docker Compose. Use for wet-lab-facing interactive exploration on an intranet \u2014 not one-off .h5ad viewing (cellxgene launch) or public hosting."
+  "description": "Two-phase skill for hosting AnnData on CellxGene over an internal network: Phase A preps the schema (float32 obsm, unique ids, X_umap); Phase B deploys N cellxgene containers behind nginx basic-auth via Docker Compose. Use for wet-lab-facing interactive exploration on an intranet — not one-off .h5ad viewing (cellxgene launch) or public hosting.",
+  "content_fingerprint": "1953b07eb968db23ce19d5f09372fd3d2c2dae8e0f27d634e3bb83aa8994ee83"
 }

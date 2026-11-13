@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": ".claude/todo/{annual,monthly,weekly}.md \u3068 git log \u3092\u8aad\u3093\u3067\u4eca\u9031\u306e\u30bf\u30b9\u30af\u3092\u512a\u5148\u9806\u4f4d\u4ed8\u304d\u3067\u6c7a\u5b9a\u3057\u3001.claude/todo/weekly.md \u3092\u76f4\u63a5\u66f4\u65b0\u3059\u308b\uff08\u6708\u66dc\u306e\u4f5c\u696d\u958b\u59cb\u524d\u30fbtodo-planner \u30921\u56de\u8d77\u52d5\u3059\u308b\u8efd\u91cf\u7248\uff09\u3002NSM/\u30e1\u30c8\u30ea\u30af\u30b9\u9023\u52d5\u306e\u6226\u7565\u7684\u8a08\u753b\u30fbweekly-review \u5f8c\u306e\u7fcc\u9031\u8a08\u753b\u306f /weekly-plan \u306e\u62c5\u5f53\u3067\u5225\u7269\u3002Use when user asks to [\u4eca\u9031\u306e\u30bf\u30b9\u30af\u3092\u6c7a\u3081\u3066, \u4eca\u9031\u4f55\u3092\u3059\u3079\u304d\u304b, weekly.md \u3092\u66f4\u65b0\u3057\u3066, /plan-weekly]."
+  "description": ".claude/todo/{annual,monthly,weekly}.md と git log を読んで今週のタスクを優先順位付きで決定し、.claude/todo/weekly.md を直接更新する（月曜の作業開始前・todo-planner を1回起動する軽量版）。NSM/メトリクス連動の戦略的計画・weekly-review 後の翌週計画は /weekly-plan の担当で別物。Use when user asks to [今週のタスクを決めて, 今週何をすべきか, weekly.md を更新して, /plan-weekly].",
+  "content_fingerprint": "4e0304ddadc285ee0148594f9e2a5c87fba46880aae0431aff7af85a87062f91"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wraps AWS SAM (Serverless Application Model) Local CLI for testing Lambda functions locally: `sam local invoke` (single invocation with event payload), `sam local start-api` (local API Gateway emulator), `sam local start-lambda` (local Lambda invoke endpoint for AWS SDK clients), and event-payload generation (`sam local generate-event`). For C#/.NET Lambdas, references/dotnet.md covers handler-direct testing with Amazon.Lambda.TestUtilities (TestLambdaContext, TestLambdaLogger) and the dotnet-lambda CLI. Use when testing Lambda + API Gateway + integrated AWS services locally."
+  "description": "Wraps AWS SAM (Serverless Application Model) Local CLI for testing Lambda functions locally: `sam local invoke` (single invocation with event payload), `sam local start-api` (local API Gateway emulator), `sam local start-lambda` (local Lambda invoke endpoint for AWS SDK clients), and event-payload generation (`sam local generate-event`). For C#/.NET Lambdas, references/dotnet.md covers handler-direct testing with Amazon.Lambda.TestUtilities (TestLambdaContext, TestLambdaLogger) and the dotnet-lambda CLI. Use when testing Lambda + API Gateway + integrated AWS services locally.",
+  "content_fingerprint": "f609f9763399e4109026cb6904622b558339d58521f060ee1be4d6ad81312409"
 }

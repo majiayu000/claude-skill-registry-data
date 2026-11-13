@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diagnose why Claude Code is (or isn't) prompting for permission. By default reads only repo-local layers (CLI project, CLI project-local, VSCode workspace). Host-global layers (CLI user `~/.claude/`, VSCode user settings) are read ONLY when the user explicitly confirms \u2014 those files may contain unrelated paths or secrets. Use when user says \"why is it asking me to approve?\", \"permission check\", \"why am I getting prompts?\", \"bypass isn't working\", \"check my permissions\". Read-only diagnostic."
+  "description": "Diagnose why Claude Code is (or isn't) prompting for permission. By default reads only repo-local layers (CLI project, CLI project-local, VSCode workspace). Host-global layers (CLI user `~/.claude/`, VSCode user settings) are read ONLY when the user explicitly confirms — those files may contain unrelated paths or secrets. Use when user says \"why is it asking me to approve?\", \"permission check\", \"why am I getting prompts?\", \"bypass isn't working\", \"check my permissions\". Read-only diagnostic.",
+  "content_fingerprint": "aeb7b5944334740228fccd12e315e3b86f877178eab9f6f58799d6748cd2205f"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Load OpenMed clinical/biomedical NER models from the Hugging Face Hub or a local path and reuse them efficiently across calls. Use when the user wants to load an OpenMed model, control the model cache, run fully offline after a one-time download, reuse a ModelLoader to avoid reloading, set a cache_dir or device, or pick between a registry key, a full Hugging Face id, and a local directory. Pairs with choosing-openmed-models (pick the model) and extracting-clinical-entities (run it)."
+  "description": "Load OpenMed clinical/biomedical NER models from the Hugging Face Hub or a local path and reuse them efficiently across calls. Use when the user wants to load an OpenMed model, control the model cache, run fully offline after a one-time download, reuse a ModelLoader to avoid reloading, set a cache_dir or device, or pick between a registry key, a full Hugging Face id, and a local directory. Pairs with choosing-openmed-models (pick the model) and extracting-clinical-entities (run it).",
+  "content_fingerprint": "bad6f372d43c675bf7c7a2d9b07793a6487a6d377bae8e7875d9277e9da15e1f"
 }

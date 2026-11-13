@@ -14,5 +14,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Spectaculous-Code/raamattu-nyt/blob/main/.claude/skills/error-fixer/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a9bf2415c5212765077186d92b0cea8dc40d6ab63c7b15e48c864be799b3194b",
+  "description": "Fix JavaScript and HTTP errors flagged for AI in the admin dashboard. Queries the database for\nerrors with ai_status='flagged_for_ai', analyzes them, and attempts to fix them.\n\nUse when:\n- User says \""
 }

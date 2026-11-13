@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/CodySwannGT/lisa/blob/main/.claude/skills/sonarqube-fix/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "68b5e4beb1bfe715566e6067438987bd0bc1d934d5ad31440eb4806cbc2af339",
+  "description": "This skill should be used when fixing SonarQube quality gate failures. It runs the sonarqube:check skill to identify failures, fixes the identified issues, and then commits the changes using the git:c"
 }

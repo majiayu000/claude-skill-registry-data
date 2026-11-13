@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Enhancement-overlay decision protocol for STREAMING the output of long-running\nLLM / agent runs from the *backend*, not just wiring a typing animation in the\nUI. Activates when a coder agent must stream final tokens to a chat client,\nsurface intermediate agent steps (which tool, which node, partial reasoning),\nemit custom tool-progress events, choose a transport (SSE vs WebSocket), or\ndecide what to do when the client disconnects mid-stream. The langchain /\nlanggraph skills mention stream modes but stop at \"you can stream\"; this skill\nencodes *what to stream, over what transport, and how to fail safely*."
+  "description": "Enhancement-overlay decision protocol for STREAMING the output of long-running\nLLM / agent runs from the *backend*, not just wiring a typing animation in the\nUI. Activates when a coder agent must stream final tokens to a chat client,\nsurface intermediate agent steps (which tool, which node, partial reasoning),\nemit custom tool-progress events, choose a transport (SSE vs WebSocket), or\ndecide what to do when the client disconnects mid-stream. The langchain /\nlanggraph skills mention stream modes but stop at \"you can stream\"; this skill\nencodes *what to stream, over what transport, and how to fail safely*.",
+  "content_fingerprint": "5c0f662b851ec9236bd974495d918a05859cba784111cfd6fd2a3b736101728c"
 }

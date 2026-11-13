@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u8be2\u4ea4\u6613\u6240\u91cd\u70b9\u63d0\u793a\u8bc1\u5238\u3002\u63a5\u53e3\uff1aGET /api/v2/market/data/stk-alert-broker\u3002\u6240\u6709\u8bf7\u6c42\u5fc5\u987b\u8bbe\u7f6e FTSHARE_API_KEY\u3002"
+  "description": "查询交易所重点提示证券。接口：GET /api/v2/market/data/stk-alert-broker。所有请求必须设置 FTSHARE_API_KEY。",
+  "content_fingerprint": "e82529a16734be848346dd36695f7d4f4a24fa4c136c52c176e53e2c8e8f6d5f"
 }

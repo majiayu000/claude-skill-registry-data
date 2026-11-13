@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Saturate/skills/blob/main/managing-ports/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "c00c8cf50baec6c8caa63dece0394c95baf91a81de15167080ec4fa7e7efdf9a",
+  "description": "Detects framework, finds available ports, and starts dev servers with correct port flags. Resolves port conflicts when multiple projects compete for the same default port (common with git worktrees). "
 }

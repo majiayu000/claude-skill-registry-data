@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `domain-design` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage domain-design --single`: the engine emits one run-stage directive for domain-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `domain-design` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage domain-design --single`: the engine emits one run-stage directive for domain-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "ac1c88855e18f361b66cf186c96ff5cb07b2b9468df2801ddbd215f6022a2cb1"
 }

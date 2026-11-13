@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `units-generation` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage units-generation --single`: the engine emits one run-stage directive for units-generation and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `units-generation` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage units-generation --single`: the engine emits one run-stage directive for units-generation and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "116d2af09a415367fcf78f810c8c98cc31c418821a65ca6e29655551506b110b"
 }

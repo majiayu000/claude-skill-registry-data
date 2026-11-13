@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Authenticate production Podium integrations and survive the auth-side failures \u2014 OAuth2 access-token expiry storms, refresh-token decay after 90 days of non-use, scope drift on re-grant, secret rotation without downtime, multi-tenant token routing, leakage in commits. Use when hardening token caching, building a refresh-token decay monitor, rotating Podium client credentials, or recovering from 401/403 auth cascades. Trigger with \"podium auth\", \"podium oauth\", \"podium token refresh\", \"podium scope drift\", \"podium credential rotation\", \"podium multi-location auth\"."
+  "description": "Authenticate production Podium integrations and survive the auth-side failures — OAuth2 access-token expiry storms, refresh-token decay after 90 days of non-use, scope drift on re-grant, secret rotation without downtime, multi-tenant token routing, leakage in commits. Use when hardening token caching, building a refresh-token decay monitor, rotating Podium client credentials, or recovering from 401/403 auth cascades. Trigger with \"podium auth\", \"podium oauth\", \"podium token refresh\", \"podium scope drift\", \"podium credential rotation\", \"podium multi-location auth\".",
+  "content_fingerprint": "492f0554ab1a7b50bf8f111c05d2b9ae744da744dbe566e821ac835b192fc22b"
 }

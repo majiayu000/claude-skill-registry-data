@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Help users chaos test their app with mirrord: inject artificial latency or connection errors into a mirrord session's outgoing traffic via per-session chaos rules managed with the `mirrord chaos` CLI. Use when a user wants to add latency or delay to outgoing connections or a dependency (e.g. a slow database), simulate connection failures (reset, timed out, refused), test app behavior under degraded network conditions, or wire chaos rules into CI test runs. Always use this skill instead of the deprecated _experimental_.latency mirrord config option."
+  "description": "Help users chaos test their app with mirrord: inject artificial latency or connection errors into a mirrord session's outgoing traffic via per-session chaos rules managed with the `mirrord chaos` CLI. Use when a user wants to add latency or delay to outgoing connections or a dependency (e.g. a slow database), simulate connection failures (reset, timed out, refused), test app behavior under degraded network conditions, or wire chaos rules into CI test runs. Always use this skill instead of the deprecated _experimental_.latency mirrord config option.",
+  "content_fingerprint": "4b91bb5c7c8c82acf60348835b2ba3c5a34e3959a51294488026257d5cf49562"
 }

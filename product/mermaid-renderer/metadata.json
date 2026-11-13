@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Phase 4.5 hook by Phase-2-Quality-Fix sprint. \u5c01\u88c5 mmdc/npx Mermaid CLI subprocess,\u628a LLM \u8f93\u51fa\u7684 `<div class=\"mermaid\">...</div>` block \u6e32\u67d3\u4e3a PNG\u3002Use AFTER cite-bound-content-generator (Phase 4 Turn 1) and BEFORE report-bundle-builder (Phase 5). Production smoke must fail closed if rendering fails."
+  "description": "Phase 4.5 hook by Phase-2-Quality-Fix sprint. 封装 mmdc/npx Mermaid CLI subprocess,把 LLM 输出的 `<div class=\"mermaid\">...</div>` block 渲染为 PNG。Use AFTER cite-bound-content-generator (Phase 4 Turn 1) and BEFORE report-bundle-builder (Phase 5). Production smoke must fail closed if rendering fails.",
+  "content_fingerprint": "5aaa974f45fd5944105ea60fc349170665aa5e311b189ff48e4e01cba952236a"
 }

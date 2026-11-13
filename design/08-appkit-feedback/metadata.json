@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Add user feedback (thumbs up/down) to an AppKit chat application, linked to MLflow assessments via the Databricks Assessments REST API. Covers the Vote table, feedback API routes (with AppKit-native auth via `getExecutionContext().client.config.authenticate()`), MLflow trace integration, and feedback UI components. Use when asked to add feedback, thumbs up/down, ratings, or link user judgments to MLflow traces. Triggers on \"feedback\", \"thumbs up\", \"thumbs down\", \"rate response\", \"MLflow assessment\", \"user rating\", \"vote on message\"."
+  "description": "Add user feedback (thumbs up/down) to an AppKit chat application, linked to MLflow assessments via the Databricks Assessments REST API. Covers the Vote table, feedback API routes (with AppKit-native auth via `getExecutionContext().client.config.authenticate()`), MLflow trace integration, and feedback UI components. Use when asked to add feedback, thumbs up/down, ratings, or link user judgments to MLflow traces. Triggers on \"feedback\", \"thumbs up\", \"thumbs down\", \"rate response\", \"MLflow assessment\", \"user rating\", \"vote on message\".",
+  "content_fingerprint": "5d6134fbe394083a9addfb05117b5c548a0547d9859c41af1c66181f27766095"
 }

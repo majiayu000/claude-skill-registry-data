@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Checks requirements.txt, pyproject.toml, and package.json dependency manifests for surface-level direct-dependency footguns: standard-library shadowing pins, abandoned backports, unpinned dependencies, and obvious intra-manifest conflicts, plus opt-in PyPI yanked releases. Use when the user asks to check a manifest for dependency problems, asks why dependencies won't install or whether anything is wrong with their dependencies, wants a dependency autopsy, or suspects dependency manifest rot. Runs offline by default as a local tool for the user's own project, not repository CI."
+  "description": "Checks requirements.txt, pyproject.toml, and package.json dependency manifests for surface-level direct-dependency footguns: standard-library shadowing pins, abandoned backports, unpinned dependencies, and obvious intra-manifest conflicts, plus opt-in PyPI yanked releases. Use when the user asks to check a manifest for dependency problems, asks why dependencies won't install or whether anything is wrong with their dependencies, wants a dependency autopsy, or suspects dependency manifest rot. Runs offline by default as a local tool for the user's own project, not repository CI.",
+  "content_fingerprint": "5c3ec4e3958d08635d8a9ea70775fa3d7e298403c9b10895e9f72035c6e29245"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Improve the internal structure of existing code without changing its observable behaviour. Use when the user says \"refactor this\", \"clean this up\", \"simplify this\", \"extract a method/class\", \"rename for clarity\", \"reduce this duplication\", or \"tidy this without changing behaviour\". The defining constraint is behaviour preservation: the tests pass before and after, and the public contract is unchanged. Do NOT use to add or change behaviour, fix a bug, or build a feature (that is create-code-generation), and do NOT use to delete dead code as the primary goal."
+  "description": "Improve the internal structure of existing code without changing its observable behaviour. Use when the user says \"refactor this\", \"clean this up\", \"simplify this\", \"extract a method/class\", \"rename for clarity\", \"reduce this duplication\", or \"tidy this without changing behaviour\". The defining constraint is behaviour preservation: the tests pass before and after, and the public contract is unchanged. Do NOT use to add or change behaviour, fix a bug, or build a feature (that is create-code-generation), and do NOT use to delete dead code as the primary goal.",
+  "content_fingerprint": "fef57a621439e76a57d17ba44d017ed77d2ad1e501a70e1e341d5896d183351c"
 }

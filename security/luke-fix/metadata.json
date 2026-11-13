@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Incremental fix-verify loop for the Luke codebase. Runs an audit, takes the highest-severity finding, proposes a fix, applies it after confirmation, then re-runs the audit to verify no regressions were introduced. Repeats until no HIGH or CRITICAL findings remain. Use after vibe coding sessions to systematically fix audit findings. Optional: specify which audit to run \u2014 /luke-fix audit | bugs | security | full Default: runs /luke-audit (architectural compliance)."
+  "description": "Incremental fix-verify loop for the Luke codebase. Runs an audit, takes the highest-severity finding, proposes a fix, applies it after confirmation, then re-runs the audit to verify no regressions were introduced. Repeats until no HIGH or CRITICAL findings remain. Use after vibe coding sessions to systematically fix audit findings. Optional: specify which audit to run — /luke-fix audit | bugs | security | full Default: runs /luke-audit (architectural compliance).",
+  "content_fingerprint": "aaccb7c600e65ccf37f40a01929b6f039a1cf41ea3d0d6931ab1bb592b1e69fa"
 }

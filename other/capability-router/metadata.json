@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use FIRST quando user faz request n\u00e3o-trivial. Retorna index resumido de plugins, MCP servers, skills e agents EOI-OS por capability category, com guidance \"use X when Y\". Trigger words/contexts:user pede algo complexo que requer ferramentas (deploy, security audit, design, knowledge graph, memory, swarm, data query, etc); user pergunta \"que ferramenta usar pra X\"; user faz request amb\u00edguo que pode mapear a m\u00faltiplos tools; in\u00edcio de qualquer task que vai usar mais de 1 tool. N\u00c3O usar para chat casual, perguntas simples, ou tasks j\u00e1 obvious (e.g., \"l\u00ea esse arquivo\" \u2192 Read direto)."
+  "description": "Use FIRST quando user faz request não-trivial. Retorna index resumido de plugins, MCP servers, skills e agents EOI-OS por capability category, com guidance \"use X when Y\". Trigger words/contexts:user pede algo complexo que requer ferramentas (deploy, security audit, design, knowledge graph, memory, swarm, data query, etc); user pergunta \"que ferramenta usar pra X\"; user faz request ambíguo que pode mapear a múltiplos tools; início de qualquer task que vai usar mais de 1 tool. NÃO usar para chat casual, perguntas simples, ou tasks já obvious (e.g., \"lê esse arquivo\" → Read direto).",
+  "content_fingerprint": "18498301862f0863ccdf0e9e72690d8d93df9a20693812302ef66e3ae86bbc37"
 }

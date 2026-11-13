@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user says \"write a spec\", \"/write-spec\", \"add a feature file\", \"write a Gherkin spec\", \"specs for this feature\", or asks to capture a feature's behaviour as a Gherkin .feature file (Cucumber/SpecFlow/Behave/pytest-bdd style). Discovers the repo's existing specs folder and conventions, discusses the feature interactively to extract scenarios (golden path, edges, errors), then writes the .feature file matching local style. Pulls context from a related ADR if one exists. Standalone counterpart to /plan-change, which writes ADR + spec together."
+  "description": "Use when the user says \"write a spec\", \"/write-spec\", \"add a feature file\", \"write a Gherkin spec\", \"specs for this feature\", or asks to capture a feature's behaviour as a Gherkin .feature file (Cucumber/SpecFlow/Behave/pytest-bdd style). Discovers the repo's existing specs folder and conventions, discusses the feature interactively to extract scenarios (golden path, edges, errors), then writes the .feature file matching local style. Pulls context from a related ADR if one exists. Standalone counterpart to /plan-change, which writes ADR + spec together.",
+  "content_fingerprint": "804255d3f241a63a70e996f5348de77816ed0f851fd3f7a412d05bfd475fb3de"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "OPA Gatekeeper ConstraintTemplate \u63a2\u7d22\u6587\u6863\u7f16\u5199\u89c4\u8303\u3002\u7528\u4e8e\u5728 constraint-explorers/ \u76ee\u5f55\u4e0b\u521b\u5efa\u7ed3\u6784\u5316\u7684 Constraint \u6df1\u5ea6\u63a2\u7d22\u6587\u6863\uff0c\u683c\u5f0f\u53c2\u8003 k8srequiredlabels.md\u3002\u5f53\u9700\u8981\u6df1\u5165\u7406\u89e3\u67d0\u4e2a Gatekeeper ConstraintTemplate \u7684 Rego \u903b\u8f91\u3001\u53c2\u6570\u914d\u7f6e\u3001\u5b9e\u9645\u7528\u4f8b\u65f6\u4f7f\u7528\u3002"
+  "description": "OPA Gatekeeper ConstraintTemplate 探索文档编写规范。用于在 constraint-explorers/ 目录下创建结构化的 Constraint 深度探索文档，格式参考 k8srequiredlabels.md。当需要深入理解某个 Gatekeeper ConstraintTemplate 的 Rego 逻辑、参数配置、实际用例时使用。",
+  "content_fingerprint": "5f3a8f98c70831c3868327072170aa3403aee10b19eb691e71131c925c77da50"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill when writing or debugging SOQL queries: SELECT syntax, WHERE filters, ORDER BY, LIMIT, OFFSET, relationship queries (child-to-parent and parent-to-child), aggregate functions (COUNT, SUM, AVG, MIN, MAX), and date literals. Trigger keywords: soql, query, SELECT FROM WHERE. NOT for SOQL injection or CRUD/FLS enforcement \u2014 use apex/soql-security. NOT for query performance and index tuning \u2014 use data/soql-query-optimization. NOT for SOSL cross-object / full-text search \u2014 use data/sosl-search-patterns."
+  "description": "Use this skill when writing or debugging SOQL queries: SELECT syntax, WHERE filters, ORDER BY, LIMIT, OFFSET, relationship queries (child-to-parent and parent-to-child), aggregate functions (COUNT, SUM, AVG, MIN, MAX), and date literals. Trigger keywords: soql, query, SELECT FROM WHERE. NOT for SOQL injection or CRUD/FLS enforcement — use apex/soql-security. NOT for query performance and index tuning — use data/soql-query-optimization. NOT for SOSL cross-object / full-text search — use data/sosl-search-patterns.",
+  "content_fingerprint": "49ad3d3e03c5978ee4d7e9d2130fad852e0e8821480955d841912cf98118bd2b"
 }

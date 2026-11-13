@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific behavior of the `mariadb-binlog` utility \u2014 that decoded row events (`-v`/`-vv`) are commented pseudo-SQL riding alongside the still-executable base64 `BINLOG` blob (not a replacement for it), that `ANNOTATE_ROWS` original-SQL comments are a MariaDB-only event printed by default, that `--flashback` generates MariaDB-specific reverse/undo SQL for DML only, `--disable-log-bin` to avoid re-logging on replay, and that replay means piping into the `mariadb` client, never running the tool itself. Use when writing, generating, or reviewing commands that read, filter, or replay MariaDB binary logs."
+  "description": "MariaDB-specific behavior of the `mariadb-binlog` utility — that decoded row events (`-v`/`-vv`) are commented pseudo-SQL riding alongside the still-executable base64 `BINLOG` blob (not a replacement for it), that `ANNOTATE_ROWS` original-SQL comments are a MariaDB-only event printed by default, that `--flashback` generates MariaDB-specific reverse/undo SQL for DML only, `--disable-log-bin` to avoid re-logging on replay, and that replay means piping into the `mariadb` client, never running the tool itself. Use when writing, generating, or reviewing commands that read, filter, or replay MariaDB binary logs.",
+  "content_fingerprint": "0ab6be4009e201e8aabc9d73e5e1fb6c6943086215b99927981f6ff3b2bc14a3"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when a SKILL.md file needs compression, deduplication, or token reduction. It provides an embedding-based compression pipeline that detects and removes redundant chunks within SKILL.md files using local embeddings (all-MiniLM-L6-v2). Two-pass approach: (1) free intra-skill deduplication via cosine similarity clustering, (2) optional LLM-judged graded eval to detect pretraining overlap. Typical result: 25-46% token reduction with zero quality loss. This skill is not intended for editing skill content, creating new skills, routing optimization, or cross-skill deduplication."
+  "description": "This skill should be used when a SKILL.md file needs compression, deduplication, or token reduction. It provides an embedding-based compression pipeline that detects and removes redundant chunks within SKILL.md files using local embeddings (all-MiniLM-L6-v2). Two-pass approach: (1) free intra-skill deduplication via cosine similarity clustering, (2) optional LLM-judged graded eval to detect pretraining overlap. Typical result: 25-46% token reduction with zero quality loss. This skill is not intended for editing skill content, creating new skills, routing optimization, or cross-skill deduplication.",
+  "content_fingerprint": "1c605b60b031d74ed48528ee925ebd45a721c0af88fdd776b661bda187f28f8c"
 }

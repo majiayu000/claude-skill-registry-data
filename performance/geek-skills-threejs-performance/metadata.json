@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Three.js \u6027\u80fd\u4f18\u5316\u6307\u5357\u3002\u5f53 Three.js/React Three Fiber \u9879\u76ee\u51fa\u73b0\u6389\u5e27\u3001\u5185\u5b58\u589e\u957f\u3001\u52a0\u8f7d\u7f13\u6162\u3001\u7ed8\u5236\u8c03\u7528\u8fc7\u591a\uff0c\u6216\u9700\u8981\u8fc1\u79fb WebGPU\u3001\u5b9e\u73b0\u5927\u89c4\u6a21\u7c92\u5b50/\u5b9e\u4f8b\u5316\u6e32\u67d3\u3001\u914d\u7f6e\u8d44\u6e90\u538b\u7f29\u7ba1\u7ebf\u65f6\u4f7f\u7528\u3002\u89e6\u53d1\u5173\u952e\u8bcd\uff1a\"Three.js \u4f18\u5316\"\u3001\"WebGPU\"\u3001\"draw calls\"\u3001\"\u5185\u5b58\u6cc4\u6f0f\"\u3001\"TSL\"\u3001\"InstancedMesh\"\u3001\"R3F \u4f18\u5316\"\u7b49\u3002\u4e0d\u7528\u4e8e\uff1a\u901a\u7528 React \u6027\u80fd\u95ee\u9898\uff08\u7528 vercel-react-best-practices\uff09\u3001WebGL/Three.js \u5165\u95e8\u6559\u5b66\u30013D \u7f8e\u672f\u8d44\u4ea7\u7684\u5236\u4f5c\u672c\u8eab\u3002"
+  "description": "Three.js 性能优化指南。当 Three.js/React Three Fiber 项目出现掉帧、内存增长、加载缓慢、绘制调用过多，或需要迁移 WebGPU、实现大规模粒子/实例化渲染、配置资源压缩管线时使用。触发关键词：\"Three.js 优化\"、\"WebGPU\"、\"draw calls\"、\"内存泄漏\"、\"TSL\"、\"InstancedMesh\"、\"R3F 优化\"等。不用于：通用 React 性能问题（用 vercel-react-best-practices）、WebGL/Three.js 入门教学、3D 美术资产的制作本身。",
+  "content_fingerprint": "32a8ef3e9c32a5f7319242d981be6288b03b378ba023facd636a0618db306d29"
 }

@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Safely regenerate driver code from .mex configuration files and build the project in one atomic operation. This is the ONLY correct way to build projects that use S32 Configuration Tools. Selects the project, triggers 'Update Code and Build' (which regenerates all driver code from .mex files then compiles), waits for both code generation and build jobs, and verifies results. Prevents stale/missing generated code errors that occur when using plain build on .mex projects."
+  "description": "Safely regenerate driver code from .mex configuration files and build the project in one atomic operation. This is the ONLY correct way to build projects that use S32 Configuration Tools. Selects the project, triggers 'Update Code and Build' (which regenerates all driver code from .mex files then compiles), waits for both code generation and build jobs, and verifies results. Prevents stale/missing generated code errors that occur when using plain build on .mex projects.",
+  "content_fingerprint": "cc439d03254802ce2115529457c8ef193f36ac301394bd2b1035ff010caf2c8f"
 }

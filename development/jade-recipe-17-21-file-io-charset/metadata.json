@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pins an explicit UTF-8 charset on the file reader, writer and print stream constructors that JADE uses to write files it later reads back itself. JEP 400 (JDK 18) changed those constructors from the platform default charset to UTF-8. Agent-mode recipe: the shard contract names the files; this document defines the transform and the sites it must refuse to touch."
+  "description": "Pins an explicit UTF-8 charset on the file reader, writer and print stream constructors that JADE uses to write files it later reads back itself. JEP 400 (JDK 18) changed those constructors from the platform default charset to UTF-8. Agent-mode recipe: the shard contract names the files; this document defines the transform and the sites it must refuse to touch.",
+  "content_fingerprint": "bca9003ec27c69d05146c5103cb76f83063b0fd7b6cd1bc0d19b545d71e4074d"
 }

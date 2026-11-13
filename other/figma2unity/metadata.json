@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u628a figma2html \u7ba1\u7ebf\u6355\u83b7\u7684\u4e2d\u95f4\u8868\u793a(IR:.ui.json \u50cf\u7d20\u5feb\u7167 + flow.json \u4ea4\u4e92\u58f0\u660e)\u7f16\u8bd1\u6210 Unity UI Toolkit \u8d44\u4ea7(UXML+USS)\u4e0e C# \u8fd0\u884c\u65f6 flow \u7ed1\u5b9a\u5668\u3002\u8f93\u5165 = figma2html capture \u7684\u4ea7\u7269;\u672c skill \u662f\u7f16\u8bd1\u540e\u7aef,\u4e0d\u542b capture\u3002\u8981\u5728 Unity \u91cc\u8fd8\u539f figma \u754c\u9762\u50cf\u7d20\u4e0e\u4ea4\u4e92(\u5e95\u5c4f+\u5f39\u7a97/\u5b88\u536b/\u5217\u8868/\u52fe\u9009)\u65f6\u4f7f\u7528\u3002"
+  "description": "把 figma2html 管线捕获的中间表示(IR:.ui.json 像素快照 + flow.json 交互声明)编译成 Unity UI Toolkit 资产(UXML+USS)与 C# 运行时 flow 绑定器。输入 = figma2html capture 的产物;本 skill 是编译后端,不含 capture。要在 Unity 里还原 figma 界面像素与交互(底屏+弹窗/守卫/列表/勾选)时使用。",
+  "content_fingerprint": "2d94ed576bbd62e6562f9f858cda3a34f49b0cd63078ba59149eb84d45143bd5"
 }

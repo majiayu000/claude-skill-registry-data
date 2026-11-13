@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs this project's SonarQube analysis, extracts the quality gate, bugs, vulnerabilities, code smells, duplication and coverage through the SonarQube Web API, traces every group of findings to the norm, template or Checkstyle setting in `.claude/` that produced it, and writes `docs/lessons-learned/sonar-NNN.md` focused on fixing the cause so the next analysis has fewer issues or none. Ends with the `/report-issue` command that files it on the Nerviz repository, where the fix belongs. Explicit invocation only."
+  "description": "Runs this project's SonarQube analysis, extracts the quality gate, bugs, vulnerabilities, code smells, duplication and coverage through the SonarQube Web API, traces every group of findings to the norm, template or Checkstyle setting in `.claude/` that produced it, and writes `docs/lessons-learned/sonar-NNN.md` focused on fixing the cause so the next analysis has fewer issues or none. Ends with the `/report-issue` command that files it on the Nerviz repository, where the fix belongs. Explicit invocation only.",
+  "content_fingerprint": "e256461c74d6d7cdf9644cc1b0cebb5ec87a8aaa4086be024759160e19402d57"
 }

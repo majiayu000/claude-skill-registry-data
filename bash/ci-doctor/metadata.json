@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diagnose and fix GitLab CI/pipeline failures, and harden .gitlab-ci.yml against this repo's recurring failure classes. Use when the user says \"pipeline failed\", \"CI is red\", \"the tag build failed\", \"publish:android/publish:ios failed\", \"check the pipeline\", \"why didn't the release go out\", \"harden CI\", or before tagging a release (\"pre-tag check\"). Also load this BEFORE editing .gitlab-ci.yml for any reason \u2014 it encodes the hard rules that past pipeline breakage taught."
+  "description": "Diagnose and fix GitLab CI/pipeline failures, and harden .gitlab-ci.yml against this repo's recurring failure classes. Use when the user says \"pipeline failed\", \"CI is red\", \"the tag build failed\", \"publish:android/publish:ios failed\", \"check the pipeline\", \"why didn't the release go out\", \"harden CI\", or before tagging a release (\"pre-tag check\"). Also load this BEFORE editing .gitlab-ci.yml for any reason — it encodes the hard rules that past pipeline breakage taught.",
+  "content_fingerprint": "69f053bfc2467cf8bb2a729c461156d28ce2711cd1592439feeb0bf01feaef99"
 }

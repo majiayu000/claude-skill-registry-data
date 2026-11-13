@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/nathanial/lean-workspace/blob/main/.claude/skills/reactive-same-frame-testing/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "0f69469fc873978fb71042e89b5d5cbe1d07f22a04ffbdffd7f071e41efc9d24",
+  "description": "Test same-frame event behavior in the Reactive FRP library. Use when: (1) testing\nzipE, difference, or mergeList combinators that require simultaneous firing,\n(2) tests fail because events fire in sep"
 }

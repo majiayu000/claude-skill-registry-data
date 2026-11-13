@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7aef\u5230\u7aef\u81ea\u52a8\u751f\u6210\u5174\u94f6\u7406\u8d22\u591a\u8d44\u4ea7\u6295\u8d44\u90e8\u4ea7\u54c1\u8fd0\u4f5c\u5468\u62a5\u3002\u5b8c\u6574\u6d41\u7a0b\u5305\u62ec\uff1a(1)\u66f4\u65b0config\u65e5\u671f\u914d\u7f6e\uff0c(2)\u8fd0\u884cPython\u6570\u636e\u5904\u7406\u7ba1\u7ebf(\u79fb\u52a8\u6587\u4ef6\u3001AI\u4ea7\u54c1\u5206\u7c7b\u3001\u751f\u6210\u7ed3\u679c\u8868\u3001\u8ba1\u7b97\u57fa\u51c6\u3001\u6536\u76ca\u9884\u6d4b)\uff0c(3)\u7528openpyxl\u66f4\u65b0Excel\u94fe\u63a5\u5de5\u4f5c\u7c3f\u4e2d\u7684\u5916\u90e8\u6587\u4ef6\u8def\u5f84\u548c\u516c\u5f0f\u5f15\u7528\uff0c(4)\u5c06Excel\u8868\u683c\u622a\u56fe\u5e76\u6309\u4e66\u7b7e\u987a\u5e8f\u63d2\u5165Word\u6a21\u7248\u751f\u6210\u6700\u7ec8docx/pdf\u5468\u62a5\u3002\u5f53\u7528\u6237\u8bf4\"\u751f\u6210XX\u65e5\u671f\u7684\u5468\u62a5\"\u3001\"\u751f\u6210\u672c\u5468\u5468\u62a5\"\u3001\"\u5468\u62a5\u81ea\u52a8\u5316\"\u3001\"run weekly report for YYYYMMDD\"\u65f6\u89e6\u53d1\u3002"
+  "description": "端到端自动生成兴银理财多资产投资部产品运作周报。完整流程包括：(1)更新config日期配置，(2)运行Python数据处理管线(移动文件、AI产品分类、生成结果表、计算基准、收益预测)，(3)用openpyxl更新Excel链接工作簿中的外部文件路径和公式引用，(4)将Excel表格截图并按书签顺序插入Word模版生成最终docx/pdf周报。当用户说\"生成XX日期的周报\"、\"生成本周周报\"、\"周报自动化\"、\"run weekly report for YYYYMMDD\"时触发。",
+  "content_fingerprint": "e8ffd1306227f7a1a574d7892a311e6747a9e7430fb855f6bbd0405899bc5d58"
 }

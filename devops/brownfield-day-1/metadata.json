@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Derive a complete AI Layer (CLAUDE.md + customized .claude/commands/) for a codebase that has no AI Layer yet. Dispatches N parallel Explorer sub-agents (3 for small repos, 5-10 for monorepos), converges into codebase-analysis.md, then dispatches 3 Builder sub-agents to produce the full AI Layer. One-shot \u2014 the agent orchestrates everything end-to-end. Also usable as a YourProduct client-onboarding capability: drop an AI layer onto a client's brownfield repo in a single run."
+  "description": "Derive a complete AI Layer (CLAUDE.md + customized .claude/commands/) for a codebase that has no AI Layer yet. Dispatches N parallel Explorer sub-agents (3 for small repos, 5-10 for monorepos), converges into codebase-analysis.md, then dispatches 3 Builder sub-agents to produce the full AI Layer. One-shot — the agent orchestrates everything end-to-end. Also usable as a YourProduct client-onboarding capability: drop an AI layer onto a client's brownfield repo in a single run.",
+  "content_fingerprint": "0f6d14bf70f10ae20356faf3d342ffa99d72bf46057e63c79970a57e90b2978a"
 }

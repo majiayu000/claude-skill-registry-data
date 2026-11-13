@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this to strip PII (emails, credit cards, SSNs, phone numbers, IPs, IBANs) out of text before it is logged to a tracing backend or sent to a third-party model. Trigger on \"redact PII\", \"scrub sensitive data\", \"mask PII before logging\", \"don't send customer data to the tracing tool\", especially for finance/healthcare/regulated apps. Ships a runnable, tested scrubber with a Luhn check to cut false positives."
+  "description": "Use this to strip PII (emails, credit cards, SSNs, phone numbers, IPs, IBANs) out of text before it is logged to a tracing backend or sent to a third-party model. Trigger on \"redact PII\", \"scrub sensitive data\", \"mask PII before logging\", \"don't send customer data to the tracing tool\", especially for finance/healthcare/regulated apps. Ships a runnable, tested scrubber with a Luhn check to cut false positives.",
+  "content_fingerprint": "d3ef77e05caaf1adef37e411a3a7167e1088467a20c5e049a4afb9b3c7836c61"
 }

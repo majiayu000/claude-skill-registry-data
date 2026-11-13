@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Execute the S32Debugger workflow that programs an image and then continues debugging from flash in the same GDB session. Use this whenever the user wants to flash an ELF or image and keep the session alive for symbolic debug afterward, continue in the same GDB session after programming, or apply the post-flash reset/register-cache/PC/symbol sequence instead of ending the flow with `fl_close`."
+  "description": "Execute the S32Debugger workflow that programs an image and then continues debugging from flash in the same GDB session. Use this whenever the user wants to flash an ELF or image and keep the session alive for symbolic debug afterward, continue in the same GDB session after programming, or apply the post-flash reset/register-cache/PC/symbol sequence instead of ending the flow with `fl_close`.",
+  "content_fingerprint": "e529ccd7b141dcd84ab89a32fff41463ddc56eefb5761f006d958ea896ad409e"
 }

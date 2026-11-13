@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Complete the data analysis tasks delegated by the user.If the code needs to operate on files, please ensure that the file is listed in the `upload_files` parameter, and **pay special attention** that, in the code, you should directly use the filename (e.g., `open('data.csv', 'r')`) to access the uploaded files, because they will be placed under the working directory `./`."
+  "description": "Complete the data analysis tasks delegated by the user.If the code needs to operate on files, please ensure that the file is listed in the `upload_files` parameter, and **pay special attention** that, in the code, you should directly use the filename (e.g., `open('data.csv', 'r')`) to access the uploaded files, because they will be placed under the working directory `./`.",
+  "content_fingerprint": "aea007096cc3df69fabe500c60e89d5fcacd4b2b48b7c2b1a3ccfd3426fd6060"
 }

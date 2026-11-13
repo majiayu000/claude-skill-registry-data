@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configure Salesforce Setup from a session when the Metadata API has no route for it - decide deploy vs scratch-org definition vs browser, gate the decision on the org's own describeMetadata, hand a headless browser one single-use authenticated session without leaking a frontdoor URL, drive Setup from the accessibility tree, and prove the change with SetupAuditTrail. Use for org preferences and feature switches with no metadata type, never for configuration a deploy can carry."
+  "description": "Configure Salesforce Setup from a session when the Metadata API has no route for it - decide deploy vs scratch-org definition vs browser, gate the decision on the org's own describeMetadata, hand a headless browser one single-use authenticated session without leaking a frontdoor URL, drive Setup from the accessibility tree, and prove the change with SetupAuditTrail. Use for org preferences and feature switches with no metadata type, never for configuration a deploy can carry.",
+  "content_fingerprint": "da6c3847ce9dc702741cb04cef737a850d451ca5f40e0fe98227207c00a8f4d9"
 }

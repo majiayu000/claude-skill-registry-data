@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/OpenDCAI/leonai/blob/main/.claude/skills/wtpr/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "7da9a0713aec925c33845042dd6810e1b4412473e8186b94541a2e8052a8ee17",
+  "description": "在 git worktree 分支上执行完整的 PR 提交流程：自动识别当前 worktree、处理未提交改动、rebase 到最新 origin/dev、force push、创建或更新 GitHub PR。当用户在 worktree 中想提交 PR、追加新 commit 到已有 PR、或执行 wtpr 命令时使用。"
 }

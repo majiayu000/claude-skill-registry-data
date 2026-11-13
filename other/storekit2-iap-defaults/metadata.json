@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Default StoreKit 2 architecture for a single non-consumable IAP (Remove Ads, Pro Unlock): `StoreKitBridge` isolates `import StoreKit` to one Live file; launch-time `Transaction.updates`; `Transaction.currentEntitlements` for unlock state; `finish()` timing; `AppStore.sync()` restore; `.storekit` + Fake-bridge test seam. Invoke when adding IAP, wiring StoreKit 2, or asked \"how do I unlock a purchase / restore purchases / test IAP\". Does NOT cover subscriptions \u2192 apple-skills:storekit, or ad SDKs \u2192 monetization-sdk-integration."
+  "description": "Default StoreKit 2 architecture for a single non-consumable IAP (Remove Ads, Pro Unlock): `StoreKitBridge` isolates `import StoreKit` to one Live file; launch-time `Transaction.updates`; `Transaction.currentEntitlements` for unlock state; `finish()` timing; `AppStore.sync()` restore; `.storekit` + Fake-bridge test seam. Invoke when adding IAP, wiring StoreKit 2, or asked \"how do I unlock a purchase / restore purchases / test IAP\". Does NOT cover subscriptions → apple-skills:storekit, or ad SDKs → monetization-sdk-integration.",
+  "content_fingerprint": "0c8e021652725027f2f9bec42c4ef1436b0a5e69eb2c32e73cb81d0d12a733d3"
 }

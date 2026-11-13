@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implement one phase of a plan stored as GitHub issues in the repository of the current working directory. Given the URL of a phase (child) issue it implements that phase; given the parent plan issue it finds and implements the current phase. Only implements a single phase per invocation, then stops for user review. It opens a pull request that references the phase issue so merging it closes the issue automatically. Never merges the pull request."
+  "description": "Implement one phase of a plan stored as GitHub issues in the repository of the current working directory. Given the URL of a phase (child) issue it implements that phase; given the parent plan issue it finds and implements the current phase. Only implements a single phase per invocation, then stops for user review. It opens a pull request that references the phase issue so merging it closes the issue automatically. Never merges the pull request.",
+  "content_fingerprint": "33792398497fdce95ecbc2f3830dbb5c91e10a5a15b6dea0734464db55275bcc"
 }

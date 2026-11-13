@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reconcile existing repository documentation with the current implementation, especially after verified hotfixes or after QA in an unattended task. A manual run first asks whether to align only the docs a specific change touched (trigger scope) or rescan the whole repo; unattended runs use the scope the dispatch states and default to the whole repo. Follow cross-repo references for evidence; edit only documentation in the authorized repo, annotating conflicting historical records. Not for fixing code, deploying, inventing requirements, or building a new documentation suite."
+  "description": "Reconcile existing repository documentation with the current implementation, especially after verified hotfixes or after QA in an unattended task. A manual run first asks whether to align only the docs a specific change touched (trigger scope) or rescan the whole repo; unattended runs use the scope the dispatch states and default to the whole repo. Follow cross-repo references for evidence; edit only documentation in the authorized repo, annotating conflicting historical records. Not for fixing code, deploying, inventing requirements, or building a new documentation suite.",
+  "content_fingerprint": "d953346ea28ae6781fdd71a5cfaa957d814e9d7ddc01ca765c3e56793babc7db"
 }

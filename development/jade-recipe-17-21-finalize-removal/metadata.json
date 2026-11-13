@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Removes Object.finalize() overrides in favour of the close or shutdown method each of them already delegates to. JEP 421 (JDK 18) deprecated finalization for removal. Agent-mode recipe: the shard contract names the files; this document defines the transform and the condition that forces NEEDS_REVIEW."
+  "description": "Removes Object.finalize() overrides in favour of the close or shutdown method each of them already delegates to. JEP 421 (JDK 18) deprecated finalization for removal. Agent-mode recipe: the shard contract names the files; this document defines the transform and the condition that forces NEEDS_REVIEW.",
+  "content_fingerprint": "c5dce850cf2fe217f0931cf1a0a2aa892492788ca1ddde7fb0c7618cb173c08b"
 }

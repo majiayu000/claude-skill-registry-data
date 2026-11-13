@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Planificador pre-pipeline de solo lectura que reconcilia el backlog con git, clasifica la aptitud de cada ticket, propone un DAG de grupos y recomienda por cual empezar; solo escribe su informe y su JSON. Usar cuando hay que decidir que pipeline o batch autonomo lanzar sobre el backlog vivo. No usar para ejecutar el pipeline ni mutar el backlog (ver orchestrate-pipeline), para auditar un pipeline cerrado (ver audit-pipeline) ni para dar de alta tickets (ver backlog-admit)."
+  "description": "Planificador pre-pipeline de solo lectura que reconcilia el backlog con git, clasifica la aptitud de cada ticket, propone un DAG de grupos y recomienda por cual empezar; solo escribe su informe y su JSON. Usar cuando hay que decidir que pipeline o batch autonomo lanzar sobre el backlog vivo. No usar para ejecutar el pipeline ni mutar el backlog (ver orchestrate-pipeline), para auditar un pipeline cerrado (ver audit-pipeline) ni para dar de alta tickets (ver backlog-admit).",
+  "content_fingerprint": "c68430ca0cb101453bc2addc5583075106ddd0d2a949ddce44a3c89ced5820d7"
 }

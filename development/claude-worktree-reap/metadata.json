@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Find Claude-created git worktrees in the current repo, write a human-readable PLAN file (path, size, danger notes) for the user to approve, delete the approved worktrees, write a RESULTS file (space saved, what was removed), then clean up both files once the user confirms. Two explicit confirmation gates, no auto-delete.\nTrigger this skill when: - User says \"reap claude worktrees\", \"clean up claude worktrees\", \"delete\n  claude worktrees\", \"purge worktrees\", or invokes `/claude-worktree-reap`.\n- A repo has accumulated stray worktrees from Claude Code isolated runs."
+  "description": "Find Claude-created git worktrees in the current repo, write a human-readable PLAN file (path, size, danger notes) for the user to approve, delete the approved worktrees, write a RESULTS file (space saved, what was removed), then clean up both files once the user confirms. Two explicit confirmation gates, no auto-delete.\nTrigger this skill when: - User says \"reap claude worktrees\", \"clean up claude worktrees\", \"delete\n  claude worktrees\", \"purge worktrees\", or invokes `/claude-worktree-reap`.\n- A repo has accumulated stray worktrees from Claude Code isolated runs.",
+  "content_fingerprint": "c50860d23534044286c6b0bcacefb1a2aabe3f645ac0ebf40ce4f4f216e2231b"
 }

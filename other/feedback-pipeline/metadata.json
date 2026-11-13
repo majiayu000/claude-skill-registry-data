@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Autonomous customer feedback intake pipeline: reads new submissions from a Google Sheet,\nroutes each to the correct project owner via a routing table, sends a Slack/chat handoff,\ntracks response status, monitors SLA, escalates breaches, and emails the customer when\nresolved. Runs on a 4-hour cron cycle with a 2-hour escalation check. Use when feedback\nsubmissions need to reach the right person without manual triage, when SLA compliance is\nimportant, or when customer response loops are slow. Also for onboarding new projects into\nthe feedback routing system, auditing open feedback, or rebuilding the pipeline state."
+  "description": "Autonomous customer feedback intake pipeline: reads new submissions from a Google Sheet,\nroutes each to the correct project owner via a routing table, sends a Slack/chat handoff,\ntracks response status, monitors SLA, escalates breaches, and emails the customer when\nresolved. Runs on a 4-hour cron cycle with a 2-hour escalation check. Use when feedback\nsubmissions need to reach the right person without manual triage, when SLA compliance is\nimportant, or when customer response loops are slow. Also for onboarding new projects into\nthe feedback routing system, auditing open feedback, or rebuilding the pipeline state.",
+  "content_fingerprint": "db9690f9c581c6de365c3292aaf74cd3c1fd5e277a1424954df83a484d67f98f"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when installing a third-party automation pack or template repository safely and deterministically. Fetches the source archive, verifies every file against an expected manifest of hashes, applies required transformations using strict unique anchors, checks for destination conflicts, and atomically moves files to the target with a saved rollback manifest. Not for unattended runs; requires explicit human invocation."
+  "description": "Use when installing a third-party automation pack or template repository safely and deterministically. Fetches the source archive, verifies every file against an expected manifest of hashes, applies required transformations using strict unique anchors, checks for destination conflicts, and atomically moves files to the target with a saved rollback manifest. Not for unattended runs; requires explicit human invocation.",
+  "content_fingerprint": "3abcc5a9bfd52fdede11613051a782714ea632aca7ad0ee51001b2cd2dd0d8b9"
 }

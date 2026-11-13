@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Final metric-driven refactoring pass over the whole production tree, using ESLint smells, SonarJS cognitive complexity, McCabe and APP mass to drive one measured change at a time. Invoke when the user explicitly asks for a final cleanup, a quality pass over the finished code, or an end-refactor. Do NOT invoke automatically after a TDD cycle \u2014 the per-cycle refactor already covers that."
+  "description": "Final metric-driven refactoring pass over the whole production tree, using ESLint smells, SonarJS cognitive complexity, McCabe and APP mass to drive one measured change at a time. Invoke when the user explicitly asks for a final cleanup, a quality pass over the finished code, or an end-refactor. Do NOT invoke automatically after a TDD cycle — the per-cycle refactor already covers that.",
+  "content_fingerprint": "3031c6e7d5a474ac9f824bcd9552aa56b737614a2875e8a6fb1899192ed40814"
 }

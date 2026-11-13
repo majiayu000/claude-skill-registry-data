@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728\u5185\u7f6e\u8bed\u8a00\u63d2\u4ef6\uff08extensions/typescript \u8fd9\u7c7b\u63d2\u4ef6\u5185\u81ea spawn LSP server \u7684\u5f62\u6001\uff09\u91cc\u5f00\u53d1\u8bed\u8a00\u7279\u6027\u65f6\u4f7f\u7528\u3002\u5f53\u4efb\u52a1\u662f\u52a0/\u6539 provider\uff08code action / inlay hint / formatting / folding / semantic tokens \u7b49\uff09\u3001\u8c03 LSP \u5ba2\u6237\u7aef / initialize \u53c2\u6570 / spawn \u65b9\u5f0f\u3001\u8bca\u65ad\u8865\u5168 hover \u4e0d\u751f\u6548\u3001\u6216\u7167 typescript \u7684\u6837\u5b50\u8fc1\u4e00\u4e2a\u65b0\u8bed\u8a00\u6210\u5185\u7f6e\u63d2\u4ef6\u65f6\u4f7f\u7528\u3002"
+  "description": "在内置语言插件（extensions/typescript 这类插件内自 spawn LSP server 的形态）里开发语言特性时使用。当任务是加/改 provider（code action / inlay hint / formatting / folding / semantic tokens 等）、调 LSP 客户端 / initialize 参数 / spawn 方式、诊断补全 hover 不生效、或照 typescript 的样子迁一个新语言成内置插件时使用。",
+  "content_fingerprint": "80736199ce4afcb0b5db9d261164accec197d3900c355f57551b4188c712410d"
 }

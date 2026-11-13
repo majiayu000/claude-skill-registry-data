@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Multi-tiered memory management (HOT/WARM/COLD) for context compaction. Invoke ONLY for explicit\ncompaction events: post-`/compact` cleanup, MEMORY.md tier promotion, archive batch, or \"trim my context\".\nNOT for general recall (use deep-recall) or routine memory writes (use storage-router).\nTriggers: \"compact memory\", \"promote to durable\", \"archive old context\", \"tier this\"."
+  "description": "Multi-tiered memory management (HOT/WARM/COLD) for context compaction. Invoke ONLY for explicit\ncompaction events: post-`/compact` cleanup, MEMORY.md tier promotion, archive batch, or \"trim my context\".\nNOT for general recall (use deep-recall) or routine memory writes (use storage-router).\nTriggers: \"compact memory\", \"promote to durable\", \"archive old context\", \"tier this\".",
+  "content_fingerprint": "0e99f6fa8b70a91cf9ea9e078f5d867e20681cf9bcb8fd3bafd16c74aebb3f55"
 }

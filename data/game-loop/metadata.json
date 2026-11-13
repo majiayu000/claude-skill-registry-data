@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/dadbodgeoff/drift/blob/main/skills/game-loop/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "fd80bd48ead521bccef4c1dba42080fc2e84a460c7cc75e8cda9c309775d2b5d",
+  "description": "Fixed timestep game loop with interpolation for frame-rate independent physics. Separates physics updates from rendering, prevents spiral of death, and supports hitstop/slow-mo effects."
 }

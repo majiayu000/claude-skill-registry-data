@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reads AI-Generated-Design-Result as both working design output and regression evidence, understands the \"<design>_designcontext_v2/\" convention for new pipeline runs kept beside preserved baselines, and inventories the artifacts (.gds, .lvs.out, .magic.drc.rpt, .spice, REPORT.md) each design directory holds. Use before comparing a new run against a prior one, or before writing anything into AI-Generated-Design-Result. Do not use it to generate a new layout or run verification \u2014 this skill is read-only and never overwrites a previous result."
+  "description": "Reads AI-Generated-Design-Result as both working design output and regression evidence, understands the \"<design>_designcontext_v2/\" convention for new pipeline runs kept beside preserved baselines, and inventories the artifacts (.gds, .lvs.out, .magic.drc.rpt, .spice, REPORT.md) each design directory holds. Use before comparing a new run against a prior one, or before writing anything into AI-Generated-Design-Result. Do not use it to generate a new layout or run verification — this skill is read-only and never overwrites a previous result.",
+  "content_fingerprint": "721828775fb072140f570c9ea72f22f4b156e58c44250d2946df47b1ef04d05d"
 }

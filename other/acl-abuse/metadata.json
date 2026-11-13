@@ -30,5 +30,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Abusing Active Directory object ACLs (DACL/ownership) for privilege escalation and lateral movement (GenericAll, GenericWrite, WriteDACL, WriteOwner, AddMember, ForceChangePassword, and replication rights via DS-Replication-Get-Changes-All). Use when BloodHound CE shows an outbound control edge from a principal you own toward a higher-value object, and you want the exact bloodyAD/impacket command to weaponize that ACE, plus detection and remediation. DCSync is covered here strictly as a post-compromise technique, not a user entry path."
+  "description": "Abusing Active Directory object ACLs (DACL/ownership) for privilege escalation and lateral movement (GenericAll, GenericWrite, WriteDACL, WriteOwner, AddMember, ForceChangePassword, and replication rights via DS-Replication-Get-Changes-All). Use when BloodHound CE shows an outbound control edge from a principal you own toward a higher-value object, and you want the exact bloodyAD/impacket command to weaponize that ACE, plus detection and remediation. DCSync is covered here strictly as a post-compromise technique, not a user entry path.",
+  "content_fingerprint": "52c1559ad0cc9e9676934d6712a247a5fcae2afef27af1abda9b58fc540ed6a8"
 }

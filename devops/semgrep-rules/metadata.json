@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configures and runs Semgrep - pattern-based SAST across 30+ languages with the Semgrep Registry rulesets (`p/owasp-top-ten`, `p/default`, `auto`) plus custom YAML rules; integrates `semgrep ci` for PR-blocking gates with `--baseline-commit` diff-aware scanning, per-finding inline `nosemgrep` suppressions, `--exclude` / `--include` path filters, output formats (`--json` / `--sarif` / `--gitlab-sast` / `--junit-xml`), and severity filter (INFO/WARNING/ERROR). Use when the user runs Semgrep, asks about pattern rules, or needs a low-friction SAST gate without semantic-DB setup."
+  "description": "Configures and runs Semgrep - pattern-based SAST across 30+ languages with the Semgrep Registry rulesets (`p/owasp-top-ten`, `p/default`, `auto`) plus custom YAML rules; integrates `semgrep ci` for PR-blocking gates with `--baseline-commit` diff-aware scanning, per-finding inline `nosemgrep` suppressions, `--exclude` / `--include` path filters, output formats (`--json` / `--sarif` / `--gitlab-sast` / `--junit-xml`), and severity filter (INFO/WARNING/ERROR). Use when the user runs Semgrep, asks about pattern rules, or needs a low-friction SAST gate without semantic-DB setup.",
+  "content_fingerprint": "cee535ebe8563be680c38fd5334016ce3f49ca976556887124acc8f190ba8b24"
 }

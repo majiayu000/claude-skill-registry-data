@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Tool skill for declaring reducers on LangGraph state keys so parallel writes\nmerge instead of crashing. Activates whenever a coder agent designs a\nStateGraph with parallel branches, fan-out via Send, multi-agent topologies,\nor whenever a run raises `InvalidUpdateError: At key '<k>': Can receive only\none value per step`. Encodes the rule \"every state key is single-writer or\nhas a reducer \u2014 nothing in between.\""
+  "description": "Tool skill for declaring reducers on LangGraph state keys so parallel writes\nmerge instead of crashing. Activates whenever a coder agent designs a\nStateGraph with parallel branches, fan-out via Send, multi-agent topologies,\nor whenever a run raises `InvalidUpdateError: At key '<k>': Can receive only\none value per step`. Encodes the rule \"every state key is single-writer or\nhas a reducer — nothing in between.\"",
+  "content_fingerprint": "04b3ff6d15d3c9945f79766b1937d01ea9f464c1db771bb176cf3feb3061c86a"
 }

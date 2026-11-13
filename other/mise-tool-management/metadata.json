@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when pinning binary CLI / build tools (swiftlint, xcbeautify, gitleaks, lefthook) with mise so dev machines and CI share one `.mise.toml` \u2014 choosing mise vs asdf / Homebrew / manual, writing `.mise.toml` (`aqua:` / `github:` backends, `os = [\"macos\"]` guards), running `mise trust` / `mise install` / `mise exec` from `ci_post_clone.sh` or a fresh git worktree, or debugging \"mise exec ignores .mise.toml in a new worktree\", `unsupported env: linux/amd64`. Does NOT cover Xcode Cloud workflow design \u2192 xcode-cloud-single-track-ci, nor gitleaks / lefthook policy \u2192 apple-public-repo-security."
+  "description": "Use when pinning binary CLI / build tools (swiftlint, xcbeautify, gitleaks, lefthook) with mise so dev machines and CI share one `.mise.toml` — choosing mise vs asdf / Homebrew / manual, writing `.mise.toml` (`aqua:` / `github:` backends, `os = [\"macos\"]` guards), running `mise trust` / `mise install` / `mise exec` from `ci_post_clone.sh` or a fresh git worktree, or debugging \"mise exec ignores .mise.toml in a new worktree\", `unsupported env: linux/amd64`. Does NOT cover Xcode Cloud workflow design → xcode-cloud-single-track-ci, nor gitleaks / lefthook policy → apple-public-repo-security.",
+  "content_fingerprint": "a5836ed0777b556ad3eec2fed39c030d0c5d8cc6804d109ec08bac39aa4d8a5a"
 }

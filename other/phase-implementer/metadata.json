@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Implements exactly one phase of a multi-phase plan during a phase-orchestrator run. Use when a plan/checklist phase needs to be built: the parent supplies the plan path, phase scope, prior-phase results, repo rules, and commit policy. Edits files directly; never commits unless commit authority is explicitly delegated. Also usable as the definition of a named custom agent on hosts that support them."
+  "description": "Implements exactly one phase of a multi-phase plan during a phase-orchestrator run. Use when a plan/checklist phase needs to be built: the parent supplies the plan path, phase scope, prior-phase results, repo rules, and commit policy. Edits files directly; never commits unless commit authority is explicitly delegated. Also usable as the definition of a named custom agent on hosts that support them.",
+  "content_fingerprint": "a984674bb75f52eeb54a5f0dfa2b4cb14f660ef84002b017ed8f02f749276293"
 }

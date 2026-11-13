@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use whenever a read-then-write decides WHICH CALLER ACTS \u2014 an idempotency claim, a lease, a dedupe marker, a reclaim of an expired or failed row, an approval slot. The write must be a compare-and-swap on the exact row you read (or a serializable transaction); an unconditional update by id lets two racers both win. Triggers on lib/ai/tools/tool-idempotency.ts, lib/services/action-attempts.ts, and any create -> P2002 -> update sequence."
+  "description": "Use whenever a read-then-write decides WHICH CALLER ACTS — an idempotency claim, a lease, a dedupe marker, a reclaim of an expired or failed row, an approval slot. The write must be a compare-and-swap on the exact row you read (or a serializable transaction); an unconditional update by id lets two racers both win. Triggers on lib/ai/tools/tool-idempotency.ts, lib/services/action-attempts.ts, and any create -> P2002 -> update sequence.",
+  "content_fingerprint": "e1f05f0e4cfc5420c45c23f7ff8bb7f60e6f2d77adc64a02bfe3e262129ea7be"
 }

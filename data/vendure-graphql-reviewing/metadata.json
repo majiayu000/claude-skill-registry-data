@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/meriley/claude-code-skills/blob/main/skills/vendure-graphql-reviewing/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "f208105a33ed10fd4d9b148d478a260c56ca2e062daa250b31e1471eb73356bb",
+  "description": "Review Vendure GraphQL resolvers for missing RequestContext, improper permissions, DTO violations, and schema extension issues. Use when reviewing GraphQL PRs or auditing API quality."
 }

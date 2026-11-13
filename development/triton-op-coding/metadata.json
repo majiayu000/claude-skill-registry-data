@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Triton Ascend \u7b97\u5b50\u4ee3\u7801\u751f\u6210 Skill \u2014 \u6839\u636e\u7b97\u5b50\u4efb\u52a1\u683c\u5f0f\u4efb\u52a1\u63cf\u8ff0\u751f\u6210\u9ad8\u6027\u80fd Triton Ascend \u5185\u6838\u4ee3\u7801\u3002\u652f\u6301\u9996\u6b21\u751f\u6210\u548c\u57fa\u4e8e\u9519\u8bef\u53cd\u9988\u7684\u8fed\u4ee3\u4f18\u5316\u3002 \u89e6\u53d1\uff1a\u5f53\u7528\u6237\u9700\u8981\u6839\u636e\u4efb\u52a1\u63cf\u8ff0\u751f\u6210\u6216\u8fed\u4ee3\u4fee\u590d Triton Ascend \u5185\u6838\u4ee3\u7801\u65f6\u4f7f\u7528\u3002"
+  "description": "Triton Ascend 算子代码生成 Skill — 根据算子任务格式任务描述生成高性能 Triton Ascend 内核代码。支持首次生成和基于错误反馈的迭代优化。 触发：当用户需要根据任务描述生成或迭代修复 Triton Ascend 内核代码时使用。",
+  "content_fingerprint": "fbe9f5cacb27d8ad2a301aed0075f27693d0cd95e237731df10c6c6bd14b7a64"
 }

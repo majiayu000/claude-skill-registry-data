@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Clean all build artifacts and perform a full rebuild from scratch. Triggers project clean, waits for the clean job to finish, then starts an incremental build and waits for completion. Finally verifies that no errors remain. Use when incremental builds produce stale-object errors or inconsistent state."
+  "description": "Clean all build artifacts and perform a full rebuild from scratch. Triggers project clean, waits for the clean job to finish, then starts an incremental build and waits for completion. Finally verifies that no errors remain. Use when incremental builds produce stale-object errors or inconsistent state.",
+  "content_fingerprint": "6278c3a96b74a046af8d953195031d5d995f417eaf4a8629d35532ae41074463"
 }

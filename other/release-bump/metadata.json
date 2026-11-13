@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Move the Unity Catalog or Delta Lake docs to a new upstream release: rewrite\nevery pin with `just bump-uc` / `just bump-delta`, triage the scripts CI runs\nagainst it, then review the claims the release can change (support state,\nknown issues, \"the server has no X\") and open one PR with a claims table.\nUse when the user wants to bump, upgrade, or move the docs to a new Unity\nCatalog or Delta release, update the release pins, or check the docs against\na new release."
+  "description": "Move the Unity Catalog or Delta Lake docs to a new upstream release: rewrite\nevery pin with `just bump-uc` / `just bump-delta`, triage the scripts CI runs\nagainst it, then review the claims the release can change (support state,\nknown issues, \"the server has no X\") and open one PR with a claims table.\nUse when the user wants to bump, upgrade, or move the docs to a new Unity\nCatalog or Delta release, update the release pins, or check the docs against\na new release.",
+  "content_fingerprint": "4f6ebcc7f90626b6e689ca4612bc66bf019a70afc35246a03a2bbe3281eac9c1"
 }

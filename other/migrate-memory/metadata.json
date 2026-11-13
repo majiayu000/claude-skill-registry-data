@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Carry an agent group's memory across a provider switch, in either direction (e.g. Claude \u2194 Codex, or any provider to/from another). Run after the operator switches a group's provider with `ncl groups config update --provider`. The coding agent reads the source provider's memory store, distills it into the target provider's store, and restarts the group. Triggers on \"migrate memory\", \"carry memory over\", \"the agent forgot everything after the switch\"."
+  "description": "Carry an agent group's memory across a provider switch, in either direction (e.g. Claude ↔ Codex, or any provider to/from another). Run after the operator switches a group's provider with `ncl groups config update --provider`. The coding agent reads the source provider's memory store, distills it into the target provider's store, and restarts the group. Triggers on \"migrate memory\", \"carry memory over\", \"the agent forgot everything after the switch\".",
+  "content_fingerprint": "ea79131d2341db905b67b794a6cf48a622b1d5895b591676833a70a911e60775"
 }

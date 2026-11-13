@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Diff two npm-package versions for added/removed security-control invocations (T3.1). Per-target wrapper around bin/npm_version_diff.py. Use when a target ships a vulnerable library version and a fix exists upstream \u2014 the diff highlights what control was added so you can grep the target for the same gap."
+  "description": "Diff two npm-package versions for added/removed security-control invocations (T3.1). Per-target wrapper around bin/npm_version_diff.py. Use when a target ships a vulnerable library version and a fix exists upstream — the diff highlights what control was added so you can grep the target for the same gap.",
+  "content_fingerprint": "fabea50dd64990bd33eee34298d207fd2d0f374c17b7e5ef33be15df7123fdc9"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Manage AICP's base model lifecycle \u2014 install/unload/delete/status/update via `aicp --models` and `aicp --model-cmd` CLI. Replaces the deprecated aicp_model_install/unload/delete/status/config/config_update MCP tools per `wiki/decisions/00_inbox/aicp-mcp-tool-surface-audit-2026-04-19.md`. Loads when the operator says \"install model X\" / \"unload qwen3-8b\" / \"delete a model\" / \"is model X downloaded yet\" / \"swap models\" / \"free up VRAM\" / \"update model config\"."
+  "description": "Manage AICP's base model lifecycle — install/unload/delete/status/update via `aicp --models` and `aicp --model-cmd` CLI. Replaces the deprecated aicp_model_install/unload/delete/status/config/config_update MCP tools per `wiki/decisions/00_inbox/aicp-mcp-tool-surface-audit-2026-04-19.md`. Loads when the operator says \"install model X\" / \"unload qwen3-8b\" / \"delete a model\" / \"is model X downloaded yet\" / \"swap models\" / \"free up VRAM\" / \"update model config\".",
+  "content_fingerprint": "c2e0900e0f68633fdece164e5704efb3ccd365103ea6fcc14a81d1f2acfd8039"
 }

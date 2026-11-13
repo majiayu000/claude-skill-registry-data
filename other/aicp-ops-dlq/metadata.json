@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Inspect or retry the AICP dead-letter queue (~/.aicp/dlq/<UTC-date>.jsonl) via the CLI surface. Replaces the deprecated aicp_dlq_status MCP tool per `wiki/decisions/00_inbox/aicp-mcp-tool-surface-audit-2026-04-19.md`. Loads when the operator says \"what's in the DLQ\" / \"retry failed tasks\" / \"did anything get DLQ'd\" / \"DLQ growing\" / \"show pending failures\" / \"reliability incident \u2014 what's queued up\"."
+  "description": "Inspect or retry the AICP dead-letter queue (~/.aicp/dlq/<UTC-date>.jsonl) via the CLI surface. Replaces the deprecated aicp_dlq_status MCP tool per `wiki/decisions/00_inbox/aicp-mcp-tool-surface-audit-2026-04-19.md`. Loads when the operator says \"what's in the DLQ\" / \"retry failed tasks\" / \"did anything get DLQ'd\" / \"DLQ growing\" / \"show pending failures\" / \"reliability incident — what's queued up\".",
+  "content_fingerprint": "a4763d239e075bfe8f09e10e8df8b18b3f8856dea3b51316efa44bec48af66dc"
 }

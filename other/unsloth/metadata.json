@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when fine-tuning an open-weight LLM fast on ONE GPU with low VRAM \u2014 Unsloth's fast model loaders with 4-bit QLoRA and the trl trainer, response-only loss masking so the prompt is not trained on, GRPO reasoning fine-tunes, and export to merged 16-bit, GGUF or the Hub. NOT whether, why or which method to fine-tune (that is `finetuning`), NOT running the exported GGUF locally (that is `ollama`), NOT serving-engine flags and throughput (that is `vllm`), NOT building the JSONL dataset (that is `training-data`)."
+  "description": "Use when fine-tuning an open-weight LLM fast on ONE GPU with low VRAM — Unsloth's fast model loaders with 4-bit QLoRA and the trl trainer, response-only loss masking so the prompt is not trained on, GRPO reasoning fine-tunes, and export to merged 16-bit, GGUF or the Hub. NOT whether, why or which method to fine-tune (that is `finetuning`), NOT running the exported GGUF locally (that is `ollama`), NOT serving-engine flags and throughput (that is `vllm`), NOT building the JSONL dataset (that is `training-data`).",
+  "content_fingerprint": "362fb1a0a88f903ecf4176be806e38f8096362b494d5daf0a96d8e1d2bdbbaa0"
 }

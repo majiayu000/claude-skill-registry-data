@@ -36,5 +36,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "> Nuphus \u5de5\u5177\u9875 24 \u4e2a\u5185\u90e8\u673a\u5236\u547d\u4ee4\u3002\u4ec5\u6ce8\u518c invokehandler\uff0c\u4e0d\u6ce8\u518c\u4e3a agent \u5de5\u5177\uff08LLM \u4e0d\u53ef\u7ecf executetool \u8c03\u7528\uff09\uff1b\u7528\u6237\u7ecf\u5de5\u5177\u9875\u624b\u52a8\u4f7f\u7528\u3002"
+  "description": "> Nuphus 工具页 24 个内部机制命令。仅注册 invokehandler，不注册为 agent 工具（LLM 不可经 executetool 调用）；用户经工具页手动使用。",
+  "content_fingerprint": "8bd43edd6e9638f3ce8f4b671eb913a0333f9bcaad41c0bfb17ab1c32e303601"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/PAIPalooza/chicommerce/blob/main/.ainative/skills/database-schema-sync/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "138520fa89baa633a8aa7bbb433cb288c3b362bddf1dee1c1d81621d76a002c5",
+  "description": "Database schema management using idempotent sync script instead of Alembic migrations. Use when (1) Adding new database tables, (2) Adding new columns to existing tables, (3) Modifying database schema"
 }

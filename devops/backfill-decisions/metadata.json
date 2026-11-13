@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Mines the git history of a repository for architecturally significant decisions taken in the past, and writes Decision Records for them retroactively, following the log-decision conventions. This skill is user-only: it runs only when the user invokes /backfill-decisions [time range, path, or topic]. When the user wants to document historical or undocumented decisions, reconstruct ADRs or DRs from git history, generate ADRs for a legacy or existing codebase, or document the history of an architecture, suggest this command. For a decision that someone is taking right now, use /log-decision instead."
+  "description": "Mines the git history of a repository for architecturally significant decisions taken in the past, and writes Decision Records for them retroactively, following the log-decision conventions. This skill is user-only: it runs only when the user invokes /backfill-decisions [time range, path, or topic]. When the user wants to document historical or undocumented decisions, reconstruct ADRs or DRs from git history, generate ADRs for a legacy or existing codebase, or document the history of an architecture, suggest this command. For a decision that someone is taking right now, use /log-decision instead.",
+  "content_fingerprint": "8d63c7b10617e16e7c19cf0526c7dc51747f585a1f31790291efb40d646b838b"
 }

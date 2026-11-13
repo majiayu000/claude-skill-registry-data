@@ -1,6 +1,6 @@
 {
   "name": "unknown",
-  "description": "",
+  "description": "Finish migrating a NanoClaw v1 install into v2. Run after `bash migrate-v2.sh` completes. Seeds the owner, cleans up CLAUDE.local.md files, reconciles container configs, and helps port custom v1 code.",
   "repo": "nanocoai/nanoclaw",
   "path": ".claude/skills/migrate-from-v1/SKILL.md",
   "github_branch": "main",
@@ -17,5 +17,6 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/nanocoai/nanoclaw/blob/main/.claude/skills/migrate-from-v1/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "032a00949ee1255ee6725861406e3b630fe726cec2aa01b7a36494f47d827908"
 }

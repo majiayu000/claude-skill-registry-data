@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `nfr-design` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage nfr-design --single`: the engine emits one run-stage directive for nfr-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `nfr-design` stage (construction phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage nfr-design --single`: the engine emits one run-stage directive for nfr-design and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "5bc6d95c61e17661cd9c4f5426755dfe960197335741ad303bb24a04ebb8e670"
 }

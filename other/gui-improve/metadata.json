@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Atom Game GUI pipeline \u7b2c 6 \u9636\u6bb5\u3002\u5bf9 gui-review \u5408\u5e76 CRITICAL \u96c6\u5408\uff08Type-A \u7f16\u8bd1/\u8bed\u6cd5\u5931\u8d25 + Type-B CRITICAL\uff09\u8fed\u4ee3\u4fee\u590d\uff08\u6700\u591a 2 \u8f6e\uff09\uff1a\u4fee\u590d \u2192 \u91cd\u8dd1 gui-review \u4e24\u8f66\u9053\uff08Bias Guard\uff09\u2192 \u8bb0\u5f55 GUI_IMPROVEMENT_LOG.md\u3002\u4ec5\u5f53 gui-review \u62a5\u51fa\u5408\u5e76 CRITICAL \u65f6\u4f7f\u7528\u30022 \u8f6e\u540e\u4ecd\u6709 CRITICAL \u5219\u8bb0\u5165 HUMAN_REVIEW.md\uff0c\u4e0d\u6682\u505c\u3002"
+  "description": "Atom Game GUI pipeline 第 6 阶段。对 gui-review 合并 CRITICAL 集合（Type-A 编译/语法失败 + Type-B CRITICAL）迭代修复（最多 2 轮）：修复 → 重跑 gui-review 两车道（Bias Guard）→ 记录 GUI_IMPROVEMENT_LOG.md。仅当 gui-review 报出合并 CRITICAL 时使用。2 轮后仍有 CRITICAL 则记入 HUMAN_REVIEW.md，不暂停。",
+  "content_fingerprint": "2764e9c2423a04452d9e5d70148546db8d28fa1d32f9e4cf8bcc6e8b5ff1e833"
 }

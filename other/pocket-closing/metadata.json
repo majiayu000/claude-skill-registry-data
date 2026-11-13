@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Terminal pocket stage. User invokes after pocket-development's phase-level pass writes verdicts. Reconciles reviews against log.json, gates on REVIEW_FAIL/REVIEW_BLOCKED, advances REVIEW\u2192DONE, runs `log close`, and emits a closeout summary. Trigger on \"pocket-closing\", \"close the plan\", \"close out\", \"finalize plan\", or when a plan is fully reviewed and all verdicts pass."
+  "description": "Terminal pocket stage. User invokes after pocket-development's phase-level pass writes verdicts. Reconciles reviews against log.json, gates on REVIEW_FAIL/REVIEW_BLOCKED, advances REVIEW→DONE, runs `log close`, and emits a closeout summary. Trigger on \"pocket-closing\", \"close the plan\", \"close out\", \"finalize plan\", or when a plan is fully reviewed and all verdicts pass.",
+  "content_fingerprint": "311f93a69230b23bb75e26f969fd0867246915d430c9ede07be6e155a1d0bd99"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Phase 0 of the delivery workflow: ensures the machine contract derived from a KB markdown template (verdict options, severities with explicit ranks, finding fields) is fresh \u2014 cache-by-hash via ensure-contract.mjs, regenerated only when the template changed \u2014 and returns it as the enum-locked return-value schema the reviewer is held to. Never modifies the template. Dispatched by the batch engine (pair-implement-batch)."
+  "description": "Phase 0 of the delivery workflow: ensures the machine contract derived from a KB markdown template (verdict options, severities with explicit ranks, finding fields) is fresh — cache-by-hash via ensure-contract.mjs, regenerated only when the template changed — and returns it as the enum-locked return-value schema the reviewer is held to. Never modifies the template. Dispatched by the batch engine (pair-implement-batch).",
+  "content_fingerprint": "0d2375db3f2357ef0796afddf66be0d9a5dcbae77bdf570a4d7bb3457c6aedf0"
 }

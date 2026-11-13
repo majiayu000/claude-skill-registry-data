@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Syedaashnaghazanfar/todo-app/blob/main/.claude/skills/notification-persistence/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "96f66a0e114f332403cc907242de4d1dc792f907ee40e6e767b79a931218f73c",
+  "description": "Stores notifications in localStorage with schema (id, taskId, message, timestamp, read, priority). Provides retrieval methods (getUnread, getAll, markAsRead) and maintains last 50 notifications with a"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Autonomous LocalLLM-Claw skill. Monitors the latency and up-time of cloud AI APIs (Gemini). If an outage or rate-limit (HTTP 429) is detected, it instantly spins up a local llama.cpp instance with a specialized vision model (MiniCPM-Llama3-V) to take over video-verification without dropping the queue."
+  "description": "Autonomous LocalLLM-Claw skill. Monitors the latency and up-time of cloud AI APIs (Gemini). If an outage or rate-limit (HTTP 429) is detected, it instantly spins up a local llama.cpp instance with a specialized vision model (MiniCPM-Llama3-V) to take over video-verification without dropping the queue.",
+  "content_fingerprint": "a239d7d3cd73ee6a034dfbf80d0ebef7b2badc0349f88d334b8526f438b14fba"
 }

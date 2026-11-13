@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Quy tr\u00ecnh nh\u1eadp (merge) code t\u1eeb nh\u00e1nh developer (v\u00ed d\u1ee5: development-yen) v\u00e0o nh\u00e1nh ch\u00ednh (development) \u2014 TH\u00d4NG QUA SCRIPT AN TO\u00c0N. Agent KH\u00d4NG g\u1ecdi l\u1ec7nh git tr\u1ef1c ti\u1ebfp. Script t\u1ef1: resolve \u0111\u00fang repo t\u1eeb t\u00ean portal, ki\u1ec3m tra tr\u01b0\u1edbc (working tree s\u1ea1ch, \u0111\u00fang repo, kh\u00f4ng file x\u00f3a), t\u1ea1o backup 2 b\u00ean (ngu\u1ed3n + \u0111\u00edch), merge --no-ff, abort khi conflict, ki\u1ec3m tra sau. H\u1ed7 tr\u1ee3 ki\u1ebfn tr\u00fac 12 repo \u0111\u1ed9c l\u1eadp (1 Root + 1 Docker + 1 .github + 9 Portal)."
+  "description": "Quy trình nhập (merge) code từ nhánh developer (ví dụ: development-yen) vào nhánh chính (development) — THÔNG QUA SCRIPT AN TOÀN. Agent KHÔNG gọi lệnh git trực tiếp. Script tự: resolve đúng repo từ tên portal, kiểm tra trước (working tree sạch, đúng repo, không file xóa), tạo backup 2 bên (nguồn + đích), merge --no-ff, abort khi conflict, kiểm tra sau. Hỗ trợ kiến trúc 12 repo độc lập (1 Root + 1 Docker + 1 .github + 9 Portal).",
+  "content_fingerprint": "cb05ea75d2cb4e6cd7a90aadb4efe28bdec8fd16e329aa68fc5be3623379bdb4"
 }

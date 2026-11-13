@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Daily reusable-session flaky-test triage for {{target_repo}}. Pulls CI run history from GitHub, scores each test's non-determinism against a persistent per-test ledger, and once a test reaches {{quarantine_threshold}} opens a quarantine PR (skip + reason, never delete) plus a running tracking issue, and posts a summary to {{alert_channel}}. Never merges."
+  "description": "Daily reusable-session flaky-test triage for {{target_repo}}. Pulls CI run history from GitHub, scores each test's non-determinism against a persistent per-test ledger, and once a test reaches {{quarantine_threshold}} opens a quarantine PR (skip + reason, never delete) plus a running tracking issue, and posts a summary to {{alert_channel}}. Never merges.",
+  "content_fingerprint": "d0bfca44e7ea5c443342581724968bcb4a23bab329d1d16ed123125e86e81daf"
 }

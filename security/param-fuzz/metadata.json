@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Systematic fuzzing across two dimensions: (1) content discovery \u2014 hidden directories, files,\nbackup/source leaks, HTTP verb enumeration, 401/403 bypass via path manipulation;\n(2) input validation \u2014 auth/token stripping, type confusion, boundary value analysis,\nHTTP parameter pollution, header fuzzing, cookie fuzzing, mass assignment discovery, and\nentropy/predictability analysis of any generated value. Works on any domain. Chains from\n/web-exploit or /pentester; chains into /business-logic when boundary violations, predictable\nIDs, or mass assignment are confirmed."
+  "description": "Systematic fuzzing across two dimensions: (1) content discovery — hidden directories, files,\nbackup/source leaks, HTTP verb enumeration, 401/403 bypass via path manipulation;\n(2) input validation — auth/token stripping, type confusion, boundary value analysis,\nHTTP parameter pollution, header fuzzing, cookie fuzzing, mass assignment discovery, and\nentropy/predictability analysis of any generated value. Works on any domain. Chains from\n/web-exploit or /pentester; chains into /business-logic when boundary violations, predictable\nIDs, or mass assignment are confirmed.",
+  "content_fingerprint": "7161ffd8f0fbb27e5e1facf29447ee9b0e2e40ee9a97d790663dfa66bbb83e67"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deployment-readiness verdict for a diff range \u2014 green (merge is the whole deploy), yellow (order matters; sequenced runbook), or red (not safe to land as-is; restructure, usually expand/contract). Use before merging or deploying when a change touches migrations, env vars, crons/workers, queues, caches, or API contracts \u2014 or when the user asks how to deploy safely, whether a migration runs before or after merge, or what to watch after a deploy. Invoked by `land-pr` before gate 2 when its impact scan flags anything."
+  "description": "Deployment-readiness verdict for a diff range — green (merge is the whole deploy), yellow (order matters; sequenced runbook), or red (not safe to land as-is; restructure, usually expand/contract). Use before merging or deploying when a change touches migrations, env vars, crons/workers, queues, caches, or API contracts — or when the user asks how to deploy safely, whether a migration runs before or after merge, or what to watch after a deploy. Invoked by `land-pr` before gate 2 when its impact scan flags anything.",
+  "content_fingerprint": "7d95cec59164799aaba5ad5702f589e4083a3e17b76e7231e73e6c9703f51b06"
 }

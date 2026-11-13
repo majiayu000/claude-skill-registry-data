@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Daisuke134/anicca-products/blob/main/.claude/skills/paywall-ab/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "baec3866e415adb36258d1267b01ab97d0c13604baec7d95924f8cab1d6071ee",
+  "description": "Anicca Paywall A/B テスト自動クローズドループ。RevenueCat Experiments を使い、Paywall コピーを継続改善する。新規実験セットアップ（Offering作成→Experiment作成→Cron登録）と3日ごと人間確認ループ（チェックイン送信→ユーザー返信待ち→勝者分析→新バリアント生成→Slack承認→RC新実験作成）の両方を担う。Use when: p"
 }

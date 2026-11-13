@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this for the Python-specific realization of idempotent-retry-safety \u2014 exception-class predicate using `isinstance` / `__cause__` chains, asyncio-friendly backoff with cancellation propagation, `tenacity` decorator patterns, `Idempotency-Key` headers on httpx requests, and dedup-key handling on aiokafka producers. Pairs with shared-core `idempotent-retry-safety` (taxonomy + decision criteria). Triggers: tenacity, retry, asyncio.TimeoutError, asyncio.CancelledError, raise from, idempotency-key, httpx, aiokafka, AIMD, Retry-After, RateLimitError."
+  "description": "Use this for the Python-specific realization of idempotent-retry-safety — exception-class predicate using `isinstance` / `__cause__` chains, asyncio-friendly backoff with cancellation propagation, `tenacity` decorator patterns, `Idempotency-Key` headers on httpx requests, and dedup-key handling on aiokafka producers. Pairs with shared-core `idempotent-retry-safety` (taxonomy + decision criteria). Triggers: tenacity, retry, asyncio.TimeoutError, asyncio.CancelledError, raise from, idempotency-key, httpx, aiokafka, AIMD, Retry-After, RateLimitError.",
+  "content_fingerprint": "951d2b0b0cc91c9735470a697189de48f3425af911f6539276fdc95e6ab501f7"
 }

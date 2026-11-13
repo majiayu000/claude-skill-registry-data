@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Read (db.sh) or deploy scripts to (deploy.sh) the Sila live SQL Server database (`SILA101`, the ticket/chat DB behind the :9201 gateway) through [CHA].[APISilaOperationV1] \u2014 list objects, read SP/view source, columns, parameters, preview rows, or run a read-only query. Use whenever the task needs to \"check the DB\", \"look at the SP\", \"what's in table X\", or discover ticket operations. Every run needs explicit user approval. Read-only; changes are deployed by the user in SSMS."
+  "description": "Read (db.sh) or deploy scripts to (deploy.sh) the Sila live SQL Server database (`SILA101`, the ticket/chat DB behind the :9201 gateway) through [CHA].[APISilaOperationV1] — list objects, read SP/view source, columns, parameters, preview rows, or run a read-only query. Use whenever the task needs to \"check the DB\", \"look at the SP\", \"what's in table X\", or discover ticket operations. Every run needs explicit user approval. Read-only; changes are deployed by the user in SSMS.",
+  "content_fingerprint": "d055d571e731cb952e3395c6c75789d5fe2692342a1c529121e07dd959c55d16"
 }

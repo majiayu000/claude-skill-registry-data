@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Produce the latest deterministic C0/C1 coverage report for a .NET service. Use when the user asks for a 'coverage report', 'coverage status', 'what's covered', 'C0 C1 numbers', or wants to check the gate. Runs dotnet-coverage + ReportGenerator (numbers are tool output, never estimated), then joins uncovered files against the manifest to explain every inclusion, exclusion, and cannot-test entry. Runnable any time."
+  "description": "Produce the latest deterministic C0/C1 coverage report for a .NET service. Use when the user asks for a 'coverage report', 'coverage status', 'what's covered', 'C0 C1 numbers', or wants to check the gate. Runs dotnet-coverage + ReportGenerator (numbers are tool output, never estimated), then joins uncovered files against the manifest to explain every inclusion, exclusion, and cannot-test entry. Runnable any time.",
+  "content_fingerprint": "2ce14a3c27683b2eb04ebca2e899b585fbfccfe76ae6c2b6455ba08267134cce"
 }

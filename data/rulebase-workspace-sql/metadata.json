@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when querying a Rulebase workspace with SQL through the MCP server's query tool \u2014 writing queries that finish inside the statement timeout, and avoiding the join fan-outs that silently inflate QA evaluation counts. Trigger for \"query my Rulebase data\", \"the query timed out\", \"statement timeout\", \"canceling statement due to statement timeout\", counts that don't reconcile between two Rulebase queries, criterion counts exceeding team counts, or any multi-step analysis over Rulebase conversations and evaluations."
+  "description": "Use when querying a Rulebase workspace with SQL through the MCP server's query tool — writing queries that finish inside the statement timeout, and avoiding the join fan-outs that silently inflate QA evaluation counts. Trigger for \"query my Rulebase data\", \"the query timed out\", \"statement timeout\", \"canceling statement due to statement timeout\", counts that don't reconcile between two Rulebase queries, criterion counts exceeding team counts, or any multi-step analysis over Rulebase conversations and evaluations.",
+  "content_fingerprint": "180249b67eb3cf5a73b0541161ba1464c1c08be1baba08addfbe259ea4406067"
 }

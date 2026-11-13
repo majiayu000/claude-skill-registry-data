@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix RFDB V2 graph data silently not persisting to disk after analysis. Use when:\n(1) rfdb-server reports \"0 nodes, 0 edges\" on restart despite successful analysis,\n(2) segment directories exist but are empty (no .bin files), (3) manifest_index.json\nshows total_nodes: 0 despite analysis logging 70k+ nodes, (4) Docker builds produce\nempty graph databases, (5) --clear flag used before analyze command. Root cause:\nGraphEngineV2::clear() replaces the store with MultiShardStore::ephemeral() which\nhas path: None, causing all flush operations to write to in-memory buffers only."
+  "description": "Fix RFDB V2 graph data silently not persisting to disk after analysis. Use when:\n(1) rfdb-server reports \"0 nodes, 0 edges\" on restart despite successful analysis,\n(2) segment directories exist but are empty (no .bin files), (3) manifest_index.json\nshows total_nodes: 0 despite analysis logging 70k+ nodes, (4) Docker builds produce\nempty graph databases, (5) --clear flag used before analyze command. Root cause:\nGraphEngineV2::clear() replaces the store with MultiShardStore::ephemeral() which\nhas path: None, causing all flush operations to write to in-memory buffers only.",
+  "content_fingerprint": "66dcd166525f37c5f774e0e636667bc717ae75dbc43a5f4730afd672de0484f4"
 }

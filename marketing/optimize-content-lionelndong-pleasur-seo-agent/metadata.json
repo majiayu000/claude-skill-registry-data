@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Optimize the cited draft against Semrush ContentShake AI scores. Calls .claude/skills/optimize-content/scripts/contentshake_optimize.py for SEO + Quality scoring + recommendations, then judgment-rewrites the additions in brand voice. Iterates until both scores \u2265 8 or voice drift triggers a rollback. No Chrome MCP, no TipTap injection \u2014 pure API."
+  "description": "Optimize the cited draft against Semrush ContentShake AI scores. Calls .claude/skills/optimize-content/scripts/contentshake_optimize.py for SEO + Quality scoring + recommendations, then judgment-rewrites the additions in brand voice. Iterates until both scores ≥ 8 or voice drift triggers a rollback. No Chrome MCP, no TipTap injection — pure API.",
+  "content_fingerprint": "6dbd85583f6ad46b310f4a9f4916e37bd3e8e105573be0c9483afc6e65b44c0c"
 }

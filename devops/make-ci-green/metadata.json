@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/brave-experiments/brave-core-bot/blob/main/.claude/skills/make-ci-green/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d51ac1e5deab02e4c3713c99e3576085747b1ee9eb1dcedc6d2cba54b943b170",
+  "description": "Re-run failed CI jobs for a brave/brave-core PR. Detects failure stage and uses WIPE_WORKSPACE for build/infra failures. Triggers on: make ci green, retry ci, rerun ci, fix ci, re-run failed jobs, ret"
 }

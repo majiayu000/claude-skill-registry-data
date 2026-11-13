@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill when the user runs /configure, /configure --needs, or /configure --check. Also auto-invoked by env-detect.sh on fresh install (Layer 0) and by skills that find required config missing at runtime (Layer 2). Guides setup of config/tools.json and config/tools.local.json through a question bank; handles public/local split, diff-before-write, and resume semantics for interrupted commands."
+  "description": "Use this skill when the user runs /configure, /configure --needs, or /configure --check. Also auto-invoked by env-detect.sh on fresh install (Layer 0) and by skills that find required config missing at runtime (Layer 2). Guides setup of config/tools.json and config/tools.local.json through a question bank; handles public/local split, diff-before-write, and resume semantics for interrupted commands.",
+  "content_fingerprint": "47ea428d06bfdf7b5a418b734eec412f7b83194e95ba121699f5d8053f166673"
 }

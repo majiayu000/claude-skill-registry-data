@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Comprehensive MongoDB Atlas + mongosh skill for performance auditing, all index types (b-tree/text/2dsphere/hashed/TTL/partial/wildcard/Atlas-Search/Vector-Search), Performance Advisor analysis, query explain, schema advice, backup status, alerts, week-over-week diffs, and additive index creation. Read-only by default; create-index ops gated behind explicit `--confirm`. Hard-blocks any destructive op (delete, drop, restore, pause, terminate, kill, dbuser write, network change). Works against Atlas Cloud (full feature set) and self-hosted/local mongo (mongosh-based subset)."
+  "description": "Comprehensive MongoDB Atlas + mongosh skill for performance auditing, all index types (b-tree/text/2dsphere/hashed/TTL/partial/wildcard/Atlas-Search/Vector-Search), Performance Advisor analysis, query explain, schema advice, backup status, alerts, week-over-week diffs, and additive index creation. Read-only by default; create-index ops gated behind explicit `--confirm`. Hard-blocks any destructive op (delete, drop, restore, pause, terminate, kill, dbuser write, network change). Works against Atlas Cloud (full feature set) and self-hosted/local mongo (mongosh-based subset).",
+  "content_fingerprint": "465682b0413b40f376de5eb94dd79042554d655623064d0059ef170d0d5cc1d0"
 }

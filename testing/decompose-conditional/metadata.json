@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ubcf5\uc7a1\ud55c if/then/else\uc758 \uc870\uac74\uc2dd\uacfc \uac01 \ubd84\uae30\ub97c \uc758\ubbf8 \uc788\ub294 \uba54\uc11c\ub4dc\ub85c \ucd94\ucd9c\ud558\uc5ec \uac00\ub3c5\uc131 \ud5a5\uc0c1. \"\uc870\uac74\ubb38 \ubd84\ud574\", \"if \uac00\ub3c5\uc131\", \"\ubcf5\uc7a1\ud55c \uc870\uac74\uc2dd\uc5d0 \uc774\ub984 \ubd99\uc5ec\", \"/decompose-conditional\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \uac19\uc740 \uacb0\uacfc\ub97c \ub0b4\ub294 \uc870\uac74\ubb38\ub4e4\uc744 \ud558\ub098\ub85c \ud569\uce58\ub294 \uac83\uc740 /consolidate-conditional, \ud0c0\uc785\ubcc4 \ubd84\uae30\ub97c \ud074\ub798\uc2a4\ub85c \ubc14\uafb8\ub294 \uac83\uc740 /replace-conditional-with-poly\uac00 \uc801\ud569. /decompose-conditional [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "복잡한 if/then/else의 조건식과 각 분기를 의미 있는 메서드로 추출하여 가독성 향상. \"조건문 분해\", \"if 가독성\", \"복잡한 조건식에 이름 붙여\", \"/decompose-conditional\" 요청 시 사용. 단, 같은 결과를 내는 조건문들을 하나로 합치는 것은 /consolidate-conditional, 타입별 분기를 클래스로 바꾸는 것은 /replace-conditional-with-poly가 적합. /decompose-conditional [commit-ref]로 호출.",
+  "content_fingerprint": "923f2c875d72bc500df5a9f58c2c4701e172ea50684cb0f4a197be88553e145a"
 }

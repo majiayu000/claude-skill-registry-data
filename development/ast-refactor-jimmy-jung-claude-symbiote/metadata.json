@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jimmy-Jung/claude_symbiote/blob/main/.claude/skills/ast-refactor/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "5ee86cbf502404e53d2dc4e01063a3e8f4eaddaa2748055449901792d0e72ec4",
+  "description": "ast-grep를 활용한 구조적 코드 검색 및 리팩토링. 텍스트 매칭이 아닌 AST(추상 구문 트리) 기반으로 코드 패턴을 정밀하게 검색하고 치환합니다. Use when performing structural code transformations or finding patterns across the codebase."
 }

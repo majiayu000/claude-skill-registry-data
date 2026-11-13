@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Authors property-based tests in Rust using proptest - wires the `proptest!` macro, defines strategies (`prop::collection::vec`, type-driven `any` strategies, regex-based string strategies), uses the strategy-per-value model (vs QuickCheck's per-type) for flexible composition, and exploits proptest's automatic shrinking + persistence of failed cases (regression test artifact). Use when a Rust codebase needs PBT - pairs especially well with parsers, serializers, and any function with a structured input domain."
+  "description": "Authors property-based tests in Rust using proptest - wires the `proptest!` macro, defines strategies (`prop::collection::vec`, type-driven `any` strategies, regex-based string strategies), uses the strategy-per-value model (vs QuickCheck's per-type) for flexible composition, and exploits proptest's automatic shrinking + persistence of failed cases (regression test artifact). Use when a Rust codebase needs PBT - pairs especially well with parsers, serializers, and any function with a structured input domain.",
+  "content_fingerprint": "56a7a3af6b2fc64699122f3a272510ce8d79970abc12824e1c432a8d63c9df81"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/andreibesleaga/GABBE/blob/main/agents/skills/coordination/meta-optimize.skill.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d62f607d937ef923c062f742b9e099578378e6a714e1fcce5dd1524f7bfd6502",
+  "description": "The \"Self-Refining\" Engine. Analyzes failure patterns in other skills (e.g., `ci-autofix` failing repeatedly) and rewrites their prompts/logic to improve future performance."
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Testing an Umbraco package's C# code on Umbraco's own integration test package (Umbraco.Cms.Tests.Integration): what the test project must add before any database test runs, getting `UmbracoTestServerTestBase` to serve the package's controllers, and switching caching and cache refreshers back on, so a test exercises the package instead of passing by default. Use when adding a C# test project, or writing or reviewing a test on `UmbracoIntegrationTest`, `UmbracoTestServerTestBase` or `ManagementApiTest<T>`, especially one that checks cached data or a Management API endpoint."
+  "description": "Testing an Umbraco package's C# code on Umbraco's own integration test package (Umbraco.Cms.Tests.Integration): what the test project must add before any database test runs, getting `UmbracoTestServerTestBase` to serve the package's controllers, and switching caching and cache refreshers back on, so a test exercises the package instead of passing by default. Use when adding a C# test project, or writing or reviewing a test on `UmbracoIntegrationTest`, `UmbracoTestServerTestBase` or `ManagementApiTest<T>`, especially one that checks cached data or a Management API endpoint.",
+  "content_fingerprint": "bcbefd4904f851e3ca21a5adb2f604f712a162c655f700a5d2dd355989a22f9b"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Writes and edits the rules in an instruction file, whether that is `AGENTS.md`, the `CLAUDE.md` symlinked to it, or a preset's `AGENTS.partial.md`. Covers the bullet a rule lands as, how its reason and its exception attach, which rules earn a place, where a new one goes, and when a rule replaces an existing bullet instead of joining it. Invoked explicitly as `/agents-md <the rule or the change>`, and applies on its own whenever the deliverable is a rule in one of those files. Not for a skill body, which `skill-creator` owns, and not for a standalone document, which `write-document` owns."
+  "description": "Writes and edits the rules in an instruction file, whether that is `AGENTS.md`, the `CLAUDE.md` symlinked to it, or a preset's `AGENTS.partial.md`. Covers the bullet a rule lands as, how its reason and its exception attach, which rules earn a place, where a new one goes, and when a rule replaces an existing bullet instead of joining it. Invoked explicitly as `/agents-md <the rule or the change>`, and applies on its own whenever the deliverable is a rule in one of those files. Not for a skill body, which `skill-creator` owns, and not for a standalone document, which `write-document` owns.",
+  "content_fingerprint": "ee0fe079410cc7494b8771bb8bc18fda51c84162b7ee8a5f3f291a536a601acf"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u7167\u7247\u7535\u5f71\u611f\u8c03\u8272\u3001\u4f4e\u9971\u548c\u51b7\u6696\u5206\u79bb\u3001\u5148\u4fdd\u539f\u7247\u518d\u8c03\u8272\u3002\u7528\u786e\u5b9a\u6027\u50cf\u7d20\u5904\u7406\u800c\u4e0d\u662f\u751f\u6210\u5f0f\u91cd\u7ed8\uff1b\u5148\u786e\u8ba4\u7528\u9014\u4e0e\u8272\u5f69\u8f93\u5165\uff0c\u8f93\u51fa\u5e26 sRGB ICC \u7684\u65b0\u56fe\u548c\u9690\u79c1\u4f18\u5148\u7684\u53c2\u6570/QA \u8fb9\u8f66\u3002\u652f\u6301 8-bit SDR JPEG/PNG \u7684 render\u3001\u56fa\u5b9a\u4e09\u9009\u5019\u9009\u5c0f\u6837 candidates \u4e0e\u6570\u503c QA\uff0c\u4ee5\u53ca\u539f\u5c3a\u5bf8\u524d\u540e\u5bf9\u6bd4 compare\uff1bcard\u3001LUT \u5c1a\u672a\u5b9e\u73b0\u3002\u4e0d\u8d1f\u8d23 RAW \u663e\u5f71\u3001\u4fee\u56fe\u6362\u666f\u3001\u51b2\u5370\u4ea4\u4ed8\u6216\u7cbe\u786e\u590d\u523b\u7535\u5f71/\u80f6\u7247\u3002"
+  "description": "照片电影感调色、低饱和冷暖分离、先保原片再调色。用确定性像素处理而不是生成式重绘；先确认用途与色彩输入，输出带 sRGB ICC 的新图和隐私优先的参数/QA 边车。支持 8-bit SDR JPEG/PNG 的 render、固定三选候选小样 candidates 与数值 QA，以及原尺寸前后对比 compare；card、LUT 尚未实现。不负责 RAW 显影、修图换景、冲印交付或精确复刻电影/胶片。",
+  "content_fingerprint": "902a2c80d99cc2b72e3ca353172d7ff8d8a71a221d799fa33d44f29fd6e115fb"
 }

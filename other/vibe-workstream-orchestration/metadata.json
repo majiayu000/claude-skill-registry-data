@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs a multi-phase project from an orchestrating main thread that plans, routes and verifies but does not build. Defines a few long-lived workstreams, each owning a file area end to end in its own worktree, and routes every follow-up to the owning agent instead of spawning a one-off. Covers base-SHA recording, rebase-before-commit, stale-checkout detection, and shared-machine hygiene (ports, processes, measurement noise). Use when a project spans several phases or sessions with three or more agents working at once."
+  "description": "Runs a multi-phase project from an orchestrating main thread that plans, routes and verifies but does not build. Defines a few long-lived workstreams, each owning a file area end to end in its own worktree, and routes every follow-up to the owning agent instead of spawning a one-off. Covers base-SHA recording, rebase-before-commit, stale-checkout detection, and shared-machine hygiene (ports, processes, measurement noise). Use when a project spans several phases or sessions with three or more agents working at once.",
+  "content_fingerprint": "4ccd8a86206802fa506a47d57cc1ce13d10ad72e7246bcb31e30cbd7179ec136"
 }

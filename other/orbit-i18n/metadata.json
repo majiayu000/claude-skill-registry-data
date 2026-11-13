@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Internationalization (i18n) audit for a WordPress plugin \u2014 checks every user-facing string is wrapped in `__()`/`_e()`/etc., text domain matches the plugin slug, POT file is fresh, locale-loading hook is on `init`/`plugins_loaded` (not earlier), placeholders use `%1$s` for translator-friendly word order, and pluralization uses `_n()`. Use when the user says \"i18n\", \"translation\", \"POT\", \"text domain\", \"make plugin translatable\", or before a release with new strings."
+  "description": "Internationalization (i18n) audit for a WordPress plugin — checks every user-facing string is wrapped in `__()`/`_e()`/etc., text domain matches the plugin slug, POT file is fresh, locale-loading hook is on `init`/`plugins_loaded` (not earlier), placeholders use `%1$s` for translator-friendly word order, and pluralization uses `_n()`. Use when the user says \"i18n\", \"translation\", \"POT\", \"text domain\", \"make plugin translatable\", or before a release with new strings.",
+  "content_fingerprint": "2588ca59391381bfc37d0f6ea17d4af3b8ec72e9eda692cc471a097f4f366635"
 }

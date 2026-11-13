@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/cbbkrd-tech/jl-finishes/blob/main/.claude/skills/ln-300-task-coordinator/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "99dc533f8c1b3dd31f682a18393b51fa864a064e78d598c3e0d528983de50b1d",
+  "description": "Orchestrates task operations. Analyzes Story, builds optimal plan (1-8 implementation tasks), delegates to ln-301-task-creator (CREATE/ADD) or ln-302-task-replanner (REPLAN). Auto-discovers team ID."
 }

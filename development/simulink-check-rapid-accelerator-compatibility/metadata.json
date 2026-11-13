@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Statically analyze a Simulink model for Rapid Accelerator (raccel) mode incompatibilities. Identifies unsupported blocks (Interpreted MATLAB Function, Level-2 S-Functions without TLC), configuration issues, and data type restrictions that prevent code generation. Classifies each issue as BLOCKER (build error) or WARNING (build warning). Use BEFORE calling sim() in rapid-accelerator mode, when buildRapidAcceleratorTarget fails, or when the user asks \"why won't my model run in raccel?\" TRIGGER: any request explicitly involving rapid accelerator mode, raccel, raccel build errors, or buildRapidAcceleratorTarget failures."
+  "description": "Statically analyze a Simulink model for Rapid Accelerator (raccel) mode incompatibilities. Identifies unsupported blocks (Interpreted MATLAB Function, Level-2 S-Functions without TLC), configuration issues, and data type restrictions that prevent code generation. Classifies each issue as BLOCKER (build error) or WARNING (build warning). Use BEFORE calling sim() in rapid-accelerator mode, when buildRapidAcceleratorTarget fails, or when the user asks \"why won't my model run in raccel?\" TRIGGER: any request explicitly involving rapid accelerator mode, raccel, raccel build errors, or buildRapidAcceleratorTarget failures.",
+  "content_fingerprint": "aa70ec91629c8b0171de0c46fe6302e4c5ff8ac8aa706013b0aee6d31404ca11"
 }

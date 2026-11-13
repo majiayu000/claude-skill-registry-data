@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fast Python I/O for BigWig (continuous genome signal) and BigBed (interval annotation) files via libBigWig. Use for random-access signal queries at specific genomic coordinates (bw.values, bw.stats), computing per-region summary statistics (mean/max/coverage) over a BED file of regions, writing custom BigWig tracks from numpy arrays, and loading ChIP-seq/ATAC-seq/RNA-seq/methylation coverage tracks (e.g. produced by deeptools bamCoverage) into pandas/numpy for downstream analysis or ML feature extraction. Complements deeptools (which generates BigWig files) and chip-seq/atac-seq workflows."
+  "description": "Fast Python I/O for BigWig (continuous genome signal) and BigBed (interval annotation) files via libBigWig. Use for random-access signal queries at specific genomic coordinates (bw.values, bw.stats), computing per-region summary statistics (mean/max/coverage) over a BED file of regions, writing custom BigWig tracks from numpy arrays, and loading ChIP-seq/ATAC-seq/RNA-seq/methylation coverage tracks (e.g. produced by deeptools bamCoverage) into pandas/numpy for downstream analysis or ML feature extraction. Complements deeptools (which generates BigWig files) and chip-seq/atac-seq workflows.",
+  "content_fingerprint": "b503c9113a4c46ac55ff2c74d03effddf3b4fe20cb1d07a0571c0102479e0880"
 }

@@ -1,6 +1,6 @@
 {
   "name": "unknown",
-  "description": "",
+  "description": "Scans the codebase to generate project-doc.md and AGENTS.md. Runs a full scan on first use and a smart delta scan on subsequent runs. Uses understand-anything + context-mode when available, falls back",
   "repo": "wshobson/agents",
   "path": "plugins/ship-mate/skills/scan/SKILL.md",
   "github_branch": "main",
@@ -17,5 +17,6 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/wshobson/agents/blob/main/plugins/ship-mate/skills/scan/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d0ff247a5a1ecb534576822c94db96e6fa10900f33be828985d26868eb7594a3"
 }

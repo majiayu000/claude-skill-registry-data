@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Harden GitHub Actions workflows against the well-known footguns. Covers SHA-pinned third-party actions, scoped GITHUB_TOKEN permissions, OIDC in place of long-lived cloud credentials, the pull_request_target trap, untrusted-input interpolation, and protected deploy environments. Invoke when adding a new workflow, introducing a third-party action, or migrating from long-lived secrets to OIDC."
+  "description": "Harden GitHub Actions workflows against the well-known footguns. Covers SHA-pinned third-party actions, scoped GITHUB_TOKEN permissions, OIDC in place of long-lived cloud credentials, the pull_request_target trap, untrusted-input interpolation, and protected deploy environments. Invoke when adding a new workflow, introducing a third-party action, or migrating from long-lived secrets to OIDC.",
+  "content_fingerprint": "6e70251dcb95d74654944bb6fc354d462461ce453f1cb00f335b63effdfc2b5b"
 }

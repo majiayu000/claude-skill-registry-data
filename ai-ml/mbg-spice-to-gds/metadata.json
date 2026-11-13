@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Converts a SPICE subcircuit netlist into a DRC-clean GDSII layout using gLayout, via the single entry point spice_to_gds_with_checks(netlist). Use when the user asks to generate GDS from SPICE, convert a netlist to layout, \"layout my circuit\", or \"spice to gds\" for the GF180MCU 3.3V PDK. Do not use for manual step-by-step placement/routing, simulation-only tasks, or verification-only tasks on an already-built GDS (use mbg-ic-verify for that)."
+  "description": "Converts a SPICE subcircuit netlist into a DRC-clean GDSII layout using gLayout, via the single entry point spice_to_gds_with_checks(netlist). Use when the user asks to generate GDS from SPICE, convert a netlist to layout, \"layout my circuit\", or \"spice to gds\" for the GF180MCU 3.3V PDK. Do not use for manual step-by-step placement/routing, simulation-only tasks, or verification-only tasks on an already-built GDS (use mbg-ic-verify for that).",
+  "content_fingerprint": "ce2cf2c3193f153a0cabce7fe66d86e6020ea19b46f2e7443b360c98480400e5"
 }

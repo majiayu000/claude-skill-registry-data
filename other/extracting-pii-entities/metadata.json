@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Detect PHI/PII spans in clinical text with OpenMed's extract_pii without altering the text. Use when the user wants to find names, dates, MRNs, phone numbers, addresses, SSNs, or other identifiers and get their offsets and labels (not redact them), inspect what would be removed before de-identifying, route spans to a custom redactor, normalize labels to a canonical taxonomy, or filter by confidence and language. Covers extract_pii, the PIIEntity fields, CANONICAL_LABELS / normalize_label, and how it differs from deidentify. Pairs before reidentifying-text and deidentifying-clinical-text."
+  "description": "Detect PHI/PII spans in clinical text with OpenMed's extract_pii without altering the text. Use when the user wants to find names, dates, MRNs, phone numbers, addresses, SSNs, or other identifiers and get their offsets and labels (not redact them), inspect what would be removed before de-identifying, route spans to a custom redactor, normalize labels to a canonical taxonomy, or filter by confidence and language. Covers extract_pii, the PIIEntity fields, CANONICAL_LABELS / normalize_label, and how it differs from deidentify. Pairs before reidentifying-text and deidentifying-clinical-text.",
+  "content_fingerprint": "4bdfd8fe17005a991ad9bad036d174e4338605c9e80737c222110a6fc048d033"
 }

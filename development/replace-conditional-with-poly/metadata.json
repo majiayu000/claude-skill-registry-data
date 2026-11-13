@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ud0c0\uc785\u00b7\uc0c1\ud0dc\ubcc4\ub85c \ubc18\ubcf5\ub418\ub294 switch/if-else \ubd84\uae30\ub97c \ub2e4\ud615\uc131(\uc778\ud130\ud398\uc774\uc2a4 + \uad6c\ud604 \ud074\ub798\uc2a4)\uc73c\ub85c \uce58\ud658. \"switch\ub97c \ub2e4\ud615\uc131\uc73c\ub85c\", \"\ud0c0\uc785 \ubd84\uae30\ub97c \ud074\ub798\uc2a4\ub85c\", \"strategy \ud328\ud134\", \"/replace-conditional-with-poly\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, null \ubd84\uae30\ub9cc\uc774\uba74 /introduce-special-case, \uc870\uac74\uc2dd \uac00\ub3c5\uc131\ub9cc\uc774\uba74 /decompose-conditional\uc774 \uc801\ud569. /replace-conditional-with-poly [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "타입·상태별로 반복되는 switch/if-else 분기를 다형성(인터페이스 + 구현 클래스)으로 치환. \"switch를 다형성으로\", \"타입 분기를 클래스로\", \"strategy 패턴\", \"/replace-conditional-with-poly\" 요청 시 사용. 단, null 분기만이면 /introduce-special-case, 조건식 가독성만이면 /decompose-conditional이 적합. /replace-conditional-with-poly [commit-ref]로 호출.",
+  "content_fingerprint": "a6bcedf1d988976bdfe0eeb9925b32d3febd5f33ef2950d3681f262052dc3393"
 }

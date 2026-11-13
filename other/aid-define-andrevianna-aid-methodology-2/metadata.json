@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Decompose approved requirements into discrete features, each recorded as a `### Feature NNN` section of REQUIREMENTS.md \u00a7 11 that cites the `AC-N` criteria it claims. Use this skill once `/aid-describe` has produced an approved REQUIREMENTS.md and the work needs splitting into features before any one of them is specified. It turns each functional requirement into a feature, then validates the requirements and the feature boundaries against the Knowledge Base and the codebase, and halts ready for `/aid-specify`."
+  "description": "Decompose approved requirements into discrete features, each recorded as a `### Feature NNN` section of REQUIREMENTS.md § 11 that cites the `AC-N` criteria it claims. Use this skill once `/aid-describe` has produced an approved REQUIREMENTS.md and the work needs splitting into features before any one of them is specified. It turns each functional requirement into a feature, then validates the requirements and the feature boundaries against the Knowledge Base and the codebase, and halts ready for `/aid-specify`.",
+  "content_fingerprint": "11257766b85ff0f01b48c563e17b6588bbca131f08bea6fc55a997551749e6c7"
 }

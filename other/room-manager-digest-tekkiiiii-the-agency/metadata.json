@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use on /room-manager-digest, a 12h cron, or when a dept head wants a fresh report. Reads each dept room's rolling.md, summarizes the last 12h per person with status counts, and sends one digest per dept head via SendMessage. Idempotent: skips depts with no new entries."
+  "description": "Use on /room-manager-digest, a 12h cron, or when a dept head wants a fresh report. Reads each dept room's rolling.md, summarizes the last 12h per person with status counts, and sends one digest per dept head via SendMessage. Idempotent: skips depts with no new entries.",
+  "content_fingerprint": "da26195c20403abbf034eb9693588b01d183668f4ca7b6af6bbd60d3346ec26a"
 }

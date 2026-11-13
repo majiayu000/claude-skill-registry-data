@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific behavior for DROP USER and RENAME USER \u2014 multiple accounts per statement, IF EXISTS turning a missing-user error into a note, the active-connections warning (dropped users keep working until their session ends; new connections are blocked), no cascade onto objects owned or privileges granted by the dropped user, dangling DEFINER references left behind on views/routines/triggers, and RENAME USER preserving privileges across the rename with no active-session check. Use when writing, generating, or reviewing DROP USER or RENAME USER statements, or account-lifecycle cleanup scripts, that target MariaDB."
+  "description": "MariaDB-specific behavior for DROP USER and RENAME USER — multiple accounts per statement, IF EXISTS turning a missing-user error into a note, the active-connections warning (dropped users keep working until their session ends; new connections are blocked), no cascade onto objects owned or privileges granted by the dropped user, dangling DEFINER references left behind on views/routines/triggers, and RENAME USER preserving privileges across the rename with no active-session check. Use when writing, generating, or reviewing DROP USER or RENAME USER statements, or account-lifecycle cleanup scripts, that target MariaDB.",
+  "content_fingerprint": "3363895ace710ff42b99806788660c2402bc67ad73e46bb87fdf66a8a57b83af"
 }

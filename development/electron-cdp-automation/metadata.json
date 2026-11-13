@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when driving or testing a packaged Electron desktop app from outside it (no source access, only the .exe/.app), or when a chrome-remote-interface/CDP script hangs forever waiting for page load, throws \"Execution context was destroyed\", fills an input that the app then ignores, or errors on a `:has-text()` selector \u2014 and when you must first establish whether the target app permits remote debugging at all."
+  "description": "Use when driving or testing a packaged Electron desktop app from outside it (no source access, only the .exe/.app), or when a chrome-remote-interface/CDP script hangs forever waiting for page load, throws \"Execution context was destroyed\", fills an input that the app then ignores, or errors on a `:has-text()` selector — and when you must first establish whether the target app permits remote debugging at all.",
+  "content_fingerprint": "a9788fa014903d086401064cac5563fb01ce459b18a8866d88707c77c0489562"
 }

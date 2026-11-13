@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when work must run outside the request, on a schedule, or be logged in an Acorn project - WP-Cron vs Action Scheduler vs Laravel queues (make:job, ShouldQueue, queue:work, failed_jobs), console commands (make:command, wp acorn <command>), Schedule::command and schedule:run from system cron, Laravel Redis and Cache vs transients, logging channels (Log::, LOG_CHANNEL, stderr, storage/logs). For tables use acorn-data; for object cache tuning use wp-performance."
+  "description": "Use when work must run outside the request, on a schedule, or be logged in an Acorn project - WP-Cron vs Action Scheduler vs Laravel queues (make:job, ShouldQueue, queue:work, failed_jobs), console commands (make:command, wp acorn <command>), Schedule::command and schedule:run from system cron, Laravel Redis and Cache vs transients, logging channels (Log::, LOG_CHANNEL, stderr, storage/logs). For tables use acorn-data; for object cache tuning use wp-performance.",
+  "content_fingerprint": "6d0247623a57ff6abac4466d152558ff31f8b4b84f38de66ecdbc10eaf67e492"
 }

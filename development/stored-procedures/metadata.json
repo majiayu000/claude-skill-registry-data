@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ports T-SQL stored procedures and functions to PostgreSQL for the dualdb tool, and decides which ones cannot be ported confidently. Use whenever you see CREATE PROCEDURE, CREATE FUNCTION, EXEC, CommandType.StoredProcedure, an output parameter, a RETURN code, RAISERROR, a cursor, or a .sql file containing procedural logic. Covers the mandatory PL/pgSQL par_/var_ naming rules."
+  "description": "Ports T-SQL stored procedures and functions to PostgreSQL for the dualdb tool, and decides which ones cannot be ported confidently. Use whenever you see CREATE PROCEDURE, CREATE FUNCTION, EXEC, CommandType.StoredProcedure, an output parameter, a RETURN code, RAISERROR, a cursor, or a .sql file containing procedural logic. Covers the mandatory PL/pgSQL par_/var_ naming rules.",
+  "content_fingerprint": "db009690c836ef25b7f993e88dc97fc1fcac9b0e5b2a1ab6ba8a01198db04401"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "security-scan\u7d50\u679c\u304b\u3089Playwright E2E\u30c6\u30b9\u30c8\u30b3\u30fc\u30c9\u3092\u81ea\u52d5\u751f\u6210\u3002\u8106\u5f31\u6027\u30bf\u30a4\u30d7\u5225\u306b\u30c6\u30b9\u30c8\u30d5\u30a1\u30a4\u30eb\u3092tests/security/\u306b\u51fa\u529b\u3002\u300cE2E\u30c6\u30b9\u30c8\u751f\u6210\u300d\u300cgenerate e2e\u300d\u300c\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u30c6\u30b9\u30c8\u4f5c\u6210\u300d\u300cPlaywright\u30c6\u30b9\u30c8\u751f\u6210\u300d\u3067\u8d77\u52d5\u3002security-audit\u306e--auto-e2e\u30aa\u30d7\u30b7\u30e7\u30f3\u3067\u3082\u81ea\u52d5\u5b9f\u884c\u3055\u308c\u308b\u3002Do NOT use for \u30b9\u30ad\u30e3\u30f3\u5b9f\u884c\uff08\u2192 security-scan\uff09\u3084\u30ec\u30dd\u30fc\u30c8\u751f\u6210\uff08\u2192 attack-report\uff09\u3002"
+  "description": "security-scan結果からPlaywright E2Eテストコードを自動生成。脆弱性タイプ別にテストファイルをtests/security/に出力。「E2Eテスト生成」「generate e2e」「セキュリティテスト作成」「Playwrightテスト生成」で起動。security-auditの--auto-e2eオプションでも自動実行される。Do NOT use for スキャン実行（→ security-scan）やレポート生成（→ attack-report）。",
+  "content_fingerprint": "1c5a0df1ae7dbaca76f902f6431bb0566a6924d5ab4655f8999d5efd36292259"
 }

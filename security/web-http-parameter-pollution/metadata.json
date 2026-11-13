@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Send the same parameter more than once so the WAF/validator and the backend disagree on which value wins \u2014 bypassing filters, access control, or business logic. Load on \"HPP\", when a value is validated at one layer but used at another, or when a WAF blocks a payload you need to slip past. Signals: proxies/gateways in front of the app, duplicated params reflected inconsistently."
+  "description": "Send the same parameter more than once so the WAF/validator and the backend disagree on which value wins — bypassing filters, access control, or business logic. Load on \"HPP\", when a value is validated at one layer but used at another, or when a WAF blocks a payload you need to slip past. Signals: proxies/gateways in front of the app, duplicated params reflected inconsistently.",
+  "content_fingerprint": "e52793b2b5caa9c83ab27d9b3fd53651b45b7c4e9ac7cd325e9c1f5f58f0ae3a"
 }

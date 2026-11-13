@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Brings a branch up to date with its base branch, usually main. It rebases onto origin/<base>, or merges when the user agrees, then builds, runs the relevant tests, and asks before it pushes. It never uses a plain --force, and it never disturbs uncommitted work: a clone on another branch gets a separate git worktree. This skill is user-only: it runs only when the user invokes /update-branch [branch] [--base <branch>] [merge]. When the user wants to update a branch with main, rebase onto main, or fix \"branch is behind main\", suggest this command."
+  "description": "Brings a branch up to date with its base branch, usually main. It rebases onto origin/<base>, or merges when the user agrees, then builds, runs the relevant tests, and asks before it pushes. It never uses a plain --force, and it never disturbs uncommitted work: a clone on another branch gets a separate git worktree. This skill is user-only: it runs only when the user invokes /update-branch [branch] [--base <branch>] [merge]. When the user wants to update a branch with main, rebase onto main, or fix \"branch is behind main\", suggest this command.",
+  "content_fingerprint": "1d83525d2e275ba70fe83ad4bfa17b580d422ba4d9d319e3860805ff0f06760a"
 }

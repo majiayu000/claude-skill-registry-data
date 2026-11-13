@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill to walk the adopter through the four classes of post-install change, including substitution, upstream companion merges, discovery plus restructuring, and within-layout consolidation. Triggers after installing a pack, when the install-to-adapt chain nudges via session-start hook, or any time a repo .adapt-install-marker.toml or user .agentbundle marker is on disk. Walks both scopes' state files for Tier-2 detection; class-1 substitution shells out to agentbundle adapt; classes 2-4 write files directly under the per-scope path-jail."
+  "description": "Use this skill to walk the adopter through the four classes of post-install change, including substitution, upstream companion merges, discovery plus restructuring, and within-layout consolidation. Triggers after installing a pack, when the install-to-adapt chain nudges via session-start hook, or any time a repo .adapt-install-marker.toml or user .agentbundle marker is on disk. Walks both scopes' state files for Tier-2 detection; class-1 substitution shells out to agentbundle adapt; classes 2-4 write files directly under the per-scope path-jail.",
+  "content_fingerprint": "0e61f2591cdad01465d19931234bc7c2c8d0a72f63b2d6ad68f4257db65a425c"
 }

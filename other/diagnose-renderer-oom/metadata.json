@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u8bca\u65ad renderer OOM\uff08\u5185\u5b58\u8017\u5c3d\u5d29\u6e83\uff09\u3002\u5f53\u7528\u6237\u4ea4\u6765 renderer OOM \u8bca\u65ad\u5305\uff08zip \u6216 logs \u76ee\u5f55\uff09\u3001\u62a5\u544a\u7f16\u8f91\u5668\u7a97\u53e3\u53d8\u9ed1/\u81ea\u52a8\u5173\u95ed\u3001\u6216\u63d0\u5230 renderer OOM / Automatic resume is paused / oom-lo-space-size / \u5207 tab \u540e\u5185\u5b58\u51b2\u5230\u6570 GB \u65f6\u4f7f\u7528\u3002"
+  "description": "诊断 renderer OOM（内存耗尽崩溃）。当用户交来 renderer OOM 诊断包（zip 或 logs 目录）、报告编辑器窗口变黑/自动关闭、或提到 renderer OOM / Automatic resume is paused / oom-lo-space-size / 切 tab 后内存冲到数 GB 时使用。",
+  "content_fingerprint": "b4f666381dd9ab96e6df6274af29ec55b576aeea18308e47f2f7e16d89341463"
 }

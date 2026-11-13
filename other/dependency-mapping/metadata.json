@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Map symbol dependencies, callers, and blast radius before editing code. Load when the user asks what depends on a symbol, what breaks if they change something, blast radius of a change, reverse dependencies, or which tests cover a function. Also triggers on \"who calls this\", \"impact of changing\", \"dependency map\", \"what uses this\", \"find callers\", or before any non-trivial edit when safe-change is not yet active. Pairs with codebase-understanding for broad architecture; this skill is symbol-scoped and edit-gated."
+  "description": "Map symbol dependencies, callers, and blast radius before editing code. Load when the user asks what depends on a symbol, what breaks if they change something, blast radius of a change, reverse dependencies, or which tests cover a function. Also triggers on \"who calls this\", \"impact of changing\", \"dependency map\", \"what uses this\", \"find callers\", or before any non-trivial edit when safe-change is not yet active. Pairs with codebase-understanding for broad architecture; this skill is symbol-scoped and edit-gated.",
+  "content_fingerprint": "0f1edbf2c5ab903838f22d72f0fe4051c0081da545e3d4972b469cd716bfbfc6"
 }

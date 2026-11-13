@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4ece\u8bbe\u8ba1\u6587\u6863\u751f\u6210\u4ee3\u7801\u9aa8\u67b6\uff08\u6587\u4ef6 + \u7c7b + \u65b9\u6cd5\uff09\uff0c\u628a\u63a5\u53e3\u5951\u7ea6\u3001\u6570\u636e\u6a21\u578b\u3001\u5f02\u5e38\u5904\u7406\u5199\u8fdb\u5951\u7ea6\u7ea7\u6ce8\u91ca\uff0c\u8ba9\u540e\u7eed\u7f16\u7801\u4e0d\u5fc5\u53cd\u590d\u7ffb\u6587\u6863\uff1b\u751f\u6210\u524d\u5148\u4e0e\u7528\u6237\u786e\u8ba4\u67b6\u6784\u98ce\u683c\u4e0e\u8bbe\u8ba1\u6a21\u5f0f\u3002\u89e6\u53d1\uff1a\"\u751f\u6210\u4ee3\u7801\u9aa8\u67b6\"\u3001\"\u642d\u9aa8\u67b6\"\u3001\"\u6309\u8bbe\u8ba1\u751f\u6210\u4ee3\u7801\u7ed3\u6784\"\uff0c\u6216\u8bbe\u8ba1\u5b8c\u6210\u540e\u51c6\u5907\u7f16\u7801\u3002"
+  "description": "从设计文档生成代码骨架（文件 + 类 + 方法），把接口契约、数据模型、异常处理写进契约级注释，让后续编码不必反复翻文档；生成前先与用户确认架构风格与设计模式。触发：\"生成代码骨架\"、\"搭骨架\"、\"按设计生成代码结构\"，或设计完成后准备编码。",
+  "content_fingerprint": "07e36c97268e3639d968b1ec9f1c355047d4fc3fb5a9bdd62d62c6ed19d062c6"
 }

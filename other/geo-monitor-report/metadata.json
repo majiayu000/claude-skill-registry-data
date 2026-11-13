@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u9700\u8981 GEO \u76d1\u6d4b\u53ef\u89c6\u5316\u62a5\u544a\u3001\u4e3b\u6d41\u5927\u6a21\u578b\u6536\u5f55\u5206\u6790\u3001HTML \u4eea\u8868\u76d8\u3001monitor-report.md \u7ed3\u8bba\u9875\u65f6\u4f7f\u7528\u3002\u8bfb\u53d6 monitor-data.json\uff08\u542b llm_coverage\uff09\uff0c\u4ea7\u51fa MD+HTML \u53cc\u4ea4\u4ed8\uff1b\u76d1\u6d4b\u7c7b\u6d41\u7a0b\u672b\u6b65\u987b read_skill \u672c skill\uff0c\u52ff\u7528 od-data-report \u51d1\u9875\u3002"
+  "description": "当用户需要 GEO 监测可视化报告、主流大模型收录分析、HTML 仪表盘、monitor-report.md 结论页时使用。读取 monitor-data.json（含 llm_coverage），产出 MD+HTML 双交付；监测类流程末步须 read_skill 本 skill，勿用 od-data-report 凑页。",
+  "content_fingerprint": "182a8c8b6d9b052d4192362db16729b2ac1caf8acfdada6a058aab5e1fc68b0e"
 }

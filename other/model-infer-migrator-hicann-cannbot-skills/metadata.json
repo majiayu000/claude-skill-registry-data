@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u57fa\u4e8e PyTorch \u6846\u67b6\u7684\u6607\u817e NPU \u6a21\u578b\u63a8\u7406\u9002\u914d\u4e0e\u90e8\u7f72\u57fa\u7ebf\u6280\u80fd\u3002\u652f\u6301\u4e24\u79cd\u90e8\u7f72\u6a21\u5f0f\uff1a\u6846\u67b6\u90e8\u7f72\u6a21\u5f0f\uff08\u63a5\u5165 cann-recipes-infer \u7684 executor/core/\uff09\u548c\u72ec\u7acb\u90e8\u7f72\u6a21\u5f0f\uff08\u81ea\u7ba1 Runner \u4e0d\u4f9d\u8d56\u6846\u67b6\uff09\u3002\u4ece HF \u94fe\u63a5\u6216\u672c\u5730\u4ee3\u7801\u9002\u914d\u4e3a\u53ef\u8fd0\u884c\u7684\u6807\u51c6\u6a21\u578b\u76ee\u5f55\uff0c\u5e76\u91c7\u96c6\u6027\u80fd\u57fa\u7ebf\u3002\u89e6\u53d1\u573a\u666f\uff1a\u65b0\u6a21\u578b\u9002\u914d\u5230\u6607\u817e NPU \u63a8\u7406\u6846\u67b6\u3001\u5df2\u6709\u6a21\u578b\u7684\u90e8\u7f72\u57fa\u7ebf\u91c7\u96c6\u3001\u6a21\u578b\u8fc1\u79fb\u548c\u521d\u59cb\u8dd1\u901a\u9a8c\u8bc1\u3002"
+  "description": "基于 PyTorch 框架的昇腾 NPU 模型推理适配与部署基线技能。支持两种部署模式：框架部署模式（接入 cann-recipes-infer 的 executor/core/）和独立部署模式（自管 Runner 不依赖框架）。从 HF 链接或本地代码适配为可运行的标准模型目录，并采集性能基线。触发场景：新模型适配到昇腾 NPU 推理框架、已有模型的部署基线采集、模型迁移和初始跑通验证。",
+  "content_fingerprint": "cff7def6774e47138eb0b8b09f470456798ae5dce2fa15498fd43620bab9938f"
 }

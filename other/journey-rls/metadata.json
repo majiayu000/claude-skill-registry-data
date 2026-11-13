@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use as the RLS build stage of the Butterbase journey, after journey-schema. Implements the RLS section of 02-plan.md by delegating to debug-rls policy patterns (for proactive creation, not debugging). Calls manage_rls (create_user_isolation, enable, create_policy). Folded into journey-schema when hackathon_mode is true."
+  "description": "Use as the RLS build stage of the Butterbase journey, after journey-schema. Implements the RLS section of 02-plan.md by delegating to debug-rls policy patterns (for proactive creation, not debugging). Calls manage_rls (create_user_isolation, enable, create_policy). Folded into journey-schema when hackathon_mode is true.",
+  "content_fingerprint": "5a385e5e987d65a2576e0bd759e79b48f94f7a524e8c3f97b88e2f4ebab0f9be"
 }

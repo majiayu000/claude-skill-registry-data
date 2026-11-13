@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a user asks to investigate, check, or characterize a domain or hostname. Chains VirusTotal, URLScan (search existing scans), Shodan (DNS resolve + host), OTX, ransomware.live (victim-status sweep), and optionally Censys. Returns reputation, resolution, hosting fingerprint, ransomware-claim status, and pivot candidates. Invoked by /cti-orchestrator when the target is a domain."
+  "description": "Use when a user asks to investigate, check, or characterize a domain or hostname. Chains VirusTotal, URLScan (search existing scans), Shodan (DNS resolve + host), OTX, ransomware.live (victim-status sweep), and optionally Censys. Returns reputation, resolution, hosting fingerprint, ransomware-claim status, and pivot candidates. Invoked by /cti-orchestrator when the target is a domain.",
+  "content_fingerprint": "d87b5a4829c3a382931bdafd891bd525d58addb0d266e2cfa183ac473b822b64"
 }

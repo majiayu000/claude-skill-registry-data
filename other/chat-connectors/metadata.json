@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Connect a ChatGPT or Claude account and sync its conversation history into the brain automatically. Cookie paste-in is the primary lane; sync is incremental (watermark + trailing-window gap-heal), and can run on a schedule via autopilot or host cron. Distinct from the export-file lane (that lives in conversation-archive) \u2014 this is the LIVE, account-connected, auto-scraping path."
+  "description": "Connect a ChatGPT or Claude account and sync its conversation history into the brain automatically. Cookie paste-in is the primary lane; sync is incremental (watermark + trailing-window gap-heal), and can run on a schedule via autopilot or host cron. Distinct from the export-file lane (that lives in conversation-archive) — this is the LIVE, account-connected, auto-scraping path.",
+  "content_fingerprint": "b7c869da6390d76b3a9eb3a2bba86ab8d7e12f6b72840e1afd38568c3566863d"
 }

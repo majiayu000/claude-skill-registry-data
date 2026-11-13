@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Parquet\u683c\u5f0f\u5316\u5668\u3002\u7528\u4e8e\u52a0\u8f7d\u548c\u683c\u5f0f\u5316parquet\u7c7b\u578b\u7684\u6587\u4ef6\u3002\n\u672cSKILL\u4f7f\u7528\u4f9d\u8d56data_juicer\uff0c\u8bf7\u5728\u8c03\u7528\u524d\u5b89\u88c5\u597dpython\u73af\u5883\u5e76\u5b89\u88c5data_juicer\uff0c\u4f60\u53ef\u7528\u4ee5\u4e0b\u6307\u4ee4\u8fdb\u884c\u5b89\u88c5\uff1a\npip install py-data-juicer\n\n\u5f53\u7528\u6237\u63d0\u5230Parquet\u683c\u5f0f\u5316\u3001Parquet\u6570\u636e\u52a0\u8f7d\u3001\u8bfb\u53d6Parquet\u6587\u4ef6\u3001Parquet\u8f6cJSONL\u7b49\u9700\u6c42\u65f6\u4f7f\u7528\u6b64skill\u3002"
+  "description": "Parquet格式化器。用于加载和格式化parquet类型的文件。\n本SKILL使用依赖data_juicer，请在调用前安装好python环境并安装data_juicer，你可用以下指令进行安装：\npip install py-data-juicer\n\n当用户提到Parquet格式化、Parquet数据加载、读取Parquet文件、Parquet转JSONL等需求时使用此skill。",
+  "content_fingerprint": "1b11f2d1f33b1e36132cfd3894e7e2a009d59553ddf589b0193b94deb78886bc"
 }

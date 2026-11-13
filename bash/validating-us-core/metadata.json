@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Validate FHIR R4 resources and Bundles against US Core / USCDI profiles with the official HL7 FHIR validator before submitting to an EHR. Covers running validator_cli.jar (or the public validator.fhir.org), declaring meta.profile, must-support elements, common conformance gaps (missing code/category/status), and turning validator output into a FHIR OperationOutcome. Use after exporting-to-fhir / assembling-fhir-bundles to check OpenMed-produced FHIR for US Core conformance, when the user mentions US Core, USCDI, must-support, profile validation, or Epic/Cerner ingestion requirements. Pairs after."
+  "description": "Validate FHIR R4 resources and Bundles against US Core / USCDI profiles with the official HL7 FHIR validator before submitting to an EHR. Covers running validator_cli.jar (or the public validator.fhir.org), declaring meta.profile, must-support elements, common conformance gaps (missing code/category/status), and turning validator output into a FHIR OperationOutcome. Use after exporting-to-fhir / assembling-fhir-bundles to check OpenMed-produced FHIR for US Core conformance, when the user mentions US Core, USCDI, must-support, profile validation, or Epic/Cerner ingestion requirements. Pairs after.",
+  "content_fingerprint": "f2e38575d78a93ae714702e29a6123bb0a3bdb62f83cd1036beaafaf080fc85f"
 }

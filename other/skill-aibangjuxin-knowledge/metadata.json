@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when reviewing or auditing a Bash / sh / zsh script (single file, PR diff, or whole scripts/ directory). Runs the 4-layer \u00d7 8-class methodology: syntax (bash -n), static (shellcheck + shfmt + custom regex sweeps), semantic (logic / secret / portability review), and runtime (dry-run / trace / bats). Outputs a structured findings report with severity-tagged blockers / logic_errors / suggestions."
+  "description": "Use when reviewing or auditing a Bash / sh / zsh script (single file, PR diff, or whole scripts/ directory). Runs the 4-layer × 8-class methodology: syntax (bash -n), static (shellcheck + shfmt + custom regex sweeps), semantic (logic / secret / portability review), and runtime (dry-run / trace / bats). Outputs a structured findings report with severity-tagged blockers / logic_errors / suggestions.",
+  "content_fingerprint": "d504bea751c73914dbebf6b3abd5e4c42649e5b1b672acc950bebcbdc6585fb8"
 }

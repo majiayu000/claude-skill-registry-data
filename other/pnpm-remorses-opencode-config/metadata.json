@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use to debug why a specific package has duplicate dependencies in a pnpm project's node_modules, which can cause type-checking and bundler errors or duplicate singleton instances such as React contexts. Also use for pnpm workspace dependency updates, and when a just-published package version will not install or update (minimumReleaseAge blocks it). NEVER use package.json overrides to update or align versions; use `pnpm update -r <package>` instead."
+  "description": "Use to debug why a specific package has duplicate dependencies in a pnpm project's node_modules, which can cause type-checking and bundler errors or duplicate singleton instances such as React contexts. Also use for pnpm workspace dependency updates, and when a just-published package version will not install or update (minimumReleaseAge blocks it). NEVER use package.json overrides to update or align versions; use `pnpm update -r <package>` instead.",
+  "content_fingerprint": "28082099d3bd93d2966d53d6231b90a6e1c06fa7060ad57ceaec982d3f4cb772"
 }

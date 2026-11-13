@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Scan container images, filesystems, git repos, and existing SBOMs for CVEs, secrets, and license violations using Trivy. Covers local CLI, CI severity gates with SARIF upload, and continuous monitoring via Trivy Operator (Flux HelmRelease). Use when asked to \"scan my image\", \"check for CVEs\", \"scan this repo for secrets\", \"scan an SBOM\", or \"set up continuous cluster vulnerability monitoring\". IaC misconfig \u2192 /platform-skills:checkov. Admission posture \u2192 /platform-skills:kyverno. Image signing/SBOM generation \u2192 /platform-skills:supply-chain."
+  "description": "Scan container images, filesystems, git repos, and existing SBOMs for CVEs, secrets, and license violations using Trivy. Covers local CLI, CI severity gates with SARIF upload, and continuous monitoring via Trivy Operator (Flux HelmRelease). Use when asked to \"scan my image\", \"check for CVEs\", \"scan this repo for secrets\", \"scan an SBOM\", or \"set up continuous cluster vulnerability monitoring\". IaC misconfig → /platform-skills:checkov. Admission posture → /platform-skills:kyverno. Image signing/SBOM generation → /platform-skills:supply-chain.",
+  "content_fingerprint": "ae32efcbdb6ba023cd776e0dbba0f8f03c33731ddf1a755863e91cc1e8889c26"
 }

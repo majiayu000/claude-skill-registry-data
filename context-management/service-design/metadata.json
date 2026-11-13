@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Service \u5c42\u67b6\u6784\u8bbe\u8ba1\u89c4\u8303\u3002\u4fee\u6539 services/ \u76ee\u5f55\uff08\u975e llm \u5b50\u76ee\u5f55\uff09\u65f6\u5fc5\u987b\u52a0\u8f7d\u3002\u6d89\u53ca Memory\u3001Session\u3001Retrieval\u3001OSS \u6a21\u5757\u53d8\u66f4\u65f6\u89e6\u53d1\u3002"
+  "description": "Service 层架构设计规范。修改 services/ 目录（非 llm 子目录）时必须加载。涉及 Memory、Session、Retrieval、OSS 模块变更时触发。",
+  "content_fingerprint": "393f28784359a9640975e5eaa43d0a8db06900e0c5011fbc4afee22933632212"
 }

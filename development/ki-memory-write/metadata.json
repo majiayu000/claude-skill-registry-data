@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5199\u5165 ki-search \u8bb0\u5fc6\u7684 SSOT\uff1a\u5c01\u88c5\u5199 ki \u7684\u516c\u5171\u52a8\u4f5c\uff08\u53ef\u7528\u6027\u68c0\u6d4b\u3001scope \u786e\u5b9a\u3001\u683c\u5f0f\u786c\u7ea6\u675f\u3001\u67e5\u91cd\u3001\u964d\u7ea7\u3001\u5220\u9664\uff09\uff0c\u6309\u8bb0\u5fc6\u7c7b\u578b\u5206\u53d1\u5230\u4e13\u9898\u3001\u63a5\u53e3\u3001\u6570\u636e\u6d41\u3001\u5f3a\u5173\u8054\u3001\u51b3\u7b56\u3001\u9519\u8bef\u5e93\u3001\u5f85\u751f\u6548\u53d8\u66f4\u5404\u5199\u5165\u7b56\u7565\u3002\u89e6\u53d1\uff1a\"\u5199\u4e13\u9898\u8bb0\u5fc6\"\u3001\"\u5199 ki \u8bb0\u5fc6\"\u3001\"\u8bb0\u5f55\u51b3\u7b56\"\u3001\"\u8bb0\u5f55\u8fd9\u4e2a\u62a5\u9519\"\u3001\"\u767b\u8bb0/\u7ed3\u8d26\u5f85\u751f\u6548\u53d8\u66f4\"\u3001\"ki memory write\"\u3002"
+  "description": "写入 ki-search 记忆的 SSOT：封装写 ki 的公共动作（可用性检测、scope 确定、格式硬约束、查重、降级、删除），按记忆类型分发到专题、接口、数据流、强关联、决策、错误库、待生效变更各写入策略。触发：\"写专题记忆\"、\"写 ki 记忆\"、\"记录决策\"、\"记录这个报错\"、\"登记/结账待生效变更\"、\"ki memory write\"。",
+  "content_fingerprint": "403afb69d6d62daa72527aac8caa332942a798136c447a5c98ca06abb1253172"
 }

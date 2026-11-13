@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generates a new image that imitates the style of a reference image while updating content based on user intent.\nUses a three-stage pipeline: image annotation (long caption), caption rewriting, and image generation.\nUse when user asks to \"imitate style\", \"\u4fdd\u6301\u8fd9\u4e2a\u98ce\u683c\u91cd\u753b\", \"\u6309\u8fd9\u5f20\u56fe\u98ce\u683c\u751f\u6210\", or \"style transfer with new content\"."
+  "description": "Generates a new image that imitates the style of a reference image while updating content based on user intent.\nUses a three-stage pipeline: image annotation (long caption), caption rewriting, and image generation.\nUse when user asks to \"imitate style\", \"保持这个风格重画\", \"按这张图风格生成\", or \"style transfer with new content\".",
+  "content_fingerprint": "47b400760b993ff3bc529c24b6cb4c63c507abf2fddab55c654ca6f431364a61"
 }

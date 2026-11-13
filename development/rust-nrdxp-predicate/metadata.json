@@ -37,5 +37,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Idiomatic programming style, patterns, and conventions for Rust development.\nTrigger when:\n- Writing, refactoring, reviewing, or debugging Rust code.\n- Files matching the pattern **/*.rs (including Cargo.toml, Cargo.lock) are in the workspace or referenced.\n- Tasks involve: cargo build, cargo clippy, cargo test, cargo check, rustc.\n- Prompt contains keywords: rust, cargo, clippy, borrow checker, lifetime, struct, enum, impl, Option, Result, match, unwrap, unsafe."
+  "description": "Idiomatic programming style, patterns, and conventions for Rust development.\nTrigger when:\n- Writing, refactoring, reviewing, or debugging Rust code.\n- Files matching the pattern **/*.rs (including Cargo.toml, Cargo.lock) are in the workspace or referenced.\n- Tasks involve: cargo build, cargo clippy, cargo test, cargo check, rustc.\n- Prompt contains keywords: rust, cargo, clippy, borrow checker, lifetime, struct, enum, impl, Option, Result, match, unwrap, unsafe.",
+  "content_fingerprint": "503c094f0a650fd8457714a7e140e34374fa78485a56ee99fc562297c282de2b"
 }

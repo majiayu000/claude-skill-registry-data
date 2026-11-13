@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/hmislk/hmis/blob/main/.claude/skills/verify-persistence/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "74641d57c54f4a0735b5f0a6586028e5d42d9a50818874f597e6da20bd76f401",
+  "description": "Verify persistence.xml configuration before git push. Use before pushing code to ensure persistence.xml uses environment variables instead of hardcoded JNDI names. Prevents QA deployment failures.\n"
 }

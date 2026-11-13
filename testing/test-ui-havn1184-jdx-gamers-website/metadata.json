@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Test UI t\u1ef1 \u0111\u1ed9ng b\u1eb1ng Playwright: truy c\u1eadp localhost:3000, \u0111\u0103ng nh\u1eadp, m\u1edf dialog/page, test create/update t\u1eebng field, ch\u1eb7n payload/response API \u0111\u1ec3 ph\u00e1t hi\u1ec7n field thi\u1ebfu (FE ko g\u1eedi/BE ko tr\u1ea3), field update thi\u1ebfu, field FK select ch\u1ec9 g\u1eedi ID thi\u1ebfu display. D\u00f9ng khi: test form CRUD, ki\u1ec3m tra field mapping FE-BE, verify payload API, ph\u00e1t hi\u1ec7n field b\u1ecb b\u1ecf s\u00f3t khi create/update, test dialog/form b\u1ea5t k\u1ef3."
+  "description": "Test UI tự động bằng Playwright: truy cập localhost:3000, đăng nhập, mở dialog/page, test create/update từng field, chặn payload/response API để phát hiện field thiếu (FE ko gửi/BE ko trả), field update thiếu, field FK select chỉ gửi ID thiếu display. Dùng khi: test form CRUD, kiểm tra field mapping FE-BE, verify payload API, phát hiện field bị bỏ sót khi create/update, test dialog/form bất kỳ.",
+  "content_fingerprint": "fe5a8f52a4f81a568c5a054ac9faf3dfac37c00e9597280f340e4752e1dfb2c8"
 }

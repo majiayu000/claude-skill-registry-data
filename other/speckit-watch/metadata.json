@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Watch every worktree on this machine and get stale work moving again: one board of what each agent is doing (feature, phase, holder, last activity, PR), the safe fixes applied (dead locks released, merged clean worktrees removed), and one background agent dispatched per stale item to resume it, take a handed-off PR to merge as its tail, re-run QA, fix red CI or merge, within the caps the watcher applies. The orchestrating session keeps one background `watch.mjs --wait` armed once two or more tasks run at once; it wakes the model only when the gate finds something to do."
+  "description": "Watch every worktree on this machine and get stale work moving again: one board of what each agent is doing (feature, phase, holder, last activity, PR), the safe fixes applied (dead locks released, merged clean worktrees removed), and one background agent dispatched per stale item to resume it, take a handed-off PR to merge as its tail, re-run QA, fix red CI or merge, within the caps the watcher applies. The orchestrating session keeps one background `watch.mjs --wait` armed once two or more tasks run at once; it wakes the model only when the gate finds something to do.",
+  "content_fingerprint": "8892c84db7742e4f0905507433dba94e79a1a926ebed565ae8b6396a767ea39c"
 }

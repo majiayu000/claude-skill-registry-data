@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5bf9\u89c4\u683c\u6587\u6863\uff08PRD + arch_spec + MAS\uff09\u505a\u5bf9\u6297\u6027\u8bc4\u5ba1\uff1a\u5b8c\u6574\u6027 / \u4e00\u81f4\u6027 / \u53ef\u5b9e\u73b0\u6027 / \u9a8c\u8bc1\u8986\u76d6\u3002\u9ed8\u8ba4 role=ruthless\uff08\u89c4\u683c\u9636\u6bb5\u9519\u8bef\u6210\u672c\u6700\u9ad8\uff09\u3002\u5728 MAS frozen \u524d\u8c03\u7528\u3002\u89e6\u53d1\u573a\u666f\uff1a(1) bba-architect \u5199\u5b8c MAS\uff1b(2) \u663e\u5f0f /bb-spec-review\u3002"
+  "description": "对规格文档（PRD + arch_spec + MAS）做对抗性评审：完整性 / 一致性 / 可实现性 / 验证覆盖。默认 role=ruthless（规格阶段错误成本最高）。在 MAS frozen 前调用。触发场景：(1) bba-architect 写完 MAS；(2) 显式 /bb-spec-review。",
+  "content_fingerprint": "fe618b067d7bd8f5ae822b905e00208781602ccf8b979fc734a7c6ca59a4a696"
 }

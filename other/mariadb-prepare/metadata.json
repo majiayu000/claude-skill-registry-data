@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "MariaDB-specific behavior of server-side prepared statements \u2014 PREPARE / EXECUTE / DEALLOCATE PREPARE and EXECUTE IMMEDIATE \u2014 covers the broad preparable-statement allow-list, EXECUTE..USING accepting arbitrary expressions (not just user variables), the stored-function/trigger ban on dynamic SQL, session-local statement lifetime, and EXECUTE IMMEDIATE's DEFAULT/IGNORE bind parameters. Use when writing, generating, or reviewing PREPARE/EXECUTE statements that target MariaDB."
+  "description": "MariaDB-specific behavior of server-side prepared statements — PREPARE / EXECUTE / DEALLOCATE PREPARE and EXECUTE IMMEDIATE — covers the broad preparable-statement allow-list, EXECUTE..USING accepting arbitrary expressions (not just user variables), the stored-function/trigger ban on dynamic SQL, session-local statement lifetime, and EXECUTE IMMEDIATE's DEFAULT/IGNORE bind parameters. Use when writing, generating, or reviewing PREPARE/EXECUTE statements that target MariaDB.",
+  "content_fingerprint": "e78914054bcb39fb81409ce8db04941f9304f034f757bacb087bee4e51c45849"
 }

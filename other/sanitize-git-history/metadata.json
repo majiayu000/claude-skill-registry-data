@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit the full Git history of any repository for confidential words, automatically using the contextual scanner with literal terms or a.sensitive.replacements.local.txt, then rewrite that history with git filter-repo before publishing. Phase 1 reports matching commit, tag, path, and blob lines and drafts or refreshes the rules plus an optional mailmap. Phase 2 rewrites a fresh clone, re-audits, verifies changed commits, restores remotes, and stops before any push. Use when the user asks to inspect or sanitize history, scrub sensitive terms, or make a repository publishable."
+  "description": "Audit the full Git history of any repository for confidential words, automatically using the contextual scanner with literal terms or a.sensitive.replacements.local.txt, then rewrite that history with git filter-repo before publishing. Phase 1 reports matching commit, tag, path, and blob lines and drafts or refreshes the rules plus an optional mailmap. Phase 2 rewrites a fresh clone, re-audits, verifies changed commits, restores remotes, and stops before any push. Use when the user asks to inspect or sanitize history, scrub sensitive terms, or make a repository publishable.",
+  "content_fingerprint": "6eda5e4b9871f9b31726d57721ae967b8da7570892702d346be513f2b0ad5be9"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill on EVERY Edit, Write, or code-modification tool call. Enforces minimum-diff discipline \u2014 only touch files listed in the plan's in-scope list, only modify functions listed in the plan's in-scope functions, never modify adjacent functions, never refactor or rename unrelated code, never \"fix while you're here\". Unrelated bugs get logged to the follow-ups file, not fixed inline. This skill is the primary mechanism for the project's core rule \"only touch code that needs to be modified, do not modify adjacent functions\"."
+  "description": "Use this skill on EVERY Edit, Write, or code-modification tool call. Enforces minimum-diff discipline — only touch files listed in the plan's in-scope list, only modify functions listed in the plan's in-scope functions, never modify adjacent functions, never refactor or rename unrelated code, never \"fix while you're here\". Unrelated bugs get logged to the follow-ups file, not fixed inline. This skill is the primary mechanism for the project's core rule \"only touch code that needs to be modified, do not modify adjacent functions\".",
+  "content_fingerprint": "36db1eccd3cac0153d58acbcb31d8e962d870dcf47050e7b984e8f160f78dd69"
 }

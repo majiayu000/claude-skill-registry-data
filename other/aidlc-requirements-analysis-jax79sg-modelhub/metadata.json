@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `requirements-analysis` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage requirements-analysis --single`: the engine emits one run-stage directive for requirements-analysis and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `requirements-analysis` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage requirements-analysis --single`: the engine emits one run-stage directive for requirements-analysis and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "ef4fae67ff4059ff01fecc3e5566465dfd94ba0f3c1f0d3f03b8f2226aff1f4b"
 }

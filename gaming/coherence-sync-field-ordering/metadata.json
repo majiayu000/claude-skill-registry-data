@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when a coherence [Sync] field's value depends on another synced field \u2014 derived/computed synced values that come out wrong on remotes, intermittent desync when several fields change in the same packet, or a [Sync] setter that reads a sibling synced field. Covers why setters have no cross-field ordering guarantee and the four safe patterns for dependent values."
+  "description": "Use when a coherence [Sync] field's value depends on another synced field — derived/computed synced values that come out wrong on remotes, intermittent desync when several fields change in the same packet, or a [Sync] setter that reads a sibling synced field. Covers why setters have no cross-field ordering guarantee and the four safe patterns for dependent values.",
+  "content_fingerprint": "58824e99c1ed5c96534ca8785aed9c446c8d437b0cd195bc8bf78b35d3950671"
 }

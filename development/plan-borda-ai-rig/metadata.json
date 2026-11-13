@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Analysis-only planning \u2014 classify and scope a task without writing code; outputs a structured plan to .plans/active/. TRIGGER when: user wants to understand scope and risks before implementation; phrases: \"plan this\", \"scope out X\", \"what would it take to Y\", \"analyse before we start\". SKIP when: user already knows what to build and wants code immediately (use `/develop:feature` or `/develop:fix` directly); `.claude/` config planning (use `/foundry:manage`)."
+  "description": "Analysis-only planning — classify and scope a task without writing code; outputs a structured plan to .plans/active/. TRIGGER when: user wants to understand scope and risks before implementation; phrases: \"plan this\", \"scope out X\", \"what would it take to Y\", \"analyse before we start\". SKIP when: user already knows what to build and wants code immediately (use `/develop:feature` or `/develop:fix` directly); `.claude/` config planning (use `/foundry:manage`).",
+  "content_fingerprint": "6e7a77f5696636a9e97a0ac90b4c87050e3a157d3ad87d08d27b9c7e0fb8a40a"
 }

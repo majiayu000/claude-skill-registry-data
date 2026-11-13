@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit old container images in the posit-dev GHCR registry and delete them in a reviewed batch. Produces a review list of every positron-<os>* / positron-postgres-* image version older than a cutoff (default 90 days), excluding anything a live tag or multi-arch manifest still points at; the human deletes rows they want to keep, then this drives the batch delete. Use when asked to clean up, prune, or garbage-collect old GHCR packages/images."
+  "description": "Audit old container images in the posit-dev GHCR registry and delete them in a reviewed batch. Produces a review list of every positron-<os>* / positron-postgres-* image version older than a cutoff (default 90 days), excluding anything a live tag or multi-arch manifest still points at; the human deletes rows they want to keep, then this drives the batch delete. Use when asked to clean up, prune, or garbage-collect old GHCR packages/images.",
+  "content_fingerprint": "1aa702abdd59653623d7fdfd32670da01eaf42f82de8b2b30c2081ef841c232f"
 }

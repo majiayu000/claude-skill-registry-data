@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Take the keys that encrypt secrets in the database from a KMS (self-hosted OpenBao Transit, or a cloud KMS) instead of ENCRYPTION_KEYS. Use when compliance requires KMS-held keys, or the user asks about envelope encryption. Not for debugging; when something fails, use the debug skill."
+  "description": "Take the keys that encrypt secrets in the database from a KMS (self-hosted OpenBao Transit, or a cloud KMS) instead of ENCRYPTION_KEYS. Use when compliance requires KMS-held keys, or the user asks about envelope encryption. Not for debugging; when something fails, use the debug skill.",
+  "content_fingerprint": "771af213963b191a6cc57aae1c13f9cbf20c660dcb501f9be0ec6634774bda09"
 }

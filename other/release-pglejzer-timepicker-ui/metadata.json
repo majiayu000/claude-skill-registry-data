@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Cut a new timepicker-ui release. Use when the user wants to bump the version, prepare a release, write/update the changelog, or sync version + changelog across README, CHANGELOG.md and the docs-app (changelog/what's-new/version strings). Drives the build-release subagent in an audit \u2192 approve \u2192 apply flow, then runs a sanity build. Does NOT git-commit/tag or npm-publish \u2014 proposes those for the user to run."
+  "description": "Cut a new timepicker-ui release. Use when the user wants to bump the version, prepare a release, write/update the changelog, or sync version + changelog across README, CHANGELOG.md and the docs-app (changelog/what's-new/version strings). Drives the build-release subagent in an audit → approve → apply flow, then runs a sanity build. Does NOT git-commit/tag or npm-publish — proposes those for the user to run.",
+  "content_fingerprint": "45686a6b6a3ebb0a4982ba425dc8d078af986e14513294ea0949b251aa770971"
 }

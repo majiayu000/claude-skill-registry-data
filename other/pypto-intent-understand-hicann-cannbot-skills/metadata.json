@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PyPTO \u7b97\u5b50\u9700\u6c42\u610f\u56fe\u7406\u89e3\u3002\u5c06\u7528\u6237\u7684\u81ea\u7136\u8bed\u8a00\u7b97\u5b50\u63cf\u8ff0\u8f6c\u5316\u4e3a\u7ed3\u6784\u5316\u9700\u6c42\u6587\u6863\u3002\u5f53\u7528\u6237\u63cf\u8ff0\u8981\u5f00\u53d1\u3001\u5b9e\u73b0\u3001\u521b\u5efa\u67d0\u4e2a\u7b97\u5b50\u65f6\u89e6\u53d1\uff0c\u4f8b\u5982\uff1a'\u5f00\u53d1\u4e00\u4e2a sinh \u7b97\u5b50'\u3001'\u5b9e\u73b0 GELU'\u3001'\u53c2\u8003 PyTorch \u7684 F.scaled_dot_product_attention'\u3001'\u6839\u636e\u8bba\u6587\u5b9e\u73b0\u7b97\u5b50'\u3001'\u521b\u5efa\u81ea\u5b9a\u4e49\u7b97\u5b50'"
+  "description": "PyPTO 算子需求意图理解。将用户的自然语言算子描述转化为结构化需求文档。当用户描述要开发、实现、创建某个算子时触发，例如：'开发一个 sinh 算子'、'实现 GELU'、'参考 PyTorch 的 F.scaled_dot_product_attention'、'根据论文实现算子'、'创建自定义算子'",
+  "content_fingerprint": "7f932f7d822a1054f7126ebfeae5f42ecbcf5c67f3432a369c749ee6280087f9"
 }

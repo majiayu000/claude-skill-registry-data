@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Convert a two-person chat history into a relationship K-line chart.\nWhen invoked, walk the user through providing a chat file, run the local\npreprocessing pipeline, score every \"turn\" (consecutive same-sender block)\nwith v3.1 semantic deltas, expand back to message-level scored.jsonl, and\nhand off to the local web frontend for visualization."
+  "description": "Convert a two-person chat history into a relationship K-line chart.\nWhen invoked, walk the user through providing a chat file, run the local\npreprocessing pipeline, score every \"turn\" (consecutive same-sender block)\nwith v3.1 semantic deltas, expand back to message-level scored.jsonl, and\nhand off to the local web frontend for visualization.",
+  "content_fingerprint": "978c929bd33a6e94597f0735f4e524282113bea281475c4d7089f753a7cac656"
 }

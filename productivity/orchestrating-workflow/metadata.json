@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Coordinate an end-to-end Jira or GitHub work-item workflow from initial fetch through per-task implementation. Use this skill when the user provides a Jira ticket URL, a GitHub issue URL, owner/repo/issue coordinates, says \"work on ticket PROJECT-123\", \"work on issue owner/repo#42\", \"resume <work-item-key>\", \"continue this workflow\", or asks for status without naming a specific phase. This top-level coordinator detects the platform from the input, loads the matching playbook just-in-time, keeps SKILL.md as a routing layer, and dispatches execution-heavy work to downstream skills or co-located utility subagents."
+  "description": "Coordinate an end-to-end Jira or GitHub work-item workflow from initial fetch through per-task implementation. Use this skill when the user provides a Jira ticket URL, a GitHub issue URL, owner/repo/issue coordinates, says \"work on ticket PROJECT-123\", \"work on issue owner/repo#42\", \"resume <work-item-key>\", \"continue this workflow\", or asks for status without naming a specific phase. This top-level coordinator detects the platform from the input, loads the matching playbook just-in-time, keeps SKILL.md as a routing layer, and dispatches execution-heavy work to downstream skills or co-located utility subagents.",
+  "content_fingerprint": "4525f7546912057c35ff58ab47cec6f2068b7f287adae356834e57af33b6403c"
 }

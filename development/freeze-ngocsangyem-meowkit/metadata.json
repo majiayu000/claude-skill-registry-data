@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Session-scoped directory edit restriction. Blocks Edit and Write outside the\nallowed path for the current session only. Use when debugging to prevent\naccidentally \"fixing\" unrelated code, or when you want to scope changes to one\nmodule. Use when asked to \"freeze\", \"restrict edits\", \"only edit this folder\",\nor \"lock down edits\". NOT for blocking destructive shell commands (see mk:careful)."
+  "description": "Session-scoped directory edit restriction. Blocks Edit and Write outside the\nallowed path for the current session only. Use when debugging to prevent\naccidentally \"fixing\" unrelated code, or when you want to scope changes to one\nmodule. Use when asked to \"freeze\", \"restrict edits\", \"only edit this folder\",\nor \"lock down edits\". NOT for blocking destructive shell commands (see mk:careful).",
+  "content_fingerprint": "e762c95113f5519869891d2ea0a7360946b8a9db6634b4b81df23735060f5a05"
 }

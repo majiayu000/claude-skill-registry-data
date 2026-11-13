@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Analyzes a Python repository to identify the root causes of build failures, including syntax errors, import errors, test failures, and build configuration issues. Use when diagnosing why a Python project fails to build or pass tests. Scans repository files for syntax errors via ast.parse/compile, parses pytest output and CI logs, checks build configuration files (pyproject.toml, setup.py, setup.cfg), identifies missing dependencies, and produces a structured diagnosis report."
+  "description": "Analyzes a Python repository to identify the root causes of build failures, including syntax errors, import errors, test failures, and build configuration issues. Use when diagnosing why a Python project fails to build or pass tests. Scans repository files for syntax errors via ast.parse/compile, parses pytest output and CI logs, checks build configuration files (pyproject.toml, setup.py, setup.cfg), identifies missing dependencies, and produces a structured diagnosis report.",
+  "content_fingerprint": "1e4358eebbb9db18c97427f875bff1919e23dfb8896e9d64d8306564cbb164e6"
 }

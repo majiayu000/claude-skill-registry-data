@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when the user asks to \"diff two archetypes\", \"compare two templates\", \"what changed between these two versions\", \"is this a patch, minor or major bump?\", \"how compatible are these two artefacts?\", or invokes `/semantic-diff`. Auto-detects archetype vs template (any serialisation) and version vs sibling comparison, then reports a version-bump verdict (rule G1) or a compatibility report with a path-compatibility table. Not a textual/git diff; to review or fix a single artefact, use the `archetype-authoring` or `template-authoring` skill."
+  "description": "This skill should be used when the user asks to \"diff two archetypes\", \"compare two templates\", \"what changed between these two versions\", \"is this a patch, minor or major bump?\", \"how compatible are these two artefacts?\", or invokes `/semantic-diff`. Auto-detects archetype vs template (any serialisation) and version vs sibling comparison, then reports a version-bump verdict (rule G1) or a compatibility report with a path-compatibility table. Not a textual/git diff; to review or fix a single artefact, use the `archetype-authoring` or `template-authoring` skill.",
+  "content_fingerprint": "fded0308c36f6a98e8c9c08ac85dd77b3a2ad2852c0b4b0c7610962804eb8e43"
 }

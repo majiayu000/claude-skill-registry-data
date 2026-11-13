@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PM-Worker \ud328\ud134\uc758 Multi-AI \uc624\ucf00\uc2a4\ud2b8\ub808\uc774\uc158 (MCP \uae30\ubc18). \ub124\uc774\ud2f0\ube0c \uba40\ud2f0\uc5d0\uc774\uc804\ud2b8\uc758 \ud3f4\ubc31 + \uc815\ucc45 \ub808\uc774\uc5b4 (hard file lock, \uc678\ubd80 \ud0dc\uc2a4\ud06c \ubcf4\ub4dc, \ud06c\ub85c\uc2a4-CLI \ud63c\ud569). /daedalus --mcp\ub85c \uc2e4\ud589. \uc77c\ubc18 \ud504\ub85c\uc81d\ud2b8\ub294 \ub124\uc774\ud2f0\ube0c \ubaa8\ub4dc \uad8c\uc7a5."
+  "description": "PM-Worker 패턴의 Multi-AI 오케스트레이션 (MCP 기반). 네이티브 멀티에이전트의 폴백 + 정책 레이어 (hard file lock, 외부 태스크 보드, 크로스-CLI 혼합). /daedalus --mcp로 실행. 일반 프로젝트는 네이티브 모드 권장.",
+  "content_fingerprint": "a3e466d6993238df3ff1ecb9a77270a2e63ff022bc0f92290fd591813fa2a25f"
 }

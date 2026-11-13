@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Runs before every git commit on heleni-memory. Checks: no credentials in tracked files,\nno oversized files, valid SKILL.md frontmatter for any new/modified skill.\nTriggers: \"commit\", \"before push\", \"validate repo\", or auto-runs as a git pre-commit hook."
+  "description": "Runs before every git commit on heleni-memory. Checks: no credentials in tracked files,\nno oversized files, valid SKILL.md frontmatter for any new/modified skill.\nTriggers: \"commit\", \"before push\", \"validate repo\", or auto-runs as a git pre-commit hook.",
+  "content_fingerprint": "6bd1bc4560c51ab407126e3e4dd59d89d7ec144583b7811e649d3b1ac2503518"
 }

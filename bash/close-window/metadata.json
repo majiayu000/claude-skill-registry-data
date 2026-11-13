@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Close the Terminal window hosting a finished Phase 2 dev-team Claude Code session. Use at sprint wind-down after dev-report.md has landed and /sprint-accept has been run. Cleans up tab accumulation from multi-sprint sessions. CTO-autonomous (no claude -p / API \u2014 just osascript window close); the JSONL transcript stays on disk regardless, and the safety check refuses to close unless dev-report.md exists (or --force)."
+  "description": "Close the Terminal window hosting a finished Phase 2 dev-team Claude Code session. Use at sprint wind-down after dev-report.md has landed and /sprint-accept has been run. Cleans up tab accumulation from multi-sprint sessions. CTO-autonomous (no claude -p / API — just osascript window close); the JSONL transcript stays on disk regardless, and the safety check refuses to close unless dev-report.md exists (or --force).",
+  "content_fingerprint": "44611626c77e35b5554349f392db434b1a1115b070bf93d60c1dabe906349bcb"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Receive and verify Aircall webhooks. Use when setting up Aircall webhook handlers, debugging Aircall webhook token verification, or handling Aircall cloud phone events like call.created, call.answered, call.ended, message.received, contact.updated, or user.connected.v2. Aircall does NOT use an HMAC signature \u2014 verification is a timing-safe comparison of the `token` field inside the JSON body."
+  "description": "Receive and verify Aircall webhooks. Use when setting up Aircall webhook handlers, debugging Aircall webhook token verification, or handling Aircall cloud phone events like call.created, call.answered, call.ended, message.received, contact.updated, or user.connected.v2. Aircall does NOT use an HMAC signature — verification is a timing-safe comparison of the `token` field inside the JSON body.",
+  "content_fingerprint": "402fb46410ca59981b8ad93a341d8e4568c1c2a1c547c2185a2412bdbb0a8a2b"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The single entry point for turning an idea into shipped, verified code. Triggers on: \"/sdlc\", \"let's build\", \"new feature idea\", \"start a new project\", \"add this idea\", \"/sdlc list\". Runs a right-sized process \u2014 a small ask stays one conversational pass; a substantial ask walks intent -> spec/plan -> build -> ship, with a git commit as the approval gate at each transition. Delegates all build-phase dispatch and verification to the separately-installed `unlazy` skill rather than reimplementing it."
+  "description": "The single entry point for turning an idea into shipped, verified code. Triggers on: \"/sdlc\", \"let's build\", \"new feature idea\", \"start a new project\", \"add this idea\", \"/sdlc list\". Runs a right-sized process — a small ask stays one conversational pass; a substantial ask walks intent -> spec/plan -> build -> ship, with a git commit as the approval gate at each transition. Delegates all build-phase dispatch and verification to the separately-installed `unlazy` skill rather than reimplementing it.",
+  "content_fingerprint": "d53a27749f0aa2bc6ac5a49a262a70a03f85e67882855643c77164423def6d02"
 }

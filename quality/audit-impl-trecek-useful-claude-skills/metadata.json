@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/Trecek/useful-claude-skills/blob/main/.claude/skills/audit-impl/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "a263b4bdcf8ee44b8bbc575642e328e22ff7cba68b5a6813b8a3f7fdbb9552ef",
+  "description": "Audit a completed implementation against its originating plan(s). Returns GO (merge approved) or NO GO (generates remediation file for retry). Final gate before merge in any implementation pipeline."
 }

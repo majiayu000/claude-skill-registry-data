@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Brain managed-mode deploy executor for Sealos Cloud. Use when SEALAI_DEPLOY_MODE=managed (a Brain Devbox sandbox) or when the task says to run /sealos-deploy: deploy the workspace repository to Sealos through the MCP-gated managed pipeline \u2014 classify, build via Kaniko if needed, generate the canonical template, hand off through template_ready / deployment_completed, and verify. Outside managed mode, use the use-sealos skill instead."
+  "description": "Brain managed-mode deploy executor for Sealos Cloud. Use when SEALAI_DEPLOY_MODE=managed (a Brain Devbox sandbox) or when the task says to run /sealos-deploy: deploy the workspace repository to Sealos through the MCP-gated managed pipeline — classify, build via Kaniko if needed, generate the canonical template, hand off through template_ready / deployment_completed, and verify. Outside managed mode, use the use-sealos skill instead.",
+  "content_fingerprint": "c7e22337082c8490ac663eeb24ea3de2838027425ecf7c85582210b43321f141"
 }

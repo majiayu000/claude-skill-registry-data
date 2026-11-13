@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728 CLI \u73af\u5883\u4e0b\u505a Android APK \u9006\u5411\u65f6\u4f7f\u7528\u3002\u9002\u7528\u4e8e APK \u89e3\u5305\u3001Java \u53cd\u7f16\u8bd1\u3001smali \u4fee\u6539\u3001\u91cd\u6253\u5305\u3001Frida \u52a8\u6001 Hook\uff0c\u4ee5\u53ca\u6309\u9700\u5207\u6362\u5230 so/native \u5206\u6790\u3002\u4f18\u5148\u4f7f\u7528\u672c\u673a\u5df2\u5b89\u88c5\u7684 jadx\u3001apktool\u3001frida\u3001adb\u3001ida-reverse\u3001radare2\u3002"
+  "description": "在 CLI 环境下做 Android APK 逆向时使用。适用于 APK 解包、Java 反编译、smali 修改、重打包、Frida 动态 Hook，以及按需切换到 so/native 分析。优先使用本机已安装的 jadx、apktool、frida、adb、ida-reverse、radare2。",
+  "content_fingerprint": "66305b6722030c8d070107014435818da64218c0640b6d6261c41e3138e6f147"
 }

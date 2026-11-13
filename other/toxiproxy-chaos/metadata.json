@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Configures Toxiproxy for TCP-level fault injection - runs as a sidecar / proxy between client and upstream, applies toxics (latency, bandwidth, slow_close, timeout, slicer, limit_data, reset_peer) via control API. Focused on the proxy itself rather than an API-level chaos runner, including non-test usage (chaos in dev environments, integration tests, pre-prod simulation). Use when the team needs TCP-precise fault injection in development / integration environments without K8s or commercial tooling."
+  "description": "Configures Toxiproxy for TCP-level fault injection - runs as a sidecar / proxy between client and upstream, applies toxics (latency, bandwidth, slow_close, timeout, slicer, limit_data, reset_peer) via control API. Focused on the proxy itself rather than an API-level chaos runner, including non-test usage (chaos in dev environments, integration tests, pre-prod simulation). Use when the team needs TCP-precise fault injection in development / integration environments without K8s or commercial tooling.",
+  "content_fingerprint": "45c19d931e1376766973a4c2b163ec415462b8135df24a00e101a1e8508c22b2"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Deploy the skyyrose-flagship-2 WordPress theme (\"SkyyRose Flagship 2\") to staging (scripts/deploy-staging.sh) or skyyrose.co (scripts/deploy-production.sh) through the gated engine (scripts/deploy-theme.sh, never run directly). Use when a theme change is built, verified, and ready to ship, or when previewing a deploy with --dry-run. Do NOT use for editing theme code, running verify during development, MU-plugin deploys (scripts/deploy-mu-plugin.sh), WooCommerce data writes, the V1 theme wordpress-theme/skyyrose-flagship (not a deploy target), or the Vercel dashboard \u2014 those have their own paths."
+  "description": "Deploy the skyyrose-flagship-2 WordPress theme (\"SkyyRose Flagship 2\") to staging (scripts/deploy-staging.sh) or skyyrose.co (scripts/deploy-production.sh) through the gated engine (scripts/deploy-theme.sh, never run directly). Use when a theme change is built, verified, and ready to ship, or when previewing a deploy with --dry-run. Do NOT use for editing theme code, running verify during development, MU-plugin deploys (scripts/deploy-mu-plugin.sh), WooCommerce data writes, the V1 theme wordpress-theme/skyyrose-flagship (not a deploy target), or the Vercel dashboard — those have their own paths.",
+  "content_fingerprint": "cc3b7544e5536c140ec7700b1b63e19a2787c7e8ed957d99382cef891c6b2a17"
 }

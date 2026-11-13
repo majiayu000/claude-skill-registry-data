@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Pre-planning ticket ingestion. Given a ticket ID or URL, reads the full ticket via MCP or CLI, follows all referenced links (Notion, Figma, GitHub, articles, etc.) using parallel subagents, synthesises a context brief, grounds it in the actual codebase via /flagrare:codebase-explore, then asks codebase-informed clarifying questions before handing off to /flagrare:atdd-plan. Works with Linear, Jira, Asana, Shortcut, Trello."
+  "description": "Pre-planning ticket ingestion. Given a ticket ID or URL, reads the full ticket via MCP or CLI, follows all referenced links (Notion, Figma, GitHub, articles, etc.) using parallel subagents, synthesises a context brief, grounds it in the actual codebase via /flagrare:codebase-explore, then asks codebase-informed clarifying questions before handing off to /flagrare:atdd-plan. Works with Linear, Jira, Asana, Shortcut, Trello.",
+  "content_fingerprint": "5f130db7431cfa09bddf07add824131cb0df62ec7d878cd50c72fe4ed6c3ccc1"
 }

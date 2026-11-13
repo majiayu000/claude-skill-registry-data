@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentsMesh/AgentsMesh/blob/main/.claude/skills/gl-gh-sync/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "d4cfd1ac4c1f308a7a1f287b536a695d8e3dec13fc1c79f9d59729e4f7177886",
+  "description": "在 GitLab（内部）和 GitHub（开源）之间双向同步代码。\n自动检测哪边有新提交，fast-forward 场景直接推送，分叉场景走 PR/MR 流程。\n"
 }

@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViktorBarzin/infra/blob/main/.claude/skills/traefik-udp-cross-namespace/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "ab0b1f8781907c564b3d29e4ea173b5b70006645e6f9654f3e2f01a0ebcab823",
+  "description": "Fix Traefik v3 (Helm chart v39+) UDP entrypoints not working for cross-namespace\nIngressRouteUDP resources. Use when: (1) Traefik pod listens on a UDP port internally\nbut the LoadBalancer service does"
 }

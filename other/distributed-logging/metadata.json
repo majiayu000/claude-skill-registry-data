@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "This skill should be used when the user designs \"distributed logging\", \"log aggregation\", \"centralized logs\", an \"ELK\" or \"EFK\" stack, \"log shipping\", \"structured logging\", a \"correlation ID\" or \"trace ID\" in logs, \"log retention\", or \"high-volume log ingest\". It gives the collect \u2192 buffer \u2192 ship \u2192 index \u2192 store \u2192 retain pipeline, sampling, ordering, and cold-storage tiering. Use it whenever many services emit logs that must be searched in one place under load, even if the user doesn't say \"logging pipeline\"."
+  "description": "This skill should be used when the user designs \"distributed logging\", \"log aggregation\", \"centralized logs\", an \"ELK\" or \"EFK\" stack, \"log shipping\", \"structured logging\", a \"correlation ID\" or \"trace ID\" in logs, \"log retention\", or \"high-volume log ingest\". It gives the collect → buffer → ship → index → store → retain pipeline, sampling, ordering, and cold-storage tiering. Use it whenever many services emit logs that must be searched in one place under load, even if the user doesn't say \"logging pipeline\".",
+  "content_fingerprint": "e9c7e09b82e24c11648ea305078d8ea29a8703519c9933d780c8b2f367bfdcd4"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/athola/claude-night-market/blob/master/plugins/conserve/skills/clear-context/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "20374b1567a1f6730b1d571833f2be9d49116512e6224b674c830867a0c6d207",
+  "description": "Manages context overflow by handing off to a fresh subagent at 80% usage. Use when context pressure is critical and work must continue uninterrupted."
 }

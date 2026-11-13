@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Iteratively improves a PR (GitHub), MR (GitLab), or shelved changelist (Perforce) until it reaches the repository's configured Greptile merge threshold with zero unresolved actionable comments, or until the five-review maximum is reached. Triggers Greptile review, fixes all actionable comments, pushes/re-shelves, re-triggers review only for new head SHAs unless a 5/5 score is already published, and repeats. Use when the user wants to optimize a PR/MR/CL against Greptile's code review standards without creating runaway review loops."
+  "description": "Iteratively improves a PR (GitHub), MR (GitLab), or shelved changelist (Perforce) until it reaches the repository's configured Greptile merge threshold with zero unresolved actionable comments, or until the five-review maximum is reached. Triggers Greptile review, fixes all actionable comments, pushes/re-shelves, re-triggers review only for new head SHAs unless a 5/5 score is already published, and repeats. Use when the user wants to optimize a PR/MR/CL against Greptile's code review standards without creating runaway review loops.",
+  "content_fingerprint": "c3af1316aa800e27954b3c338b150b1aac988e4b28c7ac9b96238b20e1e4151d"
 }

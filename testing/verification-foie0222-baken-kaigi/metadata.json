@@ -12,5 +12,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/foie0222/baken-kaigi/blob/main/.claude/skills/verification/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "e3fe34fd55dbc80b7da940c605e836c47990331a9e7fc231f4c18f4a0b7d4bb7",
+  "description": "本番環境（bakenkaigi.com）での動作確認ワークフロー。PRマージ後やコード修正後に「動作確認して」「本番確認して」「デプロイ確認して」と言われた時に使用する。ブラウザ自動操作でログイン→PR変更の反映確認→全体チェック→不具合があればIssue起票→修正まで行う。baken-kaigiリポジトリ専用。"
 }

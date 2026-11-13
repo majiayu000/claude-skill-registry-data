@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run a repeatable LibrAgent builtin-tool E2E harness via libr-delegate: instruct a live Session API session, extract the transcript, write an evidence-backed postmortem, derive ranked tool-improvement tasks, optionally patch, then re-run. Use when the user asks for tool E2E harness loops, browser/userChrome extension E2E cycles, postmortem-driven tool fixes, or \"E2E \u2192 \ubd84\uc11d \u2192 \uacfc\uc81c \u2192 \ubc18\ubcf5\". Depends on a running LibrAgent and the Cursor-only libr-delegate skill. Not for Harbor/ATIF job analysis (use harbor-harness-improvement-loop) and not for in-app agent__* delegation."
+  "description": "Run a repeatable LibrAgent builtin-tool E2E harness via libr-delegate: instruct a live Session API session, extract the transcript, write an evidence-backed postmortem, derive ranked tool-improvement tasks, optionally patch, then re-run. Use when the user asks for tool E2E harness loops, browser/userChrome extension E2E cycles, postmortem-driven tool fixes, or \"E2E → 분석 → 과제 → 반복\". Depends on a running LibrAgent and the Cursor-only libr-delegate skill. Not for Harbor/ATIF job analysis (use harbor-harness-improvement-loop) and not for in-app agent__* delegation.",
+  "content_fingerprint": "1c16f1f9b7ffdb49945e0607dbbda319cac8852b8895f00278a6f94236e69da8"
 }

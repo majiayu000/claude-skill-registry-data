@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Rebuild and re-optimize the llmwiki vault's retrieval pipeline (corpus index + AutoRAG hybrid trial). Use when the user says /retune, after any /ingest adds pages, when `llmwiki ask` can't retrieve a page that `llmwiki search` finds, after editing .rag/config.yaml, or on suspicion the deployed pipeline is stale. Not for answering questions (/query) or adding content (/ingest)."
+  "description": "Rebuild and re-optimize the llmwiki vault's retrieval pipeline (corpus index + AutoRAG hybrid trial). Use when the user says /retune, after any /ingest adds pages, when `llmwiki ask` can't retrieve a page that `llmwiki search` finds, after editing .rag/config.yaml, or on suspicion the deployed pipeline is stale. Not for answering questions (/query) or adding content (/ingest).",
+  "content_fingerprint": "ef865d37576e700651540c5cde9d3e54714ee47dac2ac8151b7a2b4087da3ccf"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u6839\u636e\u8be6\u7ec6\u6d4b\u8bd5\u8ba1\u5212\u751f\u6210\u3001\u6574\u7406\u6216\u4fee\u8ba2 Chroma 3380P ATE \u6d4b\u8bd5\u7a0b\u5e8f\u8349\u7a3f\u3002\u7528\u4e8e\u628a\u6d4b\u8bd5\u8ba1\u5212\u7ffb\u8bd1\u6210\u53ef\u8bc4\u5ba1\u7684 `.pln`\u3001\u5fc5\u8981 `.dec` \u6216 `.pat`\uff0c\u5c24\u5176\u9002\u7528\u4e8e PLN \u6d4b\u8bd5\u9879\u3001supply sweep threshold\u3001register setup helper\u3001WRITE_PAT_MEM \u52a8\u6001\u6539 pattern\u3001capture readback\u3001DC measure\u3001pattern \u6267\u884c\u548c multi-site result/judge \u903b\u8f91\u3002"
+  "description": "根据详细测试计划生成、整理或修订 Chroma 3380P ATE 测试程序草稿。用于把测试计划翻译成可评审的 `.pln`、必要 `.dec` 或 `.pat`，尤其适用于 PLN 测试项、supply sweep threshold、register setup helper、WRITE_PAT_MEM 动态改 pattern、capture readback、DC measure、pattern 执行和 multi-site result/judge 逻辑。",
+  "content_fingerprint": "0bf36382b21aa194e765410019cd2e5d823d3d94ff0b982259ea3e979652c9cd"
 }

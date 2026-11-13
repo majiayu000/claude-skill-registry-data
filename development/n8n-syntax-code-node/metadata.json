@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/OpenAEC-Foundation/n8n-Claude-Skill-Package/blob/main/skills/source/n8n-syntax/n8n-syntax-code-node/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "32cd557f3f77a4b88fa76719427dceb9473f44cde26ac8d918c07c5c45cc169a",
+  "description": "Use when writing Code node logic in n8n workflows with JavaScript or Python. Prevents misuse of unavailable variables ($itemIndex, $secrets) or restricted modules (fs, http). Covers runOnceForAllItems"
 }

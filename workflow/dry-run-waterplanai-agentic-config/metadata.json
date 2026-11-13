@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/WaterplanAI/agentic-config/blob/main/plugins/ac-tools/skills/dry-run/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "ba493d8326a5f3f36e5215722f523006d1dc1c00aa005c0a2d3021105fe42db7",
+  "description": "Simulates command execution in dry-run mode without file modifications. Sets dry_run flag, executes command with read-only constraint, then resets flag. Useful for testing workflows safely. Triggers o"
 }

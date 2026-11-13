@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Foil methodology for looped sparse MoE \u2014 flatten experts (halve layers, double experts/layer, double passes) and untie attention (per-pass attention params, shared experts/routers). Use when: (1) combining layer looping with MoE, (2) MoE routing confidence is low or load imbalanced, (3) extracting more capability at fixed params+compute. Keywords: looped MoE, expert flattening, attention untying, routing confidence, parameter efficiency."
+  "description": "Foil methodology for looped sparse MoE — flatten experts (halve layers, double experts/layer, double passes) and untie attention (per-pass attention params, shared experts/routers). Use when: (1) combining layer looping with MoE, (2) MoE routing confidence is low or load imbalanced, (3) extracting more capability at fixed params+compute. Keywords: looped MoE, expert flattening, attention untying, routing confidence, parameter efficiency.",
+  "content_fingerprint": "af921d2094335baf614635d5230bd66200a2d60d720798e21a667828de2f665c"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Sets up the product catalog and the product sets that let ads pull live inventory instead of static images, treating each set as its own promise: best sellers, under fifty, new arrivals. Use after tracking is verified, for stores with more SKUs than per-product creative can cover. Boundary: `product-catalog-audit` checks an outbound feed for disapprovals and attribute breakage; this builds the sets themselves. Requires `meta-pixel` to pass first, or it automates showing people the wrong products."
+  "description": "Sets up the product catalog and the product sets that let ads pull live inventory instead of static images, treating each set as its own promise: best sellers, under fifty, new arrivals. Use after tracking is verified, for stores with more SKUs than per-product creative can cover. Boundary: `product-catalog-audit` checks an outbound feed for disapprovals and attribute breakage; this builds the sets themselves. Requires `meta-pixel` to pass first, or it automates showing people the wrong products.",
+  "content_fingerprint": "d7e4d302f33af357d95990f49faca74147135a7c66519178ef7baf21823264f5"
 }

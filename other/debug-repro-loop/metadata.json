@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5de5\u7a0b\u73b0\u573a\u73af\u8def P1\u3002\u7528\u4e8e bug\u3001\u5931\u8d25\u6d4b\u8bd5\u3001\u6027\u80fd\u53d8\u6162\u3001\u5361\u4f4f\u3001\u6d4f\u89c8\u5668/\u5de5\u5177\u5f02\u5e38\u7b49\u8bca\u65ad\u4efb\u52a1\u3002 \u8bca\u65ad\u9ed8\u8ba4\u4e0d\u8fdb\u5165 project-lifecycle;\u5148\u7528\u672c skill \u505a\u590d\u73b0\u3001\u5b9a\u4f4d\u3001\u6700\u5c0f\u4fee\u590d\u3001\u56de\u5f52\u9a8c\u8bc1\u3002 \u82e5\u8bca\u65ad\u5347\u7ea7\u6210\u91cd\u6784/\u65b0\u529f\u80fd/\u9879\u76ee\u7ea7\u4ea4\u4ed8,\u518d\u8f6c\u5165 project-lifecycle\u3002"
+  "description": "工程现场环路 P1。用于 bug、失败测试、性能变慢、卡住、浏览器/工具异常等诊断任务。 诊断默认不进入 project-lifecycle;先用本 skill 做复现、定位、最小修复、回归验证。 若诊断升级成重构/新功能/项目级交付,再转入 project-lifecycle。",
+  "content_fingerprint": "0f35a6311e926b0158f46408a39bb1908439386fa5e29274b815daaa8ababc63"
 }

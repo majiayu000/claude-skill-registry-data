@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when \u7528\u6237\u8f93\u5165 /send-to <\u4f1a\u8bdd\u540d> [\u5185\u5bb9],\u8981\u6c42\"\u628a\u8fd9\u4e2a\u8f6c\u544a/\u540c\u6b65\u7ed9\u672c\u673a\u53e6\u4e00\u4e2a Claude Code \u4f1a\u8bdd\"\"\u544a\u8bc9\u9694\u58c1\u90a3\u4e2a\u7a97\u53e3/\u7ec8\u7aef\",\u5728 HAPI \u4f1a\u8bdd\u91cc\u8981\u7ed9\u53e6\u4e00\u4e2a HAPI \u4f1a\u8bdd(\u7528\u6237\u5f15\u7528\u4e86 /sessions/<id>,\u6216 list_peers/inspect_peer \u91cc\u770b\u5230\u7684\u4f1a\u8bdd)\u4f20\u8bdd,\u6216\u62b1\u6028\"\u53e6\u4e00\u4e2a\u7a97\u53e3\u5728 /list-agents \u91cc\u770b\u4e0d\u5230\u3001\u6d88\u606f\u53d1\u4e0d\u8fc7\u53bb\"\u65f6\u3002"
+  "description": "Use when 用户输入 /send-to <会话名> [内容],要求\"把这个转告/同步给本机另一个 Claude Code 会话\"\"告诉隔壁那个窗口/终端\",在 HAPI 会话里要给另一个 HAPI 会话(用户引用了 /sessions/<id>,或 list_peers/inspect_peer 里看到的会话)传话,或抱怨\"另一个窗口在 /list-agents 里看不到、消息发不过去\"时。",
+  "content_fingerprint": "f3f22f33291ab7df3da8823c534f8abfee030fdde5127e922236f768b52640d7"
 }

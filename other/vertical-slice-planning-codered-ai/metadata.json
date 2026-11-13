@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill when the user asks for an implementation plan for work that spans multiple components or services \u2014 \"plan this out\", \"break this into tasks\", \"write a plan for wiring X to Y\". Produces an executable plan directory: tasks ordered as vertical slices so every unit of work verifies the whole path it touches instead of deferring integration to the end, each task a single idempotent Python script that applies its change through hashline and proves it with runnable gates. Plan-only \u2014 it emits the directory and stops."
+  "description": "Use this skill when the user asks for an implementation plan for work that spans multiple components or services — \"plan this out\", \"break this into tasks\", \"write a plan for wiring X to Y\". Produces an executable plan directory: tasks ordered as vertical slices so every unit of work verifies the whole path it touches instead of deferring integration to the end, each task a single idempotent Python script that applies its change through hashline and proves it with runnable gates. Plan-only — it emits the directory and stops.",
+  "content_fingerprint": "36590ae2f5a0f1ef864f90659d749564a8bbae6fac3a726dc850c2479a28befe"
 }

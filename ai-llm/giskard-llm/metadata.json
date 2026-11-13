@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Authors and runs Giskard LLM scans - adversarial test-case generation for LLM applications via `giskard.scan(model)` covering 7 vulnerability categories (hallucination, harmful_content, prompt_injection, sensitive_information_disclosure, stereotypes, robustness, basic_sycophancy); wraps any callable model behind `giskard.Model(model_predict, model_type=\"text_generation\", ...)`; emits HTML report. Use when the user needs adversarial / red-team coverage on top of functional eval suites."
+  "description": "Authors and runs Giskard LLM scans - adversarial test-case generation for LLM applications via `giskard.scan(model)` covering 7 vulnerability categories (hallucination, harmful_content, prompt_injection, sensitive_information_disclosure, stereotypes, robustness, basic_sycophancy); wraps any callable model behind `giskard.Model(model_predict, model_type=\"text_generation\", ...)`; emits HTML report. Use when the user needs adversarial / red-team coverage on top of functional eval suites.",
+  "content_fingerprint": "503064353cabb11a946f15e47e2a1944b9956b86041dd3ec60d561323cca5b6b"
 }

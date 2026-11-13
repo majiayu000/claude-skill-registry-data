@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u4e3b\u8981\u4ea4\u4ed8\u7269\u662f\u53ef\u590d\u7528\u7684 R \u51fd\u6570\u3001\u7a33\u5b9a API\u3001S3/S4/R6 \u7c7b\u6216 R Package\uff0c\u9700\u8981\u8bbe\u8ba1\u3001\u5f00\u53d1\u3001\u91cd\u6784\u6216\u5ba1\u67e5\u5176\u63a5\u53e3\u3001\u6d4b\u8bd5\u3001\u6587\u6863\u3001\u5e76\u884c\u4e0e\u6027\u80fd\u8fb9\u754c\u65f6\u4f7f\u7528\u3002\u5206\u6790\u9879\u76ee\u4e2d\u53ea\u6709\u9700\u8981\u8de8\u5206\u6790\u590d\u7528\u6216\u5f62\u6210\u516c\u5171 API \u7684\u7ec4\u4ef6\u624d\u8fdb\u5165\u672c Skill\u3002\u26a0\ufe0f \u4e0d\u9002\u7528\uff1a\u4e3b\u8981\u4ea4\u4ed8\u7269\u662f\u6570\u636e\u5206\u6790\u6d41\u7a0b\u3001\u79d1\u5b66\u7ed3\u679c\u3001R Markdown \u62a5\u544a\u6216\u4ec5\u670d\u52a1\u5f53\u524d\u5206\u6790\u7684\u8f85\u52a9\u51fd\u6570\uff1b\u8fd9\u4e9b\u4efb\u52a1\u4f7f\u7528 bensz-rmd-rules\u3002"
+  "description": "当主要交付物是可复用的 R 函数、稳定 API、S3/S4/R6 类或 R Package，需要设计、开发、重构或审查其接口、测试、文档、并行与性能边界时使用。分析项目中只有需要跨分析复用或形成公共 API 的组件才进入本 Skill。⚠️ 不适用：主要交付物是数据分析流程、科学结果、R Markdown 报告或仅服务当前分析的辅助函数；这些任务使用 bensz-rmd-rules。",
+  "content_fingerprint": "13bfa14fc4c62224ed11d89f7eca95537d9ab83b59a3a91d1b7ca8b0e9ad5a64"
 }

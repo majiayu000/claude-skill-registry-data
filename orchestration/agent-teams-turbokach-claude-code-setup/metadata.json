@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Orchestration playbook for parallel multi-agent work in Claude Code. Use when fanning out genuinely parallel, independent work \u2014 N independent modules, multi-lens review, competing-hypothesis debugging, backend+frontend that must agree on a contract. Defaults to background subagents (with worktree isolation only when they write files in parallel and merge later); covers when to reach for Workflows instead. Covers the lead's pipeline (plan \u2192 parallel execute \u2192 review \u2192 merge), per-role models, worktree/merge flow, and the plan-approval gate."
+  "description": "Orchestration playbook for parallel multi-agent work in Claude Code. Use when fanning out genuinely parallel, independent work — N independent modules, multi-lens review, competing-hypothesis debugging, backend+frontend that must agree on a contract. Defaults to background subagents (with worktree isolation only when they write files in parallel and merge later); covers when to reach for Workflows instead. Covers the lead's pipeline (plan → parallel execute → review → merge), per-role models, worktree/merge flow, and the plan-approval gate.",
+  "content_fingerprint": "8cd52855ffdc63f0d16af5dcc851da4a135f26de7103a6ab4655f9f168d42d96"
 }

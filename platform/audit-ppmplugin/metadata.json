@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Statically audit a built `.ppmplugin` before wrap testing. Checks archive layout, manifest compatibility, bundle consistency, Android DEX integrity and SDK leakage, iOS framework structure, native source-to-receiver alignment, and the PCF composite-key/sendAsync transport contract. Reports CRITICAL, WARNING, and INFO findings with fixes routed to the owning stage; never modifies the archive. Requires `jar`; `dexdump` or `strings` improves DEX inspection. Run after /assemble-ppmplugin or standalone on an existing bundle."
+  "description": "Statically audit a built `.ppmplugin` before wrap testing. Checks archive layout, manifest compatibility, bundle consistency, Android DEX integrity and SDK leakage, iOS framework structure, native source-to-receiver alignment, and the PCF composite-key/sendAsync transport contract. Reports CRITICAL, WARNING, and INFO findings with fixes routed to the owning stage; never modifies the archive. Requires `jar`; `dexdump` or `strings` improves DEX inspection. Run after /assemble-ppmplugin or standalone on an existing bundle.",
+  "content_fingerprint": "1e27cfcb1e86a0fde531089e991b0d6884c06979dcb463a485ba0e5f89b1c1de"
 }

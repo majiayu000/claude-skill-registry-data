@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "One-stage adversarial review of your own uncommitted diff, run by a different vendor than the one that wrote it. Use before committing work you produced in an ordinary session \u2014 no task folder, no pipeline, no branch handling.\nCosts one spawn and about a minute, against nine stages for the full pipeline. Reviews the diff only; it never edits code.\nNormally fires automatically from the pre-commit gate rather than being called by hand \u2014 the moment you would think to ask for it is the moment you are least likely to."
+  "description": "One-stage adversarial review of your own uncommitted diff, run by a different vendor than the one that wrote it. Use before committing work you produced in an ordinary session — no task folder, no pipeline, no branch handling.\nCosts one spawn and about a minute, against nine stages for the full pipeline. Reviews the diff only; it never edits code.\nNormally fires automatically from the pre-commit gate rather than being called by hand — the moment you would think to ask for it is the moment you are least likely to.",
+  "content_fingerprint": "be0ce2e95c2bf2742135528262777c1d0f6fe8a8f616299d9dfffec9f2cd8d61"
 }

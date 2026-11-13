@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Windows \u5b89\u88c5\u5668\uff08electron-builder NSIS\uff09\u4e0e\u81ea\u52a8\u66f4\u65b0\uff08electron-updater\uff09\u7684\u9886\u57df\u77e5\u8bc6\u4e0e\u5957\u8def\u3002\u5f53\u4efb\u52a1\u6d89\u53ca installer.nsh / NSIS \u94a9\u5b50\u5b8f\u3001\u5b89\u88c5\u5378\u8f7d\u6d41\u7a0b\u3001quitAndInstall / --updated / \u9759\u9ed8\u6216\u975e\u9759\u9ed8\u5b89\u88c5\u3001\u66f4\u65b0\u5b89\u88c5\u6162\u3001Defender \u6392\u9664\u3001PATH \u5199\u5165\u4e0e WM_SETTINGCHANGE \u5e7f\u64ad\u3001\u53f3\u952e\u83dc\u5355\u6ce8\u518c\u8868\u3001\u6216\u5b89\u88c5\u8017\u65f6\u6d4b\u91cf\u65f6\u4f7f\u7528\u3002"
+  "description": "Windows 安装器（electron-builder NSIS）与自动更新（electron-updater）的领域知识与套路。当任务涉及 installer.nsh / NSIS 钩子宏、安装卸载流程、quitAndInstall / --updated / 静默或非静默安装、更新安装慢、Defender 排除、PATH 写入与 WM_SETTINGCHANGE 广播、右键菜单注册表、或安装耗时测量时使用。",
+  "content_fingerprint": "f66cee1acf55b6718ceae2e7d303e86b1d3739af629b512d898bf866091ae957"
 }

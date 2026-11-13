@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use only when workflow/hvac-control-board.json explicitly selects hvac-control-scope-verifier and carries its matching continuation outcome and lease. Verify exactly that one HVAC output. First commit the factual verifier status, then hand it directly to hvac-control-catalog-return-gate; never use this as a startup, repair, next-task, or broad task-completion entrypoint."
+  "description": "Use only when workflow/hvac-control-board.json explicitly selects hvac-control-scope-verifier and carries its matching continuation outcome and lease. Verify exactly that one HVAC output. First commit the factual verifier status, then hand it directly to hvac-control-catalog-return-gate; never use this as a startup, repair, next-task, or broad task-completion entrypoint.",
+  "content_fingerprint": "44f25c3f3fce0562ad76f6d5d2e5c08d2701b35f26e3d3ef8bd9336e44de0218"
 }

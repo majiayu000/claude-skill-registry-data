@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when the user runs /celebrant [target] [--full] [--auto]. Merges the current feature branch into the repo's default branch with a --no-ff merge commit, pushes, then deletes the now-merged branch local and remote. Runs a pre-merge /argonath gate (--quick by default, full under --full); a Hold warns but does not hard-stop. Refuses a dirty tree or being already on the target. One confirm before anything destructive \u2014 --auto skips it for unattended callers, and then a Hold stops the merge instead."
+  "description": "Use when the user runs /celebrant [target] [--full] [--auto]. Merges the current feature branch into the repo's default branch with a --no-ff merge commit, pushes, then deletes the now-merged branch local and remote. Runs a pre-merge /argonath gate (--quick by default, full under --full); a Hold warns but does not hard-stop. Refuses a dirty tree or being already on the target. One confirm before anything destructive — --auto skips it for unattended callers, and then a Hold stops the merge instead.",
+  "content_fingerprint": "459176ccf6db7cf68347e354efea353bdd37585b5f5898637d9718cb565e8066"
 }

@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u30bb\u30c3\u30b7\u30e7\u30f3\u4e2d\u306e\u77e5\u898b\u3092 knowledge/buffer \u30d6\u30e9\u30f3\u30c1\u306b\u81ea\u52d5\u84c4\u7a4d\u3002\u30de\u30fc\u30b8\u524d\u306b\u30bb\u30c3\u30b7\u30e7\u30f3\u5185\u3067\u751f\u307e\u308c\u305f\u77e5\u8b58\u3092\u5438\u3044\u4e0a\u3052\u3001\u5c02\u7528\u30d6\u30e9\u30f3\u30c1\u7d4c\u7531\u3067 main \u306b\u53cd\u6620\u3059\u308b\u3002\u300c/session-harvest\u300d\u300c\u77e5\u898b\u3092\u5438\u3044\u4e0a\u3052\u3066\u300d\u3068\u8a00\u3063\u305f\u6642\u306b\u4f7f\u7528\u3002"
+  "description": "セッション中の知見を knowledge/buffer ブランチに自動蓄積。マージ前にセッション内で生まれた知識を吸い上げ、専用ブランチ経由で main に反映する。「/session-harvest」「知見を吸い上げて」と言った時に使用。",
+  "content_fingerprint": "a332ad6eac8138441de0355bd4f8ac2457797f701670b7d5519662c803c5a263"
 }

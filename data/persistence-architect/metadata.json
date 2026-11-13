@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Designs the persistence layer of an already-modeled use case \u2014 tables, aggregate mapping, migrations, queries, indexes, and datasource configuration \u2014 into the `20-persistencia.md` partial. Use when the request involves modeling the database, mapping an aggregate to JPA, writing or reviewing migrations, deciding indexes and keys, diagnosing N+1 or slow queries, or tuning the pool and datasource properties. Piece of the `/new-feature` pipeline: requires `10-dominio.md` in the given folder and stops without it."
+  "description": "Designs the persistence layer of an already-modeled use case — tables, aggregate mapping, migrations, queries, indexes, and datasource configuration — into the `20-persistencia.md` partial. Use when the request involves modeling the database, mapping an aggregate to JPA, writing or reviewing migrations, deciding indexes and keys, diagnosing N+1 or slow queries, or tuning the pool and datasource properties. Piece of the `/new-feature` pipeline: requires `10-dominio.md` in the given folder and stops without it.",
+  "content_fingerprint": "22c7179720a0ab96f09e0500fca5fb152fed574f121fd320fab96b4b53b012e8"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "PRIMARY skill for clock-based session wakes via scheduleCallback. Use when the user asks for reminders, delays, or recurring checks inside the active conversation \u2014 \"remind me in 5 minutes\", \"tomorrow at 9\", \"\ub9e4\uc77c \uc544\uce68 \ud655\uc778\ud574\uc918\", timers, and wall-clock recurrence bound to this chat. NEVER for process exit, build/test completion, kanban/ticket done, webhooks, or file-watcher completion \u2014 use call-me-back. Prefer this over global schedule for in-session time requests; escalate to schedule only for permanent app-wide cron."
+  "description": "PRIMARY skill for clock-based session wakes via scheduleCallback. Use when the user asks for reminders, delays, or recurring checks inside the active conversation — \"remind me in 5 minutes\", \"tomorrow at 9\", \"매일 아침 확인해줘\", timers, and wall-clock recurrence bound to this chat. NEVER for process exit, build/test completion, kanban/ticket done, webhooks, or file-watcher completion — use call-me-back. Prefer this over global schedule for in-session time requests; escalate to schedule only for permanent app-wide cron.",
+  "content_fingerprint": "307c9a7132123649dfe89e5463c48e67209c285383075932a30ece619d4a2498"
 }

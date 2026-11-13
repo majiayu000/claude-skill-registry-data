@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Apache Kafka event streaming platform. Covers producers, consumers,\ntopics, partitions, Kafka Streams, and Connect. Use for high-throughput\nevent-driven architectures and real-time data pipelines.\n\nUSE WHEN: user mentions \"kafka\", \"event streaming\", \"kafka streams\", \"consumer groups\", \"topic partitions\", asks about \"high throughput messaging\", \"event sourcing\", \"log aggregation\", \"real-time pipelines\"\n\nDO NOT USE FOR: simple queues - use `rabbitmq` or `activemq`; cloud-native lightweight - use `nats`; AWS-native - use `sqs`; Azure-native - use `azure-service-bus`; GCP-native - use `google-pubsub`"
+  "description": "Apache Kafka event streaming platform. Covers producers, consumers,\ntopics, partitions, Kafka Streams, and Connect. Use for high-throughput\nevent-driven architectures and real-time data pipelines.\n\nUSE WHEN: user mentions \"kafka\", \"event streaming\", \"kafka streams\", \"consumer groups\", \"topic partitions\", asks about \"high throughput messaging\", \"event sourcing\", \"log aggregation\", \"real-time pipelines\"\n\nDO NOT USE FOR: simple queues - use `rabbitmq` or `activemq`; cloud-native lightweight - use `nats`; AWS-native - use `sqs`; Azure-native - use `azure-service-bus`; GCP-native - use `google-pubsub`",
+  "content_fingerprint": "46b0df6a4d67b6ab720364dba65ea1aa6786f36e112f4c0b9ae489ffad86cb39"
 }

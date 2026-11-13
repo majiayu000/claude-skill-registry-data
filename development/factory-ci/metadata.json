@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "CI and pull-request review conventions. One canonical `.github/workflows/ci.yml` is the merge gate (typecheck, lint, test, build, claude-review); branch protection's required-checks list matches the job list 1:1; `anthropics/claude-code-action@v1` reviews every PR against the `factory-pitfalls.md` checklist as a required check, not advisory. Deploy workflows live separately and never gate merge. Read at project kickoff and whenever wiring CI on a new repo."
+  "description": "CI and pull-request review conventions. One canonical `.github/workflows/ci.yml` is the merge gate (typecheck, lint, test, build, claude-review); branch protection's required-checks list matches the job list 1:1; `anthropics/claude-code-action@v1` reviews every PR against the `factory-pitfalls.md` checklist as a required check, not advisory. Deploy workflows live separately and never gate merge. Read at project kickoff and whenever wiring CI on a new repo.",
+  "content_fingerprint": "d595a948ba659c3cf69fd2512eae92f0737844487b1baaab15f9628ee79dc380"
 }

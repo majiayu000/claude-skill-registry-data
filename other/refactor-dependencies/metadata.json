@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Refactor AICP's Python dependencies \u2014 audit `pyproject.toml` / `requirements.txt`, prune unused, tighten/loosen pins, replace transitive direct-dependents, isolate security-flagged packages, separate dev/test/runtime groups. Distinct from `refactor-architecture` (package layering); this skill is package-graph hygiene. Loads when the operator says \"audit dependencies\" / \"prune unused packages\" / \"tighten pins\" / \"package X has CVE\" / \"split dev vs runtime deps\" / \"why is X in the requirements\"."
+  "description": "Refactor AICP's Python dependencies — audit `pyproject.toml` / `requirements.txt`, prune unused, tighten/loosen pins, replace transitive direct-dependents, isolate security-flagged packages, separate dev/test/runtime groups. Distinct from `refactor-architecture` (package layering); this skill is package-graph hygiene. Loads when the operator says \"audit dependencies\" / \"prune unused packages\" / \"tighten pins\" / \"package X has CVE\" / \"split dev vs runtime deps\" / \"why is X in the requirements\".",
+  "content_fingerprint": "4fc9830e22cd39160122d24985264579dc0a87462cd4d49cc13c6c79f118d41c"
 }

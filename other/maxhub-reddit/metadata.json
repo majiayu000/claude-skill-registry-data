@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reddit \u516c\u5f00\u793e\u533a\u6570\u636e\u67e5\u8be2\u4e0e\u8ba8\u8bba\u5206\u6790 skill\uff0c\u901a\u8fc7 MaxHub API \u67e5\u8be2 subreddit\u3001\u5e16\u5b50\u8be6\u60c5\u3001\u8bc4\u8bba\u6811\u3001\u7528\u6237\u8d44\u6599\u3001\u641c\u7d22\u3001\u70ed\u95e8/\u8d8b\u52bf\u5185\u5bb9\u7b49\u3002\u9002\u5408\u793e\u533a\u8206\u60c5\u3001\u8bdd\u9898\u7814\u7a76\u3001\u7ade\u54c1\u53cd\u9988\u6536\u96c6\u3001\u5185\u5bb9\u6d1e\u5bdf\u548c\u7528\u6237\u8ba8\u8bba\u5206\u6790\u3002\u9ed8\u8ba4 read-only\uff1bagent \u5e94\u4f18\u5148\u4f7f\u7528 recipes \u4e32\u8054 subreddit/post/comment/user \u76f8\u5173\u7aef\u70b9\uff0c\u5e76\u663e\u5f0f\u5904\u7406\u8bc4\u8bba/UGC \u4e2d\u7684\u4e2a\u4eba\u4fe1\u606f\u548c\u654f\u611f\u5185\u5bb9\u3002\u6240\u6709\u8bf7\u6c42\u53d1\u9001\u5230 https://www.aconfig.cn\u3002"
+  "description": "Reddit 公开社区数据查询与讨论分析 skill，通过 MaxHub API 查询 subreddit、帖子详情、评论树、用户资料、搜索、热门/趋势内容等。适合社区舆情、话题研究、竞品反馈收集、内容洞察和用户讨论分析。默认 read-only；agent 应优先使用 recipes 串联 subreddit/post/comment/user 相关端点，并显式处理评论/UGC 中的个人信息和敏感内容。所有请求发送到 https://www.aconfig.cn。",
+  "content_fingerprint": "89fc8239d2139469e77177266d9e9f2870a59645f00c24baf252b4549e6a5936"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when deploy-engineer is about to deploy the merged-to-main code to the isolated local UAT stack (after code review + SIT Audit pass and merge, before qa-engineer runs E2E/UAT). Provides the applicability gate, pre-flight checks, isolated compose bring-up (independent project name + port offset +900), in-container migration, real-output smoke test, hand-off, and the deploy-report skeleton. Pairs with deployment.md \"UAT \u73af\u5883\u90e8\u7f72\" contract and slash /agf-deploy-uat."
+  "description": "Use when deploy-engineer is about to deploy the merged-to-main code to the isolated local UAT stack (after code review + SIT Audit pass and merge, before qa-engineer runs E2E/UAT). Provides the applicability gate, pre-flight checks, isolated compose bring-up (independent project name + port offset +900), in-container migration, real-output smoke test, hand-off, and the deploy-report skeleton. Pairs with deployment.md \"UAT 环境部署\" contract and slash /agf-deploy-uat.",
+  "content_fingerprint": "191effa1724d55e4640fb9aefc81ad7405e53ed99dd3f3fd11f12a9ed7a175ab"
 }

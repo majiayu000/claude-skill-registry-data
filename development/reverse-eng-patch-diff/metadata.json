@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn a vendor security patch into a working N-day: diff the patched and unpatched binaries, read the newly added safety checks back to a bug class, then write a PoC that crashes the unpatched build. Load for a CVE with a patch but no public PoC, Patch Tuesday triage (ntoskrnl / win32k / afd.sys / clfs.sys), Linux LTS backport analysis, bindiff / ghidriff / Diaphora workflows, patch diff, binary diffing to find what a patch fixed."
+  "description": "Turn a vendor security patch into a working N-day: diff the patched and unpatched binaries, read the newly added safety checks back to a bug class, then write a PoC that crashes the unpatched build. Load for a CVE with a patch but no public PoC, Patch Tuesday triage (ntoskrnl / win32k / afd.sys / clfs.sys), Linux LTS backport analysis, bindiff / ghidriff / Diaphora workflows, patch diff, binary diffing to find what a patch fixed.",
+  "content_fingerprint": "d445f8acdf5cb33793e40fb243b06b9103e990329f63685f399d8fc35ce86a83"
 }

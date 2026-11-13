@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u4e3a /land-and-deploy \u914d\u7f6e\u90e8\u7f72\u4fe1\u606f\u3002\u81ea\u52a8\u8bc6\u522b\u90e8\u7f72\u5e73\u53f0\u3001\u751f\u4ea7 URL\u3001\u5065\u5eb7\u68c0\u67e5\u7aef\u70b9\n\u548c deploy \u547d\u4ee4\uff0c\u5e76\u628a\u7ed3\u679c\u5199\u8fdb CLAUDE.md\u3002 (gstack)"
+  "description": "为 /land-and-deploy 配置部署信息。自动识别部署平台、生产 URL、健康检查端点\n和 deploy 命令，并把结果写进 CLAUDE.md。 (gstack)",
+  "content_fingerprint": "55689c5f841ef5f0dcce15cfa76a6bee9f9a29095734e5915030a451de6cdacf"
 }

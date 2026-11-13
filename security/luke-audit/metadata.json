@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Compliance audit of the Luke codebase against architectural constraints in CLAUDE.md. Finds violations of stack rules, AppConfig misuse, auth/crypto issues, RBAC drift, pricing/collection errors, storage misuse, NAV patterns, frontend shadcn violations, and dev pattern failures. Use after vibe coding sessions or before releases. Scoping: default = diff vs merge-base. /luke-audit apps/web | --since <ref> | --full"
+  "description": "Compliance audit of the Luke codebase against architectural constraints in CLAUDE.md. Finds violations of stack rules, AppConfig misuse, auth/crypto issues, RBAC drift, pricing/collection errors, storage misuse, NAV patterns, frontend shadcn violations, and dev pattern failures. Use after vibe coding sessions or before releases. Scoping: default = diff vs merge-base. /luke-audit apps/web | --since <ref> | --full",
+  "content_fingerprint": "a346d6ed2a8c4d737bcbb9418d6736a3d3b1c0c7b582ccd0af6b5628a2cb6cf4"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Evaluate WooAIAssistant against a structured scenario suite with hard invariants + LLM-as-judge rubric scoring. Runs live against the demo store + gpt-5.1 via the woo-mobile-ai backend wrapper, writes a JSONL run record, compares against stored baselines, and surfaces regressions. Always delegated to a subagent so the main context only sees the markdown report."
+  "description": "Evaluate WooAIAssistant against a structured scenario suite with hard invariants + LLM-as-judge rubric scoring. Runs live against the demo store + gpt-5.1 via the woo-mobile-ai backend wrapper, writes a JSONL run record, compares against stored baselines, and surfaces regressions. Always delegated to a subagent so the main context only sees the markdown report.",
+  "content_fingerprint": "ae4f2f57811675c34601cdbecf020b24337fd8ea9f9759978ff1bd0cb3f90f12"
 }

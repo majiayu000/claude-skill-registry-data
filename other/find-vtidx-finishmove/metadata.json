@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Locate vtidx::FinishMove in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"vtidx::FinishMove\" (symbol vtidx_FinishMove). This is a VIRTUAL function - resolve the vtidx::FinishMove vtable via RTTI and identify the\nslot, then emit the slot. Verify by xrefs from expected call sites. vtable slots\ncommonly differ between platforms - never assume identical indices.\nTrigger: vtidx_FinishMove, vtidx::FinishMove"
+  "description": "Locate vtidx::FinishMove in CS2 server.dll / libserver.so via IDA Pro MCP and emit a fresh, minimal-unique\nsignature or offset for the local gamedata entry \"vtidx::FinishMove\" (symbol vtidx_FinishMove). This is a VIRTUAL function - resolve the vtidx::FinishMove vtable via RTTI and identify the\nslot, then emit the slot. Verify by xrefs from expected call sites. vtable slots\ncommonly differ between platforms - never assume identical indices.\nTrigger: vtidx_FinishMove, vtidx::FinishMove",
+  "content_fingerprint": "913849b636652c97a73654994ebfe1be1453a3c5265f049906f3a93a40a8bbbd"
 }

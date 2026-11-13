@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Authors Flutter tests across the three-layer pyramid - unit (`flutter test`), widget (`testWidgets` + `WidgetTester`), integration (`integration_test` on simulator/emulator/device). Picks the right layer per change, mocks via `mockito` + `build_runner`, LCOV coverage, CI with the Flutter Action. Use when the app is Flutter and the team wants its first-party stack. For React Native use detox-testing; for black-box cross-platform use appium-testing; for YAML-declarative flows use maestro-flows."
+  "description": "Authors Flutter tests across the three-layer pyramid - unit (`flutter test`), widget (`testWidgets` + `WidgetTester`), integration (`integration_test` on simulator/emulator/device). Picks the right layer per change, mocks via `mockito` + `build_runner`, LCOV coverage, CI with the Flutter Action. Use when the app is Flutter and the team wants its first-party stack. For React Native use detox-testing; for black-box cross-platform use appium-testing; for YAML-declarative flows use maestro-flows.",
+  "content_fingerprint": "9024d55d4cd04619b3314bb0ae08b674f4636a0a503417498aa20a0f9e4bb458"
 }

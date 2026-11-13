@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The progress surface for Go CLI tools - the two-line live block, the in-place meter carrying rate and ETA, how it degrades with terminal width, and the settled and summary lines it collapses into. Use when a command runs work worth watching, when clearing terminal lines, when showing a download or a file count advance, or when a command prints \"Running...\" then replaces it with a result. Triggers on ClearLines, NewMeter, NewGroup, Meter.Set, Meter.Add, Meter.Rate, Meter.Fields, Meter.Done, Meter.Fail, StdoutIsTerminal, GlobalDebugFlag, term.GetSize, out_time_us, speed=, and an in-place progress bar."
+  "description": "The progress surface for Go CLI tools - the two-line live block, the in-place meter carrying rate and ETA, how it degrades with terminal width, and the settled and summary lines it collapses into. Use when a command runs work worth watching, when clearing terminal lines, when showing a download or a file count advance, or when a command prints \"Running...\" then replaces it with a result. Triggers on ClearLines, NewMeter, NewGroup, Meter.Set, Meter.Add, Meter.Rate, Meter.Fields, Meter.Done, Meter.Fail, StdoutIsTerminal, GlobalDebugFlag, term.GetSize, out_time_us, speed=, and an in-place progress bar.",
+  "content_fingerprint": "829fbfb38067b4ef1865d6288be72c0d37f25444d34fe079ac28a9689f648eb2"
 }

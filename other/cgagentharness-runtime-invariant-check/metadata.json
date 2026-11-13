@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verify that core security invariants still hold after code changes. Run this before pushing core-path PRs (touching src/shim, guards.rs, headers.rs, writer.rs, sandbox.rs, workspace.rs, or config.default.yaml). Checks: I6 process isolation (server never imports agentic), guard chain order, CSRF contracts, write gates closed by default, RUN_ID_PATTERN consistency across boundary, clone jail contracts, and config fail-closed defaults. Complements tests/invariant_guard.rs by providing human-readable guidance on what to check and how to fix violations."
+  "description": "Verify that core security invariants still hold after code changes. Run this before pushing core-path PRs (touching src/shim, guards.rs, headers.rs, writer.rs, sandbox.rs, workspace.rs, or config.default.yaml). Checks: I6 process isolation (server never imports agentic), guard chain order, CSRF contracts, write gates closed by default, RUN_ID_PATTERN consistency across boundary, clone jail contracts, and config fail-closed defaults. Complements tests/invariant_guard.rs by providing human-readable guidance on what to check and how to fix violations.",
+  "content_fingerprint": "1196ff6378a69a42383d3ce179aa01dbd4981804f888379d5d2839a88c413173"
 }

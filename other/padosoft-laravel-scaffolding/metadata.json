@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this skill when adding something new to a Laravel application \u2014 an endpoint, a controller, a service, a CRUD backend, a queued job, a test \u2014 \"make me the API for X\", \"add the CRUD for Y\", \"I need a service that does Z\" \u2014 and whenever a piece added earlier is half-wired: a route that answers 404, a policy that is never called, a request class that validates nothing because the controller reads `all()`, a job that is dispatched but has no queue configured. It lists the files each piece touches, in order. Do not use it to review existing code (padosoft-laravel-conventions) or for the security review."
+  "description": "Use this skill when adding something new to a Laravel application — an endpoint, a controller, a service, a CRUD backend, a queued job, a test — \"make me the API for X\", \"add the CRUD for Y\", \"I need a service that does Z\" — and whenever a piece added earlier is half-wired: a route that answers 404, a policy that is never called, a request class that validates nothing because the controller reads `all()`, a job that is dispatched but has no queue configured. It lists the files each piece touches, in order. Do not use it to review existing code (padosoft-laravel-conventions) or for the security review.",
+  "content_fingerprint": "35fedabe6b84d85e50038d48a7814f93f12408114c45c9900c924c8d33f770e0"
 }

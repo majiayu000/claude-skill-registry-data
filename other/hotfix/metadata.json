@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Composite skill \u2014 emergency bypass of the release branch when production is broken and waiting for the next release-cut is not viable. Chains incident scoping \u2192 branch from main (NOT release) \u2192 minimal fix \u2192 pr-merge-readiness \u2192 merge to main \u2192 patch-version tag \u2192 deploy \u2192 cherry-pick to release branch \u2192 post-deploy verify (sentry + ci-watch). Use ONLY for production-impacting breakage; routine \"small fix\" work belongs in /pr-to-release."
+  "description": "Composite skill — emergency bypass of the release branch when production is broken and waiting for the next release-cut is not viable. Chains incident scoping → branch from main (NOT release) → minimal fix → pr-merge-readiness → merge to main → patch-version tag → deploy → cherry-pick to release branch → post-deploy verify (sentry + ci-watch). Use ONLY for production-impacting breakage; routine \"small fix\" work belongs in /pr-to-release.",
+  "content_fingerprint": "08d079428e4c72f60437e2aa3f50351c963805442d6d84dc2ab4ecec9117b137"
 }

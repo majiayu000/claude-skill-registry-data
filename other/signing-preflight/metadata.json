@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Before the first commit of a session, check that commit signing will work \u2014 the key is loaded and unlocked \u2014 and ask the operator to unlock it once, up front, instead of discovering it after a hundred unsigned commits. Never disables signing silently, never re-signs history without asking. Use at the start of implementation work in a repo that signs commits (\"\u043a\u043e\u043c\u043c\u0438\u0442\u044b \u043d\u0435 \u043f\u043e\u0434\u043f\u0438\u0441\u0430\u043d\u044b\", \"ssh-keygen \u0432\u0438\u0441\u0438\u0442\", \"gpg failed to sign\"). Loaded by senior-dev, devops."
+  "description": "Before the first commit of a session, check that commit signing will work — the key is loaded and unlocked — and ask the operator to unlock it once, up front, instead of discovering it after a hundred unsigned commits. Never disables signing silently, never re-signs history without asking. Use at the start of implementation work in a repo that signs commits (\"коммиты не подписаны\", \"ssh-keygen висит\", \"gpg failed to sign\"). Loaded by senior-dev, devops.",
+  "content_fingerprint": "c1215bf1d28f174da23e77d8a804f13d99c5a2e57405b88fa89eb6d105e8e64d"
 }

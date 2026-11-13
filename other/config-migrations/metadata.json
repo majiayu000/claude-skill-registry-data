@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Migrate AICP config schema across versions \u2014 rename keys, change shapes (string \u2192 list, scalar \u2192 object), deprecate keys, add required keys with safe defaults, validate operator config files post-upgrade. Distinct from `config-env` (env var lifecycle) and `config-deploy` (deploy-time selection); this skill is the SCHEMA EVOLUTION track. Loads when the operator says \"AICP changed config shape\" / \"migrate config X\" / \"upgrade config to new schema\" / \"add required key Y to all configs\" / \"rename config key\"."
+  "description": "Migrate AICP config schema across versions — rename keys, change shapes (string → list, scalar → object), deprecate keys, add required keys with safe defaults, validate operator config files post-upgrade. Distinct from `config-env` (env var lifecycle) and `config-deploy` (deploy-time selection); this skill is the SCHEMA EVOLUTION track. Loads when the operator says \"AICP changed config shape\" / \"migrate config X\" / \"upgrade config to new schema\" / \"add required key Y to all configs\" / \"rename config key\".",
+  "content_fingerprint": "d1eae117c8a9deb7da9df737314e162eaafd5163743eb40d29da7b2cbf988cd3"
 }

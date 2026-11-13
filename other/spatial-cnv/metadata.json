@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Load when inferring copy-number variation per spot on a preprocessed spatial AnnData with chromosome-annotated genes via infercnvpy (default \u2014 log-ratio sliding-window) or Numbat (R, allele-aware clone deconvolution). Skip when `var[\"chromosome\"]` / `var[\"start\"]` / `var[\"end\"]` gene-coord metadata is missing; no normal-reference subset can be defined."
+  "description": "Load when inferring copy-number variation per spot on a preprocessed spatial AnnData with chromosome-annotated genes via infercnvpy (default — log-ratio sliding-window) or Numbat (R, allele-aware clone deconvolution). Skip when `var[\"chromosome\"]` / `var[\"start\"]` / `var[\"end\"]` gene-coord metadata is missing; no normal-reference subset can be defined.",
+  "content_fingerprint": "6af006e13dd7dd0b31ff972946e6d20c51f38357b2bbde186c19e069114eed5b"
 }

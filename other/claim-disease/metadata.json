@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when claiming the next disease to curate in dismech. Two-phase pick \u2014 open `claim`-labelled issues for what is already taken, then the `stubs/` queue for what is left \u2014 then files a `Curate <label> (MONDO:NNNNNNN)` claim issue assigned to the current GitHub user. Accepts an optional integer 1\u20138 to claim N diseases at once. The skill should also start the curation process."
+  "description": "Use when claiming the next disease to curate in dismech. Two-phase pick — open `claim`-labelled issues for what is already taken, then the `stubs/` queue for what is left — then files a `Curate <label> (MONDO:NNNNNNN)` claim issue assigned to the current GitHub user. Accepts an optional integer 1–8 to claim N diseases at once. The skill should also start the curation process.",
+  "content_fingerprint": "b8c98a51f0c84985eb37104635345e905bd623aa505d0443978802226de2385f"
 }

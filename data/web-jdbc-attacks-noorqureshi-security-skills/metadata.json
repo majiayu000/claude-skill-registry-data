@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Turn an attacker-controllable database connection string / JDBC URL into RCE via the driver itself. Load when an app lets you set a DB host/URL/driver: a \"test connection\" form, a data-source config, an ETL/reporting/integration tool, or a processor that takes a JDBC URL. Signals: a jdbc: URL field, H2/MySQL/Postgres connection settings, Apache NiFi/Mirth/Metabase/DBeaver-style data-source config, \"connection string\", driver properties you can edit."
+  "description": "Turn an attacker-controllable database connection string / JDBC URL into RCE via the driver itself. Load when an app lets you set a DB host/URL/driver: a \"test connection\" form, a data-source config, an ETL/reporting/integration tool, or a processor that takes a JDBC URL. Signals: a jdbc: URL field, H2/MySQL/Postgres connection settings, Apache NiFi/Mirth/Metabase/DBeaver-style data-source config, \"connection string\", driver properties you can edit.",
+  "content_fingerprint": "f251c70fe0ef7072b9f81e73a8e9b4415befb71315e7c391ae1004f83bc53526"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5bf9\u5355\u7ec6\u80de RNA-seq \u6570\u636e\uff08.h5ad \u6216 .h5 \u6587\u4ef6\uff09\u6267\u884c\u8d28\u63a7\uff0c\u4f7f\u7528 scverse \u6700\u4f73\u5b9e\u8df5\u7684 MAD \u8fc7\u6ee4\u548c\u7efc\u5408\u53ef\u89c6\u5316\u3002\u9002\u7528\u4e8e QC \u5206\u6790\u3001\u4f4e\u8d28\u91cf\u7ec6\u80de\u8fc7\u6ee4\u3001\u6570\u636e\u8d28\u91cf\u8bc4\u4f30\u6216\u9075\u5faa scverse/scanpy \u5355\u7ec6\u80de\u5206\u6790\u6700\u4f73\u5b9e\u8df5\u3002"
+  "description": "对单细胞 RNA-seq 数据（.h5ad 或 .h5 文件）执行质控，使用 scverse 最佳实践的 MAD 过滤和综合可视化。适用于 QC 分析、低质量细胞过滤、数据质量评估或遵循 scverse/scanpy 单细胞分析最佳实践。",
+  "content_fingerprint": "d61c4db53bd3e34c8923063f85ec6c32395fd05ccdc9349b98229291b6835cb8"
 }

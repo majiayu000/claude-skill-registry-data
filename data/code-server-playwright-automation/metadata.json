@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Fix Playwright automation failures against code-server (VS Code in browser). Use when:\n(1) trust dialog blocks all clicks \u2014 \"monaco-dialog-modal-block intercepts pointer events\",\n(2) button:has-text() finds wrong buttons behind modal dialog,\n(3) keyboard shortcuts don't work \u2014 Meta vs Control inconsistency,\n(4) VS Code extension activity bar icon not found by aria-label,\n(5) panels show placeholder text despite extension being \"Connected\".\nCovers trust dialog dismissal, keyboard shortcut hybrid mode, extension panel\nselectors, and database connection verification for Grafema extension."
+  "description": "Fix Playwright automation failures against code-server (VS Code in browser). Use when:\n(1) trust dialog blocks all clicks — \"monaco-dialog-modal-block intercepts pointer events\",\n(2) button:has-text() finds wrong buttons behind modal dialog,\n(3) keyboard shortcuts don't work — Meta vs Control inconsistency,\n(4) VS Code extension activity bar icon not found by aria-label,\n(5) panels show placeholder text despite extension being \"Connected\".\nCovers trust dialog dismissal, keyboard shortcut hybrid mode, extension panel\nselectors, and database connection verification for Grafema extension.",
+  "content_fingerprint": "b40ded2c70b470cf6b1498b447af6bf6f2f5ee04718db7c4147071ae31cf0e98"
 }

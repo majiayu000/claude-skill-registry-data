@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\ucf54\ub4dc \ubcc0\uacbd\uc758 WHY(\uc6d0\uc778, \ub3d9\uae30, \ud310\ub2e8 \uadfc\uac70)\ub97c \ucd94\uc801\ud558\ub294 \uc2a4\ud0ac. \uc138\uc158 \ud2b8\ub79c\uc2a4\ud06c\ub9bd\ud2b8, git blame, \ucee4\ubc0b \ud788\uc2a4\ud1a0\ub9ac\uc5d0\uc11c \ubcc0\uacbd \uc758\ub3c4\ub97c \ucc3e\uc544\ub0b8\ub2e4. \"\uc65c \uc774\ub807\uac8c \ubc14\uafe8\uc5b4?\", \"\uc774 \ubcc0\uacbd \uc774\uc720\uac00 \ubb50\uc57c?\", \"\uc774\uac70 \uc65c \ubc14\ub010\uac70\uc57c?\", \"\uc774 \ucee4\ubc0b \uc758\ub3c4\uac00 \ubb50\uc57c?\", \"\ub204\uac00 \uc65c \ubc14\uafe8\uc5b4?\", \"\uc774 \ucf54\ub4dc \uc65c \uc774\ub807\uac8c \ub41c\uac70\uc57c?\", \"why was this changed?\", \"explain this commit\" \ub4f1 \ubcc0\uacbd \uc758\ub3c4\ub97c \ubb3b\ub294 \uc9c8\ubb38\uc5d0\uc11c \ud2b8\ub9ac\uac70. diff\ub098 blame \uacb0\uacfc\ub97c \ubcf4\uc5ec\uc8fc\uba70 \uc758\ub3c4\ub97c \ubb3c\uc744 \ub54c\ub3c4 \ud2b8\ub9ac\uac70."
+  "description": "코드 변경의 WHY(원인, 동기, 판단 근거)를 추적하는 스킬. 세션 트랜스크립트, git blame, 커밋 히스토리에서 변경 의도를 찾아낸다. \"왜 이렇게 바꿨어?\", \"이 변경 이유가 뭐야?\", \"이거 왜 바뀐거야?\", \"이 커밋 의도가 뭐야?\", \"누가 왜 바꿨어?\", \"이 코드 왜 이렇게 된거야?\", \"why was this changed?\", \"explain this commit\" 등 변경 의도를 묻는 질문에서 트리거. diff나 blame 결과를 보여주며 의도를 물을 때도 트리거.",
+  "content_fingerprint": "7a29dbe5bd001fa7f42a95c36f064f035fe948557c455e5eaac21abb424802cb"
 }

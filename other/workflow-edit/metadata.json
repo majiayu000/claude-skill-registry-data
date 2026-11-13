@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u67e5\u770b\u548c\u7de8\u8f2f domain stack \u7684 artifact flow\u3001skill \u4e32\u63a5\u3001workflow graph\u3002\nTrigger: \u7528\u6236\u8aaa\u300c\u6539 workflow\u300d\u3001\u300cskill \u4e32\u63a5\u300d\u3001\u300c\u8abf\u6574\u6d41\u7a0b\u300d\u3001\u300c\u770b artifact flow\u300d\u3002\nDo NOT use when: \u8981\u6539 skill \u5167\u90e8\uff08\u7528 /skill-edit\uff09\u3002\nDo NOT use when: \u8981\u52a0\u65b0 skill\uff08\u7528 /skill-gen\uff09\u3002\n\u4e0a\u6e38\uff1a\u73fe\u6709 domain stack\u3002\n\u4e0b\u6e38\uff1a\u88ab\u4fee\u6539\u7684 skill \u5011\u3002\n\u7522\u51fa\uff1a\u66f4\u65b0\u5f8c\u7684 workflow-graph.md + \u4fee\u6539\u7684 SKILL.md \u6a94\u6848\u3002"
+  "description": "查看和編輯 domain stack 的 artifact flow、skill 串接、workflow graph。\nTrigger: 用戶說「改 workflow」、「skill 串接」、「調整流程」、「看 artifact flow」。\nDo NOT use when: 要改 skill 內部（用 /skill-edit）。\nDo NOT use when: 要加新 skill（用 /skill-gen）。\n上游：現有 domain stack。\n下游：被修改的 skill 們。\n產出：更新後的 workflow-graph.md + 修改的 SKILL.md 檔案。",
+  "content_fingerprint": "44e22e758cc6c70f344fba853a9993dfcb6693defb843041f0a3d246e873afbe"
 }

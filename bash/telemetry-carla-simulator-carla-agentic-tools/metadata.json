@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reads a specific actor's live telemetry from a running CARLA server \u2014 location and rotation, velocity and speed, acceleration, angular velocity, and for vehicles the control input (throttle/steer/brake), front-wheel steer angle and mass. All kinematics come from one world snapshot so they are frame-consistent. Use when the user asks \"how fast is it going\", \"where/what heading is the car\", \"show the ego's telemetry\", or \"stream a vehicle's state\". Resolve ambiguous targets with the world-data skill."
+  "description": "Reads a specific actor's live telemetry from a running CARLA server — location and rotation, velocity and speed, acceleration, angular velocity, and for vehicles the control input (throttle/steer/brake), front-wheel steer angle and mass. All kinematics come from one world snapshot so they are frame-consistent. Use when the user asks \"how fast is it going\", \"where/what heading is the car\", \"show the ego's telemetry\", or \"stream a vehicle's state\". Resolve ambiguous targets with the world-data skill.",
+  "content_fingerprint": "cbe5ee347a6353213c070742e4b4fb5593ddb718a90e00477f65b596150a367e"
 }

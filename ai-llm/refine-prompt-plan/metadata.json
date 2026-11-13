@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/tobihagemann/turbo/blob/main/skills/refine-prompt-plan/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "314d77cac3df4f0282555f214c55545def819a1567d21784c368f265dac8e10f",
+  "description": "Iteratively review and revise a prompt plan until no new findings survive evaluation. Runs /review-prompt-plan, /evaluate-findings, /apply-findings, then re-runs itself until stable. Use when the user"
 }

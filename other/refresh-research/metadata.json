@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Bulk-refresh research entries in ./research/ using parallel research-curator agents. Use when /refresh-research is invoked, stale research needs updating, or bulk re-verification of research entries is requested. Inventories entries by review date and age, runs RT-ICA pre-flight, spawns agents in waves of 5, then validates, reviews, and commits through research-curator. Supports --all, --stale, --category, --layer, and --dry-run flags."
+  "description": "Bulk-refresh research entries in ./research/ using parallel research-curator agents. Use when /refresh-research is invoked, stale research needs updating, or bulk re-verification of research entries is requested. Inventories entries by review date and age, runs RT-ICA pre-flight, spawns agents in waves of 5, then validates, reviews, and commits through research-curator. Supports --all, --stale, --category, --layer, and --dry-run flags.",
+  "content_fingerprint": "bd834b1825d8c5ba25af4671db261590cc448b8bbf92221f41c2485325ce2fc8"
 }

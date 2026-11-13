@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ascend C \u7b97\u5b50 Tiling \u8bbe\u8ba1\u6307\u5357\u3002\u63d0\u4f9b\u7b97\u5b50\u5206\u7c7b\u4f53\u7cfb\u548c Tiling \u6838\u5fc3\u8981\u7d20\uff08\u591a\u6838\u5207\u5206\u3001UB\u5207\u5206\u3001Buffer\u89c4\u5212\u3001\u5206\u652f\u8986\u76d6\uff09\u7684\u8be6\u7ec6\u8bbe\u8ba1\u65b9\u6cd5\u3002\u89e6\u53d1\uff1a\u7b97\u5b50\u8bbe\u8ba1\u9636\u6bb5\u3001\u8bbe\u8ba1 Tiling \u7b56\u7565\uff08\u591a\u6838\u5207\u5206/UB\u5207\u5206\uff09\u3001\u89c4\u5212 Buffer \u5206\u914d\u3001\u67e5\u9605\u67d0\u7c7b\u7b97\u5b50\u7684 Tiling \u65b9\u6cd5\u8bba\u65f6\u3002"
+  "description": "Ascend C 算子 Tiling 设计指南。提供算子分类体系和 Tiling 核心要素（多核切分、UB切分、Buffer规划、分支覆盖）的详细设计方法。触发：算子设计阶段、设计 Tiling 策略（多核切分/UB切分）、规划 Buffer 分配、查阅某类算子的 Tiling 方法论时。",
+  "content_fingerprint": "68a862edff3ab71dddb350e85bfa5bae2daf5dad61456fac3f4e7ad5a91a5eca"
 }

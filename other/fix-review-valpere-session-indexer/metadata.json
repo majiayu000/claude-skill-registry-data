@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Multi-model PR review with parallel fan-out. Three Ollama models (Cloud `:cloud` by default, local fallback) review the full PR diff in parallel; Claude acts as Arbiter, using vote count as a confidence prior to confirm/escalate/dismiss findings, then applies a single consolidated fix commit. Auto-merges (squash) when no fixes were reverted and the PR is mergeable; otherwise leaves it for manual review. Usage: /fix-review [PR-number]"
+  "description": "Multi-model PR review with parallel fan-out. Three Ollama models (Cloud `:cloud` by default, local fallback) review the full PR diff in parallel; Claude acts as Arbiter, using vote count as a confidence prior to confirm/escalate/dismiss findings, then applies a single consolidated fix commit. Auto-merges (squash) when no fixes were reverted and the PR is mergeable; otherwise leaves it for manual review. Usage: /fix-review [PR-number]",
+  "content_fingerprint": "f79b388cce1d63a7252f5dd8eaca009c9e1afe911c5a09a593c037f797ea2b8f"
 }

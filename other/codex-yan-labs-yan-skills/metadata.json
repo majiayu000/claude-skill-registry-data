@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5f53\u7528\u6237\u660e\u786e\u8981\u6c42\u76f4\u63a5\u64cd\u4f5c Codex CLI \u4f5c\u4e3a\u540e\u53f0\u4ee3\u7406\uff08\u81ea\u9009 sandbox\u3001codex review\u3001apply\u3001resume \u7b49\u539f\u751f\u547d\u4ee4\uff0c\u6216\u7528 git worktree \u5e76\u884c\u5e03\u7f6e\u591a\u4e2a worker\uff09\u505a\u4ee3\u7801\u5206\u6790\u3001\u7f16\u8f91\u3001\u5ba1\u67e5\u65f6\u4f7f\u7528\u3002\u666e\u901a\u7684\u201c\u8ba9 Codex \u6216 GPT-6 \u5199\u4ee3\u7801\u3001\u8c03\u7814\u3001review\u201d\u6d3e\u5355\u8d70 agent-fleet\uff08fleet code\uff09\uff1b\u56fe\u7247\u751f\u6210\u4e0e\u7f51\u7ad9\u89c6\u89c9\u7d20\u6750\u8d70 imagegen\u3002"
+  "description": "当用户明确要求直接操作 Codex CLI 作为后台代理（自选 sandbox、codex review、apply、resume 等原生命令，或用 git worktree 并行布置多个 worker）做代码分析、编辑、审查时使用。普通的“让 Codex 或 GPT-6 写代码、调研、review”派单走 agent-fleet（fleet code）；图片生成与网站视觉素材走 imagegen。",
+  "content_fingerprint": "cde3f7d2d5b949f143b4be562fb0255854d6084253bff5ee3b22446a8eed6326"
 }

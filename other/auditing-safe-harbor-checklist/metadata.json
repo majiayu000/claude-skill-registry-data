@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Verify OpenMed de-identified output against all 18 HIPAA Safe Harbor identifier categories and report residual re-identification risk. Use when the user must confirm a note meets HIPAA Safe Harbor (45 CFR 164.514(b)(2)), needs a coverage checklist mapping detected entities to the 18 categories, wants to flag gaps like ages over 89, rare geography, fax vs phone, or biometrics, or asks whether masking was complete. Maps OpenMed CANONICAL_LABELS to the 18 HIPAA classes and uses extract_pii / deidentify to check coverage. Pairs with OpenMed deidentifying-clinical-text and auditing-deidentification-runs."
+  "description": "Verify OpenMed de-identified output against all 18 HIPAA Safe Harbor identifier categories and report residual re-identification risk. Use when the user must confirm a note meets HIPAA Safe Harbor (45 CFR 164.514(b)(2)), needs a coverage checklist mapping detected entities to the 18 categories, wants to flag gaps like ages over 89, rare geography, fax vs phone, or biometrics, or asks whether masking was complete. Maps OpenMed CANONICAL_LABELS to the 18 HIPAA classes and uses extract_pii / deidentify to check coverage. Pairs with OpenMed deidentifying-clinical-text and auditing-deidentification-runs.",
+  "content_fingerprint": "9f42344d54f8d6516d814f1a7c0908f0dda8b1bbbd50789925b578eb7d99abb9"
 }

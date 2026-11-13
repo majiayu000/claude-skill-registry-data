@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u628a\u5916\u90e8\u673a\u5668\u5bfc\u51fa\u7684 Claude Code \u539f\u751f session \u65e5\u5fd7\uff08.jsonl\uff09\u5bfc\u5165\u672c\u673a\uff0c\u8ba9 universe-editor \u7684 Agents \u89c6\u56fe\u80fd\u52a0\u8f7d/\u6062\u590d\u8be5\u4f1a\u8bdd\u3002\u5f53\u7528\u6237\u62ff\u6765\u4e00\u4e2a\u522b\u5904\u4ea7\u751f\u7684 claude session jsonl\u3001\u8bf4\u300c\u5bfc\u5165\u4f1a\u8bdd / \u8ba9\u7f16\u8f91\u5668\u80fd\u52a0\u8f7d\u8fd9\u4e2a session / \u8f6c\u6362 session \u683c\u5f0f\u300d\u65f6\u4f7f\u7528\u3002"
+  "description": "把外部机器导出的 Claude Code 原生 session 日志（.jsonl）导入本机，让 universe-editor 的 Agents 视图能加载/恢复该会话。当用户拿来一个别处产生的 claude session jsonl、说「导入会话 / 让编辑器能加载这个 session / 转换 session 格式」时使用。",
+  "content_fingerprint": "fabec191b058452c7b39f3f7b6b0a8232592f90a6a81c4786952398f181c34dc"
 }

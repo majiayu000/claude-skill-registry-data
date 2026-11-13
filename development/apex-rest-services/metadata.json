@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when building, reviewing, or debugging inbound Apex REST resources, request/response handling, status codes, versioned URL mappings, or JSON serialization in `@RestResource` classes. Triggers: 'Apex REST', '@RestResource', 'HttpGet/HttpPost', 'RestContext', 'versioned endpoint', 'services/apexrest', 'urlMapping', 'RestRequest requestBody', 'RestResponse statusCode'. NOT for outbound callouts \u2014 use apex/callouts-and-http-integrations. NOT for a deprecation and sunset policy across many endpoints \u2014 use integration/api-versioning-strategy."
+  "description": "Use when building, reviewing, or debugging inbound Apex REST resources, request/response handling, status codes, versioned URL mappings, or JSON serialization in `@RestResource` classes. Triggers: 'Apex REST', '@RestResource', 'HttpGet/HttpPost', 'RestContext', 'versioned endpoint', 'services/apexrest', 'urlMapping', 'RestRequest requestBody', 'RestResponse statusCode'. NOT for outbound callouts — use apex/callouts-and-http-integrations. NOT for a deprecation and sunset policy across many endpoints — use integration/api-versioning-strategy.",
+  "content_fingerprint": "68bbbead6bf1af8dcd22594d4cb83cb5576eabe1edbce4254d4a882e85d8ec1b"
 }

@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Break weak symmetric crypto in real apps \u2014 decrypt or forge encrypted tokens/cookies without the key via padding oracles (CBC), ECB block shuffling, and hash-length-extension of homemade MACs. Load when the app hands you ciphertext you can tamper with and resend: an encrypted cookie/token, a \"state\"/\"data\" blob, an IV+ciphertext, a `H(secret\u2016msg)` signature, base64 that changes on edit."
+  "description": "Break weak symmetric crypto in real apps — decrypt or forge encrypted tokens/cookies without the key via padding oracles (CBC), ECB block shuffling, and hash-length-extension of homemade MACs. Load when the app hands you ciphertext you can tamper with and resend: an encrypted cookie/token, a \"state\"/\"data\" blob, an IV+ciphertext, a `H(secret‖msg)` signature, base64 that changes on edit.",
+  "content_fingerprint": "7b5b8e4d50dfe8fe962fd541e06924abae20e1e6b599e16bbcc280de9da239e7"
 }

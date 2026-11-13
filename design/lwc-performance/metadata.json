@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when designing or reviewing Lightning Web Components for slow initial load, heavy rerenders, large-list rendering, payload reduction, and lazy instantiation choices such as `lwc:if`, tabs, or dynamic components. Triggers: 'slow lwc', 'rerenders too much', 'key index', 'dynamic import', 'large list lag'. NOT for 1,000+ row lists \u2014 use lwc/lwc-virtualized-lists. NOT for a slow record page overall \u2014 use admin/lightning-app-builder-advanced."
+  "description": "Use when designing or reviewing Lightning Web Components for slow initial load, heavy rerenders, large-list rendering, payload reduction, and lazy instantiation choices such as `lwc:if`, tabs, or dynamic components. Triggers: 'slow lwc', 'rerenders too much', 'key index', 'dynamic import', 'large list lag'. NOT for 1,000+ row lists — use lwc/lwc-virtualized-lists. NOT for a slow record page overall — use admin/lightning-app-builder-advanced.",
+  "content_fingerprint": "b3dcd1ebc07ccff864966a6a6c8a22c6049aa09395a32d965bf5c622505adf9a"
 }

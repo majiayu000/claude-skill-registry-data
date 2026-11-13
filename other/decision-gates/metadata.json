@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u5728 DSH \u957f\u7a0b\u4efb\u52a1\u4e2d\u4e3a\u51b3\u7b56\u5c42\u52a0\u88c5\u4e94\u9053\u9632\u504f\u95f8\u95e8\uff1a\u539f\u59cb\u8bc1\u636e\u951a\u3001\u5bf9\u6297\u5f0f\u5bf9\u9f50\u5ba1\u8ba1\u3001\u8de8\u5305\u4e00\u81f4\u6027\u6821\u9a8c\u3001\u6210\u672c\u6bd4\u5bf9\u3001\u9632\u5fa1\u81ea\u68c0\uff0c\u9632\u6b62\u76ee\u6807\u6f02\u79fb\u3001\u9a8c\u6536\u5931\u771f\u4e0e\u6458\u8981\u504f\u5dee\u3002\u7528\u4e8e\u8de8\u4f1a\u8bdd\u957f\u4efb\u52a1\u3001\u591a worker \u5e76\u884c\u3001\u5ba1\u8ba1\u7c7b\u4efb\u52a1\u3001\u6210\u672c\u654f\u611f\u4efb\u52a1\u7684 checkpoint \u8bb0\u5f55\u4e0e\u6062\u590d\uff0c\u4ee5\u53ca\u4efb\u4f55\u9700\u8981\"\u51b3\u7b56\u5c42\u4e0d\u8dd1\u504f\"\u4fdd\u969c\u7684\u6267\u884c\u573a\u666f\u3002"
+  "description": "在 DSH 长程任务中为决策层加装五道防偏闸门：原始证据锚、对抗式对齐审计、跨包一致性校验、成本比对、防御自检，防止目标漂移、验收失真与摘要偏差。用于跨会话长任务、多 worker 并行、审计类任务、成本敏感任务的 checkpoint 记录与恢复，以及任何需要\"决策层不跑偏\"保障的执行场景。",
+  "content_fingerprint": "5fdd8222ec9b5030e521bb588fb694a576669482a088edf8d3391f2fd8d75f9d"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Write a timestamped Chinese narration script (\u89e3\u8bf4\u8bcd / \u65c1\u767d) for an already-analyzed video, then lint/validate it. Use after video-understanding has produced agent_narration_brief.md + vlm_analysis.json, when you need to author the recap narration (style, anti-hallucination, \u5b57\u6570\u516c\u5f0f, density, hook/throughline). Input: the understanding index in work_dir. Output: narration.json (validated). \u89e6\u53d1\u8bcd: \u89e3\u8bf4\u8bcd, \u5199\u89e3\u8bf4, \u89c6\u9891\u65c1\u767d, narration script, \u5199\u7a3f, \u89e3\u8bf4\u6587\u6848."
+  "description": "Write a timestamped Chinese narration script (解说词 / 旁白) for an already-analyzed video, then lint/validate it. Use after video-understanding has produced agent_narration_brief.md + vlm_analysis.json, when you need to author the recap narration (style, anti-hallucination, 字数公式, density, hook/throughline). Input: the understanding index in work_dir. Output: narration.json (validated). 触发词: 解说词, 写解说, 视频旁白, narration script, 写稿, 解说文案.",
+  "content_fingerprint": "d4eaabaafec54337d8de24830ebb67aa9cb353362e15d606f8d56e9335bdbab1"
 }

@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Hourly error-backlog grooming sweep for {{sentry_project}}. Groups new and spiking errors, dedupes against existing GitHub issues in {{triage_repo}} by Sentry issue ID, drafts a GitHub issue with the stack trace and impact for the top {{max_issues_per_run}}, and posts a sweep summary to {{alert_channel}}. Never resolves, ignores, mutes, or assigns an error."
+  "description": "Hourly error-backlog grooming sweep for {{sentry_project}}. Groups new and spiking errors, dedupes against existing GitHub issues in {{triage_repo}} by Sentry issue ID, drafts a GitHub issue with the stack trace and impact for the top {{max_issues_per_run}}, and posts a sweep summary to {{alert_channel}}. Never resolves, ignores, mutes, or assigns an error.",
+  "content_fingerprint": "b550b7a25d283c8b2bccd271005ff90b777ca0b1d3562b7652e9460508bc661e"
 }

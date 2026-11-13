@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Generates a handoff manifest at the end of the ALDC pipeline so CIRCE and DELFOS can consume the extension's published surface without sharing a workspace. Use when the Conductor pipeline has completed successfully (extension compiles, all tests pass, all HITL gates cleared) and you need to emit the extension manifest from al-spec.md and the compiled .al objects."
+  "description": "Generates a handoff manifest at the end of the ALDC pipeline so CIRCE and DELFOS can consume the extension's published surface without sharing a workspace. Use when the Conductor pipeline has completed successfully (extension compiles, all tests pass, all HITL gates cleared) and you need to emit the extension manifest from al-spec.md and the compiled .al objects.",
+  "content_fingerprint": "12921e85f24d2da4aea646607ce2dd11fcf5ec07b49e2f6ae8fcffbcf31fc4b6"
 }

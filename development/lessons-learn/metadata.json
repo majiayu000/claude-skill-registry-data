@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Consolidate the accumulated lessons log for one of this plugin's skills and apply user-approved improvements to that skill's SKILL.md. User-invokable only (`/dev:lessons-learn <slug>`), typically periodically; the model never triggers it. Presents each surviving improvement via AskUserQuestion, edits the working-clone SKILL.md for approved ones, then snapshots the whole active log to <slug>.archive-<UTC stamp>.md under ~/.claude/dev-skills/lessons/, writing deferred entries back to a fresh active log. Takes the target skill's slug as its only argument. Never commits \u2014 edits stay in the working tree for review."
+  "description": "Consolidate the accumulated lessons log for one of this plugin's skills and apply user-approved improvements to that skill's SKILL.md. User-invokable only (`/dev:lessons-learn <slug>`), typically periodically; the model never triggers it. Presents each surviving improvement via AskUserQuestion, edits the working-clone SKILL.md for approved ones, then snapshots the whole active log to <slug>.archive-<UTC stamp>.md under ~/.claude/dev-skills/lessons/, writing deferred entries back to a fresh active log. Takes the target skill's slug as its only argument. Never commits — edits stay in the working tree for review.",
+  "content_fingerprint": "aa72f6e331ac8c8c6c53b471313118174a84b93254c06cade80b02313ac2f404"
 }

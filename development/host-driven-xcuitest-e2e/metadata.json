@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wire and debug launch-the-app XCUITest E2E tests in a Tuist project: a native `.uiTests` target needs its own scheme with `testAction: .targets([...])`, not `.xctestplan` membership; a name that does not collide with an SPM UITests package target; window-frame-anchored clicks for SwiftUI on macOS where `element.tap()` fails. Use when `xcodebuild test` reports no test bundles available to test, when XCUITest taps do not land on a macOS window, when adding a first E2E target, or when pinning a Simulator audit finding as a CI regression test. Manual exploration \u2192 interactive-simulator-ux-audit."
+  "description": "Wire and debug launch-the-app XCUITest E2E tests in a Tuist project: a native `.uiTests` target needs its own scheme with `testAction: .targets([...])`, not `.xctestplan` membership; a name that does not collide with an SPM UITests package target; window-frame-anchored clicks for SwiftUI on macOS where `element.tap()` fails. Use when `xcodebuild test` reports no test bundles available to test, when XCUITest taps do not land on a macOS window, when adding a first E2E target, or when pinning a Simulator audit finding as a CI regression test. Manual exploration → interactive-simulator-ux-audit.",
+  "content_fingerprint": "1d5daa9f7ce7ef65dfd5167fa200261ad9962bad89b036549bdd79bf0b8739c6"
 }

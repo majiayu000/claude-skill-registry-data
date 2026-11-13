@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Audit `register_activation_hook` for safety + idempotency \u2014 does the hook handle multisite network-activate, does it create tables via `dbDelta` (not `CREATE TABLE`), does it gracefully handle re-activation (already-installed state), does it trigger expensive ops on activation that should be deferred. Use when the user says \"activation hook\", \"register_activation_hook\", \"plugin install fails\", \"activation safety\"."
+  "description": "Audit `register_activation_hook` for safety + idempotency — does the hook handle multisite network-activate, does it create tables via `dbDelta` (not `CREATE TABLE`), does it gracefully handle re-activation (already-installed state), does it trigger expensive ops on activation that should be deferred. Use when the user says \"activation hook\", \"register_activation_hook\", \"plugin install fails\", \"activation safety\".",
+  "content_fingerprint": "6247c6ce93bb09530db0d1aba3459ca3de19b9daa24da9c33b98b86078cc54ae"
 }

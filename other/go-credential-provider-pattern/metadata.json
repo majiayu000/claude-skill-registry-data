@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use this when an SDK client needs a password, API key, token, or mTLS cert that may rotate \u2014 designing a Provider interface with Get(ctx), static / K8s mounted-file / IAM-STS-Vault-API impls, finite ConnMaxLifetime so rotation propagates, and .env / .env.example test plumbing per CLAUDE.md rule 27. Triggers: CredentialProvider, Credentials, os.ReadFile, ConnMaxLifetime, MOTADATA_*_PASSWORD, .env, refresh, rotation."
+  "description": "Use this when an SDK client needs a password, API key, token, or mTLS cert that may rotate — designing a Provider interface with Get(ctx), static / K8s mounted-file / IAM-STS-Vault-API impls, finite ConnMaxLifetime so rotation propagates, and .env / .env.example test plumbing per CLAUDE.md rule 27. Triggers: CredentialProvider, Credentials, os.ReadFile, ConnMaxLifetime, MOTADATA_*_PASSWORD, .env, refresh, rotation.",
+  "content_fingerprint": "dbf792b72d11b53810e7cacfc9998f9004a5a1da9339520377519b6d7b27d3ca"
 }

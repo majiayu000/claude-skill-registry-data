@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run scalable, isolated live QA for nac development. The top-level local orchestrator must parse n (default 4), dispatch one setup worker with this skill, copy its n assignment contracts verbatim into exactly n parallel test workers with this skill, then dispatch one aggregate worker with this skill using all test episodes; setup selects or creates a clean worktree for the requested revision, every phase changes to that worktree, slots and paths stay immutable after setup, and preloaded workers never dispatch."
+  "description": "Run scalable, isolated live QA for nac development. The top-level local orchestrator must parse n (default 4), dispatch one setup worker with this skill, copy its n assignment contracts verbatim into exactly n parallel test workers with this skill, then dispatch one aggregate worker with this skill using all test episodes; setup selects or creates a clean worktree for the requested revision, every phase changes to that worktree, slots and paths stay immutable after setup, and preloaded workers never dispatch.",
+  "content_fingerprint": "1d9679910242764385748b66bf9217f90bf7ccbee0febc6d4e4ddaf1af5862a8"
 }

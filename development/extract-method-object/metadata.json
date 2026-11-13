@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uc9c0\uc5ed \ubcc0\uc218\uac00 \uc11c\ub85c \uc5bd\ud600 Extract Method\uac00 \ubd88\uac00\ub2a5\ud55c \uac70\ub300 \uba54\uc11c\ub4dc\ub97c \ubcc4\ub3c4 \ud074\ub798\uc2a4(Method Object)\ub85c \ucd94\ucd9c. \"\uae34 \uba54\uc11c\ub4dc\ub97c \ud074\ub798\uc2a4\ub85c\", \"\uc9c0\uc5ed \ubcc0\uc218 \ub54c\ubb38\uc5d0 \ucd94\ucd9c \ubd88\uac00\", \"method object\", \"/extract-method-object\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \uc9c0\uc5ed \ubcc0\uc218 \uc5bd\ud798 \uc5c6\uc774 \uc798\ub77c\ub0bc \uc218 \uc788\ub294 \uae34 \uba54\uc11c\ub4dc\ub294 /intent-revealing-names(grouping\u2192extract)\uac00 \uc801\ud569. /extract-method-object [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "지역 변수가 서로 얽혀 Extract Method가 불가능한 거대 메서드를 별도 클래스(Method Object)로 추출. \"긴 메서드를 클래스로\", \"지역 변수 때문에 추출 불가\", \"method object\", \"/extract-method-object\" 요청 시 사용. 단, 지역 변수 얽힘 없이 잘라낼 수 있는 긴 메서드는 /intent-revealing-names(grouping→extract)가 적합. /extract-method-object [commit-ref]로 호출.",
+  "content_fingerprint": "c7d067c7792d4c157a140bb98a9af1918e0dbc193a1e75326049506930618b2e"
 }

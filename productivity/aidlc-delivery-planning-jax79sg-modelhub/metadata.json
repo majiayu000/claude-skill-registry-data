@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Run the AI-DLC `delivery-planning` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage delivery-planning --single`: the engine emits one run-stage directive for delivery-planning and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+  "description": "Run the AI-DLC `delivery-planning` stage (inception phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage delivery-planning --single`: the engine emits one run-stage directive for delivery-planning and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched.",
+  "content_fingerprint": "e5bb269be1d70776b0404cd20a154e6897ed3a1fe6fd122b5b9e83b3f7d53c59"
 }

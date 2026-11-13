@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\uceec\ub809\uc158 getter\uac00 \ub0b4\ubd80 List/Set\uc744 \uc9c1\uc811 \ub178\ucd9c\ud558\ub294 \uac83\uc744 \ubc29\uc9c0 \u2014 unmodifiable \ubc18\ud658 + add/remove \uba54\uc11c\ub4dc \uc81c\uacf5. \"\uceec\ub809\uc158 \ucea1\uc290\ud654\", \"getter\uac00 List \uadf8\ub300\ub85c \ub178\ucd9c\", \"unmodifiable\ub85c\", \"/encapsulate-collection\" \uc694\uccad \uc2dc \uc0ac\uc6a9. \ub2e8, \uceec\ub809\uc158\uacfc \uad00\ub828 \ub85c\uc9c1\uc744 \uc804\uc6a9 \ud074\ub798\uc2a4\ub85c \ubf51\ub294 \uac83\uc740 /first-class-collection\uc774 \uc801\ud569. /encapsulate-collection [commit-ref]\ub85c \ud638\ucd9c."
+  "description": "컬렉션 getter가 내부 List/Set을 직접 노출하는 것을 방지 — unmodifiable 반환 + add/remove 메서드 제공. \"컬렉션 캡슐화\", \"getter가 List 그대로 노출\", \"unmodifiable로\", \"/encapsulate-collection\" 요청 시 사용. 단, 컬렉션과 관련 로직을 전용 클래스로 뽑는 것은 /first-class-collection이 적합. /encapsulate-collection [commit-ref]로 호출.",
+  "content_fingerprint": "199a87c7f6ebc824dc254945ce49b5f81be2a7255a5b0dd847878395fcdb1ccd"
 }

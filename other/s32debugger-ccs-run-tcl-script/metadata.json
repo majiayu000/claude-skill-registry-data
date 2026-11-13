@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Execute or validate a CCS Tcl script with the CCS executable (`ccs` on Linux, `ccs.exe` on Windows). Use this whenever the user wants to start CCS, run a CCS Tcl script headlessly or with a visible CCS workflow, prove whether a target-discovery or attach script actually ran, troubleshoot why CCS succeeded at probe setup but failed later at generic chain, family-specific chain, attach, or initialization steps, or run a family-specific attach/core-status sanity test. Use this for evidence-based CCS execution reporting, especially when comparing CCS results against a prior GDB failure."
+  "description": "Execute or validate a CCS Tcl script with the CCS executable (`ccs` on Linux, `ccs.exe` on Windows). Use this whenever the user wants to start CCS, run a CCS Tcl script headlessly or with a visible CCS workflow, prove whether a target-discovery or attach script actually ran, troubleshoot why CCS succeeded at probe setup but failed later at generic chain, family-specific chain, attach, or initialization steps, or run a family-specific attach/core-status sanity test. Use this for evidence-based CCS execution reporting, especially when comparing CCS results against a prior GDB failure.",
+  "content_fingerprint": "4c908a3641c8976f967d60e6a131b7c1334d12c1bc5b25793a8f60ef9c37bce0"
 }

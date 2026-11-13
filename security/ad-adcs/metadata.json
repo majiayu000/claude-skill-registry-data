@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Attack Active Directory Certificate Services (ADCS) \u2014 ESC1\u2013ESC8 template/CA misconfigurations to escalate to Domain Admin. Load with a domain foothold/creds where ADCS is present, on \"certipy\", \"ESC1\", \"certificate template\", or a CA server. Signals: Cert Publishers, pKIEnrollmentService, ports 443/135 on a CA, certipy find output."
+  "description": "Attack Active Directory Certificate Services (ADCS) — ESC1–ESC8 template/CA misconfigurations to escalate to Domain Admin. Load with a domain foothold/creds where ADCS is present, on \"certipy\", \"ESC1\", \"certificate template\", or a CA server. Signals: Cert Publishers, pKIEnrollmentService, ports 443/135 on a CA, certipy find output.",
+  "content_fingerprint": "3433f9bd44ee69a1467257852d1388958fd589b18599bbaa6615ad70667f57c2"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Wraps ghz, the gRPC load testing tool, for throughput and latency benchmarking. Covers test invocation (--proto + --call + host:port; or --protoset for compiled descriptors), load parameters (-n total requests, -c concurrency, -r RPS rate limit, -z duration), output formats (json/csv/html/influx-summary for CI consumption), the metrics reported (RPS achieved, latency p50/p95/p99, status-code distribution, errors), and CI integration patterns for regression gating. Use when benchmarking a gRPC service's throughput or detecting latency regressions in CI."
+  "description": "Wraps ghz, the gRPC load testing tool, for throughput and latency benchmarking. Covers test invocation (--proto + --call + host:port; or --protoset for compiled descriptors), load parameters (-n total requests, -c concurrency, -r RPS rate limit, -z duration), output formats (json/csv/html/influx-summary for CI consumption), the metrics reported (RPS achieved, latency p50/p95/p99, status-code distribution, errors), and CI integration patterns for regression gating. Use when benchmarking a gRPC service's throughput or detecting latency regressions in CI.",
+  "content_fingerprint": "2d5fc2de0b52b5093a96ec60bd56ef867788dd8bd0748427a486fdc60d7c5e0b"
 }

@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/RosyGameStudio/forge-gpu/blob/main/.claude/skills/forge-normal-maps/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "1c51890900bee483b399f8649b52b81804f0cbc3f9bfa39069944eefaa48fff3",
+  "description": "Add tangent-space normal mapping to an SDL GPU project. Extends the vertex layout with tangent vectors, constructs a TBN matrix in the vertex shader, and samples/decodes normal maps in the fragment sh"
 }

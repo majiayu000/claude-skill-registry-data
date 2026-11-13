@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Create a new skill (MCP tool) for the Unity Editor by writing a C# (.cs) file that Unity compiles into the project. After compilation the new tool becomes callable through MCP. The file must be a partial class decorated with [AiToolType], each tool method must be decorated with [AiTool], the class name should match the file name, all Unity API calls must run via com.IvanMurzak.ReflectorNet.Utils.MainThread.Instance.Run(), and the method should either return a structured data model (for parseable output) or void (for side-effect-only operations). See the body of this skill for a full sample and best-practice notes."
+  "description": "Create a new skill (MCP tool) for the Unity Editor by writing a C# (.cs) file that Unity compiles into the project. After compilation the new tool becomes callable through MCP. The file must be a partial class decorated with [AiToolType], each tool method must be decorated with [AiTool], the class name should match the file name, all Unity API calls must run via com.IvanMurzak.ReflectorNet.Utils.MainThread.Instance.Run(), and the method should either return a structured data model (for parseable output) or void (for side-effect-only operations). See the body of this skill for a full sample and best-practice notes.",
+  "content_fingerprint": "d42e1488a9b11af511161d2aa23a5decb7616c34efe99a0d4bd75d1619bc0616"
 }

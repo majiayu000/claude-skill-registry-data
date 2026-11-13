@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Before any new story, task or bug fix starts, check its design: read the Design and Design boards links and the Screens part of the Build brief from the feature's file in the specs clone (.motor-fix-specs/llms.txt, then docs/reference/features/), read those boards' pages in docs/reference/design/ (the artifact is only an optional live view), and write specs/<feature>/design.md \u2014 what the screens show, the states, what is not designed, and where the mock and the Build brief disagree. Runs from the spec-kit hooks after_specify, before_plan and before_implement, and is checked by /speckit-auto."
+  "description": "Before any new story, task or bug fix starts, check its design: read the Design and Design boards links and the Screens part of the Build brief from the feature's file in the specs clone (.motor-fix-specs/llms.txt, then docs/reference/features/), read those boards' pages in docs/reference/design/ (the artifact is only an optional live view), and write specs/<feature>/design.md — what the screens show, the states, what is not designed, and where the mock and the Build brief disagree. Runs from the spec-kit hooks after_specify, before_plan and before_implement, and is checked by /speckit-auto.",
+  "content_fingerprint": "e9efe526255dad5f8b1f15ef3984c354032f6435627eeb27a56dca38ebd32ea8"
 }

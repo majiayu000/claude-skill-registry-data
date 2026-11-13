@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "\u68c0\u67e5\u8c03\u7528\u65b9\u4f20\u5165\u7684 Base64 \u6587\u4ef6\u6837\u672c\u53ca\u5f52\u6863\u5143\u6570\u636e\uff0c\u8bc6\u522b\u7f16\u7801\u3001BOM\u3001\u5206\u9694\u7b26\u3001\u8868\u5934\u3001\u6362\u884c\u3001\u516c\u5f0f\u524d\u7f00\u3001\u89e3\u538b\u6bd4\u3001\u5b8f\u548c\u5916\u94fe\u98ce\u9669\uff0c\u9002\u7528\u4e8e\u7ed3\u6784\u5316\u6587\u4ef6\u6444\u53d6\u524d\u95e8\u7981\u3002"
+  "description": "检查调用方传入的 Base64 文件样本及归档元数据，识别编码、BOM、分隔符、表头、换行、公式前缀、解压比、宏和外链风险，适用于结构化文件摄取前门禁。",
+  "content_fingerprint": "272e79868ff1ef0afb8bd5b5b7939ae58f438aad243f9e6934e74889fe4f8109"
 }

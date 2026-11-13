@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Upscale and restore video in ComfyUI \u2014 both the quick local path (per-frame ESRGAN like 4x_foolhardy_Remacri via ImageUpscaleWithModel + 4x\u21922x supersample, with its temporal-flicker tradeoff) and temporal-aware super-resolution (SeedVR2, the newer FlashVSR) with the downscale-first restore pipeline; RIFE/FILM frame interpolation via the BUILT-IN ComfyUI 0.26 FrameInterpolate (rife_v4.26 in models/frame_interpolation/) or the ComfyUI-Frame-Interpolation pack; 2x/4x scaling, VRAM tiers, VHS encode. Captures the classic downscale\u2192SeedVR2\u2192RIFE recipe and the current 2026 recommendation."
+  "description": "Upscale and restore video in ComfyUI — both the quick local path (per-frame ESRGAN like 4x_foolhardy_Remacri via ImageUpscaleWithModel + 4x→2x supersample, with its temporal-flicker tradeoff) and temporal-aware super-resolution (SeedVR2, the newer FlashVSR) with the downscale-first restore pipeline; RIFE/FILM frame interpolation via the BUILT-IN ComfyUI 0.26 FrameInterpolate (rife_v4.26 in models/frame_interpolation/) or the ComfyUI-Frame-Interpolation pack; 2x/4x scaling, VRAM tiers, VHS encode. Captures the classic downscale→SeedVR2→RIFE recipe and the current 2026 recommendation.",
+  "content_fingerprint": "f476dde8669c5f1576f2801e4362edb7083f977d67b2c6a3efb7bfa4baa50916"
 }

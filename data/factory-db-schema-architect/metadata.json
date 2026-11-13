@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when designing or modifying database schemas, migrations, multi-tenant data models, or polymorphic table structures. Carries the factory's data-layer conventions \u2014 Drizzle with domain-partitioned schema modules, `_shared.ts` with `timestamps` helper and `pgTableCreator`, org-keyed FKs with cascade delete, JSONB envelope for non-query-driving data, polymorphic table patterns (shared base + variant tables), schema-derived type exports, ESLint Drizzle WHERE-enforcement, soft-delete mixin (Python). Produces schema files that fit the house style \u2014 not generic Postgres tables."
+  "description": "Use when designing or modifying database schemas, migrations, multi-tenant data models, or polymorphic table structures. Carries the factory's data-layer conventions — Drizzle with domain-partitioned schema modules, `_shared.ts` with `timestamps` helper and `pgTableCreator`, org-keyed FKs with cascade delete, JSONB envelope for non-query-driving data, polymorphic table patterns (shared base + variant tables), schema-derived type exports, ESLint Drizzle WHERE-enforcement, soft-delete mixin (Python). Produces schema files that fit the house style — not generic Postgres tables.",
+  "content_fingerprint": "0c20678bf12a6eeabd838e2858b1b4f6dcd0249d03744d80b2d9f103df2da14d"
 }

@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Daily compliance-drift check for {{projectName}}. Reads AWS resource state and audit logs across {{aws_regions}}, compares against the compliance policy stored in skills and memory, files every finding, and drafts proposed remediation as a reviewed change \u2014 never applying a fix. Load this when the daily cron fires the sweep, or a human asks for a compliance, drift, or policy check."
+  "description": "Daily compliance-drift check for {{projectName}}. Reads AWS resource state and audit logs across {{aws_regions}}, compares against the compliance policy stored in skills and memory, files every finding, and drafts proposed remediation as a reviewed change — never applying a fix. Load this when the daily cron fires the sweep, or a human asks for a compliance, drift, or policy check.",
+  "content_fingerprint": "7fd0dc8383ec8e2cffca114b474548f9e1306cdf728959c2e6accb855cd150d2"
 }

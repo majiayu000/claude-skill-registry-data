@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Enforce the FlowGoal state machine: every `lifecycle.status` transition (draft \u2192 active \u2192 {waiting_for_user, waiting_for_ci, blocked, achieved, failed, cancelled}) writes the new lifecycle block through `bin/flow-goal-record.sh` AND a `goal-created` or `goal-evaluation` artifact to the decision journal. Use when any code path mutates `lifecycle.status`: /flow:goal pause/resume/clear, the draft \u2192 active step after goal-contract-capture, the evaluator's verdict, or the Stop hook's stuck detection. A goal in `failed` with no artifact explaining why is worse than no state machine."
+  "description": "Enforce the FlowGoal state machine: every `lifecycle.status` transition (draft → active → {waiting_for_user, waiting_for_ci, blocked, achieved, failed, cancelled}) writes the new lifecycle block through `bin/flow-goal-record.sh` AND a `goal-created` or `goal-evaluation` artifact to the decision journal. Use when any code path mutates `lifecycle.status`: /flow:goal pause/resume/clear, the draft → active step after goal-contract-capture, the evaluator's verdict, or the Stop hook's stuck detection. A goal in `failed` with no artifact explaining why is worse than no state machine.",
+  "content_fingerprint": "13ff46aac54a540ccf2492be1045416ad364e1dd174061c95d86638b7e86c43a"
 }

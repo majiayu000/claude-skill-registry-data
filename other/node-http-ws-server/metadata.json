@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "The node:http plus ws server for a Node Web Only project - src/ module layout, routing, static serving from public/, the WebSocket upgrade, broadcast, and graceful shutdown. Use when building or changing the backend server, adding a route or an API endpoint, serving the frontend, handling realtime messages, or deciding where an error is caught. Triggers on createServer, WebSocketServer, noServer, server.on('upgrade'), wss.handleUpgrade, serveStatic, path traversal guards, SIGTERM, and process.exit."
+  "description": "The node:http plus ws server for a Node Web Only project - src/ module layout, routing, static serving from public/, the WebSocket upgrade, broadcast, and graceful shutdown. Use when building or changing the backend server, adding a route or an API endpoint, serving the frontend, handling realtime messages, or deciding where an error is caught. Triggers on createServer, WebSocketServer, noServer, server.on('upgrade'), wss.handleUpgrade, serveStatic, path traversal guards, SIGTERM, and process.exit.",
+  "content_fingerprint": "c8393df558f124de04fb76621089bd74344e0c9ec0e5fac7ee321e032e128093"
 }

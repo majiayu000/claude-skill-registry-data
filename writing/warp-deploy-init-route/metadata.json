@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "First step of deploying a new warp route (steps 1\u20139). Reads a Linear ticket to extract token details and chain configuration, looks up mailbox addresses from the local registry, generates the deploy.yaml, runs the deploy, and optionally runs a send test. Follow up with /warp-deploy-update-owners."
+  "description": "First step of deploying a new warp route (steps 1–9). Reads a Linear ticket to extract token details and chain configuration, looks up mailbox addresses from the local registry, generates the deploy.yaml, runs the deploy, and optionally runs a send test. Follow up with /warp-deploy-update-owners.",
+  "content_fingerprint": "fa41567a5e43948e07bf6c7f4b96bcbfb95c7ae97b9f7987f9a5f6f1228fced8"
 }

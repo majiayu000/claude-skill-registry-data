@@ -35,5 +35,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Use when changing engram-mcp, the scan pipeline, retrieval, or any Rust behavior that the MCP surface exposes \u2014 BEFORE claiming a fix works. Triggers on \"verify live\", \"test against the real store\", \"does the fix work end-to-end\", or as the mandatory final step of any engram code change. Drives the real stdio server against a real store with timed tool calls. Unit tests alone have shipped broken paths before (the pgvector lane never ran against real Postgres until live verification caught it)."
+  "description": "Use when changing engram-mcp, the scan pipeline, retrieval, or any Rust behavior that the MCP surface exposes — BEFORE claiming a fix works. Triggers on \"verify live\", \"test against the real store\", \"does the fix work end-to-end\", or as the mandatory final step of any engram code change. Drives the real stdio server against a real store with timed tool calls. Unit tests alone have shipped broken paths before (the pgvector lane never ran against real Postgres until live verification caught it).",
+  "content_fingerprint": "87a1a3b48fe8fdc7cff3bd421d6c1baeebba9184c1ad4b8c6532e1d43b190ebd"
 }

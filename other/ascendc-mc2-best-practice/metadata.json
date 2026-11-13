@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Ascend C MC2 \u901a\u7b97\u878d\u5408\u7b97\u5b50\uff08\u591a\u5361\u901a\u4fe1+\u8ba1\u7b97\u878d\u5408\uff09\u5f00\u53d1\u6700\u4f73\u5b9e\u8df5\u3002\u5f53\u7528\u6237\u9700\u8981\u8bbe\u8ba1\u3001\u5b9e\u73b0\u3001\u8c03\u8bd5\u3001\u79fb\u690d\u6216\u4f18\u5316\u901a\u7b97\u878d\u5408\u7b97\u5b50\uff0c\u6216\u63d0\u53ca\"MC2\"\u3001\"SHMEM\"\u3001\"APACE\"\u3001\"\u901a\u7b97\u878d\u5408\"\u3001\"\u591a\u5361\u901a\u4fe1\u76f4\u8c03\"\u3001\"UDMA\"\u3001\"URMA\"\u3001\"AllToAll+Matmul\"\u3001\"CollectiveComm\"\u3001\"MoE Dispatch\"\u3001\"MoE Combine\"\u3001\"\u4e13\u5bb6\u5e76\u884c\"\u3001\"EP\"\u3001\"mega_moe\"\u3001\"MTE\u901a\u4fe1\"\u3001\"MTE window\"\u3001\"token \u8def\u7531\u5206\u53d1\"\u3001\"HCCL\"\u3001\"aclnn \u901a\u7b97\u878d\u5408\"\u65f6\u4f7f\u7528\u3002"
+  "description": "Ascend C MC2 通算融合算子（多卡通信+计算融合）开发最佳实践。当用户需要设计、实现、调试、移植或优化通算融合算子，或提及\"MC2\"、\"SHMEM\"、\"APACE\"、\"通算融合\"、\"多卡通信直调\"、\"UDMA\"、\"URMA\"、\"AllToAll+Matmul\"、\"CollectiveComm\"、\"MoE Dispatch\"、\"MoE Combine\"、\"专家并行\"、\"EP\"、\"mega_moe\"、\"MTE通信\"、\"MTE window\"、\"token 路由分发\"、\"HCCL\"、\"aclnn 通算融合\"时使用。",
+  "content_fingerprint": "31dd1dbe8257cc541886f79beb3483cf057e7a41c645313c22fd3e13c99e3684"
 }

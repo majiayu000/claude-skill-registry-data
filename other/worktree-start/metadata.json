@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Claude Code \u5c02\u7528\u3002\u8d77\u52d5\u6e08\u307f\u306e\u5bfe\u8a71 session \u304b\u3089\u3001\u30bf\u30b9\u30af\u8aac\u660e\u307e\u305f\u306f issue URL / \u756a\u53f7\u3067\u547d\u540d\u3057\u305f git worktree \u3078 `EnterWorktree` \u3067\u5207\u308a\u66ff\u3048\u308b\u3002\u65e2\u5b58 linked worktree \u3067\u306f\u4f5c\u6210\u3060\u3051\u3092 no-op \u306b\u3059\u308b\u3002Ready issue \u306f\u5b8c\u4e86\u5f62\u3092\u5224\u5b9a\u3057\u3001PR \u306a\u3089 `issue-implement`\u3001\u30b3\u30e1\u30f3\u30c8\u5b8c\u7d50\u578b\u306a\u3089 `issue-investigate` \u3078\u9023\u9396\u3057\u3001\u8981\u78ba\u8a8d\u306a\u3089 `issue-refine` \u3092\u6848\u5185\u3059\u308b\u3002"
+  "description": "Claude Code 専用。起動済みの対話 session から、タスク説明または issue URL / 番号で命名した git worktree へ `EnterWorktree` で切り替える。既存 linked worktree では作成だけを no-op にする。Ready issue は完了形を判定し、PR なら `issue-implement`、コメント完結型なら `issue-investigate` へ連鎖し、要確認なら `issue-refine` を案内する。",
+  "content_fingerprint": "bbc4e2840e98351e64c231fe7cc11da7167ad9629ec09f89c99c94916c2225de"
 }

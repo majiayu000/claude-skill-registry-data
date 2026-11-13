@@ -13,5 +13,7 @@
   "copyright": "Copyright belongs to upstream author(s); see https://github.com/existential-birds/beagle/blob/main/plugins/beagle-react/skills/remix-v2-perf-ssr-review/SKILL.md",
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
-  "license_class": "restricted"
+  "license_class": "restricted",
+  "content_fingerprint": "011e55efa261bff4585af1c7475c6fc104d5531210a31d37bdb5787ee22c0384",
+  "description": "Reviews Remix v2 code for caching header misuse, missing server/client split, hydration mismatches (Date, Math.random, locale), prefetch hygiene, and asset bottlenecks. Use when reviewing routes that "
 }

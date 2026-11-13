@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Reverse engineer the EDR/AV on an authorized target host, then evade it \u2014 fingerprint the product, dump its userland hook table, and assemble a matching bypass stack: ntdll unhooking, direct/indirect syscalls (Hell's/Halo's/Tartarus Gate), ETW and AMSI patching, hardware-breakpoint Blindside, call-stack spoofing, PPID spoof, sleep masks. Load for \"bypass EDR\", implant OPSEC against CrowdStrike/Defender/SentinelOne, or when telemetry keeps killing your payload. Signals: unhook, direct syscall, ETW patch, AMSI patch, ETW-TI, Sysmon evasion, MITRE T1562. Pentest only."
+  "description": "Reverse engineer the EDR/AV on an authorized target host, then evade it — fingerprint the product, dump its userland hook table, and assemble a matching bypass stack: ntdll unhooking, direct/indirect syscalls (Hell's/Halo's/Tartarus Gate), ETW and AMSI patching, hardware-breakpoint Blindside, call-stack spoofing, PPID spoof, sleep masks. Load for \"bypass EDR\", implant OPSEC against CrowdStrike/Defender/SentinelOne, or when telemetry keeps killing your payload. Signals: unhook, direct syscall, ETW patch, AMSI patch, ETW-TI, Sysmon evasion, MITRE T1562. Pentest only.",
+  "content_fingerprint": "e36315ea35a5bc6deb852d38d6139e8b554668d977f0cfafd88089d4df9cb7c2"
 }

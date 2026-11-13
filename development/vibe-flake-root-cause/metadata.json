@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Refuses \"flaky\" as a diagnosis. Turns an intermittent failure into a reproduction by isolating it from the environment, naming the variable that controls it, forcing that variable, and measuring before and after with enough runs to count. Separates real defects from environment contention with evidence, and never retries to green or widens a threshold. Use when a test, performance check, or deploy step fails intermittently or passes on rerun."
+  "description": "Refuses \"flaky\" as a diagnosis. Turns an intermittent failure into a reproduction by isolating it from the environment, naming the variable that controls it, forcing that variable, and measuring before and after with enough runs to count. Separates real defects from environment contention with evidence, and never retries to green or widens a threshold. Use when a test, performance check, or deploy step fails intermittently or passes on rerun.",
+  "content_fingerprint": "6a7324ac34b1df2ed00d34da7a9aa26b8766a13aa8b24d59741c6a46ed91a859"
 }

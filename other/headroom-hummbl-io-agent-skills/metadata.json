@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Proxy-level context compression for AI agents. Compresses tool outputs, logs, RAG chunks, files, and conversation history BEFORE they reach the LLM. 60-95% fewer tokens for JSON, 15-20% fewer for coding agents. Same answers. Library, proxy, MCP server, agent wrap modes. Local-first, reversible (CCR). Use when user says \"headroom\", \"compress context\", \"proxy compress\", \"reduce input tokens\", or wants to cut tool output tokens at the proxy layer (vs caveman-mode which cuts output prose, vs ponytail which cuts code LOC). Source: headroomlabs-ai/headroom (64K stars, Apache 2.0) \u2014 github.com/headroomlabs-ai/headroom"
+  "description": "Proxy-level context compression for AI agents. Compresses tool outputs, logs, RAG chunks, files, and conversation history BEFORE they reach the LLM. 60-95% fewer tokens for JSON, 15-20% fewer for coding agents. Same answers. Library, proxy, MCP server, agent wrap modes. Local-first, reversible (CCR). Use when user says \"headroom\", \"compress context\", \"proxy compress\", \"reduce input tokens\", or wants to cut tool output tokens at the proxy layer (vs caveman-mode which cuts output prose, vs ponytail which cuts code LOC). Source: headroomlabs-ai/headroom (64K stars, Apache 2.0) — github.com/headroomlabs-ai/headroom",
+  "content_fingerprint": "6ea091c1ebf1a2905a0005bf9f12d420a1d24cc67d0aa2da4c19727ef8f2d04a"
 }

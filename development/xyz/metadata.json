@@ -34,5 +34,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Coordinate two (or more) AI coding agents working CONCURRENTLY on non-overlapping, path-scoped lanes of ONE shared repo, via the `tick` CLI \u2014 for parallel builds and parallel codebase recon, with collision-free claims, liveness heartbeats, and an honest concurrency metric. Use when the user wants to \"run two agents in parallel\", \"split this build across agents\", \"have agents recon/profile the codebase concurrently\", or \"coordinate Codex + Gemini on the same repo\". NOT for work that touches shared files, needs constant cross-agent handoff, or runs across separate clones / async sessions."
+  "description": "Coordinate two (or more) AI coding agents working CONCURRENTLY on non-overlapping, path-scoped lanes of ONE shared repo, via the `tick` CLI — for parallel builds and parallel codebase recon, with collision-free claims, liveness heartbeats, and an honest concurrency metric. Use when the user wants to \"run two agents in parallel\", \"split this build across agents\", \"have agents recon/profile the codebase concurrently\", or \"coordinate Codex + Gemini on the same repo\". NOT for work that touches shared files, needs constant cross-agent handoff, or runs across separate clones / async sessions.",
+  "content_fingerprint": "ac8ff962b3789701388554279dbc5690179233a344119be92f1f6e418f33cfec"
 }

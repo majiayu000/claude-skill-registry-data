@@ -32,5 +32,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Karpathy\uc758 autoresearch \ud328\ud134\uc744 \uc2a4\ud0ac \ud504\ub86c\ud504\ud2b8 \ucd5c\uc801\ud654\uc5d0 \uc801\uc6a9. \uccb4\ud06c\ub9ac\uc2a4\ud2b8(3~6\uac1c \uc608/\uc544\ub2c8\uc624 \uae30\uc900) \uae30\ubc18 hill-climbing \ub8e8\ud504\ub85c SKILL.md\ub97c \uc790\ub3d9 \uac1c\uc120\ud569\ub2c8\ub2e4. \ud55c \ubc88\uc5d0 \ud558\ub098\ub9cc \ubc14\uafb8\uace0, \ucc44\uc810\ud558\uace0, \uc720\uc9c0\ud558\uac70\ub098 \ub418\ub3cc\ub9bd\ub2c8\ub2e4. 95%+ \u00d7 3\ud68c \uc5f0\uc18d \ub2ec\uc131 \uc2dc \uc885\ub8cc. \ucd5c\uc885 \ud569\uaca9\uc740 \ub77c\uc6b4\ub4dc\uc5d0 \uc4f0\uc9c0 \uc54a\uc740 holdout \uc785\ub825\uc73c\ub85c \ub3c5\ub9bd \ucc44\uc810\ud569\ub2c8\ub2e4. \uae30\ubcf8 \uc124\uce58\uc5d0\uc11c\ub294 \uce74\ud0c8\ub85c\uadf8\uc758 source-only \uc6d0\ubcf8\uc744 \uc9c1\uc811 \uc77d\uace0, \uc804\uccb4 \ud65c\uc131\ud654 \uc124\uce58\uc5d0\uc11c\ub294 /autoresearch\ub85c \uc2e4\ud589."
+  "description": "Karpathy의 autoresearch 패턴을 스킬 프롬프트 최적화에 적용. 체크리스트(3~6개 예/아니오 기준) 기반 hill-climbing 루프로 SKILL.md를 자동 개선합니다. 한 번에 하나만 바꾸고, 채점하고, 유지하거나 되돌립니다. 95%+ × 3회 연속 달성 시 종료. 최종 합격은 라운드에 쓰지 않은 holdout 입력으로 독립 채점합니다. 기본 설치에서는 카탈로그의 source-only 원본을 직접 읽고, 전체 활성화 설치에서는 /autoresearch로 실행.",
+  "content_fingerprint": "c6e5b6bdd30df4c308f033e8b0b395251f88b27f48768fdbb15bd6d39a41f2c2"
 }

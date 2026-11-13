@@ -33,5 +33,6 @@
   "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
   "distribution": "restricted",
   "license_class": "restricted",
-  "description": "Composite skill \u2014 runs the postmortem chain after any production incident (`/hotfix`, rollback, or prod outage acknowledged). Chains adt-research (root-cause learning) \u2192 adr-write (decision capture) \u2192 generate-tests (regression test) \u2192 security-sweep (conditional, only if root cause is auth/input/secret-related) \u2192 knowledge-loop (memory + RAG curation) \u2192 handoff. Stops the silent-postmortem failure mode where a hotfix ships and the lessons evaporate. Auto-queues after `/hotfix` Phase 10 completes; also fires when user says \"postmortem\", \"what did we learn\", \"write up the incident\"."
+  "description": "Composite skill — runs the postmortem chain after any production incident (`/hotfix`, rollback, or prod outage acknowledged). Chains adt-research (root-cause learning) → adr-write (decision capture) → generate-tests (regression test) → security-sweep (conditional, only if root cause is auth/input/secret-related) → knowledge-loop (memory + RAG curation) → handoff. Stops the silent-postmortem failure mode where a hotfix ships and the lessons evaporate. Auto-queues after `/hotfix` Phase 10 completes; also fires when user says \"postmortem\", \"what did we learn\", \"write up the incident\".",
+  "content_fingerprint": "9db139c907be410bf6574bc019a04f2cdc0bb29d89f96b42cf20c264f9e5ef2d"
 }
