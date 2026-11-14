@@ -15,12 +15,13 @@ from __future__ import annotations
 import argparse
 import csv
 import os
+import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.engine.agregador import agregar
+from scripts.engine.agregador import BANCO_DESCONHECIDO, agregar
 from scripts.engine.ingest import ler_extratos, listar_arquivos
 from scripts.engine.matcher import classifica
 
@@ -43,6 +44,26 @@ def _grava_csv_local(caminho: str, txns_classificadas: list) -> None:
             w.writerow([txn.data.isoformat(), txn.descricao, str(txn.valor), txn.banco or "", tipo])
 
 
+# codigo COMPE: so digito ASCII ([0-9], nao \d, que aceita digito de outra escrita), 1 a 4
+_CODIGO_BANCO = re.compile(r"[0-9]{1,4}")
+
+
+def _por_banco_na_tela(por_banco: dict) -> dict:
+    """So o codigo do banco (ou o 'desconhecido' do motor) vai pra tela; outro rotulo vira 'banco N'.
+
+    O rotulo vem do arquivo e pode trazer qualquer texto, ate instrucao ao Claude; o CSV do --saida
+    guarda o original.
+    """
+    tela: dict = {}
+    n = 0
+    for rotulo, valor in por_banco.items():
+        if rotulo != BANCO_DESCONHECIDO and not _CODIGO_BANCO.fullmatch(rotulo):
+            n += 1
+            rotulo = f"banco {n}"
+        tela[rotulo] = valor
+    return tela
+
+
 def _formata_tabela(mapa: dict, titulo: str) -> str:
     linhas = [titulo]
     for chave in sorted(mapa):
@@ -53,6 +74,9 @@ def _formata_tabela(mapa: dict, titulo: str) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
+    # console que nao representa um caractere (cp1252 no Windows) troca por '?' em vez de derrubar o run
+    sys.stdout.reconfigure(errors="replace")
+    sys.stderr.reconfigure(errors="replace")
     args = _parse_args(argv)
     caminhos = [Path(e) for e in args.extratos]
 
@@ -84,14 +108,16 @@ def main(argv: list[str] | None = None) -> int:
     if resumo.periodo:
         print(f"Periodo coberto: {resumo.periodo[0]} a {resumo.periodo[1]}")
     print()
-    print(_formata_tabela(resumo.por_banco, "Por banco:"))
+    print(_formata_tabela(_por_banco_na_tela(resumo.por_banco), "Por banco:"))
     print()
     print(_formata_tabela(resumo.por_mes, "Por mes:"))
     print()
     print(_formata_tabela(resumo.por_tipo, "Por tipo:"))
     print()
     print(f"Nao-classificados a conferir: {resumo.nao_classificados}")
-    print(f"Veredicto: {resumo.veredicto}")
+    # periodo None = nenhuma txn depois do --ano (formato, colunas ou ano fora): nunca SEM TARIFA ENCONTRADA
+    veredicto = "NADA LIDO" if resumo.periodo is None else resumo.veredicto
+    print(f"Veredicto: {veredicto}")
 
     if args.saida:
         if args.ano is not None:
@@ -100,11 +126,29 @@ def main(argv: list[str] | None = None) -> int:
             txns_saida = txns
         classificadas = [(t, classifica(t.descricao)) for t in txns_saida]
         classificadas = [(t, tipo) for t, tipo in classificadas if tipo is not None]
-        _grava_csv_local(args.saida, classificadas)
+        try:
+            _grava_csv_local(args.saida, classificadas)
+        except OSError as e:
+            print(f"erro: nao foi possivel gravar o --saida ({e.strerror or type(e).__name__})", file=sys.stderr)
+            return 2
         print(f"\nCSV local gravado em: {args.saida}", file=sys.stderr)
 
     return 0
 
 
+# Template literal de checar_saida_sem_dado.py (_TEMPLATE_MAIN): o texto de excecao, de SystemExit ou
+# de retorno de main() pode trazer conteudo do extrato, entao nada disso chega a saida.
 if __name__ == "__main__":
-    raise SystemExit(main())
+    import sys as _sys
+    _sys.unraisablehook = lambda _u: None
+    _codigo = 2
+    try:
+        _codigo = main()
+    except SystemExit as _e:
+        _codigo = _e.code
+    except BaseException:
+        try:
+            _sys.stderr.write("erro inesperado; o detalhe nao e impresso para nao expor o arquivo\n")
+        except BaseException:
+            pass
+    raise SystemExit(_codigo if _codigo.__class__ is int else (0 if _codigo is None else 2))

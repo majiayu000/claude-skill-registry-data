@@ -8,7 +8,9 @@ Cada categoria e uma lista de (regex, exige_marcador_tarifa). Quando
 `exige_marcador_tarifa` e True, o termo sozinho tambem aparece como a propria
 OPERACAO (ex.: uma TED de R$50.000 enviada) e so conta como tarifa quando o
 historico tambem casa um marcador de tarifa (`TAR`/`TARIFA`) em algum lugar da
-descricao (secao 6: honestidade do numero, nunca soma cega).
+descricao (secao 6: honestidade do numero, nunca soma cega). Quando e
+"fora_de_operacao", o termo generico (CESTA, ANUIDADE...) conta sozinho, mas nao
+dentro de uma OPERACAO (Pix, TED, boleto, compra) sem marcador de tarifa.
 """
 from __future__ import annotations
 
@@ -20,18 +22,22 @@ MARCADOR_TARIFA = re.compile(r"\bTAR\b|\bTARIFA\b")
 
 IMPOSTO = re.compile(r"\bIOF\b")
 
+# palavra de operacao: veta as entradas "fora_de_operacao" quando falta o marcador
+# ("PIX ENVIADO CESTA BASICA" e um Pix, nao a cesta do banco).
+OPERACAO = re.compile(r"\b(PIX|TED|DOC|TRANSF\w*|PAGTO|PAGAMENTO|PAG|BOLETO|COMPRA|ENVIAD[OA]|RECEBID[OA])\b")
+
 # ordem da tabela da SPEC-00 secao 5 (preserva ordem de checagem no matcher).
-CATEGORIAS: dict[str, list[tuple[re.Pattern, bool]]] = {
+CATEGORIAS: dict[str, list[tuple[re.Pattern, bool | str]]] = {
     "manutencao": [
         (re.compile(r"\bTAR(?:IFA)? MANUTENCAO"), False),
         (re.compile(r"MANUTENCAO CC"), False),
-        (re.compile(r"\bCESTA\b"), False),
+        (re.compile(r"\bCESTA\b"), "fora_de_operacao"),
         (re.compile(r"PACOTE (DE )?SERVICOS"), False),
         (re.compile(r"MENSALIDADE"), True),
         (re.compile(r"TARIFA MENSAL"), False),
         # nomes reais de pacote/conta de servico BR (nomes de servico, casam sem marcador)
-        (re.compile(r"CONTA CERTA"), False),
-        (re.compile(r"CONTA MAX"), False),
+        (re.compile(r"CONTA CERTA"), "fora_de_operacao"),
+        (re.compile(r"CONTA MAX"), "fora_de_operacao"),
         (re.compile(r"TARIFA BANCARIA MAX"), False),
         (re.compile(r"\bTAR(?:IFA)? CTA GARANTIDA"), False),
     ],
@@ -69,12 +75,12 @@ CATEGORIAS: dict[str, list[tuple[re.Pattern, bool]]] = {
         (re.compile(r"CARTA CIRCULARIZADORA"), False),
     ],
     "custodia": [
-        (re.compile(r"\bCUSTODIA\b"), False),
+        (re.compile(r"\bCUSTODIA\b"), "fora_de_operacao"),
         (re.compile(r"\bTAR(?:IFA)? CUSTODIA"), False),
         (re.compile(r"MANUTENCAO (DE )?TITULO"), False),
     ],
     "cartao": [
-        (re.compile(r"\bANUIDADE\b"), False),
+        (re.compile(r"\bANUIDADE\b"), "fora_de_operacao"),
         (re.compile(r"\bTAR(?:IFA)? CARTAO"), False),
     ],
     "saque_extrato": [

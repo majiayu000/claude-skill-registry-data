@@ -4,8 +4,8 @@
   "repo": "financeailab/skills-financas-br",
   "path": "plugins/auditor-de-tarifas/skills/auditor-de-tarifas/SKILL.md",
   "github_branch": "main",
-  "github_commit_sha": "62c6f18cd67e96a80985583ecb42324c2f74c355",
-  "assets_verified_at": "2026-11-07T05:31:26.704677Z",
+  "github_commit_sha": "eb52e83e18286ae14628389b34183e5914f7f303",
+  "assets_verified_at": "2026-11-14T16:38:49.673953+00:00",
   "category": "data",
   "tags": [
     "finance",
@@ -23,6 +23,8 @@
   "dir_name": "auditor-de-tarifas",
   "archive_mode": "directory",
   "bundled_files": [
+    "LICENSE",
+    "NOTICE",
     "scripts/__init__.py",
     "scripts/auditar_tarifas.py",
     "scripts/engine/__init__.py",
@@ -33,23 +35,26 @@
     "scripts/engine/normalize.py"
   ],
   "bundled_file_blobs": {
+    "LICENSE": "57bc88a15a0ee8266c259b2667e64608d3f7e292",
+    "NOTICE": "61077bf0f16571fd679a397407449f69eef8129c",
     "scripts/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
-    "scripts/auditar_tarifas.py": "00dd1f47b06649742eab6e6b8231ad79f874b407",
+    "scripts/auditar_tarifas.py": "eba9806baf8208955cd436b39c4381e7190c5c12",
     "scripts/engine/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
     "scripts/engine/agregador.py": "34e8961858e42b9e467b2a38ca6868c6a2ba2816",
-    "scripts/engine/dicionario.py": "c8b613ce2ccabf9241c5edf766b6cf290766a9c7",
-    "scripts/engine/ingest.py": "ceb7ceecc4e5151d1087a5e4731be6c3db18ae60",
-    "scripts/engine/matcher.py": "c31336d4633d9f40760fdf8738159fc1ef404c1d",
+    "scripts/engine/dicionario.py": "8550d5c5b0b8c10ab78d87f8fbbc3f1852044535",
+    "scripts/engine/ingest.py": "8012dbb3153280a96315b0a32df6e8d5f3ff9cc1",
+    "scripts/engine/matcher.py": "766c29a0c89f28b97e7a6215e2df6108df4e5010",
     "scripts/engine/normalize.py": "7ecf64e141f3851adf785c170342e9827c2dfccc"
   },
   "author": "Douglas Ferreira",
-  "source_url": "https://github.com/financeailab/skills-financas-br/blob/62c6f18cd67e96a80985583ecb42324c2f74c355/plugins/auditor-de-tarifas/skills/auditor-de-tarifas/SKILL.md",
+  "source_url": "https://github.com/financeailab/skills-financas-br/blob/eb52e83e18286ae14628389b34183e5914f7f303/plugins/auditor-de-tarifas/skills/auditor-de-tarifas/SKILL.md",
   "license": "Apache-2.0",
   "copyright": "Copyright 2026 Douglas Ferreira",
   "permission_note": "Use according to upstream license terms and attribution requirements.",
   "distribution": "compatible",
   "license_class": "compatible",
-  "asset_liveness": "live",
-  "assets_liveness_checked_at": "2026-11-12T09:58:40.263272Z",
-  "assets_liveness_sha": "49a0bb6635ff327f08a755d36738e3559ce6460e"
+  "license_source_paths": {
+    "LICENSE": "LICENSE",
+    "NOTICE": "NOTICE"
+  }
 }
