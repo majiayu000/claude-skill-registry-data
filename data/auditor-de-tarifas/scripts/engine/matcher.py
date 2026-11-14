@@ -12,7 +12,7 @@ igual em qualquer formato de origem (OFX ou CSV).
 """
 from __future__ import annotations
 
-from .dicionario import CATEGORIAS, IMPOSTO, MARCADOR_TARIFA, ORDEM_CATEGORIAS
+from .dicionario import CATEGORIAS, IMPOSTO, MARCADOR_TARIFA, OPERACAO, ORDEM_CATEGORIAS
 from .normalize import sem_acento
 
 TipoTarifa = str  # 'manutencao' | 'transferencia' | 'pix' | 'boleto' | 'custodia'
@@ -32,13 +32,16 @@ def classifica(descricao: str) -> TipoTarifa | None:
         return "imposto"
 
     tem_marcador = bool(MARCADOR_TARIFA.search(desc))
+    em_operacao = not tem_marcador and bool(OPERACAO.search(desc))
 
     for categoria in ORDEM_CATEGORIAS:
         for padrao, exige_marcador in CATEGORIAS[categoria]:
             if not padrao.search(desc):
                 continue
-            if exige_marcador and not tem_marcador:
+            if exige_marcador is True and not tem_marcador:
                 continue  # e o termo da OPERACAO (ex.: TED grande), nao tarifa
+            if exige_marcador == "fora_de_operacao" and em_operacao:
+                continue  # termo generico dentro de uma operacao (ex.: PIX ENVIADO CESTA BASICA)
             return categoria
 
     if tem_marcador:
