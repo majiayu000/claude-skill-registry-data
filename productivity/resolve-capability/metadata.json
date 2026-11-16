@@ -1,0 +1,37 @@
+{
+  "name": "resolve-capability",
+  "repo": "ynginkim/pstack-orca",
+  "path": "skills/resolve-capability/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ynginkim/pstack-orca",
+  "dir_name": "resolve-capability",
+  "downloaded_at": "2026-11-16T14:46:31.363518Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ynginkim",
+  "source_url": "https://github.com/ynginkim/pstack-orca/blob/main/skills/resolve-capability/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ynginkim/pstack-orca/blob/main/skills/resolve-capability/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Say how each thing a pstack step asks for (start a helper, start a worker on another agent, ask the user, wait for an event, find past sessions, and so on) is done in this environment, and what to do when it cannot be. Read at the start of a task. Use when a step names a capability."
+}

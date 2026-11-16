@@ -1,0 +1,38 @@
+{
+  "name": "kit-ci-pipeline",
+  "repo": "zekhoi/claude",
+  "path": "registry/skills/ci-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "ci-pipeline-zekhoi-claude",
+  "downloaded_at": "2026-11-16T14:52:22.446481Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, docker, deploy",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/registry/skills/ci-pipeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/registry/skills/ci-pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or change CI pipelines (GitHub Actions or GitLab CI) that run the project's real build, lint, and test commands with dependency caching, a version matrix where useful, least-privilege permissions, pinned actions, and safe handling of secrets and untrusted input. Use when the user asks to add, change, speed up, or fix the configuration of a CI workflow, job, or pipeline, including adding a publish, release, or deploy job, which this skill gates. Do not use for diagnosing why an existing run failed (use kit-ci-triage), for security hardening of existing workflows (use kit-hardening), or for Dockerfiles (use kit-dockerfile)."
+}

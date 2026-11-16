@@ -1,0 +1,37 @@
+{
+  "name": "branch-finish",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/branch-finish/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "branch-finish-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:33:40.941787Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/branch-finish/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/branch-finish/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a development task is complete and ready to merge or close \u2014 before running git merge, git push, or closing a branch. Triggers on: 'I'm done', 'ready to merge', 'merge this', 'finish the branch', 'close the task'."
+}

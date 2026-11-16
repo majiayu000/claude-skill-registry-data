@@ -1,0 +1,39 @@
+{
+  "name": "detecting-command-and-control-over-dns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/detecting-command-and-control-over-dns/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "detecting-command-and-control-over-dns-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:24:22.147961Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/detecting-command-and-control-over-dns/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/detecting-command-and-control-over-dns/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects command-and-control (C2) communications tunneled through DNS protocol including DNS tunneling tools (Iodine, dnscat2, dns2tcp, Cobalt Strike DNS beacon), domain generation algorithms (DGA), encoded payload delivery via TXT/CNAME records, and DNS beaconing patterns. Covers Shannon entropy analysis of query subdomains, statistical anomaly detection, ML-based DGA classification, passive DNS correlation, and Zeek/Suricata signature development. Activates for requests involving DNS-based C2 detection, DNS tunnel identification, suspicious DNS traffic investigation, or DGA domain classification."
+}

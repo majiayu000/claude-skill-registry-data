@@ -1,0 +1,40 @@
+{
+  "name": "remediating-s3-bucket-misconfiguration",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/remediating-s3-bucket-misconfiguration/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "remediating-s3-bucket-misconfiguration",
+  "downloaded_at": "2026-11-16T14:29:50.042886Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident, evidence",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/remediating-s3-bucket-misconfiguration/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/remediating-s3-bucket-misconfiguration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill provides step-by-step procedures for identifying and remediating Amazon S3 bucket misconfigurations that expose sensitive data to unauthorized access. It covers enabling S3 Block Public Access at account and bucket levels, auditing bucket policies and ACLs, enforcing encryption, configuring access logging, and deploying automated remediation using AWS Config and Lambda."
+}

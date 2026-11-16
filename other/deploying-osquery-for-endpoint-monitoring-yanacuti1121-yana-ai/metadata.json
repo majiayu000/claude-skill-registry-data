@@ -1,0 +1,39 @@
+{
+  "name": "deploying-osquery-for-endpoint-monitoring",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/deploying-osquery-for-endpoint-monitoring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "deploying-osquery-for-endpoint-monitoring-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:23:58.379203Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/deploying-osquery-for-endpoint-monitoring/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/deploying-osquery-for-endpoint-monitoring/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploys and configures osquery for real-time endpoint monitoring using SQL-based queries to inspect running processes, open ports, installed software, and system configuration. Use when building visibility into endpoint state, threat hunting across fleet, or implementing compliance monitoring. Activates for requests involving osquery deployment, endpoint visibility, fleet management, or SQL-based endpoint querying."
+}

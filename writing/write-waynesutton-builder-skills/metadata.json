@@ -1,0 +1,38 @@
+{
+  "name": "write",
+  "repo": "waynesutton/builder-skills",
+  "path": "skills/write/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/waynesutton/builder-skills",
+  "dir_name": "write-waynesutton-builder-skills",
+  "downloaded_at": "2026-11-16T14:03:48.302804Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: copy, blog, article",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "copy",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "waynesutton",
+  "source_url": "https://github.com/waynesutton/builder-skills/blob/main/skills/write/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/waynesutton/builder-skills/blob/main/skills/write/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drafts, proofs, and audits prose in the author's voice, matched to the reader and destination. Covers social posts, articles, emails, docs, READMEs, commit messages, and feature announcements, with evidence rules that forbid invented facts, quotes, or experiences, and a draft only default that never publishes or sends. Use when drafting, rewriting, proofreading, or auditing social posts, articles, emails, docs, READMEs, or commit messages, or when the user says write:, proof this, or make this sound less like AI."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "database-design",
+  "repo": "zekhoi/claude",
+  "path": "plugins/agent-kit/skills/database-design/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "database-design-zekhoi-claude-2",
+  "downloaded_at": "2026-11-16T14:52:48.294848Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/database-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/database-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design or review relational database schemas, relationships, constraints, indexes, and migrations. Use when the user asks to model new data, change a schema, write or review a migration, or diagnose a schema-level integrity or indexing problem. Do not use for general query debugging without a schema change, or for non-relational stores unless the user asks."
+}

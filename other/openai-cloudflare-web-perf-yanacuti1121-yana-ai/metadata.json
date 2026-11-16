@@ -1,0 +1,38 @@
+{
+  "name": "openai--cloudflare--web-perf",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/openai--cloudflare--web-perf/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "openai-cloudflare-web-perf-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:38:23.270181Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "analysis",
+      "analyze",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/openai--cloudflare--web-perf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/openai--cloudflare--web-perf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (FCP, LCP, TBT, CLS, Speed Index), identifies render-blocking resources, network dependency chains, layout shifts, caching issues, and accessibility gaps. Use when asked to audit, profile, debug, or optimize page load performance, Lighthouse scores, or site speed. Biases towards retrieval from current documentation over pre-trained knowledge."
+}

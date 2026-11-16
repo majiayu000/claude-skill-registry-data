@@ -1,0 +1,39 @@
+{
+  "name": "codebase-audit",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/gw360--codebase-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "gw360-codebase-audit",
+  "downloaded_at": "2026-11-16T14:25:33.026080Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, security=4",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/gw360--codebase-audit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/gw360--codebase-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit an inherited or unfamiliar codebase systematically rather than ad-hoc. Covers scope discipline, day-0 triage, SAST and SCA tool recipes (semgrep, CodeQL, gitleaks, trivy), OWASP Top 10 mapped to grep patterns, auth-surface walkthrough, and writing reports that drive remediation. Invoke when inheriting a codebase, accepting an audit engagement, or reviewing AI-generated code before shipping."
+}

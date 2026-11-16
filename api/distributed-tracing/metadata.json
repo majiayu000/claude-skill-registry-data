@@ -1,0 +1,39 @@
+{
+  "name": "distributed-tracing",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/distributed-tracing/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "distributed-tracing",
+  "downloaded_at": "2026-11-16T14:24:41.225281Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/distributed-tracing/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/distributed-tracing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Instrument and debug distributed systems with tracing — OpenTelemetry setup, span creation, context propagation (W3C traceparent), sampling strategy, exporter configuration (Jaeger/Tempo/Honeycomb/Datadog), and correlating traces with logs. Use when asked to \"add tracing\", \"OpenTelemetry\", \"OTel\", \"distributed trace\", \"trace propagation\", \"traceparent header\", \"find slow span\", \"Jaeger\", \"Tempo\", \"Honeycomb\", \"why is this request slow across services\", or \"trace ID in logs\". Do NOT use for: metrics collection alone — see observability-instrumentation. Do NOT use for: single-service profiling — tracing spans cross-service boundaries.",
+  "content_fingerprint": "ee087dbf374d9d0e4f6bcba91d2242290fc00dbb3fb61bc7c6d785dcb6d3f3ce"
+}

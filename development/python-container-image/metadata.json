@@ -1,0 +1,38 @@
+{
+  "name": "python-container-image",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/python-container-image/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "python-container-image",
+  "downloaded_at": "2026-11-16T14:11:49.760468Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-container-image/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-container-image/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a Python program that ships as a container image gets its image build or changes it \u2014 a Dockerfile and its ignore file, the base image, how dependencies get in, the user the process runs as, or how the platform's stop signal reaches the process. Owns a runtime image carrying only the installed program, an install of exactly what the lock file pins that fails where the lock has drifted, one interpreter across build and runtime, a non-root user named by number, no secret in any layer, a build context that admits only what the build reads, one image per runnable distribution and for every environment, unbuffered output, a server reachable from outside the container, and a stop signal the process acts on. Holds for a service of either architecture family and for a CLI tool shipped as an image; a library, and a CLI tool distributed as a package, have no image. Several members and their compose file are `python-workspace`; which version a tag names is `python-toolchain`. - Also when asked to containerize or dockerize a service, write a Dockerfile or a `.dockerignore`, make an image smaller, stop a container running as root, pass a private package index token into a build, or why a container takes the whole timeout to stop."
+}

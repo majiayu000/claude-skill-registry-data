@@ -1,0 +1,38 @@
+{
+  "name": "venice--venice-audio-speech",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/venice--venice-audio-speech/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "venice-venice-audio-speech",
+  "downloaded_at": "2026-11-16T14:31:49.998254Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, openapi",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/venice--venice-audio-speech/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/venice--venice-audio-speech/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate speech from text via POST /audio/speech. Covers TTS models (Kokoro, Qwen 3, xAI, Inworld, Chatterbox, Orpheus, ElevenLabs Turbo, MiniMax, Gemini Flash), voices per family, output formats (mp3/opus/aac/flac/wav/pcm), streaming, prompt/emotion styling, temperature/top_p, and language hints."
+}

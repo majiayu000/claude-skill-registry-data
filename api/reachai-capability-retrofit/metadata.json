@@ -1,0 +1,38 @@
+{
+  "name": "reachai-capability-retrofit",
+  "repo": "w8123/EnterpriseAgentFramework",
+  "path": "reachai-control-service/src/main/resources/ai-assist/skills/reachai-capability-retrofit/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/w8123/EnterpriseAgentFramework",
+  "dir_name": "reachai-capability-retrofit",
+  "downloaded_at": "2026-11-16T13:59:50.528712Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, openapi",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "w8123",
+  "source_url": "https://github.com/w8123/EnterpriseAgentFramework/blob/main/reachai-control-service/src/main/resources/ai-assist/skills/reachai-capability-retrofit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/w8123/EnterpriseAgentFramework/blob/main/reachai-control-service/src/main/resources/ai-assist/skills/reachai-capability-retrofit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Retrofit an already-connected business system so ReachAI can operate more of it. Inventory business operations that fit the developer's goal, let the developer pick which ones to open, declare the picked ones with the ReachAI SDK (Java, C#, Python, Node.js, Go or PHP), trigger one audited SDK sync, and report. Use when asked to \"let AI do X in our system\", open more business methods to ReachAI, or run a ReachAI CAPABILITY_RETROFIT task."
+}

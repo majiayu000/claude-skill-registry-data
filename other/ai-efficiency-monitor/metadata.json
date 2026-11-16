@@ -1,0 +1,38 @@
+{
+  "name": "ai-efficiency-monitor",
+  "repo": "zhaog100/openclaw-skills",
+  "path": "skills/ai-efficiency-monitor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zhaog100/openclaw-skills",
+  "dir_name": "ai-efficiency-monitor",
+  "downloaded_at": "2026-11-16T14:54:56.210639Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zhaog100",
+  "source_url": "https://github.com/zhaog100/openclaw-skills/blob/main/skills/ai-efficiency-monitor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zhaog100/openclaw-skills/blob/main/skills/ai-efficiency-monitor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "AI效率监控工具。监控AI任务执行效率，识别浪费模式（重复查询/过长上下文/无效重试/过度生成/低质量循环），生成优化建议和成本节省报告。支持OpenClaw日志解析、多模型成本计算、ASCII趋势图。",
+  "content_fingerprint": "b432af9b59c5ac59ef72428a8a926071ead8bdfdf4c8d81bebc7da84f41a6936"
+}

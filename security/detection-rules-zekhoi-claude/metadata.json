@@ -1,0 +1,39 @@
+{
+  "name": "detection-rules",
+  "repo": "zekhoi/claude",
+  "path": "plugins/agent-kit/skills/detection-rules/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "detection-rules-zekhoi-claude",
+  "downloaded_at": "2026-11-16T14:52:48.004268Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/detection-rules/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/detection-rules/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write and test detection rules, such as Semgrep or CodeQL queries for vulnerable code patterns and Sigma rules for suspicious log activity, each with true-positive and false-positive samples that prove what the rule catches. Use when the user asks to write a Semgrep, CodeQL, or Sigma rule, a custom static analysis check, or a detection for a vulnerability class or attack pattern. Do not use for finding vulnerabilities by reading code (use agent-kit:security-audit), for configuring a SIEM or deploying rules to production, or for general linting rules without a security purpose."
+}

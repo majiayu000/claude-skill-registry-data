@@ -1,0 +1,38 @@
+{
+  "name": "conform",
+  "repo": "warrendeanlangeveldt/code-kit",
+  "path": "skills/conform/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/warrendeanlangeveldt/code-kit",
+  "dir_name": "conform-warrendeanlangeveldt-code-kit",
+  "downloaded_at": "2026-11-16T14:01:23.327291Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "warrendeanlangeveldt",
+  "source_url": "https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/conform/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/warrendeanlangeveldt/code-kit/blob/main/skills/conform/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bring an existing codebase to the project's standards and engineering principles. Measures its structure (large files, import cycles, dead code, services read straight from the environment), suggests the standards (those the code already follows, and those it should move to, structural ones included), proposes a target architecture (modules, layer rules and lanes), audits the code against each standard the person adopts, records every breach in the baseline as evidence, and drafts a refactor pathway (a conformance milestone per standard, layer by layer, with the splits and moves) for the plan. Use for a brownfield project, when the person wants the code refactored to the standards, when code-kit next says the project has no standards or a standard has breaches no story covers, or runs /code-kit:conform [standard ids]."
+}

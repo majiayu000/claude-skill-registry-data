@@ -1,0 +1,39 @@
+{
+  "name": "long-context-v2",
+  "repo": "zhaog100/openclaw-skills",
+  "path": "skills/long-context-v2/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/zhaog100/openclaw-skills",
+  "dir_name": "long-context-v2",
+  "downloaded_at": "2026-11-16T14:54:50.270809Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction, memory",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zhaog100",
+  "source_url": "https://github.com/zhaog100/openclaw-skills/blob/main/skills/long-context-v2/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zhaog100/openclaw-skills/blob/main/skills/long-context-v2/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Minimize startup context by loading MEMORY-LITE.md instead of full MEMORY.md. Use for session bootstrap optimization.",
+  "content_fingerprint": "ba786d6a3addbfdaca8edb36dec21b3a0d18dee5cb80ed7ea6241d76ac4f24ca"
+}

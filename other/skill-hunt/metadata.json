@@ -1,0 +1,37 @@
+{
+  "name": "skill-hunt",
+  "repo": "wrg32786/aigent-os",
+  "path": "skills/skill-hunt/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/wrg32786/aigent-os",
+  "dir_name": "skill-hunt",
+  "downloaded_at": "2026-11-16T14:13:23.566866Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wrg32786",
+  "source_url": "https://github.com/wrg32786/aigent-os/blob/master/skills/skill-hunt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wrg32786/aigent-os/blob/master/skills/skill-hunt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search external sources and rank skills for missing capabilities. Use when hunting for a skill to fill a capability gap."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "multi-agent-handoff",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/multi-agent-handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "multi-agent-handoff",
+  "downloaded_at": "2026-11-16T14:27:57.329487Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: orchestration=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "orchestration",
+      "orchestrator",
+      "multi-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/multi-agent-handoff/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/multi-agent-handoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Safe context passing at the boundary between agents in a multi-agent pipeline \u2014 compress outgoing context, validate freshness of incoming context, detect bad-handoff signals (context bleed, hallucinated consensus, Agent Tennis). Use when an agent is about to pass work to another agent, receive results from a sub-agent, or when a multi-agent flow starts showing loop or drift symptoms. Do NOT use for session-level human handoffs \u2014 use the `handoff` skill for that. Do NOT use for dispatch planning \u2014 use `subagent-dependency` for DAG orchestration."
+}

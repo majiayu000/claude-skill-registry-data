@@ -1,0 +1,37 @@
+{
+  "name": "gemini-latest-status",
+  "repo": "yuiseki/ai-secretary",
+  "path": ".agents/skills/gemini-latest-status/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yuiseki/ai-secretary",
+  "dir_name": "gemini-latest-status",
+  "downloaded_at": "2026-11-16T14:49:14.372928Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "marketing",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuiseki",
+  "source_url": "https://github.com/yuiseki/ai-secretary/blob/main/.agents/skills/gemini-latest-status/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuiseki/ai-secretary/blob/main/.agents/skills/gemini-latest-status/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Gemini エージェントの最新セッション状態を確認する。\n用途: (1) Gemini が現在タスク実行中か入力待ちかセッション終了済みかを把握する、(2) 最後に何をしていたかを確認する、(3) 複数エージェント並行作業時の状況掌握。\nこのスキルは Read-only で動作する。",
+  "content_fingerprint": "7d1a63b61334334b46cfdbc0f710625eb21e14f4f0fd15a66d9366db4b174b73"
+}

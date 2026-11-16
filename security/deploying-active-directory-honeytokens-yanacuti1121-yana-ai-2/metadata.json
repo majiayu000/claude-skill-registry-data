@@ -1,0 +1,38 @@
+{
+  "name": "deploying-active-directory-honeytokens",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/deploying-active-directory-honeytokens/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "deploying-active-directory-honeytokens-yanacuti1121-yana-ai-2",
+  "downloaded_at": "2026-11-16T14:34:30.801567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/deploying-active-directory-honeytokens/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/deploying-active-directory-honeytokens/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploys deception-based honeytokens in Active Directory including fake privileged accounts with AdminCount=1, fake SPNs for Kerberoasting detection (honeyroasting), decoy GPOs with cpassword traps, and fake BloodHound paths. Monitors Windows Security Event IDs 4769, 4625, 4662, 5136 for honeytoken interaction. Use when implementing AD deception defenses for detecting lateral movement, credential theft, and reconnaissance."
+}

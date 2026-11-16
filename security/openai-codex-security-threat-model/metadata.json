@@ -1,0 +1,38 @@
+{
+  "name": "openai--codex-security--threat-model",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/openai--codex-security--threat-model/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "openai-codex-security-threat-model",
+  "downloaded_at": "2026-11-16T14:28:08.370323Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/openai--codex-security--threat-model/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/openai--codex-security--threat-model/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when Codex is already in the threat-modeling phase of a security scan, the user explicitly invokes $threat-model, or the user explicitly asks to create, update, or persist a repository threat model. Do not use as the primary trigger for full PR, commit, branch, patch, or repository scans."
+}

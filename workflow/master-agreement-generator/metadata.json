@@ -1,0 +1,38 @@
+{
+  "name": "master-agreement-generator",
+  "repo": "wasdqwerty81972/Stai-Project",
+  "path": ".claude/skills/master-agreement-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/wasdqwerty81972/Stai-Project",
+  "dir_name": "master-agreement-generator",
+  "downloaded_at": "2026-11-16T14:02:06.176298Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, automation",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "automation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wasdqwerty81972",
+  "source_url": "https://github.com/wasdqwerty81972/Stai-Project/blob/main/.claude/skills/master-agreement-generator/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wasdqwerty81972/Stai-Project/blob/main/.claude/skills/master-agreement-generator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate review drafts of counterparty master agreements from one template plus a JSON spec, with role-selected clauses and a Schedule A workflow limited to the executed agreement's notice authority. Use when you need reproducible drafting and separately reviewed execution preparation."
+}

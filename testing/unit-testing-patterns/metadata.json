@@ -1,0 +1,40 @@
+{
+  "name": "unit-testing-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/unit-testing-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "unit-testing-patterns",
+  "downloaded_at": "2026-11-16T14:31:45.149692Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, jest, integration, e2e",
+    "score": 4,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/unit-testing-patterns/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/unit-testing-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Write effective unit tests — Arrange-Act-Assert structure, test boundary selection, mocking strategy, test doubles (spy/stub/mock/fake), parameterized tests, snapshot pitfalls, test naming, and Vitest/Jest configuration. Use when asked about \"unit test\", \"write tests\", \"Jest\", \"Vitest\", \"mock function\", \"spy on\", \"stub\", \"test coverage\", \"describe/it/expect\", \"beforeEach/afterEach\", \"parameterized test\", \"test.each\", \"snapshot test\", \"how to test this function\", or \"unit testing best practices\". Do NOT use for: E2E browser testing — see e2e-testing. Do NOT use for: contract testing — see contract-testing. Do NOT use for: load testing — see load-testing.",
+  "content_fingerprint": "60706346238d20e7994bc6b582a8f1b4a03571f8994d7f1dcee2afd124d46179"
+}

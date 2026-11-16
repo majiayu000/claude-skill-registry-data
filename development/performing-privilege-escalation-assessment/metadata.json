@@ -1,0 +1,39 @@
+{
+  "name": "performing-privilege-escalation-assessment",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/performing-privilege-escalation-assessment/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "performing-privilege-escalation-assessment",
+  "downloaded_at": "2026-11-16T14:29:03.349924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, software, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "software",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/performing-privilege-escalation-assessment/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/performing-privilege-escalation-assessment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Performs privilege escalation assessments on compromised Linux and Windows systems to identify paths from low-privilege access to root or SYSTEM-level control. The tester enumerates misconfigurations, vulnerable services, kernel exploits, SUID binaries, unquoted service paths, and credential stores to demonstrate the full impact of an initial compromise. Activates for requests involving privilege escalation testing, local exploitation, post-compromise escalation, or OS-level security assessment."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "performing-power-grid-cybersecurity-assessment",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/performing-power-grid-cybersecurity-assessment/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "performing-power-grid-cybersecurity-assessment",
+  "downloaded_at": "2026-11-16T14:29:02.411513Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/performing-power-grid-cybersecurity-assessment/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/performing-power-grid-cybersecurity-assessment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill covers conducting cybersecurity assessments of electric power grid infrastructure including generation facilities, transmission substations, distribution systems, and energy management system (EMS) control centers. It addresses NERC CIP compliance verification, substation automation security, IEC 61850 protocol analysis, synchrophasor (PMU) network security, and the unique threat landscape targeting power grid operations as demonstrated by Industroyer/CrashOverride and related attacks."
+}

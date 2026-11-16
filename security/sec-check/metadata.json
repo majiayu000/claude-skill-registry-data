@@ -1,0 +1,39 @@
+{
+  "name": "sec-check",
+  "repo": "waynesutton/builder-skills",
+  "path": "skills/sec-check/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/waynesutton/builder-skills",
+  "dir_name": "sec-check",
+  "downloaded_at": "2026-11-16T14:03:48.642483Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "waynesutton",
+  "source_url": "https://github.com/waynesutton/builder-skills/blob/main/skills/sec-check/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/waynesutton/builder-skills/blob/main/skills/sec-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Security check and audit for Convex apps and any app with a React, Vite, Next.js, or Expo frontend, built from real incidents across shipped repos. Runs a secret scanner plus a per function surface ledger, then gates every candidate finding on a real attacker path before it gets a severity. Covers leaked keys, client prefixed secrets, public functions with no auth, caller identity taken from args, paid AI and AI Gateway spend, unsigned webhooks, open uploads, unsafe HTML, prompt injection into agent tools, component boundaries, derived data that outlives its source, status moves that skip steps, unbounded reads, and CI deploy keys. Use before any deploy, before making a repo public, when adding AI, webhooks, uploads, env vars, admin features, or agent tools, when reviewing AI generated code or a PR, when checking whether a security fix worked, or when the user says sec check, security check, security audit, pen test, find vulnerabilities, verify the fix, or is this safe to ship."
+}

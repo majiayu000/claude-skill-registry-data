@@ -1,0 +1,39 @@
+{
+  "name": "auth-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/auth-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "auth-patterns-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:22:48.779409Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "crypto"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/auth-patterns/SKILL.md",
+  "license": "MIT © 2025 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/auth-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design authentication and authorization systems — JWT lifecycle, OAuth 2.0 / OIDC flows, token storage, refresh strategy, RBAC and ABAC permission models. Use when asked about \"login flow\", \"JWT\", \"OAuth\", \"refresh token\", \"access control\", \"permissions\", \"RBAC\", \"who can see what\", or \"auth is broken\". Do NOT use for: session-based auth vs token trade-off analysis (that's an architecture decision) or security penetration testing (use `red-team-check`).",
+  "content_fingerprint": "b422e8bbd036b9824fa29c340b447c02ac49a878d463c32386eb6d9dfc3a97f1"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "navml-windows-menus",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/navml-windows-menus/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "navml-windows-menus",
+  "downloaded_at": "2026-11-16T14:46:54.228222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/navml-windows-menus/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/navml-windows-menus/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Overlapping windows and menus -- navml's Window, Desktop, Modal stacking, raising, dragging/resizing/zooming, shadows, Window > List (Windows Manager), Tile/Cascade/Close all, `must_ask`/`ask_to_close`, and MenuBar/MenuBox/SubMenu/MenuItem/MenuLine, the MenuContainer API, menu ticks, a window's own menu joining the bar (`MenuBar.context`), and the command palette (Alt+Shift+P, `CommandPalette`, `navml/fuzzy.py`). Use when touching the desktop, a window, or Navigator's main menu."
+}

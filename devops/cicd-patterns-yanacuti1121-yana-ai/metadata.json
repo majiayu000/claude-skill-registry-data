@@ -1,0 +1,42 @@
+{
+  "name": "cicd-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/cicd-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "cicd-patterns-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:23:26.790426Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, deploy, infra, infrastructure",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/cicd-patterns/SKILL.md",
+  "license": "MIT © 2025 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/cicd-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design CI/CD pipelines and container builds — Dockerfile best practices, GitHub Actions pipeline structure, pipeline stages, secrets management in CI, deployment strategies, and pipeline failure triage. Use when asked to \"set up CI\", \"write a Dockerfile\", \"GitHub Actions pipeline\", \"deployment strategy\", \"blue-green deploy\", \"canary release\", or \"why is CI slow/failing\". Do NOT use for: deploy gate authorization — that is YAMTAM's `deploy-gate.sh`.",
+  "content_fingerprint": "2f29ef71452337c6c9334206702d6ac8e9e6c41cb4d5630d7f7793e03d318525"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "prompt-firewall-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/prompt-firewall-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "prompt-firewall-patterns",
+  "downloaded_at": "2026-11-16T14:29:34.565426Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/prompt-firewall-patterns/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/prompt-firewall-patterns/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build cognitive security firewalls against prompt injection, jailbreak attacks, and Unicode homoglyph smuggling. Instruction-data segregation, jailbreak token filtering, LLM-as-a-Judge semantic guard, and system prompt reinforcement."
+}

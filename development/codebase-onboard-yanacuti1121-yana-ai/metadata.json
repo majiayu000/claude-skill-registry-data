@@ -1,0 +1,40 @@
+{
+  "name": "codebase-onboard",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/codebase-onboard/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "codebase-onboard-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:34:04.895945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug, refactor",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/codebase-onboard/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/codebase-onboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked to understand, tour, or onboard to a codebase. Triggers on: 'onboard', 'explain codebase', 'walk me through the code', 'new to this project', 'codebase overview', 'how is this structured', 'give me a tour', 't\u1ed5ng quan codebase', 'gi\u1ea3i th\u00edch project', 'entry point', 'where to start reading'."
+}

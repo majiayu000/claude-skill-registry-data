@@ -1,0 +1,38 @@
+{
+  "name": "seo-agentic",
+  "repo": "zhtyyx/codex-seo",
+  "path": "skills/seo-agentic/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/zhtyyx/codex-seo",
+  "dir_name": "seo-agentic",
+  "downloaded_at": "2026-11-16T14:55:40.623068Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: seo, content, brand",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "seo",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zhtyyx",
+  "source_url": "https://github.com/zhtyyx/codex-seo/blob/main/skills/seo-agentic/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zhtyyx/codex-seo/blob/main/skills/seo-agentic/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit and fix agent readiness: the Lighthouse Agentic Browsing fraction, accessibility tree for agents, robots.txt and Content-Signal for AI agents, WAF treatment of agent traffic, llms.txt, Markdown delivery, ai-catalog.json, /.well-known discovery files, and WebMCP tools. Use when the user asks whether AI agents can use or browse the site, or about llms.txt or WebMCP. Exclude AI citability and brand signals (seo-geo) and commerce protocol depth (seo-ecommerce)."
+}

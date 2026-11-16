@@ -1,0 +1,40 @@
+{
+  "name": "hunting-for-defense-evasion-via-timestomping",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/hunting-for-defense-evasion-via-timestomping/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "hunting-for-defense-evasion-via-timestomping-yanacuti1121-yana-ai-2",
+  "downloaded_at": "2026-11-16T14:36:33.630499Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, evidence, triage",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "forensic",
+      "forensics",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/hunting-for-defense-evasion-via-timestomping/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/hunting-for-defense-evasion-via-timestomping/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detect NTFS timestamp manipulation (MITRE T1070.006) by comparing $STANDARD_INFORMATION vs $FILE_NAME timestamps in the MFT. Uses analyzeMFT and Python to identify files with anomalous temporal patterns indicating anti-forensic timestomping activity."
+}

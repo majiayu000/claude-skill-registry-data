@@ -1,0 +1,38 @@
+{
+  "name": "diagram-lint",
+  "repo": "xavier-thomas/diagram-lint",
+  "path": "skills/diagram-lint/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/xavier-thomas/diagram-lint",
+  "dir_name": "diagram-lint",
+  "downloaded_at": "2026-11-16T14:15:27.998619Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xavier-thomas",
+  "source_url": "https://github.com/xavier-thomas/diagram-lint/blob/master/skills/diagram-lint/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xavier-thomas/diagram-lint/blob/master/skills/diagram-lint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Produce, check and render architecture diagrams as code. Use when adding a diagram, editing a Mermaid .mmd source or a draw.io generator script, rendering the .svg and .png outputs, or checking a draw.io layout before trusting it."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ios-security",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/gw360--ios-security/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "gw360-ios-security",
+  "downloaded_at": "2026-11-16T14:25:35.502133Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, ios",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/gw360--ios-security/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/gw360--ios-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Harden iOS and macOS apps against the platform-specific failure modes. Covers Keychain accessibility tiers, App Transport Security, certificate pinning tradeoffs, file protection classes, biometric authentication, jailbreak detection as a signal rather than a defense, and third-party SDK review. Invoke when shipping a native app that holds credentials, before App Store submission, or after a mobile security advisory."
+}

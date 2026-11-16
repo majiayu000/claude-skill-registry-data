@@ -1,0 +1,39 @@
+{
+  "name": "fresh-eyes-review",
+  "repo": "varun29ankuS/shodhRAG",
+  "path": "crates/shodh-rag/skills/fresh-eyes-review/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/varun29ankuS/shodhRAG",
+  "dir_name": "fresh-eyes-review-varun29ankus-shodhrag",
+  "downloaded_at": "2026-11-16T13:53:42.554296Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varun29ankuS",
+  "source_url": "https://github.com/varun29ankuS/shodhRAG/blob/master/crates/shodh-rag/skills/fresh-eyes-review/SKILL.md",
+  "license": "MIT AND Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varun29ankuS/shodhRAG/blob/master/crates/shodh-rag/skills/fresh-eyes-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Use after finishing a substantial change or a written plan, before calling it done. Have Shodh's fresh-eyes reviewer (review_code) check the changed lines with no knowledge of this conversation, then weigh each finding against the code before acting on it.",
+  "content_fingerprint": "eb54a77a572204cc72a56a2ca3a6c658f97cd43c607cd4bc002be0a61d72f9d4"
+}

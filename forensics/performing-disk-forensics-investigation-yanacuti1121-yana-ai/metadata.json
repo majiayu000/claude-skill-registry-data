@@ -1,0 +1,40 @@
+{
+  "name": "performing-disk-forensics-investigation",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/performing-disk-forensics-investigation/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "performing-disk-forensics-investigation-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:38:49.881938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident, evidence",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-disk-forensics-investigation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-disk-forensics-investigation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Conducts disk forensics investigations using forensic imaging, file system analysis, artifact recovery, and timeline reconstruction to support incident response cases. Utilizes tools such as FTK Imager, Autopsy, and The Sleuth Kit for evidence acquisition, deleted file recovery, and artifact examination. Activates for requests involving disk forensics, hard drive analysis, forensic imaging, file recovery, evidence acquisition, or digital forensic investigation."
+}

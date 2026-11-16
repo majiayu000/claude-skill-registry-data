@@ -1,0 +1,37 @@
+{
+  "name": "systematic-debugging",
+  "repo": "voyager67/Agent-Workbench",
+  "path": "skills/systematic-debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/voyager67/Agent-Workbench",
+  "dir_name": "systematic-debugging-voyager67-agent-workbench",
+  "downloaded_at": "2026-11-16T13:58:25.981136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "voyager67",
+  "source_url": "https://github.com/voyager67/Agent-Workbench/blob/main/skills/systematic-debugging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/voyager67/Agent-Workbench/blob/main/skills/systematic-debugging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose a bug or failing test by proving its root cause before changing code. Use when behavior is incorrect, flaky, or unexpectedly different."
+}

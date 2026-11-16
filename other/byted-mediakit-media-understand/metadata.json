@@ -1,0 +1,37 @@
+{
+  "name": "byted-mediakit-media-understand",
+  "repo": "yikart/AiToEarn",
+  "path": "skills/doubao-skill-aitoearn/skills/byted-mediakit-media-understand/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yikart/AiToEarn",
+  "dir_name": "byted-mediakit-media-understand",
+  "downloaded_at": "2026-11-16T14:45:29.824141Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yikart",
+  "source_url": "https://github.com/yikart/AiToEarn/blob/main/skills/doubao-skill-aitoearn/skills/byted-mediakit-media-understand/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yikart/AiToEarn/blob/main/skills/doubao-skill-aitoearn/skills/byted-mediakit-media-understand/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Understand videos, audio and images with MediaKit MCP tools. Use for media summaries, visual event searches, dialogue analysis, sound descriptions, and timestamped evidence for editing. Use sampled-image understanding, ASR and audio understanding; submit video to an understanding model only when the user explicitly requests direct video understanding. Refine only the intervals needed to answer the question."
+}

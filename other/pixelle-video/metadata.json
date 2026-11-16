@@ -1,0 +1,37 @@
+{
+  "name": "pixelle-video",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/pixelle-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "pixelle-video",
+  "downloaded_at": "2026-11-16T14:29:25.541572Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/pixelle-video/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/pixelle-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked to create or generate a video automatically from a topic, text, or idea. Triggers on: 't\u1ea1o video', 'generate video', 'make a video about', 'video t\u1eeb ch\u1ee7 \u0111\u1ec1', 'short video', 'create reel', 'pixelle', 'video t\u1ef1 \u0111\u1ed9ng', 'video AI'. Requires Pixelle-Video server running locally (docker-compose or pip install)."
+}

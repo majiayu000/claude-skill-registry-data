@@ -1,0 +1,39 @@
+{
+  "name": "spinoff",
+  "repo": "vzakharov/muthur",
+  "path": ".claude/skills/spinoff/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/vzakharov/muthur",
+  "dir_name": "spinoff-vzakharov-muthur",
+  "downloaded_at": "2026-11-16T13:59:27.392181Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: cd, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/muthur/blob/main/.claude/skills/spinoff/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/muthur/blob/main/.claude/skills/spinoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Seed a new sibling repository out of the project you are standing in: triage what travels, write the new repo's sync watermark, seed `main` plus a session branch, and hand over a session rooted in it. Runs from a repo that *adopted* this agent infrastructure, and refuses from the template itself or an unpruned fork of it. Invoke as `/spinoff <owner/name>`. Use when the operator says \"spin off\", \"a new repo like this one\", \"start a sibling project\", or \"/spinoff\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "design-observability-signals",
+  "repo": "youdede/toolkit",
+  "path": "skills/design-observability-signals/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/youdede/toolkit",
+  "dir_name": "design-observability-signals",
+  "downloaded_at": "2026-11-16T14:47:18.753725Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youdede",
+  "source_url": "https://github.com/youdede/toolkit/blob/main/skills/design-observability-signals/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youdede/toolkit/blob/main/skills/design-observability-signals/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design or audit observability for a service, job, client, or distributed flow using operational questions, failure modes, structured events, metrics, traces, alerts, retention, and privacy. Use before implementation or when operators cannot explain system behavior safely."
+}

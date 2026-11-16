@@ -1,0 +1,37 @@
+{
+  "name": "exception-catalog",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/exception-catalog/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "exception-catalog",
+  "downloaded_at": "2026-11-16T14:11:48.188824Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/exception-catalog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/exception-catalog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when adding an error class or reusing one, or translating an SDK or library exception at a boundary. Owns the single catalog file, its root and bare subclasses, the stable codes, the inherited `context` dict, translation with `from exc`, the ban on swallowing a failure, best-effort compensation as the one case a scope that re-raises stops a second failure, and a failure after a committed write, which is stopped rather than re-raised. The status a transport answers with is mapped at that transport's boundary, never carried by the class; where the error is logged is `python-logging`."
+}

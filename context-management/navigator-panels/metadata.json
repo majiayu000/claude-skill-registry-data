@@ -1,0 +1,37 @@
+{
+  "name": "navigator-panels",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/navigator-panels/SKILL.md",
+  "github_branch": "master",
+  "category": "context-management",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "navigator-panels",
+  "downloaded_at": "2026-11-16T14:46:45.570698Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-panels/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-panels/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The file manager window and its panels -- Manager (manager.nml/manager.py), Panel and DirEntry, view modes (Ctrl+Y simple/detailed/list), name scrolling, tagging (Insert, Space, Gray +/-/*, Select/Unselect group, SelectDialog), Ctrl+S quick search, Ctrl+H hidden files, type marks and icons, Backspace to parent, re-read keeping the cursor, settings and the cursor remembered per directory (directory_settings), Ctrl+F1/Ctrl+F2/Ctrl+P hiding sides, the draggable divider between the sides (Alt+Left/Alt+Right), switch_view, active/passive panel. Use when changing how files are listed, selected or navigated."
+}

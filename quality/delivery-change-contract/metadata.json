@@ -1,0 +1,37 @@
+{
+  "name": "delivery-change-contract",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-delivery/skills/delivery-change-contract/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "delivery-change-contract",
+  "downloaded_at": "2026-11-16T14:11:50.066548Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-delivery/skills/delivery-change-contract/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-delivery/skills/delivery-change-contract/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when implementing a ready spec and about to change something other than the change's own code \u2014 a test written before the code, a test that existed before the change, a gap the spec left, the spec's goal or scope, a decision record, or a check that guards the repository such as the architecture test, the linter's configuration or CI. Owns the short list of what is frozen while a spec is implemented and changes only with the person's consent, that everything else is free and read by the review from the diff, that a new decision record or a stricter guarding rule is free, that an environment others use, a shared service or a secret is touched only with the person's consent asked once before the work, with credentials found or created rather than asked for piece by piece, the base commits a change is measured from, and catching an edit to what is frozen by a diff from them rather than by forbidding it. What a spec holds and which of its sections are frozen are `delivery-spec`'s; whether an edit to a test changed what it asserts is decided by the review that reads the diff. - Also when asked whether an implementer may edit a test, loosen the architecture test, touch code another component shares, or fill in a name the spec does not give."
+}

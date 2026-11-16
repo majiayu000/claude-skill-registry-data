@@ -1,0 +1,37 @@
+{
+  "name": "vmodal-track",
+  "repo": "v-modal/vmodal_mcp",
+  "path": "skills/vmodal-track/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/v-modal/vmodal_mcp",
+  "dir_name": "vmodal-track",
+  "downloaded_at": "2026-11-16T13:52:35.941911Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "v-modal",
+  "source_url": "https://github.com/v-modal/vmodal_mcp/blob/main/skills/vmodal-track/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/v-modal/vmodal_mcp/blob/main/skills/vmodal-track/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Track a subject through VModal video collections: find every verified appearance of it and return a trail (where, when, for how long, in what order). Works for a description (\"red taxis in Kyoto\") or for one specific subject (\"this taxi\", \"the same woman\", \"the one at 1:57\"). Use when the user asks to track, follow, trace, or find everywhere / every time something appears, e.g. \"Track red cars. Collection: city\". For a single good match use vmodal-find instead. Requires the vmodal MCP (dev branch) and the vmodal-find skill."
+}

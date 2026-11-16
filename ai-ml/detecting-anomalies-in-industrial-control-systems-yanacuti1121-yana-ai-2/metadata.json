@@ -1,0 +1,41 @@
+{
+  "name": "detecting-anomalies-in-industrial-control-systems",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/detecting-anomalies-in-industrial-control-systems/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "detecting-anomalies-in-industrial-control-systems-yanacuti1121-yana-ai-2",
+  "downloaded_at": "2026-11-16T14:34:57.867499Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, machine-learning, model, training",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "machine-learning",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/detecting-anomalies-in-industrial-control-systems/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/detecting-anomalies-in-industrial-control-systems/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill covers deploying anomaly detection systems for industrial control environments using machine learning models trained on OT network baselines, physics-based process models, and behavioral analysis of industrial protocol communications. It addresses building normal behavior profiles for SCADA polling patterns, detecting deviations in Modbus/DNP3/OPC UA traffic, identifying rogue devices, and correlating network anomalies with physical process data from historians."
+}

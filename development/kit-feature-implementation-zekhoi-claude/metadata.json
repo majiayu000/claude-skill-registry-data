@@ -1,0 +1,40 @@
+{
+  "name": "kit-feature-implementation",
+  "repo": "zekhoi/claude",
+  "path": ".agents/skills/kit-feature-implementation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "kit-feature-implementation-zekhoi-claude",
+  "downloaded_at": "2026-11-16T14:52:49.582828Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, debug, refactor",
+    "score": 5,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/.agents/skills/kit-feature-implementation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/.agents/skills/kit-feature-implementation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implement a new feature or behavior change end to end, tracing requirements through design, code, tests, and verification. Use when the user asks to add, build, or change functionality that spans more than a trivial edit. Do not use for bug diagnosis, code review, one-line changes, or work that a more specific installed kit skill covers, such as React components (kit-react-component), framework endpoints (kit-fastify-api, kit-fastapi-api, kit-go-http-api), changes across several packages of a monorepo (kit-monorepo-change), or requests to delegate or coordinate build, tests, docs, and review (kit-orchestrate)."
+}

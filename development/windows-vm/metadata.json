@@ -1,0 +1,39 @@
+{
+  "name": "windows-vm",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/windows-vm/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "windows-vm",
+  "downloaded_at": "2026-11-16T14:32:02.576349Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/windows-vm/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/windows-vm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when provisioning a headless Windows 11 VM in Docker for testing, running Windows-only tools, or installing Claude Code on Windows. Triggers on: 'windows vm', 'windows docker', 'headless windows', 'windows 11 container', 'windows vm ssh', 'kvm windows', 'dockur windows', 'windows dev environment', 'windows claude code', 'windows test environment'."
+}

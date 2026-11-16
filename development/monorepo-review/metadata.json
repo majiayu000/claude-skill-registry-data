@@ -1,0 +1,39 @@
+{
+  "name": "kit-monorepo-review",
+  "repo": "zekhoi/claude",
+  "path": "registry/skills/monorepo-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "monorepo-review",
+  "downloaded_at": "2026-11-16T14:52:28.697649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/registry/skills/monorepo-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/registry/skills/monorepo-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a monorepo or workspace for package boundary problems, including imports that reach into another package's internals, imports of packages not declared as dependencies, circular dependencies between packages or modules, version drift of the same external dependency across packages, misplaced shared code, and dependencies declared at the wrong level, and report findings with severity and file locations. Use when asked to review a monorepo's structure, package boundaries, dependency graph, or workspace hygiene, or to find cycles or undeclared dependencies across packages. Do not use for general code review of a diff (use kit-code-review), for making the fixes (use kit-monorepo-change), or for single-package repositories; this skill reports and does not edit code."
+}

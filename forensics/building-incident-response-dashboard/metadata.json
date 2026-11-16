@@ -1,0 +1,39 @@
+{
+  "name": "building-incident-response-dashboard",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/building-incident-response-dashboard/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "building-incident-response-dashboard",
+  "downloaded_at": "2026-11-16T14:23:12.578231Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/building-incident-response-dashboard/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/building-incident-response-dashboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds real-time incident response dashboards in Splunk, Elastic, or Grafana to provide SOC analysts and leadership with situational awareness during active incidents, tracking affected systems, containment status, IOC spread, and response timeline. Use when IR teams need unified visibility during incident coordination and post-incident reporting."
+}

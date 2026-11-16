@@ -1,0 +1,40 @@
+{
+  "name": "openai--cloudflare--cloudflare",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/openai--cloudflare--cloudflare/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "openai-cloudflare-cloudflare",
+  "downloaded_at": "2026-11-16T14:28:04.008533Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database, etl, pipeline",
+    "score": 5,
+    "runner_up": "workflow",
+    "runner_up_score": 4,
+    "signals": [
+      "data",
+      "sql",
+      "database",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/openai--cloudflare--cloudflare/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/openai--cloudflare--cloudflare/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+}

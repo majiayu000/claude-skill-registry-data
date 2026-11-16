@@ -1,0 +1,37 @@
+{
+  "name": "hex-project-setup",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-project-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-project-setup",
+  "downloaded_at": "2026-11-16T14:11:42.786324Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-project-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-project-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when laying a hexagonal project down once \u2014 which libraries its core, its entrypoints, its stores and its features bring, the floors this family's templates rely on, and the Alembic bootstrap the revision chain cannot start without (config, environment, and a baseline only over a schema that already exists). The src layout, ruff and mypy, the line length and the dependency-floor discipline every Python project shares are `python-toolchain`'s. Never per feature \u2014 the per-change migration revision is `hex-persistence`, runtime DI bindings are `hex-wiring`, and what a settings class declares is `python-settings`."
+}

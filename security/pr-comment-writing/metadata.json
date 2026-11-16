@@ -1,0 +1,37 @@
+{
+  "name": "pr-comment-writing",
+  "repo": "voyager67/Agent-Workbench",
+  "path": "skills/pr-comment-writing/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/voyager67/Agent-Workbench",
+  "dir_name": "pr-comment-writing",
+  "downloaded_at": "2026-11-16T13:58:24.790039Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, vulnerability",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "voyager67",
+  "source_url": "https://github.com/voyager67/Agent-Workbench/blob/main/skills/pr-comment-writing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/voyager67/Agent-Workbench/blob/main/skills/pr-comment-writing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write constructive, actionable pull-request review comments. Use when preparing inline or summary feedback for a human or agent's code changes."
+}

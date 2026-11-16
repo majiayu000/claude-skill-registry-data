@@ -1,0 +1,40 @@
+{
+  "name": "implementing-soar-automation-with-phantom",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/implementing-soar-automation-with-phantom/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "implementing-soar-automation-with-phantom",
+  "downloaded_at": "2026-11-16T14:26:56.506947Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident, triage",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/implementing-soar-automation-with-phantom/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/implementing-soar-automation-with-phantom/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implements Security Orchestration, Automation, and Response (SOAR) workflows using Splunk SOAR (formerly Phantom) to automate alert triage, IOC enrichment, containment actions, and incident response playbooks. Use when SOC teams need to reduce manual analyst work, standardize response procedures, or integrate multiple security tools into automated workflows."
+}

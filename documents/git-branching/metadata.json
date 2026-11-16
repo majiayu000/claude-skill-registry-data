@@ -1,0 +1,37 @@
+{
+  "name": "git-branching",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-git/skills/git-branching/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "git-branching",
+  "downloaded_at": "2026-11-16T14:11:38.445166Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-git/skills/git-branching/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-git/skills/git-branching/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when starting a branch, deciding how a change reaches the mainline, cleaning a branch's history before it lands, or choosing whether a repository needs more than one long-lived branch \u2014 in a repository of any language. Owns the one mainline releases are cut from, recording the branching and merge method and the branch-name pattern once per repository, the short-lived one-change branch, folding a fix to unlanded work into the commit it fixes, never rewriting history someone else may have built on, and when a released version earns a maintenance branch. What each commit's message says is `git-commit-message`; computing and cutting the release is `/release`. - Also when asked about GitHub Flow, GitFlow or trunk-based development, a develop or release branch, squash versus merge commit versus rebase merging, force-pushing, rebasing a branch, fixup commits, cleaning up work-in-progress commits, branch names, deleting a merged branch, or hotfixing a released version."
+}

@@ -1,0 +1,41 @@
+{
+  "name": "implementing-code-signing-for-artifacts",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/implementing-code-signing-for-artifacts/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "implementing-code-signing-for-artifacts",
+  "downloaded_at": "2026-11-16T14:26:20.259395Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/implementing-code-signing-for-artifacts/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/implementing-code-signing-for-artifacts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill covers implementing code signing for build artifacts to ensure integrity and authenticity throughout the software supply chain. It addresses signing binaries, packages, and containers using GPG, Sigstore, and platform-specific signing tools, establishing trust chains, and verifying signatures in deployment pipelines."
+}

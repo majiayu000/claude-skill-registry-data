@@ -1,0 +1,37 @@
+{
+  "name": "session-to-skill",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/session-to-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "session-to-skill",
+  "downloaded_at": "2026-11-16T14:30:18.594191Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/session-to-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/session-to-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Auto-extract a reusable skill from the current session conversation. Use when the user says \"save this as a skill\", \"turn this into a skill\", \"I want to reuse this workflow\", \"make this repeatable\", \"skillify this\", \"we just did something I want to automate\", or after completing a useful multi-step task that could be repeated. Do NOT use for one-off fixes or tasks with no repeatable value."
+}

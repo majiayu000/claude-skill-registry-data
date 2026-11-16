@@ -1,0 +1,37 @@
+{
+  "name": "sift",
+  "repo": "xobotyi/cc-foundry",
+  "path": "plugins/better-memory/skills/sift/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/xobotyi/cc-foundry",
+  "dir_name": "sift",
+  "downloaded_at": "2026-11-16T14:18:40.029627Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xobotyi",
+  "source_url": "https://github.com/xobotyi/cc-foundry/blob/master/plugins/better-memory/skills/sift/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xobotyi/cc-foundry/blob/master/plugins/better-memory/skills/sift/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review and prune Claude Code's auto-memory entries with the user, moving standing rules into CLAUDE.md. Use when the user asks to clean up, prune, review, or audit memory, or when better-memory says instructions wait for review."
+}

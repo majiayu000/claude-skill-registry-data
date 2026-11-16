@@ -1,0 +1,39 @@
+{
+  "name": "ai-team-workflow",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/ai-team-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "ai-team-workflow",
+  "downloaded_at": "2026-11-16T14:22:03.304020Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, orchestration=3",
+    "score": 3,
+    "runner_up": "orchestration",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/ai-team-workflow/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/ai-team-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Organize AI agents as a structured team — role assignment, proposal/vote/ review/ship cycle, cross-agent code review, consensus mechanisms, and escalation to human for deadlocks. Use when asked about \"AI team\", \"agents working as a team\", \"multi-agent workflow\", \"agent roles\", \"agent review\", \"agents vote\", \"Hivemoot\", \"AI proposes and votes\", \"agent consensus\", \"agents reviewing each other's work\", \"define agent roles\", \"AI standup\", or \"autonomous team of agents\". Do NOT use for: git-based task coordination — see git-native-agent-protocol. Do NOT use for: safety gates — see agent-safety-patterns.",
+  "content_fingerprint": "b6607d26c785c75a79eefb07f5dc2552a6f2aa853907289b86d9487f5284cedf"
+}

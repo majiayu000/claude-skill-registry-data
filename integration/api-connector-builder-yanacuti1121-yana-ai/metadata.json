@@ -1,0 +1,38 @@
+{
+  "name": "api-connector-builder",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/api-connector-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "api-connector-builder-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:33:14.852540Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, connector, webhook",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "connector",
+      "webhook"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/api-connector-builder/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/api-connector-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a new API connector or provider by matching the target repo's existing integration pattern exactly. Use when adding one more integration without inventing a second architecture."
+}

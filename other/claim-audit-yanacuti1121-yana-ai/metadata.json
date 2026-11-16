@@ -1,0 +1,38 @@
+{
+  "name": "claim-audit",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/claim-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "claim-audit-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:34:00.589528Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/claim-audit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/claim-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extract every verifiable claim from a piece of content, check each against sources, and sort into 4 buckets: correct, unsourced, needs-fixing, misleading. Use when asked to 'ki\u1ec3m ch\u1ee9ng lu\u1eadn \u0111i\u1ec3m', 'audit claims', 'verify this article', 't\u00e1ch lu\u1eadn \u0111i\u1ec3m', 'check facts in this doc', '\u0111\u1ed1i chi\u1ebfu v\u1edbi ngu\u1ed3n', or 'is this content accurate'. Do NOT use for: verifying a single claim before stating it \u2014 see /fact-check command. Do NOT use for: code correctness \u2014 see verification-engine."
+}

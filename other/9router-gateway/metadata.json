@@ -1,0 +1,37 @@
+{
+  "name": "9router-gateway",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/9router-gateway/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "9router-gateway",
+  "downloaded_at": "2026-11-16T14:21:44.485465Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/9router-gateway/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/9router-gateway/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up 9Router as a local AI gateway so coding agents never stop when a provider quota runs out \u2014 one OpenAI-compatible endpoint (localhost:20128) fanning out to 40+ providers with automatic fallback. Use when asked to 'set up 9router', 'c\u00e0i 9router', 'h\u1ebft quota Claude th\u00ec l\u00e0m sao', 'fallback provider t\u1ef1 \u0111\u1ed9ng', 'never hit rate limits', 'free AI router', or 'n\u1ed1i Claude Code v\u00e0o nhi\u1ec1u provider'. Do NOT use for: cloud gateway architecture comparisons (LiteLLM/Portkey/Kong) \u2014 see ai-gateway-patterns. Do NOT use for: YAMTAM's internal task routing \u2014 see yana-router docs."
+}

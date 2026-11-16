@@ -1,0 +1,37 @@
+{
+  "name": "hex-wiring",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-wiring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-wiring",
+  "downloaded_at": "2026-11-16T14:11:37.420807Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-wiring/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-wiring/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when adding a binding in `containers.py` \u2014 provider classes, binding lifetimes, the `create_container` composition root and its declaration order, and where each settings class is constructed and bound \u2014 every one before the process serves or takes work. Bound here to dishka, with other DI libraries mapped under `## Other bindings`. What a settings class declares, defaults and keeps secret is `python-settings`; the class being bound must already exist \u2014 `hex-application`, `hex-capability-adapter`; the project substrate is `hex-project-setup` and the toolchain `python-toolchain`, not runtime wiring."
+}

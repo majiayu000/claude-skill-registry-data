@@ -1,0 +1,42 @@
+{
+  "name": "design-system-gen",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/design-system-gen/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "design-system-gen",
+  "downloaded_at": "2026-11-16T14:24:15.316170Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, css, tailwind, figma",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "css",
+      "tailwind",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/design-system-gen/SKILL.md",
+  "license": "MIT © 2026 nextlevelbuilder",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/design-system-gen/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Generate a complete design token system for a new project — color palette, typography scale, spacing, shadows, and border radius — tailored to the product type (SaaS, e-commerce, healthcare, fintech, creative, etc.). Use when starting a new project with no design system, when the user asks to \"set up design tokens\", \"create a design system\", or \"what colors/fonts should I use for a [product type]\". Do NOT use when the project already has tokens — use ui-redesign instead.",
+  "content_fingerprint": "0c77a00a61dc29f0bb2a06b1fc02a5fe99d76a75bfe193bb1c1179b74d589c27"
+}

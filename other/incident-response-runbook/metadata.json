@@ -1,0 +1,38 @@
+{
+  "name": "incident-response-runbook",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/incident-response-runbook/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "incident-response-runbook",
+  "downloaded_at": "2026-11-16T14:27:03.102061Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/incident-response-runbook/SKILL.md",
+  "license": "MIT © 2025 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/incident-response-runbook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Run and document production incidents — severity classification, incident commander role, communication cadence, triage steps, post-incident review (PIR/postmortem) generation, and action item tracking. Use when asked about \"incident response\", \"how to run an incident\", \"postmortem template\", \"PIR\", \"on-call runbook\", \"severity levels\", or when a production issue is actively happening. Do NOT use for: SLO target design — use `slo-design`.",
+  "content_fingerprint": "538f6410c11734d92eb65aac4fcce669f5876efda0e330d269027d84e32aa29f"
+}

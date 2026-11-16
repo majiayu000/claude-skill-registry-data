@@ -1,0 +1,39 @@
+{
+  "name": "performing-mobile-app-certificate-pinning-bypass",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/performing-mobile-app-certificate-pinning-bypass/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "performing-mobile-app-certificate-pinning-bypass-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:39:06.731022Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-mobile-app-certificate-pinning-bypass/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-mobile-app-certificate-pinning-bypass/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bypasses SSL/TLS certificate pinning implementations in Android and iOS applications to enable traffic interception during authorized security assessments. Covers OkHttp, TrustManager, NSURLSession, and third-party pinning library bypass techniques using Frida, Objection, and custom scripts. Activates for requests involving certificate pinning bypass, SSL pinning defeat, mobile TLS interception, or proxy-resistant app testing."
+}

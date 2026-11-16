@@ -1,0 +1,39 @@
+{
+  "name": "detecting-s3-data-exfiltration-attempts",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/detecting-s3-data-exfiltration-attempts/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "detecting-s3-data-exfiltration-attempts-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:24:35.264536Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze, insights",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/detecting-s3-data-exfiltration-attempts/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/detecting-s3-data-exfiltration-attempts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detecting data exfiltration attempts from AWS S3 buckets by analyzing CloudTrail S3 data events, VPC Flow Logs, GuardDuty findings, Amazon Macie alerts, and S3 access patterns to identify unauthorized bulk downloads and cross-account data transfers."
+}

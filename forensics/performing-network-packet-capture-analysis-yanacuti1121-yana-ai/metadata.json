@@ -1,0 +1,40 @@
+{
+  "name": "performing-network-packet-capture-analysis",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/performing-network-packet-capture-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "performing-network-packet-capture-analysis-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:39:07.466606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident, evidence",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-network-packet-capture-analysis/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-network-packet-capture-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Perform forensic analysis of network packet captures (PCAP/PCAPNG) using Wireshark, tshark, and tcpdump to reconstruct network communications, extract transferred files, identify malicious traffic, and establish evidence of data exfiltration or command-and-control activity."
+}

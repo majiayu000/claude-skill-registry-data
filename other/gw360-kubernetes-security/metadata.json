@@ -1,0 +1,38 @@
+{
+  "name": "kubernetes-security",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/gw360--kubernetes-security/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "gw360-kubernetes-security",
+  "downloaded_at": "2026-11-16T14:25:35.728946Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "kubernetes",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/gw360--kubernetes-security/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/gw360--kubernetes-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Harden a Kubernetes cluster's data plane and control plane. Covers Pod Security Standards (Restricted, Baseline, Privileged), RBAC with least privilege, NetworkPolicy default-deny, secrets management without raw env vars, admission controllers (Kyverno, OPA Gatekeeper), image scanning, and audit logging. Invoke when provisioning a new cluster, inheriting one, or before adding a new tenant to a shared cluster."
+}

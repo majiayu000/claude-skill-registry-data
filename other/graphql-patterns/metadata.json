@@ -1,0 +1,38 @@
+{
+  "name": "graphql-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/graphql-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "graphql-patterns",
+  "downloaded_at": "2026-11-16T14:25:28.855191Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/graphql-patterns/SKILL.md",
+  "license": "MIT © 2025 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/graphql-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design and optimize GraphQL APIs — schema design, N+1 elimination with DataLoader, pagination (cursor/connection spec), authorization in resolvers, subscriptions, and error handling. Use when asked about \"GraphQL schema\", \"resolver N+1\", \"DataLoader\", \"GraphQL pagination\", \"GraphQL subscriptions\", \"GraphQL authorization\", or \"how to structure a GraphQL API\". Do NOT use for: REST API design — use `api-design`. General query optimization on the database layer — use `database-patterns`.",
+  "content_fingerprint": "068b30f6275976edd816eab32bb31f64c30430fa5cfed2560d51373c5440af46"
+}

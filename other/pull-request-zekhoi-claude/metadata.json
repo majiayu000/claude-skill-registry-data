@@ -1,0 +1,36 @@
+{
+  "name": "kit-pull-request",
+  "repo": "zekhoi/claude",
+  "path": "registry/skills/pull-request/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "pull-request-zekhoi-claude",
+  "downloaded_at": "2026-11-16T14:52:23.221718Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/registry/skills/pull-request/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/registry/skills/pull-request/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare and open pull requests (GitHub) or merge requests (GitLab) with an accurate title, description, and test plan drawn from the branch's actual commits and diff. Use when the user asks to open, create, draft, or update a PR or MR, or to write its description. Do not use for reviewing someone else's PR or MR, committing, or merging."
+}

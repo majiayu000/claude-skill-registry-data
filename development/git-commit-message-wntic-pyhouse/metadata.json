@@ -1,0 +1,37 @@
+{
+  "name": "git-commit-message",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-git/skills/git-commit-message/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "git-commit-message-wntic-pyhouse",
+  "downloaded_at": "2026-11-16T14:11:45.165749Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, refactor",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-git/skills/git-commit-message/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-git/skills/git-commit-message/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing a commit message or a merge or pull request's title or description, or deciding what type, scope or breaking-change marker a change takes \u2014 whether through a command or typed by hand, in a repository of any language. Owns the Conventional Commits 1.0.0 message shape, the rule that the type records which release the change earns and is chosen by what the change is rather than how large it was, why a commit that is not a release never touches the version, how a break is marked so a tool reading the history finds it, why a message says nothing about the tool or agent that wrote it, why it refers only to what outlives the work, and where the convention has to hold under a squash or a merge-commit strategy. Staging and committing is `/commit`; refusing a malformed message at commit time is `/install-commit-hook`; computing and cutting the release is `/release`. - Also when asked for a commit message, a conventional commit, whether a change is feat or fix, how to mark a breaking change, what a merge or pull request's title and description should say, whether a feature commit should bump the version, whether to cite a spec, plan or ticket in a commit or a request, whether an agent may add a trailer or a session link, or how wide a commit body's lines may be."
+}

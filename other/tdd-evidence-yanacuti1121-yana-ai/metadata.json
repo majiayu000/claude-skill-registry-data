@@ -1,0 +1,38 @@
+{
+  "name": "tdd-evidence",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/tdd-evidence/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "tdd-evidence-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:40:56.113276Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/tdd-evidence/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/tdd-evidence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you need to prove test results with a signed receipt from yana-rt evidence run \u2014 not just text. Required for all Rust guard/evidence modules in Yana AI, and any claim \"tests passed\" that must be verifiable. Triggers on: yana-rt evidence run, signed receipt, vi\u1ebft test tr\u01b0\u1edbc, evidence run, proof of test."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "microsoft--bitnet",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/microsoft--bitnet/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "microsoft-bitnet",
+  "downloaded_at": "2026-11-16T14:27:49.370172Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, speed, benchmark",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/microsoft--bitnet/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/microsoft--bitnet/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "BitNet.cpp \u2014 official inference framework cho 1-bit LLMs: 1.37x-6.17x speedup, -55-82% energy. Ch\u1ea1y 100B model tr\u00ean single CPU 5-7 tok/s. ARM + x86."
+}

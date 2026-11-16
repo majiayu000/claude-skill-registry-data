@@ -1,0 +1,37 @@
+{
+  "name": "fastapi-api",
+  "repo": "zekhoi/claude",
+  "path": "plugins/agent-kit/skills/fastapi-api/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "fastapi-api-zekhoi-claude",
+  "downloaded_at": "2026-11-16T14:52:39.789603Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/fastapi-api/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/fastapi-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implement or change HTTP endpoints in a FastAPI application following FastAPI's conventions and the project's own patterns, with Pydantic request and response models, dependency-injected authentication, correct status codes, and TestClient tests. Use when the user asks to add, change, or fix a route, router, dependency, or API endpoint in a project that uses FastAPI. Do not use for Flask, Django, or other frameworks, for reviewing code (use agent-kit:code-review), or for database query review (use agent-kit:sqlalchemy-review)."
+}

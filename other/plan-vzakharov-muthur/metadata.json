@@ -1,0 +1,37 @@
+{
+  "name": "plan",
+  "repo": "vzakharov/muthur",
+  "path": ".claude/skills/plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vzakharov/muthur",
+  "dir_name": "plan-vzakharov-muthur",
+  "downloaded_at": "2026-11-16T13:59:24.838146Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/muthur/blob/main/.claude/skills/plan/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/muthur/blob/main/.claude/skills/plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan on disk instead of in the plan-mode UI \u2014 write the plan to a git-tracked file under docs/plans/ whose name doubles as the approval gate, publish it as a draft PR so it can be reviewed as a diff, and ask clarifying questions as numbered prose instead of AskUserQuestion. Use whenever you would otherwise enter plan mode or call AskUserQuestion (ExitPlanMode); mandatory in a remote/web session, where both of those UIs lose answers."
+}

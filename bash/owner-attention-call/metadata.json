@@ -1,0 +1,38 @@
+{
+  "name": "owner-attention-call",
+  "repo": "yuiseki/ai-secretary",
+  "path": ".agents/skills/owner-attention-call/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/yuiseki/ai-secretary",
+  "dir_name": "owner-attention-call",
+  "downloaded_at": "2026-11-16T14:49:15.386376Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuiseki",
+  "source_url": "https://github.com/yuiseki/ai-secretary/blob/main/.agents/skills/owner-attention-call/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuiseki/ai-secretary/blob/main/.agents/skills/owner-attention-call/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "手動確認や意思決定が必要になったときに、ASEE の owner presence を見て呼びかけ経路を切り替える。owner が見えていれば asay/VOICEVOX + acaption で『ユイさま、…』と話しかけ、見えていなければ ntfy で通知する。",
+  "content_fingerprint": "38b0ad0501b9a2a701bf82243c345839b6ee1586ba9ce17889579060081c6a16"
+}

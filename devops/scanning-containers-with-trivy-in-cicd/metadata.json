@@ -1,0 +1,41 @@
+{
+  "name": "scanning-containers-with-trivy-in-cicd",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/scanning-containers-with-trivy-in-cicd/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "scanning-containers-with-trivy-in-cicd",
+  "downloaded_at": "2026-11-16T14:29:59.423118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, kubernetes, deploy",
+    "score": 5,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/scanning-containers-with-trivy-in-cicd/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/scanning-containers-with-trivy-in-cicd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill covers integrating Aqua Security's Trivy scanner into CI/CD pipelines for comprehensive container image vulnerability detection. It addresses scanning Docker images for OS package and application dependency CVEs, detecting misconfigurations in Dockerfiles, scanning filesystem and git repositories, and establishing severity-based quality gates that block deployment of vulnerable images."
+}

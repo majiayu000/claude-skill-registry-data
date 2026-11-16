@@ -1,0 +1,37 @@
+{
+  "name": "hook-protect-secrets",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/hook-protect-secrets/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "hook-protect-secrets-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:36:29.709598Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/hook-protect-secrets/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/hook-protect-secrets/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pattern guide for writing PreToolUse hooks that block secret file access, credential exfiltration, and environment variable dumps. Use when: auditing token-scope-guard.sh, adding new sensitive file patterns, reviewing what secret paths are protected. Covers 33 file patterns + 24 bash patterns + 15 exfiltration patterns. Inspired by: karanb192/claude-code-hooks protect-secrets pattern (MIT)."
+}

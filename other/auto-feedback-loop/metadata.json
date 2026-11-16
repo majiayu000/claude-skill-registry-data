@@ -1,0 +1,38 @@
+{
+  "name": "auto-feedback-loop",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/auto-feedback-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "auto-feedback-loop",
+  "downloaded_at": "2026-11-16T14:22:49.554837Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/auto-feedback-loop/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/auto-feedback-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Implement self-correcting agent loops — run tests, capture failures, feed error context back to the writing agent, and repeat until pass or max-attempts reached. Inspired by Microsoft AutoGen's multi-agent reflection pattern. Use when asked about \"auto-feedback loop\", \"self-correcting agent\", \"AutoGen reflection\", \"agent retry on failure\", \"tdd feedback loop\", \"automatic fix loop\", \"agent keeps fixing until tests pass\", \"feedback-loop script\", \"run-until-green\", or \"agent self-correction\". Do NOT use for: one-shot test runs — see tdd-workflow. Do NOT use for: multi-agent task assignment — see ai-team-workflow.",
+  "content_fingerprint": "6d8a5d9f170160f05cfad8c8fcd9f459ab743ea9306d1eccc96139b7c4a9fa90"
+}

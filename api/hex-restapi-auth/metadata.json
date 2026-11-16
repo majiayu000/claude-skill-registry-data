@@ -1,0 +1,38 @@
+{
+  "name": "hex-restapi-auth",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-restapi-auth/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-restapi-auth",
+  "downloaded_at": "2026-11-16T14:11:41.783072Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-restapi-auth/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-restapi-auth/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an HTTP entrypoint must authenticate its caller or gate a route on a role. Owns the caller identity, the token-verifier port and adapter, the `get_current_user` / `require_role` route dependencies, the role-rank gate, the RFC-7235 challenge, and the 401/403 codes a route advertises because of them \u2014 a route's other error codes are `hex-restapi-endpoint`'s. - Adding auth to a REST service, choosing between an authenticated and a role-gated route, wiring a token verifier, or deciding what an authenticated route advertises in OpenAPI."
+}

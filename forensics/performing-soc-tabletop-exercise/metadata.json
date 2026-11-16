@@ -1,0 +1,40 @@
+{
+  "name": "performing-soc-tabletop-exercise",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/performing-soc-tabletop-exercise/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "performing-soc-tabletop-exercise",
+  "downloaded_at": "2026-11-16T14:29:12.827666Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident, triage",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/performing-soc-tabletop-exercise/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/performing-soc-tabletop-exercise/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Performs tabletop exercises for SOC teams simulating security incidents through discussion-based scenarios to test incident response procedures, communication workflows, and decision-making under pressure without impacting production systems. Use when organizations need to validate IR playbooks, train analysts, or meet compliance requirements for incident response testing."
+}

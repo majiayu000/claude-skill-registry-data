@@ -1,0 +1,37 @@
+{
+  "name": "python-logging",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/python-logging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "python-logging-wntic-pyhouse",
+  "downloaded_at": "2026-11-16T14:11:45.985537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-logging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-logging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing code that reports what it did or what went wrong \u2014 a log call, a `print` for progress or errors, an `except` that records a failure, or logging setup in an entry point, a CLI or a library. Owns one structured event per occurrence with a stable `<subject>_<past_tense_verb>` name and identifiers as fields, the rule that an error is logged once by the scope that stops it and never by a scope that re-raises, the warning a failed undo under compensation earns, logging configured once at the entry point and never inside a distributed package, what never reaches a log line, and a program's result on stdout as output rather than a log event, and a program whose stdout is its result logging to stderr. Annotation forms and comments are `python-style`; the error classes and their `context` are `exception-catalog`."
+}

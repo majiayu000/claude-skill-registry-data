@@ -1,0 +1,41 @@
+{
+  "name": "nutrient-document-processing",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/nutrient-document-processing/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "nutrient-document-processing-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:38:18.762956Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, excel, pptx, xlsx, docx",
+    "score": 6,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "pdf",
+      "excel",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/nutrient-document-processing/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/nutrient-document-processing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Process, convert, OCR, extract, redact, sign, and fill documents using the Nutrient DWS API. Works with PDFs, DOCX, XLSX, PPTX, HTML, and images."
+}

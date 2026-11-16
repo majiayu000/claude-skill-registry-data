@@ -1,0 +1,39 @@
+{
+  "name": "database-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/database-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "database-patterns-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:23:53.425856Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/database-patterns/SKILL.md",
+  "license": "MIT © 2025 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/database-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design and optimize relational database schemas — normalization, indexing strategy, query optimization, N+1 elimination, pagination patterns, and migration safety. Use when asked to \"design a schema\", \"fix slow queries\", \"add an index\", \"N+1 problem\", \"paginate results\", \"write a migration\", or \"database is slow\". Covers PostgreSQL/MySQL patterns. Do NOT use for: NoSQL document design — that requires a separate approach. Do NOT use for: frontend performance.",
+  "content_fingerprint": "f811a5fdf2b2f4d02ec50c3cec8b6f50afe7be005f07e8aab6087758a028110b"
+}

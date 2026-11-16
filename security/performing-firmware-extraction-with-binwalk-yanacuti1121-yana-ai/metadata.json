@@ -1,0 +1,40 @@
+{
+  "name": "performing-firmware-extraction-with-binwalk",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/performing-firmware-extraction-with-binwalk/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "performing-firmware-extraction-with-binwalk-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:38:56.208806Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, vulnerability",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-firmware-extraction-with-binwalk/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-firmware-extraction-with-binwalk/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Performs firmware image extraction and analysis using binwalk to identify embedded filesystems, compressed archives, bootloaders, kernel images, and cryptographic material. Covers entropy analysis for detecting encrypted or compressed regions, recursive extraction of nested archives, SquashFS/CramFS/JFFS2 filesystem mounting, and string analysis for credential and configuration discovery. Activates for requests involving firmware reverse engineering, IoT device analysis, embedded system security assessment, or router/camera firmware extraction."
+}

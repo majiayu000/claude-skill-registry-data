@@ -1,0 +1,38 @@
+{
+  "name": "hex-test-restapi-endpoint",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-test-restapi-endpoint/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-test-restapi-endpoint",
+  "downloaded_at": "2026-11-16T14:11:52.293831Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-test-restapi-endpoint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-test-restapi-endpoint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing one REST endpoint through the real ASGI app \u2014 one file per endpoint under `tests/integration/api/<resource>/`, asserting the success body and each advertised error code, with per-resource fixtures in a sibling `conftest.py`. Not properties discovered across all routes at once (`hex-test-app-invariants`), not the auth half \u2014 a token verifier's unit test, 401/403, role rejection, cross-tenant 404 (`hex-test-restapi-auth`) \u2014 and not the fixtures themselves (`hex-test-integration-setup`)."
+}

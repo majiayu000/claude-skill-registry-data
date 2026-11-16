@@ -1,0 +1,38 @@
+{
+  "name": "workflow",
+  "repo": "waynesutton/builder-skills",
+  "path": "skills/workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/waynesutton/builder-skills",
+  "dir_name": "workflow-waynesutton-builder-skills",
+  "downloaded_at": "2026-11-16T14:03:48.482048Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "waynesutton",
+  "source_url": "https://github.com/waynesutton/builder-skills/blob/main/skills/workflow/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/waynesutton/builder-skills/blob/main/skills/workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs multi step work the way a careful senior engineer would: triage before code, a PRD in prds/, task.md kept current, docs synced after, and lessons recorded when a mistake repeats. Hands PRD writing to create-prd and the docs sync to update-project-docs. Use when a task spans several files or steps, changes architecture, needs a plan the user can review, or when the user says plan this, track this in task.md, or what did we learn."
+}

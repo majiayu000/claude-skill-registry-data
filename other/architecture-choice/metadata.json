@@ -1,0 +1,37 @@
+{
+  "name": "architecture-choice",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/architecture-choice/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "architecture-choice",
+  "downloaded_at": "2026-11-16T14:11:49.072017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/architecture-choice/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/architecture-choice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when deciding whether a service should be hexagonal or flat-layered \u2014 a greenfield service whose family is unsettled, or an existing one that has outgrown the style it was built in. Decides from what the service itself must enforce, names what each choice costs, and states plainly which project shapes this catalogue does not cover rather than forcing one into a family. Routes to `hex-architecture` or `flat-layered` and teaches neither style; where a boundary goes at all is `coupling`'s. - Also fires on \"which architecture for this service\", \"should this be hexagonal\", \"do we need ports here\" and \"is a plain layered layout enough\", and on asking whether the catalogue's families fit a Django or Flask project, a package-by-feature tree, a library or SDK, a CLI tool, an orchestrator-shaped data-pipeline project, or a modular monolith."
+}

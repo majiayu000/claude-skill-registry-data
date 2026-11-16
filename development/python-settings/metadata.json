@@ -1,0 +1,37 @@
+{
+  "name": "python-settings",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/python-settings/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "python-settings",
+  "downloaded_at": "2026-11-16T14:11:46.688900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-settings/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-settings/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a program reads configuration from its environment \u2014 writing or extending a settings class, deciding whether a field gets a default, carrying a secret, or deciding where the settings object is built and how its values reach the code that uses them. Owns one settings class per configured component, the non-strict namespace, no default on a required field or a tunable, the secret type and where it is unwrapped, derived values, validation that only normalizes or rejects, construction at the composition root, and what a library reads (nothing, when published). The prefix's name is `naming`; nothing built at import time is `python-packaging`. - Also when asked for a config class, an env var, a `.env` file, a `BaseSettings` subclass, an API key or password field, a timeout or pool-size default, `os.getenv` in a module, or where to build the settings object."
+}

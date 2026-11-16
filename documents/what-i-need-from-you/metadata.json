@@ -1,0 +1,37 @@
+{
+  "name": "what-i-need-from-you",
+  "repo": "waynesutton/builder-skills",
+  "path": "skills/what-i-need-from-you/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/waynesutton/builder-skills",
+  "dir_name": "what-i-need-from-you",
+  "downloaded_at": "2026-11-16T14:03:50.431780Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "waynesutton",
+  "source_url": "https://github.com/waynesutton/builder-skills/blob/main/skills/what-i-need-from-you/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/waynesutton/builder-skills/blob/main/skills/what-i-need-from-you/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ends every agent turn with a clear \"What I need from you\" section listing concrete actions the user must take, or says \"Nothing needed from you right now\", and logs every ask by id and session in prds/what-i-need-from-you.md. Use on every turn, especially when blocked on the user, when the next step needs a login, dashboard, key rotation, decision, file, or approval, or when finishing a task, audit, or fix."
+}

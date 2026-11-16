@@ -1,0 +1,36 @@
+{
+  "name": "navigator-monitor",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/navigator-monitor/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "navigator-monitor",
+  "downloaded_at": "2026-11-16T14:46:48.972122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-monitor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-monitor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Utilities > System monitor, a departure from DN (DOS had one processor and nothing to measure it by) -- navigator/lib/system/monitor.py (cpu_times and CpuSampler's per-processor busy %, frequencies from cpufreq or cpuinfo, memory with the commit charge as Virtual, sensors from /sys/class/hwmon with the thermal-zone fallback, Snapshot.shape, Monitor, short_size), the meters (CpuMeters with cpu_layout's columns, MemoryMeters, SensorList), MonitorWindow (the natural size, refitting only while the rectangle is its own, the heights the boxes share), and [monitor] refresh. Use when changing the system monitor or reading another figure from /proc or /sys for it."
+}

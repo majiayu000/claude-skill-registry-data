@@ -1,0 +1,37 @@
+{
+  "name": "python-packaging",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/python-packaging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "python-packaging-wntic-pyhouse",
+  "downloaded_at": "2026-11-16T14:11:47.258886Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-packaging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-packaging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the question is the mechanics around a module rather than what it is called \u2014 `__init__.py`, `__all__`, a re-export, one file or two modules, relative versus absolute imports, a circular import, or whether this needs a class at all. Owns when a class earns its place and the one-class-per-module cap with the test for when a closed set of declarations may share a module, the four-part re-export contract, building nothing at import time, and the `py.typed` marker a library distribution ships. Naming a module is `naming`. - Adding a public module to a package; a wildcard import; import order; a module-level settings object, engine or client."
+}

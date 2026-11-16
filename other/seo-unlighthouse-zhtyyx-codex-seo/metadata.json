@@ -1,0 +1,37 @@
+{
+  "name": "seo-unlighthouse",
+  "repo": "zhtyyx/codex-seo",
+  "path": "extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zhtyyx/codex-seo",
+  "dir_name": "seo-unlighthouse-zhtyyx-codex-seo",
+  "downloaded_at": "2026-11-16T14:55:46.930456Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zhtyyx",
+  "source_url": "https://github.com/zhtyyx/codex-seo/blob/main/extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zhtyyx/codex-seo/blob/main/extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Multi-page Lighthouse audit via the MIT-licensed Unlighthouse CLI. Free-tier alternative to running PageSpeed against every URL on a site, no API quota burn, runs locally."
+}

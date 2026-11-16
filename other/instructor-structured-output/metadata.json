@@ -1,0 +1,37 @@
+{
+  "name": "instructor-structured-output",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/instructor-structured-output/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "instructor-structured-output",
+  "downloaded_at": "2026-11-16T14:27:04.396235Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/instructor-structured-output/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/instructor-structured-output/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when extracting structured data (JSON, typed objects) from LLM responses with validation and retries. Triggers on: 'instructor', 'structured output', 'extract JSON from LLM', 'pydantic llm', 'LLM return JSON', 'tr\u00edch xu\u1ea5t d\u1eef li\u1ec7u t\u1eeb LLM', 'LLM tr\u1ea3 v\u1ec1 JSON', 'parse LLM output', 'validated LLM output', 'schema extraction'."
+}

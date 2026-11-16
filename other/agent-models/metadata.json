@@ -1,0 +1,37 @@
+{
+  "name": "agent-models",
+  "repo": "yzhao062/anywhere-agents",
+  "path": "skills/agent-models/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yzhao062/anywhere-agents",
+  "dir_name": "agent-models",
+  "downloaded_at": "2026-11-16T14:50:20.290898Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yzhao062",
+  "source_url": "https://github.com/yzhao062/anywhere-agents/blob/main/skills/agent-models/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yzhao062/anywhere-agents/blob/main/skills/agent-models/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Show, check, and change the model and effort every agent role runs on (interactive sessions, /vet reviewers, review panels, audits, Claude subagents and Workflow agents, prun workers, the Claude advisor) through the one registry at user/agent-models.json. Use when the user asks which model something runs on, wants to switch a model or effort, suspects a setting is not taking effect, or adds a script that launches a model."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "performing-s7comm-protocol-security-analysis",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/performing-s7comm-protocol-security-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "performing-s7comm-protocol-security-analysis-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:39:18.350862Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-s7comm-protocol-security-analysis/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-s7comm-protocol-security-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Perform security analysis of Siemens S7comm and S7CommPlus protocols used by SIMATIC S7 PLCs to identify vulnerabilities including replay attacks, integrity bypass, unauthorized CPU stop commands, and program download manipulation exploiting weaknesses in S7-300, S7-400, S7-1200, and S7-1500 controllers."
+}

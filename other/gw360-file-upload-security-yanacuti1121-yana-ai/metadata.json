@@ -1,0 +1,37 @@
+{
+  "name": "file-upload-security",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/gw360--file-upload-security/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "gw360-file-upload-security-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:36:14.214769Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/gw360--file-upload-security/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/gw360--file-upload-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Accept user file uploads without introducing remote code execution, stored XSS, or polyglot attacks. Covers magic-byte validation, strict type allowlists, image re-encoding to defang embedded payloads, EXIF stripping, virus scanning, path-safe storage keys, and serving via a separate origin with Content-Disposition. Invoke when adding upload to a new endpoint or migrating from local-disk storage to object storage."
+}

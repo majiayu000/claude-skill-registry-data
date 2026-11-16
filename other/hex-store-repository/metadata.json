@@ -1,0 +1,37 @@
+{
+  "name": "hex-store-repository",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-store-repository/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-store-repository",
+  "downloaded_at": "2026-11-16T14:11:46.342128Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-store-repository/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-store-repository/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an aggregate is persisted on a nonrelational store \u2014 key-value, document or wide-column (redis, mongo, dynamo) \u2014 reached through an injected SDK client, or a derived index is kept beside the authoritative store. Produces the repository adapter satisfying the narrower port such a store answers, the store's settings class and connection factory, its container token and namespace keys, record mapping, and SDK-error translation. Not a relational `Table` and its migration (`hex-persistence`), and not a single-action `ICan<Verb>` port (`hex-capability-adapter`)."
+}

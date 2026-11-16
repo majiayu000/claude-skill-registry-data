@@ -1,0 +1,39 @@
+{
+  "name": "serverless-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/serverless-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "serverless-patterns-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:40:12.457499Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/serverless-patterns/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/serverless-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Build and optimize serverless functions — AWS Lambda cold starts, Cloudflare Workers edge patterns, function composition, idempotency, dead-letter queues, concurrency limits, observability, and IaC deployment with SAM/SST. Use when asked about \"Lambda\", \"serverless function\", \"cold start\", \"Cloudflare Workers\", \"edge function\", \"AWS SAM\", \"SST framework\", \"function timeout\", \"Lambda concurrency\", \"DLQ\", \"dead-letter queue\", \"idempotent Lambda\", \"serverless observability\", or \"deploy serverless\". Do NOT use for: long-running container workloads — see kubernetes-patterns or docker-patterns.",
+  "content_fingerprint": "e0252733045a4f74eaa8d6821e9a67241960031d361cf73a0d6f91244827a58d"
+}

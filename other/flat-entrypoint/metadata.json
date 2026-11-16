@@ -1,0 +1,37 @@
+{
+  "name": "flat-entrypoint",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-flat/skills/flat-entrypoint/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "flat-entrypoint",
+  "downloaded_at": "2026-11-16T14:11:42.374732Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-entrypoint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-entrypoint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when choosing how a flat-layered service is triggered and writing the process that triggers it \u2014 one run per process started by a cron entry or a timer, a loop, a continuous stream or queue consumer, a thin HTTP wrapper, or durable execution \u2014 and deciding whether a workflow engine is earned at all; one run per process is the default, and an engine is earned only by durability across process death, retries that outlive the process, or orchestration long enough that the sequence itself must survive. Owns the framework-free function every trigger calls, the process definition that builds its dependencies once and passes them down, the retry declared where the work is invoked, the aggregate a run returns, the containment that keeps one failed run from killing a long-lived process, and where a consumer acknowledges or returns its unit, under `at-least-once-delivery`. It also carries the obligations an earned engine adds, inert under every other trigger. Testing any of it is `flat-test-entrypoint`. - Also when asked for a polling loop, a `__main__` entrypoint, a nightly or periodic job, a queue or websocket consumer process, a webhook, an internal CRUD or proxy endpoint on a service with no invariants, a durable workflow, a batch loop, a heartbeat, a schedule or a cron expression, an overlap or catch-up policy, or whether this service needs a workflow engine at all."
+}

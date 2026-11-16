@@ -1,0 +1,37 @@
+{
+  "name": "dn-porting",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/dn-porting/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "dn-porting",
+  "downloaded_at": "2026-11-16T14:46:39.214369Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/dn-porting/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/dn-porting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recreating a DOS Navigator feature faithfully -- finding it in the original Pascal source (~/development/Dos-Navigator, DN.DNR/DN.DNL in CP437), naming commands and widgets after DN's cm*/T* identifiers, transcribing dialogs and menus, and recording a departure from the original. Use before implementing any feature that DOS Navigator had, or deciding whether to diverge from it."
+}

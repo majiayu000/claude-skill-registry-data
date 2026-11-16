@@ -1,0 +1,36 @@
+{
+  "name": "navigator-keybindings",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/navigator-keybindings/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "navigator-keybindings",
+  "downloaded_at": "2026-11-16T14:46:56.912829Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-keybindings/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-keybindings/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "User key bindings -- navigator/lib/config/keybindings.py (TABLES, Section, Entry, ini names, render/read/load/seed/apply/write), keybindings.ini beside navigator.ini, navkit's run-time overrides (override_keys, restore_keys, default_keys, own_keys, check_table in navkit/commands.py), Options > Configuration > Key bindings (KeyBindingsSetup, Shell.key_bindings, KeyBindingsDialog with BindingList, KeyCaptureDialog with KeyCatcher). Use when adding a key table, renaming a command a table binds, or changing how keys are rebound."
+}

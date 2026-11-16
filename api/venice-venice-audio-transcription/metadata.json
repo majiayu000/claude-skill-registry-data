@@ -1,0 +1,38 @@
+{
+  "name": "venice--venice-audio-transcription",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/venice--venice-audio-transcription/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "venice-venice-audio-transcription",
+  "downloaded_at": "2026-11-16T14:31:50.344258Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/venice--venice-audio-transcription/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/venice--venice-audio-transcription/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Transcribe audio files to text via POST /audio/transcriptions. Covers supported models (Parakeet, Whisper, Wizper, Scribe, xAI STT), supported formats (wav/flac/m4a/aac/mp4/mp3/ogg/webm), response formats (json/text), timestamps, and language hints. OpenAI-compatible multipart."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "test-principles",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/test-principles/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "test-principles",
+  "downloaded_at": "2026-11-16T14:11:50.586980Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, pytest, unittest, integration",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest",
+      "unittest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/test-principles/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/test-principles/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing or changing tests in any Python project and the question is a rule rather than a file \u2014 the layer budgets, where tests and shared fixtures sit and what may be autouse, fixture versus module-level builder, the substitution ladder and no-mocks contract, assert strength and literal expected values, intercepting HTTP, what a test against a real datastore pins, reliability, and the failing test a defect's fix starts with. Holds for a service, a library or a CLI tool alike. The fixture files a family lays are `hex-test-integration-setup`'s or `flat-test-integration-setup`'s. - Also when fixing a defect or a bug, before the fix is written."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "flat-persistence",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-flat/skills/flat-persistence/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "flat-persistence",
+  "downloaded_at": "2026-11-16T14:11:43.349258Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-persistence/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-persistence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a flat-layered service reads or writes a datastore \u2014 its table definitions, its component-owned settings class, the repository class that owns each write's transaction and builds its statements, and where its migration history lives. Owns one data-access package per store named for its technology, the SQLAlchemy Core binding of `persistence`'s store-generic rules, application-minted time-ordered keys, the settings class and engine factory the process definition builds, and one migration directory per store at the distribution root, only where the service owns the schema. Transaction ownership, driver-error translation, constraint names, conflicts and ordering, batched writes, cursor reads and safe migrations are `persistence`'s. A hexagonal service's repository adapter behind a port is `hex-persistence`, in the `pyhouse-hex` plugin; the repository root hosting a data-access library several distributions share is `python-workspace`. - Also when asked for an upsert, an `ON CONFLICT` clause, a repository class in a flat service, a second store beside the first, a constraint naming convention, a migration for a flat service or where its files go, deduplicating writes, or where a service's SQL is allowed to live."
+}

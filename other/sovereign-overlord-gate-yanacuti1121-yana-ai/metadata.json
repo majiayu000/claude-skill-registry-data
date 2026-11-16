@@ -1,0 +1,37 @@
+{
+  "name": "sovereign-overlord-gate",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/sovereign-overlord-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "sovereign-overlord-gate-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:40:24.341611Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/sovereign-overlord-gate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/sovereign-overlord-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When an agent needs to stop, roll back, or restrict access for a human \u2014 the real mechanisms are require-tier.sh's tier check, human-gate-policy.md's confirmation gate, and git's own revert/reset. Replaces an earlier design that instructed agents to implement ECDSA-P384 signed commands and a \"freeze the swarm\" API that was never built."
+}

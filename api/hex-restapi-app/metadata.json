@@ -1,0 +1,37 @@
+{
+  "name": "hex-restapi-app",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-restapi-app/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-restapi-app",
+  "downloaded_at": "2026-11-16T14:11:40.274585Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-restapi-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-restapi-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when bootstrapping a FastAPI shell once per project, or changing request handling shared by every route \u2014 `restapi/main.py`, `restapi/error_handler.py`, `restapi/schemas/errors.py`, app lifecycle, CORS, middleware, central error translation and the HTTP status each error class maps to. Not one resource's router (`hex-restapi-endpoint`) or its wire models (`hex-restapi-schema`)."
+}

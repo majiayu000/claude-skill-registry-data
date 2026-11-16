@@ -1,0 +1,37 @@
+{
+  "name": "operator-approval-loop",
+  "repo": "wasdqwerty81972/Stai-Project",
+  "path": "skills/operator-approval-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wasdqwerty81972/Stai-Project",
+  "dir_name": "operator-approval-loop-wasdqwerty81972-stai-project",
+  "downloaded_at": "2026-11-16T14:03:10.857900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wasdqwerty81972",
+  "source_url": "https://github.com/wasdqwerty81972/Stai-Project/blob/main/skills/operator-approval-loop/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wasdqwerty81972/Stai-Project/blob/main/skills/operator-approval-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operator approval contract with internal filing notices for agent-drafted outbound messages, hashed drafts, epoch-keyed decisions, durable delivery claims and receipts, and a pre-draft baseline gate. Use when an agent drafts messages to external counterparties and a human operator must approve, reject, or steer each send before it leaves."
+}

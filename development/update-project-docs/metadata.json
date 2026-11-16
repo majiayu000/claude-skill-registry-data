@@ -1,0 +1,38 @@
+{
+  "name": "update-project-docs",
+  "repo": "waynesutton/builder-skills",
+  "path": "skills/update-project-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/waynesutton/builder-skills",
+  "dir_name": "update-project-docs",
+  "downloaded_at": "2026-11-16T14:03:50.257096Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "waynesutton",
+  "source_url": "https://github.com/waynesutton/builder-skills/blob/main/skills/update-project-docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/waynesutton/builder-skills/blob/main/skills/update-project-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Brings task.md, changelog.md, and files.md back in sync with what the code says shipped, then prints a commit message as plain text. Reads git history and the working tree, never memory, and refuses to log features it cannot see in source. Use when a feature or fix lands, when the user says /update, @update, update project docs, sync changelog, or update files.md, or when task.md and the code disagree."
+}

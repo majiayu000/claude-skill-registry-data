@@ -1,0 +1,40 @@
+{
+  "name": "kit-security-audit",
+  "repo": "zekhoi/claude",
+  "path": ".agents/skills/kit-security-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "kit-security-audit",
+  "downloaded_at": "2026-11-16T14:52:33.071293Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, vulnerability, audit",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/.agents/skills/kit-security-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/.agents/skills/kit-security-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit a codebase or component for security vulnerabilities, including injection, broken access control, secrets, unsafe deserialization, and vulnerable dependencies, and report evidence-based findings with severity and file locations. Use when the user asks for a security audit, security review of a project or component, or a dependency vulnerability check. Do not use for reviewing an ordinary diff for general correctness (use kit-code-review) or for fixing a specific known bug; this skill reports and does not edit code."
+}

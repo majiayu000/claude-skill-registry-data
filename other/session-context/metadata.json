@@ -1,0 +1,36 @@
+{
+  "name": "session-context",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/session-context/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "session-context",
+  "downloaded_at": "2026-11-16T14:30:18.387013Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/session-context/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/session-context/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load development context at session start: git branch, uncommitted changes, CONTEXT.md / TODO.md / open issues. Use when: starting a new coding session, resuming interrupted work, or when the agent needs to orient itself quickly before acting. Inspired by: disler/claude-code-hooks-mastery session_start pattern."
+}

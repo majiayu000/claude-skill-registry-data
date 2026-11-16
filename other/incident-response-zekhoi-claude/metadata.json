@@ -1,0 +1,38 @@
+{
+  "name": "kit-incident-response",
+  "repo": "zekhoi/claude",
+  "path": "registry/skills/incident-response/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "incident-response-zekhoi-claude",
+  "downloaded_at": "2026-11-16T14:52:34.692866Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, forensics=3",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/registry/skills/incident-response/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/registry/skills/incident-response/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Support a blue-team investigation of a suspected security incident by analyzing logs, alerts, and code the user provides, building a timeline, scoping affected systems, data, and accounts, extracting indicators of compromise, and producing a containment, eradication, and recovery checklist. Use when the user reports a suspected breach, compromise, leaked or committed secret or key, suspicious activity, or security alert, or asks to scrub or hide a leak and asks for help investigating or responding. Do not use for routine bugs or outages without a security angle (use kit-debugging or kit-ci-triage), or for finding vulnerabilities proactively (use kit-security-audit); this skill does not delete evidence, rotate credentials, or change systems itself."
+}

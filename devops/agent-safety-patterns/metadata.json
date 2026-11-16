@@ -1,0 +1,39 @@
+{
+  "name": "agent-safety-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/agent-safety-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "agent-safety-patterns",
+  "downloaded_at": "2026-11-16T14:21:58.157537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: cd, docker, deploy",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "cd",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/agent-safety-patterns/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/agent-safety-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design safe AI agent systems — capability restriction, sandboxed execution, human-in-the-loop gates, anomaly detection, rollback on unexpected behavior, blast radius limiting, and output verification before acting. Use when asked about \"agent safety\", \"safe agent design\", \"AI agent guardrails\", \"capability restriction\", \"agent sandbox\", \"human approval gate\", \"agent rollback\", \"blast radius\", \"agent anomaly detection\", \"agent going off the rails\", \"agent verification\", \"principle of least capability\", or \"how to make an agent safe to run autonomously\". Do NOT use for: prompt injection defense — see adversarial-prompt-testing. Do NOT use for: hook-based blocking — see hook-block-commands.",
+  "content_fingerprint": "6604d06276b16016cfe9d764c6693d78632b18c5913bc1790ce1c551dc7c3f0d"
+}

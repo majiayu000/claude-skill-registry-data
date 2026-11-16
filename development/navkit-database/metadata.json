@@ -1,0 +1,39 @@
+{
+  "name": "navkit-database",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/navkit-database/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "navkit-database",
+  "downloaded_at": "2026-11-16T14:46:43.256521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/navkit-database/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/navkit-database/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The one SQLite database (navkit/database.py) -- DATABASE, Database.open/transaction/execute, Model/Field/Index/Query, model documents in .nml (`field`/`index`/`unique` lines, navml/model.py), the `_navml_schema` fingerprints and lazy per-model migration, navml/models/ (HistoryEntry), HISTORY persisted, --database and $XDG_STATE_HOME/navigator/navigator.db. Use when adding a table, querying one from a handler, changing a model's fields, or debugging what the database file holds."
+}

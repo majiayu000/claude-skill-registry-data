@@ -1,0 +1,38 @@
+{
+  "name": "verify-before-done",
+  "repo": "varun29ankuS/shodhRAG",
+  "path": "crates/shodh-rag/skills/verify-before-done/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/varun29ankuS/shodhRAG",
+  "dir_name": "verify-before-done-varun29ankus-shodhrag",
+  "downloaded_at": "2026-11-16T13:53:42.876492Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varun29ankuS",
+  "source_url": "https://github.com/varun29ankuS/shodhRAG/blob/master/crates/shodh-rag/skills/verify-before-done/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varun29ankuS/shodhRAG/blob/master/crates/shodh-rag/skills/verify-before-done/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before saying work is done, fixed or passing. Run the commands that prove it now, read their full output, and report the evidence, including anything that failed or was not checked."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "hex-restapi-schema",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-restapi-schema/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-restapi-schema",
+  "downloaded_at": "2026-11-16T14:11:44.921342Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-restapi-schema/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-restapi-schema/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a REST request or response body gains or changes a field \u2014 the pydantic models in `restapi/schemas/<resource>.py` (`FooResponse`, `FooListResponse`, `FooCreateRequest`, `FooUpdateRequest`), PATCH `T | None = None` semantics, pagination shape, schema exports. Not the domain entity they mirror (`hex-domain-model`) and not the route that maps them (`hex-restapi-endpoint`)."
+}

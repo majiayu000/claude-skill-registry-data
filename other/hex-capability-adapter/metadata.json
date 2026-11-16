@@ -1,0 +1,37 @@
+{
+  "name": "hex-capability-adapter",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-capability-adapter/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-capability-adapter",
+  "downloaded_at": "2026-11-16T14:11:47.503676Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-capability-adapter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-capability-adapter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when implementing an `ICan<Verb>` capability against a real external system \u2014 the adapter under `infrastructure/<technology>/` wrapping an SDK client, an HTTP gateway or a pure-CPU library, translating the library's own errors into `exception-catalog` classes. Not aggregate CRUD \u2014 that is `hex-persistence` or `hex-store-repository`; the protocol is `hex-domain-ports`."
+}

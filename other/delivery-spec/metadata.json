@@ -1,0 +1,37 @@
+{
+  "name": "delivery-spec",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-delivery/skills/delivery-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "delivery-spec",
+  "downloaded_at": "2026-11-16T14:11:44.135346Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-delivery/skills/delivery-spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-delivery/skills/delivery-spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing, splitting or checking the spec for one change before it is implemented \u2014 a feature or a fix, what it names as contracts, and the behaviour its tests are written from. Owns the spec's sections and which of them exist only where the project has them, the shorter form a fix takes, contracts limited to what other code depends on, the sign that one spec is several, behaviour stated as what each path leaves behind, an optional note in words on how to see a change that shows only in a running process, a step the person must take written as the command they run, the spec's claims about today's system checked before any code is written, and which sections are frozen once the spec is ready \u2014 the goal, the scope and the contracts, a fix's symptom \u2014 and which may be refined during the work, and the status it carries from draft to implemented, set by the change itself so the mainline reads implemented only once it has landed. Not why a design was chosen \u2014 that is the project's own decision record, which a spec points at. - Also when asked for a definition of done, what a spec should say about tests, how large a spec may be, whether a spec should name internal functions and types, how to write up a bug before fixing it, or whether an implementer may change what a spec says."
+}

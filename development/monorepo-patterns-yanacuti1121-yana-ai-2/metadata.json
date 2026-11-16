@@ -1,0 +1,41 @@
+{
+  "name": "monorepo-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/monorepo-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "monorepo-patterns-yanacuti1121-yana-ai-2",
+  "downloaded_at": "2026-11-16T14:38:08.664431Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, compile",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/monorepo-patterns/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/monorepo-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Structure and operate a monorepo — Turborepo or Nx workspace setup, shared packages, task pipeline caching, change detection, publishable vs internal packages, versioning strategy, and CI optimization. Use when asked about \"monorepo\", \"Turborepo\", \"Nx\", \"workspace\", \"shared packages\", \"internal packages\", \"turbo.json\", \"task pipeline\", \"remote cache\", \"affected packages\", \"package dependency graph\", \"pnpm workspaces\", \"yarn workspaces\", or \"how to share code between apps\". Do NOT use for: CI/CD pipeline wiring — see cicd-patterns. Do NOT use for: npm package publishing — see api-design for versioning principles.",
+  "content_fingerprint": "d69d0db09630b26b0a9a936785a5a134ee7deef88357025206a265e156f2a4f5"
+}

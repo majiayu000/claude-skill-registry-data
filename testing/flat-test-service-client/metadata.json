@@ -1,0 +1,38 @@
+{
+  "name": "flat-test-service-client",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-flat/skills/flat-test-service-client/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "flat-test-service-client",
+  "downloaded_at": "2026-11-16T14:11:52.054715Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-test-service-client/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-test-service-client/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing one external-service HTTP client class with its transport stubbed \u2014 URL assembly, the outgoing request, response parsing, timeouts, translation into the service's catalog exception \u2014 bound here to `httpx2.MockTransport` under a real `httpx2` client. A unit test needing no database and no container, unlike `flat-test-entrypoint`, which stubs the same transport under the whole run against a real datastore. Not a hexagonal `ICan<Verb>` capability adapter \u2014 `hex-test-capability-adapter`, in the `pyhouse-hex` plugin."
+}

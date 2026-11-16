@@ -1,0 +1,38 @@
+{
+  "name": "review-board",
+  "repo": "vzakharov/muthur",
+  "path": ".claude/skills/review-board/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/vzakharov/muthur",
+  "dir_name": "review-board",
+  "downloaded_at": "2026-11-16T13:59:31.745141Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vzakharov",
+  "source_url": "https://github.com/vzakharov/muthur/blob/main/.claude/skills/review-board/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vzakharov/muthur/blob/main/.claude/skills/review-board/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build the branch's changed files into the review board \u2014 a claude.ai artifact laying each file out as a diff card on a pannable board \u2014 publish it, keep its link in a sticky PR comment, and handle the line comments sent to Claude from it as review feedback: fix, push, republish, reply with the commit. Invoke as `/review-board`. Use when the operator says \"review board\", \"\u0434\u043e\u0441\u043a\u0430\", \"publish the board\", \"/review-board\", or when a comment sent to Claude arrives from the board's artifact."
+}

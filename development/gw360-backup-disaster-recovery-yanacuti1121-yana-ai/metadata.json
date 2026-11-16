@@ -1,0 +1,37 @@
+{
+  "name": "backup-disaster-recovery",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/gw360--backup-disaster-recovery/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "gw360-backup-disaster-recovery-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:36:12.268433Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, refactor",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/gw360--backup-disaster-recovery/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/gw360--backup-disaster-recovery/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design backups that actually work when they are needed. Covers RPO and RTO definition, the 3-2-1 rule, encryption before leaving the host, ransomware-resistant immutable storage, restore drills, and the split between operational and legal retention. Invoke when 'we have backups but nobody has restored them' is true, after a near-miss, or before a major migration."
+}

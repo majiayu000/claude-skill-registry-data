@@ -1,0 +1,39 @@
+{
+  "name": "plan-before-building",
+  "repo": "varun29ankuS/shodhRAG",
+  "path": "crates/shodh-rag/skills/plan-before-building/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/varun29ankuS/shodhRAG",
+  "dir_name": "plan-before-building",
+  "downloaded_at": "2026-11-16T13:53:43.196600Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varun29ankuS",
+  "source_url": "https://github.com/varun29ankuS/shodhRAG/blob/master/crates/shodh-rag/skills/plan-before-building/SKILL.md",
+  "license": "MIT AND Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varun29ankuS/shodhRAG/blob/master/crates/shodh-rag/skills/plan-before-building/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Use before building a feature, a change of behaviour or anything with more than one reasonable design, before writing code. Clarify what is wanted, look for what already exists, weigh two or three approaches, and agree a short plan with the user.",
+  "content_fingerprint": "cea3c699f635085947efa5554d38af9a49a9343b88324322d2ea3d45c145e105"
+}

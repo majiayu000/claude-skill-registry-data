@@ -1,0 +1,43 @@
+{
+  "name": "performing-container-security-scanning-with-trivy",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/performing-container-security-scanning-with-trivy/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "performing-container-security-scanning-with-trivy-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:38:47.544843Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, kubernetes, deploy, infra, infrastructure",
+    "score": 7,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-container-security-scanning-with-trivy/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/performing-container-security-scanning-with-trivy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scan container images, filesystems, and Kubernetes manifests for vulnerabilities, misconfigurations, exposed secrets, and license compliance issues using Aqua Security Trivy with SBOM generation and CI/CD integration."
+}

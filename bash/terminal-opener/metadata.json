@@ -1,0 +1,39 @@
+{
+  "name": "terminal-opener",
+  "repo": "wasdqwerty81972/Stai-Project",
+  "path": ".claude/skills/terminal-opener/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/wasdqwerty81972/Stai-Project",
+  "dir_name": "terminal-opener",
+  "downloaded_at": "2026-11-16T14:02:26.721520Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wasdqwerty81972",
+  "source_url": "https://github.com/wasdqwerty81972/Stai-Project/blob/main/.claude/skills/terminal-opener/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wasdqwerty81972/Stai-Project/blob/main/.claude/skills/terminal-opener/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Open an executable and its argument array in a visible terminal window through a reusable, shell-free launch plan with dry-run, JSON, capability detection, detached fallback, and standalone recovery modes. Use when Codex needs to open an interactive CLI, SSH session, local development process, sandbox, or other argv-based command in a new host terminal; diagnose whether a supported terminal is available; or provide an actionable plan when the requested terminal is unsupported."
+}

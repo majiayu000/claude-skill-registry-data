@@ -1,0 +1,38 @@
+{
+  "name": "kit-overengineering-review",
+  "repo": "zekhoi/claude",
+  "path": "registry/skills/overengineering-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "overengineering-review",
+  "downloaded_at": "2026-11-16T14:52:45.605126Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, refactor",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/registry/skills/overengineering-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/registry/skills/overengineering-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review code or a diff specifically for unnecessary complexity, including speculative abstractions, single-implementation interfaces, reinvented standard library or platform features, unneeded dependencies, dead configuration, and indirection that adds no value, and report what to delete or simplify with the simpler replacement. Use when the user asks whether code is over-engineered, what can be deleted or simplified, or for a YAGNI, simplicity, or complexity review. Do not use for correctness or security review (use kit-code-review or kit-security-audit), or for carrying out the simplification (use kit-refactoring); this skill reports and does not edit code."
+}

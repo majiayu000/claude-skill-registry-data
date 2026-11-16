@@ -1,0 +1,38 @@
+{
+  "name": "backlog",
+  "repo": "tobihagemann/turbo",
+  "path": "claude/skills/backlog/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tobihagemann/turbo",
+  "dir_name": "backlog",
+  "downloaded_at": "2026-11-16T13:42:38.447214Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tobihagemann",
+  "source_url": "https://github.com/tobihagemann/turbo/blob/main/claude/skills/backlog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tobihagemann/turbo/blob/main/claude/skills/backlog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Capture an out-of-scope improvement or accepted simplification in .turbo/backlog.md. Use proactively mid-task, or when the user asks to \"backlog this\", \"note this idea\", or \"track this for later\"."
+}

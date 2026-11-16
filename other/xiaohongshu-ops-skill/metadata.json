@@ -1,0 +1,37 @@
+{
+  "name": "xiaohongshu-ops-skill",
+  "repo": "zhaog100/openclaw-skills",
+  "path": "skills/xiaohongshu-ops-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zhaog100/openclaw-skills",
+  "dir_name": "xiaohongshu-ops-skill",
+  "downloaded_at": "2026-11-16T14:54:55.451311Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zhaog100",
+  "source_url": "https://github.com/zhaog100/openclaw-skills/blob/main/skills/xiaohongshu-ops-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zhaog100/openclaw-skills/blob/main/skills/xiaohongshu-ops-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "小红书相关操作,覆盖账号定位、选题研究、内容生产、发布执行与复盘修复的小红书全链路运营技能。凡是小红书的浏览/搜索/发布/评论任务,默认必须使用 OpenClaw 内置浏览器流程并指定 profile=\"openclaw\";除非用户明确要求,否则不要使用系统 open 或外部浏览器。",
+  "content_fingerprint": "642da161be82e54eb320afcc5f7d38de2032b97d998c83c09ddaa8720e4138cd"
+}

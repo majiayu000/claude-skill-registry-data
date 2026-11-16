@@ -1,0 +1,38 @@
+{
+  "name": "flat-test-entrypoint",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-flat/skills/flat-test-entrypoint/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "flat-test-entrypoint",
+  "downloaded_at": "2026-11-16T14:11:51.288942Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-test-entrypoint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-test-entrypoint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing what a flat-layered service's trigger actually runs \u2014 the function it calls end to end against the store or files it really writes, with only the upstream transport stubbed and an idempotence test wherever a run can repeat, the containment contract of a process that outlives one run, and the framework wrapper through its own in-process harness, proving only that the wrapper reaches the work and that the work's failure arrives as its catalogue code. Where a durable-execution engine was earned, it adds the orchestration level above those, every step stubbed by its registered wire name. Not the client's own transport, which is `flat-test-service-client`, and not the data-access package's write path, which is `flat-test-persistence`. - Also when asked to test a job's or a consumer's body, a polling loop's error handling, a wrapper class, an HTTP route in front of the work it calls, a workflow's retry policy, a batch loop's termination, or what a continuation carries across runs."
+}

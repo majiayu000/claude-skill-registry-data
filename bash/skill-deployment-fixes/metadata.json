@@ -1,0 +1,39 @@
+{
+  "name": "skill-deployment-fixes",
+  "repo": "zhaog100/openclaw-skills",
+  "path": "skills/skill-deployment-fixes/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/zhaog100/openclaw-skills",
+  "dir_name": "skill-deployment-fixes",
+  "downloaded_at": "2026-11-16T14:54:56.386218Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zhaog100",
+  "source_url": "https://github.com/zhaog100/openclaw-skills/blob/main/skills/skill-deployment-fixes/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zhaog100/openclaw-skills/blob/main/skills/skill-deployment-fixes/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Common deployment pitfalls for OpenClaw skills: OpenCV headless, shebang ordering, token config, path fixes, QMD install.",
+  "content_fingerprint": "9548110bc686c4d0c3991c2eeaf42cd2579ba1514a197ec91f907142c55c3c6d"
+}

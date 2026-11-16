@@ -1,0 +1,37 @@
+{
+  "name": "requesting-code-review",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/requesting-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "requesting-code-review-yanacuti1121-yana-ai-2",
+  "downloaded_at": "2026-11-16T14:39:53.624612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/requesting-code-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/requesting-code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked to review code, a diff, or a PR. Triggers on: 'review this', 'check my diff', 'review the PR', 'is this code ok', 'look at my changes', 'code review'. Focuses on real bugs, security issues, and env leaks \u2014 not style."
+}

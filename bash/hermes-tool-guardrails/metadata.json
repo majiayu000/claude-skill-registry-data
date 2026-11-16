@@ -1,0 +1,38 @@
+{
+  "name": "hermes-tool-guardrails",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/hermes-tool-guardrails/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "hermes-tool-guardrails",
+  "downloaded_at": "2026-11-16T14:25:44.731135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/hermes-tool-guardrails/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/hermes-tool-guardrails/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Yana AI-native (not hermes-agent-derived \u2014 see Provenance correction below) command allowlist + approval-gate pattern for safe tool execution. Block dangerous commands by default, prompt for approval on risky ones, auto-deny in non-interactive subagents. Complements YAMTAM's safe-run.sh at the agent decision level. Distinct from [[hermes-tool-loop-guard]], which detects within-turn tool-call failure loops."
+}

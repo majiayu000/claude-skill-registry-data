@@ -1,0 +1,38 @@
+{
+  "name": "navigator-desktop",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/navigator-desktop/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "navigator-desktop",
+  "downloaded_at": "2026-11-16T14:46:49.291848Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-desktop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-desktop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Saving and restoring the desktop -- Options > Save desktop / Load desktop (DN's cmSaveDesk/cmLoadDesk, SaveDesktop/RetrieveDesktop), navigator/lib/config/desktop_state.py (snapshot, save, load, restore), the SavedDesktop model, and Startup's Autosave desktop (save on exit in Navigator.on_stop, restore in on_start, the command line's directories winning). Use when changing what a saved desktop keeps or when it comes back."
+}

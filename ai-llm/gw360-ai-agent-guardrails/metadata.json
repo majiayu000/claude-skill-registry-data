@@ -1,0 +1,38 @@
+{
+  "name": "ai-agent-guardrails",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/gw360--ai-agent-guardrails/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "gw360-ai-agent-guardrails",
+  "downloaded_at": "2026-11-16T14:25:31.676845Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/gw360--ai-agent-guardrails/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/gw360--ai-agent-guardrails/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply safety controls when an LLM agent has authority to act on real systems. Covers blast-radius classification, dry-run-first patterns, out-of-band approval gates, scope locking, idempotency, kill switches, and rollback strategies. Invoke when designing an autonomous agent, when granting an LLM write access to production, or after an agent makes an unexpected change."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "release-packaging",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/release-packaging/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "release-packaging",
+  "downloaded_at": "2026-11-16T14:46:50.587960Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/release-packaging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/release-packaging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Building and releasing Navigator -- the navigator-fm distribution and navfm alias on PyPI, the single __version__, python -m build and twine, the .deb/.rpm built by packaging/linux/build.sh with nfpm, the apt/dnf repositories, GPG signing-subkey rules, .github/workflows/release.yml, native_version.py, and `nav --version`. Use for anything about packaging, versions, PyPI, Linux packages or the release workflow."
+}

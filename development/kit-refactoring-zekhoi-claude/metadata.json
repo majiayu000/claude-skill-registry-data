@@ -1,0 +1,39 @@
+{
+  "name": "kit-refactoring",
+  "repo": "zekhoi/claude",
+  "path": ".claude/skills/kit-refactoring/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "kit-refactoring-zekhoi-claude",
+  "downloaded_at": "2026-11-16T14:52:26.571061Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, debug, refactor",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/.claude/skills/kit-refactoring/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/.claude/skills/kit-refactoring/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Restructure existing code to improve its design without changing behavior, protected by tests run before and after. Use when the user asks to refactor, clean up, tidy, simplify, deduplicate, extract, rename across modules, or reorganize code, or says code is hard to read or messy, while keeping it working the same. Do not use for fixing bugs, adding features, performance work that changes behavior, or reviewing code without changing it (use kit-code-review or kit-overengineering-review)."
+}

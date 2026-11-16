@@ -1,0 +1,39 @@
+{
+  "name": "migration",
+  "repo": "wlscksdjs-bit/skills",
+  "path": "skills/migration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wlscksdjs-bit/skills",
+  "dir_name": "migration-wlscksdjs-bit-skills",
+  "downloaded_at": "2026-11-16T14:11:20.352714Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wlscksdjs-bit",
+  "source_url": "https://github.com/wlscksdjs-bit/skills/blob/main/skills/migration/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wlscksdjs-bit/skills/blob/main/skills/migration/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Bring an existing codebase into Dryforge, once. Reads the code, asks what code cannot show — business rules, security policy, what is intentional — and writes the project docs at the entry points agents already read. Use when the user invokes the `migration` skill on an existing project. Requires git.",
+  "content_fingerprint": "242da9784d58387a7b2bb547825aa213192a991711e517ccdf06d4ad2fa77d36"
+}

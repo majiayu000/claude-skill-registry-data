@@ -1,0 +1,40 @@
+{
+  "name": "testing-for-business-logic-vulnerabilities",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/testing-for-business-logic-vulnerabilities/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "testing-for-business-logic-vulnerabilities-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:41:05.255877Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, owasp",
+    "score": 4,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/testing-for-business-logic-vulnerabilities/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/testing-for-business-logic-vulnerabilities/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Identifying flaws in application business logic that allow price manipulation, workflow bypass, and privilege escalation beyond what technical vulnerability scanners can detect."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "orchestrate",
+  "repo": "zekhoi/claude",
+  "path": "plugins/agent-kit/skills/orchestrate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "orchestrate-zekhoi-claude-2",
+  "downloaded_at": "2026-11-16T14:52:38.897419Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/orchestrate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/orchestrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan and run a multi-step engineering task by splitting it into steps, assigning each step to the installed kit skill or subagent that fits (for example agent-kit:architect for design or agent-kit:planner for a step plan, agent-kit:feature-implementation to build, agent-kit:test-writing, agent-kit:documentation, agent-kit:reviewer to review), running dependent steps in order and independent steps as parallel subagents with separate file scopes, and verifying the combined result. Use when a request spans several workflows (build, test, document, review), touches several independent modules or packages, or the user asks to orchestrate, delegate, plan and execute, split the work up, work in parallel, or use subagents. Do not use for a single focused change that one skill covers (use that skill; for a change across monorepo packages, agent-kit:monorepo-change), for questions, or for code review alone (use agent-kit:code-review)."
+}

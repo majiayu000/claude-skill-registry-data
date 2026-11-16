@@ -1,0 +1,37 @@
+{
+  "name": "token-capped-workflow",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/token-capped-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "token-capped-workflow",
+  "downloaded_at": "2026-11-16T14:31:33.759837Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/token-capped-workflow/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/token-capped-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design a task workflow under an explicit token cap (e.g. 10k total) \u2014 allocate budget per phase, verify the most critical part first, and degrade gracefully when the cap nears. Use when asked to 'gi\u1edbi h\u1ea1n token', 'l\u00e0m trong 10k token', 'token cap cho task n\u00e0y', 'budget workflow', 'ti\u1ebft ki\u1ec7m chi ph\u00ed cho task', 'cheap mode', or 'work within a token limit'. Do NOT use for: choosing response length/depth \u2014 see token-budget-advisor. Do NOT use for: auditing context window bloat \u2014 see context-budget. Do NOT use for: cost-per-value scoring \u2014 see token-roi."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "kit-design-review",
+  "repo": "zekhoi/claude",
+  "path": "registry/skills/design-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "design-review-zekhoi-claude",
+  "downloaded_at": "2026-11-16T14:52:25.960938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/registry/skills/design-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/registry/skills/design-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a proposed design, plan, RFC, or architecture before or during implementation for requirements fit, simpler alternatives, trade-offs, failure modes, operability, and rollout risk, and report a recommendation with concrete concerns. Use when the user asks to review, critique, or sanity-check a design, plan, technical proposal, RFC, or architecture decision, or asks whether an approach is sound. Do not use for reviewing a code diff (use kit-code-review), for security-specific analysis (use kit-threat-model), or for implementing the design (use kit-feature-implementation); this skill reports and does not edit code."
+}

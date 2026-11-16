@@ -1,0 +1,40 @@
+{
+  "name": "terraform-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/terraform-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "terraform-patterns-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:31:21.888100Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/terraform-patterns/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/terraform-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Write production-grade Terraform — module structure, remote state, workspace strategy, variable validation, lifecycle rules, data sources, provider version pinning, and safe plan/apply workflow. Use when asked about \"Terraform\", \"IaC\", \"infrastructure as code\", \"Terraform module\", \"remote state\", \"terraform plan\", \"terraform apply\", \"state locking\", \"Terraform workspace\", \"provider version\", \"terraform import\", \"destroy protection\", \"variable validation\", or \"Terraform best practices\". Do NOT use for: Kubernetes resource manifests — see kubernetes-patterns. Do NOT use for: Pulumi or CDK — patterns differ significantly.",
+  "content_fingerprint": "e810a9dcd429ee5ed49b78b75c1c16f86f0fc648b81efc4ea6f5c038f8d16c62"
+}

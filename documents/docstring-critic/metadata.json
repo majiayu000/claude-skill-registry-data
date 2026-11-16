@@ -1,0 +1,39 @@
+{
+  "name": "docstring-critic",
+  "repo": "topoteretes/cognee",
+  "path": ".agents/skills/docstring-critic/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/topoteretes/cognee",
+  "dir_name": "docstring-critic",
+  "downloaded_at": "2026-11-16T13:44:46.605681Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown, documentation",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "topoteretes",
+  "source_url": "https://github.com/topoteretes/cognee/blob/main/.agents/skills/docstring-critic/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/topoteretes/cognee/blob/main/.agents/skills/docstring-critic/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a docstring-author patch in the Cognee pilot. Independently verify truthfulness and promotional tone, preserve supported positive framing, and write the claim ledger. Pass 2; corrects claims without expanding coverage."
+}

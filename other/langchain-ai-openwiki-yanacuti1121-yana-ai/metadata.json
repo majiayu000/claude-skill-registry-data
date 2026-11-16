@@ -1,0 +1,38 @@
+{
+  "name": "langchain-ai--openwiki",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/langchain-ai--openwiki/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "langchain-ai-openwiki-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:37:36.177728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/langchain-ai--openwiki/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/langchain-ai--openwiki/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to generate or keep repository documentation up to date via OpenWiki (langchain-ai/openwiki) \u2014 an LLM-driven CLI that writes a wiki for a codebase (or a personal knowledge base from Notion/Gmail/Slack/X/web search) and keeps it fresh via a scheduled CI pull request. Examples: \"set up OpenWiki for this repo\", \"keep the docs updated automatically\", \"generate an agent wiki\"."
+}

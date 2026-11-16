@@ -1,0 +1,38 @@
+{
+  "name": "hex-test-repository-contract",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-test-repository-contract/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-test-repository-contract",
+  "downloaded_at": "2026-11-16T14:11:53.466001Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "sdk",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-test-repository-contract/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-test-repository-contract/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing an aggregate's repository adapter \u2014 an `IFooRepository` implementation \u2014 against the real backend rather than a fake, in both halves of that contract, relational over Postgres through the `session_factory` rollback fixture (constraints on insert and on update, cascades, the pinned constraint name) and client-store (key-value, document) isolated by a fresh per-test namespace. Not a flat-layered service's storage-package write path, which is `flat-test-persistence`, in the `pyhouse-flat` plugin, not a capability port's adapter, which is `hex-test-capability-adapter`, and not the fixtures it consumes \u2014 containers, the migration run and `session_factory` are `hex-test-integration-setup`'s."
+}

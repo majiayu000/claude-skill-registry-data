@@ -1,0 +1,40 @@
+{
+  "name": "Git Commit Helper",
+  "repo": "underPressue/dotfiles",
+  "path": ".agents/skills/git-commit-helper/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/underPressue/dotfiles",
+  "dir_name": "git-commit-helper-underpressue-dotfiles-2",
+  "downloaded_at": "2026-11-16T13:50:16.749607Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, docker, infra, infrastructure",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "docker",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "underPressue",
+  "source_url": "https://github.com/underPressue/dotfiles/blob/master/.agents/skills/git-commit-helper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/underPressue/dotfiles/blob/master/.agents/skills/git-commit-helper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate descriptive commit messages by analyzing git diffs. Use when the user asks for help writing commit messages or reviewing staged changes.",
+  "content_fingerprint": "791be9d09704bcbe34142510b3ab4380445fb24b1a73f70c4587fcb4fc41a03b"
+}

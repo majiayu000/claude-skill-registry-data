@@ -1,0 +1,39 @@
+{
+  "name": "prompt-caching-strategy",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/prompt-caching-strategy/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "prompt-caching-strategy",
+  "downloaded_at": "2026-11-16T14:29:33.986894Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/prompt-caching-strategy/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/prompt-caching-strategy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Minimize token cost and latency with Anthropic prompt caching — cache breakpoints, static vs dynamic block separation, skills snapshot pre-computation, context invalidation strategy, and 90% cost reduction patterns for repeated system content. Use when asked about \"prompt caching\", \"cache breakpoint\", \"reduce token cost\", \"Anthropic caching\", \"cache_control\", \"reuse system prompt\", \"skills snapshot\", \"context invalidation\", \"token budget\", \"90% cache hit\", \"cost optimization for Claude\", or \"cached prompt tokens\". Do NOT use for: general output budget — see the OUTPUT_BUDGET_POLICY.md. Do NOT use for: session memory compaction — see pre-compact-backup.",
+  "content_fingerprint": "7cce873c5e6c0a951ed8615d7597d47c75b6195dc5ffb40158e452dc86e67cf4"
+}

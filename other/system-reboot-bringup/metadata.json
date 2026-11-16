@@ -1,0 +1,38 @@
+{
+  "name": "system-reboot-bringup",
+  "repo": "yuiseki/ai-secretary",
+  "path": ".agents/skills/system-reboot-bringup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yuiseki/ai-secretary",
+  "dir_name": "system-reboot-bringup",
+  "downloaded_at": "2026-11-16T14:49:16.664869Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuiseki",
+  "source_url": "https://github.com/yuiseki/ai-secretary/blob/main/.agents/skills/system-reboot-bringup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuiseki/ai-secretary/blob/main/.agents/skills/system-reboot-bringup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ubuntu/KDE デスクトップを再起動したあとに、この環境の常駐プロセス群（VOICEVOX API、VacuumTube、whisper.cpp 音声コマンド待受、acaption/asec オーバーレイ、ASEE Viewer ウェブカメラオーバーレイ）を順序よく復旧する。ユーザーが『再起動後の起動手順をやって』『常駐プロセスを全部立ち上げて』『音声待受とカメラ監視を復旧して』など依頼したときに使う。",
+  "content_fingerprint": "4b9f7315b467f972e1c1d5fdc66f6e228ae981acc5ed8e277c3210bdecbd2b86"
+}

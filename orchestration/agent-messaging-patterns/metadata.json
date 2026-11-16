@@ -1,0 +1,39 @@
+{
+  "name": "agent-messaging-patterns",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/agent-messaging-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "orchestration",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "agent-messaging-patterns",
+  "downloaded_at": "2026-11-16T14:21:56.841125Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "orchestration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for orchestration: orchestrator, coordination, multi-agent",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "orchestrator",
+      "coordination",
+      "multi-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/agent-messaging-patterns/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/agent-messaging-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Wire inter-agent communication — signal files, shared state via files/KV, approval queues, budget delegation, capability passing, and broadcast/ subscribe patterns for agents running in parallel terminals or processes. Use when asked about \"agents communicating\", \"agent signals\", \"how agent A tells agent B\", \"agent approval queue\", \"agent budget cap\", \"pass context between agents\", \"agent broadcast\", \"agent subscribe\", \"hcom\", \"inter-agent protocol\", \"agent pipeline\", or \"agent tool approval chain\". Do NOT use for: git-based agent coordination — see git-native-agent-protocol. Do NOT use for: subagent spawning API — see subagent-dependency.",
+  "content_fingerprint": "ac7b89c8ca7cfd60ee78ece8a3ef6ac7d5f6aa4c618bd0bcdf576e0424ad4902"
+}

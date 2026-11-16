@@ -1,0 +1,38 @@
+{
+  "name": "hex-restapi-endpoint",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-hex/skills/hex-restapi-endpoint/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "hex-restapi-endpoint",
+  "downloaded_at": "2026-11-16T14:11:45.656466Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-restapi-endpoint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-hex/skills/hex-restapi-endpoint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when adding or changing one REST route, or creating a resource's router file `restapi/routers/<resource>.py` \u2014 thin routes over application handlers, a route that carries a file, dishka handler injection, route ordering, and which error codes the route advertises. Owns the per-operation code sets and advertise-only-what-you-produce. The pydantic models are `hex-restapi-schema`; the auth dependency and the `401` / `403` that follow it are `hex-restapi-auth`."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "supply-chain-security",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/supply-chain-security/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "supply-chain-security-yanacuti1121-yana-ai-2",
+  "downloaded_at": "2026-11-16T14:40:47.198115Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/supply-chain-security/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/supply-chain-security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Secure the software supply chain — SBOM generation, dependency provenance verification, package integrity (Sigstore/npm provenance), lockfile auditing, typosquatting detection, CI artifact signing, and dependency update policy. Use when asked about \"SBOM\", \"software bill of materials\", \"supply chain attack\", \"dependency provenance\", \"Sigstore\", \"npm provenance\", \"package integrity\", \"typosquatting\", \"dependency confusion\", \"artifact signing\", \"SLSA\", \"slsa framework\", \"lockfile security\", or \"third-party package risk\". Do NOT use for: secret scanning in code — see secret-management. Do NOT use for: runtime vulnerability scanning — see security-pipeline.",
+  "content_fingerprint": "bf1749cab5c0660fcf56b6c128f09ab81dd5ad49e96fc446db8433864ee92bfc"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "quarkus-tdd",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/quarkus-tdd/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "quarkus-tdd-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:29:40.021860Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, integration",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "tdd",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/quarkus-tdd/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/quarkus-tdd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Test-driven development for Quarkus 3.x LTS using JUnit 5, Mockito, REST Assured, Camel testing, and JaCoCo. Use when adding features, fixing bugs, or refactoring event-driven services."
+}

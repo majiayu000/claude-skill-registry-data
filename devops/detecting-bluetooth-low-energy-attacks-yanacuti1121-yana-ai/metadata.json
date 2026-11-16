@@ -1,0 +1,39 @@
+{
+  "name": "detecting-bluetooth-low-energy-attacks",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/detecting-bluetooth-low-energy-attacks/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "detecting-bluetooth-low-energy-attacks-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:24:20.822563Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra, infrastructure",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/detecting-bluetooth-low-energy-attacks/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/detecting-bluetooth-low-energy-attacks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects and analyzes Bluetooth Low Energy (BLE) security attacks including sniffing, replay attacks, GATT enumeration abuse, and Man-in-the-Middle interception. Uses Ubertooth One and nRF52840 sniffers for packet capture, the bleak Python library for GATT service enumeration, and crackle for BLE encryption cracking. Use when assessing IoT device BLE security, monitoring for BLE-based attacks on wireless infrastructure, or performing authorized BLE penetration testing. Activates for requests involving BLE security assessment, Ubertooth sniffing, GATT enumeration, or BLE replay detection."
+}

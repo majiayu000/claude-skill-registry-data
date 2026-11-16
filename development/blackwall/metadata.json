@@ -1,0 +1,38 @@
+{
+  "name": "blackwall",
+  "repo": "vinta/hal-9000",
+  "path": "plugins/evals/hal-skills/best-practices/sandbox-run-skill/fixture-plugin/skills/blackwall/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/vinta/hal-9000",
+  "dir_name": "blackwall",
+  "downloaded_at": "2026-11-16T13:56:12.917725Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vinta",
+  "source_url": "https://github.com/vinta/hal-9000/blob/main/plugins/evals/hal-skills/best-practices/sandbox-run-skill/fixture-plugin/skills/blackwall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vinta/hal-9000/blob/main/plugins/evals/hal-skills/best-practices/sandbox-run-skill/fixture-plugin/skills/blackwall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run, configure, and debug blackwall, the sandbox for claude, codex, and other dev commands (srt: Seatbelt on macOS, bubblewrap on Linux). Use when the user asks whether this session is sandboxed or what it can read, write, or reach, mentions blackwall, wants a command run sandboxed, or wants the sandbox to reach a path, host, or tool: ~/.blackwall/config.json, .blackwall/config.json, presets, --add-dir, --trust; or wants a blackwall bug report. Also use inside a sandboxed session when a command fails with `Operation not permitted` on a path that exists, `CONNECT tunnel failed, response 403`, ENOTFOUND or `nodename nor servname provided` for every host, a write under /tmp or ~ that fails or vanishes, or blackwall itself refuses with `can't run inside a sandbox`: those are blackwall denials, not project bugs. Not for configuring Claude Code's built-in sandbox or Codex's sandbox_mode."
+}

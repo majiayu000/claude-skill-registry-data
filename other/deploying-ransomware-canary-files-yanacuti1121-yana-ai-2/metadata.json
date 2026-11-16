@@ -1,0 +1,39 @@
+{
+  "name": "deploying-ransomware-canary-files",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/deploying-ransomware-canary-files/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "deploying-ransomware-canary-files-yanacuti1121-yana-ai-2",
+  "downloaded_at": "2026-11-16T14:34:32.452266Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "business",
+      "operations",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/deploying-ransomware-canary-files/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/deploying-ransomware-canary-files/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploys and monitors ransomware canary files across critical directories using Python's watchdog library for real-time filesystem event detection. Places strategically named decoy files that mimic high-value targets (financial records, credentials, database exports) in locations ransomware typically enumerates first. Monitors for any read, modify, rename, or delete operations on canary files and triggers immediate alerts via email, Slack webhook, or syslog when interaction is detected, providing early warning before full encryption begins."
+}

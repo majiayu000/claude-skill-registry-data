@@ -1,0 +1,38 @@
+{
+  "name": "python-workspace",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/python-workspace/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "python-workspace",
+  "downloaded_at": "2026-11-16T14:11:46.975532Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-workspace/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-workspace/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when several Python distributions live in one repository \u2014 creating the workspace root, or admitting a member to it. Covers the root project as a container with no runtime code of its own, the shared-library versus runnable-member split, the two-sentence admission test a new member passes, in-repository dependency edges the packaging tool resolves rather than path hacks, tooling values settled once at the root, one container profile per runnable member, and the task-runner targets that sync every member, type-check and test each member from its own directory, apply migrations where members share a store, and launch each member from its own directory. Everything here is about members, never about what is inside one, so a member of any internal layout needs the same root. One distribution on its own needs none of it; a member's own layout and data access belong to that member's architecture skills, and whether a proposed member is a boundary at all is `coupling`. - Also when asked for a monorepo, a uv workspace, a `packages/` and `services/` layout, a root `Makefile` target, or a `docker compose` profile per runnable member."
+}

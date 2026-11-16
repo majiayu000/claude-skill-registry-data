@@ -1,0 +1,37 @@
+{
+  "name": "video-generation",
+  "repo": "yikart/AiToEarn",
+  "path": "skills/doubao-skill-aitoearn/skills/video-generation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/yikart/AiToEarn",
+  "dir_name": "video-generation",
+  "downloaded_at": "2026-11-16T14:45:11.152391Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yikart",
+  "source_url": "https://github.com/yikart/AiToEarn/blob/main/skills/doubao-skill-aitoearn/skills/video-generation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yikart/AiToEarn/blob/main/skills/doubao-skill-aitoearn/skills/video-generation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate, edit, or extend videos with Seedance models via list_video_generation_models and generate_video; optimizes prompts per model's conventions. Use when user asks to create, edit, extend, or storyboard a video, or mentions seedance / text-to-video / image-to-video / video-to-video."
+}

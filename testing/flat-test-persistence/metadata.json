@@ -1,0 +1,38 @@
+{
+  "name": "flat-test-persistence",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-flat/skills/flat-test-persistence/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "flat-test-persistence",
+  "downloaded_at": "2026-11-16T14:11:51.518375Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-test-persistence/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-test-persistence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing a flat-layered service's data-access package against the real datastore \u2014 its tables and the repository class that owns its transactions \u2014 pinning the generated constraint name where the translator branches on it, the catalogue exception a driver error is translated into on each write and read the class has, what each read returns, and each write's conditional contract where it has one \u2014 an upsert's update set from both sides, an ordering-stamp guard where writes for one key can arrive out of order, an empty update set, a batch's chunk edge and same-key inputs, a paged read's tied edge, a multi-statement write's atomicity. Consumes the container and isolation fixtures rather than laying them (`flat-test-integration-setup`). Not the function a trigger calls that reaches this write path, which is `flat-test-entrypoint`, and not a hexagonal `IFooRepository` adapter, which is `hex-test-repository-contract`, in the `pyhouse-hex` plugin."
+}

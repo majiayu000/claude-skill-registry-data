@@ -1,0 +1,37 @@
+{
+  "name": "console-command-line",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/console-command-line/SKILL.md",
+  "github_branch": "master",
+  "category": "writing",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "console-command-line",
+  "downloaded_at": "2026-11-16T14:46:56.226946Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writer, copy",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/console-command-line/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/console-command-line/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The console and the command line -- navkit/console.py (pyte, ConsoleScreen, alternate screen, query answers), navkit/process.py (PtyProcess), navigator/lib/system/subshell.py (persistent $SHELL, OSC 6973 marks, silent cd, held-back prompt, completion, history, atuin), the Console widget and Ctrl+O, the CommandLine (TCommandLine), Tab completion and CompletionList, running a program with every key, executing a file, Ctrl+Enter insert name, console selection. Use when touching anything that runs a command or shows its output."
+}

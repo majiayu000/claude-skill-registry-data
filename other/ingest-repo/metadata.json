@@ -1,0 +1,37 @@
+{
+  "name": "ingest-repo",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/ingest-repo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "ingest-repo",
+  "downloaded_at": "2026-11-16T14:27:03.761448Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/ingest-repo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/ingest-repo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Semantic codebase ingestion \u2014 given a topic or repo URL, agent maps the dependency graph, identifies key entry points, filters noise files, and synthesizes a structured spec. BloopAI-inspired semantic search over code at macro scale. Triggered by /ingest-repo."
+}

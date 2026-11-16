@@ -1,0 +1,38 @@
+{
+  "name": "docstring-author",
+  "repo": "topoteretes/cognee",
+  "path": ".agents/skills/docstring-author/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/topoteretes/cognee",
+  "dir_name": "docstring-author",
+  "downloaded_at": "2026-11-16T13:44:45.997345Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "topoteretes",
+  "source_url": "https://github.com/topoteretes/cognee/blob/main/.agents/skills/docstring-author/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/topoteretes/cognee/blob/main/.agents/skills/docstring-author/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or improve Python docstrings on the ten files in pilot_files.md, making supported Cognee benefits and connections between capabilities explicit. Pass 1 of the docstring pilot; a separate critic verifies the patch and writes the claim ledger."
+}

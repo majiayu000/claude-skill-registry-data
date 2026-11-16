@@ -1,0 +1,40 @@
+{
+  "name": "claude-code-harness",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/claude-code-harness/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "claude-code-harness-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:34:00.962337Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for productivity: productivity, workflow, task, planning, memory",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "productivity",
+      "workflow",
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/claude-code-harness/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/claude-code-harness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when setting up a structured Plan\u2192Work\u2192Review\u2192Release cycle for autonomous agents, integrating Claude Code with Codex/Cursor/OpenCode, enforcing spec-first development gates, or protecting against agent self-modification. Triggers on: 'claude-code-harness', 'harness cycle', 'agent release cycle', 'spec gate', 'plan work review release', 'harness-plan', 'harness-work', 'harness-review', 'harness-release', 'codex integration', 'cursor integration', 'opencode integration', 'multi-tool agent workflow', 'autonomous agent cycle', 'agent t\u1ef1 \u0111\u1ed9ng release'."
+}

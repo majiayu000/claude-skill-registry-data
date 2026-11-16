@@ -1,0 +1,37 @@
+{
+  "name": "create-prd",
+  "repo": "waynesutton/builder-skills",
+  "path": "skills/create-prd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/waynesutton/builder-skills",
+  "dir_name": "create-prd-waynesutton-builder-skills",
+  "downloaded_at": "2026-11-16T14:03:48.821144Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "waynesutton",
+  "source_url": "https://github.com/waynesutton/builder-skills/blob/main/skills/create-prd/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/waynesutton/builder-skills/blob/main/skills/create-prd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes a short PRD in prds/<slug>.md before non trivial work: problem, root cause for bugs, proposed solution, files to change, edge cases, verification steps, and a completion log, with UTC metadata. Then queues the work in task.md. Use before any multi file feature, schema change, architectural decision, or bug that took real investigation, or when the user says write a PRD, @create-prd, or plan this."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "token-roi",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/token-roi/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "token-roi-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:31:34.095540Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/token-roi/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/token-roi/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Token budget analytics and ROI scoring for AI agent actions. Track token cost per fix, detect wasteful loops, auto-route to fast tier when burn rate is too high. Integrates with token-budget-guard.sh hook. Triggered by /cost-report, \"how much did that cost\", \"token usage\", \"am I wasting tokens\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "flat-test-integration-setup",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-flat/skills/flat-test-integration-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "flat-test-integration-setup",
+  "downloaded_at": "2026-11-16T14:11:53.719002Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-test-integration-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-test-integration-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when laying the shared fixtures a flat-layered service's integration tests rest on \u2014 the suite-owned datastore container, the exact-name safety guard any database the suite did not start must pass, the migration round trip, the session-scoped engine every fixture and test shares one event loop with, the rollback-scoped connection for code that accepts one, and the whole-schema wipe for code that opens its own transaction. Lives in the distribution's own `tests/integration/conftest.py`. Testing the data-access package against that datastore is `flat-test-persistence`; a hexagonal package's conftest hierarchy with a per-test dishka container is `hex-test-integration-setup`, in the `pyhouse-hex` plugin. - Also when asked where a flat service's test fixtures live, how integration tests get a real database, why a test suite must never truncate a developer's database, or why a session-scoped engine needs a session-scoped event loop."
+}

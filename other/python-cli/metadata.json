@@ -1,0 +1,37 @@
+{
+  "name": "python-cli",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/python-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "python-cli",
+  "downloaded_at": "2026-11-16T14:11:40.938624Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing or changing a Python command-line interface \u2014 a CLI tool, or a command added to a service of either family \u2014 its commands and their arguments, the exit code each outcome leaves, and the test that invokes them. Owns the thin command that parses its arguments, calls one ordinary typed function and renders its result, the exit-code map written once at the boundary with success alone at zero, every catalogue failure on a non-zero code of its own and an unexpected exception keeping its traceback, commands that never import one another, the command line as the tool's published surface, and the in-process test through the library's runner asserting the exit code and the output as literals; bound to typer. Settings, the output and log streams, the console-script declaration and the error classes stay with `python-settings`, `python-logging`, `python-toolchain` and `exception-catalog`; whether a CLI tool takes an architecture family is `architecture-choice`."
+}

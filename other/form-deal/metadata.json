@@ -1,0 +1,39 @@
+{
+  "name": "form-deal",
+  "repo": "tonone-ai/tonone",
+  "path": "skills/form-deal/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tonone-ai/tonone",
+  "dir_name": "form-deal",
+  "downloaded_at": "2026-11-16T13:43:11.600964Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "tonone-ai",
+  "source_url": "https://github.com/tonone-ai/tonone/blob/main/skills/form-deal/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tonone-ai/tonone/blob/main/skills/form-deal/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deal a pre-vetted palette and type pairing for a trade and page kind, avoiding recent picks. Use when asked to \"deal me a palette\", \"pick a starting palette and fonts\", \"re-deal\", or \"form-deal\". A starting deal, not a verdict."
+}

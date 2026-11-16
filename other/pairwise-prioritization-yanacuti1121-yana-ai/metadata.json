@@ -1,0 +1,37 @@
+{
+  "name": "pairwise-prioritization",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/pairwise-prioritization/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "pairwise-prioritization-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:38:37.601676Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/pairwise-prioritization/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/pairwise-prioritization/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prioritize a task list by direct pairwise comparison instead of isolated scoring \u2014 compare every pair on importance, urgency, and impact, then produce a ranked execution order. Use when asked 'so t\u1eebng c\u1eb7p', 's\u1eafp x\u1ebfp \u01b0u ti\u00ean', 'prioritize these tasks', 'vi\u1ec7c n\u00e0o l\u00e0m tr\u01b0\u1edbc', 'rank this backlog', '\u0111\u1eb7t \u0111\u1ed9 \u01b0u ti\u00ean', or 'compare tasks head to head'. Do NOT use for: choosing between solution options \u2014 see option-tournament. Do NOT use for: sprint ceremony planning \u2014 see /sprint-planning."
+}

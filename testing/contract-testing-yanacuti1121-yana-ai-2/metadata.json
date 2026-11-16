@@ -1,0 +1,40 @@
+{
+  "name": "contract-testing",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/contract-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "contract-testing-yanacuti1121-yana-ai-2",
+  "downloaded_at": "2026-11-16T14:34:20.551494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration, e2e, playwright",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "integration",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/contract-testing/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/contract-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design and implement consumer-driven contract tests — Pact consumer interactions, provider verification, Pact Broker publishing, and CI/CD integration. Use when asked to \"contract testing\", \"Pact\", \"consumer-driven contracts\", \"provider verification\", \"Pact Broker\", \"can I deploy\", \"breaking API changes\", \"how to test microservice boundaries without E2E tests\", or \"verify this API change won't break consumers\". Do NOT use for: full E2E testing of a user journey — use e2e-testing skill. Do NOT use for: API schema validation alone — contracts go further by verifying consumer-specific interactions.",
+  "content_fingerprint": "915eae5aa7dd114e23d49fec7d91317789ea24c3a2977e2d28dc70108181f03a"
+}

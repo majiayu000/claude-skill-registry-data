@@ -1,0 +1,39 @@
+{
+  "name": "detecting-ransomware-encryption-behavior",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/detecting-ransomware-encryption-behavior/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "detecting-ransomware-encryption-behavior-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:24:34.230517Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, xlsx, docx",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/detecting-ransomware-encryption-behavior/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/detecting-ransomware-encryption-behavior/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects ransomware encryption activity in real time using entropy analysis, file system I/O monitoring, and behavioral heuristics. Identifies mass file modification patterns, abnormal entropy spikes in written data, and suspicious process behavior characteristic of ransomware encryption routines. Activates for requests involving ransomware behavioral detection, entropy-based file monitoring, I/O anomaly detection, or real-time encryption activity alerting."
+}

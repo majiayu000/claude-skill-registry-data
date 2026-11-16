@@ -1,0 +1,39 @@
+{
+  "name": "diagnose",
+  "repo": "yikart/AiToEarn",
+  "path": "project/aitoearn-backend/.agents/skills/diagnose/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yikart/AiToEarn",
+  "dir_name": "diagnose-yikart-aitoearn",
+  "downloaded_at": "2026-11-16T14:45:01.732640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, testing=4",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yikart",
+  "source_url": "https://github.com/yikart/AiToEarn/blob/main/project/aitoearn-backend/.agents/skills/diagnose/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yikart/AiToEarn/blob/main/project/aitoearn-backend/.agents/skills/diagnose/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce \u2192 minimise \u2192 hypothesise \u2192 instrument \u2192 fix \u2192 regression-test. Use when user says \"diagnose this\" / \"debug this\", reports a bug, says something is broken/throwing/failing, or describes a performance regression."
+}

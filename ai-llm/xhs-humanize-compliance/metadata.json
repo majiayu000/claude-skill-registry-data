@@ -1,0 +1,38 @@
+{
+  "name": "xhs-humanize-compliance",
+  "repo": "wenziai/wenzi-xiaohongshu-workflow",
+  "path": "xhs-humanize-compliance/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/wenziai/wenzi-xiaohongshu-workflow",
+  "dir_name": "xhs-humanize-compliance",
+  "downloaded_at": "2026-11-16T14:06:08.835422Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wenziai",
+  "source_url": "https://github.com/wenziai/wenzi-xiaohongshu-workflow/blob/main/xhs-humanize-compliance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wenziai/wenzi-xiaohongshu-workflow/blob/main/xhs-humanize-compliance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user has an AI-generated Xiaohongshu draft and wants it to sound more personal, concrete, platform-appropriate, and stronger in hook, retention, and interaction value. Trigger phrases: \"去 AI 味\", \"不像我\", \"合规检查\", \"改得像真人\", \"开头不抓人\", \"没停留\", \"humanize draft\", \"platform check\". Do not use for initial positioning or topic generation.",
+  "content_fingerprint": "0d430aa7a0afc0092f099ac2202869998040cae2687c69be8aceae2cec39c41f"
+}

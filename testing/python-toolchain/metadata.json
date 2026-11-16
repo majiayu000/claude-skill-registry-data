@@ -1,0 +1,38 @@
+{
+  "name": "python-toolchain",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/python-toolchain/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "python-toolchain",
+  "downloaded_at": "2026-11-16T14:11:47.933642Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-toolchain/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-toolchain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when laying down or changing the configuration every Python distribution carries once in `pyproject.toml` \u2014 the src layout, the linter's rule selection and its written function-size and complexity thresholds, the few sanctioned lint suppressions, strict type checking, the line length, the test runner's configuration block, development dependencies grouped by role, and whether a dependency this project consumes may carry a version floor \u2014 and when writing any file that names a version by hand, a Dockerfile, a compose file, a CI workflow or a hook configuration, whose versions are read from their source, never recalled. Holds alike for a service of either architecture family, a CLI tool and a library. The interpreter floor and the type-ignore policy are `python-style`'s; which runtime libraries a service's roles bring and its migration bootstrap belong to the architecture family's setup skill; the version this distribution itself declares is `python-versioning`. - Also when asked to configure ruff or mypy, why a complexity or too-many-arguments rule fired, whether a `noqa` is allowed, which line length to use, how to start a new package, library or CLI tool, where dev dependencies go, whether to pin or floor a dependency, or which version of a container image, CI action or hook to write."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "vision-window-detail",
+  "repo": "yuiseki/ai-secretary",
+  "path": ".agents/skills/vision-window-detail/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/yuiseki/ai-secretary",
+  "dir_name": "vision-window-detail",
+  "downloaded_at": "2026-11-16T14:49:15.569028Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yuiseki",
+  "source_url": "https://github.com/yuiseki/ai-secretary/blob/main/.agents/skills/vision-window-detail/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yuiseki/ai-secretary/blob/main/.agents/skills/vision-window-detail/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "指定ウィンドウだけをキャプチャして、Ollama Vision で表示内容を詳細に確認する。特定アプリの表示崩れ、再生状態、ボタン表示の確認時に使う。",
+  "content_fingerprint": "cc2d6d82cb74048dd9672b85b98bced458338209192d8bffc56d598f19eb7cd7"
+}

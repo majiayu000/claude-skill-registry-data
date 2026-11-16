@@ -1,0 +1,39 @@
+{
+  "name": "copy-slop",
+  "repo": "tonone-ai/tonone",
+  "path": "skills/copy-slop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tonone-ai/tonone",
+  "dir_name": "copy-slop",
+  "downloaded_at": "2026-11-16T13:43:10.515113Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "tonone-ai",
+  "source_url": "https://github.com/tonone-ai/tonone/blob/main/skills/copy-slop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tonone-ai/tonone/blob/main/skills/copy-slop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the deterministic copy-slop check on drafts or UI strings: AI-tell words, residue, em-dash and contrast-frame overuse, with waivers for client terms. Use when asked to \"check for AI slop\", \"does this sound like AI\", \"run the slop check\", or \"lint this copy\"."
+}

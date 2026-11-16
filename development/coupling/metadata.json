@@ -1,0 +1,38 @@
+{
+  "name": "coupling",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/coupling/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "coupling",
+  "downloaded_at": "2026-11-16T14:11:38.777149Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, software",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/coupling/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/coupling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asking whether something should be one module or two \u2014 splitting a package, extracting a service, merging two, or why a simple area keeps breaking. Weighs shared knowledge, distance and volatility to place a boundary \u2014 not which layer layout a service uses (`hex-architecture`, `flat-layered`), nor module and import mechanics (`python-packaging`). - Should these two packages be one; do we need a contract here or can they share the model; how much structure does this component deserve; a change that keeps cascading into unrelated code; reviewing a diff for knowledge that leaked across a boundary."
+}

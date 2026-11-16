@@ -1,0 +1,38 @@
+{
+  "name": "cloudflare-hardening",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/gw360--cloudflare-hardening/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "gw360-cloudflare-hardening-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:36:12.492287Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/gw360--cloudflare-hardening/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/gw360--cloudflare-hardening/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Harden a site behind Cloudflare end-to-end, from account to zone to origin. Covers DNS hygiene, origin-IP protection via Authenticated Origin Pulls and IP allowlisting, WAF managed rules, Bot Fight Mode, rate limiting, Transform Rules for security headers, Zero Trust Access for admin paths, and R2 / Pages security. Invoke when onboarding a domain, when the origin IP may be exposed, or after an attack."
+}

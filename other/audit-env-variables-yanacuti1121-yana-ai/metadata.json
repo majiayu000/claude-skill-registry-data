@@ -1,0 +1,38 @@
+{
+  "name": "audit-env-variables",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/audit-env-variables/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "audit-env-variables-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:33:21.479063Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/audit-env-variables/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/audit-env-variables/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze environment variables in JavaScript/TypeScript projects. Identifies unused variables, infers permission scopes, detects specific services (Stripe, AWS, Supabase), and documents code paths. Includes optional cleanup of unused variables with regression detection. Use when auditing .env files, reviewing security, or documenting project configuration."
+}

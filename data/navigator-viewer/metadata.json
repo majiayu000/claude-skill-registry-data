@@ -1,0 +1,37 @@
+{
+  "name": "navigator-viewer",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/navigator-viewer/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "navigator-viewer",
+  "downloaded_at": "2026-11-16T14:46:45.205275Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-viewer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-viewer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The internal file viewer (F3, DN's FVIEWER.PAS) -- navigator/lib/viewer/__init__.py (ViewSource, pread chunks), FileViewer in FileWindow, text/hex/dump modes, wrap, filters, Shift+F6 encodings (DN's XLT) and Shift+F5 Save as, the dBase viewer (dbf.py, DBWindow, As DataBase) and SQLite in it (sqlite.py), CSV in it too (table.py, As Spreadsheet), bytes-regex search on a thread with SearchJob and SearchProgress, go to address, the View menu, Ctrl+Q QuickViewer, and pictures shown on kitty/sixel terminals (image.py). Use when changing the viewer or quick view."
+}

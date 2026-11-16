@@ -1,0 +1,40 @@
+{
+  "name": "implementing-anti-ransomware-group-policy",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/implementing-anti-ransomware-group-policy/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "implementing-anti-ransomware-group-policy-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:36:41.913876Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/implementing-anti-ransomware-group-policy/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/implementing-anti-ransomware-group-policy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configures Windows Group Policy Objects (GPO) to prevent ransomware execution and limit its spread. Implements AppLocker rules, Software Restriction Policies, Controlled Folder Access, attack surface reduction rules, and network protection settings. Activates for requests involving Windows GPO hardening against ransomware, AppLocker configuration, Controlled Folder Access setup, or endpoint protection via Group Policy."
+}

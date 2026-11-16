@@ -1,0 +1,38 @@
+{
+  "name": "ccs-align",
+  "repo": "wlscksdjs-bit/skills",
+  "path": "skills/ccs-align/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/wlscksdjs-bit/skills",
+  "dir_name": "ccs-align-wlscksdjs-bit-skills",
+  "downloaded_at": "2026-11-16T14:11:19.398019Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wlscksdjs-bit",
+  "source_url": "https://github.com/wlscksdjs-bit/skills/blob/main/skills/ccs-align/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wlscksdjs-bit/skills/blob/main/skills/ccs-align/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the CCS Align seat's hourly breathing cycle — prove the local claude-mem worker is healthy, pull needle observations through search → timeline → get_observations, land them in a seat-owned middle cache via atomic grab → append → filter exclude-marks → replace, manage exclude marks, and walk house → project → seat rules to detect conflicts (SHADOW_HOUSE, DENY_ALLOW, DRIFT, CLOCK_HEADER) with an append-only rules-report.md. Use when asked to run CCS Align, breathe the alignment seat, refresh the middle cache, exclude or restore an observation, walk rules, check rules conflicts, or check the Worker Watch board.",
+  "content_fingerprint": "37a99203a172a613a5723e4222dfbce03341582212ac3e9b27040e73e46a1955"
+}

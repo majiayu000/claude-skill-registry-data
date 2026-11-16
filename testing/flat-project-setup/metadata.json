@@ -1,0 +1,38 @@
+{
+  "name": "flat-project-setup",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-flat/skills/flat-project-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "flat-project-setup",
+  "downloaded_at": "2026-11-16T14:11:45.450367Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-project-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-project-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when laying a flat-layered service down once \u2014 which runtime and development libraries each of its roles brings, with the version floors this family's templates rely on, and the relational migration bootstrap (`alembic init -t async` under `migrations/postgres/`, then the generated environment changed to read the connection string at its own composition root and see every table, the revision template changed to the house annotation forms, and a baseline only over a schema that already exists). The src layout, ruff and mypy, the line length and the dependency-floor discipline every Python project shares are `python-toolchain`'s. Never per feature \u2014 each later schema revision is `flat-persistence`'s, and the package layout inside `src/` is `flat-layered`'s. A hexagonal project's setup is `hex-project-setup`, in the `pyhouse-hex` plugin. - Also when asked to start a new worker, pipeline or ETL service, which libraries it needs, to add a dependency or justify one of this family's version floors, or to add migrations to a flat service that has none."
+}

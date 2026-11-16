@@ -1,0 +1,37 @@
+{
+  "name": "i18n",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/i18n/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "i18n-yogsagot-navigator",
+  "downloaded_at": "2026-11-16T14:46:38.766899Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, language=2",
+    "score": 2,
+    "runner_up": "language",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/i18n/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/i18n/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Translating Navigator -- navkit/i18n.py (tr, tr_n, tr_plain, LOCALE, catalogues, plural rules), the generator's live captions (`_tr` and yielding bindings for text/title/label_text/items/prompt literals), navigator/lib/config/language.py (--language, [interface] language, $LANG, the user's locales/ beside navigator.ini), Options > Interface's Language choice, and tools/i18n.py extract/check. Use when adding user-visible text, adding a language, or when a caption does not follow a language change."
+}

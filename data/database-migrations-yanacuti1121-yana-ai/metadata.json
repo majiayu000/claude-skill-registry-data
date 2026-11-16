@@ -1,0 +1,39 @@
+{
+  "name": "database-migrations",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/database-migrations/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "database-migrations-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:23:53.203441Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/database-migrations/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/database-migrations/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Manage database schema migrations safely — Prisma Migrate, Flyway, zero-downtime migration strategies, expand-contract pattern, rollback procedures, migration testing, and production deploy sequence. Use when asked about \"database migration\", \"Prisma migrate\", \"Flyway\", \"schema change\", \"add column\", \"rename column\", \"backfill data\", \"zero-downtime migration\", \"expand-contract\", \"migration rollback\", \"migrate in production\", \"NOT NULL column\", \"dropping a column safely\", or \"migration testing\". Do NOT use for: query optimization — see database-patterns. Do NOT use for: seed data for dev — separate from migration concern.",
+  "content_fingerprint": "d04c9af883f83a629a99cdd295ed4d6dd9b1e89fa88f1cf2a214ebbaf43fc02c"
+}

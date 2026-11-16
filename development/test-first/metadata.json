@@ -1,0 +1,39 @@
+{
+  "name": "test-first",
+  "repo": "varun29ankuS/shodhRAG",
+  "path": "crates/shodh-rag/skills/test-first/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/varun29ankuS/shodhRAG",
+  "dir_name": "test-first",
+  "downloaded_at": "2026-11-16T13:53:44.082174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "varun29ankuS",
+  "source_url": "https://github.com/varun29ankuS/shodhRAG/blob/master/crates/shodh-rag/skills/test-first/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/varun29ankuS/shodhRAG/blob/master/crates/shodh-rag/skills/test-first/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when implementing a feature, fixing a bug or changing behaviour, before writing the implementation. Write one failing test, watch it fail for the right reason, write the least code that passes, then tidy up with the tests green."
+}

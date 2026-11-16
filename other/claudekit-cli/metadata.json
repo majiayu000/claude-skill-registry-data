@@ -1,0 +1,37 @@
+{
+  "name": "claudekit-cli",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/claudekit-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "claudekit-cli",
+  "downloaded_at": "2026-11-16T14:23:29.421283Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/claudekit-cli/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/claudekit-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked to manage ClaudeKit projects via CLI, install/migrate skills to other coding agents (Cursor, Codex), run Claude hook diagnostics, set up a ClaudeKit web dashboard, or automate skill distribution across AI editors. Triggers on: 'claudekit', 'claudekit-cli', 'ck cli', 'install claudekit skills', 'migrate claudekit', 'claude hook diagnostics', 'skill manager cli', 'qu\u1ea3n l\u00fd skill claude code', 'ck config', 'claudekit dashboard'."
+}

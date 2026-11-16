@@ -1,0 +1,37 @@
+{
+  "name": "triage-backlog",
+  "repo": "tobihagemann/turbo",
+  "path": "codex/skills/triage-backlog/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tobihagemann/turbo",
+  "dir_name": "triage-backlog",
+  "downloaded_at": "2026-11-16T13:42:42.123915Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, software",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tobihagemann",
+  "source_url": "https://github.com/tobihagemann/turbo/blob/main/codex/skills/triage-backlog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tobihagemann/turbo/blob/main/codex/skills/triage-backlog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triage .turbo/backlog.md: merge duplicates and decide with the user what to keep or drop. Use when the user asks to \"triage the backlog\", \"clean up the backlog\", or \"groom the backlog\"."
+}

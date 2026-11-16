@@ -1,0 +1,36 @@
+{
+  "name": "python-style",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/python-style/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "python-style",
+  "downloaded_at": "2026-11-16T14:11:43.856946Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-style/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/python-style/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when choosing a type annotation, deciding what shape a record takes as it crosses a boundary, or asking whether a comment belongs here. Owns the 3.13 house interpreter floor for a new deployable project and a distributed package's floor being its consumers', `X | None` over `Optional`, the ban on `from __future__ import annotations`, immutable collection types, when a type error may be silenced inline, the rule that a fixed-shape record is a declared type rather than a bare `dict` or tuple, which builtin represents an exact decimal quantity, an instant and an identifier, and a closed set of constants as an `Enum`. What to log and which scope logs it is `python-logging`; whether a constrained scalar also earns a named type of its own belongs to the architecture family; the error classes themselves are `exception-catalog`."
+}

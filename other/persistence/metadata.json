@@ -1,0 +1,37 @@
+{
+  "name": "persistence",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-universal/skills/persistence/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "persistence",
+  "downloaded_at": "2026-11-16T14:11:43.074921Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/persistence/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-universal/skills/persistence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when code reads or writes a datastore, written or reviewed, in any project whatever its architecture \u2014 beside the family's data-access skill whenever its templates are written, since the obligations they satisfy are stated here \u2014 who owns a transaction, where a driver error is translated and what its context carries, how constraint and table names are derived, how rows map back, which stored type a value gets, how a conflicting or older write is resolved, how a batched write is sized, how a paged read orders, how a schema change ships safely, and whether data-access code logs. Owns these store-generic rules and which of them bind given the store's properties; it binds no library and writes no file. The data-access files that satisfy them are the architecture family's \u2014 `flat-persistence` in the `pyhouse-flat` plugin, `hex-persistence` or `hex-store-repository` in the `pyhouse-hex` plugin \u2014 and the error classes, translation with the cause chained and its fallback are `exception-catalog`'s. - Also when asked whether a repository may commit, why a partial write happened, what a constraint should be named, whether to use a database enum type, whether a timestamp column needs a timezone, how to stop a stale update overwriting a newer one, how to deduplicate writes, how large a batched write's chunks may be, how to page through a table without skipping rows, whether a migration is safe to deploy, whether a repository should log, how a migration chain starts, or whether a cache may take writes."
+}

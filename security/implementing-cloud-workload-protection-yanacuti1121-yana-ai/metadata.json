@@ -1,0 +1,40 @@
+{
+  "name": "implementing-cloud-workload-protection",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/implementing-cloud-workload-protection/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "implementing-cloud-workload-protection-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:36:49.668009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/implementing-cloud-workload-protection/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/implementing-cloud-workload-protection/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implements cloud workload protection using boto3 and google-cloud APIs for runtime security monitoring, process anomaly detection, and file integrity checking on EC2/GCE instances. Scans for cryptomining, reverse shells, and unauthorized binaries. Use when building runtime security controls for cloud compute workloads."
+}

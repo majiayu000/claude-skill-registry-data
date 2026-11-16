@@ -1,0 +1,37 @@
+{
+  "name": "navigator-services",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/navigator-services/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "navigator-services",
+  "downloaded_at": "2026-11-16T14:46:51.342890Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-services/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/navigator-services/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Utilities > Services, a departure from DN (DOS had no service manager) -- navigator/lib/system/services/ (the Backend interface in common.py with Unit, run/failure, Journal/LogFile/EditPlan, Follower; __init__.py's BACKENDS, current() and [services] manager, the dispatchers gather/act/details/log/edit_plan/after_edit, ordered/matches; systemd.py merging systemctl list-units and list-unit-files, drop-in overrides, daemon-reload, journalctl; openrc.py with rc-status --servicelist, rc-update show --verbose, rc-service, the own or filtered system log, /etc/conf.d; runit.py with definition directories, links in the supervised directory, sv status and its root-only supervise/, svlogd's current, conf or run; sysvinit.py with /etc/init.d scripts, LSB headers, hidden shutdown scripts, status only where handled, rc?.d links, update-rc.d/chkconfig, root-owned scripts only, /etc/default), the root helper's service/service_states/after_edit/journal_follow/journal_stop ops, ServiceList (a ColumnList), ServiceWindow (greying what a backend has not, ? states read as root, F3/F4/F5-F8, Ctrl+E/Ctrl+D, As root), F3's JournalWindow and log-file viewer, and [services] manager/refresh/journal_lines. Use when changing the Services window, adding a service manager, or changing what one runs."
+}

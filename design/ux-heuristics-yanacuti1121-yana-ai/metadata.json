@@ -1,0 +1,39 @@
+{
+  "name": "ux-heuristics",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/ux-heuristics/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "ux-heuristics-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:31:46.626321Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, frontend",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/ux-heuristics/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/ux-heuristics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Evaluate a UI against Nielsen's 10 Usability Heuristics \u2014 score each heuristic, flag violations with severity ratings, and produce a prioritized fix list. Use when the user asks for a \"UX review\", \"usability audit\", \"heuristic evaluation\", or \"why is this UI confusing to users\". Do NOT use for code quality or accessibility \u2014 use output-enforcement or accessibility-audit for those."
+}

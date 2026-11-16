@@ -1,0 +1,39 @@
+{
+  "name": "flat-layered",
+  "repo": "wntic/pyhouse",
+  "path": "plugins/pyhouse-flat/skills/flat-layered/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/wntic/pyhouse",
+  "dir_name": "flat-layered",
+  "downloaded_at": "2026-11-16T14:11:38.009264Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, database, etl, pipeline",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wntic",
+  "source_url": "https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-layered/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wntic/pyhouse/blob/main/plugins/pyhouse-flat/skills/flat-layered/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when structuring a worker, crawler, pipeline, ETL job or integration service whose family is already settled as flat \u2014 one distribution on its own by default, and one of several in a repository under the same rules. Defines the four role kinds a flat service divides into and the import contract between them, the packages named for the roles this service actually has, the package and settings class each configured component owns, the single-implementation client holding one pooled transport and a refreshable credential, and why no `Protocol` appears until a second real implementation does. Data access is one package per store, named for its technology, whose rules are `flat-persistence`; several distributions sharing one repository is `python-workspace`; an unsettled family is `architecture-choice`. - Also when asked for a worker's or a pipeline's package layout, where a client class or a settings class belongs, whether a dependency deserves an interface, or how to lay out a single-distribution repository with no workspace around it."
+}

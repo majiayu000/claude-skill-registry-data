@@ -1,0 +1,38 @@
+{
+  "name": "counterparty-channel-discipline",
+  "repo": "wasdqwerty81972/Stai-Project",
+  "path": ".claude/skills/counterparty-channel-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/wasdqwerty81972/Stai-Project",
+  "dir_name": "counterparty-channel-discipline",
+  "downloaded_at": "2026-11-16T14:01:44.959058Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: communication, messaging, chat",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "communication",
+      "messaging",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wasdqwerty81972",
+  "source_url": "https://github.com/wasdqwerty81972/Stai-Project/blob/main/.claude/skills/counterparty-channel-discipline/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wasdqwerty81972/Stai-Project/blob/main/.claude/skills/counterparty-channel-discipline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Per-channel strict prompts, mention gating, silent observation, and a communication autonomy policy for agents that sit in shared channels with external counterparties. Use when an agent joins group chats, shared channels, or DMs where outsiders can read every message and you need it to speak only when addressed, never leak internal context, and route risky content to draft-only approval."
+}

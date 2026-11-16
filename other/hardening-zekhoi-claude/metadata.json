@@ -1,0 +1,39 @@
+{
+  "name": "hardening",
+  "repo": "zekhoi/claude",
+  "path": "plugins/agent-kit/skills/hardening/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "hardening-zekhoi-claude",
+  "downloaded_at": "2026-11-16T14:52:35.430739Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, devops=4",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 4,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/hardening/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/hardening/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Harden the security configuration in the user's repository, including HTTP security headers and Content Security Policy, CORS, cookie flags, TLS and redirect settings, Dockerfiles, CI workflow permissions, dependency pinning, and secret handling, as a blue-team defensive task. Use when the user asks to harden, lock down, or secure an application's or repository's configuration, add security headers, or tighten CORS, cookies, containers, or CI permissions. Do not use for finding vulnerabilities in application logic (use agent-kit:security-audit), for writing new Dockerfiles or pipelines without a security goal, or for changing live infrastructure."
+}

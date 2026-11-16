@@ -1,0 +1,37 @@
+{
+  "name": "image-edit",
+  "repo": "yikart/AiToEarn",
+  "path": "skills/qwen-skill-aitoearn/aitoearn/references/image-edit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yikart/AiToEarn",
+  "dir_name": "image-edit-yikart-aitoearn-4",
+  "downloaded_at": "2026-11-16T14:45:22.260372Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yikart",
+  "source_url": "https://github.com/yikart/AiToEarn/blob/main/skills/qwen-skill-aitoearn/aitoearn/references/image-edit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yikart/AiToEarn/blob/main/skills/qwen-skill-aitoearn/aitoearn/references/image-edit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Edit an existing image with deterministic pixel operations via image_edit \u2014 rotate, flip, crop (free/ratio/circle), resize, compress/format-convert, adjust brightness/saturation/contrast, sharpen, blur, mosaic, rounded corners, negate, overlay, and image watermark. Use when the user asks to \u88c1\u526a/\u65cb\u8f6c/\u7ffb\u8f6c/\u7f29\u653e/\u538b\u7f29/\u6253\u7801/\u9a6c\u8d5b\u514b/\u52a0\u6c34\u5370/\u53e0\u56fe/\u5706\u89d2/\u8c03\u4eae/\u8c03\u6697/\u9510\u5316/\u6a21\u7cca an existing image, convert format, or hit a file-size limit. For AI re-creation, restyle, or adding text, use image-creation instead."
+}

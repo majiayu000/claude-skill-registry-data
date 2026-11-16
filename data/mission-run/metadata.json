@@ -1,0 +1,38 @@
+{
+  "name": "mission-run",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/mission-run/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "mission-run",
+  "downloaded_at": "2026-11-16T14:27:50.970585Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/mission-run/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/mission-run/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Parallel multi-agent mission loop using yamtam-rt \u2014 decompose task into subtasks with deps, dispatch waves, collect reports, apply changes. Use when yana-classify returns route: complex. Triggers on: 'mission run', 'run mission', 'dispatch agents', 'parallel agents', 'multi-agent task', 'orchestrate agents', 'coordinate agents', 'agent mission', 'wave dispatch', 'mission loop', 'dispatch loop', 'parallel dispatch', 'yamtam-rt mission'."
+}

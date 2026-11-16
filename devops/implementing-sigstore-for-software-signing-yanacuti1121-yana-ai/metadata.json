@@ -1,0 +1,42 @@
+{
+  "name": "implementing-sigstore-for-software-signing",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/implementing-sigstore-for-software-signing/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "implementing-sigstore-for-software-signing-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-11-16T14:37:14.855297Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, kubernetes, deploy, infra, infrastructure",
+    "score": 6,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "ci",
+      "cd",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/implementing-sigstore-for-software-signing/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/implementing-sigstore-for-software-signing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implements Sigstore-based software signing and verification using Cosign keyless signing, Rekor transparency log verification, and Fulcio certificate authority integration to establish cryptographic provenance for container images, binaries, and software artifacts. The practitioner configures OIDC-based identity binding, verifies signing events against the Rekor transparency log, and integrates signing workflows into CI/CD pipelines. Activates for requests involving software supply chain signing, keyless container signing, Sigstore deployment, or artifact provenance verification."
+}

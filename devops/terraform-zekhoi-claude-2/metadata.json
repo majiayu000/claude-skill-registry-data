@@ -1,0 +1,39 @@
+{
+  "name": "terraform",
+  "repo": "zekhoi/claude",
+  "path": "plugins/agent-kit/skills/terraform/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/zekhoi/claude",
+  "dir_name": "terraform-zekhoi-claude-2",
+  "downloaded_at": "2026-11-16T14:52:35.041691Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zekhoi",
+  "source_url": "https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/terraform/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zekhoi/claude/blob/main/plugins/agent-kit/skills/terraform/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write, change, or review Terraform or OpenTofu configuration following the repository's module layout and conventions, with pinned providers, safe defaults for security and state, and verification by fmt, validate, and plan only. Use when the user asks to add, change, fix, or review Terraform or OpenTofu resources, modules, variables, or providers. Do not use for Kubernetes manifests (use agent-kit:kubernetes), for Pulumi, CloudFormation, or CDK unless asked, or to apply changes to real infrastructure; this skill never runs apply or destroy."
+}

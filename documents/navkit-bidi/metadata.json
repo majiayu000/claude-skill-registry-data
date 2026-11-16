@@ -1,0 +1,37 @@
+{
+  "name": "navkit-bidi",
+  "repo": "yogsagot/navigator",
+  "path": ".claude/skills/navkit-bidi/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/yogsagot/navigator",
+  "dir_name": "navkit-bidi",
+  "downloaded_at": "2026-11-16T14:46:39.845207Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yogsagot",
+  "source_url": "https://github.com/yogsagot/navigator/blob/master/.claude/skills/navkit-bidi/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yogsagot/navigator/blob/master/.claude/skills/navkit-bidi/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Right-to-left text and the mirrored screen -- navkit/bidi.py (layout, order_cells for the viewer's and editor's rows, cells with logical indices, python-bidi's pure-Python UBA run step by step, arabic-reshaper and the lam-alef ligature, marks folded into their letter, caret_column/index_at/text_rtl), Surface.rtl and Surface.draw_runs, ScreenBuffer.mirrored and FLIP, Widget.mirrors (console, command line, viewer, editor, diff view, clock kept left to right) and arrows_mirrored, Application.direction/rtl/_unmirror (mouse and Left/Right), catalogue [meta] direction = \"rtl\" and i18n.is_rtl, --direction, TerminalInfo.bidi (\"app\"/\"words\", NAVKIT_BIDI), VTE's CSI 8 l, kitty's for_words. Use when text in Hebrew or Arabic looks wrong, a widget paints wrong on a mirrored screen, or adding a widget that paints text cell by cell."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "yt-viral",
+  "repo": "utillayer/youtube-agent-skill",
+  "path": "skills/yt-viral/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/utillayer/youtube-agent-skill",
+  "dir_name": "yt-viral",
+  "downloaded_at": "2026-11-16T13:52:13.253150Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "utillayer",
+  "source_url": "https://github.com/utillayer/youtube-agent-skill/blob/main/skills/yt-viral/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/utillayer/youtube-agent-skill/blob/main/skills/yt-viral/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find what is working in a niche on YouTube by ranking each video against its own channel's normal views, then name the formula behind the title. Use for \"what's working right now\", \"find outliers in my niche\", \"why did this blow up\", competitor research, or building a swipe file."
+}
