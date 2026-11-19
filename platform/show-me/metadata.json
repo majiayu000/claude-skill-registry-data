@@ -1,0 +1,39 @@
+{
+  "name": "show-me",
+  "repo": "off-grid-ai/skills",
+  "path": "review/show-me/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "show-me",
+  "downloaded_at": "2026-11-19T06:48:10.027731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, adb, android, ios",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "adb",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/review/show-me/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/review/show-me/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Get every screen of your app on one page and pin notes on the exact spot, like Figma comments; your agent reads them, makes the changes and shows each screen before and after with its replies. Works for web, mobile, desktop and games. Use when you say \"screen review\", \"/show-me\", \"screenshot all the screens\", \"let me give feedback on every screen\", \"read my screen comments\", or \"show me before and after\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "open-text-validation",
+  "repo": "scdenney/open-science-skills",
+  "path": "archive/claude/open-text-validation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/scdenney/open-science-skills",
+  "dir_name": "open-text-validation",
+  "downloaded_at": "2026-11-19T06:50:09.064976Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scdenney",
+  "source_url": "https://github.com/scdenney/open-science-skills/blob/main/archive/claude/open-text-validation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scdenney/open-science-skills/blob/main/archive/claude/open-text-validation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Walks a researcher through testing whether a randomized treatment changed what respondents wrote in open-text answers (a construct or manipulation check), with the split-first protocol of the opencheck R package. A study card is written before any text is read, discovery and codebook work use a discovery fold only, the measurement is frozen into a hashed lock before the estimation fold is opened, and effects are estimated on the estimation fold with placebo constructs and split sensitivity. Covers yes/no presence, 0-9 rating, LLM-induced codebooks, pairwise Bradley-Terry scaling, local/ALICE/API runs, and reporting. Use when the user has open-ended responses from a survey experiment or conjoint and wants to know whether the treatment activated the intended consideration. General codebook and validation advice goes to text-classification; topic discovery to topic-modeling; logprob calibration to llm-calibration-logprobs.",
+  "content_fingerprint": "c91bd163e53190f41eba34178d36a6b269dfb9a665a592081fd7aadab136b4f9"
+}

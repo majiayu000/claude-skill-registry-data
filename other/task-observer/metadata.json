@@ -1,0 +1,37 @@
+{
+  "name": "task-observer",
+  "repo": "rebelytics/one-skill-to-rule-them-all",
+  "path": "skills/task-observer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rebelytics/one-skill-to-rule-them-all",
+  "dir_name": "task-observer",
+  "downloaded_at": "2026-11-19T06:49:16.928045Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rebelytics",
+  "source_url": "https://github.com/rebelytics/one-skill-to-rule-them-all/blob/main/skills/task-observer/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rebelytics/one-skill-to-rule-them-all/blob/main/skills/task-observer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turns corrections, repeated workflows and judgement calls from work sessions into small, evidenced skill updates: logs each observation with its source, stages every change for your approval, and flags repeating work as new skills. Use during ANY multi-step task, agentic workflow, or work session. Also triggers in post-task feedback discussions and when the user mentions skill observations, the observation log, or skill taxonomy. Also known as \"One Skill to Rule Them All\" \u2014 trigger on this phrase too. IMPORTANT: invoke this skill before the FIRST tool call of any session and before writing or proposing a plan \u2014 any turn that will involve a tool call counts. This sentence is the session-start trigger and the only activation layer that survives an unreachable config file; pair it with a CLAUDE.md instruction or a session-start hook (references/environments.md). A subagent dispatched by a session already running it does not run it: it writes nothing and puts its findings in its report."
+}

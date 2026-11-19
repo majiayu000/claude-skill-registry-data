@@ -1,0 +1,37 @@
+{
+  "name": "graph-engineering-loop",
+  "repo": "off-grid-ai/skills",
+  "path": "review/graph-engineering-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "graph-engineering-loop",
+  "downloaded_at": "2026-11-19T06:48:17.555339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/review/graph-engineering-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/review/graph-engineering-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a few calls on a change review and your agent learns the rule behind them, applies it to every place the change touches across your apps, shows the result before and after, and asks you less next time. Use when you say \"I've decided the calls\", \"look at my notes on the change review\", \"graph engineering loop\", \"/graph-engineering-loop\", \"run an iteration on the change\", or \"apply this everywhere\"."
+}

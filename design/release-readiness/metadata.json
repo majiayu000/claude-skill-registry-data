@@ -1,0 +1,38 @@
+{
+  "name": "release-readiness",
+  "repo": "deanpeters/Product-Manager-Skills",
+  "path": "skills/release-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/deanpeters/Product-Manager-Skills",
+  "dir_name": "release-readiness",
+  "downloaded_at": "2026-11-19T06:39:48.961572Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "deanpeters",
+  "source_url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/release-readiness/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/release-readiness/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check a release is safe to ship: tests, rollout, monitoring, rollback, support. Use when a build is about to go out and you need to know what could hurt, and how you'd undo it.",
+  "content_fingerprint": "2ee0ffe15b9390d1d1a9e72848d09b515dd9e57c412d75fd3e455a5025996a4a"
+}

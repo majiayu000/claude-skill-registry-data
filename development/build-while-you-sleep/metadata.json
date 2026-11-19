@@ -1,0 +1,38 @@
+{
+  "name": "build-while-you-sleep",
+  "repo": "off-grid-ai/skills",
+  "path": "cto/build-while-you-sleep/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "build-while-you-sleep",
+  "downloaded_at": "2026-11-19T06:48:15.535159Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/cto/build-while-you-sleep/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/cto/build-while-you-sleep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Get the most done with several agents at once, builders write code in one shared tree with no test runs, a supervisor tests everything that landed together on a timer and removes the bottleneck each round. Use when you say \"/build-while-you-sleep\", \"keep going\", \"finish the code\", \"no test runs\", \"group and test\", \"what's the bottleneck\", \"run agents in parallel\", and on every supervisor wake-up."
+}

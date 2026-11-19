@@ -1,0 +1,37 @@
+{
+  "name": "playtest",
+  "repo": "off-grid-ai/skills",
+  "path": "games/playtest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "playtest",
+  "downloaded_at": "2026-11-19T06:48:09.493008Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/games/playtest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/games/playtest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check the whole game scene by scene with renders and debug calls, and get a pass or fail report with a picture for each check plus a fun score. Use when the user says \"playtest\", \"check everything\", \"verify the game\", \"test every scene\" or \"playtest\"."
+}

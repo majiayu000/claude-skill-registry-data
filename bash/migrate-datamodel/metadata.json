@@ -1,0 +1,38 @@
+{
+  "name": "migrate-datamodel",
+  "repo": "microsoft/power-platform-skills",
+  "path": "plugins/power-pages/skills/migrate-datamodel/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/microsoft/power-platform-skills",
+  "dir_name": "migrate-datamodel",
+  "downloaded_at": "2026-11-19T06:46:09.706764Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/power-platform-skills/blob/main/plugins/power-pages/skills/migrate-datamodel/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/power-platform-skills/blob/main/plugins/power-pages/skills/migrate-datamodel/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"migrate to enhanced data model\", \"migrate from standard to enhanced\", \"switch to EDM\", \"migrate SDM to EDM\", \"upgrade data model\", \"migrate site data model\", or wants to migrate an existing Power Pages site from the Standard Data Model (SDM) to the Enhanced Data Model (EDM) using PAC CLI."
+}

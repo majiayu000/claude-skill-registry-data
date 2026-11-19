@@ -1,0 +1,38 @@
+{
+  "name": "egm-lite",
+  "repo": "google/elephant-goldfish-model",
+  "path": "skills/egm-lite/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/google/elephant-goldfish-model",
+  "dir_name": "egm-lite",
+  "downloaded_at": "2026-11-19T06:41:51.677217Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/elephant-goldfish-model/blob/main/skills/egm-lite/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/elephant-goldfish-model/blob/main/skills/egm-lite/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Executes a lightweight 5-step EGM (Elephant-Goldfish-Model) protocol for small, rapid iterations, specification revisions, code refactors, and bug fixes. Use when the user invokes /egm-lite, issues a phase command (checklist, exec, review, goldfish), or resolves a subagent review response. Don't use for large multi-component features requiring a formal design doc (use egm-brainstorm)."
+}

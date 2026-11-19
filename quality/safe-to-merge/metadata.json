@@ -1,0 +1,38 @@
+{
+  "name": "safe-to-merge",
+  "repo": "off-grid-ai/skills",
+  "path": "review/safe-to-merge/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "safe-to-merge",
+  "downloaded_at": "2026-11-19T06:48:12.833978Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/review/safe-to-merge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/review/safe-to-merge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take a pull request from \"the diff exists\" to \"ready to merge\" and keep it there. Your agent audits its diff, gathers every review signal, answers each comment, fixes behind the checks and re-reviews until nothing blocks. Use when you say \"review this PR\", \"get this PR merge-ready\", \"/safe-to-merge\", \"address the review comments\", or after pushing to a PR with open comments."
+}

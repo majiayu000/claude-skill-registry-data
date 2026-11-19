@@ -1,0 +1,37 @@
+{
+  "name": "extend-take",
+  "repo": "bitwize-music-studio/claude-ai-music-skills",
+  "path": "skills/extend-take/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/bitwize-music-studio/claude-ai-music-skills",
+  "dir_name": "extend-take",
+  "downloaded_at": "2026-11-19T06:37:48.556125Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitwize-music-studio",
+  "source_url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/extend-take/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/extend-take/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Carries a Suno take on from a point in its audio - more of a song that stopped early, or a new second half for a take that went wrong late - and joins the result into whole songs. Shows the cost and waits for a go-ahead. Use when the user says a take \"ends too soon\", \"cut off the last chorus\", \"extend it\", \"add the bridge to this take\" or \"keep the first half and redo the rest\"."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "e2e",
+  "repo": "davepoon/buildwithclaude",
+  "path": "plugins/all-skills/skills/e2e/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/davepoon/buildwithclaude",
+  "dir_name": "e2e-davepoon-buildwithclaude",
+  "downloaded_at": "2026-11-19T06:39:44.929982Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e, playwright",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "davepoon",
+  "source_url": "https://github.com/davepoon/buildwithclaude/blob/main/plugins/all-skills/skills/e2e/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/davepoon/buildwithclaude/blob/main/plugins/all-skills/skills/e2e/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes, runs, and debugs end-to-end tests for web and mobile apps with e2e, an open source test runner that mixes agent.act goals with exact locator steps and assertions in a Playwright browser or on an iOS or Android device. Use when a project has an e2e.config.ts, when asked for end-to-end, browser, mobile, or agentic UI tests, or when an e2e run fails."
+}

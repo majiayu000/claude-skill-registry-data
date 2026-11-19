@@ -1,0 +1,38 @@
+{
+  "name": "fix-it-everywhere",
+  "repo": "off-grid-ai/skills",
+  "path": "design/fix-it-everywhere/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "fix-it-everywhere",
+  "downloaded_at": "2026-11-19T06:48:15.361049Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/design/fix-it-everywhere/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/design/fix-it-everywhere/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a few notes on your screens into one design rule, written down once and applied to every screen, so the next round of notes is smaller. Your agent proposes the rule, waits for your yes, changes every screen, and shows it back before and after. Use when you say \"I've added comments\", \"look at my comments\", \"review loop\", \"/fix-it-everywhere\", \"run an iteration\", or \"apply this to the rest of the screens\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "edit-take",
+  "repo": "bitwize-music-studio/claude-ai-music-skills",
+  "path": "skills/edit-take/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/bitwize-music-studio/claude-ai-music-skills",
+  "dir_name": "edit-take",
+  "downloaded_at": "2026-11-19T06:37:47.891176Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitwize-music-studio",
+  "source_url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/edit-take/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/edit-take/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fixes one thing in a Suno take without re-rolling the song - a word or a line, a cut or added line, a time range redone, an instrument added or dropped - and keeps the rest of the take's audio; also makes an instrumental version of a take. Shows the cost and waits for a go-ahead. Use when the user likes a take but something in it is wrong (\"fix the word in line 3\", \"drop the synth\", \"redo the bridge\"), to apply a lyric or pronunciation fix made in the track file to a take worth keeping, or when they want the take without its vocals."
+}

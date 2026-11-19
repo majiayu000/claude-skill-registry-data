@@ -1,0 +1,39 @@
+{
+  "name": "prove-it",
+  "repo": "off-grid-ai/skills",
+  "path": "games/prove-it/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "prove-it-off-grid-ai-skills",
+  "downloaded_at": "2026-11-19T06:48:09.869257Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, compile, debug",
+    "score": 4,
+    "runner_up": "gaming",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/games/prove-it/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/games/prove-it/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prove a game change works by seeing it work, with debug calls, compile checks, renders and clips, even when the game has no unit tests. Use before claiming any game change works, or when the user says \"prove it works\", \"show me it works\", \"did you test it\", \"verify this change\" or \"prove-it\"."
+}

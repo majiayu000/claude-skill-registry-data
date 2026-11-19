@@ -1,0 +1,39 @@
+{
+  "name": "boot-game",
+  "repo": "off-grid-ai/skills",
+  "path": "games/boot-game/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "boot-game",
+  "downloaded_at": "2026-11-19T06:48:10.258114Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, software, compile",
+    "score": 4,
+    "runner_up": "gaming",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "build",
+      "software",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/games/boot-game/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/games/boot-game/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run your game and its services from the command line, take screenshot renders, and share the GPU safely with the user and other agent sessions. Use before running, rendering or timing anything in a game, or when the user says \"run the game\", \"start the game\", \"take a screenshot of the scene\", \"render this level\" or \"boot-game\"."
+}

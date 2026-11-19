@@ -1,0 +1,38 @@
+{
+  "name": "anything2explainer",
+  "repo": "anbeime/skill",
+  "path": "skills/anything2explainer/anything2explainer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/anbeime/skill",
+  "dir_name": "anything2explainer-anbeime-skill",
+  "downloaded_at": "2026-11-19T06:36:42.608184Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anbeime",
+  "source_url": "https://github.com/anbeime/skill/blob/main/skills/anything2explainer/anything2explainer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anbeime/skill/blob/main/skills/anything2explainer/anything2explainer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "给一个主题，产出一条黑底 MG 风格（幕底可选星点或点阵波）、有配音字幕章节进度条的科普讲解视频（中文或英文；Remotion 代码动画；时长由用户定，常用 3–5 分钟）。内含可编译模板、图元库、配音/分镜/渲染工具、风格与动效规范、多 agent 分工协议与 QC 判据，以及一条完整样片（《RAG 与知识库》）作为质量标尺。Turn any topic into a narrated motion-graphics explainer video in Chinese or English, on a black canvas with a star-field or dot-field backdrop, TTS voiceover, subtitles and a chapter progress bar, every frame drawn in code with Remotion. Use when the user asks for an explainer, educational or science-communication video about a topic, or wants an article or document turned into a video.",
+  "content_fingerprint": "0fb5123d999e1dcc518bb362f61fe1ffbb17faf31ce2acf4711409b12b5022b2"
+}

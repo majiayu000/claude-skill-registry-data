@@ -1,0 +1,36 @@
+{
+  "name": "suno-voice",
+  "repo": "bitwize-music-studio/claude-ai-music-skills",
+  "path": "skills/suno-voice/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bitwize-music-studio/claude-ai-music-skills",
+  "dir_name": "suno-voice",
+  "downloaded_at": "2026-11-19T06:37:48.313096Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitwize-music-studio",
+  "source_url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/suno-voice/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/suno-voice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Puts one of the user's saved Suno Voices on a track or a whole album so /bitwize-music:generate sings in it, takes it off again, lists the Voices on their Suno account, or gives them Suno's link to make a new one. Checks the Voice exists first; nothing is generated or charged. Use when the user says \"use my <name> voice\", \"sing this album in <Voice>\", \"what voices do I have\", \"take the voice off track 3\" or \"make a new voice\"."
+}

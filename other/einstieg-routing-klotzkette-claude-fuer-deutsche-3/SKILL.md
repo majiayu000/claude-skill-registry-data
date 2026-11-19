@@ -1,0 +1,72 @@
+---
+name: einstieg-routing
+description: "Für Einstieg und Routing: routet Rolle, Frist, Unterlagen und Fachschritt; Ergebnis: Prüfprodukt mit Risiko und nächstem Schritt. Fachgebiet: robotik-recht."
+---
+
+# Einstieg und Routing
+
+## Einsatzlage
+
+Dieser Einstieg routet **Robotik Recht** vom ersten Sachverhalt zu Rollen, Fristen, zuständiger Stelle, passendem Spezialpfad und nächstem Arbeitsprodukt.
+
+## Fachlandkarte dieses Plugins
+
+- `ki-und-daten-bearbeiten` (Fachthema: accuracy-robustness-cybersecurity-ai) — Accuracy Robustness Cybersecurity AI
+- `konformitaet-und-sicherheit-bearbeiten` (Fachthema: agile-entwicklung-und-compliance-gates) — Agile Entwicklung und Compliance Gates
+- `unterlagen-und-quellen-auswerten-bearbeiten` (Fachthema: anwaltliche-quellenhygiene-robotik) — Anwaltliche Quellenhygiene Robotik
+- `einsatz-und-arbeitsorganisation-bearbeiten` (Fachthema: arbeitsschutz-betrsichv-autonome) — Arbeitsschutz Betrsichv Autonome
+- `einsatz-und-arbeitsorganisation-bearbeiten` (Fachthema: arbeitsschutz-betrsichv-robotik) — Arbeitsschutz Betrsichv Robotik
+- `einsatz-und-arbeitsorganisation-bearbeiten` (Fachthema: arbeitswelt-cobot-beschaffung-oeffentlich) — Arbeitswelt Cobot Beschaffung Öffentlich
+- `einsatz-und-arbeitsorganisation-bearbeiten` (Fachthema: arbeitswelt-cobot-check) — Arbeitswelt Cobot Check
+- `ki-und-daten-bearbeiten` (Fachthema: art-3-ki-system-robotik) — ART 3 KI System Robotik
+- `produkt-und-rollen-bearbeiten` (Fachthema: art-6-hochrisiko-robotik) — ART 6 Hochrisiko Robotik
+- `ki-und-daten-bearbeiten` (Fachthema: autonome-lieferroboter-oeffentlicher-raum) — Autonome Lieferroboter Oeffentlicher Raum
+- `produkt-und-rollen-bearbeiten` (Fachthema: barrierefreiheit-inklusion-batterie) — Barrierefreiheit Inklusion Batterie
+- `produkt-und-rollen-bearbeiten` (Fachthema: barrierefreiheit-und-inklusion-robotik) — Barrierefreiheit und Inklusion Robotik
+- `produkt-und-rollen-bearbeiten` (Fachthema: batterie-ladeinfrastruktur-und-brandschutz) — Batterie Ladeinfrastruktur und Brandschutz
+- `unterlagen-und-quellen-auswerten-bearbeiten` (Fachthema: anschluss-routing) — Anschluss Routing
+
+## Arbeitsweg
+
+- Rolle und Ziel klären: Welche Partei vertritt der Mandant, welcher Ergebnistyp wird gebraucht (Schriftsatz, Bescheidprüfung, Vertragsentwurf, Stellungnahme), welches Verfahren oder Dokument liegt vor?
+- Eilfristen isolieren: KI-Verordnung: Artikel 111/113 sowie produktbezogene Sonderregeln nach Artikel 2 Absatz 2 und Artikel 6 prüfen, MaschinenVO 20.01.2027, ProdHaftRL-Umsetzung 09.12.2026.
+- Fachpfad wählen: zentrale Anker im Robotik- und KI-Recht sind EU KI-Verordnung 2024/1689, ProdHaftG, Produkthaftungs-Richtlinie 2024, MaschinenVO 2023/1230, BGB §§ 823, 831, 433, 631, IT-SiG, NIS2-RL. Anhand des Sachverhalts in einen Sach-Cluster routen und den passenden Spezial-Skill aus der Fachlandkarte oben benennen.
+- Zuständige Stelle bestimmen: Hersteller, Inverkehrbringer, Betreiber, Endnutzer, Marktüberwachungsbehörde, benannte Stelle.
+- Nur die Rückfragen stellen, die die nächste Weiche tatsächlich ändern.
+
+Für den KI-bezogenen Teil dieses Arbeitsschritts gilt die [fachbezogene Normen- und Fallprüfung](../../references/ki-normen-und-fallpruefung.md). Ordnen Sie Sensorik, Sicherheitsfunktion, Steuerungssoftware und vorgesehene Änderungen getrennt ein. Prüfen Sie den Maschinenpfad in Anhang I Abschnitt B und die Begrenzung durch Artikel 2 Absatz 2, bevor Sie sämtliche Systempflichten übertragen. Dokumentieren Sie den Gegenbeleg und übernehmen Sie nur die tatsächlich tragfähige Rechtsfolge in das bestellte Arbeitsprodukt.
+
+## Normen & Rechtsprechung
+
+Konkret zu prüfen:
+
+- VO (EU) 2023/1230 (Maschinenverordnung)
+- Art. 6 AI-Act (Hochrisiko-KI)
+- §§ 1-19 ProdHaftG
+- RL (EU) 2024/2853 (neue Produkthaftungs-RL)
+
+## Qualitätsanker
+
+- Normen und Rechtsprechung nach `references/quellenhygiene.md` und `references/zitierweise.md` behandeln.
+- Wenn eine Spezialfrage sichtbar wird, den passenden Skill nennen und kurz erklären, warum genau dieser Arbeitsgang passt.
+- Bei Zeitdruck zuerst Frist, Zuständigkeit, Form und Beweislast sichern.
+
+<!-- BEGIN werkstatt-visualisierung -->
+## 1. Verständlich arbeiten und sichtbar prüfen
+
+Bei komplexem Material zuerst verständlich machen, wer beteiligt ist, was geschehen ist und welche Entscheidung ansteht. Vorhandene Unterlagen auswerten und Fachbegriffe beim ersten Gebrauch kurz erklären. Danach das erste nutzbare Arbeitsergebnis liefern. Die Fachansicht und ihre Beispiele an den konkreten Auftrag, Empfänger und Bearbeitungsstand anpassen; daraus entsteht kein Auftrag für ein zusätzliches Verfahren oder andere Unterlagen. Eine passende Visualisierung direkt erstellen, wenn sie Vergleich, Ablauf, Mengen oder Zusammenhänge verständlicher macht; nicht erst allgemein anbieten oder eine Auswahl aus Werkzeugnamen verlangen. Einfache Einzelfragen knapp beantworten. Anfangs eine zentrale Ansicht mit verständlichen Beschriftungen und kurzem Befund zeigen; weitere Details nach Bedarf öffnen.
+
+**Leitfrage für Produktrecht und Produkthaftung:** Welcher Produkt-, System- oder Lieferstand ist betroffen und welche Nachweise tragen seine Verwendung?
+
+**Erste Ansicht:** Zeige die Kette von Produkt und Version über Anforderung und Prüfnachweis bis zur betroffenen Charge, Lieferung oder Nutzung. Kennzeichne offene Befunde und widersprechende Unterlagen einzeln.
+
+**Sinnvolle Interaktion:** Eine Auswahl auf Version, Markt oder Charge zeigt nur den einschlägigen Nachweisstand. Der Wechsel darf keine Konformität oder Freigabe automatisch erklären; fehlende Nachweise bleiben sichtbar.
+
+**Datengrundlage:** Produkt oder System, Version, Charge, Markt, beteiligte Rolle, Anforderung, Nachweisdatum und Fundstelle. Je tragendem Wert die Datei und Seite, Tabellenblatt/Zelle, Zeile oder Belegkennung mitführen.
+
+**Weiter zum Ergebnis:** belegter Prüfbericht mit konkreter Nachforderung und den beauftragten Maßnahmen- oder Kommunikationstexten. Die Ansicht ist ein Arbeitsmittel auf diesem Weg.
+
+Nutze eine tatsächlich verfügbare Visualisierung oder Fachanwendung; bei geeigneter interaktiver Oberfläche direkt ein Applet erstellen oder die vorhandene Anwendung verwenden. Ohne diese Fähigkeit eine verständliche Tabelle oder Skizze liefern. Belege und Annahmen trennen, fehlende Werte nicht als null behandeln. Auswahl und neue Angaben im selben Arbeitsprodukt fortschreiben und dieses ausformulieren. Keine Datenübermittlung, Speicherung oder erfolgreiche Funktion behaupten, die nicht stattfand.
+
+Bei interaktiver Arbeit die [lokalen Regeln für Oberfläche, Belege und Fortsetzung](../../references/arbeitsoberflaeche-und-visualisierung.md) lesen.
+<!-- END werkstatt-visualisierung -->

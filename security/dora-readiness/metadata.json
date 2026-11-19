@@ -1,0 +1,39 @@
+{
+  "name": "dora-readiness",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "ra-qm-team/skills/dora-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "dora-readiness",
+  "downloaded_at": "2026-11-19T06:36:00.090247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/ra-qm-team/skills/dora-readiness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/ra-qm-team/skills/dora-readiness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a bank, payment or e-money institution, investment firm, insurer, crypto-asset service provider or fund manager in the EU faces DORA (Regulation 2022/2554, Digital Operational Resilience Act) - is an ICT outage or cyber incident major, when the initial (4h/24h), intermediate (72h) and final reports are due, weekends included; the register of information; ICT or cloud contracts missing audit rights, exit plans or other Article 30 terms; scope and the simplified framework for small firms. Not for DORA DevOps metrics. Three deterministic scripts with cited articles."
+}

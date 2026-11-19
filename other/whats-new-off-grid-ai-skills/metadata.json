@@ -1,0 +1,37 @@
+{
+  "name": "whats-new",
+  "repo": "off-grid-ai/skills",
+  "path": "launch/whats-new/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "whats-new-off-grid-ai-skills",
+  "downloaded_at": "2026-11-19T06:48:10.425761Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/launch/whats-new/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/launch/whats-new/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn the notes and replies from a screen review into release notes users actually read, grouped by how people use the app, then put them in the repo and at the top of the release PR. Use when the user says \"release notes\", \"what's new\", \"write the release notes from the comments\", \"update the PR with what changed for users\", or /whats-new."
+}

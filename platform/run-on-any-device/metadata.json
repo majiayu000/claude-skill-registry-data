@@ -1,0 +1,40 @@
+{
+  "name": "run-on-any-device",
+  "repo": "off-grid-ai/skills",
+  "path": "launch/run-on-any-device/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "run-on-any-device",
+  "downloaded_at": "2026-11-19T06:48:15.022081Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for platform: platform, device, adb, android, ios",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "adb",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/launch/run-on-any-device/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/launch/run-on-any-device/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run and drive your app on real phones, simulators and desktop the safe way, one step at a time, with test data only and the machine kept healthy. Use before running an app, a build or a device check, or when the user says \"run it on my phone\", \"open it on the device\", \"drive the app\" or \"check it on Android\"."
+}

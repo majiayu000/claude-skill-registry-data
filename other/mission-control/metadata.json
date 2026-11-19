@@ -1,0 +1,38 @@
+{
+  "name": "mission-control",
+  "repo": "off-grid-ai/skills",
+  "path": "revenue/mission-control/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "mission-control",
+  "downloaded_at": "2026-11-19T06:48:14.496216Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/revenue/mission-control/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/revenue/mission-control/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep one local dashboard page of everything in flight across your repos (branches, PRs, CI, releases, what is blocked or due), built from git and GitHub, with what needs you at the top. Use when someone says \"update the dashboard\", \"what's in flight\", \"what needs me\", \"where is feature X\", \"triage the backlog\", \"link this branch to the roadmap\" or \"research and plan this idea\"."
+}

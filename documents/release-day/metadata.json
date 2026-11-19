@@ -1,0 +1,37 @@
+{
+  "name": "release-day",
+  "repo": "off-grid-ai/skills",
+  "path": "launch/release-day/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "release-day",
+  "downloaded_at": "2026-11-19T06:48:11.261158Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/launch/release-day/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/launch/release-day/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep release branches, pushes and PRs clean across one or many repos, with captioned screenshots, a screen review link, and no merge or release build without your yes. Use when working on a release/ branch, opening or updating a release PR, or when the user says \"prep the release\", \"release branch rules\" or \"get the PRs ready to ship\"."
+}

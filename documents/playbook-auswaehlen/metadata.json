@@ -1,0 +1,37 @@
+{
+  "name": "playbook-auswaehlen",
+  "repo": "Klotzkette/claude-fuer-deutsches-recht",
+  "path": "playbook-pruefer/skills/playbook-auswaehlen/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Klotzkette/claude-fuer-deutsches-recht",
+  "dir_name": "playbook-auswaehlen",
+  "downloaded_at": "2026-11-19T06:28:45.887735Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word",
+    "score": 2,
+    "runner_up": "",
+    "runner_up_score": 0,
+    "signals": [
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Klotzkette",
+  "source_url": "https://github.com/Klotzkette/claude-fuer-deutsches-recht/blob/main/playbook-pruefer/skills/playbook-auswaehlen/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Klotzkette/claude-fuer-deutsches-recht/blob/main/playbook-pruefer/skills/playbook-auswaehlen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "W\u00e4hlt f\u00fcr einen konkreten Vertragspr\u00fcfauftrag das tats\u00e4chlich freigegebene Playbook, kl\u00e4rt vertretene Seite, Version und Verhandlungsbefugnis und erstellt einen begrenzten Pr\u00fcfauftrag."
+}

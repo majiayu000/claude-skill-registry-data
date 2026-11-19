@@ -1,0 +1,39 @@
+{
+  "name": "fix-it-for-real",
+  "repo": "off-grid-ai/skills",
+  "path": "testing/fix-it-for-real/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "fix-it-for-real",
+  "downloaded_at": "2026-11-19T06:48:13.950163Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/testing/fix-it-for-real/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/testing/fix-it-for-real/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fix bugs at the system level instead of patching symptoms, by reproducing each bug with a failing probe, finding who already solved the general problem, and committing small checked changes safely even when several agents share one checkout. Use when fixing a bug, especially one that came back, or when the user says \"no hack fixes\", \"fix it properly\", \"this keeps breaking\", \"fix the root cause\" or \"fix-it-for-real\"."
+}

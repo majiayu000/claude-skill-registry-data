@@ -1,0 +1,37 @@
+{
+  "name": "nw-requester-words",
+  "repo": "nWave-ai/nWave",
+  "path": "nWave/skills/nw-requester-words/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/nWave-ai/nWave",
+  "dir_name": "nw-requester-words",
+  "downloaded_at": "2026-11-19T06:47:04.753613Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nWave-ai",
+  "source_url": "https://github.com/nWave-ai/nWave/blob/main/nWave/skills/nw-requester-words/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nWave-ai/nWave/blob/main/nWave/skills/nw-requester-words/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when naming DIVERGE options, writing recommendation or requester-facing text, or reviewing either \u2014 the requester-words quote match, new-term definition, `[new]` marking and handle rule"
+}

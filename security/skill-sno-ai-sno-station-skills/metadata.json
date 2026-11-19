@@ -1,0 +1,39 @@
+{
+  "name": "cross-vendor-security-audit",
+  "repo": "sno-ai/sno-station-skills",
+  "path": "skills/J-peer-review-and-audit/cross-vendor-security-audit/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/sno-ai/sno-station-skills",
+  "dir_name": "skill-sno-ai-sno-station-skills",
+  "downloaded_at": "2026-11-19T06:51:14.310506Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sno-ai",
+  "source_url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/J-peer-review-and-audit/cross-vendor-security-audit/skill/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sno-ai/sno-station-skills/blob/main/skills/J-peer-review-and-audit/cross-vendor-security-audit/skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons, in which a model from another vendor re-reads everything the audit set aside. Use for security questions, focused reviews, vulnerability research, security audits, or pen tests. Run the complete workflow only for explicit codebase audit or pen-test requests, full/comprehensive/end-to-end reviews, or requested report artifacts."
+}

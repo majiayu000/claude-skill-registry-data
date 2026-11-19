@@ -1,0 +1,37 @@
+{
+  "name": "try-it-on-my-phone",
+  "repo": "off-grid-ai/skills",
+  "path": "launch/try-it-on-my-phone/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "try-it-on-my-phone",
+  "downloaded_at": "2026-11-19T06:48:15.698661Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/launch/try-it-on-my-phone/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/launch/try-it-on-my-phone/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify a release by hand on real devices with a written checklist, one device at a time, and turn every failure into a fixed bug or a logged item. Use when the user says \"hand test\", \"verify the release\", \"manual verification\", \"test it on my phone\", or /try-it-on-my-phone."
+}
