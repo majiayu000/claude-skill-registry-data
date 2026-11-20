@@ -1,0 +1,37 @@
+{
+  "name": "auto-review-loop",
+  "repo": "lisresearchgroup/math-rsi",
+  "path": "base/skills/skills-codex/auto-review-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisresearchgroup/math-rsi",
+  "dir_name": "auto-review-loop",
+  "downloaded_at": "2026-11-20T06:24:08.073409Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisresearchgroup",
+  "source_url": "https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/skills-codex/auto-review-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/skills-codex/auto-review-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Autonomous multi-round research review loop. Uses a fresh Codex agent or selected Gemini, Grok, or Claude Code reviewer, implements fixes, and re-reviews until positive assessment or max rounds reached. Use when user says \"auto review loop\", \"review until it passes\", or wants autonomous iterative improvement."
+}

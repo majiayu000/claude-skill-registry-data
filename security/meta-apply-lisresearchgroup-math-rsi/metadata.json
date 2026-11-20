@@ -1,0 +1,37 @@
+{
+  "name": "meta-apply",
+  "repo": "lisresearchgroup/math-rsi",
+  "path": "base/skills/meta-apply/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/lisresearchgroup/math-rsi",
+  "dir_name": "meta-apply-lisresearchgroup-math-rsi",
+  "downloaded_at": "2026-11-20T06:23:52.557158Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisresearchgroup",
+  "source_url": "https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/meta-apply/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/meta-apply/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Privileged applier that LANDS meta-optimize / corpus-audit patches the user approved \u2014 the ONLY skill permitted to mutate the skill corpus from a self-modification proposal, with cross-model jury and human approval at landing. Use when the user says \"meta apply\", \"/meta-apply\", \"land the staged patches\", \"\u5e94\u7528\u4f18\u5316\", after a /meta-optimize run."
+}

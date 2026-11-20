@@ -1,0 +1,36 @@
+{
+  "name": "semantic-scholar",
+  "repo": "lisresearchgroup/math-rsi",
+  "path": "base/skills/semantic-scholar/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisresearchgroup/math-rsi",
+  "dir_name": "semantic-scholar-lisresearchgroup-math-rsi",
+  "downloaded_at": "2026-11-20T06:24:01.328363Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisresearchgroup",
+  "source_url": "https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/semantic-scholar/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/semantic-scholar/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search published venue papers (IEEE, ACM, Springer, etc.) via Semantic Scholar API. Complements /arxiv (preprints) with citation counts, venue metadata, and TLDR. Use when user says \"search semantic scholar\", \"find IEEE papers\", \"find journal papers\", \"venue papers\", \"citation search\", or wants published literature beyond arXiv preprints."
+}

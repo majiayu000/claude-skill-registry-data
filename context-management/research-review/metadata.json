@@ -1,0 +1,37 @@
+{
+  "name": "research-review",
+  "repo": "lisresearchgroup/math-rsi",
+  "path": "base/skills/research-review/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/lisresearchgroup/math-rsi",
+  "dir_name": "research-review",
+  "downloaded_at": "2026-11-20T06:23:59.425210Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisresearchgroup",
+  "source_url": "https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/research-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/research-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Get a deep critical review of research from a selected reviewer (Codex by default, Gemini, Grok, Claude Code, or manual). Use when user says \"review my research\", \"help me review\", \"get external review\", or wants critical feedback on research ideas, papers, or experimental results."
+}

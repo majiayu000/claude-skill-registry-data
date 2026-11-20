@@ -1,0 +1,37 @@
+{
+  "name": "proof-checker",
+  "repo": "lisresearchgroup/math-rsi",
+  "path": "plugins/propertyb/knowledge/archive/context/skill-evaluation/lean-formalize/local-install-20261007/before/codex/proof-checker/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/lisresearchgroup/math-rsi",
+  "dir_name": "proof-checker-lisresearchgroup-math-rsi-2",
+  "downloaded_at": "2026-11-20T06:24:12.288923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, pdf",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "pdf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisresearchgroup",
+  "source_url": "https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/propertyb/knowledge/archive/context/skill-evaluation/lean-formalize/local-install-20261007/before/codex/proof-checker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/propertyb/knowledge/archive/context/skill-evaluation/lean-formalize/local-install-20261007/before/codex/proof-checker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rigorous mathematical proof verification and fixing workflow. Reads a LaTeX proof, identifies gaps via fresh-agent Codex GPT-6-Astra ultra review, fixes each gap with full derivations, re-reviews, and generates an audit report. Base review is same-family provisional. Use when user says \"\u68c0\u67e5\u8bc1\u660e\", \"verify proof\", \"proof check\", \"\u5ba1\u8bc1\u660e\", \"check this proof\", or wants rigorous mathematical verification of a theory paper."
+}

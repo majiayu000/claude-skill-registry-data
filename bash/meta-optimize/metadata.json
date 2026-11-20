@@ -1,0 +1,37 @@
+{
+  "name": "meta-optimize",
+  "repo": "lisresearchgroup/math-rsi",
+  "path": "base/skills/meta-optimize/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/lisresearchgroup/math-rsi",
+  "dir_name": "meta-optimize",
+  "downloaded_at": "2026-11-20T06:23:56.754185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisresearchgroup",
+  "source_url": "https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/meta-optimize/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/meta-optimize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze ARIS usage logs and propose optimizations to SKILL.md files, reviewer prompts, and workflow defaults. Outer-loop harness optimization inspired by Meta-Harness (Lee et al., 2026). Use when user says \"\u4f18\u5316\u6280\u80fd\", \"meta optimize\", \"improve skills\", \"\u5206\u6790\u4f7f\u7528\u8bb0\u5f55\", or wants to optimize ARIS's own harness components based on accumulated experience."
+}

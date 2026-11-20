@@ -1,0 +1,37 @@
+{
+  "name": "result-to-claim",
+  "repo": "lisresearchgroup/math-rsi",
+  "path": "base/skills/result-to-claim/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisresearchgroup/math-rsi",
+  "dir_name": "result-to-claim-lisresearchgroup-math-rsi",
+  "downloaded_at": "2026-11-20T06:24:00.009379Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisresearchgroup",
+  "source_url": "https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/result-to-claim/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/result-to-claim/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when experiments complete to judge what claims the results support, what they don't, and what evidence is still missing. Codex MCP evaluates results against intended claims and routes to next action (pivot, supplement, or confirm). Use after experiments finish \u2014 before writing the paper or running ablations."
+}

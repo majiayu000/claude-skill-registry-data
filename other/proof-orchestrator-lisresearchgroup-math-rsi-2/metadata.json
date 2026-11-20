@@ -1,0 +1,37 @@
+{
+  "name": "proof-orchestrator",
+  "repo": "lisresearchgroup/math-rsi",
+  "path": "base/skills/skills-codex/proof-orchestrator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisresearchgroup/math-rsi",
+  "dir_name": "proof-orchestrator-lisresearchgroup-math-rsi-2",
+  "downloaded_at": "2026-11-20T06:24:09.089375Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, orchestration=2",
+    "score": 2,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisresearchgroup",
+  "source_url": "https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/skills-codex/proof-orchestrator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/skills-codex/proof-orchestrator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Manage a stateful, run-directory-based proof project with Codex: continuation across runs, run-local source bookkeeping, manual GPT Pro handoff packages when a local attempt stalls, and an optional DeepSeek second opinion as additional evidence only. Use when the user asks for proof-run orchestration, a GPT Pro handoff, or cross-run proof continuation \u2014 use /proof-writer for ordinary proof drafting and /proof-checker for rigorous verification or submission acceptance."
+}

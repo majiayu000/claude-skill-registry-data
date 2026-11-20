@@ -1,0 +1,37 @@
+{
+  "name": "mathrsi-meta-evolve",
+  "repo": "lisresearchgroup/math-rsi",
+  "path": "base/skills/mathrsi-meta-evolve/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/lisresearchgroup/math-rsi",
+  "dir_name": "mathrsi-meta-evolve",
+  "downloaded_at": "2026-11-20T06:24:02.872416Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisresearchgroup",
+  "source_url": "https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/mathrsi-meta-evolve/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/mathrsi-meta-evolve/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Evolve an existing MathRSI version from real mathematical research evidence. Distill successful and failed work into base changes, domain plugins, task-local knowledge or deferred proposals; implement, use and reconcile the actual changes. Use for MathRSI iteration or absorbing a completed research project, not for silently changing a running theorem-solving workflow."
+}
