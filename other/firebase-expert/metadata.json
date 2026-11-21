@@ -1,0 +1,38 @@
+{
+  "name": "firebase-expert",
+  "repo": "Jeffallan/claude-skills",
+  "path": "skills/firebase-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jeffallan/claude-skills",
+  "dir_name": "firebase-expert",
+  "downloaded_at": "2026-11-21T06:00:01.021171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeffallan",
+  "source_url": "https://github.com/Jeffallan/claude-skills/blob/main/skills/firebase-expert/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeffallan/claude-skills/blob/main/skills/firebase-expert/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds, secures and reviews Firebase apps with the modular JS SDK (firebase 13), firebase-admin 14 and Cloud Functions 2nd gen: Firestore data modeling, queries, indexes, transactions and offline cache, Firestore and Storage Security Rules with emulator tests, Firebase Authentication and Identity Platform (custom claims, session cookies, blocking functions), callable and event-triggered functions with secrets, App Check, Firebase Hosting and App Hosting deploys, and Firestore cost control. Use when code imports from firebase/*, firebase-admin or firebase-functions, when editing firestore.rules, storage.rules, firestore.indexes.json, firebase.json or apphosting.yaml, when choosing between Firestore, Realtime Database and SQL Connect, or when diagnosing permission-denied errors, missing-index errors, runaway read costs or functions that loop on their own writes. Not for Supabase, AWS Amplify or plain Google Cloud projects with no Firebase."
+}

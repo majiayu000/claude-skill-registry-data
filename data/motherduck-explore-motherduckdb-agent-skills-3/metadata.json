@@ -1,0 +1,38 @@
+{
+  "name": "motherduck-explore",
+  "repo": "motherduckdb/agent-skills",
+  "path": "plugins/motherduck-skills-copilot/skills/motherduck-explore/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/motherduckdb/agent-skills",
+  "dir_name": "motherduck-explore-motherduckdb-agent-skills-3",
+  "downloaded_at": "2026-11-21T06:19:35.372513Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "motherduckdb",
+  "source_url": "https://github.com/motherduckdb/agent-skills/blob/main/plugins/motherduck-skills-copilot/skills/motherduck-explore/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/motherduckdb/agent-skills/blob/main/plugins/motherduck-skills-copilot/skills/motherduck-explore/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find and understand MotherDuck databases, tables, columns, shares, and sample data, including which tables hold a given kind of data. Use first when a MotherDuck workspace or schema is unfamiliar."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "lyric-video",
+  "repo": "bitwize-music-studio/claude-ai-music-skills",
+  "path": "skills/lyric-video/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/bitwize-music-studio/claude-ai-music-skills",
+  "dir_name": "lyric-video",
+  "downloaded_at": "2026-11-21T06:10:19.561087Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bitwize-music-studio",
+  "source_url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/lyric-video/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/lyric-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes a lyric video for a track through Suno's MCP server - the album cover held under the track's approved take, with the words burned in as they are sung - and saves it beside the album's audio with the mastered audio under it. Rendering was free when measured. Use when the user asks for a lyric video, a video with the lyrics on screen, or a video of a song for YouTube."
+}

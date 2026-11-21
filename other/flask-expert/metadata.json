@@ -1,0 +1,37 @@
+{
+  "name": "flask-expert",
+  "repo": "Jeffallan/claude-skills",
+  "path": "skills/flask-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jeffallan/claude-skills",
+  "dir_name": "flask-expert",
+  "downloaded_at": "2026-11-21T06:00:00.885606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeffallan",
+  "source_url": "https://github.com/Jeffallan/claude-skills/blob/main/skills/flask-expert/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeffallan/claude-skills/blob/main/skills/flask-expert/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds, modernizes and audits Flask 3.x applications: application factories and blueprints, Flask-SQLAlchemy 3.1 with SQLAlchemy 2.x typed models and Flask-Migrate, JSON APIs validated with Pydantic or marshmallow and JSON errors, Jinja templates with Flask-WTF CSRF, Flask-Login and Flask-JWT-Extended auth, pytest fixtures over the factory, and gunicorn or waitress deployment with Celery, RQ or APScheduler jobs. Use when code imports from flask or flask_* extensions (create_app, Blueprint, app.route, flask_sqlalchemy, flask_login, flask_wtf), when adding login, an API endpoint, forms, tests, background jobs or production deployment to a Flask app, when reviewing or upgrading an existing Flask project, or when diagnosing Flask errors such as 'Working outside of application context' or a 500 that only appears under gunicorn. Not for Django or FastAPI projects."
+}
