@@ -1,0 +1,39 @@
+{
+  "name": "harness-audit",
+  "repo": "wondelai/skills",
+  "path": "harness-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wondelai/skills",
+  "dir_name": "harness-audit",
+  "downloaded_at": "2026-11-22T05:57:53.320263Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, software",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wondelai",
+  "source_url": "https://github.com/wondelai/skills/blob/main/harness-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wondelai/skills/blob/main/harness-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit and harden a repository's AI coding agent harness across the 6 Software Factory Stations (Intent, Harness, Loop, Graph, Verification, Release) and place it on the Autonomy Ladder (Level 0\u20135). Use when you need to: (1) audit a repo's readiness for Claude Code, Codex, or Cursor using `@wondelai/harness-audit` or manual inspection, (2) diagnose why agents drift, loop, break tests, or stall in PR review, (3) fix duplicated AGENTS.md/CLAUDE.md, broken MCP configs, retired Codex settings, unguarded Stop hooks, or weak test oracles, (4) generate a verified remediation plan or scaffold starter harness files safely, or (5) climb from Level 2 paired prompting to Level 3\u20134 spec-driven verified loops."
+}
