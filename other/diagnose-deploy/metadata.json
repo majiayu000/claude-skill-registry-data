@@ -1,0 +1,37 @@
+{
+  "name": "diagnose-deploy",
+  "repo": "CarlosNavarron1990/kuraka",
+  "path": "skills/diagnose-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CarlosNavarron1990/kuraka",
+  "dir_name": "diagnose-deploy",
+  "downloaded_at": "2026-11-22T10:44:36.286577Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CarlosNavarron1990",
+  "source_url": "https://github.com/CarlosNavarron1990/kuraka/blob/main/skills/diagnose-deploy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CarlosNavarron1990/kuraka/blob/main/skills/diagnose-deploy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Base de conocimiento de diagnóstico de despliegue: escalera de validación genérica (localizá antes de teorizar) + catálogo de errores comunes por stack (síntoma → señal en log → causa raíz → validación rápida → fix). Se consulta en DIAGNOSE y para armar el checklist de verificación en RUNBOOK. Crece con cada incidente. On-demand.",
+  "content_fingerprint": "f26f00867daa04d696518e6519227b2d81cfc7cfca80adc99cacaadb7000aa2f"
+}

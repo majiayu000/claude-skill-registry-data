@@ -1,0 +1,38 @@
+{
+  "name": "n8n",
+  "repo": "BenAIOS/benai-skills",
+  "path": "shared-skills/n8n/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/BenAIOS/benai-skills",
+  "dir_name": "n8n-benaios-benai-skills",
+  "downloaded_at": "2026-11-22T10:38:12.592527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BenAIOS",
+  "source_url": "https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/n8n/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/n8n/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build, test, and deploy n8n workflows via REST API with incremental testing. Expert automation for n8n. USE THIS SKILL WHEN user says \"create workflow\", \"build automation\", \"deploy to n8n\", \"activate workflow\", needs to list, update, delete, or test workflows, mentions webhook execution, checking executions, debugging workflow runs, asks about n8n nodes, expressions, credentials, or Code nodes, needs JavaScript or Python code for n8n Code nodes, mentions expressions, $json, $input, or $node references, or asks about AI Agent, OpenAI, Anthropic, Google Sheets, Airtable, Slack, or other n8n nodes."
+}

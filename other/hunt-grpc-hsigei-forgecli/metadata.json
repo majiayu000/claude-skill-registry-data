@@ -1,0 +1,37 @@
+{
+  "name": "hunt-grpc",
+  "repo": "HSigei/forgeCLI",
+  "path": "skills/library/hunt-grpc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HSigei/forgeCLI",
+  "dir_name": "hunt-grpc-hsigei-forgecli",
+  "downloaded_at": "2026-11-22T11:19:13.165918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HSigei",
+  "source_url": "https://github.com/HSigei/forgeCLI/blob/main/skills/library/hunt-grpc/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HSigei/forgeCLI/blob/main/skills/library/hunt-grpc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hunt gRPC vulnerabilities \u2014 server reflection enabled (enumerate all services/methods), missing authentication / metadata-stripping on internal endpoints, plaintext gRPC over HTTP/2, internal endpoint disclosure, proto file leakage, gRPC-Web/grpc-gateway transcoding injection, and HTTP/2 Rapid Reset DoS (CVE-2023-44487). Use when target exposes port 50051 / 443 / 8443 / 9090 with HTTP/2, when grpcurl/grpcui detects reflection, when an Envoy or grpc-gateway proxy is fronting a microservice, or when recon reveals a microservice architecture."
+}

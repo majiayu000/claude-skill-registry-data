@@ -1,0 +1,38 @@
+{
+  "name": "breaking-change",
+  "repo": "DnsQueen/orcinus-skills",
+  "path": "skills/breaking-change/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/DnsQueen/orcinus-skills",
+  "dir_name": "breaking-change",
+  "downloaded_at": "2026-11-22T10:58:58.730527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DnsQueen",
+  "source_url": "https://github.com/DnsQueen/orcinus-skills/blob/main/skills/breaking-change/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DnsQueen/orcinus-skills/blob/main/skills/breaking-change/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detect breaking changes between two OpenAPI specs before shipping, so a change that breaks consumers never ships under the same version. Use before merging any API change and in CI on every spec change. OpenAPI 3.x only. Only invoke via the orcinus router."
+}

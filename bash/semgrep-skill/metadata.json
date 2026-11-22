@@ -1,0 +1,39 @@
+{
+  "name": "semgrep-skill",
+  "repo": "KimYx0207/Kim_Service",
+  "path": "skills/semgrep-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/KimYx0207/Kim_Service",
+  "dir_name": "semgrep-skill",
+  "downloaded_at": "2026-11-22T11:42:50.621575Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KimYx0207",
+  "source_url": "https://github.com/KimYx0207/Kim_Service/blob/main/skills/semgrep-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KimYx0207/Kim_Service/blob/main/skills/semgrep-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs the installed local Semgrep CLI through a bounded JSON wrapper with two bundled non-secret rules. Requires an explicit authorized workspaceRoot and target. No remote rules, uploads, installs, source excerpts or automatic fixes."
+}

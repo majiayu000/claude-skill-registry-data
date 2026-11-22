@@ -1,0 +1,37 @@
+{
+  "name": "platform",
+  "repo": "ByteTerrace/Puck",
+  "path": ".claude/skills/platform/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/ByteTerrace/Puck",
+  "dir_name": "platform-byteterrace-puck",
+  "downloaded_at": "2026-11-22T10:42:40.050416Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "platform",
+      "device"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ByteTerrace",
+  "source_url": "https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/platform/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/platform/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maps Puck's OS seams (Puck.Platform, .Windows, .Linux): native windows, Win32/Wayland/XCB, displays and VRR, precision waits, memory, clipboard, camera and desktop capture, probes, HID transports."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "hunt-misc",
+  "repo": "HSigei/forgeCLI",
+  "path": "skills/library/hunt-misc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HSigei/forgeCLI",
+  "dir_name": "hunt-misc-hsigei-forgecli",
+  "downloaded_at": "2026-11-22T11:19:13.350826Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, integration=3",
+    "score": 3,
+    "runner_up": "integration",
+    "runner_up_score": 3,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HSigei",
+  "source_url": "https://github.com/HSigei/forgeCLI/blob/main/skills/library/hunt-misc/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HSigei/forgeCLI/blob/main/skills/library/hunt-misc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hunting skill for misc vulnerabilities. Built from 225 public bug bounty reports. Use when hunting misc on any target."
+}

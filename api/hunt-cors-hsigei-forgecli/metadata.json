@@ -1,0 +1,37 @@
+{
+  "name": "hunt-cors",
+  "repo": "HSigei/forgeCLI",
+  "path": "skills/library/hunt-cors/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/HSigei/forgeCLI",
+  "dir_name": "hunt-cors-hsigei-forgecli",
+  "downloaded_at": "2026-11-22T11:19:12.979665Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HSigei",
+  "source_url": "https://github.com/HSigei/forgeCLI/blob/main/skills/library/hunt-cors/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HSigei/forgeCLI/blob/main/skills/library/hunt-cors/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hunt CORS Misconfiguration \u2014 origin-reflection with credentials, null-origin trust, subdomain-regex bypass (unanchored vs unescaped-dot vs prefix-only), pre-flight (OPTIONS) gating bypass, postMessage origin checks. High only when an attacker-controlled origin can perform a CREDENTIALED cross-origin read of sensitive data and you have proven it in a browser. Use when testing API endpoints, SPAs, or any app emitting Access-Control-* headers."
+}

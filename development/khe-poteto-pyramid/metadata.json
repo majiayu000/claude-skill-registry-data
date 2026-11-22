@@ -1,0 +1,39 @@
+{
+  "name": "khe-poteto-pyramid",
+  "repo": "HKTITAN/skills",
+  "path": "skills/khe-poteto-pyramid/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/HKTITAN/skills",
+  "dir_name": "khe-poteto-pyramid",
+  "downloaded_at": "2026-11-22T11:18:42.421937Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, refactor",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKTITAN",
+  "source_url": "https://github.com/HKTITAN/skills/blob/main/skills/khe-poteto-pyramid/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKTITAN/skills/blob/main/skills/khe-poteto-pyramid/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Puts every correction you give a coding agent at the highest layer of Lauren Tan's poteto pyramid that can hold it (the codebase, then lints, types and CI, then verification, then a line of prose, with human review last), builds the fix there, proves the check fails on a real past mistake, and deletes the instruction it replaces. Also sweeps a repo's history for repeated mistakes, triages an AGENTS.md or CLAUDE.md into checks and judgment calls, and audits how far agents can be trusted to merge. Use when someone says \"the agent keeps doing X\", \"where should this fix live\", \"turn this into a lint\", \"stop it writing this again\", \"our AGENTS.md is too long\", \"can we let agents merge\", \"all code is slop\", or names the poteto pyramid. For UI review use `khe-ui`, for a recording of the app `khe-demo`, for design corrections turned into taste rules `learn-taste` (Emil Kowalski). When unsure, `khe-auto`."
+}

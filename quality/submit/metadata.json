@@ -1,0 +1,38 @@
+{
+  "name": "submit",
+  "repo": "Abdo453/HunterAI",
+  "path": ".opencode/skills/submit/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/Abdo453/HunterAI",
+  "dir_name": "submit",
+  "downloaded_at": "2026-11-22T10:21:08.152619Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abdo453",
+  "source_url": "https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/submit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/submit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft and submit a vulnerability report to the bug bounty platform. Reads scope.yaml for platform/program, uses brain + findings for content. Always drafts first for review."
+}

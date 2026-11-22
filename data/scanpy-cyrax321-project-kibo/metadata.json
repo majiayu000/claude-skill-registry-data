@@ -1,0 +1,39 @@
+{
+  "name": "scanpy",
+  "repo": "Cyrax321/project-kibo",
+  "path": ".agents/skills/scanpy/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Cyrax321/project-kibo",
+  "dir_name": "scanpy-cyrax321-project-kibo",
+  "downloaded_at": "2026-11-22T10:52:10.608136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline, visualization",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Cyrax321",
+  "source_url": "https://github.com/Cyrax321/project-kibo/blob/main/.agents/skills/scanpy/SKILL.md",
+  "license": "SD-3-Clause license",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Cyrax321/project-kibo/blob/main/.agents/skills/scanpy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Standard single-cell RNA-seq analysis pipeline. Use for QC, normalization, dimensionality reduction (PCA/UMAP/t-SNE), clustering, differential expression, and visualization. Best for exploratory scRNA-seq analysis with established workflows. For...",
+  "content_fingerprint": "1dc7e2e1e73917398214a2bfaa5e786a24e6fc13390eca0aa113380c090230e1"
+}

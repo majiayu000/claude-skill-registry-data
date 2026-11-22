@@ -1,0 +1,37 @@
+{
+  "name": "windows-release",
+  "repo": "AdilShamim8/Uni",
+  "path": ".claude/skills/windows-release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AdilShamim8/Uni",
+  "dir_name": "windows-release",
+  "downloaded_at": "2026-11-22T10:22:21.108829Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AdilShamim8",
+  "source_url": "https://github.com/AdilShamim8/Uni/blob/main/.claude/skills/windows-release/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AdilShamim8/Uni/blob/main/.claude/skills/windows-release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build and verify the Windows desktop build (NSIS installer + latest.yml) for the canonical Uni release and its legacy updater mirror. Use when cutting a release, shipping a new version to Windows users, or when a Windows user reports they are stuck on an old version. Windows only \u2014 does not cover the macOS dmg/notarization flow."
+}

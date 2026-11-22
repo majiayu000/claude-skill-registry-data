@@ -1,0 +1,38 @@
+{
+  "name": "create-verification-skill",
+  "repo": "AdilShamim8/Uni",
+  "path": "skills/create-verification-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/AdilShamim8/Uni",
+  "dir_name": "create-verification-skill",
+  "downloaded_at": "2026-11-22T10:22:21.335471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AdilShamim8",
+  "source_url": "https://github.com/AdilShamim8/Uni/blob/main/skills/create-verification-skill/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AdilShamim8/Uni/blob/main/skills/create-verification-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create one skill that teaches a bot how to launch, drive, and verify a specific app or project. Use only when the user explicitly asks for a verification skill."
+}

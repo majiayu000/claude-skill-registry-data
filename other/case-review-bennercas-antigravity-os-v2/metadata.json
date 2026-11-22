@@ -1,0 +1,38 @@
+{
+  "name": "case-review",
+  "repo": "BennerCas/antigravity-os-v2",
+  "path": "skills/case-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/BennerCas/antigravity-os-v2",
+  "dir_name": "case-review-bennercas-antigravity-os-v2",
+  "downloaded_at": "2026-11-22T10:39:17.611998Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, forensics=3",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BennerCas",
+  "source_url": "https://github.com/BennerCas/antigravity-os-v2/blob/main/skills/case-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BennerCas/antigravity-os-v2/blob/main/skills/case-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Quality-gate review of a reverse-engineering or assessment case package: scope readiness, Evidence-to-Finding-to-Path traceability, work-item coverage, timeline consistency, and artifact hashes."
+}

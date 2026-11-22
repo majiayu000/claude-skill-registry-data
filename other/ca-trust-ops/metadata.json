@@ -1,0 +1,37 @@
+{
+  "name": "ca-trust-ops",
+  "repo": "0xDarkMatter/claude-mods",
+  "path": "skills/ca-trust-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/0xDarkMatter/claude-mods",
+  "dir_name": "ca-trust-ops",
+  "downloaded_at": "2026-11-22T10:11:30.386360Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xDarkMatter",
+  "source_url": "https://github.com/0xDarkMatter/claude-mods/blob/main/skills/ca-trust-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xDarkMatter/claude-mods/blob/main/skills/ca-trust-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check whether a machine still trusts a compromised or distrusted certificate authority (a CA distrust event): a read-only checker for macOS, Linux, WSL and Windows that probes curl, git, Python, Node and the Windows certificate store against the incident's test hosts, matches CA bundles (system, Homebrew, certifi, pip, Node, Git for Windows, Composer, WSL, a Docker image's) by public key, and flags tools older than the fix. A failed connection never counts as safe. Ships incident packs (eMudhra, October 2026) and the procedure to add one. Use when asked whether a machine is patched against a CA compromise, to confirm a fix, OS update or new toolchain, to check an extracted CA bundle, or to add a new CA incident."
+}

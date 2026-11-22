@@ -1,0 +1,39 @@
+{
+  "name": "khe-diagram",
+  "repo": "HKTITAN/skills",
+  "path": "skills/khe-diagram/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/HKTITAN/skills",
+  "dir_name": "khe-diagram",
+  "downloaded_at": "2026-11-22T11:18:39.872470Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, component, animation",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKTITAN",
+  "source_url": "https://github.com/HKTITAN/skills/blob/main/skills/khe-diagram/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKTITAN/skills/blob/main/skills/khe-diagram/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Decides whether a diagram earns its place over a sentence or a table, picks the surface by who touches the picture next, then draws a finished editorial figure or edits a live tldraw canvas, with connector, accent and budget rules that also serve as the review. Use when someone says \"can you diagram this\", \"draw the architecture\", \"make a flowchart\", \"sketch this on a board\", \"my diagram looks like Mermaid\", or names tldraw, a .tldraw file or diagram-design. For SVG markup and animation use `khe-svg`; for a live chart inside a product use `khe-ui`; for a leader line on a product shot use `stageshow`; for a blueprint line illustration use `plotter`."
+}

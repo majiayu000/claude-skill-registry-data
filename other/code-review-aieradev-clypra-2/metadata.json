@@ -1,0 +1,38 @@
+{
+  "name": "code-review",
+  "repo": "AIEraDev/Clypra",
+  "path": ".agents/skills/code-review/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AIEraDev/Clypra",
+  "dir_name": "code-review-aieradev-clypra-2",
+  "downloaded_at": "2026-11-22T10:19:04.278327Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AIEraDev",
+  "source_url": "https://github.com/AIEraDev/Clypra/blob/master/.agents/skills/code-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AIEraDev/Clypra/blob/master/.agents/skills/code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides AI agents through systematic, prioritized code reviews in Clypra. Activate when reviewing pull requests, git diffs, architectural proposals, or agent-generated changes. Focuses on correctness, architectural invariants, concurrency bugs, and regression risks over cosmetic styling."
+}

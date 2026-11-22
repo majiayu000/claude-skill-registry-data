@@ -1,0 +1,39 @@
+{
+  "name": "axolotl",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/axolotl/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "axolotl-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:48.523217Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model, training",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/axolotl/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/axolotl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Provides guidance for fine-tuning large language models with Axolotl, covering YAML training configs, LoRA and QLoRA, preference training with DPO, KTO, ORPO and GRPO, multimodal models, FSDP and multi-GPU setups, sequence (context) parallelism, NCCL bandwidth tests, dataset formats, compressed model saving for vLLM and llmcompressor, and custom integrations. Use when writing or debugging an Axolotl YAML config, choosing a dataset format for a fine-tuning run, setting up FSDP or context_parallel_size across GPUs, or running DPO, KTO, ORPO or GRPO training. Use when saving a compressed model for vLLM inference, or when writing a custom Axolotl plugin or integration. Not for inference serving or general Hugging Face Trainer scripts outside Axolotl."
+}

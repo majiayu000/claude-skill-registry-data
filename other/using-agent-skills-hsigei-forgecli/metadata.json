@@ -1,0 +1,39 @@
+{
+  "name": "using-agent-skills",
+  "repo": "HSigei/forgeCLI",
+  "path": "skills/library/using-agent-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HSigei/forgeCLI",
+  "dir_name": "using-agent-skills-hsigei-forgecli",
+  "downloaded_at": "2026-11-22T11:19:22.161897Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=4, workflow=4",
+    "score": 4,
+    "runner_up": "workflow",
+    "runner_up_score": 4,
+    "signals": [
+      "automation",
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HSigei",
+  "source_url": "https://github.com/HSigei/forgeCLI/blob/main/skills/library/using-agent-skills/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HSigei/forgeCLI/blob/main/skills/library/using-agent-skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Discovers and invokes agent skills. Use when starting a session, or when you need to decide which skill or workflow applies to the piece of work at hand. This is the meta-skill that governs how all other skills are discovered and invoked."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "genesis",
+  "repo": "GenesisAgentInfra/genesis",
+  "path": "packages/genesis_ci/src/genesis_ci/assets/skills/genesis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GenesisAgentInfra/genesis",
+  "dir_name": "genesis",
+  "downloaded_at": "2026-11-22T11:15:31.260704Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GenesisAgentInfra",
+  "source_url": "https://github.com/GenesisAgentInfra/genesis/blob/main/packages/genesis_ci/src/genesis_ci/assets/skills/genesis/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GenesisAgentInfra/genesis/blob/main/packages/genesis_ci/src/genesis_ci/assets/skills/genesis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Show what a code change does, and map a project's business flows, with Genesis, backed by code evidence. Works on Python and on most other common programming languages. Use when the user asks what a commit, pull request, branch, commit range or uncommitted change does or affects, whether it could break something or is safe to merge or release, which business flows or entry points it reaches, or whether tests cover it, for example when reviewing a change before pushing, merging or releasing. Also use it when the user wants to understand what a project does as business flows, asks for a business flow map or diagram that product and engineering can both read, asks to update or continue such a map, or asks about an existing Genesis map. Match the intent whatever language the user writes in, not exact keywords."
+}

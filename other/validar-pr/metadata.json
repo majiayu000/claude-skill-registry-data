@@ -1,0 +1,38 @@
+{
+  "name": "validar-pr",
+  "repo": "CarlosNavarron1990/kuraka",
+  "path": "skills/validar-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CarlosNavarron1990/kuraka",
+  "dir_name": "validar-pr",
+  "downloaded_at": "2026-11-22T10:44:34.866604Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CarlosNavarron1990",
+  "source_url": "https://github.com/CarlosNavarron1990/kuraka/blob/main/skills/validar-pr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CarlosNavarron1990/kuraka/blob/main/skills/validar-pr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pre-PR gate, local and before the PR exists: merges the branch onto the current base in an isolated clone, runs the project's mechanical checks + official suite only for what the PR touches, then a blind `claude -p` reviewer (no author context, fed the diff + a growing catalogue of typical errors) and, when executable code changes, an end-to-end probe on an isolated stack. Writes `.git/validar-pr/<sha>.md`; a Claude hook blocks `gh pr create|ready` without an APROBABLE report for HEAD. Use before opening or updating a PR, when the hook blocks, or when someone says 'valida la PR' / 'abre la PR' / 'listo para PR'. Not needed per commit.",
+  "content_fingerprint": "b62675d025c13731781da66ba7af85832d8e8abc18b764c0c8a089aeb3338871"
+}

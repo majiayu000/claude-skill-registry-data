@@ -1,0 +1,38 @@
+{
+  "name": "asd-ste100",
+  "repo": "JAICHANGPARK/ASD-STE100",
+  "path": "skills/asd-ste100/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JAICHANGPARK/ASD-STE100",
+  "dir_name": "asd-ste100-jaichangpark-asd-ste100",
+  "downloaded_at": "2026-11-22T11:29:04.725277Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JAICHANGPARK",
+  "source_url": "https://github.com/JAICHANGPARK/ASD-STE100/blob/main/skills/asd-ste100/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JAICHANGPARK/ASD-STE100/blob/main/skills/asd-ste100/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explains, drafts, reviews, and validates technical documentation and LLM outputs in ASD-STE100 (Simplified Technical English) or Karpathy's 80% Pragmatic Mode. Enforces short sentences, active voice, controlled vocabulary, and high cognitive parseability. Use when the user asks for ASD-STE100, STE, Simplified Technical English, \"80% STE\", Karpathy-style writing, or a clean low-cognitive-load explanation, or asks to lint or rewrite docs for passive voice, long sentences, or vague words."
+}

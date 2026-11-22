@@ -1,0 +1,39 @@
+{
+  "name": "pymc",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/pymc/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "pymc-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:42.121708Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, programming, build, compile",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/pymc/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/pymc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds, fits, checks, and compares Bayesian models in Python with PyMC and ArviZ. Covers hierarchical (multilevel) models, NUTS MCMC sampling, variational inference (ADVI), prior and posterior predictive checks, convergence diagnostics (R-hat, ESS, divergences), and LOO/WAIC model comparison. Use when writing a PyMC model for regression, count, or binary data. Use when fitting a hierarchical model with partial pooling. Use when diagnosing divergences, low ESS, or high R-hat. Use when comparing candidate models with LOO. Use when choosing priors or running prior predictive checks. Not for non-Bayesian regression; use statsmodels or scikit-learn instead."
+}

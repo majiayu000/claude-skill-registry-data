@@ -1,0 +1,39 @@
+{
+  "name": "biopython",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/biopython/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "biopython-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:55.602379Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, visualization",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/biopython/SKILL.md",
+  "license": "Biopython License Agreement",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/biopython/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Provides Biopython (Bio.Seq, Bio.SeqIO, Bio.Align, Bio.Entrez, Bio.Blast, Bio.PDB, Bio.Phylo, Bio.motifs, Bio.SeqUtils, Bio.Restriction) for sequence handling, file parsing, NCBI access, BLAST, structures, and phylogenetic trees in Python. Reads, writes, and converts FASTA, GenBank, FASTQ, PDB, mmCIF, Newick, and NEXUS files. Use when manipulating or translating DNA, RNA, or protein sequences, converting sequence file formats, fetching records from NCBI via Entrez, running or parsing BLAST searches, doing pairwise or multiple sequence alignment, analyzing PDB structures, or building and editing phylogenetic trees. For quick lookups use gget; for multi-service integration use bioservices.",
+  "content_fingerprint": "f2ffd7e7e6b53d14cadc9800251f6a94449bf231075d1ba60110b666d630e743"
+}

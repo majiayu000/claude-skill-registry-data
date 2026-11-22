@@ -1,0 +1,41 @@
+{
+  "name": "websearch",
+  "repo": "Expecho/Agent42",
+  "path": "src/Agent42.Agents/Skills/websearch/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Expecho/Agent42",
+  "dir_name": "websearch",
+  "downloaded_at": "2026-11-22T11:08:18.236640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, word, excel, pptx, xlsx, docx",
+    "score": 6,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "excel",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Expecho",
+  "source_url": "https://github.com/Expecho/Agent42/blob/main/src/Agent42.Agents/Skills/websearch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Expecho/Agent42/blob/main/src/Agent42.Agents/Skills/websearch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search the web with web_search and read web-hosted documents with read_web_document. Use whenever the answer depends on information that is current, changing, or outside what you reliably know \u2014 news, releases, prices, versions, \"what is X\", \"look up\", \"search for\", \"what's the latest on\" \u2014 or when the user gives you a link to a PDF or other document and asks what it says."
+}

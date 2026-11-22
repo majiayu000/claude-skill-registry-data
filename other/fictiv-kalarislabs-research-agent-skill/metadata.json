@@ -1,0 +1,37 @@
+{
+  "name": "fictiv",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/fictiv/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "fictiv-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:47.605316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/fictiv/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/fictiv/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drives the Fictiv on-demand manufacturing web app (app.fictiv.com) in the user's browser, since there is no public API. Covers uploading CAD files (STEP, SLDPRT, STL), configuring process, material, finish, threads and tolerances, reading DFM feedback, instant or manual quotes, lead-time tiers, checkout by card or PO, order tracking and reorders. Use when the user mentions Fictiv. Use when they want a part CNC machined, 3D printed, sheet-metal fabricated, cast, or molded online. Use when they ask to get a quote or order parts from a STEP or STL file. Use when they need to check a Fictiv quote or order status. Use when a Fictiv upload, DFM warning, price or checkout fails. Not for ITAR-controlled parts, which Fictiv does not accept."
+}

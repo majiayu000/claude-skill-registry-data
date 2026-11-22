@@ -1,0 +1,40 @@
+{
+  "name": "khe-design-tokens",
+  "repo": "HKTITAN/skills",
+  "path": "skills/khe-design-tokens/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/HKTITAN/skills",
+  "dir_name": "khe-design-tokens",
+  "downloaded_at": "2026-11-22T11:18:42.081905Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, component, tailwind",
+    "score": 5,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKTITAN",
+  "source_url": "https://github.com/HKTITAN/skills/blob/main/skills/khe-design-tokens/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKTITAN/skills/blob/main/skills/khe-design-tokens/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds a project's design contract (a `.design` file or DESIGN.md), resolves which one wins, and threads its tokens through the UI as CSS variables, a Tailwind theme or component props. Also writes design-system docs an agent can follow and checks the contract for drift. Use when a repo has a `.design` or DESIGN.md, or someone says \"use our tokens\", \"make it on-brand\", \"stop hardcoding colors\", \"the agent keeps inventing variants\" or \"document our design system\". To design the scales themselves, review the result or finish a screen that still feels unfinished, use `khe-ui`."
+}

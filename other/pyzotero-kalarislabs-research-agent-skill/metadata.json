@@ -1,0 +1,37 @@
+{
+  "name": "pyzotero",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/pyzotero/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "pyzotero-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:51.122617Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/pyzotero/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/pyzotero/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads and writes Zotero libraries from Python with pyzotero 1.13.0 and the Zotero Web API v3: items, collections, tags, attachments, saved searches, full-text content, and BibTeX, CSL-JSON, and bibliography export. Also covers the pyzotero CLI and MCP server for a local Zotero 7. Use when fetching or searching library items programmatically; when creating, updating, or deleting references, collections, or tags; when uploading PDF attachments or downloading files; when exporting citations as BibTeX or CSL-JSON; when building research automation around a Zotero user or group library. Not for formatting citations in a manuscript or verifying references against external databases."
+}

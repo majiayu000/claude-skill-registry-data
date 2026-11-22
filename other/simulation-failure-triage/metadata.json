@@ -1,0 +1,37 @@
+{
+  "name": "simulation-failure-triage",
+  "repo": "HeshamFS/materials-simulation-skills",
+  "path": "skills/robustness/simulation-failure-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HeshamFS/materials-simulation-skills",
+  "dir_name": "simulation-failure-triage",
+  "downloaded_at": "2026-11-22T11:22:08.657541Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HeshamFS",
+  "source_url": "https://github.com/HeshamFS/materials-simulation-skills/blob/main/skills/robustness/simulation-failure-triage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HeshamFS/materials-simulation-skills/blob/main/skills/robustness/simulation-failure-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "First-response triage for cross-code (LAMMPS/VASP/QE/MOOSE) simulation failures: classifies the failure signature (nonconvergence, NaN/Inf, exploding energy, unstable timestep, pressure blow-up, missing potentials/pseudopotentials, memory exhaustion, process crash/segfault, corrupted output, incomplete runs) and proposes a SAFE one-change-at-a-time RETRY LADDER with explicit STOP CONDITIONS, prioritizing evidence preservation. Use as the immediate first response to a failed or suspicious run. For deep per-stage validation, conservation/physical-bounds checks, and \"can I trust these results\" analysis, defer to the simulation-validator skill."
+}

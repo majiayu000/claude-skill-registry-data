@@ -1,0 +1,38 @@
+{
+  "name": "slo-design",
+  "repo": "Horonomos-laps/yana-wheelbot",
+  "path": ".agents/skills/slo-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Horonomos-laps/yana-wheelbot",
+  "dir_name": "slo-design-horonomos-laps-yana-wheelbot",
+  "downloaded_at": "2026-11-22T11:24:03.744493Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Horonomos-laps",
+  "source_url": "https://github.com/Horonomos-laps/yana-wheelbot/blob/main/.agents/skills/slo-design/SKILL.md",
+  "license": "MIT © 2025 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Horonomos-laps/yana-wheelbot/blob/main/.agents/skills/slo-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design and implement SLIs, SLOs, and error budgets for production services. Covers SLI selection, SLO target-setting, error budget calculation, burn-rate alerting, and error budget policy. Use when asked about \"SLO\", \"SLI\", \"error budget\", \"reliability targets\", \"burn rate\", \"uptime SLA\", or when designing alerting for a production service. Do NOT use for: application-level performance optimization — use `web-performance` for frontend.",
+  "content_fingerprint": "2439a7e23fb2c540a7b3e777a59a75746284b6221e787ea2b7a646442cc1e56f"
+}

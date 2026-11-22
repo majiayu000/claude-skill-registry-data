@@ -1,0 +1,38 @@
+{
+  "name": "frontend-architecture",
+  "repo": "DnsQueen/orcinus-skills",
+  "path": "skills/frontend-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DnsQueen/orcinus-skills",
+  "dir_name": "frontend-architecture",
+  "downloaded_at": "2026-11-22T10:58:59.964486Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DnsQueen",
+  "source_url": "https://github.com/DnsQueen/orcinus-skills/blob/main/skills/frontend-architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DnsQueen/orcinus-skills/blob/main/skills/frontend-architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "A portable architecture style for React and React Native frontends, with feature modules, a strict server-state vs UI-state split, barrel-only cross-module imports, co-located styles, and component-promotion rules. State-management and styling agnostic. Only invoke via the orcinus router."
+}

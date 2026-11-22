@@ -1,0 +1,37 @@
+{
+  "name": "spike-dotnet",
+  "repo": "Expecho/Agent42",
+  "path": ".agentic/optional-skills/spike-dotnet/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Expecho/Agent42",
+  "dir_name": "spike-dotnet-expecho-agent42",
+  "downloaded_at": "2026-11-22T11:08:18.406335Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Expecho",
+  "source_url": "https://github.com/Expecho/Agent42/blob/main/.agentic/optional-skills/spike-dotnet/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Expecho/Agent42/blob/main/.agentic/optional-skills/spike-dotnet/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Validate an assumption or run a quick spike with a .NET file-based app (dotnet run app.cs) - a single throwaway file outside the repo tree, pinned to the repo's package versions when validating repo behavior. Use when a plan step, bug-fix diagnosis, or review claim rests on unverified library/runtime behavior."
+}

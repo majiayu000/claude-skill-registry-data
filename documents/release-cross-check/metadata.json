@@ -1,0 +1,39 @@
+{
+  "name": "release-cross-check",
+  "repo": "EISSeuropa/EISSeuropa.github.io",
+  "path": ".claude/skills/release-cross-check/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/EISSeuropa/EISSeuropa.github.io",
+  "dir_name": "release-cross-check",
+  "downloaded_at": "2026-11-22T11:01:57.275440Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, markdown, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EISSeuropa",
+  "source_url": "https://github.com/EISSeuropa/EISSeuropa.github.io/blob/master/.claude/skills/release-cross-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EISSeuropa/EISSeuropa.github.io/blob/master/.claude/skills/release-cross-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Release-time six-point cross-check for EISS: the roadmap, sitemap, translations, repo docs, Anthology abstract-coverage and team-announcement surfaces (the For the team note, the dashboard release card, the EISS release notes email, the news item) to verify before cutting a minor or major release, plus milestone hygiene. Use when cutting a release, running scripts/release.sh, or asked what to check before a release. Skip for patch releases."
+}

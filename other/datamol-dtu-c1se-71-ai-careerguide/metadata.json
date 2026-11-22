@@ -1,0 +1,38 @@
+{
+  "name": "datamol",
+  "repo": "DTU-C1SE-71/AI-CAREERGUIDE",
+  "path": ".agents/skills/datamol/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DTU-C1SE-71/AI-CAREERGUIDE",
+  "dir_name": "datamol-dtu-c1se-71-ai-careerguide",
+  "downloaded_at": "2026-11-22T10:53:12.615428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DTU-C1SE-71",
+  "source_url": "https://github.com/DTU-C1SE-71/AI-CAREERGUIDE/blob/main/.agents/skills/datamol/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DTU-C1SE-71/AI-CAREERGUIDE/blob/main/.agents/skills/datamol/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery including SMILES parsing, standardization, descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit directly."
+}

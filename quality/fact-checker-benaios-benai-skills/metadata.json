@@ -1,0 +1,37 @@
+{
+  "name": "fact-checker",
+  "repo": "BenAIOS/benai-skills",
+  "path": "shared-skills/fact-checker/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/BenAIOS/benai-skills",
+  "dir_name": "fact-checker-benaios-benai-skills",
+  "downloaded_at": "2026-11-22T10:38:28.222285Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BenAIOS",
+  "source_url": "https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/fact-checker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/fact-checker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Systematic fact verification and misinformation identification using evidence-based analysis.\nUse when: verifying claims, checking facts, identifying misinformation, evaluating source credibility,\nor when user asks to \"fact check\", \"verify\", \"is this true\", or mentions claims that need validation."
+}

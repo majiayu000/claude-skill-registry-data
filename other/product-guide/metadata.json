@@ -1,0 +1,38 @@
+{
+  "name": "product-guide",
+  "repo": "CherryHQ/cherry-studio",
+  "path": ".agents/skills/product-guide/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CherryHQ/cherry-studio",
+  "dir_name": "product-guide",
+  "downloaded_at": "2026-11-22T10:46:35.786255Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CherryHQ",
+  "source_url": "https://github.com/CherryHQ/cherry-studio/blob/main/.agents/skills/product-guide/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CherryHQ/cherry-studio/blob/main/.agents/skills/product-guide/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design, build, or review a one-time in-app guide in Cherry Studio \u2014 a spotlight coachmark on a moved entry point, a changed default, or a capability users would not find, or a dialog that introduces newly unlocked content. Use when a change moves UI, changes a default users rely on, or ships something hard to discover, and whenever a guide's design, data, behavior, or Electron verification is in question."
+}

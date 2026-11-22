@@ -1,0 +1,37 @@
+{
+  "name": "khe-auto",
+  "repo": "HKTITAN/skills",
+  "path": "skills/khe-auto/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HKTITAN/skills",
+  "dir_name": "khe-auto",
+  "downloaded_at": "2026-11-22T11:18:39.501791Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKTITAN",
+  "source_url": "https://github.com/HKTITAN/skills/blob/main/skills/khe-auto/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKTITAN/skills/blob/main/skills/khe-auto/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The mode that runs the rest. Reads a request, picks a playbook or the one or two skills that own it, says why in a line, then does the work in order. Covers every skill in this collection: the khe skills (UI craft, design tokens, SVG, diagrams, sound, launch films), the skills by Emil Kowalski and Benji Taylor linked beside them, Vercel's `ui-sdk` and agent skills, and the engineering skills of Lauren Tan (poteto) and Matt Pocock. Use when a request names no skill, spans several, or someone says \"auto\", \"which skill\", \"where do I start\", \"what order\", \"list the skills\", \"make this better\", \"I need a launch video\", \"build this screen\", \"build it with ui-sdk\", \"we ship Thursday\", \"the agent keeps doing this\". When the request already names a skill, use that skill."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "go",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".claude/skills/go/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "go-devnullltd-yuzu",
+  "downloaded_at": "2026-11-22T10:57:24.379265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/go/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/go/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review a Yuzu pull request end to end with a static-first trust gate, isolated dynamic testing, adversarial Kimi/Codex review, a posted verdict, and head-SHA-bound re-review. Use when the user types forms such as \"go PR123\", \"go 123\", or \"/go PR123\"; use `--promote SHA` only after a collaborator accepts the static review of an external fork."
+}

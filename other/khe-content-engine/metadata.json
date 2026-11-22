@@ -1,0 +1,37 @@
+{
+  "name": "khe-content-engine",
+  "repo": "HKTITAN/skills",
+  "path": "skills/khe-content-engine/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HKTITAN/skills",
+  "dir_name": "khe-content-engine",
+  "downloaded_at": "2026-11-22T11:18:42.237607Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKTITAN",
+  "source_url": "https://github.com/HKTITAN/skills/blob/main/skills/khe-content-engine/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKTITAN/skills/blob/main/skills/khe-content-engine/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds and runs a content engine: a folder of small linked markdown nodes in your own project (a voice sampled from posts you wrote, audience segments, one node per platform you use, hooks, repurposing rules, content types, cadence), then turns one idea into a different draft for each platform and names the node behind every choice. Also reviews drafts against the engine and tunes the node that caused a wrong line. It drafts; a person posts. Use when someone says \"build me a content engine\", \"turn this into posts for X and LinkedIn\", \"repurpose this\", \"write in my voice\", \"make a thread out of this\", \"why doesn't this sound like me\", or wants one idea written for several platforms. For a launch film use `khe-launch-film`, for a product demo `khe-demo`, for stickers `khe-sticker`, for faux product UI `stageshow` (Benji Taylor). When unsure which skill owns a job, `khe-auto`."
+}

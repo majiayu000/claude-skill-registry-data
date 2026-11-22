@@ -1,0 +1,37 @@
+{
+  "name": "x-ray",
+  "repo": "Abdo453/HunterAI",
+  "path": ".opencode/skills/x-ray/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Abdo453/HunterAI",
+  "dir_name": "x-ray-abdo453-hunterai",
+  "downloaded_at": "2026-11-22T10:21:04.905671Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abdo453",
+  "source_url": "https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/x-ray/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/x-ray/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates an x-ray.md pre-audit report covering overview, enhanced threat model (protocol-type profiling, git-weighted attack surfaces, temporal risk analysis, composability dependency mapping), invariants, integrations, docs quality, test analysis, and developer/git history. Triggers on 'x-ray',..."
+}

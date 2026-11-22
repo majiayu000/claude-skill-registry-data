@@ -1,0 +1,39 @@
+{
+  "name": "vaex",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/vaex/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "vaex-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:41.980847Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, pipeline, visualization",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/vaex/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/vaex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Processes and analyzes tabular datasets too large for RAM using Vaex, a Python library for lazy, out-of-core DataFrames over memory-mapped HDF5 and Arrow files, with CSV and Parquet import/export. Covers virtual columns, filtering, groupby aggregations, large-data heatmaps and histograms, and vaex-ml transformers, PCA, and K-means. Use when opening or converting multi-gigabyte CSV/HDF5/Arrow/Parquet files, computing fast statistics on billions of rows, visualizing massive datasets, building ML pipelines that do not fit in memory, or speeding up slow aggregations with lazy evaluation and delay=True. Prefer polars when data fits in RAM, or dask for cluster-distributed work."
+}

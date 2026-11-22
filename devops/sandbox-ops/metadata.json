@@ -1,0 +1,38 @@
+{
+  "name": "sandbox-ops",
+  "repo": "0xDarkMatter/claude-mods",
+  "path": "skills/sandbox-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/0xDarkMatter/claude-mods",
+  "dir_name": "sandbox-ops",
+  "downloaded_at": "2026-11-22T10:11:29.453650Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd",
+      "docker"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xDarkMatter",
+  "source_url": "https://github.com/0xDarkMatter/claude-mods/blob/main/skills/sandbox-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xDarkMatter/claude-mods/blob/main/skills/sandbox-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run work on hosted cloud sandboxes without leaking boxes, losing work or credentials: boat.dev (boat, boat new, boat exec, bx_), E2B, Modal Sandboxes, Vercel Sandbox, Daytona, Fly Machines. Create and size a box, exec or ssh, copy files in and out, set the lifetime, delete and confirm it is gone, one API key per process. Covers remote agent lanes (fleetflow), one-time CI runners, heavy-job offload, Docker or DDEV on a box, residency. (Formerly boat-ops.) Not for writing @cloudflare/sandbox code: use sandbox-stable or sandbox-next."
+}

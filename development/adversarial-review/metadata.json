@@ -1,0 +1,39 @@
+{
+  "name": "adversarial-review",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".claude/skills/adversarial-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "adversarial-review",
+  "downloaded_at": "2026-11-22T10:57:29.370884Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/adversarial-review/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/adversarial-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run an adversarial two-phase code review of a change with TWO independent reviewers \u2014 Claude and Codex \u2014 who review alone, then cross-examine each other's findings, then Claude synthesizes a single weighted verdict. Use when the user says \"/adversarial-review\", \"adversarial review\", \"review this with Codex\", \"get Codex to review\", \"two-reviewer review\", \"cross-examine this PR\", or wants a second independent model to grade a change before merge."
+}

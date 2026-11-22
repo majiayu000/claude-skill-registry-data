@@ -1,0 +1,38 @@
+{
+  "name": "behavior-coverage",
+  "repo": "AIEraDev/Clypra",
+  "path": ".kiro/skills/behavior-coverage/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AIEraDev/Clypra",
+  "dir_name": "behavior-coverage",
+  "downloaded_at": "2026-11-22T10:19:04.917798Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AIEraDev",
+  "source_url": "https://github.com/AIEraDev/Clypra/blob/master/.kiro/skills/behavior-coverage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AIEraDev/Clypra/blob/master/.kiro/skills/behavior-coverage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides systematic user behavior discovery, multi-layer scenario mapping, post-implementation auditing, and Playwright UI / native test automation in Clypra. Activate when designing new features, fixing complex defects, evaluating test coverage, building UI test suites, or auditing behavioral edge cases."
+}

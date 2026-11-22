@@ -1,0 +1,40 @@
+{
+  "name": "hotwire-docs",
+  "repo": "AllYourBot/hostedgpt",
+  "path": ".claude/skills/hotwire-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AllYourBot/hostedgpt",
+  "dir_name": "hotwire-docs",
+  "downloaded_at": "2026-11-22T10:26:44.286334Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, debug",
+    "score": 5,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AllYourBot",
+  "source_url": "https://github.com/AllYourBot/hostedgpt/blob/main/.claude/skills/hotwire-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AllYourBot/hostedgpt/blob/main/.claude/skills/hotwire-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked about Turbo (Turbo Drive, Turbo Frames, Turbo Streams, ActionCable-broadcasted streams) or Stimulus (controllers, targets, actions, values, outlets) \u2014 including \"how do I do X with Turbo/Stimulus\", debugging a Turbo Stream broadcast, or wiring up a Stimulus controller. Always consult the official Hotwire docs rather than answering from memory alone, since Turbo/Stimulus APIs and idioms have shifted across versions and this project has no SPA framework \u2014 all interactivity goes through Hotwire."
+}

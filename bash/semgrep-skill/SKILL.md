@@ -1,0 +1,94 @@
+---
+name: semgrep-skill
+description: "Runs the installed local Semgrep CLI through a bounded JSON wrapper with two bundled non-secret rules. Requires an explicit authorized workspaceRoot and target. No remote rules, uploads, installs, source excerpts or automatic fixes."
+version: "1.2.0"
+context: fork
+---
+
+# Local Semgrep security scan
+
+## 本能力的验收方法
+
+执行前读取 [method.json](method.json) 中当前 capabilityId 的诊断、决策和逐字段 outputChecks，并读取 [任务验收与完整示例](references/acceptance.md)。按本次能力选择相应规则，不用字段齐全、行数或作者自报代替产物质量。缺少 blocking 证据时保留未验收；既有具体授权与宿主最终决定权不变。
+
+专业引用与工具路线继续按下文渐进读取；[来源记录](PROVENANCE.md) 和 [作者正反例](evals/professional-cases.json) 供评审。当前 Meta Skill 发现不会自动注入 method.json，宿主需按此入口读取；未观察到加载或执行时不得宣称生效。
+
+
+Use only `<skill-dir>/scripts/scan.py`, where `<skill-dir>` contains this file.
+The package `capability.json` defines the input, result and optional invocation.
+Read it after the caller verifies the discovered package hash. The generated
+index selects the package; it does not contain or grant the invocation.
+
+## Safety contract
+
+- Require the user's explicit authorized absolute local `workspaceRoot` and a
+  directory `target` inside it. Never default to the current project or drive.
+- The wrapper accepts only `rules/local-security.yml`, extracts just
+  `python-subprocess-shell-true` and `javascript-eval` into temporary configuration
+  before scanning, and records both hashes. The bundled legacy secret-pattern
+  rule is not executed by this route; credential checks are outside this capability.
+- It executes an already-installed trusted host CLI with an argv array and
+  `shell:false`. Never execute files from the scan target as programs.
+- Both the version probe and scan use `--metrics off`, `--disable-version-check`,
+  isolated settings/log/cache paths, and a minimal subprocess environment.
+  Caller tokens, proxies and custom Semgrep configuration are not inherited.
+  Windows APPDATA and a computed installed Python user base/site may be retained
+  solely to locate the existing host runtime; caller PYTHONPATH is not inherited.
+- Do not use `--config auto`, registry URLs, Semgrep Cloud, login or uploads.
+- Do not use `--autofix`, write reports, install Semgrep or fetch rules. The
+  installer installs the Skill projection only and requires separate write approval.
+- stdout contains rule IDs, workspace-relative paths, spans, severity and bundled
+  rule messages. Raw source, metavariables and raw CLI diagnostics are withheld.
+
+## Invoke and interpret
+
+From any working directory, pass one UTF-8 JSON object over stdin:
+
+```json
+{"schemaVersion":1,"workspaceRoot":"<authorized-absolute-local-root>","target":"<directory-within-root>"}
+```
+
+```bash
+python "<skill-dir>/scripts/scan.py" --input-json -
+```
+
+Equivalent named arguments are `--workspace-root <absolute-root> --target
+<directory>`, optionally `--rules rules/local-security.yml`. There are no extra
+Semgrep flags, executable overrides or JSON-file paths. Do not separately run a
+bare `semgrep --version`: the wrapper performs its own isolated runtime check.
+
+Return the wrapper result, not a promise to scan later. `completed` means every
+selected file was confirmed scanned, not that findings were empty or security
+was certified. `completed` exits 0 even with findings. `partial`, `invalid_input`,
+`unavailable` and `failed` exit 2 and keep `completed:false`. An unavailable tool
+must stay unavailable; no installation is attempted. Missing files or errors
+must never be labeled clean. Remediation remains advisory text.
+
+## Coverage and trust boundary
+
+Only visible `.py`, `.js`, `.jsx`, `.ts`, `.tsx` files are selected. Hidden
+directories/files, node_modules, __pycache__, venv and vendor are excluded.
+Links/reparse points are rejected. Narrow targets to at most 512 eligible files,
+each at most 1 MiB; do not select a target containing the host temporary directory.
+Each subprocess has a 60-second limit; output is checked
+while running against an 8 MiB limit per stream. These are safety bounds in
+`scripts/scan.py`, not caller-adjustable business parameters.
+
+`networkUsed:false` describes the enforced local configuration, metrics/version
+opt-outs and environment isolation; it is not OS network isolation or a packet
+capture certificate. `filesModified:false` means no source edits: temporary
+configuration, settings and logs are outside the target and cleaned afterward.
+Use a trusted host installation and stable filesystem; this is not a sandbox for
+malicious binaries or concurrent path replacement. Findings cover two patterns
+only; omitted file types and excluded directories were not audited.
+
+## Installing this Skill
+
+`install.ps1`, `install.sh` and `scripts/install.py` remain dry-run first, require
+explicit project/user scope, and require `--apply` to write. They project this
+file, `capability.json`, the executable scripts, bundled rules, method, referenced
+professional resources, examples, documentation and licenses with hash receipts
+and rollback. The projected method's links must remain readable after installation.
+They never install Semgrep or overwrite legacy code-security.
+See README for preview/apply/rollback commands; do not treat scan permission as
+permission to install or change source.

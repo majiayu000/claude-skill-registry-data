@@ -1,0 +1,37 @@
+{
+  "name": "mutation-testing-python",
+  "repo": "DnsQueen/orcinus-skills",
+  "path": "skills/mutation-testing-python/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/DnsQueen/orcinus-skills",
+  "dir_name": "mutation-testing-python",
+  "downloaded_at": "2026-11-22T10:59:00.150257Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DnsQueen",
+  "source_url": "https://github.com/DnsQueen/orcinus-skills/blob/main/skills/mutation-testing-python/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DnsQueen/orcinus-skills/blob/main/skills/mutation-testing-python/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check whether Python tests actually catch bugs by mutating the code and seeing if the tests fail. Use after a Python slice passes its tests, before calling it done, and whenever a Python test suite looks green but unproven. Python only. Only invoke via the orcinus router."
+}

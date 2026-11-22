@@ -1,0 +1,37 @@
+{
+  "name": "apk-redteam-pipeline",
+  "repo": "HSigei/forgeCLI",
+  "path": "skills/library/apk-redteam-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HSigei/forgeCLI",
+  "dir_name": "apk-redteam-pipeline",
+  "downloaded_at": "2026-11-22T11:19:25.285754Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HSigei",
+  "source_url": "https://github.com/HSigei/forgeCLI/blob/main/skills/library/apk-redteam-pipeline/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HSigei/forgeCLI/blob/main/skills/library/apk-redteam-pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end Android APK red-team pipeline \u2014 automated APK acquisition (Play Store + apkpure + apkmirror fallback), jadx decompilation, secret/URL/JWT/Firebase grep, pinned-cert extraction, exported-component enumeration, Frida runtime instrumentation templates, intent-injection probes. Built from an authorized external red-team engagement where 7 APKs were pulled manually, 4 download attempts truncated, and a hardcoded JWT + 30 internal API endpoints were recovered from one of the apps. Use when target has a mobile app catalogue (Play Store developer page), when you find an APK URL hosted on a web server, or when post-recon mentions \"mobile app\" in scope."
+}

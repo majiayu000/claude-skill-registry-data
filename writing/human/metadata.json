@@ -1,0 +1,39 @@
+{
+  "name": "human",
+  "repo": "AYARI2026/ayari-growth-system",
+  "path": ".claude/skills/human/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/AYARI2026/ayari-growth-system",
+  "dir_name": "human",
+  "downloaded_at": "2026-11-22T10:20:13.702591Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy, blog",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "copy",
+      "blog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AYARI2026",
+  "source_url": "https://github.com/AYARI2026/ayari-growth-system/blob/main/.claude/skills/human/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AYARI2026/ayari-growth-system/blob/main/.claude/skills/human/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "AYARI's personal humanizer for ANY text (captions, reel scripts, newsletters, product pages, ads, DMs, emails, blog posts, briefs), German and English. Writes or rewrites so it doesn't read as AI: removes every pattern from Wikipedia's \"Signs of AI writing\" plus German AI tells, then checks the result with a local script. Use when the user types /human, says \"humanize\", \"klingt nach KI\", \"sounds like AI\", \"mach das menschlicher\", \"ohne KI-Sprech\", or before any text goes out to customers or followers.",
+  "content_fingerprint": "39ac7a31a5a746246289e96c34655b86a3228844b3f2e61b465a64eec8e17f7f"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ai-visibility",
+  "repo": "Fangx-AI/geo-doctor",
+  "path": "skills/ai-visibility/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Fangx-AI/geo-doctor",
+  "dir_name": "ai-visibility-fangx-ai-geo-doctor",
+  "downloaded_at": "2026-11-22T11:09:23.240104Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fangx-AI",
+  "source_url": "https://github.com/Fangx-AI/geo-doctor/blob/master/skills/ai-visibility/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fangx-AI/geo-doctor/blob/master/skills/ai-visibility/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure whether AI assistants actually name and recommend a brand, and diagnose why they name competitors instead. Use when the user asks if ChatGPT, Doubao, DeepSeek, Yuanbao, Qwen, Kimi, Perplexity or Google AI Overviews recommend them, wants to know which brands AI lists for their category, or wants a repeatable sampling protocol instead of one-off screenshots. Builds question sets, samples answers, compares batches and reports the gap. For page-level crawlability first, see ai-crawler-audit. For the content that closes the gap, see ai-content-writer."
+}

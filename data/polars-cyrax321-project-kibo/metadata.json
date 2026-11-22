@@ -1,0 +1,39 @@
+{
+  "name": "polars",
+  "repo": "Cyrax321/project-kibo",
+  "path": ".agents/skills/polars/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Cyrax321/project-kibo",
+  "dir_name": "polars-cyrax321-project-kibo",
+  "downloaded_at": "2026-11-22T10:52:11.827030Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, etl, pipeline",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Cyrax321",
+  "source_url": "https://github.com/Cyrax321/project-kibo/blob/main/.agents/skills/polars/SKILL.md",
+  "license": "https://github.com/pola-rs/polars/blob/main/LICENSE",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Cyrax321/project-kibo/blob/main/.agents/skills/polars/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Fast in-memory DataFrame library for datasets that fit in RAM. Use when pandas is too slow but data still fits in memory. Lazy evaluation, parallel execution, Apache Arrow backend. Best for 1-100GB datasets, ETL pipelines, faster pandas replacement. For larger-than-RAM data use dask or vaex.",
+  "content_fingerprint": "5d2847da8c973eaefc1c13fb7db6e5eddd42777767b52844700681ad6a3cf6a4"
+}

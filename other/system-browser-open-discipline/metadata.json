@@ -1,0 +1,37 @@
+{
+  "name": "system-browser-open-discipline",
+  "repo": "FuDesign2008/open-skills",
+  "path": "skills/system-browser-open-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FuDesign2008/open-skills",
+  "dir_name": "system-browser-open-discipline",
+  "downloaded_at": "2026-11-22T11:11:51.338381Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FuDesign2008",
+  "source_url": "https://github.com/FuDesign2008/open-skills/blob/main/skills/system-browser-open-discipline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FuDesign2008/open-skills/blob/main/skills/system-browser-open-discipline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hard discipline for human-view opens of .md/.html: open via the OS default handler so files land in the system default browser \u2014 not IDE Simple Browser or in-editor Markdown preview. Use when presenting generated HTML/Markdown for human acceptance, or when the user asks to open/view those files in a browser. Triggers \u2014 \u300c\u7528\u6d4f\u89c8\u5668\u6253\u5f00\u300d\u300c\u7cfb\u7edf\u6d4f\u89c8\u5668\u6253\u5f00\u300d\u300c\u6253\u5f00 markdown\u300d\u300c\u6253\u5f00 html\u300d\u300c\u6d4f\u89c8\u5668\u67e5\u770b md\u300d / open in browser, system browser open, view markdown in browser. Referenced by goal-driven-queue and goal-driven-workflow via frontmatter dependencies. Do NOT use for Agent self-read/analysis, for editing files in the editor, or as an installer for browser extensions."
+}

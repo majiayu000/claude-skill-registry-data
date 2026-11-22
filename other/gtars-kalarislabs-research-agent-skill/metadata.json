@@ -1,0 +1,38 @@
+{
+  "name": "gtars",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/gtars/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "gtars-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:44.083026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/gtars/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/gtars/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Inspects and plans work with Gtars, the Rust/Python/CLI toolkit for genomic intervals: BED RegionSet set algebra (reduce, setdiff, intersect, closest, cluster, gaps), overlap counts, consensus peak sets, coverage, tokenizers, fragment processing, and refget/BEDbase stores. Use when merging or comparing BED interval sets, building a consensus or universe from peaks, tokenizing regions for ML models, working with fragment files, or planning refget sequence-collection and BEDbase cache use. Use when checking BED coordinates, contigs, or strand before running gtars. Not for general BAM/VCF processing; use samtools or bedtools for that."
+}

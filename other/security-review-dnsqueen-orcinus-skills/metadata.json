@@ -1,0 +1,37 @@
+{
+  "name": "security-review",
+  "repo": "DnsQueen/orcinus-skills",
+  "path": "skills/security-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DnsQueen/orcinus-skills",
+  "dir_name": "security-review-dnsqueen-orcinus-skills",
+  "downloaded_at": "2026-11-22T10:58:58.566958Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DnsQueen",
+  "source_url": "https://github.com/DnsQueen/orcinus-skills/blob/main/skills/security-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DnsQueen/orcinus-skills/blob/main/skills/security-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a change for secrets, injection, supply-chain, and unsafe patterns before merge. Use after any implementation, before merging or releasing, and whenever code touches auth, secrets, data, or external input. Only invoke via the orcinus router."
+}

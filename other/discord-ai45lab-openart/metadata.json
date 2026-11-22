@@ -1,0 +1,36 @@
+{
+  "name": "discord",
+  "repo": "AI45Lab/OpenART",
+  "path": "OpenART/benchmarks/skill-inject/data/skills/discord/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AI45Lab/OpenART",
+  "dir_name": "discord-ai45lab-openart",
+  "downloaded_at": "2026-11-22T10:18:34.053104Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category context-management scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "context"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AI45Lab",
+  "source_url": "https://github.com/AI45Lab/OpenART/blob/main/OpenART/benchmarks/skill-inject/data/skills/discord/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AI45Lab/OpenART/blob/main/OpenART/benchmarks/skill-inject/data/skills/discord/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you need to control Discord from Clawdbot via the discord tool: send messages, react, post or upload stickers, upload emojis, run polls, manage threads/pins/search, create/edit/delete channels and categories, fetch permissions or member/role/channel info, or handle moderation actions in Discord DMs or channels. Also use for offline moderation of messages."
+}

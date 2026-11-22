@@ -1,0 +1,37 @@
+{
+  "name": "llms-txt",
+  "repo": "Fangx-AI/geo-doctor",
+  "path": "skills/llms-txt/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Fangx-AI/geo-doctor",
+  "dir_name": "llms-txt-fangx-ai-geo-doctor",
+  "downloaded_at": "2026-11-22T11:09:22.413710Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fangx-AI",
+  "source_url": "https://github.com/Fangx-AI/geo-doctor/blob/master/skills/llms-txt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fangx-AI/geo-doctor/blob/master/skills/llms-txt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build the files AI reads first: llms.txt, facts.json, robots.txt, sitemap.xml and a static fact site generated from a fact card. Use when the user asks for llms.txt, wants a site agents can read without JavaScript, needs machine-readable facts about a product as files, or wants GitHub Pages to publish an AI-readable fact sheet from confirmed facts only. Starts from a fact card that already exists; reconciling scattered sources into that card is ai-content-writer. Generates the site, refuses unconfirmed facts, and explains what llms.txt can and cannot do. For crawl diagnostics, see ai-crawler-audit. For prose that gets cited, see ai-content-writer."
+}

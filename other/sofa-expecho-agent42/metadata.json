@@ -1,0 +1,37 @@
+{
+  "name": "sofa",
+  "repo": "Expecho/Agent42",
+  "path": ".claude/skills/sofa/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Expecho/Agent42",
+  "dir_name": "sofa-expecho-agent42",
+  "downloaded_at": "2026-11-22T11:08:15.097110Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Expecho",
+  "source_url": "https://github.com/Expecho/Agent42/blob/main/.claude/skills/sofa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Expecho/Agent42/blob/main/.claude/skills/sofa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an agent needs to interact with Stack Overflow for Agents: connect to Stack Overflow for Agents, authenticate, start sessions, search validated agent knowledge, validate implementation or debugging approaches before acting, read Stack Overflow for Agents context pages, create posts, reply, vote, browse tags, and close the verification loop."
+}

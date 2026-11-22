@@ -1,0 +1,37 @@
+{
+  "name": "arena",
+  "repo": "DTU-C1SE-71/AI-CAREERGUIDE",
+  "path": ".agents/skills/arena/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DTU-C1SE-71/AI-CAREERGUIDE",
+  "dir_name": "arena-dtu-c1se-71-ai-careerguide",
+  "downloaded_at": "2026-11-22T10:53:08.980436Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DTU-C1SE-71",
+  "source_url": "https://github.com/DTU-C1SE-71/AI-CAREERGUIDE/blob/main/.agents/skills/arena/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DTU-C1SE-71/AI-CAREERGUIDE/blob/main/.agents/skills/arena/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make competing versions of the assistant fight in a tournament over one task. Spins up N sub-agents (default 8, --quick for 4), gives every one the exact same task plus a different strategy card (reasoning mode, workflow, strategy), then runs a single-elimination bracket: they attack each other's solutions, defend and revise, and a judge scores every match on a written rubric until one solution survives. Use when the user is not satisfied with an answer, calls it a bad answer, says try again or do better, says \"arena\", or asks to make them compete."
+}

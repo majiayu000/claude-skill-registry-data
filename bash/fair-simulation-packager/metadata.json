@@ -1,0 +1,38 @@
+{
+  "name": "fair-simulation-packager",
+  "repo": "HeshamFS/materials-simulation-skills",
+  "path": "skills/data-management/fair-simulation-packager/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/HeshamFS/materials-simulation-skills",
+  "dir_name": "fair-simulation-packager",
+  "downloaded_at": "2026-11-22T11:22:09.005716Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HeshamFS",
+  "source_url": "https://github.com/HeshamFS/materials-simulation-skills/blob/main/skills/data-management/fair-simulation-packager/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HeshamFS/materials-simulation-skills/blob/main/skills/data-management/fair-simulation-packager/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create FAIR-minded reproducibility bundles for materials simulations by collecting input/output file inventories, hashes, units, engine versions, structure identifiers, provenance, and NOMAD/OPTIMADE/Materials Project friendly metadata. Use before publishing, sharing, archiving, or handing simulation results to another agent."
+}

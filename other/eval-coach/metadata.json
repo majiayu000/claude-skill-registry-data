@@ -1,0 +1,37 @@
+{
+  "name": "eval-coach",
+  "repo": "Calibre-Labs/reforge-ai-evals",
+  "path": "skills/eval-coach/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Calibre-Labs/reforge-ai-evals",
+  "dir_name": "eval-coach",
+  "downloaded_at": "2026-11-22T10:43:58.828939Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Calibre-Labs",
+  "source_url": "https://github.com/Calibre-Labs/reforge-ai-evals/blob/main/skills/eval-coach/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Calibre-Labs/reforge-ai-evals/blob/main/skills/eval-coach/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer questions about AI evals from the Reforge AI Evals course (its FAQs, course reader and live sessions), and teach the plugin's skills through short hands-on lessons on Mapper, the course agent. Use this skill whenever someone asks a concept or \"why/how/when\" question about evals, agents, harnesses, traces, rubrics, user input grids, trace codes, code checks, LLM judges, TPR/TNR, judge alignment, datasets, release thresholds, online evals, monitoring or agent success rate; asks \"what does the course say about...\", \"explain...\", \"what's the difference between...\"; or says \"teach me evals\", \"how do I learn this plugin\", \"quiz me\", \"continue the tour\" or \"eval coach\". Draws diagrams when an idea has a shape. Do NOT use when the person wants eval work done on their own files (write a rubric, cluster notes, write a judge): load that skill."
+}

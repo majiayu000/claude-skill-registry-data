@@ -1,0 +1,38 @@
+{
+  "name": "video-check",
+  "repo": "EditAtlas/skills",
+  "path": "skills/video-check/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/EditAtlas/skills",
+  "dir_name": "video-check",
+  "downloaded_at": "2026-11-22T11:03:10.051814Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EditAtlas",
+  "source_url": "https://github.com/EditAtlas/skills/blob/main/skills/video-check/SKILL.md",
+  "license": "Apache-2.0. LICENSE.txt has the complete terms",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EditAtlas/skills/blob/main/skills/video-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check a finished video before the person sees it or posts it, then fix what is wrong. Measures the file (size, frame rate, pixel format, length), picture faults (black or white frames, frozen stretches, one-frame glitches and wrong frames at cuts, stutter, loop seams), sound (loudness, clipping, silences, abrupt ends) and text too small or too brief for a phone; makes frame sheets at phone size and a strip around each cut; a reviewer who has not seen your plan judges them by the kind of video (tutorial, talking head, ad, reel, film) and, from round 2, checks each claimed fix on the new frames. Fix the worst three, render again, at most three rounds. Use it after rendering any edit, and when someone asks to check a video before sending or posting it, says \"kiểm tra video trước khi gửi\", \"xem lại bản dựng\", \"video này có lỗi gì không\", \"review my edit\", \"QA this render\". Works on a local file. Not for breaking down someone else's video (use video-breakdown) or for judging footage the person has not edited.",
+  "content_fingerprint": "8dcbaa6c00ccfd0e4fd145984627b213647ca76c4249b7d48b1e1a43500d9c2d"
+}

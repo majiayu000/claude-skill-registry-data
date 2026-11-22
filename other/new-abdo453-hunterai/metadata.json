@@ -1,0 +1,37 @@
+{
+  "name": "new",
+  "repo": "Abdo453/HunterAI",
+  "path": ".opencode/skills/new/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Abdo453/HunterAI",
+  "dir_name": "new-abdo453-hunterai",
+  "downloaded_at": "2026-11-22T10:20:58.777188Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: integration=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "webhook",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abdo453",
+  "source_url": "https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/new/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/new/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a new engagement workspace. Usage: /new <platform> <program> [--type web-app|api|mobile|smart-contract]"
+}

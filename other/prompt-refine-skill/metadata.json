@@ -1,0 +1,37 @@
+{
+  "name": "prompt-refine",
+  "repo": "Apeironics/prompt-refine-skill",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Apeironics/prompt-refine-skill",
+  "dir_name": "prompt-refine-skill",
+  "downloaded_at": "2026-11-22T10:29:56.010564Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Apeironics",
+  "source_url": "https://github.com/Apeironics/prompt-refine-skill/blob/main/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Apeironics/prompt-refine-skill/blob/main/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Improve a prompt or reusable task specification, or enable conversation-scoped prompt-refine mode. Preserve intent and constraints while applying the target model's documented guidance. Use for prompt rewriting and explicit refinement requests, not every ordinary question or edits to a skill's implementation."
+}

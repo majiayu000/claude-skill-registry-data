@@ -1,0 +1,37 @@
+{
+  "name": "split",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".claude/skills/split/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "split-devnullltd-yuzu",
+  "downloaded_at": "2026-11-22T10:57:24.997308Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/split/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/split/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Presentation/Core/Engine split control plane \u2014 the canonical entry point for any work decomposing the Yuzu server into three binaries (presentation \u00b7 core \u00b7 engine) per ADR-0031-presentation-core-engine-decomposition / ADR-0032 (the admission interlock) / ADR-0033 (access-control spine). Use when the user says \"/split\", \"/pce-split\", \"/decomposition\", asks to plan or implement a split workstream (WS-A*, WS-B*, WS-X*), asks \"what's our gap to the presentation/core split\" or \"is it safe to extract presentation/the engine yet\", asks to audit split readiness, or starts work touching the seam (handlers calling stores directly, the INV-31-4 contract test, the Drogon port, `server/presentation` or `server/engine`, the `uce` DB grants, component service identity, or the ADR-0032 admission/grant/audit substrate \u2014 `use_case_run_id`, the release log, the capability-declaration registry)."
+}

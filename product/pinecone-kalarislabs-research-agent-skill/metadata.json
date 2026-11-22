@@ -1,0 +1,38 @@
+{
+  "name": "pinecone",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/pinecone/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "pinecone-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:52.569252Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/pinecone/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/pinecone/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides use of Pinecone, a managed serverless vector database, through its Python client and the LangChain and LlamaIndex integrations. Covers creating indexes, upserting and querying vectors, metadata filtering, namespaces, hybrid dense and sparse search, index management, and deleting vectors. Use when building a production RAG system on a hosted vector store, adding semantic search or recommendations without running infrastructure, isolating per-user or per-tenant data with namespaces, combining dense and sparse vectors in one query, or filtering results by metadata. Do not use for self-hosted or local stores (Chroma, Weaviate) or offline similarity search (FAISS)."
+}

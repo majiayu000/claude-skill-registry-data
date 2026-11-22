@@ -1,0 +1,37 @@
+{
+  "name": "refresh",
+  "repo": "BenAIOS/benai-skills",
+  "path": "shared-skills/refresh/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/BenAIOS/benai-skills",
+  "dir_name": "refresh-benaios-benai-skills",
+  "downloaded_at": "2026-11-22T10:38:15.806571Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BenAIOS",
+  "source_url": "https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/refresh/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/refresh/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Start a clean Claude session with only the context the next task needs, instead of /compact.\nCaptures the goal of your next session, points to the right files (never copies them),\nand outputs a self-contained prompt to paste into a fresh chat.\nUse when: \"refresh\", \"refresh context\", \"fresh start\", \"my chat got sloppy\",\n\"start a new chat with context\", \"hand off this session\", outputs degrading, drifting off task.\nThree levels: lite (quick reset), full (default handoff), ultra (full briefing).\nNOT for: summarizing in place (that's /compact), or saving permanent notes."
+}

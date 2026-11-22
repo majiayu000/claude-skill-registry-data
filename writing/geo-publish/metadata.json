@@ -1,0 +1,39 @@
+{
+  "name": "geo-publish",
+  "repo": "Fangx-AI/geo-doctor",
+  "path": "skills/geo-publish/SKILL.md",
+  "github_branch": "master",
+  "category": "writing",
+  "source": "github.com/Fangx-AI/geo-doctor",
+  "dir_name": "geo-publish",
+  "downloaded_at": "2026-11-22T11:09:22.961453Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, blog, article",
+    "score": 4,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "writing",
+      "writer",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fangx-AI",
+  "source_url": "https://github.com/Fangx-AI/geo-doctor/blob/master/skills/geo-publish/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fangx-AI/geo-doctor/blob/master/skills/geo-publish/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan and run multi-platform publishing for GEO content: the official site publishes directly, third-party platforms get a packaged outbox that a human posts. Use when the user asks where to publish so AI cites them, wants one article shipped to a blog plus social platforms, needs drafts converted into each platform format, or wants a publish log of what went out and when. Publishes only confirmed drafts and never claims a post succeeded on a platform without a URL. For the writing itself, see ai-content-writer. For sources each AI trusts, see the references in this skill."
+}

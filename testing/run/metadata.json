@@ -1,0 +1,38 @@
+{
+  "name": "run",
+  "repo": "DrunkenDealer/claude-code-qa-cycle",
+  "path": "plugin/skills/run/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/DrunkenDealer/claude-code-qa-cycle",
+  "dir_name": "run",
+  "downloaded_at": "2026-11-22T11:00:59.377214Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DrunkenDealer",
+  "source_url": "https://github.com/DrunkenDealer/claude-code-qa-cycle/blob/main/plugin/skills/run/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DrunkenDealer/claude-code-qa-cycle/blob/main/plugin/skills/run/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Whole-app QA loop run by an orchestrator \u2014 map every feature, plan small test units, fan out one tester agent per unit, return findings as a list, then after the user's go-ahead fan out fixers (worktrees) and fresh verifiers (sandboxes), and loop cycle after cycle until every fix-now item is verified. Owns the agent structure (orchestrator \u2192 testers / fixers / verifiers), which model each role runs on, the machine-load budget, and the durable tracker. Triggers on \"test the whole app\", \"map features and test everything\", \"QA cycle\", \"fix everything in the tracker and verify\", \"next cycle of testing\", \"fan out agents to test/fix\"."
+}

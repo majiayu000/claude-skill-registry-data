@@ -1,0 +1,37 @@
+{
+  "name": "yt-ingestion",
+  "repo": "BenAIOS/benai-skills",
+  "path": "shared-skills/yt-ingestion/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/BenAIOS/benai-skills",
+  "dir_name": "yt-ingestion-benaios-benai-skills",
+  "downloaded_at": "2026-11-22T10:38:29.871409Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BenAIOS",
+  "source_url": "https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/yt-ingestion/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/yt-ingestion/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fetch a YouTube video's raw artifacts (video file, transcript, word-level timestamps, thumbnail, metadata) without committing to a downstream workflow. Use when the user wants just the ingestion output for debugging, scratch work, or feeding into another tool. Triggers on phrases like \"get me the transcript\", \"download this video\", \"fetch artifacts for\", \"ingest this YouTube URL\"."
+}

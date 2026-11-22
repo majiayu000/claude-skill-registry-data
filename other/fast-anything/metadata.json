@@ -1,0 +1,37 @@
+{
+  "name": "fast-anything",
+  "repo": "EL4CTEO/fast-anything",
+  "path": "skills/fast-anything/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/EL4CTEO/fast-anything",
+  "dir_name": "fast-anything",
+  "downloaded_at": "2026-11-22T11:02:04.424914Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EL4CTEO",
+  "source_url": "https://github.com/EL4CTEO/fast-anything/blob/main/skills/fast-anything/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EL4CTEO/fast-anything/blob/main/skills/fast-anything/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Speed up a slow Python, Node.js/TypeScript, Ruby, Java, Go, PHP, C, C++ or C# app by porting its hottest pure functions to Rust and proving each port gives the same results on real recorded calls. Use when the user wants their Python code faster, asks about hot paths or profiling, or says \"rewrite the slow part in Rust\"."
+}

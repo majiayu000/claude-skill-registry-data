@@ -1,0 +1,38 @@
+{
+  "name": "waf-setup",
+  "repo": "BennerCas/antigravity-os-v2",
+  "path": "skills/waf-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/BennerCas/antigravity-os-v2",
+  "dir_name": "waf-setup-bennercas-antigravity-os-v2",
+  "downloaded_at": "2026-11-22T10:39:16.772002Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, owasp",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BennerCas",
+  "source_url": "https://github.com/BennerCas/antigravity-os-v2/blob/main/skills/waf-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BennerCas/antigravity-os-v2/blob/main/skills/waf-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy and tune Web Application Firewalls. Configure rules for OWASP Top 10 protection. Use when protecting web applications from common attacks."
+}

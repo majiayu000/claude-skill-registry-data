@@ -1,0 +1,38 @@
+{
+  "name": "video-breakdown",
+  "repo": "EditAtlas/skills",
+  "path": "skills/video-breakdown/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/EditAtlas/skills",
+  "dir_name": "video-breakdown",
+  "downloaded_at": "2026-11-22T11:03:10.858884Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EditAtlas",
+  "source_url": "https://github.com/EditAtlas/skills/blob/main/skills/video-breakdown/SKILL.md",
+  "license": "Apache-2.0. LICENSE.txt has the complete terms",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EditAtlas/skills/blob/main/skills/video-breakdown/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Break down a reference video shot by shot and name what it does, so the person can make one like it. Measures cuts and transitions (dissolve, dip, wipe, shape, iris, push, zoom, flash), camera moves (crash zoom, push in, shake, speed change), text and graphics and their timing (in, hold, out, stagger), text colours, gradients, backgrounds, font size and free lookalike fonts, the look, pacing, the beat and sound hits; you look at the frames, look up each element in EditAtlas and write a report with technique names, sounds and a recipe. Use it when someone shares a video they like and asks what effect, transition or edit is in it, how it was made, or how to remake it; says \"video này dùng hiệu ứng gì\", \"phân tích video mẫu\", \"làm sao để edit giống video này\", \"hiệu ứng chuyển cảnh này tên gì\", \"what transition is this\"; or asks why their remake does not look like the reference (\"so sánh bản làm lại\"). Works on a local file. Not for downloading from TikTok or YouTube, telling filmed from AI footage, or editing.",
+  "content_fingerprint": "59ddd6dfd14232709920df7b739aa5afcd68ec38d8fef2423d7c6833ffbf63e4"
+}

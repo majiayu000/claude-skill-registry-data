@@ -1,0 +1,37 @@
+{
+  "name": "apa7",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/apa7/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "apa7",
+  "downloaded_at": "2026-11-22T11:40:41.454181Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/apa7/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/apa7/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Format papers, theses and references in APA Style 7th edition for psychology, education, social sciences, nursing and business, covering student vs professional papers, title page, abstract and keywords, heading levels, in-text citations, reference list entries (journal articles, books, chapters, datasets, software, webpages, AI tools), tables and figures, bias-free language, and APA via LaTeX (apa7 class + biblatex-apa), Word or Pandoc/CSL. Use when a user needs APA format, APA citations or references, or an APA-compliant manuscript or thesis."
+}

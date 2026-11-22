@@ -1,0 +1,38 @@
+{
+  "name": "linear-ops",
+  "repo": "0xDarkMatter/claude-mods",
+  "path": "skills/linear-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/0xDarkMatter/claude-mods",
+  "dir_name": "linear-ops",
+  "downloaded_at": "2026-11-22T10:11:24.830555Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xDarkMatter",
+  "source_url": "https://github.com/0xDarkMatter/claude-mods/blob/main/skills/linear-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xDarkMatter/claude-mods/blob/main/skills/linear-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operate Linear safely over its MCP server or GraphQL API, and coordinate agents in it, without a typo reading as no work. Use for: linear issue, linear.app, ENG-123 style ids, list_issues, save_issue, issueCreate, triage, cycles, projects, project updates, Linear Reviews, merge_diff, delegate to agent, agents in Linear, magic words, Fixes ENG-123, branchName, Linear webhook, Linear-Signature, Linear GraphQL, RATELIMITED, issueBatchUpdate, @linear/sdk, Linear import, agent user API key, watch Linear comments, claim a card."
+}

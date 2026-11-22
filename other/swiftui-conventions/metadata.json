@@ -1,0 +1,37 @@
+{
+  "name": "swiftui-conventions",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/apple-plugin/skills/swiftui-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "swiftui-conventions",
+  "downloaded_at": "2026-11-22T10:30:54.817163Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/swiftui-conventions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/swiftui-conventions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "SwiftUI conventions for Apple apps: app and scene structure, view composition and identity, modifiers and custom ViewModifiers, layout (stacks, Grid, ViewThatFits, Layout), lists and lazy containers, async work with .task, environment values (@Entry), design-system tokens from the asset catalog, Dynamic Type, Dark Mode, accessibility, String Catalog localization, #Preview, UIKit / AppKit interop, performance. Platform specifics live in ios-ipados, macos-app and watchos-app.\n\nUse this skill to:\n- Build screens out of small, previewable views that match the rest of the app.\n- Keep side effects out of view bodies.\n- Make every new screen accessible, localized and theme-aware.\n- Bridge to UIKit / AppKit only where SwiftUI cannot do the job.\n\nDo NOT use this skill for:\n- Where state lives and how it flows \u2014 see apple-plugin:swiftui-state.\n- Navigation, deep links, sheets \u2014 see apple-plugin:swiftui-navigation.\n- Tests and previews as tests \u2014 see apple-plugin:apple-testing."
+}

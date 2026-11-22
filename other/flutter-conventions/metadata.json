@@ -1,0 +1,37 @@
+{
+  "name": "flutter-conventions",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/flutter-plugin/skills/flutter-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "flutter-conventions",
+  "downloaded_at": "2026-11-22T10:30:55.213316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/flutter-plugin/skills/flutter-conventions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/flutter-plugin/skills/flutter-conventions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Flutter project structure and widget conventions: app vs package detection, feature-first vs layer-first layout, widget composition and const discipline, StatelessWidget vs StatefulWidget lifecycle, BuildContext rules, keys, theming with ThemeData/ColorScheme/ThemeExtension, responsive and adaptive layout, accessibility (Semantics, text scaling, tap targets), localization with gen-l10n, assets and fonts, flavors, platform channels, secure storage, performance.\n\nUse this skill to:\n- Build screens from small, const, testable widgets.\n- Manage widget lifecycle (controllers, subscriptions, animations) without leaks.\n- Read styling from the theme and keep screens responsive and accessible.\n- Add strings, assets, permissions and platform code the way the project already does.\n\nDo NOT use this skill for:\n- State management choice and patterns (see flutter-state-management).\n- Routing and deep links (see flutter-navigation).\n- Testing (see flutter-testing).\n- Plain Dart idioms (see dart-foundation:dart-conventions)."
+}

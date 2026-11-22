@@ -1,0 +1,37 @@
+{
+  "name": "slides",
+  "repo": "JimLiu/open-artifact",
+  "path": "artifact-types/slides/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JimLiu/open-artifact",
+  "dir_name": "slides-jimliu-open-artifact",
+  "downloaded_at": "2026-11-22T11:36:25.286039Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JimLiu",
+  "source_url": "https://github.com/JimLiu/open-artifact/blob/main/artifact-types/slides/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JimLiu/open-artifact/blob/main/artifact-types/slides/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make and revise presentation decks in the Slides format as local files: project/deck.json holds the title, slide order, outline and typefaces, and each slide is one HTML file (project/slides/<id>.html) on a fixed 1920\u00d71080 canvas (1440\u00d71080 at 4:3), written as HTML with classes sharing project/deck.css or, in older decks, a closed subset of HTML and inline CSS. A local page shows the deck with a slide rail and an overview, lets people retype, move and restyle things, write speaker notes, add builds and transitions, present full screen, export PDF, HTML or PowerPoint and send requests back to the agent. Use when someone asks for a slide deck, presentation, pitch deck, report deck, lecture or talk slides, names the Slides type, or wants to change a folder that holds project/deck.json. Can install a design system and use its colors, type and fonts. Not for a one-off single-file HTML deck, a document, or a free-form HTML page."
+}

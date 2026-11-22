@@ -1,0 +1,37 @@
+{
+  "name": "sync",
+  "repo": "Abdo453/HunterAI",
+  "path": ".opencode/skills/sync/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Abdo453/HunterAI",
+  "dir_name": "sync",
+  "downloaded_at": "2026-11-22T10:21:03.079408Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: vulnerability, pentest",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "vulnerability",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abdo453",
+  "source_url": "https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/sync/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/sync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sync program scope, policy, and hacktivity from a bug bounty platform. Usage: /sync hackerone tesla or /sync bugcrowd uber"
+}

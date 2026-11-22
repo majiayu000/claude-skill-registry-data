@@ -1,0 +1,37 @@
+{
+  "name": "khe-sound",
+  "repo": "HKTITAN/skills",
+  "path": "skills/khe-sound/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/HKTITAN/skills",
+  "dir_name": "khe-sound",
+  "downloaded_at": "2026-11-22T11:18:39.714082Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKTITAN",
+  "source_url": "https://github.com/HKTITAN/skills/blob/main/skills/khe-sound/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKTITAN/skills/blob/main/skills/khe-sound/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Decides which moments in a product UI or a launch video earn a sound or a haptic, designs one material family, generates the files with ElevenLabs or an offline synth, and places each transient on the frame where the motion lands. Use when someone says \"add a sound\", \"it needs a satisfying click\", \"should this make a sound?\", \"the click feels late\", \"the sounds feel stock\", or wants UI sound effects, a mute toggle, vibration on the mobile web, or a soundtrack placed on a locked film. For the motion a sound lands on use `khe-ui`; for a film's register, beats and cuts use `khe-launch-film`."
+}

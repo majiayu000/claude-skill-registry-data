@@ -1,0 +1,38 @@
+{
+  "name": "rdkit",
+  "repo": "DTU-C1SE-71/AI-CAREERGUIDE",
+  "path": ".agents/skills/rdkit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DTU-C1SE-71/AI-CAREERGUIDE",
+  "dir_name": "rdkit-dtu-c1se-71-ai-careerguide",
+  "downloaded_at": "2026-11-22T10:53:08.692933Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DTU-C1SE-71",
+  "source_url": "https://github.com/DTU-C1SE-71/AI-CAREERGUIDE/blob/main/.agents/skills/rdkit/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DTU-C1SE-71/AI-CAREERGUIDE/blob/main/.agents/skills/rdkit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cheminformatics toolkit for fine-grained molecular control. SMILES/SDF parsing, descriptors (MW, LogP, TPSA), fingerprints, substructure search, 2D/3D generation, similarity, reactions. For standard workflows with simpler interface, use datamol (wrapper around RDKit). Use rdkit for advanced control, custom sanitization, specialized algorithms."
+}

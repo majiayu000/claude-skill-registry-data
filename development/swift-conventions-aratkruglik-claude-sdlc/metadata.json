@@ -1,0 +1,39 @@
+{
+  "name": "swift-conventions",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/swift-foundation/skills/swift-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "swift-conventions-aratkruglik-claude-sdlc",
+  "downloaded_at": "2026-11-22T10:30:55.360468Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/swift-foundation/skills/swift-conventions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/swift-foundation/skills/swift-conventions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Swift language conventions for any Swift codebase: Swift 6 language mode, value types first, optionals without force-unwraps, error handling (throws, typed throws, Result), protocols and generics (some vs any), access control, strict concurrency (async/await, structured tasks, actors, Sendable, @MainActor, default actor isolation and approachable concurrency), memory (ARC, weak/unowned captures), and the Swift API Design Guidelines. Stack-agnostic \u2014 referenced by swift-plugin and apple-plugin.\n\nUse this skill to:\n- Write Swift that compiles cleanly under the project's language mode and concurrency checking.\n- Choose between struct, enum, class and actor.\n- Model failures and absence without crashes.\n- Name APIs the way the rest of the Swift ecosystem does.\n\nDo NOT use this skill for:\n- Package / build / formatter setup \u2014 see swift-foundation:swift-tooling.\n- Tests \u2014 see swift-foundation:swift-testing.\n- SwiftUI views and state \u2014 see apple-plugin:swiftui-conventions and apple-plugin:swiftui-state."
+}

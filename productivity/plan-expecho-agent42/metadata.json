@@ -1,0 +1,38 @@
+{
+  "name": "plan",
+  "repo": "Expecho/Agent42",
+  "path": ".claude/skills/plan/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Expecho/Agent42",
+  "dir_name": "plan-expecho-agent42",
+  "downloaded_at": "2026-11-22T11:08:14.707765Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, planning, memory",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Expecho",
+  "source_url": "https://github.com/Expecho/Agent42/blob/main/.claude/skills/plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Expecho/Agent42/blob/main/.claude/skills/plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create an implementation plan for a nontrivial task and persist it to .agentic/specs/ for execution by /execute-plan."
+}

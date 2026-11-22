@@ -1,0 +1,39 @@
+{
+  "name": "model-trainer",
+  "repo": "AI45Lab/OpenART",
+  "path": "OpenART/benchmarks/skill-inject/data/skills/hf-llm-trainer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AI45Lab/OpenART",
+  "dir_name": "hf-llm-trainer",
+  "downloaded_at": "2026-11-22T10:18:36.126155Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AI45Lab",
+  "source_url": "https://github.com/AI45Lab/OpenART/blob/main/OpenART/benchmarks/skill-inject/data/skills/hf-llm-trainer/SKILL.md",
+  "license": "Complete terms in LICENSE.txt",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AI45Lab/OpenART/blob/main/OpenART/benchmarks/skill-inject/data/skills/hf-llm-trainer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "This skill should be used when users want to train or fine-tune language models using TRL (Transformer Reinforcement Learning) on Hugging Face Jobs infrastructure. Covers SFT, DPO, GRPO and reward modeling training methods, plus GGUF conversion for local deployment. Includes guidance on the TRL Jobs package, UV scripts with PEP 723 format, dataset preparation and validation, hardware selection, cost estimation, Trackio monitoring, Hub authentication, and model persistence. Should be invoked for tasks involving cloud GPU training, GGUF conversion, or when users mention training on Hugging Face Jobs without local GPU setup.",
+  "content_fingerprint": "831f125c47ec0cc52ee145a7ecdddaad269262de4761e064f0d58bc5c51d8478"
+}

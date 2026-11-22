@@ -1,0 +1,39 @@
+{
+  "name": "yuzu-windows-msvc",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".codex/skills/yuzu-windows-msvc/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "yuzu-windows-msvc",
+  "downloaded_at": "2026-11-22T10:57:29.235254Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/yuzu-windows-msvc/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/yuzu-windows-msvc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use the supported Yuzu Windows workflow: MSYS2 bash plus MSVC plus vcpkg. Use when handling Windows builds, `setup_msvc_env.sh`, `triplets/x64-windows.cmake`, Windows CI, or the Windows-specific protobuf and grpc linkage in root `meson.build`."
+}

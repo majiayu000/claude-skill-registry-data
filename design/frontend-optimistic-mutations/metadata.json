@@ -1,0 +1,38 @@
+{
+  "name": "frontend-optimistic-mutations",
+  "repo": "DnsQueen/orcinus-skills",
+  "path": "skills/frontend-optimistic-mutations/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/DnsQueen/orcinus-skills",
+  "dir_name": "frontend-optimistic-mutations",
+  "downloaded_at": "2026-11-22T10:59:01.095605Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, ux, frontend",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "ux",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DnsQueen",
+  "source_url": "https://github.com/DnsQueen/orcinus-skills/blob/main/skills/frontend-optimistic-mutations/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DnsQueen/orcinus-skills/blob/main/skills/frontend-optimistic-mutations/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The write path for any React or React Native app using a query/cache layer, with cancel in-flight queries, snapshot every affected cache, patch instantly, roll back verbatim on error, invalidate on settle, and idempotency keys created once at form init. Only invoke via the orcinus router."
+}

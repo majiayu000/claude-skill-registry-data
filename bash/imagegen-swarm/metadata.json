@@ -1,0 +1,38 @@
+{
+  "name": "imagegen-swarm",
+  "repo": "Ekko237/imagegen-swarm",
+  "path": "skills/imagegen-swarm/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Ekko237/imagegen-swarm",
+  "dir_name": "imagegen-swarm",
+  "downloaded_at": "2026-11-22T11:04:01.930288Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ekko237",
+  "source_url": "https://github.com/Ekko237/imagegen-swarm/blob/main/skills/imagegen-swarm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ekko237/imagegen-swarm/blob/main/skills/imagegen-swarm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Indie devs, creators, sellers: pool AI image quotas into one batch that keeps going if one runs out. Use when the user asks to generate an image, draw, edit an image, use reference images, make a video, or do text-to-image or text-to-video. Also use when the request names Codex, Grok, Grok Imagine, Gemini, nano banana, Antigravity, Jimeng, Dreamina, Muse, Lovart, gpt-image, or a pay-per-image API. Jimeng and Grok can make video. An optional pay-per-image API line (OpenAI or Gemini API) runs when a job names api, or when no enabled subscription engine can take that job. Jimeng can edit from up to 10 reference images. Antigravity Gemini edits up to 3 reference images. The optional paid Gemini API allows 3 references for gemini-2.5-flash-image and 14 for later Gemini image models. For a shared character, brand, mascot, or cover series, ask before enabling series mode. Not for crop, resize, convert, or other ordinary local image processing."
+}

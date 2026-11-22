@@ -1,0 +1,37 @@
+{
+  "name": "alerting-oncall",
+  "repo": "BennerCas/antigravity-os-v2",
+  "path": "skills/alerting-oncall/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/BennerCas/antigravity-os-v2",
+  "dir_name": "alerting-oncall",
+  "downloaded_at": "2026-11-22T10:39:20.265098Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "communication",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BennerCas",
+  "source_url": "https://github.com/BennerCas/antigravity-os-v2/blob/main/skills/alerting-oncall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BennerCas/antigravity-os-v2/blob/main/skills/alerting-oncall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up alerting rules, configure on-call rotations, and manage incident response workflows."
+}

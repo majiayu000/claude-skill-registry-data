@@ -1,0 +1,19 @@
+---
+name: shortlist-review
+description: Refine and prioritize vacancies already in the conversation or a saved Scout search using the user's latest preferences. Use for shortlist follow-ups and comparisons; reuse existing results before starting a new search.
+---
+# Shortlist Review
+
+Keep the conversation and its saved search identity. Incorporate the user's latest refinement without discarding earlier constraints unless they change them. Distinguish supported filtering of known fields from judgments needing more evidence.
+
+If Scout is connected, inspect the discovered `refine_shortlist` schema. It takes `search_id`, `filters`, optional `candidate`, and optional `limit`. `filters` supports `include_terms`, `exclude_terms`, `companies`, `exclude_companies`, `locations`, `workplace` and `easy_apply_only`. In newer contracts company filters match the employer, and explicit description evidence can supply workplace facts. Candidate retains skills, target titles, locations, workplace and `requires_sponsorship`; newer servers additionally accept explicit `experience_years`, `target_seniority`, `remote_from_country` and `domains`. Scout v0.3 supports the optional student facts `is_student`, `degree_completed`, `graduation_year`, `fields_of_study`, `placement_year_available`, `completed_study_years` and `grade_classification`. Supply only supported fields and evidenced facts, never CV text or contacts. Refinement remains local without a paid provider run.
+
+Company size, salary, sponsorship policy, funding and agency status are not structured filter fields. For those requests, read available vacancy/company evidence and explain the rule used. Keep unknown cases separate unless the user requests their strict exclusion; say how many were excluded for missing evidence. Do not guess headcount or classify an agency solely from an ambiguous name.
+
+An empty workplace-filter result is not proof that no remote roles exist: a source can leave `workplace` unknown while the description states a remote policy. Inspect those descriptions and present evidence-based findings separately from the structured filter, keeping country restrictions and unconfirmed cases explicit.
+
+If a refinement requires vacancies outside the saved set, explain that and propose a new bounded search in chat. Do not call `prepare_search` or `search_jobs` merely to change a local view. `start_uncertain` on an earlier search means it may already have incurred a provider charge; do not silently create a new plan to bypass it. An error or incomplete result set is not evidence that no suitable jobs exist.
+
+Prioritize with evidence from requirements, CV statements and explicit preferences. For student searches, use program relevance and eligibility checks separately: an appropriate placement can outrank a superficially similar experienced role without being declared eligible. Keep unknown grades, completed study years, placement-year permission and sponsorship unresolved. A start year is not a graduation cohort. Preserve employer/publisher/recruiter attribution and unknown employer identity. Do not re-label a retained provider publication claim or previous source check as newly verified freshness. Scout's deterministic scores are heuristic aids, not a complete assessment or interview probability. A supplied skill absent from a posting is not a missing candidate qualification. Keep observation time and verification limits visible; saved jobs may have changed or closed.
+
+Show the revised shortlist directly in chat, with the reason for changes, known exclusions and important unknowns. Preserve original links and avoid presenting synthetic examples as live vacancies. If Scout is absent, apply the same reasoning to the vacancies already in the conversation; no manual report handoff is required. Do not apply, message, monitor or ask for credentials.

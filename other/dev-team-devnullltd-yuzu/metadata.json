@@ -1,0 +1,37 @@
+{
+  "name": "dev-team",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".claude/skills/dev-team/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "dev-team-devnullltd-yuzu",
+  "downloaded_at": "2026-11-22T10:57:26.174236Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/dev-team/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/dev-team/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the current session as a senior developer (Opus) leading a configurable junior fleet. Decomposes requests into scoped tasks, dispatches junior-developer subagents in parallel, optionally runs an architect plan-review gate before dispatch, autonomously resolves escalations, optionally dispatches a doc-writer second wave after juniors complete, then integrates and gates with /test + /governance. Use when the user says \"/dev-team\", \"run the dev team\", \"delegate this to the juniors\", \"act as the senior dev\", or wants a task built by a senior-led fleet."
+}

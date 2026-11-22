@@ -1,0 +1,38 @@
+{
+  "name": "verify-output",
+  "repo": "CarlosNavarron1990/kuraka",
+  "path": "skills/verify-output/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CarlosNavarron1990/kuraka",
+  "dir_name": "verify-output",
+  "downloaded_at": "2026-11-22T10:44:35.364599Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CarlosNavarron1990",
+  "source_url": "https://github.com/CarlosNavarron1990/kuraka/blob/main/skills/verify-output/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CarlosNavarron1990/kuraka/blob/main/skills/verify-output/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Self-validate agent output against the schema in output-schemas.md before returning. Prevents malformed handoffs between agents.",
+  "content_fingerprint": "aca25ef7db6bf769ad85b6065678247d69f36d2cee3020adac930e85137352dc"
+}

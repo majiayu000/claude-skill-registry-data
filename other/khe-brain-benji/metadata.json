@@ -1,0 +1,37 @@
+{
+  "name": "khe-brain-benji",
+  "repo": "HKTITAN/skills",
+  "path": "skills/khe-brain-benji/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HKTITAN/skills",
+  "dir_name": "khe-brain-benji",
+  "downloaded_at": "2026-11-22T11:18:41.250619Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKTITAN",
+  "source_url": "https://github.com/HKTITAN/skills/blob/main/skills/khe-brain-benji/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKTITAN/skills/blob/main/skills/khe-brain-benji/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answers design and product questions from Benji Taylor's published writing and public skills, with the piece named and linked. Gives the claim, its title and its URL; pressure-tests a design, a product decision or a piece of faux UI against his stated positions; says he has not written about it when the corpus is silent; flags where his pieces disagree or changed over time. Use when someone says \"what would Benji say\", \"would Benji ship this\", \"ask Benji\", \"who said that\", \"where does that come from\", \"is that really his rule\", \"pressure-test this against Benji\", or wants a claim about restraint, framing, motion, delight, agent feedback or rehearsal traced to its source. It reads and cites and never builds: to build faux product UI use `stageshow`, his own skill; to build or review an interface use `khe-ui`; to pick a skill use `khe-auto`. A reading by Harshit Khemani, not endorsed by Benji Taylor."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "swiftui-performance-audit",
+  "repo": "Evil-Project/Twinskaraoke",
+  "path": ".claude/skills/swiftui-performance-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Evil-Project/Twinskaraoke",
+  "dir_name": "swiftui-performance-audit-evil-project-twinskaraoke",
+  "downloaded_at": "2026-11-22T11:08:07.396171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Evil-Project",
+  "source_url": "https://github.com/Evil-Project/Twinskaraoke/blob/main/.claude/skills/swiftui-performance-audit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Evil-Project/Twinskaraoke/blob/main/.claude/skills/swiftui-performance-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit and improve SwiftUI runtime performance from code review and architecture. Use for requests to diagnose slow rendering, janky scrolling, high CPU/memory usage, excessive view updates, or layout thrash in SwiftUI apps, and to provide guidance for user-run Instruments profiling when code review alone is insufficient."
+}

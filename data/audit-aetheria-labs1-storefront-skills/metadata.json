@@ -1,0 +1,37 @@
+{
+  "name": "audit",
+  "repo": "Aetheria-Labs1/storefront-skills",
+  "path": "skills/audit/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Aetheria-Labs1/storefront-skills",
+  "dir_name": "audit-aetheria-labs1-storefront-skills",
+  "downloaded_at": "2026-11-22T10:22:47.599816Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Aetheria-Labs1",
+  "source_url": "https://github.com/Aetheria-Labs1/storefront-skills/blob/main/skills/audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Aetheria-Labs1/storefront-skills/blob/main/skills/audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only conversion audit of a whole storefront page. Scores above-the-fold, offer strength, proof, copy, design, mobile and funnel data against the build rules and returns ranked fixes. Never edits; hand approved fixes to /optimize."
+}

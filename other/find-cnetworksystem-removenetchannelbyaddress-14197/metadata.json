@@ -1,0 +1,36 @@
+{
+  "name": "find-CNetworkSystem_RemoveNetChannelByAddress-14197",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/find-CNetworkSystem_RemoveNetChannelByAddress-14197/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "find-cnetworksystem-removenetchannelbyaddress-14197",
+  "downloaded_at": "2026-11-22T11:18:47.597383Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CNetworkSystem_RemoveNetChannelByAddress-14197/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CNetworkSystem_RemoveNetChannelByAddress-14197/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recover CNetworkSystem_RemoveNetChannelByAddress in CS2 networksystem.dll / libnetworksystem.so\nwhen the deterministic removal-pair proof fails. Validate the fresh removal anchor and trace\nits address-based sibling's channel lookup and constant-false dispatch.\nTrigger: CNetworkSystem_RemoveNetChannelByAddress"
+}

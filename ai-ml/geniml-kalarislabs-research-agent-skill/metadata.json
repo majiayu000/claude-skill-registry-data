@@ -1,0 +1,39 @@
+{
+  "name": "geniml",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/geniml/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "geniml-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:46.343258Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ml, machine-learning, model, training",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "ml",
+      "machine-learning",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/geniml/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/geniml/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plans and audits local genomic-interval machine learning workflows with Geniml (0.8.4) and Gtars: validates BED files against chromosome sizes and assembly contracts, plans Region2Vec, scEmbed, and BEDspace runs, checks model, tokenizer, and universe.bed compatibility, and assesses consensus universes (CC, CCF, ML, HMM, assess-universe). Bundled scripts only validate or plan; they do not train. Use when checking BED coordinates, contigs, or assembly before analysis. Use when planning Region2Vec or scEmbed training on tokenized Parquet data. Use when verifying that a checkpoint, config.yaml, and universe match. Use when building or assessing a consensus peak universe. Use when reviewing BEDbase or Hugging Face download risks. Not for general BED manipulation or peak calling; use bedtools or similar tools."
+}

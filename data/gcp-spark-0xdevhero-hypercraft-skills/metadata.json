@@ -1,0 +1,40 @@
+{
+  "name": "gcp-spark",
+  "repo": "0xdevhero/hypercraft-skills",
+  "path": "ecosystem/devops-cloud/gcp-spark/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/0xdevhero/hypercraft-skills",
+  "dir_name": "gcp-spark-0xdevhero-hypercraft-skills",
+  "downloaded_at": "2026-11-22T10:12:06.321364Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, sql, etl, pipeline, visualization",
+    "score": 5,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "etl",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xdevhero",
+  "source_url": "https://github.com/0xdevhero/hypercraft-skills/blob/main/ecosystem/devops-cloud/gcp-spark/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xdevhero/hypercraft-skills/blob/main/ecosystem/devops-cloud/gcp-spark/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Develops, optimizes and runs PySpark/Spark code on Managed Spark (Dataproc\nclusters and Serverless) on Google Cloud.\nUse when:\n- Authoring or running Spark/PySpark notebooks (any kernel), incl. data\n  analysis, reports and visualizations.\n- Writing Spark ETL pipelines or preparing workloads for production.\n- Training or running inference with ML models on Spark.\n- Optimizing PySpark or Spark SQL for performance, memory, or OOM risks.\n- Managing Spark clusters, jobs, batches, and interactive sessions.\nDon't use when:\n- Writing generic Python that doesn't use Spark.\n- Performing simple SQL queries that can be done directly in BigQuery.\n- Troubleshooting failed Spark workloads (use @skill:gcp-spark-troubleshooting)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dmaker-rodada",
+  "repo": "DougFSA/DMaker",
+  "path": ".claude/skills/dmaker-rodada/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DougFSA/DMaker",
+  "dir_name": "dmaker-rodada",
+  "downloaded_at": "2026-11-22T11:00:03.033811Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category context-management scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "context"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DougFSA",
+  "source_url": "https://github.com/DougFSA/DMaker/blob/main/.claude/skills/dmaker-rodada/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DougFSA/DMaker/blob/main/.claude/skills/dmaker-rodada/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Desenvolve de ponta a ponta todos os chamados de uma versão do Jira do DMaker (projeto DMK) que ainda não começaram (colunas Backlog e Aguardando Atendimento), na ordem de prioridade, deixando cada um mergeado na develop (PR aberto e mergeado na entrega), em Teste Manual e com portões locais verdes. Use sempre que o Douglas pedir para tocar a rodada do DMaker, \"toca a rodada\", \"toca a versão\", \"pegar os chamados que faltam\", \"desenvolver o que está pendente\", \"começar os cards da versão\" ou qualquer variação de \"toca o que sobrou no Jira do DMaker\", mesmo que ele não diga a palavra \"skill\" nem cite números de card. É o ponto de entrada padrão para trabalho NOVO vindo do Jira; para o que voltou reprovado, use dmaker-redesenvolvimento; para pedido avulso sem chamado, dmaker-dev.",
+  "content_fingerprint": "3b00ed32a2aff3314f02083f189cb03d3f1b6544d30f0ec9bfb8c6ad4cf69acd"
+}

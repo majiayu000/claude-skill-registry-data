@@ -1,0 +1,37 @@
+{
+  "name": "verify-everos",
+  "repo": "EverMind-AI/EverOS",
+  "path": ".claude/skills/verify-everos/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/EverMind-AI/EverOS",
+  "dir_name": "verify-everos",
+  "downloaded_at": "2026-11-22T11:07:21.989450Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EverMind-AI",
+  "source_url": "https://github.com/EverMind-AI/EverOS/blob/main/.claude/skills/verify-everos/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EverMind-AI/EverOS/blob/main/.claude/skills/verify-everos/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify an EverOS change on a real server - start your own instance, drive it over HTTP or through Claude Code with everos-mcp, read the outcome from the layer that owns it (markdown, SQLite, LanceDB, metrics), and tear it down. Use before saying a memory feature works end to end."
+}

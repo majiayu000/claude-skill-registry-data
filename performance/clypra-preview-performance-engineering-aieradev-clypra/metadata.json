@@ -1,0 +1,38 @@
+{
+  "name": "clypra-preview-performance-engineering",
+  "repo": "AIEraDev/Clypra",
+  "path": ".agents/skills/clypra-preview-performance-engineering/SKILL.md",
+  "github_branch": "master",
+  "category": "performance",
+  "source": "github.com/AIEraDev/Clypra",
+  "dir_name": "clypra-preview-performance-engineering-aieradev-clypra",
+  "downloaded_at": "2026-11-22T10:19:16.387422Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, latency, benchmark",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "latency",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AIEraDev",
+  "source_url": "https://github.com/AIEraDev/Clypra/blob/master/.agents/skills/clypra-preview-performance-engineering/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AIEraDev/Clypra/blob/master/.agents/skills/clypra-preview-performance-engineering/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure, benchmark, profile, and compare Clypra's native GPU preview surface against its DOM/canvas or WebGL-based fallback. Use for preview performance investigations, frame pacing, dropped frames, playback and seek latency, GPU/CPU overhead, readback and copy costs, memory usage, presenter selection, fallback behavior, and preview-performance regressions across Windows, macOS, and Linux."
+}

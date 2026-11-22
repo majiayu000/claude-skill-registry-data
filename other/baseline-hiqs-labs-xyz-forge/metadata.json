@@ -1,0 +1,37 @@
+{
+  "name": "baseline",
+  "repo": "HiQS-Labs/XYZ-forge",
+  "path": "skills/3-weekly/baseline/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/HiQS-Labs/XYZ-forge",
+  "dir_name": "baseline-hiqs-labs-xyz-forge",
+  "downloaded_at": "2026-11-22T11:23:00.771152Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HiQS-Labs",
+  "source_url": "https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/3-weekly/baseline/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/3-weekly/baseline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn a frustrated or circular complaint about a process or policy into an agreed starting point. Reads the named GitHub issues, Jira tickets or pasted Slack and email text, separates what was said from what happened, checks the cited evidence with recon, then restates each complaint as a dated event, its cost, the reason the rule exists and one concrete ask. Builds a self-contained HTML slide deck in the repo's temp/ or tmp/ folder: two slides per item (the facts, then the ask), one question to agree on per slide. For managers and developers. Trigger on /baseline <issue refs>, \"baseline this issue\", \"what are they actually asking for\", \"turn this complaint into something actionable\", \"we keep going in circles on this\", \"stop the hand-wringing on #N\", or \"prep the discussion deck for #N\". Read-only on trackers and chat. Not for repo maturity (honest), whether one blocker is necessary (sanity-check) or recurring defects (whack-a-mole)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ci-cache",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".codex/skills/ci-cache/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "ci-cache",
+  "downloaded_at": "2026-11-22T10:57:26.008623Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/ci-cache/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/ci-cache/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Canonical patterns for caching in Yuzu CI workflows. Two snippets \u2014 one for ephemeral GHA-hosted runners (split actions/cache/restore + actions/cache/save, never `save-always: true`) and one for self-hosted runners (local filesystem cache under `runner.tool_cache`, no GHA cache round-trip). Use when adding a new vcpkg/ccache/dependency cache step to any workflow under `.github/workflows/`, or when reviewing a PR that touches `actions/cache@`."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "nanogpt",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/nanogpt/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "nanogpt-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:48.363501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ml, model, training",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/nanogpt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/nanogpt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Provides nanoGPT, Karpathy's minimal PyTorch GPT implementation (model.py and train.py), with workflows for training character-level Shakespeare on CPU, reproducing GPT-2 124M on OpenWebText with multi-GPU torchrun, fine-tuning pretrained GPT-2 checkpoints, and training on custom text. Use when learning how GPT and transformer blocks work from scratch. Use when running a small training experiment on CPU or a single GPU. Use when modifying a transformer variant in plain PyTorch. Use when preparing character-level or BPE binary datasets. Use when troubleshooting out-of-memory or slow training in nanoGPT. Not for production or large-scale distributed training; use HuggingFace Transformers or Megatron-LM instead."
+}

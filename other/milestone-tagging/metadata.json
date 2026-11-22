@@ -1,0 +1,37 @@
+{
+  "name": "milestone-tagging",
+  "repo": "EISSeuropa/EISSeuropa.github.io",
+  "path": ".claude/skills/milestone-tagging/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/EISSeuropa/EISSeuropa.github.io",
+  "dir_name": "milestone-tagging",
+  "downloaded_at": "2026-11-22T11:01:56.751936Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EISSeuropa",
+  "source_url": "https://github.com/EISSeuropa/EISSeuropa.github.io/blob/master/.claude/skills/milestone-tagging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EISSeuropa/EISSeuropa.github.io/blob/master/.claude/skills/milestone-tagging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How EISS's GitHub milestones are structured: the version-tied SemVer set and its backlog catch-all, why conference-phase milestones were tried and reverted, due dates tracking the roadmap timeline, and when to create a new one. Use when creating or re-milestoning an issue or PR, when the roadmap shifts a planned release, or when a milestone title or due date is in question."
+}

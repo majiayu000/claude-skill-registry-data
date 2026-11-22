@@ -1,0 +1,38 @@
+{
+  "name": "custom-metrics",
+  "repo": "Aayush-coder1/ai-bots",
+  "path": ".agents/skills/custom-metrics/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Aayush-coder1/ai-bots",
+  "dir_name": "custom-metrics",
+  "downloaded_at": "2026-11-22T10:20:35.520209Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Aayush-coder1",
+  "source_url": "https://github.com/Aayush-coder1/ai-bots/blob/main/.agents/skills/custom-metrics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Aayush-coder1/ai-bots/blob/main/.agents/skills/custom-metrics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Emit and query Vercel Custom Metrics. Use when instrumenting application or business measurements in Vercel Functions, using metric() from @vercel/functions, choosing metric names and attributes, or querying emitted values with vc metrics.",
+  "content_fingerprint": "8d3af8d2db635378a5a1b2f0e7f0213694a8d4c29040982971151cb9ce16e19f"
+}

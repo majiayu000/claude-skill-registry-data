@@ -1,0 +1,39 @@
+{
+  "name": "kotlin-conventions",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/kotlin-plugin/skills/kotlin-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "kotlin-conventions",
+  "downloaded_at": "2026-11-22T10:30:54.370580Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/kotlin-plugin/skills/kotlin-conventions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/kotlin-plugin/skills/kotlin-conventions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Idiomatic Kotlin for JVM projects: null safety without !!, val and read-only collections, data/sealed/value classes, exhaustive when, scope functions (let/apply/also/run/with) used sparingly, extension functions, default and named arguments, Result vs exceptions, collections vs sequences, Java interop annotations, package and file layout, Kotlin coding conventions. Stack-agnostic within Kotlin/JVM.\n\nUse this skill to:\n- Model domain types with data, sealed and value classes.\n- Handle absence and errors explicitly and exhaustively.\n- Keep code readable \u2014 no scope-function chains or clever one-liners.\n- Interoperate with Java libraries without platform-type surprises.\n\nDo NOT use this skill for:\n- Coroutines and Flow (see kotlin-coroutines).\n- Testing (see kotlin-testing).\n- Gradle/Maven dependency management (see java-foundation:build-tooling)."
+}

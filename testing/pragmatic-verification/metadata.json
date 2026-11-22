@@ -1,0 +1,39 @@
+{
+  "name": "pragmatic-verification",
+  "repo": "CodeAlive-AI/ai-driven-development",
+  "path": "skills/pragmatic-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/CodeAlive-AI/ai-driven-development",
+  "dir_name": "pragmatic-verification",
+  "downloaded_at": "2026-11-22T10:48:01.145089Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration, e2e",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CodeAlive-AI",
+  "source_url": "https://github.com/CodeAlive-AI/ai-driven-development/blob/main/skills/pragmatic-verification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CodeAlive-AI/ai-driven-development/blob/main/skills/pragmatic-verification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Language-agnostic playbook for thoughtful tests and checks: which cases deserve unit, integration, contract or e2e tests, when to mock, how to avoid redundant, self-confirming, brittle or flaky tests, and which QA scenarios to run through browser, computer or phone use. Use when writing, reviewing or pruning tests, auditing an existing project's test suite, planning verification of a change, or deciding whether the evidence is enough to call a task done. Not for tool syntax tutorials, load testing, security audits or evals of LLM output quality."
+}

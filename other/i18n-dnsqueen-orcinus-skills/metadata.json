@@ -1,0 +1,38 @@
+{
+  "name": "i18n",
+  "repo": "DnsQueen/orcinus-skills",
+  "path": "skills/i18n/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DnsQueen/orcinus-skills",
+  "dir_name": "i18n-dnsqueen-orcinus-skills",
+  "downloaded_at": "2026-11-22T10:58:55.769785Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, language=3",
+    "score": 3,
+    "runner_up": "language",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DnsQueen",
+  "source_url": "https://github.com/DnsQueen/orcinus-skills/blob/main/skills/i18n/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DnsQueen/orcinus-skills/blob/main/skills/i18n/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Internationalize a project: language tags and negotiation, dates/times/time zones, numbers and currency, RTL layout, pluralization and ICU messages, collation, Unicode, and localization testing. Use when adding a language or locale, or when text, dates, numbers, or RTL layout must render correctly. Only invoke via the orcinus router."
+}

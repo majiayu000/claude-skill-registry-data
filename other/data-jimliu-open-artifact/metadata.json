@@ -1,0 +1,37 @@
+{
+  "name": "data",
+  "repo": "JimLiu/open-artifact",
+  "path": "artifact-types/data/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JimLiu/open-artifact",
+  "dir_name": "data-jimliu-open-artifact",
+  "downloaded_at": "2026-11-22T11:36:24.581897Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JimLiu",
+  "source_url": "https://github.com/JimLiu/open-artifact/blob/main/artifact-types/data/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JimLiu/open-artifact/blob/main/artifact-types/data/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make and change a Data artifact: a dashboard, metrics page, KPI tracker, scorecard, data visualization or recurring report, as a page or scroll story of charts, numbers and tables that works itself out again each time someone opens it, from live queries on the person's MCP connectors, uploaded files and calculations. Its content is the artifact's own document store (small JSON documents under db/), written through ArtifactData under a host or `open-artifact write-db` locally, never as free-form files. Use for any of those, whatever the data and wherever it comes from, and when someone sends a request from a dashboard's page."
+}

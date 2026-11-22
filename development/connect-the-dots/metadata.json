@@ -1,0 +1,37 @@
+{
+  "name": "connect-the-dots",
+  "repo": "HiQS-Labs/XYZ-forge",
+  "path": "skills/3-weekly/connect-the-dots/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/HiQS-Labs/XYZ-forge",
+  "dir_name": "connect-the-dots",
+  "downloaded_at": "2026-11-22T11:23:02.221987Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HiQS-Labs",
+  "source_url": "https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/3-weekly/connect-the-dots/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/3-weekly/connect-the-dots/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Given a problem or a new feature, find the modules this codebase already has that cover parts of it, before anything new is designed. Restates the problem as the capabilities it needs, searches the repo's own maps and any installed code graph, index or code RAG before grepping, reads the candidates, and returns a cited fit table plus the remainder that is new. Trigger on /connect-the-dots, and on \"what do we already have for this\", \"what can we reuse for X\", \"are we reinventing something\", \"what existing pieces solve this\", \"I keep getting stuck on X, what am I missing in our own code\", or when a design for a new subsystem has stalled across sessions. Strategic and read-only: it names candidates and stops. Do NOT fire when the module to change is already named (that is /recon), to audit paths that already duplicate each other (that is /dry), to shrink a solution already chosen (that is /ponytail), to choose between options already on the table (that is /better-options), or to decide whether the problem is worth solving (that is /sanity-check or /worth-it)."
+}

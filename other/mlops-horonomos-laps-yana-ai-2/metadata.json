@@ -1,0 +1,39 @@
+{
+  "name": "mlops",
+  "repo": "Horonomos-laps/Yana-AI",
+  "path": ".claude/skills/mlops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Horonomos-laps/Yana-AI",
+  "dir_name": "mlops-horonomos-laps-yana-ai-2",
+  "downloaded_at": "2026-11-22T11:23:34.391185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Horonomos-laps",
+  "source_url": "https://github.com/Horonomos-laps/Yana-AI/blob/main/.claude/skills/mlops/SKILL.md",
+  "license": "MIT © 2026 Vũ Văn Tâm",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Horonomos-laps/Yana-AI/blob/main/.claude/skills/mlops/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design and implement ML operations — model registry, serving patterns, deployment strategies (shadow/canary/blue-green), drift detection, feature stores, retraining triggers, and prediction monitoring. Use when asked to \"deploy a model\", \"model registry\", \"MLflow\", \"feature store\", \"drift detection\", \"retrain trigger\", \"shadow mode\", \"model versioning\", \"serving infrastructure\", or \"ML pipeline\". Do NOT use for: prompt engineering or RAG pipelines — see prompt-engineering and rag-architect skills. Do NOT use for: general API deployment without an ML component.",
+  "content_fingerprint": "5745d98e35f01f2e88c307db251d66d43f90f2485f05d73ed616b6fdd6ab140a"
+}

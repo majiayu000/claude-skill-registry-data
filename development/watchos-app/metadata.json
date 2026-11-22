@@ -1,0 +1,38 @@
+{
+  "name": "watchos-app",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/apple-plugin/skills/watchos-app/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "watchos-app",
+  "downloaded_at": "2026-11-22T10:30:51.764525Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/watchos-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/watchos-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "watchOS app specifics: single-target SwiftUI watch apps (companion or independent), glanceable design for small screens, navigation on the watch, the Digital Crown, complications and Smart Stack widgets with WidgetKit, background refresh and extended runtime sessions, workouts and HealthKit, WatchConnectivity with the iPhone app, networking and data sync constraints, notifications, power and performance limits.\n\nUse this skill to:\n- Build a watch screen that is useful in a two-second glance.\n- Add or update a complication / Smart Stack widget.\n- Share data between the iPhone and the watch correctly.\n- Run workout or health features within watchOS limits.\n\nDo NOT use this skill for:\n- iPhone / iPad targets \u2014 see apple-plugin:ios-ipados.\n- Shared SwiftUI view rules \u2014 see apple-plugin:swiftui-conventions."
+}

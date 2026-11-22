@@ -1,0 +1,38 @@
+{
+  "name": "apple-testing",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/apple-plugin/skills/apple-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "apple-testing",
+  "downloaded_at": "2026-11-22T10:30:52.268065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, framework, build",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/apple-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/apple-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Testing Apple apps: what to unit-test in a SwiftUI app (observable models, services, mappers, reducers), MainActor-isolated tests, SwiftData and Core Data in memory, protocol doubles for system services, TCA TestStore, XCUITest UI tests (launch arguments, accessibility identifiers, page objects), snapshot tests with swift-snapshot-testing, previews as smoke tests, running tests per platform with xcodebuild and test plans, coverage. Builds on swift-foundation:swift-testing for framework basics.\n\nUse this skill to:\n- Test app logic without launching the UI.\n- Write UI tests that survive layout changes.\n- Run the right scheme and destination for each platform target.\n\nDo NOT use this skill for:\n- Swift Testing / XCTest basics \u2014 see swift-foundation:swift-testing.\n- Server-side Swift tests \u2014 see swift-plugin."
+}

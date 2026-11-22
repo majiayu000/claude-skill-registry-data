@@ -1,0 +1,38 @@
+{
+  "name": "histolab",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/histolab/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "histolab-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:50.656465Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/histolab/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/histolab/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extracts tiles and preprocesses H&E whole slide images with the histolab Python library (OpenSlide), covering slide inspection, tissue masks (TissueMask, BiggestTissueBoxMask), RandomTiler, GridTiler and ScoreTiler extraction, image and morphological filters, and Macenko or Reinhard stain normalization. Use when building a tile dataset from WSI files for deep learning. Use when detecting tissue and excluding background or pen annotations. Use when previewing tile locations and exporting tile CSV reports. Use when normalizing stain variation across slides. Not for spatial proteomics, multiplexed imaging, or deep learning pipelines; use pathml for those."
+}

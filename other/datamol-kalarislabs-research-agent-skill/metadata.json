@@ -1,0 +1,38 @@
+{
+  "name": "datamol",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/datamol/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "datamol-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:49.757194Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/datamol/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/datamol/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Wraps RDKit through the datamol Python library (import datamol as dm) for molecular cheminformatics, returning native rdkit.Chem.Mol objects. Covers SMILES/SELFIES/InChI conversion, sanitization and standardization, descriptors, fingerprints and similarity, Butina clustering and diverse subset picking, Bemis-Murcko scaffolds, BRICS/RECAP fragmentation, 3D conformers, reactions, SDF/CSV/Excel I/O including cloud paths, and parallel batch processing. Use when parsing or standardizing SMILES from external sources, computing descriptors or fingerprints for a compound library, clustering or selecting diverse molecules, making scaffold-based train/test splits, or generating conformers. Use when running a molecule-processing pipeline with n_jobs. For fine-grained control or custom parameters, use RDKit directly instead."
+}

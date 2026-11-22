@@ -1,0 +1,40 @@
+{
+  "name": "hyper-build",
+  "repo": "0xdevhero/hypercraft-skills",
+  "path": "skills/hyper-build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/0xdevhero/hypercraft-skills",
+  "dir_name": "hyper-build",
+  "downloaded_at": "2026-11-22T10:11:57.386770Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile, refactor",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xdevhero",
+  "source_url": "https://github.com/0xdevhero/hypercraft-skills/blob/main/skills/hyper-build/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xdevhero/hypercraft-skills/blob/main/skills/hyper-build/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Enforces atomic, incremental implementation one verified vertical slice at a time. Prevents catastrophic multi-file diffs and broken intermediate states. Use during code generation, feature construction, or large refactorings.",
+  "content_fingerprint": "acbb54dab912a9aef7bd41b54fb1e0f10187634289543abf59cb7ffa766da52d"
+}

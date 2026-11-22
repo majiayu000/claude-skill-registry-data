@@ -1,0 +1,38 @@
+{
+  "name": "deterministify",
+  "repo": "CodelyTV/agent-harness",
+  "path": ".agents/skills/deterministify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CodelyTV/agent-harness",
+  "dir_name": "deterministify",
+  "downloaded_at": "2026-11-22T10:48:16.797011Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CodelyTV",
+  "source_url": "https://github.com/CodelyTV/agent-harness/blob/main/.agents/skills/deterministify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CodelyTV/agent-harness/blob/main/.agents/skills/deterministify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn the conventions of a repository into deterministic rules (linter config, custom lint rules, tests) that fail in seconds. Written conventions first, patterns that only the code shows second.",
+  "content_fingerprint": "fda805195f9985415def0b700d95a1c161a4b4852f454ad4f0f6f0386768514a"
+}

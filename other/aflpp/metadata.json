@@ -1,0 +1,38 @@
+{
+  "name": "aflpp",
+  "repo": "Abdo453/HunterAI",
+  "path": ".opencode/skills/aflpp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Abdo453/HunterAI",
+  "dir_name": "aflpp",
+  "downloaded_at": "2026-11-22T10:21:05.234704Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abdo453",
+  "source_url": "https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/aflpp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/aflpp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sets up and runs AFL++ for multi-core fuzzing of C/C++ projects built with afl-clang-fast or afl-gcc-fast. Covers instrumentation modes, parallel main and secondary campaigns, persistent mode, corpus minimization, and crash triage. Use when scaling fuzzing across cores, fuzzing a mature C/C++ cod..."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "flags-sdk",
+  "repo": "Aayush-coder1/ai-bots",
+  "path": ".agents/skills/flags-sdk/upstream/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Aayush-coder1/ai-bots",
+  "dir_name": "upstream-aayush-coder1-ai-bots-4",
+  "downloaded_at": "2026-11-22T10:20:38.441045Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Aayush-coder1",
+  "source_url": "https://github.com/Aayush-coder1/ai-bots/blob/main/.agents/skills/flags-sdk/upstream/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Aayush-coder1/ai-bots/blob/main/.agents/skills/flags-sdk/upstream/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set up and use feature flags and A/B tests with the Flags SDK (`flags` npm package) and Vercel Flags. Use when installing or configuring the SDK, adding a new or existing flag, wiring `vercelAdapter` (OIDC or SDK keys), declaring flags with `flag()`, using the `vercel flags` CLI (create, inspect, list, enable, disable, set, update, split, rollout, rules, segments, use-targeting, evaluations, versions, open, archive, unarchive, rm, sdk-keys, override, prepare), setting up providers/adapters (Vercel, Statsig, LaunchDarkly, PostHog, GrowthBook, Global Config, OpenFeature, Split, Flagsmith, Reflag, Optimizely, or custom), precompute, `identify`/`dedupe`, Flags Explorer/Toolbar, Next.js or SvelteKit, or encrypting flag values. Triggers: feature flags, feature gates, A/B testing, experimentation, gradual rollout, traffic split, targeting rules, flag overrides, precompute, Flags Explorer, Vercel Flags, vercel flags CLI, `flags/next`, `flags/sveltekit`, `flags/react`, `@flags-sdk/*`.",
+  "content_fingerprint": "7da0b4eac8a46e332a625b86725a29e51fc59e1b6170ed64c8dcfea01f217b74"
+}

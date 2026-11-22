@@ -1,0 +1,39 @@
+{
+  "name": "hpc-runtime-doctor",
+  "repo": "HeshamFS/materials-simulation-skills",
+  "path": "skills/hpc-deployment/hpc-runtime-doctor/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/HeshamFS/materials-simulation-skills",
+  "dir_name": "hpc-runtime-doctor",
+  "downloaded_at": "2026-11-22T11:22:08.361948Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, programming, compile, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HeshamFS",
+  "source_url": "https://github.com/HeshamFS/materials-simulation-skills/blob/main/skills/hpc-deployment/hpc-runtime-doctor/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HeshamFS/materials-simulation-skills/blob/main/skills/hpc-deployment/hpc-runtime-doctor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose HPC runtime and scheduler problems for materials simulations, including MPI/OpenMP/GPU layout, modules, CUDA/Kokkos hints, scratch paths, walltime, job arrays, restart strategy, scheduler portability, and resource mismatch. Use when an ALREADY-SUBMITTED job failed, ran slowly, got killed, or behaved differently on a cluster than on a workstation. To author or vet a NEW submission script before running, use slurm-job-script-generator instead."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "auth-and-authz",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".codex/skills/auth-and-authz/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "auth-and-authz",
+  "downloaded_at": "2026-11-22T10:57:28.128930Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/auth-and-authz/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/auth-and-authz/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authentication & Authorisation control plane for Yuzu \u2014 the canonical entry point for any work on RBAC, OIDC SSO, SAML, SCIM, MFA/TOTP, AD/Entra integration, API tokens, session lifecycle, enrollment, and the audit/evidence chain. Use when the user says \"/auth-and-authz\", \"/auth\", \"/iam\", asks to plan or implement an enterprise A&A feature, asks \"what's our auth gap to enterprise readiness\", asks to audit current auth state against SOC 2 CC6.x / Workstream B, or starts work that touches `auth_*`, `rbac_*`, `oidc_*`, `api_token_*`, `enrollment_*`, or `cert_store.*`. The skill bundles current-state inventory, required-features inventory, gap matrix, the canonical workflow for adding a new A&A feature, and the load order for the routed reference docs."
+}

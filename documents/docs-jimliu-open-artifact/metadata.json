@@ -1,0 +1,41 @@
+{
+  "name": "docs",
+  "repo": "JimLiu/open-artifact",
+  "path": "artifact-types/docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/JimLiu/open-artifact",
+  "dir_name": "docs-jimliu-open-artifact",
+  "downloaded_at": "2026-11-22T11:36:24.769184Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, word, docx, markdown",
+    "score": 6,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "word",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JimLiu",
+  "source_url": "https://github.com/JimLiu/open-artifact/blob/main/artifact-types/docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JimLiu/open-artifact/blob/main/artifact-types/docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make and revise a living doc in the Docs format as a local folder: doc/doc.json names the doc, its tabs and its dropdown lists, and each tab is a tree of blocks (headings, paragraphs, lists and checklists, tables, code, quotes, pictures) whose characters carry ids, with chips for dates, @-mentions, links to tabs and dropdowns. This skill's script creates the doc (from markdown or a skeleton), imports a Markdown, Word (.docx) or PDF file as a new doc or a new tab, reads it, edits it in place block by block or as suggestions the person accepts or rejects, and exports it as Markdown, Word, PDF or HTML; a local page shows it where people type, comment, react and look back through each tab's versions, shared on the local network by link when asked. Use when someone asks for a document, report, plan, proposal, brief, memo, spec, handbook, guide or meeting notes to keep, share, comment on or revise together (even one they will send as Word or PDF), names the Docs type, or wants to change a folder that holds doc/doc.json. Not for a static HTML page, changing a Word file (.docx) they already have as Word, a slide deck, or an answer read once in chat."
+}

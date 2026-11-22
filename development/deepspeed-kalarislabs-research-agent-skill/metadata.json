@@ -1,0 +1,39 @@
+{
+  "name": "deepspeed",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/deepspeed/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "deepspeed-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:54.703738Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/deepspeed/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/deepspeed/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Covers DeepSpeed for distributed deep learning training and I/O: ZeRO optimization stages, pipeline parallelism, FP16/BF16/FP8 training, 1-bit Adam, sparse attention, and DeepNVMe (aio_handle, gds_handle, async_io and gds operators, ds_nvme_tune, ds_report) for fast transfers between NVMe storage and host or GPU tensors. Use when configuring ZeRO stages for large-model training, enabling mixed precision or 1-bit Adam, offloading parameters or optimizer state to NVMe with ZeRO-Infinity, writing or reading tensors to files with blocking or non-blocking DeepNVMe calls, or tuning NVMe I/O settings such as block size, queue depth and parallelism. Not for plain PyTorch DistributedDataParallel without DeepSpeed."
+}

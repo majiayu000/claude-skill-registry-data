@@ -1,0 +1,40 @@
+{
+  "name": "blueprint",
+  "repo": "0xdevhero/hypercraft-skills",
+  "path": "ecosystem/tools-workflow/blueprint/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/0xdevhero/hypercraft-skills",
+  "dir_name": "blueprint-0xdevhero-hypercraft-skills",
+  "downloaded_at": "2026-11-22T10:12:13.465945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning, memory",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xdevhero",
+  "source_url": "https://github.com/0xdevhero/hypercraft-skills/blob/main/ecosystem/tools-workflow/blueprint/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xdevhero/hypercraft-skills/blob/main/ecosystem/tools-workflow/blueprint/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn a one-line objective into a step-by-step construction plan for multi-session, multi-agent engineering projects: one-PR-sized steps with self-contained context briefs, dependency graph with parallel-step detection, adversarial review gate, and plan mutation protocol. Use when planning a large feature, refactor, or roadmap that spans multiple PRs or sessions; not for single-PR tasks or when the user says \"just do it\".",
+  "content_fingerprint": "95ab69adcdf21ac0608b911f5816002451bfe4aa23c3022a05b695c1c5cdf6e4"
+}

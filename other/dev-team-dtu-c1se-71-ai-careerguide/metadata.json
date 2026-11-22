@@ -1,0 +1,38 @@
+{
+  "name": "dev-team",
+  "repo": "DTU-C1SE-71/AI-CAREERGUIDE",
+  "path": ".agents/skills/dev-team/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DTU-C1SE-71/AI-CAREERGUIDE",
+  "dir_name": "dev-team-dtu-c1se-71-ai-careerguide",
+  "downloaded_at": "2026-11-22T10:53:16.306587Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DTU-C1SE-71",
+  "source_url": "https://github.com/DTU-C1SE-71/AI-CAREERGUIDE/blob/main/.agents/skills/dev-team/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DTU-C1SE-71/AI-CAREERGUIDE/blob/main/.agents/skills/dev-team/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Simulate a collaborative dev team session where multiple role-based personas (PM, Architect, Developer, QA) respond to the same problem together in one session. Use when designing a feature, reviewing a proposal, or onboarding a new initiative and you want multi-role perspective without switching agents manually."
+}

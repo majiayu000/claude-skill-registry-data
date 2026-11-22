@@ -1,0 +1,37 @@
+{
+  "name": "dart-testing",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/dart-foundation/skills/dart-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "dart-testing",
+  "downloaded_at": "2026-11-22T10:30:53.022119Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/dart-foundation/skills/dart-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/dart-foundation/skills/dart-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Testing pure Dart code with package:test: file layout, group/test/setUp structure, matchers, async and stream expectations, mocktail mocks and fakes (mockito when the project already uses it), test tags and platforms, coverage. Stack-agnostic \u2014 referenced by every Dart plugin in the marketplace. Flutter widget, golden and integration tests live in flutter-plugin:flutter-testing.\n\nUse this skill to:\n- Write fast, isolated unit tests for Dart classes and functions.\n- Mock collaborators at boundaries without over-mocking.\n- Test Futures, Streams, timers and errors correctly.\n- Run the suite and collect coverage the way CI does.\n\nDo NOT use this skill for:\n- Widget tests, goldens, integration_test \u2014 see flutter-plugin:flutter-testing.\n- Language idioms \u2014 see dart-foundation:dart-conventions."
+}

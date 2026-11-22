@@ -1,0 +1,37 @@
+{
+  "name": "scikit-bio",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/scikit-bio/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "scikit-bio-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:56.475555Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/scikit-bio/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/scikit-bio/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Python library scikit-bio for biological sequence and community-ecology analysis: DNA/RNA/protein sequences, pair_align alignment, phylogenetic trees (NJ, UPGMA, GME/BME, Newick), alpha/beta diversity including Faith's PD and UniFrac, PCoA/CCA/RDA ordination, PERMANOVA/ANOSIM/Mantel tests, ancom and dirmult differential abundance, BIOM tables, and FASTA/FASTQ/GenBank I/O. Use when computing microbiome diversity from a BIOM or feature table. Use when running PCoA and PERMANOVA on a distance matrix. Use when building or comparing phylogenetic trees from sequences. Use when reading, converting, or aligning FASTA/FASTQ/GenBank/Newick data. Use when testing differential abundance in compositional count data. Not for general-purpose sequence scripting where Biopython is enough."
+}

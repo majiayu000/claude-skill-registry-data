@@ -1,0 +1,37 @@
+{
+  "name": "ship-batch",
+  "repo": "BlackBeltTechnology/pi-agent-dashboard",
+  "path": ".pi/skills/ship-batch/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/BlackBeltTechnology/pi-agent-dashboard",
+  "dir_name": "ship-batch",
+  "downloaded_at": "2026-11-22T10:40:48.583349Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BlackBeltTechnology",
+  "source_url": "https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/.pi/skills/ship-batch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/.pi/skills/ship-batch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ship a whole OpenSpec group unattended: one detached runner schedules ship-it sessions N at a time in their own worktrees, never answers their questions, archives finished sessions and removes worktrees only when nothing unpushed is lost. Resumable. Triggers: \"ship the group\", \"batch ship-it\", \"ship all changes in <group>\", \"ship-batch status\"."
+}

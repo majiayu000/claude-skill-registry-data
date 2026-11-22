@@ -1,0 +1,37 @@
+{
+  "name": "flutter-testing",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/flutter-plugin/skills/flutter-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "flutter-testing-aratkruglik-claude-sdlc",
+  "downloaded_at": "2026-11-22T10:30:53.690792Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/flutter-plugin/skills/flutter-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/flutter-plugin/skills/flutter-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Testing Flutter apps: unit tests for notifiers/blocs/repositories, widget tests with testWidgets/pumpWidget/finders, a shared pumpApp helper with theme/localization/router, Riverpod overrides and ProviderContainer, bloc_test, mocktail for dependencies, accessibility guideline checks, golden tests, integration_test, coverage. Builds on dart-foundation:dart-testing for package:test basics.\n\nUse this skill to:\n- Test widgets in the same scaffolding they run in (theme, l10n, providers).\n- Test Riverpod providers and Blocs without widgets.\n- Find widgets robustly and pump frames deterministically.\n- Decide when goldens and integration tests are worth it.\n\nDo NOT use this skill for:\n- Pure Dart unit-test basics (see dart-foundation:dart-testing).\n- Widget implementation (see flutter-conventions)."
+}

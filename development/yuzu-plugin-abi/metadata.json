@@ -1,0 +1,38 @@
+{
+  "name": "yuzu-plugin-abi",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".codex/skills/yuzu-plugin-abi/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "yuzu-plugin-abi",
+  "downloaded_at": "2026-11-22T10:57:28.853518Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/yuzu-plugin-abi/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/yuzu-plugin-abi/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guard Yuzu's stable C plugin ABI, descriptor contract, and loader compatibility. Use when changing `sdk/include/yuzu/plugin.h`, `plugin.hpp`, plugin descriptors, `agents/core/src/plugin_loader.cpp`, built-in plugins, or plugin action surfaces that affect compatibility."
+}

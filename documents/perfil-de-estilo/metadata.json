@@ -1,0 +1,38 @@
+{
+  "name": "perfil-de-estilo",
+  "repo": "DerechoVirtual/jurisprudenciator",
+  "path": "plugins/jurisprudenciator/skills/perfil-de-estilo/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/DerechoVirtual/jurisprudenciator",
+  "dir_name": "perfil-de-estilo",
+  "downloaded_at": "2026-11-22T10:56:42.765546Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DerechoVirtual",
+  "source_url": "https://github.com/DerechoVirtual/jurisprudenciator/blob/main/plugins/jurisprudenciator/skills/perfil-de-estilo/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DerechoVirtual/jurisprudenciator/blob/main/plugins/jurisprudenciator/skills/perfil-de-estilo/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Aprende la forma de escribir del abogado a partir de 3 a 5 escritos suyos y guarda un perfil de estilo que usan todas las skills de redacción de los plugins de Jurisprudenciator. Se ejecuta la primera vez que se usa cualquiera de estos plugins (cuando aún no hay perfil) y cuando el abogado dice «aquí tienes mis modelos», «escribe como yo», «adapta el estilo a mis escritos» o «actualiza mi estilo».",
+  "content_fingerprint": "53cba3682f15001ae0a7131311d0dde2d295258bae1fbd103ab1daa2cca29993"
+}

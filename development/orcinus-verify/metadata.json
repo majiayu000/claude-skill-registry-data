@@ -1,0 +1,37 @@
+{
+  "name": "orcinus-verify",
+  "repo": "DnsQueen/orcinus-skills",
+  "path": "skills/orcinus-verify/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DnsQueen/orcinus-skills",
+  "dir_name": "orcinus-verify",
+  "downloaded_at": "2026-11-22T10:58:58.087768Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DnsQueen",
+  "source_url": "https://github.com/DnsQueen/orcinus-skills/blob/main/skills/orcinus-verify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DnsQueen/orcinus-skills/blob/main/skills/orcinus-verify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Independently verify a code change before any claim of done. Use after any implementation, bugfix, or refactor, before merging, releasing, or saying a feature works. Only invoke via the orcinus router."
+}

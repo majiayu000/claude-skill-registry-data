@@ -1,0 +1,38 @@
+{
+  "name": "tiledbvcf",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/tiledbvcf/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "tiledbvcf-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:55.295507Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/tiledbvcf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/tiledbvcf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stores and queries genomic variant data in TileDB-VCF datasets using the tiledbvcf Python API and CLI (create, store, export, list, stat). Covers ingesting single-sample VCF/BCF files with .csi or .tbi indexes, adding samples incrementally, querying regions and samples in parallel, and exporting to VCF/BCF or TSV, on local disk or S3, Azure, and GCS. Use when building a variant database for a cohort, adding new samples to an existing dataset, querying specific regions across many samples, exporting subsets of a large VCF collection, or preparing population genomics data such as allele frequency or GWAS inputs. Not for multi-sample VCFs, which are unsupported, or for one-off parsing of a single VCF file."
+}

@@ -1,0 +1,41 @@
+{
+  "name": "polars",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/polars/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "polars-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:46.025534Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, database, etl, pipeline",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "database",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/polars/SKILL.md",
+  "license": "https://github.com/pola-rs/polars/blob/main/LICENSE",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/polars/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "High-performance DataFrame library for Python ETL, analytics, and pandas migration. Use for expression-based data manipulation with lazy query optimization, parallel execution, streaming out-of-core processing, Arrow interoperability, and optional GPU execution.",
+  "content_fingerprint": "de84be4dbb6387c349ab2fbd7b0ddc2a70370b01f1ac5e73edd4696597e40219"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "sentry-triage",
+  "repo": "CarlosNavarron1990/kuraka",
+  "path": "skills/sentry-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CarlosNavarron1990/kuraka",
+  "dir_name": "sentry-triage-carlosnavarron1990-kuraka",
+  "downloaded_at": "2026-11-22T10:44:35.669812Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CarlosNavarron1990",
+  "source_url": "https://github.com/CarlosNavarron1990/kuraka/blob/main/skills/sentry-triage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CarlosNavarron1990/kuraka/blob/main/skills/sentry-triage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Triage Sentry issues for guai-platform-backend: sweep active issues,\ndecompose a persistent_error funnel into root causes, cross-reference\nagainst git and the known-errors catalog, and decide resolution.\nUse whenever the user says \"revisa Sentry\", \"qué pasa con este issue\",\n\"por qué sigue disparando GUAI-PLATFORM-BACKEND-X\", \"triage sentry\".\nRead-only on Sentry unless the user explicitly asks to resolve/assign.",
+  "content_fingerprint": "97c9059814cc58627d7ab5d42fa0df17d253fdefd25bd671478a60f137e90558"
+}

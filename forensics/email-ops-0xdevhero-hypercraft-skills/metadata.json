@@ -1,0 +1,39 @@
+{
+  "name": "email-ops",
+  "repo": "0xdevhero/hypercraft-skills",
+  "path": "ecosystem/tools-workflow/email-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/0xdevhero/hypercraft-skills",
+  "dir_name": "email-ops-0xdevhero-hypercraft-skills",
+  "downloaded_at": "2026-11-22T10:12:12.624487Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xdevhero",
+  "source_url": "https://github.com/0xdevhero/hypercraft-skills/blob/main/ecosystem/tools-workflow/email-ops/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xdevhero/hypercraft-skills/blob/main/ecosystem/tools-workflow/email-ops/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Evidence-first mailbox triage, drafting, send verification, and sent-mail-safe follow-up workflow for HyperCraft. Use when the user wants to organize email, draft or send through the real mail surface, or prove what landed in Sent.",
+  "content_fingerprint": "5cb4709444a1bdd52ad99cfbeeab2c920562dfabeea66257f616a275c1cbdefc"
+}

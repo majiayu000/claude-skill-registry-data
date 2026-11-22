@@ -1,0 +1,39 @@
+{
+  "name": "plugin-audit",
+  "repo": "Aayush-coder1/ai-bots",
+  "path": ".agents/skills/plugin-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Aayush-coder1/ai-bots",
+  "dir_name": "plugin-audit-aayush-coder1-ai-bots",
+  "downloaded_at": "2026-11-22T10:20:32.307512Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Aayush-coder1",
+  "source_url": "https://github.com/Aayush-coder1/ai-bots/blob/main/.agents/skills/plugin-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Aayush-coder1/ai-bots/blob/main/.agents/skills/plugin-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit vercel-plugin performance on real-world projects. Extracts tool calls from Claude Code conversation logs, tests hook matching against actual inputs, identifies pattern coverage gaps, and checks plugin cache staleness. Use when asked to audit, test, or investigate plugin skill injection on a real project.",
+  "content_fingerprint": "4aff1369c1399d1ac9d8a27d740f308fb4a1cdde659dcac443646065dac6db1d"
+}

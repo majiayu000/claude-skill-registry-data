@@ -1,0 +1,37 @@
+{
+  "name": "dart-conventions",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/dart-foundation/skills/dart-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "dart-conventions",
+  "downloaded_at": "2026-11-22T10:30:54.650130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/dart-foundation/skills/dart-conventions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/dart-foundation/skills/dart-conventions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Modern Dart idioms for any Dart project (Dart 3+): sound null safety, records, patterns and switch expressions, sealed/final/base/interface class modifiers, extension types, Future/Stream discipline, immutability, Effective Dart naming, library layout. Apply when the project is a Dart 3 project (pure Dart or Flutter). Stack-agnostic \u2014 referenced by every Dart plugin in the marketplace.\n\nUse this skill to:\n- Write null-safe code without `!` sprinkled over every access.\n- Model closed type hierarchies with sealed classes and exhaustive switch expressions.\n- Return multiple values with records instead of ad-hoc wrapper classes.\n- Write correct async code (no unawaited futures, no leaked stream subscriptions).\n- Lay out a package the way the Dart tooling expects (lib/, lib/src/, bin/, test/).\n\nDo NOT use this skill for:\n- Flutter widgets, state management or navigation \u2014 see flutter-plugin skills.\n- pubspec, lints and code generation \u2014 see dart-foundation:dart-tooling.\n- Testing patterns \u2014 see dart-foundation:dart-testing."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "yt-to-course",
+  "repo": "BenAIOS/benai-skills",
+  "path": "shared-skills/yt-to-course/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/BenAIOS/benai-skills",
+  "dir_name": "yt-to-course-benaios-benai-skills",
+  "downloaded_at": "2026-11-22T10:38:27.843766Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BenAIOS",
+  "source_url": "https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/yt-to-course/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/yt-to-course/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a YouTube video into a structured Circle course package: decides full course vs section addition (against course_structure.md), cuts sentence-aligned lessons via video-cutter, writes lesson content in Ben's voice, and outputs clips, lesson.md, description.txt, README, and manifest. STEP 2 of the YouTube pipeline: yt-to-community always runs first; invoke only after the community post is saved and the user confirms course material. TRIGGERS: \"yes, course it\", \"turn this into a course\", \"yt to course\", \"video to course\", \"create lessons from this video\", \"add this to a course\". NOT for community announcement posts (use yt-to-community)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "macos-app",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/apple-plugin/skills/macos-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "macos-app",
+  "downloaded_at": "2026-11-22T10:30:51.422312Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/macos-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/macos-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "macOS app specifics: SwiftUI scenes on the Mac (WindowGroup, Window, DocumentGroup, Settings, MenuBarExtra, UtilityWindow), opening and managing windows, menus and commands (CommandMenu, CommandGroup, keyboard shortcuts, focused values), Mac-idiomatic UI (Table, Inspector, toolbars, sidebar, context menus, hover), document-based apps and file access, App Sandbox and security-scoped bookmarks, hardened runtime and notarization constraints, AppKit interop, login items and menu-bar apps, Mac Catalyst vs native.\n\nUse this skill to:\n- Make a feature feel native on the Mac instead of a stretched iPad screen.\n- Add windows, menu commands, settings and keyboard shortcuts.\n- Read and write user files correctly under the App Sandbox.\n\nDo NOT use this skill for:\n- iPad apps running on Mac via Catalyst or \"Designed for iPad\" \u2014 see apple-plugin:ios-ipados.\n- Shared SwiftUI view rules \u2014 see apple-plugin:swiftui-conventions."
+}

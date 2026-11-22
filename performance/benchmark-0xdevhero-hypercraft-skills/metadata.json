@@ -1,0 +1,39 @@
+{
+  "name": "benchmark",
+  "repo": "0xdevhero/hypercraft-skills",
+  "path": "ecosystem/testing-qa/benchmark/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/0xdevhero/hypercraft-skills",
+  "dir_name": "benchmark-0xdevhero-hypercraft-skills",
+  "downloaded_at": "2026-11-22T10:12:02.430037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, latency, speed, benchmark",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "performance",
+      "latency",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xdevhero",
+  "source_url": "https://github.com/0xdevhero/hypercraft-skills/blob/main/ecosystem/testing-qa/benchmark/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xdevhero/hypercraft-skills/blob/main/ecosystem/testing-qa/benchmark/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure performance baselines and detect regressions across browser Core Web Vitals (LCP, INP, CLS, page weight), API endpoint latency percentiles, and build/test feedback times, with before/after comparison stored in git-tracked .hypercraft/benchmarks JSON. Use when checking page speed, responding to 'it feels slow' reports, verifying launch performance targets, or comparing stack alternatives."
+}

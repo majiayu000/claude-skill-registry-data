@@ -1,0 +1,37 @@
+{
+  "name": "flutter-state-management",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/flutter-plugin/skills/flutter-state-management/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "flutter-state-management-aratkruglik-claude-sdlc",
+  "downloaded_at": "2026-11-22T10:30:55.527752Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/flutter-plugin/skills/flutter-state-management/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/flutter-plugin/skills/flutter-state-management/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "State management in Flutter apps: detecting the installed approach and following it \u2014 Riverpod 2/3 (Notifier/AsyncNotifier, code-gen @riverpod, ref.watch/read/listen, overrides), Bloc/Cubit (events, sealed states, BlocBuilder/BlocListener/BlocSelector, hydrated_bloc), Provider (ChangeNotifier), and plain ValueNotifier/ChangeNotifier. Modelling loading/empty/error/data states, repository boundaries, side effects, dependency injection.\n\nUse this skill to:\n- Pick the right primitive inside the library the project already uses.\n- Model async screen state so loading, error and empty are never forgotten.\n- Keep business logic out of widgets and testable without Flutter.\n- Trigger one-off effects (snackbars, navigation) without rebuild bugs.\n\nDo NOT use this skill for:\n- Ephemeral widget state like text controllers (see flutter-conventions \u2014 StatefulWidget).\n- Navigation (see flutter-navigation).\n- Testing notifiers and blocs (see flutter-testing)."
+}

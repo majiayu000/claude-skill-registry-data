@@ -1,0 +1,38 @@
+{
+  "name": "tooling-files",
+  "repo": "ByteTerrace/Puck",
+  "path": ".claude/skills/tooling-files/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/ByteTerrace/Puck",
+  "dir_name": "tooling-files",
+  "downloaded_at": "2026-11-22T10:42:40.522009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ByteTerrace",
+  "source_url": "https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/tooling-files/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/tooling-files/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maps shared repository tooling for files, paths, Git queries, project ownership and Markdown fences. Load before adding or changing a helper in these areas."
+}

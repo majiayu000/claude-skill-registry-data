@@ -1,0 +1,39 @@
+{
+  "name": "yuzu-meson",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".codex/skills/yuzu-meson/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "yuzu-meson",
+  "downloaded_at": "2026-11-22T10:57:26.961437Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/yuzu-meson/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/yuzu-meson/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Maintain Yuzu's Meson build graph, source lists, dependency wiring, and platform conditionals. Use when editing any `meson.build`, adding or removing source files, changing dependencies, updating native or cross files, or adjusting CI build behavior."
+}

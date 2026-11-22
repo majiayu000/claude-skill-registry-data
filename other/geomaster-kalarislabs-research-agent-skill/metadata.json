@@ -1,0 +1,38 @@
+{
+  "name": "geomaster",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/geomaster/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "geomaster-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:53.148003Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/geomaster/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/geomaster/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Provides geospatial and Earth observation workflows using GeoPandas, Rasterio, GDAL, Xarray, Shapely, Laspy, PDAL, Google Earth Engine, and STAC/Planetary Computer, covering Sentinel, Landsat, MODIS, SAR and hyperspectral imagery, spectral indices, terrain and network analysis, point clouds, COGs, CRS handling, and spatial ML, with code in Python, R, Julia, JavaScript, C++, Java, Go, and Rust. Use when computing NDVI or other indices from satellite imagery, when running vector overlays, reprojection, or spatial statistics on shapefiles, GeoJSON, or GeoPackage data, when searching STAC catalogs and reading cloud-optimized GeoTIFFs, when classifying land cover or training ML models on Earth observation data, or when doing terrain, hydrology, or point cloud analysis. Not for general non-spatial data analysis or tabular ML."
+}

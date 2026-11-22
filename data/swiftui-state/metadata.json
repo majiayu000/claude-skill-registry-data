@@ -1,0 +1,37 @@
+{
+  "name": "swiftui-state",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/apple-plugin/skills/swiftui-state/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "swiftui-state",
+  "downloaded_at": "2026-11-22T10:30:52.113570Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/swiftui-state/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/swiftui-state/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "State and data flow in SwiftUI apps: Observation (@Observable, @State, @Bindable, @Environment), legacy ObservableObject (@StateObject, @ObservedObject, @EnvironmentObject, @Published) in existing code, ownership rules, MainActor-isolated models, dependency injection, SwiftData (@Model, ModelContainer, ModelContext, @Query, migrations) and Core Data in existing apps, The Composable Architecture when installed. Detect and follow the pattern in place.\n\nUse this skill to:\n- Decide who owns a piece of state and how it reaches a view.\n- Write observable models that update only the views that read them.\n- Persist data with SwiftData or the project's existing store.\n- Inject services so models are testable.\n\nDo NOT use this skill for:\n- View composition and layout \u2014 see apple-plugin:swiftui-conventions.\n- Navigation state \u2014 see apple-plugin:swiftui-navigation."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "tidy-repo",
+  "repo": "GeiserX/sstack",
+  "path": "skills/tidy-repo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GeiserX/sstack",
+  "dir_name": "tidy-repo-geiserx-sstack",
+  "downloaded_at": "2026-11-22T11:14:49.290687Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GeiserX",
+  "source_url": "https://github.com/GeiserX/sstack/blob/main/skills/tidy-repo/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GeiserX/sstack/blob/main/skills/tidy-repo/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Tidy an established repo end to end without changing what it does. It audits, deletes, restructures, refreshes the living docs and leaves guards so the repo stays clean. Use only when invoked explicitly."
+}

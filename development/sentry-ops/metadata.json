@@ -1,0 +1,37 @@
+{
+  "name": "sentry-ops",
+  "repo": "0xDarkMatter/claude-mods",
+  "path": "skills/sentry-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/0xDarkMatter/claude-mods",
+  "dir_name": "sentry-ops",
+  "downloaded_at": "2026-11-22T10:11:22.695339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xDarkMatter",
+  "source_url": "https://github.com/0xDarkMatter/claude-mods/blob/main/skills/sentry-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xDarkMatter/claude-mods/blob/main/skills/sentry-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add Sentry error reporting so it sends only what you decided to send, and prove it without sending traffic. Use for: Sentry setup, @sentry/* SDK choice, Sentry on Cloudflare Workers or Astro, withSentry, DSN vs auth token, source map upload, tracesSampleRate and Replay defaults, dataCollection, sendDefaultPii removed in v11, beforeSend scrubbing, PII in Sentry events, testing Sentry with a fake DSN, the Sentry wizard or agent plugin."
+}

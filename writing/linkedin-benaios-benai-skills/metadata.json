@@ -1,0 +1,39 @@
+{
+  "name": "linkedin",
+  "repo": "BenAIOS/benai-skills",
+  "path": "shared-skills/linkedin/SKILL.md",
+  "github_branch": "master",
+  "category": "writing",
+  "source": "github.com/BenAIOS/benai-skills",
+  "dir_name": "linkedin-benaios-benai-skills",
+  "downloaded_at": "2026-11-22T10:38:16.638953Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for writing: writing, writer, blog, article",
+    "score": 4,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "writer",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BenAIOS",
+  "source_url": "https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/linkedin/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/linkedin/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Repurpose research, YouTube videos, blog articles, guides, or raw insights into high-performing LinkedIn posts that match Ben's exact tone of voice and writing style. STEP-BY-STEP and interactive: never output a complete post immediately, and at each step give suggestions, wait for the user's decision, then proceed. Pairs with /research upstream and /visual downstream. Use when the user shares a YouTube link, blog URL, transcript, insight, or idea and wants a LinkedIn post, or says \"LinkedIn post\", \"LinkedIn content\", \"write a post\", \"repurpose for LinkedIn\", or \"turn this into a post\"."
+}

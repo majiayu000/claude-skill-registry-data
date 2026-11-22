@@ -1,0 +1,39 @@
+{
+  "name": "mcp-builder",
+  "repo": "BenAIOS/benai-skills",
+  "path": "shared-skills/mcp-builder/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/BenAIOS/benai-skills",
+  "dir_name": "mcp-builder-benaios-benai-skills",
+  "downloaded_at": "2026-11-22T10:38:25.233726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BenAIOS",
+  "source_url": "https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/mcp-builder/SKILL.md",
+  "license": "Complete terms in LICENSE.txt",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/mcp-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+  "content_fingerprint": "9c749e86e79ce0704f1cec38c77f1999907d22abccc4f98b68b021fa3e0a79dd"
+}

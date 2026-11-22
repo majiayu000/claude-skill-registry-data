@@ -1,0 +1,36 @@
+{
+  "name": "verify-omb",
+  "repo": "AdilShamim8/Uni",
+  "path": ".claude/skills/verify-omb/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AdilShamim8/Uni",
+  "dir_name": "verify-omb",
+  "downloaded_at": "2026-11-22T10:22:20.801712Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AdilShamim8",
+  "source_url": "https://github.com/AdilShamim8/Uni/blob/main/.claude/skills/verify-omb/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AdilShamim8/Uni/blob/main/.claude/skills/verify-omb/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify Uni server and conversation changes against an isolated fake-engine instance before claiming they work."
+}

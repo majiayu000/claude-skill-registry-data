@@ -1,0 +1,37 @@
+{
+  "name": "chronary-toolkit",
+  "repo": "Chronary/chronary-skills",
+  "path": "skills/chronary-toolkit/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/Chronary/chronary-skills",
+  "dir_name": "chronary-toolkit",
+  "downloaded_at": "2026-11-22T10:46:58.930079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Chronary",
+  "source_url": "https://github.com/Chronary/chronary-skills/blob/main/skills/chronary-toolkit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Chronary/chronary-skills/blob/main/skills/chronary-toolkit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Chronary Toolkit \u2014 50 pre-built tools with framework adapters for Vercel AI SDK, OpenAI, LangChain, Mastra, and MCP."
+}

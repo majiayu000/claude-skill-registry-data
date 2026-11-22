@@ -1,0 +1,38 @@
+{
+  "name": "ts-complexity",
+  "repo": "Expecho/Agent42",
+  "path": ".claude/skills/ts-complexity/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Expecho/Agent42",
+  "dir_name": "ts-complexity",
+  "downloaded_at": "2026-11-22T11:08:17.300705Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Expecho",
+  "source_url": "https://github.com/Expecho/Agent42/blob/main/.claude/skills/ts-complexity/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Expecho/Agent42/blob/main/.claude/skills/ts-complexity/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Report cyclomatic complexity of TypeScript code \u2014 changed files by default. Prefers the project's ESLint complexity rule and falls back to npx ts-complex. Optional, model-invoked only."
+}

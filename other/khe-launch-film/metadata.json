@@ -1,0 +1,37 @@
+{
+  "name": "khe-launch-film",
+  "repo": "HKTITAN/skills",
+  "path": "skills/khe-launch-film/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HKTITAN/skills",
+  "dir_name": "khe-launch-film",
+  "downloaded_at": "2026-11-22T11:18:41.407415Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKTITAN",
+  "source_url": "https://github.com/HKTITAN/skills/blob/main/skills/khe-launch-film/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKTITAN/skills/blob/main/skills/khe-launch-film/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plans, cuts and reviews a product launch video against 47 measured films: writes the brief and finds the one moment the film must show, names the register, then times the beats, on-screen type, UI demo, shot motion, seams and cuts, and judges a render at native fps against its own register's numbers. Use when someone wants a launch film, sizzle, teaser, README film, logo sting, landing-page loop or a 9:16 cut, says \"review my launch video\", \"what should the video show\", \"it looks good but people don't get it\", \"it feels like a slideshow\", \"when should the name appear\", \"how fast should the prompt type\", or hands over a reference film to measure. For the soundtrack once picture is locked use `khe-sound`; for motion inside the product use `khe-ui`; for a faux UI demo on a page use `stageshow`."
+}

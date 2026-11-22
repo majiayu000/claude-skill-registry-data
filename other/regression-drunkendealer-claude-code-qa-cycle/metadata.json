@@ -1,0 +1,38 @@
+{
+  "name": "regression",
+  "repo": "DrunkenDealer/claude-code-qa-cycle",
+  "path": "plugin/skills/regression/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DrunkenDealer/claude-code-qa-cycle",
+  "dir_name": "regression-drunkendealer-claude-code-qa-cycle",
+  "downloaded_at": "2026-11-22T11:00:59.670819Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DrunkenDealer",
+  "source_url": "https://github.com/DrunkenDealer/claude-code-qa-cycle/blob/main/plugin/skills/regression/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DrunkenDealer/claude-code-qa-cycle/blob/main/plugin/skills/regression/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Post-feature verification gate \u2014 phase 1 reviews the code (bugs, pitfalls, code smells), phase 2 plays manual tester \u2014 it builds and runs the project's test suite on every platform, walks the blast radius, audits against the platform bar, and optionally drives an emulator, simulator or browser when a finding needs the thing running. Auto-detects the feature from git and the platform or area from the repo, so it works after a context compaction. Read-only report with a ship/fix verdict, then offers to fix. Triggers on \"regression\", \"regression testing\", \"verify the feature we built\", \"did we break anything\", \"review and QA what we just shipped\"."
+}

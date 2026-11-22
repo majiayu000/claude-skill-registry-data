@@ -1,0 +1,38 @@
+{
+  "name": "swift-tooling",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/swift-foundation/skills/swift-tooling/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "swift-tooling",
+  "downloaded_at": "2026-11-22T10:30:53.351599Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/swift-foundation/skills/swift-tooling/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/swift-foundation/skills/swift-tooling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Swift project tooling: Package.swift manifests (tools version, platforms, products, targets, dependencies, resources, plugins), dependency constraints and the Package.resolved policy, swift build / test / run, xcodebuild for Xcode projects (schemes, destinations, test plans), Xcode project styles (buildable folders, Tuist, XcodeGen, legacy groups), formatters and linters (swift-format, SwiftFormat, SwiftLint), xcconfig files. Stack-agnostic \u2014 referenced by swift-plugin and apple-plugin.\n\nUse this skill to:\n- Add a dependency or a target the way the project already manages them.\n- Make sure a new file is actually compiled.\n- Run the project's own formatter, linter, build and tests the way CI does.\n\nDo NOT use this skill for:\n- Language idioms \u2014 see swift-foundation:swift-conventions.\n- Testing patterns \u2014 see swift-foundation:swift-testing."
+}

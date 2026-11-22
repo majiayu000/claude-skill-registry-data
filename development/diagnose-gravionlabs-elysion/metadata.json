@@ -1,0 +1,39 @@
+{
+  "name": "diagnose",
+  "repo": "GravionLabs/elysion",
+  "path": ".agents/skills/diagnose/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/GravionLabs/elysion",
+  "dir_name": "diagnose-gravionlabs-elysion",
+  "downloaded_at": "2026-11-22T11:17:34.613940Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GravionLabs",
+  "source_url": "https://github.com/GravionLabs/elysion/blob/main/.agents/skills/diagnose/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GravionLabs/elysion/blob/main/.agents/skills/diagnose/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose bugs: red-capable feedback loop first, then minimal repro, ranked hypotheses, fix with regression test. Use for bug, fix, broken, failing, debug."
+}

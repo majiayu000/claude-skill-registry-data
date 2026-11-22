@@ -1,0 +1,39 @@
+{
+  "name": "rdkit",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/rdkit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "rdkit-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:44.250168Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/rdkit/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/rdkit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides use of RDKit (Python) for reading and writing SMILES, MOL/SDF, and InChI, computing descriptors (MW, LogP, TPSA), generating Morgan/MACCS/atom-pair fingerprints, running SMARTS substructure searches, applying reaction SMARTS, and building 2D/3D coordinates with ETKDG. Use when parsing or sanitizing molecules that fail default sanitization, calculating Tanimoto similarity or clustering compounds, filtering libraries by substructure, embedding and optimizing conformers, or computing Murcko scaffolds and molecule hashes. Use when fine-grained control over sanitization or algorithms is needed. For simpler standard workflows, use datamol instead, which wraps RDKit."
+}

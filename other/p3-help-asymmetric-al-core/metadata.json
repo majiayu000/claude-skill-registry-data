@@ -1,0 +1,37 @@
+{
+  "name": "p3-help",
+  "repo": "Asymmetric-al/core",
+  "path": ".agents/skills/p3-help/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Asymmetric-al/core",
+  "dir_name": "p3-help-asymmetric-al-core",
+  "downloaded_at": "2026-11-22T10:33:26.048003Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Asymmetric-al",
+  "source_url": "https://github.com/Asymmetric-al/core/blob/master/.agents/skills/p3-help/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Asymmetric-al/core/blob/master/.agents/skills/p3-help/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guides users through p3-stack setup, /p3-mode, and picking the skill, playbook, or principle for a task. Use for /p3-help, or when the user asks how to install, set up, or use p3-stack, or which p3-stack skill fits. Not for requests to do work, even ones that name p3-stack."
+}

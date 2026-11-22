@@ -1,0 +1,37 @@
+{
+  "name": "how",
+  "repo": "Asymmetric-al/core",
+  "path": ".cursor/skills/how/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Asymmetric-al/core",
+  "dir_name": "how-asymmetric-al-core",
+  "downloaded_at": "2026-11-22T10:33:14.678370Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Asymmetric-al",
+  "source_url": "https://github.com/Asymmetric-al/core/blob/master/.cursor/skills/how/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Asymmetric-al/core/blob/master/.cursor/skills/how/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for \"how does X work\", code walkthroughs before changing something, and placement / ownership / layering questions (\"where should this live\", \"which package owns this\", \"is this the right layer\"). Explains subsystem architecture, runtime flow, onboarding mental models. Use why for motivation."
+}

@@ -1,0 +1,41 @@
+{
+  "name": "ui-sdk",
+  "repo": "Asymmetric-al/core",
+  "path": ".claude/skills/ui-sdk/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/Asymmetric-al/core",
+  "dir_name": "ui-sdk-asymmetric-al-core-4",
+  "downloaded_at": "2026-11-22T10:33:25.157716Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, compile, debug",
+    "score": 6,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Asymmetric-al",
+  "source_url": "https://github.com/Asymmetric-al/core/blob/master/.claude/skills/ui-sdk/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Asymmetric-al/core/blob/master/.claude/skills/ui-sdk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds and maintains Core's UI SDK (@ui-sdk/react and @ui-sdk/core) components as Maia-styled wrappers in packages/ui, with keyboard, focus, ARIA, server-rendering and hydration tests. Use when evaluating or implementing a shared control where UI SDK may give better interaction, accessibility, simplicity, maintainability or measured performance than the current option (Base UI and UI SDK are both approved), when changing or improving a file that imports @ui-sdk/*, or when the user asks for ui-sdk. Not needed merely because the SDK is installed, for ordinary page composition with existing @asym/ui components, or for Base UI component work."
+}

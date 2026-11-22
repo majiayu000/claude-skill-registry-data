@@ -1,0 +1,37 @@
+{
+  "name": "interview-me",
+  "repo": "BenAIOS/benai-skills",
+  "path": "shared-skills/interview-me/SKILL.md",
+  "github_branch": "master",
+  "category": "writing",
+  "source": "github.com/BenAIOS/benai-skills",
+  "dir_name": "interview-me-benaios-benai-skills",
+  "downloaded_at": "2026-11-22T10:38:31.891165Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, blog",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "blog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BenAIOS",
+  "source_url": "https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/interview-me/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BenAIOS/benai-skills/blob/master/shared-skills/interview-me/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Interview the user one question at a time before starting a big or fuzzy task, then write the brief and execute it. Use when the user says \"interview me\", \"brief me\", \"help me brief this\", \"I don't know where to start\", or hands over a large task with obvious gaps in the request. Based on the interview pattern Anthropic recommends in the Claude Fable 5 field guide."
+}

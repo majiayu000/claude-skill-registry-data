@@ -1,0 +1,37 @@
+{
+  "name": "extranjeria-intake",
+  "repo": "DerechoVirtual/jurisprudenciator",
+  "path": "plugins/extranjeria-espana/skills/extranjeria-intake/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DerechoVirtual/jurisprudenciator",
+  "dir_name": "extranjeria-intake",
+  "downloaded_at": "2026-11-22T10:56:46.435038Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category devops scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DerechoVirtual",
+  "source_url": "https://github.com/DerechoVirtual/jurisprudenciator/blob/main/plugins/extranjeria-espana/skills/extranjeria-intake/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DerechoVirtual/jurisprudenciator/blob/main/plugins/extranjeria-espana/skills/extranjeria-intake/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Puerta de entrada del plugin de extranjería para la primera consulta de un cliente extranjero. Reúne en orden su situación (nacionalidad, fecha y forma de entrada, situación administrativa, antecedentes, familia en España, trabajo, estudios, expedientes o sanciones abiertos y notificaciones con su fecha), detecta urgencias (orden de expulsión, internamiento en CIE, plazo de recurso corriendo, autorización caducada o a punto de caducar), calcula cada plazo con su precepto y deriva a la skill del plugin que corresponde. Entrega la ficha del caso en Word. Úsala con «cliente nuevo de extranjería», «primera consulta», «está sin papeles», «le ha llegado una carta de extranjería», «qué puede hacer mi cliente». Para comparar vías con requisitos, riesgos y jurisprudencia usa informe-viabilidad-extranjeria.",
+  "content_fingerprint": "824cbef714d314ef9094db34745cc41d819f9ae2c829308963f18b699850432e"
+}

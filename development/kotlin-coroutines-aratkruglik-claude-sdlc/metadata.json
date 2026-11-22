@@ -1,0 +1,37 @@
+{
+  "name": "kotlin-coroutines",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/kotlin-plugin/skills/kotlin-coroutines/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "kotlin-coroutines-aratkruglik-claude-sdlc",
+  "downloaded_at": "2026-11-22T10:30:54.128565Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/kotlin-plugin/skills/kotlin-coroutines/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/kotlin-plugin/skills/kotlin-coroutines/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Kotlin coroutines on the JVM: suspend functions, structured concurrency (coroutineScope, supervisorScope, application-owned scopes), dispatchers and blocking I/O, cancellation and CancellationException rules, timeouts, async/await parallelism, Flow (cold streams, operators, flowOn, StateFlow/SharedFlow), Ktor request coroutines, bridging callbacks and Java futures, dispatcher injection for tests.\n\nUse this skill to:\n- Write suspend APIs that are cancellable and do not block threads.\n- Run independent work in parallel without leaking coroutines.\n- Expose streams with Flow correctly.\n- Keep coroutine code testable with injected dispatchers.\n\nDo NOT use this skill for:\n- General Kotlin idioms (see kotlin-conventions).\n- Testing coroutines (see kotlin-testing \u2014 runTest, Turbine)."
+}

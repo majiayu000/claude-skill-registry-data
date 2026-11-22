@@ -1,0 +1,38 @@
+{
+  "name": "gget",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/gget/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "gget-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:43.186309Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/gget/SKILL.md",
+  "license": "BSD-2-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/gget/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Queries 20+ bioinformatics databases and analysis services through the gget CLI and Python package, covering Ensembl gene search, info and sequences (ref, search, info, seq), BLAST, BLAT, MUSCLE, DIAMOND, PDB, AlphaFold, ELM, ARCHS4, CELLxGENE, Enrichr, Bgee, OpenTargets, cBioPortal, COSMIC, viral sequence downloads (virus), and 8cube mouse specificity and expression data. Use when looking up gene or transcript details, running a quick BLAST/BLAT search, fetching AlphaFold or PDB structures, running enrichment analysis on a gene list, downloading viral sequences with filters, or exploring disease and drug associations interactively. Not for batch processing or fine-grained BLAST control (use biopython) or multi-database Python pipelines (use bioservices)."
+}

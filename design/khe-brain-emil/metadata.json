@@ -1,0 +1,39 @@
+{
+  "name": "khe-brain-emil",
+  "repo": "HKTITAN/skills",
+  "path": "skills/khe-brain-emil/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/HKTITAN/skills",
+  "dir_name": "khe-brain-emil",
+  "downloaded_at": "2026-11-22T11:18:40.896111Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, component, animation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKTITAN",
+  "source_url": "https://github.com/HKTITAN/skills/blob/main/skills/khe-brain-emil/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKTITAN/skills/blob/main/skills/khe-brain-emil/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answers interface, motion and craft questions the way Emil Kowalski's published articles answer them, with the article named. Gives the claim, its title and its URL; pressure-tests a UI or a decision against his stated positions; says \"he has not written about this\" when the articles are silent; shows where two articles disagree. Harshit Khemani's reading of his public writing, not written or endorsed by him. Use when someone says \"what would Emil say\", \"is this how Emil would do it\", \"ask Emil\", \"who said that\", \"where does that rule come from\", \"has Emil written about\", \"does Emil contradict himself\", or wants a motion, easing, component or taste decision checked against a named source. To build or review a screen use `khe-ui`. To apply his rules to code use his own skills (`emil-design-eng`, `animate`, `review-animations`), which `khe-auto` routes to."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "flywheel",
+  "repo": "HiQS-Labs/XYZ-forge",
+  "path": "skills/2-daily/flywheel/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/HiQS-Labs/XYZ-forge",
+  "dir_name": "flywheel",
+  "downloaded_at": "2026-11-22T11:23:00.049661Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HiQS-Labs",
+  "source_url": "https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/2-daily/flywheel/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/2-daily/flywheel/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive real work through XYZ Forge's existing skills with explicit work modes, bounded autonomous repair, independent review, landing, and continuation to the next eligible item. Use for \"flywheel\", \"run the factory flywheel\", \"keep real work moving\", or \"drive Jog through completion\". Routes to start-task, jog, start-marathon, 10days, optional Daily observation, relay-xyz, handsfree, unstuck, merge-cleanup, and explicitly requested skills-army-hq deployment; never creates another runner or queue."
+}

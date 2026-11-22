@@ -1,0 +1,66 @@
+---
+name: jev-seo
+description: Free SEO and GEO audits for any site or docs folder. Use when the user asks to audit SEO, check rankings, score AI visibility, validate schemas, inspect robots.txt, crawl for broken links, or gate a deploy on search health. Runs a single Rust binary, no paid APIs. Semantic judgments by TypeSafe Jev when keyed, deterministic scores otherwise.
+---
+
+# jev-seo skill
+
+Run the binary. Prefer JSON output when chaining commands. Never invent scores; every number below comes from a command.
+
+## Fast paths
+
+- Full site picture: `jev-seo crawl <url> --max-pages 50` then `jev-seo llms <domain>`.
+- Own-site truth: `jev-seo gsc auth`, then `jev-seo gsc query --site <url>` for free Search Console clicks and positions.
+- Docs folder gate: `jev-seo audit docs/ --min-pass 60 --html report.html --pdf report.pdf --md report.md`.
+- One question, one answer: `jev-seo geo <file> --query "<query>"`, `jev-seo robots <domain>`, `jev-seo schema <file>`, `jev-seo sitemap <url>`.
+- Internal links: `jev-seo link docs/ --limit 10` suggests one contextual target per page, or `no_link`.
+- Environment check first on a new machine: `jev-seo doctor`.
+
+## Reading output
+
+- `Health`, `Score`, and `Grade` lines are deterministic 0-100 values with A-F grades.
+- `Top Actions` are ranked by impact with effort bands; ids like `RULE-R01` map to the rule registry (R01-R64) in `src/rules.rs`.
+- New in v0.4.0 (unreleased): `check` + `verify`, `.jev-seo/policy.toml`, regional `--country/--language/--device`, GSC inspect/winners/losers, `bing` sites/queries, `--sarif`/`--junit`, R59-R64, citation struct, `seo_index`, 4 new MCP tools (19 total), `jev://` resources, evidence snapshots. Portable manifest (`plugin.json` + `mcp.json` + `.app.json`), annotated tools, bundled `skills/jev-audit/SKILL.md`, bridge `GET /health`. New in v0.3.0 (2 Oct 2026): `serve`, `capabilities --json`, `watch --diff-only`, `fix-plan`, crawl sitemap seeding (closes #3), R32/R08/R56 breadth, JS feature gate, GEO trends with sparkline SVG, offline `--rescore`. v0.1.2 shipped 26 Sep: `explain`, `report --baseline`, `crawl --vitals`, `query --provider dfs`, `seo_cite_check`, `seo_gap`, keyless GEO, drift gates.
+- Jev contract: Choices offer `insufficient_context`, Flags print the runner-up, every fan-out appends to `~/.jev-seo/eval.jsonl`. Question version rides the spend line.
+- `Completeness` says what was skipped (caps, missing sitemap, missing robots). A capped crawl is a sample, not a verdict.
+- `Needs review` marks Jev answers below the confidence bar. Treat those lines as unverified.
+- `--json` keeps stdout machine-clean; progress goes to stderr.
+
+## MCP server (19 tools)
+
+Run it over stdio: `npx -y @akashpriyadarshii/jev-seo` (or `jev-seo mcp` with a local build). Client config:
+
+```json
+{ "mcpServers": { "jev-seo": { "command": "npx", "args": ["-y", "@akashpriyadarshii/jev-seo"] } } }
+```
+
+No local build? Set `JEV_SEO_BIN=/path/to/jev-seo` and the wrapper uses it instead of downloading. First npx run needs network for the one-time download; musl/Alpine systems cannot run the glibc builds and must use `JEV_SEO_BIN` with a local `cargo build`.
+
+`seo_cite_check` reports whether an AI answer names the target domain. Three paths, first one that works wins: pass `answer` to score your own words (works everywhere); omit it and sampling-capable clients answer via `sampling/createMessage`; otherwise you get `needs_answer: true` plus the prompt, answer it naturally as you would a user, and re-call with `answer`. Result fields: `cited` (bool), `since_last` (previous verdict or null), `source` (answer/sampling/engine), `excerpt` (300 chars).
+
+Agentic loop: `seo_gap` ranks the Search Console queue (needs site auth once via `gsc auth`); work it top down; `seo_cite_check` each query; `seo_report` surfaces `drift` alerts (citation lost/gained, geo drops). `seo_geo` scores keyless without any key; `TYPESAFE_API_KEY` upgrades it to Jev judgment. Paid engines (Perplexity, OpenRouter, Ollama) plug in via `JEV_SEO_LLM_KEY` + `JEV_SEO_LLM_MODEL` (+ optional `JEV_SEO_LLM_URL`) and answer cite checks server-side. Deploy gate: `drift baseline --report audit.json --label v1` before a change, `drift compare --report new.json --label v1` after. One-file handoff: `audit --digest digest.md`, canonical close: `bundle audit.json --out bundle.md`.
+
+## Rules for agents
+
+1. Crawl before judging. Never score pages the crawl has not fetched.
+2. Quote the completeness line alongside any score.
+3. Gate deploys with `audit --min-pass` or crawl health deltas via `--diff`, not vibes. `--fail-on blocking` (default) fails only on deterministic rules; judgment calls warn. `--forbid` names non-negotiables.
+4. Export findings with `--csv` for spreadsheets; rebuild past runs with `--rescore`, no spend.
+4. Jev needs `TYPESAFE_API_KEY`. Without it the tool still runs; semantic sections report local-only output.
+5. Keep crawls polite: default 50 pages, 8 workers, robots.txt honored. Raise `--max-pages` deliberately.
+
+## Capabilities
+
+`jev-seo capabilities --json` reports `{version, rule_set, rules, mcp_tools, mcp_tool_names[], commands[]}`. This is the machine source of truth. Do not parse counts from the README.
+
+## Plugin bridge
+
+`jev-seo serve --addr 0.0.0.0:8787` exposes Streamable HTTP at `POST /mcp` plus `GET /plugin.json` and `/extensions/*` for ChatGPT Plugin Extensions.
+
+## Fix plan
+
+`jev-seo audit docs/ --json > audit.json && jev-seo fix-plan audit.json --json`: deterministic `rule to patch to verify` per finding (fact or heuristic, confidence capped), sorted blocking first. One hint per finding. Verify with `jev-seo audit <file> --json | jq '.findings | no RULE-Rxx'`.
+
+## Watch
+
+`jev-seo watch docs/ --once --no-jev` or `jev-seo watch https://example.com --once --json`; loop mode `jev-seo watch docs/ --every 30`. Compares against `watch-<slug>` sqlite baseline, emits `clean|regressed|improved|baseline` with delta, blocking counts, drift alerts. Polling, not inotify.

@@ -1,0 +1,37 @@
+{
+  "name": "csharp-scripts",
+  "repo": "GravionLabs/elysion",
+  "path": ".agents/skills/csharp-scripts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GravionLabs/elysion",
+  "dir_name": "csharp-scripts-gravionlabs-elysion",
+  "downloaded_at": "2026-11-22T11:17:37.002921Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GravionLabs",
+  "source_url": "https://github.com/GravionLabs/elysion/blob/main/.agents/skills/csharp-scripts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GravionLabs/elysion/blob/main/.agents/skills/csharp-scripts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run single-file C# programs as scripts (file-based apps) for quick experimentation, prototyping, and concept testing. Use when the user wants to write and execute a small C# program without creating a full project."
+}

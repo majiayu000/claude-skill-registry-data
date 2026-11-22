@@ -1,0 +1,37 @@
+{
+  "name": "esm",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/esm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "esm-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:41.132676Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/esm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/esm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Covers the EvolutionaryScale/Biohub `esm` Python SDK: ESM3 generative protein design (sequence, structure and function tracks, chain-of-thought), ESMC embeddings, inverse folding, ESMFold2 structure prediction, and hosted Forge/Biohub inference with ESM_API_KEY. Use when generating or completing proteins with ESM3, extracting ESMC embeddings for classification or similarity, folding a sequence or designing sequences from a structure, or choosing between esm3-open, esmc_300m and Forge-hosted models. Use when batching async Forge or Biohub API calls. Not for other protein models such as AlphaFold or generic Hugging Face transformers usage."
+}

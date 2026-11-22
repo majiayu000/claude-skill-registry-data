@@ -1,0 +1,38 @@
+{
+  "name": "talking-head-cut",
+  "repo": "EditAtlas/skills",
+  "path": "skills/talking-head-cut/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/EditAtlas/skills",
+  "dir_name": "talking-head-cut",
+  "downloaded_at": "2026-11-22T11:03:11.061678Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EditAtlas",
+  "source_url": "https://github.com/EditAtlas/skills/blob/main/skills/talking-head-cut/SKILL.md",
+  "license": "Apache-2.0. LICENSE.txt has the complete terms",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EditAtlas/skills/blob/main/skills/talking-head-cut/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cut a raw talking-head recording (one person speaking to camera, a lesson, a vlog, a voice-over take) into a clean video. Takes out false starts, failed and repeated takes, words said to the editor (\"take two\", \"nói lại nhé\"), doubled words and um/uh/ờ/ừm, and shortens long pauses to a breath, also with music or noise under the voice. When the script was recorded several times across files, picks the best take of each line. You quote the words; the scripts find them, put every cut in silence, render picture and sound in step, then transcribe the cut again to catch leftovers and clipped words. Use it for \"cut my mistakes out\", \"clean up this take\", \"remove the retakes\", \"pick the best takes\", \"cắt video nói chuyện\", \"cắt chỗ nói hỏng\", \"bỏ đoạn nói lại\", \"chọn take tốt nhất\", \"cắt ờ ừm và khoảng lặng\". Needs the transcribe skill's word-level transcript. Not for subtitles alone (transcribe), highlights from a long video, multi-camera edits, or adding music, B-roll or captions (after the cut).",
+  "content_fingerprint": "bfeb1eec8697e7872760fb917fb122f34f42e69e882605b5316312a1b0cbd3b0"
+}

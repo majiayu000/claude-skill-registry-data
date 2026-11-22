@@ -1,0 +1,36 @@
+{
+  "name": "medchem",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/medchem/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "medchem-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:48.829437Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/medchem/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/medchem/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Filters and triages small-molecule libraries with the Python medchem library (datamol-io, v2.0.5) on top of RDKit and datamol. Covers drug-likeness rules (Lipinski, Veber, CNS, lead-like) via RuleFilters, structural alerts (ChEMBL-derived sets, NIBR, PAINS, Brenk), chemical group detection, ZINC-based complexity thresholds, scaffold constraints, and the medchem query language (QueryFilter). Use when screening a compound library for drug-likeness, removing PAINS or other structural-alert compounds, prioritizing hits for hit-to-lead or lead optimization, detecting functional groups, or combining criteria in one query. Not for computing general descriptors or fingerprints; use RDKit directly."
+}

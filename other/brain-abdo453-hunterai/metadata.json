@@ -1,0 +1,37 @@
+{
+  "name": "brain",
+  "repo": "Abdo453/HunterAI",
+  "path": ".opencode/skills/brain/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Abdo453/HunterAI",
+  "dir_name": "brain-abdo453-hunterai",
+  "downloaded_at": "2026-11-22T10:21:03.931856Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abdo453",
+  "source_url": "https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/brain/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/brain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Central knowledge coordinator. Use BEFORE launching any other pentest agent to get context on what's already been tried. Also use AFTER any agent completes to record findings, exhausted vectors, and learned patterns. The brain prevents redundant work across sessions and agents."
+}

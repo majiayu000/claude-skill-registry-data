@@ -1,0 +1,38 @@
+{
+  "name": "phone-harness",
+  "repo": "AdilShamim8/Uni",
+  "path": "skills/phone-harness/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/AdilShamim8/Uni",
+  "dir_name": "phone-harness",
+  "downloaded_at": "2026-11-22T10:22:20.248432Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, adb, android",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "device",
+      "adb",
+      "android"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AdilShamim8",
+  "source_url": "https://github.com/AdilShamim8/Uni/blob/main/skills/phone-harness/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AdilShamim8/Uni/blob/main/skills/phone-harness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Control, inspect, test, or automate a physical Android phone connected to Uni over authorized USB debugging. Use for explicit Android, USB phone, ADB, mobile-app, tapping, typing, swiping, scrolling, screenshot, or phone-screen requests."
+}

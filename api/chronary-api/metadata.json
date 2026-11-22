@@ -1,0 +1,39 @@
+{
+  "name": "chronary-api",
+  "repo": "Chronary/chronary-skills",
+  "path": "skills/chronary-api/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/Chronary/chronary-skills",
+  "dir_name": "chronary-api",
+  "downloaded_at": "2026-11-22T10:46:58.754909Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint, openapi",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Chronary",
+  "source_url": "https://github.com/Chronary/chronary-skills/blob/main/skills/chronary-api/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Chronary/chronary-skills/blob/main/skills/chronary-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Chronary calendar API for AI agents \u2014 REST + MCP server, agent self-signup\nflow, calendar/event/proposal/availability model, webhook HMAC verification,\niCal subscriptions, error envelopes, and rate-limit/quota semantics.\n\nTRIGGER when the user asks about any of: creating an agent or calendar\nprogrammatically, scheduling an event from an agent, querying free/busy or\navailability, multi-agent meeting coordination, temporal holds before\nbooking, subscribing to a Google/Outlook/iCal feed, verifying webhook\npayloads, calling `chronary.ai` / `api.chronary.ai` / `chr_sk_` / `chr_ak_`\n/ `agt_` / `cal_` / `evt_` IDs, the MCP server at `api.chronary.ai/mcp`,\nthe `@chronary/sdk` / `chronary` Python / `@chronary/mcp` packages, the\nagent-self-signup endpoints (`POST /v1/agent/sign-up`, `/v1/agent/verify`),\nor anything that pairs the words \"calendar\" and \"agent\".\n\nSKIP when the user is asking about generic calendar libraries (`ical.js`,\n`node-ical`, RFC 5545 parsing without the Chronary API), Google Calendar\nAPI directly, or the Chronary CLI binary install (use `chronary.ai/install.sh`\nreference, not this skill)."
+}

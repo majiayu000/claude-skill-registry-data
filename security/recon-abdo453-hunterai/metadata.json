@@ -1,0 +1,38 @@
+{
+  "name": "recon",
+  "repo": "Abdo453/HunterAI",
+  "path": ".agents/skills/recon/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Abdo453/HunterAI",
+  "dir_name": "recon-abdo453-hunterai",
+  "downloaded_at": "2026-11-22T10:20:58.454672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, pentest",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abdo453",
+  "source_url": "https://github.com/Abdo453/HunterAI/blob/main/.agents/skills/recon/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abdo453/HunterAI/blob/main/.agents/skills/recon/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reconnaissance agent for target enumeration. Use for subdomain discovery, port scanning, service fingerprinting, tech stack identification, and OSINT gathering. Specify scope and depth: 'passive' for DNS/cert/OSINT only, 'active' for port scans and probing, 'deep' for comprehensive enumeration."
+}

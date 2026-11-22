@@ -1,0 +1,39 @@
+{
+  "name": "dart-tooling",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/dart-foundation/skills/dart-tooling/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "dart-tooling",
+  "downloaded_at": "2026-11-22T10:30:52.466679Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/dart-foundation/skills/dart-tooling/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/dart-foundation/skills/dart-tooling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Dart and Flutter project tooling: pubspec.yaml dependency constraints, dart pub / flutter pub workflow, pubspec.lock policy, pub workspaces and melos monorepos, analysis_options.yaml with lint packages (lints, flutter_lints, very_good_analysis), dart format / dart analyze / dart fix, build_runner code generation (freezed, json_serializable, riverpod_generator, mockito). Stack-agnostic \u2014 referenced by every Dart plugin in the marketplace.\n\nUse this skill to:\n- Add a dependency with the right constraint in the right section.\n- Run the project's own formatter, analyzer and generator the way CI does.\n- Decide whether to commit pubspec.lock and generated files.\n- Work inside a pub workspace or melos monorepo without breaking sibling packages.\n\nDo NOT use this skill for:\n- Language idioms \u2014 see dart-foundation:dart-conventions.\n- Testing patterns \u2014 see dart-foundation:dart-testing."
+}

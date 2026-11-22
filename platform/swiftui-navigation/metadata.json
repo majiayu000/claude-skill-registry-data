@@ -1,0 +1,37 @@
+{
+  "name": "swiftui-navigation",
+  "repo": "AratKruglik/claude-sdlc",
+  "path": "plugins/apple-plugin/skills/swiftui-navigation/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/AratKruglik/claude-sdlc",
+  "dir_name": "swiftui-navigation",
+  "downloaded_at": "2026-11-22T10:30:53.852951Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, ios",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "platform",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AratKruglik",
+  "source_url": "https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/swiftui-navigation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AratKruglik/claude-sdlc/blob/main/plugins/apple-plugin/skills/swiftui-navigation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Navigation in SwiftUI apps: NavigationStack with value-based navigationDestination and a programmatic path, NavigationSplitView for iPad and Mac, TabView (including the sidebar-adaptable style), sheets, full-screen covers, popovers, inspectors, alerts and confirmation dialogs, router / coordinator objects, deep links (custom URL schemes, Universal Links), state restoration, UIKit navigation interop.\n\nUse this skill to:\n- Add a destination the same way existing ones are added.\n- Drive navigation from models (deep links, notifications, post-save redirects).\n- Handle incoming URLs safely.\n\nDo NOT use this skill for:\n- Platform-specific window and scene management \u2014 see apple-plugin:macos-app and apple-plugin:ios-ipados.\n- Screen state \u2014 see apple-plugin:swiftui-state."
+}

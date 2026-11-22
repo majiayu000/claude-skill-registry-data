@@ -1,0 +1,38 @@
+{
+  "name": "media-picker",
+  "repo": "EditAtlas/skills",
+  "path": "skills/media-picker/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/EditAtlas/skills",
+  "dir_name": "media-picker",
+  "downloaded_at": "2026-11-22T11:03:10.426844Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EditAtlas",
+  "source_url": "https://github.com/EditAtlas/skills/blob/main/skills/media-picker/SKILL.md",
+  "license": "Apache-2.0. LICENSE.txt has the complete terms",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EditAtlas/skills/blob/main/skills/media-picker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find, pick and place B-roll (stock clips for the lines of a voice-over), background music, photos and sound effects that fit the video, and check each before it goes into the edit. Use it before calling search_videos, search_music, search_photos or search_sfx, or downloading from Pexels or Pixabay, whenever a video needs B-roll, cutaway shots or music, when B-roll goes on the words of a voice-over or talking head, and when someone says a pick does not fit. Measures candidates (shake, cuts, crop; music tempo, intro, energy), looks at every frame sheet, has the person hear music options, and places clips on their words, colour-matched, off the face. Triggers include \"cần B-roll cho mấy câu này\", \"chèn B-roll vào video\", \"tìm cảnh trên Pexels\", \"tìm b-roll\", \"tìm nhạc nền\", \"chọn nhạc nền\", \"nhạc nền không hay\", \"cảnh bị rung\", \"find B-roll for these lines\", \"add B-roll to this voice-over\", \"find background music\". Not for checking a finished render (video-check) or placing sounds on frames (sound-design).",
+  "content_fingerprint": "2a0d565c07ac7a593fd0bf83a91f0a46cdf0fc2d0579212ea661a59445020c27"
+}

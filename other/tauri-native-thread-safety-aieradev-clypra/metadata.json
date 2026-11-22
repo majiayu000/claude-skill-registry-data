@@ -1,0 +1,36 @@
+{
+  "name": "tauri-native-thread-safety",
+  "repo": "AIEraDev/Clypra",
+  "path": ".agents/skills/tauri-native-thread-safety/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AIEraDev/Clypra",
+  "dir_name": "tauri-native-thread-safety-aieradev-clypra",
+  "downloaded_at": "2026-11-22T10:19:10.529297Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AIEraDev",
+  "source_url": "https://github.com/AIEraDev/Clypra/blob/master/.agents/skills/tauri-native-thread-safety/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AIEraDev/Clypra/blob/master/.agents/skills/tauri-native-thread-safety/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Govern cross-platform native thread safety, operating-system window management, and asynchronous platform UI dispatch in Clypra's Tauri v2 desktop application. Enforces Architecture Invariant 16 across macOS (AppKit/NSWindow), Windows (Win32/HWND), and Linux (GTK/WebKitGTK). Activate when touching native windows, views, graphics surfaces, Tao/Wry window APIs, SetWindowPos, addChildWindow, GTK widgets, msg_send!, or investigating SIGTRAP, main-thread assertions, HWND queue deadlocks, or cross-platform UI crashes."
+}

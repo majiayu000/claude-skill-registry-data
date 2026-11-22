@@ -1,0 +1,37 @@
+{
+  "name": "demo-builder",
+  "repo": "Jakeschincariol/whale-skill",
+  "path": "demo-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/Jakeschincariol/whale-skill",
+  "dir_name": "demo-builder",
+  "downloaded_at": "2026-11-22T11:31:30.891006Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/whale-skill/blob/main/demo-builder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/whale-skill/blob/main/demo-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Demo Builder. Builds a demo showing how your product solves the problem, before the product exists. Turns a small spec into one self-contained HTML page that runs anywhere with no server: sample records, one button, every row moving through its statuses and a total counting up, with a banner that always says it is a demo with sample data. Claude can then make it look and behave more like the real thing for this buyer. Use when the user says \"build a demo\", \"mock this up\", \"show how it would work\", \"I need something to show them\", \"prototype\", or \"make a clickable demo\"."
+}

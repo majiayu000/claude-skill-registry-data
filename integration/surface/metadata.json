@@ -1,0 +1,38 @@
+{
+  "name": "surface",
+  "repo": "Abdo453/HunterAI",
+  "path": ".opencode/skills/surface/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/Abdo453/HunterAI",
+  "dir_name": "surface",
+  "downloaded_at": "2026-11-22T10:21:12.768313Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, webhook, oauth",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "webhook",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abdo453",
+  "source_url": "https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/surface/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/surface/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Show ranked attack surface for a target. Invokes recon-ranker agent. Usage: /surface target.com"
+}

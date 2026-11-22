@@ -1,0 +1,37 @@
+{
+  "name": "prerelease",
+  "repo": "ChrisChinchilla/Vale-MCP",
+  "path": ".claude/skills/prerelease/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/ChrisChinchilla/Vale-MCP",
+  "dir_name": "prerelease",
+  "downloaded_at": "2026-11-22T10:46:46.170756Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "cd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ChrisChinchilla",
+  "source_url": "https://github.com/ChrisChinchilla/Vale-MCP/blob/main/.claude/skills/prerelease/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ChrisChinchilla/Vale-MCP/blob/main/.claude/skills/prerelease/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Publish a vale-mcp prerelease (release candidate) to the npm \"next\" tag so new features can be tested before the stable release. Bumps to X.Y.Z-rc.N, opens a PR, then (after it is merged) creates a GitHub prerelease, which the publish workflow sends to npm without touching \"latest\". Use when the user says \"prerelease\", \"release candidate\", \"rc\", \"beta\", \"publish for testing\" or \"test before releasing\"."
+}

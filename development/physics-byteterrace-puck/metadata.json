@@ -1,0 +1,37 @@
+{
+  "name": "physics",
+  "repo": "ByteTerrace/Puck",
+  "path": ".claude/skills/physics/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ByteTerrace/Puck",
+  "dir_name": "physics-byteterrace-puck",
+  "downloaded_at": "2026-11-22T10:42:39.660363Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ByteTerrace",
+  "source_url": "https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/physics/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ByteTerrace/Puck/blob/main/.claude/skills/physics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maps Puck physics and contact: Puck.Physics kernels, IContactField and its providers, the body step, sweeps, step-up and snap, rigid solver, tether, gravity, navigation, field lattices, motion."
+}

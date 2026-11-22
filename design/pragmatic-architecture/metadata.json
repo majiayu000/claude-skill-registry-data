@@ -1,0 +1,38 @@
+{
+  "name": "pragmatic-architecture",
+  "repo": "CodeAlive-AI/ai-driven-development",
+  "path": "skills/pragmatic-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/CodeAlive-AI/ai-driven-development",
+  "dir_name": "pragmatic-architecture",
+  "downloaded_at": "2026-11-22T10:48:01.309569Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ux, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CodeAlive-AI",
+  "source_url": "https://github.com/CodeAlive-AI/ai-driven-development/blob/main/skills/pragmatic-architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CodeAlive-AI/ai-driven-development/blob/main/skills/pragmatic-architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design method for simple solutions that are not fragile, from the choice of model, state ownership and boundaries down to the order of implementation steps, built on Kent Beck's 'make the change easy, then make the easy change'. Use when a change has more than one reasonable design, when deciding where state, an invariant or a side effect should live, when shaping a module boundary, contract or data model, when preparing code so that a hard change becomes easy, when a design must survive retries, concurrency, partial failure or migration, or when comparing alternatives and trade-offs. Not for code-level style and refactoring mechanics (code-that-fits-in-your-head), choosing tests (pragmatic-verification), visual or UX design, or a clear local fix."
+}

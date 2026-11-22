@@ -1,0 +1,37 @@
+{
+  "name": "audio-flyover-geolocation",
+  "repo": "AlanBacker/audio-flyover-geolocation",
+  "path": "skills/en/audio-flyover-geolocation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AlanBacker/audio-flyover-geolocation",
+  "dir_name": "audio-flyover-geolocation",
+  "downloaded_at": "2026-11-22T10:25:36.013185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlanBacker",
+  "source_url": "https://github.com/AlanBacker/audio-flyover-geolocation/blob/main/skills/en/audio-flyover-geolocation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlanBacker/audio-flyover-geolocation/blob/main/skills/en/audio-flyover-geolocation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Acoustic fly-over geolocation: locate where an audio or video recording was made from the near-inaudible Doppler curves of propeller aircraft and helicopters in the background, matched against historical ADS-B tracks (about 100 m in good conditions), with an honest uncertainty region. Also covers thunder plus lightning-data localisation and a pre-publication acoustic privacy self-audit. Use this skill whenever the user wants to locate, verify or time a video, recording, livestream or call from its sound, background noise, aircraft noise, Doppler shift, spectrogram, ADS-B data or thunder; mentions acoustic geolocation, audio OSINT, \"where was this recorded\", verifying a video's location by sound, or colsto's method; or wants to check whether their own video leaks its location through sound, even if they never say Doppler or ADS-B. For OSINT verification, journalism, CTFs, research and self-audits; ships a tested Python pipeline."
+}

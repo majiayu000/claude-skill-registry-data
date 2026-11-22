@@ -1,0 +1,37 @@
+{
+  "name": "ai-crawler-audit",
+  "repo": "Fangx-AI/geo-doctor",
+  "path": "skills/ai-crawler-audit/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Fangx-AI/geo-doctor",
+  "dir_name": "ai-crawler-audit",
+  "downloaded_at": "2026-11-22T11:09:23.518244Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fangx-AI",
+  "source_url": "https://github.com/Fangx-AI/geo-doctor/blob/master/skills/ai-crawler-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fangx-AI/geo-doctor/blob/master/skills/ai-crawler-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit whether AI crawlers can reach and read one page, then name exactly what blocks them. Use when the user asks why ChatGPT, Claude, Perplexity, Gemini or Doubao never mentions their site, whether GPTBot or ClaudeBot is allowed in, what robots.txt, noindex, JS-only rendering, or a WAF is doing to AI access, or asks for an AI readability checkup of a URL. Scores the URL and returns the blocking reasons with evidence. For whether AI recommends the brand once access works, see ai-visibility. For the files AI reads first, see llms-txt."
+}

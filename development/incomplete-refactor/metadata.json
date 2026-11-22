@@ -1,0 +1,39 @@
+{
+  "name": "incomplete-refactor",
+  "repo": "DnsQueen/orcinus-skills",
+  "path": "skills/incomplete-refactor/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DnsQueen/orcinus-skills",
+  "dir_name": "incomplete-refactor",
+  "downloaded_at": "2026-11-22T10:58:59.818458Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, refactor",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DnsQueen",
+  "source_url": "https://github.com/DnsQueen/orcinus-skills/blob/main/skills/incomplete-refactor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DnsQueen/orcinus-skills/blob/main/skills/incomplete-refactor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detect an incomplete refactor \u2014 old names still referenced, removed files still present, stale tests still calling the old API \u2014 before calling the refactor done. Use after every rename, move, or API migration, and in CI on refactor branches. A green test suite does not prove a refactor is complete. Only invoke via the orcinus router."
+}

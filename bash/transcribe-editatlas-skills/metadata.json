@@ -1,0 +1,38 @@
+{
+  "name": "transcribe",
+  "repo": "EditAtlas/skills",
+  "path": "skills/transcribe/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/EditAtlas/skills",
+  "dir_name": "transcribe-editatlas-skills",
+  "downloaded_at": "2026-11-22T11:03:09.874728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EditAtlas",
+  "source_url": "https://github.com/EditAtlas/skills/blob/main/skills/transcribe/SKILL.md",
+  "license": "Apache-2.0. LICENSE.txt has the complete terms",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EditAtlas/skills/blob/main/skills/transcribe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Transcribe the speech in a video or audio file on the person's own machine with Whisper (faster-whisper), with a time for every word, then check it, write SRT/VTT subtitles, and list what an edit could cut (long silences, filler words like um, uh, ờ, ừm, and repeated takes). The checked word-level transcript is what EditAtlas caption techniques, silence and filler removal, retake selection and every template's verified_transcript input need. Use it whenever someone wants a transcript, subtitles, captions or an SRT from a video; asks to \"trích lời\", \"lấy lời thoại\", \"chuyển giọng nói thành chữ\", \"làm phụ đề\", \"làm sub\", \"cắt khoảng lặng\", \"bỏ ờ ừm\", \"speech to text\", \"Whisper\"; or starts an EditAtlas edit that needs word times, even if they never say \"transcript\". Installs Whisper only after asking. Not for translating, cleaning up audio, separating a voice from music, or making a voice.",
+  "content_fingerprint": "5b223dd934263eef227a425144a8696eda045290ec393c8df8bb8f70791dcf16"
+}

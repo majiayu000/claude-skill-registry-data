@@ -1,0 +1,38 @@
+{
+  "name": "support-triage",
+  "repo": "Flagrare/agent-skills",
+  "path": "plugins/flagrare/skills/support-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Flagrare/agent-skills",
+  "dir_name": "support-triage-flagrare-agent-skills",
+  "downloaded_at": "2026-11-22T11:10:13.174523Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Flagrare",
+  "source_url": "https://github.com/Flagrare/agent-skills/blob/main/plugins/flagrare/skills/support-triage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Flagrare/agent-skills/blob/main/plugins/flagrare/skills/support-triage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Investigate a support, ops, onboarding or account-manager report about a customer, account, store or order end to end, then draft a threaded chat reply in the user's voice. Use whenever someone reports a production problem in a channel (\"items disappeared\", \"can't find these to price\", \"no orders since last week\", \"the dashboard says Available but customers can't buy it\", \"stuck in review\", \"the plan change didn't take\"), or the user says \"take a look at this message\", \"investigate this\", \"check everything you can\", \"what's going on with this account/store\", \"help support with this\", or pastes a chat link to a support thread. Also use when a teammate tags the user on a customer question, even if they don't ask for an investigation.",
+  "content_fingerprint": "1d021f27c1e3e2d764ef1dd0643b5ef242cd1766c1c235c025096f9f1fd8fd2d"
+}

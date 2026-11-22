@@ -1,0 +1,37 @@
+{
+  "name": "gentle-ai-provider-defect-report",
+  "repo": "Gentleman-Programming/gentle-shell",
+  "path": "skills/provider-defect-report/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Gentleman-Programming/gentle-shell",
+  "dir_name": "provider-defect-report",
+  "downloaded_at": "2026-11-22T11:15:36.444117Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-llm=2",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Gentleman-Programming",
+  "source_url": "https://github.com/Gentleman-Programming/gentle-shell/blob/main/skills/provider-defect-report/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Gentleman-Programming/gentle-shell/blob/main/skills/provider-defect-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Trigger: Gentle AI provider defect, report a gentle-ai defect, gentle-ai invocation failure or refusal, provider-defect consent handoff. Classify, ask consent, privacy-scrub, and report or comment on gentle-ai issues."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "gateway-eunit",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".codex/skills/gateway-eunit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "gateway-eunit",
+  "downloaded_at": "2026-11-22T10:57:27.954693Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile, debug",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/gateway-eunit/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/gateway-eunit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the Yuzu Erlang gateway eunit test suite correctly. Sources the Erlang toolchain, uses --dir to work around rebar3 auto-discovery bug (#337), and explains how to interpret the output. Use when the user asks to run gateway unit tests, verify a gateway change, check for regressions in eunit, or chase an eunit flake."
+}

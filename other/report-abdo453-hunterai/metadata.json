@@ -1,0 +1,37 @@
+{
+  "name": "report",
+  "repo": "Abdo453/HunterAI",
+  "path": ".opencode/skills/report/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Abdo453/HunterAI",
+  "dir_name": "report-abdo453-hunterai",
+  "downloaded_at": "2026-11-22T10:21:08.794046Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abdo453",
+  "source_url": "https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/report/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abdo453/HunterAI/blob/main/.opencode/skills/report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate submission-ready reports for all confirmed findings. Runs dedup, PoC builder, quality check, and report writer. Usage: /report bounty or /report pentest"
+}

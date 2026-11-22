@@ -1,0 +1,39 @@
+{
+  "name": "molfeat",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/molfeat/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "molfeat-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:48.681053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ml, machine-learning, model, training",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ml",
+      "machine-learning",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/molfeat/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/molfeat/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Converts SMILES strings or RDKit/datamol molecules into numerical features using molfeat (0.11.0), which provides calculators, scikit-learn compatible transformers, and pretrained embedding models. Covers fingerprints (ECFP, MACCS, MAP4), RDKit and Mordred descriptors, pharmacophore descriptors, and pretrained models such as ChemBERTa and GIN, with parallel processing and caching. Use when building QSAR or QSPR models from SMILES. Use when choosing among molecular featurizers for a property prediction task. Use when generating embeddings for virtual screening, similarity search, or chemical space clustering. Use when adding a featurizer to a scikit-learn pipeline. Not for general cheminformatics tasks such as reading or editing structures, which belong to RDKit itself."
+}

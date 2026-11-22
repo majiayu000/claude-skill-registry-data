@@ -1,0 +1,39 @@
+{
+  "name": "gateway-dialyzer",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".codex/skills/gateway-dialyzer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "gateway-dialyzer",
+  "downloaded_at": "2026-11-22T10:57:28.976421Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/gateway-dialyzer/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.codex/skills/gateway-dialyzer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run dialyzer over the Yuzu Erlang gateway. Sources the Erlang toolchain and runs rebar3 dialyzer. Use after any .erl change in gateway/ \u2014 AGENTS.md mandates dialyzer be clean before commit because compilation success does not imply type correctness."
+}

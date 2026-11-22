@@ -1,0 +1,40 @@
+{
+  "name": "vercel-plugin-eval",
+  "repo": "Aayush-coder1/ai-bots",
+  "path": ".agents/skills/vercel-plugin-eval/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Aayush-coder1/ai-bots",
+  "dir_name": "vercel-plugin-eval",
+  "downloaded_at": "2026-11-22T10:20:38.129646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Aayush-coder1",
+  "source_url": "https://github.com/Aayush-coder1/ai-bots/blob/main/.agents/skills/vercel-plugin-eval/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Aayush-coder1/ai-bots/blob/main/.agents/skills/vercel-plugin-eval/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run live eval sessions against the vercel-plugin to verify hook behavior, skill injection, dedup correctness, and coverage. Launches real Claude Code sessions via WezTerm, monitors debug logs, and produces a structured coverage report.",
+  "content_fingerprint": "214fe653a447fae449ab9d2594d710e1f320269477950bebf4acf48353fa8ad1"
+}

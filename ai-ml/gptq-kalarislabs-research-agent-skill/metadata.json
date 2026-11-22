@@ -1,0 +1,38 @@
+{
+  "name": "gptq",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/gptq/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "gptq-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:42.506210Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ml, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/gptq/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/gptq/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Quantizes LLMs to 4-bit (also 3-bit) with GPTQ using group-wise quantization (group size 128 by default), via AutoGPTQ and transformers. Covers loading pre-quantized GPTQ models, quantizing your own model, choosing group size, selecting ExLlamaV2, Marlin, or Triton kernels, and QLoRA fine-tuning with PEFT. Use when fitting 70B-class models onto limited or consumer GPUs, cutting memory about 4x versus FP16, speeding up inference, finding pre-quantized checkpoints on HuggingFace, or fine-tuning a quantized model with LoRA. For slightly better accuracy on newer GPUs use AWQ instead, and for simple 8-bit or on-the-fly quantization use bitsandbytes."
+}

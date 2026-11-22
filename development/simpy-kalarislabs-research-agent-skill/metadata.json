@@ -1,0 +1,38 @@
+{
+  "name": "simpy",
+  "repo": "KalarisLabs/research-agent-skills",
+  "path": "skills/simpy/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/KalarisLabs/research-agent-skills",
+  "dir_name": "simpy-kalarislabs-research-agent-skill",
+  "downloaded_at": "2026-11-22T11:40:45.392302Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, build, debug",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KalarisLabs",
+  "source_url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/simpy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/simpy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds, tests, and analyzes bounded process-based discrete-event simulations in Python with SimPy 4.1.2: Environment, Timeout, Process, AnyOf/AllOf conditions, interrupts, Resource, PriorityResource, PreemptiveResource, Container, Store, time-weighted monitoring, and replication-based output analysis, plus bundled safe CLIs. Use when modeling queues, production lines, logistics, or service operations with generator processes; when contending entities need shared resources or preemption; when instrumenting queue length or utilization correctly; when running independent replications with seeds and confidence intervals; when debugging event ordering or run(until=) boundaries. Not for continuous-time ODE or agent-based modeling frameworks."
+}

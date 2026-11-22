@@ -1,0 +1,37 @@
+{
+  "name": "governance",
+  "repo": "DevNullLtd/Yuzu",
+  "path": ".claude/skills/governance/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DevNullLtd/Yuzu",
+  "dir_name": "governance-devnullltd-yuzu",
+  "downloaded_at": "2026-11-22T10:57:27.673539Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DevNullLtd",
+  "source_url": "https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/governance/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DevNullLtd/Yuzu/blob/main/.claude/skills/governance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the Yuzu full governance pipeline on a commit range. Produces Gate 1 Change Summary, then orchestrates Gates 2-6 as parallel agent fan-outs with pre-written prompt preambles. Use when the user says \"/governance <range>\" or \"full governance\" or asks to run the multi-gate review pipeline on a PR/commit set."
+}
