@@ -1,0 +1,38 @@
+{
+  "name": "cuml",
+  "repo": "SeaXen/agentskills",
+  "path": "library/nvidia-skills/skills/cuml/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SeaXen/agentskills",
+  "dir_name": "cuml-seaxen-agentskills",
+  "downloaded_at": "2026-11-23T06:56:44.756180Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "machine-learning",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SeaXen",
+  "source_url": "https://github.com/SeaXen/agentskills/blob/main/library/nvidia-skills/skills/cuml/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SeaXen/agentskills/blob/main/library/nvidia-skills/skills/cuml/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing, running, debugging or upgrading Python code that uses NVIDIA cuML (GPU machine learning), cuml.accel (zero-code-change GPU acceleration of scikit-learn, umap-learn and hdbscan), or GPU UMAP/HDBSCAN/RandomForest/KMeans/SVC, including through libraries that wrap cuML (BERTopic, rapids-singlecell). Covers APIs removed or renamed in 2025-2026 releases, verifying code really ran on the GPU, large-data UMAP/HDBSCAN memory recipes, and exporting trained models. Not for cuDF-only dataframe work, PyTorch or XGBoost."
+}

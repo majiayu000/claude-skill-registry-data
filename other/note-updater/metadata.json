@@ -1,0 +1,37 @@
+{
+  "name": "note-updater",
+  "repo": "Treasoni/study-system",
+  "path": ".claude/skills/note-updater/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Treasoni/study-system",
+  "dir_name": "note-updater",
+  "downloaded_at": "2026-11-23T07:18:57.549719Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category planning scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "productivity",
+    "runner_up_score": 1,
+    "signals": [
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Treasoni",
+  "source_url": "https://github.com/Treasoni/study-system/blob/main/.claude/skills/note-updater/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Treasoni/study-system/blob/main/.claude/skills/note-updater/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "更新过时的既有学习笔记。用于用户说“更新这篇笔记”“这篇笔记过时了”“根据新资料刷新旧笔记”“同步到 Obsidian 旧笔记”等场景。先定位旧笔记、判断过时段落、收集最小必要新资料，再局部 patch，避免重写整篇和浪费 token。",
+  "content_fingerprint": "73576df40e3258ea2e9de52ee924538655ea2769dee0e2268aed3347b4859813"
+}

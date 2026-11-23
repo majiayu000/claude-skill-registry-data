@@ -1,0 +1,38 @@
+{
+  "name": "hub-note",
+  "repo": "SebastianLuser/claude-code-arcane",
+  "path": "skills/hub-note/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/SebastianLuser/claude-code-arcane",
+  "dir_name": "hub-note",
+  "downloaded_at": "2026-11-23T06:57:38.039818Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SebastianLuser",
+  "source_url": "https://github.com/SebastianLuser/claude-code-arcane/blob/main/skills/hub-note/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLuser/claude-code-arcane/blob/main/skills/hub-note/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Creates or updates a vault hub file (MOC): one note per entity that matters (person, tool, concept, company) that accumulates knowledge and connects PARA with Zettelkasten. Triggers: hub file, MOC, map of content, entity note, create hub for, update hub, person note.",
+  "content_fingerprint": "ea5766ff8a1deab3202c3226c104ad2143a86467ad7eaec6424733cb7307e440"
+}

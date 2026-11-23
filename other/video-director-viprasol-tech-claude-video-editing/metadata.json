@@ -1,0 +1,37 @@
+{
+  "name": "video-director",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/video-director/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "video-director-viprasol-tech-claude-video-editing",
+  "downloaded_at": "2026-11-23T07:26:07.908294Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/video-director/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/video-director/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The boss of all Video Studio skills: give it any footage (one clip, a folder of clips, photos, a voice recording, a song) and it watches and listens first - speech, language, faces, music and beat, screen recordings, shot rate, light, orientation, length - then decides what the video should be (reel, podcast, tutorial, wedding film, montage, vlog, ad...), picks the right genre skill, look, format, platform and clean-up, and runs the whole professional edit through to delivery and QC. Use it whenever the user hands over footage without naming a specific style or genre: 'edit this video', 'make something good from these clips', 'turn this into content', 'what should I do with this footage', 'edit it like a pro', 'just make it', or any video file with a loose goal ('for Instagram', 'for YouTube', 'for the client'). Needs video-studio-core and the genre skills in the same skills folder."
+}

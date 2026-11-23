@@ -1,0 +1,38 @@
+{
+  "name": "rest-client-generator",
+  "repo": "ProjAnvil/MindForge",
+  "path": "evals/discovery/distractors/en/rest-client-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/ProjAnvil/MindForge",
+  "dir_name": "rest-client-generator-projanvil-mindforge",
+  "downloaded_at": "2026-11-23T06:46:59.302501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ProjAnvil",
+  "source_url": "https://github.com/ProjAnvil/MindForge/blob/main/evals/discovery/distractors/en/rest-client-generator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ProjAnvil/MindForge/blob/main/evals/discovery/distractors/en/rest-client-generator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates HTTP client stubs from an existing OpenAPI file. Use when a schema is already written and only client code is needed; do not use for API design or versioning decisions."
+}

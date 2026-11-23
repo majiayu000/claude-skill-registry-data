@@ -1,0 +1,38 @@
+{
+  "name": "ci-for-your-solution",
+  "repo": "LeanMeanCleanApps/CleanMinimalApi",
+  "path": ".agents/skills/ci-for-your-solution/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/LeanMeanCleanApps/CleanMinimalApi",
+  "dir_name": "ci-for-your-solution",
+  "downloaded_at": "2026-11-23T06:10:04.488265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeanMeanCleanApps",
+  "source_url": "https://github.com/LeanMeanCleanApps/CleanMinimalApi/blob/main/.agents/skills/ci-for-your-solution/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeanMeanCleanApps/CleanMinimalApi/blob/main/.agents/skills/ci-for-your-solution/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How CI works in a solution made from this template - the ci.yml that dotnet new ships, the Build Pipeline a \"Use this template\" copy keeps, and how to add security scans or a container check, or move the pipeline to Azure Pipelines, GitLab or another CI system. Use when CI fails on a fresh solution, when adding a check, or when the engineer asks how to set up CI anywhere other than GitHub Actions."
+}

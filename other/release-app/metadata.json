@@ -1,0 +1,38 @@
+{
+  "name": "release-app",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/release-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "release-app",
+  "downloaded_at": "2026-11-23T07:36:26.928236Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/release-app/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/release-app/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Release one named ZenUML Forge variant (lite, full, diagramly/dia, asyncapi/async/api) to production. The script selects the draft, enforces the canary gate, publishes, and waits for production smoke. Use when the user asks to release, deploy, ship, or promote a named variant, or asks for `release-app preflight`.",
+  "content_fingerprint": "c44b1bc778b69a1c03df48a19c9e423197c7a5739cf33f14a7c61710ab628fd8"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "synthetic-users",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/synthetic-users/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "synthetic-users",
+  "downloaded_at": "2026-11-23T07:15:28.894900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/synthetic-users/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/synthetic-users/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a synthetic user panel grounded in the team's proprietary data and pre-tests a concept, message or flow on it before real interviews, with a ledger of what synthetic users get wrong and a kill / revise / take-to-real-interview verdict. Use when the user wants to simulate a user, dry-run a pitch, or pre-test before booking interviews. Not for planning real interviews (use discovery-interview-prep)."
+}

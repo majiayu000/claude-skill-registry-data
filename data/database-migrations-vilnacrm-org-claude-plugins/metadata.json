@@ -1,0 +1,39 @@
+{
+  "name": "database-migrations",
+  "repo": "VilnaCRM-Org/claude-plugins",
+  "path": "plugins/rust-backend-sdlc/skills/database-migrations/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/VilnaCRM-Org/claude-plugins",
+  "dir_name": "database-migrations-vilnacrm-org-claude-plugins",
+  "downloaded_at": "2026-11-23T07:25:07.416541Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VilnaCRM-Org",
+  "source_url": "https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/database-migrations/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/database-migrations/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a change adds or alters the PostgreSQL schema of a Rust service built on sqlx - a new reversible migration pair under persistence.migrations_dir scaffolded with make create-migration, applied with make migrate, rolled back once, with the sqlx offline query metadata regenerated and validated in the same change, and never an edit to an applied migration. Skip when persistence.engine is null (SKIPPED). Not for choosing which index or query shape a slow read needs (use query-performance-analysis) and not for the repository adapter tests that exercise the new schema (use testing-workflow).",
+  "content_fingerprint": "d54e3808ecacbb9f6cdac927899b7a3fb14bb4fad382cbe29067095cb52e28d7"
+}

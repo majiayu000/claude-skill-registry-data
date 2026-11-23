@@ -1,0 +1,37 @@
+{
+  "name": "cross-chain",
+  "repo": "Septonz/plus",
+  "path": ".claude/skills/cross-chain/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Septonz/plus",
+  "dir_name": "cross-chain-septonz-plus",
+  "downloaded_at": "2026-11-23T06:58:19.651315Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category communication scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "messaging"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Septonz",
+  "source_url": "https://github.com/Septonz/plus/blob/main/.claude/skills/cross-chain/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Septonz/plus/blob/main/.claude/skills/cross-chain/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cross-chain interoperability for Stellar. Entry point with a rail-selection decision table and shared pitfalls, routing to three companion files — cctp.md (Circle CCTP V2, native USDC burn-and-mint between Stellar and EVM/Solana chains, domain 27, the CctpForwarder requirement for Stellar recipients), axelar.md (Axelar GMP for Soroban contracts calling contracts on other chains, and the Interchain Token Service for multichain tokens), and layerzero.md (LayerZero V2 OApp messaging with configurable DVN security, OFT omnichain tokens, and USDT0 — native USDT on Stellar). Also covers NEAR Intents (intent-based cross-chain swaps into XLM or Stellar USDC) at the routing level. Use when bridging USDC or USDT to or from Stellar, sending messages between a Stellar contract and another blockchain, making a token exist on multiple chains, or adding cross-chain swaps to an app.",
+  "content_fingerprint": "1eac8c9eaaa603cccbfa7004cf163f74cbd4522800a7ea9270bac290c5a11d3f"
+}

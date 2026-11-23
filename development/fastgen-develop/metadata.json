@@ -1,0 +1,38 @@
+{
+  "name": "fastgen-develop",
+  "repo": "NVIDIA/skills",
+  "path": "skills/fastgen-develop/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/NVIDIA/skills",
+  "dir_name": "fastgen-develop",
+  "downloaded_at": "2026-11-23T06:32:43.333942Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/skills/blob/main/skills/fastgen-develop/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/skills/blob/main/skills/fastgen-develop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implement, refactor or review NVIDIA FastGen library code using its shared design, formatting, documentation and testing conventions. Use for source changes and code reviews; configuring or running an existing workflow alone does not need this skill."
+}

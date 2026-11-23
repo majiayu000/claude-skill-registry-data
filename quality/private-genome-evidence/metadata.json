@@ -1,0 +1,39 @@
+{
+  "name": "private-genome-evidence",
+  "repo": "RobGonWin/ancestrydna-longevity-imputator",
+  "path": ".agents/skills/private-genome-evidence/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/RobGonWin/ancestrydna-longevity-imputator",
+  "dir_name": "private-genome-evidence",
+  "downloaded_at": "2026-11-23T06:51:24.708884Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "RobGonWin",
+  "source_url": "https://github.com/RobGonWin/ancestrydna-longevity-imputator/blob/main/.agents/skills/private-genome-evidence/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/RobGonWin/ancestrydna-longevity-imputator/blob/main/.agents/skills/private-genome-evidence/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Keep observed, imputed and uncertain genotype evidence separate, immutable and hash-tracked; build case-safe private reports and the layered longevity registry. Use whenever a task reads, compares or summarizes personal genotype evidence.",
+  "content_fingerprint": "6007ccfb36e1673284c64b8ba99e53b66aefa96dc5d6e6790dfa9dff3c4c2d50"
+}

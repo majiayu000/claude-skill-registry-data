@@ -1,0 +1,39 @@
+{
+  "name": "code-reviewer",
+  "repo": "Md-Bari/hospital-management-system",
+  "path": "agent/skills/code-reviewer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Md-Bari/hospital-management-system",
+  "dir_name": "code-reviewer-md-bari-hospital-management--2",
+  "downloaded_at": "2026-11-23T06:25:06.171072Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Md-Bari",
+  "source_url": "https://github.com/Md-Bari/hospital-management-system/blob/main/agent/skills/code-reviewer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Md-Bari/hospital-management-system/blob/main/agent/skills/code-reviewer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Code review automation for TypeScript, JavaScript, Python, Go, Swift, Kotlin. Analyzes PRs for complexity and risk, checks code quality for SOLID violations and code smells, generates review reports.",
+  "content_fingerprint": "b3eadbcc494315dedac18c43234520a167b75c3de07d606809269684d3f8306b"
+}

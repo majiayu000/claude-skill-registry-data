@@ -1,0 +1,39 @@
+{
+  "name": "incident-response",
+  "repo": "ShohruhDev/shohruxdev",
+  "path": ".claude/skills/incident-response/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/ShohruhDev/shohruxdev",
+  "dir_name": "incident-response-shohruhdev-shohruxdev",
+  "downloaded_at": "2026-11-23T07:00:25.980396Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, ci, deploy",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "ci",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ShohruhDev",
+  "source_url": "https://github.com/ShohruhDev/shohruxdev/blob/master/.claude/skills/incident-response/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ShohruhDev/shohruxdev/blob/master/.claude/skills/incident-response/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Сбой сайта, ошибка деплоя, 5xx, DNS, база — триаж, откат, постмортем. Run an incident response workflow — triage, communicate, and write postmortem. Trigger with 'we have an incident', 'production is down', an alert that needs severity assessment, a status update mid-incident, or when writing a blameless postmortem after resolution.",
+  "content_fingerprint": "70079684b7535e83ec3d0b20c6d9a1604cf514d5362f6779998e64cd67694d61"
+}

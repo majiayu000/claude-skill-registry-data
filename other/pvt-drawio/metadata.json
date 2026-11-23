@@ -1,0 +1,38 @@
+{
+  "name": "pvt-drawio",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/pvt-drawio/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "pvt-drawio",
+  "downloaded_at": "2026-11-23T07:36:24.517265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/pvt-drawio/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/pvt-drawio/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Focused production validation for the Graph (DrawIO) macro: nested Forge + DrawIO iframes, title field, at least one shape on the canvas (required — avoids false PASS on empty diagrams), Publish from inner editor, and verified rendered geometry on the Confluence page. Invoked by release-app Step 2.6 when graph/drawio-related commits are detected. Triggers on \"pvt-drawio\", \"test drawio\", \"validate graph macro\".",
+  "content_fingerprint": "290d6670f39e0dbb4a849e98b9de1eee09e3315b1510f0a8e4e0a8d0dbed1b2a"
+}

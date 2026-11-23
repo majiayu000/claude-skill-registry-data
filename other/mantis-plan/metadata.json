@@ -1,0 +1,38 @@
+{
+  "name": "mantis-plan",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/mantis-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "mantis-plan",
+  "downloaded_at": "2026-11-23T06:19:40.315386Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/mantis-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/mantis-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Formulates a targeted defensive security reviewing plan based on the active threat model and historical learnings. Use when starting a security review campaign to map the codebase boundaries and generate a roadmap (workspace/plan.json). Don't use for executing code reviews, writing test scripts, or patching code.",
+  "content_fingerprint": "71d779d783c28c159542830397b0d0c84b1dac5d60199a3bcb73b746c9856e81"
+}

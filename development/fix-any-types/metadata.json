@@ -1,0 +1,37 @@
+{
+  "name": "fix-any-types",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/fix-any-types/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "fix-any-types",
+  "downloaded_at": "2026-11-23T06:31:14.919145Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/fix-any-types/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/fix-any-types/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remove all uses of `any` from a TypeScript file and replace them with correct, narrow types, inferring from usage, existing interfaces, and runtime shapes. Use when someone says \"fix the any types\", \"get rid of these anys\", \"type this properly\", \"stop using any here\", or \"tighten up the types in this file\". Prefers unknown over any when a type cannot be determined. Distinct from functional-typescript, which covers broader FP patterns and general type design -- reach for this skill specifically when `any` itself is the problem."
+}

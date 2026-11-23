@@ -1,0 +1,37 @@
+{
+  "name": "lyric-video",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/lyric-video/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "lyric-video",
+  "downloaded_at": "2026-11-23T07:26:00.947276Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/lyric-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/lyric-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lyric-video editor: times every lyric line to the sung vocal (Whisper word timestamps, optionally on a Demucs vocal stem), shows each line with a karaoke fill as it is sung and the next line dimmed, over artwork, footage or a beat-reactive background, and delivers a 16:9 lyric video, a 9:16 chorus clip and an .srt of the lyrics. Use when the user says: lyric video, put the lyrics on screen, karaoke video, sing-along video, animated lyrics, lyrics for my song, visualiser with lyrics. Lyrics must be the artist's approved text. Default skin neon-orbit."
+}

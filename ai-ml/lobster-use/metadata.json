@@ -1,0 +1,39 @@
+{
+  "name": "lobster-use",
+  "repo": "MaybeBio/Daily-Code-Agent-VirtualCell",
+  "path": "code/the-omics-os__lobster/code/skills/lobster-use/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/MaybeBio/Daily-Code-Agent-VirtualCell",
+  "dir_name": "lobster-use",
+  "downloaded_at": "2026-11-23T06:24:29.914918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, machine-learning, model",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "machine-learning",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaybeBio",
+  "source_url": "https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/the-omics-os__lobster/code/skills/lobster-use/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/the-omics-os__lobster/code/skills/lobster-use/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run bioinformatics workflows with Lobster AI: single-cell and bulk RNA-seq,\ngenomics, proteomics, metabolomics, literature and dataset discovery,\nmachine learning, drug discovery, and editable Plotly figures.\nUse for omics analysis, GEO downloads, quality control, clustering,\ndifferential expression, annotation, visualization, and notebook export.\nCovers installing and configuring the local Python engine, including using\nan Omics-OS Cloud account for local inference. The npm @omicsos/lobster client\nis a separate route only for managed Cloud sessions, not a Python replacement.",
+  "content_fingerprint": "9ec550c7404e1452578ce96eb9fe9ddc8ebc6d7f3fc1a0aae6a4eb6eaa0a0bb6"
+}

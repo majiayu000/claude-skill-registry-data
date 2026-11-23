@@ -1,0 +1,38 @@
+{
+  "name": "maintain-learnings",
+  "repo": "Treasoni/study-system",
+  "path": ".agents/skills/maintain-learnings/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Treasoni/study-system",
+  "dir_name": "maintain-learnings-treasoni-study-system",
+  "downloaded_at": "2026-11-23T07:19:01.664359Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Treasoni",
+  "source_url": "https://github.com/Treasoni/study-system/blob/main/.agents/skills/maintain-learnings/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Treasoni/study-system/blob/main/.agents/skills/maintain-learnings/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "维护 .learnings/ 经验库，把过多或反复出现的学习记录、错误日志、规则失效问题聚类诊断，追溯并修改对应 skill、模板、hook、校验脚本或项目规则；修复并验证后再归档或移除已解决记录。用户提到 learnings 太多、错误反复犯、清理经验库、维护自我学习、压缩错误日志或从错误中修技能时触发。",
+  "content_fingerprint": "9c02fa9f6ec7e62fb4708e87de455db41e4fbee50bd60d771be70b680eab34e4"
+}

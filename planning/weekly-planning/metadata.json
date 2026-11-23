@@ -1,0 +1,39 @@
+{
+  "name": "weekly-planning",
+  "repo": "Saaeroos/the-budget",
+  "path": ".claude/skills/weekly-planning/SKILL.md",
+  "github_branch": "main",
+  "category": "planning",
+  "source": "github.com/Saaeroos/the-budget",
+  "dir_name": "weekly-planning",
+  "downloaded_at": "2026-11-23T06:54:36.993756Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "planning",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for planning: planning, plan, roadmap",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Saaeroos",
+  "source_url": "https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/weekly-planning/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/weekly-planning/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review last week and plan the coming one - create weekly-goals/<ISO-week>.md from the roadmap gate, docs/22 and todolist/TODO.md, carry over unfinished work. Use at the start or end of a week.",
+  "content_fingerprint": "d70be31cdce463227492ac45182a1a5555eff46701b00ff97868c17ae82fced1"
+}

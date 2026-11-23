@@ -1,0 +1,37 @@
+{
+  "name": "plugins",
+  "repo": "Systemorph/MeshWeaver",
+  "path": ".claude/skills/plugins/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Systemorph/MeshWeaver",
+  "dir_name": "plugins-systemorph-meshweaver",
+  "downloaded_at": "2026-11-23T07:11:12.988826Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Systemorph",
+  "source_url": "https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/plugins/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/plugins/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Wire a MeshWeaver deployment to the plugin catalog — as a CONSUMER (installs plugins from a registry over HTTP, no git credential) or as the REGISTRY (holds the git credential, serves private plugin repos at /api/plugins). Use when a deployment's Plugin Catalog says \"not configured\", when adding a new plugin source repo, when issuing an install its registry token, when a plugin won't appear or won't install, or when auditing who can read the catalog. Covers the credential-encapsulation model, the Helm keys (and the trap that un-templated keys are silently dropped), token issuance, and the anonymous-registry exposure that a missing token list causes.",
+  "content_fingerprint": "a1bd6d67e85c8f61da344b0a359549a704c54a145889a297382894e68f5679b8"
+}

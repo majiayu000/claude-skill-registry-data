@@ -1,0 +1,39 @@
+{
+  "name": "repro",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/repro/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "repro",
+  "downloaded_at": "2026-11-23T07:36:19.083171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, component",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/repro/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/repro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reproduce a bug in the conf-app. Extract the bug from the current conversation or user prompt, then try to reproduce it in the simplest available environment. Use when the user says \"repro\", \"reproduce\", \"can you repro this\", \"reproduce the bug\", \"verify this bug\", or describes a bug they want confirmed. Try environments in strict order: local dev server first, then conf-stg-lite.zenuml.com, then conf-lite.zenuml.com, then real Confluence as last resort.",
+  "content_fingerprint": "53e809c2fadfdbaf1ae7b98cd470bb6cceccf0bcd8c0f91c1f2860b1ce26ae19"
+}

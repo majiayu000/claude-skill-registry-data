@@ -1,0 +1,37 @@
+{
+  "name": "qyrus-mcp",
+  "repo": "QQyrus/qyrion",
+  "path": "skills/qyrus-mcp/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/QQyrus/qyrion",
+  "dir_name": "qyrus-mcp",
+  "downloaded_at": "2026-11-23T06:47:34.825571Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "QQyrus",
+  "source_url": "https://github.com/QQyrus/qyrion/blob/master/skills/qyrus-mcp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/QQyrus/qyrion/blob/master/skills/qyrus-mcp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use Qyrus Aegis MCP to discover teams, find/reuse/update existing tests, author explicit automation assets or API suites, and save Qyrion-observed web coverage. Use for explicit MCP operations, qyrus_guide_get, qyrus_teams_get_by_api_key, suite reruns, or Aegis run diagnosis. Fresh website/mobile objective execution belongs to the Qyrion web/device skills even if MCP is connected."
+}

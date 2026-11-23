@@ -1,0 +1,41 @@
+{
+  "name": "review-ui",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/review-ui/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "review-ui",
+  "downloaded_at": "2026-11-23T06:31:11.987361Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, component, tailwind, animation",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "component",
+      "tailwind",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/review-ui/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/review-ui/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a diff of UI code for design-system discipline: tokens instead of raw colours, a keyboard path for primary workflows, reduced-motion handling, visible focus, and loading, empty, disabled and error states. Use before merging a change to components or pages. Trigger on \"review the UI in this PR\", \"does this follow our design system\", or \"check this component for keyboard and accessibility\". Not for a redesign brief or a general review; use the `draft-ui-redesign` or `review-changes` skill."
+}

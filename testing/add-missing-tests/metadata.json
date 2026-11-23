@@ -1,0 +1,38 @@
+{
+  "name": "add-missing-tests",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/add-missing-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "add-missing-tests",
+  "downloaded_at": "2026-11-23T06:31:21.881723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, pytest",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/add-missing-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/add-missing-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Identify untested or under-tested behavior in a file or module and propose the most valuable tests to add. Use after a refactor, before a risky release, or during a coverage review. Trigger on questions like \"what tests am I missing\", \"what's not covered here\", \"find the coverage gaps in this file\", \"did I miss any test cases\", or \"what should I test before shipping this\". Produces a gap report and TODO-assertion test stubs only \u2014 it does not write full test implementations or run the suite. For that, use add-test-coverage instead."
+}

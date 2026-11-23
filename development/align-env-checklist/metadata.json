@@ -1,0 +1,38 @@
+{
+  "name": "align-env-checklist",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/align-env-checklist/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "align-env-checklist",
+  "downloaded_at": "2026-11-23T06:31:19.119593Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/align-env-checklist/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/align-env-checklist/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify that every runtime environment variable the code actually reads is documented in .env.example, that config validation covers the full required set, and that no real .env file is tracked. Trigger on \"is my .env.example up to date\", \"are all our env vars documented\", \"did we miss a config variable\", \"check our environment variables before deploy\", \"why is this env var undefined in staging\". Audits the documentation and config coverage of the whole codebase; to generate a fillable stub of the values missing from your own local environment, use setup-env. Delegates its secret scanning to audit-secrets rather than duplicating it."
+}

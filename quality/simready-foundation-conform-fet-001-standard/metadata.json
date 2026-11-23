@@ -1,0 +1,37 @@
+{
+  "name": "simready-foundation-conform-fet-001-standard",
+  "repo": "NVIDIA/simready-foundation",
+  "path": "skills/simready-foundation-conform-fet-001-standard/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/NVIDIA/simready-foundation",
+  "dir_name": "simready-foundation-conform-fet-001-standard",
+  "downloaded_at": "2026-11-23T06:32:34.045785Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/simready-foundation/blob/main/skills/simready-foundation-conform-fet-001-standard/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/simready-foundation/blob/main/skills/simready-foundation-conform-fet-001-standard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for repairing SimReady Minimal assets: units, upAxis, defaultPrim, hierarchy, mesh quality, extents, and origin placement. Contract: FET001_MinimalPlaceableVisual; Foundations 1 ID: FET_001_STANDARD."
+}

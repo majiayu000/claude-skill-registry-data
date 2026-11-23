@@ -1,0 +1,37 @@
+{
+  "name": "qyrus-change-impact",
+  "repo": "QQyrus/qyrion",
+  "path": "skills/qyrus-change-impact/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/QQyrus/qyrion",
+  "dir_name": "qyrus-change-impact",
+  "downloaded_at": "2026-11-23T06:47:38.204390Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "QQyrus",
+  "source_url": "https://github.com/QQyrus/qyrion/blob/master/skills/qyrus-change-impact/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/QQyrus/qyrion/blob/master/skills/qyrus-change-impact/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Selects the minimal real-device test set for a specific code change - reads the git diff, classifies behavior changes, maps them to existing saved Qyrus tests and new scenarios, produces an action plan table, then runs only the impacted set through the qyrion CLI. Use for \"what should I test for this change/PR/diff\", \"validate this branch on a real device\", or post-merge device validation of a change. Do not use for broad test generation from scratch with no diff in scope (use qyrus-device-testing) or for plain qyrion command help (use qyrion-cli)."
+}

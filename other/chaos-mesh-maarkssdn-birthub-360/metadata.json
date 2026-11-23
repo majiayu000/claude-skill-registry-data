@@ -1,0 +1,38 @@
+{
+  "name": "chaos-mesh",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/chaos-mesh/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "chaos-mesh-maarkssdn-birthub-360",
+  "downloaded_at": "2026-11-23T06:19:39.064923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/chaos-mesh/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/chaos-mesh/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a system runs on Kubernetes and fault experiments should be declared as CRDs next to the workloads. Configures Chaos Mesh pod, network, stress, IO, time, DNS, kernel and HTTP faults, label selectors, namespace limits on blast radius, schedules and the dashboard.",
+  "content_fingerprint": "64060b96e189432241e8f3f50371f23f5f6acc66e3246c68461f7dec7341b086"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "explain-flow",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/explain-flow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "explain-flow",
+  "downloaded_at": "2026-11-23T06:31:14.362705Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/explain-flow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/explain-flow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Give a narrative, step-by-step trace of how ONE feature, endpoint, job, or script works end to end, from entry point through to side effects \u2014 grounded in the real execution path, not assumptions. Use when the user asks \"how does login work\", \"how is /api/orders POST processed\", \"how does this cron job send reminders\", \"how do invoices get generated\", or \"walk me through how X works\". Not for a quick file:line pointer \u2014 use locate-implementation when the user just wants \"where is X\" with no narrative. Not for whole-repo orientation \u2014 use onboard-codebase when the user wants to understand the whole project rather than one flow."
+}

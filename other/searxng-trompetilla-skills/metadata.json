@@ -1,0 +1,37 @@
+{
+  "name": "searxng",
+  "repo": "Trompetilla/Skills",
+  "path": "skills/abk234/searxng/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Trompetilla/Skills",
+  "dir_name": "searxng-trompetilla-skills",
+  "downloaded_at": "2026-11-23T07:19:41.406537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Trompetilla",
+  "source_url": "https://github.com/Trompetilla/Skills/blob/main/skills/abk234/searxng/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Trompetilla/Skills/blob/main/skills/abk234/searxng/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Privacy-respecting metasearch using your local SearXNG instance. Search the web, images, news, and more without external API dependencies."
+}

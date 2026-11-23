@@ -1,0 +1,39 @@
+{
+  "name": "validate-branch",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/validate-branch/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "validate-branch",
+  "downloaded_at": "2026-11-23T07:36:31.852018Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/validate-branch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/validate-branch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run ordered local and staging validation on the current branch before shipping. Use when the user says \"validate\", \"check branch\", \"am I good\", \"run tests\", \"preflight\", \"is this ready\", or wants to verify their branch before pushing or creating a PR. Also use as a precondition check before invoking submit-branch or land-branch.",
+  "content_fingerprint": "477858904db49a539c3fec492d5a3fb298b4f28a04acc5f6b52cbc9deb1a6f99"
+}

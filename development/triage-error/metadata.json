@@ -1,0 +1,41 @@
+{
+  "name": "triage-error",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/triage-error/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "triage-error",
+  "downloaded_at": "2026-11-23T06:31:13.853820Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, compile, debug",
+    "score": 6,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/triage-error/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/triage-error/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take a live production error, stack trace, or on-call alert and systematically locate the fault site, assess blast radius, and recommend a mitigation path \u2014 the deliverable is fault site plus blast radius plus mitigation, not necessarily a code change. Use when the user says \"prod is down\", \"we're getting paged\", \"production is throwing errors\", \"customers are seeing 500s\", or \"what's the blast radius\", or pastes a stack trace during an active incident. Not for a routine dev-time bug, failing test, or code-review finding \u2014 use debug-issue instead, which produces a code fix rather than an incident response."
+}

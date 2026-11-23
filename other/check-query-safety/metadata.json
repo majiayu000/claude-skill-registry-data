@@ -1,0 +1,38 @@
+{
+  "name": "check-query-safety",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/check-query-safety/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "check-query-safety",
+  "downloaded_at": "2026-11-23T06:31:18.765199Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/check-query-safety/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/check-query-safety/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review database queries in a file or module for N+1 patterns, unbounded scans, SQL injection risks, and over-fetching. Use during code review or before a performance-sensitive release. Trigger on \"is this query safe\", \"check for N+1 queries\", \"could this cause a SQL injection\", \"will this query scale\", or \"review my database queries\". This is the deep, query-focused audit \u2014 review-changes only flags query issues in passing during a general review; use this skill when queries need dedicated scrutiny."
+}

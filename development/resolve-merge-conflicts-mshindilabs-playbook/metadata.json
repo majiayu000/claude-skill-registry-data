@@ -1,0 +1,37 @@
+{
+  "name": "resolve-merge-conflicts",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/resolve-merge-conflicts/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "resolve-merge-conflicts-mshindilabs-playbook",
+  "downloaded_at": "2026-11-23T06:31:20.826473Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/resolve-merge-conflicts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/resolve-merge-conflicts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resolve git conflict markers correctly by understanding both sides' intent, never silently discarding work, and verifying the result compiles and tests pass before continuing the merge or rebase. Trigger on requests like \"fix these merge conflicts\", \"resolve the conflicts\", \"there are conflict markers in this file\", \"merge is failing\", or \"rebase conflict\" \u2014 anywhere conflict markers already exist in the working tree right now. For syncing a branch before conflicts show up, use sync-branch-safely instead."
+}

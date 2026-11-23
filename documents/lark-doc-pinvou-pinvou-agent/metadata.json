@@ -1,0 +1,39 @@
+{
+  "name": "lark-doc",
+  "repo": "Pinvou/pinvou-agent",
+  "path": "pinvou3-app/src-tauri/resources/common/bundle/lark-skills/lark-doc/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Pinvou/pinvou-agent",
+  "dir_name": "lark-doc-pinvou-pinvou-agent",
+  "downloaded_at": "2026-11-23T06:45:00.967374Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, docx, markdown",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Pinvou",
+  "source_url": "https://github.com/Pinvou/pinvou-agent/blob/main/pinvou3-app/src-tauri/resources/common/bundle/lark-skills/lark-doc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Pinvou/pinvou-agent/blob/main/pinvou3-app/src-tauri/resources/common/bundle/lark-skills/lark-doc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u3010\u4f55\u65f6\u7528:\u4ec5\u5f53\u7528\u6237\u660e\u786e\u6307\u5411\u98de\u4e66/Lark(\u53d1\u5230\u98de\u4e66\u3001\u98de\u4e66\u6587\u6863\u7b49)\u65f6\u4f7f\u7528;\u6cdb\u6307\u505a\u4e2a\u6587\u6863\u6216PPT\u6216\u8868\u683c\u6216\u65b9\u6848\u9ed8\u8ba4\u8d70\u672c\u5730\u5de5\u5177,\u4e0d\u8981\u8bef\u7528\u98de\u4e66\u3011\u98de\u4e66\u4e91\u6587\u6863(Docx/Wiki)\u4e0e\u601d\u7ef4\u7b14\u8bb0\u5185\u5bb9\u64cd\u4f5c:\u8bfb\u53d6\u3001\u521b\u5efa\u3001\u7f16\u8f91,\u63d2\u5165/\u4e0b\u8f7d\u56fe\u7247\u9644\u4ef6,\u67e5\u8be2/\u56de\u6eda\u5386\u53f2\u7248\u672c\u3002\u7528\u6237\u7ed9\u51fa\u6587\u6863URL/token(doubao.com /docx/\u3001/wiki/)\u6309\u8def\u5f84/token \u8def\u7531;`/page/<token>` \u662f\u5999\u642d\u5e94\u7528\u975e\u4e91\u6587\u6863;\u5185\u5d4c\u8868\u683c/\u591a\u7ef4\u8868\u683c\u63d0\u53d6 token \u5207\u5bf9\u5e94 skill;\u753b\u677f\u65e0\u6280\u80fd,CLI \u76f4\u8fde\u3002\u8bc4\u8bba\u8d70 lark-drive;\u8868\u683c/Base \u5185\u90e8\u64cd\u4f5c\u4e0d\u5728\u672c skill\u3002"
+}

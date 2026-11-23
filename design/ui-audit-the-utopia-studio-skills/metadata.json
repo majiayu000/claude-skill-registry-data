@@ -1,0 +1,40 @@
+{
+  "name": "ui-audit",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/ui-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "ui-audit-the-utopia-studio-skills",
+  "downloaded_at": "2026-11-23T07:15:24.148659Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component, animation",
+    "score": 5,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ui-audit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ui-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Produces a scored P0-P3 technical audit of UI code: accessibility (WCAG), performance, theming, responsive design and AI-slop anti-patterns, plus Web Interface Guidelines checks with file:line findings. Use when the user asks for an accessibility or UI quality audit, to review UI code against best practices, or mentions the Web Interface Guidelines. Reports only, does not fix. Not for subjective UX feedback (use ui-critique)."
+}

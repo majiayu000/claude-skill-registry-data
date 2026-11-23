@@ -1,0 +1,37 @@
+{
+  "name": "Cove API Patterns",
+  "repo": "WYRE-AI/msp-claude-plugins",
+  "path": "msp-claude-plugins/cove/cove/skills/api-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/WYRE-AI/msp-claude-plugins",
+  "dir_name": "api-patterns-wyre-ai-msp-claude-plugins-7",
+  "downloaded_at": "2026-11-23T07:28:12.667998Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "WYRE-AI",
+  "source_url": "https://github.com/WYRE-AI/msp-claude-plugins/blob/main/msp-claude-plugins/cove/cove/skills/api-patterns/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/WYRE-AI/msp-claude-plugins/blob/main/msp-claude-plugins/cove/cove/skills/api-patterns/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How the Cove Data Protection MCP tools talk to N-able's JSON-RPC API through Conduit: the three X-Cove-* headers and the API user behind them, the 15-minute visa session, finding partner (customer) IDs, statistics column codes and units, paging and truncation, Cove error numbers, and which tool is admin-gated in Conduit."
+}

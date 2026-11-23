@@ -1,0 +1,38 @@
+{
+  "name": "context-mode",
+  "repo": "Slipcast-dev/codex-skills",
+  "path": "skills/context-mode/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Slipcast-dev/codex-skills",
+  "dir_name": "context-mode-slipcast-dev-codex-skills",
+  "downloaded_at": "2026-11-23T07:02:56.767840Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-skills/blob/main/skills/context-mode/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-skills/blob/main/skills/context-mode/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Keep Claude Code sessions productive across resets with output filtering, session logging, and auto-resume. Use when starting a long or complex coding session, when previous sessions lost context mid-task, or when you need Claude to resume exactly where it left off after a reset.",
+  "content_fingerprint": "a6e90ab59756f01346a3462ad0ce706e30360f6f9126d75ea158edb2cb108874"
+}

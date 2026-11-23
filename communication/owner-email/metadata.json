@@ -1,0 +1,37 @@
+{
+  "name": "owner-email",
+  "repo": "SkillMix/Brain",
+  "path": ".claude/skills/owner-email/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/SkillMix/Brain",
+  "dir_name": "owner-email",
+  "downloaded_at": "2026-11-23T07:01:04.888118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillMix",
+  "source_url": "https://github.com/SkillMix/Brain/blob/main/.claude/skills/owner-email/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillMix/Brain/blob/main/.claude/skills/owner-email/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tell the person something by email, from their own mailbox to their own address - a security warning, an answer that arrived, an action only they can take. Use when a tool queued a notice (`owner_email.py pending` lists it), or when a session must warn the person now. Never to anyone else; never a chat self-message."
+}

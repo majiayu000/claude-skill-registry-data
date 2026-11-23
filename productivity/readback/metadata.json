@@ -1,0 +1,38 @@
+{
+  "name": "readback",
+  "repo": "LilMGenius/paperthin",
+  "path": "skills/depth/readback/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/LilMGenius/paperthin",
+  "dir_name": "readback",
+  "downloaded_at": "2026-11-23T06:13:53.012055Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LilMGenius",
+  "source_url": "https://github.com/LilMGenius/paperthin/blob/main/skills/depth/readback/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LilMGenius/paperthin/blob/main/skills/depth/readback/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify the model's understanding of a user's instruction before spending non-trivial work. Use when a request is long, bundled, high-stakes, hard to undo, or has ambiguous scope or referents such as this, that, it, the other one, whatever is cleaner, or whichever order makes sense. Restate internally, cross-check against available context, proceed silently when resolved, and surface only a genuine surviving fork."
+}

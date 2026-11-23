@@ -1,0 +1,38 @@
+{
+  "name": "gwb-sequence-search",
+  "repo": "MaybeBio/Daily-Code-Agent-VirtualCell",
+  "path": "code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-sequence-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaybeBio/Daily-Code-Agent-VirtualCell",
+  "dir_name": "gwb-sequence-search",
+  "downloaded_at": "2026-11-23T06:24:33.737799Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaybeBio",
+  "source_url": "https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-sequence-search/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-sequence-search/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Protein sequence similarity search in a Databricks notebook with Genesis Workbench — embed a query protein with ESM-2 and search the UniRef + human-protein Vector Search indices to find functionally/structurally similar proteins (broad organisms and human targets like PARP1). Use for life-sciences homology/analog discovery by embedding. Triggers on \"find proteins similar to this sequence\", \"what is this protein\", \"homologs / analogs by embedding\", \"search my sequence against the reference\", \"protein similarity search\".",
+  "content_fingerprint": "123f782fce36994bec5101e70ed6c5ade3c7a1da0095480825ce77ee58e34976"
+}

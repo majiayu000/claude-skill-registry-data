@@ -1,0 +1,39 @@
+{
+  "name": "playwright",
+  "repo": "Systemorph/MeshWeaver",
+  "path": ".claude/skills/playwright/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/Systemorph/MeshWeaver",
+  "dir_name": "playwright-systemorph-meshweaver",
+  "downloaded_at": "2026-11-23T07:11:14.238187Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Systemorph",
+  "source_url": "https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/playwright/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/playwright/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run Playwright browser E2E against a REAL portal, not the dev Monolith. The Monolith has DevLogin but no language model; the running `memex` stack has a model but uses Entra OAuth and is the user's data. This skill stands up a throwaway, DevLogin portal on Colima k3s — built from the CURRENT working tree, with its OWN database (memex_e2e), reusing the existing memex Postgres + host Ollama + ingress/TLS — then points Playwright at it over the ingress (reverse proxy). Use when an E2E must actually log in, render Blazor/SignalR, AND execute a chat round (or any flow needing a model); or when a test \"skips execution\" for lack of a model. One command: `memex-local e2e up` → `e2e test` → `e2e down`. Built on memex-local / LocalColimaMac.",
+  "content_fingerprint": "b1f3fd4b450282cb190769bae666346c8d8c7a204a9eb03708f0037cbc5275af"
+}

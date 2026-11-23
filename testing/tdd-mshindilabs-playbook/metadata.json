@@ -1,0 +1,38 @@
+{
+  "name": "tdd",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/tdd/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "tdd-mshindilabs-playbook",
+  "downloaded_at": "2026-11-23T06:31:07.971467Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, integration",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "tdd",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/tdd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/tdd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fix a bug by writing a failing test first. Use only when the user asks for it: \"use TDD\", \"write a failing test first\", \"add a regression test for this bug\", \"red-green this\". Skip when the test path is unclear, expensive or integration-heavy. For a test that is already failing, use the `fix-failing-test` skill."
+}

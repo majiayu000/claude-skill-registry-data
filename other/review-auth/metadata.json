@@ -1,0 +1,38 @@
+{
+  "name": "review-auth",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/review-auth/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "review-auth",
+  "downloaded_at": "2026-11-23T06:31:12.924074Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/review-auth/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/review-auth/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit authentication and authorization paths for common misconfigurations, bypass risks, and IDOR vulnerabilities. Use before shipping any auth-related change or during a security review. Trigger on \"is this auth code secure\", \"check for IDOR vulnerabilities\", \"review my auth logic\", \"can users access data they shouldn't\", or \"audit our permission checks\". This is the deep, dedicated auth audit \u2014 review-changes only flags auth issues in passing during a general review; use this skill when auth needs focused scrutiny."
+}

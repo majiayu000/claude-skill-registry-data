@@ -1,0 +1,37 @@
+{
+  "name": "space-schedule-by-level",
+  "repo": "TheBaron13/Aaron_LLM_Skills",
+  "path": "skills/space-schedule-by-level/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/TheBaron13/Aaron_LLM_Skills",
+  "dir_name": "space-schedule-by-level",
+  "downloaded_at": "2026-11-23T07:15:35.609183Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TheBaron13",
+  "source_url": "https://github.com/TheBaron13/Aaron_LLM_Skills/blob/main/skills/space-schedule-by-level/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TheBaron13/Aaron_LLM_Skills/blob/main/skills/space-schedule-by-level/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Creates a Revit schedule of MEP Spaces filtered to one level (Number, Name, Level, Area), sorted by number. Use it for requests like \"make a schedule of the Level 3 spaces\" or \"space schedule for only L2\", and as a pattern for other single-category schedules filtered by level.",
+  "content_fingerprint": "de6deb20d81659af2b4c2411c692a331d81f8f3a5478721c09a72f0b65243b3e"
+}

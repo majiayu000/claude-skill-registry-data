@@ -1,0 +1,37 @@
+{
+  "name": "scene-editor",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/scene-editor/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "scene-editor",
+  "downloaded_at": "2026-11-23T07:26:04.897574Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/scene-editor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/scene-editor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Narrative scene editor for scripted coverage (wide, mediums, overs, close-ups, inserts): builds line strings of every take, picks the best performance per line (emotion over continuity, Murch's Rule of Six), assembles the scene with J/L cuts and real reactions, times cuts to the end of thoughts and before blinks, checks the 180-degree and 30-degree rules, and hands over an EDL/FCPXML/OTIO turnover. Use when the user says: edit this scene, cut my short film scene, assemble my coverage, choose the best takes, dialogue scene edit, rough cut of a scene, cut on action, L-cuts for reactions. Default skin minimal-mono (no graphics)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "probability-calibration",
+  "repo": "PuckAPI/claude-sports-analytics",
+  "path": "plugin/skills/probability-calibration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PuckAPI/claude-sports-analytics",
+  "dir_name": "probability-calibration-puckapi-claude-sports-analyt",
+  "downloaded_at": "2026-11-23T06:47:09.840823Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PuckAPI",
+  "source_url": "https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/probability-calibration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/probability-calibration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verifies and corrects model probability outputs so predicted win percentages match actual win rates. Use when user asks about calibration, reliability diagrams, Brier score, Platt scaling, isotonic regression, probability quality, or whether model probabilities are accurate. Also use when user has a trained model and wants to know if outputs can be trusted for betting. Do not use for odds math or devigging -- see odds-analysis instead. Do not use for model training -- see model-building instead."
+}

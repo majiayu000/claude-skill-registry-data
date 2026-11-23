@@ -1,0 +1,37 @@
+{
+  "name": "holder-tracker",
+  "repo": "StalkC/stalkchain-plugin",
+  "path": "skills/holder-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/StalkC/stalkchain-plugin",
+  "dir_name": "holder-tracker",
+  "downloaded_at": "2026-11-23T07:08:41.935925Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "StalkC",
+  "source_url": "https://github.com/StalkC/stalkchain-plugin/blob/main/skills/holder-tracker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/StalkC/stalkchain-plugin/blob/main/skills/holder-tracker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Track how a token's holders change over time by taking snapshots and comparing them. Use when the user wants to watch a token's holders, see who joined or left since yesterday or last week, track whether smart money is accumulating or exiting, or set up a daily holder check. Works well as a scheduled task."
+}

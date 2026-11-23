@@ -1,0 +1,39 @@
+{
+  "name": "wecomcli-doc",
+  "repo": "Pinvou/pinvou-agent",
+  "path": "pinvou3-app/src-tauri/resources/common/bundle/wecom-skills/wecomcli-doc/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Pinvou/pinvou-agent",
+  "dir_name": "wecomcli-doc",
+  "downloaded_at": "2026-11-23T06:45:03.254010Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, word, docx, markdown",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "word",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Pinvou",
+  "source_url": "https://github.com/Pinvou/pinvou-agent/blob/main/pinvou3-app/src-tauri/resources/common/bundle/wecom-skills/wecomcli-doc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Pinvou/pinvou-agent/blob/main/pinvou3-app/src-tauri/resources/common/bundle/wecom-skills/wecomcli-doc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u4f55\u65f6\u7528:\u4ec5\u5f53\u7528\u6237\u660e\u786e\u6307\u5b9a doc/docx/word/\u5728\u7ebf\u6587\u6863/office\u6587\u6863\u6216\u63d0\u4f9b doc.weixin.qq.com/doc/ \u94fe\u63a5\u65f6\u4f7f\u7528;\u6cdb\u6307\u300c\u505a\u4e2a\u6587\u6863/\u5199\u6587\u6863/\u6574\u7406\u6210\u6587\u6863\u300d\u9ed8\u8ba4\u8d70 wecomcli-smartpage \u6216\u672c\u5730\u5de5\u5177,\u672c\u6280\u80fd\u4e0d\u5f97\u62a2\u5360\u3002doc \u5185\u5bb9\u64cd\u4f5c:\u65b0\u5efa\u3001\u5bfc\u5165(.doc/.docx/.txt)\u3001\u8bfb\u53d6\u3001\u8ffd\u52a0\u3001\u8986\u76d6\u5199\u5165;\u7ed3\u6784\u5316\u6570\u636e\u9700\u6c42\u6539\u7528\u667a\u80fd\u6587\u6863/\u667a\u80fd\u8868\u683c;\u516c\u5171\u7ba1\u7406\u8d70 wecomcli-doc-manage\u3002"
+}

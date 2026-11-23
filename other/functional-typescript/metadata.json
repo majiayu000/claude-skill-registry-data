@@ -1,0 +1,37 @@
+{
+  "name": "functional-typescript",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/functional-typescript/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "functional-typescript",
+  "downloaded_at": "2026-11-23T06:31:20.275393Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/functional-typescript/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/functional-typescript/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Functional programming patterns for TypeScript and JavaScript: pure functions, immutability, composition, currying, higher-order functions, and Result and Option types. Applies the fp-ts rules when the codebase imports fp-ts. Trigger on \"how do I avoid mutation\", \"how do I curry this\", \"how do I handle async errors without try-catch\", or \"make this more functional\". For general typing questions use typescript-best-practices."
+}

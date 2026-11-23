@@ -1,0 +1,39 @@
+{
+  "name": "run-on-simulator",
+  "repo": "Saaeroos/the-budget",
+  "path": ".claude/skills/run-on-simulator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Saaeroos/the-budget",
+  "dir_name": "run-on-simulator",
+  "downloaded_at": "2026-11-23T06:54:37.138419Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Saaeroos",
+  "source_url": "https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/run-on-simulator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/run-on-simulator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build the Kwartje iOS app, run it on a local iOS Simulator through Metro with the dev auth bypass, and verify it (logs + screenshot). Use to see a change working in the real app, after native/dependency changes, or when asked to \"run on simulator\".",
+  "content_fingerprint": "c9d8c72dddd198d34b32bcc62ae01ade870c2f351aa6ee2d744e7ec5180c9a23"
+}

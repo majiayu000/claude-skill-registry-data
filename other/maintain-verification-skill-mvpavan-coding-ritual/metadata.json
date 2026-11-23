@@ -1,0 +1,38 @@
+{
+  "name": "maintain-verification-skill",
+  "repo": "MVPavan/coding-ritual",
+  "path": ".claude/skills/maintain-verification-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MVPavan/coding-ritual",
+  "dir_name": "maintain-verification-skill-mvpavan-coding-ritual",
+  "downloaded_at": "2026-11-23T06:19:27.644153Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, generation=2",
+    "score": 2,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MVPavan",
+  "source_url": "https://github.com/MVPavan/coding-ritual/blob/main/.claude/skills/maintain-verification-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MVPavan/coding-ritual/blob/main/.claude/skills/maintain-verification-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for /maintain-verification-skill when a project's verify skill that drives its real app may have drifted from the product; with no verify skill, /create-verification-skill makes one, and proving one change uses the verify skill itself. Reads every mapped feature from source, drives each one live, fixes proven drift in the skill and its map, and ends clean, changed or blocked.",
+  "content_fingerprint": "77bb45727062ef94e22ae3cd05e7d8887e5217409bd286d1bd41dcef1007449e"
+}

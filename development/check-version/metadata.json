@@ -1,0 +1,39 @@
+{
+  "name": "check-version",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/check-version/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "check-version",
+  "downloaded_at": "2026-11-23T07:36:30.373048Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, debug",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/check-version/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/check-version/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read the deployed version label from a live Forge macro iframe on any Confluence page. Covers enabling zenumlDebug in the correct (iframe) storage origin, reloading, and extracting the version string. Use after a release, in a spot check, or in PVT to confirm the expected tag is live.",
+  "content_fingerprint": "49529bc3564ddd8937a703d5d91ada7381e4e739c78bb482df4af66dbb0eb541"
+}

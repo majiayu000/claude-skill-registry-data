@@ -1,0 +1,37 @@
+{
+  "name": "draft-adr",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/draft-adr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "draft-adr",
+  "downloaded_at": "2026-11-23T06:31:11.629583Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/draft-adr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/draft-adr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Capture a technical decision in a durable ADR document covering context, options considered, the decision, and its consequences. Use when someone says \"document this decision\", \"why did we choose X over Y\", \"record the reasoning behind this\", \"write up why we did this\", or asks for an ADR, decision record, or design rationale after a choice has been made -- most users will not say \"ADR\" outright. Best used after plan-change: plan-change decides what to do before code is written, draft-adr records why, once the decision is settled, for future maintainers."
+}

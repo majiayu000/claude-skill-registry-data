@@ -1,0 +1,37 @@
+{
+  "name": "pid-to-kg",
+  "repo": "ScottDuncanAI/PID-to-Knowledge-Graph",
+  "path": "skills/pid-to-kg/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ScottDuncanAI/PID-to-Knowledge-Graph",
+  "dir_name": "pid-to-kg",
+  "downloaded_at": "2026-11-23T06:56:27.251357Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ScottDuncanAI",
+  "source_url": "https://github.com/ScottDuncanAI/PID-to-Knowledge-Graph/blob/main/skills/pid-to-kg/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ScottDuncanAI/PID-to-Knowledge-Graph/blob/main/skills/pid-to-kg/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Converts P&IDs (piping and instrumentation diagrams) and PFDs in PDF form, either vector or scanned, into a process knowledge graph covering equipment connectivity (upstream/downstream), instrument locations and measured variables, and control loops. Output is JSON plus a DuckDB file plus an LLM-ready Markdown summary. Use when the user wants to digitize, extract, analyze or build a knowledge graph or context layer from P&IDs, or asks what is upstream/downstream of a piece of equipment, which sensors measure what, or how a plant's control loops are structured."
+}

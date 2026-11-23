@@ -1,0 +1,38 @@
+{
+  "name": "amazon-ads-campaign-management",
+  "repo": "KuudoAI/skills",
+  "path": "skills/amazon-ads-campaign-management/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KuudoAI/skills",
+  "dir_name": "amazon-ads-campaign-management",
+  "downloaded_at": "2026-11-23T06:08:04.436077Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KuudoAI",
+  "source_url": "https://github.com/KuudoAI/skills/blob/main/skills/amazon-ads-campaign-management/SKILL.md",
+  "license": "PolyForm-Shield-1.0.0 (see LICENSE.txt)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KuudoAI/skills/blob/main/skills/amazon-ads-campaign-management/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Use this skill when someone wants to look up or change the settings of Amazon Ads campaigns that already exist, or build a new Sponsored Products, Sponsored Brands, Sponsored Display or standard (non- Performance+/Brand+) DSP campaign or ad group field by field. Typical asks: list enabled campaigns and their settings, pause or enable, change bids, budgets, placement adjustments or dates, add keywords or negatives, switch match types, archive, edit existing DSP, Sponsored TV or Full-Funnel entities and ad associations, or port legacy v2/v3/v4 campaign-management code to the unified v1 API (allv1_* tools). Route these elsewhere. Launching any new DSP campaign from a tactic (Performance+, Brand+, remarketing, prospecting, ASIN plus budget and flight) goes to amazon-ads-create-dsp- campaign. Anything about results (spend, sales, ACOS, ROAS, period comparisons, report requests) goes to amazon-ads-reporting. Account discovery, Review Requests campaigns and AMC also go elsewhere.",
+  "content_fingerprint": "75d244b45076dcee66c50d588b84b988737ca54b9a49e9406f88d2076d9531b1"
+}

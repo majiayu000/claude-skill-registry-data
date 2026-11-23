@@ -1,0 +1,38 @@
+{
+  "name": "client-health",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/client-health/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "client-health",
+  "downloaded_at": "2026-11-23T07:36:29.560894Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/client-health/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/client-health/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rank active ZenUML Lite tenants on two independent 0-100 scores — Opportunity (upsell candidate) and Risk (disengagement) — to decide which clients to focus on. Use whenever the user asks \"which clients should we focus on\", \"who's a good upsell candidate\", \"which tenants are at risk of churning\", \"health score\", or wants a ranked list of Lite tenants by engagement strength or fragility. Scope: Lite only, active tenants only (macro_viewed > 0 in the scoring window). For a SINGLE named tenant's paid status/profile use the `tenant` skill instead; for lifetime revenue/renewals/overdue payers use `marketplace`.",
+  "content_fingerprint": "bef012bcd39bd4dac064ae3ea4616bf36335171a5b121bc68d3e1b2b36f4d2d6"
+}

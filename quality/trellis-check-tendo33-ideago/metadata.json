@@ -1,0 +1,38 @@
+{
+  "name": "trellis-check",
+  "repo": "Tendo33/IdeaGo",
+  "path": ".claude/skills/trellis-check/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/Tendo33/IdeaGo",
+  "dir_name": "trellis-check-tendo33-ideago",
+  "downloaded_at": "2026-11-23T07:14:46.896120Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Tendo33",
+  "source_url": "https://github.com/Tendo33/IdeaGo/blob/main/.claude/skills/trellis-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Tendo33/IdeaGo/blob/main/.claude/skills/trellis-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Comprehensive quality verification: spec compliance, lint, type-check, tests, cross-layer data flow, code reuse, and consistency checks. Use when code is written and needs quality verification, before committing changes, or to catch context drift during long sessions."
+}

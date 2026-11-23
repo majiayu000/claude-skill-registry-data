@@ -1,0 +1,40 @@
+{
+  "name": "mantis-critic",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/mantis-critic/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "mantis-critic",
+  "downloaded_at": "2026-11-23T06:19:45.711713Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/mantis-critic/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/mantis-critic/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assesses the production viability of findings, filtering out debug-only features and assertion traps. Use when findings have been validated and you need to confirm they are triggerable in production release builds (with assertions disabled). Don't use for writing reproduction scripts or patches.",
+  "content_fingerprint": "5f348c99f2e89b745965f6375511d539aa9457f8bee537619487afd425e39c1a"
+}

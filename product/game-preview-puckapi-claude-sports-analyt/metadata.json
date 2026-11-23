@@ -1,0 +1,37 @@
+{
+  "name": "game-preview",
+  "repo": "PuckAPI/claude-sports-analytics",
+  "path": "plugin/skills/game-preview/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/PuckAPI/claude-sports-analytics",
+  "dir_name": "game-preview-puckapi-claude-sports-analyt",
+  "downloaded_at": "2026-11-23T06:47:06.358583Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: feature, metrics",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PuckAPI",
+  "source_url": "https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/game-preview/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/game-preview/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Complete pre-game analysis for a single NHL (or other sport) matchup: team records, goalie matchup, key stats, odds snapshot, model edge, and head-to-head history in one shareable report. Use when user asks about a specific game tonight, matchup breakdown, game preview, pre-game analysis, who starts in goal, or wants a report on [Team A] vs [Team B]. Do not use for full slate analysis -- see daily-card. Do not use for odds-only lookup -- see odds-explorer. Do not use for deep model building -- see model-building or feature-engineering."
+}

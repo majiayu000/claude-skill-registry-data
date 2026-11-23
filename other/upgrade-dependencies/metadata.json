@@ -1,0 +1,37 @@
+{
+  "name": "upgrade-dependencies",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/upgrade-dependencies/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "upgrade-dependencies",
+  "downloaded_at": "2026-11-23T06:31:19.305917Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/upgrade-dependencies/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/upgrade-dependencies/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Safely plan and execute package or runtime version bumps. Audits outdated dependencies, classifies them by risk tier, reads changelogs for breaking changes, upgrades in safe batches, and verifies checks pass. Trigger on requests like \"upgrade our dependencies\", \"bump these packages\", \"update to the latest version\", or \"upgrade npm packages and make sure tests still pass\". This skill executes the upgrade and changes files \u2014 for a read-only CVE and license report that touches nothing, use audit-dependencies instead."
+}

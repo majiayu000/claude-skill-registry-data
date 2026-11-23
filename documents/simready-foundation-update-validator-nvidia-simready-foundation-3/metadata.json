@@ -1,0 +1,37 @@
+{
+  "name": "simready-foundation-update-validator",
+  "repo": "NVIDIA/simready-foundation",
+  "path": ".agents/skills/simready-foundation-update-validator/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/NVIDIA/simready-foundation",
+  "dir_name": "simready-foundation-update-validator-nvidia-simready-foundation-3",
+  "downloaded_at": "2026-11-23T06:32:33.655924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/simready-foundation/blob/main/.agents/skills/simready-foundation-update-validator/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/simready-foundation/blob/main/.agents/skills/simready-foundation-update-validator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for updating SimReady validators, failure messages, edge cases, and tests while preserving requirement semantics."
+}

@@ -1,0 +1,41 @@
+{
+  "name": "detox-testing",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/detox-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "detox-testing",
+  "downloaded_at": "2026-11-23T06:19:44.237126Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, debug",
+    "score": 5,
+    "runner_up": "platform",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/detox-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/detox-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use whenever a React Native app needs end-to-end tests with Detox: gray-box runs inside the app, by.id, by.text and by.label matchers, waitFor for extra sync, and the Jest runner. Flutter is flutter-testing; cross-platform black-box is appium-testing; YAML flows are maestro-flows.",
+  "content_fingerprint": "71a7eb77adcc0d55e33b7f56c83706ca1ff5b4c181fc6b76b9e84d8a82083e6d"
+}

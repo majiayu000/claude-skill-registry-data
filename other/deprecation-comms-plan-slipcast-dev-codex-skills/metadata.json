@@ -1,0 +1,38 @@
+{
+  "name": "deprecation-comms-plan",
+  "repo": "Slipcast-dev/codex-skills",
+  "path": "skills/deprecation-comms-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-skills",
+  "dir_name": "deprecation-comms-plan-slipcast-dev-codex-skills",
+  "downloaded_at": "2026-11-23T07:03:18.453632Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-skills/blob/main/skills/deprecation-comms-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-skills/blob/main/skills/deprecation-comms-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plan the communications for deprecating a product, API, endpoint, or feature that customers depend on. Use when winding down or sunsetting something, planning a breaking change, or migrating customers off a legacy path. This is the customer-communications program — distinct from [[feature-sunset-plan]] (the kill decision, data handling, and code removal) and [[api-versioning-strategy]] (the technical versioning mechanics).",
+  "content_fingerprint": "2c06ba241b02c70fc5b30fafcaaaa4962029b386af8d1b51e5b3961d3f4acb6d"
+}

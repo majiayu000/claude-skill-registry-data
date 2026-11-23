@@ -1,0 +1,37 @@
+{
+  "name": "check",
+  "repo": "Saaeroos/the-budget",
+  "path": ".claude/skills/check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Saaeroos/the-budget",
+  "dir_name": "check-saaeroos-the-budget",
+  "downloaded_at": "2026-11-23T06:54:35.197306Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category development scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Saaeroos",
+  "source_url": "https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the full local verification suite (pnpm check) and fix what fails. Use before every commit or when a gate is red.",
+  "content_fingerprint": "83d7042449fc7347408ed0d183e30ffd32f1177530db1538a11add6da1b0c693"
+}

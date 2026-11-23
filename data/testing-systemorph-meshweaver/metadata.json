@@ -1,0 +1,38 @@
+{
+  "name": "testing",
+  "repo": "Systemorph/MeshWeaver",
+  "path": ".claude/skills/testing/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Systemorph/MeshWeaver",
+  "dir_name": "testing-systemorph-meshweaver",
+  "downloaded_at": "2026-11-23T07:11:13.176731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Systemorph",
+  "source_url": "https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write and run MeshWeaver tests, and triage a red CI run. Use when adding a test, running one locally, or reading a CI failure. The house standards are non-negotiable: no mocking of IMessageHub / IMeshService / core interfaces (use the real mesh test bases), never Task.Delay to wait for propagation (wait on the condition), never assert an exact change-event count on a change feed, and never re-run a test to see whether it was a flake. Also covers the xUnit v3 configuration, why methodTimeout does not bound fixture or teardown wedges, and how to read a shard artifact (trx TextMessages, the trace log that survives a killed host, the CI exit markers).",
+  "content_fingerprint": "2eb81d109ef26a82715eb1fcc3c1286d3f9939f4848c63f0a7fc1928aaaf2779"
+}

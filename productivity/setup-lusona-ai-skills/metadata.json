@@ -1,0 +1,37 @@
+{
+  "name": "setup",
+  "repo": "Lusona/ai-skills",
+  "path": "plugins/lusona/skills/setup/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Lusona/ai-skills",
+  "dir_name": "setup-lusona-ai-skills",
+  "downloaded_at": "2026-11-23T06:17:35.107934Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lusona",
+  "source_url": "https://github.com/Lusona/ai-skills/blob/main/plugins/lusona/skills/setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lusona/ai-skills/blob/main/plugins/lusona/skills/setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare a project for Lusona by creating `docs/lusona/` and the work queue and adding a Lusona section to the project's `AGENTS.md`, with the standing TDD preference and model tier mapping, after the user confirms the text. Produce the created records, the confirmed agent-instruction text and suggested next steps. Use when the user asks to set up or initialize Lusona in a project. Optional; no skill requires it. Not for workflow orientation or progress; use status."
+}

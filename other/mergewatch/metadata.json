@@ -1,0 +1,36 @@
+{
+  "name": "mergewatch",
+  "repo": "aethersdr/AetherSDR",
+  "path": ".claude/skills/mergewatch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aethersdr/AetherSDR",
+  "dir_name": "mergewatch",
+  "downloaded_at": "2026-11-23T07:44:49.408065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aethersdr",
+  "source_url": "https://github.com/aethersdr/AetherSDR/blob/main/.claude/skills/mergewatch/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aethersdr/AetherSDR/blob/main/.claude/skills/mergewatch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Report release-cycle GitHub merge counts and compare CI build and test times with five merges from the previous release. Use for /mergewatch, $mergewatch, release-cycle merge reports, or CI timing baseline comparisons. Read-only."
+}

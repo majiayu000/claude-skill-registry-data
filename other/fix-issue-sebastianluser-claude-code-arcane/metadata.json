@@ -1,0 +1,37 @@
+{
+  "name": "fix-issue",
+  "repo": "SebastianLuser/claude-code-arcane",
+  "path": "skills/fix-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SebastianLuser/claude-code-arcane",
+  "dir_name": "fix-issue-sebastianluser-claude-code-arcane",
+  "downloaded_at": "2026-11-23T06:57:39.947670Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SebastianLuser",
+  "source_url": "https://github.com/SebastianLuser/claude-code-arcane/blob/main/skills/fix-issue/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLuser/claude-code-arcane/blob/main/skills/fix-issue/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fetches a GitHub issue by number, understands the problem, locates the code, implements a minimal fix and commits referencing the issue.",
+  "content_fingerprint": "02574157e381d0b419a4759bb96329e279859558b2fb94fdad11a1e6dce05c6a"
+}

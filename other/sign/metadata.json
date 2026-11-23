@@ -1,0 +1,36 @@
+{
+  "name": "sign",
+  "repo": "SkillMix/Brain",
+  "path": ".claude/skills/sign/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SkillMix/Brain",
+  "dir_name": "sign",
+  "downloaded_at": "2026-11-23T07:01:01.165800Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category communication scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillMix",
+  "source_url": "https://github.com/SkillMix/Brain/blob/main/.claude/skills/sign/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillMix/Brain/blob/main/.claude/skills/sign/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The person's one verb over Needs you - show the list, brief each item with a recommendation, take yes/edit/no/later/always in bulk, read back the exact text, and only on an explicit \"submit\" run sign.py apply for that named person. Use when someone types /sign, answers an item, or asks what needs them."
+}

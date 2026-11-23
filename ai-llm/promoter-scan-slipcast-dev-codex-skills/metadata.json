@@ -1,0 +1,38 @@
+{
+  "name": "promoter-scan",
+  "repo": "Slipcast-dev/codex-skills",
+  "path": "skills/promoter-scan/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/Slipcast-dev/codex-skills",
+  "dir_name": "promoter-scan-slipcast-dev-codex-skills",
+  "downloaded_at": "2026-11-23T07:05:18.259445Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-skills/blob/main/skills/promoter-scan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-skills/blob/main/skills/promoter-scan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find the requests you keep making to your AI assistant by scanning Claude Code transcripts and claude.ai exports, clustering them by intent, and ranking each recurring pattern by how promotable it is into a reusable skill. Use when asked what do I keep asking for, scan my transcripts, find repeated prompts, which of my prompts should become skills, or to start the promote loop.",
+  "content_fingerprint": "3055bc3986d557e8a88eddaf3d79e14a4196817369f8f7db6a8e9434557a0a0b"
+}

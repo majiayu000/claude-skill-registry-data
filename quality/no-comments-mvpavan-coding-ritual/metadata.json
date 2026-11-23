@@ -1,0 +1,38 @@
+{
+  "name": "no-comments",
+  "repo": "MVPavan/coding-ritual",
+  "path": ".claude/skills/no-comments/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/MVPavan/coding-ritual",
+  "dir_name": "no-comments-mvpavan-coding-ritual",
+  "downloaded_at": "2026-11-23T06:19:26.816372Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MVPavan",
+  "source_url": "https://github.com/MVPavan/coding-ritual/blob/main/.claude/skills/no-comments/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MVPavan/coding-ritual/blob/main/.claude/skills/no-comments/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Sweep a scope for comments that should go, judged by principle-no-comments, then fix what the sweep exposes and offer checks for real constraints. Use for /no-comments; reviewing a change for bugs or design is review.",
+  "content_fingerprint": "6d73093ff7f144856b0d6145db06b8471265b200a3c504e2549d21e037ec8364"
+}

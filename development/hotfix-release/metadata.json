@@ -1,0 +1,38 @@
+{
+  "name": "hotfix-release",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/hotfix-release/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "hotfix-release",
+  "downloaded_at": "2026-11-23T06:31:15.833272Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/hotfix-release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/hotfix-release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply a minimal emergency fix to a production release line: branch from the correct base tag or release branch, change only what is essential, open a focused PR, and plan the merge-back to every affected branch. Trigger on \"prod is down\", \"we need to patch production now\", \"emergency fix\", \"sev1\", \"hotfix this\", \"customers are broken and it cannot wait\". Never tags or merges without checking for existing release automation first. For a fix that can wait for the normal cycle, use create-pr; if the cause is not identified yet, use triage-error or debug-issue first."
+}

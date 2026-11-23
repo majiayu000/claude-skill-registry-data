@@ -1,0 +1,38 @@
+{
+  "name": "wp72-asset-loading",
+  "repo": "Lonsdale201/wp-agent-skills",
+  "path": "wordpress-72/wp72-asset-loading/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Lonsdale201/wp-agent-skills",
+  "dir_name": "wp72-asset-loading",
+  "downloaded_at": "2026-11-23T06:14:58.086851Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: css, frontend, component",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lonsdale201",
+  "source_url": "https://github.com/Lonsdale201/wp-agent-skills/blob/main/wordpress-72/wp72-asset-loading/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lonsdale201/wp-agent-skills/blob/main/wordpress-72/wp72-asset-loading/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Migrates WordPress 7.2 asset integrations away from load-scripts.php, load-styles.php and retired concatenation/compression settings. Use for broken admin previews, hardcoded asset endpoints, script_concat_settings, COMPRESS_SCRIPTS, COMPRESS_CSS, ENFORCE_GZIP or jQuery Migrate warnings. Covers the jQuery 3 to future jQuery 4 preparation boundary."
+}

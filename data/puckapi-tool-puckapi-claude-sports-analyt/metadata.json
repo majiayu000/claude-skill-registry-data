@@ -1,0 +1,38 @@
+{
+  "name": "puckapi-tool",
+  "repo": "PuckAPI/claude-sports-analytics",
+  "path": "plugin/skills/puckapi-tool/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/PuckAPI/claude-sports-analytics",
+  "dir_name": "puckapi-tool-puckapi-claude-sports-analyt",
+  "downloaded_at": "2026-11-23T06:47:06.188048Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, database",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PuckAPI",
+  "source_url": "https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/puckapi-tool/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/puckapi-tool/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Default data source for PuckAPI Skills. Routes all MCP tool calls for NHL games, schedules, team standings, player stats, goalie performance, and betting odds. Use when any other skill needs data. Do not invoke directly -- other skills call this. Not for data analysis, modeling, or bet recommendations -- see hockey-analytics, model-building, or edge-detection instead."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "babysit-pr",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/babysit-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "babysit-pr",
+  "downloaded_at": "2026-11-23T07:36:25.445672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/babysit-pr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/babysit-pr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Monitor and fix failing GitHub Actions CI checks on PRs for ZenUml/conf-app. Use when the user says \"babysit PR\", \"check PR status\", \"fix CI\", \"PR is failing\", \"watch this PR\", \"why is CI red\", or when used with /loop to continuously monitor a PR. Also use when staging deploy failures, E2E test flakiness, lint issues, or unit test failures block merging. Triggers on any PR monitoring, CI failure diagnosis, or automated fix-and-retry workflow.",
+  "content_fingerprint": "30956f069a9a0aac09fc800b08536cce21c3e564c63f586c4499976eb173d1ca"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "three-agent-harness",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/three-agent-harness/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "three-agent-harness",
+  "downloaded_at": "2026-11-23T07:36:36.506267Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e, playwright",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/three-agent-harness/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/three-agent-harness/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Autonomous feature development using a Planner-Generator-Evaluator architecture inspired by GANs. Use when the user says \"harness\", \"three-agent\", \"build feature autonomously\", \"plan-build-test loop\", or wants a complete feature implemented end-to-end with AI-driven QA. Takes a brief prompt and delivers a tested, working feature through iterative sprints.",
+  "content_fingerprint": "bc29093097961502f72810daa4096fc8ab068160ae0f50e230d59016033cb6ea"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "simready-foundation-upgrade-legacy-tier",
+  "repo": "NVIDIA/simready-foundation",
+  "path": "skills/simready-foundation-upgrade-legacy-tier/SKILL.md",
+  "github_branch": "main",
+  "category": "generation",
+  "source": "github.com/NVIDIA/simready-foundation",
+  "dir_name": "simready-foundation-upgrade-legacy-tier",
+  "downloaded_at": "2026-11-23T06:32:21.502763Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "generation",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for generation: generation, generator, scaffold",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "generation",
+      "generator",
+      "scaffold"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/simready-foundation/blob/main/skills/simready-foundation-upgrade-legacy-tier/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/simready-foundation/blob/main/skills/simready-foundation-upgrade-legacy-tier/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Define a new SimReady Foundation tier, expand an existing tier, or upgrade a legacy Foundations 1, pre-underscore, AIF, DSX, or third-party tier to the Foundations 2 CAP/FET/profile contract. Use for tier scaffolding and registration, ownership and ID allocation, static-feature-to-capability realignment, dotted runtime FET migration, profile projection, adapter and runtime-test remapping, validator integration, and compatibility-preserving legacy catalog upgrades."
+}

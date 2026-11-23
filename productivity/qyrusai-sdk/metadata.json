@@ -1,0 +1,38 @@
+{
+  "name": "qyrusai-sdk",
+  "repo": "QQyrus/qyrion",
+  "path": "skills/qyrusai-sdk/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/QQyrus/qyrion",
+  "dir_name": "qyrusai-sdk",
+  "downloaded_at": "2026-11-23T06:47:35.948371Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "QQyrus",
+  "source_url": "https://github.com/QQyrus/qyrion/blob/master/skills/qyrusai-sdk/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/QQyrus/qyrion/blob/master/skills/qyrusai-sdk/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the public qyrusai Python SDK with the shared Qyrus X-API-Key for Nova scenario/step generation, synthetic data, API specifications/assertions, image-based test or accessibility analysis, and evaluator workflows. Use for qyrusai or Nova generation requests; this is not the internal QAI runtime SDK."
+}

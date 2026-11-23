@@ -1,0 +1,39 @@
+{
+  "name": "triage-ci-failure",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/triage-ci-failure/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "triage-ci-failure",
+  "downloaded_at": "2026-11-23T06:31:18.200260Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, pytest, integration",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "jest",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/triage-ci-failure/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/triage-ci-failure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose a failing CI pipeline run: read the job logs, classify the failure type, map it to a local reproduction command, and recommend the smallest safe fix. Trigger on \"CI is failing\", \"why did the build fail\", \"the check failed on my PR\", \"build is red\", \"pipeline broke\", \"it passes locally but fails in CI\". Falls back to asking for pasted logs when the gh CLI is unavailable. For a static, pre-emptive audit of CI config files rather than a live failure, use check-ci-health; when a single named test is red and CI is otherwise fine, use fix-failing-test."
+}

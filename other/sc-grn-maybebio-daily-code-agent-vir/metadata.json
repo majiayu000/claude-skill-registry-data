@@ -1,0 +1,38 @@
+{
+  "name": "sc-grn",
+  "repo": "MaybeBio/Daily-Code-Agent-VirtualCell",
+  "path": "code/mdbabumiamssm__LLMs-Universal-Life-Science-and-Clinical-Skills-/code/Skills/singlecell/scrna/sc-grn/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaybeBio/Daily-Code-Agent-VirtualCell",
+  "dir_name": "sc-grn-maybebio-daily-code-agent-vir",
+  "downloaded_at": "2026-11-23T06:24:38.940684Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "MaybeBio",
+  "source_url": "https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/mdbabumiamssm__LLMs-Universal-Life-Science-and-Clinical-Skills-/code/Skills/singlecell/scrna/sc-grn/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/mdbabumiamssm__LLMs-Universal-Life-Science-and-Clinical-Skills-/code/Skills/singlecell/scrna/sc-grn/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Infer gene regulatory networks from scRNA-seq using the pySCENIC workflow: GRNBoost2 for adjacency inference, cisTarget-style motif pruning, and AUCell regulon scoring."
+}

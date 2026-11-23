@@ -1,0 +1,38 @@
+{
+  "name": "caddy-https-reverse-proxy",
+  "repo": "StaticFlow-AI/static-flow",
+  "path": "skills/caddy-https-reverse-proxy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/StaticFlow-AI/static-flow",
+  "dir_name": "caddy-https-reverse-proxy-staticflow-ai-static-flow",
+  "downloaded_at": "2026-11-23T07:09:00.167425Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "StaticFlow-AI",
+  "source_url": "https://github.com/StaticFlow-AI/static-flow/blob/main/skills/caddy-https-reverse-proxy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/StaticFlow-AI/static-flow/blob/main/skills/caddy-https-reverse-proxy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploy Caddy (no Docker) on a remote Linux host to expose a local HTTP backend as trusted HTTPS, prioritizing first-party domain + Let's Encrypt (HTTP-01), with DuckDNS DNS-01 fallback, low-bandwidth binary transfer fallback, verification, and rollback.",
+  "content_fingerprint": "48338c16b7bec262a6a68e0ef59c0101caf8915f5d5e37c76658efdac11914f5"
+}

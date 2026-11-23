@@ -1,0 +1,37 @@
+{
+  "name": "recheck-lint",
+  "repo": "Redocly/redocly-cli",
+  "path": "packages/recheck/skills/recheck-lint/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Redocly/redocly-cli",
+  "dir_name": "recheck-lint-redocly-redocly-cli",
+  "downloaded_at": "2026-11-23T06:50:25.482930Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Redocly",
+  "source_url": "https://github.com/Redocly/redocly-cli/blob/main/packages/recheck/skills/recheck-lint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Redocly/redocly-cli/blob/main/packages/recheck/skills/recheck-lint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you write or edit Markdown in a project whose redocly.yaml has a recheck block or a recheck/* preset in extends \u2014 run redocly recheck on the touched files before you commit them or hand them over, and fix what it finds."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "kiro-local-account-importer",
+  "repo": "StaticFlow-AI/static-flow",
+  "path": "skills/kiro-local-account-importer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/StaticFlow-AI/static-flow",
+  "dir_name": "kiro-local-account-importer",
+  "downloaded_at": "2026-11-23T07:09:01.149577Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "StaticFlow-AI",
+  "source_url": "https://github.com/StaticFlow-AI/static-flow/blob/main/skills/kiro-local-account-importer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/StaticFlow-AI/static-flow/blob/main/skills/kiro-local-account-importer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when importing local Kiro CLI accounts into StaticFlow/llm-access from local SQLite files, including discovering auth SQLite files under specified directories or the default Kiro path, reading auth_kv locally, calling the locally mapped llm-access admin API, and applying Kiro account concurrency plus proxy assignment policy.",
+  "content_fingerprint": "de9adf8c1ccee77b51d8b6ccfe4b58a7477b77c43a2a6ce0a28a99a3cae3b604"
+}

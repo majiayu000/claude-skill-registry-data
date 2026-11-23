@@ -1,0 +1,37 @@
+{
+  "name": "guard-hooks",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/guard-hooks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "guard-hooks",
+  "downloaded_at": "2026-11-23T06:31:13.319276Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/guard-hooks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/guard-hooks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Install, check or remove the playbook guard hooks: deterministic guards that stop a coding agent from skipping git hooks, committing secrets, adding attribution lines or non-Conventional commit subjects, loosening lint config, or committing straight to the default branch, plus a typecheck when the agent stops. Use on request only: \"install the guard hooks\", \"set up the guards\", \"why was my commit blocked by a playbook guard\", \"turn off a guard\", \"remove the guard hooks\". Works in Claude Code and Codex."
+}

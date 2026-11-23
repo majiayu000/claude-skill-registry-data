@@ -1,0 +1,40 @@
+{
+  "name": "redesign-in-claude",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/redesign-in-claude/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "redesign-in-claude",
+  "downloaded_at": "2026-11-23T06:31:18.390567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend, component, figma",
+    "score": 5,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "frontend",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/redesign-in-claude/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/redesign-in-claude/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end page redesign straight into Claude Design. Runs the draft-ui-redesign skill to audit a page and produce its self-contained generation prompt, then uses that prompt to build the redesign as a Claude Design artifact (the Artifact tool's Design type) \u2014 no copy-pasting between tools. Use when the user says \"redesign this page in Claude Design\", \"take this screen through Claude Design\", \"draft and design the redesign\", or runs /redesign-in-claude with a route or file. Claude-only: it targets Claude Design exclusively, never Stitch, v0, Lovable, or Figma Make."
+}

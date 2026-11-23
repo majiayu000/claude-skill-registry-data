@@ -1,0 +1,38 @@
+{
+  "name": "storm",
+  "repo": "Systemorph/MeshWeaver",
+  "path": ".claude/skills/storm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Systemorph/MeshWeaver",
+  "dir_name": "storm",
+  "downloaded_at": "2026-11-23T07:11:11.898461Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Systemorph",
+  "source_url": "https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/storm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/storm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnose and CURE storms that wedge the portal — resubscribe/retry storms, NotFound/DeliveryFailure storms, per-instance-hub accumulation, create-in-render loops. A storm makes the process unresponsive → liveness /healthz times out → the pod is pulled from the Service → ingress returns 502 → SIGKILL + restart. Use when a portal pod restarts/502s, memory climbs unbounded, the log volume explodes, or you are reviewing reactive code that could re-fire on every emission. Storms come from exactly two roots: (1) sync-over-async blocking, (2) uncaught / not-forwarded exceptions or delivery failures. Grounded in ErrorPropagationAndWedges, AccessContextPropagation.md; pairs with the /async skill.",
+  "content_fingerprint": "a518d7c21f3f322501f85e077931cc99c285109c0cb4a950b9e9b58d864631d0"
+}

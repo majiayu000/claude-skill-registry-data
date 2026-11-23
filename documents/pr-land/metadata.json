@@ -1,0 +1,37 @@
+{
+  "name": "pr-land",
+  "repo": "aethersdr/AetherSDR",
+  "path": ".claude/skills/pr-land/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/aethersdr/AetherSDR",
+  "dir_name": "pr-land",
+  "downloaded_at": "2026-11-23T07:44:48.495800Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aethersdr",
+  "source_url": "https://github.com/aethersdr/AetherSDR/blob/main/.claude/skills/pr-land/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aethersdr/AetherSDR/blob/main/.claude/skills/pr-land/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Post-review remediation pass for AetherSDR \u2014 takes a PR whose proposed change the maintainer has already accepted, fixes every outstanding finding with proof, answers and resolves every review thread, dismisses blocking reviews with evidence, posts the approving review and arms auto-merge. Every judgment call goes to the maintainer through AskUserQuestion. Use after /pr-review, e.g. \"/pr-land 5601\"."
+}

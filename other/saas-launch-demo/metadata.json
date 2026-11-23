@@ -1,0 +1,37 @@
+{
+  "name": "saas-launch-demo",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/saas-launch-demo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "saas-launch-demo",
+  "downloaded_at": "2026-11-23T07:26:04.711230Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/saas-launch-demo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/saas-launch-demo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "SaaS launch and product demo editor for Claude: turns a screen recording plus optional founder voice/face into a 60-180 s launch or demo video (outcome, problem, walkthrough, result, CTA) with readable UI, targeted zoom-ins, callouts, cursor pointers, PII blurred, and a 15 s social cut and GIF loop. Use when the user says 'edit my product demo', 'make a launch video for my app', 'Product Hunt video', 'feature announcement video', 'turn this screen recording into a demo', 'SaaS explainer', or hands over a screen capture of software. Runs on video-studio-core (transcribe, cut, motion graphics, deliver, QC)."
+}

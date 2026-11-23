@@ -1,0 +1,37 @@
+{
+  "name": "refactor-safely",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/refactor-safely/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "refactor-safely-mshindilabs-playbook",
+  "downloaded_at": "2026-11-23T06:31:16.360906Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/refactor-safely/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/refactor-safely/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Refactor code for clarity, maintainability, or reduced duplication without changing behavior. Use when someone says \"refactor this\", \"clean up this code\", \"this function is too long\", \"reduce the duplication here\", or \"make this more readable\", as long as behavior should stay the same. Works in small, reviewable increments and verifies behavior is preserved at each step rather than rewriting broadly. Not for adding features, fixing bugs, or changing what the code does -- only for restructuring that behaves identically before and after."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "agent-dev",
+  "repo": "ZhangShenao/harness9",
+  "path": ".dsh/skills/agent-dev/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/ZhangShenao/harness9",
+  "dir_name": "agent-dev",
+  "downloaded_at": "2026-11-23T07:36:51.193065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZhangShenao",
+  "source_url": "https://github.com/ZhangShenao/harness9/blob/master/.dsh/skills/agent-dev/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZhangShenao/harness9/blob/master/.dsh/skills/agent-dev/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u5b50\u4ee3\u7406\u89d2\u8272\uff08\u7528 subagent \u59d4\u6d3e\uff09\uff1a\u5728\u6307\u5b9a git worktree \u4e2d\u6309 Feature Spec \u5b9e\u73b0 Go \u529f\u80fd\u3001\u8865\u6d4b\u8bd5\u5e76\u63d0\u4ea4\u3002\u59d4\u6d3e\u65f6\u8ba9\u5b50\u4ee3\u7406\u52a0\u8f7d\u672c\u6280\u80fd\u3002"
+}

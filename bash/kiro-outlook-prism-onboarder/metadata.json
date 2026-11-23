@@ -1,0 +1,39 @@
+{
+  "name": "kiro-outlook-prism-onboarder",
+  "repo": "StaticFlow-AI/static-flow",
+  "path": "skills/kiro-outlook-prism-onboarder/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/StaticFlow-AI/static-flow",
+  "dir_name": "kiro-outlook-prism-onboarder",
+  "downloaded_at": "2026-11-23T07:09:01.535641Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "StaticFlow-AI",
+  "source_url": "https://github.com/StaticFlow-AI/static-flow/blob/main/skills/kiro-outlook-prism-onboarder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/StaticFlow-AI/static-flow/blob/main/skills/kiro-outlook-prism-onboarder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configure, inspect, and resume the supplied macOS Outlook/AWS Builder ID security and Kiro CLI-to-Prism batch workflow. Use when the user selects this bundled full workflow or its standalone tools; route ordinary StaticFlow llm-access or IDE onboarding to aws-builder-id-kiro-account-workflow.",
+  "content_fingerprint": "331041c2b376c868941a2765deacbe112cb9e5ed051d2af21fc227a94e54348b"
+}

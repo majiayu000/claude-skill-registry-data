@@ -1,0 +1,40 @@
+{
+  "name": "release",
+  "repo": "Systemorph/MeshWeaver",
+  "path": ".claude/skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Systemorph/MeshWeaver",
+  "dir_name": "release-systemorph-meshweaver",
+  "downloaded_at": "2026-11-23T07:11:12.537747Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, deploy",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Systemorph",
+  "source_url": "https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/release/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/release/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cut a MeshWeaver release. Two channels, both already wired in .github/workflows. CONTINUOUS = merge to main → multi-arch Docker to ACR, baked and sealed → every install self-updates under its own policy. OFFICIAL = push an annotated v*.*.* tag on a promoted, sealed commit → release.yml PROMOTES that set (retags in ACR + GHCR, release marker, GitHub Release, next-line bump PR). Nothing is rebuilt and nothing ships to NuGet. Use when shipping a release, tagging a version, or wiring/altering the release pipeline. Read BEFORE tagging — a tag is a public, hard-to-reverse publish.",
+  "content_fingerprint": "a9f5fe523fc3c3d5c43ec206b9021911620e2285e7b31069d4a54f23fbd52bc8"
+}

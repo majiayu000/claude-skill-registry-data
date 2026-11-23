@@ -1,0 +1,38 @@
+{
+  "name": "new-branch",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/new-branch/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "new-branch-mshindilabs-playbook",
+  "downloaded_at": "2026-11-23T06:31:12.333567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/new-branch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/new-branch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a well-formed git branch named prefix.type.TICKET.short-description, where the prefix is the author's initials or whatever the project documents \u2014 for example abc.feat.FSS-373.multi-currency-invoices \u2014 dropping the ticket segment when no ticket or issue number exists (abc.fix.null-session-token). Validates the name against git ref rules and Conventional Commits types, branches from an up-to-date base, and protects uncommitted work. Trigger on \"create a branch\", \"new branch for this\", \"branch off main\", \"start work on FSS-373\", \"make me a branch\", \"cut a branch for this ticket\", or when starting work that should not land on the current branch. For deleting or pruning branches use clean-branch; for opening the PR afterwards use create-pr."
+}

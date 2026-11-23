@@ -1,0 +1,38 @@
+{
+  "name": "orc-repl-researcher",
+  "repo": "ObneyAI/orc",
+  "path": "orc-skills/orc-repl-researcher/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ObneyAI/orc",
+  "dir_name": "orc-repl-researcher",
+  "downloaded_at": "2026-11-23T06:38:42.158319Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ObneyAI",
+  "source_url": "https://github.com/ObneyAI/orc/blob/main/orc-skills/orc-repl-researcher/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ObneyAI/orc/blob/main/orc-skills/orc-repl-researcher/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build, run, inspect, and recover an adaptive ORC repl-researcher stage inside a behavior or specialist. Use for runtime exploration, generated behavior trees, described tools, bounded fan-out, and evidence-driven focused repair."
+}

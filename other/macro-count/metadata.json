@@ -1,0 +1,38 @@
+{
+  "name": "macro-count",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/macro-count/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "macro-count",
+  "downloaded_at": "2026-11-23T07:36:26.394267Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/macro-count/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/macro-count/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Investigate per-space macro inventory for one Confluence site, comparing reported Metrics KV inventory with distinct viewed macros and optional D1 coverage. Use for macro counts, space limits and reconciling inventory/usage. Distinguishes actual stock from activity and historical sync rows.",
+  "content_fingerprint": "17625608aef9f835d6291973a8a1c5ed3125cdda6803f624103110c2bf7e34ef"
+}

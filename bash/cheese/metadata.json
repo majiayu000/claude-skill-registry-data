@@ -1,0 +1,38 @@
+{
+  "name": "CHEESE Agent Marketplace",
+  "repo": "Trompetilla/Skills",
+  "path": "skills/locjonz/cheese/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Trompetilla/Skills",
+  "dir_name": "cheese",
+  "downloaded_at": "2026-11-23T07:19:43.038790Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Trompetilla",
+  "source_url": "https://github.com/Trompetilla/Skills/blob/main/skills/locjonz/cheese/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Trompetilla/Skills/blob/main/skills/locjonz/cheese/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, browse, accept, and complete on-chain work requests. Agents can act as requesters (posting jobs) or providers (completing work). Uses ETH/stablecoin escrow on Base network."
+}

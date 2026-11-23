@@ -1,0 +1,38 @@
+{
+  "name": "seo-cluster",
+  "repo": "LeonardoWlopes/leonardolopes.tech",
+  "path": ".claude/skills/seo-cluster/SKILL.md",
+  "github_branch": "master",
+  "category": "marketing",
+  "source": "github.com/LeonardoWlopes/leonardolopes.tech",
+  "dir_name": "seo-cluster-leonardowlopes-leonardolopes-tech",
+  "downloaded_at": "2026-11-23T06:11:40.685739Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: seo, content, brand",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "seo",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeonardoWlopes",
+  "source_url": "https://github.com/LeonardoWlopes/leonardolopes.tech/blob/master/.claude/skills/seo-cluster/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeonardoWlopes/leonardolopes.tech/blob/master/.claude/skills/seo-cluster/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cluster keywords by SERP overlap and design hub-and-spoke content architecture with internal links. Use for planning; `/seo cluster execute` then writes the posts with claude-blog's blog-write skill when it is installed, or content briefs when it is not."
+}

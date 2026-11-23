@@ -1,0 +1,38 @@
+{
+  "name": "interview-doc",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/interview-doc/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "interview-doc",
+  "downloaded_at": "2026-11-23T07:25:59.716432Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/interview-doc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/interview-doc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Documentary / interview editor: transcribes the interviews, builds a paper edit and a radio edit (the story in sound first), then covers every interview cut with B-roll, a second angle or a punch-in, with J/L cuts, room tone, light filler removal and a constructed-quote (Frankenbite) guard; delivers the film, a textless version, captions and a music cue sheet. Use when the user says: documentary edit, interview film, edit my interviews into a story, mini-doc, brand documentary, paper edit, radio edit, cover the jump cuts with B-roll, oral history. Default skin doc-real; any Video Studio skin works."
+}

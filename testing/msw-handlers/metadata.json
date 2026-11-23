@@ -1,0 +1,41 @@
+{
+  "name": "msw-handlers",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/msw-handlers/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "msw-handlers",
+  "downloaded_at": "2026-11-23T06:19:43.336280Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, jest, integration, playwright, cypress",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "integration",
+      "playwright",
+      "cypress"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/msw-handlers/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/msw-handlers/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authors Mock Service Worker (MSW) request handlers for both browser and Node.js test environments using the `http.get` / `http.post` / `HttpResponse.json` API, wires them via `setupWorker` (browser) or `setupServer` (Node), and manages the test lifecycle (`server.listen` / `resetHandlers` / `close`). Use when the project uses JavaScript / TypeScript and needs to mock fetch / XHR at the network layer for both Vitest / Jest unit tests and Cypress / Playwright integration tests.",
+  "content_fingerprint": "d44a53ef1dadf69d35ce9d16d66799aaa9efaa5b454d301c8f15138aae4bd1b3"
+}

@@ -1,0 +1,58 @@
+{
+  "name": "brewpage-publish",
+  "description": "Requires network access to the free BrewPage hosting service (brewpage.app); no account, API key or payment; uses bash, curl, Node.js and Python 3 for the bundled runner. Prepares local drafts with zero network calls, publishes supplied content or a newly composed page (HTML, Markdown, JSON, files, built static sites, forms that save visitor answers) and returns an HTTPS link, and updates a specific existing BrewPage publication in place; keeps owner keys in a local receipt file.",
+  "repo": "kochetkov-ma/brewpage-publish-plugins",
+  "path": "skills/brewpage-publish/SKILL.md",
+  "github_branch": "main",
+  "github_commit_sha": "93ec9f13759cd4266eed4d232940a96dbd766ec4",
+  "assets_verified_at": "2026-11-23T07:48:35.154916Z",
+  "category": "productivity",
+  "tags": [
+    "publishing",
+    "static-sites",
+    "html-hosting",
+    "markdown",
+    "sharing"
+  ],
+  "stars": 1,
+  "source": "Community Skills",
+  "dir_name": "brewpage-publish",
+  "archive_mode": "directory",
+  "bundled_files": [
+    "LICENSE",
+    "README.md",
+    "references/custom-domain.md",
+    "references/ownership.md",
+    "references/page-data.md",
+    "references/publishing.md",
+    "scripts/brewpage-lib.sh",
+    "scripts/brewpage-run.sh",
+    "scripts/history.py",
+    "scripts/publish.mjs"
+  ],
+  "license_source_paths": {
+    "LICENSE": "skills/brewpage-publish/LICENSE"
+  },
+  "bundled_file_blobs": {
+    "LICENSE": "0e4a065c73dc77d19f2a8f091e6b0a947a85cd6b",
+    "README.md": "728bd208b8a44f299d078350d613a3502610aece",
+    "references/custom-domain.md": "5633fa92c4a29cbd6e6f06a0d0f2305c38a76e21",
+    "references/ownership.md": "5fafff8281a3efb85483a7e170c686dc6d965ec7",
+    "references/page-data.md": "5531a99ec5c7b25f271b7dffcacb7a624fc78d72",
+    "references/publishing.md": "292773a610e0c19db1116dae3577b0ffdcfdded5",
+    "scripts/brewpage-lib.sh": "db598cbd362ab6ace8a13693dd576cf015e29fae",
+    "scripts/brewpage-run.sh": "0a9846aa4a55932645240847761d7b30ec7c8a04",
+    "scripts/history.py": "ee6367ca7dd3297405294fd6e2115f9b2bfedae6",
+    "scripts/publish.mjs": "7ed4ad6336fa4cf76732f6dd2366d7ecf3edfe57"
+  },
+  "author": "Maksim Kochetkov (kochetkov-ma)",
+  "source_url": "https://github.com/kochetkov-ma/brewpage-publish-plugins/blob/93ec9f13759cd4266eed4d232940a96dbd766ec4/skills/brewpage-publish/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2025-2026 Maksim Kochetkov (kochetkov-ma)",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "asset_liveness": "live",
+  "assets_liveness_checked_at": "2026-11-23T09:05:28.446439Z",
+  "assets_liveness_sha": "73df4cd802ef8852c2cc1928d23133e68b8e5115"
+}

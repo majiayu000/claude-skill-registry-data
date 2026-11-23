@@ -1,0 +1,39 @@
+{
+  "name": "security-secret-audit",
+  "repo": "Treasoni/study-system",
+  "path": ".claude/skills/security-secret-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Treasoni/study-system",
+  "dir_name": "security-secret-audit",
+  "downloaded_at": "2026-11-23T07:19:03.679839Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Treasoni",
+  "source_url": "https://github.com/Treasoni/study-system/blob/main/.claude/skills/security-secret-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Treasoni/study-system/blob/main/.claude/skills/security-secret-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit a Git repository for exposed API keys, tokens, passwords, private keys, and other credentials without printing their values. Use when asked to check repository security, scan for leaked secrets, review files before committing or pushing, investigate a credential leak, or check Git history after a possible exposure.",
+  "content_fingerprint": "58da866616968d583db1238c916924280f75b1ec0fa4f8d172cd5e5373e786ae"
+}

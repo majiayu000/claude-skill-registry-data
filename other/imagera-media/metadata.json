@@ -1,0 +1,37 @@
+{
+  "name": "Imagera Media Generation",
+  "repo": "agentskillexchange/skills",
+  "path": "skills/imagera-media/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/agentskillexchange/skills",
+  "dir_name": "imagera-media",
+  "downloaded_at": "2026-11-23T07:46:57.755434Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agentskillexchange",
+  "source_url": "https://github.com/agentskillexchange/skills/blob/main/skills/imagera-media/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentskillexchange/skills/blob/main/skills/imagera-media/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates and edits images, video clips, voiceovers and music from a coding agent through the hosted Imagera MCP server (https://mcp.imagera.ai/mcp, Streamable HTTP, OAuth sign-in), quoting the credit cost with estimate_cost and waiting for approval before each paid call, then saving the files into the project."
+}

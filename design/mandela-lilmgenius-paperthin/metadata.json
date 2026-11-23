@@ -1,0 +1,37 @@
+{
+  "name": "mandela",
+  "repo": "LilMGenius/paperthin",
+  "path": "skills/depth/mandela/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/LilMGenius/paperthin",
+  "dir_name": "mandela-lilmgenius-paperthin",
+  "downloaded_at": "2026-11-23T06:13:52.276671Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LilMGenius",
+  "source_url": "https://github.com/LilMGenius/paperthin/blob/main/skills/depth/mandela/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LilMGenius/paperthin/blob/main/skills/depth/mandela/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit any eval, metric, experiment, or benchmark for leakage: does external ground-truth enter independently, or are the model, scorer, and designer just confirming a result no outside truth ever produced? Use before trusting any 'how we'll know it worked', including an A/B, a holdout, a score, a validation, and whenever a result feels too clean or self-confirming. Walks an 8-pattern leakage taxonomy and returns only the patterns that fire, each with an independence fix. Read-only."
+}

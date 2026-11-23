@@ -1,0 +1,38 @@
+{
+  "name": "qfai-run",
+  "repo": "aganesy/QFAI",
+  "path": "packages/qfai/assets/init/.qfai/assistant/skill/qfai-run/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aganesy/QFAI",
+  "dir_name": "qfai-run",
+  "downloaded_at": "2026-11-23T07:45:15.023814Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aganesy",
+  "source_url": "https://github.com/aganesy/QFAI/blob/main/packages/qfai/assets/init/.qfai/assistant/skill/qfai-run/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aganesy/QFAI/blob/main/packages/qfai/assets/init/.qfai/assistant/skill/qfai-run/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks for a change, a fix, an investigation of the codebase, a question about the project or an operation on finished work in plain words and names no stage skill. Plans every such request, the lightest included, with `npx qfai workflow plan` and runs the plan's steps in order to its end."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "ui-performance",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/ui-performance/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "ui-performance",
+  "downloaded_at": "2026-11-23T07:15:27.859331Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: ui, css, frontend, component, animation",
+    "score": 5,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "frontend",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ui-performance/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ui-performance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnoses and fixes frontend performance: Core Web Vitals (LCP, INP, CLS), bundle size and code splitting, image formats and sizing, font loading, janky scrolling and animation, re-renders. Use when a page is slow or janky, the user shares Lighthouse or Web Vitals numbers, a large JS bundle or huge images, or asks to make the UI faster. Not for React/Next.js code-pattern review (use vercel-react-best-practices)."
+}

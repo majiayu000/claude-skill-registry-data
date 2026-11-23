@@ -1,0 +1,39 @@
+{
+  "name": "protein-design-from-paper",
+  "repo": "MaybeBio/Daily-Code-Agent-VirtualCell",
+  "path": "code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/protein-design-from-paper/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/MaybeBio/Daily-Code-Agent-VirtualCell",
+  "dir_name": "protein-design-from-paper",
+  "downloaded_at": "2026-11-23T06:24:36.700745Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaybeBio",
+  "source_url": "https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/protein-design-from-paper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/protein-design-from-paper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a complete, runnable protein-design notebook for the user's own target by generating cells into the current notebook. Use when a user references a research paper or a one-line goal and wants to design or optimize a protein — a binder against a protein, a binder against a small molecule/ligand, a scaffold around a functional motif, a de novo monomer, or an optimization of an existing design — using Genesis Workbench serving endpoints. Triggers on \"use this paper to design/optimize\", \"design a binder against\", \"scaffold this motif\", \"de novo protein\", \"optimize this protein\" in a Databricks workspace with Genesis Workbench deployed.",
+  "content_fingerprint": "0540b766d5cb5f87ee68f669e749387cc566dfd2394b002c2ebc56c2882ca655"
+}

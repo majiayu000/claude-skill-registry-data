@@ -1,0 +1,38 @@
+{
+  "name": "qyrion-cli",
+  "repo": "QQyrus/qyrion",
+  "path": "skills/qyrion-cli/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/QQyrus/qyrion",
+  "dir_name": "qyrion-cli",
+  "downloaded_at": "2026-11-23T06:47:35.224323Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "QQyrus",
+  "source_url": "https://github.com/QQyrus/qyrion/blob/master/skills/qyrion-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/QQyrus/qyrion/blob/master/skills/qyrion-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Starts, monitors, replies to, downloads artifacts from, and cancels Qyrus AI mobile and web sessions through the qyrion CLI. Use for explicit qyrion commands, direct session operations (start/stream/send/question/result/cancel), email-report/email-status for existing History reports without rerunning, artifact/screenshot download, app upload, device or test listing, and troubleshooting qyrion CLI errors or exit codes. Do not use for deciding what to test (use qyrus-device-testing) or for git-diff test impact analysis (use qyrus-change-impact)."
+}

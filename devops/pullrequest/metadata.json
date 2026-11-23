@@ -1,0 +1,38 @@
+{
+  "name": "pullrequest",
+  "repo": "Systemorph/MeshWeaver",
+  "path": ".claude/skills/pullrequest/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Systemorph/MeshWeaver",
+  "dir_name": "pullrequest",
+  "downloaded_at": "2026-11-23T07:11:14.442388Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, deploy",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Systemorph",
+  "source_url": "https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/pullrequest/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/pullrequest/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Open a PR and merge it — and the NON-NEGOTIABLE rule that the PR's CI must be GREEN before you merge, because the pull-based self-update (memex-local autoroll + the AKS portals) deploys main's image. A red or still-pending main blocks the self-update from rolling forward and can wedge the deployment. Use whenever you create/review/merge a PR, when a merge \"went through\" but CI later failed, or when main is red and the auto-update is stuck. Covers the exact gh/API commands, the automatic ruleset-driven Copilot review (never hand-request or withdraw it; a 402 quota error leaves the PR unreviewed), the merge-only-when-green gate, and the half-committed-WIP trap that turns main red on a clean CI checkout.",
+  "content_fingerprint": "92897c0c423711c187aeba82e3a9c598cbd2e6ca13aae4245b6b7c1a94cfe908"
+}

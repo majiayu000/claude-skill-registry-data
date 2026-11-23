@@ -1,0 +1,37 @@
+{
+  "name": "batch-note-updater",
+  "repo": "Treasoni/study-system",
+  "path": ".agents/skills/batch-note-updater/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Treasoni/study-system",
+  "dir_name": "batch-note-updater-treasoni-study-system",
+  "downloaded_at": "2026-11-23T07:19:01.502341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Treasoni",
+  "source_url": "https://github.com/Treasoni/study-system/blob/main/.agents/skills/batch-note-updater/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Treasoni/study-system/blob/main/.agents/skills/batch-note-updater/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "多篇既有学习笔记的批量更新编排。用于用户想一次更新一个目录、文件列表、Obsidian vault 子目录或多篇旧笔记，例如“批量更新这些笔记”“多篇笔记过时了”“把一组笔记更新到新版本”“refresh multiple notes”。先生成更新清单和批量计划，经用户确认后逐篇调用 note-updater 局部 patch，避免全文重写和批量误覆盖。",
+  "content_fingerprint": "40e43022c49cba63742fbb715843d2d6aeb358790eb07521d2b0848b7476b5bd"
+}

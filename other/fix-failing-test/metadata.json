@@ -1,0 +1,38 @@
+{
+  "name": "fix-failing-test",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/fix-failing-test/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "fix-failing-test",
+  "downloaded_at": "2026-11-23T06:31:21.701902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/fix-failing-test/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/fix-failing-test/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Get a failing test back to green by identifying whether the test, the production code, or both are wrong. Avoids weakening assertions or changing snapshots without understanding why they changed. Trigger on \"why is this test failing\", \"this test keeps failing\", \"this test broke after my change\", \"this test is red\", \"make this test pass\", or \"test was passing yesterday and now isn't\". Scoped to a single failing test or suite \u2014 when the whole CI pipeline is red, use triage-ci-failure; when the failure is not a test, or the bug's cause is unknown, use debug-issue."
+}

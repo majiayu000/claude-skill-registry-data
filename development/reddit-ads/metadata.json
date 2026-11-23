@@ -1,0 +1,37 @@
+{
+  "name": "reddit-ads",
+  "repo": "adkit/ads-skills",
+  "path": "skills/reddit-ads/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/adkit/ads-skills",
+  "dir_name": "reddit-ads",
+  "downloaded_at": "2026-11-23T07:43:45.666199Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adkit",
+  "source_url": "https://github.com/adkit/ads-skills/blob/main/skills/reddit-ads/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adkit/ads-skills/blob/main/skills/reddit-ads/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, edit, and report on Reddit ads from an AI agent through the AdKit MCP connector: campaigns, ad groups, ads, carousels, account defaults, and results. Every change is saved as a draft that the user approves before it goes live. Use when the user wants to run, change, or check Reddit ads. Not for Reddit ad strategy or creative advice."
+}

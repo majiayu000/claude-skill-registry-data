@@ -1,0 +1,37 @@
+{
+  "name": "outsystems-spec-driven-build",
+  "repo": "OutSystems/outsystems-mcp",
+  "path": "cursor/skills/outsystems-spec-driven-build/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/OutSystems/outsystems-mcp",
+  "dir_name": "outsystems-spec-driven-build-outsystems-outsystems-mcp",
+  "downloaded_at": "2026-11-23T06:41:32.591433Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "OutSystems",
+  "source_url": "https://github.com/OutSystems/outsystems-mcp/blob/main/cursor/skills/outsystems-spec-driven-build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/OutSystems/outsystems-mcp/blob/main/cursor/skills/outsystems-spec-driven-build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[Beta] Drive ODC Mentor to bootstrap an OutSystems app from a TEXT-ONLY structured spec. For Figma/image/HTML inputs, use `outsystems-design-to-app` instead. EXPERIMENTAL \u2014 Mentor is built for in-flow edits, so treat results as draft scaffolds for review, NOT ship-ready apps. A spec check first confirms every screen names a role the spec defines and that entities are listed, and warns when relationships or integrations are not stated; then it drives Mentor in two parts, data model then screens, each published, with guardrails against its known mistakes. Three entry modes \u2014 your own markdown spec file, an interview, or clone from an example template. Use when the user asks to \"build a new app from spec\", \"generate an app from requirements\", \"have Mentor build [app] from this spec\", \"build an app from this written description\", \"write a spec for a new app and build it\", or similar spec- or requirements-driven greenfield asks with NO design artifact. Not for OutSystems 11 (O11) or Service Studio."
+}

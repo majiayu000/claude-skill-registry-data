@@ -1,0 +1,39 @@
+{
+  "name": "spatial-preprocess",
+  "repo": "MaybeBio/Daily-Code-Agent-VirtualCell",
+  "path": "code/mdbabumiamssm__LLMs-Universal-Life-Science-and-Clinical-Skills-/code/Skills/spatial/spatial-preprocess/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaybeBio/Daily-Code-Agent-VirtualCell",
+  "dir_name": "spatial-preprocess-maybebio-daily-code-agent-vir",
+  "downloaded_at": "2026-11-23T06:24:45.847059Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "MaybeBio",
+  "source_url": "https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/mdbabumiamssm__LLMs-Universal-Life-Science-and-Clinical-Skills-/code/Skills/spatial/spatial-preprocess/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/mdbabumiamssm__LLMs-Universal-Life-Science-and-Clinical-Skills-/code/Skills/spatial/spatial-preprocess/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load matrix-level spatial transcriptomics data (including raw_counts.h5ad from spatial-raw-processing), run the current OmicsClaw scanpy-standard preprocessing workflow, and export a downstream-ready AnnData with explicit effective QC parameters plus a standardized preprocessing visualization contract."
+}

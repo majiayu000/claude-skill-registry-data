@@ -1,0 +1,38 @@
+{
+  "name": "orc-judges",
+  "repo": "ObneyAI/orc",
+  "path": "orc-skills/orc-judges/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/ObneyAI/orc",
+  "dir_name": "orc-judges",
+  "downloaded_at": "2026-11-23T06:38:41.003801Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ObneyAI",
+  "source_url": "https://github.com/ObneyAI/orc/blob/main/orc-skills/orc-judges/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ObneyAI/orc/blob/main/orc-skills/orc-judges/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design, build, attach, verify, and report banded ORC quality assessments using built-in judges, custom judge behavior trees, or score-only decision models such as Jev. Use whenever an ORC workflow needs quality monitoring, judge feedback, rubric calibration, node or specialist performance reports, or assessment of a whole tree or selected group of executions."
+}

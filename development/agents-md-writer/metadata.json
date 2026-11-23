@@ -1,0 +1,39 @@
+{
+  "name": "agents-md-writer",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/agents-md-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "agents-md-writer",
+  "downloaded_at": "2026-11-23T07:15:29.636752Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/agents-md-writer/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/agents-md-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes AGENTS.md, CLAUDE.md-style context and .cursorrules or .cursor/rules so coding agents (Claude Code, Cursor, Codex, Copilot) understand a repo's stack, commands, structure, conventions and boundaries. Use when the user asks to write or improve AGENTS.md, CLAUDE.md or .cursorrules, make a repo AI-native or agent-friendly, or onboard coding agents to a codebase. Not for general repo cleanup (use repo-structurer)."
+}

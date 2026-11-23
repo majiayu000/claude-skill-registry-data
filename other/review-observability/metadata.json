@@ -1,0 +1,37 @@
+{
+  "name": "review-observability",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/review-observability/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "review-observability",
+  "downloaded_at": "2026-11-23T06:31:19.477576Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/review-observability/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/review-observability/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a diff for observability: one structured log line per event, a request id carried across calls, error reporting that skips client errors and sensitive data, monitored scheduled jobs, and health endpoints. Use before merging a change to handlers, jobs or service calls. Trigger on \"review the logging in this PR\", \"will we be able to trace this request\", or \"check our error reporting and health checks\". Not for a live incident, a secrets scan or a general review; use the `triage-error`, `audit-secrets` or `review-changes` skill."
+}

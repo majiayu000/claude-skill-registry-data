@@ -1,0 +1,36 @@
+{
+  "name": "news-explainer",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/news-explainer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "news-explainer",
+  "downloaded_at": "2026-11-23T07:26:02.338603Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category analysis scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/news-explainer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/news-explainer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "News and explainer editor for Claude: turns a presenter clip, voice-over or interview into a sourced, inverted-pyramid explainer (key fact first, why it matters, context, data, what next) with attribution on screen, charts and maps, neutral music, accurate captions, a 16:9 master and vertical cutdowns. Use when the user says 'make a news explainer', 'explain this story', 'news update video', 'breakdown of what happened', 'market news short', 'fact-based explainer with sources', 'turn this report into a video'. Runs on video-studio-core (transcribe, autocut, charts, colour, deliver, QC). Not for opinion rants dressed as news."
+}

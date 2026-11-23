@@ -1,0 +1,37 @@
+{
+  "name": "maintain-formal-verification-skill",
+  "repo": "MVPavan/coding-ritual",
+  "path": ".claude/skills/maintain-formal-verification-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MVPavan/coding-ritual",
+  "dir_name": "maintain-formal-verification-skill",
+  "downloaded_at": "2026-11-23T06:19:27.985079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MVPavan",
+  "source_url": "https://github.com/MVPavan/coding-ritual/blob/main/.claude/skills/maintain-formal-verification-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MVPavan/coding-ritual/blob/main/.claude/skills/maintain-formal-verification-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for /maintain-formal-verification-skill when a project's formal verify skill may no longer describe its code after changes made without it; with none, /create-formal-verification-skill makes one, and checking your own change uses the verify skill itself. Sorts every change to covered code since the sync commit, updates the model from the code, reruns, and gives each check one outcome: in sync, updated, bug or blocked.",
+  "content_fingerprint": "2bceafe731109ce3a461b0c031f3bc7b09dd4ab4f6441e6656f2262f19201a2d"
+}

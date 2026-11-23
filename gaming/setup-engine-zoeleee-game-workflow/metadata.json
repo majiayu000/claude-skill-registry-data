@@ -1,0 +1,39 @@
+{
+  "name": "setup-engine",
+  "repo": "ZoeLeee/game-workflow",
+  "path": ".agents/skills/setup-engine/SKILL.md",
+  "github_branch": "master",
+  "category": "gaming",
+  "source": "github.com/ZoeLeee/game-workflow",
+  "dir_name": "setup-engine-zoeleee-game-workflow",
+  "downloaded_at": "2026-11-23T07:37:57.019153Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "gaming",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for gaming: game, unity, godot",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "game",
+      "unity",
+      "godot"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZoeLeee",
+  "source_url": "https://github.com/ZoeLeee/game-workflow/blob/master/.agents/skills/setup-engine/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZoeLeee/game-workflow/blob/master/.agents/skills/setup-engine/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configure engine and version. Pins it in CLAUDE.md; WebSearch fills reference docs when the version is beyond LLM training data.",
+  "content_fingerprint": "9684b882129e64b486f229d2a111b5a75f28ed437cb3de56df8772e5490b69f5"
+}

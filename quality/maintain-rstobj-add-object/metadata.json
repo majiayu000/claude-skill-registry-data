@@ -1,0 +1,38 @@
+{
+  "name": "maintain-rstobj-add-object",
+  "repo": "MacHu-GWU/rstobj-project",
+  "path": ".claude/skills/maintain-rstobj-add-object/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/MacHu-GWU/rstobj-project",
+  "dir_name": "maintain-rstobj-add-object",
+  "downloaded_at": "2026-11-23T06:20:05.137480Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/rstobj-project/blob/main/.claude/skills/maintain-rstobj-add-object/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/rstobj-project/blob/main/.claude/skills/maintain-rstobj-add-object/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add a new markup or directive class to rstobj: the dataclass, its jinja2 template, the api.py export, the rendering cases and snapshots, and its place in the docs Rendering Gallery. Use when the user asks rstobj to support a new reStructuredText directive, role, or markup, or a new language code block."
+}

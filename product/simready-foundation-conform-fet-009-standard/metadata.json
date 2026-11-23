@@ -1,0 +1,37 @@
+{
+  "name": "simready-foundation-conform-fet-009-standard",
+  "repo": "NVIDIA/simready-foundation",
+  "path": "skills/simready-foundation-conform-fet-009-standard/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/NVIDIA/simready-foundation",
+  "dir_name": "simready-foundation-conform-fet-009-standard",
+  "downloaded_at": "2026-11-23T06:32:36.724487Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: feature, metrics",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/simready-foundation/blob/main/skills/simready-foundation-conform-fet-009-standard/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/simready-foundation/blob/main/skills/simready-foundation-conform-fet-009-standard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for repairing FET009_MaterialCoverage failures, where preview_surface_renders, openpbr_renders or mdl_renders measures rendered material coverage below min_material_coverage. Binds the uncovered geometry to the asset's own materials (VM.MAT.001) on staged output, then reruns the static gate and the coverage tests in Kit."
+}

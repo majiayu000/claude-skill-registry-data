@@ -1,0 +1,38 @@
+{
+  "name": "improve-getting-started",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/improve-getting-started/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "improve-getting-started",
+  "downloaded_at": "2026-11-23T06:31:20.645753Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: docker, infra, infrastructure",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/improve-getting-started/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/improve-getting-started/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit and improve the developer onboarding experience -- finds gaps between what the README says and what actually works (runtime versions, service startup, migrations), then updates the docs so a new developer can go from clone to running tests with confidence. Use when someone says \"does the README still work\", \"clone to running tests\", \"onboarding is broken\", \"our setup docs are stale\", or \"can a new hire get this running\". For checking whether env vars themselves are fully documented or contain leaked secrets, defer to align-env-checklist instead of auditing that here."
+}

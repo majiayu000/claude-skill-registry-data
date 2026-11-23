@@ -1,0 +1,37 @@
+{
+  "name": "microsoft-ads",
+  "repo": "adkit/ads-skills",
+  "path": "skills/microsoft-ads/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/adkit/ads-skills",
+  "dir_name": "microsoft-ads",
+  "downloaded_at": "2026-11-23T07:43:45.982225Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adkit",
+  "source_url": "https://github.com/adkit/ads-skills/blob/main/skills/microsoft-ads/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adkit/ads-skills/blob/main/skills/microsoft-ads/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read and change Microsoft Advertising (Bing Ads) campaigns from an AI agent through the AdKit MCP connector, using the official Microsoft Advertising API v13. Every change is saved as a draft that the user approves before it goes live. Use when the user wants to run, change, or check Microsoft or Bing ads. Not for Microsoft Ads strategy or ad copy advice."
+}

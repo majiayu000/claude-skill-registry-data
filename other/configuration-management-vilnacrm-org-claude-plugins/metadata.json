@@ -1,0 +1,39 @@
+{
+  "name": "configuration-management",
+  "repo": "VilnaCRM-Org/claude-plugins",
+  "path": "plugins/rust-backend-sdlc/skills/configuration-management/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/VilnaCRM-Org/claude-plugins",
+  "dir_name": "configuration-management-vilnacrm-org-claude-plugins",
+  "downloaded_at": "2026-11-23T07:25:09.297045Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "docker",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VilnaCRM-Org",
+  "source_url": "https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/configuration-management/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/configuration-management/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a Rust service gains, renames or removes a setting, an environment variable, a `?=` make variable or a compose variable, or changes its HTTP port, so the value enters only through the clap CLI and config modules of the composition root (`architecture.composition_root`), `.env` and `.env.test` hold local placeholders and never a secret, `docs/environment.md` gets exactly one row per variable (docs-check rule 5) and the drift check mapped by `make.docs_check` stays green. Skip, reported as SKIPPED, when `architecture.composition_root` is null. Not for documenting a change that adds no variable (use documentation-sync) and not for writing a new documentation page (use documentation-creation).",
+  "content_fingerprint": "d71640d278658f910a4fafa9d7e0d34d25563a479e67bf48356896eeb532dfcc"
+}

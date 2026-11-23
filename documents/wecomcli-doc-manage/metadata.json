@@ -1,0 +1,38 @@
+{
+  "name": "wecomcli-doc-manage",
+  "repo": "Pinvou/pinvou-agent",
+  "path": "pinvou3-app/src-tauri/resources/common/bundle/wecom-skills/wecomcli-doc-manage/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Pinvou/pinvou-agent",
+  "dir_name": "wecomcli-doc-manage",
+  "downloaded_at": "2026-11-23T06:45:06.469390Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Pinvou",
+  "source_url": "https://github.com/Pinvou/pinvou-agent/blob/main/pinvou3-app/src-tauri/resources/common/bundle/wecom-skills/wecomcli-doc-manage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Pinvou/pinvou-agent/blob/main/pinvou3-app/src-tauri/resources/common/bundle/wecom-skills/wecomcli-doc-manage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u4f55\u65f6\u7528:\u4ec5\u5f53\u7528\u6237\u660e\u786e\u6307\u5411\u4f01\u4e1a\u5fae\u4fe1\u6587\u6863\u7684\u516c\u5171\u7ba1\u7406(\u641c\u7d22/\u6539\u540d/\u6210\u5458\u6743\u9650/\u52a0\u5165\u89c4\u5219)\u65f6\u4f7f\u7528;\u672c\u5730\u6587\u4ef6\u7ba1\u7406\u9ed8\u8ba4\u8d70\u672c\u5730\u5de5\u5177\u3002\u641c\u7d22\u652f\u6301\u5404\u7c7b\u4f01\u5fae\u6587\u6863;\u6539\u540d/\u6210\u5458\u6743\u9650/\u52a0\u5165\u89c4\u5219\u4ec5\u652f\u6301 doc/sheet/smartsheet/smartpage;\u65b0\u5efa doc \u8d70 wecomcli-doc\u3001\u65b0\u5efa\u5728\u7ebf\u8868\u683c\u8d70 wecomcli-sheet\u3001\u667a\u80fd\u8868\u683c CRUD \u8d70 wecomcli-smartsheet\u3001\u751f\u6210\u667a\u80fd\u6587\u6863\u8d70 wecomcli-smartpage;\u300c\u770b\u8fc7\u54ea\u4e9b\u6587\u6863/\u6d4f\u89c8\u5386\u53f2\u300d\u8d70\u672c\u6280\u80fd\u3002"
+}

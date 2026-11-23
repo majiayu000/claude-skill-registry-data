@@ -1,0 +1,37 @@
+{
+  "name": "pinterest-ads",
+  "repo": "adkit/ads-skills",
+  "path": "skills/pinterest-ads/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/adkit/ads-skills",
+  "dir_name": "pinterest-ads-adkit-ads-skills",
+  "downloaded_at": "2026-11-23T07:43:46.136489Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, business=2",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adkit",
+  "source_url": "https://github.com/adkit/ads-skills/blob/main/skills/pinterest-ads/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adkit/ads-skills/blob/main/skills/pinterest-ads/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read and change Pinterest ads from an AI agent through the AdKit MCP connector: campaigns, ad groups, ads, and reporting through the official Pinterest API v5. Every change is saved as a draft that the user approves before it goes live. Use when the user wants to run, change, or check Pinterest ads. Not for Pinterest ad strategy or creative advice."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ssotize-local",
+  "repo": "LilMGenius/paperthin",
+  "path": "skills/breadth/ssotize-local/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LilMGenius/paperthin",
+  "dir_name": "ssotize-local",
+  "downloaded_at": "2026-11-23T06:13:56.568533Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: workflow=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LilMGenius",
+  "source_url": "https://github.com/LilMGenius/paperthin/blob/main/skills/breadth/ssotize-local/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LilMGenius/paperthin/blob/main/skills/breadth/ssotize-local/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Consolidate duplicate files or directories into one canonical home after approval, held as an identity by this machine's filesystem: hardlink, symlink, junction, or bind mount, with bytes, ACLs, owner and mode, named streams, xattrs and kept timestamps preserved. Use when consumers need the same bytes at several paths and textual references cannot serve them, when asked to hardlink, symlink, junction or bind-mount duplicate copies, or to dedupe identical files or trees on disk without breaking their readers."
+}

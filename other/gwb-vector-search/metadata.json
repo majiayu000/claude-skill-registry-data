@@ -1,0 +1,38 @@
+{
+  "name": "gwb-vector-search",
+  "repo": "MaybeBio/Daily-Code-Agent-VirtualCell",
+  "path": "code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-vector-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaybeBio/Daily-Code-Agent-VirtualCell",
+  "dir_name": "gwb-vector-search",
+  "downloaded_at": "2026-11-23T06:24:33.234843Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaybeBio",
+  "source_url": "https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-vector-search/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-vector-search/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Query a Genesis Workbench Vector Search index from a notebook for a life-sciences similarity or annotation workflow — protein sequence similarity search and single-cell nearest-neighbor cell-type annotation. Use when a user wants to find similar proteins or cells, annotate single cells against a reference by KNN, or query/build a GWB vector index. Covers the embed-then-query pattern and all GWB indices (UniRef + human-gene protein indices, SCimilarity cells, TEDDY cells). Triggers on \"find similar proteins/cells\", \"nearest neighbor\", \"annotate cell types\", \"vector search\", \"similarity search\", \"semantic search over sequences\", \"KNN\".",
+  "content_fingerprint": "c23188834453700d38a5e72568378674209e134fef4952630295c21d7781fd84"
+}

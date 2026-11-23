@@ -1,0 +1,37 @@
+{
+  "name": "token-compare",
+  "repo": "StalkC/stalkchain-plugin",
+  "path": "skills/token-compare/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/StalkC/stalkchain-plugin",
+  "dir_name": "token-compare",
+  "downloaded_at": "2026-11-23T07:08:41.600525Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, crypto",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "crypto"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "StalkC",
+  "source_url": "https://github.com/StalkC/stalkchain-plugin/blob/main/skills/token-compare/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/StalkC/stalkchain-plugin/blob/main/skills/token-compare/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compare two to five crypto tokens side by side on safety, buy and sell flow, smart money and liquidity. Use when the user asks to compare coins, which of several tokens looks safer or stronger, \"X vs Y\", or wants a table across a few tickers or addresses."
+}

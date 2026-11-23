@@ -1,0 +1,39 @@
+{
+  "name": "giskard-llm",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/giskard-llm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "giskard-llm",
+  "downloaded_at": "2026-11-23T06:19:41.196131Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/giskard-llm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/giskard-llm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when an LLM app needs adversarial or red-team tests on top of functional evals. Runs giskard.scan on any model wrapped as giskard.Model to probe hallucination, harmful content, prompt injection, sensitive data disclosure, stereotypes, robustness and sycophancy, with an HTML report.",
+  "content_fingerprint": "503064353cabb11a946f15e47e2a1944b9956b86041dd3ec60d561323cca5b6b"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "smart-contracts",
+  "repo": "Septonz/plus",
+  "path": ".claude/skills/smart-contracts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Septonz/plus",
+  "dir_name": "smart-contracts",
+  "downloaded_at": "2026-11-23T06:58:19.823465Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, security=4",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Septonz",
+  "source_url": "https://github.com/Septonz/plus/blob/main/.claude/skills/smart-contracts/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Septonz/plus/blob/main/.claude/skills/smart-contracts/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stellar smart contract development (Rust, soroban-sdk). Entry point with project setup, contract anatomy, and build/deploy workflow, routing to three companion files in this directory — development.md (storage/TTL, authorization, cross-contract calls, tokens, events, errors, upgrades, fees, troubleshooting), testing.md (unit, fuzz, property, fork, mutation, integration), and security.md (vulnerability classes, checklists, tooling, audits). Use when writing, testing, reviewing, securing, debugging, or shipping Stellar smart contracts, including anything the user calls \"Soroban\" — Soroban contracts, soroban-sdk, Soroban auth/storage/TTL errors, SEP-41 tokens, or SAC integration from contract code.",
+  "content_fingerprint": "203517f414511015a1a860c8f1cf2408a4bd2e79881d107b93f3c1ee3058c7c3"
+}

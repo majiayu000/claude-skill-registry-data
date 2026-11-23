@@ -1,0 +1,39 @@
+{
+  "name": "diagramly-admin",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/diagramly-admin/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "diagramly-admin",
+  "downloaded_at": "2026-11-23T07:36:32.471460Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/diagramly-admin/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/diagramly-admin/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Navigate to the Diagramly admin panel on a Confluence site and interact with admin features (enroll space for demo page, etc.). Triggers on \"diagramly admin\", \"enroll space\", \"create demo page admin\".",
+  "content_fingerprint": "acf29f05aad92fec0d28cade9e6bf0876ab7ad70e6db433b3713c4a61a1e5fca"
+}

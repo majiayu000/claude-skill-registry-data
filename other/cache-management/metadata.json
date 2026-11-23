@@ -1,0 +1,38 @@
+{
+  "name": "cache-management",
+  "repo": "VilnaCRM-Org/claude-plugins",
+  "path": "plugins/rust-backend-sdlc/skills/cache-management/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/VilnaCRM-Org/claude-plugins",
+  "dir_name": "cache-management",
+  "downloaded_at": "2026-11-23T07:25:05.734764Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VilnaCRM-Org",
+  "source_url": "https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/cache-management/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/cache-management/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a hot or slow read path of a Rust service needs an in-process cache - a cache adapter behind the context's port in the infrastructure layer, expiry decided through the Clock port, invalidation by every command that writes the cached data, a domain that holds no cache, and unit and coverage tests that prove hits, expiry and invalidation. Skip when the story gives no staleness budget or no measured need for a cache. Not for making the underlying query faster (use query-performance-analysis) and not for designing the aggregate or its port (use implementing-ddd-architecture).",
+  "content_fingerprint": "96363bc83593f9d4ddfd3c5d9d22963718846a0715f92e0bd5fe77836107f83a"
+}

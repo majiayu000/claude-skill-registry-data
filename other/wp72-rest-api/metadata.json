@@ -1,0 +1,37 @@
+{
+  "name": "wp72-rest-api",
+  "repo": "Lonsdale201/wp-agent-skills",
+  "path": "wordpress-72/wp72-rest-api/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Lonsdale201/wp-agent-skills",
+  "dir_name": "wp72-rest-api",
+  "downloaded_at": "2026-11-23T06:14:57.345245Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lonsdale201",
+  "source_url": "https://github.com/Lonsdale201/wp-agent-skills/blob/main/wordpress-72/wp72-rest-api/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lonsdale201/wp-agent-skills/blob/main/wordpress-72/wp72-rest-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits the WordPress 7.2 REST changes to revision/autosave metadata, comments status arrays and rest_allowed_cors_methods. Use for revision.meta clients, revisions_enabled, wp_post_revision_meta_keys, rest_comment_query, comments status comparisons or Access-Control-Allow-Methods overrides."
+}

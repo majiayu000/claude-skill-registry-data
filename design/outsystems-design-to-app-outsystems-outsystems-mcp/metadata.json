@@ -1,0 +1,39 @@
+{
+  "name": "outsystems-design-to-app",
+  "repo": "OutSystems/outsystems-mcp",
+  "path": "claude/skills/outsystems-design-to-app/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/OutSystems/outsystems-mcp",
+  "dir_name": "outsystems-design-to-app-outsystems-outsystems-mcp",
+  "downloaded_at": "2026-11-23T06:41:31.436555Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, figma",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "OutSystems",
+  "source_url": "https://github.com/OutSystems/outsystems-mcp/blob/main/claude/skills/outsystems-design-to-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/OutSystems/outsystems-mcp/blob/main/claude/skills/outsystems-design-to-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[Beta] Drive ODC Mentor to bootstrap an OutSystems app from a design source \u2014 Figma URL, screenshot/image, HTML mockup, or structured front-end code (TSX/React/HTML, the highest-fidelity input). EXPERIMENTAL \u2014 greenfield-from-design layers on top of Mentor (built for in-flow edits) and fidelity varies; treat results as draft scaffolds, NOT ship-ready apps. Authors the design into a styling-complete spec.json (real OS UI blocks, not fake CSS; tokens, data model, sample data, chart series), then drives Mentor in batches and publishes. For prose-only briefs with NO concrete design or code, this skill does not apply. Use when the user asks to \"build this design as an OutSystems app\", \"implement this Figma in OutSystems\", \"design to model\", \"design to app\", \"generate a screen from this mockup\", \"build this screen\", or provides a Figma URL / image path / HTML or TSX file and wants it turned into a live OutSystems app. Not for OutSystems 11 (O11) or Service Studio."
+}

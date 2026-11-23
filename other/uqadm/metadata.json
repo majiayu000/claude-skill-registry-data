@@ -1,0 +1,38 @@
+{
+  "name": "uqadm",
+  "repo": "Unique-AG/ai",
+  "path": ".claude/skills/uqadm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Unique-AG/ai",
+  "dir_name": "uqadm",
+  "downloaded_at": "2026-11-23T07:21:30.072778Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, bash=3",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "language-model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Unique-AG",
+  "source_url": "https://github.com/Unique-AG/ai/blob/main/.claude/skills/uqadm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Unique-AG/ai/blob/main/.claude/skills/uqadm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Administer Unique AI spaces and knowledge bases with the uqadm CLI. Use when the user asks to export, upsert, migrate, clone, diff or delete a space; copy space configuration between environments or credential slots (qa/prod); push config to an existing space without changing its access rights; replace a language model across spaces or ingestion configs; grant space or folder access; or create, sync, download or remove knowledge-base folders and files."
+}

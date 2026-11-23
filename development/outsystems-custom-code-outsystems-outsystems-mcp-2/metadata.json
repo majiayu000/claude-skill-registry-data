@@ -1,0 +1,38 @@
+{
+  "name": "outsystems-custom-code",
+  "repo": "OutSystems/outsystems-mcp",
+  "path": "kiro/outsystems/skills/outsystems-custom-code/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/OutSystems/outsystems-mcp",
+  "dir_name": "outsystems-custom-code-outsystems-outsystems-mcp-2",
+  "downloaded_at": "2026-11-23T06:41:33.483246Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "OutSystems",
+  "source_url": "https://github.com/OutSystems/outsystems-mcp/blob/main/kiro/outsystems/skills/outsystems-custom-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/OutSystems/outsystems-mcp/blob/main/kiro/outsystems/skills/outsystems-custom-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[Beta] Reference + workflow for building, testing, and deploying C# class-library \"External Logic\" libraries for OutSystems Developer Cloud (ODC). Covers SDK attributes ([OSInterface] / [OSAction] / [OSParameter] / [OSStructure] / [OSIgnore]), supported data types, optional parameters, logging via ILogger, project structure, runtime constraints (95s execution / 1 GB memory / 5.5 MB payload), unit + container integration tests, and deployment via the OutSystems MCP. Use when the user asks to \"build a C# library for OutSystems\", \"create ODC external logic\", \"write custom code for ODC\", \"deploy an external library\", \"publish C# code to OutSystems\", or names ODC External Logic / external library / OSInterface / OSAction directly. Not for OutSystems 11 (O11) or Service Studio."
+}

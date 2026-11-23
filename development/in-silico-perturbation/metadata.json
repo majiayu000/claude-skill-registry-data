@@ -1,0 +1,38 @@
+{
+  "name": "in-silico-perturbation",
+  "repo": "MaybeBio/Daily-Code-Agent-VirtualCell",
+  "path": "code/helicalAI__heli-plugin/code/plugins/helical-platform/skills/in-silico-perturbation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MaybeBio/Daily-Code-Agent-VirtualCell",
+  "dir_name": "in-silico-perturbation",
+  "downloaded_at": "2026-11-23T06:24:31.859504Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaybeBio",
+  "source_url": "https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/helicalAI__heli-plugin/code/plugins/helical-platform/skills/in-silico-perturbation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/helicalAI__heli-plugin/code/plugins/helical-platform/skills/in-silico-perturbation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run an in-silico gene knockout, knockdown or overexpression screen with Helical foundation models by editing the expression matrix locally, then embedding the perturbed cells on the platform. Use when the user wants to perturb genes, screen targets, or find genes whose perturbation shifts diseased cells toward a healthy state — even when no perturbation tool is available, because none is needed.",
+  "content_fingerprint": "2d382b0d2ac65ff3afe9ff9947af1c0989920b6858a41f1686212b618d42855a"
+}

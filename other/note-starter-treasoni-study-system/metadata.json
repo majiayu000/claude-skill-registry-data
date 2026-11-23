@@ -1,0 +1,37 @@
+{
+  "name": "note-starter",
+  "repo": "Treasoni/study-system",
+  "path": ".claude/skills/note-starter/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Treasoni/study-system",
+  "dir_name": "note-starter-treasoni-study-system",
+  "downloaded_at": "2026-11-23T07:18:58.239245Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category orchestration scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "planning",
+    "runner_up_score": 1,
+    "signals": [
+      "orchestrator"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Treasoni",
+  "source_url": "https://github.com/Treasoni/study-system/blob/main/.claude/skills/note-starter/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Treasoni/study-system/blob/main/.claude/skills/note-starter/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "启动新主题学习笔记。用于用户说“开始写笔记”“启动写笔记”“创建学习笔记”或明确想为新主题建立学习笔记时。检查可恢复运行后，委派给 research-planner 初始化 learning-note-flow；不用于旧笔记导入或更新。",
+  "content_fingerprint": "07a9bceb339f03be6c2dc278eb779e80822b35e240699cdebffef691385862d7"
+}

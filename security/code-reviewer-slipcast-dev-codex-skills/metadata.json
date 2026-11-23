@@ -1,0 +1,38 @@
+{
+  "name": "code-reviewer",
+  "repo": "Slipcast-dev/codex-skills",
+  "path": "skills/code-reviewer/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Slipcast-dev/codex-skills",
+  "dir_name": "code-reviewer-slipcast-dev-codex-skills",
+  "downloaded_at": "2026-11-23T07:02:45.115344Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-skills/blob/main/skills/code-reviewer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-skills/blob/main/skills/code-reviewer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for any code review: a pull request, a diff, a commit, or a pasted function, handler or file in TypeScript, JavaScript, Python, Go, Swift, Kotlin, C#/.NET, Java, C, C++, Rust, Ruby, PHP or Dart/Flutter. Applies per-language rule packs (security such as SQL injection and missing auth, async and resource handling, error handling, performance) and scripts that score a PR's risk and complexity, then gives a merge verdict with blocking and non-blocking findings. Use whenever the user asks to review, check or look over code, says 'code review', 'review this PR', 'review this diff' or 'is this safe to merge', or asks what is wrong with a snippet, even a single function.",
+  "content_fingerprint": "f542a2029b3e48dc36f3c85ec233e7329f36b6f7c1dae1cb00578d6062264872"
+}

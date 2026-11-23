@@ -1,0 +1,39 @@
+{
+  "name": "database-migration-plan",
+  "repo": "Slipcast-dev/codex-skills",
+  "path": "skills/database-migration-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Slipcast-dev/codex-skills",
+  "dir_name": "database-migration-plan-slipcast-dev-codex-skills",
+  "downloaded_at": "2026-11-23T07:03:08.581444Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-skills/blob/main/skills/database-migration-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-skills/blob/main/skills/database-migration-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write a safe, zero-downtime database migration plan for a schema change. Use when asked to plan a database migration, design a zero-downtime schema change, document an expand/contract migration, produce a rollback procedure for a database change, or coordinate a database schema update with a deployment.",
+  "content_fingerprint": "03be32dfd3bb420f08cea0e537e6f66156cd0ead4a752377f7087f5c5b9ccca7"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "codeql-queries",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/codeql-queries/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "codeql-queries-maarkssdn-birthub-360",
+  "downloaded_at": "2026-11-23T06:19:50.441336Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/codeql-queries/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/codeql-queries/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a GitHub-hosted repo needs deep semantic static analysis (SAST) beyond pattern matching, such as cross-file taint and data flow: codeql database create and analyze per language, query packs, SARIF upload to code scanning, and suppressions.",
+  "content_fingerprint": "17238bbf6ca0029ad45eb36a9fc13ab8fdf00bf2f7b20da9296823a02046ad9c"
+}

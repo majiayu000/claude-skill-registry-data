@@ -1,0 +1,38 @@
+{
+  "name": "visualization",
+  "repo": "PuckAPI/claude-sports-analytics",
+  "path": "plugin/skills/visualization/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/PuckAPI/claude-sports-analytics",
+  "dir_name": "visualization-puckapi-claude-sports-analyt-2",
+  "downloaded_at": "2026-11-23T06:47:06.529046Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, visualization",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PuckAPI",
+  "source_url": "https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/visualization/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/visualization/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate shareable visual outputs for sports analytics: calibration curves, equity curves, radar charts, matchup cards, probability histograms, and player cards. Use when user asks to visualize, chart, plot, graph, show, display, generate a visual, make a shareable image, or wants to post analysis to social media. Do not use for raw data exploration -- see game-lookup or nl-to-query. Do not use for analysis itself -- run the relevant skill first, then visualize the output."
+}

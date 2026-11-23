@@ -1,0 +1,38 @@
+{
+  "name": "wp72-html-kses",
+  "repo": "Lonsdale201/wp-agent-skills",
+  "path": "wordpress-72/wp72-html-kses/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Lonsdale201/wp-agent-skills",
+  "dir_name": "wp72-html-kses",
+  "downloaded_at": "2026-11-23T06:14:57.526666Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lonsdale201",
+  "source_url": "https://github.com/Lonsdale201/wp-agent-skills/blob/main/wordpress-72/wp72-html-kses/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lonsdale201/wp-agent-skills/blob/main/wordpress-72/wp72-html-kses/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews HTML sanitization against WordPress 7.2's transitional KSES implementation. Use for wp_kses, wp_kses_post, pre_kses, custom allowlists, wp_kses_force_legacy_parser, or HTML API parser migrations. Distinguishes the default HTML API parser from the legacy fallback and tests security and output compatibility."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "conference-talk",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/conference-talk/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "conference-talk",
+  "downloaded_at": "2026-11-23T07:25:55.581016Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/conference-talk/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/conference-talk/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Conference talk editor for Claude: turns a keynote, panel, meetup or webinar recording (speaker camera plus slides) into a clean 16:9 session video with a title card, speaker lower third, slide inserts, trimmed dead air and applause, accessible captions and chapters, plus a 60-90 s highlight and vertical quote clips. Use when the user says 'edit my talk', 'clean up this keynote recording', 'conference session video', 'add my slides to the talk', 'webinar recording edit', 'make a highlight from my speech', 'TEDx style edit'. Runs on video-studio-core (transcribe, gentle autocut, scenes, colour, deliver, QC)."
+}

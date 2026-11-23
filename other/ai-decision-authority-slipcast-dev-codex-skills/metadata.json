@@ -1,0 +1,38 @@
+{
+  "name": "ai-decision-authority",
+  "repo": "Slipcast-dev/codex-skills",
+  "path": "skills/ai-decision-authority/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Slipcast-dev/codex-skills",
+  "dir_name": "ai-decision-authority-slipcast-dev-codex-skills",
+  "downloaded_at": "2026-11-23T07:01:56.696063Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Slipcast-dev",
+  "source_url": "https://github.com/Slipcast-dev/codex-skills/blob/main/skills/ai-decision-authority/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Slipcast-dev/codex-skills/blob/main/skills/ai-decision-authority/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Routes marketing and GTM decisions into three AI governance zones (AI-Primary, Collaborative, Human-Primary) by stakes and reversibility. Use when deciding which AI outputs need human review, whether an agent may act autonomously on a task, why AI adoption is collapsing under review requirements, or when auditing a list of workflows for safe autonomy. Triggers on 'should a human review this', 'can the agent just do this', 'AI governance policy', 'human in the loop'.",
+  "content_fingerprint": "40525a6dc2e5735315cd186ae4107213812639db1371fd55445b2b4a222b38a9"
+}

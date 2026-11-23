@@ -1,0 +1,37 @@
+{
+  "name": "debloat",
+  "repo": "LilMGenius/paperthin",
+  "path": "skills/depth/debloat/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LilMGenius/paperthin",
+  "dir_name": "debloat",
+  "downloaded_at": "2026-11-23T06:13:52.482010Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LilMGenius",
+  "source_url": "https://github.com/LilMGenius/paperthin/blob/main/skills/depth/debloat/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LilMGenius/paperthin/blob/main/skills/depth/debloat/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cut an artifact that has accreted into bloat, prose or code, to its load-bearing density, meaning and behavior preserved. In prose: padding, over-qualification, fused sentences, walls of enumeration, adjacent restatement. In code, behind green tests: comments that restate the code, commented-out code, vague TODOs, dead code, debug leftovers, guards on guaranteed values, pass-through wrappers, single-use helpers, and nesting a guard clause flattens. Use when the user names an artifact, section, file list, or diff that is correct and current but verbose, patched-over, or slop-filled and wants it tight without a full rewrite; when they ask to clean up, deslop, or remove AI slop from code or recent changes; or when a pipeline the user invoked passes that scope on. Acts only inside that scope."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "weekly-meeting",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/weekly-meeting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "weekly-meeting",
+  "downloaded_at": "2026-11-23T07:36:31.649271Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/weekly-meeting/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/weekly-meeting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Prepare weekly meeting data — fetches 30-day Marketplace revenue, new/large/lost customers, and updates the \"Weekly Meeting Prep\" panel at the top of the client profiles homepage (http://localhost:52401/). Use when the user says \"weekly meeting\", \"prep for the meeting\", \"update the weekly meeting section\", or \"what's our revenue this week\".",
+  "content_fingerprint": "8551d5469bf555cd91492bdeef971085e79282ac15e9adc0d042e055b47e8492"
+}

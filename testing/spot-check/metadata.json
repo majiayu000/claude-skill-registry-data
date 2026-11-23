@@ -1,0 +1,39 @@
+{
+  "name": "spot-check",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/spot-check/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "spot-check",
+  "downloaded_at": "2026-11-23T07:36:25.088797Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/spot-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/spot-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ad hoc, AI-driven verification of a specific behavior — not a checked-in E2E test. Use after developing a feature, fixing a bug, validating a branch, or post-release. Drives agent-browser for Forge iframe UI, or CLI for backend/analytics signals. Triggers on \"spot check\", \"run a spot check on X\", \"spot check this fix\", \"spot check on staging\", \"spot check zenuml-lite@stg\", \"verify on staging\".",
+  "content_fingerprint": "87371c86b23ffab8161275832f10589baea7a54307b212a2ec01453324bff66c"
+}

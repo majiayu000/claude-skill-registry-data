@@ -1,0 +1,37 @@
+{
+  "name": "google-ads",
+  "repo": "adkit/ads-skills",
+  "path": "skills/google-ads/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/adkit/ads-skills",
+  "dir_name": "google-ads-adkit-ads-skills",
+  "downloaded_at": "2026-11-23T07:43:45.341634Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adkit",
+  "source_url": "https://github.com/adkit/ads-skills/blob/main/skills/google-ads/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adkit/ads-skills/blob/main/skills/google-ads/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, edit, and report on Google Ads from an AI agent through the AdKit MCP connector: Search and Performance Max campaigns, ad groups, ads, keywords, negative keywords, keyword research, search terms, and results. Every change is saved as a draft that the user approves before it goes live. Use when the user wants to run, change, or check Google Ads. Not for Google Ads strategy: use google-ads-strategy for that."
+}

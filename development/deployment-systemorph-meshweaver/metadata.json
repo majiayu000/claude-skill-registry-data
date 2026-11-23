@@ -1,0 +1,39 @@
+{
+  "name": "deploy",
+  "repo": "Systemorph/MeshWeaver",
+  "path": ".claude/skills/deployment/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Systemorph/MeshWeaver",
+  "dir_name": "deployment-systemorph-meshweaver",
+  "downloaded_at": "2026-11-23T07:11:14.031812Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Systemorph",
+  "source_url": "https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/deployment/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Systemorph/MeshWeaver/blob/main/.claude/skills/deployment/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploy MeshWeaver — the two routes (shared AKS cluster, and Azure Container Apps via the Aspire test/prod modes) and the traps that make a deploy look done when it is not. Use when rolling a code change onto a portal, standing up or patching an environment, or verifying that what is running is what you built. FIRST RULE (maintainer, 2026-09-08): on AKS an operation is a Hosting/InstanceAction on the control instance (Roll, Restart, Suspend, Audit, Reconcile, …) executed by the in-cluster operator — az aks command invoke / kubectl are break-glass, never the procedure. Also covers the bootstrap build-image / set-image / restart sequence the operator runs for you, why an env deploy.sh is first-time setup and not a code-update path, why the database migration is a run-once Job that a helm upgrade runs — never a Deployment to roll — and the DbVersionGate that makes a portal refuse to serve ahead of its schema.",
+  "content_fingerprint": "d73cab87a37b1d1382b80372c7e108a2e7b2072ff994890988a1d10a63d8e97d"
+}

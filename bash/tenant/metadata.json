@@ -1,0 +1,39 @@
+{
+  "name": "tenant",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/tenant/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "tenant",
+  "downloaded_at": "2026-11-23T07:36:19.504052Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/tenant/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/tenant/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Look up verified Confluence tenant seat counts (Marketplace license users), product, license, payment, contact and pricing facts. Use for one site or a batch whenever the request asks for seats, license users, user count, site size or license tier (席位、座席、用户数), and for tenant profiles, paid status, trials or potential annual value. Reuses Marketplace exports and the separate Lite KV layer; customer-followup owns action decisions.",
+  "content_fingerprint": "bf52f3fa3e9a3bd2aec869745ace0f4b226511565962dcd93e559ceac1224f4a"
+}

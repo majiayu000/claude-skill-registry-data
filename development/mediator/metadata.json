@@ -1,0 +1,37 @@
+{
+  "name": "mediator",
+  "repo": "LeanMeanCleanApps/CleanMinimalApi",
+  "path": ".agents/skills/mediator/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/LeanMeanCleanApps/CleanMinimalApi",
+  "dir_name": "mediator",
+  "downloaded_at": "2026-11-23T06:09:55.205856Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeanMeanCleanApps",
+  "source_url": "https://github.com/LeanMeanCleanApps/CleanMinimalApi/blob/main/.agents/skills/mediator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeanMeanCleanApps/CleanMinimalApi/blob/main/.agents/skills/mediator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How source-generated Mediator carries requests from the presentation layer to Application handlers - registration and lifetime, IRequest and IRequestHandler, ValueTask, pipeline behaviours and their order, and why it isn't MediatR. Use when adding or changing a pipeline behaviour, sending a request, or when a handler isn't found."
+}

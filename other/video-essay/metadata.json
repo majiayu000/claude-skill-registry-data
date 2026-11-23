@@ -1,0 +1,37 @@
+{
+  "name": "video-essay",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/video-essay/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "video-essay",
+  "downloaded_at": "2026-11-23T07:26:08.072620Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/video-essay/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/video-essay/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Video-essay and documentary-style YouTube editor: script-first, voice-over-led edits with archival footage, B-roll, quote cards, maps, timelines, charts and chapter cards, cut at the pace of an argument (4-8 s shots), filmic grade, sourced on-screen attribution and YouTube chapters. Use when the user says: video essay, documentary-style YouTube video, explain this topic in depth, narrated essay, history/analysis/film-analysis video, edit my VO with archive footage, chapter cards. Default skin essay-mode; any Video Studio skin works."
+}

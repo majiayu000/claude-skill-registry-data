@@ -1,0 +1,37 @@
+{
+  "name": "redocly-cli",
+  "repo": "Redocly/redocly-cli",
+  "path": ".claude/skills/redocly-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Redocly/redocly-cli",
+  "dir_name": "redocly-cli",
+  "downloaded_at": "2026-11-23T06:50:24.713068Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Redocly",
+  "source_url": "https://github.com/Redocly/redocly-cli/blob/main/.claude/skills/redocly-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Redocly/redocly-cli/blob/main/.claude/skills/redocly-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Redocly CLI for OpenAPI, AsyncAPI, Arazzo, and Overlay descriptions, and for Markdown docs. Use when the user wants to lint, bundle, split, or join an API description, apply decorators or overlays, build or preview API docs, lint Markdown or prose with recheck, test a live API with respect or Arazzo, capture traffic or check drift, get stats or a score, generate a TypeScript client, document an MCP server in an OpenAPI description, push to the Redocly platform, clone a Redocly-hosted project and open its pull requests, or find the node type a rule or plugin should target."
+}

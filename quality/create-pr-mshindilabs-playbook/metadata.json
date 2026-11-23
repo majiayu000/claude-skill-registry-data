@@ -1,0 +1,38 @@
+{
+  "name": "create-pr",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/create-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "create-pr-mshindilabs-playbook",
+  "downloaded_at": "2026-11-23T06:31:12.167750Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/create-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/create-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Open a pull request from the current branch to any target branch, defaulting to the repository's main branch. Validates branch state, commits pending work safely, shows what will be published and waits for a yes, then pushes and opens the PR with gh pr create. Use this for every single-change PR regardless of target \u2014 feature branches to main, and also to dev, staging, or release lines. Trigger on \"open a PR\", \"create a pull request\", \"raise a PR for this branch\", \"put this up for review\". Run run-pre-pr-checks first if the local quality gate has not passed yet; use ship-release-candidate instead when the branch bundles multiple changes into a versioned release."
+}

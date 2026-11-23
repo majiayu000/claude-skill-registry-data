@@ -1,0 +1,38 @@
+{
+  "name": "zk-proofs",
+  "repo": "Septonz/plus",
+  "path": ".claude/skills/zk-proofs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Septonz/plus",
+  "dir_name": "zk-proofs",
+  "downloaded_at": "2026-11-23T06:58:19.473063Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Septonz",
+  "source_url": "https://github.com/Septonz/plus/blob/main/.claude/skills/zk-proofs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Septonz/plus/blob/main/.claude/skills/zk-proofs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Zero-knowledge proofs and privacy patterns on Stellar. Covers Groth16 verification in smart contracts via BLS12-381 host functions (CAP-59), the BN254 + Poseidon host functions (CAP-74/75), and concrete toolchain walkthroughs for Circom, Noir, and RISC Zero. Use when building privacy-preserving applications, ZK-verifier contracts, or wiring a proving toolchain to Stellar.",
+  "content_fingerprint": "8f7434f059103e48794e9479477c3497ad7f5292e8493f251ee58d16c5492919"
+}

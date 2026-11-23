@@ -1,0 +1,38 @@
+{
+  "name": "staticflow-cli-publisher",
+  "repo": "StaticFlow-AI/static-flow",
+  "path": "skills/staticflow-cli-publisher/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/StaticFlow-AI/static-flow",
+  "dir_name": "staticflow-cli-publisher-staticflow-ai-static-flow",
+  "downloaded_at": "2026-11-23T07:08:59.813385Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "StaticFlow-AI",
+  "source_url": "https://github.com/StaticFlow-AI/static-flow/blob/main/skills/staticflow-cli-publisher/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/StaticFlow-AI/static-flow/blob/main/skills/staticflow-cli-publisher/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Publish and verify StaticFlow content in LanceDB via `sf-cli`: write articles/images, sync notes, infer missing metadata, and run local API checks. This skill is not a live-table repair or corruption-recovery playbook.",
+  "content_fingerprint": "ed67ad9e57ce5fca0762643547a64bb93a8b5b2295fbda397cc84a0f9e0976e6"
+}

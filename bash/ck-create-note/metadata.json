@@ -1,0 +1,37 @@
+{
+  "name": "ck-create-note",
+  "repo": "Oxyd22/ContextKit",
+  "path": ".claude/skills/ck-create-note/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Oxyd22/ContextKit",
+  "dir_name": "ck-create-note",
+  "downloaded_at": "2026-11-23T06:42:05.318351Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Oxyd22",
+  "source_url": "https://github.com/Oxyd22/ContextKit/blob/main/.claude/skills/ck-create-note/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Oxyd22/ContextKit/blob/main/.claude/skills/ck-create-note/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Record knowledge, decisions, and tickets in the knowledge base (the model can read and write it). Creates or updates a schema-valid entry and rebuilds the index. Run: /ck-create-note <what to record> \u2014 or /ck-create-note <TICKET-ID>."
+}

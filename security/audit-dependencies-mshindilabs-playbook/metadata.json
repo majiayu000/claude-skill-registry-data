@@ -1,0 +1,38 @@
+{
+  "name": "audit-dependencies",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/audit-dependencies/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "audit-dependencies-mshindilabs-playbook",
+  "downloaded_at": "2026-11-23T06:31:18.950696Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, vulnerability, audit",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/audit-dependencies/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/audit-dependencies/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review dependencies for known CVEs, significantly outdated packages, license risks, and genuinely unused packages. Trigger on \"are my dependencies safe\", \"check for vulnerable packages\", \"run a dependency audit\", \"do we have any GPL or AGPL dependencies\", \"any CVEs in our deps\", \"what can I safely remove from package.json\". Produces a read-only report and changes no files \u2014 to actually plan and execute the version bumps and verify checks still pass, use upgrade-dependencies."
+}

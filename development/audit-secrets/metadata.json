@@ -1,0 +1,38 @@
+{
+  "name": "audit-secrets",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/audit-secrets/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "audit-secrets",
+  "downloaded_at": "2026-11-23T06:31:14.704737Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/audit-secrets/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/audit-secrets/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scan the working tree and recent git history for accidentally committed secrets, tokens, API keys, private keys, and credentials before they leave the machine. Trigger on \"did I commit a key\", \"check for leaked credentials\", \"did I leak an API key\", \"is there a secret in this diff\", \"scan for secrets before I push\", \"I think I pushed a password\". This skill owns the credential pattern set for the whole repo, including the git-history pass where a secret survives after the file is deleted \u2014 other skills delegate their secret checks here rather than reimplementing them. Always says to rotate an exposed credential, not merely remove it."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "openapi-and-scalar",
+  "repo": "LeanMeanCleanApps/CleanMinimalApi",
+  "path": ".agents/skills/openapi-and-scalar/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/LeanMeanCleanApps/CleanMinimalApi",
+  "dir_name": "openapi-and-scalar",
+  "downloaded_at": "2026-11-23T06:10:02.804824Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeanMeanCleanApps",
+  "source_url": "https://github.com/LeanMeanCleanApps/CleanMinimalApi/blob/main/.agents/skills/openapi-and-scalar/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeanMeanCleanApps/CleanMinimalApi/blob/main/.agents/skills/openapi-and-scalar/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How this Minimal API builds its OpenAPI document and serves the Scalar API reference - AddOpenApi, the document and operation transformers, the bearer scheme when authentication is on, the Scalar options, and the tests that read the generated document. Use when changing the API description, tags, security scheme, Scalar settings, or when the API reference looks wrong."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "jacoco-analysis",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/jacoco-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "jacoco-analysis",
+  "downloaded_at": "2026-11-23T06:19:51.741962Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/jacoco-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/jacoco-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use whenever a Java, Kotlin, Scala or Groovy project on Gradle or Maven needs code coverage or a coverage gate: JaCoCo agent setup, HTML, XML and CSV reports, check rules that fail the build below a minimum such as 80% lines, the six counters, and JaCoCo XML to LCOV or Cobertura.",
+  "content_fingerprint": "371c29b0eb85327181a41a1a8e1567a4729aa36ab714ed70ebbd99e90f1d3839"
+}

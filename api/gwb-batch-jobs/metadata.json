@@ -1,0 +1,39 @@
+{
+  "name": "gwb-batch-jobs",
+  "repo": "MaybeBio/Daily-Code-Agent-VirtualCell",
+  "path": "code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-batch-jobs/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/MaybeBio/Daily-Code-Agent-VirtualCell",
+  "dir_name": "gwb-batch-jobs",
+  "downloaded_at": "2026-11-23T06:24:32.205425Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaybeBio",
+  "source_url": "https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-batch-jobs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-batch-jobs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Dispatch a long-running Genesis Workbench batch workflow from a notebook via the Databricks Jobs API, then poll it and read results from MLflow, a Delta table, or a UC Volume. Use for life-sciences workflows that are too long or heavy for a synchronous endpoint call and run as a GWB job — guided enzyme optimization, GPU variant calling (Parabricks), VCF ingestion, GWAS, model (re)registration and reference (re)builds. Triggers on \"run the enzyme optimization\", \"launch/kick off a batch job\", \"variant calling\", \"parabricks\", \"GWAS\", \"run it as a job and check the results\", \"long-running workflow\".",
+  "content_fingerprint": "e4f699b738a38d87377432eb84edec3270b0bfa89336d160ab85420f8d01f658"
+}

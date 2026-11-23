@@ -1,0 +1,40 @@
+{
+  "name": "ush-develop",
+  "repo": "LuoTong17/LuoTong_vegeEdit",
+  "path": ".claude/skills/ush-develop/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/LuoTong17/LuoTong_vegeEdit",
+  "dir_name": "ush-develop",
+  "downloaded_at": "2026-11-23T06:17:24.245481Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "LuoTong17",
+  "source_url": "https://github.com/LuoTong17/LuoTong_vegeEdit/blob/master/.claude/skills/ush-develop/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LuoTong17/LuoTong_vegeEdit/blob/master/.claude/skills/ush-develop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "AesWorld USH Material V2 框架维护与开发指南。Use when: 给 USH 框架添加新参数类型、 修改解析器/表达式节点/材质构建逻辑、调试 USH 相关编译错误、 理解 USH 内部架构。 Triggers: EarthUshMaterialBuildUtils, EarthUshFileParser, UMaterialExpressionCustom, BuildMaterialFromUsh, 新增参数类型, 迭代模板, USH 框架, 材质系统维护. 不用于日常材质创建（用 ush-create）。",
+  "content_fingerprint": "d61f7e0dad0e1440ba12c22139447cc4d8026a8268500f73d80c12a777164d1f"
+}

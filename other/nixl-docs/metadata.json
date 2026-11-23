@@ -1,0 +1,38 @@
+{
+  "name": "nixl-docs",
+  "repo": "NVIDIA/skills",
+  "path": "skills/nixl-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NVIDIA/skills",
+  "dir_name": "nixl-docs",
+  "downloaded_at": "2026-11-23T06:32:39.911000Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/skills/blob/main/skills/nixl-docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/skills/blob/main/skills/nixl-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find and read NIXL documentation for APIs, architecture, backends, installation and builds, environment variables, telemetry, troubleshooting, examples, benchmarks, and contribution."
+}

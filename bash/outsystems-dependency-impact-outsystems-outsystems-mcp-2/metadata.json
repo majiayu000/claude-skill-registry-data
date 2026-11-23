@@ -1,0 +1,38 @@
+{
+  "name": "outsystems-dependency-impact",
+  "repo": "OutSystems/outsystems-mcp",
+  "path": "kiro/outsystems/skills/outsystems-dependency-impact/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/OutSystems/outsystems-mcp",
+  "dir_name": "outsystems-dependency-impact-outsystems-outsystems-mcp-2",
+  "downloaded_at": "2026-11-23T06:41:34.355081Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "OutSystems",
+  "source_url": "https://github.com/OutSystems/outsystems-mcp/blob/main/kiro/outsystems/skills/outsystems-dependency-impact/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/OutSystems/outsystems-mcp/blob/main/kiro/outsystems/skills/outsystems-dependency-impact/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[Beta] Build an interactive HTML REVERSE-dependency explorer \u2014 answers 'who depends on this library/agent/connection?' from the platform's deletion-impact analysis (read-only; nothing is deleted). One named target is one analysis: seconds, a few K tokens. A whole-tenant map is one analysis per library/agent/connection in parallel batches (estimate: ~0.5K tokens per target plus ~0.1\u20130.15K per dependent found). Use ONLY for reverse questions like 'who depends on [library/agent]', 'if I publish [library] who breaks', 'blast radius of [library/agent]', 'reverse dependency map', 'library impact audit', 'agent impact audit'. For forward questions about a specific app ('what does App X depend on', 'deps of App X'), use outsystems-app-architecture or the app's references directly. Not for OutSystems 11 (O11) or Service Studio."
+}

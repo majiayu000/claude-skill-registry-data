@@ -1,0 +1,39 @@
+{
+  "name": "pvt-edit",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/pvt-edit/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "pvt-edit",
+  "downloaded_at": "2026-11-23T07:36:22.234906Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/pvt-edit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/pvt-edit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Focused production validation for the macro edit path (Forge custom UI modal, editor mount, Publish). Confirms opening Edit from the viewer loads the editor iframe and can publish or cancel without blank states. Invoked by release-app Step 2.6 when editor-related commits are detected. Triggers on \"pvt-edit\", \"test macro edit\", \"validate editor\", \"pvt-editor\".",
+  "content_fingerprint": "8369a2af63e35f1f094e6324034437912beb28cdc030d645761bd57f90d38ba2"
+}

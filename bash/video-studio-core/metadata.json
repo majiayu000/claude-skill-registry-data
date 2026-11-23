@@ -1,0 +1,37 @@
+{
+  "name": "video-studio-core",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/video-studio-core/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "video-studio-core",
+  "downloaded_at": "2026-11-23T07:26:08.236943Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/video-studio-core/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/video-studio-core/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Shared engine and editor brain for the Video Studio skills. Transcribes and cuts raw footage like a professional editor (smart pause/filler/retake cuts, J/L cuts), assembles multi-clip timelines with real transitions and speed ramps, reframes to any aspect ratio by following faces, grades colour on the footage (auto correction, log to Rec.709, 50+ looks), renders motion-graphics overlays frame by frame, mixes sound to platform loudness, then delivers platform exports with subtitles, chapters, thumbnails and QC. Use it directly for a plain professional edit, or through any Video Studio genre skill (wedding-highlight, podcast-episode, retention-reel...) or style skin (halo-cut, depth-type...)."
+}

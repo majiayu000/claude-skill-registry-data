@@ -1,0 +1,38 @@
+{
+  "name": "workflow-design",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/workflow-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "workflow-design-the-utopia-studio-skills",
+  "downloaded_at": "2026-11-23T07:15:28.714833Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/workflow-design/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/workflow-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs a multi-agent workflow: which agents (researcher, analyst, drafter, critic, prototyper), each one's spawn trigger, how work hands off between them, and which surface each runs on (Claude.ai, Claude Code, Cowork). Use when the user or a fellow wants a fleet or team of agents, asks how agents should hand off, or wants to orchestrate agents for recurring work like weekly research. Not for one agent's role, tools and memory (use agent-design)."
+}

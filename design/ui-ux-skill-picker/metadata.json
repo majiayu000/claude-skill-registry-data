@@ -1,0 +1,41 @@
+{
+  "name": "ui-ux-skill-picker",
+  "repo": "NickCrew/Claude-Cortex",
+  "path": "skills/ui-ux-skill-picker/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/NickCrew/Claude-Cortex",
+  "dir_name": "ui-ux-skill-picker",
+  "downloaded_at": "2026-11-23T06:36:22.817785Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, css, frontend, component",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NickCrew",
+  "source_url": "https://github.com/NickCrew/Claude-Cortex/blob/main/skills/ui-ux-skill-picker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NickCrew/Claude-Cortex/blob/main/skills/ui-ux-skill-picker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ask the user what they are trying to achieve with a UI or design request, then recommend the UI/UX skill or skills to run, with the reason and the input each one needs. Use when the user asks which UX, design, or UI review skill to use, or when a UI/UX request is vague enough that more than one skill fits. Recommends only; it does not run the review or design work. Not for requests that already name a skill or map cleanly to one."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "customer-timeline",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/customer-timeline/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "customer-timeline",
+  "downloaded_at": "2026-11-23T07:36:34.313704Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/customer-timeline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/customer-timeline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build the chronological timeline of every recorded fact for ONE Confluence tenant (Marketplace license and transactions, Mixpanel events, prod D1 tables, plus rows you pass in), with a source-coverage table and tracking-gap flags. Triggers on \"完整时间线\", \"客户时间线\", \"customer timeline\", \"what did this customer do\", \"trial review timeline\", \"查这个租户所有数据源\", \"what happened on this site\". Not for deciding whether to contact the customer (customer-followup), fleet-wide analysis (conf-app), or tracker writes (customer-tracker).",
+  "content_fingerprint": "8acfcf5643839e47b95d779a00e265a55fa3f145a9a2c78450c1a48943f5ffa0"
+}

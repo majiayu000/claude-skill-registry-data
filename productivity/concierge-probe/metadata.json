@@ -1,0 +1,38 @@
+{
+  "name": "concierge-probe",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/concierge-probe/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "concierge-probe",
+  "downloaded_at": "2026-11-23T07:15:28.548222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/concierge-probe/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/concierge-probe/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runbook for a concierge MVP: the founder delivers the outcome by hand to one real customer at a price set in advance, producing a concierge log and a willingness-to-pay score on the evidence ladder. Use when the user says do it by hand first, concierge test, deliver it manually, or wants to test if a customer will pay before automating. Not for an agent running the task to price it (use agent-concierge-probe)."
+}

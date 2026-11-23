@@ -1,0 +1,37 @@
+{
+  "name": "web-research",
+  "repo": "aganesy/QFAI",
+  "path": "packages/qfai/assets/init/.qfai/assistant/skill/web-research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aganesy/QFAI",
+  "dir_name": "web-research-aganesy-qfai",
+  "downloaded_at": "2026-11-23T07:45:15.798508Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aganesy",
+  "source_url": "https://github.com/aganesy/QFAI/blob/main/packages/qfai/assets/init/.qfai/assistant/skill/web-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aganesy/QFAI/blob/main/packages/qfai/assets/init/.qfai/assistant/skill/web-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "8-stage web research pipeline with MCP integration, caching, and citation generation. Use when asked to research a topic on the web and report the findings with cited sources."
+}

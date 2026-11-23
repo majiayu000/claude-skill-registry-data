@@ -1,0 +1,39 @@
+{
+  "name": "faker-data",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/faker-data/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "faker-data",
+  "downloaded_at": "2026-11-23T06:19:39.943652Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/faker-data/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/faker-data/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fixes test data that breaks tests - factory values in a shape the code under test rejects (a phone number that is not E.164), fixtures that only pass when the whole suite runs in order, and random values that make an assertion pass or fail depending on the run. Authors test-data factories with Faker: the Python `faker` library, the `@faker-js/faker` JS port, and the `faker-ruby` gem - install per language, the provider catalogue (person / internet / location / date / finance / lorem), locale selection and multi-locale mode, and seed-based determinism for reproducible runs. Scope is generating fresh values for tests that start from nothing, not replacing values inside a dataset that already holds real records - that goes to pii-masking-pipeline-builder. Use when fixtures need realistic values, a stable shape, or a fixed seed.",
+  "content_fingerprint": "041c649269a027712e80067951ca2ba6685f748469eeb50eb50d9b803289d21a"
+}

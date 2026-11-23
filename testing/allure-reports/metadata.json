@@ -1,0 +1,39 @@
+{
+  "name": "allure-reports",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/allure-reports/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "allure-reports",
+  "downloaded_at": "2026-11-23T06:19:50.783939Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, pytest",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/allure-reports/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/allure-reports/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a team wants richer test reports than JUnit XML: steps, attachments, per-test history, retries and severity or feature labels. Sets up Allure Report adapters for pytest, Jest, JUnit, TestNG, NUnit or Mocha, failure categories, history trends and the static HTML site as a CI artifact.",
+  "content_fingerprint": "c78a8c94d83972ac2f1392ab43617a0cb07bee39b5f05b21494b20241ef38308"
+}

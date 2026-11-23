@@ -1,0 +1,38 @@
+{
+  "name": "copy-change",
+  "repo": "Saaeroos/the-budget",
+  "path": ".claude/skills/copy-change/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Saaeroos/the-budget",
+  "dir_name": "copy-change",
+  "downloaded_at": "2026-11-23T06:54:36.002164Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Saaeroos",
+  "source_url": "https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/copy-change/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/copy-change/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add or change user-facing Dutch/English copy through i18n keys, following docs/15 and the AFM no-advice boundary. Use for new strings, copy rewrites, notifications, paywall or Wet Van Dam / Toeslagen wording.",
+  "content_fingerprint": "a8856bf99425a5e886053b3dee2292a39378657c47dfe215de94caf81f72297e"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "railway",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/railway/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "railway",
+  "downloaded_at": "2026-11-23T07:15:23.954652Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploys and operates apps on Railway: create or link projects and services, railway up, add Postgres, Redis, MySQL or MongoDB, variables and build config, domains, logs and failed builds, metrics, PR deploys and templates, plus answers from Railway docs and Central Station. Use when the user mentions Railway, railway up, Railpack or Central Station, or asks how a Railway feature works. Not for Vercel (use deploy-to-vercel)."
+}

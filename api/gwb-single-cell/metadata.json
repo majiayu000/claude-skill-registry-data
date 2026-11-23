@@ -1,0 +1,38 @@
+{
+  "name": "gwb-single-cell",
+  "repo": "MaybeBio/Daily-Code-Agent-VirtualCell",
+  "path": "code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-single-cell/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/MaybeBio/Daily-Code-Agent-VirtualCell",
+  "dir_name": "gwb-single-cell",
+  "downloaded_at": "2026-11-23T06:24:32.370049Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: sdk, endpoint",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaybeBio",
+  "source_url": "https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-single-cell/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaybeBio/Daily-Code-Agent-VirtualCell/blob/main/code/databricks-industry-solutions__genesis-workbench/code/genie_code_skills/gwb-single-cell/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Annotate or embed single cells in a Databricks notebook using Genesis Workbench single-cell foundation models (TEDDY, scGPT, SCimilarity) and the cell Vector Search indices — cell-type annotation by reference KNN, cell embeddings, and in-silico gene perturbation. Use for scRNA-seq / AnnData life-sciences workflows. Triggers on \"annotate my cells / what cell types are these\", \"embed single cells\", \"scRNA-seq\", \"AnnData\", \"TEDDY / scGPT / SCimilarity\", \"predict a gene knockout / overexpression\".",
+  "content_fingerprint": "cb9e4b91472aea055d45633774903886daa77b63e1a05f6e593457f26824f381"
+}

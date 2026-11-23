@@ -1,0 +1,36 @@
+{
+  "name": "pr-review-tuning",
+  "repo": "MiniMax-AI/mcode-stack",
+  "path": "stacks/jiachen/skills/pr-review-tuning/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MiniMax-AI/mcode-stack",
+  "dir_name": "pr-review-tuning",
+  "downloaded_at": "2026-11-23T06:28:03.548409Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MiniMax-AI",
+  "source_url": "https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/jiachen/skills/pr-review-tuning/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MiniMax-AI/mcode-stack/blob/main/stacks/jiachen/skills/pr-review-tuning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The weekly self-tuning loop for the MCode Review bot on GitHub or GitLab. Measures the bot on a repository's recent PRs (threads per PR, which kinds people answer or dismiss, what was unanswered at merge, cost per round, time to merge, follow-up fixes), finds noise and misses, proposes at most three rule changes with their expected effect on each goal, backtests them on past PRs with known outcomes within an agreed token budget, has an independent check recompute the numbers, and changes rules only after a person approves. The first run only measures. Use for requests to run pr-review-tuning or to measure or tune the review bot, for the weekly scheduled run, and for settling a proposal (approve or reject P1)."
+}

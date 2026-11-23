@@ -1,0 +1,37 @@
+{
+  "name": "onboard",
+  "repo": "SkillMix/Brain",
+  "path": ".claude/skills/onboard/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/SkillMix/Brain",
+  "dir_name": "onboard-skillmix-brain",
+  "downloaded_at": "2026-11-23T07:01:03.788690Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillMix",
+  "source_url": "https://github.com/SkillMix/Brain/blob/main/.claude/skills/onboard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillMix/Brain/blob/main/.claude/skills/onboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "One sentence sets a person or a company up - \"onboard me\", \"set me up\", \"get started\", \"join <company>\", \"set up our company brain\", an invitation sentence (\"Onboard me to X - <link> with my invitation <brain>:<slug>\"), \"invite <colleague>\", \"schedule my routines\", \"pause my routines\", \"resume my routines\", \"run my routines here\", \"run my routines in the cloud\", \"change the plan\", \"start reading my history\", \"skip <app>\", \"is this set up?\", or any sentence while a setup is partway (~/.spaces/setup.yaml holds a phase not done; a history marked in_background counts as done, since the routines read it from there). A guided conversation over start.py's phases (signins, apps, research, build, history, resume), one message per milestone; onboard.py --invite or --check for the rest. The agent does every step but the sign-ins only the person can give."
+}

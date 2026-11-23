@@ -1,0 +1,39 @@
+{
+  "name": "api-contract",
+  "repo": "MohamadAlaskari/MediBooker-v1",
+  "path": ".claude/skills/api-contract/SKILL.md",
+  "github_branch": "master",
+  "category": "api",
+  "source": "github.com/MohamadAlaskari/MediBooker-v1",
+  "dir_name": "api-contract-mohamadalaskari-medibooker-v1",
+  "downloaded_at": "2026-11-23T06:28:58.046142Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MohamadAlaskari",
+  "source_url": "https://github.com/MohamadAlaskari/MediBooker-v1/blob/master/.claude/skills/api-contract/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MohamadAlaskari/MediBooker-v1/blob/master/.claude/skills/api-contract/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Contract-first API rules for MediBooker v2 — how the OpenAPI spec is produced from NestJS, how the typed client for web and mobile is generated, REST conventions (paths, JSON, dates, enums, pagination, errors, idempotency), backward compatibility for released mobile apps, error codes, realtime event contracts and the initial endpoint catalogue. Use when adding or changing an endpoint, DTO, error code or event, and when consuming the API from web or mobile.",
+  "content_fingerprint": "9a483879d62c9e40c121365ef209d33a9c00a3f7546e2830c876654bacc61a3b"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "documentation-sync",
+  "repo": "VilnaCRM-Org/claude-plugins",
+  "path": "plugins/rust-backend-sdlc/skills/documentation-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/VilnaCRM-Org/claude-plugins",
+  "dir_name": "documentation-sync-vilnacrm-org-claude-plugins",
+  "downloaded_at": "2026-11-23T07:25:06.836434Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VilnaCRM-Org",
+  "source_url": "https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/documentation-sync/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/documentation-sync/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a change to a Rust service adds, renames or removes a make target, a `service` command or flag, an environment variable, an endpoint or GraphQL field, a pull-request workflow job or an operational procedure, so every page that cites it changes in the same commit and the drift check mapped by `make.docs_check` and the invariants mapped by `make.validate_invariants` stay green. Service-owned targets go to make/service.mk and docs/make-targets-service.md, never to the template Makefile. Skip a proof run, reported as not run, when its key is null. Not for writing a page that does not exist yet (use documentation-creation) and not for the code side of a new setting (use configuration-management).",
+  "content_fingerprint": "b38c27d8f56f0165f35417211ccb4784fac2c109295f35a0e6997af5fb5c9589"
+}

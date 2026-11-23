@@ -1,0 +1,38 @@
+{
+  "name": "check-ci-health",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/check-ci-health/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "check-ci-health",
+  "downloaded_at": "2026-11-23T06:31:16.193442Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/check-ci-health/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/check-ci-health/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Inspect CI configuration files for trigger misconfigurations, security risks, caching gaps, and slow-path inefficiencies. Use when CI behaves unexpectedly or before adding a new workflow. Trigger on \"is our CI config secure\", \"review our GitHub Actions workflow\", \"audit our CI setup\", \"why is our CI so slow\", or \"check our pipeline for security issues\". This is a static, pre-emptive audit of CI config files, not a live-failure diagnosis \u2014 when an actual run is failing, use triage-ci-failure instead."
+}

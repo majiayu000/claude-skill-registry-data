@@ -1,0 +1,38 @@
+{
+  "name": "decision-trail",
+  "repo": "MVPavan/coding-ritual",
+  "path": ".claude/skills/decision-trail/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MVPavan/coding-ritual",
+  "dir_name": "decision-trail",
+  "downloaded_at": "2026-11-23T06:19:27.289369Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MVPavan",
+  "source_url": "https://github.com/MVPavan/coding-ritual/blob/main/.claude/skills/decision-trail/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MVPavan/coding-ritual/blob/main/.claude/skills/decision-trail/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a calling playbook names it, or when asked for a reviewable trail of a long run someone will check after stepping away: an append-only TSV of decisions with evidence pointers, closed by an audit and an independent critic. A metric climb is the hillclimb playbook, which calls this. Skip a resume note, a bead note or a short attempt record.",
+  "content_fingerprint": "2f277f3e18b9a2bb69836294e07cbffbe392e79eeb2a2be02b6bcd18193209e5"
+}

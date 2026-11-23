@@ -1,0 +1,37 @@
+{
+  "name": "bb-cache",
+  "repo": "M0st8fa/master-bughunter",
+  "path": "skills/bb-cache/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/M0st8fa/master-bughunter",
+  "dir_name": "bb-cache",
+  "downloaded_at": "2026-11-23T06:18:09.662301Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "M0st8fa",
+  "source_url": "https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-cache/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-cache/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hunt web cache attacks \u2014 web cache deception (victim's authenticated response cached under an attacker-guessable URL \u2192 cross-user PII read) and web cache poisoning (unkeyed input reflected into a cached response \u2192 stored XSS/redirect for every visitor). Use whenever the user mentions cache deception, cache poisoning, CDN, Cloudflare/Varnish/Fastly/Akamai cache, X-Cache, cf-cache-status, \"cached PII\", \"poison the cache\", or wants to test whether personal responses are cacheable."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "documentation-creation",
+  "repo": "VilnaCRM-Org/claude-plugins",
+  "path": "plugins/rust-backend-sdlc/skills/documentation-creation/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/VilnaCRM-Org/claude-plugins",
+  "dir_name": "documentation-creation-vilnacrm-org-claude-plugins",
+  "downloaded_at": "2026-11-23T07:25:08.205618Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VilnaCRM-Org",
+  "source_url": "https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/documentation-creation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/documentation-creation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a Rust service needs a documentation page that does not exist yet (a runbook, a guide to one adapter or bounded context, an integration reference) and the page must pass the service's docs-check, which means naming the service by `project.name`, citing only make targets, `service` commands, slash commands and paths that exist, and never listing gate targets outside the verification markers of AGENTS.md. Skip only the proof run, reported as not run, when `make.docs_check` is null. Not for updating pages that already exist after a code change (use documentation-sync), not for environment-variable rows of docs/environment.md (use configuration-management), and not for skills under .claude/skills/ (the plugin never writes there).",
+  "content_fingerprint": "4860b923eab68723894bf0c1644332cebafc1063519f234ff413fbc9d1f85fce"
+}

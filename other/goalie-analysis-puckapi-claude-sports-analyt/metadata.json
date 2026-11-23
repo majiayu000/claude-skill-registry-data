@@ -1,0 +1,37 @@
+{
+  "name": "goalie-analysis",
+  "repo": "PuckAPI/claude-sports-analytics",
+  "path": "plugin/skills/goalie-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PuckAPI/claude-sports-analytics",
+  "dir_name": "goalie-analysis-puckapi-claude-sports-analyt",
+  "downloaded_at": "2026-11-23T06:47:08.174111Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PuckAPI",
+  "source_url": "https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/goalie-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PuckAPI/claude-sports-analytics/blob/main/plugin/skills/goalie-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Goalie-specific analysis for NHL: leaderboard rankings, workload tracking, starter identification, tandem splits, and matchup history. Returns xG-adjusted metrics -- GSAX, high-danger save%, rolling form -- straight from the API, which predict future performance better than raw save percentage. Use when user asks about goalie stats, save percentage, GAA, quality starts, goalie fatigue, back-to-back starts, or which goalie is starting tonight. Do not use for skater stats -- see player-scouting. Do not use for team-level shot metrics -- see team-analysis. Do not use for building goalie model features -- see feature-engineering."
+}

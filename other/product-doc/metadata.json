@@ -1,0 +1,39 @@
+{
+  "name": "product-doc",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/product-doc/skill.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "product-doc",
+  "downloaded_at": "2026-11-23T07:36:27.963899Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/product-doc/skill.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/product-doc/skill.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate or update the user-facing product guide for the ZenUML Confluence Add-on. Reads source components, captures Playwright screenshots from staging, and writes/updates docs/product-guide.md. Use after new features are merged, for release updates, or when the user asks to \"update product docs\" or \"document this feature\".",
+  "content_fingerprint": "14333c2ffa41cbbc9faa41a0a94421afdba3da225c827d72b0d0392be7b2ab3d"
+}

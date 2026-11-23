@@ -1,0 +1,38 @@
+{
+  "name": "job-hunt",
+  "repo": "SebastianLuser/claude-code-arcane",
+  "path": "skills/job-hunt/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/SebastianLuser/claude-code-arcane",
+  "dir_name": "job-hunt",
+  "downloaded_at": "2026-11-23T06:57:37.574241Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SebastianLuser",
+  "source_url": "https://github.com/SebastianLuser/claude-code-arcane/blob/main/skills/job-hunt/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLuser/claude-code-arcane/blob/main/skills/job-hunt/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Entry point for the job-search skillset. Scaffolds and manages a portable career workspace (profiles, CVs, applications, companies, contacts, interviews), migrates workspaces created before the English contract, and routes to the right skill. Triggers: job hunt, job search, look for a job, organize applications, setup career workspace, migrate career workspace.",
+  "content_fingerprint": "902937439649121dd86c8295b7a8c8ea954b4c5662adbb7281473fd51f3c3931"
+}

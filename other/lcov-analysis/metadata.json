@@ -1,0 +1,38 @@
+{
+  "name": "lcov-analysis",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/lcov-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "lcov-analysis",
+  "downloaded_at": "2026-11-23T06:19:46.065185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/lcov-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/lcov-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a coverage gate must work across languages from LCOV .info or Cobertura XML files (gcov, llvm-cov, coverage.py, JaCoCo, Jest, nyc, coverlet). Parses per-file line, function and branch metrics, compares with a baseline and returns per-file pass or fail verdicts.",
+  "content_fingerprint": "12be3bdb221aa2d98f578bd34ad5994c4967c4fd12bc35307a61424ce4957354"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "agilepool",
+  "repo": "Yiming1997/agilePool",
+  "path": "skills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Yiming1997/agilePool",
+  "dir_name": "skills-yiming1997-agilepool",
+  "downloaded_at": "2026-11-23T07:33:32.531958Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Yiming1997",
+  "source_url": "https://github.com/Yiming1997/agilePool/blob/main/skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Yiming1997/agilePool/blob/main/skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "High-performance adaptive goroutine pool for Go (github.com/Yiming1997/agilePool/v2, Go 1.23.4) \u2014 Little's Law auto-scaling from sliding-window medians, sharded handoff queues plus a chunked overflow buffer, five idle-container backends (LinkedList/MinHeap/Slice/RingQueue/Treap), optional spinlock, retry with exponential backoff, context- and deadline-aware submission, panic handler and lifecycle hooks. Use when working in this codebase \u2014 adding features, fixing bugs, writing tests, reviewing changes, or answering questions about pool internals, configuration or API usage."
+}

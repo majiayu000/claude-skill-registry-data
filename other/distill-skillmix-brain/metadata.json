@@ -1,0 +1,36 @@
+{
+  "name": "distill",
+  "repo": "SkillMix/Brain",
+  "path": ".claude/skills/distill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/SkillMix/Brain",
+  "dir_name": "distill-skillmix-brain",
+  "downloaded_at": "2026-11-23T07:01:04.068709Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillMix",
+  "source_url": "https://github.com/SkillMix/Brain/blob/main/.claude/skills/distill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillMix/Brain/blob/main/.claude/skills/distill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run distill.py after a sweep so every subject whose evidence moved gets one candidate page, then write each candidate from an understanding of its subject - the subject's brief, research for what the evidence leaves open, the page shape of its kind, a source on every line, written for where it lands - and have a second agent check it before it reaches anyone. Use as the second step of the sweep chain, after a backfill (--rebuild), or when the person asks what is ready to sign."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "wp72-abilities-api",
+  "repo": "Lonsdale201/wp-agent-skills",
+  "path": "wordpress-72/wp72-abilities-api/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Lonsdale201/wp-agent-skills",
+  "dir_name": "wp72-abilities-api",
+  "downloaded_at": "2026-11-23T06:14:58.286085Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lonsdale201",
+  "source_url": "https://github.com/Lonsdale201/wp-agent-skills/blob/main/wordpress-72/wp72-abilities-api/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lonsdale201/wp-agent-skills/blob/main/wordpress-72/wp72-abilities-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Migrates WordPress 7.2 Abilities API integrations using required_capabilities, has_required_capabilities, WP_Ability::prepare_input and schema-aware JSON output. Use for ability registration, direct PHP versus REST input differences, permission callbacks, sanitization failures or custom AI/REST transports."
+}

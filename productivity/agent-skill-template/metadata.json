@@ -1,0 +1,39 @@
+{
+  "name": "agent-skill-template",
+  "repo": "a129924/agent-skills",
+  "path": "skills/agent-skill-template/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/a129924/agent-skills",
+  "dir_name": "agent-skill-template",
+  "downloaded_at": "2026-11-23T07:38:37.249370Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "a129924",
+  "source_url": "https://github.com/a129924/agent-skills/blob/master/skills/agent-skill-template/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/a129924/agent-skills/blob/master/skills/agent-skill-template/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Supply the repository scaffold when creating a new single-purpose skill manually.",
+  "content_fingerprint": "c0d395d8019c874708a9ee189f156397a8e9b9852a22a23eceacb7ef30c8a2f4"
+}

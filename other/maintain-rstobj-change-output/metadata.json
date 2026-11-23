@@ -1,0 +1,37 @@
+{
+  "name": "maintain-rstobj-change-output",
+  "repo": "MacHu-GWU/rstobj-project",
+  "path": ".claude/skills/maintain-rstobj-change-output/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MacHu-GWU/rstobj-project",
+  "dir_name": "maintain-rstobj-change-output",
+  "downloaded_at": "2026-11-23T06:20:05.470103Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/rstobj-project/blob/main/.claude/skills/maintain-rstobj-change-output/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/rstobj-project/blob/main/.claude/skills/maintain-rstobj-change-output/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Change what an existing rstobj class renders (fix a bug in its output, add or rename an option, change indentation or whitespace), update the snapshots, and decide from the snapshot diff whether the change fits a patch, minor, or major release. Use when the user reports wrong or invalid rstobj output, or asks to change how an existing class renders."
+}

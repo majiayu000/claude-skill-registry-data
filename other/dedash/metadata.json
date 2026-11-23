@@ -1,0 +1,36 @@
+{
+  "name": "dedash",
+  "repo": "LilMGenius/paperthin",
+  "path": "skills/depth/dedash/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LilMGenius/paperthin",
+  "dir_name": "dedash",
+  "downloaded_at": "2026-11-23T06:13:50.829067Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LilMGenius",
+  "source_url": "https://github.com/LilMGenius/paperthin/blob/main/skills/depth/dedash/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LilMGenius/paperthin/blob/main/skills/depth/dedash/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remove the em and en dashes an agent drops into running prose where a comma, colon, parentheses or a sentence break belongs, from a user-owned scope, keeping hyphens, ranges and dashes that separate a label from its text."
+}

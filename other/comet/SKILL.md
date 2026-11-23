@@ -1,0 +1,345 @@
+---
+name: comet
+description: 24 agent skills from rpamis/comet — including comet, comet-build, comet-archive. Install with npx skills add rpamis/comet.
+---
+
+## 回复语言
+
+必须采用中文回答用户
+
+## 表达与文档风格
+
+适用于回复、Skill、开发文档、CLI 帮助、错误提示和代码注释。
+
+- 使用自然、具体的表达，先说明结果或动作，再说明必要的原因和条件。Skill 指令写清何时执行、执行什么、完成条件是什么。
+- 用事实、行为和例子解释问题；删去空泛评价、宣传口吻、机械排比、重复总结，以及没有实际区别的“不是 X，而是 Y”句式。标题、加粗和列表只用于帮助阅读。
+- 用准确的常用词表达概念，避免堆砌抽象名词、自造口号或生硬直译。技术术语确有必要时保留，并在首次出现且读者可能不熟悉时简要解释。
+- 网站中文内容中，表示 Docker 容器所在机器时保留“宿主机”；其他语境禁用“宿主”一词，根据实际对象使用“Agent 平台”“Agent”“执行器”或“本机”等准确名称。
+- 精简重复表述，保留需求范围、触发条件、例外、失败处理、确认要求和验收标准。必要内容移到参考文件时，写明读取条件与位置；不能以减少字数代替完整说明。
+
+## Skill 触发表述规范
+
+修改 skill 时，新增或调整依赖 skill 的触发方式必须和既有写法保持一致：
+
+- 中文统一使用：`**立即执行：** 使用 Skill 工具加载 <skill-name> 技能。禁止跳过此步骤。`
+- 英文统一使用：`**Immediately execute:** Use the Skill tool to load the <skill-name> skill. Skipping this step is prohibited.`
+- 后续输入、上下文或执行要求写在“技能加载后 / After the skill loads”段落，不要把 `ARGUMENTS`、`fast-forward` 等另一套调用术语混入触发句。
+
+## 代码与 CLI 术语
+
+- 新增或修改命令、参数、函数、类型、模块和协议字段时，先查仓库中同一概念的既有名称，再参考相关 Agent 工具、依赖库或开源项目的公开接口与文档。优先采用含义一致、已有使用惯例的名称。
+- Agent 概念和架构术语应与实际职责对应，例如 tool、agent、session、handoff、checkpoint、router、adapter、state machine；不能仅为显得专业而套用术语或引入对应抽象。不确定是否通用时先核对来源，不凭印象声称是行业标准。
+- 同一概念在代码、CLI、JSON、帮助和文档中保持一致；不同职责保留区别，不为统一名称而混淆状态或角色。CLI 动作使用明确的动词，参数说明操作对象或选项含义，遵循仓库已有命令结构。
+- 没有合适通用词时，使用能直接说明职责的领域名称，并简要定义。现有公开名称的调整须评估兼容性和迁移影响；本规则不要求批量重命名已有接口或重构架构。
+
+## 项目配置决策
+
+新增 `.comet/config.yaml` 字段前，先核对当前解析、生成和更新逻辑，以及 Git 历史中已移除的同类字段；Issue 的建议不能单独作为恢复配置的依据。Native v4 已停止在项目配置中维护 `native.snapshot` 的文件数、字节数等预算，因此生成输入检查也不得换名新增同类项目级限额。检查应流式读取并绑定实际输入；读取失败或不稳定时报告快照不完整，禁止复用旧检查。确需恢复公开预算配置时，先明确用户需求并评估兼容性与迁移影响。
+
+## 开发工作区保护
+
+开始修改前检查当前分支、比较基线、未提交文件和子模块状态。保留所有无关修改，不得通过 `reset`、`clean`、删除或格式化无关文件来换取检查通过。提交时只显式暂存本任务文件。
+
+`website` 是独立 Git 子模块；只有任务明确涉及网站时才能修改其内容或引用状态。
+
+`.agents/skills/comet*`、`.claude/skills/comet*`、平台安装目录和测试生成目录是本地安装或 dogfood 副本，不是产品源码。产品行为应修改 `app/`、`domains/`、`platform/`、`assets/` 或对应构建脚本。
+
+## 分层开发规则
+
+修改目标文件前，读取从仓库根到该文件目录沿途的 `AGENTS.md`；路径更深的文件补充或覆盖上层规则。`.claude/rules/*.md` 是 Claude Code 的对应路径规则，`.codex/rules/*.rules` 只用于 Codex 命令执行策略，不承载开发行为说明。
+
+规则文件的数字前缀只用于分组和稳定排序，不表示优先级。发生冲突时按平台自身的作用域规则处理，不根据编号判断覆盖关系。
+
+## 问题证据与验证结论
+
+Issue、Review 意见、Project Knowledge、Memory 和历史记录只提供调查线索。可能变化的事实必须在当前分支重新核对；行为缺陷应先在最小临时项目、对应发布包或真实 Runtime 中复现。
+
+单元测试、生成 Runtime、npm 打包产物、真实平台 Hook 和真实模型 Eval 是不同证据层级，前一层通过不能证明后一层通过。完成报告必须列出实际执行的检查、真实结果、未执行项及原因；超时、依赖缺失和环境不可用均视为未完成。
+
+## 用户问题修复完成标准
+
+修复用户 Issue、线上阻塞或用户报告时，先读取 `docs/architecture/badcase-maintenance.zh.md`，按以下顺序交付；代码修改完成不等于问题已经关闭。
+
+1. 保留 Issue 链接或稳定的 `report:<id>` 来源，将一个报告中的独立失败行为分开记录，不能用一个宽泛案例代替多个不同问题。
+2. 在当前分支与对应旧版本的最小临时项目、公开 CLI 或发布产物上复现并说明根因；不能复现时明确标记“未复现/未解决”，记录已尝试的条件和缺失证据，不宣称已验证修复。
+3. 为每个行为写明预期结果与禁止结果，再新增或复用可执行回归测试。优先取得同一案例在旧代码失败、新代码通过的证据；无法取得时说明具体原因与替代证据，不能把未运行写成通过。
+4. 在 `config/workflow-regressions.json` 的 badcase 分组登记来源、行为、稳定 case ID 和精确测试选择器；复用已有测试必须给出逐行为映射，并确认断言确实覆盖报告。PR 按模板声明所有已修复行为与 case ID。
+5. 选择与故障相同的验证边界：公开 CLI/命令 bundle、安装包、状态转换、恢复或迁移缺陷不能只用内部函数测试证明；模型遵循指令的问题需要真实模型 Eval 证据，启动须遵守下方“Eval 启动授权”，UI 交互问题需要浏览器验证。各层结果分别报告，不能互相替代。
+6. 补充相关安全反例，包括未获批准不推进、不写入，不绑定陈旧证据，不跨 workflow/候选污染状态，不在恢复时重复副作用；合法流程也须保持可完成。只选与本次故障有关的反例，不机械扩大为全量测试。
+7. 不得静默删除、跳过、缩窄或降低历史案例断言。迁移或替换须保留来源和行为映射、等价或更强的执行证据，并经 Review 明确确认；当前校验器不支持的变更不能靠改 ID 或删除登记绕过。
+
+不涉及用户行为修复时，按模板说明具体理由。确实无法自动化的部分须给出复现/人工验证记录、限制、负责人和后续动作，不作为免测或关闭问题的通用豁免。自动校验只能核对已声明来源和案例，不能发现所有未声明的用户问题；作者负责完整声明，Reviewer 负责核对报告拆分、覆盖边界、豁免证据和遗漏。
+
+## Eval 启动授权
+
+- 只有用户明确要求启动 Eval 时，Agent 才能执行 Eval，包括真实模型评估、容器评估场景、批量评估及重跑。用户未明确要求时，禁止自行启动。
+- “继续 change”、实施、修复、验证、验收或发布请求，以及 AGENTS.md、Skill、change、发布清单中的验证要求，都不构成 Eval 启动授权。已有凭据、历史运行、保存的计划和 Agent 自行设置的授权参数（如 `--authorize-model`）同样不构成用户授权。
+- 获得明确请求后，只执行用户要求覆盖的场景、样本和轮次；未获覆盖的扩展或新一轮评估须等用户明确要求。不能为了补齐验收、关闭 badcase 或排查失败而自行扩大范围或重跑。
+- 没有启动请求时，继续实施和必要的普通定向测试，将缺少的 Eval 如实记为“未执行”，说明模型行为仍缺少对应证据。验证要求只规定证据标准，不授予执行权限；普通确定性单元测试和文档契约检查仍按“测试”章节执行。
+- 用户要求停止时，停止本任务相关 Eval 并核对运行状态，保留已有结果和失败记录；如果执行已结束，如实说明，不能声称已终止。未获新的明确启动请求不得重新启动。
+
+## 测试
+
+验证范围必须与改动风险相匹配，不要在每次编辑后默认运行全量测试。
+
+- 每轮先运行覆盖当前改动的最小相关测试。
+- 需要根据当前差异选择检查时，运行 `pnpm verify:changed --base <比较基线>`；该命令只读取差异并执行检查，不生成文件或更新快照。
+- 纯文档或 Skill 内容修改：运行相关契约测试和受影响文件的 Prettier 检查。
+- 单一 `app/`、`domains/` 或 `platform/` 模块修改：运行对应测试；涉及编译、Runtime 或生成物时再运行 build。
+- 按具体行为和依赖关系选择测试文件或测试名，再补相关契约、构建或临时项目验证。涉及多个生产模块、Runtime、安装/路由、版本字段或生成物，以及准备提交或交付，本身都不自动触发全量测试。
+- 只有用户明确要求，或共享契约、测试基础设施等变更导致影响范围无法可靠界定，且定向检查无法覆盖时，才考虑全量测试。启动前说明具体覆盖缺口、已有证据为何不足及预计耗时；不能只以“高风险”作为理由。
+- 用户明确要求不跑全量时，遵守该范围，完成必要的定向检查并记录未覆盖部分。正式发布流程的专门检查仍按发布规则执行，不因日常版本字段更新提前运行。
+- 全量测试失败或超时时，先定位原因；只有修正了明确原因后才重跑，不盲目重复。
+- CI 已覆盖全量检查时，可以在本地只运行相关验证，但交付时必须明确说明未在本地运行的检查。
+- Native 的“完整独立验收”是当前候选的全部验收项，不等于仓库全量测试；优先复用仍与候选和执行上下文匹配的 Runtime 检查，只补跑缺失或已失效的检查。
+- 全量测试同一时刻只允许有一轮；启动前记录原因、范围和预计耗时。出现首个明确失败或超时后先收集结果并分类，不能因为等待工具超时、单个长测试或未收到汇总就并行重启另一轮。
+
+```bash
+npx vitest run <相关测试文件>                     # 默认：最小相关测试
+npx vitest run                                   # 仅在满足上述全量条件时
+```
+
+## 提交前检查
+
+仓库已配置 Git pre-commit 钩子（husky + lint-staged），每次 `git commit` 会自动对 `app/`、`domains/`、`platform/`、`scripts/`、`test/`、`.github/`、`config/` 下的暂存源文件运行 `prettier --write`（与 CI `format:check` 范围一致；冻结的 `test/fixtures/` 除外），编辑器无关，所有贡献者生效。
+
+根据改动范围选择提交前检查；不要求每个提交机械地运行全部命令（CI 会执行完整检查）：
+
+```bash
+pnpm format:check   # 大范围格式检查；小范围可只检查受影响文件
+pnpm lint           # 修改源码、测试、脚本或配置时
+pnpm build          # 涉及编译、Runtime、生成物或发布资产时
+pnpm test           # 仅在满足“测试”章节的全量条件时
+```
+
+注：本地 Windows 若 `core.autocrlf=true`，未改动的旧文件可能因 CRLF 被 `prettier --check` 误报；钩子只处理暂存文件，不受影响，旧文件下次编辑时会自动转为 LF。
+
+## Commit 规范
+
+提交信息必须使用类型前缀，格式为 `<type>: <summary>`，scope 可选：`<type>(<scope>): <summary>`。
+
+常用类型包括：`feat`、`fix`、`docs`、`chore`、`refactor`、`test`、`build`、`ci`、`perf`。
+
+示例：
+
+- `feat: add eval report language switch`
+- `fix(eval): prevent chart labels from overlapping`
+- `docs: update contributor commit rules`
+
+## 项目结构规范
+
+当前源码目录按责任分层：
+
+- `app/`：CLI 入口、命令编排和用户交互层。只能组合 domain/platform 能力，不承载领域规则。
+- `domains/`：业务领域模块。每个子目录是一个可独立维护的领域模块，例如 `domains/agent-learning/`、`domains/bundle/`、`domains/comet-classic/`、`domains/comet-native/`、`domains/comet-entry/`、`domains/dashboard/`、`domains/project-knowledge/`、`domains/skill/`、`domains/workflow-contract/`。
+- `platform/`：文件系统、进程、安装平台、版本、路径等平台适配能力。domain 不应直接散落平台差异逻辑。
+- `scripts/`：构建、发布、benchmark、lint 等仓库自动化脚本。可调用源码模块，但不要成为运行时业务入口。
+- `assets/`：发布资产和内置 Skill 内容。修改 runtime 源码后必须通过构建同步生成资产，不要把业务逻辑只写在生成物里。
+- `domains/workflow-application/`：完整 SDK 应用加载、Skill 适配审查、固定依赖、宿主执行契约和 Run 归属。基础流程种类与应用身份分别表达；Native/Classic 领域可通过 `wrapStore` 同步投影，SDK Run 保持推进权威。
+- `domains/workflow-generation/`：确认方案的确定性装配、本地样板入口与隔离阶段产物验收；可调用 Native 和 Classic 的公开应用工厂准备样板，通过 `workflow-contract` 的受保护路径检查仅在临时项目创建验收样例，不能接管真实领域审批、验收或 Archive。应用安装预览、不可变版本与本地导出位于 `workflow-application`；平台路径和 Runtime 依赖安装位于 `platform/`。
+- `domains/workflow-creation/`：Creator 的固定 SDK 创作流程，关联自然语言目标、具体方案、用户决定、固定依赖、编译验证与安装预览；复用 `workflow-generation` 组合器和 SDK Run，不保存第二套推进状态。
+- `domains/eval/`：Skill 与 SDK 应用评估的目标解析、完整应用快照、固定用例复用和报告绑定。Creator 可调用其公开入口编排可选 Eval；应用分发只读取内容匹配的评估证据，不依赖模型执行器。
+- `domains/dashboard/`：通过 Eval 的公开入口展示和操作项目评估；评估规则由 `domains/eval/` 维护。通过 `workflow-creation` 和 `workflow-application` 的公开只读入口观测 Creator 与固定应用 Run；存储发现和快照校验复用 SDK，观测不加载应用执行模块或推进流程。
+- `domains/workflow-generation/`：按已确认方案装配 Native、Classic 和独立应用，生成同一组合结果的入口、固定依赖和安装恢复身份；复用领域工厂，不实现另一套状态机。
+- `domains/comet-native/native-application.ts`：公开 Native 扩展工厂，复用原领域状态机并绑定候选审查；Native 可依赖 `workflow-application` 的加载及宿主契约，默认主流程仍不依赖外部 Skill。
+- `domains/comet-classic/classic-application.ts`：公开 Classic 组合工厂，替换执行 Skill 并在领域检查点追加有验收和恢复路径的步骤；沿用 Classic 状态机，SDK Run 保持推进权威。
+- Classic 归档后的交付恢复在 `classic-sdk-delivery-repair-model.ts` 中解析 Run、原批准及续行关联，该模块属于登记的纯模型，不执行文件或命令操作；`classic-sdk-delivery-repair.ts` 核对文件证据，`classic-sdk-delivery-repair-application.ts` 装配检查、批准及交付步骤。归档文档和 checkpoint 读取只依赖纯模型，避免反向依赖检查执行器或应用装配。
+- `eval/scaffold/shell/` 中仅允许 `config/repository-layout.json` 明确列出的隔离评审 sidecar 入口；它们属于 Eval 容器边界，不是产品 Runtime 入口。
+- `eval/local/fixtures/edit-continuation-052/` 保存通过公开 CLI 验证编辑续行的隔离场景；控制器逐文件登记，只在显式加载的 pytest 插件中使用。历史 Agent/User 和补充 Verifier/User 的模拟必须明确标注，不能代替真实 change 的批准或独立验收；装配、静态检查与真实模型结果分别报告。
+- `eval/archives/` 保存可随 Git 克隆的历史实验。归档应用模块必须逐文件登记到 `config/repository-layout.json`，并匹配归档清单的内容摘要；它们只供只读观测，不属于产品 Runtime 或安装入口。冻结文件禁止格式化和换行转换。
+
+测试目录必须跟随被测对象归属：
+
+- `test/app/` 覆盖 `app/` 命令和 CLI 行为。
+- `test/domains/<domain>/` 覆盖对应 `domains/<domain>/` 模块；新增 domain 时同步新增同名测试目录。
+- `test/platform/` 覆盖 `platform/` 适配层。
+- `test/scripts/` 覆盖 `scripts/` 自动化脚本。
+- `test/repository/` 覆盖 README、CI、仓库布局等跨层约束。
+- `test/fixtures/` 和 `test/helpers/` 只放测试数据与测试工具。
+- 禁止新增或恢复 `test/ts/` 这种横向桶；旧文件应迁移到上面对应目录。
+
+架构约束由 `pnpm run lint:architecture` 校验，并已接入 `pnpm lint`。它会检查顶层目录白名单、活跃源码根、app/domain/platform 子模块、脚本模块、Classic/Native/Entry runtime 入口与生成物、内置 Skill 根目录、测试归属、领域依赖方向、跨领域入口、纯模型和兼容门面。新增领域依赖或供其他领域使用的源码入口时，先判断职责是否合理，再显式更新 `config/repository-layout.json`；不得由脚本自动扩展许可清单。新增顶层目录、源码模块、测试根目录或例外时，同时更新架构 linter 和本节说明。
+
+## Classic runtime 脚本规范
+
+脚本位于 `assets/skills/comet/scripts/`，当前发布形态是 CLI 聚合 runtime + 每命令独立的自包含 `.mjs` bundle：
+
+- 运行时源码与每命令 entry 位于 `domains/comet-classic/`，修改后必须运行 `pnpm build:classic-runtime` 同步 `comet-runtime.mjs` 和所有 `comet-*.mjs` 命令 bundle
+- 命令 bundle 必须由对应 entry 构建为自包含产物；不要在生成物中直接编写业务逻辑，也不要恢复对 `comet-runtime.mjs` 的运行时 import
+- 不再新增 `.sh` runtime；测试 fixture `test/fixtures/classic-0.3.9/` 是冻结参考实现，只用于差分兼容
+- 新增命令 bundle 或 runtime 文件必须加入 `test/domains/comet-classic/comet-scripts.test.ts` 的 `beforeEach` 拷贝列表、`config/repository-layout.json` 和 `assets/manifest.json`
+- `comet-hook-guard.mjs` 是 Classic Guard 的自包含命令 bundle，不作为平台 Hook 直接安装；平台统一安装的 Hook 入口是 `comet-hook-router.mjs`
+
+## Native 与 Entry runtime 规范
+
+- Native 运行时源码与每命令 entry 位于 `domains/comet-native/`，修改后必须运行 `pnpm build:native-runtime` 同步 `comet-native-runtime.mjs` 和所有 `comet-native-*.mjs` 命令 bundle
+- `native-portable-delta-rebase.ts` 负责 Delta 重合并及其原输入绑定；`native-portable-requirements.ts` 保留正式材料读取与需求校验，不反向依赖检查执行模块。
+- `comet-native-hook-guard.mjs` 是 Native Guard 的自包含命令 bundle，不作为平台 Hook 直接安装；Native 主流程与 Guard 都不得依赖外部 Skill
+- 共享入口与 Hook Router 源码位于 `domains/comet-entry/`，修改后必须运行 `pnpm build:entry-runtime`，同步 `comet-entry-runtime.mjs` 与 `comet-hook-router.mjs`
+- 每个平台只安装一份 `comet-workflow-guard` Rule；支持 Hook 的平台只安装一个 `comet-hook-router.mjs`
+- Router 通过 `.comet/current-change.json` 的 `workflow + change` 确定当前需求归属，一次写入最多调用一个 workflow Guard；Native 与 Classic 的 phase、目录、schema 和 Guard 逻辑保持独立
+- 新增或重命名 runtime 入口/生成物时，同步 `config/repository-layout.json`、`assets/manifest.json` 和对应的 `test/repository/*-runtime-assets.test.ts`
+
+## 脚本依赖关系
+
+```
+comet-runtime.mjs ← domains/comet-classic/*
+comet-state.mjs ← domains/comet-classic/classic-state-entry.ts
+comet-check.mjs ← domains/comet-classic/classic-check-entry.ts (执行并绑定验证证据)
+comet-guard.mjs ← domains/comet-classic/classic-guard-entry.ts
+comet-handoff.mjs ← domains/comet-classic/classic-handoff-entry.ts (写入 handoff_context/handoff_hash)
+comet-archive.mjs ← domains/comet-classic/classic-archive-entry.ts
+comet-yaml-validate.mjs ← domains/comet-classic/classic-validate-entry.ts
+comet-hook-guard.mjs ← domains/comet-classic/classic-hook-guard-entry.ts (不直接安装为平台 Hook)
+comet-native-runtime.mjs ← domains/comet-native/*
+comet-native-<command>.mjs ← domains/comet-native/native-<command>-entry.ts
+comet-native-hook-guard.mjs ← domains/comet-native/native-hook-guard-entry.ts (不直接安装为平台 Hook)
+comet-entry-runtime.mjs ← domains/comet-entry/*
+comet-hook-router.mjs ← domains/comet-entry/* (平台唯一 Hook 入口，路由一个 workflow Guard)
+```
+
+Classic 命令之间新增共享工具函数时（如 archive 目录解析、change name 校验、hash、yaml 解析），优先放在 `domains/comet-classic/` 的共享模块中，再重新生成全部 bundle，避免多个命令漂移。跨 workflow 的稳定契约放在 `domains/workflow-contract/`，入口归属与路由放在 `domains/comet-entry/`；不要为了复用而合并 Native 与 Classic 的状态机或 Guard。
+
+## .comet.yaml 状态机
+
+每个 change 的状态文件，字段变更需要同步三处：
+
+1. `domains/comet-classic/classic-state-command.ts` — `set` 白名单 + enum 验证
+2. `domains/comet-classic/classic-validate-command.ts` — schema 校验 + KNOWN_KEYS
+3. `test/domains/comet-classic/comet-scripts.test.ts` — 测试中的 yaml 字符串
+
+## 双语言 Skill
+
+skill 优化时先写中文版本（`assets/skills-zh/`），用户确认后再修改英文版本（`assets/skills/`）。
+
+## 中文术语翻译规范
+
+中文文档不得把英文 “gate” 直译为“门”（如“压缩门”“调试门”“确认门”），这种译法在中文语境下不自然。应按实际含义翻译：
+
+- `gate`（阶段性检查/阻塞点）→ 根据语境用“协议”“阶段”“检查”“阻塞点”等，如 `debug gate` → “异常调试协议”
+- 修饰词性质的 `proactive/active` → “主动式”，如 `proactive context compression` → “主动式上下文压缩”，不写作“主动压缩门”
+- 英文版保持原术语（如 Debug Gate），仅中文版需要遵循本规范
+
+## Changelog 规范
+
+Changelog写英文
+
+每次代码产生变更你都应该在完成后写Changelog，并确定是否需要升级版本号，版本号只会比master分支的版本号大一个版本，你需要确定一下当前master的版本号后做决定
+
+如果当前已经有了一个比master大的版本Changelog，则应该追加到同一个版本的Changelog条目下
+
+如果修改的是Skill内容，则需要等中英文完全同步之后再写Changelog
+
+文件：`CHANGELOG.md`，新版本条目置顶。
+
+```
+## What's Changed [x.y.z] - YYYY-MM-DD
+
+### Added / Changed / Fixed / Tests / Removed / Security
+
+- **功能名**: 描述做了什么以及为什么
+```
+
+要点：
+
+- 版本号与 `package.json` 的 `version` 字段一致
+- 每条以 `- **粗体关键词**: ` 开头，后接具体变更内容
+- 按类型分组：Added → Changed → Fixed → Tests → Removed → Security
+- 描述侧重 **行为变更**（what + why），不是实现细节
+- `### Tests` 条目汇总新增测试覆盖的场景，不逐条列出测试用例
+
+写的Changelog应该是用户可视的版本，如果在一个分支上多次解决问题，但又不是master中的问题，而是开发中的问题，那这种内容不需要写入
+
+### 常见错误：写偏问题
+
+**核心规则：每个版本条目只描述与上一个 tag 之间的差异，不是开发过程记录。**
+
+错误做法：
+
+- 把开发分支上的所有迭代都写进 changelog
+- 记录设计过程、文档迭代、重构历史
+- 把已经在上一个 tag 中发布的内容重复写入
+- 把开发中解决的内部问题（而非最终用户可见的改动）写入
+
+正确做法：
+
+- 先用 `git log <上一个tag>..HEAD --oneline` 确认实际改动范围
+- 只写最终用户升级后能感知到的变化
+- 如果一个功能经历了多轮迭代，只写最终形态，不写中间过程
+- 如果一个改动在开发中解决了多个内部问题，合并为一条用户视角的描述
+- 开发中的设计文档、重构、内部修复不需要出现在 changelog 中（除非它们改变了用户可见行为）
+
+判断标准：**"一个从上个版本升级的用户，会注意到这个变化吗？"** 如果不会，不要写入。
+
+### Changelog 发布视角检查
+
+写 `CHANGELOG.md` 前必须先完成以下检查，不允许直接把 commit log 改写成 changelog：
+
+1. **确定比较基线**
+   - 确认 `package.json` 当前版本、`origin/master` 版本、上一个发布 tag。
+   - 用 `git log <上一个tag>..HEAD --oneline` 只生成候选清单，不等于逐条写入。
+   - 如果当前分支已有高于 master 的版本条目，只重写/追加到同一个版本条目，不新增流水账版本。
+
+2. **先列候选，再筛选**
+   每个候选变化都必须先判断：
+   - 用户从上一个版本升级后是否会感知到？
+   - 它是最终能力/行为，还是开发中间状态？
+   - 它应该归类为 Added / Changed / Fixed / Removed / Security 中哪一类？
+   - 是否有 issue / PR / 用户报告可追溯？
+
+3. **禁止写入开发过程**
+   不写：
+   - 分支内反复修正、review follow-up、doc sync、coverage、test refactor
+   - “修复刚新增功能里的问题”，除非该问题已经存在于 master / 已发布版本
+   - 设计过程、重构过程、命名迁移过程
+   - 预发布内部格式、未公开 CLI 别名、后端术语清理
+
+   应合并为：
+   - 一个最终用户可见能力
+   - 一个从已发布版本继承来的用户可见修复
+   - 一个安全/依赖风险修复
+
+`### Tests` 只在测试/评估能力本身是用户可运行的发布能力时使用；普通回归测试、覆盖率补充、测试文件迁移不写入 changelog。
+
+### Changelog 分类规则
+
+- `Added`: 新命令、新平台、新 workflow、新用户可运行能力。
+- `Changed`: 已有行为的用户可见语义变化，例如默认值、路由、升级判定、输出结构。
+- `Fixed`: 修复已发布版本或 master 中用户会遇到的问题；新功能开发过程中发现并修掉的问题不算 Fixed。
+- `Removed`: 移除用户曾经可见或可用的能力；未发布的内部别名/临时格式不要写。
+- `Security`: 依赖漏洞、权限、路径穿越、敏感信息、执行安全相关修复。
+
+## 修改Skill规范
+
+不能够直接修改Superpowers和OpenSpec的原始Skill
+
+除非用户明确同意，否则不得使用 Superpowers 的任何 Skill。
+
+## github规范
+
+不能未经过同意直接在github上评论或者提交PR
+
+## README改动
+
+先写中文，再写英文，当feature更新后，更新README应该保持克制，确定是否是必要的需要列在READMD的内容，这部分要用户阅读友好，必要的亮点特性应该以文档引用的形式存在docs目录下
+
+## Comet Dashboard规范
+
+Comet Dashboard实现时尽量采用使用AntD React组件
+
+<claude-mem-context>
+# Memory Context
+
+# claude-mem status
+
+This project has no memory yet. The current session will seed it; subsequent sessions will receive auto-injected context for relevant past work.
+
+Memory injection starts on your second session in a project.
+
+`/learn-codebase` is available if the user wants to front-load the entire repo into memory in a single pass (~5 minutes on a typical repo, optional). Otherwise memory builds passively as work happens.
+
+Live activity: http://localhost:37777
+How it works: `/how-it-works`
+
+This message disappears once the first observation lands.
+</claude-mem-context>

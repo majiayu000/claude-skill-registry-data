@@ -1,0 +1,37 @@
+{
+  "name": "orc-decision-models",
+  "repo": "ObneyAI/orc",
+  "path": "orc-skills/orc-decision-models/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ObneyAI/orc",
+  "dir_name": "orc-decision-models",
+  "downloaded_at": "2026-11-23T06:38:41.947612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ObneyAI",
+  "source_url": "https://github.com/ObneyAI/orc/blob/main/orc-skills/orc-decision-models/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ObneyAI/orc/blob/main/orc-skills/orc-decision-models/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build bounded semantic decisions in ORC with llm-decision, boolean llm-condition gates, and registered native decision providers such as Jev. Use for described enum routing, finite tool arguments, applicability and completion checks, or decision-model integration and evidence."
+}

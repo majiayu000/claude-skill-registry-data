@@ -1,0 +1,38 @@
+{
+  "name": "new-feature",
+  "repo": "Saaeroos/the-budget",
+  "path": ".claude/skills/new-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Saaeroos/the-budget",
+  "dir_name": "new-feature",
+  "downloaded_at": "2026-11-23T06:54:35.831569Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Saaeroos",
+  "source_url": "https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/new-feature/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Saaeroos/the-budget/blob/main/.claude/skills/new-feature/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a new feature module in apps/mobile/src/features/<name> following the project rules. Use when a ticket introduces a new feature folder.",
+  "content_fingerprint": "84ec74e74088af81d4f3a83e0ec3b54ffde5e459387781ca497fd0bac9b76691"
+}

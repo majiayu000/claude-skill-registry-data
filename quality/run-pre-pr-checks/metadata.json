@@ -1,0 +1,39 @@
+{
+  "name": "run-pre-pr-checks",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/run-pre-pr-checks/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "run-pre-pr-checks",
+  "downloaded_at": "2026-11-23T06:31:17.308118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review, validate",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "quality",
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/run-pre-pr-checks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/run-pre-pr-checks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the full local quality gate (format, lint, typecheck, tests) before opening a PR. Discovers the project's real check scripts, runs them in order, and reports a clear PASS/FAIL summary with actionable next steps. Trigger on \"run the checks before I push\", \"is this ready for a PR\", \"run lint typecheck and tests\", \"am I good to push this\", or \"check everything before I open a PR\". Runs BEFORE create-pr as the local quality gate \u2014 it does not create or open the pull request itself; use create-pr for that."
+}

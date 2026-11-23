@@ -1,0 +1,38 @@
+{
+  "name": "code-review",
+  "repo": "VilnaCRM-Org/claude-plugins",
+  "path": "plugins/rust-backend-sdlc/skills/code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/VilnaCRM-Org/claude-plugins",
+  "dir_name": "code-review-vilnacrm-org-claude-plugins-2",
+  "downloaded_at": "2026-11-23T07:25:05.069967Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VilnaCRM-Org",
+  "source_url": "https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/code-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/code-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when reviewing a branch diff against the profile base ref - the review protocol, the finding format with its seven fields and the final fenced json block, the code-review ledger and its PR comment. Skip the publishing step when capabilities.publish_pr_comments is false. Not for the catalogue of quality bars and how each is measured (use quality-standards), not for refactoring a complexity finding (use complexity-management), and not for answering PR review threads.",
+  "content_fingerprint": "a349d985cb4ab6f331351775867af9c9bd14c73821b5b3e4b51d45e774b02b51"
+}

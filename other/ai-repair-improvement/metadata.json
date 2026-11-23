@@ -1,0 +1,38 @@
+{
+  "name": "ai-repair-improvement",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/ai-repair-improvement/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "ai-repair-improvement",
+  "downloaded_at": "2026-11-23T07:36:37.460353Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/ai-repair-improvement/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/ai-repair-improvement/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extract original DSL from production AI Repair failures, save a private corpus, coordinate fixes, and complete L2→L3→L4 validation. Use for ongoing work on newly discovered real failures. For regression-only runs on saved historical DSL, use ai-repair-regression; for single-case validation, use ai-repair-case-validation.",
+  "content_fingerprint": "446a27cb5da48aec31628f50b3bbfe48b190a1ecb6df9b081ba0fa7ed17acd55"
+}

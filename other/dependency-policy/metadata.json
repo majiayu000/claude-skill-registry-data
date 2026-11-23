@@ -1,0 +1,39 @@
+{
+  "name": "dependency-policy",
+  "repo": "VilnaCRM-Org/claude-plugins",
+  "path": "plugins/rust-backend-sdlc/skills/dependency-policy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/VilnaCRM-Org/claude-plugins",
+  "dir_name": "dependency-policy",
+  "downloaded_at": "2026-11-23T07:25:06.131430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VilnaCRM-Org",
+  "source_url": "https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/dependency-policy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VilnaCRM-Org/claude-plugins/blob/main/plugins/rust-backend-sdlc/skills/dependency-policy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a change adds, upgrades, removes or moves a third-party crate, edits a `Cargo.toml` dependency table or `Cargo.lock`, or when the target mapped by `make.check_security` (cargo-deny lanes advisories, licences, bans, sources) or by `make.unused_dependencies` (cargo-shear) reports a finding, including a RUSTSEC advisory. Covers the per-layer allow-lists of `architecture.toml` and the domain dependency whitelist (a needed change escalates, never edited), workspace inheritance through `[workspace.dependencies]`, diagnosis with `cargo tree -i <crate>` and the two dependency ceilings, both fixed at 0. Skip when neither target is mapped and the diff touches no manifest or lock file. Not for moving code between layers or contexts to satisfy the boundary check (use architecture-boundary-fixer), not for an OWASP audit of the service (use security-audit).",
+  "content_fingerprint": "08084f929c67c2df302fcae00ef70ceae969c27032af737185c353831b369013"
+}

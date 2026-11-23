@@ -1,0 +1,39 @@
+{
+  "name": "python-blueprint-review",
+  "repo": "a129924/agent-skills",
+  "path": ".codex/skills/python-blueprint-review/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/a129924/agent-skills",
+  "dir_name": "python-blueprint-review-a129924-agent-skills",
+  "downloaded_at": "2026-11-23T07:39:01.692571Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "a129924",
+  "source_url": "https://github.com/a129924/agent-skills/blob/master/.codex/skills/python-blueprint-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/a129924/agent-skills/blob/master/.codex/skills/python-blueprint-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review a greenfield Python blueprint against its locked schema before project initialization.",
+  "content_fingerprint": "2f0f1a4d52e31fcfad2426b35b323516a65e20af671dd99a3042461adbd5cb0e"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "edit-macro",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/edit-macro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "edit-macro",
+  "downloaded_at": "2026-11-23T07:36:25.265122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/edit-macro/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/edit-macro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Edit an existing ZenUML/Mermaid/PlantUML/Graph/OpenAPI macro on a Confluence page using Playwright browser automation. Use this skill when the user asks to edit a macro, switch diagram types, change macro content, click Edit on a macro, or interact with the macro editor dialog in the Confluence page editor. Covers both Forge (Lite) and Connect (Full) app variants. This skill provides exact selectors and efficient Playwright patterns so you can navigate without excessive snapshots or screenshots.",
+  "content_fingerprint": "610a5387838096ba5ec385af69aa90ef826b6ee99faf4ff518426ed45e32125f"
+}

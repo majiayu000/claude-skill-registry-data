@@ -1,0 +1,36 @@
+{
+  "name": "concert-multicam",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/concert-multicam/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "concert-multicam",
+  "downloaded_at": "2026-11-23T07:25:55.423912Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/concert-multicam/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/concert-multicam/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Concert and live-music multicam editor for Claude: lines up 2-4 camera angles of a gig, switches angles to follow the music, lays the board mix (or the best camera audio) under the picture, and delivers the full show, per-song files and vertical clips. Use when the user says 'edit my concert footage', 'multicam the gig', 'cut our live set', 'band live session video', 'recital video from two cameras', 'festival set', 'make clips from the show', or hands over several camera files from one performance. Runs on video-studio-core (multicam, timeline, beats, colour, deliver, QC)."
+}

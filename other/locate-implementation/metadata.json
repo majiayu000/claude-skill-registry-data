@@ -1,0 +1,37 @@
+{
+  "name": "locate-implementation",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/locate-implementation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "locate-implementation",
+  "downloaded_at": "2026-11-23T06:31:20.072338Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/locate-implementation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/locate-implementation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer \"where is X handled\" or \"which file does Y live in\" with a precise, scannable file and symbol map \u2014 no narrative, just definitions, registrations, and related types. Use when the user asks \"where is this defined\", \"which file handles X\", \"find the function that does Y\", \"where is this endpoint registered\", or wants pointers for fast navigation rather than an explanation. Not for understanding how something works \u2014 use explain-flow instead when the user wants a step-by-step narrative of a feature or endpoint rather than a location."
+}

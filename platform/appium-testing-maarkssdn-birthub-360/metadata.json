@@ -1,0 +1,41 @@
+{
+  "name": "appium-testing",
+  "repo": "MaarkssDN/Birthub-360",
+  "path": ".agents/skills/appium-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/MaarkssDN/Birthub-360",
+  "dir_name": "appium-testing-maarkssdn-birthub-360",
+  "downloaded_at": "2026-11-23T06:19:49.753636Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for platform: platform, device, adb, android, ios",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "adb",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaarkssDN",
+  "source_url": "https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/appium-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaarkssDN/Birthub-360/blob/main/.agents/skills/appium-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use whenever one mobile UI test suite must run on iOS and Android (native or React Native apps), or an Appium suite fails, flakes or breaks after an upgrade: XCUITest, UiAutomator2 and Espresso drivers, capabilities, clients in JS, Python, Java, Ruby or .NET, simulators, emulators and device farms.",
+  "content_fingerprint": "63e072f4c9bd4c82000da5766b64d517122fec1b4db9fd21e97f10fc2800f465"
+}

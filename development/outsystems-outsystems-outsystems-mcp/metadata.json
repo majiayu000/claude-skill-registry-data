@@ -1,0 +1,37 @@
+{
+  "name": "outsystems",
+  "repo": "OutSystems/outsystems-mcp",
+  "path": "kiro/outsystems/skills/outsystems/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/OutSystems/outsystems-mcp",
+  "dir_name": "outsystems-outsystems-outsystems-mcp",
+  "downloaded_at": "2026-11-23T06:41:30.456445Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "OutSystems",
+  "source_url": "https://github.com/OutSystems/outsystems-mcp/blob/main/kiro/outsystems/skills/outsystems/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/OutSystems/outsystems-mcp/blob/main/kiro/outsystems/skills/outsystems/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "OutSystems Developer Cloud (ODC) over MCP. Edit apps, publish, deploy, search tenant elements, manage external libraries. Load this skill before calling any tool from the OutSystems ODC MCP server, including read-only calls such as listing apps. Use for ANY OutSystems task on ODC. Not for OutSystems 11 (O11) modules open in Service Studio. When the Service Studio (O11) MCP server is also connected and the request names neither ODC nor O11, ask the user which platform before calling any OutSystems tool."
+}

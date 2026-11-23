@@ -1,0 +1,37 @@
+{
+  "name": "qfai-triage",
+  "repo": "aganesy/QFAI",
+  "path": "packages/qfai/assets/init/.qfai/assistant/skill/qfai-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aganesy/QFAI",
+  "dir_name": "qfai-triage",
+  "downloaded_at": "2026-11-23T07:45:15.627997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aganesy",
+  "source_url": "https://github.com/aganesy/QFAI/blob/main/packages/qfai/assets/init/.qfai/assistant/skill/qfai-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aganesy/QFAI/blob/main/packages/qfai/assets/init/.qfai/assistant/skill/qfai-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when invoked by name or handed a QFAI work order for a request ending with no tracked change but its deliberation record, open questions and approval row: a question, a duplicate, missing information, a split, automated reports, a security report, an operation only a person can run or the user named on finished work, or authorized cleanup of current-task temporary directories."
+}

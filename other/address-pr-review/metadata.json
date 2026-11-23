@@ -1,0 +1,37 @@
+{
+  "name": "address-pr-review",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/address-pr-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "address-pr-review",
+  "downloaded_at": "2026-11-23T06:31:17.661670Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/address-pr-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/address-pr-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Systematically address PR review comments by triaging feedback, applying targeted code changes, writing clean follow-up commits, and preparing a re-review summary for reviewers. Use when someone says \"address the PR feedback\", \"respond to reviewer comments\", \"the reviewer asked for changes\", \"handle these review comments\", or \"fix what the reviewer flagged\". Assumes the PR already exists and has comments to work through -- for opening a brand-new pull request, use create-pr instead."
+}

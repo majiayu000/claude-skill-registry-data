@@ -1,0 +1,37 @@
+{
+  "name": "localise-dub",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/localise-dub/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "localise-dub",
+  "downloaded_at": "2026-11-23T07:26:00.194801Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, language=2",
+    "score": 2,
+    "runner_up": "language",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/localise-dub/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/localise-dub/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Localisation and dubbing editor for Claude: takes a finished video and makes a version in another language: transcript, translation, subtitles per language (SRT/VTT/TTML), and an offline TTS voice-over dub time-fitted to the original lines and mixed over the music and effects. Honest about limits: translation needs Claude or an optional local model, voices depend on installed TTS, and lip-sync is not done locally. Use when the user says 'dub this into Hindi', 'translate my video', 'Spanish subtitles', 'make a Tamil version', 'localise for Brazil', 'voice-over in another language', 'add subtitles in three languages'. Runs on video-studio-core (transcribe, tts, stems, finish, deliver, QC)."
+}

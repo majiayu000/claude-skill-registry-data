@@ -1,0 +1,38 @@
+{
+  "name": "orc-tools",
+  "repo": "ObneyAI/orc",
+  "path": "orc-skills/orc-tools/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ObneyAI/orc",
+  "dir_name": "orc-tools",
+  "downloaded_at": "2026-11-23T06:38:40.801076Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ObneyAI",
+  "source_url": "https://github.com/ObneyAI/orc/blob/main/orc-skills/orc-tools/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ObneyAI/orc/blob/main/orc-skills/orc-tools/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build and use ORC tools through authored tool leaves, guarded code callers, described catalogs, typed dynamic or finite arguments, recursive specialist chains and parallel actions. Use when selecting, invoking, composing or debugging tools, including researcher-generated tool nodes."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "investigate",
+  "repo": "Tayhlow8/Caixa-D-gua-website-2026",
+  "path": ".agents/skills/gstack/investigate/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Tayhlow8/Caixa-D-gua-website-2026",
+  "dir_name": "investigate-tayhlow8-caixa-d-gua-website--2",
+  "downloaded_at": "2026-11-23T07:13:32.870788Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Tayhlow8",
+  "source_url": "https://github.com/Tayhlow8/Caixa-D-gua-website-2026/blob/master/.agents/skills/gstack/investigate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Tayhlow8/Caixa-D-gua-website-2026/blob/master/.agents/skills/gstack/investigate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Systematic debugging with root cause investigation. Four phases: investigate,\nanalyze, hypothesize, implement. Iron Law: no fixes without root cause.\nUse when asked to \"debug this\", \"fix this bug\", \"why is this broken\",\n\"investigate this error\", or \"root cause analysis\".\nProactively invoke this skill (do NOT debug directly) when the user reports\nerrors, 500 errors, stack traces, unexpected behavior, \"it was working\nyesterday\", or is troubleshooting why something stopped working. (gstack)",
+  "content_fingerprint": "4278ebb9a32abcc0f755ef3a39a5446932e4f162c1d790a365cd73b32689cb71"
+}

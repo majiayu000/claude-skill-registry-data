@@ -1,0 +1,38 @@
+{
+  "name": "gestion-de-gitlab",
+  "repo": "MartinColavita/template_estructura_IA",
+  "path": ".agents/skills/gestion-de-gitlab/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/MartinColavita/template_estructura_IA",
+  "dir_name": "gestion-de-gitlab-martincolavita-template-estructura-",
+  "downloaded_at": "2026-11-23T06:22:24.074857Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, infra",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinColavita",
+  "source_url": "https://github.com/MartinColavita/template_estructura_IA/blob/master/.agents/skills/gestion-de-gitlab/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinColavita/template_estructura_IA/blob/master/.agents/skills/gestion-de-gitlab/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Puerta única de GitLab como plataforma (GitLab.com o una instancia propia) y rol de su orquestador: cómo están configurados un proyecto, un grupo, sus runners y la instancia, qué barreras da el plan y el cambio exacto para que lo aplique una persona. Usar cuando se pida \"revisá cómo está configurado el GitLab\", \"¿están protegidas las ramas?\", \"armá el proyecto en GitLab\", \"auditá el runner\", \"¿hay que actualizar el GitLab?\", \"revisá este texto antes de subirlo a GitLab\", \"/gestion-de-gitlab\". NO es para el YAML del pipeline ni para desplegar (eso es despliegue-continuo). Español (Argentina).",
+  "content_fingerprint": "ee09addcd6e013959d123af9825a8029bc275d6a4ff6d7e77473f43981914052"
+}

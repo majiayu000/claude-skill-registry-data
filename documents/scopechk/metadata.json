@@ -1,0 +1,37 @@
+{
+  "name": "scopechk",
+  "repo": "LilMGenius/paperthin",
+  "path": "skills/depth/scopechk/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/LilMGenius/paperthin",
+  "dir_name": "scopechk",
+  "downloaded_at": "2026-11-23T06:13:53.165389Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LilMGenius",
+  "source_url": "https://github.com/LilMGenius/paperthin/blob/main/skills/depth/scopechk/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LilMGenius/paperthin/blob/main/skills/depth/scopechk/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check whether an item falls inside a target's existing scope, as the target's own written sources define it; it never sets or narrows the scope of a piece of work. Use before a skill, script, module, rule, feature, doc section, or file is added to, moved into, promoted into, merged into, or upstreamed to a suite, repository, plugin, package, or document, and when someone asks whether X is in scope for Y, whether X belongs in Y, or which of several homes should own X."
+}

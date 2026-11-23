@@ -1,0 +1,38 @@
+{
+  "name": "graph-macro",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/graph-macro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "graph-macro",
+  "downloaded_at": "2026-11-23T07:36:27.271823Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/graph-macro/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/graph-macro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive the ZenUML Graph (DrawIO) macro through any entry point — slash-menu insert, in-editor Edit, copy-then-edit fallback, or view-mode Edit — and into the inner DrawIO editor to append a timestamp shape and Publish. Classifies the save outcome as success or did-not-persist, and records whether the paywall was observed. Use whenever you need to verify a Graph macro insert / edit / save end-to-end via agent-browser without re-deriving the Forge → DrawIO iframe chain. Triggers on \"insert graph macro\", \"edit graph macro\", \"publish graph\", \"spot check drawio publish\", \"test graph save\", \"verify graph publish on lite\", or any ad-hoc Graph-macro spot check on lite-stg / full-stg / dia-stg / zenuml-stg / prod.",
+  "content_fingerprint": "a635575ebc84e301297259fc1f6685a1fa813a33d5f00f6c10f2bf93d1fbb14a"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "deid",
+  "repo": "LilMGenius/paperthin",
+  "path": "skills/depth/deid/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LilMGenius/paperthin",
+  "dir_name": "deid",
+  "downloaded_at": "2026-11-23T06:13:49.621829Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LilMGenius",
+  "source_url": "https://github.com/LilMGenius/paperthin/blob/main/skills/depth/deid/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LilMGenius/paperthin/blob/main/skills/depth/deid/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find one person's or one organization's data leaked into a shared repository, folder or artifact, using needles built from that owner's own records (names in every script, handles, emails, phone numbers, addresses, account and client ids), replace each hit with a role or placeholder that keeps the artifact working, and scan git history read-only for the commits that still carry them. Use when a public or shared repository, a template, a fixture set, docs or a deliverable may hold an operator's, a client's or a teammate's personal or business data, when someone asks to de-identify, anonymize, scrub or depersonalize an artifact, before publishing or open-sourcing a repository, or when a person's data must leave a codebase every operator runs."
+}

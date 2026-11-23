@@ -1,0 +1,38 @@
+{
+  "name": "metrics",
+  "repo": "ZenUml/conf-app",
+  "path": ".claude/skills/metrics/skill.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZenUml/conf-app",
+  "dir_name": "metrics-zenuml-conf-app",
+  "downloaded_at": "2026-11-23T07:36:21.086071Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZenUml",
+  "source_url": "https://github.com/ZenUml/conf-app/blob/main/.claude/skills/metrics/skill.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZenUml/conf-app/blob/main/.claude/skills/metrics/skill.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Inspect MacroMetrics KV cache for a domain and space. Usage: /metrics <domain> [space] Returns stored metrics data with diagnostic information (status, freshness, available spaces). Triggers on \"check metrics\", \"metrics for domain\", \"inspect KV cache\", \"metrics data\", \"is metrics data available\", \"why no metrics\".",
+  "content_fingerprint": "2328089b8b86d791db4d79a45fa2bcb0ce351a35a2853c96d5c389e769e62b6a"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "setup-commit-hooks-and-release",
+  "repo": "MshindiLabs/playbook",
+  "path": "skills/setup-commit-hooks-and-release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MshindiLabs/playbook",
+  "dir_name": "setup-commit-hooks-and-release",
+  "downloaded_at": "2026-11-23T06:31:21.155565Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MshindiLabs",
+  "source_url": "https://github.com/MshindiLabs/playbook/blob/main/skills/setup-commit-hooks-and-release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MshindiLabs/playbook/blob/main/skills/setup-commit-hooks-and-release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up Husky commit hooks, commitlint, lint-staged, semantic-release, and a GitHub Actions release workflow from scratch in a Node.js project. Trigger on requests like \"set up conventional commits\", \"enforce commit message format\", \"automate versioning and changelogs\", or \"add a release pipeline\" \u2014 even when the user doesn't know these tool names by heart."
+}

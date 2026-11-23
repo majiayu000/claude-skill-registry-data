@@ -1,0 +1,38 @@
+{
+  "name": "update-agent-desktop",
+  "repo": "SkillfulAgents/Gamut",
+  "path": ".claude/skills/update-agent-desktop/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/SkillfulAgents/Gamut",
+  "dir_name": "update-agent-desktop",
+  "downloaded_at": "2026-11-23T07:01:11.790813Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SkillfulAgents",
+  "source_url": "https://github.com/SkillfulAgents/Gamut/blob/main/.claude/skills/update-agent-desktop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SkillfulAgents/Gamut/blob/main/.claude/skills/update-agent-desktop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bump the agent-desktop CLI that runs agents' computer use on the host, and regenerate the agent-facing computer-use guides from its bundled skills. Use when a new agent-desktop release is out, when computer use misbehaves after an agent-desktop change, or when the version-stamp test in scripts/generate-computer-use-docs.test.ts fails."
+}

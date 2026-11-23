@@ -1,0 +1,38 @@
+{
+  "name": "smoke-check",
+  "repo": "ZoeLeee/game-workflow",
+  "path": ".agents/skills/smoke-check/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ZoeLeee/game-workflow",
+  "dir_name": "smoke-check-zoeleee-game-workflow",
+  "downloaded_at": "2026-11-23T07:37:54.162699Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZoeLeee",
+  "source_url": "https://github.com/ZoeLeee/game-workflow/blob/master/.agents/skills/smoke-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZoeLeee/game-workflow/blob/master/.agents/skills/smoke-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Critical-path smoke gate before QA hand-off — runs the automated suite. A failed check means the build is not QA-ready.",
+  "content_fingerprint": "b0de5491ec39530e45d69ca144b170825183a4cd8c903a603449dd8e97865c48"
+}

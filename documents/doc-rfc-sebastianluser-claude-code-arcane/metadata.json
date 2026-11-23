@@ -1,0 +1,39 @@
+{
+  "name": "doc-rfc",
+  "repo": "SebastianLuser/claude-code-arcane",
+  "path": "skills/doc-rfc/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/SebastianLuser/claude-code-arcane",
+  "dir_name": "doc-rfc-sebastianluser-claude-code-arcane",
+  "downloaded_at": "2026-11-23T06:57:35.604757Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SebastianLuser",
+  "source_url": "https://github.com/SebastianLuser/claude-code-arcane/blob/main/skills/doc-rfc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SebastianLuser/claude-code-arcane/blob/main/skills/doc-rfc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate RFC docs: epics, user stories, tasks in Alizia-BE format. Trigger: RFC, technical docs, epic, user story, spec, technical breakdown.",
+  "content_fingerprint": "4ef4078653cbae317e3c7dcd3ad059cf642327ad54e04eeda66b3ec4991f736a"
+}

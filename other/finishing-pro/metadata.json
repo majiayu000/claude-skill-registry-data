@@ -1,0 +1,37 @@
+{
+  "name": "finishing-pro",
+  "repo": "Viprasol-Tech/claude-video-editing-skills",
+  "path": "plugins/video-studio/skills/finishing-pro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Viprasol-Tech/claude-video-editing-skills",
+  "dir_name": "finishing-pro",
+  "downloaded_at": "2026-11-23T07:25:58.056243Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Viprasol-Tech",
+  "source_url": "https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/finishing-pro/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Viprasol-Tech/claude-video-editing-skills/blob/main/plugins/video-studio/skills/finishing-pro/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finishing editor for Claude: takes any locked Video Studio edit (or any finished video with a plan) through the finishing department: colour correction and shot matching, a creative look with protected skin, dialogue clean-up, music and SFX mix to the delivery loudness, legal levels, then platform encodes, captions, chapters, thumbnails and an automated QC report. Use when the user says 'finish this edit', 'grade and mix it', 'make it broadcast-ready', 'final polish', 'fix the colour and sound', 'loudness for YouTube / podcast / broadcast', 'QC my video', 'online and deliver'. Runs on video-studio-core (color.py, finish.py, audio_chain.py, deliver.py, qc.py)."
+}

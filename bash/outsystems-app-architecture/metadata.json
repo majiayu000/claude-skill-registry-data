@@ -1,0 +1,38 @@
+{
+  "name": "outsystems-app-architecture",
+  "repo": "OutSystems/outsystems-mcp",
+  "path": "cursor/skills/outsystems-app-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/OutSystems/outsystems-mcp",
+  "dir_name": "outsystems-app-architecture",
+  "downloaded_at": "2026-11-23T06:41:31.707909Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "OutSystems",
+  "source_url": "https://github.com/OutSystems/outsystems-mcp/blob/main/cursor/skills/outsystems-app-architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/OutSystems/outsystems-mcp/blob/main/cursor/skills/outsystems-app-architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[Beta] Generate an interactive HTML graph of a single OutSystems app's architecture \u2014 UI flows + screens, server/client/service actions with signatures, entities with attributes and relationships, static enums, structures, roles, AI model connections, library dependencies and where the app is deployed \u2014 with OutSystems-themed dark mode styling. ONE app per invocation \u2014 do NOT iterate over multiple apps in a single call (run the skill explicitly per-app; for more than 3 named apps, ask the user and wait for an explicit answer first). For 'every app' / 'all apps' requests and tenant-wide views, use outsystems-tenant-architecture instead: its scope guard asks before any per-app run, without listing the apps first. Use when the user asks for the architecture of a specific app, 'show me the architecture of [app]', 'explore [app]', 'what's inside [app]', 'give me an overview of [app]', or similar. Not for OutSystems 11 (O11) or Service Studio."
+}

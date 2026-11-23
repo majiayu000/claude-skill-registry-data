@@ -1,0 +1,39 @@
+{
+  "name": "kiro-github-google-onboarder",
+  "repo": "StaticFlow-AI/static-flow",
+  "path": "skills/kiro-github-google-onboarder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/StaticFlow-AI/static-flow",
+  "dir_name": "kiro-github-google-onboarder",
+  "downloaded_at": "2026-11-23T07:09:01.326964Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "StaticFlow-AI",
+  "source_url": "https://github.com/StaticFlow-AI/static-flow/blob/main/skills/kiro-github-google-onboarder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/StaticFlow-AI/static-flow/blob/main/skills/kiro-github-google-onboarder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Onboard or refresh a Kiro social account when Kiro uses GitHub as its provider but GitHub itself must be entered through Continue with Google. Automates Google credentials, Google authenticator verification through 2fa.fun, GitHub authenticator verification through 2fa.fun, Kiro device approval, llm-access import, proxy assignment, and KIRO STUDENT balance verification.",
+  "content_fingerprint": "cb1886dbc707874f435984797cd1f25bd0efb6ac987770a8ed297a4439a868c6"
+}
