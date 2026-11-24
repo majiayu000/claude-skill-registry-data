@@ -1,0 +1,39 @@
+{
+  "name": "debugger",
+  "repo": "aiskillstore/marketplace",
+  "path": "skills/cubha/debugger/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/aiskillstore/marketplace",
+  "dir_name": "debugger-aiskillstore-marketplace",
+  "downloaded_at": "2026-11-24T08:59:03.552517Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, playwright",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aiskillstore",
+  "source_url": "https://github.com/aiskillstore/marketplace/blob/main/skills/cubha/debugger/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aiskillstore/marketplace/blob/main/skills/cubha/debugger/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "버그 원인을 시스템 로그 기반으로 특정하고 수정·검증·정리까지 완료하는 디버깅 워크플로우 스킬. 트리거: '디버깅해줘', '버그 원인 찾아줘', '어디서 오류나는지', '로그 삽입해줘', 에러 메시지/스택 트레이스 붙여넣기, '--pw'/'--pw --headless'/'--pw --record' 플래그. 지원 언어: JS/TS, Python, Java, Kotlin. 안티-트리거: 단순 코드 리뷰, 신규 기능 구현, 원인이 이미 특정된 경우(수정만 진행), 성능 최적화, 기능 동작 검증/시나리오 PASS-FAIL 판정.",
+  "content_fingerprint": "6901b8cfe9c188e3699d6d98317b0deb9b6e6cbad8bf119a34a4f2748fdfbd84"
+}

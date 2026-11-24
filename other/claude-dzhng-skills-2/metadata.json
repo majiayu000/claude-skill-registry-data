@@ -1,0 +1,37 @@
+{
+  "name": "claude",
+  "repo": "dzhng/skills",
+  "path": "skills/implement/claude/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dzhng/skills",
+  "dir_name": "claude-dzhng-skills-2",
+  "downloaded_at": "2026-11-24T10:20:02.705756Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dzhng",
+  "source_url": "https://github.com/dzhng/skills/blob/main/skills/implement/claude/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dzhng/skills/blob/main/skills/implement/claude/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use Claude Code as an independent `claude -p` subagent when the user explicitly asks for Claude, wants a second-agent opinion from Claude, or asks to delegate a well-scoped task to Claude. Supports selecting `--model` and thinking/effort level with defaults of the current `opus` alias and `high`."
+}

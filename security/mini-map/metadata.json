@@ -1,0 +1,40 @@
+{
+  "name": "mini-map",
+  "repo": "cameronww7/skill-sec-arcade",
+  "path": "skills/mini-map/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/cameronww7/skill-sec-arcade",
+  "dir_name": "mini-map",
+  "downloaded_at": "2026-11-24T09:41:08.474246Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, vulnerability, owasp",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "vulnerability",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cameronww7",
+  "source_url": "https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/mini-map/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/mini-map/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Condense an existing dungeon-crawl-threat-map artifact (THREAT_MODEL.md) into a hard-capped, ~50-line MINI_MAP.md that other skills can load as quick background context, application overview, business logic invariants, and security mechanisms (auth, SSO, session handling, secrets, crypto), without pulling in the whole threat model. Trigger this whenever the user asks to \"build app context,\" \"give [a skill] context on this app,\" \"condense the threat model,\" \"generate a mini map,\" \"summarize the security posture for later use,\" or wants quick context before reviewing a finding or planning a remediation. If no THREAT_MODEL.md exists yet, this skill prompts to generate one first, it doesn't fabricate context from scratch."
+}

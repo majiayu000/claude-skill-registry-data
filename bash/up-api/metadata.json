@@ -1,0 +1,39 @@
+{
+  "name": "up-api",
+  "repo": "bx2o/rea",
+  "path": ".stremiium/skills/up-api/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/bx2o/rea",
+  "dir_name": "up-api",
+  "downloaded_at": "2026-11-24T09:39:20.966673Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bx2o",
+  "source_url": "https://github.com/bx2o/rea/blob/main/.stremiium/skills/up-api/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bx2o/rea/blob/main/.stremiium/skills/up-api/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Interact with the Up Banking API to query accounts, transactions, categories, and tags. Use when the user wants to:\n- Check account balances or list accounts\n- Search or filter transactions (by date, category, tag, status)\n- Analyze spending patterns or generate summaries\n- Categorize transactions or manage tags\n- Set up or manage webhooks for real-time notifications\nRequires UP_API_TOKEN environment variable.",
+  "content_fingerprint": "9c876055be200e1caad2b32a8595132e0c6b11794baf4077f5860b37e7c899f0"
+}

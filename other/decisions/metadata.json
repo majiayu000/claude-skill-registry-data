@@ -1,0 +1,37 @@
+{
+  "name": "decisions",
+  "repo": "dtiger1889-ops/claude-harness-toolbox",
+  "path": "skills/decisions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dtiger1889-ops/claude-harness-toolbox",
+  "dir_name": "decisions",
+  "downloaded_at": "2026-11-24T10:18:39.309250Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dtiger1889-ops",
+  "source_url": "https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/decisions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/decisions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds the decision board for the current project: only the choices that are genuinely the user's to make right now, each with its options and, per option, why you'd pick it, what it costs and what it unblocks. Use when the user types /decisions or says \"what do I need to decide\", \"show me my decisions\", \"decision board\" or \"what's waiting on me\". Gathers candidates from the project's CHECKPOINT.md open threads (plus an optional folder of markdown task notes), classifies each with a fixed test, prints the verdicts, then shows the survivors as a board page whose picks the next run reads back, or as a numbered list in chat when no page host is available. An empty board is a correct result. Do NOT use for listing open work in general (that is the CHECKPOINT) or for a to-do list."
+}

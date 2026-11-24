@@ -1,0 +1,38 @@
+{
+  "name": "unity-skill-create",
+  "repo": "eppumelto/Kanshilike",
+  "path": ".claude/skills/unity-skill-create/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eppumelto/Kanshilike",
+  "dir_name": "unity-skill-create-eppumelto-kanshilike",
+  "downloaded_at": "2026-11-24T10:25:30.423483Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eppumelto",
+  "source_url": "https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/unity-skill-create/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/unity-skill-create/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create a new skill (MCP tool) for the Unity Editor by writing a C# (.cs) file that Unity compiles into the project. After compilation the new tool becomes callable through MCP. The file must be a partial class decorated with [AiToolType], each tool method must be decorated with [AiTool], the class name should match the file name, all Unity API calls must run via com.IvanMurzak.ReflectorNet.Utils.MainThread.Instance.Run(), and the method should either return a structured data model (for parseable output) or void (for side-effect-only operations). See the body of this skill for a full sample and best-practice notes.",
+  "content_fingerprint": "4d1b6158fad763bd7c1105ea38bf9f45ec927164df94ce21b754f502d9b1d26b"
+}

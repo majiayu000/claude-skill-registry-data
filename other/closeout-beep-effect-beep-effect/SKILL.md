@@ -1,0 +1,107 @@
+---
+name: closeout
+description: Guided session closeout for beep-effect. Use at every stopping point (task done, blocked on the operator, PR merge-ready, post-merge closeout, before yielding on a question) to hand the operator a structured next-step prompt through AskUserQuestion (Claude Code) or request_user_input (Codex) instead of a prose list of options.
+---
+
+# Guided Closeout
+
+The operator runs many sessions and clones in parallel and does not read long
+final messages. A stopping point is handed back as a short recap plus one
+structured prompt whose options are the concrete next steps. The law is the
+"Guided Closeout" section of `AGENTS.md`; this skill is the shape.
+
+When holding the orchestrator role, update the private handoff under
+[the orchestrate skill](../orchestrate/SKILL.md) before the ledger row and prompt.
+Record each unit's T3 thread link (or its `environmentId` plus thread id on a
+linked host) and any send whose reply is still unread. A `t3_thread_send`
+receipt confirms delivery, not completion; role takeover requires the
+successor's explicit acknowledgment and orchestrator ledger row. Do not resume
+an existing Desktop task merely to deliver a closeout message.
+
+## At session start
+
+Read `bun run beep session open` (the Claude SessionStart hook prints the
+same rows). Each live row is a resume candidate: offer them in the first
+prompt alongside whatever the operator asked for, newest first, and never
+silently take over a row another live session owns: `bun run beep session
+resolve <lane or PR>` names its owner and says whether that session is live.
+
+## When
+
+Every stopping point, not only the end of a task:
+
+- the requested work is done and verified;
+- the work is blocked on something only the operator can decide or do;
+- a PR reached `merge-ready: yes`: it opened (or left draft) at content-final, its checks
+  are green, its threads are answered and its 20-minute review window has
+  elapsed (hand-off, never a merge unless authorized);
+- a merge landed and the lane was retired;
+- any moment you would otherwise end the turn with a question.
+
+If the harness has no question tool (headless `-p` runs, a detached job), write
+the same options as a numbered list with the recommended item first and say
+which tool the operator should use to answer.
+
+## Shape
+
+0. **Write the ledger row first.** `bun run beep session note --state
+   <open|blocked|done> --next "<one line>" [--summary "<one line>"]
+   [--pr <n>]` from the checkout you worked in. This is what the next session
+   (yours or a sibling's) sees at start through `bun run beep session open`;
+   the prompt below is for the operator, the row is for the fleet. The note
+   also records this session's message routes, so `session resolve` can find
+   it. `yeet
+   sweep` and `yeet sweep --retire` write the `done` row themselves.
+1. **Recap, three lines at most, above the prompt.** What landed (PR numbers,
+   commits), what is verified, what is not. Numbers in a short table if more
+   than two.
+2. **One prompt call.** Claude Code: `AskUserQuestion`. Codex:
+   `request_user_input`. At most four questions per call; most closeouts need
+   one.
+3. **The question carries the state.** One line: clone, lane or branch, PR,
+   where it stopped. The operator must be able to answer without scrolling up.
+4. **Two to four options, each a real next step.** Recommended option first,
+   labelled "(Recommended)", with the trade-off in its description. Always
+   include a "stop here" or "park it" option so a `no` is one click.
+5. **Multi-select only when the options are independent** (several lanes to
+   retire, several packets to close). Decisions between alternatives stay
+   single-select.
+6. **Act on the answer in the same turn** when it is reversible and in scope;
+   otherwise open the next prompt.
+
+## Option vocabulary
+
+Prefer these, so prompts read the same across sessions:
+
+- `Continue with <next step> (Recommended)` — the work that follows naturally.
+- `Open the follow-up PR for <x>` — when the next step is a separate branch.
+- `Run /grill-with-docs on <decision>` — when direction, not execution, is next.
+- `Retire the lane` / `Sweep the clone` — post-merge closeout.
+- `Verify the <slug> closeout (Recommended)` — after a goal's final PR merges:
+  `goals completion refresh --slug <slug>`, then `goals doctor --online`.
+  `yeet sweep --retire` runs the same check and leaves a P0 inbox row when it
+  fails. A red required check needs a committed `redAttribution` decision
+  file naming it with its cause and fix PR; a final GitHub can no longer
+  verify needs an `operatorRuling` decision file. A goal is not done, and
+  `/goal` must not stop, until it verifies or an operator ruling closes it.
+- `Archive the <slug> packet (Recommended)` — after the closeout verifies:
+  `bun run beep goals archive --kind goals --slug <slug> --plan`, then
+  `--write --expect <planId>`, push the archive checkout, then land the
+  tombstone in a packet-state PR; or set
+  `retentionReason` in the manifest when the evidence must stay on `main`.
+  Explorations use `--kind explorations` once graduated or killed.
+- `Park it: record state and stop` — writes the state to memory or the packet
+  and ends the turn.
+
+## What it is not
+
+- Not a substitute for `/grill-with-docs`: direction-setting decisions are
+  grilled first; the closeout prompt carries the remaining frontier.
+- Not an exploration exit: an `/explore` packet that needs the operator
+  switches into `/grill-with-docs` and keeps going; closeout comes only once
+  the packet is graduated, parked, or killed.
+- Not a permission laundering path: an action the harness denied is reported
+  as denied, never offered as an option for the operator to "approve" on your
+  behalf.
+- Not a reason to skip the on-disk handoff: packet state, memory, and the
+  yeet inbox are still written before the prompt.

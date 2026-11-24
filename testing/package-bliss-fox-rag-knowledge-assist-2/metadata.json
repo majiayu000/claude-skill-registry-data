@@ -1,0 +1,39 @@
+{
+  "name": "package",
+  "repo": "bliss-fox/rag-knowledge-assistant-archive",
+  "path": ".github/skills/package/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/bliss-fox/rag-knowledge-assistant-archive",
+  "dir_name": "package-bliss-fox-rag-knowledge-assist-2",
+  "downloaded_at": "2026-11-24T09:32:49.056568Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, pytest",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bliss-fox",
+  "source_url": "https://github.com/bliss-fox/rag-knowledge-assistant-archive/blob/main/.github/skills/package/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bliss-fox/rag-knowledge-assistant-archive/blob/main/.github/skills/package/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Clean and package the project for distribution. Removes __pycache__, .venv, build artifacts, data caches, logs, IDE files, coverage reports, and sanitizes API keys in config. Produces a minimal, ready-to-share codebase. Use when user says 'package', 'clean project', 'clean up', '打包', '清理项目', '清理缓存', 'prepare for distribution', 'remove caches', or wants to deliver a clean copy of the code.",
+  "content_fingerprint": "ff769791faebf8e810bb116469587d47c97f54c0964944f425aabdb12222a531"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "tool-reviewer",
+  "repo": "bonigarcia/context-engineering",
+  "path": "skills/tool-reviewer/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/bonigarcia/context-engineering",
+  "dir_name": "tool-reviewer",
+  "downloaded_at": "2026-11-24T09:34:16.957854Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bonigarcia",
+  "source_url": "https://github.com/bonigarcia/context-engineering/blob/main/skills/tool-reviewer/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bonigarcia/context-engineering/blob/main/skills/tool-reviewer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews the tools an agent can call: function-calling schemas (OpenAI, Anthropic, Gemini formats), MCP server tool definitions, or the code that implements them. Reports unclear names and descriptions, weak parameter schemas, overlapping tools, oversized outputs, and poor error messages. Use when the user asks to review, design, or improve agent tools, function definitions, or an MCP server. Do not use for security review of tool permissions (use governance-check)."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "phy-css-dead-code",
+  "repo": "canquedehuiyi-cpu/xiongbao-nenglishichang",
+  "path": "skills/local-installed/phy-css-dead-code/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/canquedehuiyi-cpu/xiongbao-nenglishichang",
+  "dir_name": "phy-css-dead-code",
+  "downloaded_at": "2026-11-24T09:42:04.792380Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, refactor",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "canquedehuiyi-cpu",
+  "source_url": "https://github.com/canquedehuiyi-cpu/xiongbao-nenglishichang/blob/main/skills/local-installed/phy-css-dead-code/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/canquedehuiyi-cpu/xiongbao-nenglishichang/blob/main/skills/local-installed/phy-css-dead-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Unused CSS detector and dead selector auditor. Scans your stylesheet files against all HTML, JSX, TSX, Vue, and template files to find selectors that are defined but never referenced anywhere in your codebase. Detects CSS framework (Tailwind, Bootstrap, CSS Modules, vanilla CSS, Sass/SCSS) and applies the right analysis strategy for each. Reports estimated byte savings per dead rule, finds !important overuse, duplicate selectors, and orphaned media-query blocks. Generates a safe-deletion plan with exact grep verification commands. Works with PostCSS, Sass, Less, and raw CSS. Zero external API \u2014 uses npx and grep only. Triggers on \"unused CSS\", \"dead CSS\", \"CSS bloat\", \"remove unused styles\", \"CSS cleanup\", \"what CSS can I delete\", \"/css-dead-code\"."
+}

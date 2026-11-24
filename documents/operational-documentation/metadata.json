@@ -1,0 +1,40 @@
+{
+  "name": "operational-documentation",
+  "repo": "farstic/ai-servicenow-architect",
+  "path": ".claude/skills/operational-documentation/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/farstic/ai-servicenow-architect",
+  "dir_name": "operational-documentation",
+  "downloaded_at": "2026-11-24T10:32:02.301934Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "farstic",
+  "source_url": "https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/operational-documentation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/operational-documentation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a delivered ServiceNow capability needs operator- and end-user-facing documentation — runbooks covering operational procedure, on-call response and rollback; Knowledge Base Articles including knowledge bases, article templates, versioning and validity, review-and-publish and KCS create-from-incident; training material and user guides. Audience is operators, support engineers and end users.",
+  "content_fingerprint": "31c0d47d535db9b5fbe520ad69b6fa316a85bfd46da0c857d87605d23ec11db3"
+}

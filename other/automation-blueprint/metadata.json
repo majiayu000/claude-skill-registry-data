@@ -1,0 +1,38 @@
+{
+  "name": "automation-blueprint",
+  "repo": "dev-dami/dami-stack",
+  "path": "skills/tend/automation-blueprint/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dev-dami/dami-stack",
+  "dir_name": "automation-blueprint",
+  "downloaded_at": "2026-11-24T10:09:16.022784Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dev-dami",
+  "source_url": "https://github.com/dev-dami/dami-stack/blob/main/skills/tend/automation-blueprint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dev-dami/dami-stack/blob/main/skills/tend/automation-blueprint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when repeated work should be delegated and its spec isn't clear, or when designing agents that turn tickets into merged code. Design only, no build."
+}

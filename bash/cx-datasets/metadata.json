@@ -1,0 +1,38 @@
+{
+  "name": "cx-datasets",
+  "repo": "coralogix/cx-cli",
+  "path": "skills/cx-datasets/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/coralogix/cx-cli",
+  "dir_name": "cx-datasets",
+  "downloaded_at": "2026-11-24T09:56:05.778483Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coralogix",
+  "source_url": "https://github.com/coralogix/cx-cli/blob/master/skills/cx-datasets/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coralogix/cx-cli/blob/master/skills/cx-datasets/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Discover the datasets a Coralogix team can query with the `cx datasets` CLI \u2014 the fully qualified `<dataspace>/<dataset>` names DataPrime `source` commands need. Use when the user asks to \"list datasets\", \"what datasets do we have\", \"which datasets can I query\", \"find datasets\", \"show dataspaces\", \"discover datasets\", \"what data does this team have\", \"available DataPrime sources\", \"filter datasets by pillar\", \"queryable sources\", \"dataset names for DataPrime\", or wants to enumerate or filter the queryable datasets before running a DataPrime query."
+}

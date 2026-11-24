@@ -1,0 +1,41 @@
+{
+  "name": "deploy-node",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/deploy-node/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "deploy-node",
+  "downloaded_at": "2026-11-24T09:54:46.448918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, cd, deploy, infra",
+    "score": 5,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "ci",
+      "cd",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/deploy-node/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/deploy-node/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Router for 'deploy a node', 'ship my node app', 'deploy to candidate-a, preview or production', 'which nodes exist', 'check deployment status'. A node ships with one call: POST /api/v1/deploy/workloads. Routes each deploy question to the hub guide or skill that owns it.",
+  "content_fingerprint": "4cdcd0416910a7a4a1b8a5adf07d3759e4c37a457b02b848156dd75741b48663"
+}

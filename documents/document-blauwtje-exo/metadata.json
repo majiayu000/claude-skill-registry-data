@@ -1,0 +1,38 @@
+{
+  "name": "document",
+  "repo": "blauwtje/exo",
+  "path": "skills/document/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/blauwtje/exo",
+  "dir_name": "document-blauwtje-exo",
+  "downloaded_at": "2026-11-24T09:32:32.656597Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word, documentation",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blauwtje",
+  "source_url": "https://github.com/blauwtje/exo/blob/main/skills/document/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blauwtje/exo/blob/main/skills/document/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes and edits prose read later: README, doc page, PR body, changelog line, release notes. Use when the user asks for one. Not for chat replies or code comments."
+}

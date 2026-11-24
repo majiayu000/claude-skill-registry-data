@@ -1,0 +1,39 @@
+{
+  "name": "handoff-commit",
+  "repo": "ferraroroberto/fleet-config",
+  "path": "skills/handoff-commit/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/ferraroroberto/fleet-config",
+  "dir_name": "handoff-commit",
+  "downloaded_at": "2026-11-24T10:34:23.232555Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ferraroroberto",
+  "source_url": "https://github.com/ferraroroberto/fleet-config/blob/main/skills/handoff-commit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ferraroroberto/fleet-config/blob/main/skills/handoff-commit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a copy-paste prompt handing off a GitHub commit to another LLM to apply the same change to a sister project. Use on a public repo to replicate a change in a private fork or vice versa, without copy-pasting code. Defaults to HEAD; accepts a commit-ish argument (SHA, HEAD~N, branch).",
+  "content_fingerprint": "97362409f1d8d928861d2c686854547f734197c141d9342533b94235d12bc587"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "plain",
+  "repo": "dtiger1889-ops/claude-harness-toolbox",
+  "path": "skills/plain/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dtiger1889-ops/claude-harness-toolbox",
+  "dir_name": "plain",
+  "downloaded_at": "2026-11-24T10:18:37.735346Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dtiger1889-ops",
+  "source_url": "https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/plain/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/plain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Re-expresses a dense response in plain English while preserving its substance. Use for /plain, \"say that in plain English\", \"de-jargon this\", \"unpack that\", or \"explain that like a normal person\". Targets the previous assistant message unless the user supplies another passage. Picture mode, only when asked (/plain show, or \"show me\" about an answer), re-explains with the smallest plain-text picture - pseudocode, a call tree, a component or file tree, or a diff of a tree."
+}

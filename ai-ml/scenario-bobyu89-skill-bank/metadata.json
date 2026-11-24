@@ -1,0 +1,38 @@
+{
+  "name": "scenario",
+  "repo": "bobyu89/skill-bank",
+  "path": "skills/3d-gamedev/scenario-skills/scenario/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-ml",
+  "source": "github.com/bobyu89/skill-bank",
+  "dir_name": "scenario-bobyu89-skill-bank",
+  "downloaded_at": "2026-11-24T09:33:41.655199Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bobyu89",
+  "source_url": "https://github.com/bobyu89/skill-bank/blob/master/skills/3d-gamedev/scenario-skills/scenario/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bobyu89/skill-bank/blob/master/skills/3d-gamedev/scenario-skills/scenario/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when connecting an AI agent to Scenario (scenario.com) through MCP, or when a task involves generating images, video, 3D, audio, sprites, textures, or game assets. Also when picking a Scenario model, running a LoRA, refining a generation prompt, uploading reference images, waiting on generation jobs, checking credits or quota, hitting Scenario auth, scope, or Forbidden errors, or setting up mcp.scenario.com in Claude Code, Cursor, VSCode, or another agent."
+}

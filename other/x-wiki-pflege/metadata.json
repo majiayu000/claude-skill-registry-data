@@ -1,0 +1,37 @@
+{
+  "name": "x-wiki-pflege",
+  "repo": "exava-ai/exava-hintergrund",
+  "path": ".claude/skills/x-wiki-pflege/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/exava-ai/exava-hintergrund",
+  "dir_name": "x-wiki-pflege",
+  "downloaded_at": "2026-11-24T10:29:40.590962Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category context-management scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "context"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "exava-ai",
+  "source_url": "https://github.com/exava-ai/exava-hintergrund/blob/main/.claude/skills/x-wiki-pflege/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/exava-ai/exava-hintergrund/blob/main/.claude/skills/x-wiki-pflege/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Veraltete Wiki-Artikel eines Auftrags (bis zu 20 Partner oder eigene Gesellschaften) neu schreiben – je Subjekt das berechtigte Wissen über read_knowledge lesen und den Artikel nach dem WikiSchema per ingest_wiki mit Compare-and-Swap übergeben; jeder Satz belegt, sonst wird das Subjekt übersprungen. Ein Subjekt je Schritt; meldet EXAVA vorrang, sofort abgeben (partial). Kein Versand, kein Entwurf, keine Rückfrage. Verwenden nur in der EXAVA-Hintergrundarbeit bei Aufträgen mit profil ingest und skill x-wiki-pflege bzw. art wiki.",
+  "content_fingerprint": "dedb2025ef726548ad27d267c43dd702b45d3a3bd5cb3ba789cda99cdfcdcd38"
+}

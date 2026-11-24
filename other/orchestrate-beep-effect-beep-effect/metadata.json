@@ -1,0 +1,37 @@
+{
+  "name": "orchestrate",
+  "repo": "beep-effect/beep-effect",
+  "path": ".claude/skills/orchestrate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/beep-effect/beep-effect",
+  "dir_name": "orchestrate-beep-effect-beep-effect",
+  "downloaded_at": "2026-11-24T09:27:12.202903Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "communication",
+      "messaging"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "beep-effect",
+  "source_url": "https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/orchestrate/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/orchestrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the orchestrator role for beep-effect \u2014 one session that coordinates every other agent session, routes PR review threads, reds and conflicts to their owners, fixes inherited reds once on main, merges PRs at the gate, and relays operator decisions. Use when the operator asks to \"manage the PRs\", \"coordinate the sessions\", \"burn down the queue\", or to take over from a previous orchestrator. Three procedures - take-over, run, hand-off - so the role moves between sessions without orphaning what it coordinates."
+}

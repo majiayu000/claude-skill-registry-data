@@ -1,0 +1,37 @@
+{
+  "name": "dispute-evidence",
+  "repo": "coreyhaines31/makerskills",
+  "path": "skills/dispute-evidence/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coreyhaines31/makerskills",
+  "dir_name": "dispute-evidence",
+  "downloaded_at": "2026-11-24T09:56:38.443685Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: integration=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "webhook",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coreyhaines31",
+  "source_url": "https://github.com/coreyhaines31/makerskills/blob/main/skills/dispute-evidence/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coreyhaines31/makerskills/blob/main/skills/dispute-evidence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When you want to add dispute/chargeback/refund evidence logging to an app (sign-in logs, access/download events, checkout ToS consent, policy versioning, email delivery tracking, dispute webhook alerts, admin evidence export, log retention). Triggers on \"dispute evidence,\" \"chargeback evidence,\" \"refund evidence,\" \"fight chargebacks,\" \"access activity log.\" Product instrumentation, not marketing copy \u2014 marketingskills refunds/paywalls write offers; this records proof of access. Load references/checklist.md and references/worked-example-swipefiles.md."
+}

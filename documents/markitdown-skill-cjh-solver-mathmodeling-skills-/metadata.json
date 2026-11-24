@@ -1,0 +1,43 @@
+{
+  "name": "markitdown-skill",
+  "repo": "cjh-solver/MathModeling-Skills-Arsenal",
+  "path": "skills/05-toolkit/markitdown-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/cjh-solver/MathModeling-Skills-Arsenal",
+  "dir_name": "markitdown-skill-cjh-solver-mathmodeling-skills-",
+  "downloaded_at": "2026-11-24T09:50:09.846420Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, word, excel, pptx, docx, markdown, documentation",
+    "score": 8,
+    "runner_up": "bash",
+    "runner_up_score": 4,
+    "signals": [
+      "docs",
+      "pdf",
+      "word",
+      "excel",
+      "pptx",
+      "docx",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cjh-solver",
+  "source_url": "https://github.com/cjh-solver/MathModeling-Skills-Arsenal/blob/main/skills/05-toolkit/markitdown-skill/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cjh-solver/MathModeling-Skills-Arsenal/blob/main/skills/05-toolkit/markitdown-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Convert documents to Markdown using Microsoft's MarkItDown CLI (`markitdown`). Supports PDF, Word, PowerPoint, Excel, images (OCR), audio (transcription), HTML, YouTube, and URLs. Use when a user wants to convert a file or URL to Markdown, extract text from PDFs/images, transcribe audio/video, or batch-convert documents."
+}

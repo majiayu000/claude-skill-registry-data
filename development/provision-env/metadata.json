@@ -1,0 +1,39 @@
+{
+  "name": "provision-env",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/provision-env/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "provision-env",
+  "downloaded_at": "2026-11-24T09:54:48.045133Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, debug",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/provision-env/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/provision-env/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Provision (or reprovision) a full environment — candidate-*, preview, or production — via the runner-owned `provision-env.yml` workflow. Covers the before (prereqs + minting secrets), the dispatch, the phase map, the hard-won gotchas that turn a \"green\" provision into a silent half-deploy, and the after (verify + decommission). Use when standing up a new env, reprovisioning a dead one, debugging a provision that \"succeeded\" but isn't serving, or when someone says \"provision prod / candidate-b\", \"the new VM isn't up\", \"ImagePullBackOff after provision\", \"apex cut over to an empty VM\", \"525 after provision\", \"operator pod won't start\". Sibling to `https://cognidao.org/knowledge/fork-quickstart-guide` (the forker's zero-to-green) — this is the operator's reference for ANY env on the hub.",
+  "content_fingerprint": "2f9ede1da04e0dd3246b84e32c725526bf6c92dd76ea7b30d03edaaf0509e198"
+}

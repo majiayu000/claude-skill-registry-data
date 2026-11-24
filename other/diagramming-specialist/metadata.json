@@ -1,0 +1,38 @@
+{
+  "name": "diagramming-specialist",
+  "repo": "farstic/ai-servicenow-architect",
+  "path": ".claude/skills/diagramming-specialist/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/farstic/ai-servicenow-architect",
+  "dir_name": "diagramming-specialist",
+  "downloaded_at": "2026-11-24T10:32:01.294564Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "farstic",
+  "source_url": "https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/diagramming-specialist/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/diagramming-specialist/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a ServiceNow design needs a figure — solution and context (C4), data-model and ERD, sequence, process and swimlane, state and lifecycle, deployment and MID topology, CSDM and CMDB relationship maps, and project visuals such as roadmap, Gantt and RACI. Produces diagrams in Mermaid by default, draw.io XML or PlantUML on request. Depicts architecture faithfully and flags inconsistencies back to the source author; it never invents or decides architecture.",
+  "content_fingerprint": "5e7a07bb2b581784b76766ef9bd35058e11b664e8bdc08fafd2019a9932bd8b9"
+}

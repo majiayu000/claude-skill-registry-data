@@ -1,0 +1,38 @@
+{
+  "name": "screenshot-isolated",
+  "repo": "eppumelto/Kanshilike",
+  "path": ".claude/skills/screenshot-isolated/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eppumelto/Kanshilike",
+  "dir_name": "screenshot-isolated",
+  "downloaded_at": "2026-11-24T10:25:31.939477Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, gaming=2",
+    "score": 2,
+    "runner_up": "gaming",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eppumelto",
+  "source_url": "https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/screenshot-isolated/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/screenshot-isolated/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Render a target GameObject from a chosen camera angle with optional layer-based isolation, configurable background (solid/skybox/transparent), multi-light setup via JSON, and Composite (2x2 Front/Right/Back/Top) mode. Returns a PNG image. When isolated=true, inactive children may briefly fire OnEnable — see the body for side-effect notes.",
+  "content_fingerprint": "8d158d11042f0a74618f2546265e73c35f104d1cb11821f041f5137d00bd3b39"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "apify-actor-runtime",
+  "repo": "apify/agent-skills",
+  "path": "skills/apify-actor-runtime/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/apify/agent-skills",
+  "dir_name": "apify-actor-runtime",
+  "downloaded_at": "2026-11-24T09:14:59.170165Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "apify",
+  "source_url": "https://github.com/apify/agent-skills/blob/main/skills/apify-actor-runtime/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/apify/agent-skills/blob/main/skills/apify-actor-runtime/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Test and develop Apify Actors on a local Actor runtime instead of the Apify platform - install it via the Apify CLI, then load its version-matched skill with apify runtime skill. Use when building, running, debugging or testing an Actor locally.",
+  "content_fingerprint": "391189630ede459165da64d26961746297149a7eee922e9f5d606dd6b07b48c1"
+}

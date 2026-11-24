@@ -1,0 +1,38 @@
+{
+  "name": "security-threat-model",
+  "repo": "aspectly-labs/Mikka",
+  "path": ".claude/skills/security-threat-model/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aspectly-labs/Mikka",
+  "dir_name": "security-threat-model-aspectly-labs-mikka",
+  "downloaded_at": "2026-11-24T09:20:28.321948Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aspectly-labs",
+  "source_url": "https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/security-threat-model/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/security-threat-model/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the user explicitly asks to threat model a codebase or path, enumerate threats/abuse paths, or perform AppSec threat modeling. Do not trigger for general architecture summaries, code review, or non-security design work."
+}

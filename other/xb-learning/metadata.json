@@ -1,0 +1,38 @@
+{
+  "name": "xb-learning",
+  "repo": "dennydkt/xbskill",
+  "path": "skills/xb-learning/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dennydkt/xbskill",
+  "dir_name": "xb-learning",
+  "downloaded_at": "2026-11-24T10:08:47.825540Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dennydkt",
+  "source_url": "https://github.com/dennydkt/xbskill/blob/main/skills/xb-learning/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dennydkt/xbskill/blob/main/skills/xb-learning/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "调用受用户配置约束：高自动、中先确认、低须明确开启；用户指定其他技能时禁止接管。围绕真实工作任务建立自适应学习循环，用诊断任务、最小讲解、刻意练习、反馈和迁移证据提升软件、业务、分析与沟通能力。用于快速上手、补能力、制定学习计划、学后难应用、AI 代做后难核验或根据上一轮结果调整学习。触发：$xb-learning、带我学、快速学会、学习计划、继续练、根据反馈调整。",
+  "content_fingerprint": "fc2670eb555ed2acde55766424461450639ea9d29d2561dc0b68b1a17628e734"
+}

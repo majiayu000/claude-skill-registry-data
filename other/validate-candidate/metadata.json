@@ -1,0 +1,37 @@
+{
+  "name": "validate-candidate",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/validate-candidate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "validate-candidate",
+  "downloaded_at": "2026-11-24T09:54:51.703299Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/validate-candidate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/validate-candidate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Validate a PR flighted to candidate-a with exact-SHA, behavior, authentication, UI/API and feature-specific Loki proof. Use for /validate-candidate, \"prove this PR on candidate-a\", or posting the PR validation scorecard. Fetch the authoritative hub contract first. Not for local tests or pre-flight CI.",
+  "content_fingerprint": "aa9cf74f3562d5027614660ec54fe0dcaf3ee9348b497c355a54fc6d6b43868e"
+}

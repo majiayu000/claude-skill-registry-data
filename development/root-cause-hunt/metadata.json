@@ -1,0 +1,38 @@
+{
+  "name": "root-cause-hunt",
+  "repo": "dev-dami/dami-stack",
+  "path": "skills/make/root-cause-hunt/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dev-dami/dami-stack",
+  "dir_name": "root-cause-hunt",
+  "downloaded_at": "2026-11-24T10:09:15.233820Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dev-dami",
+  "source_url": "https://github.com/dev-dami/dami-stack/blob/main/skills/make/root-cause-hunt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dev-dami/dami-stack/blob/main/skills/make/root-cause-hunt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a first fix failed, the cause isn't obvious, a failure is intermittent, or something got slower. Skip obvious one-liners."
+}

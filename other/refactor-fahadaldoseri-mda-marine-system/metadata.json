@@ -1,0 +1,37 @@
+{
+  "name": "refactor",
+  "repo": "fahadaldoseri/mda-marine-system",
+  "path": "skills/refactor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fahadaldoseri/mda-marine-system",
+  "dir_name": "refactor-fahadaldoseri-mda-marine-system",
+  "downloaded_at": "2026-11-24T10:30:52.887416Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fahadaldoseri",
+  "source_url": "https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/refactor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/refactor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Surgical code refactoring to improve maintainability without changing behavior. Covers extracting functions, renaming variables, breaking down god functions, improving type safety, eliminating code smells, and applying design patterns. Less drastic than repo-rebuilder; use for gradual improvements."
+}

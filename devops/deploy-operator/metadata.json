@@ -1,0 +1,41 @@
+{
+  "name": "deploy-operator",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/deploy-operator/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "deploy-operator",
+  "downloaded_at": "2026-11-24T09:54:49.796571Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, cd, deploy, infra",
+    "score": 5,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "cd",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/deploy-operator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/deploy-operator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploy/provision the Cogni operator (k3s + Argo CD). Node apps ship with POST /api/v1/deploy/workloads. Use for provisioning a VM/env, bringing a node live, promoting an image digest, debugging Argo sync / ImagePullBackOff / CreateContainerConfigError, or verifying deployment health. REDIRECT skill — the maintained detail lives in provision-env, devops-expert, cicd-secrets-expert.",
+  "content_fingerprint": "7d6a647fa671bc4124b28df3cf6e9c06a71ae5b18966d861d5cbe18d33e08937"
+}

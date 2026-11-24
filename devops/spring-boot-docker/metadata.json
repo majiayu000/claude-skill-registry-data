@@ -1,0 +1,38 @@
+{
+  "name": "spring-boot-docker",
+  "repo": "alefiengo/spring-boot-tools",
+  "path": "skills/spring-boot-docker/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/alefiengo/spring-boot-tools",
+  "dir_name": "spring-boot-docker",
+  "downloaded_at": "2026-11-24T09:04:57.287945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, docker, deploy",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alefiengo",
+  "source_url": "https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-docker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-docker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Containerize Spring Boot 4.x services with expert-level Dockerfiles and a docker-compose for daily local development: multi-stage builds with layered jars, dependency layer caching, JVM flags for containers (MaxRAMPercentage, virtual threads), non-root runtime, CDS/AOT training runs, healthchecks, and compose with Postgres + .env. Use when asked to dockerize, write a Dockerfile, docker-compose, optimize image size or startup, or fix container behavior."
+}

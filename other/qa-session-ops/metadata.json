@@ -1,0 +1,37 @@
+{
+  "name": "qa-session-ops",
+  "repo": "beep-effect/beep-effect",
+  "path": ".claude/skills/qa-session-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/beep-effect/beep-effect",
+  "dir_name": "qa-session-ops",
+  "downloaded_at": "2026-11-24T09:27:12.944997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "beep-effect",
+  "source_url": "https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/qa-session-ops/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/qa-session-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run and troubleshoot `bun run beep qa` recording sessions: record / extract / report subcommands, lane choice (playwright recordVideo vs OBS obs-websocket against real Chrome), OBS provisioning (websocket enable, PipeWire portal restore-token, scene setup), and collector/witness debugging. Use when a QA capture will not start, produces no events, records a black window, or you must pick a recording lane. The loop protocol itself lives in `browser-qa-loop`; this skill is the machinery under it."
+}

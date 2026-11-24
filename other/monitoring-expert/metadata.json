@@ -1,0 +1,38 @@
+{
+  "name": "monitoring-expert",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/monitoring-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "monitoring-expert",
+  "downloaded_at": "2026-11-24T09:54:50.986486Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/monitoring-expert/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/monitoring-expert/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configures monitoring systems, implements structured logging pipelines, creates Prometheus/Grafana dashboards, defines alerting rules, and instruments distributed tracing. Implements Prometheus/Grafana stacks, conducts load testing, performs application profiling, and plans infrastructure capacity. Use when setting up application monitoring, adding observability to services, debugging production issues with logs/metrics/traces, running load tests with k6 or Artillery, profiling CPU/memory bottlenecks, or forecasting capacity needs."
+}

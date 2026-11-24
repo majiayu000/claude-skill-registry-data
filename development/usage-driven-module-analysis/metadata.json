@@ -1,0 +1,38 @@
+{
+  "name": "usage-driven-module-analysis",
+  "repo": "ezMbedded/EasyEmbeddedFramework",
+  "path": ".claude/skills/usage-driven-module-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ezMbedded/EasyEmbeddedFramework",
+  "dir_name": "usage-driven-module-analysis",
+  "downloaded_at": "2026-11-24T10:30:10.314800Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ezMbedded",
+  "source_url": "https://github.com/ezMbedded/EasyEmbeddedFramework/blob/main/.claude/skills/usage-driven-module-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ezMbedded/EasyEmbeddedFramework/blob/main/.claude/skills/usage-driven-module-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyse the design of a framework module, using its callers (samples, applications, tests) only as evidence of how the API is used, and report API gaps, misuse risks, duplication, and simplification opportunities. Findings are about changing the module, never the callers. Use when the user asks to review or redesign a module from its usage."
+}

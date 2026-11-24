@@ -1,0 +1,38 @@
+{
+  "name": "spring-boot-database",
+  "repo": "alefiengo/spring-boot-tools",
+  "path": "skills/spring-boot-database/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/alefiengo/spring-boot-tools",
+  "dir_name": "spring-boot-database",
+  "downloaded_at": "2026-11-24T09:04:57.974138Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alefiengo",
+  "source_url": "https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-database/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-database/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Flyway migrations and relational schema for Spring Boot: review or create files under db/migration, naming and version order, checksum/validation failures, evolving applied migrations, table/constraint/index design, entity-to-schema mapping and native queries. Use when asked whether a migration is correct, how to name or evolve it, how a schema should change, or to diagnose database connection failures and locks. For slow endpoints, N+1 queries or pool sizing use spring-boot-performance."
+}

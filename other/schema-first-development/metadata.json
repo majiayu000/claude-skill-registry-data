@@ -1,0 +1,38 @@
+{
+  "name": "schema-first-development",
+  "repo": "beep-effect/beep-effect",
+  "path": ".claude/skills/schema-first-development/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/beep-effect/beep-effect",
+  "dir_name": "schema-first-development",
+  "downloaded_at": "2026-11-24T09:27:17.132848Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "beep-effect",
+  "source_url": "https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/schema-first-development/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/schema-first-development/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Focused schema-first guidance for this repo's effect/Schema and @beep/schema patterns. Use when adding or refactoring schemas, replacing exported interface/type data models, fixing schema-first lint violations, modeling literal domains or tagged unions, applying schema defaults or transformations, decoding external input, or reviewing schema code for repo-law compliance."
+}

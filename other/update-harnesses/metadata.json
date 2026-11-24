@@ -1,0 +1,37 @@
+{
+  "name": "update-harnesses",
+  "repo": "beep-effect/beep-effect",
+  "path": ".claude/skills/update-harnesses/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/beep-effect/beep-effect",
+  "dir_name": "update-harnesses",
+  "downloaded_at": "2026-11-24T09:27:14.201310Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "beep-effect",
+  "source_url": "https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/update-harnesses/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/update-harnesses/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Update every agent harness on every fleet host: T3 Code, Codex, Claude Code, Grok Build, Kimi Code, Junie, Cursor Agent and Muse on DankStation, beep-worker, dankserver, tbk-worker, tom-pc-1-wsl and the grok-bot VM, plus the desktop apps (ChatGPT and Claude Desktop on DankStation and grok-bot; Cursor and Kimi Desktop on DankStation). Use on `/update-harnesses`, when a harness is out of date somewhere, or to audit which versions and install methods each host runs."
+}

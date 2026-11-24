@@ -1,0 +1,40 @@
+{
+  "name": "site-audit",
+  "repo": "boringmarketer/boring-marketing-skills",
+  "path": "skills/site-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/boringmarketer/boring-marketing-skills",
+  "dir_name": "site-audit",
+  "downloaded_at": "2026-11-24T09:34:48.651595Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, content, campaign, brand",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "seo",
+      "content",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "boringmarketer",
+  "source_url": "https://github.com/boringmarketer/boring-marketing-skills/blob/main/skills/site-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/boringmarketer/boring-marketing-skills/blob/main/skills/site-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Crawls a website the way Google and the AI crawlers see it and returns a short, ranked fix list in plain words. It covers pages blocked from Google, noindex and canonical mistakes, AI crawlers blocked in robots.txt or at the CDN, sitemap health, broken links, duplicate and thin pages, Core Web Vitals from Google's free PageSpeed API, and the content signals that make a page worth citing. Use for a technical SEO audit, when pages aren't showing up on Google, to check whether AI crawlers can reach the site, or to re-check a site after fixes and see what changed."
+}

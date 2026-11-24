@@ -1,0 +1,37 @@
+{
+  "name": "learn",
+  "repo": "blauwtje/exo",
+  "path": "skills/learn/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/blauwtje/exo",
+  "dir_name": "learn-blauwtje-exo",
+  "downloaded_at": "2026-11-24T09:32:31.814143Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blauwtje",
+  "source_url": "https://github.com/blauwtje/exo/blob/main/skills/learn/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blauwtje/exo/blob/main/skills/learn/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a repeated correction into a check that fails or one small lesson note, and offers lessons mined from past sessions. Use when a hook line starts with `exo:` or says Exo found new memories, when the user repeats a correction, says 'remember this', or asks to mine past sessions or prune CLAUDE.md. Not for a first correction mid-task, unfinished work (save) or a bug (diagnose)."
+}

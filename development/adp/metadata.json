@@ -1,0 +1,38 @@
+{
+  "name": "adp",
+  "repo": "fblgit/artifacts-done-properly",
+  "path": "plugins/artifacts-done-properly/skills/adp/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fblgit/artifacts-done-properly",
+  "dir_name": "adp",
+  "downloaded_at": "2026-11-24T10:32:11.652537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fblgit",
+  "source_url": "https://github.com/fblgit/artifacts-done-properly/blob/main/plugins/artifacts-done-properly/skills/adp/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fblgit/artifacts-done-properly/blob/main/plugins/artifacts-done-properly/skills/adp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "ADP (Artifacts Done Properly) is a protocol and framework for structured Claude Artifacts and Sites pages: a thin shell, the record in the artifact's database mapped to the page's parts, changes sent as records instead of republishes, and pages built from a shared catalog of kits, themes and templates. Load it FIRST, before writing any HTML and before calling the Artifact or ArtifactData tools, whenever the user wants a new artifact page, board, tracker, dashboard, assistant or record that will be kept or changed again; wants to edit, republish or answer comments on an ADP artifact; says ADP, adp.py, catalog, kit, theme, template, part id, watch the artifact, requests or presence; wants an existing artifact put on ADP; or is setting ADP up for the first time. Skipping it means republishing and rebuilding by hand what the record and the catalog already hold."
+}

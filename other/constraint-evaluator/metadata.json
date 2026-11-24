@@ -1,0 +1,37 @@
+{
+  "name": "constraint-evaluator",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/constraint-evaluator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "constraint-evaluator",
+  "downloaded_at": "2026-11-24T09:54:53.029745Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/constraint-evaluator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/constraint-evaluator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Evaluate the project's biggest constraint to achieving its mission using Theory of Constraints. Performs independent research, challenges assumptions, and records a dated finding against the constraint taxonomy (https://cognidao.org/knowledge/constraint-toc-taxonomy) through a hub contribution. Use this skill whenever the user asks about constraints, bottlenecks, blockers, what to work on next, strategic priorities, or \"what's holding us back.\" Also use it when the user wants a strategic health check, wants to understand where the project stands, or asks about TOC analysis. Even if the user just says \"evaluate\" or \"triage\" without specifics, this skill is likely what they want.",
+  "content_fingerprint": "25acd6ccfa8205525403f67878a6725db25e4a2110ae9c2bd8f7d089d9a0bc10"
+}

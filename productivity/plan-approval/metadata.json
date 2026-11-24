@@ -1,0 +1,37 @@
+{
+  "name": "plan-approval",
+  "repo": "chnlich/charlie-bot",
+  "path": "skills/plan-approval/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/chnlich/charlie-bot",
+  "dir_name": "plan-approval",
+  "downloaded_at": "2026-11-24T09:47:53.960029Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chnlich",
+  "source_url": "https://github.com/chnlich/charlie-bot/blob/main/skills/plan-approval/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chnlich/charlie-bot/blob/main/skills/plan-approval/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Enforces explicit user approval at the CharlieBot master-to-user boundary. Use only when the CharlieBot master is producing an understanding page, presenting a plan, receiving plan feedback, or preparing to delegate implementation."
+}

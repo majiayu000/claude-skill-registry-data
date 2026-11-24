@@ -1,0 +1,39 @@
+{
+  "name": "cypress-skill",
+  "repo": "fahadaldoseri/mda-marine-system",
+  "path": "skills/cypress-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/fahadaldoseri/mda-marine-system",
+  "dir_name": "cypress-skill",
+  "downloaded_at": "2026-11-24T10:31:05.007280Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e, cypress",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "e2e",
+      "cypress"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fahadaldoseri",
+  "source_url": "https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/cypress-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/cypress-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates production-grade Cypress E2E and component tests in JavaScript or TypeScript. Supports local execution and TestMu AI cloud. Use when the user asks to write Cypress tests, set up Cypress, test with cy commands, or mentions \"Cypress\", \"cy.visit\", \"cy.get\", \"cy.intercept\". Triggers on: \"Cypress\", \"cy.\", \"component test\", \"E2E test\", \"TestMu\", \"LambdaTest\"."
+}

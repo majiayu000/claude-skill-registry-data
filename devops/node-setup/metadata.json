@@ -1,0 +1,40 @@
+{
+  "name": "node-setup",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/node-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "node-setup",
+  "downloaded_at": "2026-11-24T09:54:46.106554Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/node-setup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/node-setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Agentic node setup for Cogni forks. Orchestrates the full lifecycle: DAO formation, payment activation, repo identity, infrastructure provisioning, and deploy verification. Delegates to guide docs for step-by-step details.",
+  "content_fingerprint": "7022ff9659eedc3732fe955ad67c1eadd342c372c3fe532aa0ae566e96afb662"
+}

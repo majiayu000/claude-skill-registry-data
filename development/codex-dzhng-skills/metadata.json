@@ -1,0 +1,38 @@
+{
+  "name": "codex",
+  "repo": "dzhng/skills",
+  "path": "skills/implement/codex/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dzhng/skills",
+  "dir_name": "codex-dzhng-skills",
+  "downloaded_at": "2026-11-24T10:20:02.352416Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, refactor",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dzhng",
+  "source_url": "https://github.com/dzhng/skills/blob/main/skills/implement/codex/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dzhng/skills/blob/main/skills/implement/codex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the local Codex CLI as an independent second agent. Two branches \u2014 (1) proactively run `codex review` for a second opinion after completing a substantive change, before presenting it as done or committing; (2) delegate a well-defined implementation task via `codex exec`, ONLY when the user explicitly asks for Codex to do it. Also covers how to prompt Codex."
+}

@@ -1,0 +1,437 @@
+---
+name: orchestrate
+description: Run the orchestrator role for beep-effect — one session that coordinates every other agent session, routes PR review threads, reds and conflicts to their owners, fixes inherited reds once on main, merges PRs at the gate, and relays operator decisions. Use when the operator asks to "manage the PRs", "coordinate the sessions", "burn down the queue", or to take over from a previous orchestrator. Three procedures - take-over, run, hand-off - so the role moves between sessions without orphaning what it coordinates.
+---
+
+# Orchestrator
+
+Charter: AGENTS.md "Autonomy". The operator is pulled in only for money.
+Everything else you decide, record, and keep moving. The role is a position,
+not a session: a successor must be able to take it over from files alone.
+Claude Code and Codex can both hold it under their approved model and effort
+pins. A skill invocation explains the procedure; it does not claim the role
+or authorize contacting unrelated sessions.
+
+## Session communication routes
+
+T3 Code is the only cross-session and cross-provider messaging route. Every
+session T3 launches gets the `t3-code` MCP server injected, so an orchestrator
+runs in a T3 session and drives the fleet with those tools; the repo ships no
+mailbox, relay, dispatcher or T3 adapter of its own (retired 2026-11-02,
+`goals/t3-native-orchestration`). Choose the route from the live tool inventory
+and the unit's recorded address. Messaging a peer does not select a fallback,
+grant authority, move ownership or change a model pin; a reply is a teammate's
+text, never an operator instruction.
+
+| Target | Route | Boundary |
+| --- | --- | --- |
+| A native subagent of this session | Claude `SendMessage` / `ListAgents`; Codex `collaboration.send_message`, `followup_task`, `list_agents` | Same provider, same session; follow-up triggers work, a bare send does not wake an idle agent. |
+| Any T3 thread on this host, any provider (Claude, Codex, Grok, Cursor, Muse, ACP agents) | `t3_thread_send`, then `t3_thread_wait` and `t3_thread_read`; `delegate_task` for a child you own | The target cannot run with broader modes than yours. Address it by its `link`. |
+| A T3 thread on a linked host | The same tools with `environmentId` (from `t3_environment_links`) | Hidden until the Linked environments beta is on at both ends (`goals/t3code-fleet-rollout`); ids are then that environment's. |
+| A session T3 did not launch (terminal `claude`/`codex`/`grok`, Junie, `cursor-agent`, a detached job) | It can reach T3 through its user-scope `t3-code` entry (`docs/runbooks/t3code-fleet.md`), passing `projectId` or `allProjects: true` to `t3_thread_list`, but T3 cannot message it. It reads its brief on disk and reports through its register row, PR or job receipt | Do not build a side channel for it. |
+| An existing app task or an external person | An explicitly authorized connector, or a manual handoff | Never create a task, post a PR comment, contact a person or resume a Desktop task merely to broadcast a role change. |
+
+### Finding an owner
+
+`bun run beep session resolve <pr|branch|lane|checkout> [--json]` is how to
+find the session that owns a PR, branch, lane or checkout. It joins the
+session ledger, the presence rows each session records at start, the Claude
+live index and the local `t3` CLI, and prints the owner, every route with its
+liveness computed now (`live`, `dormant`, `unreachable`, `dead`, `unknown`;
+`unknown` is never `dead`) and the literal `t3_thread_send` or `SendMessage`
+call. A newer claim from another checkout wins and the older one is listed as
+superseded. When no session on this host owns the key it prints one
+`t3_thread_search` per linked environment for you to run, then the PR-comment
+and takeover fallbacks. It sends nothing. Do not join ledger rows, transcripts
+and session titles by hand.
+
+
+[permission-continuity runbook](../../../docs/runbooks/agent-permission-continuity.md)
+and the operator's applicable agent instructions still apply: do not resume a
+dormant Full-access/Never-ask task to deliver a message. The operator opens it, or authorizes a fresh T3 thread instead.
+
+### T3-native procedure
+
+Tool names and argument names below are the ones the installed T3 server lists
+(fork `beep-effect/t3code`, verified 2026-11-02). `t3_thread_configuration` does
+not exist; the tool is `t3_thread_configure`.
+
+1. **Capabilities and configuration.** `orchestrator_capabilities`
+   (`environmentId?`, `search?`) lists provider instances
+   (`providerInstanceId`), model ids, options such as `effort`, and runtime
+   modes. `t3_thread_configure` with no `threadId` reads your own provider,
+   model and modes; with `threadId` it reads a peer's, and with
+   `modelSelection` it changes one you own. A child never exceeds your modes.
+2. **Launch with a pin.** For a child you own: `delegate_task`
+   `{task, title, role, target: {providerInstanceId | driverKind, model,
+   options: {effort: "medium"}}, isolation: "shared" | "worktree", mode:
+   "async", clientRequestId}`. Pins: Codex `gpt-6.1-sol` medium, Claude
+   `claude-opus-5-5` medium (AGENTS.md "Volume pools"); `target.environmentId`
+   plus `projectId` runs it on a linked host. For a top-level thread with its
+   own checkout: `t3_thread_launch` `{title, message, modelSelection: {provider,
+   model, options}, workspaceStrategy: {type: "worktree", baseRef, branch},
+   clientRequestId}`; `create_threads` makes up to twenty top-level threads
+   sharing this checkout. Launch has a retry key: after an error or a lost
+   reply, retry with the same `clientRequestId`, never a fresh one. Record the
+   returned `link`, thread id and `taskId` in the register before anything
+   else.
+3. **Send with a stable id.** `t3_thread_send` `{threadId, message, mode,
+   clientRequestId, environmentId?}`. Derive `clientRequestId` from the brief
+   and purpose (`orch-<repo>-<brief>-<purpose>-<n>`), write it into the brief,
+   and reuse it only for identical content. The receipt carries `messageId`,
+   `runId` and `delivery` (`started`, `queued`, `steered` or `restarted`).
+   `mode: "auto"` starts an idle thread, steers a running turn, or queues;
+   `queue` is a new turn after the current one; `steer` is a mid-turn update;
+   `restart` interrupts first. A send to a finished child starts a fresh task
+   and returns its `taskId`. The message is a pointer: the brief path plus two
+   lines.
+4. **Correlate wait and read.** Wait on the run the send returned:
+   `t3_thread_wait` `{threadId, runId, timeoutMs}`; on `timedOut` with `next`
+   present end your turn (the completion wakes you), without `next` call it
+   again. Then `t3_thread_read` `{threadId, view: "messages", limit,
+   maxCharsPerItem, afterPosition}` and accept only an assistant message
+   positioned after your sent message. For a delegate, do not poll
+   `task_status` before its completion wakes you; its `summary` is the result,
+   `hasPendingQuestion` means a `t3_pending_request` is blocking it, and
+   `pendingApproval` is the operator's to answer. An ambiguous receipt is
+   reconciled against the brief and the thread read, never resent blindly.
+5. **Interrupt the right run.** `t3_thread_interrupt` `{threadId, runId?,
+   reason, stop?, clientRequestId}` for a top-level thread (`stop: true` acts
+   as its Stop button: queued messages held, PR watches ended, delegated tasks
+   stopped); `task_cancel` `{taskId}` for a delegate; `t3_workflow_stop` for a
+   Claude workflow. Verify the terminal status with `t3_thread_wait` before
+   recording it.
+6. **Scheduled wakes.** `schedule_task` `{prompt, schedule: {type:
+   "interval", everyMs} | {type: "fixed_time", timeOfDay, weekdays?} | {type:
+   "once", runAt} | {type: "webhook"}, title, bindToCurrentThread,
+   clientRequestId}` replaces sleep loops and the retired wake daemon;
+   `list_scheduled_tasks`, `delete_scheduled_task` and `run_scheduled_task_now`
+   manage them. A PR you must babysit gets `watch_pull_request`.
+7. **Cross-environment placeholder.** Every thread tool, the capabilities
+   call, the scheduled-task tools and `delegate_task.target` take
+   `environmentId`. Leave it out on this host. `goals/t3code-fleet-rollout`
+   fills it in per host once `t3_environment_links` lists the link; a remote
+   thread is cited as `t3-thread://v2/<environmentId>/<threadId>` and
+   `delegate_task` then returns `remoteChild` instead of `childThreadId`.
+
+Repository authority does not move with messages: the registered orchestrator,
+briefs, ownership, model routing and Yeet gates stay as written below. Keep
+reads small (`limit`, `maxCharsPerItem`); delegate any larger read to a child
+that writes a file. Private thread ids, environment ids and briefs live only in
+`~/.cache/beep/orchestrator/`; the repo carries none.
+
+## Files the role lives in
+
+| File | Writer | What it is |
+| --- | --- | --- |
+| `~/.local/state/beep/sessions/<repo>.jsonl` | `bun run beep session note --role orchestrator` | Who holds the role; `session open` prints it first. |
+| `~/.local/state/beep/orchestrator/<repo>.jsonl` | `bun run beep session register add` (`convert` to move a unit) | The REGISTER: one row per coordinated unit (kind, address, owns, state, waiting-on-orchestrator, last contact, orphan plan). A T3 unit's address is its thread `link` (plus `environmentId` on a linked host); a T3 scheduled task is a `scheduled-task` row. `register list --markdown` renders it. |
+| `~/.local/state/beep/orchestrator/<repo>.rulings.jsonl` | `bun run beep session ruling add` | Operator rulings, verbatim and dated, with their source; `--supersedes <id>` retires the one a ruling replaces. `ruling list` shows the rulings in force. |
+| `~/.cache/beep/orchestrator/HANDOFF.md` | `bun run beep session handoff --write`, then you for the prose sections | The format is `HANDOFF.template.md` in this directory. The renderer writes the holder line, rulings, gate snapshot, register and journal pointer from their files and keeps every other section (promises, pending decisions, next actions, recipes, routes, broadcast) exactly as you wrote it, backing the old file up first. Rewritten at every stopping point, not at hand-off. |
+| `~/.cache/beep/orchestrator/briefs/*.md` | you | Per-session briefs: the exact text sent to a session, dated. |
+| `~/.cache/beep/orchestrator/STATE.md` | you | Append-only journal (one timestamped line per event). Never read whole; `tail -40` only. |
+
+None of these are committed. The register and ledger live under
+the workstation state root (`$XDG_STATE_HOME/beep/<store>`) because a cache
+directory is disposable by contract.
+
+## Smart zone: keep your own context small
+
+The orchestrator's context is the scarcest thing in the fleet. Rules:
+
+- Write every ruling, gate state and promise to a file at the moment it
+  happens (`STATE.md` line + `HANDOFF.md` section), never only in chat.
+- Never read a large file yourself. Delegate reads to an agent that writes a
+  short file; read the short file. `yeet gate-table` output and
+  `session register list` are the only tables you read directly.
+- One brief per session, on disk, then `t3_thread_send` the path plus a two-line
+  summary with a stable `clientRequestId`. The brief is the record; the message is the pointer.
+- Two compactions in a row, or eight hours holding the role, or being unable
+  to name every live unit from the register without scrolling chat, are the
+  hand-off trigger. Hand off before the third compaction.
+
+## Ownership before take-over
+
+A missing local process is **unknown**, not retired, for a Desktop or remote
+session. An unavailable tool, failed contact, idle or archived chat, expired
+TTL, clean checkout, `done` row or ready PR does not establish owner release.
+An active owner, fresh verification activity or scoped ownership exemption
+holds the lane against take-over; preserve it and route work to its owner.
+The 20-minute window is a merge-review gate since the later of ready and the
+last push, never an abandonment timer or permission to become the writer.
+
+Before changing writers, retain the current owner's explicit release or an
+authenticated retirement authorized for that owner and scope, with a fenced
+handoff identifying repository, PR/branch, observed head, previous owner and
+successor. Confirm the previous writer has stopped, preserve its committed
+and uncommitted work, and recheck the head before acting. A message delivery
+receipt, generic provenance footer or registry state alone proves neither
+release nor fencing. Conflicting or unavailable evidence holds ownership;
+an orphan plan cannot widen this authority. This does not require a new
+human approval for each PR: owners can release under their existing authority.
+
+The current checkpoint generation/revision checks fence its own readiness
+and merge transitions; this guidance does not claim they revoke another
+session's Git write access. Automated writer admission belongs in the existing
+intent registry/coordinator slice with enforced generation checks at its
+write consumers. Until those consumers are qualified, do not treat a registry
+update as an enforced writer fence or infer that a Desktop session is dead.
+
+## Take-over
+
+1. `bun run beep session open`: see who holds the role. Apply "Ownership
+   before take-over" first. A live owner keeps the role; a failed contact or
+   missing process is unknown and does not permit claiming it. Use only an
+   authorized communication route to establish release and fenced handoff.
+2. Read `~/.cache/beep/orchestrator/HANDOFF.md` (whole; it is short by rule)
+   and `tail -40 ~/.cache/beep/orchestrator/STATE.md`. If `HANDOFF.md` is
+   missing, run `bun run beep session handoff --write` (it renders the
+   holder, rulings, register and journal pointer and writes the template's
+   placeholders for the rest), then fill the prose sections from the newest
+   briefs before doing anything else.
+3. `bun run beep session register list`: every unit, newest first. For each
+   row with `waiting on orchestrator`, that ask is your first queue.
+4. `bun run beep yeet gate-table`: one row per open PR, with a `window=`
+   column (push-first-publish D11: `ok`, minutes left, `?`, or `-` for a
+   draft), pending commit statuses as a hold and failing ones in their own
+   `STATUS-RED:` column. Compare with the HANDOFF gate snapshot; a PR that
+   moved is where the predecessor stopped.
+5. Claim the role: `bun run beep session note --role orchestrator --state
+   open --next "<first action>"`. Append `took over from <session id>` to
+   `STATE.md`.
+6. Send the HANDOFF "Broadcast" text to every live unit in the register
+   through `t3_thread_send` on its recorded thread link (with its
+   `environmentId` on a linked host), one stable `clientRequestId` per unit.
+   A unit T3 did not launch has no route: record it as unreachable, keep its
+   brief on disk and apply only the authorized parts of its orphan plan. A
+   register row never authorizes a connector, a Desktop task or a message to
+   a person.
+7. Re-arm pollers: for each `background-job` row, `bun run beep yeet job
+   wait <id>` or re-submit; for each `systemd-unit` row, `systemctl --user
+   status <unit>`; for each `scheduled-task` row, `list_scheduled_tasks` and
+   re-create a missing one with `schedule_task` bound to this thread. For each
+   `in-process-agent` row the predecessor could not convert, run the authorized
+   parts of its orphan plan, or relaunch it with `delegate_task` from its brief
+   when the plan says so.
+8. Run `bun run beep session handoff --write` (it writes the holder line from
+   your ledger claim), then set its `Holder thread:` line to your own T3
+   thread link: it is the route a successor uses to ask you for an explicit
+   release. Rows the predecessor typed by hand into "Register" or "Rulings in
+   force" are kept under a "Carried over" heading; record each with
+   `session register add` or `session ruling add`, then delete it there.
+
+## Where to launch
+
+An advisory rule, not a dispatcher. Before launching substantive work, read
+`bun run beep palantiri parcel host-pressure --json` and compare it with this table.
+A stale item (`freshness._tag` other than `Fresh`) means unknown: do not spill on it.
+
+| Signal | Parcel field | Spill at | Baseline, 7 days |
+| --- | --- | --- | --- |
+| CPU, sustained | `PressureStall` cpu `some.avg60` and `some.avg300` | avg60 >= 33 and avg300 >= 17 | avg60 p99 32.5; avg300 p95 16.6 |
+| Memory stall | `PressureStall` memory `full.avg60` | >= 5 | p99 4.7 |
+| IO stall | `PressureStall` io `full.avg60` | >= 10 | p99 9.8 |
+| Free memory | `HostMemory.availableGib` | <= 13 | p1 13.0 |
+| Admission | `AdmissionSlots.hardFloorEngaged`, `queued` | engaged, or queued >= 1 | Not from PSI; the gate's own refusal |
+
+Any one row is a breach. Baseline and derivation:
+[goals/t3code-spill-routing/history/2026-11-08-baseline.md](https://github.com/beep-effect/beep-effect-goals-archive/blob/main/goals/t3code-spill-routing/history/2026-11-08-baseline.md). Re-derive the table if the
+recorder changes.
+
+On a breach, launch on the first host in this order that `t3_environment_links` lists
+`reachable`, that is below its job limit, and that has the checkout, credentials and data
+boundary the work needs (`tom-pc-1` has a beep-effect checkout and GitHub push but no
+1Password agent credential, so work that reads `BEEP_SECRETS` skips it):
+
+1. `beep-worker`
+2. `tbk-worker`
+3. `tom-pc-1` (one job at a time; an in-use PC, no client data)
+4. `dankserver` (last resort; one job at a time)
+
+`grok-bot` is outside the order: it sleeps unless the operator has its view open, so
+use it only when asked. Launch with `delegate_task` or `t3_thread_launch` and the target
+`environmentId`. Spilling never changes the model or provider, and never moves work
+already running. Record the host and the reason with `bun run beep session note`. The
+operator can override.
+
+The composer's "Auto balance" is separate: it places new human threads and never
+`delegate_task` work.
+
+On the host itself, heavy commands need no wrapper. Yeet's full, merged-preview
+and review-fix proofs wait for weighted admission from the machine-wide quality
+scheduler before they start, and run in `agent-run-<ticket>.scope` under
+`agent-runs.slice` when the user manager allows it; `bun run beep quality
+scheduler status` shows the queue.
+Other commands, such as `quality package-verify` and coverage runs, are not
+admitted yet (`goals/local-proof-under-ten`, SCHE-02): run them directly and
+apply the table above and the AGENTS.md constrained-compute rule. The
+2026-10-06 `beep-heavy` slot wrapper is retired (PERIL-10): do not put it in
+briefs or wrap commands in it.
+
+## Run
+
+Where each event is recorded, in the order it happens:
+
+| Event | Record | Then |
+| --- | --- | --- |
+| A session reports "final <sha>" | HANDOFF "Outstanding promises" row; STATE line | The PR is already ready when the owner opened it at content-final (`yeet open`); the owner of an opt-in draft flips it in the same step (`bun run beep yeet ready`, which requires a complete passing final-check receipt for the current head, or a valid ancestor carry under the refresh rule, and refuses known required reds or outstanding threads); flip it yourself only after the owner called it final, never un-draft and merge in one step. Arm the gate for that sha. "Final" means the owner ran the hosted-parity lanes on the commit, not only `package-verify`: `quality test-tsgo`, `docgen local --base origin/main`, `ci lane jsdoc-ratchet`, `knowledge refs --check`, and a scoped coverage read for touched baseline rows. Under the constrained-compute rule (AGENTS.md, operator 2026-10-24) the owner may skip local lanes; green hosted CI then stands in for each lane the PR body lists as skipped. A `final <F> #N receipt <R>` report means F has no receipt of its own and `yeet ready` carried the passing receipt of ancestor R under the refresh rule (operator 2026-10-28; yeet `references/merge-loop.md`, "Refresh after a main merge"): since R the lane changed only regenerated standards inventories or goal-packet files, and its effect-vitest status counts held. Arm the gate for F; no second final-check. If the lane itself changed code, tests or config after R (code that main brought in does not count), it needs a fresh `final <F> #N`. |
+| Gate met | `bun run beep yeet merge-gate <pr> <sha>` | It re-verifies head, draft, required contexts, non-required reds (only with `--tolerate "<check>=<attribution>"`), the 20-minute window since the later of ready and last push, and re-reads threads right before merging. It merges through `PUT pulls/{n}/merge-async` pinned to `<sha>` and polls the result to a terminal state: GitHub checks the ruleset after it accepts, so a `failed` result holds as `merge-failed` with GitHub's sentence (an unresolved conversation, a head that moved) and a request still pending after about two minutes holds as `merge-unsettled`; read the PR before acting on either. The merge line names `merge-async`. Strict merges send `bypass_rules: false`. An S11 merge adds `--relaxed`: pending checks and inherited reds, required ones included, are recorded with their attribution instead of holding; a red the PR introduced (green on the merge-base commit or on the base tip, not attributed, no `unblocks-main` label) holds as `own-red` (2026-11-02). A hold exits 1 with the reason; route it. `--force-window` only for a fix that unblocks main. Tell the owner `MERGED <sha>` and to `yeet sweep --retire`. A PR in a native stack is gated from the top: `merge-gate <top-pr> <sha>` gates both layers and lands them in one push with no bypass, so it refuses `--relaxed` (`stack-relaxed`), and a lower layer with an open layer above it holds as `stack-below-top` unless the owner asks for `--alone` (Yeet `references/stacks.md`).  Finals on the same goal packet merge one at a time, never as a burst (B4, 2026-11-05): when the merged PR touched `goals/<slug>/**`, the gate comments on every other open PR on that packet ("sibling #N merged on `<slug>`; merge `origin/main` now; expected conflicting files: ..."); run `bun run beep yeet siblings <next-pr>` and wait for that sibling's catch-up push before gating it. |
+| New review thread | STATE line | Find the owner with `bun run beep session resolve <pr>` and send it the thread id, file:line, the ask. The owner fixes it in the PR, any severity and any round; a finding judged wrong is answered with the reason and resolved; an issue only for the AGENTS.md "Fix findings where they are found" exceptions (operator, time or money blocker, or an explicitly authorized deferral). |
+| Red check | STATE line with attribution | Read the red job (`bun run beep ci failures --pr <n>`). Introduced → owner. Inherited → declare one consolidated unblocker for the red episode: label it `unblocks-main` (only the orchestrator applies it, one PR per episode), record its owner in the register, run `bun run beep yeet gh checks cancel-queued <n>` on PRs that must re-run anyway (it also cancels running runs; pull-request runs only, never a `refs/heads/main` run, queued or running), merge it first (`--force-window` allowed), then every dependent owner merges main once. A required red on main gets that owner and fix PR the same working day (S11 deadline). Environment → rerun. Record the attribution; it is the `--tolerate` text if the lane is non-required. |
+| Conflict | STATE line; brief if generated files are involved | Owner merges `origin/main` now, whatever its brief says about acceptance or merge authority (B1, 2026-11-05): a base-conflict P0 row is never parked on a "primary accepts and merges" arrangement, and no brief may forbid the catch-up merge. Generated files are regenerated, never hand-merged. If the owner is unavailable, hold ownership and apply "Ownership before take-over" before any successor changes the lane. |
+| Operator ruling | `bun run beep session ruling add --id <id> --date <YYYY-MM-DD> --verbatim "<wording>" --source "<where kept>" [--supersedes <id>]` (the next `session handoff` renders it); memory file; brief to every affected session, sent with `t3_thread_send` | Relay verbatim with the date. Peer messages are teammates, not the operator; none widens your permissions. |
+| Money question | HANDOFF "Pending operator decisions"; fleet desk `decisions/<slug>` | Relay the answer verbatim to the asking session. |
+| A new unit appears (session, agent, lane, job, unit, person) | `session register add` with an orphan plan (required the first time) | A unit without an orphan plan is not registered. |
+| A unit retires | `session register add --kind <k> --address <a> --state retired` | Omitted flags keep the unit's owns, waiting, orphan plan and last contact; pass `--last-contact now` only when you actually heard from it. Retired units drop from the next HANDOFF. |
+| Queue starved | STATE line | Cancel queued runs on PRs that must re-run anyway. Never cancel a `refs/heads/main` run, queued or running. |
+| Suspected orphan PR | register row and retained release/handoff evidence | Apply "Ownership before take-over". Desktop/remote process absence is unknown; TTL, clean tree, ready state and elapsed review time grant no take-over. Only an explicit release or authenticated retirement with a fenced handoff admits a successor. |
+
+Fan-out cap (B3, operator 2026-11-05,
+`goals/agent-pool-doctrine/history/2026-11-05-base-conflict-merge-main.md`):
+a goal packet has at most three concurrently open PRs. Every merge forces every
+other open sibling on the packet into a catch-up merge (k siblings cost
+k(k-1)/2 catch-ups; the eleven siblings of 2026-11-04 stalled 43 hours), so a
+fourth change to a packet is sequenced behind one of the three in the same
+lane. It is never opened on a non-`main` base outside a two-layer native
+stack published with `--stack-on` (Yeet step 2c, amended 2026-11-13): no
+workflow fires there. A stack's two layers count as two of the three. Refuse a brief
+that would open a fourth sibling; route the work to an existing lane instead.
+`bun run beep yeet siblings <pr>` lists a PR's open packet siblings and the
+files each would conflict on against `origin/main`.
+
+Poll `bun run beep yeet gate-table` every ~4 minutes from a detached job or
+a T3 scheduled task, not a foreground loop: `systemd-run --user
+--unit=orchestrator-gate --collect --same-dir -E PATH bash -c 'while true; do
+bun run beep yeet gate-table; sleep 240; done'` (register it as a
+`systemd-unit` row; read its output with `journalctl --user -u
+orchestrator-gate`), or `schedule_task` with
+`{type: "interval", everyMs: 240000}` bound to this thread (register it as a
+`scheduled-task` row with the task id). `gate.sh` is kept as a one-line
+wrapper for pollers armed before the port. A `GATE-MET` row is a merge
+candidate, never a merge:
+`merge-gate` decides. Never poll GraphQL in a tight loop (see "REST first"
+below); `threads=?` is never zero.
+
+Rulings in force since 2026-10-06 (verbatim sources in
+`~/.claude/memory/beep-effect/feedback-review-window-before-merge.md` and
+`feedback-autonomy-ruling-2026-10-06.md`): ready at content-final; no merge
+inside 20 minutes of ready or the last push (a proven clean merge of the base
+keeps the earlier push, AGENTS.md "Mergeable"); only money escalates; review
+findings are fixed in the PR, never deferred to follow-up issues outside the
+AGENTS.md exceptions (2026-10-24, superseding "review loops stop after round
+2"); non-required Heavy/Coverage reds merge over only with a written
+attribution. Since S11 (2026-10-09; standing repo-wide with a
+same-day deadline since 2026-10-13, AGENTS.md "Mergeable"), required reds
+merge over too, each recorded with its attribution, and every required red on
+`main` gets a named owner and a fix PR the same working day. Run S11 merges
+with `bun run beep yeet merge-gate <pr> <sha> --relaxed [--tolerate
+"<check>=<attribution>"]`. It keeps the head, draft, conflict, ruleset, window
+and thread holds, still holds a head on which no required check has run yet,
+merges over pending checks and inherited reds (the same check red, pending or
+absent on both the merge-base commit and the base tip, attributed by
+`--tolerate` or the PR body's "Inherited reds (S11)" section stamped with this
+head, or any red on an `unblocks-main` PR), holds as
+`own-red` on a required red the PR introduced (since 2026-11-02, when #2522 and
+#2526 merged over their own reds and each needed an unblocker), records each
+merged-over check with its attribution (the `--tolerate` text, else the
+merge-base evidence, else the S11 default) in the merge line and a PR comment,
+and cancels the merged head's leftover runs. It is the only merge that sends
+`bypass_rules: true`, and only when it records at least one check that was
+not green; the merge line and the comment say a bypass was requested. It supersedes the
+relaxed gate script in `~/.cache/beep/orchestrator/bin/`. An S11 PR still has
+to leave draft first: when `yeet ready` refuses on a required red inherited
+from `main`, the owner calls final and runs `bun run beep yeet ready
+--inherited "<check>=<attribution>"`. It records each inherited red in the PR
+body before the flip and still requires every review thread to be answered;
+the orchestrator copies those attributions into the `--tolerate` text.
+
+Two more operator rulings from 2026-10-06 (verbatim, relayed by the
+orchestrator session):
+
+- **Codex delegation.** "Also so that we use up my codex credits as well you
+  can instruct sessions that they can delegate work to codex using GPT 6
+  Sol". "GPT 6 Sol" is the operator's shorthand for `gpt-6.1-sol` at `medium`
+  effort (pins in AGENTS.md "Volume pools"). Both Claude and Codex may stage,
+  commit and publish within their assigned ownership and verified permissions.
+  A delegated worker follows its explicit commit boundary; do not infer a
+  provider-wide restriction. Register a running delegation under its actual
+  native-agent address as an `in-process-agent` row, or process job as a
+  `background-job` row, with the owning session in `owns`.
+- **REST first.** "Use rest api & gh secret." then "in op.": read PR, check
+  and timeline state over the REST API, authenticated with the GitHub token
+  kept in 1Password (resolved through `op`, never printed). That token is the
+  same rate-budget consumer as the `gh` login when both select the same
+  GitHub identity. The CLI also supports an approved alternate token or App
+  identity; verify the selected identity before claiming independent headroom.
+  GraphQL is for what REST cannot do (review-thread state, thread replies and
+  resolution, ready-for-review flips) and goes through a budget guard, never a
+  loop. The operator originally requested "add to beep's yeet command or a
+  new command and configure it to perform common operations for us going
+  forward using the rest api" and said "for now I say just install".
+  Yeet's GitHub operations are now implemented through `@beep/github`; their
+  current behavior is defined in `commands/Yeet/Gh.command.ts` and
+  `commands/Yeet/internal/GhOps.ts` under the repo CLI. The earlier
+  `@effected/github`/Effect 4.0.1 plan is historical context, not the current
+  dependency contract. Keep GraphQL calls one-shot and treat a refused or
+  rate-limited read as unknown.
+
+## Hand-off
+
+1. Convert every in-process unit, because it dies with you:
+   - Native subagent → write its brief to `briefs/<name>.md` (task, state,
+     what it owes, how to resume). Relaunch it as a T3 child with
+     `delegate_task` from that brief (same pin, `mode: "async"`), then move
+     its row in one step: `bun run beep session register convert --kind
+     in-process-agent --address <agent id> --to-kind desktop-session
+     --to-address <thread link> --brief briefs/<name>.md` (it keeps the owns,
+     the waiting ask and the orphan plan); a subagent that cannot be
+     relaunched keeps its brief and is marked unreachable.
+   - Background Bash poller (merge waiter, unit watcher) → re-create as a
+     detached job (`yeet monitor --until-ready --detach`), a user unit
+     (`systemd-run --user --unit=<name> --collect --same-dir -E PATH ...`), or
+     a T3 `schedule_task` bound to the successor's thread; move its row with
+     `session register convert --to-kind
+     background-job|systemd-unit|scheduled-task`.
+   - Scratchpad script → move it into the repo CLI or into
+     `~/.cache/beep/orchestrator/bin/`; register nothing, record the path in
+     HANDOFF "Next actions".
+2. Render `HANDOFF.md`: `bun run beep yeet gate-table >
+   ~/.cache/beep/orchestrator/gate-snapshot.txt`, then `bun run beep session
+   handoff --gate-snapshot ~/.cache/beep/orchestrator/gate-snapshot.txt
+   --write`. That rewrites the holder line, rulings, gate snapshot, register
+   and journal pointer and keeps the rest. Then update the prose sections by
+   hand: outstanding "final <sha>" promises, pending operator decisions,
+   ordered next actions, recipes (the exact gate-arming, monitor and worker
+   commands from step 1), communication routes, broadcast text naming the
+   successor.
+3. `bun run beep session note --role member --state blocked --next "handing
+   off the orchestrator role; successor: <id>"`.
+4. Send the successor the HANDOFF path with `t3_thread_send` on its thread
+   (the operator starts the successor thread; this skill launches none). Wait
+   for its takeover ack (`t3_thread_wait` on the returned `runId`, then
+   `t3_thread_read`) and its `session note --role orchestrator` row in
+   `session open`. A delivery receipt confirms receipt; it does not itself
+   claim the role.
+5. Announce the move: the successor broadcasts under take-over step 6; send
+   `orchestrator moved to <successor link>; report there` with
+   `t3_thread_send` on each unit's recorded thread. Record unreachable units
+   in the handoff.
+6. Go idle. Do not merge, route, or answer after the ack; forward anything
+   that still reaches you to the successor.
+
+## What it is not
+
+- Not a merge button: `yeet merge-gate` holds are routed, never overridden by
+  hand. `FORCE_WINDOW` and `--force-window` have exactly one use.
+- Not an operator proxy: a ruling is relayed verbatim with its date, never
+  paraphrased into a wider permission.
+- Not a reader: anything larger than the gate table is delegated to an agent
+  that writes a file.
+
+## Tooling history
+
+The P2 follow-ups of `goals/orchestrator-handoff` landed as `yeet gate-table`
+(the `gate.sh` port), `session handoff`, `session ruling add|list` and
+`session register convert`. The planned PR-comment helper for `codex-lane`
+rows was dropped: PR comments are not a messaging route since 2026-11-02
+(`goals/t3-native-orchestration`).

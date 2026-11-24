@@ -1,0 +1,38 @@
+{
+  "name": "teach",
+  "repo": "beep-effect/beep-effect",
+  "path": ".claude/skills/teach/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/beep-effect/beep-effect",
+  "dir_name": "teach-beep-effect-beep-effect",
+  "downloaded_at": "2026-11-24T09:27:10.121744Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, memory",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "beep-effect",
+  "source_url": "https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/teach/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/teach/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Teach the user a new skill or concept, within this workspace."
+}

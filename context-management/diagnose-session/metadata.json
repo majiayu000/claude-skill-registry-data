@@ -1,0 +1,38 @@
+{
+  "name": "diagnose-session",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "plugins/standalone/ceh-session-learning/skills/diagnose-session/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "diagnose-session",
+  "downloaded_at": "2026-11-24T09:46:36.081524Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-session-learning/skills/diagnose-session/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-session-learning/skills/diagnose-session/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load this skill when a Claude Code session went wrong and the cause should be found from its transcript, every finding cited and each root cause routed to a fix. Trigger on \"diagnose this session\", \"why did that session go wrong\", \"the agent kept doing X\"."
+}

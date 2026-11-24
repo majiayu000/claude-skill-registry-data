@@ -1,0 +1,39 @@
+{
+  "name": "story-writer",
+  "repo": "farstic/ai-servicenow-architect",
+  "path": ".claude/skills/story-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/farstic/ai-servicenow-architect",
+  "dir_name": "story-writer",
+  "downloaded_at": "2026-11-24T10:31:57.458402Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, markdown, documentation",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "farstic",
+  "source_url": "https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/story-writer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/story-writer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when authoring ServiceNow user stories, acceptance criteria or Gherkin Feature files — including extracting requirements from a workshop transcript, converting Discovery Output into sprint-ready stories, or breaking a feature into a story map. Produces ServiceNow-aware Gherkin with explicit OPEN QUESTIONS blocks, real role and table names, observable acceptance criteria and proposed supporting stories.",
+  "content_fingerprint": "4b173a62c8fd0ba47e3bf2143b4fb2e08cb5eb9a2b7b1f35d95e18a7acb8f722"
+}

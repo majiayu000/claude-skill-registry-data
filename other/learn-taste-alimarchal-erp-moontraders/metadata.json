@@ -1,0 +1,38 @@
+{
+  "name": "learn-taste",
+  "repo": "alimarchal/erp-moontraders",
+  "path": ".claude/skills/learn-taste/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alimarchal/erp-moontraders",
+  "dir_name": "learn-taste-alimarchal-erp-moontraders",
+  "downloaded_at": "2026-11-24T09:08:14.188522Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alimarchal",
+  "source_url": "https://github.com/alimarchal/erp-moontraders/blob/main/.claude/skills/learn-taste/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alimarchal/erp-moontraders/blob/main/.claude/skills/learn-taste/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn the design corrections a user made during a session into rules the next agent follows. Collects every correction (explicit ones, edits the user made to files you wrote, repeated nudges, reverts), generalizes each to the right level, confirms the why, and writes it as rule plus reason into the project's DESIGN.md, a project skill, or a lint check. Only runs when explicitly invoked.",
+  "content_fingerprint": "97a0c759fcf294f9781e26b109d48be4ba0a626536d6e17e62b12cc0058cb575"
+}

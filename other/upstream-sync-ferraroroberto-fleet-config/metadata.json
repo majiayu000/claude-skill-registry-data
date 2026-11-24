@@ -1,0 +1,38 @@
+{
+  "name": "upstream-sync",
+  "repo": "ferraroroberto/fleet-config",
+  "path": "skills/upstream-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ferraroroberto/fleet-config",
+  "dir_name": "upstream-sync-ferraroroberto-fleet-config",
+  "downloaded_at": "2026-11-24T10:34:22.417050Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ferraroroberto",
+  "source_url": "https://github.com/ferraroroberto/fleet-config/blob/main/skills/upstream-sync/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ferraroroberto/fleet-config/blob/main/skills/upstream-sync/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Bring an outside source repo's merged work into the local copy built from it — read the `[upstream]` watermark in `.fleet.toml`, survey the source's merged items since then (apply / adapt / skip), and port each one through `/issue-add` + an `/issue-yolo` lane that reuses the source code and fixes it forward until the gate passes. One shot by default; `--dry-run` only surveys. E.g. \"/upstream-sync\", \"/upstream-sync https://github.com/o/r sonnet\", \"/upstream-sync --dry-run\".",
+  "content_fingerprint": "461ccb9884a3d5f60c0a2f348cea457608fb5ed456089b3a821c22ad3815c1c6"
+}

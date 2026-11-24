@@ -1,0 +1,36 @@
+{
+  "name": "xero-books-health-and-close-check",
+  "repo": "coupler-io/skills",
+  "path": "finance/xero/xero-books-health-and-close-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coupler-io/skills",
+  "dir_name": "xero-books-health-and-close-check",
+  "downloaded_at": "2026-11-24T09:57:02.119341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coupler-io",
+  "source_url": "https://github.com/coupler-io/skills/blob/main/finance/xero/xero-books-health-and-close-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coupler-io/skills/blob/main/finance/xero/xero-books-health-and-close-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for Xero questions like \"are our Xero books clean\", \"can I trust the numbers in Xero\", \"are we ready to close the month in Xero\", \"does the Xero trial balance balance\", \"what's sitting in suspense in Xero\", \"what's still unreconciled in Xero\", \"does receivables in Xero match the open invoices\", or \"did anything change in a locked period\" \u2014 and before trusting any Xero profit, cash or balance sheet figure, even when the user never says \"audit\" or \"close\". Use when the decision is whether the Xero books can be reported on yet, not what they say. Xero only; for QuickBooks use quickbooks-books-health-and-close-check."
+}

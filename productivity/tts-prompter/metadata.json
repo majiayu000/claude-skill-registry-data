@@ -1,0 +1,39 @@
+{
+  "name": "tts-prompter",
+  "repo": "fahadaldoseri/mda-marine-system",
+  "path": "skills/tts-prompter/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/fahadaldoseri/mda-marine-system",
+  "dir_name": "tts-prompter",
+  "downloaded_at": "2026-11-24T10:31:04.180753Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fahadaldoseri",
+  "source_url": "https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/tts-prompter/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/tts-prompter/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "MUST read this skill BEFORE calling `generate_speech` or entering generate mode for any text-to-speech (TTS) task, including narration, voice-over and dialogue audio requested by other skills such as video production. Covers how to split a script into verbatim `turns[].text` and short `turns[].style`, inline vocal tags, two-speaker dialogue, voice selection (30 studio voices, plus 2,000+ locale-native library voices with regional accents and personas found through a bundled search script), language and accent, and length and duration planning.",
+  "content_fingerprint": "40671c7b7242273576b0fe6e3aceb541fbd5133d77bca17f126b8861729b7051"
+}

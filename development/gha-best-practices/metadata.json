@@ -1,0 +1,37 @@
+{
+  "name": "gha-best-practices",
+  "repo": "anchildress1/awesome-ai",
+  "path": "skills/gha-best-practices/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/anchildress1/awesome-ai",
+  "dir_name": "gha-best-practices",
+  "downloaded_at": "2026-11-24T09:11:03.710907Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anchildress1",
+  "source_url": "https://github.com/anchildress1/awesome-ai/blob/main/skills/gha-best-practices/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anchildress1/awesome-ai/blob/main/skills/gha-best-practices/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "GitHub Actions workflow rules: triggers, draft guards, path filters, concurrency, permissions, secrets, action pinning, timeouts, caching, artifacts, checkout depth, installs, step naming, actionlint, Dependabot.\nLoad BEFORE creating or editing any file under `.github/workflows/` or `.github/actions/` (ci.yml, codeql.yml, release-please.yml, reusable workflows, composite actions), including a one-line change.\nTrigger on: adding or changing a job, step, trigger, `permissions` block, matrix, or `env`; \"add a workflow\", \"fix CI\", \"CI is failing\", \"add a job\", \"add a step\", \"pin this action\", \"add workflow_dispatch\", \"run it on PRs\", \"cache the install\", \"upload the artifact\", \"why did CI not run\", \"add dependabot\"; scaffolding CI for a new repo; reviewing a diff that touches a workflow file, even when the user never says \"Actions\"."
+}

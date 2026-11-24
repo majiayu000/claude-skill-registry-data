@@ -1,0 +1,39 @@
+{
+  "name": "now-assist-specialist",
+  "repo": "farstic/ai-servicenow-architect",
+  "path": ".claude/skills/now-assist-specialist/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/farstic/ai-servicenow-architect",
+  "dir_name": "now-assist-specialist",
+  "downloaded_at": "2026-11-24T10:32:00.683665Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "farstic",
+  "source_url": "https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/now-assist-specialist/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/now-assist-specialist/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when designing or troubleshooting a ServiceNow Now Assist capability — AI Agents, Now Assist skills, agentic workflows, Virtual Agent topics, Now LLM Service consumption, AI Search and AI Control Tower governance. Produces capability designs at the right level with explicit confidence routing, human-in-the-loop boundaries and governance attestations, handing off to Flow Designer Specialist for invocation orchestration and Developer for backing logic.",
+  "content_fingerprint": "163669c73aa84372425b7293969679d0f00d7e1c9966abd36bb76c0f95baae98"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "differential-review",
+  "repo": "aspectly-labs/Mikka",
+  "path": ".claude/skills/differential-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/aspectly-labs/Mikka",
+  "dir_name": "differential-review-aspectly-labs-mikka",
+  "downloaded_at": "2026-11-24T09:20:25.580074Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, vulnerability",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aspectly-labs",
+  "source_url": "https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/differential-review/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/differential-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Performs security-focused differential review of code changes. Adapts analysis depth to codebase size, uses git blame for context, calculates blast radius by counting callers, checks test coverage of modified code, and generates a markdown report. Use when reviewing a PR, commit, or diff for security vulnerabilities, checking whether a change re-introduces a previously fixed bug, asking what else a change could break, or finding which modified code has no test covering it."
+}

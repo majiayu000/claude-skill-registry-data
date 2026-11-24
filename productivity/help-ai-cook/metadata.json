@@ -1,0 +1,37 @@
+{
+  "name": "help-ai-cook",
+  "repo": "ezgameworkplace/help-ai-cook",
+  "path": "skills/help-ai-cook/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ezgameworkplace/help-ai-cook",
+  "dir_name": "help-ai-cook",
+  "downloaded_at": "2026-11-24T10:30:13.106047Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, memory",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ezgameworkplace",
+  "source_url": "https://github.com/ezgameworkplace/help-ai-cook/blob/main/skills/help-ai-cook/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ezgameworkplace/help-ai-cook/blob/main/skills/help-ai-cook/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Before starting a task, work out what the user could provide that would make the result clearly better \u2014 a tool to install, access to grant, a reference or asset to hand over, an answer to something you don't know \u2014 and ask for it, with the payoff and cost of each. Use when the user asks what you need from them or how they can help; before work whose quality depends on tools or materials you may not have (art, animation, audio, 3D, game-engine or editor work, external services, unfamiliar toolchains); and whenever you would otherwise guess at something you don't understand or can't reach. Skip routine edits and questions where nothing is missing."
+}

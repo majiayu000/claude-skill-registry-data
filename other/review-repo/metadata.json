@@ -1,0 +1,38 @@
+{
+  "name": "review-repo",
+  "repo": "chrisallenlane/claude-swe-workflows",
+  "path": "skills/review-repo/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/chrisallenlane/claude-swe-workflows",
+  "dir_name": "review-repo",
+  "downloaded_at": "2026-11-24T09:48:21.406703Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chrisallenlane",
+  "source_url": "https://github.com/chrisallenlane/claude-swe-workflows/blob/master/skills/review-repo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chrisallenlane/claude-swe-workflows/blob/master/skills/review-repo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Whole-repository review. With no focus, maps where to engage or tread carefully, including tech-debt hotspots. Focuses for deep reviews are architecture, dead-code, value, and namespace. Creates tickets only with authority. Never changes code."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "linear",
+  "repo": "chnlich/charlie-bot",
+  "path": "skills/linear/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/chnlich/charlie-bot",
+  "dir_name": "linear-chnlich-charlie-bot",
+  "downloaded_at": "2026-11-24T09:47:52.254547Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chnlich",
+  "source_url": "https://github.com/chnlich/charlie-bot/blob/main/skills/linear/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chnlich/charlie-bot/blob/main/skills/linear/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to read, create, update, or search Linear issues, projects, cycles, or teams."
+}

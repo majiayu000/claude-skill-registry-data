@@ -1,0 +1,38 @@
+{
+  "name": "clinical-assistant",
+  "repo": "bobyu89/skill-bank",
+  "path": "skills/clinical-nursing/clinical-assistant/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/bobyu89/skill-bank",
+  "dir_name": "clinical-assistant",
+  "downloaded_at": "2026-11-24T09:33:40.759738Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bobyu89",
+  "source_url": "https://github.com/bobyu89/skill-bank/blob/master/skills/clinical-nursing/clinical-assistant/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bobyu89/skill-bank/blob/master/skills/clinical-nursing/clinical-assistant/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Self-contained Virtual Clinical Team. An intent router picks ONE focused task or the full 8-phase workflow (intake, evidence search, GRADE, 13-archetype board, treatment plan, report, QA, update), plus conditional imaging analysis and a bounded deep-research loop for rare, newly described, undiagnosed or treatment-refractory cases. Focused modes answer literature questions without forcing a full workup. Missing decision-critical data becomes a decision tree, never a guess. Trigger on symptoms, a diagnosis, treatment or evidence questions, and on: \"analiza este caso\", \"plan de tratamiento\", \"informe clinico\", \"junta clinica\", \"nadie sabe que tengo\", \"busca estudios\", \"que dice la evidencia\", \"ultimas guias\", \"tratamiento mas novedoso\", \"analyze this case\", \"clinical board\", \"rare disease\", \"undiagnosed\", \"deep research\", \"clinical-assistant\". Bilingual EN/ES. Produces research and decision-support DRAFTS only, never a diagnosis, prescription, or substitute for a licensed professional."
+}

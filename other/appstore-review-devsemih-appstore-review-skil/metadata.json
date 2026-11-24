@@ -1,0 +1,37 @@
+{
+  "name": "appstore-review",
+  "repo": "devsemih/appstore-review-skill",
+  "path": "skills/appstore-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/devsemih/appstore-review-skill",
+  "dir_name": "appstore-review-devsemih-appstore-review-skil",
+  "downloaded_at": "2026-11-24T10:10:15.063236Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devsemih",
+  "source_url": "https://github.com/devsemih/appstore-review-skill/blob/main/skills/appstore-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devsemih/appstore-review-skill/blob/main/skills/appstore-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks an iOS/iPadOS/macOS app project against Apple's App Store Review Guidelines (October 16, 2026 revision) before submission. Works with native (Swift/Obj-C), Flutter, React Native, Expo, Kotlin Multiplatform, .NET MAUI, Cordova, Ionic, Capacitor, and Unity projects. Can also inspect a built .ipa/.xcarchive for privacy-manifest problems (ITMS-91053/91061) and apply safe fixes with --fix. Use when the user wants to verify their app complies with App Store rules, or when they mention 'app review', 'app store guidelines', 'submission check', 'will my app get rejected', or 'review rejection' risk before submitting."
+}

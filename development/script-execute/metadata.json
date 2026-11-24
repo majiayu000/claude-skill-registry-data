@@ -1,0 +1,40 @@
+{
+  "name": "script-execute",
+  "repo": "eppumelto/Kanshilike",
+  "path": ".claude/skills/script-execute/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/eppumelto/Kanshilike",
+  "dir_name": "script-execute",
+  "downloaded_at": "2026-11-24T10:25:26.866316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, compile, debug",
+    "score": 4,
+    "runner_up": "gaming",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eppumelto",
+  "source_url": "https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/script-execute/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/script-execute/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compiles and runs C# in the Unity Editor (Roslyn): plain statements with the last expression as the result, or a full class with a static method. See the skill body for the modes, usings/include and Unity object parameters.",
+  "content_fingerprint": "5bc337859f434ecdc953844d1f3c8a0deda16194d0b7651ae79dbce58a1663c6"
+}

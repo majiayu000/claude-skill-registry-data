@@ -1,0 +1,38 @@
+{
+  "name": "figure-generation",
+  "repo": "cjh-solver/MathModeling-Skills-Arsenal",
+  "path": "skills/04-figures/figure-generation/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/cjh-solver/MathModeling-Skills-Arsenal",
+  "dir_name": "figure-generation",
+  "downloaded_at": "2026-11-24T09:50:08.407799Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline, visualization",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cjh-solver",
+  "source_url": "https://github.com/cjh-solver/MathModeling-Skills-Arsenal/blob/main/skills/04-figures/figure-generation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cjh-solver/MathModeling-Skills-Arsenal/blob/main/skills/04-figures/figure-generation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate publication-quality scientific figures using matplotlib/seaborn with a three-phase pipeline (query expansion, code generation with execution, VLM visual feedback). Handles bar charts, line plots, heatmaps, training curves, ablation plots, and more. Use when the user needs figures, plots, or visualizations for a paper."
+}

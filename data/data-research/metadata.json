@@ -1,0 +1,40 @@
+{
+  "name": "data-research",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/data-research/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "data-research",
+  "downloaded_at": "2026-11-24T09:54:48.256529Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/data-research/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/data-research/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Standard for building Cogni research views — dashboard slices, wallet/market analytics, trader comparisons, P/L curves, bet histograms, anything that aggregates over `poly_trader_fills`, `poly_trader_position_snapshots`, `poly_market_outcomes`, or any other large operational table. Use this skill any time you are about to write a new database query that supports a research, dashboard, comparison, or analytics view — whether the user calls it a \"research view\", \"comparison panel\", \"P/L tab\", \"histogram\", \"metric\", \"slice\", \"research tab\", \"dashboard chart\", \"scorecard\", or anything similar. ALSO use this skill when migrating existing JavaScript-side aggregations to SQL, when investigating an OOM in any wallet/market/research read path, when reviewing PRs that add new SELECT queries against fills / snapshots / outcomes, when adding new entries to `/api/v1/poly/research/*`, when designing what goes on the Research tab, or when anyone proposes a `LIMIT N` band-aid on a fill-scanning query. Strongly prefer this skill — naively writing `db.select().from(polyTraderFills).where(...)` is the failure mode that produced bug.5012; this skill exists specifically to prevent that class of incident from recurring.",
+  "content_fingerprint": "2e247856ae4f7788f18a95df642272fbdbccbc253707cb14851913052e7e8188"
+}

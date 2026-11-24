@@ -1,0 +1,39 @@
+{
+  "name": "lakona-doc-maintenance",
+  "repo": "bruce48x/Lakona",
+  "path": ".agents/skills/lakona-doc-maintenance/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/bruce48x/Lakona",
+  "dir_name": "lakona-doc-maintenance",
+  "downloaded_at": "2026-11-24T09:37:10.693892Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bruce48x",
+  "source_url": "https://github.com/bruce48x/Lakona/blob/main/.agents/skills/lakona-doc-maintenance/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bruce48x/Lakona/blob/main/.agents/skills/lakona-doc-maintenance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit Lakona contributor documentation and report findings, or apply authorized cleanup to stale plans, duplicate authorities, and documentation maps within the requested scope."
+}

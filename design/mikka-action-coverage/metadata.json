@@ -1,0 +1,38 @@
+{
+  "name": "mikka-action-coverage",
+  "repo": "aspectly-labs/Mikka",
+  "path": ".claude/skills/mikka-action-coverage/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/aspectly-labs/Mikka",
+  "dir_name": "mikka-action-coverage",
+  "downloaded_at": "2026-11-24T09:20:28.141742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aspectly-labs",
+  "source_url": "https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/mikka-action-coverage/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/mikka-action-coverage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit business command-to-UI reachability and UI-to-command behavior in Mikka. Use when an operation exists in APIs but has no button/menu, a state lacks a change path, different views disagree, a control is dead, or feedback claims success without a durable result."
+}

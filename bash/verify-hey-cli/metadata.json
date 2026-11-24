@@ -1,0 +1,38 @@
+{
+  "name": "verify-hey-cli",
+  "repo": "basecamp/hey-cli",
+  "path": ".agents/skills/verify-hey-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basecamp/hey-cli",
+  "dir_name": "verify-hey-cli",
+  "downloaded_at": "2026-11-24T09:26:51.976205Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basecamp",
+  "source_url": "https://github.com/basecamp/hey-cli/blob/main/.agents/skills/verify-hey-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basecamp/hey-cli/blob/main/.agents/skills/verify-hey-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reproduce and verify HEY CLI or TUI behavior against local development Haystack. Use before and after a bug fix, for PR runtime proof, or to maintain the user-facing feature map. Uses the existing smoke harness, owned fixtures and private evidence; unit tests alone are not live proof."
+}

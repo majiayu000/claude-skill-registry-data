@@ -1,0 +1,37 @@
+{
+  "name": "adp-edit",
+  "repo": "fblgit/artifacts-done-properly",
+  "path": "plugins/artifacts-done-properly/skills/adp-edit/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/fblgit/artifacts-done-properly",
+  "dir_name": "adp-edit",
+  "downloaded_at": "2026-11-24T10:32:14.313675Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fblgit",
+  "source_url": "https://github.com/fblgit/artifacts-done-properly/blob/main/plugins/artifacts-done-properly/skills/adp-edit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fblgit/artifacts-done-properly/blob/main/plugins/artifacts-done-properly/skills/adp-edit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Edit, publish or answer comments on an ADP artifact (adp/2: it has a manifest and a db). Load it before ANY edit, publish or comment reply on such an artifact, when a comment was sent to Claude, or when the user asks what changed. Gives the loop: export to a local copy, edit, then propose (the page's inbox applies it) or publish and record, each write pinned to the version read."
+}

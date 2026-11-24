@@ -1,0 +1,38 @@
+{
+  "name": "identity-model-expert",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/identity-model-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "identity-model-expert",
+  "downloaded_at": "2026-11-24T09:54:53.542640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/identity-model-expert/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/identity-model-expert/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Identity and authority navigation for Cogni nodes. Use when deciding who a caller is, what a human, AI agent or company may do on a node, or who gets paid. Covers identity, authentication, authorization, authz, login, API keys, principals, agents vs humans, credentials, grants, roles, role rows, RLS, agent tool authority, wallets, beneficiaries, DAO admins, user bindings, OpenFGA vs node SQL grants (@cogni-dao/agent-grants), and any 'who may do what' question. Triggers: 'identity', 'principal', 'agent principal', 'agent credential', 'authorization', 'authz', 'login', 'API key', 'grant', 'role row', 'RLS', 'tool authority', 'beneficiary', 'wallet', 'billing_account_id', 'user_id vs actor_id', 'user_bindings', 'node admin', 'DAO root', 'who may do X', 'agent acts as human', 'delegated access', 'add a permission'. Loads the hub identity-expert and routes to its atoms. Does not restate them.",
+  "content_fingerprint": "d35e37c3f37aa8eceb20de6678f56655aff2f9733fddb3b34ed95bbee736ed15"
+}

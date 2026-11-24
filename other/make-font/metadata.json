@@ -1,0 +1,37 @@
+{
+  "name": "make-font",
+  "repo": "arla6ka/design.how",
+  "path": "skills/make-font/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arla6ka/design.how",
+  "dir_name": "make-font",
+  "downloaded_at": "2026-11-24T09:17:41.692339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arla6ka",
+  "source_url": "https://github.com/arla6ka/design.how/blob/main/skills/make-font/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arla6ka/design.how/blob/main/skills/make-font/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when someone wants their own font made from fonts they like, such as \"make me a font like these\", \"/make-font\" or \"build a typeface from these screenshots\". It measures the references, fits the closest open-licence font to them, checks it, and delivers an OFL font with web files and a font book. It never copies outlines."
+}

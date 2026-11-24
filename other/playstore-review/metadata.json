@@ -1,0 +1,37 @@
+{
+  "name": "playstore-review",
+  "repo": "devsemih/appstore-review-skill",
+  "path": "skills/playstore-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/devsemih/appstore-review-skill",
+  "dir_name": "playstore-review",
+  "downloaded_at": "2026-11-24T10:10:15.317401Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devsemih",
+  "source_url": "https://github.com/devsemih/appstore-review-skill/blob/main/skills/playstore-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devsemih/appstore-review-skill/blob/main/skills/playstore-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks an Android app project against Google Play's Developer Program Policies (including the October 29, 2026 policy update) before submission. Works with native (Kotlin/Java), Flutter, React Native, Expo, Kotlin Multiplatform, .NET MAUI, Cordova, Ionic, Capacitor, and Unity projects. Can also inspect a built .aab/.apk merged manifest and apply safe fixes with --fix. Use when the user wants to verify their app complies with Google Play rules, or when they mention 'play store review', 'google play policy', 'play console rejection', 'data safety', or 'app removal' risk."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pytorch-gpu-training",
+  "repo": "chnlich/charlie-bot",
+  "path": "skills/pytorch-gpu-training/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/chnlich/charlie-bot",
+  "dir_name": "pytorch-gpu-training",
+  "downloaded_at": "2026-11-24T09:47:54.885778Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chnlich",
+  "source_url": "https://github.com/chnlich/charlie-bot/blob/main/skills/pytorch-gpu-training/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chnlich/charlie-bot/blob/main/skills/pytorch-gpu-training/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when training or debugging PyTorch on GPUs."
+}

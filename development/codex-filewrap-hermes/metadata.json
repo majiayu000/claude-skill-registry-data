@@ -1,0 +1,38 @@
+{
+  "name": "codex",
+  "repo": "filewrap/hermes",
+  "path": "skills/autonomous-ai-agents/codex/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/filewrap/hermes",
+  "dir_name": "codex-filewrap-hermes",
+  "downloaded_at": "2026-11-24T10:34:57.754965Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "filewrap",
+  "source_url": "https://github.com/filewrap/hermes/blob/main/skills/autonomous-ai-agents/codex/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/filewrap/hermes/blob/main/skills/autonomous-ai-agents/codex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate coding to OpenAI Codex CLI (features, PRs)."
+}

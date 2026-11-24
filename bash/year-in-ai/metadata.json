@@ -1,0 +1,38 @@
+{
+  "name": "year-in-ai",
+  "repo": "broomva/skills",
+  "path": "skills/knowledge/year-in-ai/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/broomva/skills",
+  "dir_name": "year-in-ai",
+  "downloaded_at": "2026-11-24T09:36:48.439314Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "broomva",
+  "source_url": "https://github.com/broomva/skills/blob/main/skills/knowledge/year-in-ai/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/broomva/skills/blob/main/skills/knowledge/year-in-ai/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "A Spotify-Wrapped-style retrospective of your year with AI agents, computed from local history across harnesses (Claude Code, Codex, T3, Conductor, Gemini CLI, bridged transcripts, exports). Two layers. (1) A year-round HARVEST folds every turn into a text-free ledger (counts, hashes, who wrote it) and optionally ARCHIVES the transcripts that their own tools prune (Claude Code deletes sessions after ~30 days), because a December extract alone cannot cover a year. (2) The recap: ATTENTION folds the ledger into words you wrote vs words you read (final reply per human turn \u00d7 a stated read share, 60-70% by default), separating human prompts from agent-dispatched ones per each store's own author flags; EXTRACT/RENDER build the story deck. (3) REFLECT reasons about how the year went, not just how much: it rebuilds each session the person drove as an episode (their prompts verbatim, trimmed final replies, invoked skills, corrections), fans out digest subagents per batch, joins episodes to merged PRs, tickets and KG entities, and has the invoking agent write a cited reflection.md (monthly arcs plus four chapters) that a lint holds to the data. USE WHEN year in ai, your year in ai, ai wrapped, wrapped for my agents, year in review of my ai usage, how much have I written to agents, how much have I read, words written and read, harvest agent history, archive agent transcripts, set up the year-in-ai harvest, reflect on my year with agents, what patterns did I have with agents, themes of my year in ai, how did I work with agents this year. NOT FOR billing or token cost (use the provider's usage tools), single-session search (use session-search), or health/sleep recaps."
+}

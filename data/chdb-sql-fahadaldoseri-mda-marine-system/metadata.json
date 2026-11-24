@@ -1,0 +1,40 @@
+{
+  "name": "chdb-sql",
+  "repo": "fahadaldoseri/mda-marine-system",
+  "path": "skills/chdb-sql/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/fahadaldoseri/mda-marine-system",
+  "dir_name": "chdb-sql-fahadaldoseri-mda-marine-system",
+  "downloaded_at": "2026-11-24T10:30:51.482252Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database, pipeline",
+    "score": 5,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fahadaldoseri",
+  "source_url": "https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/chdb-sql/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/chdb-sql/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to run SQL \u2014 especially analytical SQL \u2014 on local files (parquet/csv/json), URLs, S3 paths, or remote databases (Postgres, MySQL, MongoDB, ClickHouse Cloud, Iceberg, Delta Lake) without setting up a server. Provides chDB \u2014 embedded ClickHouse SQL in Python with 1000+ functions, Session for stateful multi-step pipelines, parametrized queries, and cross-source joins via `s3()`, `mysql()`, `postgresql()`, `iceberg()`, `deltaLake()`, `remoteSecure()` table functions. TRIGGER when: user wants SQL on parquet/csv/files or across remote analytical sources; uses ClickHouse SQL features (window functions, windowFunnel, geoToH3, JSON path ops, Session, parametrized queries); imports `chdb` or calls `chdb.query()`. SKIP this skill for pandas-style DataFrame method-chaining (use chdb-datastore instead) or ClickHouse server administration."
+}

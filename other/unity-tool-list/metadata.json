@@ -1,0 +1,38 @@
+{
+  "name": "unity-tool-list",
+  "repo": "eppumelto/Kanshilike",
+  "path": ".claude/skills/unity-tool-list/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eppumelto/Kanshilike",
+  "dir_name": "unity-tool-list",
+  "downloaded_at": "2026-11-24T10:25:28.183403Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: gaming=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "game",
+      "unity"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eppumelto",
+  "source_url": "https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/unity-tool-list/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/unity-tool-list/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "List all Unity-MCP tools registered in the connected Unity Editor instance, hidden ones included (each with `Visible`). Optional regex filter matches against tool name, description, and argument names/descriptions. Use the `includeDescription` / `includeInputs` toggles to control the response size.",
+  "content_fingerprint": "0dda7a7bcdcadcf405bbe1eb634d60f2bf911015444951af89e4ddc63b506563"
+}

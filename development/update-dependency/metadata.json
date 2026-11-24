@@ -1,0 +1,38 @@
+{
+  "name": "update-dependency",
+  "repo": "eclipse-theia/theia",
+  "path": ".agents/skills/update-dependency/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/eclipse-theia/theia",
+  "dir_name": "update-dependency",
+  "downloaded_at": "2026-11-24T10:21:13.198846Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, compile",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eclipse-theia",
+  "source_url": "https://github.com/eclipse-theia/theia/blob/master/.agents/skills/update-dependency/SKILL.md",
+  "license": "EPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eclipse-theia/theia/blob/master/.agents/skills/update-dependency/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Update dependencies of the Theia framework and record what was learned. Its main use is the post-release dependency update after every minor release (NPM upgrade that reduces dependency vulnerabilities reported by npm audit and Dependabot, Electron update, Node.js/React check). Also covers single updates on demand (Electron, Monaco, TypeScript, Node.js, React, AI provider SDKs, vulnerable dependencies), on master or a `release/x.y.x` branch. Use when asked for the \"post-release update\", \"npm upgrade\", \"update/upgrade/bump <dependency>\", to reduce dependency vulnerabilities or npm audit findings, or to list outdated dependencies. Not for the VS Code API version bump."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "make-pixel-splats",
+  "repo": "codepawl/creator-generalist",
+  "path": "plugins/3d-generalist/skills/make-pixel-splats/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/codepawl/creator-generalist",
+  "dir_name": "make-pixel-splats",
+  "downloaded_at": "2026-11-24T09:53:42.177646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "codepawl",
+  "source_url": "https://github.com/codepawl/creator-generalist/blob/main/plugins/3d-generalist/skills/make-pixel-splats/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/codepawl/creator-generalist/blob/main/plugins/3d-generalist/skills/make-pixel-splats/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make pixel art scenes from gaussian splats written by code, with no 3D model, rendered in Crucible: shapes from signed distance functions, light baked into each splat, then glow, haze, a small palette and dither, or the crisp ink look with body-coloured contours. Ships example scenes, motion helpers, a headless frame renderer, film plans and a 'how it's made' explainer compositor. Use for pixel art splats, voxel splat dioramas, code-built gaussian splat scenes. Also sprite stacking: pixel-art slices of a GLB that turn to any angle (\"sprite stack\")."
+}

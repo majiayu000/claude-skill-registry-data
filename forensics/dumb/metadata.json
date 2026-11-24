@@ -1,0 +1,37 @@
+{
+  "name": "dumb",
+  "repo": "dtiger1889-ops/claude-harness-toolbox",
+  "path": "skills/dumb/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/dtiger1889-ops/claude-harness-toolbox",
+  "dir_name": "dumb",
+  "downloaded_at": "2026-11-24T10:18:37.361272Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dtiger1889-ops",
+  "source_url": "https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/dumb/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/dumb/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Corrects an immediately previous response or action that the user says was wrong, incomplete, lazy, or missed the point. Use for /dumb and corrections such as \"that was dumb\", \"fix it\", \"stop being lazy\", \"that's not done\", or \"you skipped\" directed at the previous work, and also on the early laziness signals: \"why am I still seeing this\", \"why didn't you\", \"you said you did\", \"did you actually\", \"just do it\". Delivers the correction and records reusable lessons."
+}

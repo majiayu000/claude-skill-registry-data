@@ -1,0 +1,37 @@
+{
+  "name": "securing-s3-buckets",
+  "repo": "aspectly-labs/Mikka",
+  "path": ".claude/skills/securing-s3-buckets/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aspectly-labs/Mikka",
+  "dir_name": "securing-s3-buckets",
+  "downloaded_at": "2026-11-24T09:20:27.105411Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aspectly-labs",
+  "source_url": "https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/securing-s3-buckets/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/securing-s3-buckets/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create and secure S3 buckets following AWS best practices for access control, encryption, monitoring, and remediation of misconfigurations. Use when the user wants to secure a new bucket, audit an existing bucket, fix a security finding, configure encryption, or enable logging and monitoring. Do NOT use for general S3 data operations, S3 Tables setup, or discovering existing data assets."
+}

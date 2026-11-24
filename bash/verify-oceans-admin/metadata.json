@@ -1,0 +1,38 @@
+{
+  "name": "verify-oceans-admin",
+  "repo": "ahstn/oceans-llm",
+  "path": ".agents/skills/verify-oceans-admin/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ahstn/oceans-llm",
+  "dir_name": "verify-oceans-admin",
+  "downloaded_at": "2026-11-24T08:57:02.403725Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahstn",
+  "source_url": "https://github.com/ahstn/oceans-llm/blob/main/.agents/skills/verify-oceans-admin/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahstn/oceans-llm/blob/main/.agents/skills/verify-oceans-admin/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Verify the Oceans LLM admin control plane and backend gateway against the real local stack, seeded demo data, and bounded live providers when required. Use for user-path checks of sign-in, models, API keys, observability, usage costs, spend controls, batches, agent sessions, request logs, Anthropic Messages thinking and effort compatibility, MCP registry and tool access, OpenRouter routing, guardrails, and Skills storage."
+}

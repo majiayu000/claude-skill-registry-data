@@ -1,0 +1,38 @@
+{
+  "name": "xb-config",
+  "repo": "dennydkt/xbskill",
+  "path": "skills/xb-config/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/dennydkt/xbskill",
+  "dir_name": "xb-config",
+  "downloaded_at": "2026-11-24T10:08:46.270553Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dennydkt",
+  "source_url": "https://github.com/dennydkt/xbskill/blob/main/skills/xb-config/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dennydkt/xbskill/blob/main/skills/xb-config/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "精神同步协调与使用偏好配置：首次用两轮单问选择参与方式和保存提醒，之后可选了解工作背景或学习协作。也可直接查看或修改已有偏好。触发：$xb-config、精神同步协调、AI 神经同步、学会与 AI 提问、配置 xbskill、修改 XB 调用强度、修改 XB 保存提示。",
+  "content_fingerprint": "932eb9e1e0375b99efdaa076c2c81dd807d0c98b88c615ebe386238c413f6228"
+}

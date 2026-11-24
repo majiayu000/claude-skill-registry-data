@@ -1,0 +1,38 @@
+{
+  "name": "agents-sdk",
+  "repo": "aspectly-labs/Mikka",
+  "path": ".claude/skills/cloudflare-agents-sdk/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/aspectly-labs/Mikka",
+  "dir_name": "cloudflare-agents-sdk",
+  "downloaded_at": "2026-11-24T09:20:27.808922Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: communication, email, chat",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "communication",
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aspectly-labs",
+  "source_url": "https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/cloudflare-agents-sdk/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/cloudflare-agents-sdk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build, debug, or review Cloudflare Agents SDK applications using the agents package."
+}

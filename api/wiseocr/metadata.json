@@ -1,0 +1,39 @@
+{
+  "name": "wiseocr",
+  "repo": "baneeishaque/ljt-520_openclaw-backup",
+  "path": "skills/fmdmm/wiseocr/SKILL.md",
+  "github_branch": "master",
+  "category": "api",
+  "source": "github.com/baneeishaque/ljt-520_openclaw-backup",
+  "dir_name": "wiseocr",
+  "downloaded_at": "2026-11-24T09:26:24.978208Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "baneeishaque",
+  "source_url": "https://github.com/baneeishaque/ljt-520_openclaw-backup/blob/master/skills/fmdmm/wiseocr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/baneeishaque/ljt-520_openclaw-backup/blob/master/skills/fmdmm/wiseocr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Convert PDF files to Markdown using WiseOCR API (powered by WiseDiag). Supports table recognition, multi-column layouts, and medical document OCR. Usage: Upload a PDF file and say Use WiseOCR to process this.",
+  "content_fingerprint": "c5bc7c8b945bab373405c6be0cf29c44eb163ee36c4fd18dc4693d665fd0e761"
+}

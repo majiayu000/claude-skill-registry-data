@@ -1,0 +1,37 @@
+{
+  "name": "reel-loop",
+  "repo": "broomva/skills",
+  "path": "skills/video/reel-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/broomva/skills",
+  "dir_name": "reel-loop",
+  "downloaded_at": "2026-11-24T09:36:45.133479Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "broomva",
+  "source_url": "https://github.com/broomva/skills/blob/main/skills/video/reel-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/broomva/skills/blob/main/skills/video/reel-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run one short-form account as a loop: find the reels in a niche that broke out\nagainst their own creator's normal, take the best one apart (hook, structure,\nshots), write a new script in the account's own voice, produce it (narration,\nscenes, word-by-word captions), stop for a person's approval, publish to Instagram\nthrough the Graph API, measure at 48 h and 7 d, and push variants of winners as\nTrial Reels to non-followers. A composition skill: research, voice, render and\nlayout come from sibling skills; the arithmetic (outlier and winner scores) and\nthe publish gate live in a tested script, so no step past the approval is\nreachable without an approval bound to the exact rendered bytes. Poll comment\nkeywords into one private reply per comment with a separately byte-approved\ntemplate and durable attempt ledger.\nUSE WHEN: \"reel loop\", \"content machine\", \"find viral reels in my niche and remake\nthem\", \"outliers in my niche\", \"x times their normal\", \"nightly content run\",\n\"remix the winners\", \"trial reels\", \"make reels while I sleep\", \"content-os\",\n\"comment keyword funnel\", \"WORKSPACE private reply\", \"/reel-loop\". NOT FOR: editing raw footage into a cut with no loop around it\n(video-cut), one cinematic generation or brand compile (content-engine), a\nmulti-account portfolio with canon and spend ledgers (that is the\nagentic-media-studio initiative, which runs one reel-loop per account lane), or\nreposting someone else's video (never).\nTriggers on: reel loop, viral outliers, niche outliers, reel remix, trial reels,\nnightly content, content machine, reel-loop."
+}

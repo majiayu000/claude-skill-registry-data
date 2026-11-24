@@ -1,0 +1,38 @@
+{
+  "name": "update-docs",
+  "repo": "aspectly-labs/Mikka",
+  "path": ".claude/skills/update-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aspectly-labs/Mikka",
+  "dir_name": "update-docs-aspectly-labs-mikka",
+  "downloaded_at": "2026-11-24T09:20:16.248848Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aspectly-labs",
+  "source_url": "https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/update-docs/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/update-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Repo-wide documentation sweep for updating project docs, context, ADRs, diagrams, README files, agent instructions, and documentation sites after feature work, decisions, or direction changes. Use this skill whenever the user asks to update docs, refresh documentation, prepare for PR, finish a branch, merge, ship, close out work, record what changed, or align docs with code. It first discovers the repo's key Markdown documentation and docs sites, ignores historical archives by default, presents the proposed docs plan for approval, then updates only the approved docs surgically."
+}

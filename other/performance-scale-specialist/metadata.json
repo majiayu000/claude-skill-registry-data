@@ -1,0 +1,38 @@
+{
+  "name": "performance-scale-specialist",
+  "repo": "farstic/ai-servicenow-architect",
+  "path": ".claude/skills/performance-scale-specialist/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/farstic/ai-servicenow-architect",
+  "dir_name": "performance-scale-specialist",
+  "downloaded_at": "2026-11-24T10:32:02.698841Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "farstic",
+  "source_url": "https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/performance-scale-specialist/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/performance-scale-specialist/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a ServiceNow design has to hold at volume — query design, large-table patterns, asynchronous and batch processing, data growth and archival, transaction quotas and semaphores, ACL and list-rendering cost at scale, and Performance Analytics at volume. Produces a scale constraint note before builders run and a scale audit of the returned artefact.",
+  "content_fingerprint": "c6d7c65ce0b755d5d5bbcbab0ac229da32f0d30775446fe29a8036a5e508a051"
+}

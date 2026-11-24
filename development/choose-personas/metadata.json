@@ -1,0 +1,38 @@
+{
+  "name": "choose-personas",
+  "repo": "axiomantic/garden",
+  "path": "skills/choose-personas/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/axiomantic/garden",
+  "dir_name": "choose-personas",
+  "downloaded_at": "2026-11-24T09:23:51.232736Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "axiomantic",
+  "source_url": "https://github.com/axiomantic/garden/blob/main/skills/choose-personas/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/axiomantic/garden/blob/main/skills/choose-personas/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Selects, balances, and configures specialized agent personas for a Garden swarm task. Analyzes codebase context, domain complexity, and task requirements to formulate a triad of complementary personas with opposing priorities. Auto-detects the active coding harness and aligns worker harnesses and session-default models with operator preferences via a single intake question. Synthesizes dynamic swarm configurations. Triggers: 'choose personas', 'select personas', 'set up agent team', 'assemble personas for this task', 'recommend agents'."
+}

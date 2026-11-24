@@ -1,0 +1,38 @@
+{
+  "name": "browser-qa-loop",
+  "repo": "beep-effect/beep-effect",
+  "path": ".claude/skills/browser-qa-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/beep-effect/beep-effect",
+  "dir_name": "browser-qa-loop",
+  "downloaded_at": "2026-11-24T09:27:14.034742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, playwright",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "beep-effect",
+  "source_url": "https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/browser-qa-loop/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/browser-qa-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the browser QA loop against a UI change: a playwright capture harness drives real-input scenarios while `bun run beep qa record` captures video and a witness event log, `beep qa extract` pulls per-gesture frame strips, GIFs, and contact sheets, an Opus 5.5 vision-judge agent judges the evidence into a schema-validated inventory, Fable fixes the findings, and the loop repeats until zero required findings. Use for any milestone that changes pointer gestures, layout, animation, or user-facing UI \u2014 jsdom green is not click-works green, and a post-gesture screenshot is not a mid-gesture proof."
+}

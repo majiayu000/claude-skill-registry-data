@@ -1,0 +1,37 @@
+{
+  "name": "ensure-self-contained-doc",
+  "repo": "eai-org/agent-toolkit",
+  "path": "skills/ensure-self-contained-doc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eai-org/agent-toolkit",
+  "dir_name": "ensure-self-contained-doc",
+  "downloaded_at": "2026-11-24T10:20:40.805945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eai-org",
+  "source_url": "https://github.com/eai-org/agent-toolkit/blob/main/skills/ensure-self-contained-doc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eai-org/agent-toolkit/blob/main/skills/ensure-self-contained-doc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ensure a document written in this session is self-contained for the fresh session that will pick it up, by filling in what a fresh reader finds missing."
+}

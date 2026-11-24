@@ -1,0 +1,38 @@
+{
+  "name": "vet",
+  "repo": "dtiger1889-ops/claude-harness-toolbox",
+  "path": "skills/vet/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/dtiger1889-ops/claude-harness-toolbox",
+  "dir_name": "vet",
+  "downloaded_at": "2026-11-24T10:18:37.001321Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, task, memory",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dtiger1889-ops",
+  "source_url": "https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/vet/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/vet/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Picks apart someone else's repo, skill, plugin, MCP server or agent harness to find which of its parts fit this workspace, collates the options on that topic into a topic guide in your notes, and records every thing looked at in a ledger so nothing is evaluated twice. Use when the user drops a link or a list of links and asks if it is useful, worth adding, worth stealing or worth looking at, says \"eval this\", \"vet these\", \"should I install this\", \"is this worth it\", \"what's out there for X\", or points at a note full of tools to triage; also before adopting any external tool found mid-task. Dedupes against past verdicts first. Do NOT use to install anything, to search for prior art while building (that is /outside), or for things not built for or about AI agents (those go to a general dev-tools note)."
+}

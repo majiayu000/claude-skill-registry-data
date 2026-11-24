@@ -1,0 +1,38 @@
+{
+  "name": "xb-company",
+  "repo": "dennydkt/xbskill",
+  "path": "skills/xb-company/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/dennydkt/xbskill",
+  "dir_name": "xb-company",
+  "downloaded_at": "2026-11-24T10:08:46.073547Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dennydkt",
+  "source_url": "https://github.com/dennydkt/xbskill/blob/main/skills/xb-company/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dennydkt/xbskill/blob/main/skills/xb-company/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "调用受用户配置约束：高自动、中先确认、低须明确开启；用户指定其他技能时禁止接管。分析公司实际权责、审批、考核与流程，比较正式规则和实际做法，依据近期案例判断当前工作可怎样推进。补录公司背景统一由 xb-context 办理。触发：$xb-company、分析公司规则、核对实际审批流程、理解组织条件。",
+  "content_fingerprint": "159c64af7050aeb7783852c3016b8bbf09b003c5e7510d078f47aa6242b46c08"
+}

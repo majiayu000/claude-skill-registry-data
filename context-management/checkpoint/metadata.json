@@ -1,0 +1,37 @@
+{
+  "name": "checkpoint",
+  "repo": "dtiger1889-ops/claude-harness-toolbox",
+  "path": "skills/checkpoint/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/dtiger1889-ops/claude-harness-toolbox",
+  "dir_name": "checkpoint",
+  "downloaded_at": "2026-11-24T10:18:39.665843Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dtiger1889-ops",
+  "source_url": "https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/checkpoint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/checkpoint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Updates the current project's CHECKPOINT.md in place so another session can resume from verified state. Use for /checkpoint, \"save progress\", \"update checkpoint\", a completed unit of work, or impending compaction; never ask whether to checkpoint, just do it. Preserves history, records unfinished work, and runs bundled validation and size checks. A session that kept the file current takes the light close. Project-specific conventions override the default schema."
+}

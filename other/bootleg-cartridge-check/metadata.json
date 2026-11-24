@@ -1,0 +1,38 @@
+{
+  "name": "bootleg-cartridge-check",
+  "repo": "cameronww7/skill-sec-arcade",
+  "path": "skills/bootleg-cartridge-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cameronww7/skill-sec-arcade",
+  "dir_name": "bootleg-cartridge-check",
+  "downloaded_at": "2026-11-24T09:41:10.355923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cameronww7",
+  "source_url": "https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/bootleg-cartridge-check/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/bootleg-cartridge-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a static security scan of a Claude Code skill or plugin directory that has not yet been trusted or installed, before you install it, enable it, or merge it. Trigger this whenever the user asks \"scan this skill for security issues,\" \"is this skill/plugin safe to install,\" \"check this plugin for malicious instructions,\" \"audit this SKILL.md,\" \"review a third-party skill before installing it,\" \"bootleg cartridge check,\" or pastes/points at a skill they found somewhere and want vetted first. Read-only, local, no network calls, never executes or installs the thing it is scanning."
+}

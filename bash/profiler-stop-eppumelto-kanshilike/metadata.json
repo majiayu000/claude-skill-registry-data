@@ -1,0 +1,38 @@
+{
+  "name": "profiler-stop",
+  "repo": "eppumelto/Kanshilike",
+  "path": ".claude/skills/profiler-stop/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/eppumelto/Kanshilike",
+  "dir_name": "profiler-stop-eppumelto-kanshilike",
+  "downloaded_at": "2026-11-24T10:25:26.173406Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eppumelto",
+  "source_url": "https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/profiler-stop/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/profiler-stop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Disable Unity's runtime profiler. Idempotent — calling when already disabled returns the current disabled state.",
+  "content_fingerprint": "c1dd45812731478113232db0a3c79237be18688dbbbbb402e984e9f80996b420"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "usfiscaldata",
+  "repo": "fahadaldoseri/mda-marine-system",
+  "path": "skills/usfiscaldata/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/fahadaldoseri/mda-marine-system",
+  "dir_name": "usfiscaldata-fahadaldoseri-mda-marine-system",
+  "downloaded_at": "2026-11-24T10:31:02.210865Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fahadaldoseri",
+  "source_url": "https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/usfiscaldata/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/usfiscaldata/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Query the U.S. Treasury Fiscal Data REST API for federal financial data. No API key required. Use for national debt (Debt to the Penny), Daily Treasury Statements, Monthly Treasury Statements, Treasury securities auctions, interest rates, foreign exchange rates, savings bonds, or U.S. government revenue and spending statistics."
+}

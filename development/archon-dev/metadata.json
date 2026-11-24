@@ -1,0 +1,40 @@
+{
+  "name": "archon-dev",
+  "repo": "cliffthelin/AXiomEngine",
+  "path": "archon/.claude/skills/archon-dev/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/cliffthelin/AXiomEngine",
+  "dir_name": "archon-dev",
+  "downloaded_at": "2026-11-24T09:52:01.864718Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug, refactor",
+    "score": 5,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cliffthelin",
+  "source_url": "https://github.com/cliffthelin/AXiomEngine/blob/master/archon/.claude/skills/archon-dev/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cliffthelin/AXiomEngine/blob/master/archon/.claude/skills/archon-dev/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The PRIMARY development workflow for the Archon project (remote-coding-agent).\nUse this skill instead of any PRP skills when working on Archon code.\nRoutes to 10 specialized cookbooks based on what the user is trying to do:\n\nRESEARCH    \u2014 \"how does the orchestrator work?\", \"where is session state defined?\",\n              \"trace the workflow execution flow\", \"what is IWorkflowStore?\"\nINVESTIGATE \u2014 \"should we use Drizzle or Prisma?\", \"what's the best way to add WebSockets?\",\n              \"can we migrate to Turso?\", \"how do other projects handle rate limiting?\"\nPRD         \u2014 \"write a PRD for dark mode\", \"spec out the notification feature\",\n              \"product requirements for webhook retry\"\nPLAN        \u2014 \"plan the auth refactor\", \"design the caching layer\",\n              \"create an implementation plan for #42\"\nIMPLEMENT   \u2014 \"implement the plan\", \"execute .claude/archon/plans/auth.plan.md\",\n              \"build the feature from the plan\", \"code this up\"\nREVIEW      \u2014 \"review PR #123\", \"review my changes\", \"code review the diff\"\nDEBUG       \u2014 \"debug the failing test\", \"why is streaming broken?\",\n              \"root cause analysis on the timeout issue\"\nCOMMIT      \u2014 \"commit these changes\", \"commit the auth refactor\"\nPR          \u2014 \"create a PR\", \"open a pull request for this branch\"\nISSUE       \u2014 \"report this to gh\", \"create a gh issue\", \"log it in github\",\n              \"file a bug for this\", \"create a feature request\"\n\nThis skill triggers on ANY development task: researching, investigating,\nplanning, building, reviewing, debugging, committing, or shipping code.\nNOT for: Running Archon CLI workflows in worktrees (use /archon instead)."
+}

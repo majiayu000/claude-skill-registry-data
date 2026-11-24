@@ -1,0 +1,38 @@
+{
+  "name": "mloda",
+  "repo": "aiskillstore/marketplace",
+  "path": "skills/mloda-ai/mloda/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aiskillstore/marketplace",
+  "dir_name": "mloda-aiskillstore-marketplace",
+  "downloaded_at": "2026-11-24T08:59:05.170165Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, context-management=3",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aiskillstore",
+  "source_url": "https://github.com/aiskillstore/marketplace/blob/main/skills/mloda-ai/mloda/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aiskillstore/marketplace/blob/main/skills/mloda-ai/mloda/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Give an AI agent declarative, deterministic data access via mloda (https://github.com/mloda-ai/mloda) - a Python plugin framework where the caller describes WHAT features or data it needs and mloda resolves HOW to compute or fetch them across a plugin graph, with built-in lineage back to source. Use when an agent needs to check whether an existing mloda plugin already covers a requested feature (see the `mloda-plugins` skill for writing a new one), before requesting structured data or feature aggregations as a tool call instead of writing ad hoc fetch/transform code (the \"LLM Tool Function\" pattern), assembling a multi-source context window declaratively, or chaining retrieval/validation/redaction steps for a RAG pipeline by feature name."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "auth-environments",
+  "repo": "beep-effect/beep-effect",
+  "path": ".claude/skills/auth-environments/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/beep-effect/beep-effect",
+  "dir_name": "auth-environments",
+  "downloaded_at": "2026-11-24T09:27:14.859040Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "beep-effect",
+  "source_url": "https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/auth-environments/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/auth-environments/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sign Claude Code in to a chosen Claude subscription on every linked T3 fleet host (grok-bot, beep-worker, dankserver, tbk-worker, tom-pc-1-wsl). Use when a Claude account hits its weekly limit, when `bun run beep accounts` shows the fleet's account used up, or on `/auth-environments`. Opens each host's OAuth page and a masked KDE code dialog together and verifies the admitted account."
+}

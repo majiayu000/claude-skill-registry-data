@@ -1,0 +1,39 @@
+{
+  "name": "prompt-audit",
+  "repo": "ferraroroberto/fleet-config",
+  "path": ".claude/skills/prompt-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/ferraroroberto/fleet-config",
+  "dir_name": "prompt-audit",
+  "downloaded_at": "2026-11-24T10:34:26.356742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ferraroroberto",
+  "source_url": "https://github.com/ferraroroberto/fleet-config/blob/main/.claude/skills/prompt-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ferraroroberto/fleet-config/blob/main/.claude/skills/prompt-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits every fleet instruction file (CLAUDE.md, AGENTS.md, rules, SKILL.md) against the vendors' current prompting guides — first checking whether those guides changed, then linting and judging each file — posts a ledger digest and files per-repo prompt-drift cleanup issues. Also runs unattended weekly. E.g. \"/prompt-audit\", \"/prompt-audit --dry-run\", \"audit our prompts against the latest guidance\".",
+  "content_fingerprint": "90f079c7ea91e62c481800b5f2d3d826625c07e6b9f9b9c7fe6e170dbddea8c1"
+}

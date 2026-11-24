@@ -1,0 +1,38 @@
+{
+  "name": "omem",
+  "repo": "canquedehuiyi-cpu/xiongbao-nenglishichang",
+  "path": "skills/market/Agent-Evolution/OMem/omem/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/canquedehuiyi-cpu/xiongbao-nenglishichang",
+  "dir_name": "omem",
+  "downloaded_at": "2026-11-24T09:42:01.896530Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "canquedehuiyi-cpu",
+  "source_url": "https://github.com/canquedehuiyi-cpu/xiongbao-nenglishichang/blob/main/skills/market/Agent-Evolution/OMem/omem/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/canquedehuiyi-cpu/xiongbao-nenglishichang/blob/main/skills/market/Agent-Evolution/OMem/omem/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Search the user's local work memory (Office Memory / OMem) — a unified,\nlocally-indexed wiki built from the user's emails, calendar events,\ndocuments, and collaboration notes. OMem ingests from whatever sources\nthe user has configured: mail kind (e.g. macOS Mail.app, Outlook\nClassic, Outlook on the Web, AppleScript-driven mailboxes), calendar\nkind (Calendar.app, Outlook calendars, .ics files), file kind (any\nlocal folder — OneDrive, Dropbox, iCloud Drive, ~/Documents, plain\ndirectories), and loop kind (Microsoft Teams Loop notes). Future\nversions add Slack / Jira / Notion. The wiki abstracts over all of\nthese — you don't need to know which source a hit came from.\n\nUSE THIS SKILL whenever the user's question touches their work\ncontext, even implicitly — past meetings, colleagues' names, project\ncodenames, vendor/contract details, \"that document I saw last week\",\n\"what did X say about Y\", upcoming/past calendar items, internal\nacronyms, RFPs, performance reviews, OKRs, anything that sounds like\nit could live in their work history (any inbox, calendar, local\nfolder, or collaboration tool they use for work). When in doubt,\nCALL omem query FIRST and decide afterward whether the results help.\n\nDO NOT use this skill for: weather, general programming questions,\ntranslation, math, public-knowledge lookups, or anything where the\nuser clearly is NOT asking about their own work history.\n\nPrimary tool: `omem query \"<question>\" --format json --limit 20`\nThen progressively drill down via `omem page get <page_id>`,\n`omem raw get <page_id> --parsed`, `omem raw get <page_id>`.\nUsually one query and one page answers the question — read it, cite,\ndone. Only when a page's answer hinges on a specific term, person, or\ndocument you haven't resolved, query again for that one thing — follow\nthe thread, don't crawl the graph.\nNever call `omem setup / install / ingest / lint / index rebuild` —\nthose are user actions; tell the user in natural language instead.",
+  "content_fingerprint": "8b0c7729786dd99d0a4c675d25dd4883b7db674ebfbb81deff84833520c09953"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "whatsnext",
+  "repo": "archid21/whatsnext",
+  "path": "skills/whatsnext/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/archid21/whatsnext",
+  "dir_name": "whatsnext",
+  "downloaded_at": "2026-11-24T09:16:49.735669Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "archid21",
+  "source_url": "https://github.com/archid21/whatsnext/blob/main/skills/whatsnext/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/archid21/whatsnext/blob/main/skills/whatsnext/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Shared plan checklist, check-offs and resumable task progress for every coding agent in a project. Use when the user asks what to work on next or starts or finishes a plan item (\"what's next?\", \"start P-13\", \"mark P-13 done\"), asks to see the plan or who has what (\"show the plan\", \"who has what?\"), asks to run the ready plan items or get a status update, or saves or reads where a task stands (\"start a task\", \"where did we leave off?\", \"what does the resume note say?\")."
+}

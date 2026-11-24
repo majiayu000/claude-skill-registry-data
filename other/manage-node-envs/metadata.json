@@ -1,0 +1,38 @@
+{
+  "name": "manage-node-envs",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/manage-node-envs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "manage-node-envs",
+  "downloaded_at": "2026-11-24T09:54:50.245600Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/manage-node-envs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/manage-node-envs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Manage which deploy environments (candidate-a / preview / production) a Cogni node lives in, via the operator app: request the env_manager role, owner approves, call the env verb, merge the catalog PR, verify. Use when asked to 'give this node a preview deploy', 'take a node out of preview', 'change a node's env set', or on a 403 authz_denied / 503 authz_unavailable from POST /api/v1/nodes/{id}/envs. Triggers on 'env_manager', 'can_manage_envs', 'env-membership PR', 'catalog envs: line'. Distinct from shipping a build (POST /api/v1/deploy/workloads), provisioning an env (provision-env) and secrets (cicd-secrets-expert).",
+  "content_fingerprint": "dacdefe5215979f8330d11d6af39adbd2a8343b93786ed41796ab4101809adcb"
+}

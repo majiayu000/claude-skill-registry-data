@@ -1,0 +1,37 @@
+{
+  "name": "studio-endless-studios-find-animation-opportunities",
+  "repo": "endlessm/prototyping-playground",
+  "path": ".claude/skills/studio-endless-studios-find-animation-opportunities/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/endlessm/prototyping-playground",
+  "dir_name": "studio-endless-studios-find-animation-opportunities",
+  "downloaded_at": "2026-11-24T10:24:28.206666Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, animation",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "endlessm",
+  "source_url": "https://github.com/endlessm/prototyping-playground/blob/main/.claude/skills/studio-endless-studios-find-animation-opportunities/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/endlessm/prototyping-playground/blob/main/.claude/skills/studio-endless-studios-find-animation-opportunities/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it does not implement it. Use when the user asks \"what could be animated here?\" or wants to \"make this feel more alive\". For fixing existing animations, use improve-animations or review-animations instead."
+}

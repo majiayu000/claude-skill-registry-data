@@ -1,0 +1,36 @@
+{
+  "name": "adp-catalog",
+  "repo": "fblgit/artifacts-done-properly",
+  "path": "plugins/artifacts-done-properly/skills/adp-catalog/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fblgit/artifacts-done-properly",
+  "dir_name": "adp-catalog",
+  "downloaded_at": "2026-11-24T10:32:14.776905Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fblgit",
+  "source_url": "https://github.com/fblgit/artifacts-done-properly/blob/main/plugins/artifacts-done-properly/skills/adp-catalog/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fblgit/artifacts-done-properly/blob/main/plugins/artifacts-done-properly/skills/adp-catalog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find, use and add components, themes, layouts and guides from the ADP catalog (the shared library of reusable artifact parts). Load it whenever an artifact needs a component, theme, layout or pattern that may already exist, when the user says take, reuse, catalog, kit or theme, or when a new reusable piece should be added. Covers search, taking entries by reference with the files map, and the catalog rules. Also load it when the user wants their own, a separate or a private copy of the catalog."
+}

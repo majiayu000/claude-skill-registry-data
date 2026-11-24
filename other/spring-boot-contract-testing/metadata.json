@@ -1,0 +1,37 @@
+{
+  "name": "spring-boot-contract-testing",
+  "repo": "alefiengo/spring-boot-tools",
+  "path": "skills/spring-boot-contract-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alefiengo/spring-boot-tools",
+  "dir_name": "spring-boot-contract-testing",
+  "downloaded_at": "2026-11-24T09:04:59.279344Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "messaging",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alefiengo",
+  "source_url": "https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-contract-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-contract-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides contract testing between Spring Boot services: consumer-driven contracts with Pact (pact-jvm consumer tests, pact file publishing, broker verification) and provider-side contracts with Spring Cloud Contract (contracts in Groovy/YAML, stub publishing, consumer stub runner). Use when asked about contract tests, Pact, Spring Cloud Contract, consumer-driven contracts, or verifying inter-service API compatibility."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "spring-boot-3-to-4-migration",
+  "repo": "alefiengo/spring-boot-tools",
+  "path": "skills/spring-boot-3-to-4-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/alefiengo/spring-boot-tools",
+  "dir_name": "spring-boot-3-to-4-migration",
+  "downloaded_at": "2026-11-24T09:04:59.445037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, build, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alefiengo",
+  "source_url": "https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-3-to-4-migration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-3-to-4-migration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides migration of a Spring Boot 3.x project to 4.x: preparation, the OpenRewrite recipe (UpgradeSpringBoot_4_0), Jackson 2\u21923 changes, Spring Framework 7, modular starters, deprecated properties, Testcontainers 2, and verification. Use when asked to upgrade/migrate Spring Boot 3 to 4, modernize an old project, or diagnose post-migration errors."
+}

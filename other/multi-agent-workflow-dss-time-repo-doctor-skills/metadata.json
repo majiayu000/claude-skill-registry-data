@@ -1,0 +1,38 @@
+{
+  "name": "multi-agent-workflow",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "skills/multi-agent-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "multi-agent-workflow-dss-time-repo-doctor-skills",
+  "downloaded_at": "2026-11-24T10:18:13.013744Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/skills/multi-agent-workflow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/skills/multi-agent-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Select single-agent or multi-agent execution for a repository task when the user asks to choose the mode, explicitly requests delegation, or provides multiple genuinely independent implementation slices or review assignments that need coordination. Coordinate existing Skills, scoped workers and integration evidence. Keep ordinary small fixes, ordinary reviews and single-Skill tasks with their existing owner; do not activate merely because a task is called complex. Host-native subagents are required for parallel execution. \u7528\u6237\u8981\u6c42\u81ea\u52a8\u9009\u6267\u884c\u6a21\u5f0f\u3001\u660e\u786e\u8981\u6c42\u59d4\u6d3e\uff0c\u6216\u63d0\u4f9b\u9700\u8981\u534f\u8c03\u7684\u591a\u4e2a\u771f\u6b63\u72ec\u7acb\u5b9e\u65bd\u5207\u7247\u6216\u5ba1\u67e5\u5206\u5de5\u65f6\uff0c\u4e3a\u4ed3\u5e93\u4efb\u52a1\u9009\u62e9\u5355 Agent \u6216\u591a Agent \u6267\u884c\uff0c\u5e76\u534f\u8c03\u73b0\u6709 Skills\u3001\u53d7\u9650\u5b50\u4efb\u52a1\u548c\u96c6\u6210\u8bc1\u636e\u3002\u666e\u901a\u5c0f\u4fee\u590d\u3001\u666e\u901a\u5ba1\u67e5\u548c\u5355 Skill \u4efb\u52a1\u7ee7\u7eed\u7531\u539f\u80fd\u529b\u5904\u7406\uff0c\u4e0d\u80fd\u4ec5\u51ed\u201c\u590d\u6742\u201d\u542f\u52a8\u3002\u5e76\u884c\u6267\u884c\u9700\u8981\u5bbf\u4e3b\u539f\u751f\u5b50 Agent \u80fd\u529b\u3002"
+}

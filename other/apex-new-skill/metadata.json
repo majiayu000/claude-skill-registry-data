@@ -1,0 +1,37 @@
+{
+  "name": "apex-new-skill",
+  "repo": "aws-samples/sample-apex-skills",
+  "path": "skills/apex-new-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws-samples/sample-apex-skills",
+  "dir_name": "apex-new-skill",
+  "downloaded_at": "2026-11-24T09:23:11.671371Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws-samples",
+  "source_url": "https://github.com/aws-samples/sample-apex-skills/blob/main/skills/apex-new-skill/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws-samples/sample-apex-skills/blob/main/skills/apex-new-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Adds a new skill, or a class change, to the APEX skills repository (aws-samples/sample-apex-skills) end to end: reads the repo's classes and class tree to pick the skill's classes, writes SKILL.md front matter, drafts its SKILL_META line, authors the eval set and sibling-map updates, regenerates the docs with the repo's generators, runs the checks CI runs, drafts the ADR, the design-doc note and the fact check, asks before drafting a blog, then prepares the branch, explicit-path commit and pull request. Use when someone wants to contribute, add, onboard or submit a new skill to this repo, change a class under classes/, asks how to open a pull request for a new skill, or needs to retrofit a skill that landed without its eval set. Not for using the APEX skills on an EKS or ECS workload (use the matching skill), not for drafting or tuning skill content in general (use skill-creator), not for a doc sync alone (use update-docs), and not for editing vendored skills synced from upstream."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "triggers",
+  "repo": "fahadaldoseri/mda-marine-system",
+  "path": "skills/triggers/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fahadaldoseri/mda-marine-system",
+  "dir_name": "triggers-fahadaldoseri-mda-marine-system",
+  "downloaded_at": "2026-11-24T10:30:53.060483Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fahadaldoseri",
+  "source_url": "https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/triggers/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/triggers/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create and manage condition-based Manus automations using provider events, webhooks, or scheduled JavaScript monitoring. Also use to inspect executions and debug saved script Triggers. For reminders or recurring instructions without a monitored condition, use manus-config ScheduleTask instead.",
+  "content_fingerprint": "edfe43d362a2ac73f86557e5ce489522a4030636792988587ecd2e2bae864049"
+}

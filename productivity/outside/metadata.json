@@ -1,0 +1,37 @@
+{
+  "name": "outside",
+  "repo": "dtiger1889-ops/claude-harness-toolbox",
+  "path": "skills/outside/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/dtiger1889-ops/claude-harness-toolbox",
+  "dir_name": "outside",
+  "downloaded_at": "2026-11-24T10:18:38.276379Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dtiger1889-ops",
+  "source_url": "https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/outside/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/outside/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks prior art, related workspace projects, and relevant notes before choosing an approach. Use for /outside, \"get an outside view\", \"check prior art\", \"are we reinventing the wheel\", or \"has anyone already built this\". Runs one bounded reconnaissance pass without helper agents."
+}

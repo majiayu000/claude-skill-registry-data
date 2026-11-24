@@ -1,0 +1,37 @@
+{
+  "name": "x-postfach-hygiene",
+  "repo": "exava-ai/exava-hintergrund",
+  "path": ".claude/skills/x-postfach-hygiene/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/exava-ai/exava-hintergrund",
+  "dir_name": "x-postfach-hygiene",
+  "downloaded_at": "2026-11-24T10:29:41.907735Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category documents scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "integration",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "exava-ai",
+  "source_url": "https://github.com/exava-ai/exava-hintergrund/blob/main/.claude/skills/x-postfach-hygiene/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/exava-ai/exava-hintergrund/blob/main/.claude/skills/x-postfach-hygiene/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Postfach-Hygiene (Kernregeln 10/11/18, art postfach_hygiene) – nur über EXAVA (mail_lesen, mail_archivieren): echte Geschäftsmails aus dem Spam holen und den Posteingang aufräumen (Claude entscheidet je Mail samt Anhängen, was der Nutzer weder tun noch wissen muss; nur aus dem Posteingang nehmen); Abmeldungen nur als tägliche Sammel-Karte zur Freigabe; Papierkorb-Schutzschild: kritische Post aus dem Papierkorb ins Archiv. Nichts löschen, nichts senden. Verwenden nur in der EXAVA-Hintergrundarbeit bei Aufträgen mit skill x-postfach-hygiene bzw. art postfach_hygiene.",
+  "content_fingerprint": "4ecccc64408299c9b3ee88fd145afc3e8e139dd1aeeb43d84274e75a9bf26252"
+}

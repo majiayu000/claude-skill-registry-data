@@ -1,0 +1,39 @@
+{
+  "name": "agentic-rag-extension",
+  "repo": "bliss-fox/rag-knowledge-assistant-archive",
+  "path": ".agents/skills/agentic-rag-extension/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/bliss-fox/rag-knowledge-assistant-archive",
+  "dir_name": "agentic-rag-extension-bliss-fox-rag-knowledge-assist",
+  "downloaded_at": "2026-11-24T09:32:48.637636Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bliss-fox",
+  "source_url": "https://github.com/bliss-fox/rag-knowledge-assistant-archive/blob/main/.agents/skills/agentic-rag-extension/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bliss-fox/rag-knowledge-assistant-archive/blob/main/.agents/skills/agentic-rag-extension/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "为 MODULAR-RAG-MCP-SERVER 添加 Agentic RAG 层并跑出真实评测数据。\n作者背景：应届生 + 无实习，目标 Agent 方向求职。\n\n使用场景：\n1. 用户说\"加 Agent 层\" / \"实现 ReAct Agent\" / \"Agentic RAG\" / \"多步推理\"\n2. 用户说\"跑评测\" / \"出评测数字\" / \"Ragas 实测\" / \"对比指标\"\n3. 用户说\"继续扩建项目\" / \"Stage J\" / \"Stage K\"\n4. 用户在新对话中提到这个 RAG 项目需要扩展\n\n该 skill 记录了所有背景知识、架构决策和实现细节，使 Codex 无需重新探索即可直接执行。",
+  "content_fingerprint": "27f3ac46f3372cbfe3832691dc49461563cfb6513ee21f709e809c95d46ae958"
+}

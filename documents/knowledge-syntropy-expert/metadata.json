@@ -1,0 +1,38 @@
+{
+  "name": "knowledge-syntropy-expert",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/knowledge-syntropy-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "knowledge-syntropy-expert",
+  "downloaded_at": "2026-11-24T09:54:54.080422Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/knowledge-syntropy-expert/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/knowledge-syntropy-expert/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when organizing or curating a Cogni knowledge hub, deciding where durable knowledge belongs, or migrating Markdown docs and skills into the hub. Read the node knowledge axioms first, then the complete guide for the task.",
+  "content_fingerprint": "40f1ffcb4490beba01d68e9a70d42f2c66e0cdde68d4f10299ef61b8ff080e06"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "feast-architecture",
+  "repo": "feast-dev/feast",
+  "path": "skills/feast-architecture/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/feast-dev/feast",
+  "dir_name": "feast-architecture",
+  "downloaded_at": "2026-11-24T10:32:39.669229Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feast-dev",
+  "source_url": "https://github.com/feast-dev/feast/blob/master/skills/feast-architecture/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feast-dev/feast/blob/master/skills/feast-architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Internals of the Feast codebase \u2014 how each component works, where the key abstractions live, and the data flow through the system. Use when asked how feast apply works, how the registry stores data, how materialization moves data, how get_online_features retrieves features, how the feature server works, how the Kubernetes operator manages deployments, or when navigating the codebase to understand where to make a change."
+}

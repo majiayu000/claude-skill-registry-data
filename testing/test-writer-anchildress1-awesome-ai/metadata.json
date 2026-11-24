@@ -1,0 +1,42 @@
+{
+  "name": "test-writer",
+  "repo": "anchildress1/awesome-ai",
+  "path": "skills/test-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/anchildress1/awesome-ai",
+  "dir_name": "test-writer-anchildress1-awesome-ai",
+  "downloaded_at": "2026-11-24T09:11:04.292168Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, jest, pytest, integration, e2e, playwright, cypress",
+    "score": 7,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "jest",
+      "pytest",
+      "integration",
+      "e2e",
+      "playwright",
+      "cypress"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anchildress1",
+  "source_url": "https://github.com/anchildress1/awesome-ai/blob/main/skills/test-writer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anchildress1/awesome-ai/blob/main/skills/test-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write, extend, or review tests in any codebase. Use this skill whenever the user asks to write tests, add test coverage, test a new feature, fix failing tests, or audit existing test files \u2014 regardless of language, framework, or project. Also trigger for \"add tests for\", \"write tests for\", \"cover this with tests\", \"test this file\", \"update the tests\", \"improve coverage\", or \"this needs tests\". This skill enforces universal testing rules (no .skip, no lowering thresholds, full-path coverage) and adapts its mock patterns and tooling to whatever stack the repo uses."
+}

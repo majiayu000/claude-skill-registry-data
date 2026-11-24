@@ -1,0 +1,38 @@
+{
+  "name": "feast-user-guide",
+  "repo": "feast-dev/feast",
+  "path": "skills/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/feast-dev/feast",
+  "dir_name": "skills-feast-dev-feast",
+  "downloaded_at": "2026-11-24T10:32:38.060749Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feast-dev",
+  "source_url": "https://github.com/feast-dev/feast/blob/master/skills/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feast-dev/feast/blob/master/skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for working with Feast (Feature Store) \u2014 defining features, configuring feature_store.yaml, retrieving features online/offline, using the CLI, and building RAG retrieval pipelines. Use when the user asks about creating entities, feature views, on-demand feature views, stream feature views, feature services, data sources, feature_store.yaml configuration, feast apply/materialize commands, online or historical feature retrieval, or vector-based document retrieval with Feast."
+}

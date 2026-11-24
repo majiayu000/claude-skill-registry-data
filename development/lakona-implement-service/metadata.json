@@ -1,0 +1,38 @@
+{
+  "name": "lakona-implement-service",
+  "repo": "bruce48x/Lakona",
+  "path": "skills/lakona-implement-service/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/bruce48x/Lakona",
+  "dir_name": "lakona-implement-service",
+  "downloaded_at": "2026-11-24T09:37:09.210038Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bruce48x",
+  "source_url": "https://github.com/bruce48x/Lakona/blob/main/skills/lakona-implement-service/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bruce48x/Lakona/blob/main/skills/lakona-implement-service/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implement or update Lakona RPC service handlers in Server/Hotfix from Shared interfaces marked with RpcService. Use when adding or completing a service, changing RPC methods, selecting the correct generated service call context, fixing Hotfix service binding, validating RPC-to-Hotfix wiring, or detecting that a service dependency such as a database or Redis client must be initialized by HotfixComponent with stable App resources or ComponentState."
+}

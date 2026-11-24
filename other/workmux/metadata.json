@@ -1,0 +1,37 @@
+{
+  "name": "workmux",
+  "repo": "ahsanghalib/ai-workflow",
+  "path": "skills/workmux-skills/workmux/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ahsanghalib/ai-workflow",
+  "dir_name": "workmux",
+  "downloaded_at": "2026-11-24T08:56:55.237469Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahsanghalib",
+  "source_url": "https://github.com/ahsanghalib/ai-workflow/blob/main/skills/workmux-skills/workmux/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahsanghalib/ai-workflow/blob/main/skills/workmux-skills/workmux/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Manage terminal agents, git worktrees, and tmux sessions with workmux. Use when the user asks to open or start an agent in a project, check running agents or their progress in a tmux session, or work with workmux, worktrees, or parallel agent workflows."
+}

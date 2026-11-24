@@ -1,0 +1,39 @@
+{
+  "name": "assets-create-folder",
+  "repo": "eppumelto/Kanshilike",
+  "path": ".claude/skills/assets-create-folder/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/eppumelto/Kanshilike",
+  "dir_name": "assets-create-folder-eppumelto-kanshilike",
+  "downloaded_at": "2026-11-24T10:25:33.998596Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eppumelto",
+  "source_url": "https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/assets-create-folder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/assets-create-folder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create a new folder under a parent folder inside 'Assets/'. The parent path must start with 'Assets/' and every intermediate folder in it must already exist. Refreshes the AssetDatabase at the end and returns the GUID(s) of the created folder(s).",
+  "content_fingerprint": "1781faa347cee3162c1b7bef02ad20eacc077708c08fb50e1bc6215f9964c692"
+}

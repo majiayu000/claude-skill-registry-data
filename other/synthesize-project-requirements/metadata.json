@@ -1,0 +1,38 @@
+{
+  "name": "synthesize-project-requirements",
+  "repo": "ahundt/autorun",
+  "path": "plugins/autorun-skills/skills/synthesize-project-requirements/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ahundt/autorun",
+  "dir_name": "synthesize-project-requirements",
+  "downloaded_at": "2026-11-24T08:57:28.759526Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahundt",
+  "source_url": "https://github.com/ahundt/autorun/blob/main/plugins/autorun-skills/skills/synthesize-project-requirements/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahundt/autorun/blob/main/plugins/autorun-skills/skills/synthesize-project-requirements/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create one evidence-backed project requirements and gotchas note from cumulative notes, current repository state, git history, and human-authored messages found with AI Session Search. Use when asked to \"go through all the notes\", \"recover project requirements\", \"mine prior sessions\", \"collect requirements and gotchas\", \"make a project memory note\", \"prepare a project handoff\", or preserve decisions and corrections for a handoff. Do not use for a one-off log summary or direct factual answer unless durable project memory or a handoff is requested. Default to the project's notes directory; publish to its documentation only when requested and add a guidance-file pointer only with permission."
+}

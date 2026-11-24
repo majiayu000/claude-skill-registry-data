@@ -1,0 +1,37 @@
+{
+  "name": "xb-anti-blame",
+  "repo": "dennydkt/xbskill",
+  "path": "skills/xb-anti-blame/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dennydkt/xbskill",
+  "dir_name": "xb-anti-blame",
+  "downloaded_at": "2026-11-24T10:08:44.790053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dennydkt",
+  "source_url": "https://github.com/dennydkt/xbskill/blob/main/skills/xb-anti-blame/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dennydkt/xbskill/blob/main/skills/xb-anti-blame/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "调用受用户配置约束：高自动、中先确认、低须明确开启；用户指定其他技能时禁止接管。处理工作中被要求承担缺少依据的责任、被公开归责、被要求认错或签署责任说明。通过少量交互提问形成归责主张卡、事实证据账、当时控制链、强力可发送回复与升级分支，同时承担有证据支持的本人责任。触发：$xb-anti-blame、被甩锅/让我背锅、责任全推给我、怎么强力回击。",
+  "content_fingerprint": "a5ff6e2dad410339c547cc1b0fdc369dc6a0a7f0061b2438a660c032fcab9b6e"
+}

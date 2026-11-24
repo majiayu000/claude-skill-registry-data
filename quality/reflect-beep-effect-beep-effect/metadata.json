@@ -1,0 +1,39 @@
+{
+  "name": "reflect",
+  "repo": "beep-effect/beep-effect",
+  "path": ".claude/skills/reflect/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/beep-effect/beep-effect",
+  "dir_name": "reflect-beep-effect-beep-effect",
+  "downloaded_at": "2026-11-24T09:27:11.111826Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review, validate",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "beep-effect",
+  "source_url": "https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/reflect/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/reflect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write a structured agent reflection for a goal packet. Trigger on: a goal's P3 Close phase, the user invoking `/reflect <goal-slug>`, or when you notice a TODO worth codifying. Produces a schema-valid `goals/<slug>/history/reflections/<YYYY-MM-DD>-<agent>.md` enforced by `bun run beep lint reflection-artifacts`."
+}

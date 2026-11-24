@@ -1,0 +1,37 @@
+{
+  "name": "yomado",
+  "repo": "chekusu/yomado",
+  "path": "skills/yomado/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/chekusu/yomado",
+  "dir_name": "yomado",
+  "downloaded_at": "2026-11-24T09:46:21.377689Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chekusu",
+  "source_url": "https://github.com/chekusu/yomado/blob/main/skills/yomado/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chekusu/yomado/blob/main/skills/yomado/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare and manage yomado virtual work screens on macOS using existing computer-use tools. Use when an agent needs to create or name a work screen, move authorized app windows into it, verify visual access, or return those windows after a task."
+}

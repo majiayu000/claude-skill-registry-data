@@ -1,0 +1,37 @@
+{
+  "name": "blender",
+  "repo": "digitalsamba/claude-code-video-toolkit",
+  "path": ".claude/skills/blender/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/digitalsamba/claude-code-video-toolkit",
+  "dir_name": "blender-digitalsamba-claude-code-video-to",
+  "downloaded_at": "2026-11-24T10:12:23.979455Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "digitalsamba",
+  "source_url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/blender/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/blender/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "3D scenes, character acting and product shots from a shot spec, rendered in Blender, as a finished film, as clips for any other build (moviepy, a video job, an editor), or as elements of a Remotion video (transparent characters over a scene, a Remotion render on a 3D laptop, phone or floating card that the camera pulls back from, an imported 3D model on a studio stage), or a brand's opening and closing ident built from its SVG logo. A rigged cartoon cast described in JSON (build, face, hair, clothes, a seed), sets, shots by type, acting beats in seconds or on narration words, every camera checked by geometry, sound placed on the motion. Use when a video needs a consistent directable character (parody, explainer gag, reaction shot), a 3D reveal or element in a Remotion video, a device or product shot of an app or a model, or exact acting timing that AI video clips can't hold. Triggers include Blender, 3D, character animation, rigged character, cast, shot spec, acting, camera angles, transparent clip, alpha, pull out from the screen, phone mockup, device mockup, product shot, turntable, orbit, glTF, GLB, BlenderClip, logo animation, ident, logo reveal, sting, SVG in 3D."
+}

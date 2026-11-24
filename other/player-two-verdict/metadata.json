@@ -1,0 +1,37 @@
+{
+  "name": "player-two-verdict",
+  "repo": "cameronww7/skill-sec-arcade",
+  "path": "skills/player-two-verdict/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cameronww7/skill-sec-arcade",
+  "dir_name": "player-two-verdict",
+  "downloaded_at": "2026-11-24T09:41:09.625216Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cameronww7",
+  "source_url": "https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/player-two-verdict/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/player-two-verdict/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Independently investigate a pasted security scanner finding (SAST, SCA, Secrets, IaC, or DAST) to determine if it's a true or false positive, using actual repo access rather than trusting the tool's verdict. Trigger this whenever the user pastes a security finding, vulnerability report, CVE, CWE, scanner output, or asks to triage, validate, review, or challenge a security finding. Also trigger on requests like \"is this a real vulnerability\" or \"help me figure out if I can suppress this finding.\""
+}

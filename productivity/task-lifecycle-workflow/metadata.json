@@ -1,0 +1,38 @@
+{
+  "name": "task-lifecycle-workflow",
+  "repo": "ahundt/autorun",
+  "path": "plugins/autorun-skills/skills/task-lifecycle-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ahundt/autorun",
+  "dir_name": "task-lifecycle-workflow",
+  "downloaded_at": "2026-11-24T08:57:28.369626Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahundt",
+  "source_url": "https://github.com/ahundt/autorun/blob/main/plugins/autorun-skills/skills/task-lifecycle-workflow/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahundt/autorun/blob/main/plugins/autorun-skills/skills/task-lifecycle-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a full evidence-to-completion lifecycle for long, correction-heavy, multi-artifact, or release-bound work. Use when asked to \"coordinate dependent work\", \"preserve cumulative requirements\", \"recover off-rails work\", \"cold-read the result\", or \"continue until fully ready\". Do not use for planning alone, factual answers, typos, or reversible one-owner work with one check; use Autorun's focused plan skills for those."
+}

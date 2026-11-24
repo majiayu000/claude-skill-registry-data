@@ -1,0 +1,37 @@
+{
+  "name": "build-minecraft-model-from-image",
+  "repo": "codepawl/creator-generalist",
+  "path": "plugins/3d-generalist/skills/build-minecraft-model-from-image/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/codepawl/creator-generalist",
+  "dir_name": "build-minecraft-model-from-image-codepawl-creator-generalist",
+  "downloaded_at": "2026-11-24T09:53:43.045587Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "codepawl",
+  "source_url": "https://github.com/codepawl/creator-generalist/blob/main/plugins/3d-generalist/skills/build-minecraft-model-from-image/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/codepawl/creator-generalist/blob/main/plugins/3d-generalist/skills/build-minecraft-model-from-image/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a 2D picture of an object into a Minecraft-style 3D model: a few clean cuboids with pixel textures, never fine voxels. Exports GLB, a viewer and renders. Use for \"make this photo a Minecraft model\", \"block model from an image\", \"voxel from a picture\"."
+}

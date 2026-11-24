@@ -1,0 +1,38 @@
+{
+  "name": "lakona-e2e-testing",
+  "repo": "bruce48x/Lakona",
+  "path": ".agents/skills/lakona-e2e-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/bruce48x/Lakona",
+  "dir_name": "lakona-e2e-testing",
+  "downloaded_at": "2026-11-24T09:37:09.565940Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bruce48x",
+  "source_url": "https://github.com/bruce48x/Lakona/blob/main/.agents/skills/lakona-e2e-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bruce48x/Lakona/blob/main/.agents/skills/lakona-e2e-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify Lakona.Tool generated projects through real RPC using local source, local packages, or nuget.org; excludes unit-only and client UI testing."
+}

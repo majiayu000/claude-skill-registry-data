@@ -1,0 +1,8 @@
+---
+name: studio-endless-studios-mobile-native
+description: 'Make a web app feel native on a phone — the small CSS and meta-tag fixes that separate "a website in a browser" from something that feels installed. Covers sticky hover states, tap highlight flashes, the 100vh bug, inputs that zoom the page, laggy taps, pull-to-refresh hijacking scroll, content under the notch, long-press selecting button text, carousels that scroll the wrong way, mismatched status bars, and the rule that you test on real hardware. Use when a web app is being built for or reviewed on mobile, when something "works in Chrome but feels wrong on my phone", when building a PWA, a bottom sheet, a carousel, a full-screen layout, or any touch interaction. For motion itself use animate; for React Native use animate-expo.'
+---
+
+Read [the canonical skill](../../../src/systems/endless-studios/skills/mobile-native/SKILL.md).
+
+Use system skills only for that system or its assigned prototypes.

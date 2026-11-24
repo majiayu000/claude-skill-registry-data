@@ -1,0 +1,37 @@
+{
+  "name": "tikz-scientific-figures",
+  "repo": "cjh-solver/MathModeling-Skills-Arsenal",
+  "path": "skills/04-figures/tikz-scientific-figures/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cjh-solver/MathModeling-Skills-Arsenal",
+  "dir_name": "tikz-scientific-figures",
+  "downloaded_at": "2026-11-24T09:50:09.354373Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cjh-solver",
+  "source_url": "https://github.com/cjh-solver/MathModeling-Skills-Arsenal/blob/main/skills/04-figures/tikz-scientific-figures/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cjh-solver/MathModeling-Skills-Arsenal/blob/main/skills/04-figures/tikz-scientific-figures/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create publication-grade scientific figures and schematic diagrams with TikZ/PGFPlots, output as SVG + PNG (PDF only as compile intermediate, not a deliverable). Use when the user wants a figure for a paper/thesis/report, a data plot (line, scatter, bar, error-bar, heatmap, log axis), a circuit diagram, a flowchart or block diagram, a free-body/force or geometry schematic, a biology figure (immunofluorescence/tissue, cell, signaling pathway, gene or plasmid map), a CS/ML figure (neural network, system architecture, finite-state machine, tree, graph), or a molecular structure \u2014 especially when they mention TikZ, PGFPlots, circuitikz, LaTeX figures, reproducible/vector/publication-quality plots, or editing an existing .tex figure. Produces reproducible .tex + data sources the user can re-edit."
+}

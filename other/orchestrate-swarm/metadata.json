@@ -1,0 +1,37 @@
+{
+  "name": "orchestrate-swarm",
+  "repo": "axiomantic/garden",
+  "path": "skills/orchestrate-swarm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/axiomantic/garden",
+  "dir_name": "orchestrate-swarm",
+  "downloaded_at": "2026-11-24T09:23:51.620398Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, orchestration=2",
+    "score": 2,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "axiomantic",
+  "source_url": "https://github.com/axiomantic/garden/blob/main/skills/orchestrate-swarm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/axiomantic/garden/blob/main/skills/orchestrate-swarm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Directs live multi-agent swarm execution from the primary chat session acting as Lead Orchestrator. Dispatches tasks over the Rhizo Redis bus, monitors worker heartbeats with rhizo who, governs task leasing and dead-letter queues, ratifies emergent design addenda, enforces the Three-Key Gate and independent adversarial audit ratification, executes fast-forward trunk merges via vine weave, and dynamically maintains implementation plan checkboxes and harness To-Do tools. Triggers: 'orchestrate swarm', 'run implementation plan', 'execute swarm tasks', 'manage workers', 'drive plan'."
+}

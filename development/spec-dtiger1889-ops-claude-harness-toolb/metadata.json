@@ -1,0 +1,38 @@
+{
+  "name": "spec",
+  "repo": "dtiger1889-ops/claude-harness-toolbox",
+  "path": "skills/spec/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dtiger1889-ops/claude-harness-toolbox",
+  "dir_name": "spec-dtiger1889-ops-claude-harness-toolb",
+  "downloaded_at": "2026-11-24T10:18:37.557359Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dtiger1889-ops",
+  "source_url": "https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dtiger1889-ops/claude-harness-toolbox/blob/main/skills/spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes or reviews a change or decision spec with explicit tradeoffs and closeout criteria. Use for /spec, \"spec this\", \"write a spec\", review of a spec's open questions, or closing, archiving, and promoting a finished spec, including when its work is reported done and nobody said \"close it\". Runs a prior-art pass (shipped solutions, related projects, notes) before writing. Does not authorize implementation by itself."
+}

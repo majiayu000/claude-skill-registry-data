@@ -1,0 +1,38 @@
+{
+  "name": "appstore-rejection",
+  "repo": "devsemih/appstore-review-skill",
+  "path": "skills/appstore-rejection/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/devsemih/appstore-review-skill",
+  "dir_name": "appstore-rejection",
+  "downloaded_at": "2026-11-24T10:10:15.518108Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devsemih",
+  "source_url": "https://github.com/devsemih/appstore-review-skill/blob/main/skills/appstore-rejection/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devsemih/appstore-review-skill/blob/main/skills/appstore-rejection/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnoses an App Store rejection and drafts the Resolution Center reply. Parses an App Review rejection message (pasted text, a file, or a screenshot), maps every cited guideline (e.g. 'Guideline 2.1 - Performance - App Completeness', '5.1.1(v)', '4.8') and ITMS email error (e.g. ITMS-91053 missing API declaration) to the exact rule, finds the root cause in the project code with file:line evidence, proposes fixes, and writes a reply or App Review Board appeal. Works with native Swift/Obj-C, Flutter, React Native, Expo, KMP, .NET MAUI, Capacitor/Cordova/Ionic, and Unity. Use when the user says 'app rejected', 'rejection', 'Resolution Center', 'Guideline 4.3', 'app review rejected my app', 'Apple rejected', 'ITMS-91053', 'binary rejected', or pastes an App Review message."
+}

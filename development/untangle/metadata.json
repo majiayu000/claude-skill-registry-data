@@ -1,0 +1,38 @@
+{
+  "name": "untangle",
+  "repo": "fictormarcel2/untangle-everything",
+  "path": "skills/untangle/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fictormarcel2/untangle-everything",
+  "dir_name": "untangle",
+  "downloaded_at": "2026-11-24T10:34:32.899284Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fictormarcel2",
+  "source_url": "https://github.com/fictormarcel2/untangle-everything/blob/main/skills/untangle/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fictormarcel2/untangle-everything/blob/main/skills/untangle/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a codebase built quickly with AI coding tools has become hard to change or trust - competing ways of doing the same thing, duplicate or _v2/_final files, tests that pass but prove nothing, dead code, fixes that break unrelated features, code nobody can explain - or when asked to audit, clean up, untangle or de-slop a repository, or to make it safe for coding agents to keep working in."
+}

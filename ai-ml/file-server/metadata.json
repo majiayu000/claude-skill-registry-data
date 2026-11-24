@@ -1,0 +1,37 @@
+{
+  "name": "file-server",
+  "repo": "chnlich/charlie-bot",
+  "path": "skills/file-server/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/chnlich/charlie-bot",
+  "dir_name": "file-server",
+  "downloaded_at": "2026-11-24T09:47:53.027889Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: model, training",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chnlich",
+  "source_url": "https://github.com/chnlich/charlie-bot/blob/main/skills/file-server/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chnlich/charlie-bot/blob/main/skills/file-server/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Must invoke when presenting a file to the user. The CharlieBot server has a built-in file browser that serves any file on the host filesystem."
+}

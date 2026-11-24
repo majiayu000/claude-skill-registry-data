@@ -1,0 +1,39 @@
+{
+  "name": "propagate-vendored",
+  "repo": "ferraroroberto/fleet-config",
+  "path": "skills/propagate-vendored/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ferraroroberto/fleet-config",
+  "dir_name": "propagate-vendored",
+  "downloaded_at": "2026-11-24T10:34:24.611713Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ferraroroberto",
+  "source_url": "https://github.com/ferraroroberto/fleet-config/blob/main/skills/propagate-vendored/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ferraroroberto/fleet-config/blob/main/skills/propagate-vendored/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Re-vendor project-scaffolding components byte-for-byte into every adopter in its [vendored] manifest — one PR per repo with every behind component; hash-verify, bump sha, run the gate, auto-merge, no per-repo issue. Dry-run reports what is behind, touching nothing. Invoke explicitly, never per scaffold commit. E.g. \"/propagate-vendored nav\", \"/propagate-vendored nav,usage_log\", \"/propagate-vendored --all-behind\", or \"/propagate-vendored nav --dry-run\".",
+  "content_fingerprint": "c48a5eb3f71a0bcfbd6ab0774752f4af3a15f9c8f3cdc1f6a10eb514034c73b3"
+}

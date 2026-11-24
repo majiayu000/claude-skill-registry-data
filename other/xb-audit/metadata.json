@@ -1,0 +1,37 @@
+{
+  "name": "xb-audit",
+  "repo": "dennydkt/xbskill",
+  "path": "skills/xb-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dennydkt/xbskill",
+  "dir_name": "xb-audit",
+  "downloaded_at": "2026-11-24T10:08:44.954863Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dennydkt",
+  "source_url": "https://github.com/dennydkt/xbskill/blob/main/skills/xb-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dennydkt/xbskill/blob/main/skills/xb-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "调用受用户配置约束：高自动、中先确认、低须明确开启；用户指定其他技能时禁止接管。只读审查 xbskill 技能族的结构完整性、路由覆盖、契约一致性、安全边界、静默降级和更新漂移；结论必须引用文件与行号。触发：$xb-audit、审查 xbskill、检查技能系统、发布前验收。",
+  "content_fingerprint": "d0ec6b2fe5c3827a9d4e24b32615f5299ee36471d69d6338c1cbbeb194c500c5"
+}

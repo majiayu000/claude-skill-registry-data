@@ -1,0 +1,37 @@
+{
+  "name": "x-synchronisation",
+  "repo": "exava-ai/exava-hintergrund",
+  "path": ".claude/skills/x-synchronisation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/exava-ai/exava-hintergrund",
+  "dir_name": "x-synchronisation",
+  "downloaded_at": "2026-11-24T10:29:41.710443Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category data scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "exava-ai",
+  "source_url": "https://github.com/exava-ai/exava-hintergrund/blob/main/.claude/skills/x-synchronisation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/exava-ai/exava-hintergrund/blob/main/.claude/skills/x-synchronisation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ein zugewiesenes Synchronisationsfenster (Postfach bzw. Drive, Zeitraum, Cursor, max_items) seitenweise lesen und je Quelle den Text über ingest_document (Dateien liest und übergibt der Helfer x-scan), belegte Fakten über ingest_facts und Wiki-Artikel über ingest_wiki an EXAVA übergeben; vollständig nur mit Nachweis (completeness_evidence), sonst partial mit Cursor, Fehler je Quelle ausgewiesen. Verwenden nur in der EXAVA-Hintergrundarbeit bei Aufträgen mit profil ingest und art sync_aktuell oder sync_historisch (Fenster aus arbeit_holen).",
+  "content_fingerprint": "5e42ea97678753cea35ddb50d55ef7c4325eb5095f8020625d67a500d331792b"
+}

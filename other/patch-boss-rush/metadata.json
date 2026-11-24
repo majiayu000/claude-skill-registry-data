@@ -1,0 +1,37 @@
+{
+  "name": "patch-boss-rush",
+  "repo": "cameronww7/skill-sec-arcade",
+  "path": "skills/patch-boss-rush/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cameronww7/skill-sec-arcade",
+  "dir_name": "patch-boss-rush",
+  "downloaded_at": "2026-11-24T09:41:09.260202Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cameronww7",
+  "source_url": "https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/patch-boss-rush/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/patch-boss-rush/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "A fast, fully self-contained remediation pass on a single pasted security finding (SAST, SCA, Secrets, IaC, or DAST), no app-context loading, no dependency-health lookups, no delegation to any other skill in this plugin. Does its own compact sanity check, plans a fix, applies it on approval, shows the diff, and optionally opens a PR. Trigger this whenever the user asks to \"just fix this,\" \"quick fix,\" \"rush this,\" or wants fast remediation on a finding that's probably simple, without the full context-gathering ceremony. For the deliberate, context-aware workflow (app context, dependency staleness tradeoffs), that's `patch-for-the-high-score` instead."
+}

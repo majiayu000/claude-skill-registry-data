@@ -1,0 +1,37 @@
+{
+  "name": "google_meet",
+  "repo": "filewrap/hermes",
+  "path": "plugins/google_meet/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/filewrap/hermes",
+  "dir_name": "google-meet-filewrap-hermes",
+  "downloaded_at": "2026-11-24T10:34:41.451029Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "platform",
+      "device"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "filewrap",
+  "source_url": "https://github.com/filewrap/hermes/blob/main/plugins/google_meet/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/filewrap/hermes/blob/main/plugins/google_meet/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Join a Google Meet call, transcribe live captions, optionally speak in realtime, and do the followup work afterwards. Use when the user asks the agent to sit in on a meeting, take notes, summarize, respond in-call, or action items from it."
+}

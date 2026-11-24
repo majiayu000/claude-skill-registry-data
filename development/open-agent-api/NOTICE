@@ -1,0 +1,22 @@
+Open Agent API
+Copyright 2026 The Open Agent API Authors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes software and metadata developed by third parties:
+
+Open Design (https://github.com/nexu-io/open-design)
+Copyright 2026 Open Design contributors
+Licensed under the Apache License, Version 2.0 (see licenses/OpenDesign-APACHE-2.0.txt).
+  - The ACP agent preset metadata in src/config/agent-presets.ts is adapted from
+    Open Design (commit b40f25a1c89552725f1fc31f8c2fad172f92acfe), and has been
+    modified for Open Agent API as described in that file's header.
+  - Some agent icons under web/agents/ are copied or adapted from Open Design
+    (commits 5360b5a4e9c44edf9ab5582001efe0b651d66c49 and
+    b40f25a1c89552725f1fc31f8c2fad172f92acfe).
+
+This product also depends on @anthropic-ai/sandbox-runtime
+(Copyright 2025 Anthropic, Apache License 2.0).
+
+Attributions and license texts for the other third-party material (icons, fonts,
+npm dependencies) are listed in THIRD_PARTY_NOTICES.md and the licenses/ directory.

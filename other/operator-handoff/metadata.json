@@ -1,0 +1,36 @@
+{
+  "name": "operator-handoff",
+  "repo": "beep-effect/beep-effect",
+  "path": ".claude/skills/operator-handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/beep-effect/beep-effect",
+  "dir_name": "operator-handoff",
+  "downloaded_at": "2026-11-24T09:27:14.375065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "beep-effect",
+  "source_url": "https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/operator-handoff/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/beep-effect/beep-effect/blob/main/.claude/skills/operator-handoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "One-command orchestrator hand-over for beep-effect. Run `/operator-handoff` in a fresh session to take over the orchestrator role immediately from the on-disk handoff (read HANDOFF.md, claim the role, re-arm gates and monitors, broadcast, resume the queue). Run it in the session that currently holds the role to hand off (convert in-process units, rewrite HANDOFF.md, mark the ledger, tell the operator to start a successor)."
+}

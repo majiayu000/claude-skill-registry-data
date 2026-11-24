@@ -1,0 +1,41 @@
+{
+  "name": "agent-infrastructure-expert",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/agent-infrastructure-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "agent-infrastructure-expert",
+  "downloaded_at": "2026-11-24T09:54:54.656365Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/agent-infrastructure-expert/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/agent-infrastructure-expert/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authoritative map of Cogni's AI-agent infrastructure — the substrate that turns a LangGraph graph into a billed, observed, durably-orchestrated, deployable production agent. Use when designing/debugging the graph execution path (InProc vs LangGraph Server), the build-ship-run topology (what's in the app image, how the Temporal worker reaches a graph), evals, or deciding which spec in the sprawling agent/langgraph cluster is authoritative. Routes graph-authoring mechanics to agent-development.md and tool-authoring to tools-authoring.md; this skill owns the infrastructure altitude above them. For all dated status (what's built, InProc↔Server alignment, doc DRY/drift) see agent-infrastructure-scorecard. Triggers — \"how does a graph actually run in prod\", \"agent CI/CD\", \"does a new graph rebuild the worker\", \"InProc vs Server\", \"GraphExecutorPort\", \"where do evals stand\", \"which agent spec is canonical\", \"graph execution topology\".",
+  "content_fingerprint": "c3f825e88bdb01f28c61d3185d596a36f34cb539d7098ebf642f2984abb5e9b8"
+}

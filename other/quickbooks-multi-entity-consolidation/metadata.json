@@ -1,0 +1,36 @@
+{
+  "name": "quickbooks-multi-entity-consolidation",
+  "repo": "coupler-io/skills",
+  "path": "finance/quickbooks/quickbooks-multi-entity-consolidation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coupler-io/skills",
+  "dir_name": "quickbooks-multi-entity-consolidation",
+  "downloaded_at": "2026-11-24T09:57:03.889760Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coupler-io",
+  "source_url": "https://github.com/coupler-io/skills/blob/main/finance/quickbooks/quickbooks-multi-entity-consolidation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coupler-io/skills/blob/main/finance/quickbooks/quickbooks-multi-entity-consolidation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for questions across several QuickBooks companies like \"combine our QuickBooks companies\", \"group P&L across all our QuickBooks entities\", \"consolidated balance sheet for the group\", \"how is the group doing across our QuickBooks companies\", \"eliminate intercompany between our QuickBooks entities\", or \"put our US and Canada QuickBooks books in one currency\" \u2014 even when the user never says \"consolidation\". Use when the decision needs one set of group numbers from two or more QuickBooks companies. QuickBooks only, wholly owned entities; for Xero use xero-multi-entity-consolidation."
+}

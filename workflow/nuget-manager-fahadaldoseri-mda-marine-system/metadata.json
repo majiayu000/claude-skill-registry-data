@@ -1,0 +1,38 @@
+{
+  "name": "nuget-manager",
+  "repo": "fahadaldoseri/mda-marine-system",
+  "path": "skills/nuget-manager/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/fahadaldoseri/mda-marine-system",
+  "dir_name": "nuget-manager-fahadaldoseri-mda-marine-system",
+  "downloaded_at": "2026-11-24T10:31:05.351377Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fahadaldoseri",
+  "source_url": "https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/nuget-manager/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fahadaldoseri/mda-marine-system/blob/main/skills/nuget-manager/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Manage NuGet packages in .NET projects/solutions. Use this skill when adding, removing, or updating NuGet package versions. It enforces using `dotnet` CLI for package management and provides strict procedures for direct file edits only when updating versions.",
+  "content_fingerprint": "22d101f2448a4ab0a752f9aa6285a011f62d77ebbb815e70ebec9e8144281248"
+}

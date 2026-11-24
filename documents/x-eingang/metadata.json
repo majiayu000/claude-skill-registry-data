@@ -1,0 +1,40 @@
+{
+  "name": "x-eingang",
+  "repo": "exava-ai/exava-hintergrund",
+  "path": ".claude/skills/x-eingang/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/exava-ai/exava-hintergrund",
+  "dir_name": "x-eingang",
+  "downloaded_at": "2026-11-24T10:29:39.463923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, xlsx, docx",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "pdf",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "exava-ai",
+  "source_url": "https://github.com/exava-ai/exava-hintergrund/blob/main/.claude/skills/x-eingang/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/exava-ai/exava-hintergrund/blob/main/.claude/skills/x-eingang/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Eingangsauftrag (Profil ingest, art eingang) – Dateien, die nur in EXAVA liegen (Netzlaufwerk-Eingang, WhatsApp-Medien, Uploads; höchstens 20 je Auftrag), über exava_datei_lesen laden und den SHA-256 selbst rechnen; lesen und mit ingest_document an EXAVA übergeben lässt du jede Datei den Helfer x-scan (A-901); je Dokument die Dokument-Weiche still · Zur Kenntnis · Entscheidung (A-1183). Kein Versand, kein Entwurf, keine Rückfrage außer der Dokument-Weiche. Verwenden nur in der EXAVA-Hintergrundarbeit bei Aufträgen mit skill x-eingang.",
+  "content_fingerprint": "afb9e20206654074bd4accee7055d53510d4f4614a58c972c6522c2e4a057bfa"
+}

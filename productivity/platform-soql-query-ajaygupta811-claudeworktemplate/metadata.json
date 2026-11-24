@@ -1,0 +1,39 @@
+{
+  "name": "platform-soql-query",
+  "repo": "ajaygupta811/claudeworktemplate",
+  "path": ".claude/skills/platform-soql-query/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ajaygupta811/claudeworktemplate",
+  "dir_name": "platform-soql-query-ajaygupta811-claudeworktemplate",
+  "downloaded_at": "2026-11-24T08:59:33.253126Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ajaygupta811",
+  "source_url": "https://github.com/ajaygupta811/claudeworktemplate/blob/main/.claude/skills/platform-soql-query/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ajaygupta811/claudeworktemplate/blob/main/.claude/skills/platform-soql-query/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "SOQL query generation, optimization, and analysis with 100-point scoring. Use this skill when the user needs SOQL/SOSL authoring or optimization: natural-language-to-query generation, relationship queries, aggregates, query-plan analysis, and performance or safety improvements for Salesforce queries. TRIGGER when: user writes, optimizes, or debugs SOQL/SOSL queries, touches .soql files, or asks about relationship queries, aggregates, or query performance. DO NOT TRIGGER when: bulk data operations (use platform-data-manage), Apex DML logic (use platform-apex-generate), or report/dashboard queries.",
+  "content_fingerprint": "cff0361a9ec8c9b9e2c29150255723a9fab88022651b65406f5ab481ea961e43"
+}

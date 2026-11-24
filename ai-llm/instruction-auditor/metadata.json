@@ -1,0 +1,37 @@
+{
+  "name": "instruction-auditor",
+  "repo": "bonigarcia/context-engineering",
+  "path": "skills/instruction-auditor/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/bonigarcia/context-engineering",
+  "dir_name": "instruction-auditor",
+  "downloaded_at": "2026-11-24T09:34:17.945261Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bonigarcia",
+  "source_url": "https://github.com/bonigarcia/context-engineering/blob/main/skills/instruction-auditor/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bonigarcia/context-engineering/blob/main/skills/instruction-auditor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits a system prompt or an instruction artifact (AGENTS.md, CLAUDE.md, GEMINI.md, .cursor/rules, copilot-instructions.md) and reports contradictions, vague or unenforceable rules, excessive size, and procedures that belong in a skill or a tool. Use when the user asks to review, audit, shorten, or improve agent instructions or a system prompt. Do not use for SKILL.md files (use skill-reviewer) or for user prompt templates (use prompt-reviewer)."
+}

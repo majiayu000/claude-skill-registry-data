@@ -1,0 +1,37 @@
+{
+  "name": "make-faceless-video",
+  "repo": "airdropfi/autoshort-skills",
+  "path": "skills/make-faceless-video/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/airdropfi/autoshort-skills",
+  "dir_name": "make-faceless-video",
+  "downloaded_at": "2026-11-24T08:58:49.341765Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, brand",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "airdropfi",
+  "source_url": "https://github.com/airdropfi/autoshort-skills/blob/main/skills/make-faceless-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/airdropfi/autoshort-skills/blob/main/skills/make-faceless-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a narrated, captioned faceless short video (AI images and AI voice) on the user's own AutoShort or StoryShort account. Works with either MCP server, detects which one is connected, agrees the script with the user, shows the credit price the server returns and renders only after an explicit yes, then polls the render and returns the video link. Use when the user wants to make, draft, render or publish a short video, YouTube Short, TikTok or Reel."
+}

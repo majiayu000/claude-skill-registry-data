@@ -1,0 +1,38 @@
+{
+  "name": "spring-boot-initializr",
+  "repo": "alefiengo/spring-boot-tools",
+  "path": "skills/spring-boot-initializr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alefiengo/spring-boot-tools",
+  "dir_name": "spring-boot-initializr",
+  "downloaded_at": "2026-11-24T09:04:58.347754Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, generation=3",
+    "score": 3,
+    "runner_up": "generation",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alefiengo",
+  "source_url": "https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-initializr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alefiengo/spring-boot-tools/blob/main/skills/spring-boot-initializr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates a new Spring Boot project from the official Spring Initializr (start.spring.io) through the initialize_project tool. Use only when the user explicitly asks to create, scaffold, bootstrap or generate a new Spring Boot application in a new, absent directory. Never inside an existing Maven/Gradle project or into an existing target; to add code to an existing application use spring-boot-codegen."
+}

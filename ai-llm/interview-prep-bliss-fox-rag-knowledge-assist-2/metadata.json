@@ -1,0 +1,38 @@
+{
+  "name": "interview-prep",
+  "repo": "bliss-fox/rag-knowledge-assistant-archive",
+  "path": ".github/skills/interview-prep/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/bliss-fox/rag-knowledge-assistant-archive",
+  "dir_name": "interview-prep-bliss-fox-rag-knowledge-assist-2",
+  "downloaded_at": "2026-11-24T09:32:49.984642Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bliss-fox",
+  "source_url": "https://github.com/bliss-fox/rag-knowledge-assistant-archive/blob/main/.github/skills/interview-prep/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bliss-fox/rag-knowledge-assistant-archive/blob/main/.github/skills/interview-prep/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "针对 Modular RAG MCP Server 项目的模拟技术面试 Agent。读取用户简历（可选），围绕三个方向进行最多 3 轮深度追问，结束后生成并持久化面试报告（含参考答案、包装识别点评、评分）。Use when user says '模拟面试', '面试练习', '帮我面试', 'mock interview', 'interview practice', '面试', '考我', '开始面试', or wants to practice interviewing about this project.",
+  "content_fingerprint": "0b36f32eecbe266ef38b68e6702d18b45ef6b6e469e597ef020170defa400742"
+}

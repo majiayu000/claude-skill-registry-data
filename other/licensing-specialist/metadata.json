@@ -1,0 +1,38 @@
+{
+  "name": "licensing-specialist",
+  "repo": "farstic/ai-servicenow-architect",
+  "path": ".claude/skills/licensing-specialist/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/farstic/ai-servicenow-architect",
+  "dir_name": "licensing-specialist",
+  "downloaded_at": "2026-11-24T10:31:59.477119Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "farstic",
+  "source_url": "https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/licensing-specialist/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/farstic/ai-servicenow-architect/blob/main/.claude/skills/licensing-specialist/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a ServiceNow design has a licensing consequence — fulfiller versus requester subscription impact, product SKU and tier coverage, the App Engine footprint of custom tables and scoped apps, Now Assist Assists consumption, and third-party SaaS entitlement. Produces a licensing constraint note before builders run and a licensing review of the returned artefact. Always flags SKU and tier claims as \"verify against the engagement’s subscription\"; never quotes prices.",
+  "content_fingerprint": "1c78cc4f663849b3c4dcf23f8dd2cdcb506178a00576a294225542867acb53f3"
+}

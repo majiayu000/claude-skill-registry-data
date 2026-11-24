@@ -1,0 +1,37 @@
+{
+  "name": "endo-pharmaco-eligibility",
+  "repo": "dromlakhani/MD2SKILL",
+  "path": "skills/endocrinology/obesity/endo-pharmaco-eligibility/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dromlakhani/MD2SKILL",
+  "dir_name": "endo-pharmaco-eligibility",
+  "downloaded_at": "2026-11-24T10:17:42.681295Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category quality scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "",
+    "runner_up_score": 0,
+    "signals": [
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dromlakhani",
+  "source_url": "https://github.com/dromlakhani/MD2SKILL/blob/main/skills/endocrinology/obesity/endo-pharmaco-eligibility/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dromlakhani/MD2SKILL/blob/main/skills/endocrinology/obesity/endo-pharmaco-eligibility/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Determines if a patient is a candidate for pharmacotherapy based on BMI thresholds: BMI ≥27 kg/m2 with at least one obesity-related comorbidity or BMI ≥30 kg/m2 regardless of comorbidities. Triggered when a clinician asks, “Does this patient qualify for weight‑loss medication based on BMI and comorbidities?” or “Should I consider pharmacotherapy for a patient with BMI 28 and hypertension?”.",
+  "content_fingerprint": "e565a786623129b9e7d76494b515932821a9c41652f871313d055eb7c288c5a0"
+}

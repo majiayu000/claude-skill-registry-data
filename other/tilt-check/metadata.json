@@ -1,0 +1,37 @@
+{
+  "name": "tilt-check",
+  "repo": "cameronww7/skill-sec-arcade",
+  "path": "skills/tilt-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cameronww7/skill-sec-arcade",
+  "dir_name": "tilt-check",
+  "downloaded_at": "2026-11-24T09:41:08.690343Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cameronww7",
+  "source_url": "https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/tilt-check/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/tilt-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Independently re-investigate a finding that has already been marked a False Positive, by an AI triage agent, another analyst, or an automated tool, to check whether that verdict actually holds up. Treats the FP call and its justification as an unverified claim, not fact, and actively hunts for a reason the finding is still exploitable before agreeing to close it out. Trigger this whenever the user pastes a False Positive verdict, a suppression justification, a \"not applicable\" or \"won't fix\" ticket comment, asks to double-check, audit, sanity-check, or second-guess an AI triage result, or asks \"are we sure this is actually a false positive?\""
+}

@@ -1,0 +1,38 @@
+{
+  "name": "operator-app-auth-routing",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/operator-app-auth-routing/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "operator-app-auth-routing",
+  "downloaded_at": "2026-11-24T09:54:54.261762Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/operator-app-auth-routing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/operator-app-auth-routing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when changing operator app auth routing, Next.js public vs app route groups, `proxy.ts` route protection, auth-aware public chrome, `AccountSlot`, NextAuth session identity, wallet Connect button state, `/api/v1` auth rules, or route matcher tests. Trigger on requests involving `/nodes`, `/dashboard`, `/knowledge`, public-but-auth-aware pages, stale Connect state after login, or proxy matcher drift.",
+  "content_fingerprint": "2d860cebd2ece056b198d6054dc5d6738186933017d3aef2ec94e2ad83c6bddb"
+}

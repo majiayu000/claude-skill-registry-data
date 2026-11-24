@@ -1,0 +1,37 @@
+{
+  "name": "dead-weight-detector",
+  "repo": "cameronww7/skill-sec-arcade",
+  "path": "skills/dead-weight-detector/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/cameronww7/skill-sec-arcade",
+  "dir_name": "dead-weight-detector",
+  "downloaded_at": "2026-11-24T09:41:09.996318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: vulnerability, audit",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cameronww7",
+  "source_url": "https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/dead-weight-detector/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/dead-weight-detector/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze how much each direct OSS dependency is actually used in first-party code, cross-reference that against live maintenance-health signals from the package's own registry (release recency, maintainer count, download volume, known unpatched vulnerabilities), and recommend keep vs. replace with first-party code. Trigger this whenever the user asks \"is this dependency worth keeping,\" \"should we drop this package,\" \"audit our dependencies,\" \"which OSS packages are barely used,\" \"should we inline this instead of using a dependency,\" \"is X well maintained,\" or wants a dependency health check. Requires live network access for the health-check phase, unlike this plugin's other skills."
+}

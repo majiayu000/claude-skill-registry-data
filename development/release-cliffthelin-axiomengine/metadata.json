@@ -1,0 +1,39 @@
+{
+  "name": "release",
+  "repo": "cliffthelin/AXiomEngine",
+  "path": "archon/.claude/skills/release/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/cliffthelin/AXiomEngine",
+  "dir_name": "release-cliffthelin-axiomengine",
+  "downloaded_at": "2026-11-24T09:51:49.381197Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cliffthelin",
+  "source_url": "https://github.com/cliffthelin/AXiomEngine/blob/master/archon/.claude/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cliffthelin/AXiomEngine/blob/master/archon/.claude/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a release from dev branch. Generates changelog entries from commits,\nbumps version, and creates a PR to main.\n\nTRIGGERS - Use this skill when user says:\n- \"/release\" - create a patch release (default)\n- \"/release minor\" - create a minor release\n- \"/release major\" - create a major release\n- \"make a release\", \"cut a release\", \"ship it\", \"release to main\""
+}

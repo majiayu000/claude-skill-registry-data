@@ -1,0 +1,36 @@
+{
+  "name": "quickbooks-balance-sheet-and-working-capital",
+  "repo": "coupler-io/skills",
+  "path": "finance/quickbooks/quickbooks-balance-sheet-and-working-capital/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coupler-io/skills",
+  "dir_name": "quickbooks-balance-sheet-and-working-capital",
+  "downloaded_at": "2026-11-24T09:57:04.280950Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coupler-io",
+  "source_url": "https://github.com/coupler-io/skills/blob/main/finance/quickbooks/quickbooks-balance-sheet-and-working-capital/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coupler-io/skills/blob/main/finance/quickbooks/quickbooks-balance-sheet-and-working-capital/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for QuickBooks questions like \"how much working capital do we have in QuickBooks\", \"where is our cash tied up\", \"what's our current ratio\", \"how many days do customers take to pay us\", \"are we paying vendors too early\", \"what changed on the QuickBooks balance sheet this month\", or \"why is cash down when we made a profit\" \u2014 even when the user never says \"balance sheet\". Use when the decision is whether the business can meet its short-term obligations and where cash is sitting. QuickBooks only; for Xero use xero-balance-sheet-and-working-capital."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "xb-data",
+  "repo": "dennydkt/xbskill",
+  "path": "skills/xb-data/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/dennydkt/xbskill",
+  "dir_name": "xb-data",
+  "downloaded_at": "2026-11-24T10:08:46.782989Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, etl",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "etl"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dennydkt",
+  "source_url": "https://github.com/dennydkt/xbskill/blob/main/skills/xb-data/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dennydkt/xbskill/blob/main/skills/xb-data/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "调用受用户配置约束：高自动、中先确认、低须明确开启；用户指定其他技能时禁止接管。处理 Excel、SQL、指标口径、数据清洗、对账、异常分析、统计分析、图表和数据结论；把业务问题连接到可复核口径、数据链路和现实决定。触发：$xb-data、帮我看数据、Excel/SQL、指标为什么变了、核对报表、做个图表。",
+  "content_fingerprint": "0855a6f245d06a0a9158b48ccf1283193e0fe65354ceb4db025e9be84fdcf943"
+}

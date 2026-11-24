@@ -1,0 +1,38 @@
+{
+  "name": "documenting-tech-specs",
+  "repo": "careerchain-ys/stdd",
+  "path": ".claude/skills/documenting-tech-specs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/careerchain-ys/stdd",
+  "dir_name": "documenting-tech-specs",
+  "downloaded_at": "2026-11-24T09:42:48.918029Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "careerchain-ys",
+  "source_url": "https://github.com/careerchain-ys/stdd/blob/main/.claude/skills/documenting-tech-specs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/careerchain-ys/stdd/blob/main/.claude/skills/documenting-tech-specs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u6280\u8853 spec (tech_specs) \u306e\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u3068\u30ac\u30a4\u30c9\u30e9\u30a4\u30f3\u3092\u63d0\u4f9b\u3059\u308b\u3002feature \u306e\u6280\u8853\u8a2d\u8a08\u3068\u30c6\u30b9\u30c8\u8a2d\u8a08\uff08`docs.lineup` \u304c single \u306a\u3089 TECH_DESIGN / TEST_PLAN\u3001layered \u306a\u3089 API_DESIGN / SCREEN_DESIGN / API_TEST_DESIGN / SCREEN_TEST_DESIGN / TEST_DESIGN\uff09\u3068\u3001common \u968e\u5c64\u306e ARCHITECTURE / TABLE_DEFINITION / API_SPEC / DESIGN \u3092\u6271\u3046\u3002\u300c\u6280\u8853\u8a2d\u8a08\uff08How\uff09\u300d\u306e SSoT\u3002\u8981\u4ef6\u306f documenting-requirements \u3092\u4f7f\u3046\u3002"
+}

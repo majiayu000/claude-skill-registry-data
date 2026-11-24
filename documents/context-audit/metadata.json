@@ -1,0 +1,39 @@
+{
+  "name": "context-audit",
+  "repo": "ferraroroberto/fleet-config",
+  "path": ".claude/skills/context-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ferraroroberto/fleet-config",
+  "dir_name": "context-audit",
+  "downloaded_at": "2026-11-24T10:34:26.563684Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ferraroroberto",
+  "source_url": "https://github.com/ferraroroberto/fleet-config/blob/main/.claude/skills/context-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ferraroroberto/fleet-config/blob/main/.claude/skills/context-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit the fleet's always-on context surface — CLAUDE.md token budgets, skill-description word counts, and single-home-by-altitude violations (universal directives leaking into project files) — flagging drift. E.g. \"/context-audit\", \"audit my always-on context\", \"context budget audit\". Also runs unattended weekly.",
+  "content_fingerprint": "24a73be087166de1efccefdae1299b62c008902f447f396d548be81f31e03348"
+}

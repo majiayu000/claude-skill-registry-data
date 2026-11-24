@@ -1,0 +1,36 @@
+{
+  "name": "3dg",
+  "repo": "codepawl/creator-generalist",
+  "path": "plugins/3d-generalist/skills/3dg/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/codepawl/creator-generalist",
+  "dir_name": "3dg",
+  "downloaded_at": "2026-11-24T09:53:39.418981Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "codepawl",
+  "source_url": "https://github.com/codepawl/creator-generalist/blob/main/plugins/3d-generalist/skills/3dg/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/codepawl/creator-generalist/blob/main/plugins/3d-generalist/skills/3dg/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Start the 3d-generalist skill from a slash command, with an optional mode first and then the subject, for example \"/3dg cutaway muddy puddle to village well\" or \"/3dg story porta-potty in a windstorm\". With no request it shows the menu of modes."
+}

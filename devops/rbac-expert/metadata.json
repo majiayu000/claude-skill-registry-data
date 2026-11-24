@@ -1,0 +1,39 @@
+{
+  "name": "rbac-expert",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/rbac-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "rbac-expert",
+  "downloaded_at": "2026-11-24T09:54:46.701936Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, deploy, infra",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/rbac-expert/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/rbac-expert/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authorization/RBAC navigation for cogni-template — points at the canon (OpenFGA model, AuthorizationPort, https://cognidao.org/knowledge/authz-port-contract invariants, the access-request flow, the hardening roadmap) and captures the durable mental model + hard-won gotchas that aren't obvious when you read it: OpenFGA is the sole authority, principal→role→capability, deny-by-default / fail-closed-with-distinction, why authorization is `undefined`, immutable hashed models, the request→approve→flight grant loop, and which checks aren't wired yet. Use when adding an authz check to a route/tool, designing a new protected action or role, debugging authz_denied vs authz_unavailable, deciding why authorization is undefined, granting/revoking node access, or touching packages/authorization-core / OpenFgaAuthorizationAdapter / infra/openfga/rbac-model.json / scripts/ci/bootstrap-openfga.sh / node_access_requests / POST /api/v1/nodes/{id}/{access-requests,developers} / POST /api/v1/vcs/flight. Triggers: 'OpenFGA', 'RBAC', 'ReBAC', 'authorization', 'AuthorizationPort', 'authz check', 'node.flight', 'can_flight', 'developer role', 'access request', 'approve agent', 'grant access to a node', 'tuple write', 'writeRelation', 'authz_denied', 'authz_unavailable', 'deny by default', 'fail closed', 'subjectId', 'on-behalf-of', 'delegation', 'OPENFGA_STORE_ID', 'authorization model', 'immutable model', 'bootstrap-openfga', 'rbac-model.json', 'add a role', 'add a permission', 'why is authz undefined', 'why 503 authz_unavailable', 'production_promoter', 'preview_promoter', 'can_promote_production', 'NODE_ACCESS_ROLES', 'validate an rbac extension', 'prove a grant works', 'candidate-flight-infra', 'two-lever bootstrap', 'role-grant workflow'.",
+  "content_fingerprint": "bba5fa32b8d44bcd958b6121da9376465975d123eee42fc98454a09a9adb4dfb"
+}

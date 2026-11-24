@@ -1,0 +1,37 @@
+{
+  "name": "patch-for-the-high-score",
+  "repo": "cameronww7/skill-sec-arcade",
+  "path": "skills/patch-for-the-high-score/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cameronww7/skill-sec-arcade",
+  "dir_name": "patch-for-the-high-score",
+  "downloaded_at": "2026-11-24T09:41:10.783656Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cameronww7",
+  "source_url": "https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/patch-for-the-high-score/SKILL.md",
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cameronww7/skill-sec-arcade/blob/main/skills/patch-for-the-high-score/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The full remediation workflow for a pasted security finding (SAST, SCA, Secrets, IaC, or DAST), from investigation through to an applied, diffed, optionally-PR'd fix. Loads app context from mini-map, investigates using the same evidentiary standard as player-two-verdict, judges SCA patch-vs-upgrade tradeoffs using dead-weight-detector's health signals, and gates on fix complexity before touching anything risky. Trigger this whenever the user asks to \"remediate this finding,\" \"fix this properly,\" \"walk through fixing this vulnerability,\" \"generate a fix for this CVE/CWE,\" or wants the deliberate, context-aware path from finding to applied patch. For a fast, standalone pass on a probably-simple finding with no context-loading ceremony, that's `patch-boss-rush` instead."
+}

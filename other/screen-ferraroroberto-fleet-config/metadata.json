@@ -1,0 +1,37 @@
+{
+  "name": "screen",
+  "repo": "ferraroroberto/fleet-config",
+  "path": "skills/screen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ferraroroberto/fleet-config",
+  "dir_name": "screen-ferraroroberto-fleet-config",
+  "downloaded_at": "2026-11-24T10:34:20.403559Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ferraroroberto",
+  "source_url": "https://github.com/ferraroroberto/fleet-config/blob/main/skills/screen/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ferraroroberto/fleet-config/blob/main/skills/screen/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Attach screenshots from E:\\downloads\\snaps without manual copy-paste. Invoke whenever the user's message contains the literal token `/screen`, at the start or mid-sentence (e.g. \"check this /screen 1\" or \"/screen 3 what changed?\"). Forms — `/screen` (latest), `/screen N` (last N), `/screen Nm` (last N minutes). Any other text is the user's prompt about those screenshots.",
+  "content_fingerprint": "81b9e502472f1c303424cbb6976687841db40c27cbe9be285465bb65efc33253"
+}

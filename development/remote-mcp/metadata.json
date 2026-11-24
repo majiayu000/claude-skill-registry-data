@@ -1,0 +1,38 @@
+{
+  "name": "remote-mcp",
+  "repo": "fcakyon/claude-codex-settings",
+  "path": "plugins/remote-mcp-skills/skills/remote-mcp/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fcakyon/claude-codex-settings",
+  "dir_name": "remote-mcp",
+  "downloaded_at": "2026-11-24T10:32:25.910455Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fcakyon",
+  "source_url": "https://github.com/fcakyon/claude-codex-settings/blob/main/plugins/remote-mcp-skills/skills/remote-mcp/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fcakyon/claude-codex-settings/blob/main/plugins/remote-mcp-skills/skills/remote-mcp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when user asks to \"build a remote MCP server\", \"add MCP OAuth\", \"build an MCP App UI\", \"fix ChatGPT or Claude connector issues\", or \"support MCP 2026-07-28\"."
+}

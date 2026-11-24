@@ -1,0 +1,37 @@
+{
+  "name": "retro",
+  "repo": "ferraroroberto/fleet-config",
+  "path": "skills/retro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ferraroroberto/fleet-config",
+  "dir_name": "retro-ferraroroberto-fleet-config",
+  "downloaded_at": "2026-11-24T10:34:19.956850Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ferraroroberto",
+  "source_url": "https://github.com/ferraroroberto/fleet-config/blob/main/skills/retro/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ferraroroberto/fleet-config/blob/main/skills/retro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reviews one agent session for mistakes and friction, labels each finding mechanical (file a check) or judgement (file a rule), proposes the cheapest enforcing home, and files approved findings through /issue-add. Explicit invocation only, e.g. \"/retro\" for the running session or \"/retro path/to/session.jsonl\" for a past one.",
+  "content_fingerprint": "444ed04a1925f829812d84e33fbfb15defd1303aa002c6cc98ffe1cae073702b"
+}

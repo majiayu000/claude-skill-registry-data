@@ -1,0 +1,39 @@
+{
+  "name": "cleanup-fleet",
+  "repo": "ferraroroberto/fleet-config",
+  "path": ".claude/skills/cleanup-fleet/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ferraroroberto/fleet-config",
+  "dir_name": "cleanup-fleet",
+  "downloaded_at": "2026-11-24T10:34:26.778042Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ferraroroberto",
+  "source_url": "https://github.com/ferraroroberto/fleet-config/blob/main/.claude/skills/cleanup-fleet/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ferraroroberto/fleet-config/blob/main/.claude/skills/cleanup-fleet/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Take one bucket of audit findings (a label like documentation, drift, or bug) and fan out one background agent per repo to fix every open issue carrying it fleet-wide. The fix-half of /audit-fleet — e.g. \"/cleanup-fleet documentation\", \"/cleanup-fleet drift\", \"clean up all the bugs\", \"/cleanup-fleet docs easy\".",
+  "content_fingerprint": "d5afa0a4e001ee87f044a79b1ce0b5113e55ad99c13f8f7bba021544df110afd"
+}

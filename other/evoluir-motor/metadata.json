@@ -1,0 +1,37 @@
+{
+  "name": "evoluir-motor",
+  "repo": "delkrusty/Mangalate",
+  "path": ".claude/skills/evoluir-motor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/delkrusty/Mangalate",
+  "dir_name": "evoluir-motor",
+  "downloaded_at": "2026-11-24T10:07:33.852679Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "delkrusty",
+  "source_url": "https://github.com/delkrusty/Mangalate/blob/main/.claude/skills/evoluir-motor/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/delkrusty/Mangalate/blob/main/.claude/skills/evoluir-motor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Protocolo para melhorar o motor de tradu\u00e7\u00e3o do Mangalate (detec\u00e7\u00e3o, OCR, bal\u00e3o ou arte, limpeza, tradu\u00e7\u00e3o, letreiramento, emendas, velocidade) uma itera\u00e7\u00e3o por vez, guiado por baseline, teste que falha antes, mudan\u00e7a m\u00ednima e rodada sem regress\u00e3o. Use ao corrigir ou melhorar qualquer coisa em server/ que muda a p\u00e1gina traduzida."
+}

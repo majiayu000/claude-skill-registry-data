@@ -1,0 +1,37 @@
+{
+  "name": "review",
+  "repo": "dzhng/skills",
+  "path": "skills/review/review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/dzhng/skills",
+  "dir_name": "review-dzhng-skills-2",
+  "downloaded_at": "2026-11-24T10:20:02.209202Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dzhng",
+  "source_url": "https://github.com/dzhng/skills/blob/main/skills/review/review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dzhng/skills/blob/main/skills/review/review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Closeout pass on a finished substantive change \u2014 sequence refactor-change (shape), code-review (diff), and write-docs (docs) so all three run, in the order where each feeds the next. Use after implementing a slice or feature and before calling it done or committing; when the user asks for a final review, a cleanup-and-document pass, or to \"review everything.\" For a diff-only audit, reach code-review directly."
+}

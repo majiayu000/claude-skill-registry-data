@@ -1,0 +1,37 @@
+{
+  "name": "adp-adopt",
+  "repo": "fblgit/artifacts-done-properly",
+  "path": "plugins/artifacts-done-properly/skills/adp-adopt/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fblgit/artifacts-done-properly",
+  "dir_name": "adp-adopt",
+  "downloaded_at": "2026-11-24T10:32:14.602736Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fblgit",
+  "source_url": "https://github.com/fblgit/artifacts-done-properly/blob/main/plugins/artifacts-done-properly/skills/adp-adopt/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fblgit/artifacts-done-properly/blob/main/plugins/artifacts-done-properly/skills/adp-adopt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Put an existing claude.ai Artifact on ADP: add part ids and hashes, declare the db, seed the records, or move a single-file page to the multi-file adp/2 layout. Load it when the user wants an artifact they already have to be split into parts, changed by records, built from catalog parts, commented on, or converted to ADP or adp/2, before touching its source."
+}

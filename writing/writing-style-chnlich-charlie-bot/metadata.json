@@ -1,0 +1,37 @@
+{
+  "name": "writing-style",
+  "repo": "chnlich/charlie-bot",
+  "path": "skills/writing-style/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/chnlich/charlie-bot",
+  "dir_name": "writing-style-chnlich-charlie-bot",
+  "downloaded_at": "2026-11-24T09:47:53.824744Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, article",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chnlich",
+  "source_url": "https://github.com/chnlich/charlie-bot/blob/main/skills/writing-style/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chnlich/charlie-bot/blob/main/skills/writing-style/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Genre style packs for code, READMEs, commits and PRs, bug reports, article shares, and coordination messages. Load the matching genre file at its writing moment. General prose rules, the rules for text a model reads included, live in the master prompt's Writing Style section."
+}

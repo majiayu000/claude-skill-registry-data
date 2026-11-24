@@ -1,0 +1,37 @@
+{
+  "name": "google-oauth",
+  "repo": "chnlich/charlie-bot",
+  "path": "skills/google-oauth/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/chnlich/charlie-bot",
+  "dir_name": "google-oauth",
+  "downloaded_at": "2026-11-24T09:47:53.378821Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chnlich",
+  "source_url": "https://github.com/chnlich/charlie-bot/blob/main/skills/google-oauth/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chnlich/charlie-bot/blob/main/skills/google-oauth/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a Google integration (Gmail, Docs, Sheets, Drive, Calendar) needs its OAuth client set up, its refresh token obtained again after expiry, or an access token minted at runtime. Use when adding a Google account or choosing among several accounts."
+}

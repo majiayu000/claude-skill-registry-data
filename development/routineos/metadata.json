@@ -1,0 +1,38 @@
+{
+  "name": "routineos",
+  "repo": "devkindhq/routineos",
+  "path": "skills/routineos/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/devkindhq/routineos",
+  "dir_name": "routineos",
+  "downloaded_at": "2026-11-24T10:09:37.487622Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devkindhq",
+  "source_url": "https://github.com/devkindhq/routineos/blob/main/skills/routineos/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devkindhq/routineos/blob/main/skills/routineos/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Discover, design, build, verify, deploy, operate, improve and retire Claude routines (scheduled cloud agents) as small apps, with conventions like Rails for routines. Use this whenever the user wants a routine, scheduled agent, recurring or watch job, says \"I spend time on X every week\", \"automate this\" or \"keep an eye on\" something, wants a dashboard or mobile page for a routine, settings they can tune, an approval gate (ask me before it sends), memory between runs, or a \"Claude app\" that runs on a schedule. Also use it to review, harden, deploy or retire an existing routine. Trigger even if the user never says \"framework\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "spec-experiment",
+  "repo": "benjaminthomas/spec-driven-dev",
+  "path": "plugin/skills/spec-experiment/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/benjaminthomas/spec-driven-dev",
+  "dir_name": "spec-experiment",
+  "downloaded_at": "2026-11-24T09:28:26.381088Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "benjaminthomas",
+  "source_url": "https://github.com/benjaminthomas/spec-driven-dev/blob/main/plugin/skills/spec-experiment/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/benjaminthomas/spec-driven-dev/blob/main/plugin/skills/spec-experiment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide a person through a pre-registered experiment on their AI-agent workflow: write the design before any run, get it approved and hashed, run it, keep an honest log and cost ledger, then write the results against the rules fixed in advance. Use when the user says \"run an experiment\", \"pre-register\", \"A/B test the agent\", \"compare prompts\", \"compare models\", \"does this prompt/model/workflow change actually help\", \"write up the experiment results\", \"fill my experiment timesheet\", or \"/spec-experiment\". Works in any project. It records evidence and never decides what counts for any tax or grant scheme."
+}

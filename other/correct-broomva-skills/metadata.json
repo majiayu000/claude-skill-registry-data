@@ -1,0 +1,37 @@
+{
+  "name": "correct",
+  "repo": "broomva/skills",
+  "path": "skills/governance/correct/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/broomva/skills",
+  "dir_name": "correct-broomva-skills",
+  "downloaded_at": "2026-11-24T09:36:48.259953Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "broomva",
+  "source_url": "https://github.com/broomva/skills/blob/main/skills/governance/correct/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/broomva/skills/blob/main/skills/governance/correct/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn the mistakes agents keep repeating in a repo into checks that make them impossible. Find each mistake class (two occurrences make a class), fix it at the highest level that works (architecture, then types, then a lint or CI check whose error names the fix, then a test, then a hook, prose last), prove each check refuses a real past mistake and allows a nearby legitimate input, and keep a rule-to-enforcer registry. Use when the operator corrects an agent, says 'stop doing X', 'again?', '/correct', 'make this impossible', 'why does this keep happening', or when a rule exists in docs that nothing enforces."
+}

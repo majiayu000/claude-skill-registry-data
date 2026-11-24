@@ -1,0 +1,38 @@
+{
+  "name": "gameobject-modify",
+  "repo": "eppumelto/Kanshilike",
+  "path": ".claude/skills/gameobject-modify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eppumelto/Kanshilike",
+  "dir_name": "gameobject-modify-eppumelto-kanshilike",
+  "downloaded_at": "2026-11-24T10:25:29.401780Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, gaming=2",
+    "score": 2,
+    "runner_up": "gaming",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eppumelto",
+  "source_url": "https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/gameobject-modify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eppumelto/Kanshilike/blob/main/.claude/skills/gameobject-modify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Modify GameObject fields and properties in opened Prefab or in a Scene. You can modify multiple GameObjects at once. Just provide the same number of GameObject references and SerializedMember objects. Three modification surfaces are available per GameObject (gameObjectDiffs, pathPatchesPerGameObject, jsonPatchesPerGameObject) — see the skill body for details.",
+  "content_fingerprint": "5d380b3b5ba9e74bd0d5f1fc10421394043e15926237173d9e3b4046b508a8a9"
+}

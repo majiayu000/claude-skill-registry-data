@@ -1,0 +1,37 @@
+{
+  "name": "release-notes",
+  "repo": "byjunyoung/claude-product-skills",
+  "path": "plugins/pm/skills/release-notes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/byjunyoung/claude-product-skills",
+  "dir_name": "release-notes-byjunyoung-claude-product-skill",
+  "downloaded_at": "2026-11-24T09:39:56.237056Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "byjunyoung",
+  "source_url": "https://github.com/byjunyoung/claude-product-skills/blob/main/plugins/pm/skills/release-notes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/byjunyoung/claude-product-skills/blob/main/plugins/pm/skills/release-notes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns an engineering release notice into notes the people who run the product can act on \u2014 per feature, the change as a sentence, a recording of the real screen, where it is, who it reaches and what they have to do \u2014 written to the spec or a file, then a short reply on the notice saved as a draft. Triggers - \"/pm:release-notes\", \"write the release notes\", \"turn this release notice into notes for operations\", \"\ub9b4\ub9ac\uc988 \ub178\ud2b8 \uc368\uc918\", \"\ubc30\ud3ec \uacf5\uc9c0 \uc815\ub9ac\ud574\uc918\", \"\ubc30\ud3ec \uc804 \uc548\ub0b4 \uc368\uc918\"."
+}

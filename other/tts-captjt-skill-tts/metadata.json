@@ -1,0 +1,37 @@
+{
+  "name": "tts",
+  "repo": "captjt/skill-tts",
+  "path": "skills/tts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/captjt/skill-tts",
+  "dir_name": "tts-captjt-skill-tts",
+  "downloaded_at": "2026-11-24T09:42:20.505705Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "captjt",
+  "source_url": "https://github.com/captjt/skill-tts/blob/main/skills/tts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/captjt/skill-tts/blob/main/skills/tts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Text-to-speech for voiceovers and spoken output. Renders narration for product, feature, and demo videos as per-scene audio files with exact durations, timing offsets, and captions, and speaks text aloud. Supports the built-in macOS/Linux voice, local Kokoro, OpenAI, ElevenLabs, Gemini, Cartesia, and Deepgram. Use when the user wants a voiceover, narration, or audio for a video or screencast, wants something read aloud or announced, wants an audio file (.wav/.mp3/.m4a), wants to compare or choose voices, or wants to set up TTS providers and API keys."
+}

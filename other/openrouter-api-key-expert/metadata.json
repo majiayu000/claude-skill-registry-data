@@ -1,0 +1,38 @@
+{
+  "name": "openrouter-api-key-expert",
+  "repo": "cogni-dao/cogni",
+  "path": ".claude/skills/openrouter-api-key-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cogni-dao/cogni",
+  "dir_name": "openrouter-api-key-expert",
+  "downloaded_at": "2026-11-24T09:54:54.459086Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cogni-dao",
+  "source_url": "https://github.com/cogni-dao/cogni/blob/main/.claude/skills/openrouter-api-key-expert/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cogni-dao/cogni/blob/main/.claude/skills/openrouter-api-key-expert/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "End-to-end OpenRouter key + spend + outage playbook for Cogni. Use when investigating unexplained OpenRouter spend ('who used opus/model X?', 'why is my bill high'), a suspected leaked/compromised API key, a prod AI outage that surfaces as `provider_unavailable` / `402` / LiteLLM `Insufficient credits`, or when you must rotate/cap/kill an OpenRouter key across the fleet. Encodes the diagnostic decision tree (provider_unavailable = upstream, truth in `service=litellm` Loki; 402 = account balance dry; a model NOT in the deployed LiteLLM catalog can't come from Cogni infra), the attribution method that needs a MANAGEMENT key (/api/v1/{keys,activity,credits,key}), the rule-out-local sweep, the LiteLLM-is-Compose-on-VM + OpenBao-SSOT converge facts, the full break-glass rotation runbook (mint capped → OpenBao fleet-wide → deploy-infra converge → BEHAVIOR-verify → delete), and the CARDINAL rule: never leave a compromised key alive/uncapped — cap-or-disable on suspicion, delete the moment prod is verified on the replacement. Triggers: 'openrouter', 'who used opus', 'opus-4.8 spend', 'unexplained openrouter charges', 'leaked api key', 'compromised key', 'rotate openrouter key', 'provider_unavailable', '402 insufficient credits', 'prod AI down', 'litellm out of credits', 'openrouter activity', 'management key', 'cap the key', 'kill the leaked key', 'openrouter attribution', 'which key does prod use'.",
+  "content_fingerprint": "d052a7e7ff1f9bcef5dc7db491b9dde81670fa708867a40a1e71205e4cb64695"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "perf-sweep",
+  "repo": "ferraroroberto/fleet-config",
+  "path": ".claude/skills/perf-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ferraroroberto/fleet-config",
+  "dir_name": "perf-sweep",
+  "downloaded_at": "2026-11-24T10:34:24.110570Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ferraroroberto",
+  "source_url": "https://github.com/ferraroroberto/fleet-config/blob/main/.claude/skills/perf-sweep/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ferraroroberto/fleet-config/blob/main/.claude/skills/perf-sweep/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Weekly phone-speed check of every fleet web app, one at a time — runs /perf-review's measure and file for each, then prints one digest of what is over budget and what got slower since the last run. Never restarts an app. E.g. \"/perf-sweep\", \"/perf-sweep home-automation\", \"which apps got slower this week\". Also runs weekly unattended.",
+  "content_fingerprint": "ad94d2eb8b60a01c3a1902a5d6760981d7e883e30069d51d8386f43d5fbd0af1"
+}

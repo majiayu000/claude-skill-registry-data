@@ -1,0 +1,38 @@
+{
+  "name": "skill-reviewer",
+  "repo": "bonigarcia/context-engineering",
+  "path": "skills/skill-reviewer/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/bonigarcia/context-engineering",
+  "dir_name": "skill-reviewer-bonigarcia-context-engineering",
+  "downloaded_at": "2026-11-24T09:34:17.127766Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bonigarcia",
+  "source_url": "https://github.com/bonigarcia/context-engineering/blob/main/skills/skill-reviewer/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bonigarcia/context-engineering/blob/main/skills/skill-reviewer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews an agent skill directory (a SKILL.md file plus its scripts, references, and assets) and reports problems with its frontmatter, activation conditions, procedure, and output contract. Use when the user asks to review, audit, lint, or improve a skill or a SKILL.md file. Do not use for instruction artifacts such as AGENTS.md or CLAUDE.md (use instruction-auditor) or for writing a new skill from scratch."
+}

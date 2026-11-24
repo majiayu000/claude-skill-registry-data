@@ -1,0 +1,39 @@
+{
+  "name": "mikka-ux-quality-audit",
+  "repo": "aspectly-labs/Mikka",
+  "path": ".claude/skills/mikka-ux-quality-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/aspectly-labs/Mikka",
+  "dir_name": "mikka-ux-quality-audit",
+  "downloaded_at": "2026-11-24T09:20:29.147222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aspectly-labs",
+  "source_url": "https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/mikka-ux-quality-audit/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aspectly-labs/Mikka/blob/main/.claude/skills/mikka-ux-quality-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a cross-product Mikka UI/UX and functional-quality audit: discoverability and missing actions, dead controls, state/permission parity, error recovery, keyboard/touch, responsive layout and accessible flows. Use for broad UX reviews and quality sweeps; route concrete command coverage to mikka-action-coverage."
+}

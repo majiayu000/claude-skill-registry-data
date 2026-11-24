@@ -1,0 +1,37 @@
+{
+  "name": "improve-skill",
+  "repo": "av/skills",
+  "path": "improve-skill/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/av/skills",
+  "dir_name": "improve-skill",
+  "downloaded_at": "2026-11-24T09:22:42.860330Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "av",
+  "source_url": "https://github.com/av/skills/blob/master/improve-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/av/skills/blob/master/improve-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Improve an existing agent SKILL.md through one gated cycle: select the target (default this skill), snapshot the committed baseline, diagnose against skill-design-principles plus four rubric dimensions, apply exactly one focused change, and ship only if a different agent than the author PASSes with quoted evidence. Use when the user says \"improve this skill\", \"improve-skill\", \"iterate on SKILL.md\", or \"apply skill-design-principles to a skill\". Do not use for code slop over a duration (anneal), generic timeboxed work (timeboxed-iterating), graph orchestration (workgraph), metric hill-climb on a codebase (autoresearch), or stripping slop from existing prose (catalog-deslop)."
+}

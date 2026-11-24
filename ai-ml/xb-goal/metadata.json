@@ -1,0 +1,38 @@
+{
+  "name": "xb-goal",
+  "repo": "dennydkt/xbskill",
+  "path": "skills/xb-goal/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/dennydkt/xbskill",
+  "dir_name": "xb-goal",
+  "downloaded_at": "2026-11-24T10:08:47.266026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dennydkt",
+  "source_url": "https://github.com/dennydkt/xbskill/blob/main/skills/xb-goal/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dennydkt/xbskill/blob/main/skills/xb-goal/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "调用受用户配置约束：高自动、中先确认、低须明确开启；用户指定其他技能时禁止接管。把领导需求、模糊愿望和长期方向整理为可行动、可验收的 G0–G5 目标，并选择 H0–H4 帮助能级。用于需求不清、返工、优先级冲突、完成标准争议，以及希望 AI 按任务/项目/岗位/职业/组织目标提供不同深度帮助。触发：$xb-goal、明确目标、拆解目标、领导到底要什么、应该帮我到什么程度。",
+  "content_fingerprint": "8ebb9379e3146a68223efe80dea79fa106262530e7b3d47c3d55d9ca261ad986"
+}

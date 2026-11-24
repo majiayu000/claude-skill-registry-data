@@ -1,0 +1,38 @@
+{
+  "name": "routineos-migrate",
+  "repo": "devkindhq/routineos",
+  "path": "skills/routineos-migrate/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/devkindhq/routineos",
+  "dir_name": "routineos-migrate",
+  "downloaded_at": "2026-11-24T10:09:37.711299Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: connector, webhook, zapier",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "connector",
+      "webhook",
+      "zapier"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "devkindhq",
+  "source_url": "https://github.com/devkindhq/routineos/blob/main/skills/routineos-migrate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/devkindhq/routineos/blob/main/skills/routineos-migrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Migrate, convert or move an existing automation into a RoutineOS routine (a Claude routine, a scheduled cloud agent with a Desk). Use this whenever the user wants to migrate, convert, port or move an n8n workflow, a Windmill flow or a Zap to RoutineOS or to a Claude routine, shares an n8n workflow JSON or an n8n template link or id, asks to \"turn this workflow into a routine\", \"replace my n8n\" or \"get off Zapier\", or wants to search the n8n template gallery for something to convert. Also use it to finish a half-converted pack (translate code stubs, rewrite expressions, read MIGRATION.md). Trigger even if the user never says \"RoutineOS\"."
+}
