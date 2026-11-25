@@ -1,0 +1,38 @@
+{
+  "name": "hubspot-crm",
+  "repo": "grolinjacq/revenue-engine-skills",
+  "path": ".claude/skills/hubspot-crm/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/grolinjacq/revenue-engine-skills",
+  "dir_name": "hubspot-crm-grolinjacq-revenue-engine-skill-2",
+  "downloaded_at": "2026-11-25T07:41:55.588517Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "grolinjacq",
+  "source_url": "https://github.com/grolinjacq/revenue-engine-skills/blob/main/.claude/skills/hubspot-crm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/grolinjacq/revenue-engine-skills/blob/main/.claude/skills/hubspot-crm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "HubSpot adapter of crm (use crm for any other CRM, or with no CRM). Derive the ICP from HubSpot closed-won deals, check a lead list against existing HubSpot contacts and companies before outreach, and hold the write rules every HubSpot skill follows. Use on \"who are our best customers\", \"write our ICP from HubSpot\", \"dedupe these leads against HubSpot\", \"is this company already in HubSpot\", or as steps 1 and 3 of revenue-engine. For a brief on one account use hubspot-account-brief; to log a call use hubspot-log-call; for a quick task, field or deal change use hubspot.",
+  "content_fingerprint": "811591ec711740ec2b5dbb515e900106073f39f6652bbe358cc66f1c208367d6"
+}

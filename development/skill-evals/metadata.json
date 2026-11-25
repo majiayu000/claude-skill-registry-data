@@ -1,0 +1,38 @@
+{
+  "name": "skill-evals",
+  "repo": "getedgehq/skills",
+  "path": "skill-evals/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "skill-evals",
+  "downloaded_at": "2026-11-25T07:34:03.645569Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/skill-evals/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/skill-evals/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build evals for an AI agent that already does real work. Use when someone asks \"how do I know my agent is right\", wants to test an agent before trusting it, compare models on cost versus quality, or turn production failures into tests. Walks from first tasks and yes/no verifiers, to isolated environments, to a trace-driven improvement loop."
+}

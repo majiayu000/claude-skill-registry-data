@@ -1,0 +1,37 @@
+{
+  "name": "editor-video-formula100k",
+  "repo": "formula100k/formula100k-skills",
+  "path": "editor-video-formula100k/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/formula100k/formula100k-skills",
+  "dir_name": "editor-video-formula100k",
+  "downloaded_at": "2026-11-25T07:23:42.600380Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "formula100k",
+  "source_url": "https://github.com/formula100k/formula100k-skills/blob/main/editor-video-formula100k/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/formula100k/formula100k-skills/blob/main/editor-video-formula100k/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Toma un video grabado por Andrea + un MANIFEST.md (keyword-based: header, énfasis, overlays, B-roll) y produce un BORRADOR_AUTO.mp4 listo para retoque. Corta silencios, muletillas y repeticiones con precisión (transcribe word-level), y compone el preset visual 'Crea contenido viral' — talking-head 9:16, header con trazo negro (gancho primeros 8s), caja blanca de énfasis, overlays inferiores para no tapar la cara, B-roll videos fullscreen, B-roll imágenes en la parte inferior (igual que overlays, no tapan la cara). SIN subtítulos. Sincroniza por keyword sobre el transcript (no por timestamp), así sobrevive al corte de silencios. Renderiza local con Remotion (gratis). OPCIÓN EXTRA: genera motion graphics animados (badge deslizante, browser con pasos, typing effect, contador, kinetic type, etc.) con HyperFrames (HTML+GSAP, gratis, local) y los agrega al MANIFEST como overlays o B-roll animado. 8 estilos visuales + 11 técnicas disponibles. Activar cuando Andrea diga 'edita este video', 'auto-edita', 'monta el video', 'renderiza', '/render <carpeta>', '/edita <carpeta>', 'genera un motion graphic', 'overlay animado', o combine una carpeta con MANIFEST.md y la intención de producir el .mp4 final. Output: $DEST/BORRADOR_AUTO.mp4. macOS (Homebrew) y Windows (winget); la primera vez instala node, ffmpeg, yt-dlp, whisper y Remotion vía bootstrap.",
+  "content_fingerprint": "b47ae3ec10c5a82e06e3248e406160c1764ec6dfd5b86bdf2135fbbcca9ae135"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "yc-app-roast",
+  "repo": "getedgehq/skills",
+  "path": "yc-app-roast/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "yc-app-roast",
+  "downloaded_at": "2026-11-25T07:34:05.113593Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/yc-app-roast/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/yc-app-roast/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "YC App Roast: roast a YC or a16z Speedrun application. Use when a founder wants their YC or Speedrun answers scored, asks \"what would a YC partner think\", wants the weak answers found or rewritten, or wants their draft checked before they submit. Scores every answer 0-10 against public advice from YC and Speedrun partners, names the top issue with the exact words that cost points, and writes a rewrite from the founder's own facts. Works for YC and a16z Speedrun. Not affiliated with Y Combinator or a16z."
+}

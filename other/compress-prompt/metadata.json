@@ -1,0 +1,37 @@
+{
+  "name": "compress-prompt",
+  "repo": "griddynamics/rosetta",
+  "path": ".claude/skills/compress-prompt/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/griddynamics/rosetta",
+  "dir_name": "compress-prompt",
+  "downloaded_at": "2026-11-25T07:41:08.653429Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "griddynamics",
+  "source_url": "https://github.com/griddynamics/rosetta/blob/main/.claude/skills/compress-prompt/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/griddynamics/rosetta/blob/main/.claude/skills/compress-prompt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compress a Rosetta KB prompt artifact (skill \u00b7 workflow \u00b7 phase \u00b7 rule \u00b7 agent \u00b7 template \u00b7 generic) by stripping structural tautology and ineffective scaffolding while preserving every importance-bearing token. Use when the user asks to compress, shorten, tighten, densify, or reduce a prompt / skill / workflow / phase / rule file."
+}

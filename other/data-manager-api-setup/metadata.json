@@ -1,0 +1,37 @@
+{
+  "name": "data-manager-api-setup",
+  "repo": "google/skills",
+  "path": "skills/ads/data-manager-api-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/google/skills",
+  "dir_name": "data-manager-api-setup",
+  "downloaded_at": "2026-11-25T07:38:43.248037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/skills/blob/main/skills/ads/data-manager-api-setup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/skills/blob/main/skills/ads/data-manager-api-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides developers through client library installation and authentication setup steps for the Data Manager API. Use this skill when a user is getting started with the Data Manager API and needs to setup their local environment, install the client library, or setup access to the API. Don't use for implementing audience or event ingestion logic (use the data-manager-api-audience-ingestion or data-manager-api-event-ingestion skills instead), or for debugging UNAUTHENTICATED, PERMISSION_DENIED, or other errors from requests after setup (use the data-manager-api-troubleshooting skill)."
+}

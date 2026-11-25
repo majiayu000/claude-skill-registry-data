@@ -1,0 +1,37 @@
+{
+  "name": "legals",
+  "repo": "itsfatodono/skills",
+  "path": "plugins/fatodono-founderkit/skills/legals/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/itsfatodono/skills",
+  "dir_name": "legals",
+  "downloaded_at": "2026-11-25T08:10:14.491130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "itsfatodono",
+  "source_url": "https://github.com/itsfatodono/skills/blob/main/plugins/fatodono-founderkit/skills/legals/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/itsfatodono/skills/blob/main/plugins/fatodono-founderkit/skills/legals/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Legal documents for the user's own app, filled from its code (privacy policy, terms of service, subscription terms, refund policy, account deletion page), and the company's own agreements (founders' / shareholders' agreement, IP assignment, contractor agreement). Use to write or update them, to find which ones the app needs, or to build a skeleton for a legal document."
+}

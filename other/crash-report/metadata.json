@@ -1,0 +1,37 @@
+{
+  "name": "crash-report",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/crash-report/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "crash-report",
+  "downloaded_at": "2026-11-25T08:18:00.058335Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/crash-report/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/crash-report/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Process a Roku weekly crash-report CSV (or a zip holding one or more CSVs) into tracked GitHub issues and architectural-epic evidence, enriching before filing (stage, then enrich, then file). STAGE parses and filters the CSV, groups by pkg-path signature, builds each cited app version in a temporary git worktree, maps the transpiled `.brs` line back to the source `.bs` line, runs the GitHub dedup search, and writes a local worksheet where every crash starts pending; a mechanism hint (task-launch, network, other) orders which to pull first but never authorizes a file. ENRICH folds in the per-crash backtraces you paste from Roku's dashboard (a 7-day window, one click per crash, no bulk export), extracts each `&hNN` exception code, and routes every crash to a disposition (nothing files or aggregates without a backtrace): `file` (a scoped bug becomes a new per-signature [crash] issue, born enriched), `aggregate` (a known architectural class: `&h29` big-library too-many-task-threads, `&h23` render-thread execution timeouts, the `&hec` init `m.global.constants` race; upserted as one flat record comment per `file\u00b7function\u00b7line\u00b7version` onto the class epic, never a standalone issue), or `watch` (accepted noise, a spike comment only). FILE performs the GitHub writes (create, comment or reopen for scoped bugs; the epic record upsert for architectural classes) and writes a run-summary handoff. Dedup-aware and idempotent. Use when a fresh Roku crash CSV arrives (weekly). A deep dive on one crash goes to `/issue-triage <N>` after filing."
+}

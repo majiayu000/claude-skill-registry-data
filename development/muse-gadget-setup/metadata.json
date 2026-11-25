@@ -1,0 +1,38 @@
+{
+  "name": "muse-gadget-setup",
+  "repo": "getedgehq/skills",
+  "path": "muse-gadget-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "muse-gadget-setup",
+  "downloaded_at": "2026-11-25T07:34:23.219605Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/muse-gadget-setup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/muse-gadget-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Get a Meta Muse gadget working from one sentence like \"I have [hardware]. I want Muse to [thing].\" Picks the right path (Muse Home Link, Linux Device SDK on a Raspberry Pi or Linux box, or ESP32 Device SDK firmware), the right board, the exact token, Developer mode, build, flash, install and pairing steps from the official facebookincubator/muse-gadget-sdk docs, how to add commands or behaviour, and a debugging checklist built from the docs, GitHub issues and Hacker News reports. Use for Muse Gadgets, Muse Home Link, MuseGadget pairing, ESP32 or Raspberry Pi with Muse, mgst_ SDK tokens, or any \"make Muse do X on my hardware\" request."
+}

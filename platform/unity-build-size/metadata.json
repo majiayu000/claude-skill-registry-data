@@ -1,0 +1,39 @@
+{
+  "name": "unity-build-size",
+  "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+  "path": "skills/unity/unity-build-size/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "dir_name": "unity-build-size",
+  "downloaded_at": "2026-11-25T07:29:27.707492Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, android, ios",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gamedev-skills",
+  "source_url": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/main/skills/unity/unity-build-size/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/main/skills/unity/unity-build-size/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds and shrinks what makes a Unity 6.3 LTS build too big: Build Report reading, uncompressed textures, glTFast models, PCM audio and per-platform levers. Use when an APK, AAB, WebGL build or Steam depot is over a size limit or the download is too big. Not for frame rate (`performance-optimization`), build scripts or stripping (`unity-build-pipeline`) or store uploads (`steam-publish`)."
+}

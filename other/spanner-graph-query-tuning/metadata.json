@@ -1,0 +1,37 @@
+{
+  "name": "spanner-graph-query-tuning",
+  "repo": "google/skills",
+  "path": "skills/cloud/spanner-graph-query-tuning/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/google/skills",
+  "dir_name": "spanner-graph-query-tuning",
+  "downloaded_at": "2026-11-25T07:39:00.841064Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/skills/blob/main/skills/cloud/spanner-graph-query-tuning/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/skills/blob/main/skills/cloud/spanner-graph-query-tuning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tunes and troubleshoots Spanner Graph on Google Cloud ISO GQL queries and execution plans. Use when optimizing slow Spanner Graph GQL queries, diagnosing distributed cross apply versus hash join execution operators and index seek prefixes, eliminating multi-arm star query Cartesian products with chained query aggregation, bounding super-node fan-out, decorrelating slow subqueries or optional matches, optimizing deep quantified variable-length paths, or applying join method, index, and path factorization query hints. Don't use for relational-to-property-graph schema mapping over existing relational tables (use spanner-relational-to-graph) or physical schema, table, and interleaving design (use spanner-graph-schema-best-practices)."
+}

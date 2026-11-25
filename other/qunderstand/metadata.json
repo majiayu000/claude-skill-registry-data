@@ -1,0 +1,37 @@
+{
+  "name": "Qunderstand",
+  "repo": "inho-team/qe-framework",
+  "path": "skills/Qunderstand/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/inho-team/qe-framework",
+  "dir_name": "qunderstand",
+  "downloaded_at": "2026-11-25T08:06:55.056985Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "inho-team",
+  "source_url": "https://github.com/inho-team/qe-framework/blob/main/skills/Qunderstand/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/inho-team/qe-framework/blob/main/skills/Qunderstand/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when starting a new coding task or a requirements interview. Invoke first before planning, editing, or debugging if EITHER the user's reason (why) OR observable completion criteria are missing. A precise implementation request with no stated purpose still triggers this skill."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "run",
+  "repo": "id-2/old-one",
+  "path": "skills/run/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/id-2/old-one",
+  "dir_name": "run-id-2-old-one",
+  "downloaded_at": "2026-11-25T08:03:19.850249Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "id-2",
+  "source_url": "https://github.com/id-2/old-one/blob/main/skills/run/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/id-2/old-one/blob/main/skills/run/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a single experiment iteration. Edit the target file, evaluate, keep or discard."
+}

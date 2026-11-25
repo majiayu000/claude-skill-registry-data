@@ -1,0 +1,38 @@
+{
+  "name": "hubspot",
+  "repo": "grolinjacq/revenue-engine-skills",
+  "path": ".claude/skills/hubspot/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/grolinjacq/revenue-engine-skills",
+  "dir_name": "hubspot-grolinjacq-revenue-engine-skill",
+  "downloaded_at": "2026-11-25T07:41:52.570525Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "grolinjacq",
+  "source_url": "https://github.com/grolinjacq/revenue-engine-skills/blob/main/.claude/skills/hubspot/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/grolinjacq/revenue-engine-skills/blob/main/.claude/skills/hubspot/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "HubSpot quick actions: lookups, stats and single changes — \"show me [company]\", \"open deals\", \"pipeline value\", \"create a task\", \"update [deal]\", \"move [deal] to [stage]\", \"create a deal for [company]\", \"how many contacts\", \"/hubspot\", \"hey HubSpot\" — and any CRM question without a more specific skill in scope. Not for the revenue loop: ICP, dedupe and lead lists go to hubspot-crm, scoring new leads to hubspot-lead-triage, \"did anyone reply\", \"update the CRM\" or \"sync lemlist to HubSpot\" to close-the-loop, and \"run the engine\" or one-sentence campaign requests to revenue-engine.",
+  "content_fingerprint": "18b46cbaf653db1e4ceb1274d91de7b66d97a36b2b62a9fbcdffe4b66589fdee"
+}

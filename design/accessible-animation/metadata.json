@@ -1,0 +1,38 @@
+{
+  "name": "accessible-animation",
+  "repo": "iart-ai/web-animation-skills",
+  "path": "skills/accessible-animation/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/iart-ai/web-animation-skills",
+  "dir_name": "accessible-animation",
+  "downloaded_at": "2026-11-25T08:02:37.466892Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, animation",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iart-ai",
+  "source_url": "https://github.com/iart-ai/web-animation-skills/blob/main/skills/accessible-animation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iart-ai/web-animation-skills/blob/main/skills/accessible-animation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"respect prefers-reduced-motion\", \"honor reduced motion\", \"make my animations accessible\", \"fix vestibular / motion-sickness issues\", \"add a useReducedMotion hook\", \"gate GSAP / Framer Motion / Lenis for reduced motion\", or \"meet WCAG 2.3.3 / C39\". Provides tiered (not all-or-nothing) reduced-motion patterns in CSS and JS."
+}

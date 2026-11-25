@@ -1,0 +1,39 @@
+{
+  "name": "empire-runtime-audit",
+  "repo": "guitriloco/vivos",
+  "path": "shared/skills/empire-runtime-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/guitriloco/vivos",
+  "dir_name": "empire-runtime-audit",
+  "downloaded_at": "2026-11-25T07:43:29.433690Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "guitriloco",
+  "source_url": "https://github.com/guitriloco/vivos/blob/main/shared/skills/empire-runtime-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/guitriloco/vivos/blob/main/shared/skills/empire-runtime-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Systematic static syntax + runtime execution audit for VIVOS Empire scripts across Python, C++, and Rust.",
+  "content_fingerprint": "5685a2749039b9748b20bca6620eeecb5f7d3f51d81d62b30d2c416e2d261568"
+}

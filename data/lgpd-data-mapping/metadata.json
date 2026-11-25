@@ -1,0 +1,40 @@
+{
+  "name": "lgpd-data-mapping",
+  "repo": "goul4rt/lgpd-skills",
+  "path": "skills/lgpd-data-mapping/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/goul4rt/lgpd-skills",
+  "dir_name": "lgpd-data-mapping",
+  "downloaded_at": "2026-11-25T07:39:37.134865Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database, pipeline",
+    "score": 5,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "goul4rt",
+  "source_url": "https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-data-mapping/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-data-mapping/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build and maintain a canonical data inventory (mapa de dados) of all personal data processing activities, databases, APIs, cookies, pixels, mobile/web SDKs, telemetry streams, and third-party legal roles. Run FIRST before `lgpd-legal-basis`, `lgpd-ropa`, `lgpd-ripd`, and `lgpd-retention-erasure`. Produces `.lgpd/data-map.md`."
+}

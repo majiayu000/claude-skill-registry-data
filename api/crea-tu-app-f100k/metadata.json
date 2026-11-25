@@ -1,0 +1,38 @@
+{
+  "name": "crea-tu-app-f100k",
+  "repo": "formula100k/formula100k-skills",
+  "path": "skills/crea-tu-app-f100k/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/formula100k/formula100k-skills",
+  "dir_name": "crea-tu-app-f100k",
+  "downloaded_at": "2026-11-25T07:23:41.807609Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "formula100k",
+  "source_url": "https://github.com/formula100k/formula100k-skills/blob/main/skills/crea-tu-app-f100k/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/formula100k/formula100k-skills/blob/main/skills/crea-tu-app-f100k/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Wizard que guía a una alumna a construir y publicar su app de IA sin programar: la entrevista, le recomienda la app, captura su marca, construye y despliega en su Vercel. Usar con «quiero crear mi app», «crea tu app». NO es el motor de build (usa constructor-miniapps-f100k).",
+  "content_fingerprint": "62a1162873279e71a1f9bc3b428bce3fc81783b15bd3dc2c18ad8363a0a1f9e2"
+}

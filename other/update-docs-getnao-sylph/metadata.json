@@ -1,0 +1,39 @@
+{
+  "name": "update-docs",
+  "repo": "getnao/sylph",
+  "path": ".claude/skills/update-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/getnao/sylph",
+  "dir_name": "update-docs-getnao-sylph",
+  "downloaded_at": "2026-11-25T07:34:41.848678Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getnao",
+  "source_url": "https://github.com/getnao/sylph/blob/main/.claude/skills/update-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getnao/sylph/blob/main/.claude/skills/update-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Detect user-facing features in recently merged PRs and open a PR in the docs repo adding the missing documentation.",
+  "content_fingerprint": "d8cbabc78c5cfaa77d3d093ad6dd970063a032cd3b797d7a97cc59d16bca2fd4"
+}

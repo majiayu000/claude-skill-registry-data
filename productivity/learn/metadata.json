@@ -1,0 +1,37 @@
+{
+  "name": "learn",
+  "repo": "jgarner9/bud-plugins",
+  "path": "plugins/bud/skills/learn/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/jgarner9/bud-plugins",
+  "dir_name": "learn",
+  "downloaded_at": "2026-11-25T08:18:46.163878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, memory",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgarner9",
+  "source_url": "https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud/skills/learn/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud/skills/learn/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Learning mode. Teaches Jason by asking, the Socratic way, with a map of what he knows, strict checks and a note saved to Basic Memory. Use when he wants to understand or master something rather than get a task done; \"teach me\", \"tutor me\", \"quiz me\", \"drill me\", \"help me master\", \"walk me through\", \"I keep mixing up X and Y\", what to learn before X, or a bare concept name. A one-off \"explain X\" or \"what is X\" gets a direct answer and an offer to teach it. Not for tasks (coding, writing, fixing, calculating), a quick factual lookup, news, or explaining the code in the repo you're working in."
+}

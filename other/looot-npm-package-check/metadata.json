@@ -1,0 +1,37 @@
+{
+  "name": "looot-npm-package-check",
+  "repo": "loootai/looot-skills",
+  "path": "skills/looot-npm-package-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/loootai/looot-skills",
+  "dir_name": "looot-npm-package-check",
+  "downloaded_at": "2026-11-25T08:55:59.795746Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loootai",
+  "source_url": "https://github.com/loootai/looot-skills/blob/main/skills/looot-npm-package-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loootai/looot-skills/blob/main/skills/looot-npm-package-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check an npm package before you install it, for free. Use when the user says things like \"is express safe to install\", \"what is the latest version and license of this package\", \"does this npm package have known vulnerabilities\" or \"who maintains this package and does it have provenance\". Runs free through looot on the npm registry and OSV.dev endpoints ($0 per run, no top-up needed)."
+}

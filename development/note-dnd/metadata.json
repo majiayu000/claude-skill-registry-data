@@ -1,0 +1,38 @@
+{
+  "name": "note-dnd",
+  "repo": "ivanerricis/easytask",
+  "path": ".claude/skills/note-dnd/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/ivanerricis/easytask",
+  "dir_name": "note-dnd",
+  "downloaded_at": "2026-11-25T08:11:34.052778Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ivanerricis",
+  "source_url": "https://github.com/ivanerricis/easytask/blob/master/.claude/skills/note-dnd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ivanerricis/easytask/blob/master/.claude/skills/note-dnd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Map of the drag & drop of EasyTask notes (tasks, sections, groups, open tabs, sidebar tree) - pointer controller, hit test, owners of the split view, live drag shifts, Ctrl cross-note drag and Alt copy, autoscroll and scroll lock, DB queries, tests and e2e. Use before changing or debugging anything that is dragged, a drop zone, the live drag, or the drag between the two notes of the split view."
+}

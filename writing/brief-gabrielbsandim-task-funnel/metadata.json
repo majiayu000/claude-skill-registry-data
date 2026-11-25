@@ -1,0 +1,37 @@
+{
+  "name": "brief",
+  "repo": "gabrielbsandim/task-funnel",
+  "path": "skills/brief/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/gabrielbsandim/task-funnel",
+  "dir_name": "brief-gabrielbsandim-task-funnel",
+  "downloaded_at": "2026-11-25T07:27:45.759677Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "writer"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gabrielbsandim",
+  "source_url": "https://github.com/gabrielbsandim/task-funnel/blob/main/skills/brief/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gabrielbsandim/task-funnel/blob/main/skills/brief/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns what the user says loosely into a precise prompt grounded in the code, shows it for approval, then runs it through the right flow. Use when the user wants help writing the prompt or spec for a task, asks to sharpen or clarify a request before it runs, describes something vaguely and asks for a plan to be written first, or on /brief <request>. Not for a request the user already wants executed as stated: that goes straight to task or investigate."
+}

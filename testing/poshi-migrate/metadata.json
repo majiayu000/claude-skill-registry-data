@@ -1,0 +1,40 @@
+{
+  "name": "poshi-migrate",
+  "repo": "liferay/liferay-portal",
+  "path": ".claude/skills/poshi-migrate/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/liferay/liferay-portal",
+  "dir_name": "poshi-migrate",
+  "downloaded_at": "2026-11-25T08:49:27.641638Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, jest, integration, playwright",
+    "score": 4,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "jest",
+      "integration",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liferay",
+  "source_url": "https://github.com/liferay/liferay-portal/blob/master/.claude/skills/poshi-migrate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liferay/liferay-portal/blob/master/.claude/skills/poshi-migrate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Migrate a Liferay Poshi .testcase file to its modern test layer (Playwright, Jest, JUnit unit, Java integration). Routes each test to the right layer, consolidates compatible tests at write time, and follows existing Playwright patterns from a configurable reference folder. Use when the user asks to migrate, port, or convert a Poshi .testcase to Playwright, Jest, or JUnit.",
+  "content_fingerprint": "bf5df334987532ec96ab0804c1aa79b464db538ed6eab9c15815e9f902cfd913"
+}

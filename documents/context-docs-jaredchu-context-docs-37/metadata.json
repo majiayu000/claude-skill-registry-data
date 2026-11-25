@@ -1,0 +1,38 @@
+{
+  "name": "context-docs",
+  "repo": "jaredchu/context-docs",
+  "path": "evals/results/2026-09-28-journal-integration/codex-missing-helper/.agents/skills/context-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/jaredchu/context-docs",
+  "dir_name": "context-docs-jaredchu-context-docs-37",
+  "downloaded_at": "2026-11-25T08:14:16.148204Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jaredchu",
+  "source_url": "https://github.com/jaredchu/context-docs/blob/main/evals/results/2026-09-28-journal-integration/codex-missing-helper/.agents/skills/context-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jaredchu/context-docs/blob/main/evals/results/2026-09-28-journal-integration/codex-missing-helper/.agents/skills/context-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, audit, and maintain project context documents for continuity across AI sessions. Use when establishing a context-docs convention, refreshing project state after work, or consolidating stale or growing context files. Adapt to existing layouts and preserve decisions and evidence. Not for general copyediting or storing conversation transcripts."
+}

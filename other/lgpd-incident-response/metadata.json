@@ -1,0 +1,37 @@
+{
+  "name": "lgpd-incident-response",
+  "repo": "goul4rt/lgpd-skills",
+  "path": "skills/lgpd-incident-response/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/goul4rt/lgpd-skills",
+  "dir_name": "lgpd-incident-response",
+  "downloaded_at": "2026-11-25T07:39:40.967521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "goul4rt",
+  "source_url": "https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-incident-response/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-incident-response/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Execute the LGPD security incident response runbook (Art. 48 LGPD + Resolu\u00e7\u00e3o CD/ANPD n\u00ba 15/2024). Trigger IMMEDIATELY in emergency mode when user reports \"tivemos um incidente\", \"vazamento de dados\", \"data breach\", \"invadiram o banco\", or \"preciso comunicar a ANPD\"; or run in preparatory mode during an audit pipeline. Encodes the 3-business-day deadline (6 for eligible ATPPs), the 12 mandatory ANPD items, the 7 data-subject items, and the 5-year incident log under Art. 10."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "_mureo-chatgpt-ads",
+  "repo": "logly/mureo",
+  "path": "skills/_mureo-chatgpt-ads/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/logly/mureo",
+  "dir_name": "mureo-chatgpt-ads",
+  "downloaded_at": "2026-11-25T08:55:01.473249Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "logly",
+  "source_url": "https://github.com/logly/mureo/blob/main/skills/_mureo-chatgpt-ads/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/logly/mureo/blob/main/skills/_mureo-chatgpt-ads/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "ChatGPT Ads (bundled provider over OpenAI's Advertiser API): read the ad account, spending limits, campaigns, ad groups, ads, performance insights and the change history; pause and activate, rename, reschedule, set budgets, bids and the account daily spending limit, each recorded with a reversal; create campaigns, ad groups and ads (always paused), archive them irreversibly, upload images, preview ads and search locations; create and fill custom audiences from a local identifier file; set up pixels and conversion events and report conversions."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "codegraph",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/review/codegraph/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "codegraph-gbencke-dotfiles-2",
+  "downloaded_at": "2026-11-25T07:30:12.486151Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/review/codegraph/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/review/codegraph/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read and understand code in a repo through its pre-indexed CodeGraph knowledge graph instead of grepping and reading files \u2014 one call returns the relevant source, the call paths between symbols, and the blast radius of a change. Use for \"explore this codebase\", \"how does X work\", \"how does X reach Y\", \"who calls X\", \"what breaks if I change X\", \"which tests cover these changes\", and for reading any indexed file. Also use unprompted before any code search in a repo that has a .codegraph/ index."
+}

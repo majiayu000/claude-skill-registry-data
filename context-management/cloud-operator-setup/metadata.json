@@ -1,0 +1,37 @@
+{
+  "name": "cloud-operator-setup",
+  "repo": "google/skills",
+  "path": "skills/cloud/cloud-operator-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/google/skills",
+  "dir_name": "cloud-operator-setup",
+  "downloaded_at": "2026-11-25T07:38:43.610264Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-operator-setup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/skills/blob/main/skills/cloud/cloud-operator-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sets up the user's personal operator agent in a Google Cloud organization via the `ask_cloud_operator` MCP tool (the autocloud server, or any server that offers it): finds the project's organization, checks or creates the agent, saves the project and organization, and offers to share the user's existing Google Cloud operating context with the operator agent's memory. Use when the user runs this skill, asks to set up the operator or create their operator agent, or chooses setup when the cloud-operator skill asks. Don't use for ordinary GCP requests or installing gcloud."
+}

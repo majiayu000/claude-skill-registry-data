@@ -1,0 +1,37 @@
+{
+  "name": "release",
+  "repo": "joshsmithxrm/power-platform-developer-suite",
+  "path": ".claude/skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/joshsmithxrm/power-platform-developer-suite",
+  "dir_name": "release-joshsmithxrm-power-platform-devel",
+  "downloaded_at": "2026-11-25T08:24:12.640974Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "joshsmithxrm",
+  "source_url": "https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/.claude/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/.claude/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Walk the maintainer through a PPDS release by following docs/runbooks/release.md \u2014 scope advisory, CHANGELOGs, version bumps, the tag commands the maintainer runs, CI monitoring and publish verification. Use when preparing a prerelease, stable or patch release of the CLI, TUI, MCP, Extension or NuGet libraries."
+}

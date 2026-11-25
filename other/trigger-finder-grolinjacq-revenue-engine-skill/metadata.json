@@ -1,0 +1,38 @@
+{
+  "name": "trigger-finder",
+  "repo": "grolinjacq/revenue-engine-skills",
+  "path": ".agents/skills/trigger-finder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/grolinjacq/revenue-engine-skills",
+  "dir_name": "trigger-finder-grolinjacq-revenue-engine-skill",
+  "downloaded_at": "2026-11-25T07:41:59.713458Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "grolinjacq",
+  "source_url": "https://github.com/grolinjacq/revenue-engine-skills/blob/main/.agents/skills/trigger-finder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/grolinjacq/revenue-engine-skills/blob/main/.agents/skills/trigger-finder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Buying trigger analysis skill for outbound sales teams. Identifies and interprets trigger events (funding, hiring, tool changes, job changes, LinkedIn activity, M&A, etc.) to help time outreach and sharpen messaging. Works in two modes: (1) Strategic — given an ICP, recommends the best triggers to activate and the right messaging angle for each; (2) Tactical — given a specific company or signal, explains how to exploit it right now. ALWAYS use this skill when the user mentions signals, triggers, buying intent, \"right time to reach out\", timing outreach, \"they just raised\", \"they just hired\", \"they changed jobs\", job postings, funding rounds, tech stack changes, LinkedIn activity, or any event-based prospecting. Use it even if the user just says \"when should I reach out to X\".",
+  "content_fingerprint": "b75b0948d3188c17b1b8219777e7a9fca53063046e716e2ba63a4aba112a459f"
+}

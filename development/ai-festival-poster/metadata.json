@@ -1,0 +1,38 @@
+{
+  "name": "ai-festival-poster",
+  "repo": "getedgehq/skills",
+  "path": "ai-festival-poster/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "ai-festival-poster",
+  "downloaded_at": "2026-11-25T07:34:26.557145Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/ai-festival-poster/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/ai-festival-poster/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn someone's real AI usage into a desert festival lineup poster, painted in Python. Scans local Claude Code and Codex session logs (plus an optional ChatGPT export), counts the sessions in which each tool, model and MCP server was actually used, books the most-used as headliners across three days (Build, Think, Create), and paints a dusk scene with brush strokes. No image model and no invented acts or numbers. Use for \"make my AI festival poster\", \"Instafest for my AI tools\", \"my AI usage as a lineup\"."
+}

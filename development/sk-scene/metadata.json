@@ -1,0 +1,38 @@
+{
+  "name": "sk-scene",
+  "repo": "howznguyen/shorts-kit",
+  "path": ".claude/skills/sk-scene/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/howznguyen/shorts-kit",
+  "dir_name": "sk-scene",
+  "downloaded_at": "2026-11-25T07:56:32.717521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howznguyen",
+  "source_url": "https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-scene/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-scene/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds and fixes the visuals of a short in Remotion inside its own folder src/videos/<id>/, using shared components from src/shared/, keeping text inside the platform safe zones, and reviewing rendered stills before claiming anything is done. Use when the user says \"build the scenes\", \"make this shot\", \"the text is cut off\", \"move the caption\", \"add motion\", \"change the colours or font\", \"open the studio\", \"render a still\", or \"check the layout\". Steps 8 and 9 of sk-pipeline."
+}

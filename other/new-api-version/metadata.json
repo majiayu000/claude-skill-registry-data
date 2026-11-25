@@ -1,0 +1,37 @@
+{
+  "name": "new-api-version",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/new-api-version/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "new-api-version",
+  "downloaded_at": "2026-11-25T08:18:02.206298Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/new-api-version/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/new-api-version/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guided workflow for standing up a new Jellyfin apiVersion tier (V3, V4, \u2026) in JellyRock when an upstream release restructures the API enough to need a new `if m.getApiVersion() >= N` dispatch level. Wraps the \"Add an API tier\" recipe in docs/dev/jellyfin-server-versioning.md and walks every surface that must move together (the boundary map in YAML, its BrightScript twin `resolveApiVersion()`, the `sdkVN.bs` endpoints, the dispatch branches, the device profile, the manifest tier clamp, and the validators), stopping at each step so the tier split cannot land half-built. Use when proactive RC/master triage (via `/server-upgrade <rc-or-unstable>`) shows a breaking API shift that a per-method `>= N` branch must cover. Not for routine endpoint additions inside an existing tier (those use the existing `>= 2` shape directly)."
+}

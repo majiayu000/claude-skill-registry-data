@@ -1,0 +1,38 @@
+{
+  "name": "collect-github-stats",
+  "repo": "griddynamics/rosetta",
+  "path": ".claude/skills/collect-github-stats/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/griddynamics/rosetta",
+  "dir_name": "collect-github-stats",
+  "downloaded_at": "2026-11-25T07:41:11.654189Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "griddynamics",
+  "source_url": "https://github.com/griddynamics/rosetta/blob/main/.claude/skills/collect-github-stats/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/griddynamics/rosetta/blob/main/.claude/skills/collect-github-stats/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Collect GitHub repo health/usage stats into merged JSON."
+}

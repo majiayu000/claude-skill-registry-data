@@ -1,0 +1,36 @@
+{
+  "name": "verify-board-save",
+  "repo": "kk6/kura",
+  "path": ".claude/skills/verify-board-save/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kk6/kura",
+  "dir_name": "verify-board-save",
+  "downloaded_at": "2026-11-25T08:36:57.542722Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kk6",
+  "source_url": "https://github.com/kk6/kura/blob/main/.claude/skills/verify-board-save/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kk6/kura/blob/main/.claude/skills/verify-board-save/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Kura \u306e\u30dc\u30fc\u30c9\u306e\u81ea\u52d5\u4fdd\u5b58\uff08src/board/saveQueue.ts \u306e push / retry / clear / flush \u3068 run \u306e\u30eb\u30fc\u30d7\uff09\u304c\u3001\u7de8\u96c6\u3092\u5931\u308f\u305a\u3001\u672a\u4fdd\u5b58\u306e\u5909\u66f4\u3092\u300c\u4fdd\u5b58\u6e08\u307f\u300d\u3068\u793a\u3055\u305a\u3001\u9589\u3058\u308b\u30fb\u5207\u308a\u66ff\u3048\u308b\u3068\u304d\u306b\u6700\u5f8c\u306e\u5909\u66f4\u3092\u4fdd\u5b58\u3057\u7d42\u3048\u308b\u3053\u3068\u3092\u3001TLA+ \u306e\u30e2\u30c7\u30eb\u691c\u67fb\uff08TLC\uff09\u3067\u78ba\u304b\u3081\u308b\u3002saveQueue.ts \u3092\u5909\u3048\u305f\u3068\u304d\u3001BoardApp.tsx \u306e\u4fdd\u5b58\u306e\u30ad\u30e5\u30fc\u306e\u4f7f\u3044\u65b9\uff08commit\u3001flush \u306e\u547c\u3073\u65b9\u3001clear\uff09\u3092\u5909\u3048\u305f\u3068\u304d\u3001\u307e\u305f\u306f\u3053\u306e\u691c\u67fb\u304c DRIFT \u3092\u51fa\u3057\u305f\u3068\u304d\u306b\u4f7f\u3046\u3002"
+}

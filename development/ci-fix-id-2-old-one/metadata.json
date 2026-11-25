@@ -1,0 +1,39 @@
+{
+  "name": "ci-fix",
+  "repo": "id-2/old-one",
+  "path": "skills/ci-fix/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/id-2/old-one",
+  "dir_name": "ci-fix-id-2-old-one",
+  "downloaded_at": "2026-11-25T08:03:30.799374Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "id-2",
+  "source_url": "https://github.com/id-2/old-one/blob/main/skills/ci-fix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/id-2/old-one/blob/main/skills/ci-fix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose and fix GitHub Actions CI failures. Inspects workflow runs and logs, identifies root causes, implements minimal fixes, and pushes to a fix branch. Use when CI is failing, red, broken, or needs diagnosis."
+}

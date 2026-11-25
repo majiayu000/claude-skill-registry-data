@@ -1,0 +1,39 @@
+{
+  "name": "assistant-verification",
+  "repo": "laimis91/assistant-framework",
+  "path": "plugins/assistant-framework/skills/assistant-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/laimis91/assistant-framework",
+  "dir_name": "assistant-verification",
+  "downloaded_at": "2026-11-25T08:42:59.172820Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, debug, refactor",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laimis91",
+  "source_url": "https://github.com/laimis91/assistant-framework/blob/main/plugins/assistant-framework/skills/assistant-verification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laimis91/assistant-framework/blob/main/plugins/assistant-framework/skills/assistant-verification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyzes and selects proportionate testing, validation, or evaluation for a change, or assesses whether existing evidence is sufficient across code, skills, plugins, and non-code artifacts. Use on request, and before the first edit of any non-trivial feature, fix, refactor, migration, or skill change, including after plan approval, review feedback, CI failures, or resuming, even when assistant-workflow or assistant-debugging has already loaded. Not for running an existing test command or tests-first requests (assistant-tdd)."
+}

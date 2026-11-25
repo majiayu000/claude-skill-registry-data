@@ -1,0 +1,38 @@
+{
+  "name": "cypher-help",
+  "repo": "foobar-beer/claude-neoize",
+  "path": "skills/neoize-cypher-help/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/foobar-beer/claude-neoize",
+  "dir_name": "neoize-cypher-help",
+  "downloaded_at": "2026-11-25T07:22:45.184326Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "foobar-beer",
+  "source_url": "https://github.com/foobar-beer/claude-neoize/blob/main/skills/neoize-cypher-help/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/foobar-beer/claude-neoize/blob/main/skills/neoize-cypher-help/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Print a cheat-sheet of ready-to-paste Cypher queries TAILORED to this project's actual graph, for the user to run in the Neo4j Browser. Walks the live model (the labels, relationships and properties that are really there) and emits example queries with a one-line explanation each, so a human can explore the graph for their own needs without knowing Cypher."
+}

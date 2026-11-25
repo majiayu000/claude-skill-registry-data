@@ -1,0 +1,38 @@
+{
+  "name": "pinned-debt",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/review/pinned-debt/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "pinned-debt",
+  "downloaded_at": "2026-11-25T07:30:16.748497Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, cypress",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "cypress"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/review/pinned-debt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/review/pinned-debt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure technical debt and cognitive load in any JS/TS or Python git repo with a pinned tool set (ESLint 9 + sonarjs cognitive complexity, complexipy, jscpd, git history) running inside a bubblewrap sandbox with no network and the repo mounted read-only. Reports cognitive complexity per function, duplication, oversized files, change amplification and churn x complexity hotspots, per repo plus a cross-repo summary. Use when asked to \"analyse tech debt\", \"measure cognitive load\", \"find hotspots\", \"debt analysis\", \"how hard is this code to understand\", \"compare repos for debt\", \"review AI-generated code for complexity\", or invokes /pinned-debt."
+}

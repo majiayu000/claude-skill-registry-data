@@ -1,0 +1,37 @@
+{
+  "name": "diagram-animation",
+  "repo": "iart-ai/explainer-video-skills",
+  "path": "skills/diagram-animation/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/iart-ai/explainer-video-skills",
+  "dir_name": "diagram-animation",
+  "downloaded_at": "2026-11-25T08:02:03.185711Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: css, animation",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iart-ai",
+  "source_url": "https://github.com/iart-ai/explainer-video-skills/blob/main/skills/diagram-animation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iart-ai/explainer-video-skills/blob/main/skills/diagram-animation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"animate this diagram\", \"build a flowchart that reveals step by step\", \"animate an architecture/sequence diagram\", \"make a chart animate in\", \"grow the bars / draw the line / count up the number\", \"show data flowing along a connector\", or \"turn a static diagram into a guided reveal\". Covers SVG, Framer Motion, D3, and Remotion."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "translation-import",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/translation-import/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "translation-import",
+  "downloaded_at": "2026-11-25T08:18:02.698589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/translation-import/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/translation-import/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Import translations for untranslated JellyRock keys from other Jellyfin clients, one reviewed batch at a time. Ranks unmapped keys by the cells mapping them would fill (`npm run translations:seed -- suggest --rank`), judges each candidate's meaning and shape from its key name and its own translations, reads the source's code only when those leave it unclear (`translations:seed -- context`), and writes `locale/seed/keymap.yml` entries, `reject:` lines and `exclude:` cells with reasons. Then runs the seeder, reads the result and reports each decision for review in a PR. Use when the user wants more keys translated from other clients, or names keys to map. Not for adding a new English string (use /translation-add) or for Weblate suggestions."
+}

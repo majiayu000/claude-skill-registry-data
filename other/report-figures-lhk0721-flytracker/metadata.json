@@ -1,0 +1,38 @@
+{
+  "name": "report-figures",
+  "repo": "lhk0721/flytracker",
+  "path": ".claude/skills/report-figures/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lhk0721/flytracker",
+  "dir_name": "report-figures-lhk0721-flytracker",
+  "downloaded_at": "2026-11-25T08:48:48.579000Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lhk0721",
+  "source_url": "https://github.com/lhk0721/flytracker/blob/main/.claude/skills/report-figures/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lhk0721/flytracker/blob/main/.claude/skills/report-figures/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Makes figures for documents people read on paper or in a PDF — reports, papers, model write-ups, slides exported to PDF — from one reproducible plotting script. One claim per figure, no explanatory sentences inside the figure and a caption that is only the figure's name (the body text explains it, from a claim line and an in-text line kept next to each figure), gray data charts with one colour-blind-safe accent for the claim, values on the vertical axis, structure drawn as flat 2D box-and-arrow diagrams instead of 3D renders, every figure rendered and looked at before it ships, tables drawn as images like figures, one figure sheet per document whose buttons copy each image, its path and its caption, and a manuscript page where clicking a heading, paragraph, section bracket, table or figure copies it, or in select mode copies a selector down to one line of a paragraph or a single bar, point or label of a figure. Use it whenever a chart, plot, histogram or architecture/flow diagram is about to go into a report or document, and whenever someone says the figures are confusing, cluttered, look AI-made, or need simplifying. Triggers include \"그림 만들어\", \"figure 그려\", \"기술서 그림\", \"도식 그려\", \"구조도\", \"흐름도\", \"그래프 단순하게\", \"그림 안 글씨 빼\", \"grayscale로\", \"AI 티 나\", \"그림이 안 읽혀\", \"make the figures\", \"plot for the report\", \"architecture diagram\", \"the figure is confusing\", \"simplify the chart\", \"remove the text from the figure\", \"표도 이미지로\", \"그림 모아 보기\", \"캡션 복사\", \"figure sheet\", \"copy the caption\", \"캡션 줄여\", \"본문이 그림을 설명\", \"그림이 글을 설명하는지\", \"원고를 웹으로\", \"원고 복사\", \"문단 복사\", \"요소 선택\", \"줄 단위로 선택\", \"selector 복사\", \"그림 요소 지정\", \"원고 편집\", \"페이지에서 고쳐\", \"실시간 수정\", \"manuscript page\", and any figure destined for a document rather than an interactive dashboard.",
+  "content_fingerprint": "c5978cf52868e88068da084c3c11381e08113d22ce7421bcdef69fbe2c94495a"
+}

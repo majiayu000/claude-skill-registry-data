@@ -1,0 +1,37 @@
+{
+  "name": "sonnet",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/sonnet/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "sonnet",
+  "downloaded_at": "2026-11-25T08:17:58.129095Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/sonnet/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/sonnet/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Execute a procedural implementation plan on the Sonnet model. Runs when the user types /sonnet with a plan path, or as a Sonnet sub-agent that a parent (usually /focus, right after it saves the plan) starts and supervises. Checks the plan is for this repo, walks its Approach literally, runs its Verification, commits, records the landing in the plan's project, and stops before push for an explicit OK. Not for judgment-heavy work: if the plan still has open forks, architectural decisions or \"we need to figure out X\" gaps, stay on the stronger model and finish the planning first. Not for investigation or recipe work that has its own skill (/ci-triage, /issue-triage, /new-setting and the like): the recipe is the better plan."
+}

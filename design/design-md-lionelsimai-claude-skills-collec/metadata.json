@@ -1,0 +1,39 @@
+{
+  "name": "design-md",
+  "repo": "lionelsimai/claude-skills-collection",
+  "path": "skills/design-md/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/lionelsimai/claude-skills-collection",
+  "dir_name": "design-md-lionelsimai-claude-skills-collec",
+  "downloaded_at": "2026-11-25T08:51:47.167180Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component, animation",
+    "score": 4,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lionelsimai",
+  "source_url": "https://github.com/lionelsimai/claude-skills-collection/blob/main/skills/design-md/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lionelsimai/claude-skills-collection/blob/main/skills/design-md/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create an agent-readable DESIGN.md design spec (colours, type, spacing, components, reasoning) before any visual build. Use when the user starts a visual build, asks for a design spec, or says 'DESIGN.md'."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "lgpd-vendor-audit",
+  "repo": "goul4rt/lgpd-skills",
+  "path": "skills/lgpd-vendor-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/goul4rt/lgpd-skills",
+  "dir_name": "lgpd-vendor-audit",
+  "downloaded_at": "2026-11-25T07:39:37.518486Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, docker, infra",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "docker",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "goul4rt",
+  "source_url": "https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-vendor-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-vendor-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Classify third-party privacy roles (operator, independent controller, joint controller) and conduct due diligence under LGPD Arts. 39 and 42. Use when user asks 'auditar fornecedor', 'vendor audit LGPD', 'operadores LGPD', 'devida dilig\u00eancia', or onboarding/reviewing external SDKs, APIs, cloud, payment, or analytics providers. Produces vendor role & tier assessments in `.lgpd/vendors/` and remediation items in `.lgpd/gaps.md`."
+}

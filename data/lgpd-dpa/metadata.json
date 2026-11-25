@@ -1,0 +1,37 @@
+{
+  "name": "lgpd-dpa",
+  "repo": "goul4rt/lgpd-skills",
+  "path": "skills/lgpd-dpa/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/goul4rt/lgpd-skills",
+  "dir_name": "lgpd-dpa",
+  "downloaded_at": "2026-11-25T07:39:34.801955Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "goul4rt",
+  "source_url": "https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-dpa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-dpa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Structure and review Data Processing Agreements (DPA) with operators under LGPD Arts. 39, 42, 46, and 48, distinguishing operators from independent or joint controllers. Use when user mentions 'DPA', 'contrato com operador', 'cl\u00e1usulas LGPD', 'data processing agreement', or onboarding a third-party service (cloud, analytics, payment, email, observability). Outputs DPA best-practice checklist + per-vendor sheets in `.lgpd/vendors/`."
+}

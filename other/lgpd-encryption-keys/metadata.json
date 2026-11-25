@@ -1,0 +1,37 @@
+{
+  "name": "lgpd-encryption-keys",
+  "repo": "goul4rt/lgpd-skills",
+  "path": "skills/lgpd-encryption-keys/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/goul4rt/lgpd-skills",
+  "dir_name": "lgpd-encryption-keys",
+  "downloaded_at": "2026-11-25T07:39:40.193126Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "goul4rt",
+  "source_url": "https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-encryption-keys/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-encryption-keys/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure encryption in transit, cloud storage/volume encryption at rest, application-level column encryption, blind indexing, and KMS key management as engineering controls aligned with LGPD Art. 46 and ANPD's Information Security Guide. Outputs tested AES-256-GCM + Prisma query extension handlers."
+}

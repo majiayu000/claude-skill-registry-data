@@ -1,0 +1,38 @@
+{
+  "name": "process-image",
+  "repo": "krowten/claude-media-generation",
+  "path": "skills/process-image/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/krowten/claude-media-generation",
+  "dir_name": "process-image",
+  "downloaded_at": "2026-11-25T08:40:25.264200Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "krowten",
+  "source_url": "https://github.com/krowten/claude-media-generation/blob/main/skills/process-image/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/krowten/claude-media-generation/blob/main/skills/process-image/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resize, convert, rotate, flip, color-adjust, or inspect a local image file (JPEG/PNG/WebP/AVIF, or an SVG rendered to pixels) and make blur-up placeholders \u2014 thumbnails, avatars, hero images, fitting an image into a layout, converting between formats, orientation fixes, brightness/saturation tweaks, checking dimensions/size. Runs entirely offline via Bun's native image API, no network call and no fal.ai credit spent. Use whenever the user wants to resize, shrink, convert, re-encode, compress, rotate, mirror, brighten/desaturate an image they already have, needs an LQIP/blur-up placeholder, or needs a PNG/favicon/preview from an SVG logo \u2014 even if they just paste a path and say \"make this smaller\"."
+}

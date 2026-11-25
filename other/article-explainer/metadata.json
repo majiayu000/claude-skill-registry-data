@@ -1,0 +1,37 @@
+{
+  "name": "article-explainer",
+  "repo": "iurysza/agent-skills",
+  "path": "skills/article-explainer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/iurysza/agent-skills",
+  "dir_name": "article-explainer",
+  "downloaded_at": "2026-11-25T08:11:15.654296Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iurysza",
+  "source_url": "https://github.com/iurysza/agent-skills/blob/main/skills/article-explainer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iurysza/agent-skills/blob/main/skills/article-explainer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns an article, paper or long post into a single self-contained HTML explainer, built around one diagram that assembles itself as the reader scrolls, with plain, quotable prose tied to the reader's own project. Use when asked to explain, break down or visualise an article, or to make an \"article explainer\"."
+}

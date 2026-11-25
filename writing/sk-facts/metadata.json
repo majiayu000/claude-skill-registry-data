@@ -1,0 +1,39 @@
+{
+  "name": "sk-facts",
+  "repo": "howznguyen/shorts-kit",
+  "path": ".claude/skills/sk-facts/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/howznguyen/shorts-kit",
+  "dir_name": "sk-facts",
+  "downloaded_at": "2026-11-25T07:56:33.104168Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for writing: writing, copy, blog, article",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "copy",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howznguyen",
+  "source_url": "https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-facts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-facts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Researches, verifies and records the factual claims of a short in the fact ledger (docs/facts/facts.json and sources.json), including the licence of every image, clip and dataset. Use when the user says \"check this fact\", \"is this true\", \"find a source for\", \"research the topic\", \"add to the ledger\", \"where does this number come from\", \"can I use this photo\", or when lint reports a missing or unverified fact. Step 2 of sk-pipeline, and the step to return to whenever a number changes."
+}

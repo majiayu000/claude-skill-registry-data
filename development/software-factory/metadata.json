@@ -1,0 +1,39 @@
+{
+  "name": "software-factory",
+  "repo": "kortix-ai/CompanyOS",
+  "path": "packages/starter/templates/software-factory/skills/software-factory/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/kortix-ai/CompanyOS",
+  "dir_name": "software-factory",
+  "downloaded_at": "2026-11-25T08:39:00.331151Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, software",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/software-factory/skills/software-factory/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/software-factory/skills/software-factory/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The Software Factory contract. Sources file tickets into one ticket store (GitHub Issues, Linear, Jira, Asana or a JSON file); intake hands each ready ticket to one worker session; workers verify on the dev environment and open a pull request with evidence; feedback, the merge gate, groom and eval keep it moving. The factory acts on GitHub as its own account (FACTORY_GITHUB_TOKEN, scripts/github-identity.sh). Defines the GitHub identity, the store operations, labels, dedup keys, upsert, states, markers, caps, ticket body, worker brief, models, pull request evidence, follow-ups and the hard rules. Load it in every factory run (every trigger of the `engineer` agent, every worker and reviewer session) and in any session that files or changes factory tickets.",
+  "content_fingerprint": "0363915e335aa7bff4e97ffb05379ca30984290a0ae136c35b737b4634eb4f42"
+}

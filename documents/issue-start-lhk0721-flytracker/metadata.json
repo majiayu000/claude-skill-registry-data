@@ -1,0 +1,39 @@
+{
+  "name": "issue-start",
+  "repo": "lhk0721/flytracker",
+  "path": ".claude/skills/issue-start/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/lhk0721/flytracker",
+  "dir_name": "issue-start-lhk0721-flytracker",
+  "downloaded_at": "2026-11-25T08:48:47.382367Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lhk0721",
+  "source_url": "https://github.com/lhk0721/flytracker/blob/main/.claude/skills/issue-start/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lhk0721/flytracker/blob/main/.claude/skills/issue-start/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Start tracked work the kit way — one script registers the GitHub issue, creates the branch and worktree from the REMOTE base ref, and seeds the management doc, Master Registry row and AGENTS.md pointer line. Use this whenever the user wants to begin work that is not yet tracked by an open issue, even when they only say \"let's fix X\" or \"add Y\" — and always when they say \"이슈 만들어\", \"새 작업 시작\", \"새 이슈로\", \"worktree 파줘\", \"브랜치 파줘\", \"start issue\", \"new task\", \"open an issue for\", \"create a branch for\", \"set up a worktree for\". In a kit repo (agent-system.yaml present) never hand-run gh issue create / git worktree add for new work; run this skill's script instead — it does the steps in the only order the rulebook allows.",
+  "content_fingerprint": "ebc1c47f960b7e0168e11b161bd633d6246b7ec776c10e2c1aab962f03c1b104"
+}

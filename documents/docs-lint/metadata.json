@@ -1,0 +1,38 @@
+{
+  "name": "docs-lint",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/docs-lint/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "docs-lint",
+  "downloaded_at": "2026-11-25T08:17:58.845555Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/docs-lint/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/docs-lint/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run JellyRock's docs governance checks (broken markdown links, link anchors that match no heading, broken related-files frontmatter paths, stale tech-debt anchor references, journal-schema gates for progress.md and the decisions.md supersede chain, stale-doc detection) and surface a structured fix list grouped by category. Consumes the --json output of scripts/lint/docs-check.cjs and the human-readable output of scripts/lint/docs-stale.cjs. Use when a commit hits the docs-lint pre-push hook, before pushing a PR that touched docs/ or any CLAUDE.md, or when you want a one-shot pass over doc references."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "golang-checklist",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/programming.languages/golang-general/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "golang-general",
+  "downloaded_at": "2026-11-25T07:30:36.207093Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "programming",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/programming.languages/golang-general/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/programming.languages/golang-general/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply the Go code review checklist during PR review, design review, or self-review. Covers style & idioms, error handling, design patterns, project architecture, concurrency, testing, performance, and security. Each item tagged MUST, SHOULD, or CONSIDER. Triggers when user asks to \"review Go code\", \"check Go PR\", \"golang checklist\", \"review my Go\", \"Go code review\", or invokes /golang-checklist."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "assistant-security",
+  "repo": "laimis91/assistant-framework",
+  "path": "plugins/assistant-framework/skills/assistant-security/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/laimis91/assistant-framework",
+  "dir_name": "assistant-security-laimis91-assistant-framework",
+  "downloaded_at": "2026-11-25T08:42:58.552835Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laimis91",
+  "source_url": "https://github.com/laimis91/assistant-framework/blob/main/plugins/assistant-framework/skills/assistant-security/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laimis91/assistant-framework/blob/main/plugins/assistant-framework/skills/assistant-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyzes threats, vulnerabilities, dependencies, and attack surfaces. Use for security work, and before changing auth, external input, secrets, sensitive data, persistence, network or shell calls, dependencies or config, or external integrations."
+}

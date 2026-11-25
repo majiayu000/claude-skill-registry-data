@@ -1,0 +1,38 @@
+{
+  "name": "building-the-review-page",
+  "repo": "kajisho5/ffmpeg-skill",
+  "path": ".claude/skills/review-page-ui/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/kajisho5/ffmpeg-skill",
+  "dir_name": "review-page-ui",
+  "downloaded_at": "2026-11-25T08:29:10.138852Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kajisho5",
+  "source_url": "https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/review-page-ui/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/review-page-ui/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build or change the standalone review page (scripts/_review.py, `npx ffmpeg-skill review`) \u2014 the editor-style screen where a person looks at a render project and its result and composes an instruction for their agent. Covers the fixed constraints (one offline HTML file, nothing executed, no new dependency, not a contract tool), the 16:10 three-column layout, the numbering scheme every element carries (S, C, T, A, M, R, P,"
+}

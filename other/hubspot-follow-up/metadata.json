@@ -1,0 +1,38 @@
+{
+  "name": "hubspot-follow-up",
+  "repo": "grolinjacq/revenue-engine-skills",
+  "path": ".claude/skills/hubspot-follow-up/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/grolinjacq/revenue-engine-skills",
+  "dir_name": "hubspot-follow-up",
+  "downloaded_at": "2026-11-25T07:42:06.509894Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "grolinjacq",
+  "source_url": "https://github.com/grolinjacq/revenue-engine-skills/blob/main/.claude/skills/hubspot-follow-up/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/grolinjacq/revenue-engine-skills/blob/main/.claude/skills/hubspot-follow-up/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drafts a personalised follow-up email to one named contact who is already in HubSpot, grounded in deal context, recent notes and email history, and opens it in HubSpot for the user to send. Use on \"follow up with X\", \"draft an email to X\", \"check in with X\", \"draft a follow-up for [deal]\". Not for a reply to a prospect's message (reply-handler), cold sequence emails or follow-ups for a campaign (copywriting-follow-up, lemlist-campaign), or anything that sends.",
+  "content_fingerprint": "072ad525327db68d71045def3ba5610c7a746c7d99db873958dde63b076b7612"
+}

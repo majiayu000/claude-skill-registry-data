@@ -1,0 +1,37 @@
+{
+  "name": "client-comms",
+  "repo": "getedgehq/skills",
+  "path": "client-comms/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "client-comms",
+  "downloaded_at": "2026-11-25T07:34:04.749482Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "communication",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/client-comms/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/client-comms/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft, review, or triage a message to a paying client. Use for a concise reply, status update, meeting recap, action request, or complaint acknowledgement. Apply conclusion-first structure, clear owners and deadlines, and fast escalation for errors."
+}

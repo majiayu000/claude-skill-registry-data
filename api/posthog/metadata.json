@@ -1,0 +1,39 @@
+{
+  "name": "posthog",
+  "repo": "heymegabyte/agent-skills",
+  "path": "skills/posthog/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/heymegabyte/agent-skills",
+  "dir_name": "posthog",
+  "downloaded_at": "2026-11-25T07:53:20.567749Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "heymegabyte",
+  "source_url": "https://github.com/heymegabyte/agent-skills/blob/main/skills/posthog/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/heymegabyte/agent-skills/blob/main/skills/posthog/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "PostHog API API skill — auto-forged from OpenAPI 1.0.0.",
+  "content_fingerprint": "0c9205264b6878859def22d104884b4cecb9788c775caaf376124183e2530f8f"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "narrated-video",
+  "repo": "lewislf/claude-code-video-studio",
+  "path": "skills/narrated-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lewislf/claude-code-video-studio",
+  "dir_name": "narrated-video-lewislf-claude-code-video-st",
+  "downloaded_at": "2026-11-25T08:48:38.632661Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lewislf",
+  "source_url": "https://github.com/lewislf/claude-code-video-studio/blob/main/skills/narrated-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lewislf/claude-code-video-studio/blob/main/skills/narrated-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Local pipeline to make, redo or patch any narrated explainer video (script as data, AI voice with OmniVoice, music with MusicGen, animated scenes in HyperFrames/SVG/GSAP, assembly with ffmpeg, sped-up version, phone copy, YouTube title/description/chapters). Use when the user asks \"make a narrated video\" / \"faz um v\u00eddeo narrado\", \"explainer video about X\" / \"v\u00eddeo explicativo sobre X\", \"start a new video\" / \"come\u00e7a um v\u00eddeo novo\", \"redo scene X\" / \"refaz a cena X\", \"swap the voice/audio\" / \"troca a voz/\u00e1udio\", \"reassemble the video\" / \"remonta o v\u00eddeo\", \"make the final version\" / \"gera a vers\u00e3o final\", \"speed it up to 1.35x\" / \"acelera pra 1,35x\", \"send it to my phone\" / \"manda pro celular\", \"YouTube description\" / \"descri\u00e7\u00e3o do youtube\"."
+}

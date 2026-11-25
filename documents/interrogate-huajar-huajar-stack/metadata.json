@@ -1,0 +1,37 @@
+{
+  "name": "interrogate",
+  "repo": "huajar/huajar-stack",
+  "path": "skills/interrogate/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/huajar/huajar-stack",
+  "dir_name": "interrogate-huajar-huajar-stack",
+  "downloaded_at": "2026-11-25T07:57:44.102594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huajar",
+  "source_url": "https://github.com/huajar/huajar-stack/blob/main/skills/interrogate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huajar/huajar-stack/blob/main/skills/interrogate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for \"interrogate\", \"adversarial review\", \"multi-model review\", \"challenge this\", \"stress test this code\", \"find blind spots\", or \"tear this apart\". Adversaries try to break a change or design, and only findings proven by a run survive."
+}

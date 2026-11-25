@@ -1,0 +1,38 @@
+{
+  "name": "core",
+  "repo": "hackernoon/cuttlefish-agent-skills",
+  "path": "plugins/qa-testing/skills/core/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hackernoon/cuttlefish-agent-skills",
+  "dir_name": "core-hackernoon-cuttlefish-agent-ski",
+  "downloaded_at": "2026-11-25T07:44:42.226725Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hackernoon",
+  "source_url": "https://github.com/hackernoon/cuttlefish-agent-skills/blob/main/plugins/qa-testing/skills/core/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hackernoon/cuttlefish-agent-skills/blob/main/plugins/qa-testing/skills/core/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill, type, select), extracting text and data, taking screenshots, managing tabs, handling forms and auth, waiting for content, running multiple browser sessions in parallel, and troubleshooting common failures. Use when the user asks to interact with a website, fill a form, click something, extract data, take a screenshot, log into a site, test a web app, or automate any browser task."
+}

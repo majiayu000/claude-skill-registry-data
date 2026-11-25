@@ -1,0 +1,39 @@
+{
+  "name": "managing-cloud-identity-with-okta",
+  "repo": "henriquescastilho/my-claude",
+  "path": ".claude/skills/managing-cloud-identity-with-okta/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/henriquescastilho/my-claude",
+  "dir_name": "managing-cloud-identity-with-okta-henriquescastilho-my-claude",
+  "downloaded_at": "2026-11-25T07:51:18.245129Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "henriquescastilho",
+  "source_url": "https://github.com/henriquescastilho/my-claude/blob/main/.claude/skills/managing-cloud-identity-with-okta/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/henriquescastilho/my-claude/blob/main/.claude/skills/managing-cloud-identity-with-okta/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill covers implementing Okta as a centralized identity provider for cloud environments, configuring SSO integration with AWS, Azure, and GCP, deploying phishing- resistant MFA with Okta FastPass, managing lifecycle automation for user provisioning and deprovisioning, and enforcing adaptive access policies based on device posture and risk signals."
+}

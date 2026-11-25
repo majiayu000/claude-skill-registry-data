@@ -1,0 +1,40 @@
+{
+  "name": "lgpd-anonymization",
+  "repo": "goul4rt/lgpd-skills",
+  "path": "skills/lgpd-anonymization/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/goul4rt/lgpd-skills",
+  "dir_name": "lgpd-anonymization",
+  "downloaded_at": "2026-11-25T07:39:38.302609Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, etl, pipeline",
+    "score": 5,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "goul4rt",
+  "source_url": "https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-anonymization/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-anonymization/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply anonymization (Art. 5, XI) and pseudonymization (Art. 13, \u00a74) techniques to take data out of LGPD scope or reduce risk in analytics pipelines. Use when user asks 'anonimizar', 'pseudonimizar', 'k-anonymity', 'differential privacy', 'tokeniza\u00e7\u00e3o', 'analytics LGPD', or designing analytics/ML pipelines."
+}

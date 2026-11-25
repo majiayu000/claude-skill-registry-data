@@ -1,0 +1,36 @@
+{
+  "name": "pacman-cache-clean",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/utils/pacman-cache-clean/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "pacman-cache-clean",
+  "downloaded_at": "2026-11-25T07:30:27.173672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/utils/pacman-cache-clean/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/utils/pacman-cache-clean/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Inspect and clean the pacman package cache on Arch Linux, keeping only the installed versions and removing stale partial-download dirs. Use when asked to \"clean pacman cache\", \"free disk space from pacman\", \"paccache\", \"keep only used package versions\", or invokes /pacman-cache-clean."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "meeting-action-items",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/obsidian/meeting-action-items/SKILL.md",
+  "github_branch": "master",
+  "category": "writing",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "meeting-action-items",
+  "downloaded_at": "2026-11-25T07:30:32.784963Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/obsidian/meeting-action-items/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/obsidian/meeting-action-items/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a per-person action items report from meeting summaries in 02.Meetings/summaries/. Groups every action item by owner across all summaries (or a date range) and writes the result as a markdown file at the repo root. Use when asked to \"generate action items from meetings\", \"create action items report\", \"summarize action items by person\", \"who owes what from meetings\", or invokes /meeting-action-items."
+}

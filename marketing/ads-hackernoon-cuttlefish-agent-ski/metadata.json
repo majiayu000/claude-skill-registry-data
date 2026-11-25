@@ -1,0 +1,40 @@
+{
+  "name": "ads",
+  "repo": "hackernoon/cuttlefish-agent-skills",
+  "path": "plugins/marketing-seo/skills/ads/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/hackernoon/cuttlefish-agent-skills",
+  "dir_name": "ads-hackernoon-cuttlefish-agent-ski",
+  "downloaded_at": "2026-11-25T07:44:48.809882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, social, campaign, brand",
+    "score": 5,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "marketing",
+      "seo",
+      "social",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hackernoon",
+  "source_url": "https://github.com/hackernoon/cuttlefish-agent-skills/blob/main/plugins/marketing-seo/skills/ads/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hackernoon/cuttlefish-agent-skills/blob/main/plugins/marketing-seo/skills/ads/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' 'should I run ads,' 'ABM,' 'account-based marketing,' 'B2B ads,' 'lead quality,' 'negative keywords,' 'Performance Max,' 'thought leader ads,' 'when should I kill an ad,' 'search terms report,' 'wasted spend,' or 'is this campaign working.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see cro. For outbound to target accounts, see cold-email. For pixels, CAPI, and tracking audits, see conversion-tracking. End every recommendation with facts, hypotheses, and missing data, and label unavailable inputs MISSING instead of estimating them."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "new-setting",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/new-setting/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "new-setting",
+  "downloaded_at": "2026-11-25T08:17:59.241839Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/new-setting/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/new-setting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guided workflow for adding a new user setting or global setting to JellyRock. Walks the recipe in docs/dev/new-user-setting.md (pick the kind, add the settings/settings.json entry, add its strings, add the JellyfinUserSettings field, read it in code, test it). Stops at each step to verify and gives the user the relevant file paths. Use when adding a toggle, a choice, a number or a text setting that the user can change in the JellyRock Settings screen."
+}

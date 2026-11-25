@@ -1,0 +1,38 @@
+{
+  "name": "game-docs",
+  "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+  "path": "skills/workflows/game-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "dir_name": "game-docs",
+  "downloaded_at": "2026-11-25T07:29:27.336210Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gamedev-skills",
+  "source_url": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/main/skills/workflows/game-docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/main/skills/workflows/game-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes and maintains a game's design docs: a one-page GDD with a feature index and short feature notes, kept true to the code by a link and status checker. Use for \"draft a GDD\", \"spec out this mechanic\", or updating docs after a playtest or code change. Not for building a game when no docs were asked for (`prototype-fast`, `game-jam`), READMEs or level layouts (`level-design`)."
+}

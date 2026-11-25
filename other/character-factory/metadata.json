@@ -1,0 +1,37 @@
+{
+  "name": "character-factory",
+  "repo": "luccacerfz/character-factory-skills",
+  "path": "plugins/character-factory/skills/character-factory/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/luccacerfz/character-factory-skills",
+  "dir_name": "character-factory",
+  "downloaded_at": "2026-11-25T08:58:23.688664Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "luccacerfz",
+  "source_url": "https://github.com/luccacerfz/character-factory-skills/blob/main/plugins/character-factory/skills/character-factory/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/luccacerfz/character-factory-skills/blob/main/plugins/character-factory/skills/character-factory/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Full Character Factory pipeline \u2014 from the character the artist imagined to the character rigged, animated (idle, walk, attack, hit, death) and imported into Unity, with everything happening live in Blender. Use ALWAYS when the user asks for a new character (\"create another character\", \"new character in the factory\", \"run the pipeline\"), wants to resume a character, or asks for a step without saying which one. This skill decides the order and the gates of each stage, and hands off to the others (character-design, character-rig, character-clips, character-review, character-engine, character-show \u2014 characters acting together, summoner + summons, training target, round with health). Read it before any work in factory/. It also summarizes the 8 GAME principles (readability in the game camera, essence, style \u00d7 scale, close-up, swarm variation, strike timing, simple rig, test bench with a Death Ray) and points to where each one is detailed."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "provar-na-tela",
+  "repo": "gbertelliti-collab/claude-skills",
+  "path": "plugins/orquestrador/skills/provar-na-tela/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gbertelliti-collab/claude-skills",
+  "dir_name": "provar-na-tela",
+  "downloaded_at": "2026-11-25T07:30:48.164480Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbertelliti-collab",
+  "source_url": "https://github.com/gbertelliti-collab/claude-skills/blob/main/plugins/orquestrador/skills/provar-na-tela/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbertelliti-collab/claude-skills/blob/main/plugins/orquestrador/skills/provar-na-tela/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Usa ANTES de dizer pronto em qualquer mudanca que aparece na tela. Tambem quando o usuario mandar print dizendo \"continua igual\", \"nao mudou\", \"ainda esta assim\", \"ficou feio\", \"arruma isso\", ou pedir \"confere na tela\", \"tira um print\", \"ve como ficou\". NAO usa em mudanca so de servidor sem tela (ai a prova e teste ou contagem)."
+}

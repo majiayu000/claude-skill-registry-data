@@ -1,0 +1,38 @@
+{
+  "name": "neoize-wrap",
+  "repo": "foobar-beer/claude-neoize",
+  "path": "skills/neoize-wrap/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/foobar-beer/claude-neoize",
+  "dir_name": "neoize-wrap",
+  "downloaded_at": "2026-11-25T07:22:43.627592Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "foobar-beer",
+  "source_url": "https://github.com/foobar-beer/claude-neoize/blob/main/skills/neoize-wrap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/foobar-beer/claude-neoize/blob/main/skills/neoize-wrap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-of-session capture. Decide what this session learned, route each fact to its one home (a lesson in the graph, where an always-on rule is a scope:always lesson materialised into the rules file, the changelog, or agent memory), author and load the new lessons, and reconcile any that went stale. Use at the end of a working session, or when asked to \"wrap\", \"write up what we learned\", or \"capture this before I close\"."
+}

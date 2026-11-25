@@ -1,0 +1,37 @@
+{
+  "name": "new-migration",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/new-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "new-migration-jellyrock-jellyrock",
+  "downloaded_at": "2026-11-25T08:18:00.240184Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/new-migration/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/new-migration/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guided workflow for writing a registry migration in JellyRock when a setting key is renamed, removed, or its data shape changes. Walks docs/dev/registry-migrations.md (add a version constant, add the migration's function and its gated call in the runner for the right scope in source/migrations.bs, update the code that used the old name, write a real-registry integration test, run it on hardware). Use when an existing setting changes shape; brand-new settings don't need migrations and should use /new-setting instead."
+}

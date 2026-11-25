@@ -1,0 +1,38 @@
+{
+  "name": "crm-pipeline-pulse",
+  "repo": "grolinjacq/revenue-engine-skills",
+  "path": ".agents/skills/crm-pipeline-pulse/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/grolinjacq/revenue-engine-skills",
+  "dir_name": "crm-pipeline-pulse",
+  "downloaded_at": "2026-11-25T07:42:08.670109Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "grolinjacq",
+  "source_url": "https://github.com/grolinjacq/revenue-engine-skills/blob/main/.agents/skills/crm-pipeline-pulse/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/grolinjacq/revenue-engine-skills/blob/main/.agents/skills/crm-pipeline-pulse/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pipeline snapshot from any CRM - open deals by stage, age and last activity, stalled deals flagged, a simple forecast and suggested follow-ups - saved to out/. Read-only. Works with HubSpot, any CRM connector or a deals CSV export. Use on \"how's my pipeline\", \"show me my deals\", \"which deals are stalling\", \"pipeline review\", \"forecast this quarter\".",
+  "content_fingerprint": "9e5ce498f44153b3662cae602c96254963f689c94292c8a316ce7f8a5fb20470"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "markdown-simplify",
+  "repo": "gpsaggese/helpers",
+  "path": ".claude/skills/markdown.simplify/SKILL.md",
+  "github_branch": "master",
+  "category": "workflow",
+  "source": "github.com/gpsaggese/helpers",
+  "dir_name": "markdown-simplify",
+  "downloaded_at": "2026-11-25T07:39:48.214926Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gpsaggese",
+  "source_url": "https://github.com/gpsaggese/helpers/blob/master/.claude/skills/markdown.simplify/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gpsaggese/helpers/blob/master/.claude/skills/markdown.simplify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Simplify markdown text with ASD-STE100 and plain language, keep format"
+}

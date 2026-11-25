@@ -1,0 +1,37 @@
+{
+  "name": "sk-promo",
+  "repo": "howznguyen/shorts-kit",
+  "path": ".claude/skills/sk-promo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/howznguyen/shorts-kit",
+  "dir_name": "sk-promo",
+  "downloaded_at": "2026-11-25T07:56:33.482284Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howznguyen",
+  "source_url": "https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-promo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-promo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes an ad, TVC, product launch film or feature teaser as a promo, either vertical 9:16 or landscape 16:9, using video.json format and mode. Use when the user says \"make an ad\", \"TVC\", \"commercial\", \"product video\", \"launch film\", \"promo\", \"teaser\", \"qu\u1ea3ng c\u00e1o\", \"l\u00e0m video gi\u1edbi thi\u1ec7u s\u1ea3n ph\u1ea9m\", \"video ngang\", \"16:9\", \"landscape\", or asks for a video that sells or announces something rather than explains a fact. Not for narrated knowledge shorts (use sk-pipeline)."
+}

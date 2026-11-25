@@ -1,0 +1,40 @@
+{
+  "name": "motion",
+  "repo": "ivanerricis/easytask",
+  "path": ".claude/skills/motion/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/ivanerricis/easytask",
+  "dir_name": "motion-ivanerricis-easytask",
+  "downloaded_at": "2026-11-25T08:11:31.184180Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: ui, css, component, tailwind, animation",
+    "score": 5,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "component",
+      "tailwind",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ivanerricis",
+  "source_url": "https://github.com/ivanerricis/easytask/blob/master/.claude/skills/motion/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ivanerricis/easytask/blob/master/.claude/skills/motion/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How animations and transitions work in EasyTask - the animation speed preference (System, Slow, Normal, None) applied as data-motion on the root, the CSS rules that scale or stop them, durations in JS, the exceptions (spinners, loading dots, live drag), WebKitGTK limits, and how to test them. Use when adding or changing an animation, a transition, an animated icon, or anything that moves on screen, and when auditing animations."
+}

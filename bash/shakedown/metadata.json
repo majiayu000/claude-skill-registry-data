@@ -1,0 +1,39 @@
+{
+  "name": "shakedown",
+  "repo": "joshsmithxrm/power-platform-developer-suite",
+  "path": ".claude/skills/shakedown/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/joshsmithxrm/power-platform-developer-suite",
+  "dir_name": "shakedown",
+  "downloaded_at": "2026-11-25T08:24:13.008504Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "joshsmithxrm",
+  "source_url": "https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/.claude/skills/shakedown/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/.claude/skills/shakedown/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Multi-surface product validation against live Dataverse - exercise the Extension, TUI, MCP server and CLI, compare behaviour across surfaces, audit the architecture, and write a findings report. Use before a release, after a large cross-surface feature or refactor, or when asked to kick the tires. Refuses to start without a configured safe-environment allowlist."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "support-answer-drafts",
+  "repo": "kortix-ai/CompanyOS",
+  "path": "packages/starter/templates/support/skills/support-answer-drafts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kortix-ai/CompanyOS",
+  "dir_name": "support-answer-drafts",
+  "downloaded_at": "2026-11-25T08:38:59.114229Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category development scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/support/skills/support-answer-drafts/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/support/skills/support-answer-drafts/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Draft the reply to one triaged support conversation from the docs and the codebase, with a source for every statement (a docs URL or a repository file and line), then deliver it as the category's approval mode says - a draft and a Review output by default. Load it for contract step 5 of the support-loop skill, or when a person asks for a reply draft.",
+  "content_fingerprint": "75432fb811bc4488838fd8ab7b487cadb4f3b3939fde162f97ee3993163971fa"
+}

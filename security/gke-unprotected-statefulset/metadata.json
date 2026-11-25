@@ -1,0 +1,38 @@
+{
+  "name": "gke-unprotected-statefulset",
+  "repo": "google/skills",
+  "path": "skills/cloud/gke-unprotected-statefulset/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/google/skills",
+  "dir_name": "gke-unprotected-statefulset",
+  "downloaded_at": "2026-11-25T07:39:03.210728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, vulnerability, audit",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/skills/blob/main/skills/cloud/gke-unprotected-statefulset/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/skills/blob/main/skills/cloud/gke-unprotected-statefulset/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits, detects, and proposes fixes for GKE StatefulSets that lack a matching PodDisruptionBudget (PDB) to prevent simultaneous Pod evictions during voluntary node drains (GKE insight subtype PDB_UNPROTECTED_STATEFULSET). Use when investigating the PDB_UNPROTECTED_STATEFULSET insight, checking whether GKE StatefulSets have a matching PDB, or proposing fixes for selector mismatches where an existing PDB does not match the StatefulSet's .spec.selector. Don't use for existing PDBs that allow zero disruptions or block node drains (PDB_UNPERMISSIVE), general probe and PDB setup unrelated to this insight (use gke-reliability), upgrade planning (use gke-upgrades), Pods stuck in Pending (use gke-workload-troubleshooting), node autoscaling or capacity stockouts (use gke-cluster-autoscaler), ComputeClass configuration (use gke-compute-classes), or general Kubernetes manifest generation (use gke-manifest-generation)."
+}

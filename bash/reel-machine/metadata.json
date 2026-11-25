@@ -1,0 +1,37 @@
+{
+  "name": "reel-machine",
+  "repo": "getedgehq/skills",
+  "path": "reel-machine/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "reel-machine",
+  "downloaded_at": "2026-11-25T07:34:04.382892Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/reel-machine/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/reel-machine/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn raw phone clips into scheduled vertical reels with no editor in the loop: iCloud Photos clips, word-level transcription (free local faster-whisper, or ElevenLabs Scribe with a key), segment picking across one or more clips, a drift-free precut, hook text with a logo or flag on frame 0, bare stat cards, full-screen cutaways for named places and products, captions above the app UI, a handle closer or a product CTA, natural voice EQ, VAD jump cuts with a pace gate, a face check on the first and last frames, a lip-sync check, written sensitivity rules, a second-model caption review, then a finished 9:16 file to post by hand, or Instagram Reels (plus a Story reshare), TikTok and YouTube Shorts scheduled through Buffer when a Buffer token is set. Runs free with no API keys. Use when someone wants their selfie or talking clips turned into finished, posted shorts, or wants a daily reel cadence run by an agent."
+}

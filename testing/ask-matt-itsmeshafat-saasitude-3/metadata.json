@@ -1,0 +1,38 @@
+{
+  "name": "ask-matt",
+  "repo": "itsmeshafat/saasitude",
+  "path": ".claude/skills/ask-matt/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/itsmeshafat/saasitude",
+  "dir_name": "ask-matt-itsmeshafat-saasitude-3",
+  "downloaded_at": "2026-11-25T08:10:43.390332Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, integration",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "tdd",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "itsmeshafat",
+  "source_url": "https://github.com/itsmeshafat/saasitude/blob/main/.claude/skills/ask-matt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/itsmeshafat/saasitude/blob/main/.claude/skills/ask-matt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ask which skill or flow fits your situation. A router over the skills in this repo."
+}

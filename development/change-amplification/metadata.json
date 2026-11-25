@@ -1,0 +1,39 @@
+{
+  "name": "change-amplification",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/review/change-amplification/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "change-amplification",
+  "downloaded_at": "2026-11-25T07:30:30.716872Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, software",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/review/change-amplification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/review/change-amplification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detect change amplification \u2014 Ousterhout's clearest signal of bad architecture \u2014 by fetching the last N merged PRs from the current git repo and analysing them for conceptual changes that forced edits across scattered files because no module owned the decision. Produces a ranked architectural debt backlog with PR links as evidence and concrete remediation steps. Use when asked to \"find change amplification\", \"analyse PR history for architecture debt\", \"detect missing boundaries\", \"find architectural debt in my PRs\", or invokes /change-amplification."
+}

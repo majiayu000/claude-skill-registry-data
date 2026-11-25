@@ -1,0 +1,37 @@
+{
+  "name": "issue-triage",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/issue-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "issue-triage-jellyrock-jellyrock",
+  "downloaded_at": "2026-11-25T08:17:59.624646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/issue-triage/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/issue-triage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Investigate one GitHub issue and act on it the /snag way. Fetches the issue and its comments, first checks it is still true (everything it names still exists), reads it through the repo's issue forms, classifies it (bug, feature, enhancement, or a design decision), checks whether it is real, reproducible and not already fixed, maps it to an area, reproduces it and finds the root cause, then shows one decision screen; the chosen fix is built test-first and committed on a fix branch, never pushed. Anything posted on the issue is drafted and shown first. Use when you have an issue number you want to act on."
+}

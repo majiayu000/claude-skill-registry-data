@@ -1,0 +1,41 @@
+{
+  "name": "google-cicd-deploy",
+  "repo": "google/skills",
+  "path": "skills/cloud/google-cicd-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/google/skills",
+  "dir_name": "google-cicd-deploy",
+  "downloaded_at": "2026-11-25T07:38:39.614850Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, cd, deploy, infra, infrastructure",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/skills/blob/main/skills/cloud/google-cicd-deploy/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/skills/blob/main/skills/cloud/google-cicd-deploy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when requested to deploy an application to Google Cloud (GCS, Cloud Run, GKE) or when analyzing an application to determine the best deployment target. **Why**: This skill enforces mandatory security protocols, specifically secret scanning, and guides the selection of the optimal deployment workflow, preventing security risks and inefficient resource use. Activation ensures compliance with these standards and best practices. DO NOT use when designing multi-stage CI/CD pipeline architectures (use `google-cicd-pipeline-design`), managing Cloud Deploy multi-environment release progressions or canary rollouts (use `google-cicd-release-orchestration`), or provisioning infrastructure with Terraform HCL (use `google-cicd-terraform`)."
+}

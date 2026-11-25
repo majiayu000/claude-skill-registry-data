@@ -1,0 +1,37 @@
+{
+  "name": "x-growth-playbook",
+  "repo": "getedgehq/skills",
+  "path": "x-growth-playbook/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "x-growth-playbook",
+  "downloaded_at": "2026-11-25T07:34:23.601545Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/x-growth-playbook/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/x-growth-playbook/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "X Growth Playbook. Analyse a person's own X (Twitter) posts and tell them what to post next, with the numbers behind every claim. Compares quote posts vs originals, links vs no links, short vs long, time of day in their timezone, media vs text and the topics they name, reports medians with n, then writes a 10-step plan and the next 7 posts in their voice. Use when the user says \"analyse my X posts\", \"what works on my Twitter\", \"how do I grow on X\", \"what should I post next on X\", \"audit my X account\", or shares an X data archive, X API export or a list of their posts. Runs on the user's computer."
+}

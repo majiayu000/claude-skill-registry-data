@@ -1,0 +1,39 @@
+{
+  "name": "lgpd-legacy-retrofit",
+  "repo": "goul4rt/lgpd-skills",
+  "path": "skills/lgpd-legacy-retrofit/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/goul4rt/lgpd-skills",
+  "dir_name": "lgpd-legacy-retrofit",
+  "downloaded_at": "2026-11-25T07:39:39.819404Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, pipeline",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "goul4rt",
+  "source_url": "https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-legacy-retrofit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-legacy-retrofit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a code-level privacy discovery, gap analysis, and prioritized retrofit plan for an existing software project. Entry point for Pipeline B when user asks 'auditar projeto legado LGPD', 'gap analysis LGPD', 'sistema antigo LGPD', 'diagn\u00f3stico de privacidade no c\u00f3digo', or invokes `lgpd-audit` on an existing repository. Produces `.lgpd/discovery.md` and `.lgpd/gaps.md`."
+}

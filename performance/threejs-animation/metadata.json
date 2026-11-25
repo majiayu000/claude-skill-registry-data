@@ -1,0 +1,37 @@
+{
+  "name": "threejs-animation",
+  "repo": "iart-ai/webgl-animation-skills",
+  "path": "skills/threejs-animation/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/iart-ai/webgl-animation-skills",
+  "dir_name": "threejs-animation",
+  "downloaded_at": "2026-11-25T08:02:43.671298Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, optimize",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "performance",
+      "optimize"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iart-ai",
+  "source_url": "https://github.com/iart-ai/webgl-animation-skills/blob/main/skills/threejs-animation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iart-ai/webgl-animation-skills/blob/main/skills/threejs-animation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"build a 3D hero section or WebGL background\", \"animate a Three.js scene\", \"play or crossfade GLTF animation clips\", \"move/lerp the camera or link it to scroll\", \"render thousands of objects with InstancedMesh\", \"set up React Three Fiber (R3F) motion\", \"add bloom/DOF post-processing\", or \"keep a Three.js/R3F animation smooth and leak-free (dispose geometries/materials/textures, free GPU memory on unmount)\". Covers scenes, render loops, camera moves, GLTF AnimationMixer, instancing, scroll-linked 3D, R3F, and animation performance/disposal."
+}

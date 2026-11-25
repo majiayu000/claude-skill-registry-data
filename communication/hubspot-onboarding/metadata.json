@@ -1,0 +1,38 @@
+{
+  "name": "hubspot-onboarding",
+  "repo": "grolinjacq/revenue-engine-skills",
+  "path": ".claude/skills/hubspot-onboarding/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/grolinjacq/revenue-engine-skills",
+  "dir_name": "hubspot-onboarding",
+  "downloaded_at": "2026-11-25T07:42:08.303719Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "grolinjacq",
+  "source_url": "https://github.com/grolinjacq/revenue-engine-skills/blob/main/.claude/skills/hubspot-onboarding/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/grolinjacq/revenue-engine-skills/blob/main/.claude/skills/hubspot-onboarding/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guided setup for a new or empty HubSpot portal. Captures sales goals and imports initial contacts to get the user started quickly.\nUse when the user wants help getting started inside a new or empty HubSpot portal — \"onboard me to HubSpot\", \"I'm new to HubSpot\", \"my portal is empty\", \"configure my HubSpot\", \"where do I start in HubSpot\". Not for \"set me up\" or installing and connecting tools: that is hackathon-setup.",
+  "content_fingerprint": "656e948cadc884323e89d926af55da2701ee9aa08f1024d542fd43fb7aebcf98"
+}

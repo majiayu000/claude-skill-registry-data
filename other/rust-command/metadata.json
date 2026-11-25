@@ -1,0 +1,37 @@
+{
+  "name": "rust-command",
+  "repo": "ivanerricis/easytask",
+  "path": ".claude/skills/rust-command/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ivanerricis/easytask",
+  "dir_name": "rust-command",
+  "downloaded_at": "2026-11-25T08:11:38.172938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ivanerricis",
+  "source_url": "https://github.com/ivanerricis/easytask/blob/master/.claude/skills/rust-command/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ivanerricis/easytask/blob/master/.claude/skills/rust-command/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recipe to add a Rust command to EasyTask (src-tauri) - the command and its registration, heavy work off the UI thread, path checks, a new crate with cargo deny / cargo audit, caches in the data folder, unit tests with generated files, and the TypeScript side. Use when adding or changing a"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "review-consolidate",
+  "repo": "gbencke/dotfiles",
+  "path": "pi/extensions/adversarial-review/skills/review-consolidate/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "review-consolidate",
+  "downloaded_at": "2026-11-25T07:30:37.653020Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/pi/extensions/adversarial-review/skills/review-consolidate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/pi/extensions/adversarial-review/skills/review-consolidate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run repository/lens reviews in separate processes, then consolidate validated, scope-aware full reports. Focused verifications and legacy reports remain history and cannot replace full-review status."
+}

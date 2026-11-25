@@ -1,0 +1,37 @@
+{
+  "name": "f100k-puente",
+  "repo": "formula100k/formula100k-skills",
+  "path": "openclaw/puente/f100k-puente/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/formula100k/formula100k-skills",
+  "dir_name": "f100k-puente",
+  "downloaded_at": "2026-11-25T07:23:53.411671Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "formula100k",
+  "source_url": "https://github.com/formula100k/formula100k-skills/blob/main/openclaw/puente/f100k-puente/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/formula100k/formula100k-skills/blob/main/openclaw/puente/f100k-puente/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Puente para correr las skills de FÓRMULA 100K dentro de un agente OpenClaw (PapayaClaw u otro servidor). Léela SIEMPRE antes de usar cualquier skill F100K en este agente, y cada vez que una skill nombre una herramienta de Claude Code (agent-browser, claude-in-chrome, mcp__..., AskUserQuestion, subagentes, Task), una ruta de la Mac (~/Documents, ~/.claude, ~/.f100k-radar) o diga que se entregue por email. Traduce cada herramienta a su equivalente en el servidor, dice dónde se guarda cada archivo dentro del workspace, cómo leer el segundo cerebro de la usuaria y las reglas de seguridad: nada público sin ✅, todo se entrega por Telegram y nunca se entra logueada a Instagram desde el servidor.",
+  "content_fingerprint": "6de47ace7b71564afa801f3a2d1f520a8ef77d854cbbca681b5880fd1c018770"
+}

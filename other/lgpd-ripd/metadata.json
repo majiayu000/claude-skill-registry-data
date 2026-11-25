@@ -1,0 +1,37 @@
+{
+  "name": "lgpd-ripd",
+  "repo": "goul4rt/lgpd-skills",
+  "path": "skills/lgpd-ripd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/goul4rt/lgpd-skills",
+  "dir_name": "lgpd-ripd",
+  "downloaded_at": "2026-11-25T07:39:35.574570Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "goul4rt",
+  "source_url": "https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-ripd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-ripd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Produce a Relat\u00f3rio de Impacto \u00e0 Prote\u00e7\u00e3o de Dados Pessoais (RIPD / DPIA) under LGPD Art. 38, applying the cumulative high-risk test of Resolu\u00e7\u00e3o CD/ANPD n\u00ba 2/2022 Art. 4 (multifactorial large scale + specific criteria) or precautionary risk governance. Includes LINDDUN privacy threat modeling, inference risks, algorithmic bias, and AI/LLM exposure. Produces `.lgpd/RIPD/ripd-{slug}.md`."
+}

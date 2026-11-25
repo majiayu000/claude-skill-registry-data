@@ -1,0 +1,38 @@
+{
+  "name": "manage-objects",
+  "repo": "liferay/liferay-portal",
+  "path": "workspaces/liferay-one-workspace/.agents/skills/manage-objects/SKILL.md",
+  "github_branch": "master",
+  "category": "api",
+  "source": "github.com/liferay/liferay-portal",
+  "dir_name": "manage-objects",
+  "downloaded_at": "2026-11-25T08:50:06.670710Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liferay",
+  "source_url": "https://github.com/liferay/liferay-portal/blob/master/workspaces/liferay-one-workspace/.agents/skills/manage-objects/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liferay/liferay-portal/blob/master/workspaces/liferay-one-workspace/.agents/skills/manage-objects/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create, update, and publish Liferay Object definitions — fields, relationships, picklists, and validations. Use when the user asks to create an object, add a field, define a picklist, add a relationship, or set up an object validation.",
+  "content_fingerprint": "74ba415cbeeff9ea2cc160ad1bcf814f67a5a304307c3b15b8c5327adb9f61f4"
+}

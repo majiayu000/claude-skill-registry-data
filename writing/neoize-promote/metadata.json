@@ -1,0 +1,38 @@
+{
+  "name": "neoize-promote",
+  "repo": "foobar-beer/claude-neoize",
+  "path": "skills/neoize-promote/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/foobar-beer/claude-neoize",
+  "dir_name": "neoize-promote",
+  "downloaded_at": "2026-11-25T07:22:44.008181Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy, article",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "copy",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "foobar-beer",
+  "source_url": "https://github.com/foobar-beer/claude-neoize/blob/main/skills/neoize-promote/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/foobar-beer/claude-neoize/blob/main/skills/neoize-promote/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Move a project's universal lessons UP into the shared neoize layer, so knowledge that holds for all work with Claude (git discipline, PR flow, verification, writing voice) stops being one project's secret and is read by every session. Product-specific knowledge (a symbol, a structural node, this product's domain) stays in the project and never travels."
+}

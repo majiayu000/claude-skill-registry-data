@@ -1,0 +1,38 @@
+{
+  "name": "hitl",
+  "repo": "griddynamics/rosetta",
+  "path": "instructions/r2/core/skills/hitl/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/griddynamics/rosetta",
+  "dir_name": "hitl",
+  "downloaded_at": "2026-11-25T07:41:09.274521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "griddynamics",
+  "source_url": "https://github.com/griddynamics/rosetta/blob/main/instructions/r2/core/skills/hitl/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/griddynamics/rosetta/blob/main/instructions/r2/core/skills/hitl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rosetta CRITICAL MUST skill to load as Prep Step 3 Step 2 \u2014 immediately after orchestrator-contract, right before loading any workflow. Loads the session-wide approval-gate protocol governing when to stop and wait vs proceed. WITHOUT IT decisions proceed silently, violating enterprise policy. Activate it for ALL tasks always \u2014 planning, execution, validation, review \u2014 regardless of auto-mode, no approval policy, full access. THE ONLY exception: user DIRECTLY EXPLICITLY requests with EXACTLY `fully autonomous` or `No HITL`. Without explicit opt-out this skill is MANDATORY. Do not assume approval from a question or partial response. Contains human-in-the-loop collaboration, questioning, approvals, and user coordination requirements. Auto mode, full access, etc ONLY means automatic approval of tool permission prompts, HITL stays!"
+}

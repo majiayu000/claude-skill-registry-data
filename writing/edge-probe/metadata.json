@@ -1,0 +1,37 @@
+{
+  "name": "probing-edge-values",
+  "repo": "kajisho5/ffmpeg-skill",
+  "path": ".claude/skills/edge-probe/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/kajisho5/ffmpeg-skill",
+  "dir_name": "edge-probe",
+  "downloaded_at": "2026-11-25T08:29:09.788899Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kajisho5",
+  "source_url": "https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/edge-probe/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/edge-probe/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find the option values an ffmpeg-skill tool accepts without anyone having decided what they mean \u2014 zero, a negative number, a value far past any real frame or clip \u2014 by running tests/edge_values.py over every numeric option in the contract, then reading each call that ran or hung against the option's help, and checking the few properties a tool should keep (doing it twice changes nothing more, an inverse returns the source's shape, the output is what probe.py says). Use when looking for defects nobody has reported, before a tool moves from beta to stable, after adding a numeric option, or when a report says a tool \"hung\", \"wrote a strange file\" or \"accepted nonsense\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "promo-reels",
+  "repo": "glebis/claude-skills",
+  "path": "promo-reels/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "promo-reels",
+  "downloaded_at": "2026-11-25T07:36:27.960672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/promo-reels/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/promo-reels/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when turning raw footage (rehearsals, backstage, events, product or workshop clips, phone videos) into short vertical promo Reels (1080\u00d71920, 15\u201360 s) with a call to action \u2014 hook slide, fast or calm cut across varied framings, captions, text slides in a style picked from presets, from a reference image/site or tuned in dialogue (design tokens), optional generated or licensed music on a beat grid, and a final \"buy a ticket / sign up / order\" CTA. Trigger on \"\u0441\u0434\u0435\u043b\u0430\u0439 \u0440\u0438\u043b\u0441\u044b \u0438\u0437 \u044d\u0442\u0438\u0445 \u0432\u0438\u0434\u0435\u043e\", \"\u0440\u0438\u043b\u0441 \u0441 \u043f\u0440\u0438\u0437\u044b\u0432\u043e\u043c \u043a\u0443\u043f\u0438\u0442\u044c \u0431\u0438\u043b\u0435\u0442\", \"\u0441\u043c\u043e\u043d\u0442\u0438\u0440\u0443\u0439 reels \u043f\u043e\u0434 \u043c\u0443\u0437\u044b\u043a\u0443\", \"make reels from this footage\", \"promo reel with CTA\", \"cut this to the beat\", \"reels for the show/event on <date>\", \"\u0432 \u0441\u0442\u0438\u043b\u0435 \u044d\u0442\u043e\u0433\u043e \u043f\u043e\u0441\u0442\u0435\u0440\u0430\", \"match our brand\". Also trigger its reflection command on \"\u0440\u0435\u0444\u043b\u0435\u043a\u0441\u0438\u044f\", \"\u0443\u043b\u0443\u0447\u0448\u0438 \u0441\u043a\u0438\u043b\u043b\", \"\u0447\u0442\u043e \u0443\u0437\u043d\u0430\u043b\u0438 \u0437\u0430 \u044d\u0442\u043e\u0442 \u0437\u0430\u043f\u0443\u0441\u043a\", \"reflect on the reels run\", \"self-improve promo-reels\". Inputs are just the video files, the title, date/venue and the CTA; everything else has defaults."
+}

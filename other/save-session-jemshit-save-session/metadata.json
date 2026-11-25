@@ -1,0 +1,36 @@
+{
+  "name": "save-session",
+  "repo": "jemshit/save-session",
+  "path": "skills/save-session/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jemshit/save-session",
+  "dir_name": "save-session-jemshit-save-session",
+  "downloaded_at": "2026-11-25T08:18:05.340508Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jemshit",
+  "source_url": "https://github.com/jemshit/save-session/blob/main/skills/save-session/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jemshit/save-session/blob/main/skills/save-session/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Save the active coding session (session ID, model, working directory) to a per-harness markdown record under ~/.agents/memories/sessions/, and later find a saved session by project title and tell the user exactly how to resume it. USE THIS SKILL whenever the user wants to save, bookmark, or remember a session or session id (\"save this session\", \"remember this session\", \"store my session id\", \"note down where we were\"), or asks to get back into earlier work (\"resume the X session\", \"find the session for X\", \"continue where we left off on X\", \"which session were we doing X in\", \"what's my session id for X\", \"how do I get back into X\"). Applies to Pi, Claude Code, Codex, Antigravity CLI (agy), and OpenCode. Trigger even when the user names neither a session ID nor a harness \u2014 figuring those out is this skill's job."
+}

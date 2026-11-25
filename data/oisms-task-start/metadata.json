@@ -1,0 +1,39 @@
+{
+  "name": "oisms-task-start",
+  "repo": "khoalvd839764-netizen/OISMS",
+  "path": "skills/oisms-task-start/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/khoalvd839764-netizen/OISMS",
+  "dir_name": "oisms-task-start",
+  "downloaded_at": "2026-11-25T08:34:39.511284Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "khoalvd839764-netizen",
+  "source_url": "https://github.com/khoalvd839764-netizen/OISMS/blob/main/skills/oisms-task-start/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/khoalvd839764-netizen/OISMS/blob/main/skills/oisms-task-start/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Quy trình chuẩn khi bắt đầu một task OISMS, đọc CodeGraph và docs theo đúng thứ tự, có giới hạn để tiết kiệm token. Dùng khi nhận task code, sửa lỗi, review hoặc lập plan trong repo OISMS, hoặc khi người dùng yêu cầu đọc docs và CodeGraph trước khi làm. Không cần cho câu hỏi nhanh hoặc khi đã có đủ bối cảnh trong phiên.",
+  "content_fingerprint": "22809abc5517b5dbf8bb8710f19d13175c73c5f6ff0e33575e09b845af1f12a8"
+}

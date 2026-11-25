@@ -1,0 +1,38 @@
+{
+  "name": "gemini-api",
+  "repo": "google/skills",
+  "path": "skills/cloud/gemini-api/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/google/skills",
+  "dir_name": "gemini-api-google-skills",
+  "downloaded_at": "2026-11-25T07:38:25.971527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/skills/blob/main/skills/cloud/gemini-api/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/skills/blob/main/skills/cloud/gemini-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Integrates Gemini models on Gemini platform (formerly Gemini Enterprise Agent Platform and Vertex AI) using the unified Google Gen AI SDK across Python, TypeScript/JavaScript, Go, Java, and C#. Use for Google Cloud AI workloads: text/multimodal generation, structured JSON, function calling, Search grounding, code execution, URL context, Nano Banana images, Gemini Omni and Veo video, TTS, Lyria music, embeddings, caching, batch, thinking, safety, Live API, or model tuning. Don't use for server-managed stateful agent sessions (gemini-interactions-api), Managed Agent CRUD (gemini-agents-api), raw BidiGenerateContent WebSocket scaffolding/audio debugging (gemini-live-api), open-model SFT or tuning job management (agent-platform-tuning, agent-platform-tuning-management), or OpenMaaS, OpenAI SDK, numeric endpoints, and 429 DSQ debugging (agent-platform-inference)."
+}

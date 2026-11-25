@@ -1,0 +1,38 @@
+{
+  "name": "isometric-animation",
+  "repo": "iart-ai/explainer-video-skills",
+  "path": "skills/isometric-animation/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/iart-ai/explainer-video-skills",
+  "dir_name": "isometric-animation",
+  "downloaded_at": "2026-11-25T08:02:03.544524Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, animation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iart-ai",
+  "source_url": "https://github.com/iart-ai/explainer-video-skills/blob/main/skills/isometric-animation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iart-ai/explainer-video-skills/blob/main/skills/isometric-animation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when the user asks to \"make an isometric animation\", \"build a 2.5D isometric scene\", \"create an isometric infographic\", \"animate an exploded diagram\", \"do an isometric city/stack build\", \"show stacked layers in iso\", \"extrude blocks with depth\", or \"add a gentle camera drift to an iso scene\". Covers CSS 3D transforms, SVG iso planes, and Three.js OrthographicCamera for true 3D iso \u2014 no build step."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "process-root-transcripts",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/obsidian/process-root-transcripts/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "process-root-transcripts",
+  "downloaded_at": "2026-11-25T07:30:35.830154Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/obsidian/process-root-transcripts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/obsidian/process-root-transcripts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Convert any *.txt transcripts at the repo root into Obsidian meeting transcript + summary pairs (offline, no API key required), then commit and push. The model authors the summary in-session from the transcript text. Use when asked to \"process transcripts\", \"convert txt transcripts\", \"add meeting transcript\", \"ingest transcripts\", or invokes /process-root-transcripts."
+}

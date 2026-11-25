@@ -1,0 +1,39 @@
+{
+  "name": "session-handoff",
+  "repo": "lhk0721/flytracker",
+  "path": ".claude/skills/session-handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lhk0721/flytracker",
+  "dir_name": "session-handoff-lhk0721-flytracker",
+  "downloaded_at": "2026-11-25T08:48:48.947606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "context",
+      "compaction",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lhk0721",
+  "source_url": "https://github.com/lhk0721/flytracker/blob/main/.claude/skills/session-handoff/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lhk0721/flytracker/blob/main/.claude/skills/session-handoff/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Writes the resume note a fresh session needs to take over — what is running where with ETA and log path, what is confirmed with numbers, the exact next steps in order, the fallback state that is certain, today's traps, and the scratchpad tools copied into the repo before they vanish. Use it whenever a session may end with work in flight — a long background job is running when the turn ends, the context is getting long, the user says they are stepping away, or a deadline week has jobs on remote nodes. Triggers include \"이어받을 수 있게\", \"인계 문서\", \"세션 끊기기 전에\", \"resume 문서\", \"지금 상태 정리해둬\", \"다음 세션이 볼 수 있게\", \"handoff\", \"resume doc\", \"before the session ends\", \"context is getting long\", \"write down the state\", \"in case this drops\", and whenever a long background job is running when the turn ends, even if nobody asked.",
+  "content_fingerprint": "c9d9e3f26de910ce2c8ca9f26551ed9f9975e8ea243011b65fdedc1f16a22109"
+}

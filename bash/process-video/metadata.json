@@ -1,0 +1,38 @@
+{
+  "name": "process-video",
+  "repo": "krowten/claude-media-generation",
+  "path": "skills/process-video/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/krowten/claude-media-generation",
+  "dir_name": "process-video",
+  "downloaded_at": "2026-11-25T08:40:25.633161Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "krowten",
+  "source_url": "https://github.com/krowten/claude-media-generation/blob/main/skills/process-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/krowten/claude-media-generation/blob/main/skills/process-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Process a local video file with ffmpeg \u2014 extract a poster frame for <video poster>, re-encode to WebM/VP9 or AV1 for smaller web delivery, compress an oversized clip, trim to the segment that matters, strip an unwanted audio track, make a looping clip wrap without a visible jump, export a frame sequence for scroll- or cursor-driven animation, reverse or ping-pong a clip, join clips, inspect duration/codec/size, or check a clip with a contact sheet and a motion timeline. Runs entirely offline, no fal.ai credit spent. Use whenever the user wants to convert, compress, shrink, trim, cut, mute, or get info about a video they already have \u2014 including making a generated generate-video clip actually shippable on a web page, fixing a loop that jumps or stutters where it repeats, and preparing a clip for a page that plays it by scroll position or cursor (\"scroll animation from this video\", \"Apple-style scroll sequence\")."
+}

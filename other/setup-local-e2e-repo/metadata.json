@@ -1,0 +1,37 @@
+{
+  "name": "setup-local-e2e-repo",
+  "repo": "hancrafted/markdown-harness",
+  "path": "skills/setup-local-e2e-repo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hancrafted/markdown-harness",
+  "dir_name": "setup-local-e2e-repo",
+  "downloaded_at": "2026-11-25T07:47:11.176220Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hancrafted",
+  "source_url": "https://github.com/hancrafted/markdown-harness/blob/main/skills/setup-local-e2e-repo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hancrafted/markdown-harness/blob/main/skills/setup-local-e2e-repo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Mint throwaway local repositories that look like an adopter's, for end-to-end runs of markdown-harness. Use when testing the markdown-harness skill from a user's point of view, reproducing a first-run experience, checking that the init or demo workflow works on a clean tree, or preparing repositories for a workshop."
+}

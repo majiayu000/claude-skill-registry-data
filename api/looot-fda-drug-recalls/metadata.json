@@ -1,0 +1,37 @@
+{
+  "name": "looot-fda-drug-recalls",
+  "repo": "loootai/looot-skills",
+  "path": "skills/looot-fda-drug-recalls/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/loootai/looot-skills",
+  "dir_name": "looot-fda-drug-recalls",
+  "downloaded_at": "2026-11-25T08:55:59.398318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "loootai",
+  "source_url": "https://github.com/loootai/looot-skills/blob/main/skills/looot-fda-drug-recalls/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/loootai/looot-skills/blob/main/skills/looot-fda-drug-recalls/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search FDA drug recalls on openFDA, for free. Use when the user says things like \"has duloxetine been recalled\", \"list recent nitrosamine drug recalls\", \"which drug recalls did this manufacturer have\" or \"is this lot or NDC part of a recall\". Runs free through looot on the openFDA endpoint ($0 per run, no top-up needed)."
+}

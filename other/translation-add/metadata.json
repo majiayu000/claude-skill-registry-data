@@ -1,0 +1,37 @@
+{
+  "name": "translation-add",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/translation-add/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "translation-add",
+  "downloaded_at": "2026-11-25T08:18:01.993396Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, language=2",
+    "score": 2,
+    "runner_up": "language",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/translation-add/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/translation-add/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add a new translation key to JellyRock's custom JSON i18n system. Walks locale/CLAUDE.md (pick the right key prefix, add to locale/custom/en_US.json alphabetically, handle plurals via Zero/One/Many suffixes, handle placeholders via indexed {0} {1}, add ISO-639-2 aliases for track-language keys, run npm run lint:translations + lint:language-coverage). Use when adding a new user-visible string. The BSC plugin watches en_US.json and regenerates the translationKeys constants live, so the BS-side reference becomes available without a manual codegen step."
+}

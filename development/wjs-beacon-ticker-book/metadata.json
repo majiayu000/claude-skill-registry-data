@@ -1,0 +1,38 @@
+{
+  "name": "wjs-beacon-ticker-book",
+  "repo": "jianshuo/claude-skills",
+  "path": "wjs-beacon-ticker-book/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jianshuo/claude-skills",
+  "dir_name": "wjs-beacon-ticker-book",
+  "downloaded_at": "2026-11-25T08:19:41.143709Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jianshuo",
+  "source_url": "https://github.com/jianshuo/claude-skills/blob/main/wjs-beacon-ticker-book/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jianshuo/claude-skills/blob/main/wjs-beacon-ticker-book/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants a stock ticker turned into a \"book\" for the Beacon app \u2014 \u7ed9\u4e00\u4e2a\u7f8e\u80a1\u4ee3\u7801\uff0c\u4ece\u516c\u53f8\u662f\u5e72\u4ec0\u4e48\u7684\u8bb2\u8d77\u3001\u4ef7\u683c\u6700\u540e\u624d\u770b\uff0c\u5199\u6210\u5341\u4e09\u7ae0\u7684\u80a1\u7968\u4e66\uff08\u4e5d\u7ae0\u5199\u4f5c + \u4e09\u7ae0\u5b9e\u65f6 + \u4f53\u68c0\u8868\uff09\uff0c\u53d1\u5e03\u5230 beacon.jianshuo.dev \u5e76\u51fa\u73b0\u5728 Beacon app \u7684\u300c\u5206\u6790\u300d\u9875\u7b7e\u3002\u4e5f\u7528\u4e8e\u4fee\u6539\u5199\u4e66\u6d41\u7a0b\u672c\u8eab\u3001\u628a\u65b0\u7248\u672c\u90e8\u7f72\u5230\u670d\u52a1\u5668\u3002Triggers \u2014 \"\u7ed9 XX \u5199\u4e00\u672c\u4e66\", \"\u5199\u80a1\u7968\u4e66\", \"ticker book\", \"\u5206\u6790\u8fd9\u53ea\u80a1\u7968\u5199\u6210\u4e66\", \"\u6539\u5199\u4e66\u6d41\u7a0b\", \"\u90e8\u7f72\u5199\u4e66\u5230 VPS\", \"/wjs-beacon-ticker-book <TICKER>\"."
+}

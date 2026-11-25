@@ -1,0 +1,37 @@
+{
+  "name": "write-sop",
+  "repo": "hermes-hq/hodios-dist",
+  "path": "skills/write-sop/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/hermes-hq/hodios-dist",
+  "dir_name": "write-sop",
+  "downloaded_at": "2026-11-25T07:52:02.429088Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hermes-hq",
+  "source_url": "https://github.com/hermes-hq/hodios-dist/blob/main/skills/write-sop/SKILL.md",
+  "license": "CC0-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hermes-hq/hodios-dist/blob/main/skills/write-sop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes a standard operating procedure from a process description - purpose, scope, roles, numbered steps, checks and exceptions - with gaps flagged for confirmation. Use to document a repeatable task."
+}

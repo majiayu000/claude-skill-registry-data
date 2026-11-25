@@ -1,0 +1,39 @@
+{
+  "name": "social",
+  "repo": "kortix-ai/CompanyOS",
+  "path": "packages/starter/templates/marketing/skills/social/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/kortix-ai/CompanyOS",
+  "dir_name": "social-kortix-ai-companyos",
+  "downloaded_at": "2026-11-25T08:38:49.613477Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, social, brand",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/marketing/skills/social/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/marketing/skills/social/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Draft platform-native social posts (X, LinkedIn, and any platform in channels.social.platforms) from what shipped, as files in one rolling pull request that a person reviews and posts. Never posts. Load for the `social` role and whenever a person asks for an X post, a thread, a LinkedIn post or social copy for a launch or a blog post. Load `brand` first.",
+  "content_fingerprint": "2e8e5efccb67cb74f06a8fcb00f33d065f667fbfbf9cf5e63de69f6a35fed9df"
+}

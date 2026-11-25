@@ -1,0 +1,39 @@
+{
+  "name": "create-a-prd",
+  "repo": "ghalex/skills",
+  "path": "create-a-prd/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/ghalex/skills",
+  "dir_name": "create-a-prd",
+  "downloaded_at": "2026-11-25T07:35:15.093043Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for product: product, prd, feature, metrics",
+    "score": 4,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ghalex",
+  "source_url": "https://github.com/ghalex/skills/blob/main/create-a-prd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ghalex/skills/blob/main/create-a-prd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a Product Requirements Document through user interview, codebase exploration, and module sketching, then file it as local Markdown. Use when user wants a PRD, product requirements, feature spec, or to formalize a feature idea into a shareable document."
+}

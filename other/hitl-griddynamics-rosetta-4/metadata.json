@@ -1,0 +1,37 @@
+{
+  "name": "hitl",
+  "repo": "griddynamics/rosetta",
+  "path": "plugins/rosetta-antigravity/skills/hitl/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/griddynamics/rosetta",
+  "dir_name": "hitl-griddynamics-rosetta-4",
+  "downloaded_at": "2026-11-25T07:41:35.541153Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "griddynamics",
+  "source_url": "https://github.com/griddynamics/rosetta/blob/main/plugins/rosetta-antigravity/skills/hitl/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/griddynamics/rosetta/blob/main/plugins/rosetta-antigravity/skills/hitl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "MUST activate for ALL tasks \u2014 planning, execution, validation, review: session-wide work with human together, human-in-the-loop questioning, approvals, stop-and-wait vs proceed. NEVER assume approval. MANDATORY unless user requested EXACTLY `fully autonomous` or `No HITL`."
+}

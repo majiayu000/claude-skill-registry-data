@@ -1,0 +1,38 @@
+{
+  "name": "interactive-explainer",
+  "repo": "iurysza/agent-skills",
+  "path": "skills/interactive-explainer/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/iurysza/agent-skills",
+  "dir_name": "interactive-explainer",
+  "downloaded_at": "2026-11-25T08:11:16.067672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iurysza",
+  "source_url": "https://github.com/iurysza/agent-skills/blob/main/skills/interactive-explainer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iurysza/agent-skills/blob/main/skills/interactive-explainer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a single self-contained, playable HTML explainer for a tool, extension, feature or system we built, with a global state switch, a live model of the system, and a \"try it\" lab that runs the real rules. Use when asked to explain or demo something we made, or to make an \"interactive explainer\". For someone else's article, use article-explainer."
+}

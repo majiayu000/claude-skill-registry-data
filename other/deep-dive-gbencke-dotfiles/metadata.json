@@ -1,0 +1,37 @@
+{
+  "name": "deep-dive",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/obsidian/deep-dive/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "deep-dive-gbencke-dotfiles",
+  "downloaded_at": "2026-11-25T07:30:16.053069Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/obsidian/deep-dive/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/obsidian/deep-dive/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a deep-dive technical document from meeting transcripts and summaries in the Obsidian vault. Follows a strict 16-section structure with attribution rules, table preference, verbatim-only quotes, and blocker flagging. Output is written to 01.Technical/product/deep dives/. Use when asked to \"create a deep dive\", \"write a deep dive on X\", \"generate deep dive report\", \"deep dive into X\", or invokes /deep-dive."
+}

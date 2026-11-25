@@ -1,0 +1,37 @@
+{
+  "name": "bater-valores",
+  "repo": "gbertelliti-collab/claude-skills",
+  "path": "plugins/orquestrador/skills/bater-valores/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/gbertelliti-collab/claude-skills",
+  "dir_name": "bater-valores",
+  "downloaded_at": "2026-11-25T07:30:47.583525Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbertelliti-collab",
+  "source_url": "https://github.com/gbertelliti-collab/claude-skills/blob/main/plugins/orquestrador/skills/bater-valores/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbertelliti-collab/claude-skills/blob/main/plugins/orquestrador/skills/bater-valores/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Usa quando o usuario disser que um valor \"nao bate\", \"valor errado\", \"faltando dinheiro\", \"sobrou dinheiro\", \"pagou 2x\", \"divergencia\", \"atribuiu errado\", \"confere esse valor\" ou \"o valor nao esta sendo enviado ou pago\"; e ANTES de dizer pronto em mudanca que mexe em calculo, soma ou atribuicao de dinheiro. NAO usa pra layout de tela de valor (isso e provar-na-tela)."
+}

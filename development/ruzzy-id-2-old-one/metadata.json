@@ -1,0 +1,38 @@
+{
+  "name": "ruzzy",
+  "repo": "id-2/old-one",
+  "path": "skills/ruzzy/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/id-2/old-one",
+  "dir_name": "ruzzy-id-2-old-one",
+  "downloaded_at": "2026-11-25T08:03:26.840858Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "id-2",
+  "source_url": "https://github.com/id-2/old-one/blob/main/skills/ruzzy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/id-2/old-one/blob/main/skills/ruzzy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ruzzy is a coverage-guided Ruby fuzzer by Trail of Bits. Use for fuzzing pure Ruby code and Ruby C extensions."
+}

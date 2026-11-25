@@ -1,0 +1,39 @@
+{
+  "name": "generate-image",
+  "repo": "krowten/claude-media-generation",
+  "path": "skills/generate-image/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/krowten/claude-media-generation",
+  "dir_name": "generate-image-krowten-claude-media-generat",
+  "downloaded_at": "2026-11-25T08:40:24.074430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "krowten",
+  "source_url": "https://github.com/krowten/claude-media-generation/blob/main/skills/generate-image/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/krowten/claude-media-generation/blob/main/skills/generate-image/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate new raster images and edit existing ones via fal.ai (GPT Image 2.5, Nano Banana 2.1) \u2014 illustrations, product photos, hero art, UI mockups, background removal. Use whenever the user asks to generate/create/make an image, produce a photo or illustration for a page, get a before/after edit of an existing image (\"add X\", \"remove Y\", \"change the color of Z\" while keeping everything else the same), or strip/remove a background \u2014 even if they don't say \"fal.ai\" or name a model, and also when they do name one (\"with Nano Banana\", \"use GPT Image\"). For logos, icons, or anything that should ship as SVG, prefer the generate-svg skill."
+}

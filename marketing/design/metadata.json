@@ -1,0 +1,39 @@
+{
+  "name": "design",
+  "repo": "kortix-ai/CompanyOS",
+  "path": "packages/starter/templates/marketing/skills/design/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/kortix-ai/CompanyOS",
+  "dir_name": "design",
+  "downloaded_at": "2026-11-25T08:38:50.462517Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, social, brand",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/marketing/skills/design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/marketing/skills/design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make on-brand graphics - blog covers, OG images, social cards, thumbnails - with the Kortix `image_gen` tool for the background art and an HTML card for the exact text and the real logo, rendered to PNG at the surface's native size. Load whenever a blog post, social draft, video or answer page needs an image, and whenever a person asks for a cover, an OG image or a social graphic. Load `brand` first.",
+  "content_fingerprint": "931781521f257cfdcfb29d7d62252e52a9b2a4358b1223d2ce2c1a4a76a56574"
+}

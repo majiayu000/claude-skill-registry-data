@@ -1,0 +1,37 @@
+{
+  "name": "pmctl",
+  "repo": "johnalbertini14-glitch/openclaw-skills",
+  "path": "skills/wbingli/pmctl/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/johnalbertini14-glitch/openclaw-skills",
+  "dir_name": "pmctl-johnalbertini14-glit-openclaw-skills",
+  "downloaded_at": "2026-11-25T08:22:37.454198Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "johnalbertini14-glitch",
+  "source_url": "https://github.com/johnalbertini14-glitch/openclaw-skills/blob/main/skills/wbingli/pmctl/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/johnalbertini14-glitch/openclaw-skills/blob/main/skills/wbingli/pmctl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Browse and inspect Postman collections, requests, and environments from the terminal using pmctl. Use when you need to discover API endpoints, look up request details (method, URL, headers, body, query params), resolve environment variables to real base URLs, or construct curl commands from Postman data. Works with any Postman workspace. Requires pmctl to be installed (`pip install pmctl`)."
+}

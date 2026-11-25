@@ -1,0 +1,38 @@
+{
+  "name": "app-store-preflight",
+  "repo": "ilan-uzan/app-store-preflight",
+  "path": "skills/app-store-preflight/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ilan-uzan/app-store-preflight",
+  "dir_name": "app-store-preflight",
+  "downloaded_at": "2026-11-25T08:03:55.131090Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ilan-uzan",
+  "source_url": "https://github.com/ilan-uzan/app-store-preflight/blob/main/skills/app-store-preflight/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ilan-uzan/app-store-preflight/blob/main/skills/app-store-preflight/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits an iOS, iPadOS, macOS, watchOS, tvOS or visionOS app against every App Store Review Guideline and App Store Connect submission requirement before it is sent to App Review. It checks the code, optionally drives App Store Connect in the browser (Claude in Chrome or Playwright MCP) to compare the listing with the app, marks every check pass or fail with evidence, verifies each failure, then fixes what can be fixed in code and documents the rest. Use when the user wants to submit an app to the App Store, asks whether an app will be rejected, wants an App Review or App Store Connect checklist, received an App Review rejection, or mentions App Store guidelines, privacy manifests, purpose strings, account deletion, Sign in with Apple, or in-app purchase review."
+}

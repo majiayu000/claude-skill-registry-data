@@ -1,0 +1,37 @@
+{
+  "name": "lgpd-audit",
+  "repo": "goul4rt/lgpd-skills",
+  "path": "skills/lgpd-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/goul4rt/lgpd-skills",
+  "dir_name": "lgpd-audit",
+  "downloaded_at": "2026-11-25T07:39:36.328276Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "goul4rt",
+  "source_url": "https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/goul4rt/lgpd-skills/blob/main/skills/lgpd-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maestro orchestrator for LGPD (Lei 13.709/2018) privacy engineering, code-level auditing, implementation, and governance in software projects. Use for \"como estamos de LGPD\", \"audite LGPD\", \"privacy engineering LGPD\", \"gap analysis LGPD\", \"auditar privacidade\", \"tivemos um vazamento\", or English phrasings like \"audit our LGPD privacy controls\" or \"we collect personal data, what do we need\". Immediately routes active breaches to emergency incident response, or chains 18 specialized sub-skills (data mapping, legal basis, DPO/ATPP channel, consent ledger, DSAR, security, ROPA, RIPD, vendors, international transfer, ECA Digital) producing versioned artifacts under .lgpd/."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "executing-active-directory-attack-simulation",
+  "repo": "galyarderlabs/galyarder-framework",
+  "path": "skills/executing-active-directory-attack-simulation/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/galyarderlabs/galyarder-framework",
+  "dir_name": "executing-active-directory-attack-simulation-galyarderlabs-galyarder-framework",
+  "downloaded_at": "2026-11-25T07:28:56.310630Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, pentest",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "galyarderlabs",
+  "source_url": "https://github.com/galyarderlabs/galyarder-framework/blob/main/skills/executing-active-directory-attack-simulation/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/galyarderlabs/galyarder-framework/blob/main/skills/executing-active-directory-attack-simulation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Executes authorized attack simulations against Active Directory environments to identify misconfigurations, weak credentials, dangerous privilege paths, and exploitable trust relationships that could lead to domain compromise. The tester uses BloodHound for attack path analysis, Mimikatz for credential extraction, and Impacket for protocol-level attacks including Kerberoasting, AS-REP Roasting, and delegation abuse. Activates for requests involving Active Directory pentest, AD attack simulation, domain compromise testing, or Kerberos attack assessment."
+}

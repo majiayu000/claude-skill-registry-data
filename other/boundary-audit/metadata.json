@@ -1,0 +1,37 @@
+{
+  "name": "boundary-audit",
+  "repo": "ignaciohermosillacornejo/copilot-money-mcp",
+  "path": "skills/boundary-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ignaciohermosillacornejo/copilot-money-mcp",
+  "dir_name": "boundary-audit",
+  "downloaded_at": "2026-11-25T08:03:46.584058Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ignaciohermosillacornejo",
+  "source_url": "https://github.com/ignaciohermosillacornejo/copilot-money-mcp/blob/main/skills/boundary-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ignaciohermosillacornejo/copilot-money-mcp/blob/main/skills/boundary-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when running the quarterly boundary audit of this repo's external assumptions \u2014 inventory the write/read/docs surfaces against the conformance ledger, track the verification-class trend, retro-check recent bugs for missing class-level ratchets, and spot-check docs freshness. Produces a dated report under docs/audits/ plus filed follow-up issues. Repo-maintenance skill, not a finance skill."
+}

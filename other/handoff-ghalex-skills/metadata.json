@@ -1,0 +1,37 @@
+{
+  "name": "handoff",
+  "repo": "ghalex/skills",
+  "path": "handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ghalex/skills",
+  "dir_name": "handoff-ghalex-skills",
+  "downloaded_at": "2026-11-25T07:35:12.786959Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ghalex",
+  "source_url": "https://github.com/ghalex/skills/blob/main/handoff/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ghalex/skills/blob/main/handoff/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+  "content_fingerprint": "4f98b7f80ab807ffcfe380b27648bc65302158716e4c13e594ed63b7603ff3f6"
+}

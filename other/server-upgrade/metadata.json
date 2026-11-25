@@ -1,0 +1,37 @@
+{
+  "name": "server-upgrade",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/server-upgrade/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "server-upgrade",
+  "downloaded_at": "2026-11-25T08:18:01.486350Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/server-upgrade/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/server-upgrade/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Triage a Jellyfin server release against JellyRock's API usage. CI opens one digest issue per release; this skill reads the data report (`.api-watch/cache/findings-candidates-<from>..<to>.json` from `npm run api-watch:findings`, built here if missing), investigates each candidate by reading the app code it cites, resolves the edge cases the design doc lists (a spec break that is not a runtime break, a capability guard or dispatch branch that covers it, a spec-regeneration artifact, an enum change, graceful degradation, whether an opportunity is worth it, floor coverage, removal versus rename), and writes a verdict per finding. Then `scripts/server-upgrade.js` runs scaffold, plan and execute: it dedups against existing `[server-upgrade]` issues, files each `file` verdict as a sub-issue of the digest, notes the skip and monitor verdicts on the digest, rewrites its checklist and closes it once every finding has a verdict. Nothing files without one approval per release. Post-floor endpoints the endpoint-availability ledger covers (MediaSegments, Lyrics, QuickConnect) do not come back every release. Use when a new Jellyfin stable release lands and you want to know what, if anything, it breaks for us. Release candidates and unstable/master builds take a local path: the report is built in memory, findings go to a `.claude/handoffs/` note, and nothing is filed on GitHub until the stable release."
+}

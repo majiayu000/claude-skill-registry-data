@@ -1,0 +1,39 @@
+{
+  "name": "vm-security",
+  "repo": "ghalex/skills",
+  "path": "vm-security/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ghalex/skills",
+  "dir_name": "vm-security",
+  "downloaded_at": "2026-11-25T07:35:14.307041Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ghalex",
+  "source_url": "https://github.com/ghalex/skills/blob/main/vm-security/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ghalex/skills/blob/main/vm-security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit and harden a Linux VM (Ubuntu/Debian) over SSH — key-only login as one admin user, no root, fail2ban, ufw, unattended security upgrades, sysctl, journald cap, SSH login alerts — plus a read-only check for signs of compromise (login history, root logins, unknown IPs, shell history, cron/systemd persistence, odd processes, setuid files, modified package files, Docker exposure). Triggers — \"secure my server\", \"harden this VM\", \"lock down ssh\", \"check my server for suspicious files\", \"was my server hacked\", \"audit this VM\", \"fail2ban and ufw on\".",
+  "content_fingerprint": "4f481854e6e976b6203775e20f6293274568c5cf91d1a0b6a056f76a9f30dd7e"
+}

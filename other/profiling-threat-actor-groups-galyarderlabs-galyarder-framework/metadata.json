@@ -1,0 +1,38 @@
+{
+  "name": "profiling-threat-actor-groups",
+  "repo": "galyarderlabs/galyarder-framework",
+  "path": "skills/profiling-threat-actor-groups/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/galyarderlabs/galyarder-framework",
+  "dir_name": "profiling-threat-actor-groups-galyarderlabs-galyarder-framework",
+  "downloaded_at": "2026-11-25T07:29:08.132803Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "operations"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "galyarderlabs",
+  "source_url": "https://github.com/galyarderlabs/galyarder-framework/blob/main/skills/profiling-threat-actor-groups/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/galyarderlabs/galyarder-framework/blob/main/skills/profiling-threat-actor-groups/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Develops comprehensive threat actor profiles for APT groups, criminal organizations, and hacktivist collectives by aggregating TTP documentation, historical campaign data, tooling fingerprints, and attribution indicators from multiple intelligence sources. Use when briefing executives on sector-specific threats, updating threat model assumptions, or prioritizing defensive controls against specific adversaries. Activates for requests involving MITRE ATT&CK Groups, Mandiant APT profiles, CrowdStrike adversary naming, or sector-specific threat briefings."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "qwen-image",
+  "repo": "kingcharleslzy-ai/DSH-Spicy",
+  "path": "skills/qwen-image/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/kingcharleslzy-ai/DSH-Spicy",
+  "dir_name": "qwen-image",
+  "downloaded_at": "2026-11-25T08:35:25.719428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, cli",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kingcharleslzy-ai",
+  "source_url": "https://github.com/kingcharleslzy-ai/DSH-Spicy/blob/main/skills/qwen-image/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kingcharleslzy-ai/DSH-Spicy/blob/main/skills/qwen-image/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "DSH \u56fe\u50cf\u5de5\u4f5c\u533a\uff1a\u8fdc\u7a0b Turbo \u5feb\u901f\u6587\u751f\u56fe\u7528 image_mode=turbo\uff0c\u751f\u56fe\u4f18\u5148 qwen_generate_image\uff0c\u540c\u6b65\u5bf9\u8bdd\u8fdb\u5ea6\u4e0e\u56fe\u5e93\uff1b\u539f\u751f\u53c2\u8003\u7f16\u8f91\u7528 reference_mode=edit\uff1bqwen_image_import \u5bfc\u5165\u7f51\u5740/\u672c\u673a\u6587\u4ef6/\u5bf9\u8bdd\u53c2\u8003\u56fe\uff0cqwen_image_resources \u67e5\u8d44\u6e90\uff0cqwen_image_presets \u914d\u7f6e\u548c\u4fdd\u5b58\u6574\u5957\u9884\u8bbe\uff0cqwen_image_connection \u5b9e\u65f6\u5207\u6362\u672c\u673a/\u8fdc\u7a0b\u5e76\u8bbe\u7f6e\u7a7a\u95f2\u5378\u8f7d\uff1bqwen_image_jobs \u6279\u91cf\u67e5\u961f\u5217\u3001qwen_image_cancel \u53d6\u6d88\u4efb\u52a1\u3001qwen_image_gallery \u53ea\u8bfb\u68c0\u7d22\u56fe\u5e93\u3001qwen_image_batch \u6279\u91cf\u63d0\u4ea4\u3001qwen_image_import_many \u6279\u91cf\u5bfc\u5165\u3001qwen_image_export \u590d\u5236\u5bfc\u51fa\u3001qwen_image_score \u672c\u5730\u5ba2\u89c2\u8bc4\u5206\u3001qwen_image_reroll \u6309\u6807\u8bb0\u91cd\u6295\u3001`source_image_ids` \u591a\u56fe\u7f16\u8f91\u3002\u4e0d\u6539\u8dd1\u72ec\u7acb\u811a\u672c\u3002"
+}

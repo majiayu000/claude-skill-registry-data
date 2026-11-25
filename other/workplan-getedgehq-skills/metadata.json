@@ -1,0 +1,37 @@
+{
+  "name": "workplan",
+  "repo": "getedgehq/skills",
+  "path": "workplan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "workplan-getedgehq-skills",
+  "downloaded_at": "2026-11-25T07:33:56.111812Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, creative=2",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/workplan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/workplan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, update, or close work plans for multi-step tasks. Use when starting refactors, bug lists, feature work, migrations, or any task with 2+ steps. Also use after auto-compaction to re-orient. Triggers: \"workplan\", \"work plan\", \"create a plan\", \"what's the plan\", \"where was I\", or when Claude detects a multi-step task that needs tracking."
+}

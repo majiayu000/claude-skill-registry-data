@@ -1,0 +1,36 @@
+{
+  "name": "research-catalogue",
+  "repo": "glebis/claude-skills",
+  "path": "research-catalogue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/glebis/claude-skills",
+  "dir_name": "research-catalogue",
+  "downloaded_at": "2026-11-25T07:36:30.513337Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category context-management scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "glebis",
+  "source_url": "https://github.com/glebis/claude-skills/blob/main/research-catalogue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/glebis/claude-skills/blob/main/research-catalogue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used to research any collection of comparable things \u2014 opportunities (open calls, grants, jobs, conferences), products, tools, places, courses, studies or papers, sources, vendors \u2014 against a user's question and criteria, and to build or refresh a standalone HTML catalogue of the verified results, with cards, a sortable comparison table, filters, favourites, optional dates and timeline, numeric measures, per-item verification status and full details with sources. Triggers on \"research and compare\", \"build a catalogue of\", \"make a comparison page for\", \"literature review page\", \"refresh the catalogue\", \"weekly research run\", \"add this to the catalogue\", \"find options for me and put them in a page\", or \"show the catalogue demo\"."
+}

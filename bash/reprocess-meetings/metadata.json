@@ -1,0 +1,37 @@
+{
+  "name": "reprocess-meetings",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/obsidian/reprocess-meetings/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "reprocess-meetings",
+  "downloaded_at": "2026-11-25T07:30:31.396913Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/obsidian/reprocess-meetings/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/obsidian/reprocess-meetings/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reprocess a day's meetings against a folder of meeting exports the user supplies: add meetings the vault is missing, append transcript segments the vault transcripts missed or garbled, fold the new facts into the summaries, then update the files the daily workstream update produces for that day. Use when asked to \"reprocess yesterday's meetings\", \"reprocess meetings\", \"fill in missing calls\", \"improve yesterday's meetings and notes\", or invokes /reprocess-meetings."
+}

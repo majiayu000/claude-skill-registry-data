@@ -1,0 +1,37 @@
+{
+  "name": "research",
+  "repo": "itsmeshafat/saasitude",
+  "path": ".claude/skills/research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/itsmeshafat/saasitude",
+  "dir_name": "research-itsmeshafat-saasitude-3",
+  "downloaded_at": "2026-11-25T08:10:45.530459Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "itsmeshafat",
+  "source_url": "https://github.com/itsmeshafat/saasitude/blob/main/.claude/skills/research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/itsmeshafat/saasitude/blob/main/.claude/skills/research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "markdown-harness",
+  "repo": "hancrafted/markdown-harness",
+  "path": "skills/markdown-harness/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hancrafted/markdown-harness",
+  "dir_name": "markdown-harness",
+  "downloaded_at": "2026-11-25T07:47:08.287354Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hancrafted",
+  "source_url": "https://github.com/hancrafted/markdown-harness/blob/main/skills/markdown-harness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hancrafted/markdown-harness/blob/main/skills/markdown-harness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Govern a folder of markdown with markdown-harness \u2014 set it up in a repository, author or change a markdown-harness.config.yaml, put `mh check` in the gate, or wire the Claude Code hook that reads a freshness sentence back to an agent. Use when installing or setting up markdown-harness, deciding what a document must declare about its provenance or freshness, adding or changing a rule, converting a document template into a rule over its headings, applying or updating a preset such as Keep a Changelog or Archgate ADRs, migrating an existing setup off the `--check` flag forms or an old config grammar, working out why a rule governs nothing, or demonstrating what the tool does."
+}

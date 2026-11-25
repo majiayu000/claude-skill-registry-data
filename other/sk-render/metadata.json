@@ -1,0 +1,37 @@
+{
+  "name": "sk-render",
+  "repo": "howznguyen/shorts-kit",
+  "path": ".claude/skills/sk-render/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/howznguyen/shorts-kit",
+  "dir_name": "sk-render",
+  "downloaded_at": "2026-11-25T07:56:34.244865Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howznguyen",
+  "source_url": "https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-render/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-render/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Renders a short to mp4 with Remotion, normalises loudness, and re-encodes it to the platform upload spec (yuv420p limited range, BT.709 tags, 48 kHz audio, faststart), then verifies each file with ffprobe and by looking at frames. Use when the user says \"render the video\", \"export it\", \"make the final mp4\", \"fix the loudness\", \"it's too quiet\", \"colours look washed out after upload\", \"the file won't play\", or reports a truncated or broken output. Steps 10, 12 and 13 of sk-pipeline."
+}

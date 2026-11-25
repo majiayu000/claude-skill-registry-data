@@ -1,0 +1,37 @@
+{
+  "name": "article-cover-adapter",
+  "repo": "jqaisystems/jqai-ai-skills",
+  "path": "skills/article-cover-adapter/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/jqaisystems/jqai-ai-skills",
+  "dir_name": "article-cover-adapter",
+  "downloaded_at": "2026-11-25T08:25:19.170423Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, documentation",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jqaisystems",
+  "source_url": "https://github.com/jqaisystems/jqai-ai-skills/blob/main/skills/article-cover-adapter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jqaisystems/jqai-ai-skills/blob/main/skills/article-cover-adapter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Adapt approved cover artwork to another size or placement while preserving exact wording, branding, important artwork, and visible credits. Use for local cover derivatives and review packages, not new thumbnail concepts or automatic publication."
+}

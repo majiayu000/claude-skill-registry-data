@@ -1,0 +1,41 @@
+{
+  "name": "sylph-setup-skill",
+  "repo": "getnao/sylph",
+  "path": ".claude/skills/sylph-setup-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/getnao/sylph",
+  "dir_name": "sylph-setup-skill",
+  "downloaded_at": "2026-11-25T07:34:54.923068Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: seo, content, social, campaign, brand",
+    "score": 5,
+    "runner_up": "writing",
+    "runner_up_score": 3,
+    "signals": [
+      "seo",
+      "content",
+      "social",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getnao",
+  "source_url": "https://github.com/getnao/sylph/blob/main/.claude/skills/sylph-setup-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getnao/sylph/blob/main/.claude/skills/sylph-setup-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set up a specific Sylph skill by auto-pulling examples from the web, deriving insights, and configuring the skill. Run as `/sylph-setup-skill <skill-name>`.",
+  "content_fingerprint": "3024c22a6a55f80c9b3e1564ea001a14f6ad80aea7fc398d58eac8358b20f4b4"
+}

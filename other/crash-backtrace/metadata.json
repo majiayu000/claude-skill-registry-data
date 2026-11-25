@@ -1,0 +1,37 @@
+{
+  "name": "crash-backtrace",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/crash-backtrace/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "crash-backtrace",
+  "downloaded_at": "2026-11-25T08:18:01.785926Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/crash-backtrace/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/crash-backtrace/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "DEPRECATED, replaced by the `enrich` phase built into /crash-report. The old flow filed crash issues first and enriched them one by one afterward. The new flow (stage, then enrich, then file) pulls the dashboard backtrace before filing, so issues are born complete and architectural-class crashes go to their epic instead of becoming standalone issues. Do not invoke it for new work: run /crash-report and paste the backtraces during its enrich step. It stays only as a redirect; the `enrich-issue` script subcommand still exists as a legacy escape hatch for a crash issue filed before the change."
+}

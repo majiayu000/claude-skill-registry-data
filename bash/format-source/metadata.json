@@ -1,0 +1,39 @@
+{
+  "name": "format-source",
+  "repo": "liferay/liferay-portal",
+  "path": ".claude/skills/format-source/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/liferay/liferay-portal",
+  "dir_name": "format-source",
+  "downloaded_at": "2026-11-25T08:49:28.045139Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liferay",
+  "source_url": "https://github.com/liferay/liferay-portal/blob/master/.claude/skills/format-source/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liferay/liferay-portal/blob/master/.claude/skills/format-source/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Format source files to align with Liferay's coding standards.",
+  "content_fingerprint": "c9338bcadb4f1dd17330bbd2c237719c396f7872ef6b0245449abbf57ed3e4b3"
+}

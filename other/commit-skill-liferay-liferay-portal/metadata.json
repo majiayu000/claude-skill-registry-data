@@ -1,0 +1,37 @@
+{
+  "name": "commit-skill",
+  "repo": "liferay/liferay-portal",
+  "path": "workspaces/liferay-one-workspace/.agents/skills/commit-skill/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/liferay/liferay-portal",
+  "dir_name": "commit-skill-liferay-liferay-portal",
+  "downloaded_at": "2026-11-25T08:49:40.673161Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liferay",
+  "source_url": "https://github.com/liferay/liferay-portal/blob/master/workspaces/liferay-one-workspace/.agents/skills/commit-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liferay/liferay-portal/blob/master/workspaces/liferay-one-workspace/.agents/skills/commit-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Commit a skill authored in this workspace to the liferay-portal repository, collapsing the workspace's duplicated agent trees into the repository's symlinked layout. Use when the user asks to commit, contribute, or upstream a skill, and as the handoff from `author-skill`.",
+  "content_fingerprint": "dab4c97df182e1685a8ccc2ef917e4c55f02ccb4ae85f6baee1c69666facafaa"
+}

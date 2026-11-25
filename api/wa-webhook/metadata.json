@@ -1,0 +1,37 @@
+{
+  "name": "wa-webhook",
+  "repo": "gestorlenonagencia-blip/meta-ads-whatsapp-skills",
+  "path": "skills/wa-webhook/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/gestorlenonagencia-blip/meta-ads-whatsapp-skills",
+  "dir_name": "wa-webhook",
+  "downloaded_at": "2026-11-25T07:33:20.807459Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gestorlenonagencia-blip",
+  "source_url": "https://github.com/gestorlenonagencia-blip/meta-ads-whatsapp-skills/blob/main/skills/wa-webhook/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gestorlenonagencia-blip/meta-ads-whatsapp-skills/blob/main/skills/wa-webhook/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configura e testa o webhook do WhatsApp oficial (Cloud API) para o seu backend, pelo MCP do WhatsApp Business e pelo MCP de Apps da Meta. Use quando o usu\u00e1rio pedir para ligar o webhook, apontar o WhatsApp para o seu backend, n\u00e3o chegam mensagens ou eventos, inscrever uma conta do WhatsApp num app, ou adicionar campos como automatic_events, smb_message_echoes e history."
+}

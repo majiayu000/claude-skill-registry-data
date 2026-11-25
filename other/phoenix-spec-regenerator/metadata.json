@@ -1,0 +1,37 @@
+{
+  "name": "phoenix-spec-regenerator",
+  "repo": "liuning0820/skills",
+  "path": "skills/phoenix-spec-regenerator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/liuning0820/skills",
+  "dir_name": "phoenix-spec-regenerator",
+  "downloaded_at": "2026-11-25T08:53:02.002911Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category business scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "business"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liuning0820",
+  "source_url": "https://github.com/liuning0820/skills/blob/main/skills/phoenix-spec-regenerator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liuning0820/skills/blob/main/skills/phoenix-spec-regenerator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "基于 Chad Fowler《可再生软件》与《凤凰架构》原则，从现有代码中剥离实现细节、提炼不变规范（Invariant Spec）与黑盒评估集（Golden Evals），并通过双盲再生与“删除测试（Deletion Test）”验证再生代码的等效性。当用户要求从老代码反向导出 Spec、重构遗留模块或验证代码可再生性时触发。",
+  "content_fingerprint": "f24687694445d2cb7e4ee91fd2f92051bf52204218659dc04beb643b796109c7"
+}

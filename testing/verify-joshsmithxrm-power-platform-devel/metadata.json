@@ -1,0 +1,39 @@
+{
+  "name": "verify",
+  "repo": "joshsmithxrm/power-platform-developer-suite",
+  "path": ".claude/skills/verify/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/joshsmithxrm/power-platform-developer-suite",
+  "dir_name": "verify-joshsmithxrm-power-platform-devel",
+  "downloaded_at": "2026-11-25T08:24:12.244766Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration, playwright",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "pytest",
+      "integration",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "joshsmithxrm",
+  "source_url": "https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/.claude/skills/verify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/.claude/skills/verify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check that a PPDS change actually works in its running surface, beyond unit tests - drive the CLI binary, the TUI in a PTY (tui-verify.mjs), the VS Code extension's webviews over CDP (webview-cdp.mjs), the MCP server, or the .claude/ hooks and settings, and report observed values. Use after implementing a change and before opening a PR, or when asked to verify, smoke-test or screenshot a surface."
+}

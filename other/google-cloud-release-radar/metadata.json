@@ -1,0 +1,38 @@
+{
+  "name": "google-cloud-release-radar",
+  "repo": "google/skills",
+  "path": "skills/cloud/google-cloud-release-radar/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/google/skills",
+  "dir_name": "google-cloud-release-radar",
+  "downloaded_at": "2026-11-25T07:39:01.238086Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/skills/blob/main/skills/cloud/google-cloud-release-radar/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/skills/blob/main/skills/cloud/google-cloud-release-radar/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tracks, queries, and summarizes official Google Cloud release notes across 360+ products and curated product bundles using a customizable watchlist. Use when the user asks what shipped recently in Google Cloud, wants to check release notes, deprecations, security bulletins, or breaking changes for specific services or curated bundles, or wants to set up, add, remove, or view products on their release watchlist. Don't use when deploying infrastructure, troubleshooting runtime errors, or writing product release notes for internal codebases."
+}

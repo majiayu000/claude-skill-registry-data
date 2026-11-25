@@ -1,0 +1,38 @@
+{
+  "name": "sk-improve",
+  "repo": "howznguyen/shorts-kit",
+  "path": ".claude/skills/sk-improve/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/howznguyen/shorts-kit",
+  "dir_name": "sk-improve",
+  "downloaded_at": "2026-11-25T07:56:34.616186Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, pipeline",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howznguyen",
+  "source_url": "https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-improve/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howznguyen/shorts-kit/blob/main/.claude/skills/sk-improve/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Adapts and changes the channel's rules (SOUL.md, docs/soul/, thresholds.json, flows) rather than a single video, including first-time setup of the kit for a new channel, turning a posted video's results into a recorded lesson, adding, editing or retiring a storytelling flow, changing a threshold, or adding a lint check. The user supplies the stats or screenshots; the agent never scrapes them. Use when the user says \"the video got N views\", \"here are my stats\", \"here's a screenshot of the analytics\", \"what did this video teach us\", \"this flow doesn't work\", \"change the threshold\", \"drop rule X\", \"add a new flow\", \"why did this get zero views\", \"adapt the rules to my channel\", \"this rule doesn't fit my niche\", \"change the voice/style\", \"set up the kit for my channel\", or on first run when SOUL.md has no change-log entries yet."
+}

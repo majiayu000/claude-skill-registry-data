@@ -1,0 +1,38 @@
+{
+  "name": "kortix-evals",
+  "repo": "kortix-ai/CompanyOS",
+  "path": "packages/starter/templates/managed/skills/kortix-evals/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kortix-ai/CompanyOS",
+  "dir_name": "kortix-evals",
+  "downloaded_at": "2026-11-25T08:38:52.373858Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/managed/skills/kortix-evals/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/CompanyOS/blob/main/packages/starter/templates/managed/skills/kortix-evals/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Eval-driven development for agents: write tasks with a verifier that scores them, run an agent on them, read the score, change the agent, run again, and keep only changes that score better. Tasks use the Harbor format (instruction.md, task.toml, tests/test.sh writes the reward), suites live under `evals:` in kortix.yaml, `kortix evals` runs and compares them, and `kortix evals judge` scores open-ended work with a model. Load before you build or change an agent, its prompt, skills, tools or model; when someone asks whether an agent got better or worse; when asked to benchmark, eval, evalmaxx or benchmaxx; to run Terminal-Bench or another Harbor dataset; or to write an eval task or a grader.",
+  "content_fingerprint": "d5e43a09c4654a33f2391dc1a9093cb902be6b0a3afaef48672e43429c582fa2"
+}

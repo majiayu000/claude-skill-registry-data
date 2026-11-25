@@ -1,0 +1,37 @@
+{
+  "name": "second-opinion",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/second-opinion/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "second-opinion-jellyrock-jellyrock",
+  "downloaded_at": "2026-11-25T08:18:01.279084Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/second-opinion/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/second-opinion/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Get a second opinion from a reviewer with a clean context. Runs only when the user types /second-opinion (with what to review), or replies second-opinion on a decision screen; never on its own. One item comes back improved (ranked problems with evidence, fixes, what is missing); several come back compared without bias (neutral shuffled labels, criteria written before the options are seen, a winner and what would flip it, an option nobody listed). The report is shown word for word, then a point-by-point response, then the screen again with changes marked. NOT for bugs in a code diff (use /code-review) or for how a skill ran (a skill audit)."
+}

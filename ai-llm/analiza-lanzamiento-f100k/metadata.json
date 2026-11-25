@@ -1,0 +1,38 @@
+{
+  "name": "analiza-lanzamiento-f100k",
+  "repo": "formula100k/formula100k-skills",
+  "path": "skills/analiza-lanzamiento-f100k/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/formula100k/formula100k-skills",
+  "dir_name": "analiza-lanzamiento-f100k",
+  "downloaded_at": "2026-11-25T07:24:06.104597Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "formula100k",
+  "source_url": "https://github.com/formula100k/formula100k-skills/blob/main/skills/analiza-lanzamiento-f100k/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/formula100k/formula100k-skills/blob/main/skills/analiza-lanzamiento-f100k/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analiza los números de un lanzamiento que ya pasó (masterclass, webinar, clase en vivo o reto con venta): calcula conversión de registro, show-up, conversión a venta, CPL, CPA, ROAS y LTV con churn si hubo suscripción, encuentra dónde se cayó el embudo y entrega qué funcionó, máximo 3 cambios para el próximo y un reporte HTML descargable. Usar con «analiza mi lanzamiento», «cómo me fue en el lanzamiento», «revisa las métricas de mi masterclass», «reporte de lanzamiento», «por qué no vendí en mi webinar». NO planea un lanzamiento nuevo (eso es campana-lanzamiento-formula100k) ni mide los posts semanales (eso es metricas-semanales-f100k).",
+  "content_fingerprint": "3439cde4fabefebfff9d6aa0a7ebc48f0f9c0db2a3bd95cc5ac7a41946cb4a6d"
+}

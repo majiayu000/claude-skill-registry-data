@@ -1,0 +1,37 @@
+{
+  "name": "jobs-lens",
+  "repo": "getedgehq/skills",
+  "path": "jobs-lens/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "jobs-lens",
+  "downloaded_at": "2026-11-25T07:33:58.543984Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: platform=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/jobs-lens/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/jobs-lens/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review pitch and product copy through the lens of how Steve Jobs communicated, built from short sourced quotes from his launches, interviews and letters. Use on product one-liners, taglines, launch posts, deck lines, landing-page heroes and investor messages when the user asks for the Jobs view, or whether a line is clear, memorable or too abstract. Returns pass or fail per check and a rewrite. Independent framework, not affiliated with or endorsed by Steve Jobs, his estate or Apple."
+}

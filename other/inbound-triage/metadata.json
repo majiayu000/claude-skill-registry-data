@@ -1,0 +1,37 @@
+{
+  "name": "inbound-triage",
+  "repo": "getedgehq/skills",
+  "path": "inbound-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "inbound-triage",
+  "downloaded_at": "2026-11-25T07:34:13.341151Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "messaging",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/inbound-triage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/inbound-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triage a mixed email, LinkedIn, or messaging inbox and report what needs the user's attention. Use when asked to sweep inbound messages, prioritize unread threads, decide reply versus ignore or delegate, or prepare a concise inbox summary."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "<skill name; MUST equal the parent folder name of SKILL.md; lowercase-hyphenated>",
+  "repo": "griddynamics/rosetta",
+  "path": "docs/schemas/skill.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/griddynamics/rosetta",
+  "dir_name": "schemas-griddynamics-rosetta",
+  "downloaded_at": "2026-11-25T07:41:07.554425Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "griddynamics",
+  "source_url": "https://github.com/griddynamics/rosetta/blob/main/docs/schemas/skill.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/griddynamics/rosetta/blob/main/docs/schemas/skill.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "GENERIC form: To <verb> <what it does + when/why; dense keywords>. CRITICAL/guardrail form: 'Rosetta CRITICAL MUST skill. MUST activate when <condition>'. Budget: all skills share ~1K tokens \u2014 keep \u2264 ~25 tokens and dense; over-long is ignored the same as terse, keyword-dense descriptions trigger best. EXCEPTION: disable-model-invocation:true => this description is actually user friendly."
+}

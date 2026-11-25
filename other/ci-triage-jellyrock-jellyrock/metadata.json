@@ -1,0 +1,37 @@
+{
+  "name": "ci-triage",
+  "repo": "jellyrock/jellyrock",
+  "path": ".claude/skills/ci-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jellyrock/jellyrock",
+  "dir_name": "ci-triage-jellyrock-jellyrock",
+  "downloaded_at": "2026-11-25T08:17:58.594593Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jellyrock",
+  "source_url": "https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/ci-triage/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jellyrock/jellyrock/blob/main/.claude/skills/ci-triage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnose a failed CI workflow run and fix it the /snag way. A tested read-only script fetches the run, reports every failed job and step with the log region around its errors (not the post-job cleanup), and classifies each against this repo's gates.tsv, printing the banner a gate carries when its obvious fix is the wrong one. Then: re-run only what is transient, reproduce locally, find the root cause, and show one decision screen; the chosen fix is built test-first and committed on a fix branch, never pushed. Use when a CI run failed on a pull request or on the default branch."
+}

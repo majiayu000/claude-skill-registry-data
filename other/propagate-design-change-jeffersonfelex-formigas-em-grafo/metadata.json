@@ -1,0 +1,38 @@
+{
+  "name": "propagate-design-change",
+  "repo": "jeffersonfelex/formigas-em-grafo",
+  "path": ".claude/skills/propagate-design-change/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jeffersonfelex/formigas-em-grafo",
+  "dir_name": "propagate-design-change-jeffersonfelex-formigas-em-grafo",
+  "downloaded_at": "2026-11-25T08:17:50.148405Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jeffersonfelex",
+  "source_url": "https://github.com/jeffersonfelex/formigas-em-grafo/blob/main/.claude/skills/propagate-design-change/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jeffersonfelex/formigas-em-grafo/blob/main/.claude/skills/propagate-design-change/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Finds architecture decisions (ADRs) made stale by a changed GDD and walks through resolving each. Use when the user changed a number or rule in a GDD and asks which ADRs or architecture decisions are now out of date.",
+  "content_fingerprint": "05e8d9bbf5d45ccdfb1668782278977a04606b19e1751c54fa3425ebd5701a3b"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "possibility-analysis",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/review/possibility-analysis/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "possibility-analysis",
+  "downloaded_at": "2026-11-25T07:30:30.041161Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, generation=2",
+    "score": 2,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/review/possibility-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/review/possibility-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Structured exploration of what is possible within a given problem, decision, or system \u2014 before evaluating what is optimal. Use this skill whenever the user asks to explore options, brainstorm, map a solution space, think through alternatives, analyze what could be done, weigh paths forward, or reason about uncertainty and tradeoffs. Also trigger when the user says things like \"what are my options\", \"help me think through this\", \"what could we do here\", \"I'm not sure how to approach X\", \"is there another way\", or \"let's explore this\". This is not a brainstorming-list generator \u2014 it is a rigorous epistemic process that expands, structures, and interrogates a possibility space before collapsing it into a decision. Always use this skill when depth of reasoning matters more than speed of answer."
+}

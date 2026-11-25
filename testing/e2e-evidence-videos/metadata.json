@@ -1,0 +1,39 @@
+{
+  "name": "e2e-evidence-videos",
+  "repo": "gbencke/dotfiles",
+  "path": "skills/utils/e2e-evidence-videos/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/gbencke/dotfiles",
+  "dir_name": "e2e-evidence-videos",
+  "downloaded_at": "2026-11-25T07:30:27.902411Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e, playwright",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gbencke",
+  "source_url": "https://github.com/gbencke/dotfiles/blob/master/skills/utils/e2e-evidence-videos/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gbencke/dotfiles/blob/master/skills/utils/e2e-evidence-videos/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Record captioned evidence videos of Playwright BDD e2e scenarios (353.e2e-bdd-playwright) for a Jira ticket. Runs each scenario alone with video on, against deployed SQA or a local production build of an open MFE PR, then burns in captions (ticket, the bug, live Gherkin steps, \"The bug / Fixed\" notes with freeze frames, PASSED/FAILED card with the error) and optionally attaches the passing videos to Jira. Use when asked to \"record the e2e tests\", \"make videos of the e2e tests\", \"rerun the e2e with video\", \"add captions to the e2e videos\", \"evidence videos for NGS-XXXX\", \"attach the test videos to the ticket\", or invokes /e2e-evidence-videos."
+}

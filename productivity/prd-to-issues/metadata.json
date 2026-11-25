@@ -1,0 +1,38 @@
+{
+  "name": "prd-to-issues",
+  "repo": "ghalex/skills",
+  "path": "prd-to-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ghalex/skills",
+  "dir_name": "prd-to-issues",
+  "downloaded_at": "2026-11-25T07:35:16.263021Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ghalex",
+  "source_url": "https://github.com/ghalex/skills/blob/main/prd-to-issues/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ghalex/skills/blob/main/prd-to-issues/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Break a PRD or plan into independently-grabbable, vertically-sliced Markdown issues that an agent can work one-by-one in a ralph loop. Use when the user wants to turn a PRD or plan into issues, tickets, tasks, or work items, or asks to \"slice this into issues\" or \"prep this for a loop\"."
+}

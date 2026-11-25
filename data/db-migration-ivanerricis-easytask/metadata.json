@@ -1,0 +1,38 @@
+{
+  "name": "db-migration",
+  "repo": "ivanerricis/easytask",
+  "path": ".claude/skills/db-migration/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/ivanerricis/easytask",
+  "dir_name": "db-migration-ivanerricis-easytask",
+  "downloaded_at": "2026-11-25T08:11:36.779771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ivanerricis",
+  "source_url": "https://github.com/ivanerricis/easytask/blob/master/.claude/skills/db-migration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ivanerricis/easytask/blob/master/.claude/skills/db-migration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checklist to add a database migration to EasyTask (new table, column or index in SQLite) and carry the new data everywhere it must go - schema, workspace edit triggers, queries, tree loading, state and undo, trash and archive, templates, copies, cross-note moves, export/import/validate, tests. Use when a feature needs a new table or column, when touching src/db/schema or src/db/initDb.ts, or when new data must survive templates, copies, export or the trash."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "gemini-live-api",
+  "repo": "google/skills",
+  "path": "skills/cloud/gemini-live-api/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/google/skills",
+  "dir_name": "gemini-live-api-google-skills",
+  "downloaded_at": "2026-11-25T07:38:32.334460Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/skills/blob/main/skills/cloud/gemini-live-api/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/skills/blob/main/skills/cloud/gemini-live-api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds, integrates, and troubleshoots Gemini Enterprise Agent Platform Live API (BidiGenerateContent) WebSocket clients and sessions. Use when scaffolding a LiveAPI client or demo UI/backend (GA v1 WebSockets, isolated Python venv, ADC bearer token refresh, transparent session resumption, ClientMessage and ServerMessage JSON protos, tool responses, context_update, interrupt and transcription handling) or debugging Live API issues such as silent or empty turns, audio amplitude collapse, tonal humming, voice gender or accent drift, premature turn completion, barge-in failures, output_transcription leaks, malformed or looping tool calls, WebSocket 1008/1011/goAway drops, or latency spikes. Don't use for non-live, non-bidirectional Gemini API calls such as unary generateContent, embeddings, image/video generation, or fine-tuning \u2014 use the gemini-api skill for those."
+}

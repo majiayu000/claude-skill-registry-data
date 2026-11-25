@@ -1,0 +1,39 @@
+{
+  "name": "bitwarden",
+  "repo": "heymegabyte/agent-skills",
+  "path": "skills/bitwarden/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/heymegabyte/agent-skills",
+  "dir_name": "bitwarden",
+  "downloaded_at": "2026-11-25T07:53:21.932009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "heymegabyte",
+  "source_url": "https://github.com/heymegabyte/agent-skills/blob/main/skills/bitwarden/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/heymegabyte/agent-skills/blob/main/skills/bitwarden/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Bitwarden Public API skill — auto-forged from OpenAPI 1.0.0. Bitwarden Public API for Organizations — manage members, collections, groups, events, and policies.",
+  "content_fingerprint": "152d803c2dc278822a64dac2fac9d7d96b274b39eec11149dca42a0156c9c46e"
+}

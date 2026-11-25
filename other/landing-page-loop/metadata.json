@@ -1,0 +1,38 @@
+{
+  "name": "landing-page-loop",
+  "repo": "getedgehq/skills",
+  "path": "landing-page-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/getedgehq/skills",
+  "dir_name": "landing-page-loop",
+  "downloaded_at": "2026-11-25T07:34:23.968141Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, marketing=3",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "getedgehq",
+  "source_url": "https://github.com/getedgehq/skills/blob/main/landing-page-loop/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/getedgehq/skills/blob/main/landing-page-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a fast, distinctive landing page with coding agents, the way the getedge.cc homepage was built: one design-token file that generates the CSS, black-and-white wireframes before any styling, a small static site generator instead of a framework, variants side by side, a blind second-model review loop with screenshots at desktop and phone width, a post-release roast, an idle CPU and GPU memory cost check, and an atomic release folder plus symlink deploy with one-command rollback. Use when someone wants a landing page or homepage that looks designed rather than generated, styled from their own example sites or Pinterest images, wants to redesign an existing site with an agent, or wants a repeatable build, review and ship loop for marketing pages."
+}

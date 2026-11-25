@@ -1,0 +1,37 @@
+{
+  "name": "jira-bug",
+  "repo": "liferay/liferay-portal",
+  "path": ".claude/skills/jira-bug/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/liferay/liferay-portal",
+  "dir_name": "jira-bug",
+  "downloaded_at": "2026-11-25T08:49:26.251915Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "liferay",
+  "source_url": "https://github.com/liferay/liferay-portal/blob/master/.claude/skills/jira-bug/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/liferay/liferay-portal/blob/master/.claude/skills/jira-bug/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create a Jira bug ticket in the LPD project through the REST API. Use when the user asks to create or file a Jira bug or LPD ticket.",
+  "content_fingerprint": "7354ba53f03abd03e7e63befa40e5808eecc5354dd79b4d61052df0b01cf5883"
+}

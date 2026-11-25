@@ -1,0 +1,38 @@
+{
+  "name": "smart-glasses-rokid",
+  "repo": "hinty-eu/smart-glasses-skills",
+  "path": "skills/smart-glasses-rokid/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hinty-eu/smart-glasses-skills",
+  "dir_name": "smart-glasses-rokid",
+  "downloaded_at": "2026-11-25T07:54:40.069491Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hinty-eu",
+  "source_url": "https://github.com/hinty-eu/smart-glasses-skills/blob/main/skills/smart-glasses-rokid/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hinty-eu/smart-glasses-skills/blob/main/skills/smart-glasses-rokid/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rokid Glasses apps driven from an Android phone with Rokid's public CXR-L SDK - authorise once in the Hi Rokid companion app (Global or China build), open a custom view on the green display and update its text, stream the glasses microphone as 16 kHz PCM, survive pauses for the Rokid assistant, and fall back to phone notifications mirrored by Hi Rokid (also on iPhone) when the SDK path is not an option. Covers Maven setup, CXR-L versus CXR-M and CXR-S, R8 rules, iOS notes, input limits and real community issues. Use when the user mentions Rokid, Rokid Glasses, RV101, CXR, CXR-L, CXR-M, CXR-S, Hi Rokid, Rokid AI App or YodaOS-Sprite and wants a phone app to put text on the glasses or read their microphone. Not for apps that run on the glasses themselves (see RealComputer/GlassKit or Rokid's bare-metal docs), not for AIUI agents (use the yodaos-project/aiui skill), and not for Rokid Max or other USB-C display glasses (use the smart-glasses skill)."
+}

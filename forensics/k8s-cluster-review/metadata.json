@@ -1,0 +1,38 @@
+{
+  "name": "k8s-cluster-review",
+  "repo": "k8s-servant/k8s-skills",
+  "path": "skills/k8s-cluster-review/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/k8s-servant/k8s-skills",
+  "dir_name": "k8s-cluster-review",
+  "downloaded_at": "2026-11-25T08:28:04.486092Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k8s-servant",
+  "source_url": "https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-cluster-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k8s-servant/k8s-skills/blob/main/skills/k8s-cluster-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when nothing is broken but someone wants to know whether a Kubernetes cluster, or one namespace, is still in good shape: \"review the cluster\", \"check it against best practices\", \"what drifted since we deployed it?\", after taking over a cluster, or before a busy period. Reviews the live objects, not manifests in a repository, in three groups. Reliability: workloads with one replica, no readiness probe or no requests, PodDisruptionBudgets that allow 0 disruptions or match no pod, all replicas on one node or zone. Security: privileged or root containers, hostPath and hostNetwork, namespaces without Pod Security labels, cluster-admin bound to users or ServiceAccounts, namespaces without NetworkPolicies, :latest images. Hygiene and cost: PVCs no pod mounts, Released PVs, Services without endpoints, LoadBalancers, workloads at 0 replicas, failed Jobs, stale CronJobs. Reports each finding once per workload, with why it matters and when it is fine. Read-only: never changes anything itself."
+}

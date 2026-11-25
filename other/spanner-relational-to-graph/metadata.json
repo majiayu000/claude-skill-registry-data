@@ -1,0 +1,38 @@
+{
+  "name": "spanner-relational-to-graph",
+  "repo": "google/skills",
+  "path": "skills/cloud/spanner-relational-to-graph/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/google/skills",
+  "dir_name": "spanner-relational-to-graph",
+  "downloaded_at": "2026-11-25T07:39:04.417303Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/skills/blob/main/skills/cloud/spanner-relational-to-graph/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/skills/blob/main/skills/cloud/spanner-relational-to-graph/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyzes existing Spanner relational schemas on Google Cloud (DDL, foreign keys, interleaved tables, and junction tables) and generates `CREATE PROPERTY GRAPH` DDL statements (`NODE TABLES`, `EDGE TABLES`) without modifying underlying relational tables. Use when mapping existing Spanner tables to a Spanner Graph, identifying node and edge candidates from relational tables, creating SQL bridge views for implicit `ARRAY`/`JSON` or type-mismatched relationships, mapping polymorphic or self-referential tables, or troubleshooting `CREATE PROPERTY GRAPH` DDL compiler errors. Don't use for greenfield physical table design (use spanner-graph-schema-best-practices) or tuning slow ISO GQL queries (use spanner-graph-query-tuning)."
+}

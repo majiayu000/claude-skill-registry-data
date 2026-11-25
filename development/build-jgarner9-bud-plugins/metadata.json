@@ -1,0 +1,38 @@
+{
+  "name": "build",
+  "repo": "jgarner9/bud-plugins",
+  "path": "plugins/bud/skills/build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jgarner9/bud-plugins",
+  "dir_name": "build-jgarner9-bud-plugins",
+  "downloaded_at": "2026-11-25T08:18:46.525984Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jgarner9",
+  "source_url": "https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud/skills/build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jgarner9/bud-plugins/blob/main/plugins/bud/skills/build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Building mode. How a coding task is worked so it costs few tokens and stays correct; one task per context, a spec before code, the code written by the cheapest coder that can follow the spec, and checks instead of reading. Use when starting to write, fix or change code, working an issue, or picking the next task. Not for explaining code or planning what to build."
+}

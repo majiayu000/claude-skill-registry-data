@@ -1,0 +1,39 @@
+{
+  "name": "mapping-mitre-attack-techniques",
+  "repo": "galyarderlabs/galyarder-framework",
+  "path": "skills/mapping-mitre-attack-techniques/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/galyarderlabs/galyarder-framework",
+  "dir_name": "mapping-mitre-attack-techniques",
+  "downloaded_at": "2026-11-25T07:29:03.398553Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=3, planning=3",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "galyarderlabs",
+  "source_url": "https://github.com/galyarderlabs/galyarder-framework/blob/main/skills/mapping-mitre-attack-techniques/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/galyarderlabs/galyarder-framework/blob/main/skills/mapping-mitre-attack-techniques/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maps observed adversary behaviors, security alerts, and detection rules to MITRE ATT&CK techniques and sub-techniques to quantify detection coverage and guide control prioritization. Use when building an ATT&CK-based coverage heatmap, tagging SIEM alerts with technique IDs, aligning security controls to adversary playbooks, or reporting threat exposure to executives. Activates for requests involving ATT&CK Navigator, Sigma rules, MITRE D3FEND, or coverage gap analysis."
+}

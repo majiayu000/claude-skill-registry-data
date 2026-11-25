@@ -1,0 +1,37 @@
+{
+  "name": "ci",
+  "repo": "jbsilva/photo-tagger",
+  "path": ".claude/skills/ci/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jbsilva/photo-tagger",
+  "dir_name": "ci-jbsilva-photo-tagger",
+  "downloaded_at": "2026-11-25T08:16:33.894194Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jbsilva",
+  "source_url": "https://github.com/jbsilva/photo-tagger/blob/main/.claude/skills/ci/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jbsilva/photo-tagger/blob/main/.claude/skills/ci/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the full local CI pipeline (ruff, bandit, pytest, sonar-scanner) and refresh SonarQube findings."
+}
