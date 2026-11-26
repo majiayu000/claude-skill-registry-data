@@ -1,0 +1,39 @@
+{
+  "name": "review-run",
+  "repo": "sagittaras/agentic-workflow",
+  "path": "skills/review-run/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sagittaras/agentic-workflow",
+  "dir_name": "review-run",
+  "downloaded_at": "2026-11-26T08:28:52.090756Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sagittaras",
+  "source_url": "https://github.com/sagittaras/agentic-workflow/blob/main/skills/review-run/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sagittaras/agentic-workflow/blob/main/skills/review-run/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rozebere jeden proběhlý běh run-milestone z transkriptů orchestrátoru a jeho podřazených session a ze stavu trackeru. Skriptem najde transkripty, spočítá tokeny a čas po session a zhustí je do výtahů. Výtahy podřazených session čtou paralelně subagenti. Každý nález ověří proti textu skillu nebo skriptu ve verzi, na které běh jel, a odliší, co aktuální plugin už opravil. Výsledkem je report slabin pluginu s důkazy, uložený jako markdown vedle repozitáře projektu. Nic neopravuje a do trackeru nepíše.",
+  "content_fingerprint": "8e414ee70e7feb8a62137cb1781db99bb0c3a1536fffd7cffef7d08782c92832"
+}

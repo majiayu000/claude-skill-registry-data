@@ -1,0 +1,38 @@
+{
+  "name": "edit-evals",
+  "repo": "plurai-ai/plurai-simulation",
+  "path": "skills/edit-evals/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/plurai-ai/plurai-simulation",
+  "dir_name": "edit-evals",
+  "downloaded_at": "2026-11-26T08:05:19.482421Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "plurai-ai",
+  "source_url": "https://github.com/plurai-ai/plurai-simulation/blob/main/skills/edit-evals/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/plurai-ai/plurai-simulation/blob/main/skills/edit-evals/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Iterate on the generated policies_config.yaml in a backend session: add, change or remove policies, thresholds and judge prompts. Run after /generate-evals.",
+  "content_fingerprint": "c723693ed91d832d88dfbdf2e2c6a7e6de6bedad543a33377ce6b19e7af4449f"
+}

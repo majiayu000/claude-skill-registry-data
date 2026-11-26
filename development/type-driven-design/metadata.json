@@ -1,0 +1,38 @@
+{
+  "name": "type-driven-design",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/rust/type-driven-design/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "type-driven-design",
+  "downloaded_at": "2026-11-26T08:20:58.040180Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/rust/type-driven-design/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/rust/type-driven-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make illegal states unrepresentable \u2014 enums instead of boolean and string flags, newtypes instead of bare primitives, parsed types instead of validated ones, typestate for protocol order. Use when a struct has fields that are only valid in some combinations, when validation is re-checked at many call sites, when boolean flags multiply, or when the user asks how to model a domain in Rust."
+}

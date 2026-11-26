@@ -1,0 +1,37 @@
+{
+  "name": "test-and-fix",
+  "repo": "njdaniel/conch",
+  "path": ".claude/skills/test-and-fix/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/njdaniel/conch",
+  "dir_name": "test-and-fix-njdaniel-conch",
+  "downloaded_at": "2026-11-26T07:44:09.494587Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "njdaniel",
+  "source_url": "https://github.com/njdaniel/conch/blob/main/.claude/skills/test-and-fix/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/njdaniel/conch/blob/main/.claude/skills/test-and-fix/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the test suite, categorize every failure (regression / flake / environment), fix regressions, and never silently skip. Use whenever tests fail or before opening a PR."
+}

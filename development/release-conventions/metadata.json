@@ -1,0 +1,38 @@
+{
+  "name": "release-conventions",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/release/release-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "release-conventions",
+  "downloaded_at": "2026-11-26T07:57:07.735016Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/release/release-conventions/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/release/release-conventions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Versioning and release rules: semantic versioning driven by Conventional Commits, release-me as the default tool, release-please where still used, moving major tags, Renovate conventions and release labels. Use when setting up release automation or deciding what a change means for the version."
+}

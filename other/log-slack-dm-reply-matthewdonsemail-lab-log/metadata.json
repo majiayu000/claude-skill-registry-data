@@ -1,0 +1,37 @@
+{
+  "name": "log-slack-dm-reply",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "hermesPlugin/skills/log-slack-dm-reply/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-slack-dm-reply-matthewdonsemail-lab-log",
+  "downloaded_at": "2026-11-26T07:18:57.128209Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/hermesPlugin/skills/log-slack-dm-reply/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/hermesPlugin/skills/log-slack-dm-reply/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reading and answering a Slack DM. A log play (docs/useCases/slack/dmReply.md): Read what someone wrote to the account on Slack and answer it in the owner's voice, on the account's own session, with no browser."
+}

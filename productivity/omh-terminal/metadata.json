@@ -1,0 +1,39 @@
+{
+  "name": "omh-terminal",
+  "repo": "rlaope/oh-my-hermes",
+  "path": "skills/omh-terminal/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/rlaope/oh-my-hermes",
+  "dir_name": "omh-terminal",
+  "downloaded_at": "2026-11-26T08:23:14.872196Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task, memory",
+    "score": 4,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rlaope",
+  "source_url": "https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-terminal/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-terminal/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[omh] Shell command or test-suite execution: policy overlay for terminal commands - add cwd, environment, safety, and result-evidence gates after preferring native shell tools for ordinary CLI, package-manager, and test runs. Use when the user says: command-operator, command operator, terminal command, terminal task, shell command, shell task, cli command, command execution."
+}

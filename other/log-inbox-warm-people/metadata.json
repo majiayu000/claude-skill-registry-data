@@ -1,0 +1,37 @@
+{
+  "name": "log-inbox-warm-people",
+  "repo": "matthewdonsemail-lab/log",
+  "path": ".claude/skills/log-inbox-warm-people/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-inbox-warm-people",
+  "downloaded_at": "2026-11-26T07:18:55.498935Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-inbox-warm-people/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-inbox-warm-people/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Working the warm people in your dms. A log play (docs/useCases/inbox/warmPeople.md): The people already in the owner's dms are the easiest yes. Every one of them carries who they are (lead, client, partner, friend, community, bot) and, for a lead or client, where they are (new, warming, needFound, offered, callBooked, won, lost, goneQuiet), read by a small local model on every new message, plus the old label: warming, readyToAsk, askedWaiting, cold, skip, friend or client. A bot, friend or partner never gets a sales stage, and the owner's own label always wins. The agent pulls the readyToAsk leads, reads each chat, and drafts the ask in his words."
+}

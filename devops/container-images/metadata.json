@@ -1,0 +1,37 @@
+{
+  "name": "container-images",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/containers/container-images/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "container-images",
+  "downloaded_at": "2026-11-26T07:57:07.849779Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, docker",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "docker"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/containers/container-images/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/containers/container-images/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Container image conventions: every image targets linux/amd64 and linux/arm64, and a base image is pinned by its multi-platform manifest list digest. Use when writing or changing a Dockerfile, pinning a base image digest, or setting up a CI job that builds and publishes a container image."
+}

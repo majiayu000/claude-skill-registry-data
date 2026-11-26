@@ -1,0 +1,37 @@
+{
+  "name": "ulw-maestro",
+  "repo": "rlaope/oh-my-hermes",
+  "path": "skills/ulw-maestro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rlaope/oh-my-hermes",
+  "dir_name": "ulw-maestro",
+  "downloaded_at": "2026-11-26T08:23:14.630182Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rlaope",
+  "source_url": "https://github.com/rlaope/oh-my-hermes/blob/main/skills/ulw-maestro/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rlaope/oh-my-hermes/blob/main/skills/ulw-maestro/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[omh] Coding owner already chosen, handoff pending: prepares the handoff for the coding agent you already chose, composing its prompt from that agent's own installed skills; never selects the owner and never executes the work itself. Use when the user says: ulw-maestro, coding handoff, prepare the handoff, prepare a coding handoff, hand off the coding work, external executor handoff, handoff prompt, delegation prompt."
+}

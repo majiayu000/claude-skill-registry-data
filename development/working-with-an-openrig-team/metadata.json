@@ -1,0 +1,37 @@
+{
+  "name": "working-with-an-openrig-team",
+  "repo": "mvschwarz/openrig",
+  "path": "plugins/claude-directory/skills/working-with-an-openrig-team/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mvschwarz/openrig",
+  "dir_name": "working-with-an-openrig-team",
+  "downloaded_at": "2026-11-26T07:34:34.410572Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mvschwarz",
+  "source_url": "https://github.com/mvschwarz/openrig/blob/main/plugins/claude-directory/skills/working-with-an-openrig-team/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mvschwarz/openrig/blob/main/plugins/claude-directory/skills/working-with-an-openrig-team/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the person runs an OpenRig team of agents on this machine and wants it to do some work, wants to know how that work is going, has a question from the team to answer, or wants to read what the team returned. Works through the `rig` command in your shell; no MCP server is needed."
+}

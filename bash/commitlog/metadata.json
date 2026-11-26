@@ -1,0 +1,38 @@
+{
+  "name": "commitLog",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/commitLog/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "commitlog",
+  "downloaded_at": "2026-11-26T07:18:48.721810Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/commitLog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/commitLog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write the day-log entry every log-cli commit needs, in the private devlog (LOG_DEVLOG_DIR, default ~/.logCli/devlog/<date>.md, indexed by log.md there), never in the repo. On commit, the commit-msg hook parses the staged code into an abstract syntax tree (AST), writes which declarations and tests were added, changed or removed into a template entry, and feeds that back to the agent. The agent writes What changed, Why and Checked in the commit message (one commit) or under the template (two)."
+}

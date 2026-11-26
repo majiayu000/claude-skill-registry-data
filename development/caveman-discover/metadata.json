@@ -1,0 +1,38 @@
+{
+  "name": "caveman-discover",
+  "repo": "sant1jmnz/claude-code-kit",
+  "path": "skills/caveman-discover/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sant1jmnz/claude-code-kit",
+  "dir_name": "caveman-discover",
+  "downloaded_at": "2026-11-26T08:30:42.035479Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sant1jmnz",
+  "source_url": "https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/caveman-discover/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/caveman-discover/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find and label every LLM workflow in the repository so Caveman Cloud groups spend by workflow instead of one bucket. Use for \"discover workflows\" or breaking LLM spend down by workflow."
+}

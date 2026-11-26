@@ -1,0 +1,37 @@
+{
+  "name": "humanMouse",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/humanMouse/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "humanmouse",
+  "downloaded_at": "2026-11-26T07:18:49.081975Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/humanMouse/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/humanMouse/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make the cursor move like the owner's hand, measured not guessed. Record their mouse with recordMouse.py, fit humanMouse.py to the numbers, run a session and measure ours with the same analyser. Use when motion \"looks wrong\", when a page needs the cursor to behave differently, or when the owner says \"record my mouse\", \"the mouse moves weird\", \"too slow\", \"it never stops\"."
+}

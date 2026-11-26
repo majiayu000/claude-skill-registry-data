@@ -1,0 +1,37 @@
+{
+  "name": "work-with-pr",
+  "repo": "omagents/omagents",
+  "path": "packages/core/skills/work-with-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/omagents/omagents",
+  "dir_name": "work-with-pr-omagents-omagents",
+  "downloaded_at": "2026-11-26T07:51:45.067378Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "omagents",
+  "source_url": "https://github.com/omagents/omagents/blob/main/packages/core/skills/work-with-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/omagents/omagents/blob/main/packages/core/skills/work-with-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Manage the full PR lifecycle using the github MCP: create, update, review, merge. Trigger when the user says 'create PR', 'update PR', 'review PR', 'merge PR', or needs to work with pull requests."
+}

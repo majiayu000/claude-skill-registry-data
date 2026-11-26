@@ -1,0 +1,36 @@
+{
+  "name": "exact-evaluator-replica",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/exact-evaluator-replica/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "exact-evaluator-replica",
+  "downloaded_at": "2026-11-26T07:49:27.261827Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/exact-evaluator-replica/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/exact-evaluator-replica/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build and validate a fast, exact local copy of a benchmark's official evaluator: same inputs, same counts, same score, proven by a differential fuzz test and a reproduced graded log. Use when the official judge is too slow, too memory-hungry or too opaque to sit inside the edit loop of an optimization campaign (circuits, provers, gas, proof size), when many candidates must be scored per day, or when a failure-rate estimate needs fresh samples the judge cannot give."
+}

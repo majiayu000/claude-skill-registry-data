@@ -1,0 +1,37 @@
+{
+  "name": "qti-domain-expert",
+  "repo": "pie-framework/pie-qti",
+  "path": ".claude/skills/qti-domain-expert/SKILL.md",
+  "github_branch": "master",
+  "category": "product",
+  "source": "github.com/pie-framework/pie-qti",
+  "dir_name": "qti-domain-expert",
+  "downloaded_at": "2026-11-26T08:04:08.194286Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pie-framework",
+  "source_url": "https://github.com/pie-framework/pie-qti/blob/master/.claude/skills/qti-domain-expert/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pie-framework/pie-qti/blob/master/.claude/skills/qti-domain-expert/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer questions about QTI 2.x/3.0 specification semantics, compliance requirements, and correct implementation patterns in this codebase. Use when the user asks how a QTI feature should work, whether an implementation matches the spec, what a QTI term means, or how to handle a spec-defined edge case (adaptive items, response processing rules, cardinality, navigation modes, etc.)."
+}

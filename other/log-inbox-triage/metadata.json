@@ -1,0 +1,37 @@
+{
+  "name": "log-inbox-triage",
+  "repo": "matthewdonsemail-lab/log",
+  "path": ".claude/skills/log-inbox-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-inbox-triage",
+  "downloaded_at": "2026-11-26T07:18:52.676966Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-inbox-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-inbox-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triage: scoping someone's job and handing it to whoever does it. A log play (docs/useCases/inbox/triage.md): A person comes to the owner needing something built. The owner is the face of the work: the person on the other side deals with him and nobody else. Behind that, the work goes to whoever actually does it. This page is that route: read what the person needing it has said, get the scope out of them, and hand the whole thing to the person who will build it, as a brief, without ever telling either side about the other."
+}

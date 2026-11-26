@@ -1,0 +1,37 @@
+{
+  "name": "skills-admin",
+  "repo": "orlandoneto/agent-skills",
+  "path": "skills/community/skills-admin/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/orlandoneto/agent-skills",
+  "dir_name": "skills-admin",
+  "downloaded_at": "2026-11-26T07:56:46.213308Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: prompt, prompting",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orlandoneto",
+  "source_url": "https://github.com/orlandoneto/agent-skills/blob/main/skills/community/skills-admin/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orlandoneto/agent-skills/blob/main/skills/community/skills-admin/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Administrative workflows for the agent-skills repository. Use when the user wants to contribute a skill, open a pull request, or update an already-installed skill to the latest version.\nTrigger when users say: \"open a PR\", \"submit my changes\", \"push this skill\", \"update my skills\", \"update the skills repo\", or \"how do I contribute a skill\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "plan",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/work/plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "plan-ostendorf-cloud-skills",
+  "downloaded_at": "2026-11-26T07:57:02.413021Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/work/plan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/work/plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes a short implementation plan into a GitHub issue, split into verified facts and assumptions, ordered reviewable steps, files touched, a verification command, risks and open questions. Use before implementing a non trivial issue, or when asked to plan an approach first."
+}

@@ -1,0 +1,93 @@
+---
+name: "omh-meeting-brief"
+description: "[omh] Upcoming work meeting that lacks an agenda: agenda, prompts, decisions, and record template. Use when the user says: meeting-brief, meeting brief, meeting agenda, agenda, discussion prompts, decisions needed, record template, meeting topics."
+license: MIT
+author: "oh-my-hermes maintainers"
+metadata:
+  hermes:
+    tags: [workflow, oh-my-hermes, meeting]
+    category: meeting
+    phase: preparation
+    role: operator
+    quality_tier: facilitation-gated
+    related_skills: [omh-operating-rhythm, meeting-action-items]
+---
+
+# Meeting Brief
+
+Required: meeting goal, date and length, audience, known context, decision topics and who decides. Output: agenda, discussion prompts, decisions needed, action-item template.
+
+**Do Not Use When:** The meeting already happened, its notes or transcript are in hand, and the user wants decisions, owners, follow-ups, or tickets drawn from them; load Hermes' bundled `meeting-action-items` skill instead of this one.
+
+## Why This Exists
+
+`meeting-brief` exists to turn scattered context into a focused agenda, discussion prompts, decision points, and a record template without pretending the meeting already happened.
+
+Contract: `references/full-contract.md` (examples, sibling boundaries, full artifact details).
+
+## Workflow Lane
+
+- Current lane: **Research and company ops** - research, signals, ops, and briefings.
+- If intent belongs to another lane, hand back to `omh-routing` or name the adjacent workflow.
+- Shared product, routing, compatibility, and evidence rules: `skill_view(name='omh-routing', file_path='references/skill-common-rail.md')`.
+
+## When to Use
+
+Use when Hermes should prepare a meeting agenda, discussion prompts, decision points, and a record template.
+
+    Strong routing signals: `meeting-brief`, `meeting brief`, `meeting agenda`, `agenda`, `discussion prompts`, `decisions needed`, `record template`, `meeting topics`, `회의 주제`, `회의 아젠다`, `아젠다`, `회의 준비`, `논의 질문`, `결정할 것`, `기록 템플릿`
+
+## Catalog Metadata
+
+Category: `meeting`
+Phase: `preparation`
+Hermes role: `operator`
+Quality tier: `facilitation-gated`
+Reasoning demand: `light`
+
+Quality bar:
+
+- Turn context into agenda topics, prompts, decisions needed, and a record template.
+- Keep prep distinct from actual meeting minutes or accepted decisions.
+- Identify missing context that would change the meeting structure.
+- Give each agenda item a time box that sums to the meeting length, an owner and an intended outcome (decide, discuss, inform); name pre-reads and who reads them; for a decision item name the decider and what each option costs; say so when a message would meet the goal.
+- Give the record template's action-item rows outcome, owner, due date, dependency, acceptance condition, and source columns, each marked unknown until the meeting record fills it.
+
+Handoff policy:
+
+Run meeting preparation in Hermes; only create follow-up coding handoff from observed decisions or accepted plans.
+
+Safety rules:
+
+- Do not claim the meeting happened from a prepared agenda.
+- Separate proposed action items from observed decisions.
+- Use a later status or decision record for actual meeting outcomes.
+
+## Completion Checklist
+
+- The agenda, participants or audience, decisions needed, and record template are named.
+- Meeting prep, observed minutes, accepted decisions, and action ownership are separate states.
+- Missing context that would change the meeting structure is surfaced.
+
+## Recovery Notes
+
+- If decision topics lack known context, retain the supplied meeting goal and audience, mark the agenda tentative, and hand back discussion prompts and the decisions-needed list with its open questions.
+- If follow-up coding lacks observed decisions or an accepted plan, retain the meeting brief, mark the coding handoff unresolved, and hand back the decisions needed rather than an implementation claim.
+
+## Runtime Evidence
+
+Preferred harness for this skill: `meeting-facilitation`.
+
+```sh
+omh runtime record --skill meeting-brief --harness meeting-facilitation --status started
+```
+
+Record observed delegation results; otherwise return `not_available` or `not_observed`.
+Prepared OMH routing is not execution, review, CI, merge-readiness, or merge evidence.
+- Treat wrapper memory/context summaries as advisory local context, not proof of opaque Hermes memory reads or changes.
+Preserve workflow intent and stop conditions; verify before claiming completion.
+Reply in the user's own words and the host's own voice: its SOUL.md persona owns reply language, tone, speech level, and sentence endings, progress updates included (where it sets no language, use the one the user wrote in), and OMH shapes structure and content only. When the requested output is delivered, put any open points inside the result and end with no question or offer; only when the person asked to choose or decide and that choice is still theirs, end with one specific question about it, not a list, a generic offer, or a footer; the shared rail's Reply Language And Host Voice and Turn Ending sections hold the full rule.
+
+Use Hermes-native subagent/delegation features when available: native subagents -> Hermes delegation when available, otherwise sequential lanes.
+
+Shared product, compatibility, topology, memory, harness, and execution rules: `skill_view(name='omh-routing', file_path='references/skill-common-rail.md')`. Load it when applicable; otherwise name an unavailable capability.

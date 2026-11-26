@@ -1,0 +1,39 @@
+{
+  "name": "nvoos-forge-deploy",
+  "repo": "nvdigitalsolutions/mcp-ai-wpoos",
+  "path": ".agents/skills/nvoos-forge-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nvdigitalsolutions/mcp-ai-wpoos",
+  "dir_name": "nvoos-forge-deploy",
+  "downloaded_at": "2026-11-26T07:47:32.951008Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, build, debug",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvdigitalsolutions",
+  "source_url": "https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/nvoos-forge-deploy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/nvoos-forge-deploy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploy and operate forged Astro sites on Cloudways Velocity — the mirror-branch contract (site/<name>, artifact at the repo root, force-pushed), the static vs managed tiers and their deploy.json, Velocity app settings (Output Directory, build command, Entry server.js), the pull-after-mirror-push step, and the WAF / shell-safe build traps. Use when a forge deploy fails or a site serves a stale artifact, when wiring a new Velocity app to a mirror branch, or when debugging mirror-push, site/<name> branches or managed deploy trees.",
+  "content_fingerprint": "a4c735c2342678a426851fee03e00cfc5fb16dbc3cf8c49cb229d1ad08269feb"
+}

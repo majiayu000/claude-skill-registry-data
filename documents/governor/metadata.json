@@ -1,0 +1,37 @@
+{
+  "name": "governor",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/governor/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "governor",
+  "downloaded_at": "2026-11-26T07:18:48.595089Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/governor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/governor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read every platform account's governor count (requests, writes, this hour) and put one back to 0 when the owner says so, recorded in log.db (rule 168). Use when a call comes back governorBlocked \"daily cap reached (500/day)\", when the hook's account line shows 500/500, or when the owner says \"reset the governor\", \"reset X to 0\", \"reset the count\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "log-tiktok-post",
+  "repo": "matthewdonsemail-lab/log",
+  "path": ".claude/skills/log-tiktok-post/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-tiktok-post",
+  "downloaded_at": "2026-11-26T07:18:52.444164Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-tiktok-post/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-tiktok-post/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Posting a video on TikTok, and deleting it. A log play (docs/useCases/tiktok/post.md): Post one video on the account's TikTok with a caption, and delete one of its posts, on the direct-API engine with no browser: the calls TikTok Studio makes, sent the same way. The AdsPower browser flows are the fallback when TikTok refuses a direct call. TikTok's own answers decide each step."
+}

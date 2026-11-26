@@ -1,0 +1,37 @@
+{
+  "name": "log-people-bots",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "hermesPlugin/skills/log-people-bots/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-people-bots-matthewdonsemail-lab-log",
+  "downloaded_at": "2026-11-26T07:18:55.011244Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/hermesPlugin/skills/log-people-bots/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/hermesPlugin/skills/log-people-bots/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bots. A log play (docs/useCases/people/bots.md): log drops bots from the Relate network view and keeps them as people you can still read: a bot is whoever log's own reading of a chat calls automated, a stored profile the platform flagged, a hand label, a name that says bot, or the platform account itself. The flag is written by `markAutomatedIdentity`, which the catch-up path only writes for messages read after it existed, so a backlog can hold bots with no flag at all: @MEE6, @Welcomer, @Discohook Utils and @Hermes-Log are ordinary-looking people there until the platform itself says otherwise. `peopleBots` asks the platforms for their own answer and records it, so nothing is inferred from a name."
+}

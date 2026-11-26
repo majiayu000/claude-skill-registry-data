@@ -1,0 +1,37 @@
+{
+  "name": "factory-log",
+  "repo": "nonlinear-xyz/factory-kit",
+  "path": "skills/factory-log/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/nonlinear-xyz/factory-kit",
+  "dir_name": "factory-log",
+  "downloaded_at": "2026-11-26T07:45:07.812429Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nonlinear-xyz",
+  "source_url": "https://github.com/nonlinear-xyz/factory-kit/blob/main/skills/factory-log/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nonlinear-xyz/factory-kit/blob/main/skills/factory-log/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep a ticket's working state in one Linear working doc attached to the issue, without burying the operator in text. A short \"Now\" block at the top of the doc, rewritten in place, says where things stand and what the operator owes; below it sit the plan, state model, decisions, findings and learn rep. The issue description stays the operator's. The agent never starts comment threads."
+}

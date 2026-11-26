@@ -1,0 +1,37 @@
+{
+  "name": "issue",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/work/issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "issue-ostendorf-cloud-skills",
+  "downloaded_at": "2026-11-26T07:57:02.837276Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/work/issue/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/work/issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates or updates a GitHub issue with gh issue create or gh issue edit, after a duplicate search, with Goal, Context, Acceptance criteria and Out of scope sections, one type label and a priority label when known. Use when filing, opening or updating an issue or ticket."
+}

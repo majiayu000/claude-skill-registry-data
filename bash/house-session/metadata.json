@@ -1,0 +1,39 @@
+{
+  "name": "house-session",
+  "repo": "rusharlabs/house-party-protocol",
+  "path": "multi-session/lane-kit-1.11.0/skills/house-session/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/rusharlabs/house-party-protocol",
+  "dir_name": "house-session",
+  "downloaded_at": "2026-11-26T08:28:15.043781Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rusharlabs",
+  "source_url": "https://github.com/rusharlabs/house-party-protocol/blob/main/multi-session/lane-kit-1.11.0/skills/house-session/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rusharlabs/house-party-protocol/blob/main/multi-session/lane-kit-1.11.0/skills/house-session/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs a House Session on this host \u2014 a panel of pinned deciders from at least two model families, each seat a read-only command in its own lane, blind first round, counted, stopped and sealed by the HPP core."
+}

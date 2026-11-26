@@ -1,0 +1,39 @@
+{
+  "name": "anti-slop",
+  "repo": "sant1jmnz/claude-code-kit",
+  "path": "skills/anti-slop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sant1jmnz/claude-code-kit",
+  "dir_name": "anti-slop-sant1jmnz-claude-code-kit",
+  "downloaded_at": "2026-11-26T08:30:40.697144Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, marketing=3",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "sant1jmnz",
+  "source_url": "https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/anti-slop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/anti-slop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stops your agent from sounding like ChatGPT - no generic, padded, templated or invented output, and it tells you when something might read as AI-made. Before delivering anything (text, design, code, copy, video scripts, data), check it for anything that is or could look like generic AI output, and tell the user explicitly what you found. Use on every deliverable, and whenever the user asks to review something for \"AI look\", \"slop\", \"sounds like ChatGPT\", \"generic\" or \"template-y\"."
+}

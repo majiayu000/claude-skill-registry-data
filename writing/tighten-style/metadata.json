@@ -1,0 +1,38 @@
+{
+  "name": "tighten-style",
+  "repo": "petar-djukic/agent-skills",
+  "path": ".agents/skills/tighten-style/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/petar-djukic/agent-skills",
+  "dir_name": "tighten-style",
+  "downloaded_at": "2026-11-26T08:02:42.359172Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy, article",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "copy",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petar-djukic",
+  "source_url": "https://github.com/petar-djukic/agent-skills/blob/main/.agents/skills/tighten-style/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petar-djukic/agent-skills/blob/main/.agents/skills/tighten-style/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tighten prose against a rule catalog: cut needless words, restore buried verbs and the active voice, and give paragraphs a spine. Checks sentence-level rules (needless words, intensifiers, hedge stacks, negative form, nominalizations) and paragraph-level structure (topic sentence, one topic, consequent order), citing rule IDs. Tightens toward the author's measured density, never past it. Triggers: tighten, tighten style, omit needless words, wordy, too wordy, cut the fat, edit for concision, copyedit, style rules, paragraph structure, active voice."
+}

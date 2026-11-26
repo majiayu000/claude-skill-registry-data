@@ -1,0 +1,39 @@
+{
+  "name": "delegate",
+  "repo": "sant1jmnz/claude-code-kit",
+  "path": "skills/delegate/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sant1jmnz/claude-code-kit",
+  "dir_name": "delegate-sant1jmnz-claude-code-kit",
+  "downloaded_at": "2026-11-26T08:30:45.327963Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "sant1jmnz",
+  "source_url": "https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/delegate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/delegate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hand bulk or well-scoped work to free external coding agents (Codex, Antigravity/Gemini, DeepSeek via OpenCode) so Claude spends fewer tokens, with secrets blocked and every result reviewed. Use on your own initiative for repetitive work, scoped code with a clear spec, long reading, reverse engineering (authorized scope only) or UI testing."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "port-from-typescript",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/porting/port-from-typescript/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "port-from-typescript",
+  "downloaded_at": "2026-11-26T08:20:58.939131Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, refactor",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/porting/port-from-typescript/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/porting/port-from-typescript/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Port TypeScript or JavaScript into Rust \u2014 construct mapping against runtime semantics, the traps (every number is an f64, two kinds of absent, structural typing, regex feature gaps), and the napi-rs and wasm-bindgen boundaries. Use when porting, rewriting, or migrating TypeScript, JavaScript, Node, Deno, Bun, Express, or a JS CLI or library into Rust, when replacing a hot JS module with a native addon or WebAssembly, or when the user asks how a TypeScript or JavaScript construct translates to Rust."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "linkedin-analytics",
+  "repo": "publora/skills",
+  "path": ".claude-marketplace/publora-skills/skills/linkedin-analytics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/publora/skills",
+  "dir_name": "linkedin-analytics-publora-skills-2",
+  "downloaded_at": "2026-11-26T08:10:55.742732Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "publora",
+  "source_url": "https://github.com/publora/skills/blob/main/.claude-marketplace/publora-skills/skills/linkedin-analytics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/publora/skills/blob/main/.claude-marketplace/publora-skills/skills/linkedin-analytics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze LinkedIn performance and manage engagement through Publora. Use when the user asks how a LinkedIn post or account performed (impressions, reach, reactions, comments, reshares, follower growth) or wants to react, comment, reshare or resolve an @mention. Statistics run over the REST API, engagement over MCP tools. Not for creating posts (use linkedin-post)."
+}

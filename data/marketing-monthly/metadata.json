@@ -1,0 +1,40 @@
+{
+  "name": "marketing-monthly",
+  "repo": "saurabhchandanshive05/Aurax-frontend-app",
+  "path": ".claude/skills/marketing-monthly/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/saurabhchandanshive05/Aurax-frontend-app",
+  "dir_name": "marketing-monthly",
+  "downloaded_at": "2026-11-26T08:31:37.000142Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, pipeline",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saurabhchandanshive05",
+  "source_url": "https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/marketing-monthly/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/marketing-monthly/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate the monthly marketing board snapshot for a company: headline metrics (pipeline value, MQL, leads, web traffic) vs the prior month, quarter progress vs targets with YTD sparklines, traffic by campaign, what-we're-learning insights, and a per-lead journey section, as a self-contained HTML report plus a markdown companion. Use when the user says \"/marketing-monthly\", \"monthly board report\", \"marketing monthly\", \"marketing snapshot for [month]\", or asks for the next edition of the board-prep marketing report. NOT a single campaign's report (campaign-report) and NOT the RevOps diagnostic (pipeline-analysis). Company, CRM ids, GA4 property, templates, and output paths come from a context pack in the workspace you launch from, chosen per run from the company and period you pass (e.g. /marketing-monthly September Acme); nothing client-specific lives in this skill.",
+  "content_fingerprint": "827cc2d2e419aad762628113089817e93b4eea8498b2321a31d32eee5bfd64e6"
+}

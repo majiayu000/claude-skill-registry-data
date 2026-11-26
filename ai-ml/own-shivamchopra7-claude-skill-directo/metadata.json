@@ -1,0 +1,38 @@
+{
+  "name": "own",
+  "repo": "shivamchopra7/claude-skill-directory",
+  "path": "skills/ai-ml/own/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/shivamchopra7/claude-skill-directory",
+  "dir_name": "own-shivamchopra7-claude-skill-directo",
+  "downloaded_at": "2026-11-26T08:42:04.533539Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shivamchopra7",
+  "source_url": "https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/ai-ml/own/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/ai-ml/own/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks for a debrief on recent work, wants to check what they actually own versus what AI carried, or asks to be quizzed on their codebase. Triggers on \"debrief\", \"what do I own\", \"own this\", \"quiz me on the code\". User-invoked only \u2014 never self-trigger from context."
+}

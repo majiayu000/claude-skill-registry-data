@@ -1,0 +1,38 @@
+{
+  "name": "baoyu-diagram",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/baoyu-diagram/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "baoyu-diagram",
+  "downloaded_at": "2026-11-26T07:09:35.838339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/baoyu-diagram/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/baoyu-diagram/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create professional diagrams with configurable dark/light theme via CSS custom properties. Use this skill whenever the user asks for any kind of technical or conceptual diagram, visualization of a system, process flow, data flow, component relationship, network topology, decision tree, org chart, state machine, or any visual representation of structure/logic/process. Also trigger when the user says \"\u753b\u4e2a\u56fe\" \"\u753b\u4e00\u4e2a\u67b6\u6784\u56fe\" \"diagram\" \"flowchart\" \"sequence diagram\" \"draw me a ...\" or uploads content and asks to visualize it. Outputs a dark-theme SVG, a light-theme SVG, and a @2x PNG of each."
+}

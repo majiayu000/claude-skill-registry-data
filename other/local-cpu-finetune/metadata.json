@@ -1,0 +1,37 @@
+{
+  "name": "local-cpu-finetune",
+  "repo": "openamer/openamer",
+  "path": "skills/local-cpu-finetune/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openamer/openamer",
+  "dir_name": "local-cpu-finetune",
+  "downloaded_at": "2026-11-26T07:54:47.083099Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openamer",
+  "source_url": "https://github.com/openamer/openamer/blob/main/skills/local-cpu-finetune/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openamer/openamer/blob/main/skills/local-cpu-finetune/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for CPU-only LoRA fine-tuning of local LLMs."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "read-docs",
+  "repo": "sagittaras/agentic-workflow",
+  "path": "skills/read-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sagittaras/agentic-workflow",
+  "dir_name": "read-docs",
+  "downloaded_at": "2026-11-26T08:28:51.935946Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sagittaras",
+  "source_url": "https://github.com/sagittaras/agentic-workflow/blob/main/skills/read-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sagittaras/agentic-workflow/blob/main/skills/read-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Najde ve znalostní bázi projektu odpověď na otázku — mapu stromu indexů vypíše skriptem, podle vět u odkazů vybere a přečte jen stránky, které téma pokrývají, a z jednorázového kontextu vrátí krátkou odpověď s citacemi cesta#kotva, doslovné pasáže chráněných rozhodnutí a mezery báze. Kód nečte a nic nemění.",
+  "content_fingerprint": "36d4aecb5d0560b163cd10009ce9b6a2f4466984cb3ec98e3a23d97d6be390a8"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "shadertoy",
+  "repo": "orlandoneto/agent-skills",
+  "path": "skills/community/ck-shadertoy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/orlandoneto/agent-skills",
+  "dir_name": "ck-shadertoy",
+  "downloaded_at": "2026-11-26T07:56:46.957185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orlandoneto",
+  "source_url": "https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-shadertoy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-shadertoy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write, debug, and optimize Shadertoy shaders and GLSL fragment shaders for procedural graphics. Use when creating visual effects, generative art, or WebGL shaders; when writing .glsl files; or when user says \"write a shader\", \"make a Shadertoy effect\", \"help with GLSL\", or \"create a procedural animation\"."
+}

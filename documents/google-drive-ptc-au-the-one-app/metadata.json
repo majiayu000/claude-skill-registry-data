@@ -1,0 +1,37 @@
+{
+  "name": "google-drive",
+  "repo": "ptc-au/the-one-app",
+  "path": "apps/google-drive/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ptc-au/the-one-app",
+  "dir_name": "google-drive-ptc-au-the-one-app",
+  "downloaded_at": "2026-11-26T08:10:38.372316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ptc-au",
+  "source_url": "https://github.com/ptc-au/the-one-app/blob/main/apps/google-drive/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ptc-au/the-one-app/blob/main/apps/google-drive/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read before finding, uploading, renaming, moving or trashing files in the person's Google Drive."
+}

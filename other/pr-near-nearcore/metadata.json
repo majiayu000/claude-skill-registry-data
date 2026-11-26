@@ -1,0 +1,38 @@
+{
+  "name": "pr",
+  "repo": "near/nearcore",
+  "path": ".claude/skills/pr/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/near/nearcore",
+  "dir_name": "pr-near-nearcore",
+  "downloaded_at": "2026-11-26T07:38:27.352153Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "near",
+  "source_url": "https://github.com/near/nearcore/blob/master/.claude/skills/pr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/near/nearcore/blob/master/.claude/skills/pr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create a PR from staged changes with auto-generated branch, title, and description. Use this skill whenever the user wants to create a pull request, ship changes, open a PR, send code for review, or push staged work to GitHub — even if they don't explicitly say \"PR\".",
+  "content_fingerprint": "e7e15346b07afe39e1c21b13dda6c626d8d88a3f1adad75aef244a97fc2bdacf"
+}

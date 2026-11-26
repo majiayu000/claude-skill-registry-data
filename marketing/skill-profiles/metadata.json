@@ -1,0 +1,40 @@
+{
+  "name": "skill-profiles",
+  "repo": "sant1jmnz/claude-code-kit",
+  "path": "skills/skill-profiles/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/sant1jmnz/claude-code-kit",
+  "dir_name": "skill-profiles",
+  "downloaded_at": "2026-11-26T08:30:56.152631Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, content, social",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "marketing",
+      "seo",
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "sant1jmnz",
+  "source_url": "https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/skill-profiles/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/skill-profiles/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep 100+ skills working - turn groups of skills on or off depending on the type of work (frontend, marketing, video, code, ...) so the skill listing stays within the context budget. Use when the person says what kind of work they'll do (\"today is frontend\", \"let's do video\"), asks to see/change/create profiles, or asks why a skill doesn't show up or why the skills listing is truncated. Claude Code only."
+}

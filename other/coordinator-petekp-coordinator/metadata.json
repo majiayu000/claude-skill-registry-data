@@ -1,0 +1,37 @@
+{
+  "name": "coordinator",
+  "repo": "petekp/coordinator",
+  "path": "skills/coordinator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/petekp/coordinator",
+  "dir_name": "coordinator-petekp-coordinator",
+  "downloaded_at": "2026-11-26T08:02:52.129786Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petekp",
+  "source_url": "https://github.com/petekp/coordinator/blob/main/skills/coordinator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petekp/coordinator/blob/main/skills/coordinator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run this session as the coordinator for one domain, such as a project, a product area or a set of tools. The user passes the domain as the argument."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "lean-arklib-proofs",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/lean-arklib-proofs/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "lean-arklib-proofs",
+  "downloaded_at": "2026-11-26T07:49:23.652003Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, crypto, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/lean-arklib-proofs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/lean-arklib-proofs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Formalize and verify mathematical or cryptographic claims in Lean 4 with ArkLib: exact-target builds, axiom audits, dependency checks, and the build evidence an evaluator expects."
+}

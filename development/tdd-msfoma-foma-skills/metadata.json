@@ -1,0 +1,39 @@
+{
+  "name": "tdd",
+  "repo": "msFoma/foma-skills",
+  "path": "plugins/foma-skills/skills/tdd/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/msFoma/foma-skills",
+  "dir_name": "tdd-msfoma-foma-skills",
+  "downloaded_at": "2026-11-26T07:33:29.079649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msFoma",
+  "source_url": "https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/tdd/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/tdd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a change test-first in red-green slices. Use when the user asks for tests first, TDD, a test-driven change, or a regression test for a bug fix. Not for plain \"add a function\", review or debugging."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "log-people-facts",
+  "repo": "matthewdonsemail-lab/log",
+  "path": ".claude/skills/log-people-facts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-people-facts",
+  "downloaded_at": "2026-11-26T07:18:52.557545Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-people-facts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-people-facts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Person facts. A log play (docs/useCases/people/facts.md): log keeps what people said that stays true (their job, where they work, what they are building, what the owner promised them, money owed) as events in log.db, each with the exact message it came from. A draft that says a promise again is held by the voice gate as already promised, and the person card, the conversation card and the Relate graph show the current facts."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "worktree",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/repo/worktree/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "worktree-ostendorf-cloud-skills",
+  "downloaded_at": "2026-11-26T07:57:03.976404Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/repo/worktree/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/repo/worktree/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates a git worktree under .claude/worktrees/<branch> for a parallel session, and removes it once its branch is merged. Use when starting a session that must not disturb an already checked out branch, or cleaning up after one."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "omh-jev-done-check",
+  "repo": "rlaope/oh-my-hermes",
+  "path": "skills/omh-jev-done-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rlaope/oh-my-hermes",
+  "dir_name": "omh-jev-done-check",
+  "downloaded_at": "2026-11-26T08:23:23.034853Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rlaope",
+  "source_url": "https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-jev-done-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-jev-done-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[omh] Completion claim tested by Jev: Jev done check: does the gathered evidence support the completion claim? It can only object. Use when the user says: jev-done-check, jev done check, ask jev if this is done, jev evidence check."
+}

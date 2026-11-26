@@ -1,0 +1,38 @@
+{
+  "name": "factory-autopilot",
+  "repo": "nonlinear-xyz/factory-kit",
+  "path": "skills/factory-autopilot/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nonlinear-xyz/factory-kit",
+  "dir_name": "factory-autopilot",
+  "downloaded_at": "2026-11-26T07:45:08.362397Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nonlinear-xyz",
+  "source_url": "https://github.com/nonlinear-xyz/factory-kit/blob/main/skills/factory-autopilot/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nonlinear-xyz/factory-kit/blob/main/skills/factory-autopilot/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The contract for an unattended build run started by `factory-kit autopilot run`. The agent edits and verifies in its assigned worktree; the runner owns the gate, commits, push, draft PR and Linear handoff. Read when a prompt says you are running under autopilot."
+}

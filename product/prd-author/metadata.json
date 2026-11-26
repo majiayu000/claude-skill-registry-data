@@ -1,0 +1,38 @@
+{
+  "name": "prd-author",
+  "repo": "pie-framework/pie-qti",
+  "path": ".claude/skills/prd-author/SKILL.md",
+  "github_branch": "master",
+  "category": "product",
+  "source": "github.com/pie-framework/pie-qti",
+  "dir_name": "prd-author",
+  "downloaded_at": "2026-11-26T08:04:07.350088Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pie-framework",
+  "source_url": "https://github.com/pie-framework/pie-qti/blob/master/.claude/skills/prd-author/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pie-framework/pie-qti/blob/master/.claude/skills/prd-author/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft a new PRD for a QTI interaction, architecture subsystem, or cross-cutting system concern. Use when the user asks to \"write a PRD\", \"document how X works\", \"add a PRD for X\", or wants to capture requirements and rationale for a feature or subsystem. The skill interviews for missing context, reads the relevant source code and existing docs, then produces a complete draft aligned to docs/prds/TEMPLATE.md."
+}

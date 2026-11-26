@@ -1,0 +1,38 @@
+{
+  "name": "assessment-content-validator",
+  "repo": "pie-framework/pie-qti",
+  "path": ".agents/skills/assessment-content-validator/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/pie-framework/pie-qti",
+  "dir_name": "assessment-content-validator-pie-framework-pie-qti",
+  "downloaded_at": "2026-11-26T08:04:10.641251Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pie-framework",
+  "source_url": "https://github.com/pie-framework/pie-qti/blob/master/.agents/skills/assessment-content-validator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pie-framework/pie-qti/blob/master/.agents/skills/assessment-content-validator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews and validates assessment items for both technical correctness (QTI/PIE compliance, functionality) and pedagogical quality (appropriate difficulty, clear instructions, realistic scenarios, K-12 appropriateness). Use when creating example items, reviewing test fixtures, debugging broken assessments, or ensuring items are usable and make sense from an educational perspective."
+}

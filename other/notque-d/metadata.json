@@ -1,0 +1,37 @@
+{
+  "name": "d",
+  "repo": "orlandoneto/agent-skills",
+  "path": "skills/community/notque-d/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/orlandoneto/agent-skills",
+  "dir_name": "notque-d",
+  "downloaded_at": "2026-11-26T07:56:40.948506Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orlandoneto",
+  "source_url": "https://github.com/orlandoneto/agent-skills/blob/main/skills/community/notque-d/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orlandoneto/agent-skills/blob/main/skills/community/notque-d/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Request router: picks the agent, skill, and pipeline with /do's rules, then uses Jev to validate the requested outcome and attach extra skills."
+}

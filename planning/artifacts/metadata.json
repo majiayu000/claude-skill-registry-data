@@ -1,0 +1,38 @@
+{
+  "name": "device-sync-protocol",
+  "repo": "pelchers/MockTrialGame",
+  "path": ".other-devices/components/device-sync-protocol/artifacts/SKILL.md",
+  "github_branch": "main",
+  "category": "planning",
+  "source": "github.com/pelchers/MockTrialGame",
+  "dir_name": "artifacts",
+  "downloaded_at": "2026-11-26T08:02:04.252901Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "planning",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for planning: planning, plan",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pelchers",
+  "source_url": "https://github.com/pelchers/MockTrialGame/blob/main/.other-devices/components/device-sync-protocol/artifacts/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pelchers/MockTrialGame/blob/main/.other-devices/components/device-sync-protocol/artifacts/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cross-device pickup + wind-down rituals for multi-machine work (home-desktop ⇄ asus-laptop). Use at the START of work (get synced to the most-forward version before proceeding) and at the END of work (leave a clean handoff on the device branch + main). Trigger on \"pickup\", \"wind down\", \"handoff\", \"sync up\", \"start/finish work on this device\", a SessionStart banner reporting another device is ahead, OR natural-language cues that the user just switched machines — e.g. \"I'm back\", \"back from my other laptop/desktop\", \"what's the state of things\", \"catch me up\", \"where did we leave off\", \"resume\".",
+  "content_fingerprint": "d96129cab97f9c0544badf544bc1757792b4a6372afda0a272d416f78dba90a7"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "callTiming",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/callTiming/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "calltiming",
+  "downloaded_at": "2026-11-26T07:18:49.483323Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: speed, benchmark",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/callTiming/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/callTiming/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find where a log call spends its time from stored timings, never a guess (rule 165). Every MCP tool call and terminal run has a call id and stores each stage as a span in log.db; `timing` reports p50, p95 and p99 per tool and per stage, and `timing` { call } shows one call as a waterfall. Use when the owner asks why something is slow, whether we hit p99 or p95, or before and after any change made to speed something up."
+}

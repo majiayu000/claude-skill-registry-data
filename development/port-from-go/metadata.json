@@ -1,0 +1,38 @@
+{
+  "name": "port-from-go",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/porting/port-from-go/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "port-from-go",
+  "downloaded_at": "2026-11-26T08:20:57.072852Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/porting/port-from-go/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/porting/port-from-go/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Port Go into Rust \u2014 goroutines and channels onto tasks and async, interfaces onto traits, error values onto Result, and the value-semantics traps (zero values, integer wraparound, slice aliasing, nil). Use when porting, rewriting, or migrating Go, Golang, a Go service, or a Go CLI into Rust, when replacing a Go component with a Rust one behind the same interface, or when the user asks how a Go construct translates to Rust."
+}

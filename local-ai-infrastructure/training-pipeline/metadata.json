@@ -1,0 +1,38 @@
+{
+  "name": "training-pipeline",
+  "repo": "openamer/openamer",
+  "path": "skills/training-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "local-ai-infrastructure",
+  "source": "github.com/openamer/openamer",
+  "dir_name": "training-pipeline",
+  "downloaded_at": "2026-11-26T07:54:46.809959Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "local-ai-infrastructure",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for local-ai-infrastructure: ollama, llama-cpp, gguf",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ollama",
+      "llama-cpp",
+      "gguf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openamer",
+  "source_url": "https://github.com/openamer/openamer/blob/main/skills/training-pipeline/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openamer/openamer/blob/main/skills/training-pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for LoRA SFT training, merge, GGUF, and serving."
+}

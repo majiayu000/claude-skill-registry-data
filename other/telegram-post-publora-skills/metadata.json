@@ -1,0 +1,37 @@
+{
+  "name": "telegram-post",
+  "repo": "publora/skills",
+  "path": ".claude-marketplace/publora-skills/skills/telegram-post/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/publora/skills",
+  "dir_name": "telegram-post-publora-skills",
+  "downloaded_at": "2026-11-26T08:10:55.447209Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "publora",
+  "source_url": "https://github.com/publora/skills/blob/main/.claude-marketplace/publora-skills/skills/telegram-post/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/publora/skills/blob/main/.claude-marketplace/publora-skills/skills/telegram-post/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to post or schedule to a Telegram channel or group through Publora, using a bot. Covers Telegram markdown, silent delivery, link previews and forward protection. Bot API caps media captions at 1,024 characters and videos at 50 MB. Not for other platforms (each has its own skill)."
+}

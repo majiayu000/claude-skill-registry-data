@@ -1,0 +1,37 @@
+{
+  "name": "vlsit-create-skill",
+  "repo": "nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "path": ".dsh/skills/vlsit-create-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "dir_name": "vlsit-create-skill",
+  "downloaded_at": "2026-11-26T07:40:55.831526Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nguyenquanicd",
+  "source_url": "https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.dsh/skills/vlsit-create-skill/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.dsh/skills/vlsit-create-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a new agent skill in the house format (SKILL.md workflow, rule.md with numbered rules, reference/ and scripts/ folders) and mirror it to the repository's supported assistant skill folders. Interview the user, offer design options with advantages and disadvantages, then validate and mirror the skill. Use when the user asks to create, build, scaffold, write, standardize or fix a skill, a SKILL.md or a rule.md, or wants to turn a repeated workflow into a reusable skill."
+}

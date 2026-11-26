@@ -1,0 +1,37 @@
+{
+  "name": "groundwork",
+  "repo": "msFoma/foma-skills",
+  "path": "plugins/foma-skills/skills/groundwork/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/msFoma/foma-skills",
+  "dir_name": "groundwork",
+  "downloaded_at": "2026-11-26T07:33:30.316690Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msFoma",
+  "source_url": "https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/groundwork/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/groundwork/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sets up or audits a project for AI work: CLAUDE.md contract, docs layout, agents. Use when starting a new project, there is no CLAUDE.md, or the user asks to set up or audit the repo. Writes only after your ok."
+}

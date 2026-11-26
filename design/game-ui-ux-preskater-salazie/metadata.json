@@ -1,0 +1,40 @@
+{
+  "name": "game-ui-ux",
+  "repo": "preskater/salazie",
+  "path": ".agent/skills/game-ui-ux/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/preskater/salazie",
+  "dir_name": "game-ui-ux-preskater-salazie",
+  "downloaded_at": "2026-11-26T08:08:48.811023Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component",
+    "score": 4,
+    "runner_up": "gaming",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "preskater",
+  "source_url": "https://github.com/preskater/salazie/blob/main/.agent/skills/game-ui-ux/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/preskater/salazie/blob/main/.agent/skills/game-ui-ux/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Engine-neutral design rules for game HUDs and menus: anchors and containers, scaling, safe areas, gamepad focus, HUDs driven by events instead of polling, and accessibility minimums. Use for menus, health bars or inventory screens that break on ultrawide or phones. Pair with `godot-ui-control` or `roblox-ui`. Not for button juice (`game-feel`) or rebinding (`input-systems`).",
+  "content_fingerprint": "332347952cf5af46d719278d04f4f2b040e68c2c9b5af0140023fb853ffc02b4"
+}

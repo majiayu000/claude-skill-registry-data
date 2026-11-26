@@ -1,0 +1,37 @@
+{
+  "name": "warmup",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/warmup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "warmup",
+  "downloaded_at": "2026-11-26T07:18:47.677713Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/warmup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/warmup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Record and run an account warm-up (rule 31) - the platform's warm-up activities, each recorded once with log inspect in a headed session, turned into a flow and an XState machine, then run in one open browser with a stage log: `log <platform> warmup stages`. Use when the owner says warm up, warm-up, record the warm-up, or wants to watch it."
+}

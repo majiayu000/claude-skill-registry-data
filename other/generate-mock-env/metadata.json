@@ -1,0 +1,38 @@
+{
+  "name": "generate-mock-env",
+  "repo": "plurai-ai/plurai-simulation",
+  "path": "skills/generate-mock-env/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/plurai-ai/plurai-simulation",
+  "dir_name": "generate-mock-env",
+  "downloaded_at": "2026-11-26T08:05:23.644468Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "plurai-ai",
+  "source_url": "https://github.com/plurai-ai/plurai-simulation/blob/main/skills/generate-mock-env/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/plurai-ai/plurai-simulation/blob/main/skills/generate-mock-env/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate and deploy the agent's mock environment with a backend job, then store its env_id and mock url. Normally invoked by /simulation-generate-suite; run alone to rebuild the world after /simulation-scan-agent.",
+  "content_fingerprint": "00f9d50c502fe81c4735a0071b6ff462cc7ad34702f29abbb4ef11cfe592b889"
+}

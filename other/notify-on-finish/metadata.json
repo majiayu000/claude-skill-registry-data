@@ -1,0 +1,37 @@
+{
+  "name": "notify-on-finish",
+  "repo": "ralvarez-ai/ralvaskills",
+  "path": "skills/tooling/notify-on-finish/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ralvarez-ai/ralvaskills",
+  "dir_name": "notify-on-finish",
+  "downloaded_at": "2026-11-26T08:15:46.725409Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ralvarez-ai",
+  "source_url": "https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/tooling/notify-on-finish/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/tooling/notify-on-finish/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Native desktop notifications for long-running work - runs a command detached, captures exit code and duration, then plays a sound and fires a notification (notify-send/D-Bus, osascript, log-only fallback). Use when a command will take more than a minute, when asked to leave something in the background and tell me when it finishes, or when waiting on a build, test suite, migration, benchmark or download."
+}

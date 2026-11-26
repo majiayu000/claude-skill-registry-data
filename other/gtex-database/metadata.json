@@ -1,0 +1,37 @@
+{
+  "name": "gtex-database",
+  "repo": "r2ascension/skill_repo",
+  "path": "skills/gtex-database/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/r2ascension/skill_repo",
+  "dir_name": "gtex-database",
+  "downloaded_at": "2026-11-26T08:14:40.291545Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "r2ascension",
+  "source_url": "https://github.com/r2ascension/skill_repo/blob/main/skills/gtex-database/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/r2ascension/skill_repo/blob/main/skills/gtex-database/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Query GTEx (Genotype-Tissue Expression) portal for tissue-specific gene expression, eQTLs (expression quantitative trait loci), and sQTLs. Essential for linking GWAS variants to gene regulation, understanding tissue-specific expression, and interpreting non-coding variant effects."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "connect-observability",
+  "repo": "microsoft/azure-skills",
+  "path": ".github/plugins/azure-observability/skills/connect-observability/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/microsoft/azure-skills",
+  "dir_name": "connect-observability-microsoft-azure-skills",
+  "downloaded_at": "2026-11-26T07:24:19.701093Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/azure-skills/blob/main/.github/plugins/azure-observability/skills/connect-observability/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/azure-skills/blob/main/.github/plugins/azure-observability/skills/connect-observability/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find or connect an Azure application's or Foundry agent's telemetry for an explicit observability, monitoring, alerting, health or operational diagnosis request. Confirm source scope and task-specific telemetry access; not generic app connection, resource creation or deployment readiness. Instrumentation/collection design can precede deployment; answer conceptual questions directly. No automatic provisioning or changes."
+}

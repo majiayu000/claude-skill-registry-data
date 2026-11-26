@@ -1,0 +1,38 @@
+{
+  "name": "ulw-perf",
+  "repo": "rlaope/oh-my-hermes",
+  "path": "skills/ulw-perf/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/rlaope/oh-my-hermes",
+  "dir_name": "ulw-perf",
+  "downloaded_at": "2026-11-26T08:23:12.593990Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rlaope",
+  "source_url": "https://github.com/rlaope/oh-my-hermes/blob/main/skills/ulw-perf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rlaope/oh-my-hermes/blob/main/skills/ulw-perf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[omh] Software slowness, memory leaks, or cost spikes: find where a system is actually slow, leaking, or expensive across runtime, memory, token cost, storage, rendering, inference, CI, and query domains, then fix one measured hot path at a time behind a regression budget. Use when the user says: ultraperf, ulw-perf, performance audit, performance bottleneck, find the bottleneck, profile the hot path, memory leak investigation, token cost hotspot."
+}

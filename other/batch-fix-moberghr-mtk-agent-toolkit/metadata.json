@@ -1,0 +1,38 @@
+{
+  "name": "batch-fix",
+  "repo": "moberghr/mtk-agent-toolkit",
+  "path": ".claude/skills/batch-fix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moberghr/mtk-agent-toolkit",
+  "dir_name": "batch-fix-moberghr-mtk-agent-toolkit",
+  "downloaded_at": "2026-11-26T07:29:29.552014Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moberghr",
+  "source_url": "https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/batch-fix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/batch-fix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to apply review findings or several small independent corrections across more than 3 files in one batch, with no new contract or architecture \u2014 broader than fix, lighter than implement."
+}

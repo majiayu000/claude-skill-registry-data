@@ -1,0 +1,37 @@
+{
+  "name": "snx-code-quality",
+  "repo": "n-popescu/Inkypaint",
+  "path": ".claude/skills/snx-code-quality/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/n-popescu/Inkypaint",
+  "dir_name": "snx-code-quality-n-popescu-inkypaint",
+  "downloaded_at": "2026-11-26T07:34:59.461793Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n-popescu",
+  "source_url": "https://github.com/n-popescu/Inkypaint/blob/main/.claude/skills/snx-code-quality/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n-popescu/Inkypaint/blob/main/.claude/skills/snx-code-quality/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "RFC #142's C rules: strict ISO C99, no redundant state, indices not pointer chains, one allocation per owner, atomics apart, no stored pointers, one global struct per file. Use when writing or reviewing C in src/."
+}

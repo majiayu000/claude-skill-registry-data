@@ -1,0 +1,39 @@
+{
+  "name": "test-like-a-user",
+  "repo": "off-grid-ai/skills",
+  "path": "testing/skills/test-like-a-user/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "test-like-a-user-off-grid-ai-skills",
+  "downloaded_at": "2026-11-26T07:49:53.192749Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, ux, component, animation",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "ux",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/testing/skills/test-like-a-user/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/testing/skills/test-like-a-user/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hold every test to one bar, real integration tests that walk the whole user journey and prove the intended end state, with fakes only at boundaries you can't control. Use when writing, fixing, reviewing or auditing tests, or when the user says \"write a test\", \"add tests for this\", \"are these tests any good\", \"test this properly\", \"audit the tests\" or \"review this test\"."
+}

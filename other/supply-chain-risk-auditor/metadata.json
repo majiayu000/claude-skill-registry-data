@@ -1,0 +1,39 @@
+{
+  "name": "supply-chain-risk-auditor",
+  "repo": "rasata/coldvault.dev",
+  "path": ".claude/skills/supply-chain-risk-auditor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rasata/coldvault.dev",
+  "dir_name": "supply-chain-risk-auditor",
+  "downloaded_at": "2026-11-26T08:16:42.094065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rasata",
+  "source_url": "https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/supply-chain-risk-auditor/SKILL.md",
+  "license": "MIT (ZONOVA RESEARCH — coldvault.dev)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/supply-chain-risk-auditor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Evaluate third-party dependencies for known CVEs, typo-squats, malicious maintainers, install-time hooks, unusual registries, and git-URL dependencies. Combines lockfile parsing with OSV / Trivy / Snyk data.",
+  "content_fingerprint": "5826ce9c646612e6e461649b6220a3c3a51a80a5d1ef126296c493003cdf8a00"
+}

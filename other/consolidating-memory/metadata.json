@@ -1,0 +1,37 @@
+{
+  "name": "consolidating-memory",
+  "repo": "qte77/claude-code-plugins",
+  "path": "plugins/memory-hygiene/skills/consolidating-memory/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/qte77/claude-code-plugins",
+  "dir_name": "consolidating-memory",
+  "downloaded_at": "2026-11-26T08:13:34.923969Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qte77",
+  "source_url": "https://github.com/qte77/claude-code-plugins/blob/main/plugins/memory-hygiene/skills/consolidating-memory/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qte77/claude-code-plugins/blob/main/plugins/memory-hygiene/skills/consolidating-memory/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Clean up this project's Claude Code auto memory. Checks each memory against the repo and recent sessions, fixes wrong or stale facts, merges duplicates, deletes obsolete entries and keeps MEMORY.md a short index. Use when the memory-hygiene hook says a pass is due, or when asked to clean, prune, consolidate or \"dream\" over memory."
+}

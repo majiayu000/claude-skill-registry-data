@@ -1,0 +1,37 @@
+{
+  "name": "log-discord-meme-reply",
+  "repo": "matthewdonsemail-lab/log",
+  "path": ".claude/skills/log-discord-meme-reply/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-discord-meme-reply",
+  "downloaded_at": "2026-11-26T07:18:56.815315Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-discord-meme-reply/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-discord-meme-reply/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Replying with a meme in a Discord chat. A log play (docs/useCases/discord/memeReply.md): Answer a moment in a Discord group or DM the way people there already do: with a meme. The chat is read first, [Memelord](https://www.memelord.com/sign-up?ref=kfwut9wc) finds a template that fits what was just said, the meme is gated like any other send, and it goes out as its media url, which Discord shows inline. Only Memelord's free tools are used (rule 41). The extension itself is described in [docs/extensions/memelord.md](../../extensions/memelord.md)."
+}

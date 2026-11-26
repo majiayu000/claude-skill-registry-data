@@ -1,0 +1,38 @@
+{
+  "name": "wa-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/wa-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "wa-payroll",
+  "downloaded_at": "2026-11-26T07:54:38.708567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, social",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/wa-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/wa-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Washington State employer payroll taxes for 2026. Washington has no state income tax withholding. Covers unemployment insurance from the Employment Security Department (ESD) with the $78,200 taxable wage base, 40 rate classes from 0.27% to 6.03% including the employment administration fund, and the new-employer rate; Paid Family and Medical Leave at 1.13% of wages up to $184,500 with the 71.43% employee and 28.57% employer split and the 50-employee rule; the WA Cares Fund long-term care premium of 0.58% with no wage cap and its exemptions; quarterly reports and due dates; and a pointer to Labor and Industries workers' compensation. Trigger on \"Washington payroll\", \"WA payroll tax\", \"Washington unemployment tax\", \"ESD tax rate\", \"Washington SUI\", \"Paid Family and Medical Leave premium\", \"PFML Washington\", \"WA Cares\", \"long-term care tax Washington\", \"Washington new employer\". Federal payroll taxes are in us-form-941-940-payroll.",
+  "content_fingerprint": "50f24916c224cdf7b8c00d94aa10e77b4bbeaf12464665b5a1586445bdde1007"
+}

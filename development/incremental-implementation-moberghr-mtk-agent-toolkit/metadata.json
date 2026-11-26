@@ -1,0 +1,40 @@
+{
+  "name": "incremental-implementation",
+  "repo": "moberghr/mtk-agent-toolkit",
+  "path": ".claude/skills/incremental-implementation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/moberghr/mtk-agent-toolkit",
+  "dir_name": "incremental-implementation-moberghr-mtk-agent-toolkit",
+  "downloaded_at": "2026-11-26T07:29:32.768953Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile, refactor",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moberghr",
+  "source_url": "https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/incremental-implementation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/incremental-implementation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when executing an approved multi-file implementation to ensure each batch compiles, tests, and stays within the approved manifest."
+}

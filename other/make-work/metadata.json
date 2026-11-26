@@ -1,0 +1,38 @@
+{
+  "name": "make-work",
+  "repo": "petar-djukic/agent-skills",
+  "path": ".agents/skills/make-work/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/petar-djukic/agent-skills",
+  "dir_name": "make-work",
+  "downloaded_at": "2026-11-26T08:02:37.445400Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petar-djukic",
+  "source_url": "https://github.com/petar-djukic/agent-skills/blob/main/.agents/skills/make-work/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petar-djukic/agent-skills/blob/main/.agents/skills/make-work/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read `docs/VISION.yaml` (goals and boundaries), `docs/ARCHITECTURE.yaml`"
+}

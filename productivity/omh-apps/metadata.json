@@ -1,0 +1,39 @@
+{
+  "name": "omh-apps",
+  "repo": "rlaope/oh-my-hermes",
+  "path": "skills/omh-apps/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/rlaope/oh-my-hermes",
+  "dir_name": "omh-apps",
+  "downloaded_at": "2026-11-26T08:23:13.349103Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task, memory",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rlaope",
+  "source_url": "https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-apps/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-apps/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[omh] Email, Slack, or Jira action to perform: external app actions - email, Slack, Discord, Notion, Linear, Jira, CRM, and similar providers, scoped with auth, payload, confirmation, and result-evidence gates. Use when the user says: connector-operator, connector operator, external app action, external connector action, saas action, api action, send email, email customer."
+}

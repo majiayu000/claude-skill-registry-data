@@ -1,0 +1,37 @@
+{
+  "name": "cf-plan-gate",
+  "repo": "pauldx/claudifying",
+  "path": ".claude/skills/cf-plan-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pauldx/claudifying",
+  "dir_name": "cf-plan-gate-pauldx-claudifying",
+  "downloaded_at": "2026-11-26T08:00:58.674703Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pauldx",
+  "source_url": "https://github.com/pauldx/claudifying/blob/main/.claude/skills/cf-plan-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pauldx/claudifying/blob/main/.claude/skills/cf-plan-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When the user asks to enforce spec-driven development, add planning gates, require specs before coding, or prevent scope creep \u2014 activate this SDD enforcement skill"
+}

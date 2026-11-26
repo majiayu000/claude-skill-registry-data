@@ -1,0 +1,37 @@
+{
+  "name": "vlsit-lec-review",
+  "repo": "nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "path": ".dsh/skills/vlsit-lec-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "dir_name": "vlsit-lec-review",
+  "downloaded_at": "2026-11-26T07:40:55.270867Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nguyenquanicd",
+  "source_url": "https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.dsh/skills/vlsit-lec-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.dsh/skills/vlsit-lec-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review an equivalence check (LEC or EQ) run \u2014 assess the setup environment and its configuration, flag the risks of set_dont_verify and the mapping choices, explain every error and warning of the logs, trace the first five failing compare points through the RTL and the netlist, prove or disprove each cone, and deliver a bilingual report with a severity per finding. Use when the user asks for a LEC log review or a Formality, Conformal or VC Formal sign-off."
+}

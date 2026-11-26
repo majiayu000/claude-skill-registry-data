@@ -1,0 +1,39 @@
+{
+  "name": "simulation-ci",
+  "repo": "plurai-ai/plurai-simulation",
+  "path": "skills/simulation-ci/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/plurai-ai/plurai-simulation",
+  "dir_name": "simulation-ci",
+  "downloaded_at": "2026-11-26T08:05:20.221128Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "plurai-ai",
+  "source_url": "https://github.com/plurai-ai/plurai-simulation/blob/main/skills/simulation-ci/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/plurai-ai/plurai-simulation/blob/main/skills/simulation-ci/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set up CI for your simulations in one command: finds each agent, checks it is ready, renders a GitHub workflow per agent with its ci.yaml, and prints the token and secret commands. Run again to edit the setup.",
+  "content_fingerprint": "ec99714e934be0064b34a2c49ca1737eb80ee1e4a654b07d2c43fdd11fdc5206"
+}

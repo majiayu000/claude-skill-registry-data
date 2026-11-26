@@ -1,0 +1,37 @@
+{
+  "name": "chatgpt-business-profile",
+  "repo": "sigistry/marketplace",
+  "path": "plugins/romeo-seo/skills/chatgpt-business-profile/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sigistry/marketplace",
+  "dir_name": "chatgpt-business-profile",
+  "downloaded_at": "2026-11-26T08:43:16.484545Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sigistry",
+  "source_url": "https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/chatgpt-business-profile/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/chatgpt-business-profile/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Get a business ready to claim its profile in ChatGPT (OpenAI's Businesses in ChatGPT, managed in Business Hub). Finds what customers search about the brand, checks what ChatGPT tells them today against the website, then writes the profile to paste in, the site fixes to make first, the questions to test a Business Agent with, and the steps to claim and verify. Works best with the RomeoSEO MCP connected and still works by hand without it. Use for \"claim our business on ChatGPT\", \"set up Business Hub\", \"make a Business Agent\" or \"what does ChatGPT say about us\"."
+}

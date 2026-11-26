@@ -1,0 +1,37 @@
+{
+  "name": "snx-gpu-shader",
+  "repo": "n-popescu/Inkypaint",
+  "path": ".claude/skills/snx-gpu-shader/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/n-popescu/Inkypaint",
+  "dir_name": "snx-gpu-shader-n-popescu-inkypaint",
+  "downloaded_at": "2026-11-26T07:34:59.351523Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n-popescu",
+  "source_url": "https://github.com/n-popescu/Inkypaint/blob/main/.claude/skills/snx-gpu-shader/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n-popescu/Inkypaint/blob/main/.claude/skills/snx-gpu-shader/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write and optimize ScarletNX's own compute shaders (astc.comp, vic.comp, future ones) for what the GPU actually executes: constant tables, bit twiddling, uniform branches, fewer fetches, workgroup and subgroup structure, exactness proofs, and the GLSL-as-C++ tests and lavapipe timing that check them. Use when writing, reviewing or speeding up a GLSL shader under src/nx/gpu/, or when deciding whether to split one."
+}

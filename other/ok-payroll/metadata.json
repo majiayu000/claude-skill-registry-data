@@ -1,0 +1,37 @@
+{
+  "name": "ok-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/ok-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "ok-payroll",
+  "downloaded_at": "2026-11-26T07:54:37.905809Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ok-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ok-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Apply Oklahoma 2026 withholding with OK-W-4 and OW-2 percentage or wage tables, whole-dollar rounding, OkTAP WTH10001 and payment schedules. Also covers employer UI: published $25,000 base, 1.5% new rate, 0.2%-5.8% range, registration and quarterly wage reporting. Trigger on OK payroll, withholding or OESC contributions.",
+  "content_fingerprint": "2e76f7816649f3e968a916023a7d8f2ee1a2c960b0caa12cdf45990f6ebadd90"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "game-docs",
+  "repo": "preskater/salazie",
+  "path": ".agent/skills/game-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/preskater/salazie",
+  "dir_name": "game-docs-preskater-salazie",
+  "downloaded_at": "2026-11-26T08:08:48.493560Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "preskater",
+  "source_url": "https://github.com/preskater/salazie/blob/main/.agent/skills/game-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/preskater/salazie/blob/main/.agent/skills/game-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Writes and maintains a game's design docs: a one-page GDD with a feature index and short feature notes, kept true to the code by a link and status checker. Use for \"draft a GDD\", \"spec out this mechanic\", or updating docs after a playtest or code change. Not for building a game when no docs were asked for (`prototype-fast`, `game-jam`), READMEs or level layouts (`level-design`).",
+  "content_fingerprint": "cd5689b094a8c03f09a57d603649e32b096b8627fea7869af6f732c6e72bf0c2"
+}

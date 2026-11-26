@@ -1,0 +1,38 @@
+{
+  "name": "gemini",
+  "repo": "pauldx/claudifying",
+  "path": "skills/cf-ai-research/gemini/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pauldx/claudifying",
+  "dir_name": "gemini-pauldx-claudifying",
+  "downloaded_at": "2026-11-26T08:00:59.810139Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, performance=3",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pauldx",
+  "source_url": "https://github.com/pauldx/claudifying/blob/main/skills/cf-ai-research/gemini/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pauldx/claudifying/blob/main/skills/cf-ai-research/gemini/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to run Gemini CLI for code review, plan review, or big context (>200k) processing. Ideal for comprehensive analysis requiring large context windows. Uses Gemini 3 Pro by default for state-of-the-art reasoning and coding."
+}

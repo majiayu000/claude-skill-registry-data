@@ -1,0 +1,37 @@
+{
+  "name": "dep-vuln-update",
+  "repo": "sneg55/agent-starter",
+  "path": "skills/dep-vuln-update/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sneg55/agent-starter",
+  "dir_name": "dep-vuln-update",
+  "downloaded_at": "2026-11-26T08:48:25.783394Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sneg55",
+  "source_url": "https://github.com/sneg55/agent-starter/blob/main/skills/dep-vuln-update/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sneg55/agent-starter/blob/main/skills/dep-vuln-update/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when dependencies in a repo have known vulnerabilities and need updating, including when the dep-vuln hook reports advisories at commit or merge request time, when the user asks to fix vulns, patch CVEs or GHSAs, run an audit fix, or bump vulnerable packages. Covers scanning tracked lockfiles with osv-scanner, choosing the smallest version that clears each advisory, overrides for transitive deps, verifying with the repo's own tests, and committing per repo."
+}

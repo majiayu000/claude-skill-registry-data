@@ -1,0 +1,39 @@
+{
+  "name": "macos-apps",
+  "repo": "orlandoneto/agent-skills",
+  "path": "skills/community/ck-macos-apps/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/orlandoneto/agent-skills",
+  "dir_name": "ck-macos-apps",
+  "downloaded_at": "2026-11-26T07:56:48.554675Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orlandoneto",
+  "source_url": "https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-macos-apps/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-macos-apps/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build professional native macOS apps in Swift with SwiftUI and AppKit. Full lifecycle - build, debug, test, optimize, ship. CLI-only, no Xcode. Use when asked to: create macOS apps, build Swift apps, develop SwiftUI interfaces, fix macOS app issues, add macOS app features, or when user says 'build a Mac app', 'create a Swift project', 'develop for macOS'."
+}

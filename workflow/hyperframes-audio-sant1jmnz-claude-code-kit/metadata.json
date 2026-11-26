@@ -1,0 +1,37 @@
+{
+  "name": "hyperframes-audio",
+  "repo": "sant1jmnz/claude-code-kit",
+  "path": "skills/hyperframes-audio/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/sant1jmnz/claude-code-kit",
+  "dir_name": "hyperframes-audio-sant1jmnz-claude-code-kit",
+  "downloaded_at": "2026-11-26T08:30:48.054552Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: process, automation",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "process",
+      "automation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sant1jmnz",
+  "source_url": "https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/hyperframes-audio/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/hyperframes-audio/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when audio already placed in a HyperFrames composition needs to be mixed: fade-in/fade-out, crossfade, track gain or volume, volume automation, ducking, a music bed that fights a voiceover (voiceover carve), effects on a track (EQ, compressor, limiter, gate, saturation, delay, reverb, chorus, phaser, bitcrush), automation envelopes drawn on a track's volume or any effect parameter, or one submix bus carrying a chain, a fader and an automation clock for several tracks at once (`<hf-audio-group>`). Don't use for sourcing or generating audio \u2014 finding BGM, SFX, or making a voiceover is `/media-use`. Don't use for clip timing or track layout, which is `/hyperframes-core`."
+}

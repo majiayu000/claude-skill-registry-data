@@ -1,0 +1,39 @@
+{
+  "name": "level-design",
+  "repo": "preskater/salazie",
+  "path": ".agent/skills/level-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/preskater/salazie",
+  "dir_name": "level-design-preskater-salazie",
+  "downloaded_at": "2026-11-26T08:08:49.275940Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: gaming=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "game",
+      "unity",
+      "godot"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "preskater",
+  "source_url": "https://github.com/preskater/salazie/blob/main/.agent/skills/level-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/preskater/salazie/blob/main/.agent/skills/level-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Engine-neutral level design with Godot checks: player metrics from the real controller, key and ability gating with a soft-lock check, and pacing. Use when laying out a level or metroidvania gates, or players get lost or a key sits behind its own door. Not for generation (`procedural-gen`), painting tiles (`godot-tilemap`, `unity-tilemap-2d`) or jump tuning (`platformer`).",
+  "content_fingerprint": "be66157bf384a7aae6f01ae63fcc5e6202bfba85de3b2722c95f72ac7473ceaf"
+}

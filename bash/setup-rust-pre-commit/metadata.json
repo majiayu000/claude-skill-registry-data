@@ -1,0 +1,37 @@
+{
+  "name": "setup-rust-pre-commit",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/misc/setup-rust-pre-commit/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "setup-rust-pre-commit",
+  "downloaded_at": "2026-11-26T08:20:58.821277Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/misc/setup-rust-pre-commit/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/misc/setup-rust-pre-commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up fast pre-commit hooks for a Rust repo \u2014 format and lint the staged changes only, with CI left as the real gate."
+}

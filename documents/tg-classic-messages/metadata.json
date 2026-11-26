@@ -1,0 +1,38 @@
+{
+  "name": "tg-classic-messages",
+  "repo": "serejaris/telegram-skills",
+  "path": "skills/tg-classic-messages/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/serejaris/telegram-skills",
+  "dir_name": "tg-classic-messages",
+  "downloaded_at": "2026-11-26T08:35:36.983222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, markdown",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "serejaris",
+  "source_url": "https://github.com/serejaris/telegram-skills/blob/main/skills/tg-classic-messages/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/serejaris/telegram-skills/blob/main/skills/tg-classic-messages/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when sending or editing ordinary Telegram bot messages: sendMessage text, MarkdownV2/HTML escaping and entities, quotes, date_time, custom emoji, link previews, photos and documents with captions, albums, upload size limits, protect_content, copy, forward, delete. Also use to choose between a classic message and a rich message."
+}

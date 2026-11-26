@@ -1,0 +1,39 @@
+{
+  "name": "release-prep",
+  "repo": "n8mus/AetherOrion",
+  "path": ".claude/skills/release-prep/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/n8mus/AetherOrion",
+  "dir_name": "release-prep-n8mus-aetherorion",
+  "downloaded_at": "2026-11-26T07:35:41.405319Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n8mus",
+  "source_url": "https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/release-prep/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/release-prep/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The AetherSDR release-prep pass \u2014 takes a CalVer version and drives the release from \"main is where we want to cut\" to \"the prep PR is merged on main and ready to tag\". Maps the range through the commit-to-PR API, writes the CHANGELOG section from PR bodies, refreshes README and ROADMAP, edits the six release files, validates, opens the prep PR, folds in what merges after the cutoff, and hands the merged squash commit to /tag-release for the tag, the release and the asset verification. Every judgment call goes to the maintainer through AskUserQuestion. Use when the user says \"/release-prep 26.9.4\", \"/release-prep v26.9.4\", \"prep the release\", \"release prep\", \"write the changelog for 26.9.4\", or otherwise wants a version prepped; the cut itself is \"/tag-release\"."
+}

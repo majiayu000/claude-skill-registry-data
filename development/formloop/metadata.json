@@ -1,0 +1,38 @@
+{
+  "name": "formloop",
+  "repo": "manibordev/formloop",
+  "path": "formloop-plugin/skills/formloop/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/manibordev/formloop",
+  "dir_name": "formloop",
+  "downloaded_at": "2026-11-26T07:13:10.349618Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "manibordev",
+  "source_url": "https://github.com/manibordev/formloop/blob/master/formloop-plugin/skills/formloop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/manibordev/formloop/blob/master/formloop-plugin/skills/formloop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create Typeform-quality forms on-the-fly to ask a human structured questions, then resume execution when the form is submitted. Supports rich blocks (HTML mockup grids, drag-and-drop ranks, sliders with live previews) that chat and AskUserQuestion can't render. Use when you need 4+ structured inputs from a human in the loop, or when the choice is visual (designs, mockups, layouts)."
+}

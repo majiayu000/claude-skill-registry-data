@@ -1,0 +1,40 @@
+{
+  "name": "content-audit",
+  "repo": "saurabhchandanshive05/Aurax-frontend-app",
+  "path": ".claude/skills/content-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/saurabhchandanshive05/Aurax-frontend-app",
+  "dir_name": "content-audit-saurabhchandanshive0-aurax-frontend-app",
+  "downloaded_at": "2026-11-26T08:31:34.372881Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, content, brand",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "seo",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saurabhchandanshive05",
+  "source_url": "https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/content-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/content-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnose how a website's content works as an inbound lead channel. Crawls the site, derives the offerings from the site as a whole (confirmed by the user), classifies every page by offering and AIDA stage (Attention, Interest, Desire, Action) with parallel subagents, scores value-proposition clarity, and finds where each offering's buyer journey breaks: missing or thin stages, pages with no onward step, content that is not found in search, traffic that does not convert. Optional Search Console, GA4, HubSpot and Google Ads exports, dropped into an ingest folder after the first run, add findability, traffic and first-touch leads. Python does every count. Output is one readable HTML report plus markdown and a page-level CSV, ending in a per-offering verdict (content, findability, conversion or distribution gap) and priorities handed to other skills. Use when the user says \"/content-audit\", \"content audit\", \"content gap analysis\", \"AIDA audit\", \"journey gaps\", \"which offering lacks decision content\", \"does our content generate leads\", or wants to know whether to invest in content, SEO, distribution or paid. Not the 7-part strategy audit (/content-strategy), not an internal-link audit (/internal-linking), not a technical SEO audit (/seo-audit).",
+  "content_fingerprint": "1343cbb8f7c1a38b85e8e9f8ab8c83fff54d97f1260da168863ff6cea86348f8"
+}

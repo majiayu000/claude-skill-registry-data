@@ -1,0 +1,37 @@
+{
+  "name": "vt-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/vt-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "vt-payroll",
+  "downloaded_at": "2026-11-26T07:54:37.209125Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/vt-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/vt-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compute and administer Vermont employer wage withholding and UI for 2026, with W-4VT, current percentage tables, USD 15,400 UI wage base, new-employer rates, registrations and returns. Includes mandatory Child Care Contribution and distinguishes its employee deduction. Trigger on Vermont payroll, withholding, e-Services, unemployment and WHT-436.",
+  "content_fingerprint": "e732521372e8b75e45652ff3fc452470d080082a46ad52582f2ca2b85f0ea860"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "tech-stack-python",
+  "repo": "moberghr/mtk-agent-toolkit",
+  "path": ".claude/skills/tech-stack-python/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/moberghr/mtk-agent-toolkit",
+  "dir_name": "tech-stack-python",
+  "downloaded_at": "2026-11-26T07:29:31.540580Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, compile",
+    "score": 5,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moberghr",
+  "source_url": "https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/tech-stack-python/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/tech-stack-python/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Python stack context for workflow skills \u2014 pytest, mypy and ruff commands, SQLAlchemy and Alembic guidance, FastAPI, Django and Flask patterns, and reference file paths."
+}

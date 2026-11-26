@@ -1,0 +1,37 @@
+{
+  "name": "manga-page-generator",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/manga-page-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "manga-page-generator",
+  "downloaded_at": "2026-11-26T07:09:57.325992Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/manga-page-generator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/manga-page-generator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate production-ready manga pages, chapter pages, covers, and panel sequences with strict recurring-character consistency. Use this when the user asks for a manga page, manga scene, chapter page, comic page, storyboard page, or character-consistent page generation. Before generating any page, inspect `img-memory`, create missing character sprites/reference sheets, make those images visible to image generation, then generate the final manga page."
+}

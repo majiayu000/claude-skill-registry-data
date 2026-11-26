@@ -1,0 +1,37 @@
+{
+  "name": "embedded-agents-agent-sdk",
+  "repo": "phuryn/product-engineering",
+  "path": "app-stack/skills/embedded-agents-agent-sdk/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/phuryn/product-engineering",
+  "dir_name": "embedded-agents-agent-sdk",
+  "downloaded_at": "2026-11-26T08:03:59.307683Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "phuryn",
+  "source_url": "https://github.com/phuryn/product-engineering/blob/main/app-stack/skills/embedded-agents-agent-sdk/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/phuryn/product-engineering/blob/main/app-stack/skills/embedded-agents-agent-sdk/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Only when the Agent SDK is asked for, an agent needs Claude Code's own tools, or the app already runs it: embed Claude agents in a Next.js app with the Agent SDK."
+}

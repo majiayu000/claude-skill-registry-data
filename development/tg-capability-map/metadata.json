@@ -1,0 +1,37 @@
+{
+  "name": "tg-capability-map",
+  "repo": "serejaris/telegram-skills",
+  "path": "skills/tg-capability-map/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/serejaris/telegram-skills",
+  "dir_name": "tg-capability-map",
+  "downloaded_at": "2026-11-26T08:35:36.430464Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "serejaris",
+  "source_url": "https://github.com/serejaris/telegram-skills/blob/main/skills/tg-capability-map/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/serejaris/telegram-skills/blob/main/skills/tg-capability-map/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before promising a Telegram feature or designing around one: what a bot can do in Bot API, what lives only in the client or MTProto (scheduled posts, channel stats, poll stats, channel stories, folders, boosts, welcome messages, communities), and what never to promise from a bot."
+}

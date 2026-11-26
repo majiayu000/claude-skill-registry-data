@@ -1,0 +1,39 @@
+{
+  "name": "local-ai-lord",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/local-ai-lord/SKILL.md",
+  "github_branch": "main",
+  "category": "local-ai-infrastructure",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "local-ai-lord",
+  "downloaded_at": "2026-11-26T07:09:57.100885Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "local-ai-infrastructure",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for local-ai-infrastructure: ollama, llama-cpp, gguf, vllm",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ollama",
+      "llama-cpp",
+      "gguf",
+      "vllm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/local-ai-lord/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/local-ai-lord/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lord skill for local AI and edge deployment \u2014 runtime selection (Ollama, LM Studio, vLLM, llama.cpp, MLX), quantization, GPU acceleration, OpenAI-compatible APIs, and hybrid local+cloud patterns. Do not use for local seo tasks \u2014 use `local-seo` instead."
+}

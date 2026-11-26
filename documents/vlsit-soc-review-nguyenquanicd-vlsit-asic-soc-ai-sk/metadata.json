@@ -1,0 +1,38 @@
+{
+  "name": "vlsit-soc-review",
+  "repo": "nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "path": ".claude/skills/vlsit-soc-review/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "dir_name": "vlsit-soc-review-nguyenquanicd-vlsit-asic-soc-ai-sk",
+  "downloaded_at": "2026-11-26T07:40:56.373032Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, docx, markdown",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nguyenquanicd",
+  "source_url": "https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.claude/skills/vlsit-soc-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.claude/skills/vlsit-soc-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review an SoC integration \u2014 read the mandatory hardware architecture spec for the address, IO, interrupt maps and bus structure, convert it to Markdown with figures, strip RTL comments into copies, extract the hierarchy and connections with fanout and function, then flag wrong protocol connections, float or tie-off signals, uncaptured pulses and violated destination limits, with a bilingual report and an RTL fix per finding. Use when the user asks for an SoC top or chip integration review."
+}

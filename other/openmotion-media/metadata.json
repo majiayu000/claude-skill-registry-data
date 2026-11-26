@@ -1,0 +1,37 @@
+{
+  "name": "openmotion-media",
+  "repo": "nexu-io/openmotion",
+  "path": "skills/openmotion-media/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nexu-io/openmotion",
+  "dir_name": "openmotion-media",
+  "downloaded_at": "2026-11-26T07:40:23.876771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nexu-io",
+  "source_url": "https://github.com/nexu-io/openmotion/blob/main/skills/openmotion-media/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nexu-io/openmotion/blob/main/skills/openmotion-media/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate, poll and inspect individual image, video, speech or music assets through openmotion_assets_use after openmotion_media_use discovery (configured Atlas Cloud, fal.ai, WaveSpeedAI or OpenDesign Cloud BYOK providers, or a signed-in OpenDesign account), either when delegated by an OpenMotion film workflow or for a standalone asset-generation request. Native-only tasks with no new speech or music stay outside generation unless explicitly requested. Not a whole-film entry point: creating, recreating, templating, editing or exporting a whole video belongs to the OpenMotion video entries."
+}

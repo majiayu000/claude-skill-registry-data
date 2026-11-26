@@ -1,0 +1,39 @@
+{
+  "name": "derive-tests",
+  "repo": "phuryn/product-engineering",
+  "path": "ai-shipping/skills/derive-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/phuryn/product-engineering",
+  "dir_name": "derive-tests",
+  "downloaded_at": "2026-11-26T08:03:59.634165Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "phuryn",
+  "source_url": "https://github.com/phuryn/product-engineering/blob/main/ai-shipping/skills/derive-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/phuryn/product-engineering/blob/main/ai-shipping/skills/derive-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "'What should we test' or a coverage map: derive the coverage map and missing tests from docs and code; check mode reports staleness."
+}

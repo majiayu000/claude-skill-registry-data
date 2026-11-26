@@ -1,0 +1,38 @@
+{
+  "name": "asi-capability-summary",
+  "repo": "openamer/openamer",
+  "path": "skills/asi-capability-summary/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/openamer/openamer",
+  "dir_name": "asi-capability-summary",
+  "downloaded_at": "2026-11-26T07:54:48.548900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openamer",
+  "source_url": "https://github.com/openamer/openamer/blob/main/skills/asi-capability-summary/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openamer/openamer/blob/main/skills/asi-capability-summary/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for 16-point ASI audit: capabilities, evidence, status."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "repo-conventions",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/conventions/repo-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "repo-conventions",
+  "downloaded_at": "2026-11-26T07:57:08.394605Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/conventions/repo-conventions/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/conventions/repo-conventions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "What every repository must contain, how it is laid out, how its tools are pinned and how its scripts are placed. Use when creating a repository, auditing one against the baseline, or deciding where a file, a tool pin or a script belongs."
+}

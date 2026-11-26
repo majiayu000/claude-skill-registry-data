@@ -1,0 +1,37 @@
+{
+  "name": "qmd",
+  "repo": "orlandoneto/agent-skills",
+  "path": "skills/community/ck-qmd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/orlandoneto/agent-skills",
+  "dir_name": "ck-qmd",
+  "downloaded_at": "2026-11-26T07:56:39.924904Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orlandoneto",
+  "source_url": "https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-qmd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-qmd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Local hybrid search for markdown notes and docs. Use when searching notes, finding related content, or retrieving documents from indexed collections."
+}

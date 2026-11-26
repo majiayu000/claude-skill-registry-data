@@ -1,0 +1,39 @@
+{
+  "name": "plain-speech-convention",
+  "repo": "pelchers/MockTrialGame",
+  "path": ".claude/skills/plain-speech-convention/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/pelchers/MockTrialGame",
+  "dir_name": "plain-speech-convention-pelchers-mocktrialgame",
+  "downloaded_at": "2026-11-26T08:02:00.370342Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy, article",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "copy",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pelchers",
+  "source_url": "https://github.com/pelchers/MockTrialGame/blob/main/.claude/skills/plain-speech-convention/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pelchers/MockTrialGame/blob/main/.claude/skills/plain-speech-convention/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "How to write every chat reply, report, ADR and commit message so it reads as a person wrote it. Enforces the repo's existing zero-tolerance AI-speak catalogue (f3 phase 08) plus the reply-shaped tells that catalogue cannot see. Use before sending any substantive reply, when explaining a finding, writing a report for a human reader, or when the user says output \"sounds like AI\".",
+  "content_fingerprint": "2b8a9fefd8a7c37223134a7625f37bf09d687f1d3ba26a94db30963096f6ac1d"
+}

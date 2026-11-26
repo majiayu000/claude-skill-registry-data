@@ -1,0 +1,40 @@
+{
+  "name": "render-disks",
+  "repo": "sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "path": "CapabilityTreeSitter/03-AgenticRuntime/render-render-disks/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "dir_name": "render-render-disks",
+  "downloaded_at": "2026-11-26T08:32:00.972970Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, docker, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "docker",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sbarteau2022",
+  "source_url": "https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/CapabilityTreeSitter/03-AgenticRuntime/render-render-disks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/CapabilityTreeSitter/03-AgenticRuntime/render-render-disks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Attaches and manages persistent disks on Render services\u2014mount paths, sizing, snapshots, file transfers, and single-instance constraints. Use when the user needs persistent storage, file uploads, a custom database on disk, CMS media storage, or needs to understand why their service can't scale horizontally or use zero-downtime deploys. Trigger terms: persistent disk, disk, storage, mount path, sizeGB, SSD, file uploads, snapshots, disk restore, ephemeral filesystem."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "orbit-gmail",
+  "repo": "nexu-io/openmotion",
+  "path": "library/design/templates/orbit-gmail/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/nexu-io/openmotion",
+  "dir_name": "orbit-gmail",
+  "downloaded_at": "2026-11-26T07:40:33.565965Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, figma",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nexu-io",
+  "source_url": "https://github.com/nexu-io/openmotion/blob/main/library/design/templates/orbit-gmail/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nexu-io/openmotion/blob/main/library/design/templates/orbit-gmail/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Open Orbit briefing skill \u2014 selected by the Orbit pipeline when\nGmail is the user's only connected connector, or when the user\nexplicitly scopes their daily digest to Gmail. Pulls the past 24\nhours of inbox activity (replies awaited, mentions, cc, auto-\ncategorized bulk) from the user's authenticated Gmail connection\nand renders the digest as the Orbit Daily Digest email opened\ninside Gmail's reading view. This skill should not be triggered\nmanually \u2014 it is invoked by Orbit's daily-digest scheduler against\nlive Gmail data."
+}

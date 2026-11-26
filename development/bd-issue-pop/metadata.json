@@ -1,0 +1,38 @@
+{
+  "name": "bd-issue-pop",
+  "repo": "petar-djukic/agent-skills",
+  "path": ".agents/skills/bd-issue-pop/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/petar-djukic/agent-skills",
+  "dir_name": "bd-issue-pop",
+  "downloaded_at": "2026-11-26T08:02:39.969131Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petar-djukic",
+  "source_url": "https://github.com/petar-djukic/agent-skills/blob/main/.agents/skills/bd-issue-pop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petar-djukic/agent-skills/blob/main/.agents/skills/bd-issue-pop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pop a bead (epic) into a worktree branch, decompose it into child beads, then"
+}

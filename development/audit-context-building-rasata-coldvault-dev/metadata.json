@@ -1,0 +1,40 @@
+{
+  "name": "audit-context-building",
+  "repo": "rasata/coldvault.dev",
+  "path": ".claude/skills/audit-context-building/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rasata/coldvault.dev",
+  "dir_name": "audit-context-building-rasata-coldvault-dev",
+  "downloaded_at": "2026-11-26T08:16:41.624975Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rasata",
+  "source_url": "https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/audit-context-building/SKILL.md",
+  "license": "MIT (ZONOVA RESEARCH — coldvault.dev)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/audit-context-building/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Inventory the suspect repository (languages, frameworks, package managers, entry points, build system, CI) before any scan. Always run this first — subsequent skills depend on its output.",
+  "content_fingerprint": "8455a2a7fb2d9450f106d0bdd87d29737693bee08dc231c0ed6096d6d4392e9e"
+}

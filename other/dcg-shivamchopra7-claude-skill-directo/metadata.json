@@ -1,0 +1,38 @@
+{
+  "name": "dcg",
+  "repo": "shivamchopra7/claude-skill-directory",
+  "path": "skills/other/dcg/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/shivamchopra7/claude-skill-directory",
+  "dir_name": "dcg-shivamchopra7-claude-skill-directo",
+  "downloaded_at": "2026-11-26T08:42:01.214850Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shivamchopra7",
+  "source_url": "https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/other/dcg/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/other/dcg/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Handle blocked destructive commands. Use when dcg blocks rm -rf, git reset --hard, DROP DATABASE, kubectl delete, or when configuring agent safety guardrails."
+}

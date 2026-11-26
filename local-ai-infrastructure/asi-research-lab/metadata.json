@@ -1,0 +1,37 @@
+{
+  "name": "asi-research-lab",
+  "repo": "openamer/openamer",
+  "path": "skills/asi/asi-research-lab/SKILL.md",
+  "github_branch": "main",
+  "category": "local-ai-infrastructure",
+  "source": "github.com/openamer/openamer",
+  "dir_name": "asi-research-lab",
+  "downloaded_at": "2026-11-26T07:54:47.690992Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "local-ai-infrastructure",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for local-ai-infrastructure: llama-cpp, gguf",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "llama-cpp",
+      "gguf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openamer",
+  "source_url": "https://github.com/openamer/openamer/blob/main/skills/asi/asi-research-lab/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openamer/openamer/blob/main/skills/asi/asi-research-lab/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for neural architecture experiments in Pure Python."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "verify-paired-native-measurements",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/verify-paired-native-measurements/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "verify-paired-native-measurements",
+  "downloaded_at": "2026-11-26T07:49:30.917970Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/verify-paired-native-measurements/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/verify-paired-native-measurements/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit the process, sample and archive evidence behind paired native benchmarks, especially wrappers around an unchanged official client. Use before admitting benchmark results or when reviewing the controller that produced them. Ordinary unit tests do not need this."
+}

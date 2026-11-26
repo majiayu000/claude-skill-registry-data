@@ -1,0 +1,39 @@
+{
+  "name": "workflow-artifacts",
+  "repo": "moberghr/mtk-agent-toolkit",
+  "path": ".claude/skills/workflow-artifacts/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/moberghr/mtk-agent-toolkit",
+  "dir_name": "workflow-artifacts",
+  "downloaded_at": "2026-11-26T07:29:31.678749Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moberghr",
+  "source_url": "https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/workflow-artifacts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/workflow-artifacts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to create, update, and read durable workflow state under .mtk/workflows/ so orchestration survives compaction, crash, and session handoff."
+}

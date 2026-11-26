@@ -1,0 +1,38 @@
+{
+  "name": "ie-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/ie-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "ie-payroll",
+  "downloaded_at": "2026-11-26T07:54:40.445725Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ie-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ie-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Irish employer payroll for tax year 2026: PAYE Income Tax at 20% and 40% under the Revenue Payroll Notification (RPN), the 2026 standard rate cut-off points (EUR 44,000 single) and tax credits (EUR 2,000 personal, EUR 2,000 employee), USC 2026 bands, PRSI Class A at 4.2% employee to 30 September 2026 and 4.35% from 1 October 2026, employer 9%/11.25% then 9.15%/11.40% above EUR 552 a week, the PRSI Credit, the EUR 14.15 minimum wage, company car BIK and the EUR 1,500 small benefit exemption, auto-enrolment (MyFutureFund) at 1.5% employee and 1.5% employer from 1 January 2026, payroll submissions on or before pay day, payment by the 14th (23rd on ROS), the emergency basis, and the EUR 4,000 penalty and 0.0274% daily interest. Trigger on 'Irish payroll', 'gross to net Ireland', 'RPN', 'payroll submission', 'emergency tax', 'BIK Ireland', 'auto-enrolment', 'MyFutureFund'. Out of scope: USC in depth (ie-usc), self-employed PRSI (ie-prsi-class-s), posted workers and A1 (ie-prsi-cross-border)",
+  "content_fingerprint": "172c28fdbd6dbcff7d292d764d61c84b146d1ef1acd77270758975d728b9f04d"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "bailian-cli",
+  "repo": "sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "path": "CapabilityTreeSitter/03-AgenticRuntime/bailian-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "dir_name": "bailian-cli",
+  "downloaded_at": "2026-11-26T08:31:51.615331Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sbarteau2022",
+  "source_url": "https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/CapabilityTreeSitter/03-AgenticRuntime/bailian-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/CapabilityTreeSitter/03-AgenticRuntime/bailian-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "阿里云百炼 / Aliyun Bailian / DashScope 资源管理与 `bl` CLI hub： 应用调用（bl app）、应用记忆、知识库检索、模型目录/模型列表、用量/额度/配额、免费额度、 工作空间、MCP 市场、pipeline、文件上传、console API、登录鉴权与配置、 Agent skill 安装/列表/更新/卸载（bl skill add|list|update|remove，百炼 skill registry）。 用户点名百炼 / DashScope / `bl`，或继续既有 `bl` 工作流时直接使用。 共享协议（consent / 版本预检 / 鉴权 / 错误上报）在 bailian-protocol；官方安装 `bl skill init`。 家族路由：生图/生视频/配音/语音合成/转写 → bailian-gen；精调/微调/训练/数据集 → bailian-finetune； agents.yaml 托管 Agent → bailian-managed-agent；联网搜索的模型路由（Token Plan 自带搜索 vs MCP 搜索 + 兜底）→ bailian-web-search。 不要用于普通问答、编程、写作、翻译、摘要、泛搜索，或图片理解等宿主自己能做的任务（普通问答、编程、写作、翻译、摘要、泛搜索不触发）。 未命名用量/额度问题：先问用户使用哪个产品，再运行 `bl usage` / `bl quota` 查询。",
+  "content_fingerprint": "862e8a31adcab46fce7980613958ac7e39f0952341cb50c119fd5c7ac7fa2128"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "figcraft-design",
+  "repo": "makifbaysal/tasktrooper",
+  "path": "catalog/agents/ui-designer/skills/figcraft-design/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/makifbaysal/tasktrooper",
+  "dir_name": "figcraft-design",
+  "downloaded_at": "2026-11-26T07:12:29.036626Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "makifbaysal",
+  "source_url": "https://github.com/makifbaysal/tasktrooper/blob/main/catalog/agents/ui-designer/skills/figcraft-design/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/makifbaysal/tasktrooper/blob/main/catalog/agents/ui-designer/skills/figcraft-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use for every design task when FigCraft is installed - the design system and every screen are drawn as editable FigCraft layers (frames, auto layout, components, variants, styles, variables) in the task's own .figcraft file from get_design_file; Foundations page, one page per flow, frame naming, batch-and-verify loop, saving, and the short notes document the human reviews beside it"
+}

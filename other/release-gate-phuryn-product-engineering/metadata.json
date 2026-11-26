@@ -1,0 +1,37 @@
+{
+  "name": "release-gate",
+  "repo": "phuryn/product-engineering",
+  "path": "ai-shipping/skills/release-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/phuryn/product-engineering",
+  "dir_name": "release-gate-phuryn-product-engineering",
+  "downloaded_at": "2026-11-26T08:03:56.769364Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "phuryn",
+  "source_url": "https://github.com/phuryn/product-engineering/blob/main/ai-shipping/skills/release-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/phuryn/product-engineering/blob/main/ai-shipping/skills/release-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Before 'push it', 'ship it', a deploy, release or go-live, or calling a stage done: the gate, the owner's preview, go/no-go, promote, prove it serves, roll back."
+}

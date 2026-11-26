@@ -1,0 +1,37 @@
+{
+  "name": "evaluator-scoring-surface-audit",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/evaluator-scoring-surface-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "evaluator-scoring-surface-audit",
+  "downloaded_at": "2026-11-26T07:49:30.711774Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/evaluator-scoring-surface-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/evaluator-scoring-surface-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read a benchmark's evaluator, verifier and scoring source line by line for gaps between what is counted, what is checked and what is only assumed, then turn each gap into a priced lever, a tool, or a report to the organisers. Use when joining a benchmark, after any evaluator change, or when the leaderboard moves in a way your cost model does not explain."
+}

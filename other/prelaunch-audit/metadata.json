@@ -1,0 +1,39 @@
+{
+  "name": "prelaunch-audit",
+  "repo": "sant1jmnz/claude-code-kit",
+  "path": "skills/prelaunch-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sant1jmnz/claude-code-kit",
+  "dir_name": "prelaunch-audit",
+  "downloaded_at": "2026-11-26T08:30:53.277789Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "sant1jmnz",
+  "source_url": "https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/prelaunch-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sant1jmnz/claude-code-kit/blob/main/skills/prelaunch-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Get a website production-ready in one pass - finds and fixes bugs, security holes, missing legal pages, SEO gaps, accessibility and speed problems, then load-tests and attacks it locally, and checks 20 signs of a \"vibe-coded\" site. Use when the user says \"audit this site\", \"make it production-ready\", \"review before launch\", \"launch checklist\", \"will it handle traffic?\" or \"look for vulnerabilities\" on their own or a client's site."
+}

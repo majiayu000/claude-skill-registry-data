@@ -1,0 +1,38 @@
+{
+  "name": "fix-ci",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/quality/fix-ci/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "fix-ci-ostendorf-cloud-skills",
+  "downloaded_at": "2026-11-26T07:57:04.129978Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/quality/fix-ci/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/quality/fix-ci/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reads a failing GitHub Actions run with the CLI, reproduces the failure locally with the same task target and tool versions, and fixes the cause instead of retrying the job. Use when a check is red, CI behaves differently than local, or someone asks to fix CI."
+}

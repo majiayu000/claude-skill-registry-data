@@ -1,0 +1,38 @@
+{
+  "name": "idea-md",
+  "repo": "orlandoneto/agent-skills",
+  "path": "skills/community/ck-idea-md/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/orlandoneto/agent-skills",
+  "dir_name": "ck-idea-md",
+  "downloaded_at": "2026-11-26T07:56:44.106771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "planning",
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orlandoneto",
+  "source_url": "https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-idea-md/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-idea-md/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create or expand an Idea.md / IDEA.md file from a rough description, existing repo, conversation history, notes, or other early-stage product inputs. Use when the user asks to \"write an Idea.md\", \"turn this into an idea file\", \"capture this product idea\", \"expand this concept\", or wants a repo-grounded concept brief before validation, PRD, or implementation work."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "kubernetes-conventions",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/kubernetes/kubernetes-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "kubernetes-conventions",
+  "downloaded_at": "2026-11-26T07:57:08.669897Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, infra, infrastructure",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "kubernetes",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/kubernetes/kubernetes-conventions/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/kubernetes/kubernetes-conventions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Kubernetes conventions for how a workload reaches the cluster, how namespaces and CRDs are organised, and the baseline every workload meets: resources, probes, non root, secrets, default deny network policy. Use when installing, changing or reviewing anything that runs in Kubernetes."
+}

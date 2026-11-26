@@ -1,0 +1,37 @@
+{
+  "name": "assess-observability-health",
+  "repo": "microsoft/azure-skills",
+  "path": ".github/plugins/azure-observability/skills/assess-observability-health/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/microsoft/azure-skills",
+  "dir_name": "assess-observability-health-microsoft-azure-skills",
+  "downloaded_at": "2026-11-26T07:24:20.062703Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/azure-skills/blob/main/.github/plugins/azure-observability/skills/assess-observability-health/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/azure-skills/blob/main/.github/plugins/azure-observability/skills/assess-observability-health/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assess operational Azure application/resource or Foundry-agent health from supplied evidence or authorized telemetry: failed requests, runtime/tool errors and application latency. Return ranked findings and gaps read-only. Not resource creation, general coding fixes or deployment readiness. Direct health requests do not require the coordinator; conceptual health/monitoring questions need no journey."
+}

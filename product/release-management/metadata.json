@@ -1,0 +1,38 @@
+{
+  "name": "release-management",
+  "repo": "rampstackco/claude-skills",
+  "path": "skills/release-management/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/rampstackco/claude-skills",
+  "dir_name": "release-management",
+  "downloaded_at": "2026-11-26T08:16:06.991548Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rampstackco",
+  "source_url": "https://github.com/rampstackco/claude-skills/blob/main/skills/release-management/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rampstackco/claude-skills/blob/main/skills/release-management/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the recurring release cycle that turns merged work into a shipped, communicated release: a stated release model, a version derived from the changes, a release candidate and freeze, a written go/no-go gate, staged rollout with an exercised rollback, a hotfix path, and the changelog and release notes. Use this skill whenever the user wants to cut a release, plan or run a release train, decide what version a release should be, freeze code, hold a go/no-go, write a rollout or rollback plan, ship a hotfix, or write release notes, a changelog entry, or a deprecation notice. Triggers on release, cut a release, release notes, changelog, version bump, semver, calver, what version should this be, release train, code freeze, release candidate, RC, go/no-go, rollout plan, staged rollout, canary, rollback plan, hotfix, deprecation notice, release manager, release captain. Also triggers when the user has a set of merged changes and asks how to ship them or what to tell users, even if they never say release."
+}

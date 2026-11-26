@@ -1,0 +1,36 @@
+{
+  "name": "tregExtension",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/tregExtension/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "tregextension",
+  "downloaded_at": "2026-11-26T07:18:50.659119Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/tregExtension/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/tregExtension/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reach treg's catalog from log. `tregSearch` finds an endpoint by the job, `tregGet` gives its price and params, and `tregCall` calls it with the key held server-side; a priced endpoint only runs as `tregCallLive` when the owner approved the spend. Use whenever something has to be looked up from an external source (rule 53), such as web search, X or TikTok data, SEO or enrichment."
+}

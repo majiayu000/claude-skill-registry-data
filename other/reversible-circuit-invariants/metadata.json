@@ -1,0 +1,37 @@
+{
+  "name": "reversible-circuit-invariants",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/reversible-circuit-invariants/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "reversible-circuit-invariants",
+  "downloaded_at": "2026-11-26T07:49:29.763983Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/reversible-circuit-invariants/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/reversible-circuit-invariants/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Executable invariant checkers for space-efficient reversible arithmetic circuits, derived from eprint 2026/2014 (Jo & Lee, exact in-place modular inversion with 3n/2+o(n) qubits). Use before an ecdsa.fail build/eval/submit, when porting a low-qubit layout (four-hole / omitted-rail ports), when deciding whether an in-place erase relation is a legal permutation, when pricing spooky-pebbled uncomputation offline against a lane budget, or when auditing a candidate circuit's peak/Toffoli/clean-ancilla structure from ops.bin. Fires on \"rci\", \"check the layout\", \"is this erase legal\", \"price the pebble\", \"ops.bin census\", \"omitted rail audit\", \"exceptional set\"."
+}

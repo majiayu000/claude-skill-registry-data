@@ -1,0 +1,37 @@
+{
+  "name": "memelord",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/memelord/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "memelord",
+  "downloaded_at": "2026-11-26T07:18:48.486095Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/memelord/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/memelord/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reply with a meme that fits the moment, from Memelord's template library. Read the chat, search Memelord for the moment (`memelordSearch`, `memelordTrending`, `memelordTemplate`), gate it, and send its media url on its own line, which Discord shows inline. Use when the owner asks to answer a chat with memes, or when a chat is joking with clips and a meme is the human answer."
+}

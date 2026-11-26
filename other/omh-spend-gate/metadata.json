@@ -1,0 +1,37 @@
+{
+  "name": "omh-spend-gate",
+  "repo": "rlaope/oh-my-hermes",
+  "path": "skills/omh-spend-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rlaope/oh-my-hermes",
+  "dir_name": "omh-spend-gate",
+  "downloaded_at": "2026-11-26T08:23:16.963866Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rlaope",
+  "source_url": "https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-spend-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-spend-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[omh] Spending money on the user's behalf: a card checkout, an HTTP 402 or pay-per-request call, a wallet transfer, a booking, a paid data endpoint; show a pre-spend card (payee, total with fees, cap, refund terms, approver) first, and call it done only on an observed receipt. Use when the user says: spend-gate, spend gate, pre-spend, pre-spend card, spend cap, spending cap, spend limit, spending limit."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "pr",
+  "repo": "mkofler96/KoFEM",
+  "path": ".claude/skills/pr/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/mkofler96/KoFEM",
+  "dir_name": "pr-mkofler96-kofem",
+  "downloaded_at": "2026-11-26T07:28:36.697574Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mkofler96",
+  "source_url": "https://github.com/mkofler96/KoFEM/blob/main/.claude/skills/pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mkofler96/KoFEM/blob/main/.claude/skills/pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Open or write a KoFEM pull request that is fast to review: a diagram or diff sketch of the key change, before/after proof that it fixes the problem, and the merge danger. Use when opening a PR, writing or rewriting a PR body, or asked to 'make a PR' for a Linear issue."
+}

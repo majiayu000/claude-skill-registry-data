@@ -1,0 +1,37 @@
+{
+  "name": "hush",
+  "repo": "royashbrook/hush",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/royashbrook/hush",
+  "dir_name": "hush",
+  "downloaded_at": "2026-11-26T08:26:07.391829Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "royashbrook",
+  "source_url": "https://github.com/royashbrook/hush/blob/main/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/royashbrook/hush/blob/main/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use whenever an agent needs to STORE, GENERATE, or USE a secret such as an API token, signing key, or password. Hush has one hard rule: the agent never sees plaintext, so it never enters chat, transcripts, stdout, logs, the clipboard, or a temp file. A user-provided value enters once through a hidden prompt; a strong random value can be generated directly into the OS-backed store. Hush later injects it straight into a consumer through an environment variable or stdin, never prints it, and deliberately has no plaintext get command. Trigger on \"store this token\", \"save this key\", \"add it to the keychain\", \"generate an operator/signing key\", \"use the X secret to call Y\", or whenever an agent needs a credential to reach a service. macOS, Linux, and Windows backends are built in; the never-print contract is portable beyond them."
+}

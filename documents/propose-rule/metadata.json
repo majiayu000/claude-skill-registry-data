@@ -1,0 +1,37 @@
+{
+  "name": "propose-rule",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/work/propose-rule/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "propose-rule",
+  "downloaded_at": "2026-11-26T07:57:05.627835Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/work/propose-rule/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/work/propose-rule/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Proposes a change to the baseline rules, hooks, settings or skills as an issue in the skills repository or as a message to the user, without ever editing the installed baseline. Use when a correction recurs, a guardrail is missing or wrong, or a skill needs updating."
+}

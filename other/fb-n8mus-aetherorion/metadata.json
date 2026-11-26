@@ -1,0 +1,37 @@
+{
+  "name": "fb",
+  "repo": "n8mus/AetherOrion",
+  "path": ".claude/skills/fb/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/n8mus/AetherOrion",
+  "dir_name": "fb-n8mus-aetherorion",
+  "downloaded_at": "2026-11-26T07:35:40.563257Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n8mus",
+  "source_url": "https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/fb/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/fb/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fix an AetherSDR bug end-to-end and prove the fix with the agent automation bridge. Use when the user says $fb or /fb ISSUE_NUMBER (e.g. /fb 2211), or asks to \"fix bug 2211\", \"take the next bug\", \"reproduce and fix issue 3340\", or otherwise wants a GitHub issue investigated, root-caused, fixed in a worktree, built, proven via the bridge, and turned into a PR. This is the dogfooding loop for the agent automation bridge \u2014 reach for it whenever a UX, meter, transmit, audio, or control bug is reported with an issue number."
+}

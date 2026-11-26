@@ -1,0 +1,38 @@
+{
+  "name": "debugging",
+  "repo": "msFoma/foma-skills",
+  "path": "plugins/foma-skills/skills/debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/msFoma/foma-skills",
+  "dir_name": "debugging-msfoma-foma-skills",
+  "downloaded_at": "2026-11-26T07:33:30.065098Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msFoma",
+  "source_url": "https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/debugging/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/debugging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds the root cause of a bug before fixing it. Use when something behaves unexpectedly, throws, fails a test, runs slow, or the user says \"find out why\". Not for a precisely diagnosed fix, test runs, reviews or tests-first work."
+}

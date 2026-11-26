@@ -1,0 +1,39 @@
+{
+  "name": "internal-linking",
+  "repo": "saurabhchandanshive05/Aurax-frontend-app",
+  "path": ".claude/skills/internal-linking/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/saurabhchandanshive05/Aurax-frontend-app",
+  "dir_name": "internal-linking-saurabhchandanshive0-aurax-frontend-app",
+  "downloaded_at": "2026-11-26T08:31:35.847569Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: seo, content, brand",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "seo",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saurabhchandanshive05",
+  "source_url": "https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/internal-linking/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/internal-linking/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit a website's internal linking and hand back the fixes. Crawls the site (or imports a Screaming Frog export), finds orphan pages, under-linked priority pages, over-linked hubs, broken links, redirect chains, generic and repetitive anchors, then proposes concrete links (source page, target page, anchor text, draft sentence) and a top-20 action plan in one markdown report. Use when the user says \"/internal-linking\", \"internal links\", \"internal linking audit\", \"orphan pages\", \"link equity\", \"anchor text audit\", \"which pages should link to X\", \"spread authority to this page\", or asks why a page gets no internal links. Not for backlinks from other sites, and not for planning new content clusters (that is /seo-cluster).",
+  "content_fingerprint": "932ebd92881a69ce0820375c99308ec0e260a25d9736906795525793cf335c91"
+}

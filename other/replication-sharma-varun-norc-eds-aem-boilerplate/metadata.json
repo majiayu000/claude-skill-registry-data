@@ -1,0 +1,37 @@
+{
+  "name": "replication",
+  "repo": "sharma-varun-norc/eds-aem-boilerplate",
+  "path": ".claude/skills/replication/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sharma-varun-norc/eds-aem-boilerplate",
+  "dir_name": "replication-sharma-varun-norc-eds-aem-boilerplate",
+  "downloaded_at": "2026-11-26T08:39:10.086135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sharma-varun-norc",
+  "source_url": "https://github.com/sharma-varun-norc/eds-aem-boilerplate/blob/main/.claude/skills/replication/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sharma-varun-norc/eds-aem-boilerplate/blob/main/.claude/skills/replication/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "AEM Cloud Service expert skill for replication / content distribution. Covers migration from CQ Replicator (com.day.cq.replication.Replicator) and Sling Replication Agent (org.apache.sling.replication.agent.api) to the Sling Distribution API (Distributor + SimpleDistributionRequest). Includes agent selection (publish vs preview), async response handling, author cluster coordination, service-user setup, review checklist, troubleshooting, and common pitfalls."
+}

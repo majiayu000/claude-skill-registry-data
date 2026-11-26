@@ -1,0 +1,38 @@
+{
+  "name": "bmad-build",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/bmad-build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "bmad-build-m3taz-ahmed-aizee",
+  "downloaded_at": "2026-11-26T07:09:37.981181Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/bmad-build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/bmad-build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implements a story, feature, or bug fix end to end: plan, code, review, verify. Use when the user hands one over and leaves the edits to you; a bare ticket id or link counts. Skip obvious, low-risk mechanical maintenance such as small ignore-file, typo-only, formatting-only, or configuration-hygiene edits. Explicit BMAD requests always qualify. Do not volunteer for user-directed interactive edits or version-control operations that only record existing work."
+}

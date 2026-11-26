@@ -1,0 +1,37 @@
+{
+  "name": "playwright-web-scraping",
+  "repo": "omagents/omagents",
+  "path": "packages/core/skills/playwright-web-scraping/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/omagents/omagents",
+  "dir_name": "playwright-web-scraping",
+  "downloaded_at": "2026-11-26T07:51:46.157939Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "omagents",
+  "source_url": "https://github.com/omagents/omagents/blob/main/packages/core/skills/playwright-web-scraping/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/omagents/omagents/blob/main/packages/core/skills/playwright-web-scraping/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use Playwright (Python) for all web scraping and page-fetching tasks instead of curl, wget, or requests. Trigger this skill whenever the task involves: fetching a web page's content, scraping data from a URL, reading a website's text, extracting information from HTML, or any task where a web page needs to be loaded and parsed. Playwright handles JavaScript-rendered pages, cookies, redirects, and anti-bot measures far better than curl. Do NOT use curl for fetching web page content \u2014 reserve curl exclusively for testing HTTP APIs (REST/GraphQL endpoints, checking status codes, headers, JSON responses)."
+}

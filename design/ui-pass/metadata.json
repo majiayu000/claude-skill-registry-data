@@ -1,0 +1,39 @@
+{
+  "name": "ui-pass",
+  "repo": "njdaniel/conch",
+  "path": ".claude/skills/ui-pass/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/njdaniel/conch",
+  "dir_name": "ui-pass",
+  "downloaded_at": "2026-11-26T07:44:08.578409Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "njdaniel",
+  "source_url": "https://github.com/njdaniel/conch/blob/main/.claude/skills/ui-pass/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/njdaniel/conch/blob/main/.claude/skills/ui-pass/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The UI/UX improvement loop for Conch's clients. Capture real screenshots of a flow's states at desktop, desktop-app and phone sizes against a real LiveKit, critique them against the UX rules, file ranked issues with the images, fix with before/after screenshots, and pin each fix with a layout test. Use when asked to review or improve the UI or UX of a flow (talk, stream, chat, sign-in, settings), or before a release that changes how a client looks."
+}

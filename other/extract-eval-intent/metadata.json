@@ -1,0 +1,39 @@
+{
+  "name": "extract-eval-intent",
+  "repo": "plurai-ai/plurai-simulation",
+  "path": "skills/extract-eval-intent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/plurai-ai/plurai-simulation",
+  "dir_name": "extract-eval-intent",
+  "downloaded_at": "2026-11-26T08:05:24.746826Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "plurai-ai",
+  "source_url": "https://github.com/plurai-ai/plurai-simulation/blob/main/skills/extract-eval-intent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/plurai-ai/plurai-simulation/blob/main/skills/extract-eval-intent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write eval_intent.yaml, what the customer cares about, from the PRD and scenario variables after 3-4 questions. Optional. Run standalone before a suite build, never inside /simulation-generate-suite.",
+  "content_fingerprint": "87761ce85254894a97333a311cbafb2e696ee34f78731c591761827280617dc5"
+}

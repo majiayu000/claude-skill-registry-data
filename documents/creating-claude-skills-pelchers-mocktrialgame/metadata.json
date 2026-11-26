@@ -1,0 +1,42 @@
+{
+  "name": "creating-claude-skills",
+  "repo": "pelchers/MockTrialGame",
+  "path": ".claude/skills/creating-claude-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/pelchers/MockTrialGame",
+  "dir_name": "creating-claude-skills-pelchers-mocktrialgame",
+  "downloaded_at": "2026-11-26T08:01:59.035726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, excel, markdown, documentation",
+    "score": 6,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "excel",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pelchers",
+  "source_url": "https://github.com/pelchers/MockTrialGame/blob/main/.claude/skills/creating-claude-skills/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pelchers/MockTrialGame/blob/main/.claude/skills/creating-claude-skills/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Creates Claude Code skills following Anthropic's official format with progressive disclosure, YAML frontmatter, and proper structure. Use when building new skills, understanding skill architecture, or implementing team expertise as reusable Claude capabilities.",
+  "content_fingerprint": "4207296ce2ab197041b71d140ce9b4e66795581361d178592f9123fba25f7edd"
+}

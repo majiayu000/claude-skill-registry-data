@@ -1,0 +1,38 @@
+{
+  "name": "verifie",
+  "repo": "naiersaidane/claude-mastery",
+  "path": "skills/verifie/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/naiersaidane/claude-mastery",
+  "dir_name": "verifie",
+  "downloaded_at": "2026-11-26T07:35:58.255108Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "naiersaidane",
+  "source_url": "https://github.com/naiersaidane/claude-mastery/blob/main/skills/verifie/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/naiersaidane/claude-mastery/blob/main/skills/verifie/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "V\u00e9rifier qu'un changement marche vraiment avant de le livrer : contr\u00f4les rapides (lint, types, tests), tests E2E persistants (un par crit\u00e8re d'acceptation du PLAN), checklist d\u00e9clench\u00e9e par le diff, passe exploratoire sur l'app qui tourne, puis rapport de preuves. Au premier lancement, installe la v\u00e9rification du projet dans `docs/VERIFICATION.md`. Utilise sur /verifie, \"v\u00e9rifie\", \"teste tout\", \"est-ce que \u00e7a marche ?\", \"c'est pr\u00eat ?\", avant de d\u00e9clarer une phase termin\u00e9e, ou quand /livre le d\u00e9clenche. Pair naturel de /planifie (amont, crit\u00e8res) et /livre (aval)."
+}

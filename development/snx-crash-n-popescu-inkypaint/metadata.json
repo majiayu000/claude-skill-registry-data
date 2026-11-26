@@ -1,0 +1,38 @@
+{
+  "name": "snx-crash",
+  "repo": "n-popescu/Inkypaint",
+  "path": ".claude/skills/snx-crash/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/n-popescu/Inkypaint",
+  "dir_name": "snx-crash-n-popescu-inkypaint",
+  "downloaded_at": "2026-11-26T07:34:58.636610Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n-popescu",
+  "source_url": "https://github.com/n-popescu/Inkypaint/blob/main/.claude/skills/snx-crash/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n-popescu/Inkypaint/blob/main/.claude/skills/snx-crash/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Take a ScarletNX crash report, svcBreak or hang from the log to the mechanism that causes it, using the symbolizer and disassembler on the game's code. Use when the game crashes (signal 11 or 7), calls svcBreak or fatal, hangs, or when a log shows \"*** Crash\". Also for corrupted data showing up in game structures."
+}

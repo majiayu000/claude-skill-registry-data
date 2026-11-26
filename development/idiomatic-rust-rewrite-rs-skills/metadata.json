@@ -1,0 +1,38 @@
+{
+  "name": "idiomatic-rust",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/rust/idiomatic-rust/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "idiomatic-rust-rewrite-rs-skills",
+  "downloaded_at": "2026-11-26T08:20:56.465808Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/rust/idiomatic-rust/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/rust/idiomatic-rust/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write Rust that reads like Rust \u2014 iterator pipelines over index loops, From/Into over ad-hoc converters, derives over hand-written impls, newtypes over bare primitives. Use when writing new Rust, when reviewing Rust that reads like a translation from another language, when reaching for a classic design pattern (strategy, command, visitor) or a try/finally cleanup in Rust, when naming a constructor, accessor, iterator, or error type, or when the user asks how to make Rust code more idiomatic or less repetitive."
+}

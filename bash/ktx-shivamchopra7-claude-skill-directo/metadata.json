@@ -1,0 +1,38 @@
+{
+  "name": "ktx",
+  "repo": "shivamchopra7/claude-skill-directory",
+  "path": "skills/bash/ktx/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/shivamchopra7/claude-skill-directory",
+  "dir_name": "ktx-shivamchopra7-claude-skill-directo",
+  "downloaded_at": "2026-11-26T08:41:55.118280Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shivamchopra7",
+  "source_url": "https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/bash/ktx/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/bash/ktx/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Installs and configures ktx, the open-source context layer for data agents \u2014 runs ktx setup non-interactively with hidden CLI flags, configures database connections and embeddings, installs agent integration, and verifies readiness. Use when the user asks an agent to add ktx to a project, connect data sources, install agent rules, ingest schema, or troubleshoot a local ktx install."
+}

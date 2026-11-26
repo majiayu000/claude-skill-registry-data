@@ -1,0 +1,38 @@
+{
+  "name": "serbia-vat",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/serbia-vat/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "serbia-vat",
+  "downloaded_at": "2026-11-26T07:54:38.225870Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/serbia-vat/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/serbia-vat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Serbian value added tax (porez na dodatu vrednost, PDV) for 2026 under the Zakon o porezu na dodatu vrednost, consolidated to Law 80/2026. Covers who must register (the RSD 8,000,000 threshold in Article 38) and small taxpayers; the 20% general rate and the 10% special rate and what each covers; exemptions with and without input deduction; input tax and blocked items; monthly and quarterly tax periods and the 15-day return and payment deadline; the PPPDV return with its POPDV schedule; the SEF e-invoicing system and the e-VAT records (EEO and EPP) due by the 12th; reverse charge and the tax debtor rules; refunds; penalties under the ZPPPA; and which 80/2026 changes start in 2027. Trigger on: Serbia VAT, PDV Srbija, PPPDV, POPDV, SEF, e-faktura, Serbian reverse charge, Serbian VAT refund. Out of scope: corporate tax (rs-corporate-tax), income tax (serbia-income-tax), payroll (serbia-payroll), cross-border structuring (rs-cross-border).",
+  "content_fingerprint": "99dedf5b8dda9495212597bf7451861ccd15d55c3059d559200cb4ff6ce66a21"
+}

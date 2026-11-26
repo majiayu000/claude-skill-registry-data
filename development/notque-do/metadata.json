@@ -1,0 +1,39 @@
+{
+  "name": "do",
+  "repo": "orlandoneto/agent-skills",
+  "path": "skills/community/notque-do/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/orlandoneto/agent-skills",
+  "dir_name": "notque-do",
+  "downloaded_at": "2026-11-26T07:56:41.961882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orlandoneto",
+  "source_url": "https://github.com/orlandoneto/agent-skills/blob/main/skills/community/notque-do/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orlandoneto/agent-skills/blob/main/skills/community/notque-do/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Classify user requests and route to the correct agent + skill. Primary entry point for all delegated work."
+}

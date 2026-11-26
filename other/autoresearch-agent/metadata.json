@@ -1,0 +1,38 @@
+{
+  "name": "autoresearch-agent",
+  "repo": "sinhoneyy/master-skills",
+  "path": "skills/autoresearch-agent/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/sinhoneyy/master-skills",
+  "dir_name": "autoresearch-agent",
+  "downloaded_at": "2026-11-26T08:44:19.753094Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, performance=3",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sinhoneyy",
+  "source_url": "https://github.com/sinhoneyy/master-skills/blob/master/skills/autoresearch-agent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sinhoneyy/master-skills/blob/master/skills/autoresearch-agent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Autonomous experiment loop that optimizes any file by a measurable metric. Inspired by Karpathy's autoresearch. The agent edits a target file, runs a fixed evaluation, keeps improvements (git commit), discards failures (git reset), and loops indefinitely. Use when: user wants to optimize code speed, reduce bundle/image size, improve test pass rate, optimize prompts, improve content quality (headlines, copy, CTR), or run any measurable improvement loop. Requires: a target file, an evaluation command that outputs a metric, and a git repo."
+}

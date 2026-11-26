@@ -1,0 +1,37 @@
+{
+  "name": "factory-mentor",
+  "repo": "nonlinear-xyz/factory-kit",
+  "path": "skills/factory-mentor/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/nonlinear-xyz/factory-kit",
+  "dir_name": "factory-mentor",
+  "downloaded_at": "2026-11-26T07:45:08.245338Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nonlinear-xyz",
+  "source_url": "https://github.com/nonlinear-xyz/factory-kit/blob/main/skills/factory-mentor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nonlinear-xyz/factory-kit/blob/main/skills/factory-mentor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pedagogy layer over factory-voice \u2014 the operator wants to become a better engineer, not just ship. Ambient layer (on when `~/.factory/learner/profile.md` exists) \u2014 mechanism glosses for every named component, derive-before-explain for direct questions, load-bearing-assumption inversion on designs, defensibility flags on specs, blunt correctness calls. Learn mode (switched on by factory-learn) \u2014 the operator writes the artifact, the agent coaches and never writes it, following a track ladder and a progress log in ~/.factory/learner/. When that profile exists, read on session start alongside factory-voice; otherwise skip it unless the operator asks for it; the ambient layer never blocks autonomous builds."
+}

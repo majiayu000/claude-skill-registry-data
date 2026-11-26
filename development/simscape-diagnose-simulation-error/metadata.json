@@ -1,0 +1,39 @@
+{
+  "name": "simscape-diagnose-simulation-error",
+  "repo": "matlab/simulink-agentic-toolkit",
+  "path": "skills-catalog/physical-modeling/simscape-diagnose-simulation-error/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/matlab/simulink-agentic-toolkit",
+  "dir_name": "simscape-diagnose-simulation-error",
+  "downloaded_at": "2026-11-26T07:17:49.293804Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matlab",
+  "source_url": "https://github.com/matlab/simulink-agentic-toolkit/blob/main/skills-catalog/physical-modeling/simscape-diagnose-simulation-error/SKILL.md",
+  "license": "https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matlab/simulink-agentic-toolkit/blob/main/skills-catalog/physical-modeling/simscape-diagnose-simulation-error/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Triage Simscape simulation errors and solver warnings and dispatch to the appropriate diagnostic surface. Covers transient/runtime failures — min step size violations (stiffness, parasitics, event-time), transient initialization failures, and index reduction (\"Cannot solve for one or more variables\"), including errors that appear only with run-time parameters. Use whenever a Simscape model fails to simulate or warns while simulating, even if the user doesn't quote the message and it only shows up after you run the model or read a warnings log; load it before attempting a fix.",
+  "content_fingerprint": "d543ebec690ff5d0622eea08c507bb93f76105f1a273adac4d850984035fee3c"
+}

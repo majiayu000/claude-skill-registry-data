@@ -1,0 +1,40 @@
+{
+  "name": "godot-export",
+  "repo": "preskater/salazie",
+  "path": ".agent/skills/godot-export/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/preskater/salazie",
+  "dir_name": "godot-export",
+  "downloaded_at": "2026-11-26T08:08:49.105124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, android, ios",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "preskater",
+  "source_url": "https://github.com/preskater/salazie/blob/main/.agent/skills/godot-export/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/preskater/salazie/blob/main/.agent/skills/godot-export/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Exports Godot 4.7 projects: templates, export_presets.cfg for desktop, Web and Android, command-line exports and web COOP/COEP headers. Use on \"No export template found\", a blank web build, a SharedArrayBuffer error or files missing after export. Not for tests in CI (`godot-gdscript-headless-testing`), store uploads (`steam-publish`, `itch-publish`) or netcode (`godot-multiplayer`).",
+  "content_fingerprint": "cc3f5d5ef88c6efe3e8bd7011a152bd8fc4dde313c3c73e32bd3b51cd6c45a4f"
+}

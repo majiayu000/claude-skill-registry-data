@@ -1,0 +1,37 @@
+{
+  "name": "leader-rebase-stack",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/leader-rebase-stack/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "leader-rebase-stack",
+  "downloaded_at": "2026-11-26T07:49:24.581077Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/leader-rebase-stack/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/leader-rebase-stack/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maintain your contributions to a moving-leader leaderboard as an ordered stack of idempotent patches (stack/NN-slug/) that rebase onto whatever submission currently leads, with a background leader watcher, a restack that scores the leader first, and a submission gate tied to the live board (submit only when the stack beats the leader by a written margin at submission time). Use on any benchmark where rivals keep landing rows while you build."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "trace-to-scenarios",
+  "repo": "plurai-ai/plurai-simulation",
+  "path": "skills/trace-to-scenarios/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/plurai-ai/plurai-simulation",
+  "dir_name": "trace-to-scenarios",
+  "downloaded_at": "2026-11-26T08:05:23.922306Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, brand",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "plurai-ai",
+  "source_url": "https://github.com/plurai-ai/plurai-simulation/blob/main/skills/trace-to-scenarios/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/plurai-ai/plurai-simulation/blob/main/skills/trace-to-scenarios/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn conversation exports into scenarios that resume where the trace ended. You never read or parse a raw trace file. `--from-brief` (chained by /analyze-traces) turns a trace brief's failures into scenarios and reads the converter's own rendering of a trace, to choose the cut.",
+  "content_fingerprint": "83d56d2b634f315e47b720e2240aafa4b8975a11161e1ca911a762739618a9eb"
+}

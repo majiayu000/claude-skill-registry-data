@@ -1,0 +1,37 @@
+{
+  "name": "configure",
+  "repo": "shaz-norc/aem-eds",
+  "path": ".claude/skills/configure/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/shaz-norc/aem-eds",
+  "dir_name": "configure-shaz-norc-aem-eds",
+  "downloaded_at": "2026-11-26T08:39:43.177641Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, creative=2",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shaz-norc",
+  "source_url": "https://github.com/shaz-norc/aem-eds/blob/main/.claude/skills/configure/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shaz-norc/aem-eds/blob/main/.claude/skills/configure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides Adobe plugin setup in Claude: checks connector availability, suggests tool permissions, and opens the Adobe home hub. Use for /configure, explicit requests to set up Adobe, finish Adobe setup, connect or sign in to Adobe, or set Adobe tool permissions; the plugin's Continue to setup button; or a handoff after selecting Configure the plugin in adobe. Not for /adobe or standalone capability, tour, or overview questions: those use adobe first. Requires the Adobe connector."
+}

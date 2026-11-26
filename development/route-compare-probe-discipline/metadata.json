@@ -1,0 +1,37 @@
+{
+  "name": "route-compare-probe-discipline",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/route-compare-probe-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "route-compare-probe-discipline",
+  "downloaded_at": "2026-11-26T07:49:30.129136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/route-compare-probe-discipline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/route-compare-probe-discipline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compare baseline and candidate on identical input vectors before blaming one call for ecdsa.fail residual or eval dirt. Use when a structural edit changes the op stream, because Fiat-Shamir sampling then tests the two circuits on different shots and can create or hide failures."
+}

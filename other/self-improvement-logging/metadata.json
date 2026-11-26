@@ -1,0 +1,38 @@
+{
+  "name": "self-improvement-logging",
+  "repo": "pelchers/MockTrialGame",
+  "path": ".codex/skills/self-improvement-logging/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pelchers/MockTrialGame",
+  "dir_name": "self-improvement-logging",
+  "downloaded_at": "2026-11-26T08:02:00.227814Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pelchers",
+  "source_url": "https://github.com/pelchers/MockTrialGame/blob/main/.codex/skills/self-improvement-logging/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pelchers/MockTrialGame/blob/main/.codex/skills/self-improvement-logging/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Record how the agents actually performed on real work — the benefit, the bug/gap, how it was verified, and the commit — so the team and future agents compound. Use after a subagent finishes, after a notable action/decision/bug/fix lands, or when the user says \"log the improvement\", \"log that outcome\", \"record how that went\", \"note the learning\", \"add to the self-improvement log\". Appends a minimal-but-verifiable entry to `.self-improving-ai/log/<feature-or-topic>.md`, and promotes durable learnings to `.self-improving-ai/ledger.md`. Companion to `chat-history-convention` (which logs turns verbatim); this logs agent performance.",
+  "content_fingerprint": "ea967515e6bf114f14c37a69f6dd8b7ad9389e2030d8081e9b282f1f344fe664"
+}

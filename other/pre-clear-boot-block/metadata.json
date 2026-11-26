@@ -1,0 +1,38 @@
+{
+  "name": "pre-clear-boot-block",
+  "repo": "rusharlabs/house-party-protocol",
+  "path": "frameworks/operator-kit-1.8.7/skills/pre-clear-boot-block/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rusharlabs/house-party-protocol",
+  "dir_name": "pre-clear-boot-block",
+  "downloaded_at": "2026-11-26T08:28:14.468634Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rusharlabs",
+  "source_url": "https://github.com/rusharlabs/house-party-protocol/blob/main/frameworks/operator-kit-1.8.7/skills/pre-clear-boot-block/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rusharlabs/house-party-protocol/blob/main/frameworks/operator-kit-1.8.7/skills/pre-clear-boot-block/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Before a /clear, emits the DONE / MISSING / read-in-this-order block so the fresh session resumes with zero loss"
+}

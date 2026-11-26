@@ -1,0 +1,39 @@
+{
+  "name": "performance-tradeoff",
+  "repo": "macintog/skills",
+  "path": "skills/performance-tradeoff/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/macintog/skills",
+  "dir_name": "performance-tradeoff-macintog-skills",
+  "downloaded_at": "2026-11-26T07:10:52.082879Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for performance: performance, latency, speed, benchmark",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "latency",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "macintog",
+  "source_url": "https://github.com/macintog/skills/blob/main/skills/performance-tradeoff/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/macintog/skills/blob/main/skills/performance-tradeoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Judge performance or resource claims on real hardware, and design the test, replay, evaluation, benchmark, soak or watch before it runs: latency, throughput, memory or headroom numbers, and accept-or-reject decisions on optimizations. Not for refactors with no resource claim."
+}

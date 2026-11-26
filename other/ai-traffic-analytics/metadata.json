@@ -1,0 +1,37 @@
+{
+  "name": "ai-traffic-analytics",
+  "repo": "sigistry/marketplace",
+  "path": "plugins/romeo-seo/skills/ai-traffic-analytics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sigistry/marketplace",
+  "dir_name": "ai-traffic-analytics",
+  "downloaded_at": "2026-11-26T08:43:13.321268Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sigistry",
+  "source_url": "https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/ai-traffic-analytics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/ai-traffic-analytics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure what AI search really sends the business (visits, signups, revenue) with free tools. Use for \"how much traffic do we get from ChatGPT\", \"track AI referrals in GA4\" or \"report on our AEO and GEO work\". Sets up GA4, Search Console, Bing AI Performance and log tracking, accounts for dark AI traffic, and produces a monthly report."
+}

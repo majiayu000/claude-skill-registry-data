@@ -1,0 +1,38 @@
+{
+  "name": "docs-template-preview",
+  "repo": "openmove/engineering-design-playbook",
+  "path": ".cursor/skills/design-docs-template/preview/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openmove/engineering-design-playbook",
+  "dir_name": "preview-openmove-engineering-design-p-2",
+  "downloaded_at": "2026-11-26T07:55:34.615957Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openmove",
+  "source_url": "https://github.com/openmove/engineering-design-playbook/blob/main/.cursor/skills/design-docs-template/preview/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openmove/engineering-design-playbook/blob/main/.cursor/skills/design-docs-template/preview/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Starts the local Starlight docs site: syncs docs/ into the website, runs the Astro/Starlight dev server, and reports the Local URL including the configured base path. Use when the user wants to preview design docs on localhost. Invoked via design-docs-template.",
+  "content_fingerprint": "99c02f79e24f1d31da26a5fcaae031e4ad5f305762550fe614b738b6b6cb7c6d"
+}

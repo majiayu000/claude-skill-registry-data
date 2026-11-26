@@ -1,0 +1,38 @@
+{
+  "name": "guardrail-builder",
+  "repo": "ralvarez-ai/ralvaskills",
+  "path": "skills/workflows/guardrail-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ralvarez-ai/ralvaskills",
+  "dir_name": "guardrail-builder",
+  "downloaded_at": "2026-11-26T08:15:47.101430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ralvarez-ai",
+  "source_url": "https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/workflows/guardrail-builder/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ralvarez-ai/ralvaskills/blob/main/skills/workflows/guardrail-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find the mistakes agents keep repeating in a repo and make each one impossible, in order - architecture, types, a lint whose error names the fix, a test, docs last - and keep a rule-to-enforcer table in AGENTS.md. Use when the operator corrects you for the same thing twice, or asks to harden a repo against agent mistakes."
+}

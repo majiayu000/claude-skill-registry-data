@@ -1,0 +1,38 @@
+{
+  "name": "salazie-coverage",
+  "repo": "preskater/salazie",
+  "path": ".agent/skills/salazie-coverage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/preskater/salazie",
+  "dir_name": "salazie-coverage",
+  "downloaded_at": "2026-11-26T08:08:50.472013Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "preskater",
+  "source_url": "https://github.com/preskater/salazie/blob/main/.agent/skills/salazie-coverage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/preskater/salazie/blob/main/.agent/skills/salazie-coverage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Measure GDScript statement coverage of Salazie's gdUnit4 suites, find the untested lines of a script, and raise the CI coverage floor. Use when adding tests, when the coverage job is red, or before claiming a script is covered. Not for running the plain test suite (`salazie-verify`).",
+  "content_fingerprint": "497cda757b57ad4e0836c0b61e6724b89863e9178c983ab23874cd0a97a13a99"
+}

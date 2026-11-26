@@ -1,0 +1,160 @@
+---
+name: "omh-routing"
+description: "[omh] Choosing among OMH skills for a request: router guidance for using oh-my-hermes workflow skills inside Hermes Agent."
+license: MIT
+author: "oh-my-hermes maintainers"
+metadata:
+  hermes:
+    tags: [workflow, oh-my-hermes, router]
+    category: router
+    phase: routing
+    role: guide
+    quality_tier: routing-gated
+---
+
+# Oh My Hermes Router
+
+Reasoning demand: `light`
+
+Use this skill when the user mentions oh-my-hermes or a workflow keyword such as `deep-interview`, `ultraperf`, `ralplan`, `loop`, `product-docs`, `research`, `research-department`, `source-finder`, `paper-learning`, `long-document-reading`, `data-analysis`, `command-operator`, `connector-operator`, `live-info-operator`, `external-connector-readiness`, `physical-device-readiness`, `content-operator`, `media-input-operator`, `feedback-triage`, `finance-analysis`, `people-ops`, `legal-compliance-review`, `support-operations`, `curriculum-design`, `localization-review`, `sales-development`, `product-brief`, `materials-package`, `img-summary`, `design-quality-gate`, `frontend`, `accessibility-audit`, `visual-qa`, `browser-operator`, `workspace-file-operator`, `automation-blueprint`, `harness-session-inventory`, `agent-debug`, `failure-signal-audit`, `instinct-ledger`, `skill-scout`, `skill-health`, `workflow-learning`, `codebase-onboarding`, `codegraph-refresh`, `codebase-uml`, `context-budget-review`, `run-efficiency`, `provider-profile-posture`, `decision-recall`, `security-safety-review`, `application-threat-model`, `live-incident-response`, `code-review`, `build-failure-triage`, `ultrawork`, `ultraqa`, `doctor`.
+
+## Routing Contract
+
+This is best-effort Hermes prompt guidance. It does not override Hermes core routing and it does not claim exact runtime parity with another agent framework.
+
+Normal users should talk to Hermes Agent or invoke installed Hermes skills. Do not ask chat users to run `omh`; it is bootstrap and backend infrastructure.
+
+## Why This Exists
+
+`oh-my-hermes` exists to keep Hermes chat routing conservative: it maps plain requests to the right workflow, explains evidence boundaries, and avoids making every keyword look like hidden implementation.
+
+## Do Not Use When
+
+- The user already invoked a more specific installed skill and its routing signals are unambiguous.
+- The message is ordinary chat, status acknowledgement, or a question that does not need workflow routing.
+- The wrapper wants to claim execution, review, CI, or merge evidence that no observed artifact provides.
+
+## Examples
+
+Good example:
+
+- Prompt: Use OMH request-to-handoff for: safely add a feature to this repo.
+- Expected behavior: Classify the request, name the retained Hermes lane or prepared coding handoff, and expose the observed/prepared evidence boundary.
+- Why: The user asks for OMH-shaped routing without naming a narrow workflow, so the router should choose the safest next surface.
+
+Bad example:
+
+- Prompt: omh
+- Expected behavior: Show the workflow picker or ask what the user wants to do next; do not infer a coding workflow.
+- Why: A bare product name is a picker or clarification signal, not implementation evidence.
+
+## Completion Checklist
+
+- The selected workflow, confidence reason, evidence boundary, and user-facing next action are named.
+- Low-confidence or conflicting signals return a picker or clarification instead of forced routing.
+- Catalog answers are rendered without shell approval when wrapper metadata is sufficient.
+
+## Recovery Notes
+
+- If a skill is not installed, keep the intent; hand back the install gap as unresolved.
+- If executor readiness is unknown, keep routing; hand back the check as not_observed.
+
+## OMH Awareness Primer (Compact)
+
+OMH is Hermes-native workflow guidance, not a hidden executor or core patch. Hermes should retain routing, web/source research, deep interview, planning, status, and evidence narration. Coding-heavy work becomes an explicit `prepared_not_observed` handoff to the selected executor/runtime profile until observed.
+
+Compact lane map:
+
+- Intent -> plan: `deep-interview`, `ralplan`, `plan`, `dag-ulw`, `loop`.
+- Research and company ops: `research`, `source-finder`, `research-department`, `paper-learning`, `feedback-triage`, `strategy-brief`, `meeting-brief`.
+- Retained knowledge: `wiki`.
+- Materials and visual summaries: `design-quality-gate`, `frontend`, `accessibility-audit`, `visual-qa`, `materials-package`, `img-summary`, `report-package`, `deliverable-package`.
+- Operations and evidence gates: `workspace-audit`, `production-audit`, `verification-gate`, `agent-evaluation`, `rules-distill`, `agent-ops-review`, `harness-session-inventory`, `ops-observability-card`, `instinct-ledger`, `workflow-learning`.
+- Coding handoff and review: `idea-to-deploy`, `code-review`, `ultrawork`, `ultraqa`.
+
+## OMH Orchestration Posture
+
+Treat OMH as the operating layer above individual Hermes-native skills. For a workflow-shaped request, first frame the problem, success criteria, constraints, risks, and evidence needed; then select the smallest OMH workflow and harness that can coordinate the work. Hermes-native skills, tools, and subagents are capabilities used inside that OMH-selected workflow, not competing top-level owners.
+
+- On an unfamiliar or first-use pattern, briefly recommend the OMH-led route: explain that OMH can structure the problem, select the needed skills, and keep evidence boundaries clear.
+- After repeated accepted local patterns for the same user and workflow, continue OMH-led exploration, problem framing, skill composition, and prepared planning automatically. Keep the current workflow, next action, and prepared-versus-observed boundary visible.
+- Never let that autonomy bypass existing confirmation gates for destructive changes, credentials, external writes, deployment, executor dispatch, or starting a follow-on workflow engine (`dag-ulw`, `ultrawork` — including its coordinated-scope, single-owner-persistence, delivery-boundary, and durable-checkpoint capabilities — `loop`, `ultraqa`) from another skill's output: an accepted plan or clarified brief is planning evidence, not permission — recommend the engine that fits the work's shape and wait for the user's explicit go-ahead. Do not claim that a native skill, subagent, review, CI, or merge ran unless matching observation exists.
+- If a native Hermes capability is relevant, present it as an optional subordinate capability under the selected OMH workflow. OMH policy remains responsible for selecting and governing the workflow.
+
+## Priority Rules
+
+1. Exact or near-exact OMH maintenance commands (`omh update`, `omh setup`, `omh doctor`, `omh uninstall`, `omh install`, `omh list`, and Korean forms such as `omh 업데이트해줘`, `omh 닥터 돌려줘`, `omh 삭제해줘`, `omh 셋업해줘`) route as `operator_maintenance_command`. Run the requested command, report observed output, and avoid repo mutation unless asked. `omh uninstall`: `--dry-run`, then confirm.
+2. Explicit slash skill invocation wins when it is not one of those maintenance commands.
+3. Explicit workflow keywords route to the matching adapted skill when installed.
+4. Broad planning requests route to `ralplan` or `plan` before implementation.
+5. Persistence or finish-until-done requests route to `ultrawork`'s single-owner-persistence capability only after scope is concrete.
+6. Unknown or conflicting signals stay in this router and ask one concise clarification question.
+
+## Direct Picker Aliases
+
+If the user has only typed `./`, `/`, `./o`, or `/om`, show a command preview with exactly one top-level suggestion: `omh`. Selecting it should insert `./omh` or `/omh` and then open the workflow picker.
+
+For messenger-native setup, wrappers can call `omh chat native-command --source discord`, `--source slack`, or `--source telegram`. When plain-message autocomplete is not available, render the returned `omh_command_fallback_card/v1` as an `Open omh` button/card before opening the picker.
+
+If the user types `./omh`, `/omh`, `./skills`, or `/skills` without a task, show a compact workflow picker instead of creating a plan. Keep real skill names unchanged and keep `chat_response.state.skill_picker.options` as the flat-list fallback.
+
+Choosing a skill is routing intent, not plan acceptance, dispatch, execution, or verification evidence. Do not make the user approve `omh list` just to see the catalog.
+
+## Install And CLI Boundary
+
+Hermes-native install paths should converge on the same skill-visible state:
+
+- `hermes skills tap add rlaope/oh-my-hermes`, then `hermes skills install rlaope/oh-my-hermes/skills/omh-routing --yes` installs this tap-compatible skill pack directly when Hermes supports taps.
+- `omh setup` installs generated managed skills and registers their directory through `skills.external_dirs` when a local bootstrap or repair path is preferred.
+
+Use compact human summaries for normal `omh setup`, `omh doctor`, `omh update`, `omh uninstall`, `omh install`, and `omh list` operator flows.
+
+## Wrapper Backend Summary
+
+`omh chat route`, `omh_interact`, `omh_recommend`, `omh coding delegate`, `omh memory ...`, and `omh hermes plan` are adapter/backend surfaces, not normal chat UX. This is a deterministic wrapper-side decision layer; it does not patch Hermes core or require platform network access from `omh`.
+
+When a wrapper prepares coding work, check `executor_readiness/v1` for Codex, Claude Code, Hermes, or oh-my runtime profiles before first dispatch. A readiness probe is not dispatch, implementation, verification, review, CI, merge-readiness, or merge evidence.
+
+## Runtime Evidence
+
+Record only what is observed. A task card, route, plan, `coding_delegation.json`, or `prepared_coding_delegation` run envelope proves preparation, not execution. Executor-choice, prompt-only, and runtime handoffs do not create lifecycle runtime runs.
+
+## Hermes Compatibility
+
+- Use Hermes-native tools, file operations, and subagent/delegation features when available.
+- Do not require runtime tools, role prompts, or overlays Hermes Agent does not expose.
+- Translate runtime-specific mechanisms to Hermes-native artifacts:
+  - goal tools -> `.omh/goals/` ledgers, goal status cards, or explicit checklists with named next actions,
+  - question renderers -> one concise question in the current Hermes interface,
+  - native subagents -> Hermes delegation when available, otherwise sequential lanes,
+  - shell bridge commands -> optional bridge mode only.
+- Record observed delegation results when exposed. If unavailable, record `not_available` or `not_observed`.
+- Reply in the user's own words and the host's own voice: its SOUL.md persona owns reply language, tone, speech level, and sentence endings, progress updates included (where it sets no language, use the one the user wrote in), and OMH shapes structure and content only. When the requested output is delivered, put any open points inside the result and end with no question or offer; only when the person asked to choose or decide and that choice is still theirs, end with one specific question about it, not a list, a generic offer, or a footer; the shared rail's Reply Language And Host Voice and Turn Ending sections hold the full rule.
+
+## Progressive Disclosure References
+
+Load these only when exact detail matters:
+
+- `references/operator-maintenance.md` for short `omh` maintenance command semantics.
+- `references/catalog-index.md` for the full-catalog shortlist (every skill name plus one-line description); shortlist there first, then confirm with `omh recommend --json --limit 3` (authoritative next action and evidence boundary); never paste full catalog dumps into chat.
+- `references/workflow-registry.md` for representative workflow triggers and role registry; load the specific workflow skill for the full trigger list.
+- `references/harness-registry.md` for representative harnesses and priority.
+- `references/wrapper-routing.md` for backend/plugin/chat/coding delegation contracts.
+- `references/coding-handoff-progress-reporting.md` for active progress cadence, background executor watchdogs, PR head/merge verification, and memory/context collision pitfalls.
+- `references/evidence-boundaries.md` for prepared-vs-observed, target topology, memory, and compatibility rules.
+- `references/structural-code-search.md` for ast-grep structural code search patterns and the grep fallback.
+- `references/human-voice.md` before writing prose a person reads: AI-writing tells to remove, Korean habits, reply shape.
+- `references/skill-common-rail.md` for the shared rail: the full Reply Language And Host Voice and Turn Ending rules this body's reply line names.
+
+## Recovery
+
+- If exact route detail matters, load `references/workflow-registry.md` plus the specific workflow skill before answering.
+- If harness behavior matters, load `references/harness-registry.md`.
+- If wrapper/backend behavior matters, load `references/wrapper-routing.md`.
+- If delegated coding work is running or being reported, load `references/coding-handoff-progress-reporting.md`.
+- If maintenance command behavior matters, load `references/operator-maintenance.md`.
+- If evidence or target topology is disputed, load `references/evidence-boundaries.md`.
+- If the search target is a syntactic shape rather than a string, load `references/structural-code-search.md`.
+- If the right skill was not loaded, call `skills_list` or `skill_view`.
+- If a slash command exists, use the explicit slash skill such as `/ulw-work`.
+- If a skill name collides, keep the OMH-selected policy in control and present the Hermes-native skill only as an explicit recommendation; do not let a native candidate override routing.

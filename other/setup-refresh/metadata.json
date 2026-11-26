@@ -1,0 +1,37 @@
+{
+  "name": "setup-refresh",
+  "repo": "moberghr/mtk-agent-toolkit",
+  "path": ".claude/skills/setup-refresh/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moberghr/mtk-agent-toolkit",
+  "dir_name": "setup-refresh",
+  "downloaded_at": "2026-11-26T07:29:30.496283Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moberghr",
+  "source_url": "https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/setup-refresh/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/setup-refresh/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Refresh generated setup artifacts (principles, conventions, detected tools, AGENTS.md, configs, indexes) against codebase drift \u2014 proposes diffs for engineer-edited files instead of overwriting."
+}

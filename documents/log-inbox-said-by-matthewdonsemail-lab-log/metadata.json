@@ -1,0 +1,37 @@
+{
+  "name": "log-inbox-said-by",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "hermesPlugin/skills/log-inbox-said-by/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-inbox-said-by-matthewdonsemail-lab-log",
+  "downloaded_at": "2026-11-26T07:18:56.566961Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/hermesPlugin/skills/log-inbox-said-by/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/hermesPlugin/skills/log-inbox-said-by/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Someone's messages on every platform, found by name, newest first. A log play (docs/useCases/inbox/saidBy.md): Someone's messages on every platform, found by name, newest first. Made from a hand-rolled one-off with log tool scaffold (getGuide({ useCase: \"log/toolFromOneOff\" })), so it is a log tool from now on and the one-off is never written again."
+}

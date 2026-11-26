@@ -1,0 +1,37 @@
+{
+  "name": "tg-rich-messages",
+  "repo": "serejaris/telegram-skills",
+  "path": "skills/tg-rich-messages/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/serejaris/telegram-skills",
+  "dir_name": "tg-rich-messages",
+  "downloaded_at": "2026-11-26T08:35:36.149350Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "serejaris",
+  "source_url": "https://github.com/serejaris/telegram-skills/blob/main/skills/tg-rich-messages/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/serejaris/telegram-skills/blob/main/skills/tg-rich-messages/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when sending structured or richly formatted messages from a Telegram bot \u2014 tables, section headings, collapsible blocks, photo galleries, maps, math formulas, audio, native styled buttons, bot UI cards, or streaming AI responses. Also use for understanding rich message types and limits when plain sendMessage with parse_mode HTML/Markdown is not sufficient."
+}

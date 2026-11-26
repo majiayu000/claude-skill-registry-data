@@ -1,0 +1,37 @@
+{
+  "name": "never-twice",
+  "repo": "off-grid-ai/skills",
+  "path": "review/skills/never-twice/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/off-grid-ai/skills",
+  "dir_name": "never-twice-off-grid-ai-skills",
+  "downloaded_at": "2026-11-26T07:49:52.000967Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "off-grid-ai",
+  "source_url": "https://github.com/off-grid-ai/skills/blob/main/review/skills/never-twice/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/off-grid-ai/skills/blob/main/review/skills/never-twice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn each pull request review into a sharper engineering standard, so the same mistake doesn't come back. Your agent keeps only the general lessons from a review, writes each into code-check with a signal a grep can catch, and logs its source. Use when you say \"learn from this review\", \"/never-twice\", \"update the standard from these comments\", or at the end of safe-to-merge."
+}

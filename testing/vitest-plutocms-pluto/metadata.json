@@ -1,0 +1,38 @@
+{
+  "name": "vitest",
+  "repo": "plutocms/pluto",
+  "path": ".agents/skills/vitest/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/plutocms/pluto",
+  "dir_name": "vitest-plutocms-pluto",
+  "downloaded_at": "2026-11-26T08:06:02.753621Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, integration",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "plutocms",
+  "source_url": "https://github.com/plutocms/pluto/blob/main/.agents/skills/vitest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/plutocms/pluto/blob/main/.agents/skills/vitest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing unit/integration tests for Vite projects - configure vitest.config.ts, write test suites with describe/it, create mock implementations with vi.fn and vi.mock, set up code coverage thresholds, and run tests in parallel"
+}

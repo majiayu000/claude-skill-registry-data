@@ -1,0 +1,38 @@
+{
+  "name": "device-branch-routing",
+  "repo": "pelchers/MockTrialGame",
+  "path": ".codex/skills/device-branch-routing/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/pelchers/MockTrialGame",
+  "dir_name": "device-branch-routing",
+  "downloaded_at": "2026-11-26T08:01:57.222127Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: infra, infrastructure",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pelchers",
+  "source_url": "https://github.com/pelchers/MockTrialGame/blob/main/.codex/skills/device-branch-routing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pelchers/MockTrialGame/blob/main/.codex/skills/device-branch-routing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Resolve which git branch to commit/push to based on the per-machine device.local.md toggle. Use before any commit or push, when the user says \"commit\"/\"push\"/\"merge to main\", or when deciding the default git target on this machine. Enforces that the work laptop never auto-pushes to main.",
+  "content_fingerprint": "5e18bdfa652769c6b5971d46a55c2dd5c21da13c8f36999e1730c7cced63b458"
+}

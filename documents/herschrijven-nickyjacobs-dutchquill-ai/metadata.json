@@ -1,0 +1,38 @@
+{
+  "name": "herschrijven",
+  "repo": "nickyjacobs/DutchQuill-AI",
+  "path": "skills/herschrijven/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/nickyjacobs/DutchQuill-AI",
+  "dir_name": "herschrijven-nickyjacobs-dutchquill-ai",
+  "downloaded_at": "2026-11-26T07:41:56.777914Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, docx, markdown",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nickyjacobs",
+  "source_url": "https://github.com/nickyjacobs/DutchQuill-AI/blob/main/skills/herschrijven/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nickyjacobs/DutchQuill-AI/blob/main/skills/herschrijven/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Herschrijft bestaande tekst in het Nederlands of Engels zonder de inhoud te veranderen: verbeteren, inkorten, formeler of luchtiger maken, een andere toon, vertalen tussen Nederlands en Engels, parafraseren, of een eerdere versie bijwerken. Werkt op geplakte tekst, een bestand (.docx, .pdf, .md) of een rapport in de DutchQuill-werkmap, en controleert achteraf dat er geen feit, getal, citaat of bron verloren ging. Gebruik bij /dutchquill:herschrijven, of als de gebruiker vraagt een tekst te herschrijven, verbeteren, korter of formeler te maken of te vertalen (\"herschrijf dit\", \"maak dit zakelijker\", \"rewrite this\", \"make this shorter\", \"vertaal naar het Engels\")."
+}

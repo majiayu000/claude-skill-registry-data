@@ -1,0 +1,38 @@
+{
+  "name": "telescope-debugging",
+  "repo": "parkroad-fellowship/core",
+  "path": ".github/skills/telescope-debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/parkroad-fellowship/core",
+  "dir_name": "telescope-debugging-parkroad-fellowship-core-2",
+  "downloaded_at": "2026-11-26T07:59:50.630462Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "parkroad-fellowship",
+  "source_url": "https://github.com/parkroad-fellowship/core/blob/main/.github/skills/telescope-debugging/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/parkroad-fellowship/core/blob/main/.github/skills/telescope-debugging/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Inspect what a Laravel application actually did using the telescope:list and telescope:show Artisan commands. Use when debugging a slow page, exception, 500 response, failing queued job, N+1 or slow query, or unexpected cache miss in a project with laravel/telescope installed, even when Telescope is not mentioned.",
+  "content_fingerprint": "411cdb63a34011abaf8ae160c70a88d0ee8b32eb56662a1298a975e8b0f0fc55"
+}

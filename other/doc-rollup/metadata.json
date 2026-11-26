@@ -1,0 +1,37 @@
+{
+  "name": "doc-rollup",
+  "repo": "rusharlabs/house-party-protocol",
+  "path": "continuity/continuity-kit-1.6.0/skills/doc-rollup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rusharlabs/house-party-protocol",
+  "dir_name": "doc-rollup",
+  "downloaded_at": "2026-11-26T08:28:10.903844Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rusharlabs",
+  "source_url": "https://github.com/rusharlabs/house-party-protocol/blob/main/continuity/continuity-kit-1.6.0/skills/doc-rollup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rusharlabs/house-party-protocol/blob/main/continuity/continuity-kit-1.6.0/skills/doc-rollup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keeps the project's history/evolution docs (changelog, narrative timeline, state snapshot, lessons, session wrapup) up to date after a significant session \u2014 with built-in degradation (a stamp instead of endless narrative) from day 1."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "competitor-intel",
+  "repo": "saurabhchandanshive05/Aurax-frontend-app",
+  "path": ".claude/skills/competitor-intel/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/saurabhchandanshive05/Aurax-frontend-app",
+  "dir_name": "competitor-intel",
+  "downloaded_at": "2026-11-26T08:31:36.214331Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saurabhchandanshive05",
+  "source_url": "https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/competitor-intel/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/competitor-intel/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scan competitor websites and ad libraries, detect what changed since the last scan, and write a competitive briefing. Use when the user says \"/competitor-intel\", \"competitor scan\", \"what are our competitors doing\", \"competitive intelligence\", \"competitor briefing\", or asks to track a competitor's website or ads over time. First run walks through a short intake that stores company and competitor details in a competitor-intel/ folder in the current project — no company data lives in the skill. Works with no dependencies (curl); adds screenshots and LinkedIn ad extraction when Node and Playwright are available.",
+  "content_fingerprint": "2aaf9badc63684d25c4ed8a9c1239d152798adabf403702bc4b2a90c0c74ca04"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ai-brand-facts",
+  "repo": "sigistry/marketplace",
+  "path": "plugins/romeo-seo/skills/ai-brand-facts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sigistry/marketplace",
+  "dir_name": "ai-brand-facts",
+  "downloaded_at": "2026-11-26T08:43:09.641284Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, marketing=3",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sigistry",
+  "source_url": "https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/ai-brand-facts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/ai-brand-facts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find what ChatGPT, Gemini, Perplexity, Copilot, Claude and Google AI Overviews get wrong about your business, trace each claim to its source and fix it there. Use for \"ChatGPT has our pricing wrong\", \"AI confuses us with another company\", a brand fact sheet or an AEO / LLM SEO / GEO entity check."
+}

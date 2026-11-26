@@ -1,0 +1,37 @@
+{
+  "name": "seo-cluster",
+  "repo": "saurabhchandanshive05/Aurax-frontend-app",
+  "path": ".claude/skills/seo-cluster/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/saurabhchandanshive05/Aurax-frontend-app",
+  "dir_name": "seo-cluster-saurabhchandanshive0-aurax-frontend-app",
+  "downloaded_at": "2026-11-26T08:31:32.768983Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saurabhchandanshive05",
+  "source_url": "https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/seo-cluster/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/seo-cluster/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "SERP-based semantic topic clustering for content architecture planning. Groups keywords by actual Google SERP overlap (not text similarity), designs hub-and-spoke content clusters with internal link matrices, and generates interactive visualizations. Optionally executes content creation if claude-blog is installed. Use when user says \"topic cluster\", \"content cluster\", \"semantic clustering\", \"pillar page\", \"hub and spoke\", \"content architecture\", \"keyword grouping\", or \"cluster plan\"."
+}

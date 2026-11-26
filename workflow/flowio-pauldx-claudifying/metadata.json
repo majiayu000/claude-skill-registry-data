@@ -1,0 +1,38 @@
+{
+  "name": "flowio",
+  "repo": "pauldx/claudifying",
+  "path": "skills/cf-scientific/flowio/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/pauldx/claudifying",
+  "dir_name": "flowio-pauldx-claudifying",
+  "downloaded_at": "2026-11-26T08:00:57.767909Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pauldx",
+  "source_url": "https://github.com/pauldx/claudifying/blob/main/skills/cf-scientific/flowio/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pauldx/claudifying/blob/main/skills/cf-scientific/flowio/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Parse FCS (Flow Cytometry Standard) files v2.0-3.1. Extract events as NumPy arrays, read metadata/channels, convert to CSV/DataFrame, for flow cytometry data preprocessing."
+}

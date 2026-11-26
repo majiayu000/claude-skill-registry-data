@@ -1,0 +1,37 @@
+{
+  "name": "lsp-guide",
+  "repo": "omagents/omagents",
+  "path": "packages/core/skills/lsp-guide/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/omagents/omagents",
+  "dir_name": "lsp-guide",
+  "downloaded_at": "2026-11-26T07:51:44.856829Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "omagents",
+  "source_url": "https://github.com/omagents/omagents/blob/main/packages/core/skills/lsp-guide/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/omagents/omagents/blob/main/packages/core/skills/lsp-guide/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide agents to use the right code intelligence tool: OpenCode's native LSP, codegraph MCP, grep, or ast-grep. Trigger when the agent needs code navigation, definition lookup, reference finding, renaming, or diagnostics."
+}

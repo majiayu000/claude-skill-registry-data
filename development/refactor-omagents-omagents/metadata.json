@@ -1,0 +1,40 @@
+{
+  "name": "refactor",
+  "repo": "omagents/omagents",
+  "path": "packages/core/skills/refactor/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/omagents/omagents",
+  "dir_name": "refactor-omagents-omagents",
+  "downloaded_at": "2026-11-26T07:51:44.444493Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug, refactor",
+    "score": 5,
+    "runner_up": "quality",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "omagents",
+  "source_url": "https://github.com/omagents/omagents/blob/main/packages/core/skills/refactor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/omagents/omagents/blob/main/packages/core/skills/refactor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Systematic code refactoring using a durable loop workflow. Each refactoring target is processed, verified, and marked complete before moving to the next. Trigger when the user says 'refactor', 'restructure code', or wants to improve code without changing behavior."
+}

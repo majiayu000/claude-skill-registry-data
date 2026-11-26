@@ -1,0 +1,37 @@
+{
+  "name": "ase-code-triage",
+  "repo": "rse/ase",
+  "path": "plugin/skills/ase-code-triage/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/rse/ase",
+  "dir_name": "ase-code-triage",
+  "downloaded_at": "2026-11-26T08:26:17.654695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rse",
+  "source_url": "https://github.com/rse/ase/blob/master/plugin/skills/ase-code-triage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rse/ase/blob/master/plugin/skills/ase-code-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triage whether the project of the current repository is affected by a vulnerability, given either by its CVE id or by a free-text security or vulnerability description, by consulting the published VEX status of the project, the CVE record or the Internet/Web, and the project artifacts, and emit an AFFECTED, NOT-AFFECTED, or INCONCLUSIVE verdict, optionally with a brief reason. Use when the user asks whether the project is \"affected\" by, \"vulnerable\" to, or \"exposed\" to a CVE or a vulnerability, or calls to \"triage\" one."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "learning",
+  "repo": "msFoma/foma-skills",
+  "path": "plugins/foma-skills/skills/learning/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/msFoma/foma-skills",
+  "dir_name": "learning",
+  "downloaded_at": "2026-11-26T07:33:29.804130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msFoma",
+  "source_url": "https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/learning/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/learning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a repeated mistake or correction into the smallest lasting fix (CLAUDE.md line, rule, hook) and prunes stale rules. Use when the user says you keep doing X, wants a rule for this project, or asks to clean up CLAUDE.md. Proposes first."
+}

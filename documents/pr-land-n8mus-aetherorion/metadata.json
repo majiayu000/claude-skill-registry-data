@@ -1,0 +1,37 @@
+{
+  "name": "pr-land",
+  "repo": "n8mus/AetherOrion",
+  "path": ".claude/skills/pr-land/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/n8mus/AetherOrion",
+  "dir_name": "pr-land-n8mus-aetherorion",
+  "downloaded_at": "2026-11-26T07:35:40.700104Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n8mus",
+  "source_url": "https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/pr-land/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/pr-land/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Post-review remediation pass for AetherSDR \u2014 takes a PR whose proposed change the maintainer has already accepted, fixes every outstanding finding with proof, answers and resolves every review thread, dismisses blocking reviews with evidence, posts the approving review and arms auto-merge. Every judgment call goes to the maintainer through AskUserQuestion. Use after /pr-review, e.g. \"/pr-land 5601\"."
+}

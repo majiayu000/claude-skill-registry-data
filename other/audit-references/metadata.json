@@ -1,0 +1,37 @@
+{
+  "name": "audit-references",
+  "repo": "petar-djukic/agent-skills",
+  "path": ".cursor/skills/audit-references/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/petar-djukic/agent-skills",
+  "dir_name": "audit-references",
+  "downloaded_at": "2026-11-26T08:02:44.831292Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petar-djukic",
+  "source_url": "https://github.com/petar-djukic/agent-skills/blob/main/.cursor/skills/audit-references/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petar-djukic/agent-skills/blob/main/.cursor/skills/audit-references/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify citations in a paper or document. Reads a markdown document, extracts every [@citation-id] pandoc citation, resolves each against references.yaml (CSL-YAML), fetches the cited papers (arXiv or Google Scholar), reads them, and checks whether the claims made in the citing text are supported by the sources. Produces an audit report with per-citation verdicts. Triggers: audit references, verify citations, check references, citation audit, verify bibliography, check my citations, are my references correct, fact-check citations, validate sources."
+}

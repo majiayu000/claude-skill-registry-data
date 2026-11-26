@@ -1,0 +1,37 @@
+{
+  "name": "skimmable",
+  "repo": "orlandoneto/agent-skills",
+  "path": "skills/community/ck-skimmable/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/orlandoneto/agent-skills",
+  "dir_name": "ck-skimmable",
+  "downloaded_at": "2026-11-26T07:56:46.624729Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orlandoneto",
+  "source_url": "https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-skimmable/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orlandoneto/agent-skills/blob/main/skills/community/ck-skimmable/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Enforce code readability and state minimisation before opening or updating a pull request. Use when code is functionally complete and needs a final simplification pass focused on skimmability: reducing arguments, removing optionality and overrides, collapsing unnecessary abstractions, preferring discriminated unions, adding assertions at boundaries, handling variants exhaustively, deleting incidental changes, and making the diff shorter, clearer, and easier to review."
+}

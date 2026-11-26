@@ -1,0 +1,38 @@
+{
+  "name": "code-review",
+  "repo": "pauldx/claudifying",
+  "path": "skills/native/cf-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/pauldx/claudifying",
+  "dir_name": "cf-code-review",
+  "downloaded_at": "2026-11-26T08:00:59.938026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, owasp",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pauldx",
+  "source_url": "https://github.com/pauldx/claudifying/blob/main/skills/native/cf-code-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pauldx/claudifying/blob/main/skills/native/cf-code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When the user asks to review code, review a diff, check changes before pushing, or wants a second opinion on their work \u2014 activate this skill for structured code review"
+}

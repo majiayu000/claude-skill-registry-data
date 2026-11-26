@@ -1,0 +1,37 @@
+{
+  "name": "prepare-release",
+  "repo": "mkofler96/KoFEM",
+  "path": ".claude/skills/prepare-release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mkofler96/KoFEM",
+  "dir_name": "prepare-release-mkofler96-kofem",
+  "downloaded_at": "2026-11-26T07:28:40.416782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mkofler96",
+  "source_url": "https://github.com/mkofler96/KoFEM/blob/main/.claude/skills/prepare-release/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mkofler96/KoFEM/blob/main/.claude/skills/prepare-release/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze KoFEM changes and readiness, recommend a version, and create or refresh a Linear release parent with actionable sub-issues and a release label. Use for prepare release, release planning, or a release checklist; this does not bump versions or open the release PR."
+}

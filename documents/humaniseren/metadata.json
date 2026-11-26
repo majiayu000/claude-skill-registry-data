@@ -1,0 +1,38 @@
+{
+  "name": "humaniseren",
+  "repo": "nickyjacobs/DutchQuill-AI",
+  "path": "skills/humaniseren/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/nickyjacobs/DutchQuill-AI",
+  "dir_name": "humaniseren",
+  "downloaded_at": "2026-11-26T07:41:56.669056Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, docx",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nickyjacobs",
+  "source_url": "https://github.com/nickyjacobs/DutchQuill-AI/blob/main/skills/humaniseren/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nickyjacobs/DutchQuill-AI/blob/main/skills/humaniseren/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maakt tekst die als AI klinkt menselijker, in de stem van de gebruiker, zonder de inhoud te veranderen. Haalt de AI-patronen van 2026 eruit, in het Nederlands en het Engels: woordkeus per modelgeneratie, clusters, niet-X-maar-Y, formules, gelijk of overgecorrigeerd ritme, LinkedIn-formules. Een feitencontrole bewaakt dat geen feit, getal, citaat of bron verandert. Kan ook alleen analyseren (scan). Gebruik bij /dutchquill:humaniseren, of als de gebruiker vraagt een tekst menselijker of natuurlijker te maken, minder als AI te laten klinken, of op AI-patronen te checken (\"klinkt dit als ChatGPT?\", \"maak dit menselijker\", \"humanize this\", \"does this sound like AI\")."
+}

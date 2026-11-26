@@ -1,0 +1,37 @@
+{
+  "name": "dispatch",
+  "repo": "njdaniel/conch",
+  "path": ".claude/skills/dispatch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/njdaniel/conch",
+  "dir_name": "dispatch-njdaniel-conch",
+  "downloaded_at": "2026-11-26T07:44:08.797076Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "njdaniel",
+  "source_url": "https://github.com/njdaniel/conch/blob/main/.claude/skills/dispatch/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/njdaniel/conch/blob/main/.claude/skills/dispatch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Dispatch one issue to a worker \u2014 pick the worker, write the brief, isolate, then run the mandatory five-gate review before anything is committed. Use whenever delegating issue work to codex or a Claude agent."
+}

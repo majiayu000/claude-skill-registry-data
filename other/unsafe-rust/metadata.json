@@ -1,0 +1,37 @@
+{
+  "name": "unsafe-rust",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/rust/unsafe-rust/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "unsafe-rust",
+  "downloaded_at": "2026-11-26T08:20:56.095887Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/rust/unsafe-rust/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/rust/unsafe-rust/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Justify, document, and verify unsafe Rust \u2014 safety invariants on every unsafe block, sound safe wrappers, undefined behaviour hazards, and verification with Miri. Use when writing or reviewing unsafe code, when working across an FFI boundary, when raw pointers or transmute appear, when a safe API wraps an unsafe primitive, or when the user asks whether an unsafe block is justified."
+}

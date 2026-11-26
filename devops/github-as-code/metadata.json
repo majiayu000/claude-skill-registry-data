@@ -1,0 +1,37 @@
+{
+  "name": "github-as-code",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/tofu/github-as-code/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "github-as-code",
+  "downloaded_at": "2026-11-26T07:57:06.171312Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: infra, infrastructure",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/tofu/github-as-code/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/tofu/github-as-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "GitHub repositories, labels, rulesets, organisation secrets and GitHub Apps written as OpenTofu with the github provider, instead of changed by hand with gh or the web UI. Use when writing or reviewing OpenTofu that manages one of those, or when asked to change one of those by hand."
+}

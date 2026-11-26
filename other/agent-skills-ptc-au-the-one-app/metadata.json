@@ -1,0 +1,36 @@
+{
+  "name": "agent-skills",
+  "repo": "ptc-au/the-one-app",
+  "path": "apps/agent-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ptc-au/the-one-app",
+  "dir_name": "agent-skills-ptc-au-the-one-app",
+  "downloaded_at": "2026-11-26T08:10:39.064086Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ptc-au",
+  "source_url": "https://github.com/ptc-au/the-one-app/blob/main/apps/agent-skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ptc-au/the-one-app/blob/main/apps/agent-skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read before giving a device the network's skills, so its agent tools (Claude Code, Codex, OpenCode, Amp) have them without connecting, or when a skill there named for the network looks wrong or is missing."
+}

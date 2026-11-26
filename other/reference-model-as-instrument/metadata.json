@@ -1,0 +1,37 @@
+{
+  "name": "reference-model-as-instrument",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/reference-model-as-instrument/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "reference-model-as-instrument",
+  "downloaded_at": "2026-11-26T07:49:29.890932Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/reference-model-as-instrument/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/reference-model-as-instrument/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "For a new algorithmic design, write the exact classical reference model first and make that one model serve as test oracle, parameter-table generator, failure-class predictor, failing-case replayer and seed scanner. Use when starting a new design in a benchmark-optimization campaign (circuit, prover trace, contract, proof term) or when adopting a rival's design you will modify; not for post-passes or retunes of a design whose model already exists."
+}

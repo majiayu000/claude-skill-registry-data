@@ -1,0 +1,37 @@
+{
+  "name": "humanize",
+  "repo": "petar-djukic/agent-skills",
+  "path": ".opencode/skills/humanize/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/petar-djukic/agent-skills",
+  "dir_name": "humanize-petar-djukic-agent-skills-4",
+  "downloaded_at": "2026-11-26T08:02:37.786369Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petar-djukic",
+  "source_url": "https://github.com/petar-djukic/agent-skills/blob/main/.opencode/skills/humanize/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petar-djukic/agent-skills/blob/main/.opencode/skills/humanize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The laundering chain: one generative pass that moves AI-drafted prose toward human-passing on Pangram. Stages in order \u2014 filter-tells (semantic cleanup), seeded match-voice (anchored Cohere seed, iterate only while the score falls), optional burstiness, tighten-style (word recovery), optional accent-dial, inject-vernacular (terminal). Pure function: structurally diverged draft in, laundered draft plus report out; the caller owns structure (match-outline), review (reverse-outline, critic-panel, voice-critic, cold review), and the decision to cycle. Venue mode (--venue <name>) resolves stage parameters from a writing-voice/venues/ profile. Locked spans respected by every stage; after the terminal stage models read but never write. Triggers: humanize, humanize article, make it human, full rewrite pipeline, rewrite for pangram, humanize for venue, laundering chain."
+}

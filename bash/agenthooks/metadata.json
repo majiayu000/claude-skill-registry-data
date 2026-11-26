@@ -1,0 +1,39 @@
+{
+  "name": "agentHooks",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/agentHooks/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "agenthooks",
+  "downloaded_at": "2026-11-26T07:18:49.749471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/agentHooks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/agentHooks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep log-cli's CLI commands, MCP tools, agent hooks (Claude Code and Codex) and the live log in step (rule 55). Use when adding or changing a hook, a CLI command, an MCP tool, a page state or anything that writes progress lines, or when `bun run check:agentHooks` refuses a commit."
+}

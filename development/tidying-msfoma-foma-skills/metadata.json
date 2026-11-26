@@ -1,0 +1,39 @@
+{
+  "name": "tidying",
+  "repo": "msFoma/foma-skills",
+  "path": "plugins/foma-skills/skills/tidying/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/msFoma/foma-skills",
+  "dir_name": "tidying-msfoma-foma-skills",
+  "downloaded_at": "2026-11-26T07:33:29.451606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msFoma",
+  "source_url": "https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/tidying/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/tidying/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds junk files (backups, temp, stray notes) and removes them reversibly after your ok. Use when the user asks to clean up the project, remove leftovers, or says the repo is messy. Not for refactoring code."
+}

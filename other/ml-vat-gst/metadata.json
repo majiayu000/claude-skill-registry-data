@@ -1,0 +1,38 @@
+{
+  "name": "ml-vat-gst",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/ml-vat-gst/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "ml-vat-gst",
+  "downloaded_at": "2026-11-26T07:54:37.050895Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, business=2",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ml-vat-gst/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ml-vat-gst/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Mali VAT research draft for 2026, using the older DGI tax-code and procedure-code text while holding the operative current amendment chain unresolved. Use it to prepare conditional domestic VAT workpapers for registration classification, standard and reduced rates, exports and exemptions, tax-exclusive consideration, goods and services tax points, input-tax restrictions, mixed-use allocations and the real-normal versus real-simplified filing distinction. It corrects the former Guide's blanket monthly-return statement and its simplified zero-rate and imported-services descriptions. Two executable examples test output/input tax and mixed-use deduction arithmetic. Current tariff lists, amendments, refund procedures, official forms and authenticated portal steps remain unverified. No current-law approval or accountant attestation is claimed.",
+  "content_fingerprint": "3f1d041b9ab9673ac62eb21ac3c7cf513bfdc3b7722f6d5244af3a990b569aa2"
+}

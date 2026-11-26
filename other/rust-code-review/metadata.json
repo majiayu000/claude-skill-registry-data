@@ -1,0 +1,37 @@
+{
+  "name": "rust-code-review",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/workflow/rust-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "rust-code-review",
+  "downloaded_at": "2026-11-26T08:20:58.559621Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/workflow/rust-code-review/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/workflow/rust-code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review Rust changes on two axes at once \u2014 standards (idioms, ownership, errors, API surface, unsafe) and spec (does the change do what was asked) \u2014 with a Rust smell baseline layered on the repo lint configuration. Use when reviewing a Rust diff, pull request, or branch, when asked whether a change is ready to merge, or when a review needs to cover more than what clippy already reports. Also use for an audit or critique of a Rust file or crate, or when asked what is wrong with some Rust."
+}

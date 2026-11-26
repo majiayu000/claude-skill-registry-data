@@ -1,0 +1,37 @@
+{
+  "name": "api-design-reviewer",
+  "repo": "pie-framework/pie-qti",
+  "path": ".claude/skills/api-design-reviewer/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/pie-framework/pie-qti",
+  "dir_name": "api-design-reviewer-pie-framework-pie-qti",
+  "downloaded_at": "2026-11-26T08:04:09.083558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pie-framework",
+  "source_url": "https://github.com/pie-framework/pie-qti/blob/master/.claude/skills/api-design-reviewer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pie-framework/pie-qti/blob/master/.claude/skills/api-design-reviewer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews public APIs in framework code for consistency, usability, type safety, breaking changes, and maintainability. Use when designing new APIs, reviewing API changes, or conducting framework code reviews."
+}

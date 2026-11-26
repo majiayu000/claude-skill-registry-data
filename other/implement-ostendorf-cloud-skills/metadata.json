@@ -1,0 +1,37 @@
+{
+  "name": "implement",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/work/implement/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "implement-ostendorf-cloud-skills",
+  "downloaded_at": "2026-11-26T07:57:04.244919Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/work/implement/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/work/implement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Claims one ready or changes-requested GitHub issue, implements it on a worktree branch through a subagent, verifies, commits, pushes and opens a draft pull request, then hands it to review. Use when asked to implement, work on, pick up or build an issue, or to address review feedback."
+}

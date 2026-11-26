@@ -1,0 +1,98 @@
+---
+name: "omh-rust"
+description: "[omh] Rust ownership, lifetime, or unsafe trouble: prepare Rust changes with ownership, error, and API discipline, and escalate any unsafe, FFI, or lock-free change to the UB checklist. Use when the user says: rust, rust code, rust skill, rustlang, borrow checker, lifetime error, ownership error, trait bound."
+license: MIT
+author: "oh-my-hermes maintainers"
+metadata:
+  hermes:
+    tags: [workflow, oh-my-hermes, planning]
+    category: planning
+    phase: rust-development
+    role: planner
+    quality_tier: rust-safety-gated
+    related_skills: [omh-backend, omh-native-debugging, omh-code-review]
+---
+
+# Rust
+
+Required: the crate, module, or function being changed, whether the change touches `unsafe`, raw pointers, FFI, `MaybeUninit`, or a lock-free primitive, the crate's edition, MSRV, and async runtime when relevant, existing error type and public API stability constraints, the gate commands the repository already runs, observed compiler, clippy, test, and Miri/sanitizer evidence for completion claims. Output: rust_change_contract/v1, ownership_shape/v1, error_and_api_contract/v1, rust_gate_list/v1, ub_escalation_verdict/v1, ub_discipline_checklist/v1 when the escalation triggers, observed_rust_gate_evidence/v1 when observed.
+
+## Why This Exists
+
+`rust` closes OMH's zero-coverage Rust domain and makes the escalation from ordinary Rust work to undefined-behavior discipline a deterministic routing rule rather than something a model is trusted to notice.
+
+Contract: `references/full-contract.md` (examples, sibling boundaries, full artifact details).
+
+## Workflow Lane
+
+- Current lane: **Coding handoff** - coding owners, handoffs, review, CI, and merge evidence.
+- If intent belongs to another lane, hand back to `omh-routing` or name the adjacent workflow.
+- Shared product, routing, compatibility, and evidence rules: `skill_view(name='omh-routing', file_path='references/skill-common-rail.md')`.
+
+## When to Use
+
+Use when Hermes should prepare a Rust change: ownership and lifetime shape, error and API types, cargo/clippy gates, and the mandatory UB escalation when the change touches unsafe, raw pointers, FFI, MaybeUninit, or lock-free primitives.
+
+    Strong routing signals: `rust`, `rust code`, `rust skill`, `rustlang`, `borrow checker`, `lifetime error`, `ownership error`, `trait bound`, `cargo build`, `cargo clippy`, `clippy lint`, `unsafe rust`, `unsafe block`, `raw pointer`, `maybeuninit`, `rust ffi`, `extern c`, `undefined behavior`, `miri`, `loom`, `ボローチェッカー`, `所有権エラー`, `ライフタイムエラー`, `トレイト境界`, `러스트`, `러스트 코드`, `빌림 검사기`, `소유권 에러`, `라이프타임 에러`, `언세이프`, `미정의 동작`, `借用检查器`, `所有权错误`, `生命周期错误`, `特征约束`, `bantu atasi error borrow checker`, `perbaiki masalah ownership Rust`, `jelaskan error lifetime Rust`, `tolong beresin error cargo clippy`, `tinjau blok unsafe Rust ini`, `giúp xử lý lỗi borrow checker`, `sửa vấn đề ownership trong Rust`, `giải thích lỗi lifetime trong Rust`, `hãy sửa lỗi cargo clippy`, `rà soát khối unsafe Rust này`
+
+## Catalog Metadata
+
+Category: `planning`
+Phase: `rust-development`
+Hermes role: `planner`
+Quality tier: `rust-safety-gated`
+Reasoning demand: `standard`
+
+Quality bar:
+
+- Run the escalation check before anything else and state the verdict; a change whose `unsafe`/FFI status is unknown is escalated by default.
+- Load `references/rust-discipline.md` for the ownership, error, API, binary-interface, and dependency rules, and name the gate commands from it rather than assuming `cargo build` is the whole bar.
+- When the escalation triggers, load `references/ub-escalation.md` and carry its Miri, sanitizer, and loom-style concurrency requirements into the handoff as blocking items.
+- Name the ownership decision behind every clone, `Arc`, interior-mutability wrapper, and lifetime annotation the change introduces.
+- Name the error type and its conversion boundary; a surviving `unwrap` needs a written reason, not silence.
+- Keep compilation, clippy, tests, Miri, sanitizers, and loom as observed-only evidence.
+
+Handoff policy:
+
+Keep the ownership shape, error-type choice, API surface, gate list, and the UB escalation verdict in Hermes. Record compilation, clippy output, test results, Miri runs, sanitizer runs, and loom runs only from executor or wrapper observed evidence.
+
+Safety rules:
+
+- Do not claim compilation, clippy cleanliness, passing tests, a Miri run, a sanitizer run, or a loom run from a prepared Rust contract.
+- The UB escalation is deterministic, not a judgment call: if the change touches `unsafe`, `*mut`/`*const`, FFI or `extern`, `MaybeUninit`, `unsafe impl Send`/`Sync`, `transmute`, a hand-written lock-free primitive, or non-test code in a module whose existing `unsafe` depends on it (fields, constructors, `Drop`, visibility), escalate.
+- When escalated, a change is not ready for handoff until the UB checklist names the Miri, sanitizer, and concurrency-testing requirement for it.
+- Never present `unsafe` as safe because it compiles: the compiler does not check the invariant an `unsafe` block asserts.
+- Do not silence a borrow-checker error with a clone, `Rc<RefCell<_>>`, or `unsafe` without naming the ownership decision that made it necessary.
+- Do not run cargo, Miri, sanitizers, or any toolchain from OMH core.
+
+## Completion Checklist
+
+- The escalation verdict is stated with the trigger that decided it.
+- The ownership shape names owners, borrows across boundaries, and every deliberate clone.
+- The error type, its conversion boundary, and every surviving `unwrap`/`expect`/`panic!` are named.
+- The gate list names the exact commands the executor must run and pass, covering every target, the feature extremes, doc tests, and the declared MSRV.
+- An escalated change carries the Miri, sanitizer, and concurrency-testing requirements as blocking items.
+- Compiler, clippy, test, Miri, sanitizer, and loom results stay observed-only.
+
+## Recovery Notes
+
+- If the crate cannot be inspected, escalate by default and say the verdict is conservative rather than measured.
+- If the toolchain cannot run Miri or a sanitizer for the escalated change, keep the change blocked and name the smallest substitute proof instead of downgrading the verdict.
+
+## Runtime Evidence
+
+Preferred harness for this skill: `coding-handling`.
+
+```sh
+omh runtime record --skill rust --harness coding-handling --status started
+```
+
+Record observed delegation results; otherwise return `not_available` or `not_observed`.
+Prepared OMH routing is not execution, review, CI, merge-readiness, or merge evidence.
+- Treat wrapper memory/context summaries as advisory local context, not proof of opaque Hermes memory reads or changes.
+Preserve workflow intent and stop conditions; verify before claiming completion.
+Reply in the user's own words and the host's own voice: its SOUL.md persona owns reply language, tone, speech level, and sentence endings, progress updates included (where it sets no language, use the one the user wrote in), and OMH shapes structure and content only. When the requested output is delivered, put any open points inside the result and end with no question or offer; only when the person asked to choose or decide and that choice is still theirs, end with one specific question about it, not a list, a generic offer, or a footer; the shared rail's Reply Language And Host Voice and Turn Ending sections hold the full rule.
+
+Use Hermes-native subagent/delegation features when available: native subagents -> Hermes delegation when available, otherwise sequential lanes.
+
+Shared product, compatibility, topology, memory, harness, and execution rules: `skill_view(name='omh-routing', file_path='references/skill-common-rail.md')`. Load it when applicable; otherwise name an unavailable capability.

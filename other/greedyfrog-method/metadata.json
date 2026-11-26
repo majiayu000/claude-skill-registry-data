@@ -1,0 +1,37 @@
+{
+  "name": "greedyfrog-method",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/greedyfrog-method/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "greedyfrog-method",
+  "downloaded_at": "2026-11-26T07:49:23.384224Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/greedyfrog-method/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/greedyfrog-method/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "BitWonka's greedyfrog process, reconstructed so we can repeat it. Use when redesigning a reversible traversal or inversion (ecdsa.fail Euclid / GCD walk) so the state carries its own reverse decisions instead of a history stack, when building, porting or moving greedyfrog rows (825 / 815 / 849 trees, cap-dependent family), or when asked how greedyfrog was invented."
+}

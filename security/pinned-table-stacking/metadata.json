@@ -1,0 +1,37 @@
+{
+  "name": "pinned-table-stacking",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/pinned-table-stacking/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "pinned-table-stacking",
+  "downloaded_at": "2026-11-26T07:49:25.720911Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/pinned-table-stacking/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/pinned-table-stacking/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Author declarative circuit-edit tables that are pinned to an exact gate list by length and hash, applied by an applicator that refuses any other stream, frozen and qualified as individual rungs, and stacked in call order before the nonce tail. Includes the portfolio-vs-exact labeling test (identical wrong-output and aligned failing-shot sets) and the \"tables as durable assets\" rule: a table above today's strict gate ships unchanged later inside a bigger stack. From jackylee0424's spookyfrog series on ecdsa.fail."
+}

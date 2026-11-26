@@ -1,0 +1,38 @@
+{
+  "name": "bailian-finetune",
+  "repo": "sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "path": "CapabilityTreeSitter/03-AgenticRuntime/bailian-finetune/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "dir_name": "bailian-finetune",
+  "downloaded_at": "2026-11-26T08:31:57.081422Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sbarteau2022",
+  "source_url": "https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/CapabilityTreeSitter/03-AgenticRuntime/bailian-finetune/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/CapabilityTreeSitter/03-AgenticRuntime/bailian-finetune/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "阿里云百炼模型精调训练入口：用户要精调、微调、训练自己的模型（fine-tune，支持 SFT / SFT-LoRA / DPO / DPO-LoRA / CPT， 覆盖文本、语音、图像）、校验或上传训练数据集、看训练进度和日志、挑 checkpoint、导出精调产物、 把专属模型部署成服务时使用 `bl dataset` / `bl finetune` / `bl deploy`。链路是 validate 校验数据 → upload 拿 file-id → finetune create 建任务 → watch 看进度 → export 导出 → deploy 上线，需要 API key； 写操作先用 `--dry-run` 预览。反触发：用户点名火山方舟/ark 的精调不走本 skill；只是要选哪个模型走 bailian-model-recommend；用现成模型生图生视频走 bailian-gen；百炼其他资源管理走 bailian-cli。 官方安装：`bl skill init`（与共享协议 bailian-protocol 同装）。",
+  "content_fingerprint": "2b246701ac4809be2e53a06b4d668abcc616570c9f2d7354f16c1869b2e282aa"
+}

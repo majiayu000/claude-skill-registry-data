@@ -1,0 +1,38 @@
+{
+  "name": "verify-research-transfer",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/verify-research-transfer/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "verify-research-transfer",
+  "downloaded_at": "2026-11-26T07:49:28.293332Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, speed, benchmark",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/verify-research-transfer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/verify-research-transfer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check whether a literature finding supports a proposed performance optimization. Read the primary figures and the implementation source, then run a cheap falsifier before writing code or benchmarks."
+}

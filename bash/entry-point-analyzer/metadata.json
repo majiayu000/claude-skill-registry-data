@@ -1,0 +1,39 @@
+{
+  "name": "entry-point-analyzer",
+  "repo": "rasata/coldvault.dev",
+  "path": ".claude/skills/entry-point-analyzer/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/rasata/coldvault.dev",
+  "dir_name": "entry-point-analyzer",
+  "downloaded_at": "2026-11-26T08:16:41.417442Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rasata",
+  "source_url": "https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/entry-point-analyzer/SKILL.md",
+  "license": "MIT (ZONOVA RESEARCH — coldvault.dev)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/entry-point-analyzer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Map the attack surface of target/ — HTTP routes, CLI commands, exported library symbols, message-queue consumers, GitHub Actions triggers, IPC sockets. Produces reports/entry-points.md.",
+  "content_fingerprint": "2050983cff04c69af5b7e133db3ceff6f061b9851ea53c473ba438992016394a"
+}

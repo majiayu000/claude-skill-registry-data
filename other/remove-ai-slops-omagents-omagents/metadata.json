@@ -1,0 +1,38 @@
+{
+  "name": "remove-ai-slops",
+  "repo": "omagents/omagents",
+  "path": "packages/core/skills/remove-ai-slops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/omagents/omagents",
+  "dir_name": "remove-ai-slops-omagents-omagents",
+  "downloaded_at": "2026-11-26T07:51:45.666377Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "omagents",
+  "source_url": "https://github.com/omagents/omagents/blob/main/packages/core/skills/remove-ai-slops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/omagents/omagents/blob/main/packages/core/skills/remove-ai-slops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Clean up AI-generated code artifacts using a durable loop workflow. Trigger when the user says 'clean AI code', 'remove slops', 'remove AI artifacts', or notices low-quality AI-generated code. Processes files one by one with verification."
+}

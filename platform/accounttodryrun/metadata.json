@@ -1,0 +1,37 @@
+{
+  "name": "accountToDryRun",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/accountToDryRun/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "accounttodryrun",
+  "downloaded_at": "2026-11-26T07:18:51.607831Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "platform",
+      "device"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/accountToDryRun/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/accountToDryRun/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take one Facebook account from imported (NEEDSLOGIN) to ACTIVE and run a full publish dry run, through the `log` MCP tools. Proxy, sign-in, a Twenty listing, then the publish machine all the way to the filled create form, stopping before Publish. Use when a new or vendor account has to start working, or to prove an account can post before going live."
+}

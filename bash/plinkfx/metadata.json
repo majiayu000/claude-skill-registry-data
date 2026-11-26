@@ -1,0 +1,39 @@
+{
+  "name": "plinkfx",
+  "repo": "maximilianfeix/plinkfx",
+  "path": "skills/plinkfx/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/maximilianfeix/plinkfx",
+  "dir_name": "plinkfx",
+  "downloaded_at": "2026-11-26T07:19:21.071933Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maximilianfeix",
+  "source_url": "https://github.com/maximilianfeix/plinkfx/blob/main/skills/plinkfx/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maximilianfeix/plinkfx/blob/main/skills/plinkfx/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design, render and measure game sound effects as code with plinkfx. Use when the user wants a sound effect for a game or UI (\"a heavy door for a dungeon\", \"a softer coin\", \"a laser that sounds like 1985\"), wants to tweak an existing plinkfx sound, or needs WAV/OGG files of game sounds. Produces a plinkfx parameter object plus a WAV, checked against loudness and peak limits. Runs locally through the plinkfx CLI; no network, no AI audio models.",
+  "content_fingerprint": "066ef28df5c65f3a5429d895856a2797ec15e6e8ea655178f714acc697bc4722"
+}

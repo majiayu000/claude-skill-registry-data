@@ -1,0 +1,39 @@
+{
+  "name": "papercuts",
+  "repo": "n8mus/AetherOrion",
+  "path": ".claude/skills/papercuts/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/n8mus/AetherOrion",
+  "dir_name": "papercuts-n8mus-aetherorion",
+  "downloaded_at": "2026-11-26T07:35:41.104915Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task, memory",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n8mus",
+  "source_url": "https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/papercuts/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/papercuts/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read-only AetherSDR issue triage that surfaces the UX papercuts, bugs, and regressions you can fix AND prove today with the agent automation bridge. Use when the user says $papercuts or /papercuts, or asks to \"find papercuts\", \"what can I fix and prove today\", \"triage bridge-provable issues\", \"what UX bugs can the bridge close\", \"sort issues by priority I can knock out\", or otherwise wants a curated, lifecycle-aware (design\u2192code\u2192prove) shortlist of issues \u2014 NOT the label-and-respond /triage workflow. This is the discovery step that feeds /fb. Strictly read-only: it never labels, comments, closes, or edits issues."
+}

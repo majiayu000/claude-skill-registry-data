@@ -1,0 +1,38 @@
+{
+  "name": "vlsit-rtl-spec-change-implementer",
+  "repo": "nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "path": ".dsh/skills/vlsit-rtl-spec-change-implementer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "dir_name": "vlsit-rtl-spec-change-implementer",
+  "downloaded_at": "2026-11-26T07:41:02.699723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nguyenquanicd",
+  "source_url": "https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.dsh/skills/vlsit-rtl-spec-change-implementer/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.dsh/skills/vlsit-rtl-spec-change-implementer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze an existing RTL IP top-down (hierarchy, instance counts, inter-module function, interfaces, CSR map, block diagrams, basic software sequence) in one Markdown report, plan a minimal modification for sign-off, then modify the RTL in place, write the CSR Excel workbook, and verify with lint and before/after tests. The specification is optional. Use when the user wants to add or change a feature of an existing RTL IP."
+}

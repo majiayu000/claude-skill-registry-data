@@ -1,0 +1,38 @@
+{
+  "name": "match-voice",
+  "repo": "petar-djukic/agent-skills",
+  "path": ".claude/skills/match-voice/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/petar-djukic/agent-skills",
+  "dir_name": "match-voice",
+  "downloaded_at": "2026-11-26T08:02:38.020592Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, blog, article",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petar-djukic",
+  "source_url": "https://github.com/petar-djukic/agent-skills/blob/main/.claude/skills/match-voice/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petar-djukic/agent-skills/blob/main/.claude/skills/match-voice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rewrite paragraphs of a draft in the author's voice using a second model family served by Ollama, with a verification gate before any text is spliced back. Retrieves voice anchors from the repository's writing-voice/ exemplars, sends paragraph plus anchors to a local (or cloud) Ollama model, then gates the result on citation/number preservation, meaning entailment, anchor similarity, and register. Triggers: voice rewrite, rewrite in my voice, ollama rewrite, rewrite paragraphs, local model rewrite, sound like my earlier papers, rewrite against writing-voice."
+}

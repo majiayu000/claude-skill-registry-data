@@ -1,0 +1,38 @@
+{
+  "name": "simulink-model-rf-system",
+  "repo": "matlab/simulink-agentic-toolkit",
+  "path": "skills-catalog/rf-and-mixed-signal/simulink-model-rf-system/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matlab/simulink-agentic-toolkit",
+  "dir_name": "simulink-model-rf-system",
+  "downloaded_at": "2026-11-26T07:17:48.686708Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matlab",
+  "source_url": "https://github.com/matlab/simulink-agentic-toolkit/blob/main/skills-catalog/rf-and-mixed-signal/simulink-model-rf-system/SKILL.md",
+  "license": "https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matlab/simulink-agentic-toolkit/blob/main/skills-catalog/rf-and-mixed-signal/simulink-model-rf-system/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Physics-based RF system simulation in Simulink with RF Blockset Circuit Envelope and Idealized Baseband, capturing multi-carrier interactions, impedance mismatch, and nonlinear mixing products that behavioral models miss. Export an rfbudget chain or measured S-parameters to a model, add impairments (noise, nonlinearity, phase noise, IQ mismatch) one at a time, verify each with Harmonic Balance testbenches and non-loading power taps, then drive with 5G/LTE/WLAN waveforms for EVM/ACLR/BER. Use when building RF models from budget specs or measured data, sweeping power for optimal back-off, finding the performance-limiting component, or comparing Circuit Envelope vs Idealized Baseband. Trigger: simrfV2, Configuration block, exportRFBlockset, exportTestbench, rfsystem, model_edit, RF Inport, RF Outport, S-parameter block, Amplifier, Mixer, IMT Mixer, Filter, Touchstone, noise figure, IQ imbalance, DPD, RF testbench, power meter, transducer gain, IP3, OIP3, IIP3, spectral regrowth, tall pole.",
+  "content_fingerprint": "1d5edb6d6b070e961008eb714b19807f82314b2342d97fe9a09589c889e2385e"
+}

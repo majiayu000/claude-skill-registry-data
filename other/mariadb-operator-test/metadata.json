@@ -1,0 +1,37 @@
+{
+  "name": "mariadb-operator-test",
+  "repo": "mariadb-operator/mariadb-operator",
+  "path": ".agents/skills/mariadb-operator-test/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mariadb-operator/mariadb-operator",
+  "dir_name": "mariadb-operator-test",
+  "downloaded_at": "2026-11-26T07:14:49.207590Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mariadb-operator",
+  "source_url": "https://github.com/mariadb-operator/mariadb-operator/blob/main/.agents/skills/mariadb-operator-test/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mariadb-operator/mariadb-operator/blob/main/.agents/skills/mariadb-operator-test/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Conduct in-depth, end-to-end testing of a mariadb-operator/mariadb-operator pull request in a local KIND environment, hunting for corner cases and failure modes to make the feature as robust and polished as possible before it is released. Builds a test plan from the PR, runs happy-path, reported-repro and failure-injection scenarios (process and container kills, retries, timeouts, concurrency, deletion mid-operation, operator restarts, manual interventions), fixes the gaps it finds, separates regressions from pre-existing and environmental failures, posts a test report on the PR through mariadb-operator-comment, and proposes which scenarios are worth promoting to CI integration tests. Use whenever the user wants a PR tested beyond its unit/integration tests \u2014 \"test PR #1234 on KIND\", \"conduct additional testing for this PR\", \"harden this feature before we release it\", \"find corner cases in #1234\", \"make this PR robust\"."
+}

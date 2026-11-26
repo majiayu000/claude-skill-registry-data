@@ -1,0 +1,39 @@
+{
+  "name": "mirrord-quickstart",
+  "repo": "metalbear-co/mirrord",
+  "path": "skills/skills/mirrord-quickstart/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/metalbear-co/mirrord",
+  "dir_name": "mirrord-quickstart-metalbear-co-mirrord",
+  "downloaded_at": "2026-11-26T07:23:03.230545Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "metalbear-co",
+  "source_url": "https://github.com/metalbear-co/mirrord/blob/main/skills/skills/mirrord-quickstart/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/metalbear-co/mirrord/blob/main/skills/skills/mirrord-quickstart/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide users from zero to their first working mirrord session \u2014 check system requirements, install mirrord via CLI, VS Code, or IntelliJ, run a first session against a Kubernetes target, and verify the connection. Use when a user is new to mirrord, wants to install it, needs help running their first session, or wants to debug or test a local process against their Kubernetes cluster."
+}

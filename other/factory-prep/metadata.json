@@ -1,0 +1,37 @@
+{
+  "name": "factory-prep",
+  "repo": "nonlinear-xyz/factory-kit",
+  "path": "skills/factory-prep/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nonlinear-xyz/factory-kit",
+  "dir_name": "factory-prep",
+  "downloaded_at": "2026-11-26T07:45:07.967445Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nonlinear-xyz",
+  "source_url": "https://github.com/nonlinear-xyz/factory-kit/blob/main/skills/factory-prep/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nonlinear-xyz/factory-kit/blob/main/skills/factory-prep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a Linear ticket ready to build when it moves into Todo or In Progress. An independent agent checks the ticket's assumptions against the code, writes the state model and a commit-pinned code map into the working doc, and returns a verdict (Ready, Split, Blocked, Needs decision) so open questions get answered before the work session starts."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "surfaceDocs",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/surfaceDocs/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "surfacedocs",
+  "downloaded_at": "2026-11-26T07:18:49.902220Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/surfaceDocs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/surfaceDocs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep the command reference (docs/reference.md) and the Mermaid diagrams (docs/diagrams/*.mmd) generated from the code (rules 55, 103). Use when adding or changing a command, a flag, an MCP tool, a hook or a page state, or when `bun run check:docs` refuses a commit."
+}

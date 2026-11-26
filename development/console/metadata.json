@@ -1,0 +1,38 @@
+{
+  "name": "console",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/console/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "console",
+  "downloaded_at": "2026-11-26T07:18:47.927564Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/console/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/console/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read this machine's local console, the same data in the terminal, as JSON per screen, or in the web console served on loopback with no sign-in. Use when someone asks \"is log set up here\", \"is the MCP running\", \"which accounts are signed in\", \"how many calls today\", \"show the latest events\", \"what MCP config do I paste into Claude Code / Codex / opencode\", or \"open the console\"."
+}

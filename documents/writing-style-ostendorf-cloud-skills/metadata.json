@@ -1,0 +1,37 @@
+{
+  "name": "writing-style",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/conventions/writing-style/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "writing-style-ostendorf-cloud-skills",
+  "downloaded_at": "2026-11-26T07:57:07.141786Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, documentation",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/conventions/writing-style/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/conventions/writing-style/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Structural rules for everything written, a chat answer, a file, a commit, a pull request or issue body, a code comment or a test name. Use before writing or rewriting any of these, or when asked to rewrite text in house style."
+}

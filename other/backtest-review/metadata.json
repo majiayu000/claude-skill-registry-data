@@ -1,0 +1,37 @@
+{
+  "name": "backtest-review",
+  "repo": "radys-s/AlgoTrade",
+  "path": ".claude/skills/backtest-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/radys-s/AlgoTrade",
+  "dir_name": "backtest-review",
+  "downloaded_at": "2026-11-26T08:14:51.432120Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "radys-s",
+  "source_url": "https://github.com/radys-s/AlgoTrade/blob/main/.claude/skills/backtest-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/radys-s/AlgoTrade/blob/main/.claude/skills/backtest-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit a trading-strategy backtest for look-ahead bias, overfitting, unrealistic assumptions, and regime-dependence. Use this skill when reviewing backtest code, backtest results, equity curves, or considering whether to deploy a strategy live.",
+  "content_fingerprint": "5ad21815d35902752b7c7d9be52b014ceee54235d048695b28404f29528d4bab"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "dispatcher",
+  "repo": "sharma-varun-norc/eds-aem-boilerplate",
+  "path": ".agents/skills/dispatcher/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sharma-varun-norc/eds-aem-boilerplate",
+  "dir_name": "dispatcher-sharma-varun-norc-eds-aem-boilerplate",
+  "downloaded_at": "2026-11-26T08:39:08.261203Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=3, performance=3",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sharma-varun-norc",
+  "source_url": "https://github.com/sharma-varun-norc/eds-aem-boilerplate/blob/main/.agents/skills/dispatcher/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sharma-varun-norc/eds-aem-boilerplate/blob/main/.agents/skills/dispatcher/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Single entry point for all AEM 6.5 LTS Dispatcher skills. Covers config authoring,\ntechnical advisory, incident response, performance tuning, security hardening, and full lifecycle\norchestration for the Adobe Dispatcher Apache HTTP Server module and its HTTPD/dispatcher configuration\nin AEM 6.5 LTS and AMS environments."
+}

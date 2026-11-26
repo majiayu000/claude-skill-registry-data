@@ -1,0 +1,38 @@
+{
+  "name": "reviewing",
+  "repo": "msFoma/foma-skills",
+  "path": "plugins/foma-skills/skills/reviewing/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/msFoma/foma-skills",
+  "dir_name": "reviewing-msfoma-foma-skills",
+  "downloaded_at": "2026-11-26T07:33:30.181551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msFoma",
+  "source_url": "https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/reviewing/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/reviewing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews a diff against the project's standards and spec in priority order, ending in a ship or fix-first verdict. Use when the user asks to review code, a PR or a branch, \"is this ready to merge?\", or for UI code feedback. Not for debugging."
+}

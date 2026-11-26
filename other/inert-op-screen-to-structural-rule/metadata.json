@@ -1,0 +1,36 @@
+{
+  "name": "inert-op-screen-to-structural-rule",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/inert-op-screen-to-structural-rule/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "inert-op-screen-to-structural-rule",
+  "downloaded_at": "2026-11-26T07:49:31.367168Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category analysis scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/inert-op-screen-to-structural-rule/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/inert-op-screen-to-structural-rule/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find charged operations that never act on the verifier's input distribution by bit-sliced screening over many seeds, ship their removal only under a re-verification gate, then replace the index list with a structural skip rule in the generator. Use when a benchmark's judge charges per executed op and verifies on a sample, and the artefact comes from a generator with conservative guards; on benchmarks with exact verification use the screen for discovery only."
+}

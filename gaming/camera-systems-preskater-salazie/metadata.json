@@ -1,0 +1,39 @@
+{
+  "name": "camera-systems",
+  "repo": "preskater/salazie",
+  "path": ".agent/skills/camera-systems/SKILL.md",
+  "github_branch": "main",
+  "category": "gaming",
+  "source": "github.com/preskater/salazie",
+  "dir_name": "camera-systems-preskater-salazie",
+  "downloaded_at": "2026-11-26T08:08:49.880462Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "gaming",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for gaming: game, unity, godot",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "game",
+      "unity",
+      "godot"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "preskater",
+  "source_url": "https://github.com/preskater/salazie/blob/main/.agent/skills/camera-systems/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/preskater/salazie/blob/main/.agent/skills/camera-systems/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds and tunes game cameras, engine-neutral with Godot and Cinemachine 3 mappings: 2D follow with deadzone and look-ahead, third-person orbit, first-person look and split-screen. Use when the camera lags, jitters while following, shows past the level edge, clips through walls or changes with frame rate. Not for shake (`game-feel`) or physics timestep jitter (`physics-tuning`).",
+  "content_fingerprint": "19cd1e6732ae1d2b46512ea43b123abdc44a2aea8c2072a0fa7eb381efb67704"
+}

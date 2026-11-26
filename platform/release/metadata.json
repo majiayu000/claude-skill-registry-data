@@ -1,0 +1,37 @@
+{
+  "name": "release",
+  "repo": "ptc-au/the-one-app",
+  "path": ".agents/skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/ptc-au/the-one-app",
+  "dir_name": "release",
+  "downloaded_at": "2026-11-26T08:10:40.743694Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "platform",
+      "device"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ptc-au",
+  "source_url": "https://github.com/ptc-au/the-one-app/blob/main/.agents/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ptc-au/the-one-app/blob/main/.agents/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use once your change is on main, to put it live on the network by the smallest path it needs, or to see what is live. Whoever makes a change releases it."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "mtk-doctor",
+  "repo": "moberghr/mtk-agent-toolkit",
+  "path": ".claude/skills/mtk-doctor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moberghr/mtk-agent-toolkit",
+  "dir_name": "mtk-doctor",
+  "downloaded_at": "2026-11-26T07:29:29.847912Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moberghr",
+  "source_url": "https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/mtk-doctor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moberghr/mtk-agent-toolkit/blob/main/.claude/skills/mtk-doctor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "MTK install health check \u2014 core files, hooks, integrity, active config and environment, with JSON output, safe auto-repair and raw usage counts; use when MTK seems broken or misconfigured."
+}

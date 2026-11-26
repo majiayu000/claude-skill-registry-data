@@ -1,0 +1,39 @@
+{
+  "name": "awq-quantization",
+  "repo": "shivamchopra7/claude-skill-directory",
+  "path": "skills/ai-ml/awq/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/shivamchopra7/claude-skill-directory",
+  "dir_name": "awq-shivamchopra7-claude-skill-directo",
+  "downloaded_at": "2026-11-26T08:42:00.775299Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "shivamchopra7",
+  "source_url": "https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/ai-ml/awq/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/ai-ml/awq/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Activation-aware weight quantization for 4-bit LLM compression with 3x speedup and minimal accuracy loss. Use when deploying large models (7B-70B) on limited GPU memory, when you need faster inference than GPTQ with better accuracy preservation, or for instruction-tuned and multimodal models. MLSys 2024 Best Paper Award winner."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "matlab-design-scenario",
+  "repo": "matlab/matlab-agentic-toolkit",
+  "path": "skills-catalog/radar/matlab-design-scenario/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matlab/matlab-agentic-toolkit",
+  "dir_name": "matlab-design-scenario",
+  "downloaded_at": "2026-11-26T07:17:44.540782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matlab",
+  "source_url": "https://github.com/matlab/matlab-agentic-toolkit/blob/main/skills-catalog/radar/matlab-design-scenario/SKILL.md",
+  "license": "https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matlab/matlab-agentic-toolkit/blob/main/skills-catalog/radar/matlab-design-scenario/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design, simulate, and analyze 3D scenarios with terrain, buildings, actors, trajectories, and analyses. Use when evaluating visibility or geometric paths between moving actors, planning sensor or antenna placement in urban environments, simulating vehicle or aircraft routes, or analyzing line-of-sight and geometric ray trace propagation over terrain and buildings. Also use when the user mentions 3D Scenarios or scenario(). Not for radarScenario, drivingScenario, uavScenario, trackingScenario, satelliteScenario, RoadRunner Scenario or Scenario Builder driving scenarios, or txsite and siteviewer coverage maps.",
+  "content_fingerprint": "1cc690fea27b796d9e739dc4db418be3367296417062a9c506cf8e49afc49e91"
+}

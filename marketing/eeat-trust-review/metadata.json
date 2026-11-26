@@ -1,0 +1,38 @@
+{
+  "name": "eeat-trust-review",
+  "repo": "sigistry/marketplace",
+  "path": "plugins/romeo-seo/skills/eeat-trust-review/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/sigistry/marketplace",
+  "dir_name": "eeat-trust-review",
+  "downloaded_at": "2026-11-26T08:43:11.193960Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: seo, content, brand",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "seo",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sigistry",
+  "source_url": "https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/eeat-trust-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/eeat-trust-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a page and its site for experience, expertise, authoritativeness and trust the way a Google quality rater would. Use for \"check our E-E-A-T\", \"do we need author bios\", \"is our site trustworthy enough for health or finance content\" or traffic lost after a core update. Returns trust gaps with fixes and spam-policy risks."
+}

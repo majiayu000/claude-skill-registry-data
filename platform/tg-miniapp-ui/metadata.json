@@ -1,0 +1,39 @@
+{
+  "name": "tg-miniapp-ui",
+  "repo": "serejaris/telegram-skills",
+  "path": "skills/tg-miniapp-ui/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/serejaris/telegram-skills",
+  "dir_name": "tg-miniapp-ui",
+  "downloaded_at": "2026-11-26T08:35:35.708548Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, android, ios",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "serejaris",
+  "source_url": "https://github.com/serejaris/telegram-skills/blob/main/skills/tg-miniapp-ui/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/serejaris/telegram-skills/blob/main/skills/tg-miniapp-ui/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building or debugging the interface of a Telegram Mini App: theme colors and dark mode, safe areas and notches, fullscreen, keyboard and viewport height, MainButton and SecondaryButton, BackButton, haptic feedback, performance on weak Android, or a layout bug that shows up only on a real iPhone, Android or Desktop client."
+}

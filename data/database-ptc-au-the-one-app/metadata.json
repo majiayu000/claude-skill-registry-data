@@ -1,0 +1,38 @@
+{
+  "name": "database",
+  "repo": "ptc-au/the-one-app",
+  "path": "apps/database/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/ptc-au/the-one-app",
+  "dir_name": "database-ptc-au-the-one-app",
+  "downloaded_at": "2026-11-26T08:10:36.296709Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ptc-au",
+  "source_url": "https://github.com/ptc-au/the-one-app/blob/main/apps/database/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ptc-au/the-one-app/blob/main/apps/database/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read before writing an app that keeps data or has scheduled jobs, which it keeps in a database with this app."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "vlsit-cdc-review",
+  "repo": "nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "path": ".claude/skills/vlsit-cdc-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "dir_name": "vlsit-cdc-review-nguyenquanicd-vlsit-asic-soc-ai-sk",
+  "downloaded_at": "2026-11-26T07:40:56.099756Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nguyenquanicd",
+  "source_url": "https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.claude/skills/vlsit-cdc-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.claude/skills/vlsit-cdc-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review clock domain crossings (CDC) \u2014 analyse the RTL and the SDC independently, list every asynchronous clock domain and every crossing signal with its function and pulse/level nature, identify the synchronisation mechanism with an SVG figure, parse Spyglass, Questa or VC CDC reports and the waiver, group violations by root cause, and give a fix, SDC or waiver verdict with the risk of each. Use when the user asks for a CDC review or a CDC sign-off."
+}

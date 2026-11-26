@@ -1,0 +1,37 @@
+{
+  "name": "documenting",
+  "repo": "msFoma/foma-skills",
+  "path": "plugins/foma-skills/skills/documenting/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/msFoma/foma-skills",
+  "dir_name": "documenting-msfoma-foma-skills",
+  "downloaded_at": "2026-11-26T07:33:30.683164Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msFoma",
+  "source_url": "https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/documenting/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/documenting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes project docs in the right place. Use when the user asks to document something, record a decision, write an ADR, or update the README or docs. Not for code comments, commit messages or reviews."
+}

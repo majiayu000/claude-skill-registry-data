@@ -1,0 +1,37 @@
+{
+  "name": "wide-research",
+  "repo": "ponti-studios/kernel",
+  "path": "skills/wide-research/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ponti-studios/kernel",
+  "dir_name": "wide-research-ponti-studios-kernel",
+  "downloaded_at": "2026-11-26T08:06:34.621669Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, memory",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ponti-studios",
+  "source_url": "https://github.com/ponti-studios/kernel/blob/main/skills/wide-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ponti-studios/kernel/blob/main/skills/wide-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run one research question across many independent inputs and return a single normalized result set with coverage reported. Use for high-volume lookup, screening, or comparison where every input yields the same fields; not for single-item tasks or subtasks that depend on each other."
+}

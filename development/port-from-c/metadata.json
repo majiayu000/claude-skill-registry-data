@@ -1,0 +1,38 @@
+{
+  "name": "port-from-c",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/porting/port-from-c/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "port-from-c",
+  "downloaded_at": "2026-11-26T08:20:56.623974Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/porting/port-from-c/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/porting/port-from-c/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Port C into Rust \u2014 recovering the ownership, lifetime, nullability, and length that C never recorded, mapping pointers to references and slices, tag-plus-union to enums, return codes and errno to Result, and linking Rust into the existing build with bindgen and cbindgen. Use when porting, rewriting, or migrating C, a C library, firmware, or a C application into Rust, when replacing C modules one at a time behind the existing build, or when the user asks how a C construct such as malloc, a char pointer, a union, or a preprocessor macro translates to Rust."
+}

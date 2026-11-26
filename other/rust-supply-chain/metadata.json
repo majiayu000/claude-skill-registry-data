@@ -1,0 +1,38 @@
+{
+  "name": "rust-supply-chain",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/misc/rust-supply-chain/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "rust-supply-chain",
+  "downloaded_at": "2026-11-26T08:20:57.690053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/misc/rust-supply-chain/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/misc/rust-supply-chain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit a Rust dependency tree \u2014 advisories, licences, banned and duplicate crates, and unmaintained dependencies \u2014 and turn each finding into a decision. Use when checking whether dependencies are safe to ship, when cargo audit or cargo deny reports something, when adding a dependency to a project with a licence policy, when a build pulls in two versions of the same crate, or when the user asks about supply chain risk in Rust."
+}

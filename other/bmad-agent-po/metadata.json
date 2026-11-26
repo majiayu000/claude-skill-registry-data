@@ -1,0 +1,37 @@
+{
+  "name": "bmad-agent-po",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/bmad-agent-po/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "bmad-agent-po",
+  "downloaded_at": "2026-11-26T07:09:37.304944Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/bmad-agent-po/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/bmad-agent-po/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sofia, the Product Owner: turns any input (an idea, brief, PRD, transcript, notes) into a ticket's requirements, slices initiatives into epics and epics into stories, writes and refines tickets, runs the board, validates the tree, replans when a change lands, and sets up the ticket store. Use when the user asks for Sofia or the product owner, or says 'create a spec', 'distill this PRD', 'write the initiative from', 'slice this', 'split this epic', 'break this into stories', 'make a ticket', 'refine this ticket', 'what's ready', 'status of', 'publish', 'validate these tickets', 'this changed, what now', 'set up the ticket store'."
+}

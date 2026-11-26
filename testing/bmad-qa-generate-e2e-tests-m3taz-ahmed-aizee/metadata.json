@@ -1,0 +1,38 @@
+{
+  "name": "bmad-qa-generate-e2e-tests",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/bmad-qa-generate-e2e-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "bmad-qa-generate-e2e-tests-m3taz-ahmed-aizee",
+  "downloaded_at": "2026-11-26T07:09:39.313157Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/bmad-qa-generate-e2e-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/bmad-qa-generate-e2e-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add end-to-end and API tests for features that already work, following the project's existing test harness. Use when the user asks for e2e tests, API tests, or automated coverage of an existing feature, or says \"create qa automated tests for [feature]\". Not for unit tests on work in flight, which the build writes."
+}

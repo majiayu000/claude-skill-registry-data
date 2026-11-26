@@ -1,0 +1,37 @@
+{
+  "name": "log-log-tool-health",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "hermesPlugin/skills/log-log-tool-health/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-log-tool-health-matthewdonsemail-lab-log",
+  "downloaded_at": "2026-11-26T07:18:58.328612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/hermesPlugin/skills/log-log-tool-health/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/hermesPlugin/skills/log-log-tool-health/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tool health. A log play (docs/useCases/log/toolHealth.md): Read how log's own tools are doing from the calls log.db already stores: per tool its calls, failures, commonest failure code, p50 and p95, and last use, with three flags (unused, failing, stale guide mentions) and a fix for each. It reads only: it changes no code, file or guide, and the fixes are for the owner to choose."
+}

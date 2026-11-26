@@ -1,0 +1,37 @@
+{
+  "name": "internal-linking-plan",
+  "repo": "sigistry/marketplace",
+  "path": "plugins/romeo-seo/skills/internal-linking-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sigistry/marketplace",
+  "dir_name": "internal-linking-plan",
+  "downloaded_at": "2026-11-26T08:43:14.404133Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "seo",
+      "content"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sigistry",
+  "source_url": "https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/internal-linking-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/internal-linking-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find orphan pages, buried pages, links to redirects or 404s, nofollowed links and weak anchors, then get an exact list of links to add (source, target, anchor, sentence, reason). Use for \"plan my internal links\", \"find orphan pages\", \"which pages should link to this page\", or after a site crawl."
+}

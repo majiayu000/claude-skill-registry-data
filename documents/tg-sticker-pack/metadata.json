@@ -1,0 +1,37 @@
+{
+  "name": "tg-sticker-pack",
+  "repo": "serejaris/telegram-skills",
+  "path": "skills/tg-sticker-pack/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/serejaris/telegram-skills",
+  "dir_name": "tg-sticker-pack",
+  "downloaded_at": "2026-11-26T08:35:36.025542Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "serejaris",
+  "source_url": "https://github.com/serejaris/telegram-skills/blob/main/skills/tg-sticker-pack/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/serejaris/telegram-skills/blob/main/skills/tg-sticker-pack/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when making static Telegram stickers or a sticker pack from a meme frame, photo or video: cut the person out, put a caption on top (WordArt, Impact, label tags), check the 512 px PNG/WEBP format offline, and publish the set from a user account through @Stickers or from a bot through createNewStickerSet / addStickerToSet."
+}

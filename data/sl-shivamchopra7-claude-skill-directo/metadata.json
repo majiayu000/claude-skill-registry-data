@@ -1,0 +1,38 @@
+{
+  "name": "sl",
+  "repo": "shivamchopra7/claude-skill-directory",
+  "path": "skills/data/sl/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/shivamchopra7/claude-skill-directory",
+  "dir_name": "sl-shivamchopra7-claude-skill-directo",
+  "downloaded_at": "2026-11-26T08:41:53.760330Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shivamchopra7",
+  "source_url": "https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/data/sl/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/data/sl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "KTX's semantic layer - a structured catalog of sources (tables/views), measures, joins, and segments expressed as YAML. Covers the schema and how to query it via `sl_query`. Use when the task involves querying pre-defined metrics (ARR, churn, retention, LTV, MAU) or reading SL source YAML to understand the catalog. Capture is handled by the `sl_capture` skill (memory-agent only)."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "tag-release",
+  "repo": "n8mus/AetherOrion",
+  "path": ".claude/skills/tag-release/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/n8mus/AetherOrion",
+  "dir_name": "tag-release-n8mus-aetherorion",
+  "downloaded_at": "2026-11-26T07:35:41.237836Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n8mus",
+  "source_url": "https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/tag-release/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n8mus/AetherOrion/blob/main/.claude/skills/tag-release/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The AetherSDR cut pass \u2014 takes a CalVer version whose prep PR has merged on main and drives it from \"the prep is on main\" to \"the release is published, every asset is signed and verified, the Store draft is staged, the website post is up and the report is written\". Finds the squash-merge commit, checks the six release files at that SHA, tags it with a signed annotated tag, creates the release before CI attaches anything, watches the three build workflows and the signing runs, verifies the seventeen-asset set on the files, reads the Store staging step, drafts the website post, and reports the first 48 hours. Every judgment call goes to the maintainer through AskUserQuestion. Use when the user says \"/tag-release 26.9.5\", \"/tag-release v26.9.5\", \"tag the release\", \"cut the tag\", \"publish v26.9.5\", \"the prep merged, tag it\", or otherwise wants a prepped version tagged and published. /release-prep ends where this begins."
+}

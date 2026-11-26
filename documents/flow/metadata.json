@@ -1,0 +1,39 @@
+{
+  "name": "flow",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/flow/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "flow",
+  "downloaded_at": "2026-11-26T07:18:46.962613Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/flow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/flow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a `log inspect` recording into a flow (rule 31) - a definition built from the recording, its documentation, an XState machine, the `log flow run` command and an MCP tool of its own - and run it on any account. Use after recording a procedure with inspect, when the owner says \"make it a state machine\", \"run it on another account\", \"register it as an MCP\", or to run a saved flow."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "scientific-visualization",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/scientific-toolkit/references/scientific-skills/scientific-visualization/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "scientific-visualization-m3taz-ahmed-aizee",
+  "downloaded_at": "2026-11-26T07:10:09.264171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, visualization",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/scientific-toolkit/references/scientific-skills/scientific-visualization/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/scientific-toolkit/references/scientific-skills/scientific-visualization/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Meta-skill for publication-ready figures. Use when creating journal submission figures requiring multi-panel layouts, significance annotations, error bars, colorblind-safe palettes, and specific journal formatting (Nature, Science, Cell). Orchestrates matplotlib/seaborn/plotly with publication styles. For quick exploration use seaborn or plotly directly."
+}

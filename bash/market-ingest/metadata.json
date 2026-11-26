@@ -1,0 +1,38 @@
+{
+  "name": "market-ingest",
+  "repo": "marshadgani/Arshad.AI",
+  "path": ".claude/skills/market-ingest/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/marshadgani/Arshad.AI",
+  "dir_name": "market-ingest",
+  "downloaded_at": "2026-11-26T07:16:01.380985Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marshadgani",
+  "source_url": "https://github.com/marshadgani/Arshad.AI/blob/master/.claude/skills/market-ingest/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marshadgani/Arshad.AI/blob/master/.claude/skills/market-ingest/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ingest and normalize market data into OHLCV vectors with HNSW indexing",
+  "content_fingerprint": "721ad9e59691e4ff1b6c39afd4a60b109138d9f3716c9a0606972bfbb5c8f577"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "meat-recon",
+  "repo": "martinetlee/meat-evm",
+  "path": ".claude/skills/meat-recon/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/martinetlee/meat-evm",
+  "dir_name": "meat-recon",
+  "downloaded_at": "2026-11-26T07:16:41.239401Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "martinetlee",
+  "source_url": "https://github.com/martinetlee/meat-evm/blob/main/.claude/skills/meat-recon/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/martinetlee/meat-evm/blob/main/.claude/skills/meat-recon/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Expand from partial exploit info to full picture. Finds additional attacker addresses,\nattack transactions, and victims. Use after /meat when the picture is incomplete.",
+  "content_fingerprint": "997524170d2360ebe4fe508e5699d875ca7d17ecad12d6cba90397bac05bafd5"
+}

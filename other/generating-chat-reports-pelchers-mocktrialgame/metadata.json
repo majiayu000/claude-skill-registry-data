@@ -1,0 +1,38 @@
+{
+  "name": "generating-chat-reports",
+  "repo": "pelchers/MockTrialGame",
+  "path": ".claude/skills/generating-chat-reports/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pelchers/MockTrialGame",
+  "dir_name": "generating-chat-reports-pelchers-mocktrialgame",
+  "downloaded_at": "2026-11-26T08:02:00.575608Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pelchers",
+  "source_url": "https://github.com/pelchers/MockTrialGame/blob/main/.claude/skills/generating-chat-reports/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pelchers/MockTrialGame/blob/main/.claude/skills/generating-chat-reports/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate structured markdown session reports summarizing files changed, agents invoked, decisions made, sync status, and pending items after long agent work sessions.",
+  "content_fingerprint": "8c95a7f352fb7a8e95c1789f863090b17ba6c8e53a4cac6007e69a8d779eebbb"
+}

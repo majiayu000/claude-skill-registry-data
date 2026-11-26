@@ -1,0 +1,38 @@
+{
+  "name": "uml-drawing",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/uml-drawing/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "uml-drawing",
+  "downloaded_at": "2026-11-26T07:10:17.584537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/uml-drawing/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/uml-drawing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Put a correct UML class diagram \u2014 as an embeddable image \u2014 into your docs. Use this skill whenever the user wants to add, draw, embed, or export a UML class diagram for a README, design doc, wiki, slide, or `.md` spec: it builds a structurally-correct model (classes, attributes, associations, inheritance, multiplicities) \u2014 from a description or from existing code the agent reads \u2014 and delivers it either as B-UML code embedded in the document or as a rendered SVG/PNG image (the agent can render it itself with a single call to BESSER's headless SVG endpoint, or export it from the BESSER web editor). Trigger on \"embed a UML diagram\", \"add a class diagram to the README\", \"draw the data model\", \"diagram my code\", \"export the diagram as an image/SVG/PNG\", or any request for a diagram that should both look right and stay accurate. The diagram is code \u2014 for building models in depth defer to bes \u2026"
+}

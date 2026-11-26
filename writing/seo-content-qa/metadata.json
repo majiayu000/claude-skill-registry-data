@@ -1,0 +1,39 @@
+{
+  "name": "seo-content-qa",
+  "repo": "sigistry/marketplace",
+  "path": "plugins/romeo-seo/skills/seo-content-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/sigistry/marketplace",
+  "dir_name": "seo-content-qa",
+  "downloaded_at": "2026-11-26T08:43:09.831666Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, blog, article",
+    "score": 4,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "writing",
+      "writer",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sigistry",
+  "source_url": "https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/seo-content-qa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sigistry/marketplace/blob/main/plugins/romeo-seo/skills/seo-content-qa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Score an SEO draft before it ships against its brief, checking intent, structure, human voice, product facts, competitor claims, links, images, schema and publishing readiness, with a PASS/FAIL verdict out of 40. Use for \"check this draft\", \"is this article ready to publish\", \"QA my blog post\", \"review this before it goes live\"."
+}

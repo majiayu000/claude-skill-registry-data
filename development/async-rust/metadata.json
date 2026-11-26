@@ -1,0 +1,38 @@
+{
+  "name": "async-rust",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/rust/async-rust/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "async-rust",
+  "downloaded_at": "2026-11-26T08:20:55.684648Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/rust/async-rust/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/rust/async-rust/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write correct async Rust \u2014 runtime choice, Send and Sync bounds, cancellation safety, blocking work inside async contexts, and shared state across tasks. Use when writing or reviewing async code, when a future is held across an await point, when the user hits a Send bound error on a spawned task, when a runtime stalls or deadlocks, or when the user asks about tokio, select!, or spawn_blocking."
+}

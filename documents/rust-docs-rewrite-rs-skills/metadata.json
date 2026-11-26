@@ -1,0 +1,39 @@
+{
+  "name": "rust-docs",
+  "repo": "rewrite-rs/skills",
+  "path": "skills/rust/rust-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/rewrite-rs/skills",
+  "dir_name": "rust-docs-rewrite-rs-skills",
+  "downloaded_at": "2026-11-26T08:20:55.559016Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rewrite-rs",
+  "source_url": "https://github.com/rewrite-rs/skills/blob/main/skills/rust/rust-docs/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rewrite-rs/skills/blob/main/skills/rust/rust-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Doc comments as API contract \u2014 a one-line first sentence, module-level docs, Examples, Errors, Panics, Safety and Abort sections, doctests that actually run, intra-doc links, and Cargo package metadata and release notes. Use when writing or reviewing rustdoc comments, when a public item is undocumented, when doctests are marked ignore or fail, when magic values appear undocumented, or when the user asks how to document a Rust crate."
+}

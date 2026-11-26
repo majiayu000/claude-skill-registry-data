@@ -1,0 +1,37 @@
+{
+  "name": "vlsit-spec-to-docx",
+  "repo": "nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "path": ".agents/skills/vlsit-spec-to-docx/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "dir_name": "vlsit-spec-to-docx-nguyenquanicd-vlsit-asic-soc-ai-sk",
+  "downloaded_at": "2026-11-26T07:40:57.689139Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docx, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nguyenquanicd",
+  "source_url": "https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.agents/skills/vlsit-spec-to-docx/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.agents/skills/vlsit-spec-to-docx/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Convert a Markdown design specification into a filled copy of the VLSIT IP Microarchitecture Specification DOCX template, asking the user for every missing fact and never inventing content. Use when the user asks to turn a spec, or the current design specification, into the DOCX template format."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "claude-md-from-profile",
+  "repo": "rusharlabs/house-party-protocol",
+  "path": "frameworks/operator-kit-1.8.7/skills/claude-md-from-profile/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rusharlabs/house-party-protocol",
+  "dir_name": "claude-md-from-profile",
+  "downloaded_at": "2026-11-26T08:28:13.281938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rusharlabs",
+  "source_url": "https://github.com/rusharlabs/house-party-protocol/blob/main/frameworks/operator-kit-1.8.7/skills/claude-md-from-profile/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rusharlabs/house-party-protocol/blob/main/frameworks/operator-kit-1.8.7/skills/claude-md-from-profile/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates the project's CLAUDE.md block FROM operator-profile.yaml - floor first (what the AI does not decide), then where things live, the rules of done and the flow. Idempotent, signed; refuses to overwrite a hand-edited block"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "layout",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/layout/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "layout-matthewdonsemail-lab-log",
+  "downloaded_at": "2026-11-26T07:18:47.802553Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/layout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/layout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Where a new file goes in log-cli (rule 2). Every file sits in a domain folder named for what it does: src/{library}/{domain}/, python/<domain>/, scripts/<domain>/; nothing loose. Use when adding a Python module, a script or a check, or when `bun run check:layout` refuses a commit."
+}

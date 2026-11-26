@@ -1,0 +1,38 @@
+{
+  "name": "moi-workspace",
+  "repo": "moi-computer/moi",
+  "path": "skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moi-computer/moi",
+  "dir_name": "skill-moi-computer-moi",
+  "downloaded_at": "2026-11-26T07:30:22.241000Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "communication",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moi-computer",
+  "source_url": "https://github.com/moi-computer/moi/blob/main/skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moi-computer/moi/blob/main/skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The Moi workspace — the web UI the user chats from, extended with agent-authored applets (widgets, views) plus theme & config. Read this FIRST when a message carries a hidden moi-context envelope or the user uses Moi vocab such as workspace, applet, widget, view, scratchpad, dashboard, or a `moi` command, or asks to build, edit, customize, or theme the workspace UI or its layout.",
+  "content_fingerprint": "ebcd287304d9b725eaf9901c3f1b4ea8e942cf7c50acf2660fc4d1a3e1afd30a"
+}

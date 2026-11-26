@@ -1,0 +1,37 @@
+{
+  "name": "runs",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/runs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "runs",
+  "downloaded_at": "2026-11-26T07:18:47.255396Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/runs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/runs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep the recorded runs from filling the disk (rule 66). `log runs` lists every run under ~/.logCli/runs with its size, whether rea settled it and whether the request docs hold it; `log runs prune --apply` deletes the analysed ones, keeping each one's findings, steps and requests by domain. Use when the storage hook speaks, AdsPower says it is running out of disk space, or the owner asks to clear the runs."
+}

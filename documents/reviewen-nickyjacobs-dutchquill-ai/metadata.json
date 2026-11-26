@@ -1,0 +1,38 @@
+{
+  "name": "reviewen",
+  "repo": "nickyjacobs/DutchQuill-AI",
+  "path": "skills/reviewen/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/nickyjacobs/DutchQuill-AI",
+  "dir_name": "reviewen-nickyjacobs-dutchquill-ai",
+  "downloaded_at": "2026-11-26T07:41:56.129527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, docx",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nickyjacobs",
+  "source_url": "https://github.com/nickyjacobs/DutchQuill-AI/blob/main/skills/reviewen/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nickyjacobs/DutchQuill-AI/blob/main/skills/reviewen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviewt een tekst zonder iets te veranderen: taal en spelling, AI-patronen, structuur en opbouw, toon voor de lezer, en (als die aan staan) APA en academische stijl, plus de beoordelingscriteria of inlevereisen van een vak als die in de werkmap staan. Levert een reviewrapport met bevindingen per regel, prioriteiten en de vijf belangrijkste acties; korte teksten (mail, post) krijgen hun review in de chat. Gebruik bij /dutchquill:reviewen, of als de gebruiker vraagt een tekst na te kijken, te beoordelen of feedback te geven (\"kijk mijn rapport na\", \"review this draft\", \"is deze mail goed zo\", \"geef feedback op hoofdstuk 3\")."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "snx-run",
+  "repo": "n-popescu/Inkypaint",
+  "path": ".claude/skills/snx-run/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/n-popescu/Inkypaint",
+  "dir_name": "snx-run",
+  "downloaded_at": "2026-11-26T07:34:58.472950Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n-popescu",
+  "source_url": "https://github.com/n-popescu/Inkypaint/blob/main/.claude/skills/snx-run/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n-popescu/Inkypaint/blob/main/.claude/skills/snx-run/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a recompiled game unattended and judge the result: scripted button input, timed exit, screenshots, reading the log, and repeat runs for intermittent crashes. Use when verifying a runtime change, reproducing a bug, checking a scene renders, measuring a crash rate, or when the user asks to run or test the game."
+}

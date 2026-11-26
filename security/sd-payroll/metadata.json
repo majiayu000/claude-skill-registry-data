@@ -1,0 +1,39 @@
+{
+  "name": "sd-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/sd-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "sd-payroll",
+  "downloaded_at": "2026-11-26T07:54:38.074466Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/sd-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/sd-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compute South Dakota 2026 employer reemployment assistance contributions, taxable wage base, new and construction rates, investment and administrative fees, Form 21 quarterly filing and no state income-tax withholding. Trigger on South Dakota payroll, SUI, RA tax, UI rate notice and quarterly wages.",
+  "content_fingerprint": "2455be86cf86294b68a64aaddc5f9cbf7a4a4f7b1af852d8888ceecedfb8a962"
+}

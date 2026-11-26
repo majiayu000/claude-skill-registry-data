@@ -1,0 +1,40 @@
+{
+  "name": "local-network",
+  "repo": "ptc-au/the-one-app",
+  "path": ".agents/skills/local-network/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ptc-au/the-one-app",
+  "dir_name": "local-network",
+  "downloaded_at": "2026-11-26T08:10:41.380700Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile, debug",
+    "score": 5,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ptc-au",
+  "source_url": "https://github.com/ptc-au/the-one-app/blob/main/.agents/skills/local-network/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ptc-au/the-one-app/blob/main/.agents/skills/local-network/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to run a whole network of your own on this machine, to try a change, call its tools as different users, or open the app against it, without touching the owner's live network."
+}

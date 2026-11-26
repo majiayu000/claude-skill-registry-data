@@ -1,0 +1,38 @@
+{
+  "name": "agent-stall-watch",
+  "repo": "pelchers/MockTrialGame",
+  "path": ".claude/skills/agent-stall-watch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pelchers/MockTrialGame",
+  "dir_name": "agent-stall-watch-pelchers-mocktrialgame",
+  "downloaded_at": "2026-11-26T08:01:55.152877Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pelchers",
+  "source_url": "https://github.com/pelchers/MockTrialGame/blob/main/.claude/skills/agent-stall-watch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pelchers/MockTrialGame/blob/main/.claude/skills/agent-stall-watch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Watch a long autonomous session's background agents and wake the main session when the chain stalls. One node script (no dependencies) reads the agent transcripts, the background task output files and the session scratchpad, and exits with one line - STALL (an agent has a tool call open too long, or it waits on a run that ended or on nothing that moves), DONE (all finished) or IMPASSE (the same stall came back, or everyone waits on the user). Starts by itself through a UserPromptSubmit hook when the user asks for a long autonomous session, and stops by itself on DONE or IMPASSE. Use when starting a long autonomous or agentic session, when a STALL notice arrives, when the user asks whether agents are stuck, or on /stall-watch.",
+  "content_fingerprint": "56f3e93e8e75d2f0d44328515e6b9e87b4109ec2a15f96df2ccb5e8b832bc3c5"
+}

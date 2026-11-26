@@ -1,0 +1,37 @@
+{
+  "name": "nyc-ubt",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/nyc-ubt/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "nyc-ubt",
+  "downloaded_at": "2026-11-26T07:54:35.437651Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/nyc-ubt/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/nyc-ubt/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compute and file the New York City unincorporated business tax (UBT) for a sole proprietor or a single-member LLC owned by an individual, tax year 2026 (2025-2026 filing cycle forms). Covers the filing test (gross income from all business over $95,000), Form NYC-202 Schedule A line by line, the allowance for the owner's services (20% or $10,000), the $5,000 exemption, the 4% rate, the business tax credit that wipes out a tax of $3,400 or less and phases out at $5,400, Form NYC-202S eligibility, NYC-5UBTI estimated payments, the NYC-EXT extension, and the Form IT-219 credit a New York City resident takes against city income tax (100% falling to 23%). Trigger on \"NYC UBT\", \"unincorporated business tax\", \"NYC-202\", \"NYC-202S\", \"NYC-5UBTI\", \"IT-219\", \"freelancer in New York City tax\". Partnerships, corporations and business allocation are referred.",
+  "content_fingerprint": "663f8d0406bba901a4516addb780d7aae039dfb0ad74f50125222f138d218261"
+}

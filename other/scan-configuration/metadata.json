@@ -1,0 +1,38 @@
+{
+  "name": "scan-configuration",
+  "repo": "nvsecurity/nightvision-skills",
+  "path": "skills/scan-configuration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nvsecurity/nightvision-skills",
+  "dir_name": "scan-configuration",
+  "downloaded_at": "2026-11-26T07:48:13.559703Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvsecurity",
+  "source_url": "https://github.com/nvsecurity/nightvision-skills/blob/main/skills/scan-configuration/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvsecurity/nightvision-skills/blob/main/skills/scan-configuration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for agents to help users configure NightVision DAST scans. Use when creating targets, setting up authentication (Playwright, headers, cookies), recording HTTP traffic, managing projects, configuring scope exclusions, or preparing private network scans."
+}

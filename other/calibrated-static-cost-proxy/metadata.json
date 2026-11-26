@@ -1,0 +1,36 @@
+{
+  "name": "calibrated-static-cost-proxy",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/calibrated-static-cost-proxy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "calibrated-static-cost-proxy",
+  "downloaded_at": "2026-11-26T07:49:29.642043Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/calibrated-static-cost-proxy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/calibrated-static-cost-proxy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compute the judged cost inside the artefact generator from structure alone (charged ops weighted by the firing rate of their enclosing conditions), calibrate it against the official judge once per design, and use it for all inner-loop decisions. Use when a judge run costs minutes or more and individual levers are worth less than about 1% each, in any benchmark-optimization campaign where a generator builds the artefact (circuits, prover constraints, gas, proof size)."
+}

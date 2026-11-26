@@ -1,0 +1,39 @@
+{
+  "name": "omh-data-pipelines",
+  "repo": "rlaope/oh-my-hermes",
+  "path": "skills/omh-data-pipelines/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rlaope/oh-my-hermes",
+  "dir_name": "omh-data-pipelines",
+  "downloaded_at": "2026-11-26T08:23:21.978494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=4, productivity=4",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 4,
+    "signals": [
+      "data",
+      "database",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rlaope",
+  "source_url": "https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-data-pipelines/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-data-pipelines/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[omh] Data pipeline work on an ETL or streaming job: a backfill or replay, duplicate events, a schema change downstream, a lineage question, a data-quality regression; make every rerun idempotent, bound every replay, and gate each load on observed checks. Use when the user says: data-pipelines, data pipeline, data pipelines, etl, elt, etl pipeline, etl job, etl backfill."
+}

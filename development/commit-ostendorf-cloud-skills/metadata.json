@@ -1,0 +1,40 @@
+{
+  "name": "commit",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/repo/commit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "commit-ostendorf-cloud-skills",
+  "downloaded_at": "2026-11-26T07:57:03.338381Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug, refactor",
+    "score": 5,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/repo/commit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/repo/commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns the current working tree into one or more atomic Conventional Commits, split by intent, without asking for confirmation first. Use when changes are ready to commit, or the working tree holds several unrelated changes that need splitting."
+}

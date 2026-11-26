@@ -1,0 +1,38 @@
+{
+  "name": "brand-setup",
+  "repo": "shaz-norc/aem-eds",
+  "path": ".claude/skills/brand-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/shaz-norc/aem-eds",
+  "dir_name": "brand-setup-shaz-norc-aem-eds-2",
+  "downloaded_at": "2026-11-26T08:39:46.949485Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, marketing=3",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shaz-norc",
+  "source_url": "https://github.com/shaz-norc/aem-eds/blob/main/.claude/skills/brand-setup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shaz-norc/aem-eds/blob/main/.claude/skills/brand-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a fresh AEM Edge Delivery Services boilerplate project should take on the brand basics of an existing website being migrated to EDS \u2014 colors, body and heading fonts, font sizes, header height, favicon and logo. Triggers include \"set up the brand from <site>\", \"match the source site's look\", \"apply the client's fonts and colors\", \"use their favicon and logo\". Not for projects whose styles were already customized, and not for full design-system extraction (spacing scales, components, motifs)."
+}

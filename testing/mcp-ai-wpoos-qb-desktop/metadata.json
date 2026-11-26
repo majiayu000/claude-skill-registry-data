@@ -1,0 +1,38 @@
+{
+  "name": "mcp-ai-wpoos-qb-desktop",
+  "repo": "nvdigitalsolutions/mcp-ai-wpoos",
+  "path": ".agents/skills/mcp-ai-wpoos-qb-desktop/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/nvdigitalsolutions/mcp-ai-wpoos",
+  "dir_name": "mcp-ai-wpoos-qb-desktop",
+  "downloaded_at": "2026-11-26T07:47:33.353809Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvdigitalsolutions",
+  "source_url": "https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/mcp-ai-wpoos-qb-desktop/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/mcp-ai-wpoos-qb-desktop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operate the QuickBooks Desktop MCP server (Proposal 113) in examples/qb-desktop-mcp — read tools, the safe write tier (customer/item/vendor adds), the two-step confirm + revert flow, and the QBBRIDGE_WRITE_MODE gate. Use when working with QuickBooks Desktop data, booking to a company file, or re-enabling writes after owner sign-off.",
+  "content_fingerprint": "0939a6be67f09f7838178a18497163bf59ec8322023cbb8e954b7076f302ff28"
+}

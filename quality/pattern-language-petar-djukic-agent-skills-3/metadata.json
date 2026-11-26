@@ -1,0 +1,38 @@
+{
+  "name": "pattern-language",
+  "repo": "petar-djukic/agent-skills",
+  "path": ".opencode/skills/pattern-language/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/petar-djukic/agent-skills",
+  "dir_name": "pattern-language-petar-djukic-agent-skills-3",
+  "downloaded_at": "2026-11-26T08:02:46.734362Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petar-djukic",
+  "source_url": "https://github.com/petar-djukic/agent-skills/blob/main/.opencode/skills/pattern-language/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petar-djukic/agent-skills/blob/main/.opencode/skills/pattern-language/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write an Alexandrian pattern language (pattern-language.yaml) for a repository: read the existing materials, mine recurring force-configurations, and emit a YAML file in the fixed format shared by the existing pattern languages (declarative-agents, agent-failure-modes). Also validates and extends existing languages. Triggers: pattern language, design patterns yaml, extract patterns, mine patterns, pattern-language.yaml, Alexander patterns, forces and solution, pattern grammar, write the patterns file."
+}

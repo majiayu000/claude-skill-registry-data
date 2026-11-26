@@ -1,0 +1,39 @@
+{
+  "name": "railway-database",
+  "repo": "pauldx/claudifying",
+  "path": "skills/cf-railway/database/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pauldx/claudifying",
+  "dir_name": "database-pauldx-claudifying",
+  "downloaded_at": "2026-11-26T08:00:56.996568Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "pauldx",
+  "source_url": "https://github.com/pauldx/claudifying/blob/main/skills/cf-railway/database/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pauldx/claudifying/blob/main/skills/cf-railway/database/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add official Railway database services (Postgres, Redis, MySQL, MongoDB). Use when user wants to add a database, says \"add postgres\", \"add redis\", \"add database\", \"connect to database\", or \"wire up the database\". For other templates (Ghost, Strapi, n8n), use the railway-templates skill."
+}

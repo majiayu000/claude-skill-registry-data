@@ -1,0 +1,37 @@
+{
+  "name": "az-payroll",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/az-payroll/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "az-payroll",
+  "downloaded_at": "2026-11-26T07:54:39.964576Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/az-payroll/SKILL.md",
+  "license": "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/az-payroll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Arizona employer payroll for 2026, state income tax withholding and state unemployment insurance. Withholding is a percentage of each employee's gross taxable wages (federal W-2 box 1 wages) chosen on Form A-4 (0.5%, 1.0%, 1.5%, 2.0%, 2.5%, 3.0% or 3.5%, or zero), with 2.0% withheld when no A-4 is given within five days of hire; nonresidents are withheld after 60 days in Arizona. Payments follow the federal deposit schedule once quarterly withholding averaged over $1,500, otherwise quarterly with Form A1-QRT (due 30 April, 31 July, 31 October, 31 January); the annual Form A1-R and W-2s are due 31 January. Unemployment insurance (Arizona DES) for 2026 is on the first $8,000 of each employee's wages, at 2.00% for new employers and 0.03% to 8.36% for rated employers. Also covers earned paid sick time accrual and final pay timing. Trigger on \"Arizona payroll\", \"Arizona withholding\", \"Form A-4\", \"A1-QRT\", \"A1-R\", \"Arizona unemployment tax\", \"Arizona SUTA\", \"AZ DES UI rate\". Federal payroll",
+  "content_fingerprint": "e4e935240e086f84d5ac57dd5513ba06f83783c840eca5b47d3429ab86255a69"
+}

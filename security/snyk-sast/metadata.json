@@ -1,0 +1,41 @@
+{
+  "name": "snyk-sast",
+  "repo": "rasata/coldvault.dev",
+  "path": ".claude/skills/snyk-sast/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/rasata/coldvault.dev",
+  "dir_name": "snyk-sast",
+  "downloaded_at": "2026-11-26T08:16:40.370456Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit, owasp",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rasata",
+  "source_url": "https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/snyk-sast/SKILL.md",
+  "license": "MIT (ZONOVA RESEARCH — coldvault.dev)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/snyk-sast/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Snyk Code-parity workflow for static application security testing. Uses Semgrep with curated rulesets plus language-native analyzers to produce findings equivalent to Snyk Code's categories (injection, crypto, authn, etc.).",
+  "content_fingerprint": "11d1d6333e9723a362593ba0ed3e874492488ca838c13f4e8fd5c49f9dae3c1d"
+}

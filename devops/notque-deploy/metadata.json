@@ -1,0 +1,40 @@
+{
+  "name": "deploy",
+  "repo": "orlandoneto/agent-skills",
+  "path": "skills/community/notque-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/orlandoneto/agent-skills",
+  "dir_name": "notque-deploy",
+  "downloaded_at": "2026-11-26T07:56:49.298732Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: cd, kubernetes, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "cd",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orlandoneto",
+  "source_url": "https://github.com/orlandoneto/agent-skills/blob/main/skills/community/notque-deploy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orlandoneto/agent-skills/blob/main/skills/community/notque-deploy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy and infrastructure: web deploy, cron, package install, shell configuration."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "xchatReplies",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/xchatReplies/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "xchatreplies",
+  "downloaded_at": "2026-11-26T07:18:50.391808Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/xchatReplies/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/xchatReplies/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer people who write to the owner on X - X pushes each X Chat message over one socket (no polling), the inbox hook says who wrote, then read the thread, draft from the owner's own writing guide, gate it with log voice, show the owner, send only when the owner says. Use when a >>> NEW MESSAGE note arrives, when the owner asks who messaged, or asks to reply, follow up or take over a conversation."
+}

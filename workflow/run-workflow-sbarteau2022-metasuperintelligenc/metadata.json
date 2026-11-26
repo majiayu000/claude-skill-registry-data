@@ -1,0 +1,39 @@
+{
+  "name": "run-workflow",
+  "repo": "sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "path": "skills/system/run-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "dir_name": "run-workflow-sbarteau2022-metasuperintelligenc",
+  "downloaded_at": "2026-11-26T08:31:49.869254Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sbarteau2022",
+  "source_url": "https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/skills/system/run-workflow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/skills/system/run-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "How to write and run a dynamic workflow script with the `run_workflow` tool: a Python script that orchestrates many agents with `agent`, `parallel`, `pipeline`, and `phase`. Use when a task splits into many independent or staged pieces of agent work (fan out over files, modules, bugs, or review angles, then aggregate), or when the user asks for a workflow. Don't use for a single delegated task (use a subagent) or for legacy workflow files (see migrate-workflows).",
+  "content_fingerprint": "ac9aca5f2539658051d956cd4f150dc206743de5cdcdacdf16e5982bbf6435e7"
+}

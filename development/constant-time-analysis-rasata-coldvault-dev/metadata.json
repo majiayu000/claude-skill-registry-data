@@ -1,0 +1,39 @@
+{
+  "name": "constant-time-analysis",
+  "repo": "rasata/coldvault.dev",
+  "path": ".claude/skills/constant-time-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rasata/coldvault.dev",
+  "dir_name": "constant-time-analysis-rasata-coldvault-dev",
+  "downloaded_at": "2026-11-26T08:16:41.525728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, compile",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rasata",
+  "source_url": "https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/constant-time-analysis/SKILL.md",
+  "license": "MIT (ZONOVA RESEARCH — coldvault.dev)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/constant-time-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Inspect cryptographic code for timing leaks. Flags variable-time comparisons on secrets, early-exit loops, and library calls known to be variable-time. Limited static scope — the definitive check is micro-benchmarks on compiled binaries, but ~70% of timing bugs show up in source review.",
+  "content_fingerprint": "a017ba4b0a88e419c8ebcce24020cd4750c60dc3238426aab76e187324a07fde"
+}

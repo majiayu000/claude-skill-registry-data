@@ -1,0 +1,92 @@
+---
+name: "omh-people-ops"
+description: "[omh] Company hiring or HR process to structure: turn hiring and people context into a fair, structured recruiting or people-operations brief. Use when the user says: recruiting plan, hiring scorecard, interview scorecard, candidate debrief, 채용 계획, 면접 평가표, 후보자 비교."
+license: MIT
+author: "oh-my-hermes maintainers"
+metadata:
+  hermes:
+    tags: [workflow, oh-my-hermes, operations]
+    category: operations
+    phase: people-operations
+    role: operator
+    quality_tier: evidence-gated
+    related_skills: [omh-legal-compliance-review, omh-content-operator, omh-apps, omh-ai-job-search]
+---
+
+# People Ops
+
+Required: role or people-process outcome, available evidence, decision owner, policy constraints. Output: role/outcome and must-have versus trainable-criteria brief, structured interview scorecard and evidence-based debrief template, hiring-process, interviewer, and decision-owner plan, inclusion, privacy, policy, and missing-evidence flags with a next route.
+
+## Why This Exists
+
+`people-ops` keeps recruiting and people-process guidance fair, structured, and evidence bounded before any human decision or external HR action.
+
+Contract: `references/full-contract.md` (examples, sibling boundaries, full artifact details).
+
+## Workflow Lane
+
+- Current lane: **Research and company ops** - research, signals, ops, and briefings.
+- If intent belongs to another lane, hand back to `omh-routing` or name the adjacent workflow.
+- Shared product, routing, compatibility, and evidence rules: `skill_view(name='omh-routing', file_path='references/skill-common-rail.md')`.
+
+## When to Use
+
+Use when a team needs a role brief, hiring plan, interview rubric, candidate-debrief structure, onboarding outline, or people-process decision support.
+
+    Strong routing signals: `recruiting plan`, `hiring scorecard`, `interview scorecard`, `candidate debrief`, `채용 계획`, `면접 평가표`, `후보자 비교`
+
+## Catalog Metadata
+
+Category: `operations`
+Phase: `people-operations`
+Hermes role: `operator`
+Quality tier: `evidence-gated`
+Reasoning demand: `light`
+
+Quality bar:
+
+- Distinguish role outcomes from proxy criteria and missing evidence.
+- Keep inclusion, privacy, policy, and decision-owner gaps visible.
+
+Handoff policy:
+
+Keep domain framing, clarification, source/evidence synthesis, draft outputs, and next-work routing in Hermes. A prepared brief, review, reply, or plan is not an external action, approval, filing, send, publish, data mutation, implementation, review, CI, or merge claim. Prepare a connector, file, coding, or human-review handoff only when the user explicitly accepts that next step; report it only from observed evidence. Hermes can prepare fair process guidance and interview artifacts; it cannot claim a candidate was contacted, evaluated, hired, rejected, or recorded in an HR system.
+
+Expert clarification questions:
+- `role or people-process outcome`
+  - English: What role or people-process outcome should this work achieve?
+  - Korean: 이 작업에서 어떤 역할 또는 인사 프로세스 결과를 달성해야 하나요?
+
+Safety rules:
+
+- Keep protected characteristics and missing interview evidence out of unsupported candidate recommendations.
+- Do not claim HRIS, ATS, outreach, interview, or employment-status actions occurred.
+- Draft no questions on protected traits or their proxies (age, family status, health, origin), and check the local rule on what a form or question may ask on an official page (in Korea, the recruitment fairness act); route that question to `omh-legal-compliance-review`, say why, and offer a job-related substitute.
+
+## Completion Checklist
+
+- Outcomes, must-haves and trainable skills are separate; every criterion has anchors and states the outcome it predicts; every candidate gets the same core questions; interviewers score before the debrief, and the debrief separates evidence from impression; no candidate recommendation without interview evidence; no ATS, calendar or HRIS action is claimed.
+- Where selection-rate data by group exists, compare the rates; in the US the four-fifths rule (29 CFR 1607.4(D)) is an enforcement rule of thumb, not a safe harbour. With small numbers or no such data, mark the check not_observed and route the jurisdiction question to `omh-legal-compliance-review`.
+
+## Recovery Notes
+
+- If interview evidence cannot support a candidate debrief, retain the role outcomes, must-have versus trainable criteria, and scorecard, mark the recommendation unresolved, and hand back the missing evidence to the decision owner.
+- If policy constraints need a jurisdiction-specific ruling, retain the role brief and interview scorecard, mark the policy conclusion unresolved, and hand back the flagged questions to `omh-legal-compliance-review`.
+
+## Runtime Evidence
+
+Preferred harness for this skill: `ops-review`.
+
+```sh
+omh runtime record --skill people-ops --harness ops-review --status started
+```
+
+Record observed delegation results; otherwise return `not_available` or `not_observed`.
+Prepared OMH routing is not execution, review, CI, merge-readiness, or merge evidence.
+- Treat wrapper memory/context summaries as advisory local context, not proof of opaque Hermes memory reads or changes.
+Preserve workflow intent and stop conditions; verify before claiming completion.
+Reply in the user's own words and the host's own voice: its SOUL.md persona owns reply language, tone, speech level, and sentence endings, progress updates included (where it sets no language, use the one the user wrote in), and OMH shapes structure and content only. When the requested output is delivered, put any open points inside the result and end with no question or offer; only when the person asked to choose or decide and that choice is still theirs, end with one specific question about it, not a list, a generic offer, or a footer; the shared rail's Reply Language And Host Voice and Turn Ending sections hold the full rule.
+
+Use Hermes-native subagent/delegation features when available: native subagents -> Hermes delegation when available, otherwise sequential lanes.
+
+Shared product, compatibility, topology, memory, harness, and execution rules: `skill_view(name='omh-routing', file_path='references/skill-common-rail.md')`. Load it when applicable; otherwise name an unavailable capability.

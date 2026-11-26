@@ -1,0 +1,38 @@
+{
+  "name": "update-references",
+  "repo": "petar-djukic/agent-skills",
+  "path": ".claude/skills/update-references/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/petar-djukic/agent-skills",
+  "dir_name": "update-references",
+  "downloaded_at": "2026-11-26T08:02:45.695744Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petar-djukic",
+  "source_url": "https://github.com/petar-djukic/agent-skills/blob/main/.claude/skills/update-references/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petar-djukic/agent-skills/blob/main/.claude/skills/update-references/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find, download, read, and summarize research papers related to the work in the current directory. Searches arXiv, OpenAlex, Semantic Scholar, and Google Scholar, with a hierarchical mode (hubs, surveys, citation snowball). Maintains a CSL-YAML reference database (references.yaml) compatible with pandoc's --bibliography flag, so the same file serves both the skill and document builds. Triggers: update references, refresh the bibliography, find papers, related work, literature review, what's been published on, recent papers, cite sources for, background reading, summarize this paper, search scholar."
+}

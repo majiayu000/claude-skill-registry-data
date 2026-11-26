@@ -1,0 +1,39 @@
+{
+  "name": "snyk-sca",
+  "repo": "rasata/coldvault.dev",
+  "path": ".claude/skills/snyk-sca/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rasata/coldvault.dev",
+  "dir_name": "snyk-sca",
+  "downloaded_at": "2026-11-26T08:16:40.232328Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rasata",
+  "source_url": "https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/snyk-sca/SKILL.md",
+  "license": "MIT (ZONOVA RESEARCH — coldvault.dev)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rasata/coldvault.dev/blob/main/.claude/skills/snyk-sca/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Snyk Open Source-parity workflow for software composition analysis. Produces a dependency vulnerability report using open-source tooling (osv-scanner, trivy, grype) plus the bundled snyk CLI if authenticated. Use when the analyst is familiar with the Snyk workflow and wants a drop-in replacement.",
+  "content_fingerprint": "ad7218a90bfa755f837e5eb16fd63a053320a74ce7d0864a44fabeb55cc01744"
+}

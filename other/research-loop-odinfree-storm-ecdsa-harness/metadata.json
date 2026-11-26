@@ -1,0 +1,38 @@
+{
+  "name": "research-loop",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/research-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "research-loop-odinfree-storm-ecdsa-harness",
+  "downloaded_at": "2026-11-26T07:49:22.445762Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/research-loop/SKILL.md",
+  "license": "MIT (adapted from BitWonka/loop-engine; see LICENSE)",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/research-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Run a self-expanding research loop. Each cycle sends parallel researcher agents after open questions, each writes one linked Markdown note, and their follow-up questions refill the queue. Use to start a loop on a seed question, run a cycle, run a tool-assisted monitor cycle, or report loop status. Adapted from BitWonka's loop-engine (MIT).",
+  "content_fingerprint": "1d06e473cd41d892f978bbb029cc9f99143f3b94302afe7bf5b8bd66404f165e"
+}

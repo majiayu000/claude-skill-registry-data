@@ -1,0 +1,38 @@
+{
+  "name": "ci-cd-integration",
+  "repo": "nvsecurity/nightvision-skills",
+  "path": "skills/ci-cd-integration/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nvsecurity/nightvision-skills",
+  "dir_name": "ci-cd-integration",
+  "downloaded_at": "2026-11-26T07:48:13.140568Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvsecurity",
+  "source_url": "https://github.com/nvsecurity/nightvision-skills/blob/main/skills/ci-cd-integration/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvsecurity/nightvision-skills/blob/main/skills/ci-cd-integration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for agents to help users integrate NightVision DAST scanning into CI/CD pipelines. Use when setting up security scans in GitHub Actions, GitLab CI, Azure DevOps, Jenkins, BitBucket, or JFrog pipelines, configuring NightVision tokens, creating targets, running scans, exporting results as SARIF/CSV, or detecting API breaking changes."
+}

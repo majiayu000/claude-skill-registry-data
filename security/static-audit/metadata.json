@@ -1,0 +1,37 @@
+{
+  "name": "static-audit",
+  "repo": "phuryn/product-engineering",
+  "path": "ai-shipping/skills/static-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/phuryn/product-engineering",
+  "dir_name": "static-audit",
+  "downloaded_at": "2026-11-26T08:03:56.571378Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, audit",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "phuryn",
+  "source_url": "https://github.com/phuryn/product-engineering/blob/main/ai-shipping/skills/static-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/phuryn/product-engineering/blob/main/ai-shipping/skills/static-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Only when a security or performance audit is asked for (ship-check asks by name, and a release proposes it without running it): a static audit of AI-built code against documented trust boundaries or for N+1 queries, request waterfalls, over-fetching, missing indexes and caching."
+}

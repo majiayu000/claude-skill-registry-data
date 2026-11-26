@@ -1,0 +1,38 @@
+{
+  "name": "scan-triage",
+  "repo": "nvsecurity/nightvision-skills",
+  "path": "skills/scan-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/nvsecurity/nightvision-skills",
+  "dir_name": "scan-triage",
+  "downloaded_at": "2026-11-26T07:48:12.089030Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvsecurity",
+  "source_url": "https://github.com/nvsecurity/nightvision-skills/blob/main/skills/scan-triage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvsecurity/nightvision-skills/blob/main/skills/scan-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for agents to help users interpret and act on NightVision DAST scan results. Use when reading SARIF/CSV findings, explaining vulnerabilities, locating vulnerable code, validating findings with curl, prioritizing by severity, suggesting remediations, or marking false positives."
+}

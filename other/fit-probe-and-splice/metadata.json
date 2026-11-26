@@ -1,0 +1,37 @@
+{
+  "name": "fit-probe-and-splice",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/fit-probe-and-splice/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "fit-probe-and-splice",
+  "downloaded_at": "2026-11-26T07:49:24.715671Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/fit-probe-and-splice/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/fit-probe-and-splice/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Before porting a module from another source tree, measure whether and at what cost it builds under your resource cap (fit probe), then import it verbatim through an adapter that remaps its resources and asserts its contract, instead of rewriting it. Use when a rival's or a library's routine is cheaper than yours, is self-contained, and shares your artefact's op format: a circuit gadget, a prover gadget, a contract library under a size cap."
+}

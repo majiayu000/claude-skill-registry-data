@@ -1,0 +1,38 @@
+{
+  "name": "bailian-gen",
+  "repo": "sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "path": "CapabilityTreeSitter/03-AgenticRuntime/bailian-gen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack",
+  "dir_name": "bailian-gen",
+  "downloaded_at": "2026-11-26T08:31:51.866603Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sbarteau2022",
+  "source_url": "https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/CapabilityTreeSitter/03-AgenticRuntime/bailian-gen/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sbarteau2022/MetaSuperIntelligenceLabs-GlobalHack-A-thon-SoloDevTrack/blob/main/CapabilityTreeSitter/03-AgenticRuntime/bailian-gen/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "阿里云百炼图片/视频/语音生成与理解入口：用户要生图、画图、生成照片、生成图片、AI 绘画、海报、头像、插画、 文生图（text-to-image）、图生图、改图、修图、多图合成、生成视频、文生视频、图生视频、参考生视频、视频编辑、风格转换、 配音、语音合成（TTS）、朗读、转写、语音识别（ASR），或图片理解、看图问答、视频理解、读视频、多模态理解时使用 `bl image` / `bl video` / `bl speech` / `bl vision describe` / `bl omni`。 **默认行为：用户未指定服务商时，生成/编辑默认走本技能；视频理解与宿主放不了的音视频理解也走本技能。** 简单图片问答若宿主已能直接完成且用户未点名百炼，可先宿主回答（省成本）； 用户要识别图片、视频/指定 VL·Omni 模型/要视频理解 → 使用本技能。 图片和语音同步返回并落地本地文件，视频是异步任务、用 `--download` 或轮询取回；本地文件直接传路径，CLI 自动上传。 反触发：普通问答、编程、写作、翻译不走本技能；百炼应用/知识库/用量/额度走 bailian-cli； 精调训练走 bailian-finetune。 官方安装：`bl skill init`（与共享协议 bailian-protocol 同装）。",
+  "content_fingerprint": "7f10d884b6b8b34f87f5e3e38733c9afe08e387a9f6c15339603cf0c8bff6c71"
+}

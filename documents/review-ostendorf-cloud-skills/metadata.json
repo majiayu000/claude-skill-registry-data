@@ -1,0 +1,39 @@
+{
+  "name": "review",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/repo/review/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "review-ostendorf-cloud-skills",
+  "downloaded_at": "2026-11-26T07:57:03.225200Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/repo/review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/repo/review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews a diff, a branch or a pull request and posts the verdict as a comment with findings grouped by severity. Use when asked to review code, before merging a pull request, or before approving your own earlier work from a different session."
+}

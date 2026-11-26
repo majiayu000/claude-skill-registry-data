@@ -1,0 +1,38 @@
+{
+  "name": "prd-reviewer",
+  "repo": "pie-framework/pie-qti",
+  "path": ".claude/skills/prd-reviewer/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/pie-framework/pie-qti",
+  "dir_name": "prd-reviewer-pie-framework-pie-qti-2",
+  "downloaded_at": "2026-11-26T08:04:07.986752Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pie-framework",
+  "source_url": "https://github.com/pie-framework/pie-qti/blob/master/.claude/skills/prd-reviewer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pie-framework/pie-qti/blob/master/.claude/skills/prd-reviewer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review an existing PRD for completeness, accuracy, and staleness. Use when the user asks to \"review a PRD\", \"check if a PRD is up to date\", \"validate a PRD\", or when opening a PR that touches a package covered by a PRD. Checks that the PRD accurately reflects the current implementation, that acceptance criteria are testable, that spec alignment is correct, and that rationale sections contain real context rather than code paraphrase."
+}

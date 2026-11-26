@@ -1,0 +1,38 @@
+{
+  "name": "rls-audit",
+  "repo": "rusharlabs/house-party-protocol",
+  "path": "frameworks/operator-kit-1.8.7/skills/rls-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/rusharlabs/house-party-protocol",
+  "dir_name": "rls-audit",
+  "downloaded_at": "2026-11-26T08:28:14.590770Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rusharlabs",
+  "source_url": "https://github.com/rusharlabs/house-party-protocol/blob/main/frameworks/operator-kit-1.8.7/skills/rls-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rusharlabs/house-party-protocol/blob/main/frameworks/operator-kit-1.8.7/skills/rls-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Really audits the RLS of a Supabase project \u2014 pg_policies per permissive anon policy + get_advisors, not just the relrowsecurity flag"
+}

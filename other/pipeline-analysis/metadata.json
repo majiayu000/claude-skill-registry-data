@@ -1,0 +1,38 @@
+{
+  "name": "pipeline-analysis",
+  "repo": "saurabhchandanshive05/Aurax-frontend-app",
+  "path": ".claude/skills/pipeline-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/saurabhchandanshive05/Aurax-frontend-app",
+  "dir_name": "pipeline-analysis",
+  "downloaded_at": "2026-11-26T08:31:37.111105Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saurabhchandanshive05",
+  "source_url": "https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/pipeline-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saurabhchandanshive05/Aurax-frontend-app/blob/main/.claude/skills/pipeline-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a HubSpot RevOps pipeline and conversion analysis over a period (a quarter, a year, a custom or trailing range) and return a diagnosis-first report: verdict (binding constraint A–F with owner and value), reverse-funnel scorecard, New Business full diagnostic (flow plane, diagnosis plane, cohort conversion, velocity, sources), Account Management condensed, reconciliation, method note. Markdown by default; HTML on request. Use when the user says \"/pipeline-analysis\", \"run a pipeline analysis\", \"revops analysis\", \"conversion analysis for [period]\", or asks how leads, MQLs, and SQLs converted over a period. NOT the monthly board snapshot (that is marketing-monthly) and NOT a single campaign's report (that is campaign-report). Company and CRM ids come from a context pack in the workspace you launch from, chosen per run from the company and period you pass (e.g. /pipeline-analysis Q3 Acme); nothing client-specific lives in this skill.",
+  "content_fingerprint": "3c7a368456939102a2070e7e22eae12597f7631c84410d57a4c658ac5c31ce6e"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "review-docs",
+  "repo": "sagittaras/agentic-workflow",
+  "path": "skills/review-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sagittaras/agentic-workflow",
+  "dir_name": "review-docs",
+  "downloaded_at": "2026-11-26T08:28:52.401614Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sagittaras",
+  "source_url": "https://github.com/sagittaras/agentic-workflow/blob/main/skills/review-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sagittaras/agentic-workflow/blob/main/skills/review-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Nezávislé review znalostní báze s čistým kontextem — posoudí úsudkovou část, kterou skript kontroly struktury neumí: jestli věta u odkazu říká, co na stránce je, jestli stránka nedubluje CLAUDE.md ani jinou stránku a jestli téma leží ve správné sekci. Výsledek docs-check.sh převezme ze zadání, při přímém vyvolání si skript spustí sám. Vrátí verdikt se seznamem nálezů podle závažnosti. Neopravuje.",
+  "content_fingerprint": "094d6c36f1466287187d27274f6db43368a5337fdae511fbf486290b0413f586"
+}

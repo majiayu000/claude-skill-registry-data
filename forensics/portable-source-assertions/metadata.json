@@ -1,0 +1,37 @@
+{
+  "name": "portable-source-assertions",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/portable-source-assertions/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "portable-source-assertions",
+  "downloaded_at": "2026-11-26T07:49:28.890590Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/portable-source-assertions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/portable-source-assertions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fix Python AST source-identity assertions that break across interpreter versions while keeping the exact semantic check. Keeps a source review separate from an actual fixture run."
+}

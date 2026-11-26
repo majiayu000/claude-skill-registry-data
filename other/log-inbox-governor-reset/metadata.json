@@ -1,0 +1,37 @@
+{
+  "name": "log-inbox-governor-reset",
+  "repo": "matthewdonsemail-lab/log",
+  "path": ".claude/skills/log-inbox-governor-reset/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-inbox-governor-reset",
+  "downloaded_at": "2026-11-26T07:18:58.099668Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-inbox-governor-reset/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-inbox-governor-reset/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resetting an account's governor count. A log play (docs/useCases/inbox/governorReset.md): Every platform account's governor counts what it sent today and refuses once the count is spent (\"daily cap reached (500/day)\"). When the owner says to, the count goes back to 0 so the work can carry on, on X, Discord, Slack, Instagram, Reddit, LinkedIn or Facebook alike. The reset is checked and kept in log.db, so it is never a hand edit nobody can see (rule 168)."
+}

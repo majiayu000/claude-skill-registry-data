@@ -1,0 +1,37 @@
+{
+  "name": "vlsit-ip-impl-review",
+  "repo": "nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "path": ".dsh/skills/vlsit-ip-impl-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS",
+  "dir_name": "vlsit-ip-impl-review",
+  "downloaded_at": "2026-11-26T07:40:57.435193Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nguyenquanicd",
+  "source_url": "https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.dsh/skills/vlsit-ip-impl-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nguyenquanicd/VLSIT_ASIC_SOC_AI_SKILLS/blob/main/.dsh/skills/vlsit-ip-impl-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review an ASIC IP implementation against its specification with a mandatory RTL cross-check and the available verification, lint, CDC, RDC, SDC and synthesis evidence, producing a scored bilingual report with a consistency matrix. Use when the user asks whether the RTL really implements the specification."
+}

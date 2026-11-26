@@ -1,0 +1,37 @@
+{
+  "name": "vacuous-evidence-audit",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/vacuous-evidence-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "vacuous-evidence-audit",
+  "downloaded_at": "2026-11-26T07:49:26.329982Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/vacuous-evidence-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/vacuous-evidence-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Evidence discipline for a width-reduction or optimisation campaign where many agents land many small changes into one tree. Distilled from the ecdsa.fail 793-to-792 rung (2,036 over-cap cells to 216, 23 merges, 12 workers), in which a census counted cells on a circuit that could never build, a patch applied cleanly and silently deleted a merged class, a gate pass could not be reproduced, eight distinct kinds of negative control turned out to prove nothing, two classes passed review on structural arguments and were later found unsound, a \"120-cell\" change turned out to be three stacked 40-cell changes, and a retired worker left 19 GB of orphans after reporting it had stopped. Use when evidence from parallel workers is being merged into a shared artefact; when a change \"passes\" and you want to know whether the test could have failed; when a premise is about to be accepted on sampled data; or when deciding whether to continue a campaign."
+}

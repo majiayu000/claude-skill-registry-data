@@ -1,0 +1,37 @@
+{
+  "name": "undetectable-browsing",
+  "repo": "openamer/openamer",
+  "path": "skills/undetectable-browsing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openamer/openamer",
+  "dir_name": "undetectable-browsing",
+  "downloaded_at": "2026-11-26T07:54:48.289500Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openamer",
+  "source_url": "https://github.com/openamer/openamer/blob/main/skills/undetectable-browsing/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openamer/openamer/blob/main/skills/undetectable-browsing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Undetectable web browsing via real Chrome CDP + Playwright connect_over_cdp."
+}

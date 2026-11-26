@@ -1,0 +1,37 @@
+{
+  "name": "talos-ops",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/kubernetes/talos-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "talos-ops",
+  "downloaded_at": "2026-11-26T07:57:06.409198Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/kubernetes/talos-ops/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/kubernetes/talos-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operates a Talos cluster whose machine configuration, bootstrap and upgrades run as OpenTofu resources, one node at a time, with a health and etcd quorum gate between nodes. Use when upgrading Talos or Kubernetes, reconfiguring a node, bootstrapping a cluster, or diagnosing a node with talosctl."
+}

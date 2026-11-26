@@ -1,0 +1,39 @@
+{
+  "name": "agent-orchestration-lord",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/agent-orchestration-lord/SKILL.md",
+  "github_branch": "main",
+  "category": "orchestration",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "agent-orchestration-lord",
+  "downloaded_at": "2026-11-26T07:09:26.923329Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "orchestration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for orchestration: orchestration, orchestrator, coordination, multi-agent",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 3,
+    "signals": [
+      "orchestration",
+      "orchestrator",
+      "coordination",
+      "multi-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/agent-orchestration-lord/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/agent-orchestration-lord/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lord skill for multi-agent orchestration \u2014 pattern selection (orchestrator-worker, supervisor-router, hierarchical, peer-to-peer), A2A communication, task decomposition, and failure handling."
+}

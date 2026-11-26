@@ -1,0 +1,37 @@
+{
+  "name": "multi-agent-relay",
+  "repo": "nvsecurity/nightvision-skills",
+  "path": "skills/multi-agent-relay/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nvsecurity/nightvision-skills",
+  "dir_name": "multi-agent-relay",
+  "downloaded_at": "2026-11-26T07:48:13.270634Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvsecurity",
+  "source_url": "https://github.com/nvsecurity/nightvision-skills/blob/main/skills/multi-agent-relay/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvsecurity/nightvision-skills/blob/main/skills/multi-agent-relay/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stand up and drive multiple coordinating agents that build a feature through a filesystem relay: a driver that authors one task prompt at a time, an implementation agent (a standing poll-loop session OR a freshly spawned subagent) that implements and tests, and a shipping agent that commits, reviews, fixes, and ships - all coordinating through report files with a fixed status-line protocol and background monitors. Use when executing an approved multi-task sequence across one or more repos with separate agents that must stay in distinct lanes."
+}

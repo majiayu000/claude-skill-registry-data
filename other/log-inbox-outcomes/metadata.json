@@ -1,0 +1,37 @@
+{
+  "name": "log-inbox-outcomes",
+  "repo": "matthewdonsemail-lab/log",
+  "path": ".claude/skills/log-inbox-outcomes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "log-inbox-outcomes",
+  "downloaded_at": "2026-11-26T07:18:53.375150Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-inbox-outcomes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/.claude/skills/log-inbox-outcomes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Do people answer what log sends?. A log play (docs/useCases/inbox/outcomes.md): log reads every send in log.db and splits them into the ones log sent (a send record, a sent queue item, or a log send call at that moment) and the ones the owner typed himself. It then compares how often and how fast people answered each, and whether they moved on to a later stage, first raw and then matched to the same person at the same stage, so a warmer audience for either side doesn't decide it. Nothing is sent and nothing is written."
+}

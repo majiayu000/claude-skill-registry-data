@@ -1,0 +1,37 @@
+{
+  "name": "pso",
+  "repo": "shivamchopra7/claude-skill-directory",
+  "path": "skills/data/pso/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/shivamchopra7/claude-skill-directory",
+  "dir_name": "pso",
+  "downloaded_at": "2026-11-26T08:41:58.626484Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shivamchopra7",
+  "source_url": "https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/data/pso/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shivamchopra7/claude-skill-directory/blob/main/skills/data/pso/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Project Support Officer - Interface to the organization's project management system. Manages project list (project-list.csv), activity logs (project-activity-logs.csv), and project artifacts in org/pr"
+}

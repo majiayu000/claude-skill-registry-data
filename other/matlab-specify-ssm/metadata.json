@@ -1,0 +1,38 @@
+{
+  "name": "matlab-specify-ssm",
+  "repo": "matlab/matlab-agentic-toolkit",
+  "path": "skills-catalog/computational-finance/matlab-specify-ssm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matlab/matlab-agentic-toolkit",
+  "dir_name": "matlab-specify-ssm",
+  "downloaded_at": "2026-11-26T07:17:45.379120Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matlab",
+  "source_url": "https://github.com/matlab/matlab-agentic-toolkit/blob/main/skills-catalog/computational-finance/matlab-specify-ssm/SKILL.md",
+  "license": "https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matlab/matlab-agentic-toolkit/blob/main/skills-catalog/computational-finance/matlab-specify-ssm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Convert state-space equations, given as an image or as text, into a MATLAB Econometrics Toolbox ssm object. Use only when the request contains the model equations and asks to convert, implement, or create ssm code. Do not use when no equations are given; for estimating, filtering, smoothing, forecasting, or diagnosing an existing or estimated ssm model; for explaining equations without code; or for Control System ss or System Identification idss models.",
+  "content_fingerprint": "b6af58b98cf411436d3aa9694749228fc234a3bc7e5fdd475822ad9522cf0069"
+}

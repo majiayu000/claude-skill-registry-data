@@ -1,0 +1,36 @@
+{
+  "name": "adobe",
+  "repo": "shaz-norc/aem-eds",
+  "path": ".agents/skills/adobe/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/shaz-norc/aem-eds",
+  "dir_name": "adobe-shaz-norc-aem-eds",
+  "downloaded_at": "2026-11-26T08:39:36.493018Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shaz-norc",
+  "source_url": "https://github.com/shaz-norc/aem-eds/blob/main/.agents/skills/adobe/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shaz-norc/aem-eds/blob/main/.agents/skills/adobe/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Handles only /adobe and Adobe capability-discovery questions by presenting a two-option entry screen. Matches: /adobe; what can I do with Adobe?; what Adobe skills are available?; give me an overview of Adobe capabilities. Does not match: set up the Adobe plugin; finish setting up Adobe in Claude; help me get started with Adobe setup; make a flyer; resize a video. These are action requests rather than capability questions."
+}

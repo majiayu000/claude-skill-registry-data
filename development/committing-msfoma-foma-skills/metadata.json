@@ -1,0 +1,38 @@
+{
+  "name": "committing",
+  "repo": "msFoma/foma-skills",
+  "path": "plugins/foma-skills/skills/committing/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/msFoma/foma-skills",
+  "dir_name": "committing-msfoma-foma-skills",
+  "downloaded_at": "2026-11-26T07:33:30.444772Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, debug, refactor",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "msFoma",
+  "source_url": "https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/committing/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/msFoma/foma-skills/blob/main/plugins/foma-skills/skills/committing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes clean git commits in the project's own style. Use when the user asks to commit, write a commit message, split changes into commits, or open a PR. Not for reviews or explaining history."
+}

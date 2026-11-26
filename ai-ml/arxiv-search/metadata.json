@@ -1,0 +1,39 @@
+{
+  "name": "arxiv-search",
+  "repo": "r2ascension/skill_repo",
+  "path": "skills/arxiv-search/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/r2ascension/skill_repo",
+  "dir_name": "arxiv-search",
+  "downloaded_at": "2026-11-26T08:14:38.566283Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, machine-learning, model",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "machine-learning",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "r2ascension",
+  "source_url": "https://github.com/r2ascension/skill_repo/blob/main/skills/arxiv-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/r2ascension/skill_repo/blob/main/skills/arxiv-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search arXiv physics, math, and computer science preprints using natural language queries. Powered by Valyu semantic search."
+}

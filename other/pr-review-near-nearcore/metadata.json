@@ -1,0 +1,38 @@
+{
+  "name": "pr-review",
+  "repo": "near/nearcore",
+  "path": ".claude/skills/pr-review/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/near/nearcore",
+  "dir_name": "pr-review-near-nearcore",
+  "downloaded_at": "2026-11-26T07:38:27.551343Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "operations"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "near",
+  "source_url": "https://github.com/near/nearcore/blob/master/.claude/skills/pr-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/near/nearcore/blob/master/.claude/skills/pr-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review a Rust pull request against the nearcore engineering rubric — correctness, production safety, performance, Rust-specific concerns, security, and comment quality. Use when asked to review a PR, do a code review of a branch's changes, or check a diff before merge. This is the same rubric CI runs on @claude review.",
+  "content_fingerprint": "e4a4342878f317660a82352d29f1068c2e9cbfe40579b7f9878b67ab41abfd88"
+}

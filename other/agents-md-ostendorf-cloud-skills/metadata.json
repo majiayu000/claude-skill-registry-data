@@ -1,0 +1,37 @@
+{
+  "name": "agents-md",
+  "repo": "ostendorf-cloud/skills",
+  "path": "skills/conventions/agents-md/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ostendorf-cloud/skills",
+  "dir_name": "agents-md-ostendorf-cloud-skills",
+  "downloaded_at": "2026-11-26T07:57:06.772209Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ostendorf-cloud",
+  "source_url": "https://github.com/ostendorf-cloud/skills/blob/main/skills/conventions/agents-md/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ostendorf-cloud/skills/blob/main/skills/conventions/agents-md/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "What a root AGENTS.md holds, where the rest of a repository's agent knowledge goes, and the line limits a check enforces. Use when writing, trimming or reviewing an AGENTS.md or a CLAUDE.md."
+}

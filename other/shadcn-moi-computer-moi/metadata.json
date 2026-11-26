@@ -1,0 +1,40 @@
+{
+  "name": "shadcn",
+  "repo": "moi-computer/moi",
+  "path": ".agents/skills/shadcn/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moi-computer/moi",
+  "dir_name": "shadcn-moi-computer-moi",
+  "downloaded_at": "2026-11-26T07:30:22.408432Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=4, development=4",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moi-computer",
+  "source_url": "https://github.com/moi-computer/moi/blob/main/.agents/skills/shadcn/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moi-computer/moi/blob/main/.agents/skills/shadcn/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for \"shadcn init\", \"create an app with --preset\", or \"switch to --preset\".",
+  "content_fingerprint": "d7c6c9fd72d48fe029d00c5ba7df0601691125510be00f99d5082a7d3cbc3ce3"
+}

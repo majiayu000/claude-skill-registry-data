@@ -1,0 +1,38 @@
+{
+  "name": "activitylog-development",
+  "repo": "parkroad-fellowship/core",
+  "path": ".claude/skills/activitylog-development/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/parkroad-fellowship/core",
+  "dir_name": "activitylog-development-parkroad-fellowship-core",
+  "downloaded_at": "2026-11-26T07:59:49.313915Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "parkroad-fellowship",
+  "source_url": "https://github.com/parkroad-fellowship/core/blob/main/.claude/skills/activitylog-development/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/parkroad-fellowship/core/blob/main/.claude/skills/activitylog-development/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds spatie/laravel-activitylog features. Use when logging model events with the LogsActivity trait, configuring LogOptions, logging activities manually, setting causers, or querying and customizing activities."
+}

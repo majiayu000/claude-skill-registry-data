@@ -1,0 +1,37 @@
+{
+  "name": "inspect",
+  "repo": "matthewdonsemail-lab/log",
+  "path": "skills/inspect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matthewdonsemail-lab/log",
+  "dir_name": "inspect",
+  "downloaded_at": "2026-11-26T07:18:48.066308Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matthewdonsemail-lab",
+  "source_url": "https://github.com/matthewdonsemail-lab/log/blob/main/skills/inspect/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matthewdonsemail-lab/log/blob/main/skills/inspect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Look at a page step by step in the account's own gated browser (AdsPower first) before writing code for it (rule 29), on any platform with a browser path. `log inspect start` opens the account's headed browser; `log inspect do` runs one action at a time and records each step's accessibility snapshot (refs), screenshot, HAR and rea reading as it happens. Use before writing or fixing any click/selector code, when a run hits a page nobody has looked at, or when the owner says \"look at the page\", \"introspect\", \"what is on there\"."
+}

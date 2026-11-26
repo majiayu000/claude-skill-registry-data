@@ -1,0 +1,38 @@
+{
+  "name": "secure-build",
+  "repo": "nvsecurity/nightvision-skills",
+  "path": "skills/secure-build/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nvsecurity/nightvision-skills",
+  "dir_name": "secure-build",
+  "downloaded_at": "2026-11-26T07:48:12.776767Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvsecurity",
+  "source_url": "https://github.com/nvsecurity/nightvision-skills/blob/main/skills/secure-build/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvsecurity/nightvision-skills/blob/main/skills/secure-build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Secure-by-default rules to follow while writing a web app or API, so vibe-coded and agent-built apps start out safe. Use whenever you create or materially change a web app, API, route handler, login or signup flow, database access, file upload, payment flow, admin page, or an AI feature that calls a model or tools. Covers access control, injection, secrets, sessions, CORS, headers, rate limits, uploads, SSRF, AI features, dependencies and backend-as-a-service rules."
+}

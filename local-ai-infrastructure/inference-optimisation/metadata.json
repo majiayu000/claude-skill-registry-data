@@ -1,0 +1,39 @@
+{
+  "name": "inference-optimisation",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/inference-optimisation/SKILL.md",
+  "github_branch": "main",
+  "category": "local-ai-infrastructure",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "inference-optimisation",
+  "downloaded_at": "2026-11-26T07:09:54.419837Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "local-ai-infrastructure",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for local-ai-infrastructure: llama-cpp, local-llm, gguf, vllm",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "llama-cpp",
+      "local-llm",
+      "gguf",
+      "vllm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/inference-optimisation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/inference-optimisation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hill-climb the serving speed of a local LLM on any hardware (NVIDIA, AMD, Intel, Apple, unified-memory laptops, multi-GPU) and any quantization (GGUF, EXL2/EXL3, AWQ/GPTQ, FP8, MLX, BF16): single-user and concurrent decode tok/s, speculative decoding, prefill tok/s, KV cache size, startup time and TTFT, under a memory cap and with full-context stability. Computes the theoretical ceiling first, runs noise-controlled A/B experiments, keeps a ledger, and qualifies the winner before publishing it. Use when asked to optimise, tune, speed up, benchmark or hill-climb a model server (vLLM, SGLang, llama.cpp, ExLlama/TabbyAPI, MLX, TensorRT-LLM...), to find the maximum possible tok/s on a machine, or to publish a tuned recipe. Triggers: hill climb, tok/s, decode speed, prefill speed, MTP, EAGLE, draft model, speculative decoding, KV cache, TTFT, startup time, theoretical maximum."
+}

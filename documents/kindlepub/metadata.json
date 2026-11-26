@@ -1,0 +1,39 @@
+{
+  "name": "kindlepub",
+  "repo": "m3taz-ahmed/aizee",
+  "path": "skills/kindlepub/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/m3taz-ahmed/aizee",
+  "dir_name": "kindlepub",
+  "downloaded_at": "2026-11-26T07:09:55.680471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, docx",
+    "score": 4,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m3taz-ahmed",
+  "source_url": "https://github.com/m3taz-ahmed/aizee/blob/main/skills/kindlepub/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m3taz-ahmed/aizee/blob/main/skills/kindlepub/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end Amazon KDP self-publishing pipeline for a finished book manuscript. Builds the reflowable Kindle EPUB (epubcheck-clean), generates cover art with Gemini Nano Banana and assembles the cover in KDP Cover Creator (which auto-sizes the spine \u2014 no custom print PDF), drafts all KDP metadata, and walks the user through the KDP Details/Content/Pricing/Publish flow for Kindle ebook, paperback, and hardcover. Use this whenever the user wants to publish, self-publish, or upload a book to Amazon, KDP, or Kindle Direct Publishing; make a Kindle ebook; set up a paperback or hardcover; build a book cover or EPUB; or asks about KDP pricing, royalties, DRM, KDP Select, AI-content disclosure, or pre-orders. Trigger even if the user only says \"put my book on Amazon,\" \"make this a Kindle book,\" or \"I finished my manuscript, now what.\""
+}

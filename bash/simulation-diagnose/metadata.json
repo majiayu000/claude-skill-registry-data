@@ -1,0 +1,39 @@
+{
+  "name": "simulation-diagnose",
+  "repo": "plurai-ai/plurai-simulation",
+  "path": "skills/simulation-diagnose/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/plurai-ai/plurai-simulation",
+  "dir_name": "simulation-diagnose",
+  "downloaded_at": "2026-11-26T08:05:25.119390Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "plurai-ai",
+  "source_url": "https://github.com/plurai-ai/plurai-simulation/blob/main/skills/simulation-diagnose/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/plurai-ai/plurai-simulation/blob/main/skills/simulation-diagnose/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnose one already-failed run directory with error.json files, isolating a local cause (simulate.py, scenarios, config) from a remote one (mock service, seed data). Used by /simulation-fixes; not for a general run-and-diagnose request.",
+  "content_fingerprint": "8d4debfb62e440353cf54d1837ba620fae643dd4954ebc56c7517a8b076fd07f"
+}

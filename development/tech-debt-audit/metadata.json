@@ -1,0 +1,39 @@
+{
+  "name": "tech-debt-audit",
+  "repo": "omagents/omagents",
+  "path": "packages/core/skills/tech-debt-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/omagents/omagents",
+  "dir_name": "tech-debt-audit",
+  "downloaded_at": "2026-11-26T07:51:45.440155Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "omagents",
+  "source_url": "https://github.com/omagents/omagents/blob/main/packages/core/skills/tech-debt-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/omagents/omagents/blob/main/packages/core/skills/tech-debt-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Systematically audit a codebase for technical debt using a durable loop workflow. Each audit category is scanned, findings collected, and recorded before moving to the next. Trigger when the user says 'tech debt audit', 'audit code', 'code health check'."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "mirrord-up",
+  "repo": "metalbear-co/mirrord",
+  "path": "skills/skills/mirrord-up/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/metalbear-co/mirrord",
+  "dir_name": "mirrord-up-metalbear-co-mirrord",
+  "downloaded_at": "2026-11-26T07:23:01.944298Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: docker, kubernetes, deploy",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "metalbear-co",
+  "source_url": "https://github.com/metalbear-co/mirrord/blob/main/skills/skills/mirrord-up/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/metalbear-co/mirrord/blob/main/skills/skills/mirrord-up/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Helps users run multiple concurrent mirrord sessions from a single mirrord-up.yaml (compose-style multi-service local debugging). Use when the user mentions mirrord up, mirrord-up.yaml, mirrord up init, debugging several related microservices together, or managing multiple mirrord sessions' lifecycle in one command."
+}

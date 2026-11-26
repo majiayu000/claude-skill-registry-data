@@ -1,0 +1,40 @@
+{
+  "name": "omh-iac-change",
+  "repo": "rlaope/oh-my-hermes",
+  "path": "skills/omh-iac-change/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/rlaope/oh-my-hermes",
+  "dir_name": "omh-iac-change",
+  "downloaded_at": "2026-11-26T08:23:16.705147Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, kubernetes, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rlaope",
+  "source_url": "https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-iac-change/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rlaope/oh-my-hermes/blob/main/skills/omh-iac-change/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[omh] Infrastructure-as-code change: Terraform, OpenTofu, Pulumi, a Kubernetes manifest, a Helm chart; read the drift, the blast radius and the cost delta from the saved plan, then stage the apply behind a health gate with a rollback per stage. Use when the user says: iac-change, iac change, infrastructure as code, infrastructure-as-code, terraform plan, terraform apply, terraform state, terraform drift."
+}

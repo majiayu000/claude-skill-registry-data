@@ -1,0 +1,38 @@
+{
+  "name": "hold-demand-ledger",
+  "repo": "odinfree/storm-ecdsa-harness",
+  "path": "skills/hold-demand-ledger/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/odinfree/storm-ecdsa-harness",
+  "dir_name": "hold-demand-ledger",
+  "downloaded_at": "2026-11-26T07:49:24.066743Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "odinfree",
+  "source_url": "https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/hold-demand-ledger/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/odinfree/storm-ecdsa-harness/blob/main/skills/hold-demand-ledger/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure hold/dup-loan demand and supply on an ecdsa.fail-style reversible op stream, and price Q-cut (width) moves correctly against hold capacity. Use when extending or auditing a hold_pass-type final pass, when pricing a qubit cut against the holds it enables or destroys, when a \"shortfall histogram\" or demand curve looks suspiciously clean, or before trusting internal consistency checks (sym asserts, relocate 0-failures) as evidence of correctness. Contains the four measured traps: tautological shortfall, uniform-shift vs peak-clip model confusion, pre-loan/with-loan numbering drift, and oracle-only rejection."
+}

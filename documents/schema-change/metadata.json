@@ -1,0 +1,37 @@
+{
+  "name": "schema-change",
+  "repo": "njdaniel/conch",
+  "path": ".claude/skills/schema-change/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/njdaniel/conch",
+  "dir_name": "schema-change",
+  "downloaded_at": "2026-11-26T07:44:09.080556Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "njdaniel",
+  "source_url": "https://github.com/njdaniel/conch/blob/main/.claude/skills/schema-change/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/njdaniel/conch/blob/main/.claude/skills/schema-change/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Procedure for changing anything in pkg/schema \u2014 version bumps, fixture regeneration, compatibility diff, migrations, and MCP tool-definition sync. Use for ANY change to a wire shape, before touching pkg/schema."
+}
